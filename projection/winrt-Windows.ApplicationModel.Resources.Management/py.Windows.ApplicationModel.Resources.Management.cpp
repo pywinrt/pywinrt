@@ -241,8 +241,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
         { "get_qualifier_value", reinterpret_cast<PyCFunction>(IndexedResourceCandidate_GetQualifierValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IndexedResourceCandidate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IndexedResourceCandidate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IndexedResourceCandidate[] = {
         { "metadata", reinterpret_cast<getter>(IndexedResourceCandidate_get_Metadata), nullptr, nullptr, nullptr },
@@ -250,16 +249,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
         { "type", reinterpret_cast<getter>(IndexedResourceCandidate_get_Type), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(IndexedResourceCandidate_get_Uri), nullptr, nullptr, nullptr },
         { "value_as_string", reinterpret_cast<getter>(IndexedResourceCandidate_get_ValueAsString), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IndexedResourceCandidate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IndexedResourceCandidate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IndexedResourceCandidate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IndexedResourceCandidate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IndexedResourceCandidate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IndexedResourceCandidate = {
         "winrt._winrt_windows_applicationmodel_resources_management.IndexedResourceCandidate",
@@ -372,22 +369,19 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
     static PyMethodDef _methods_IndexedResourceQualifier[] = {
         { "_assign_array_", _assign_array_IndexedResourceQualifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IndexedResourceQualifier), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IndexedResourceQualifier[] = {
         { "qualifier_name", reinterpret_cast<getter>(IndexedResourceQualifier_get_QualifierName), nullptr, nullptr, nullptr },
         { "qualifier_value", reinterpret_cast<getter>(IndexedResourceQualifier_get_QualifierValue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IndexedResourceQualifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IndexedResourceQualifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IndexedResourceQualifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IndexedResourceQualifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IndexedResourceQualifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IndexedResourceQualifier = {
         "winrt._winrt_windows_applicationmodel_resources_management.IndexedResourceQualifier",
@@ -566,20 +560,17 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
         { "index_file_path", reinterpret_cast<PyCFunction>(ResourceIndexer_IndexFilePath), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ResourceIndexer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceIndexer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResourceIndexer[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResourceIndexer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceIndexer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceIndexer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceIndexer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceIndexer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResourceIndexer = {
         "winrt._winrt_windows_applicationmodel_resources_management.ResourceIndexer",

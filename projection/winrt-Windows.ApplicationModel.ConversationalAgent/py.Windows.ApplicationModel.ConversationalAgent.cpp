@@ -1220,8 +1220,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivationSignalDetectionConfiguration), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ActivationSignalDetectionConfiguration), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ActivationSignalDetectionConfiguration), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivationSignalDetectionConfiguration[] = {
         { "availability_info", reinterpret_cast<getter>(ActivationSignalDetectionConfiguration_get_AvailabilityInfo), nullptr, nullptr, nullptr },
@@ -1233,16 +1232,14 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "training_steps_completed", reinterpret_cast<getter>(ActivationSignalDetectionConfiguration_get_TrainingStepsCompleted), nullptr, nullptr, nullptr },
         { "training_steps_remaining", reinterpret_cast<getter>(ActivationSignalDetectionConfiguration_get_TrainingStepsRemaining), nullptr, nullptr, nullptr },
         { "training_step_completion_max_allowed_time", reinterpret_cast<getter>(ActivationSignalDetectionConfiguration_get_TrainingStepCompletionMaxAllowedTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivationSignalDetectionConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivationSignalDetectionConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivationSignalDetectionConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivationSignalDetectionConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivationSignalDetectionConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivationSignalDetectionConfiguration = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetectionConfiguration",
@@ -1355,22 +1352,19 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static PyMethodDef _methods_ActivationSignalDetectionConfigurationCreationResult[] = {
         { "_assign_array_", _assign_array_ActivationSignalDetectionConfigurationCreationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivationSignalDetectionConfigurationCreationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivationSignalDetectionConfigurationCreationResult[] = {
         { "configuration", reinterpret_cast<getter>(ActivationSignalDetectionConfigurationCreationResult_get_Configuration), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(ActivationSignalDetectionConfigurationCreationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivationSignalDetectionConfigurationCreationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivationSignalDetectionConfigurationCreationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivationSignalDetectionConfigurationCreationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivationSignalDetectionConfigurationCreationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivationSignalDetectionConfigurationCreationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivationSignalDetectionConfigurationCreationResult = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetectionConfigurationCreationResult",
@@ -2333,8 +2327,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "remove_configuration_with_result_async", reinterpret_cast<PyCFunction>(ActivationSignalDetector_RemoveConfigurationWithResultAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ActivationSignalDetector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivationSignalDetector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivationSignalDetector[] = {
         { "can_create_configurations", reinterpret_cast<getter>(ActivationSignalDetector_get_CanCreateConfigurations), nullptr, nullptr, nullptr },
@@ -2344,16 +2337,14 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "supported_power_states", reinterpret_cast<getter>(ActivationSignalDetector_get_SupportedPowerStates), nullptr, nullptr, nullptr },
         { "supported_training_data_formats", reinterpret_cast<getter>(ActivationSignalDetector_get_SupportedTrainingDataFormats), nullptr, nullptr, nullptr },
         { "detector_id", reinterpret_cast<getter>(ActivationSignalDetector_get_DetectorId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivationSignalDetector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivationSignalDetector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivationSignalDetector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivationSignalDetector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivationSignalDetector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivationSignalDetector = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetector",
@@ -2690,20 +2681,17 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "get_all_activation_signal_detectors_async", reinterpret_cast<PyCFunction>(ConversationalAgentDetectorManager_GetAllActivationSignalDetectorsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ConversationalAgentDetectorManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConversationalAgentDetectorManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConversationalAgentDetectorManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConversationalAgentDetectorManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConversationalAgentDetectorManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConversationalAgentDetectorManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConversationalAgentDetectorManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConversationalAgentDetectorManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConversationalAgentDetectorManager = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentDetectorManager",
@@ -2714,12 +2702,10 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyGetSetDef getset_ConversationalAgentDetectorManager_Static[] = {
         { "default", reinterpret_cast<getter>(ConversationalAgentDetectorManager_get_Default), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ConversationalAgentDetectorManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ConversationalAgentDetectorManager_Static[] = 
     {
@@ -2729,14 +2715,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { }
     };
 
-    static PyType_Spec type_spec_ConversationalAgentDetectorManager_Static =
-    {
+    static PyType_Spec type_spec_ConversationalAgentDetectorManager_Static = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentDetectorManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ConversationalAgentDetectorManager_Static
-    };
+        type_slots_ConversationalAgentDetectorManager_Static};
 
     // ----- ConversationalAgentSession class --------------------
 
@@ -4461,8 +4445,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "_from", reinterpret_cast<PyCFunction>(_from_ConversationalAgentSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ConversationalAgentSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ConversationalAgentSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConversationalAgentSession[] = {
         { "agent_state", reinterpret_cast<getter>(ConversationalAgentSession_get_AgentState), nullptr, nullptr, nullptr },
@@ -4473,16 +4456,14 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "is_user_authenticated", reinterpret_cast<getter>(ConversationalAgentSession_get_IsUserAuthenticated), nullptr, nullptr, nullptr },
         { "is_voice_activation_available", reinterpret_cast<getter>(ConversationalAgentSession_get_IsVoiceActivationAvailable), nullptr, nullptr, nullptr },
         { "signal", reinterpret_cast<getter>(ConversationalAgentSession_get_Signal), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConversationalAgentSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConversationalAgentSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConversationalAgentSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConversationalAgentSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConversationalAgentSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConversationalAgentSession = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSession",
@@ -4492,14 +4473,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         _type_slots_ConversationalAgentSession};
 
     static PyGetSetDef getset_ConversationalAgentSession_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ConversationalAgentSession_Static[] = {
         { "get_current_session_async", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetCurrentSessionAsync), METH_VARARGS, nullptr },
         { "get_current_session_sync", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetCurrentSessionSync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ConversationalAgentSession_Static[] = 
     {
@@ -4509,14 +4488,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { }
     };
 
-    static PyType_Spec type_spec_ConversationalAgentSession_Static =
-    {
+    static PyType_Spec type_spec_ConversationalAgentSession_Static = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSession_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ConversationalAgentSession_Static
-    };
+        type_slots_ConversationalAgentSession_Static};
 
     // ----- ConversationalAgentSessionInterruptedEventArgs class --------------------
 
@@ -4562,20 +4539,17 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static PyMethodDef _methods_ConversationalAgentSessionInterruptedEventArgs[] = {
         { "_assign_array_", _assign_array_ConversationalAgentSessionInterruptedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConversationalAgentSessionInterruptedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConversationalAgentSessionInterruptedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConversationalAgentSessionInterruptedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConversationalAgentSessionInterruptedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConversationalAgentSessionInterruptedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConversationalAgentSessionInterruptedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConversationalAgentSessionInterruptedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConversationalAgentSessionInterruptedEventArgs = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSessionInterruptedEventArgs",
@@ -5102,8 +5076,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static PyMethodDef _methods_ConversationalAgentSignal[] = {
         { "_assign_array_", _assign_array_ConversationalAgentSignal, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConversationalAgentSignal), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConversationalAgentSignal[] = {
         { "signal_start", reinterpret_cast<getter>(ConversationalAgentSignal_get_SignalStart), reinterpret_cast<setter>(ConversationalAgentSignal_put_SignalStart), nullptr, nullptr },
@@ -5114,16 +5087,14 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "is_signal_verification_required", reinterpret_cast<getter>(ConversationalAgentSignal_get_IsSignalVerificationRequired), reinterpret_cast<setter>(ConversationalAgentSignal_put_IsSignalVerificationRequired), nullptr, nullptr },
         { "detector_id", reinterpret_cast<getter>(ConversationalAgentSignal_get_DetectorId), nullptr, nullptr, nullptr },
         { "detector_kind", reinterpret_cast<getter>(ConversationalAgentSignal_get_DetectorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConversationalAgentSignal[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConversationalAgentSignal) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConversationalAgentSignal) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConversationalAgentSignal) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConversationalAgentSignal) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConversationalAgentSignal = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSignal",
@@ -5176,20 +5147,17 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static PyMethodDef _methods_ConversationalAgentSignalDetectedEventArgs[] = {
         { "_assign_array_", _assign_array_ConversationalAgentSignalDetectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConversationalAgentSignalDetectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConversationalAgentSignalDetectedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConversationalAgentSignalDetectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConversationalAgentSignalDetectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConversationalAgentSignalDetectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConversationalAgentSignalDetectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConversationalAgentSignalDetectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConversationalAgentSignalDetectedEventArgs = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSignalDetectedEventArgs",
@@ -5272,21 +5240,18 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static PyMethodDef _methods_ConversationalAgentSystemStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_ConversationalAgentSystemStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConversationalAgentSystemStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConversationalAgentSystemStateChangedEventArgs[] = {
         { "system_state_change_type", reinterpret_cast<getter>(ConversationalAgentSystemStateChangedEventArgs_get_SystemStateChangeType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConversationalAgentSystemStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConversationalAgentSystemStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConversationalAgentSystemStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConversationalAgentSystemStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConversationalAgentSystemStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConversationalAgentSystemStateChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSystemStateChangedEventArgs",
@@ -5369,21 +5334,18 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static PyMethodDef _methods_DetectionConfigurationAvailabilityChangedEventArgs[] = {
         { "_assign_array_", _assign_array_DetectionConfigurationAvailabilityChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DetectionConfigurationAvailabilityChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DetectionConfigurationAvailabilityChangedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(DetectionConfigurationAvailabilityChangedEventArgs_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DetectionConfigurationAvailabilityChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DetectionConfigurationAvailabilityChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DetectionConfigurationAvailabilityChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DetectionConfigurationAvailabilityChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DetectionConfigurationAvailabilityChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DetectionConfigurationAvailabilityChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.DetectionConfigurationAvailabilityChangedEventArgs",
@@ -5586,8 +5548,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static PyMethodDef _methods_DetectionConfigurationAvailabilityInfo[] = {
         { "_assign_array_", _assign_array_DetectionConfigurationAvailabilityInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DetectionConfigurationAvailabilityInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DetectionConfigurationAvailabilityInfo[] = {
         { "has_lock_screen_permission", reinterpret_cast<getter>(DetectionConfigurationAvailabilityInfo_get_HasLockScreenPermission), nullptr, nullptr, nullptr },
@@ -5595,16 +5556,14 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "has_system_resource_access", reinterpret_cast<getter>(DetectionConfigurationAvailabilityInfo_get_HasSystemResourceAccess), nullptr, nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(DetectionConfigurationAvailabilityInfo_get_IsEnabled), nullptr, nullptr, nullptr },
         { "unavailable_system_resources", reinterpret_cast<getter>(DetectionConfigurationAvailabilityInfo_get_UnavailableSystemResources), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DetectionConfigurationAvailabilityInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DetectionConfigurationAvailabilityInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DetectionConfigurationAvailabilityInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DetectionConfigurationAvailabilityInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DetectionConfigurationAvailabilityInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DetectionConfigurationAvailabilityInfo = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.DetectionConfigurationAvailabilityInfo",

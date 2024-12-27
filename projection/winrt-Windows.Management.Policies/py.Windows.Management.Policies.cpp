@@ -101,19 +101,16 @@ namespace py::cpp::Windows::Management::Policies
     }
 
     static PyMethodDef _methods_NamedPolicy[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NamedPolicy[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NamedPolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NamedPolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NamedPolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NamedPolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NamedPolicy = {
         "winrt._winrt_windows_management_policies.NamedPolicy",
@@ -123,14 +120,12 @@ namespace py::cpp::Windows::Management::Policies
         _type_slots_NamedPolicy};
 
     static PyGetSetDef getset_NamedPolicy_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_NamedPolicy_Static[] = {
         { "get_policy_from_path", reinterpret_cast<PyCFunction>(NamedPolicy_GetPolicyFromPath), METH_VARARGS, nullptr },
         { "get_policy_from_path_for_user", reinterpret_cast<PyCFunction>(NamedPolicy_GetPolicyFromPathForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_NamedPolicy_Static[] = 
     {
@@ -140,14 +135,12 @@ namespace py::cpp::Windows::Management::Policies
         { }
     };
 
-    static PyType_Spec type_spec_NamedPolicy_Static =
-    {
+    static PyType_Spec type_spec_NamedPolicy_Static = {
         "winrt._winrt_windows_management_policies.NamedPolicy_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_NamedPolicy_Static
-    };
+        type_slots_NamedPolicy_Static};
 
     // ----- NamedPolicyData class --------------------
 
@@ -645,8 +638,7 @@ namespace py::cpp::Windows::Management::Policies
         { "remove_changed", reinterpret_cast<PyCFunction>(NamedPolicyData_remove_Changed), METH_O, nullptr },
         { "_assign_array_", _assign_array_NamedPolicyData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NamedPolicyData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NamedPolicyData[] = {
         { "area", reinterpret_cast<getter>(NamedPolicyData_get_Area), nullptr, nullptr, nullptr },
@@ -655,16 +647,14 @@ namespace py::cpp::Windows::Management::Policies
         { "kind", reinterpret_cast<getter>(NamedPolicyData_get_Kind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(NamedPolicyData_get_Name), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(NamedPolicyData_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NamedPolicyData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NamedPolicyData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NamedPolicyData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NamedPolicyData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NamedPolicyData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NamedPolicyData = {
         "winrt._winrt_windows_management_policies.NamedPolicyData",

@@ -322,20 +322,17 @@ namespace py::cpp::Windows::Storage::Compression
         { "_from", reinterpret_cast<PyCFunction>(_from_Compressor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Compressor), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_Compressor), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Compressor[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Compressor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Compressor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Compressor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Compressor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Compressor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Compressor = {
         "winrt._winrt_windows_storage_compression.Compressor",
@@ -565,20 +562,17 @@ namespace py::cpp::Windows::Storage::Compression
         { "_from", reinterpret_cast<PyCFunction>(_from_Decompressor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Decompressor), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_Decompressor), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Decompressor[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Decompressor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Decompressor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Decompressor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Decompressor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Decompressor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Decompressor = {
         "winrt._winrt_windows_storage_compression.Decompressor",

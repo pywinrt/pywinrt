@@ -286,8 +286,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
     static PyMethodDef _methods_NotifyCollectionChangedEventArgs[] = {
         { "_assign_array_", _assign_array_NotifyCollectionChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NotifyCollectionChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NotifyCollectionChangedEventArgs[] = {
         { "action", reinterpret_cast<getter>(NotifyCollectionChangedEventArgs_get_Action), nullptr, nullptr, nullptr },
@@ -295,16 +294,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { "new_starting_index", reinterpret_cast<getter>(NotifyCollectionChangedEventArgs_get_NewStartingIndex), nullptr, nullptr, nullptr },
         { "old_items", reinterpret_cast<getter>(NotifyCollectionChangedEventArgs_get_OldItems), nullptr, nullptr, nullptr },
         { "old_starting_index", reinterpret_cast<getter>(NotifyCollectionChangedEventArgs_get_OldStartingIndex), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NotifyCollectionChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotifyCollectionChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotifyCollectionChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotifyCollectionChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotifyCollectionChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NotifyCollectionChangedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_interop.NotifyCollectionChangedEventArgs",
@@ -314,12 +311,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         _type_slots_NotifyCollectionChangedEventArgs};
 
     static PyGetSetDef getset_NotifyCollectionChangedEventArgs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_NotifyCollectionChangedEventArgs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_NotifyCollectionChangedEventArgs_Static[] = 
     {
@@ -329,14 +324,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { }
     };
 
-    static PyType_Spec type_spec_NotifyCollectionChangedEventArgs_Static =
-    {
+    static PyType_Spec type_spec_NotifyCollectionChangedEventArgs_Static = {
         "winrt._winrt_microsoft_ui_xaml_interop.NotifyCollectionChangedEventArgs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_NotifyCollectionChangedEventArgs_Static
-    };
+        type_slots_NotifyCollectionChangedEventArgs_Static};
 
     // ----- IBindableIterable interface --------------------
 
@@ -423,20 +416,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { "first", reinterpret_cast<PyCFunction>(IBindableIterable_First), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBindableIterable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableIterable), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBindableIterable[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBindableIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableIterable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableIterable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableIterable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBindableIterable = {
         "winrt._winrt_microsoft_ui_xaml_interop.IBindableIterable",
@@ -518,13 +508,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
     static PyMethodDef methods_ImplementsIBindableIterable[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableIterable), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableIterable), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBindableIterable[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBindableIterable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBindableIterable = {
         "winrt._winrt_microsoft_ui_xaml_interop.ImplementsIBindableIterable",
@@ -678,22 +666,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { "move_next", reinterpret_cast<PyCFunction>(IBindableIterator_MoveNext), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBindableIterator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableIterator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBindableIterator[] = {
         { "current", reinterpret_cast<getter>(IBindableIterator_get_Current), nullptr, nullptr, nullptr },
         { "has_current", reinterpret_cast<getter>(IBindableIterator_get_HasCurrent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBindableIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableIterator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableIterator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBindableIterator = {
         "winrt._winrt_microsoft_ui_xaml_interop.IBindableIterator",
@@ -815,13 +800,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
     static PyMethodDef methods_ImplementsIBindableIterator[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableIterator), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableIterator), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBindableIterator[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBindableIterator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBindableIterator = {
         "winrt._winrt_microsoft_ui_xaml_interop.ImplementsIBindableIterator",
@@ -1415,21 +1398,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { "remove_vector_changed", reinterpret_cast<PyCFunction>(IBindableObservableVector_remove_VectorChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_IBindableObservableVector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableObservableVector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBindableObservableVector[] = {
         { "size", reinterpret_cast<getter>(IBindableObservableVector_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBindableObservableVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableObservableVector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableObservableVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableObservableVector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableObservableVector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBindableObservableVector = {
         "winrt._winrt_microsoft_ui_xaml_interop.IBindableObservableVector",
@@ -1877,13 +1857,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
     static PyMethodDef methods_ImplementsIBindableObservableVector[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableObservableVector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableObservableVector), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBindableObservableVector[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBindableObservableVector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBindableObservableVector = {
         "winrt._winrt_microsoft_ui_xaml_interop.ImplementsIBindableObservableVector",
@@ -2410,21 +2388,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { "set_at", reinterpret_cast<PyCFunction>(IBindableVector_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBindableVector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableVector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBindableVector[] = {
         { "size", reinterpret_cast<getter>(IBindableVector_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBindableVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableVector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableVector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableVector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBindableVector = {
         "winrt._winrt_microsoft_ui_xaml_interop.IBindableVector",
@@ -2810,13 +2785,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
     static PyMethodDef methods_ImplementsIBindableVector[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableVector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableVector), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBindableVector[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBindableVector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBindableVector = {
         "winrt._winrt_microsoft_ui_xaml_interop.ImplementsIBindableVector",
@@ -3040,21 +3013,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { "index_of", reinterpret_cast<PyCFunction>(IBindableVectorView_IndexOf), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBindableVectorView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableVectorView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBindableVectorView[] = {
         { "size", reinterpret_cast<getter>(IBindableVectorView_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBindableVectorView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableVectorView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableVectorView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableVectorView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableVectorView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBindableVectorView = {
         "winrt._winrt_microsoft_ui_xaml_interop.IBindableVectorView",
@@ -3222,13 +3192,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
     static PyMethodDef methods_ImplementsIBindableVectorView[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableVectorView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableVectorView), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBindableVectorView[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBindableVectorView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBindableVectorView = {
         "winrt._winrt_microsoft_ui_xaml_interop.ImplementsIBindableVectorView",
@@ -3348,20 +3316,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { "remove_collection_changed", reinterpret_cast<PyCFunction>(INotifyCollectionChanged_remove_CollectionChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_INotifyCollectionChanged, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INotifyCollectionChanged), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INotifyCollectionChanged[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INotifyCollectionChanged[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INotifyCollectionChanged) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INotifyCollectionChanged) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INotifyCollectionChanged) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INotifyCollectionChanged) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INotifyCollectionChanged = {
         "winrt._winrt_microsoft_ui_xaml_interop.INotifyCollectionChanged",
@@ -3479,13 +3444,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
     static PyMethodDef methods_ImplementsINotifyCollectionChanged[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINotifyCollectionChanged), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINotifyCollectionChanged), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINotifyCollectionChanged[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINotifyCollectionChanged) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINotifyCollectionChanged = {
         "winrt._winrt_microsoft_ui_xaml_interop.ImplementsINotifyCollectionChanged",

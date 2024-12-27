@@ -89,20 +89,17 @@ namespace py::cpp::Windows::Security::DataProtection
         { "get_deferral", reinterpret_cast<PyCFunction>(UserDataAvailabilityStateChangedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataAvailabilityStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAvailabilityStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAvailabilityStateChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAvailabilityStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAvailabilityStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAvailabilityStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAvailabilityStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAvailabilityStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAvailabilityStateChangedEventArgs = {
         "winrt._winrt_windows_security_dataprotection.UserDataAvailabilityStateChangedEventArgs",
@@ -215,22 +212,19 @@ namespace py::cpp::Windows::Security::DataProtection
     static PyMethodDef _methods_UserDataBufferUnprotectResult[] = {
         { "_assign_array_", _assign_array_UserDataBufferUnprotectResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataBufferUnprotectResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataBufferUnprotectResult[] = {
         { "status", reinterpret_cast<getter>(UserDataBufferUnprotectResult_get_Status), nullptr, nullptr, nullptr },
         { "unprotected_buffer", reinterpret_cast<getter>(UserDataBufferUnprotectResult_get_UnprotectedBuffer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataBufferUnprotectResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataBufferUnprotectResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataBufferUnprotectResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataBufferUnprotectResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataBufferUnprotectResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataBufferUnprotectResult = {
         "winrt._winrt_windows_security_dataprotection.UserDataBufferUnprotectResult",
@@ -649,20 +643,17 @@ namespace py::cpp::Windows::Security::DataProtection
         { "remove_data_availability_state_changed", reinterpret_cast<PyCFunction>(UserDataProtectionManager_remove_DataAvailabilityStateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_UserDataProtectionManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataProtectionManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataProtectionManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataProtectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataProtectionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataProtectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataProtectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataProtectionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataProtectionManager = {
         "winrt._winrt_windows_security_dataprotection.UserDataProtectionManager",
@@ -672,14 +663,12 @@ namespace py::cpp::Windows::Security::DataProtection
         _type_slots_UserDataProtectionManager};
 
     static PyGetSetDef getset_UserDataProtectionManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserDataProtectionManager_Static[] = {
         { "try_get_default", reinterpret_cast<PyCFunction>(UserDataProtectionManager_TryGetDefault), METH_VARARGS, nullptr },
         { "try_get_for_user", reinterpret_cast<PyCFunction>(UserDataProtectionManager_TryGetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserDataProtectionManager_Static[] = 
     {
@@ -689,14 +678,12 @@ namespace py::cpp::Windows::Security::DataProtection
         { }
     };
 
-    static PyType_Spec type_spec_UserDataProtectionManager_Static =
-    {
+    static PyType_Spec type_spec_UserDataProtectionManager_Static = {
         "winrt._winrt_windows_security_dataprotection.UserDataProtectionManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserDataProtectionManager_Static
-    };
+        type_slots_UserDataProtectionManager_Static};
 
     // ----- UserDataStorageItemProtectionInfo class --------------------
 
@@ -772,21 +759,18 @@ namespace py::cpp::Windows::Security::DataProtection
     static PyMethodDef _methods_UserDataStorageItemProtectionInfo[] = {
         { "_assign_array_", _assign_array_UserDataStorageItemProtectionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataStorageItemProtectionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataStorageItemProtectionInfo[] = {
         { "availability", reinterpret_cast<getter>(UserDataStorageItemProtectionInfo_get_Availability), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataStorageItemProtectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataStorageItemProtectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataStorageItemProtectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataStorageItemProtectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataStorageItemProtectionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataStorageItemProtectionInfo = {
         "winrt._winrt_windows_security_dataprotection.UserDataStorageItemProtectionInfo",

@@ -259,20 +259,17 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
         { "unprotect_stream_async", reinterpret_cast<PyCFunction>(DataProtectionProvider_UnprotectStreamAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DataProtectionProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataProtectionProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DataProtectionProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DataProtectionProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataProtectionProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataProtectionProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataProtectionProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataProtectionProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DataProtectionProvider = {
         "winrt._winrt_windows_security_cryptography_dataprotection.DataProtectionProvider",

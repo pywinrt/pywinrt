@@ -404,8 +404,7 @@ namespace py::cpp::Windows::Graphics::Display
         { "is_hdr_metadata_format_currently_supported", reinterpret_cast<PyCFunction>(AdvancedColorInfo_IsHdrMetadataFormatCurrentlySupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AdvancedColorInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdvancedColorInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdvancedColorInfo[] = {
         { "blue_primary", reinterpret_cast<getter>(AdvancedColorInfo_get_BluePrimary), nullptr, nullptr, nullptr },
@@ -417,16 +416,14 @@ namespace py::cpp::Windows::Graphics::Display
         { "red_primary", reinterpret_cast<getter>(AdvancedColorInfo_get_RedPrimary), nullptr, nullptr, nullptr },
         { "sdr_white_level_in_nits", reinterpret_cast<getter>(AdvancedColorInfo_get_SdrWhiteLevelInNits), nullptr, nullptr, nullptr },
         { "white_point", reinterpret_cast<getter>(AdvancedColorInfo_get_WhitePoint), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdvancedColorInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvancedColorInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdvancedColorInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvancedColorInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvancedColorInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdvancedColorInfo = {
         "winrt._winrt_windows_graphics_display.AdvancedColorInfo",
@@ -1109,23 +1106,20 @@ namespace py::cpp::Windows::Graphics::Display
         { "remove_is_supported_changed", reinterpret_cast<PyCFunction>(BrightnessOverride_remove_IsSupportedChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_BrightnessOverride, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BrightnessOverride), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BrightnessOverride[] = {
         { "brightness_level", reinterpret_cast<getter>(BrightnessOverride_get_BrightnessLevel), nullptr, nullptr, nullptr },
         { "is_override_active", reinterpret_cast<getter>(BrightnessOverride_get_IsOverrideActive), nullptr, nullptr, nullptr },
         { "is_supported", reinterpret_cast<getter>(BrightnessOverride_get_IsSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BrightnessOverride[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BrightnessOverride) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BrightnessOverride) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BrightnessOverride) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BrightnessOverride) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BrightnessOverride = {
         "winrt._winrt_windows_graphics_display.BrightnessOverride",
@@ -1135,15 +1129,13 @@ namespace py::cpp::Windows::Graphics::Display
         _type_slots_BrightnessOverride};
 
     static PyGetSetDef getset_BrightnessOverride_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BrightnessOverride_Static[] = {
         { "get_default_for_system", reinterpret_cast<PyCFunction>(BrightnessOverride_GetDefaultForSystem), METH_VARARGS, nullptr },
         { "get_for_current_view", reinterpret_cast<PyCFunction>(BrightnessOverride_GetForCurrentView), METH_VARARGS, nullptr },
         { "save_for_system_async", reinterpret_cast<PyCFunction>(BrightnessOverride_SaveForSystemAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BrightnessOverride_Static[] = 
     {
@@ -1153,14 +1145,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Spec type_spec_BrightnessOverride_Static =
-    {
+    static PyType_Spec type_spec_BrightnessOverride_Static = {
         "winrt._winrt_windows_graphics_display.BrightnessOverride_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BrightnessOverride_Static
-    };
+        type_slots_BrightnessOverride_Static};
 
     // ----- BrightnessOverrideSettings class --------------------
 
@@ -1392,22 +1382,19 @@ namespace py::cpp::Windows::Graphics::Display
     static PyMethodDef _methods_BrightnessOverrideSettings[] = {
         { "_assign_array_", _assign_array_BrightnessOverrideSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BrightnessOverrideSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BrightnessOverrideSettings[] = {
         { "desired_level", reinterpret_cast<getter>(BrightnessOverrideSettings_get_DesiredLevel), nullptr, nullptr, nullptr },
         { "desired_nits", reinterpret_cast<getter>(BrightnessOverrideSettings_get_DesiredNits), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BrightnessOverrideSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BrightnessOverrideSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BrightnessOverrideSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BrightnessOverrideSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BrightnessOverrideSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BrightnessOverrideSettings = {
         "winrt._winrt_windows_graphics_display.BrightnessOverrideSettings",
@@ -1417,15 +1404,13 @@ namespace py::cpp::Windows::Graphics::Display
         _type_slots_BrightnessOverrideSettings};
 
     static PyGetSetDef getset_BrightnessOverrideSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BrightnessOverrideSettings_Static[] = {
         { "create_from_display_brightness_override_scenario", reinterpret_cast<PyCFunction>(BrightnessOverrideSettings_CreateFromDisplayBrightnessOverrideScenario), METH_VARARGS, nullptr },
         { "create_from_level", reinterpret_cast<PyCFunction>(BrightnessOverrideSettings_CreateFromLevel), METH_VARARGS, nullptr },
         { "create_from_nits", reinterpret_cast<PyCFunction>(BrightnessOverrideSettings_CreateFromNits), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BrightnessOverrideSettings_Static[] = 
     {
@@ -1435,14 +1420,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Spec type_spec_BrightnessOverrideSettings_Static =
-    {
+    static PyType_Spec type_spec_BrightnessOverrideSettings_Static = {
         "winrt._winrt_windows_graphics_display.BrightnessOverrideSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BrightnessOverrideSettings_Static
-    };
+        type_slots_BrightnessOverrideSettings_Static};
 
     // ----- ColorOverrideSettings class --------------------
 
@@ -1560,21 +1543,18 @@ namespace py::cpp::Windows::Graphics::Display
     static PyMethodDef _methods_ColorOverrideSettings[] = {
         { "_assign_array_", _assign_array_ColorOverrideSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorOverrideSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ColorOverrideSettings[] = {
         { "desired_display_color_override_scenario", reinterpret_cast<getter>(ColorOverrideSettings_get_DesiredDisplayColorOverrideScenario), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ColorOverrideSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorOverrideSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorOverrideSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorOverrideSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorOverrideSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ColorOverrideSettings = {
         "winrt._winrt_windows_graphics_display.ColorOverrideSettings",
@@ -1584,13 +1564,11 @@ namespace py::cpp::Windows::Graphics::Display
         _type_slots_ColorOverrideSettings};
 
     static PyGetSetDef getset_ColorOverrideSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ColorOverrideSettings_Static[] = {
         { "create_from_display_color_override_scenario", reinterpret_cast<PyCFunction>(ColorOverrideSettings_CreateFromDisplayColorOverrideScenario), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ColorOverrideSettings_Static[] = 
     {
@@ -1600,14 +1578,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Spec type_spec_ColorOverrideSettings_Static =
-    {
+    static PyType_Spec type_spec_ColorOverrideSettings_Static = {
         "winrt._winrt_windows_graphics_display.ColorOverrideSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ColorOverrideSettings_Static
-    };
+        type_slots_ColorOverrideSettings_Static};
 
     // ----- DisplayEnhancementOverride class --------------------
 
@@ -2217,24 +2193,21 @@ namespace py::cpp::Windows::Graphics::Display
         { "remove_is_override_active_changed", reinterpret_cast<PyCFunction>(DisplayEnhancementOverride_remove_IsOverrideActiveChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_DisplayEnhancementOverride, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayEnhancementOverride), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayEnhancementOverride[] = {
         { "color_override_settings", reinterpret_cast<getter>(DisplayEnhancementOverride_get_ColorOverrideSettings), reinterpret_cast<setter>(DisplayEnhancementOverride_put_ColorOverrideSettings), nullptr, nullptr },
         { "brightness_override_settings", reinterpret_cast<getter>(DisplayEnhancementOverride_get_BrightnessOverrideSettings), reinterpret_cast<setter>(DisplayEnhancementOverride_put_BrightnessOverrideSettings), nullptr, nullptr },
         { "can_override", reinterpret_cast<getter>(DisplayEnhancementOverride_get_CanOverride), nullptr, nullptr, nullptr },
         { "is_override_active", reinterpret_cast<getter>(DisplayEnhancementOverride_get_IsOverrideActive), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayEnhancementOverride[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayEnhancementOverride) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayEnhancementOverride) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayEnhancementOverride) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayEnhancementOverride) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayEnhancementOverride = {
         "winrt._winrt_windows_graphics_display.DisplayEnhancementOverride",
@@ -2244,13 +2217,11 @@ namespace py::cpp::Windows::Graphics::Display
         _type_slots_DisplayEnhancementOverride};
 
     static PyGetSetDef getset_DisplayEnhancementOverride_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DisplayEnhancementOverride_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(DisplayEnhancementOverride_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DisplayEnhancementOverride_Static[] = 
     {
@@ -2260,14 +2231,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Spec type_spec_DisplayEnhancementOverride_Static =
-    {
+    static PyType_Spec type_spec_DisplayEnhancementOverride_Static = {
         "winrt._winrt_windows_graphics_display.DisplayEnhancementOverride_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DisplayEnhancementOverride_Static
-    };
+        type_slots_DisplayEnhancementOverride_Static};
 
     // ----- DisplayEnhancementOverrideCapabilities class --------------------
 
@@ -2414,22 +2383,19 @@ namespace py::cpp::Windows::Graphics::Display
         { "get_supported_nit_ranges", reinterpret_cast<PyCFunction>(DisplayEnhancementOverrideCapabilities_GetSupportedNitRanges), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DisplayEnhancementOverrideCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayEnhancementOverrideCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayEnhancementOverrideCapabilities[] = {
         { "is_brightness_control_supported", reinterpret_cast<getter>(DisplayEnhancementOverrideCapabilities_get_IsBrightnessControlSupported), nullptr, nullptr, nullptr },
         { "is_brightness_nits_control_supported", reinterpret_cast<getter>(DisplayEnhancementOverrideCapabilities_get_IsBrightnessNitsControlSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayEnhancementOverrideCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayEnhancementOverrideCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayEnhancementOverrideCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayEnhancementOverrideCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayEnhancementOverrideCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilities = {
         "winrt._winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilities",
@@ -2512,21 +2478,18 @@ namespace py::cpp::Windows::Graphics::Display
     static PyMethodDef _methods_DisplayEnhancementOverrideCapabilitiesChangedEventArgs[] = {
         { "_assign_array_", _assign_array_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayEnhancementOverrideCapabilitiesChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayEnhancementOverrideCapabilitiesChangedEventArgs[] = {
         { "capabilities", reinterpret_cast<getter>(DisplayEnhancementOverrideCapabilitiesChangedEventArgs_get_Capabilities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayEnhancementOverrideCapabilitiesChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayEnhancementOverrideCapabilitiesChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayEnhancementOverrideCapabilitiesChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayEnhancementOverrideCapabilitiesChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayEnhancementOverrideCapabilitiesChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs = {
         "winrt._winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs",
@@ -3500,8 +3463,7 @@ namespace py::cpp::Windows::Graphics::Display
         { "remove_advanced_color_info_changed", reinterpret_cast<PyCFunction>(DisplayInformation_remove_AdvancedColorInfoChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_DisplayInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayInformation[] = {
         { "current_orientation", reinterpret_cast<getter>(DisplayInformation_get_CurrentOrientation), nullptr, nullptr, nullptr },
@@ -3515,16 +3477,14 @@ namespace py::cpp::Windows::Graphics::Display
         { "diagonal_size_in_inches", reinterpret_cast<getter>(DisplayInformation_get_DiagonalSizeInInches), nullptr, nullptr, nullptr },
         { "screen_height_in_raw_pixels", reinterpret_cast<getter>(DisplayInformation_get_ScreenHeightInRawPixels), nullptr, nullptr, nullptr },
         { "screen_width_in_raw_pixels", reinterpret_cast<getter>(DisplayInformation_get_ScreenWidthInRawPixels), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayInformation = {
         "winrt._winrt_windows_graphics_display.DisplayInformation",
@@ -3535,15 +3495,13 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyGetSetDef getset_DisplayInformation_Static[] = {
         { "auto_rotation_preferences", reinterpret_cast<getter>(DisplayInformation_get_AutoRotationPreferences), reinterpret_cast<setter>(DisplayInformation_put_AutoRotationPreferences), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DisplayInformation_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(DisplayInformation_GetForCurrentView), METH_VARARGS, nullptr },
         { "add_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayInformation_add_DisplayContentsInvalidated), METH_O, nullptr },
         { "remove_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayInformation_remove_DisplayContentsInvalidated), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DisplayInformation_Static[] = 
     {
@@ -3553,14 +3511,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Spec type_spec_DisplayInformation_Static =
-    {
+    static PyType_Spec type_spec_DisplayInformation_Static = {
         "winrt._winrt_windows_graphics_display.DisplayInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DisplayInformation_Static
-    };
+        type_slots_DisplayInformation_Static};
 
     // ----- DisplayProperties class --------------------
 
@@ -4156,19 +4112,16 @@ namespace py::cpp::Windows::Graphics::Display
     }
 
     static PyMethodDef _methods_DisplayProperties[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayProperties[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayProperties = {
         "winrt._winrt_windows_graphics_display.DisplayProperties",
@@ -4184,8 +4137,7 @@ namespace py::cpp::Windows::Graphics::Display
         { "native_orientation", reinterpret_cast<getter>(DisplayProperties_get_NativeOrientation), nullptr, nullptr, nullptr },
         { "resolution_scale", reinterpret_cast<getter>(DisplayProperties_get_ResolutionScale), nullptr, nullptr, nullptr },
         { "stereo_enabled", reinterpret_cast<getter>(DisplayProperties_get_StereoEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DisplayProperties_Static[] = {
         { "get_color_profile_async", reinterpret_cast<PyCFunction>(DisplayProperties_GetColorProfileAsync), METH_VARARGS, nullptr },
@@ -4199,8 +4151,7 @@ namespace py::cpp::Windows::Graphics::Display
         { "remove_orientation_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_OrientationChanged), METH_O, nullptr },
         { "add_stereo_enabled_changed", reinterpret_cast<PyCFunction>(DisplayProperties_add_StereoEnabledChanged), METH_O, nullptr },
         { "remove_stereo_enabled_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_StereoEnabledChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DisplayProperties_Static[] = 
     {
@@ -4210,14 +4161,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Spec type_spec_DisplayProperties_Static =
-    {
+    static PyType_Spec type_spec_DisplayProperties_Static = {
         "winrt._winrt_windows_graphics_display.DisplayProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DisplayProperties_Static
-    };
+        type_slots_DisplayProperties_Static};
 
     // ----- DisplayServices class --------------------
 
@@ -4303,20 +4252,17 @@ namespace py::cpp::Windows::Graphics::Display
     static PyMethodDef _methods_DisplayServices[] = {
         { "_assign_array_", _assign_array_DisplayServices, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayServices), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayServices[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayServices[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayServices) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayServices) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayServices) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayServices) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayServices = {
         "winrt._winrt_windows_graphics_display.DisplayServices",
@@ -4326,13 +4272,11 @@ namespace py::cpp::Windows::Graphics::Display
         _type_slots_DisplayServices};
 
     static PyGetSetDef getset_DisplayServices_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DisplayServices_Static[] = {
         { "find_all", reinterpret_cast<PyCFunction>(DisplayServices_FindAll), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DisplayServices_Static[] = 
     {
@@ -4342,14 +4286,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Spec type_spec_DisplayServices_Static =
-    {
+    static PyType_Spec type_spec_DisplayServices_Static = {
         "winrt._winrt_windows_graphics_display.DisplayServices_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DisplayServices_Static
-    };
+        type_slots_DisplayServices_Static};
 
     // ----- NitRange struct --------------------
 
@@ -4422,8 +4364,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyMethodDef _methods_NitRange[] = {
         { "_assign_array_", _assign_array_NitRange, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* NitRange_get_MinNits(py::wrapper::Windows::Graphics::Display::NitRange* self, void* /*unused*/) noexcept
     {
@@ -4528,8 +4469,7 @@ namespace py::cpp::Windows::Graphics::Display
         { "min_nits", reinterpret_cast<getter>(NitRange_get_MinNits), reinterpret_cast<setter>(NitRange_set_MinNits), nullptr, nullptr },
         { "max_nits", reinterpret_cast<getter>(NitRange_get_MaxNits), reinterpret_cast<setter>(NitRange_set_MaxNits), nullptr, nullptr },
         { "step_size_nits", reinterpret_cast<getter>(NitRange_get_StepSizeNits), reinterpret_cast<setter>(NitRange_set_StepSizeNits), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_NitRange(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* other, int op) noexcept
     {
@@ -4597,8 +4537,7 @@ namespace py::cpp::Windows::Graphics::Display
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NitRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_NitRange) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_NitRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NitRange = {
         "winrt._winrt_windows_graphics_display.NitRange",

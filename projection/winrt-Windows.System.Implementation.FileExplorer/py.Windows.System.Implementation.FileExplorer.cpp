@@ -102,21 +102,18 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     static PyMethodDef _methods_SysStorageProviderEventReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_SysStorageProviderEventReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SysStorageProviderEventReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SysStorageProviderEventReceivedEventArgs[] = {
         { "json", reinterpret_cast<getter>(SysStorageProviderEventReceivedEventArgs_get_Json), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SysStorageProviderEventReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SysStorageProviderEventReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SysStorageProviderEventReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SysStorageProviderEventReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SysStorageProviderEventReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SysStorageProviderEventReceivedEventArgs = {
         "winrt._winrt_windows_system_implementation_fileexplorer.SysStorageProviderEventReceivedEventArgs",
@@ -236,20 +233,17 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { "remove_event_received", reinterpret_cast<PyCFunction>(ISysStorageProviderEventSource_remove_EventReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_ISysStorageProviderEventSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISysStorageProviderEventSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISysStorageProviderEventSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISysStorageProviderEventSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISysStorageProviderEventSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISysStorageProviderEventSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISysStorageProviderEventSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISysStorageProviderEventSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISysStorageProviderEventSource = {
         "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderEventSource",
@@ -367,13 +361,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     static PyMethodDef methods_ImplementsISysStorageProviderEventSource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISysStorageProviderEventSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISysStorageProviderEventSource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISysStorageProviderEventSource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISysStorageProviderEventSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISysStorageProviderEventSource = {
         "winrt._winrt_windows_system_implementation_fileexplorer.ImplementsISysStorageProviderEventSource",
@@ -513,20 +505,17 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { "get_http_request_provider", reinterpret_cast<PyCFunction>(ISysStorageProviderHandlerFactory_GetHttpRequestProvider), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISysStorageProviderHandlerFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISysStorageProviderHandlerFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISysStorageProviderHandlerFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISysStorageProviderHandlerFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISysStorageProviderHandlerFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISysStorageProviderHandlerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISysStorageProviderHandlerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISysStorageProviderHandlerFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISysStorageProviderHandlerFactory = {
         "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHandlerFactory",
@@ -658,13 +647,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     static PyMethodDef methods_ImplementsISysStorageProviderHandlerFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISysStorageProviderHandlerFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISysStorageProviderHandlerFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISysStorageProviderHandlerFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISysStorageProviderHandlerFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISysStorageProviderHandlerFactory = {
         "winrt._winrt_windows_system_implementation_fileexplorer.ImplementsISysStorageProviderHandlerFactory",
@@ -760,20 +747,17 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { "send_request_async", reinterpret_cast<PyCFunction>(ISysStorageProviderHttpRequestProvider_SendRequestAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISysStorageProviderHttpRequestProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISysStorageProviderHttpRequestProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISysStorageProviderHttpRequestProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISysStorageProviderHttpRequestProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISysStorageProviderHttpRequestProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISysStorageProviderHttpRequestProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISysStorageProviderHttpRequestProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISysStorageProviderHttpRequestProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISysStorageProviderHttpRequestProvider = {
         "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHttpRequestProvider",
@@ -861,13 +845,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     static PyMethodDef methods_ImplementsISysStorageProviderHttpRequestProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISysStorageProviderHttpRequestProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISysStorageProviderHttpRequestProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISysStorageProviderHttpRequestProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISysStorageProviderHttpRequestProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISysStorageProviderHttpRequestProvider = {
         "winrt._winrt_windows_system_implementation_fileexplorer.ImplementsISysStorageProviderHttpRequestProvider",

@@ -78,21 +78,18 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     static PyMethodDef _methods_ErrorReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_ErrorReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ErrorReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ErrorReceivedEventArgs[] = {
         { "error", reinterpret_cast<getter>(ErrorReceivedEventArgs_get_Error), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ErrorReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ErrorReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ErrorReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ErrorReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ErrorReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ErrorReceivedEventArgs = {
         "winrt._winrt_windows_devices_serialcommunication.ErrorReceivedEventArgs",
@@ -175,21 +172,18 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     static PyMethodDef _methods_PinChangedEventArgs[] = {
         { "_assign_array_", _assign_array_PinChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PinChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PinChangedEventArgs[] = {
         { "pin_change", reinterpret_cast<getter>(PinChangedEventArgs_get_PinChange), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PinChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PinChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PinChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PinChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PinChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PinChangedEventArgs = {
         "winrt._winrt_windows_devices_serialcommunication.PinChangedEventArgs",
@@ -1570,8 +1564,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         { "_from", reinterpret_cast<PyCFunction>(_from_SerialDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SerialDevice), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_SerialDevice), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SerialDevice[] = {
         { "is_data_terminal_ready_enabled", reinterpret_cast<getter>(SerialDevice_get_IsDataTerminalReadyEnabled), reinterpret_cast<setter>(SerialDevice_put_IsDataTerminalReadyEnabled), nullptr, nullptr },
@@ -1593,16 +1586,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         { "port_name", reinterpret_cast<getter>(SerialDevice_get_PortName), nullptr, nullptr, nullptr },
         { "usb_product_id", reinterpret_cast<getter>(SerialDevice_get_UsbProductId), nullptr, nullptr, nullptr },
         { "usb_vendor_id", reinterpret_cast<getter>(SerialDevice_get_UsbVendorId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SerialDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SerialDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SerialDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SerialDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SerialDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SerialDevice = {
         "winrt._winrt_windows_devices_serialcommunication.SerialDevice",
@@ -1612,16 +1603,14 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         _type_slots_SerialDevice};
 
     static PyGetSetDef getset_SerialDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SerialDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(SerialDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_from_port_name", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelectorFromPortName), METH_VARARGS, nullptr },
         { "get_device_selector_from_usb_vid_pid", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelectorFromUsbVidPid), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SerialDevice_Static[] = 
     {
@@ -1631,14 +1620,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         { }
     };
 
-    static PyType_Spec type_spec_SerialDevice_Static =
-    {
+    static PyType_Spec type_spec_SerialDevice_Static = {
         "winrt._winrt_windows_devices_serialcommunication.SerialDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SerialDevice_Static
-    };
+        type_slots_SerialDevice_Static};
 
     // ----- Windows.Devices.SerialCommunication Initialization --------------------
 

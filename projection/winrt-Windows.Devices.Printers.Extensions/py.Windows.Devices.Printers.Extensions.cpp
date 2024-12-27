@@ -322,22 +322,19 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { "remove_printer_changed", reinterpret_cast<PyCFunction>(Print3DWorkflow_remove_PrinterChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Print3DWorkflow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DWorkflow), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DWorkflow[] = {
         { "is_print_ready", reinterpret_cast<getter>(Print3DWorkflow_get_IsPrintReady), reinterpret_cast<setter>(Print3DWorkflow_put_IsPrintReady), nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(Print3DWorkflow_get_DeviceID), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DWorkflow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DWorkflow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DWorkflow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DWorkflow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DWorkflow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DWorkflow = {
         "winrt._winrt_windows_devices_printers_extensions.Print3DWorkflow",
@@ -552,21 +549,18 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { "set_source_changed", reinterpret_cast<PyCFunction>(Print3DWorkflowPrintRequestedEventArgs_SetSourceChanged), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Print3DWorkflowPrintRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DWorkflowPrintRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DWorkflowPrintRequestedEventArgs[] = {
         { "status", reinterpret_cast<getter>(Print3DWorkflowPrintRequestedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DWorkflowPrintRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DWorkflowPrintRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DWorkflowPrintRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DWorkflowPrintRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DWorkflowPrintRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DWorkflowPrintRequestedEventArgs = {
         "winrt._winrt_windows_devices_printers_extensions.Print3DWorkflowPrintRequestedEventArgs",
@@ -649,21 +643,18 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static PyMethodDef _methods_Print3DWorkflowPrinterChangedEventArgs[] = {
         { "_assign_array_", _assign_array_Print3DWorkflowPrinterChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DWorkflowPrinterChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DWorkflowPrinterChangedEventArgs[] = {
         { "new_device_id", reinterpret_cast<getter>(Print3DWorkflowPrinterChangedEventArgs_get_NewDeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DWorkflowPrinterChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DWorkflowPrinterChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DWorkflowPrinterChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DWorkflowPrinterChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DWorkflowPrinterChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DWorkflowPrinterChangedEventArgs = {
         "winrt._winrt_windows_devices_printers_extensions.Print3DWorkflowPrinterChangedEventArgs",
@@ -724,19 +715,16 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     }
 
     static PyMethodDef _methods_PrintExtensionContext[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintExtensionContext[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintExtensionContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintExtensionContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintExtensionContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintExtensionContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintExtensionContext = {
         "winrt._winrt_windows_devices_printers_extensions.PrintExtensionContext",
@@ -746,13 +734,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         _type_slots_PrintExtensionContext};
 
     static PyGetSetDef getset_PrintExtensionContext_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PrintExtensionContext_Static[] = {
         { "from_device_id", reinterpret_cast<PyCFunction>(PrintExtensionContext_FromDeviceId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PrintExtensionContext_Static[] = 
     {
@@ -762,14 +748,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { }
     };
 
-    static PyType_Spec type_spec_PrintExtensionContext_Static =
-    {
+    static PyType_Spec type_spec_PrintExtensionContext_Static = {
         "winrt._winrt_windows_devices_printers_extensions.PrintExtensionContext_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PrintExtensionContext_Static
-    };
+        type_slots_PrintExtensionContext_Static};
 
     // ----- PrintNotificationEventDetails class --------------------
 
@@ -914,22 +898,19 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static PyMethodDef _methods_PrintNotificationEventDetails[] = {
         { "_assign_array_", _assign_array_PrintNotificationEventDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintNotificationEventDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintNotificationEventDetails[] = {
         { "event_data", reinterpret_cast<getter>(PrintNotificationEventDetails_get_EventData), reinterpret_cast<setter>(PrintNotificationEventDetails_put_EventData), nullptr, nullptr },
         { "printer_name", reinterpret_cast<getter>(PrintNotificationEventDetails_get_PrinterName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintNotificationEventDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintNotificationEventDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintNotificationEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintNotificationEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintNotificationEventDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintNotificationEventDetails = {
         "winrt._winrt_windows_devices_printers_extensions.PrintNotificationEventDetails",
@@ -1079,21 +1060,18 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { "remove_save_requested", reinterpret_cast<PyCFunction>(PrintTaskConfiguration_remove_SaveRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintTaskConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTaskConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTaskConfiguration[] = {
         { "printer_extension_context", reinterpret_cast<getter>(PrintTaskConfiguration_get_PrinterExtensionContext), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTaskConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTaskConfiguration = {
         "winrt._winrt_windows_devices_printers_extensions.PrintTaskConfiguration",
@@ -1303,21 +1281,18 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { "save", reinterpret_cast<PyCFunction>(PrintTaskConfigurationSaveRequest_Save), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintTaskConfigurationSaveRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTaskConfigurationSaveRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTaskConfigurationSaveRequest[] = {
         { "deadline", reinterpret_cast<getter>(PrintTaskConfigurationSaveRequest_get_Deadline), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTaskConfigurationSaveRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskConfigurationSaveRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskConfigurationSaveRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskConfigurationSaveRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskConfigurationSaveRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTaskConfigurationSaveRequest = {
         "winrt._winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequest",
@@ -1412,20 +1387,17 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { "complete", reinterpret_cast<PyCFunction>(PrintTaskConfigurationSaveRequestedDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintTaskConfigurationSaveRequestedDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTaskConfigurationSaveRequestedDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTaskConfigurationSaveRequestedDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTaskConfigurationSaveRequestedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskConfigurationSaveRequestedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskConfigurationSaveRequestedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskConfigurationSaveRequestedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskConfigurationSaveRequestedDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTaskConfigurationSaveRequestedDeferral = {
         "winrt._winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequestedDeferral",
@@ -1508,21 +1480,18 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static PyMethodDef _methods_PrintTaskConfigurationSaveRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_PrintTaskConfigurationSaveRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTaskConfigurationSaveRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTaskConfigurationSaveRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(PrintTaskConfigurationSaveRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTaskConfigurationSaveRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskConfigurationSaveRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskConfigurationSaveRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskConfigurationSaveRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskConfigurationSaveRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTaskConfigurationSaveRequestedEventArgs = {
         "winrt._winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequestedEventArgs",

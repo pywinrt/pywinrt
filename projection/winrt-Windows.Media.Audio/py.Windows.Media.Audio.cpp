@@ -750,8 +750,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioDeviceInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioDeviceInputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioDeviceInputNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioDeviceInputNode[] = {
         { "device", reinterpret_cast<getter>(AudioDeviceInputNode_get_Device), nullptr, nullptr, nullptr },
@@ -761,16 +760,14 @@ namespace py::cpp::Windows::Media::Audio
         { "consume_input", reinterpret_cast<getter>(AudioDeviceInputNode_get_ConsumeInput), reinterpret_cast<setter>(AudioDeviceInputNode_put_ConsumeInput), nullptr, nullptr },
         { "effect_definitions", reinterpret_cast<getter>(AudioDeviceInputNode_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(AudioDeviceInputNode_get_EncodingProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioDeviceInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceInputNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioDeviceInputNode = {
         "winrt._winrt_windows_media_audio.AudioDeviceInputNode",
@@ -1401,8 +1398,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioDeviceOutputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioDeviceOutputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioDeviceOutputNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioDeviceOutputNode[] = {
         { "device", reinterpret_cast<getter>(AudioDeviceOutputNode_get_Device), nullptr, nullptr, nullptr },
@@ -1411,16 +1407,14 @@ namespace py::cpp::Windows::Media::Audio
         { "effect_definitions", reinterpret_cast<getter>(AudioDeviceOutputNode_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(AudioDeviceOutputNode_get_EncodingProperties), nullptr, nullptr, nullptr },
         { "listener", reinterpret_cast<getter>(AudioDeviceOutputNode_get_Listener), reinterpret_cast<setter>(AudioDeviceOutputNode_put_Listener), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioDeviceOutputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceOutputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceOutputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceOutputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceOutputNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioDeviceOutputNode = {
         "winrt._winrt_windows_media_audio.AudioDeviceOutputNode",
@@ -1716,23 +1710,20 @@ namespace py::cpp::Windows::Media::Audio
         { "remove_status_changed", reinterpret_cast<PyCFunction>(AudioEffectsPackConfiguration_remove_StatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AudioEffectsPackConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioEffectsPackConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioEffectsPackConfiguration[] = {
         { "device_id", reinterpret_cast<getter>(AudioEffectsPackConfiguration_get_DeviceId), nullptr, nullptr, nullptr },
         { "effects_pack_id", reinterpret_cast<getter>(AudioEffectsPackConfiguration_get_EffectsPackId), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(AudioEffectsPackConfiguration_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioEffectsPackConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioEffectsPackConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioEffectsPackConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEffectsPackConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEffectsPackConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioEffectsPackConfiguration = {
         "winrt._winrt_windows_media_audio.AudioEffectsPackConfiguration",
@@ -1742,14 +1733,12 @@ namespace py::cpp::Windows::Media::Audio
         _type_slots_AudioEffectsPackConfiguration};
 
     static PyGetSetDef getset_AudioEffectsPackConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AudioEffectsPackConfiguration_Static[] = {
         { "get_for_device_id", reinterpret_cast<PyCFunction>(AudioEffectsPackConfiguration_GetForDeviceId), METH_VARARGS, nullptr },
         { "is_device_id_supported", reinterpret_cast<PyCFunction>(AudioEffectsPackConfiguration_IsDeviceIdSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AudioEffectsPackConfiguration_Static[] = 
     {
@@ -1759,14 +1748,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Spec type_spec_AudioEffectsPackConfiguration_Static =
-    {
+    static PyType_Spec type_spec_AudioEffectsPackConfiguration_Static = {
         "winrt._winrt_windows_media_audio.AudioEffectsPackConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AudioEffectsPackConfiguration_Static
-    };
+        type_slots_AudioEffectsPackConfiguration_Static};
 
     // ----- AudioFileInputNode class --------------------
 
@@ -2961,8 +2948,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFileInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioFileInputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioFileInputNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioFileInputNode[] = {
         { "playback_speed_factor", reinterpret_cast<getter>(AudioFileInputNode_get_PlaybackSpeedFactor), reinterpret_cast<setter>(AudioFileInputNode_put_PlaybackSpeedFactor), nullptr, nullptr },
@@ -2978,16 +2964,14 @@ namespace py::cpp::Windows::Media::Audio
         { "consume_input", reinterpret_cast<getter>(AudioFileInputNode_get_ConsumeInput), reinterpret_cast<setter>(AudioFileInputNode_put_ConsumeInput), nullptr, nullptr },
         { "effect_definitions", reinterpret_cast<getter>(AudioFileInputNode_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(AudioFileInputNode_get_EncodingProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioFileInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFileInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFileInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFileInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFileInputNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioFileInputNode = {
         "winrt._winrt_windows_media_audio.AudioFileInputNode",
@@ -3620,8 +3604,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFileOutputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioFileOutputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioFileOutputNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioFileOutputNode[] = {
         { "file", reinterpret_cast<getter>(AudioFileOutputNode_get_File), nullptr, nullptr, nullptr },
@@ -3630,16 +3613,14 @@ namespace py::cpp::Windows::Media::Audio
         { "consume_input", reinterpret_cast<getter>(AudioFileOutputNode_get_ConsumeInput), reinterpret_cast<setter>(AudioFileOutputNode_put_ConsumeInput), nullptr, nullptr },
         { "effect_definitions", reinterpret_cast<getter>(AudioFileOutputNode_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(AudioFileOutputNode_get_EncodingProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioFileOutputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFileOutputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFileOutputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFileOutputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFileOutputNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioFileOutputNode = {
         "winrt._winrt_windows_media_audio.AudioFileOutputNode",
@@ -3722,21 +3703,18 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioFrameCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_AudioFrameCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFrameCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioFrameCompletedEventArgs[] = {
         { "frame", reinterpret_cast<getter>(AudioFrameCompletedEventArgs_get_Frame), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioFrameCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFrameCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFrameCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFrameCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFrameCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioFrameCompletedEventArgs = {
         "winrt._winrt_windows_media_audio.AudioFrameCompletedEventArgs",
@@ -4780,8 +4758,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFrameInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioFrameInputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioFrameInputNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioFrameInputNode[] = {
         { "playback_speed_factor", reinterpret_cast<getter>(AudioFrameInputNode_get_PlaybackSpeedFactor), reinterpret_cast<setter>(AudioFrameInputNode_put_PlaybackSpeedFactor), nullptr, nullptr },
@@ -4792,16 +4769,14 @@ namespace py::cpp::Windows::Media::Audio
         { "consume_input", reinterpret_cast<getter>(AudioFrameInputNode_get_ConsumeInput), reinterpret_cast<setter>(AudioFrameInputNode_put_ConsumeInput), nullptr, nullptr },
         { "effect_definitions", reinterpret_cast<getter>(AudioFrameInputNode_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(AudioFrameInputNode_get_EncodingProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioFrameInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFrameInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFrameInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFrameInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFrameInputNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioFrameInputNode = {
         "winrt._winrt_windows_media_audio.AudioFrameInputNode",
@@ -5374,24 +5349,21 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFrameOutputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioFrameOutputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioFrameOutputNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioFrameOutputNode[] = {
         { "outgoing_gain", reinterpret_cast<getter>(AudioFrameOutputNode_get_OutgoingGain), reinterpret_cast<setter>(AudioFrameOutputNode_put_OutgoingGain), nullptr, nullptr },
         { "consume_input", reinterpret_cast<getter>(AudioFrameOutputNode_get_ConsumeInput), reinterpret_cast<setter>(AudioFrameOutputNode_put_ConsumeInput), nullptr, nullptr },
         { "effect_definitions", reinterpret_cast<getter>(AudioFrameOutputNode_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(AudioFrameOutputNode_get_EncodingProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioFrameOutputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFrameOutputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFrameOutputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFrameOutputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFrameOutputNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioFrameOutputNode = {
         "winrt._winrt_windows_media_audio.AudioFrameOutputNode",
@@ -6921,8 +6893,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioGraph), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioGraph), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioGraph), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioGraph[] = {
         { "completed_quantum_count", reinterpret_cast<getter>(AudioGraph_get_CompletedQuantumCount), nullptr, nullptr, nullptr },
@@ -6931,16 +6902,14 @@ namespace py::cpp::Windows::Media::Audio
         { "primary_render_device", reinterpret_cast<getter>(AudioGraph_get_PrimaryRenderDevice), nullptr, nullptr, nullptr },
         { "render_device_audio_processing", reinterpret_cast<getter>(AudioGraph_get_RenderDeviceAudioProcessing), nullptr, nullptr, nullptr },
         { "samples_per_quantum", reinterpret_cast<getter>(AudioGraph_get_SamplesPerQuantum), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioGraph[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraph) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraph) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraph) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraph) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioGraph = {
         "winrt._winrt_windows_media_audio.AudioGraph",
@@ -6950,13 +6919,11 @@ namespace py::cpp::Windows::Media::Audio
         _type_slots_AudioGraph};
 
     static PyGetSetDef getset_AudioGraph_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AudioGraph_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(AudioGraph_CreateAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AudioGraph_Static[] = 
     {
@@ -6966,14 +6933,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Spec type_spec_AudioGraph_Static =
-    {
+    static PyType_Spec type_spec_AudioGraph_Static = {
         "winrt._winrt_windows_media_audio.AudioGraph_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AudioGraph_Static
-    };
+        type_slots_AudioGraph_Static};
 
     // ----- AudioGraphBatchUpdater class --------------------
 
@@ -7086,20 +7051,17 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioGraphBatchUpdater), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioGraphBatchUpdater), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioGraphBatchUpdater), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioGraphBatchUpdater[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioGraphBatchUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraphBatchUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraphBatchUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraphBatchUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraphBatchUpdater) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioGraphBatchUpdater = {
         "winrt._winrt_windows_media_audio.AudioGraphBatchUpdater",
@@ -7251,22 +7213,19 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioGraphConnection[] = {
         { "_assign_array_", _assign_array_AudioGraphConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioGraphConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioGraphConnection[] = {
         { "gain", reinterpret_cast<getter>(AudioGraphConnection_get_Gain), reinterpret_cast<setter>(AudioGraphConnection_put_Gain), nullptr, nullptr },
         { "destination", reinterpret_cast<getter>(AudioGraphConnection_get_Destination), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioGraphConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraphConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraphConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraphConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraphConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioGraphConnection = {
         "winrt._winrt_windows_media_audio.AudioGraphConnection",
@@ -7826,8 +7785,7 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioGraphSettings[] = {
         { "_assign_array_", _assign_array_AudioGraphSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioGraphSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioGraphSettings[] = {
         { "quantum_size_selection_mode", reinterpret_cast<getter>(AudioGraphSettings_get_QuantumSizeSelectionMode), reinterpret_cast<setter>(AudioGraphSettings_put_QuantumSizeSelectionMode), nullptr, nullptr },
@@ -7837,16 +7795,14 @@ namespace py::cpp::Windows::Media::Audio
         { "desired_render_device_audio_processing", reinterpret_cast<getter>(AudioGraphSettings_get_DesiredRenderDeviceAudioProcessing), reinterpret_cast<setter>(AudioGraphSettings_put_DesiredRenderDeviceAudioProcessing), nullptr, nullptr },
         { "audio_render_category", reinterpret_cast<getter>(AudioGraphSettings_get_AudioRenderCategory), reinterpret_cast<setter>(AudioGraphSettings_put_AudioRenderCategory), nullptr, nullptr },
         { "max_playback_speed_factor", reinterpret_cast<getter>(AudioGraphSettings_get_MaxPlaybackSpeedFactor), reinterpret_cast<setter>(AudioGraphSettings_put_MaxPlaybackSpeedFactor), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioGraphSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraphSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraphSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraphSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraphSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioGraphSettings = {
         "winrt._winrt_windows_media_audio.AudioGraphSettings",
@@ -7929,21 +7885,18 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioGraphUnrecoverableErrorOccurredEventArgs[] = {
         { "_assign_array_", _assign_array_AudioGraphUnrecoverableErrorOccurredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioGraphUnrecoverableErrorOccurredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioGraphUnrecoverableErrorOccurredEventArgs[] = {
         { "error", reinterpret_cast<getter>(AudioGraphUnrecoverableErrorOccurredEventArgs_get_Error), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioGraphUnrecoverableErrorOccurredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraphUnrecoverableErrorOccurredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraphUnrecoverableErrorOccurredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraphUnrecoverableErrorOccurredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraphUnrecoverableErrorOccurredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs = {
         "winrt._winrt_windows_media_audio.AudioGraphUnrecoverableErrorOccurredEventArgs",
@@ -8608,8 +8561,7 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioNodeEmitter[] = {
         { "_assign_array_", _assign_array_AudioNodeEmitter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioNodeEmitter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioNodeEmitter[] = {
         { "position", reinterpret_cast<getter>(AudioNodeEmitter_get_Position), reinterpret_cast<setter>(AudioNodeEmitter_put_Position), nullptr, nullptr },
@@ -8622,16 +8574,14 @@ namespace py::cpp::Windows::Media::Audio
         { "is_doppler_disabled", reinterpret_cast<getter>(AudioNodeEmitter_get_IsDopplerDisabled), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(AudioNodeEmitter_get_Shape), nullptr, nullptr, nullptr },
         { "spatial_audio_model", reinterpret_cast<getter>(AudioNodeEmitter_get_SpatialAudioModel), reinterpret_cast<setter>(AudioNodeEmitter_put_SpatialAudioModel), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioNodeEmitter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioNodeEmitter = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitter",
@@ -8774,23 +8724,20 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioNodeEmitterConeProperties[] = {
         { "_assign_array_", _assign_array_AudioNodeEmitterConeProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioNodeEmitterConeProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioNodeEmitterConeProperties[] = {
         { "inner_angle", reinterpret_cast<getter>(AudioNodeEmitterConeProperties_get_InnerAngle), nullptr, nullptr, nullptr },
         { "outer_angle", reinterpret_cast<getter>(AudioNodeEmitterConeProperties_get_OuterAngle), nullptr, nullptr, nullptr },
         { "outer_angle_gain", reinterpret_cast<getter>(AudioNodeEmitterConeProperties_get_OuterAngleGain), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioNodeEmitterConeProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitterConeProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitterConeProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitterConeProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitterConeProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioNodeEmitterConeProperties = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterConeProperties",
@@ -9051,24 +8998,21 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioNodeEmitterDecayModel[] = {
         { "_assign_array_", _assign_array_AudioNodeEmitterDecayModel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioNodeEmitterDecayModel), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioNodeEmitterDecayModel[] = {
         { "kind", reinterpret_cast<getter>(AudioNodeEmitterDecayModel_get_Kind), nullptr, nullptr, nullptr },
         { "max_gain", reinterpret_cast<getter>(AudioNodeEmitterDecayModel_get_MaxGain), nullptr, nullptr, nullptr },
         { "min_gain", reinterpret_cast<getter>(AudioNodeEmitterDecayModel_get_MinGain), nullptr, nullptr, nullptr },
         { "natural_properties", reinterpret_cast<getter>(AudioNodeEmitterDecayModel_get_NaturalProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioNodeEmitterDecayModel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitterDecayModel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitterDecayModel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitterDecayModel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitterDecayModel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioNodeEmitterDecayModel = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterDecayModel",
@@ -9078,14 +9022,12 @@ namespace py::cpp::Windows::Media::Audio
         _type_slots_AudioNodeEmitterDecayModel};
 
     static PyGetSetDef getset_AudioNodeEmitterDecayModel_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AudioNodeEmitterDecayModel_Static[] = {
         { "create_custom", reinterpret_cast<PyCFunction>(AudioNodeEmitterDecayModel_CreateCustom), METH_VARARGS, nullptr },
         { "create_natural", reinterpret_cast<PyCFunction>(AudioNodeEmitterDecayModel_CreateNatural), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AudioNodeEmitterDecayModel_Static[] = 
     {
@@ -9095,14 +9037,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Spec type_spec_AudioNodeEmitterDecayModel_Static =
-    {
+    static PyType_Spec type_spec_AudioNodeEmitterDecayModel_Static = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterDecayModel_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AudioNodeEmitterDecayModel_Static
-    };
+        type_slots_AudioNodeEmitterDecayModel_Static};
 
     // ----- AudioNodeEmitterNaturalDecayModelProperties class --------------------
 
@@ -9208,22 +9148,19 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioNodeEmitterNaturalDecayModelProperties[] = {
         { "_assign_array_", _assign_array_AudioNodeEmitterNaturalDecayModelProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioNodeEmitterNaturalDecayModelProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioNodeEmitterNaturalDecayModelProperties[] = {
         { "cutoff_distance", reinterpret_cast<getter>(AudioNodeEmitterNaturalDecayModelProperties_get_CutoffDistance), nullptr, nullptr, nullptr },
         { "unity_gain_distance", reinterpret_cast<getter>(AudioNodeEmitterNaturalDecayModelProperties_get_UnityGainDistance), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioNodeEmitterNaturalDecayModelProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitterNaturalDecayModelProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitterNaturalDecayModelProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitterNaturalDecayModelProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitterNaturalDecayModelProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioNodeEmitterNaturalDecayModelProperties = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterNaturalDecayModelProperties",
@@ -9420,22 +9357,19 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioNodeEmitterShape[] = {
         { "_assign_array_", _assign_array_AudioNodeEmitterShape, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioNodeEmitterShape), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioNodeEmitterShape[] = {
         { "cone_properties", reinterpret_cast<getter>(AudioNodeEmitterShape_get_ConeProperties), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(AudioNodeEmitterShape_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioNodeEmitterShape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitterShape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitterShape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitterShape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitterShape) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioNodeEmitterShape = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterShape",
@@ -9445,14 +9379,12 @@ namespace py::cpp::Windows::Media::Audio
         _type_slots_AudioNodeEmitterShape};
 
     static PyGetSetDef getset_AudioNodeEmitterShape_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AudioNodeEmitterShape_Static[] = {
         { "create_cone", reinterpret_cast<PyCFunction>(AudioNodeEmitterShape_CreateCone), METH_VARARGS, nullptr },
         { "create_omnidirectional", reinterpret_cast<PyCFunction>(AudioNodeEmitterShape_CreateOmnidirectional), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AudioNodeEmitterShape_Static[] = 
     {
@@ -9462,14 +9394,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Spec type_spec_AudioNodeEmitterShape_Static =
-    {
+    static PyType_Spec type_spec_AudioNodeEmitterShape_Static = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterShape_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AudioNodeEmitterShape_Static
-    };
+        type_slots_AudioNodeEmitterShape_Static};
 
     // ----- AudioNodeListener class --------------------
 
@@ -9813,24 +9743,21 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioNodeListener[] = {
         { "_assign_array_", _assign_array_AudioNodeListener, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioNodeListener), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioNodeListener[] = {
         { "speed_of_sound", reinterpret_cast<getter>(AudioNodeListener_get_SpeedOfSound), reinterpret_cast<setter>(AudioNodeListener_put_SpeedOfSound), nullptr, nullptr },
         { "position", reinterpret_cast<getter>(AudioNodeListener_get_Position), reinterpret_cast<setter>(AudioNodeListener_put_Position), nullptr, nullptr },
         { "orientation", reinterpret_cast<getter>(AudioNodeListener_get_Orientation), reinterpret_cast<setter>(AudioNodeListener_put_Orientation), nullptr, nullptr },
         { "doppler_velocity", reinterpret_cast<getter>(AudioNodeListener_get_DopplerVelocity), reinterpret_cast<setter>(AudioNodeListener_put_DopplerVelocity), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioNodeListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeListener) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioNodeListener = {
         "winrt._winrt_windows_media_audio.AudioNodeListener",
@@ -10324,22 +10251,19 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioPlaybackConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioPlaybackConnection), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioPlaybackConnection), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioPlaybackConnection[] = {
         { "device_id", reinterpret_cast<getter>(AudioPlaybackConnection_get_DeviceId), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(AudioPlaybackConnection_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioPlaybackConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioPlaybackConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioPlaybackConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioPlaybackConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioPlaybackConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioPlaybackConnection = {
         "winrt._winrt_windows_media_audio.AudioPlaybackConnection",
@@ -10349,14 +10273,12 @@ namespace py::cpp::Windows::Media::Audio
         _type_slots_AudioPlaybackConnection};
 
     static PyGetSetDef getset_AudioPlaybackConnection_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AudioPlaybackConnection_Static[] = {
         { "get_device_selector", reinterpret_cast<PyCFunction>(AudioPlaybackConnection_GetDeviceSelector), METH_VARARGS, nullptr },
         { "try_create_from_id", reinterpret_cast<PyCFunction>(AudioPlaybackConnection_TryCreateFromId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AudioPlaybackConnection_Static[] = 
     {
@@ -10366,14 +10288,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Spec type_spec_AudioPlaybackConnection_Static =
-    {
+    static PyType_Spec type_spec_AudioPlaybackConnection_Static = {
         "winrt._winrt_windows_media_audio.AudioPlaybackConnection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AudioPlaybackConnection_Static
-    };
+        type_slots_AudioPlaybackConnection_Static};
 
     // ----- AudioPlaybackConnectionOpenResult class --------------------
 
@@ -10479,22 +10399,19 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_AudioPlaybackConnectionOpenResult[] = {
         { "_assign_array_", _assign_array_AudioPlaybackConnectionOpenResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioPlaybackConnectionOpenResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioPlaybackConnectionOpenResult[] = {
         { "extended_error", reinterpret_cast<getter>(AudioPlaybackConnectionOpenResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(AudioPlaybackConnectionOpenResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioPlaybackConnectionOpenResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioPlaybackConnectionOpenResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioPlaybackConnectionOpenResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioPlaybackConnectionOpenResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioPlaybackConnectionOpenResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioPlaybackConnectionOpenResult = {
         "winrt._winrt_windows_media_audio.AudioPlaybackConnectionOpenResult",
@@ -10980,21 +10897,18 @@ namespace py::cpp::Windows::Media::Audio
         { "remove_sound_level_changed", reinterpret_cast<PyCFunction>(AudioStateMonitor_remove_SoundLevelChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AudioStateMonitor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioStateMonitor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioStateMonitor[] = {
         { "sound_level", reinterpret_cast<getter>(AudioStateMonitor_get_SoundLevel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioStateMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioStateMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioStateMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioStateMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioStateMonitor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioStateMonitor = {
         "winrt._winrt_windows_media_audio.AudioStateMonitor",
@@ -11004,8 +10918,7 @@ namespace py::cpp::Windows::Media::Audio
         _type_slots_AudioStateMonitor};
 
     static PyGetSetDef getset_AudioStateMonitor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AudioStateMonitor_Static[] = {
         { "create_for_capture_monitoring", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForCaptureMonitoring), METH_VARARGS, nullptr },
@@ -11016,8 +10929,7 @@ namespace py::cpp::Windows::Media::Audio
         { "create_for_render_monitoring_with_category", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForRenderMonitoringWithCategory), METH_VARARGS, nullptr },
         { "create_for_render_monitoring_with_category_and_device_id", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForRenderMonitoringWithCategoryAndDeviceId), METH_VARARGS, nullptr },
         { "create_for_render_monitoring_with_category_and_device_role", reinterpret_cast<PyCFunction>(AudioStateMonitor_CreateForRenderMonitoringWithCategoryAndDeviceRole), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AudioStateMonitor_Static[] = 
     {
@@ -11027,14 +10939,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Spec type_spec_AudioStateMonitor_Static =
-    {
+    static PyType_Spec type_spec_AudioStateMonitor_Static = {
         "winrt._winrt_windows_media_audio.AudioStateMonitor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AudioStateMonitor_Static
-    };
+        type_slots_AudioStateMonitor_Static};
 
     // ----- AudioSubmixNode class --------------------
 
@@ -11752,8 +11662,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioSubmixNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioSubmixNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioSubmixNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioSubmixNode[] = {
         { "outgoing_connections", reinterpret_cast<getter>(AudioSubmixNode_get_OutgoingConnections), nullptr, nullptr, nullptr },
@@ -11762,16 +11671,14 @@ namespace py::cpp::Windows::Media::Audio
         { "consume_input", reinterpret_cast<getter>(AudioSubmixNode_get_ConsumeInput), reinterpret_cast<setter>(AudioSubmixNode_put_ConsumeInput), nullptr, nullptr },
         { "effect_definitions", reinterpret_cast<getter>(AudioSubmixNode_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(AudioSubmixNode_get_EncodingProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioSubmixNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioSubmixNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioSubmixNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioSubmixNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioSubmixNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioSubmixNode = {
         "winrt._winrt_windows_media_audio.AudioSubmixNode",
@@ -11914,23 +11821,20 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_CreateAudioDeviceInputNodeResult[] = {
         { "_assign_array_", _assign_array_CreateAudioDeviceInputNodeResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CreateAudioDeviceInputNodeResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CreateAudioDeviceInputNodeResult[] = {
         { "device_input_node", reinterpret_cast<getter>(CreateAudioDeviceInputNodeResult_get_DeviceInputNode), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(CreateAudioDeviceInputNodeResult_get_Status), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(CreateAudioDeviceInputNodeResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CreateAudioDeviceInputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioDeviceInputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioDeviceInputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioDeviceInputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioDeviceInputNodeResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CreateAudioDeviceInputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateAudioDeviceInputNodeResult",
@@ -12073,23 +11977,20 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_CreateAudioDeviceOutputNodeResult[] = {
         { "_assign_array_", _assign_array_CreateAudioDeviceOutputNodeResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CreateAudioDeviceOutputNodeResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CreateAudioDeviceOutputNodeResult[] = {
         { "device_output_node", reinterpret_cast<getter>(CreateAudioDeviceOutputNodeResult_get_DeviceOutputNode), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(CreateAudioDeviceOutputNodeResult_get_Status), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(CreateAudioDeviceOutputNodeResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CreateAudioDeviceOutputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioDeviceOutputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioDeviceOutputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioDeviceOutputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioDeviceOutputNodeResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CreateAudioDeviceOutputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateAudioDeviceOutputNodeResult",
@@ -12232,23 +12133,20 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_CreateAudioFileInputNodeResult[] = {
         { "_assign_array_", _assign_array_CreateAudioFileInputNodeResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CreateAudioFileInputNodeResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CreateAudioFileInputNodeResult[] = {
         { "file_input_node", reinterpret_cast<getter>(CreateAudioFileInputNodeResult_get_FileInputNode), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(CreateAudioFileInputNodeResult_get_Status), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(CreateAudioFileInputNodeResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CreateAudioFileInputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioFileInputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioFileInputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioFileInputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioFileInputNodeResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CreateAudioFileInputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateAudioFileInputNodeResult",
@@ -12391,23 +12289,20 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_CreateAudioFileOutputNodeResult[] = {
         { "_assign_array_", _assign_array_CreateAudioFileOutputNodeResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CreateAudioFileOutputNodeResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CreateAudioFileOutputNodeResult[] = {
         { "file_output_node", reinterpret_cast<getter>(CreateAudioFileOutputNodeResult_get_FileOutputNode), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(CreateAudioFileOutputNodeResult_get_Status), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(CreateAudioFileOutputNodeResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CreateAudioFileOutputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioFileOutputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioFileOutputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioFileOutputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioFileOutputNodeResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CreateAudioFileOutputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateAudioFileOutputNodeResult",
@@ -12550,23 +12445,20 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_CreateAudioGraphResult[] = {
         { "_assign_array_", _assign_array_CreateAudioGraphResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CreateAudioGraphResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CreateAudioGraphResult[] = {
         { "graph", reinterpret_cast<getter>(CreateAudioGraphResult_get_Graph), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(CreateAudioGraphResult_get_Status), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(CreateAudioGraphResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CreateAudioGraphResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioGraphResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioGraphResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioGraphResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioGraphResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CreateAudioGraphResult = {
         "winrt._winrt_windows_media_audio.CreateAudioGraphResult",
@@ -12709,23 +12601,20 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_CreateMediaSourceAudioInputNodeResult[] = {
         { "_assign_array_", _assign_array_CreateMediaSourceAudioInputNodeResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CreateMediaSourceAudioInputNodeResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CreateMediaSourceAudioInputNodeResult[] = {
         { "node", reinterpret_cast<getter>(CreateMediaSourceAudioInputNodeResult_get_Node), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(CreateMediaSourceAudioInputNodeResult_get_Status), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(CreateMediaSourceAudioInputNodeResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CreateMediaSourceAudioInputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateMediaSourceAudioInputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateMediaSourceAudioInputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateMediaSourceAudioInputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateMediaSourceAudioInputNodeResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CreateMediaSourceAudioInputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateMediaSourceAudioInputNodeResult",
@@ -13069,8 +12958,7 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_EchoEffectDefinition[] = {
         { "_assign_array_", _assign_array_EchoEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EchoEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EchoEffectDefinition[] = {
         { "wet_dry_mix", reinterpret_cast<getter>(EchoEffectDefinition_get_WetDryMix), reinterpret_cast<setter>(EchoEffectDefinition_put_WetDryMix), nullptr, nullptr },
@@ -13078,16 +12966,14 @@ namespace py::cpp::Windows::Media::Audio
         { "delay", reinterpret_cast<getter>(EchoEffectDefinition_get_Delay), reinterpret_cast<setter>(EchoEffectDefinition_put_Delay), nullptr, nullptr },
         { "activatable_class_id", reinterpret_cast<getter>(EchoEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(EchoEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EchoEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EchoEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EchoEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EchoEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EchoEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EchoEffectDefinition = {
         "winrt._winrt_windows_media_audio.EchoEffectDefinition",
@@ -13347,23 +13233,20 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_EqualizerBand[] = {
         { "_assign_array_", _assign_array_EqualizerBand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EqualizerBand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EqualizerBand[] = {
         { "gain", reinterpret_cast<getter>(EqualizerBand_get_Gain), reinterpret_cast<setter>(EqualizerBand_put_Gain), nullptr, nullptr },
         { "frequency_center", reinterpret_cast<getter>(EqualizerBand_get_FrequencyCenter), reinterpret_cast<setter>(EqualizerBand_put_FrequencyCenter), nullptr, nullptr },
         { "bandwidth", reinterpret_cast<getter>(EqualizerBand_get_Bandwidth), reinterpret_cast<setter>(EqualizerBand_put_Bandwidth), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EqualizerBand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EqualizerBand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EqualizerBand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EqualizerBand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EqualizerBand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EqualizerBand = {
         "winrt._winrt_windows_media_audio.EqualizerBand",
@@ -13530,23 +13413,20 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_EqualizerEffectDefinition[] = {
         { "_assign_array_", _assign_array_EqualizerEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EqualizerEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EqualizerEffectDefinition[] = {
         { "bands", reinterpret_cast<getter>(EqualizerEffectDefinition_get_Bands), nullptr, nullptr, nullptr },
         { "activatable_class_id", reinterpret_cast<getter>(EqualizerEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(EqualizerEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EqualizerEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EqualizerEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EqualizerEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EqualizerEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EqualizerEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EqualizerEffectDefinition = {
         "winrt._winrt_windows_media_audio.EqualizerEffectDefinition",
@@ -13629,21 +13509,18 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_FrameInputNodeQuantumStartedEventArgs[] = {
         { "_assign_array_", _assign_array_FrameInputNodeQuantumStartedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameInputNodeQuantumStartedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameInputNodeQuantumStartedEventArgs[] = {
         { "required_samples", reinterpret_cast<getter>(FrameInputNodeQuantumStartedEventArgs_get_RequiredSamples), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameInputNodeQuantumStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameInputNodeQuantumStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameInputNodeQuantumStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameInputNodeQuantumStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameInputNodeQuantumStartedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameInputNodeQuantumStartedEventArgs = {
         "winrt._winrt_windows_media_audio.FrameInputNodeQuantumStartedEventArgs",
@@ -13918,24 +13795,21 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_LimiterEffectDefinition[] = {
         { "_assign_array_", _assign_array_LimiterEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LimiterEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LimiterEffectDefinition[] = {
         { "release", reinterpret_cast<getter>(LimiterEffectDefinition_get_Release), reinterpret_cast<setter>(LimiterEffectDefinition_put_Release), nullptr, nullptr },
         { "loudness", reinterpret_cast<getter>(LimiterEffectDefinition_get_Loudness), reinterpret_cast<setter>(LimiterEffectDefinition_put_Loudness), nullptr, nullptr },
         { "activatable_class_id", reinterpret_cast<getter>(LimiterEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(LimiterEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LimiterEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LimiterEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LimiterEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LimiterEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LimiterEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LimiterEffectDefinition = {
         "winrt._winrt_windows_media_audio.LimiterEffectDefinition",
@@ -15137,8 +15011,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaSourceAudioInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaSourceAudioInputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaSourceAudioInputNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaSourceAudioInputNode[] = {
         { "outgoing_connections", reinterpret_cast<getter>(MediaSourceAudioInputNode_get_OutgoingConnections), nullptr, nullptr, nullptr },
@@ -15154,16 +15027,14 @@ namespace py::cpp::Windows::Media::Audio
         { "duration", reinterpret_cast<getter>(MediaSourceAudioInputNode_get_Duration), nullptr, nullptr, nullptr },
         { "media_source", reinterpret_cast<getter>(MediaSourceAudioInputNode_get_MediaSource), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MediaSourceAudioInputNode_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaSourceAudioInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaSourceAudioInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaSourceAudioInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaSourceAudioInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaSourceAudioInputNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaSourceAudioInputNode = {
         "winrt._winrt_windows_media_audio.MediaSourceAudioInputNode",
@@ -16887,8 +16758,7 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_ReverbEffectDefinition[] = {
         { "_assign_array_", _assign_array_ReverbEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ReverbEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ReverbEffectDefinition[] = {
         { "high_e_q_gain", reinterpret_cast<getter>(ReverbEffectDefinition_get_HighEQGain), reinterpret_cast<setter>(ReverbEffectDefinition_put_HighEQGain), nullptr, nullptr },
@@ -16916,16 +16786,14 @@ namespace py::cpp::Windows::Media::Audio
         { "room_filter_h_f", reinterpret_cast<getter>(ReverbEffectDefinition_get_RoomFilterHF), reinterpret_cast<setter>(ReverbEffectDefinition_put_RoomFilterHF), nullptr, nullptr },
         { "activatable_class_id", reinterpret_cast<getter>(ReverbEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(ReverbEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ReverbEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReverbEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReverbEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReverbEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReverbEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ReverbEffectDefinition = {
         "winrt._winrt_windows_media_audio.ReverbEffectDefinition",
@@ -17008,21 +16876,18 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef _methods_SetDefaultSpatialAudioFormatResult[] = {
         { "_assign_array_", _assign_array_SetDefaultSpatialAudioFormatResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SetDefaultSpatialAudioFormatResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SetDefaultSpatialAudioFormatResult[] = {
         { "status", reinterpret_cast<getter>(SetDefaultSpatialAudioFormatResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SetDefaultSpatialAudioFormatResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SetDefaultSpatialAudioFormatResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SetDefaultSpatialAudioFormatResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SetDefaultSpatialAudioFormatResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SetDefaultSpatialAudioFormatResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SetDefaultSpatialAudioFormatResult = {
         "winrt._winrt_windows_media_audio.SetDefaultSpatialAudioFormatResult",
@@ -17390,24 +17255,21 @@ namespace py::cpp::Windows::Media::Audio
         { "remove_configuration_changed", reinterpret_cast<PyCFunction>(SpatialAudioDeviceConfiguration_remove_ConfigurationChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_SpatialAudioDeviceConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialAudioDeviceConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialAudioDeviceConfiguration[] = {
         { "active_spatial_audio_format", reinterpret_cast<getter>(SpatialAudioDeviceConfiguration_get_ActiveSpatialAudioFormat), nullptr, nullptr, nullptr },
         { "default_spatial_audio_format", reinterpret_cast<getter>(SpatialAudioDeviceConfiguration_get_DefaultSpatialAudioFormat), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(SpatialAudioDeviceConfiguration_get_DeviceId), nullptr, nullptr, nullptr },
         { "is_spatial_audio_supported", reinterpret_cast<getter>(SpatialAudioDeviceConfiguration_get_IsSpatialAudioSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialAudioDeviceConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAudioDeviceConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialAudioDeviceConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAudioDeviceConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAudioDeviceConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialAudioDeviceConfiguration = {
         "winrt._winrt_windows_media_audio.SpatialAudioDeviceConfiguration",
@@ -17417,13 +17279,11 @@ namespace py::cpp::Windows::Media::Audio
         _type_slots_SpatialAudioDeviceConfiguration};
 
     static PyGetSetDef getset_SpatialAudioDeviceConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SpatialAudioDeviceConfiguration_Static[] = {
         { "get_for_device_id", reinterpret_cast<PyCFunction>(SpatialAudioDeviceConfiguration_GetForDeviceId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SpatialAudioDeviceConfiguration_Static[] = 
     {
@@ -17433,14 +17293,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Spec type_spec_SpatialAudioDeviceConfiguration_Static =
-    {
+    static PyType_Spec type_spec_SpatialAudioDeviceConfiguration_Static = {
         "winrt._winrt_windows_media_audio.SpatialAudioDeviceConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpatialAudioDeviceConfiguration_Static
-    };
+        type_slots_SpatialAudioDeviceConfiguration_Static};
 
     // ----- SpatialAudioFormatConfiguration class --------------------
 
@@ -17681,21 +17539,18 @@ namespace py::cpp::Windows::Media::Audio
         { "report_license_changed_async", reinterpret_cast<PyCFunction>(SpatialAudioFormatConfiguration_ReportLicenseChangedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialAudioFormatConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialAudioFormatConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialAudioFormatConfiguration[] = {
         { "mixed_reality_exclusive_mode_policy", reinterpret_cast<getter>(SpatialAudioFormatConfiguration_get_MixedRealityExclusiveModePolicy), reinterpret_cast<setter>(SpatialAudioFormatConfiguration_put_MixedRealityExclusiveModePolicy), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialAudioFormatConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAudioFormatConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialAudioFormatConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAudioFormatConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAudioFormatConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialAudioFormatConfiguration = {
         "winrt._winrt_windows_media_audio.SpatialAudioFormatConfiguration",
@@ -17705,13 +17560,11 @@ namespace py::cpp::Windows::Media::Audio
         _type_slots_SpatialAudioFormatConfiguration};
 
     static PyGetSetDef getset_SpatialAudioFormatConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SpatialAudioFormatConfiguration_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(SpatialAudioFormatConfiguration_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SpatialAudioFormatConfiguration_Static[] = 
     {
@@ -17721,14 +17574,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Spec type_spec_SpatialAudioFormatConfiguration_Static =
-    {
+    static PyType_Spec type_spec_SpatialAudioFormatConfiguration_Static = {
         "winrt._winrt_windows_media_audio.SpatialAudioFormatConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpatialAudioFormatConfiguration_Static
-    };
+        type_slots_SpatialAudioFormatConfiguration_Static};
 
     // ----- SpatialAudioFormatSubtype class --------------------
 
@@ -17950,19 +17801,16 @@ namespace py::cpp::Windows::Media::Audio
     }
 
     static PyMethodDef _methods_SpatialAudioFormatSubtype[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialAudioFormatSubtype[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialAudioFormatSubtype[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAudioFormatSubtype) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAudioFormatSubtype) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAudioFormatSubtype) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialAudioFormatSubtype = {
         "winrt._winrt_windows_media_audio.SpatialAudioFormatSubtype",
@@ -17979,12 +17827,10 @@ namespace py::cpp::Windows::Media::Audio
         { "dolby_atmos_for_speakers", reinterpret_cast<getter>(SpatialAudioFormatSubtype_get_DolbyAtmosForSpeakers), nullptr, nullptr, nullptr },
         { "windows_sonic", reinterpret_cast<getter>(SpatialAudioFormatSubtype_get_WindowsSonic), nullptr, nullptr, nullptr },
         { "d_t_s_x_for_home_theater", reinterpret_cast<getter>(SpatialAudioFormatSubtype_get_DTSXForHomeTheater), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SpatialAudioFormatSubtype_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SpatialAudioFormatSubtype_Static[] = 
     {
@@ -17994,14 +17840,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Spec type_spec_SpatialAudioFormatSubtype_Static =
-    {
+    static PyType_Spec type_spec_SpatialAudioFormatSubtype_Static = {
         "winrt._winrt_windows_media_audio.SpatialAudioFormatSubtype_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpatialAudioFormatSubtype_Static
-    };
+        type_slots_SpatialAudioFormatSubtype_Static};
 
     // ----- IAudioInputNode interface --------------------
 
@@ -18689,8 +18533,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioInputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioInputNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAudioInputNode[] = {
         { "outgoing_connections", reinterpret_cast<getter>(IAudioInputNode_get_OutgoingConnections), nullptr, nullptr, nullptr },
@@ -18698,16 +18541,14 @@ namespace py::cpp::Windows::Media::Audio
         { "effect_definitions", reinterpret_cast<getter>(IAudioInputNode_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(IAudioInputNode_get_EncodingProperties), nullptr, nullptr, nullptr },
         { "outgoing_gain", reinterpret_cast<getter>(IAudioInputNode_get_OutgoingGain), reinterpret_cast<setter>(IAudioInputNode_put_OutgoingGain), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAudioInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioInputNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAudioInputNode = {
         "winrt._winrt_windows_media_audio.IAudioInputNode",
@@ -19167,13 +19008,11 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef methods_ImplementsIAudioInputNode[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioInputNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioInputNode), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAudioInputNode[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAudioInputNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAudioInputNode = {
         "winrt._winrt_windows_media_audio.ImplementsIAudioInputNode",
@@ -19898,8 +19737,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode2), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioInputNode2), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioInputNode2), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAudioInputNode2[] = {
         { "emitter", reinterpret_cast<getter>(IAudioInputNode2_get_Emitter), nullptr, nullptr, nullptr },
@@ -19908,16 +19746,14 @@ namespace py::cpp::Windows::Media::Audio
         { "encoding_properties", reinterpret_cast<getter>(IAudioInputNode2_get_EncodingProperties), nullptr, nullptr, nullptr },
         { "outgoing_gain", reinterpret_cast<getter>(IAudioInputNode2_get_OutgoingGain), reinterpret_cast<setter>(IAudioInputNode2_put_OutgoingGain), nullptr, nullptr },
         { "outgoing_connections", reinterpret_cast<getter>(IAudioInputNode2_get_OutgoingConnections), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAudioInputNode2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioInputNode2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioInputNode2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioInputNode2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioInputNode2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAudioInputNode2 = {
         "winrt._winrt_windows_media_audio.IAudioInputNode2",
@@ -20397,13 +20233,11 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef methods_ImplementsIAudioInputNode2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioInputNode2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioInputNode2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAudioInputNode2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAudioInputNode2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAudioInputNode2 = {
         "winrt._winrt_windows_media_audio.ImplementsIAudioInputNode2",
@@ -20935,24 +20769,21 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioNode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAudioNode[] = {
         { "consume_input", reinterpret_cast<getter>(IAudioNode_get_ConsumeInput), reinterpret_cast<setter>(IAudioNode_put_ConsumeInput), nullptr, nullptr },
         { "effect_definitions", reinterpret_cast<getter>(IAudioNode_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(IAudioNode_get_EncodingProperties), nullptr, nullptr, nullptr },
         { "outgoing_gain", reinterpret_cast<getter>(IAudioNode_get_OutgoingGain), reinterpret_cast<setter>(IAudioNode_put_OutgoingGain), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAudioNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAudioNode = {
         "winrt._winrt_windows_media_audio.IAudioNode",
@@ -21290,13 +21121,11 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef methods_ImplementsIAudioNode[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioNode), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAudioNode[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAudioNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAudioNode = {
         "winrt._winrt_windows_media_audio.ImplementsIAudioNode",
@@ -21897,8 +21726,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNodeWithListener), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioNodeWithListener), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioNodeWithListener), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAudioNodeWithListener[] = {
         { "listener", reinterpret_cast<getter>(IAudioNodeWithListener_get_Listener), reinterpret_cast<setter>(IAudioNodeWithListener_put_Listener), nullptr, nullptr },
@@ -21906,16 +21734,14 @@ namespace py::cpp::Windows::Media::Audio
         { "effect_definitions", reinterpret_cast<getter>(IAudioNodeWithListener_get_EffectDefinitions), nullptr, nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(IAudioNodeWithListener_get_EncodingProperties), nullptr, nullptr, nullptr },
         { "outgoing_gain", reinterpret_cast<getter>(IAudioNodeWithListener_get_OutgoingGain), reinterpret_cast<setter>(IAudioNodeWithListener_put_OutgoingGain), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAudioNodeWithListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioNodeWithListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioNodeWithListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioNodeWithListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioNodeWithListener) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAudioNodeWithListener = {
         "winrt._winrt_windows_media_audio.IAudioNodeWithListener",
@@ -22296,13 +22122,11 @@ namespace py::cpp::Windows::Media::Audio
     static PyMethodDef methods_ImplementsIAudioNodeWithListener[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioNodeWithListener), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioNodeWithListener), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAudioNodeWithListener[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAudioNodeWithListener) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAudioNodeWithListener = {
         "winrt._winrt_windows_media_audio.ImplementsIAudioNodeWithListener",

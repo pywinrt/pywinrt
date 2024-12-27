@@ -279,21 +279,18 @@ namespace py::cpp::Windows::Management::Update
         { "sync_async", reinterpret_cast<PyCFunction>(PreviewBuildsManager_SyncAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PreviewBuildsManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PreviewBuildsManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PreviewBuildsManager[] = {
         { "are_preview_builds_allowed", reinterpret_cast<getter>(PreviewBuildsManager_get_ArePreviewBuildsAllowed), reinterpret_cast<setter>(PreviewBuildsManager_put_ArePreviewBuildsAllowed), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PreviewBuildsManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreviewBuildsManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreviewBuildsManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreviewBuildsManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreviewBuildsManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PreviewBuildsManager = {
         "winrt._winrt_windows_management_update.PreviewBuildsManager",
@@ -303,14 +300,12 @@ namespace py::cpp::Windows::Management::Update
         _type_slots_PreviewBuildsManager};
 
     static PyGetSetDef getset_PreviewBuildsManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PreviewBuildsManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(PreviewBuildsManager_GetDefault), METH_VARARGS, nullptr },
         { "is_supported", reinterpret_cast<PyCFunction>(PreviewBuildsManager_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PreviewBuildsManager_Static[] = 
     {
@@ -320,14 +315,12 @@ namespace py::cpp::Windows::Management::Update
         { }
     };
 
-    static PyType_Spec type_spec_PreviewBuildsManager_Static =
-    {
+    static PyType_Spec type_spec_PreviewBuildsManager_Static = {
         "winrt._winrt_windows_management_update.PreviewBuildsManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PreviewBuildsManager_Static
-    };
+        type_slots_PreviewBuildsManager_Static};
 
     // ----- PreviewBuildsState class --------------------
 
@@ -403,21 +396,18 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_PreviewBuildsState[] = {
         { "_assign_array_", _assign_array_PreviewBuildsState, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PreviewBuildsState), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PreviewBuildsState[] = {
         { "properties", reinterpret_cast<getter>(PreviewBuildsState_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PreviewBuildsState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreviewBuildsState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreviewBuildsState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreviewBuildsState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreviewBuildsState) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PreviewBuildsState = {
         "winrt._winrt_windows_management_update.PreviewBuildsState",
@@ -1215,8 +1205,7 @@ namespace py::cpp::Windows::Management::Update
         { "get_property_value", reinterpret_cast<PyCFunction>(WindowsUpdate_GetPropertyValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WindowsUpdate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdate[] = {
         { "action_progress", reinterpret_cast<getter>(WindowsUpdate_get_ActionProgress), nullptr, nullptr, nullptr },
@@ -1241,16 +1230,14 @@ namespace py::cpp::Windows::Management::Update
         { "support_url", reinterpret_cast<getter>(WindowsUpdate_get_SupportUrl), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(WindowsUpdate_get_Title), nullptr, nullptr, nullptr },
         { "update_id", reinterpret_cast<getter>(WindowsUpdate_get_UpdateId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdate = {
         "winrt._winrt_windows_management_update.WindowsUpdate",
@@ -1423,24 +1410,21 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateActionCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_WindowsUpdateActionCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateActionCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateActionCompletedEventArgs[] = {
         { "action", reinterpret_cast<getter>(WindowsUpdateActionCompletedEventArgs_get_Action), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(WindowsUpdateActionCompletedEventArgs_get_ExtendedError), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(WindowsUpdateActionCompletedEventArgs_get_Succeeded), nullptr, nullptr, nullptr },
         { "update", reinterpret_cast<getter>(WindowsUpdateActionCompletedEventArgs_get_Update), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateActionCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateActionCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateActionCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateActionCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateActionCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateActionCompletedEventArgs = {
         "winrt._winrt_windows_management_update.WindowsUpdateActionCompletedEventArgs",
@@ -1553,22 +1537,19 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateActionProgress[] = {
         { "_assign_array_", _assign_array_WindowsUpdateActionProgress, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateActionProgress), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateActionProgress[] = {
         { "action", reinterpret_cast<getter>(WindowsUpdateActionProgress_get_Action), nullptr, nullptr, nullptr },
         { "progress", reinterpret_cast<getter>(WindowsUpdateActionProgress_get_Progress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateActionProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateActionProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateActionProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateActionProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateActionProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateActionProgress = {
         "winrt._winrt_windows_management_update.WindowsUpdateActionProgress",
@@ -1741,24 +1722,21 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateActionResult[] = {
         { "_assign_array_", _assign_array_WindowsUpdateActionResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateActionResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateActionResult[] = {
         { "action", reinterpret_cast<getter>(WindowsUpdateActionResult_get_Action), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(WindowsUpdateActionResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(WindowsUpdateActionResult_get_Succeeded), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(WindowsUpdateActionResult_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateActionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateActionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateActionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateActionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateActionResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateActionResult = {
         "winrt._winrt_windows_management_update.WindowsUpdateActionResult",
@@ -2325,20 +2303,17 @@ namespace py::cpp::Windows::Management::Update
         { "start_administrator_scan", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_StartAdministratorScan), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WindowsUpdateAdministrator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateAdministrator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateAdministrator[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateAdministrator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateAdministrator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateAdministrator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateAdministrator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateAdministrator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateAdministrator = {
         "winrt._winrt_windows_management_update.WindowsUpdateAdministrator",
@@ -2348,8 +2323,7 @@ namespace py::cpp::Windows::Management::Update
         _type_slots_WindowsUpdateAdministrator};
 
     static PyGetSetDef getset_WindowsUpdateAdministrator_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WindowsUpdateAdministrator_Static[] = {
         { "cancel_restart_request", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_CancelRestartRequest), METH_VARARGS, nullptr },
@@ -2358,8 +2332,7 @@ namespace py::cpp::Windows::Management::Update
         { "register_for_administration", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_RegisterForAdministration), METH_VARARGS, nullptr },
         { "request_restart", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_RequestRestart), METH_VARARGS, nullptr },
         { "unregister_for_administration", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_UnregisterForAdministration), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WindowsUpdateAdministrator_Static[] = 
     {
@@ -2369,14 +2342,12 @@ namespace py::cpp::Windows::Management::Update
         { }
     };
 
-    static PyType_Spec type_spec_WindowsUpdateAdministrator_Static =
-    {
+    static PyType_Spec type_spec_WindowsUpdateAdministrator_Static = {
         "winrt._winrt_windows_management_update.WindowsUpdateAdministrator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WindowsUpdateAdministrator_Static
-    };
+        type_slots_WindowsUpdateAdministrator_Static};
 
     // ----- WindowsUpdateApprovalData class --------------------
 
@@ -2789,8 +2760,7 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateApprovalData[] = {
         { "_assign_array_", _assign_array_WindowsUpdateApprovalData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateApprovalData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateApprovalData[] = {
         { "seeker", reinterpret_cast<getter>(WindowsUpdateApprovalData_get_Seeker), reinterpret_cast<setter>(WindowsUpdateApprovalData_put_Seeker), nullptr, nullptr },
@@ -2798,16 +2768,14 @@ namespace py::cpp::Windows::Management::Update
         { "compliance_grace_period_in_days", reinterpret_cast<getter>(WindowsUpdateApprovalData_get_ComplianceGracePeriodInDays), reinterpret_cast<setter>(WindowsUpdateApprovalData_put_ComplianceGracePeriodInDays), nullptr, nullptr },
         { "compliance_deadline_in_days", reinterpret_cast<getter>(WindowsUpdateApprovalData_get_ComplianceDeadlineInDays), reinterpret_cast<setter>(WindowsUpdateApprovalData_put_ComplianceDeadlineInDays), nullptr, nullptr },
         { "allow_download_on_metered", reinterpret_cast<getter>(WindowsUpdateApprovalData_get_AllowDownloadOnMetered), reinterpret_cast<setter>(WindowsUpdateApprovalData_put_AllowDownloadOnMetered), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateApprovalData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateApprovalData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateApprovalData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateApprovalData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateApprovalData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateApprovalData = {
         "winrt._winrt_windows_management_update.WindowsUpdateApprovalData",
@@ -2920,22 +2888,19 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateAttentionRequiredInfo[] = {
         { "_assign_array_", _assign_array_WindowsUpdateAttentionRequiredInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateAttentionRequiredInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateAttentionRequiredInfo[] = {
         { "reason", reinterpret_cast<getter>(WindowsUpdateAttentionRequiredInfo_get_Reason), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(WindowsUpdateAttentionRequiredInfo_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateAttentionRequiredInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateAttentionRequiredInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateAttentionRequiredInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateAttentionRequiredInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateAttentionRequiredInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateAttentionRequiredInfo = {
         "winrt._winrt_windows_management_update.WindowsUpdateAttentionRequiredInfo",
@@ -3048,22 +3013,19 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateAttentionRequiredReasonChangedEventArgs[] = {
         { "_assign_array_", _assign_array_WindowsUpdateAttentionRequiredReasonChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateAttentionRequiredReasonChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateAttentionRequiredReasonChangedEventArgs[] = {
         { "reason", reinterpret_cast<getter>(WindowsUpdateAttentionRequiredReasonChangedEventArgs_get_Reason), nullptr, nullptr, nullptr },
         { "update", reinterpret_cast<getter>(WindowsUpdateAttentionRequiredReasonChangedEventArgs_get_Update), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateAttentionRequiredReasonChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateAttentionRequiredReasonChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateAttentionRequiredReasonChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateAttentionRequiredReasonChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateAttentionRequiredReasonChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs = {
         "winrt._winrt_windows_management_update.WindowsUpdateAttentionRequiredReasonChangedEventArgs",
@@ -3176,22 +3138,19 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateGetAdministratorResult[] = {
         { "_assign_array_", _assign_array_WindowsUpdateGetAdministratorResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateGetAdministratorResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateGetAdministratorResult[] = {
         { "administrator", reinterpret_cast<getter>(WindowsUpdateGetAdministratorResult_get_Administrator), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(WindowsUpdateGetAdministratorResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateGetAdministratorResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateGetAdministratorResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateGetAdministratorResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateGetAdministratorResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateGetAdministratorResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateGetAdministratorResult = {
         "winrt._winrt_windows_management_update.WindowsUpdateGetAdministratorResult",
@@ -3484,8 +3443,7 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateItem[] = {
         { "_assign_array_", _assign_array_WindowsUpdateItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateItem[] = {
         { "category", reinterpret_cast<getter>(WindowsUpdateItem_get_Category), nullptr, nullptr, nullptr },
@@ -3496,16 +3454,14 @@ namespace py::cpp::Windows::Management::Update
         { "timestamp", reinterpret_cast<getter>(WindowsUpdateItem_get_Timestamp), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(WindowsUpdateItem_get_Title), nullptr, nullptr, nullptr },
         { "update_id", reinterpret_cast<getter>(WindowsUpdateItem_get_UpdateId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateItem = {
         "winrt._winrt_windows_management_update.WindowsUpdateItem",
@@ -4245,23 +4201,20 @@ namespace py::cpp::Windows::Management::Update
         { "remove_working_state_changed", reinterpret_cast<PyCFunction>(WindowsUpdateManager_remove_WorkingStateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_WindowsUpdateManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateManager[] = {
         { "is_scanning", reinterpret_cast<getter>(WindowsUpdateManager_get_IsScanning), nullptr, nullptr, nullptr },
         { "is_working", reinterpret_cast<getter>(WindowsUpdateManager_get_IsWorking), nullptr, nullptr, nullptr },
         { "last_successful_scan_timestamp", reinterpret_cast<getter>(WindowsUpdateManager_get_LastSuccessfulScanTimestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateManager = {
         "winrt._winrt_windows_management_update.WindowsUpdateManager",
@@ -4374,22 +4327,19 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateProgressChangedEventArgs[] = {
         { "_assign_array_", _assign_array_WindowsUpdateProgressChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateProgressChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateProgressChangedEventArgs[] = {
         { "action_progress", reinterpret_cast<getter>(WindowsUpdateProgressChangedEventArgs_get_ActionProgress), nullptr, nullptr, nullptr },
         { "update", reinterpret_cast<getter>(WindowsUpdateProgressChangedEventArgs_get_Update), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateProgressChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateProgressChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateProgressChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateProgressChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateProgressChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateProgressChangedEventArgs = {
         "winrt._winrt_windows_management_update.WindowsUpdateProgressChangedEventArgs",
@@ -4966,8 +4916,7 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateRestartRequestOptions[] = {
         { "_assign_array_", _assign_array_WindowsUpdateRestartRequestOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateRestartRequestOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateRestartRequestOptions[] = {
         { "title", reinterpret_cast<getter>(WindowsUpdateRestartRequestOptions_get_Title), reinterpret_cast<setter>(WindowsUpdateRestartRequestOptions_put_Title), nullptr, nullptr },
@@ -4977,16 +4926,14 @@ namespace py::cpp::Windows::Management::Update
         { "description", reinterpret_cast<getter>(WindowsUpdateRestartRequestOptions_get_Description), reinterpret_cast<setter>(WindowsUpdateRestartRequestOptions_put_Description), nullptr, nullptr },
         { "compliance_grace_period_in_days", reinterpret_cast<getter>(WindowsUpdateRestartRequestOptions_get_ComplianceGracePeriodInDays), reinterpret_cast<setter>(WindowsUpdateRestartRequestOptions_put_ComplianceGracePeriodInDays), nullptr, nullptr },
         { "compliance_deadline_in_days", reinterpret_cast<getter>(WindowsUpdateRestartRequestOptions_get_ComplianceDeadlineInDays), reinterpret_cast<setter>(WindowsUpdateRestartRequestOptions_put_ComplianceDeadlineInDays), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateRestartRequestOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateRestartRequestOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateRestartRequestOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateRestartRequestOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateRestartRequestOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateRestartRequestOptions = {
         "winrt._winrt_windows_management_update.WindowsUpdateRestartRequestOptions",
@@ -5159,24 +5106,21 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateScanCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_WindowsUpdateScanCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateScanCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsUpdateScanCompletedEventArgs[] = {
         { "extended_error", reinterpret_cast<getter>(WindowsUpdateScanCompletedEventArgs_get_ExtendedError), nullptr, nullptr, nullptr },
         { "provider_id", reinterpret_cast<getter>(WindowsUpdateScanCompletedEventArgs_get_ProviderId), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(WindowsUpdateScanCompletedEventArgs_get_Succeeded), nullptr, nullptr, nullptr },
         { "updates", reinterpret_cast<getter>(WindowsUpdateScanCompletedEventArgs_get_Updates), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsUpdateScanCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsUpdateScanCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsUpdateScanCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsUpdateScanCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsUpdateScanCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsUpdateScanCompletedEventArgs = {
         "winrt._winrt_windows_management_update.WindowsUpdateScanCompletedEventArgs",

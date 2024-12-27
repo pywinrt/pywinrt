@@ -141,19 +141,16 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
     }
 
     static PyMethodDef _methods_LicenseManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LicenseManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LicenseManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LicenseManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LicenseManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LicenseManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LicenseManager = {
         "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseManager",
@@ -163,15 +160,13 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
         _type_slots_LicenseManager};
 
     static PyGetSetDef getset_LicenseManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LicenseManager_Static[] = {
         { "add_license_async", reinterpret_cast<PyCFunction>(LicenseManager_AddLicenseAsync), METH_VARARGS, nullptr },
         { "get_satisfaction_infos_async", reinterpret_cast<PyCFunction>(LicenseManager_GetSatisfactionInfosAsync), METH_VARARGS, nullptr },
         { "refresh_licenses_async", reinterpret_cast<PyCFunction>(LicenseManager_RefreshLicensesAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LicenseManager_Static[] = 
     {
@@ -181,14 +176,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
         { }
     };
 
-    static PyType_Spec type_spec_LicenseManager_Static =
-    {
+    static PyType_Spec type_spec_LicenseManager_Static = {
         "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LicenseManager_Static
-    };
+        type_slots_LicenseManager_Static};
 
     // ----- LicenseSatisfactionInfo class --------------------
 
@@ -444,8 +437,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
     static PyMethodDef _methods_LicenseSatisfactionInfo[] = {
         { "_assign_array_", _assign_array_LicenseSatisfactionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LicenseSatisfactionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LicenseSatisfactionInfo[] = {
         { "is_satisfied", reinterpret_cast<getter>(LicenseSatisfactionInfo_get_IsSatisfied), nullptr, nullptr, nullptr },
@@ -455,16 +447,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
         { "satisfied_by_pass", reinterpret_cast<getter>(LicenseSatisfactionInfo_get_SatisfiedByPass), nullptr, nullptr, nullptr },
         { "satisfied_by_signed_in_user", reinterpret_cast<getter>(LicenseSatisfactionInfo_get_SatisfiedBySignedInUser), nullptr, nullptr, nullptr },
         { "satisfied_by_trial", reinterpret_cast<getter>(LicenseSatisfactionInfo_get_SatisfiedByTrial), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LicenseSatisfactionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LicenseSatisfactionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LicenseSatisfactionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LicenseSatisfactionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LicenseSatisfactionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LicenseSatisfactionInfo = {
         "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionInfo",
@@ -577,22 +567,19 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
     static PyMethodDef _methods_LicenseSatisfactionResult[] = {
         { "_assign_array_", _assign_array_LicenseSatisfactionResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LicenseSatisfactionResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LicenseSatisfactionResult[] = {
         { "extended_error", reinterpret_cast<getter>(LicenseSatisfactionResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "license_satisfaction_infos", reinterpret_cast<getter>(LicenseSatisfactionResult_get_LicenseSatisfactionInfos), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LicenseSatisfactionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LicenseSatisfactionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LicenseSatisfactionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LicenseSatisfactionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LicenseSatisfactionResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LicenseSatisfactionResult = {
         "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionResult",

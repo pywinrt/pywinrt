@@ -138,23 +138,20 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DeviceAccessChangedEventArgs[] = {
         { "_assign_array_", _assign_array_DeviceAccessChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceAccessChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceAccessChangedEventArgs[] = {
         { "status", reinterpret_cast<getter>(DeviceAccessChangedEventArgs_get_Status), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(DeviceAccessChangedEventArgs_get_Id), nullptr, nullptr, nullptr },
         { "user_prompt_required", reinterpret_cast<getter>(DeviceAccessChangedEventArgs_get_UserPromptRequired), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceAccessChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceAccessChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceAccessChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceAccessChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceAccessChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceAccessChangedEventArgs = {
         "winrt._winrt_windows_devices_enumeration.DeviceAccessChangedEventArgs",
@@ -460,22 +457,19 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "remove_access_changed", reinterpret_cast<PyCFunction>(DeviceAccessInformation_remove_AccessChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_DeviceAccessInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceAccessInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceAccessInformation[] = {
         { "current_status", reinterpret_cast<getter>(DeviceAccessInformation_get_CurrentStatus), nullptr, nullptr, nullptr },
         { "user_prompt_required", reinterpret_cast<getter>(DeviceAccessInformation_get_UserPromptRequired), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceAccessInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceAccessInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceAccessInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceAccessInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceAccessInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceAccessInformation = {
         "winrt._winrt_windows_devices_enumeration.DeviceAccessInformation",
@@ -485,15 +479,13 @@ namespace py::cpp::Windows::Devices::Enumeration
         _type_slots_DeviceAccessInformation};
 
     static PyGetSetDef getset_DeviceAccessInformation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DeviceAccessInformation_Static[] = {
         { "create_from_device_class", reinterpret_cast<PyCFunction>(DeviceAccessInformation_CreateFromDeviceClass), METH_VARARGS, nullptr },
         { "create_from_device_class_id", reinterpret_cast<PyCFunction>(DeviceAccessInformation_CreateFromDeviceClassId), METH_VARARGS, nullptr },
         { "create_from_id", reinterpret_cast<PyCFunction>(DeviceAccessInformation_CreateFromId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DeviceAccessInformation_Static[] = 
     {
@@ -503,14 +495,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Spec type_spec_DeviceAccessInformation_Static =
-    {
+    static PyType_Spec type_spec_DeviceAccessInformation_Static = {
         "winrt._winrt_windows_devices_enumeration.DeviceAccessInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DeviceAccessInformation_Static
-    };
+        type_slots_DeviceAccessInformation_Static};
 
     // ----- DeviceConnectionChangeTriggerDetails class --------------------
 
@@ -586,21 +576,18 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DeviceConnectionChangeTriggerDetails[] = {
         { "_assign_array_", _assign_array_DeviceConnectionChangeTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceConnectionChangeTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceConnectionChangeTriggerDetails[] = {
         { "device_id", reinterpret_cast<getter>(DeviceConnectionChangeTriggerDetails_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceConnectionChangeTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceConnectionChangeTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceConnectionChangeTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceConnectionChangeTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceConnectionChangeTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceConnectionChangeTriggerDetails = {
         "winrt._winrt_windows_devices_enumeration.DeviceConnectionChangeTriggerDetails",
@@ -683,21 +670,18 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DeviceDisconnectButtonClickedEventArgs[] = {
         { "_assign_array_", _assign_array_DeviceDisconnectButtonClickedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceDisconnectButtonClickedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceDisconnectButtonClickedEventArgs[] = {
         { "device", reinterpret_cast<getter>(DeviceDisconnectButtonClickedEventArgs_get_Device), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceDisconnectButtonClickedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceDisconnectButtonClickedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceDisconnectButtonClickedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceDisconnectButtonClickedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceDisconnectButtonClickedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceDisconnectButtonClickedEventArgs = {
         "winrt._winrt_windows_devices_enumeration.DeviceDisconnectButtonClickedEventArgs",
@@ -1844,8 +1828,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "update", reinterpret_cast<PyCFunction>(DeviceInformation_Update), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DeviceInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceInformation[] = {
         { "enclosure_location", reinterpret_cast<getter>(DeviceInformation_get_EnclosureLocation), nullptr, nullptr, nullptr },
@@ -1856,16 +1839,14 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "properties", reinterpret_cast<getter>(DeviceInformation_get_Properties), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(DeviceInformation_get_Kind), nullptr, nullptr, nullptr },
         { "pairing", reinterpret_cast<getter>(DeviceInformation_get_Pairing), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceInformation = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformation",
@@ -1875,8 +1856,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         _type_slots_DeviceInformation};
 
     static PyGetSetDef getset_DeviceInformation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DeviceInformation_Static[] = {
         { "create_from_id_async", reinterpret_cast<PyCFunction>(DeviceInformation_CreateFromIdAsync), METH_VARARGS, nullptr },
@@ -1896,8 +1876,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "find_all_async_with_aqs_filter_additional_properties_kind_and_settings", reinterpret_cast<PyCFunction>(DeviceInformation_FindAllAsyncWithAqsFilterAdditionalPropertiesKindAndSettings), METH_VARARGS, nullptr },
         { "find_all_async_with_kind_aqs_filter_and_additional_properties", reinterpret_cast<PyCFunction>(DeviceInformation_FindAllAsyncWithKindAqsFilterAndAdditionalProperties), METH_VARARGS, nullptr },
         { "get_aqs_filter_from_device_class", reinterpret_cast<PyCFunction>(DeviceInformation_GetAqsFilterFromDeviceClass), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DeviceInformation_Static[] = 
     {
@@ -1907,14 +1886,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Spec type_spec_DeviceInformation_Static =
-    {
+    static PyType_Spec type_spec_DeviceInformation_Static = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DeviceInformation_Static
-    };
+        type_slots_DeviceInformation_Static};
 
     // ----- DeviceInformationCollection class --------------------
 
@@ -2292,13 +2269,11 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "index_of", reinterpret_cast<PyCFunction>(DeviceInformationCollection_IndexOf), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DeviceInformationCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceInformationCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceInformationCollection[] = {
         { "size", reinterpret_cast<getter>(DeviceInformationCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceInformationCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformationCollection) },
@@ -2309,8 +2284,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_DeviceInformationCollection) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_DeviceInformationCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_DeviceInformationCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceInformationCollection = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformationCollection",
@@ -2673,20 +2647,17 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "remove_pairing_set_members_requested", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_remove_PairingSetMembersRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_DeviceInformationCustomPairing, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceInformationCustomPairing), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceInformationCustomPairing[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceInformationCustomPairing[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformationCustomPairing) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceInformationCustomPairing) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceInformationCustomPairing) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceInformationCustomPairing) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceInformationCustomPairing = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformationCustomPairing",
@@ -3113,24 +3084,21 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "unpair_async", reinterpret_cast<PyCFunction>(DeviceInformationPairing_UnpairAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DeviceInformationPairing, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceInformationPairing), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceInformationPairing[] = {
         { "can_pair", reinterpret_cast<getter>(DeviceInformationPairing_get_CanPair), nullptr, nullptr, nullptr },
         { "is_paired", reinterpret_cast<getter>(DeviceInformationPairing_get_IsPaired), nullptr, nullptr, nullptr },
         { "custom", reinterpret_cast<getter>(DeviceInformationPairing_get_Custom), nullptr, nullptr, nullptr },
         { "protection_level", reinterpret_cast<getter>(DeviceInformationPairing_get_ProtectionLevel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceInformationPairing[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformationPairing) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceInformationPairing) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceInformationPairing) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceInformationPairing) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceInformationPairing = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformationPairing",
@@ -3140,14 +3108,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         _type_slots_DeviceInformationPairing};
 
     static PyGetSetDef getset_DeviceInformationPairing_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DeviceInformationPairing_Static[] = {
         { "try_register_for_all_inbound_pairing_requests", reinterpret_cast<PyCFunction>(DeviceInformationPairing_TryRegisterForAllInboundPairingRequests), METH_VARARGS, nullptr },
         { "try_register_for_all_inbound_pairing_requests_with_protection_level", reinterpret_cast<PyCFunction>(DeviceInformationPairing_TryRegisterForAllInboundPairingRequestsWithProtectionLevel), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DeviceInformationPairing_Static[] = 
     {
@@ -3157,14 +3123,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Spec type_spec_DeviceInformationPairing_Static =
-    {
+    static PyType_Spec type_spec_DeviceInformationPairing_Static = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformationPairing_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DeviceInformationPairing_Static
-    };
+        type_slots_DeviceInformationPairing_Static};
 
     // ----- DeviceInformationUpdate class --------------------
 
@@ -3300,23 +3264,20 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DeviceInformationUpdate[] = {
         { "_assign_array_", _assign_array_DeviceInformationUpdate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceInformationUpdate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceInformationUpdate[] = {
         { "id", reinterpret_cast<getter>(DeviceInformationUpdate_get_Id), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(DeviceInformationUpdate_get_Properties), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(DeviceInformationUpdate_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceInformationUpdate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformationUpdate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceInformationUpdate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceInformationUpdate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceInformationUpdate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceInformationUpdate = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformationUpdate",
@@ -3674,23 +3635,20 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "get_deferral", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DevicePairingRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePairingRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePairingRequestedEventArgs[] = {
         { "device_information", reinterpret_cast<getter>(DevicePairingRequestedEventArgs_get_DeviceInformation), nullptr, nullptr, nullptr },
         { "pairing_kind", reinterpret_cast<getter>(DevicePairingRequestedEventArgs_get_PairingKind), nullptr, nullptr, nullptr },
         { "pin", reinterpret_cast<getter>(DevicePairingRequestedEventArgs_get_Pin), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePairingRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePairingRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePairingRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePairingRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePairingRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePairingRequestedEventArgs = {
         "winrt._winrt_windows_devices_enumeration.DevicePairingRequestedEventArgs",
@@ -3803,22 +3761,19 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DevicePairingResult[] = {
         { "_assign_array_", _assign_array_DevicePairingResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePairingResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePairingResult[] = {
         { "protection_level_used", reinterpret_cast<getter>(DevicePairingResult_get_ProtectionLevelUsed), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(DevicePairingResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePairingResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePairingResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePairingResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePairingResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePairingResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePairingResult = {
         "winrt._winrt_windows_devices_enumeration.DevicePairingResult",
@@ -3961,23 +3916,20 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DevicePairingSetMembersRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_DevicePairingSetMembersRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePairingSetMembersRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePairingSetMembersRequestedEventArgs[] = {
         { "pairing_set_members", reinterpret_cast<getter>(DevicePairingSetMembersRequestedEventArgs_get_PairingSetMembers), nullptr, nullptr, nullptr },
         { "parent_device_information", reinterpret_cast<getter>(DevicePairingSetMembersRequestedEventArgs_get_ParentDeviceInformation), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(DevicePairingSetMembersRequestedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePairingSetMembersRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePairingSetMembersRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePairingSetMembersRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePairingSetMembersRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePairingSetMembersRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePairingSetMembersRequestedEventArgs = {
         "winrt._winrt_windows_devices_enumeration.DevicePairingSetMembersRequestedEventArgs",
@@ -4607,23 +4559,20 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "remove_disconnect_button_clicked", reinterpret_cast<PyCFunction>(DevicePicker_remove_DisconnectButtonClicked), METH_O, nullptr },
         { "_assign_array_", _assign_array_DevicePicker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePicker), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePicker[] = {
         { "appearance", reinterpret_cast<getter>(DevicePicker_get_Appearance), nullptr, nullptr, nullptr },
         { "filter", reinterpret_cast<getter>(DevicePicker_get_Filter), nullptr, nullptr, nullptr },
         { "requested_properties", reinterpret_cast<getter>(DevicePicker_get_RequestedProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePicker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePicker = {
         "winrt._winrt_windows_devices_enumeration.DevicePicker",
@@ -5159,8 +5108,7 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DevicePickerAppearance[] = {
         { "_assign_array_", _assign_array_DevicePickerAppearance, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePickerAppearance), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePickerAppearance[] = {
         { "title", reinterpret_cast<getter>(DevicePickerAppearance_get_Title), reinterpret_cast<setter>(DevicePickerAppearance_put_Title), nullptr, nullptr },
@@ -5170,16 +5118,14 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "foreground_color", reinterpret_cast<getter>(DevicePickerAppearance_get_ForegroundColor), reinterpret_cast<setter>(DevicePickerAppearance_put_ForegroundColor), nullptr, nullptr },
         { "background_color", reinterpret_cast<getter>(DevicePickerAppearance_get_BackgroundColor), reinterpret_cast<setter>(DevicePickerAppearance_put_BackgroundColor), nullptr, nullptr },
         { "accent_color", reinterpret_cast<getter>(DevicePickerAppearance_get_AccentColor), reinterpret_cast<setter>(DevicePickerAppearance_put_AccentColor), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePickerAppearance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePickerAppearance) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePickerAppearance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePickerAppearance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePickerAppearance) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePickerAppearance = {
         "winrt._winrt_windows_devices_enumeration.DevicePickerAppearance",
@@ -5292,22 +5238,19 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DevicePickerFilter[] = {
         { "_assign_array_", _assign_array_DevicePickerFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePickerFilter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePickerFilter[] = {
         { "supported_device_classes", reinterpret_cast<getter>(DevicePickerFilter_get_SupportedDeviceClasses), nullptr, nullptr, nullptr },
         { "supported_device_selectors", reinterpret_cast<getter>(DevicePickerFilter_get_SupportedDeviceSelectors), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePickerFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePickerFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePickerFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePickerFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePickerFilter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePickerFilter = {
         "winrt._winrt_windows_devices_enumeration.DevicePickerFilter",
@@ -5390,21 +5333,18 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DeviceSelectedEventArgs[] = {
         { "_assign_array_", _assign_array_DeviceSelectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceSelectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceSelectedEventArgs[] = {
         { "selected_device", reinterpret_cast<getter>(DeviceSelectedEventArgs_get_SelectedDevice), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceSelectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceSelectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceSelectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceSelectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceSelectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceSelectedEventArgs = {
         "winrt._winrt_windows_devices_enumeration.DeviceSelectedEventArgs",
@@ -6013,8 +5953,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceThumbnail), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DeviceThumbnail), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DeviceThumbnail), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceThumbnail[] = {
         { "content_type", reinterpret_cast<getter>(DeviceThumbnail_get_ContentType), nullptr, nullptr, nullptr },
@@ -6022,16 +5961,14 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "can_read", reinterpret_cast<getter>(DeviceThumbnail_get_CanRead), nullptr, nullptr, nullptr },
         { "can_write", reinterpret_cast<getter>(DeviceThumbnail_get_CanWrite), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(DeviceThumbnail_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceThumbnail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceThumbnail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceThumbnail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceThumbnail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceThumbnail) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceThumbnail = {
         "winrt._winrt_windows_devices_enumeration.DeviceThumbnail",
@@ -6114,21 +6051,18 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DeviceUnpairingResult[] = {
         { "_assign_array_", _assign_array_DeviceUnpairingResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceUnpairingResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceUnpairingResult[] = {
         { "status", reinterpret_cast<getter>(DeviceUnpairingResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceUnpairingResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceUnpairingResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceUnpairingResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceUnpairingResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceUnpairingResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceUnpairingResult = {
         "winrt._winrt_windows_devices_enumeration.DeviceUnpairingResult",
@@ -6673,21 +6607,18 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "remove_updated", reinterpret_cast<PyCFunction>(DeviceWatcher_remove_Updated), METH_O, nullptr },
         { "_assign_array_", _assign_array_DeviceWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceWatcher[] = {
         { "status", reinterpret_cast<getter>(DeviceWatcher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceWatcher = {
         "winrt._winrt_windows_devices_enumeration.DeviceWatcher",
@@ -6830,23 +6761,20 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DeviceWatcherEvent[] = {
         { "_assign_array_", _assign_array_DeviceWatcherEvent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceWatcherEvent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceWatcherEvent[] = {
         { "device_information", reinterpret_cast<getter>(DeviceWatcherEvent_get_DeviceInformation), nullptr, nullptr, nullptr },
         { "device_information_update", reinterpret_cast<getter>(DeviceWatcherEvent_get_DeviceInformationUpdate), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(DeviceWatcherEvent_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceWatcherEvent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceWatcherEvent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceWatcherEvent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceWatcherEvent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceWatcherEvent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceWatcherEvent = {
         "winrt._winrt_windows_devices_enumeration.DeviceWatcherEvent",
@@ -6929,21 +6857,18 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DeviceWatcherTriggerDetails[] = {
         { "_assign_array_", _assign_array_DeviceWatcherTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceWatcherTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceWatcherTriggerDetails[] = {
         { "device_watcher_events", reinterpret_cast<getter>(DeviceWatcherTriggerDetails_get_DeviceWatcherEvents), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceWatcherTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceWatcherTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceWatcherTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceWatcherTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceWatcherTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceWatcherTriggerDetails = {
         "winrt._winrt_windows_devices_enumeration.DeviceWatcherTriggerDetails",
@@ -7116,24 +7041,21 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_EnclosureLocation[] = {
         { "_assign_array_", _assign_array_EnclosureLocation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EnclosureLocation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EnclosureLocation[] = {
         { "in_dock", reinterpret_cast<getter>(EnclosureLocation_get_InDock), nullptr, nullptr, nullptr },
         { "in_lid", reinterpret_cast<getter>(EnclosureLocation_get_InLid), nullptr, nullptr, nullptr },
         { "panel", reinterpret_cast<getter>(EnclosureLocation_get_Panel), nullptr, nullptr, nullptr },
         { "rotation_angle_in_degrees_clockwise", reinterpret_cast<getter>(EnclosureLocation_get_RotationAngleInDegreesClockwise), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EnclosureLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnclosureLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnclosureLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnclosureLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnclosureLocation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EnclosureLocation = {
         "winrt._winrt_windows_devices_enumeration.EnclosureLocation",
@@ -7186,20 +7108,17 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_IDeviceEnumerationSettings[] = {
         { "_assign_array_", _assign_array_IDeviceEnumerationSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDeviceEnumerationSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDeviceEnumerationSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDeviceEnumerationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDeviceEnumerationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDeviceEnumerationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDeviceEnumerationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDeviceEnumerationSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDeviceEnumerationSettings = {
         "winrt._winrt_windows_devices_enumeration.IDeviceEnumerationSettings",
@@ -7255,13 +7174,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef methods_ImplementsIDeviceEnumerationSettings[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDeviceEnumerationSettings), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDeviceEnumerationSettings), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDeviceEnumerationSettings[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDeviceEnumerationSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDeviceEnumerationSettings = {
         "winrt._winrt_windows_devices_enumeration.ImplementsIDeviceEnumerationSettings",
@@ -7314,20 +7231,17 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_IDevicePairingSettings[] = {
         { "_assign_array_", _assign_array_IDevicePairingSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDevicePairingSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDevicePairingSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDevicePairingSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDevicePairingSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDevicePairingSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDevicePairingSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDevicePairingSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDevicePairingSettings = {
         "winrt._winrt_windows_devices_enumeration.IDevicePairingSettings",
@@ -7383,13 +7297,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef methods_ImplementsIDevicePairingSettings[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDevicePairingSettings), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDevicePairingSettings), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDevicePairingSettings[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDevicePairingSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDevicePairingSettings = {
         "winrt._winrt_windows_devices_enumeration.ImplementsIDevicePairingSettings",

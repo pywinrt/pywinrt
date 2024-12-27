@@ -237,8 +237,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static PyMethodDef _methods_HidBooleanControl[] = {
         { "_assign_array_", _assign_array_HidBooleanControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidBooleanControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidBooleanControl[] = {
         { "is_active", reinterpret_cast<getter>(HidBooleanControl_get_IsActive), reinterpret_cast<setter>(HidBooleanControl_put_IsActive), nullptr, nullptr },
@@ -246,16 +245,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "id", reinterpret_cast<getter>(HidBooleanControl_get_Id), nullptr, nullptr, nullptr },
         { "usage_id", reinterpret_cast<getter>(HidBooleanControl_get_UsageId), nullptr, nullptr, nullptr },
         { "usage_page", reinterpret_cast<getter>(HidBooleanControl_get_UsagePage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidBooleanControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidBooleanControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidBooleanControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidBooleanControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidBooleanControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidBooleanControl = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidBooleanControl",
@@ -518,8 +515,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static PyMethodDef _methods_HidBooleanControlDescription[] = {
         { "_assign_array_", _assign_array_HidBooleanControlDescription, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidBooleanControlDescription), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidBooleanControlDescription[] = {
         { "id", reinterpret_cast<getter>(HidBooleanControlDescription_get_Id), nullptr, nullptr, nullptr },
@@ -529,16 +525,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "usage_id", reinterpret_cast<getter>(HidBooleanControlDescription_get_UsageId), nullptr, nullptr, nullptr },
         { "usage_page", reinterpret_cast<getter>(HidBooleanControlDescription_get_UsagePage), nullptr, nullptr, nullptr },
         { "is_absolute", reinterpret_cast<getter>(HidBooleanControlDescription_get_IsAbsolute), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidBooleanControlDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidBooleanControlDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidBooleanControlDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidBooleanControlDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidBooleanControlDescription) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidBooleanControlDescription = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidBooleanControlDescription",
@@ -711,24 +705,21 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static PyMethodDef _methods_HidCollection[] = {
         { "_assign_array_", _assign_array_HidCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidCollection[] = {
         { "id", reinterpret_cast<getter>(HidCollection_get_Id), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(HidCollection_get_Type), nullptr, nullptr, nullptr },
         { "usage_id", reinterpret_cast<getter>(HidCollection_get_UsageId), nullptr, nullptr, nullptr },
         { "usage_page", reinterpret_cast<getter>(HidCollection_get_UsagePage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidCollection = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidCollection",
@@ -1708,8 +1699,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "_from", reinterpret_cast<PyCFunction>(_from_HidDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HidDevice), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HidDevice), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidDevice[] = {
         { "product_id", reinterpret_cast<getter>(HidDevice_get_ProductId), nullptr, nullptr, nullptr },
@@ -1717,16 +1707,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "usage_page", reinterpret_cast<getter>(HidDevice_get_UsagePage), nullptr, nullptr, nullptr },
         { "vendor_id", reinterpret_cast<getter>(HidDevice_get_VendorId), nullptr, nullptr, nullptr },
         { "version", reinterpret_cast<getter>(HidDevice_get_Version), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidDevice = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidDevice",
@@ -1736,15 +1724,13 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         _type_slots_HidDevice};
 
     static PyGetSetDef getset_HidDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HidDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(HidDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(HidDevice_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_vid_pid", reinterpret_cast<PyCFunction>(HidDevice_GetDeviceSelectorVidPid), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HidDevice_Static[] = 
     {
@@ -1754,14 +1740,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Spec type_spec_HidDevice_Static =
-    {
+    static PyType_Spec type_spec_HidDevice_Static = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HidDevice_Static
-    };
+        type_slots_HidDevice_Static};
 
     // ----- HidFeatureReport class --------------------
 
@@ -2080,22 +2064,19 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "get_numeric_control_by_description", reinterpret_cast<PyCFunction>(HidFeatureReport_GetNumericControlByDescription), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HidFeatureReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidFeatureReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidFeatureReport[] = {
         { "data", reinterpret_cast<getter>(HidFeatureReport_get_Data), reinterpret_cast<setter>(HidFeatureReport_put_Data), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(HidFeatureReport_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidFeatureReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidFeatureReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidFeatureReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidFeatureReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidFeatureReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidFeatureReport = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidFeatureReport",
@@ -2442,24 +2423,21 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "get_numeric_control_by_description", reinterpret_cast<PyCFunction>(HidInputReport_GetNumericControlByDescription), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HidInputReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidInputReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidInputReport[] = {
         { "activated_boolean_controls", reinterpret_cast<getter>(HidInputReport_get_ActivatedBooleanControls), nullptr, nullptr, nullptr },
         { "data", reinterpret_cast<getter>(HidInputReport_get_Data), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(HidInputReport_get_Id), nullptr, nullptr, nullptr },
         { "transitioned_boolean_controls", reinterpret_cast<getter>(HidInputReport_get_TransitionedBooleanControls), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidInputReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidInputReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidInputReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidInputReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidInputReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidInputReport = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidInputReport",
@@ -2542,21 +2520,18 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static PyMethodDef _methods_HidInputReportReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_HidInputReportReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidInputReportReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidInputReportReceivedEventArgs[] = {
         { "report", reinterpret_cast<getter>(HidInputReportReceivedEventArgs_get_Report), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidInputReportReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidInputReportReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidInputReportReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidInputReportReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidInputReportReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidInputReportReceivedEventArgs = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidInputReportReceivedEventArgs",
@@ -2897,8 +2872,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static PyMethodDef _methods_HidNumericControl[] = {
         { "_assign_array_", _assign_array_HidNumericControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidNumericControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidNumericControl[] = {
         { "value", reinterpret_cast<getter>(HidNumericControl_get_Value), reinterpret_cast<setter>(HidNumericControl_put_Value), nullptr, nullptr },
@@ -2908,16 +2882,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "is_grouped", reinterpret_cast<getter>(HidNumericControl_get_IsGrouped), nullptr, nullptr, nullptr },
         { "usage_id", reinterpret_cast<getter>(HidNumericControl_get_UsageId), nullptr, nullptr, nullptr },
         { "usage_page", reinterpret_cast<getter>(HidNumericControl_get_UsagePage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidNumericControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidNumericControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidNumericControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidNumericControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidNumericControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidNumericControl = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidNumericControl",
@@ -3450,8 +3422,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static PyMethodDef _methods_HidNumericControlDescription[] = {
         { "_assign_array_", _assign_array_HidNumericControlDescription, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidNumericControlDescription), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidNumericControlDescription[] = {
         { "has_null", reinterpret_cast<getter>(HidNumericControlDescription_get_HasNull), nullptr, nullptr, nullptr },
@@ -3470,16 +3441,14 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "unit_exponent", reinterpret_cast<getter>(HidNumericControlDescription_get_UnitExponent), nullptr, nullptr, nullptr },
         { "usage_id", reinterpret_cast<getter>(HidNumericControlDescription_get_UsageId), nullptr, nullptr, nullptr },
         { "usage_page", reinterpret_cast<getter>(HidNumericControlDescription_get_UsagePage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidNumericControlDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidNumericControlDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidNumericControlDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidNumericControlDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidNumericControlDescription) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidNumericControlDescription = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidNumericControlDescription",
@@ -3805,22 +3774,19 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "get_numeric_control_by_description", reinterpret_cast<PyCFunction>(HidOutputReport_GetNumericControlByDescription), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HidOutputReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidOutputReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidOutputReport[] = {
         { "data", reinterpret_cast<getter>(HidOutputReport_get_Data), reinterpret_cast<setter>(HidOutputReport_put_Data), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(HidOutputReport_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidOutputReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidOutputReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidOutputReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidOutputReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidOutputReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidOutputReport = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidOutputReport",

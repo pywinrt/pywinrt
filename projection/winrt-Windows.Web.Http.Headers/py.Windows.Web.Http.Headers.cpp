@@ -1175,8 +1175,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpCacheDirectiveHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpCacheDirectiveHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpCacheDirectiveHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpCacheDirectiveHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpCacheDirectiveHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
@@ -1184,8 +1183,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "min_fresh", reinterpret_cast<getter>(HttpCacheDirectiveHeaderValueCollection_get_MinFresh), reinterpret_cast<setter>(HttpCacheDirectiveHeaderValueCollection_put_MinFresh), nullptr, nullptr },
         { "max_stale", reinterpret_cast<getter>(HttpCacheDirectiveHeaderValueCollection_get_MaxStale), reinterpret_cast<setter>(HttpCacheDirectiveHeaderValueCollection_put_MaxStale), nullptr, nullptr },
         { "max_age", reinterpret_cast<getter>(HttpCacheDirectiveHeaderValueCollection_get_MaxAge), reinterpret_cast<setter>(HttpCacheDirectiveHeaderValueCollection_put_MaxAge), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpCacheDirectiveHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCacheDirectiveHeaderValueCollection) },
@@ -1198,8 +1196,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpCacheDirectiveHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpCacheDirectiveHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpCacheDirectiveHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpCacheDirectiveHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpCacheDirectiveHeaderValueCollection",
@@ -1538,15 +1535,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpChallengeHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpChallengeHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpChallengeHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpChallengeHeaderValue[] = {
         { "parameters", reinterpret_cast<getter>(HttpChallengeHeaderValue_get_Parameters), nullptr, nullptr, nullptr },
         { "scheme", reinterpret_cast<getter>(HttpChallengeHeaderValue_get_Scheme), nullptr, nullptr, nullptr },
         { "token", reinterpret_cast<getter>(HttpChallengeHeaderValue_get_Token), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpChallengeHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpChallengeHeaderValue) },
@@ -1554,8 +1549,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpChallengeHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpChallengeHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpChallengeHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpChallengeHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpChallengeHeaderValue",
@@ -1565,14 +1559,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpChallengeHeaderValue};
 
     static PyGetSetDef getset_HttpChallengeHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpChallengeHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpChallengeHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpChallengeHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpChallengeHeaderValue_Static[] = 
     {
@@ -1582,14 +1574,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpChallengeHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpChallengeHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpChallengeHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpChallengeHeaderValue_Static
-    };
+        type_slots_HttpChallengeHeaderValue_Static};
 
     // ----- HttpChallengeHeaderValueCollection class --------------------
 
@@ -2486,13 +2476,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpChallengeHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpChallengeHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpChallengeHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpChallengeHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpChallengeHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpChallengeHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpChallengeHeaderValueCollection) },
@@ -2505,8 +2493,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpChallengeHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpChallengeHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpChallengeHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpChallengeHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpChallengeHeaderValueCollection",
@@ -2769,13 +2756,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpConnectionOptionHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpConnectionOptionHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpConnectionOptionHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpConnectionOptionHeaderValue[] = {
         { "token", reinterpret_cast<getter>(HttpConnectionOptionHeaderValue_get_Token), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpConnectionOptionHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpConnectionOptionHeaderValue) },
@@ -2783,8 +2768,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpConnectionOptionHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpConnectionOptionHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpConnectionOptionHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpConnectionOptionHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpConnectionOptionHeaderValue",
@@ -2794,14 +2778,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpConnectionOptionHeaderValue};
 
     static PyGetSetDef getset_HttpConnectionOptionHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpConnectionOptionHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpConnectionOptionHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpConnectionOptionHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpConnectionOptionHeaderValue_Static[] = 
     {
@@ -2811,14 +2793,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpConnectionOptionHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpConnectionOptionHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpConnectionOptionHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpConnectionOptionHeaderValue_Static
-    };
+        type_slots_HttpConnectionOptionHeaderValue_Static};
 
     // ----- HttpConnectionOptionHeaderValueCollection class --------------------
 
@@ -3715,13 +3695,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpConnectionOptionHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpConnectionOptionHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpConnectionOptionHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpConnectionOptionHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpConnectionOptionHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpConnectionOptionHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpConnectionOptionHeaderValueCollection) },
@@ -3734,8 +3712,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpConnectionOptionHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpConnectionOptionHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpConnectionOptionHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpConnectionOptionHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpConnectionOptionHeaderValueCollection",
@@ -3998,13 +3975,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpContentCodingHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpContentCodingHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpContentCodingHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpContentCodingHeaderValue[] = {
         { "content_coding", reinterpret_cast<getter>(HttpContentCodingHeaderValue_get_ContentCoding), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpContentCodingHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentCodingHeaderValue) },
@@ -4012,8 +3987,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentCodingHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpContentCodingHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpContentCodingHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpContentCodingHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingHeaderValue",
@@ -4023,14 +3997,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpContentCodingHeaderValue};
 
     static PyGetSetDef getset_HttpContentCodingHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpContentCodingHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpContentCodingHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpContentCodingHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpContentCodingHeaderValue_Static[] = 
     {
@@ -4040,14 +4012,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpContentCodingHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpContentCodingHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpContentCodingHeaderValue_Static
-    };
+        type_slots_HttpContentCodingHeaderValue_Static};
 
     // ----- HttpContentCodingHeaderValueCollection class --------------------
 
@@ -4944,13 +4914,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpContentCodingHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpContentCodingHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpContentCodingHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpContentCodingHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpContentCodingHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpContentCodingHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentCodingHeaderValueCollection) },
@@ -4963,8 +4931,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpContentCodingHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpContentCodingHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpContentCodingHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpContentCodingHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingHeaderValueCollection",
@@ -5273,14 +5240,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpContentCodingWithQualityHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpContentCodingWithQualityHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpContentCodingWithQualityHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpContentCodingWithQualityHeaderValue[] = {
         { "content_coding", reinterpret_cast<getter>(HttpContentCodingWithQualityHeaderValue_get_ContentCoding), nullptr, nullptr, nullptr },
         { "quality", reinterpret_cast<getter>(HttpContentCodingWithQualityHeaderValue_get_Quality), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpContentCodingWithQualityHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentCodingWithQualityHeaderValue) },
@@ -5288,8 +5253,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentCodingWithQualityHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpContentCodingWithQualityHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpContentCodingWithQualityHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingWithQualityHeaderValue",
@@ -5299,14 +5263,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpContentCodingWithQualityHeaderValue};
 
     static PyGetSetDef getset_HttpContentCodingWithQualityHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpContentCodingWithQualityHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpContentCodingWithQualityHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpContentCodingWithQualityHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpContentCodingWithQualityHeaderValue_Static[] = 
     {
@@ -5316,14 +5278,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingWithQualityHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpContentCodingWithQualityHeaderValue_Static
-    };
+        type_slots_HttpContentCodingWithQualityHeaderValue_Static};
 
     // ----- HttpContentCodingWithQualityHeaderValueCollection class --------------------
 
@@ -6220,13 +6180,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpContentCodingWithQualityHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpContentCodingWithQualityHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpContentCodingWithQualityHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpContentCodingWithQualityHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpContentCodingWithQualityHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpContentCodingWithQualityHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentCodingWithQualityHeaderValueCollection) },
@@ -6239,8 +6197,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpContentCodingWithQualityHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpContentCodingWithQualityHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpContentCodingWithQualityHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingWithQualityHeaderValueCollection",
@@ -6848,8 +6805,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpContentDispositionHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpContentDispositionHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpContentDispositionHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpContentDispositionHeaderValue[] = {
         { "size", reinterpret_cast<getter>(HttpContentDispositionHeaderValue_get_Size), reinterpret_cast<setter>(HttpContentDispositionHeaderValue_put_Size), nullptr, nullptr },
@@ -6858,8 +6814,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "file_name", reinterpret_cast<getter>(HttpContentDispositionHeaderValue_get_FileName), reinterpret_cast<setter>(HttpContentDispositionHeaderValue_put_FileName), nullptr, nullptr },
         { "disposition_type", reinterpret_cast<getter>(HttpContentDispositionHeaderValue_get_DispositionType), reinterpret_cast<setter>(HttpContentDispositionHeaderValue_put_DispositionType), nullptr, nullptr },
         { "parameters", reinterpret_cast<getter>(HttpContentDispositionHeaderValue_get_Parameters), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpContentDispositionHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentDispositionHeaderValue) },
@@ -6867,8 +6822,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentDispositionHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpContentDispositionHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpContentDispositionHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpContentDispositionHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpContentDispositionHeaderValue",
@@ -6878,14 +6832,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpContentDispositionHeaderValue};
 
     static PyGetSetDef getset_HttpContentDispositionHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpContentDispositionHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpContentDispositionHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpContentDispositionHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpContentDispositionHeaderValue_Static[] = 
     {
@@ -6895,14 +6847,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpContentDispositionHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpContentDispositionHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpContentDispositionHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpContentDispositionHeaderValue_Static
-    };
+        type_slots_HttpContentDispositionHeaderValue_Static};
 
     // ----- HttpContentHeaderCollection class --------------------
 
@@ -8189,8 +8139,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_append_without_validation", reinterpret_cast<PyCFunction>(HttpContentHeaderCollection_TryAppendWithoutValidation), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpContentHeaderCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpContentHeaderCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpContentHeaderCollection[] = {
         { "size", reinterpret_cast<getter>(HttpContentHeaderCollection_get_Size), nullptr, nullptr, nullptr },
@@ -8204,8 +8153,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "content_disposition", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentDisposition), reinterpret_cast<setter>(HttpContentHeaderCollection_put_ContentDisposition), nullptr, nullptr },
         { "content_encoding", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentEncoding), nullptr, nullptr, nullptr },
         { "content_language", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentLanguage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpContentHeaderCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentHeaderCollection) },
@@ -8218,8 +8166,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_mp_length, reinterpret_cast<void*>(_map_length_HttpContentHeaderCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_HttpContentHeaderCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_HttpContentHeaderCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpContentHeaderCollection = {
         "winrt._winrt_windows_web_http_headers.HttpContentHeaderCollection",
@@ -8644,16 +8591,14 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpContentRangeHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpContentRangeHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpContentRangeHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpContentRangeHeaderValue[] = {
         { "unit", reinterpret_cast<getter>(HttpContentRangeHeaderValue_get_Unit), reinterpret_cast<setter>(HttpContentRangeHeaderValue_put_Unit), nullptr, nullptr },
         { "first_byte_position", reinterpret_cast<getter>(HttpContentRangeHeaderValue_get_FirstBytePosition), nullptr, nullptr, nullptr },
         { "last_byte_position", reinterpret_cast<getter>(HttpContentRangeHeaderValue_get_LastBytePosition), nullptr, nullptr, nullptr },
         { "length", reinterpret_cast<getter>(HttpContentRangeHeaderValue_get_Length), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpContentRangeHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentRangeHeaderValue) },
@@ -8661,8 +8606,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentRangeHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpContentRangeHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpContentRangeHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpContentRangeHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpContentRangeHeaderValue",
@@ -8672,14 +8616,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpContentRangeHeaderValue};
 
     static PyGetSetDef getset_HttpContentRangeHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpContentRangeHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpContentRangeHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpContentRangeHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpContentRangeHeaderValue_Static[] = 
     {
@@ -8689,14 +8631,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpContentRangeHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpContentRangeHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpContentRangeHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpContentRangeHeaderValue_Static
-    };
+        type_slots_HttpContentRangeHeaderValue_Static};
 
     // ----- HttpCookiePairHeaderValue class --------------------
 
@@ -9037,14 +8977,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpCookiePairHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpCookiePairHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpCookiePairHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpCookiePairHeaderValue[] = {
         { "value", reinterpret_cast<getter>(HttpCookiePairHeaderValue_get_Value), reinterpret_cast<setter>(HttpCookiePairHeaderValue_put_Value), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(HttpCookiePairHeaderValue_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpCookiePairHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookiePairHeaderValue) },
@@ -9052,8 +8990,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCookiePairHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCookiePairHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpCookiePairHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpCookiePairHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpCookiePairHeaderValue",
@@ -9063,14 +9000,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpCookiePairHeaderValue};
 
     static PyGetSetDef getset_HttpCookiePairHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpCookiePairHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpCookiePairHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpCookiePairHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpCookiePairHeaderValue_Static[] = 
     {
@@ -9080,14 +9015,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpCookiePairHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpCookiePairHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpCookiePairHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpCookiePairHeaderValue_Static
-    };
+        type_slots_HttpCookiePairHeaderValue_Static};
 
     // ----- HttpCookiePairHeaderValueCollection class --------------------
 
@@ -9984,13 +9917,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpCookiePairHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpCookiePairHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpCookiePairHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpCookiePairHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpCookiePairHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpCookiePairHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookiePairHeaderValueCollection) },
@@ -10003,8 +9934,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpCookiePairHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpCookiePairHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpCookiePairHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpCookiePairHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpCookiePairHeaderValueCollection",
@@ -10343,15 +10273,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpCredentialsHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpCredentialsHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpCredentialsHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpCredentialsHeaderValue[] = {
         { "parameters", reinterpret_cast<getter>(HttpCredentialsHeaderValue_get_Parameters), nullptr, nullptr, nullptr },
         { "scheme", reinterpret_cast<getter>(HttpCredentialsHeaderValue_get_Scheme), nullptr, nullptr, nullptr },
         { "token", reinterpret_cast<getter>(HttpCredentialsHeaderValue_get_Token), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpCredentialsHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCredentialsHeaderValue) },
@@ -10359,8 +10287,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCredentialsHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCredentialsHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpCredentialsHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpCredentialsHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpCredentialsHeaderValue",
@@ -10370,14 +10297,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpCredentialsHeaderValue};
 
     static PyGetSetDef getset_HttpCredentialsHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpCredentialsHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpCredentialsHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpCredentialsHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpCredentialsHeaderValue_Static[] = 
     {
@@ -10387,14 +10312,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpCredentialsHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpCredentialsHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpCredentialsHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpCredentialsHeaderValue_Static
-    };
+        type_slots_HttpCredentialsHeaderValue_Static};
 
     // ----- HttpDateOrDeltaHeaderValue class --------------------
 
@@ -10656,14 +10579,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpDateOrDeltaHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpDateOrDeltaHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpDateOrDeltaHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpDateOrDeltaHeaderValue[] = {
         { "date", reinterpret_cast<getter>(HttpDateOrDeltaHeaderValue_get_Date), nullptr, nullptr, nullptr },
         { "delta", reinterpret_cast<getter>(HttpDateOrDeltaHeaderValue_get_Delta), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpDateOrDeltaHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpDateOrDeltaHeaderValue) },
@@ -10671,8 +10592,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpDateOrDeltaHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpDateOrDeltaHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpDateOrDeltaHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpDateOrDeltaHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpDateOrDeltaHeaderValue",
@@ -10682,14 +10602,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpDateOrDeltaHeaderValue};
 
     static PyGetSetDef getset_HttpDateOrDeltaHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpDateOrDeltaHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpDateOrDeltaHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpDateOrDeltaHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpDateOrDeltaHeaderValue_Static[] = 
     {
@@ -10699,14 +10617,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpDateOrDeltaHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpDateOrDeltaHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpDateOrDeltaHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpDateOrDeltaHeaderValue_Static
-    };
+        type_slots_HttpDateOrDeltaHeaderValue_Static};
 
     // ----- HttpExpectationHeaderValue class --------------------
 
@@ -11077,15 +10993,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpExpectationHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpExpectationHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpExpectationHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpExpectationHeaderValue[] = {
         { "value", reinterpret_cast<getter>(HttpExpectationHeaderValue_get_Value), reinterpret_cast<setter>(HttpExpectationHeaderValue_put_Value), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(HttpExpectationHeaderValue_get_Name), nullptr, nullptr, nullptr },
         { "parameters", reinterpret_cast<getter>(HttpExpectationHeaderValue_get_Parameters), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpExpectationHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpExpectationHeaderValue) },
@@ -11093,8 +11007,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpExpectationHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpExpectationHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpExpectationHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpExpectationHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpExpectationHeaderValue",
@@ -11104,14 +11017,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpExpectationHeaderValue};
 
     static PyGetSetDef getset_HttpExpectationHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpExpectationHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpExpectationHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpExpectationHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpExpectationHeaderValue_Static[] = 
     {
@@ -11121,14 +11032,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpExpectationHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpExpectationHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpExpectationHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpExpectationHeaderValue_Static
-    };
+        type_slots_HttpExpectationHeaderValue_Static};
 
     // ----- HttpExpectationHeaderValueCollection class --------------------
 
@@ -12025,13 +11934,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpExpectationHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpExpectationHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpExpectationHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpExpectationHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpExpectationHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpExpectationHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpExpectationHeaderValueCollection) },
@@ -12044,8 +11951,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpExpectationHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpExpectationHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpExpectationHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpExpectationHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpExpectationHeaderValueCollection",
@@ -12949,13 +12855,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpLanguageHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpLanguageHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpLanguageHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpLanguageHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpLanguageHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpLanguageHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpLanguageHeaderValueCollection) },
@@ -12968,8 +12872,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpLanguageHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpLanguageHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpLanguageHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpLanguageHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpLanguageHeaderValueCollection",
@@ -13278,14 +13181,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpLanguageRangeWithQualityHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpLanguageRangeWithQualityHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpLanguageRangeWithQualityHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpLanguageRangeWithQualityHeaderValue[] = {
         { "language_range", reinterpret_cast<getter>(HttpLanguageRangeWithQualityHeaderValue_get_LanguageRange), nullptr, nullptr, nullptr },
         { "quality", reinterpret_cast<getter>(HttpLanguageRangeWithQualityHeaderValue_get_Quality), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpLanguageRangeWithQualityHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpLanguageRangeWithQualityHeaderValue) },
@@ -13293,8 +13194,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpLanguageRangeWithQualityHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpLanguageRangeWithQualityHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpLanguageRangeWithQualityHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpLanguageRangeWithQualityHeaderValue",
@@ -13304,14 +13204,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpLanguageRangeWithQualityHeaderValue};
 
     static PyGetSetDef getset_HttpLanguageRangeWithQualityHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpLanguageRangeWithQualityHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpLanguageRangeWithQualityHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpLanguageRangeWithQualityHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpLanguageRangeWithQualityHeaderValue_Static[] = 
     {
@@ -13321,14 +13219,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpLanguageRangeWithQualityHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpLanguageRangeWithQualityHeaderValue_Static
-    };
+        type_slots_HttpLanguageRangeWithQualityHeaderValue_Static};
 
     // ----- HttpLanguageRangeWithQualityHeaderValueCollection class --------------------
 
@@ -14225,13 +14121,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpLanguageRangeWithQualityHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpLanguageRangeWithQualityHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpLanguageRangeWithQualityHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpLanguageRangeWithQualityHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpLanguageRangeWithQualityHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpLanguageRangeWithQualityHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpLanguageRangeWithQualityHeaderValueCollection) },
@@ -14244,8 +14138,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpLanguageRangeWithQualityHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpLanguageRangeWithQualityHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpLanguageRangeWithQualityHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpLanguageRangeWithQualityHeaderValueCollection",
@@ -14646,15 +14539,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpMediaTypeHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpMediaTypeHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMediaTypeHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpMediaTypeHeaderValue[] = {
         { "media_type", reinterpret_cast<getter>(HttpMediaTypeHeaderValue_get_MediaType), reinterpret_cast<setter>(HttpMediaTypeHeaderValue_put_MediaType), nullptr, nullptr },
         { "char_set", reinterpret_cast<getter>(HttpMediaTypeHeaderValue_get_CharSet), reinterpret_cast<setter>(HttpMediaTypeHeaderValue_put_CharSet), nullptr, nullptr },
         { "parameters", reinterpret_cast<getter>(HttpMediaTypeHeaderValue_get_Parameters), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpMediaTypeHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMediaTypeHeaderValue) },
@@ -14662,8 +14553,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMediaTypeHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMediaTypeHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMediaTypeHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpMediaTypeHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpMediaTypeHeaderValue",
@@ -14673,14 +14563,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpMediaTypeHeaderValue};
 
     static PyGetSetDef getset_HttpMediaTypeHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpMediaTypeHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpMediaTypeHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpMediaTypeHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpMediaTypeHeaderValue_Static[] = 
     {
@@ -14690,14 +14578,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpMediaTypeHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpMediaTypeHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpMediaTypeHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpMediaTypeHeaderValue_Static
-    };
+        type_slots_HttpMediaTypeHeaderValue_Static};
 
     // ----- HttpMediaTypeWithQualityHeaderValue class --------------------
 
@@ -15176,16 +15062,14 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpMediaTypeWithQualityHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpMediaTypeWithQualityHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMediaTypeWithQualityHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpMediaTypeWithQualityHeaderValue[] = {
         { "quality", reinterpret_cast<getter>(HttpMediaTypeWithQualityHeaderValue_get_Quality), reinterpret_cast<setter>(HttpMediaTypeWithQualityHeaderValue_put_Quality), nullptr, nullptr },
         { "media_type", reinterpret_cast<getter>(HttpMediaTypeWithQualityHeaderValue_get_MediaType), reinterpret_cast<setter>(HttpMediaTypeWithQualityHeaderValue_put_MediaType), nullptr, nullptr },
         { "char_set", reinterpret_cast<getter>(HttpMediaTypeWithQualityHeaderValue_get_CharSet), reinterpret_cast<setter>(HttpMediaTypeWithQualityHeaderValue_put_CharSet), nullptr, nullptr },
         { "parameters", reinterpret_cast<getter>(HttpMediaTypeWithQualityHeaderValue_get_Parameters), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpMediaTypeWithQualityHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMediaTypeWithQualityHeaderValue) },
@@ -15193,8 +15077,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMediaTypeWithQualityHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMediaTypeWithQualityHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMediaTypeWithQualityHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpMediaTypeWithQualityHeaderValue",
@@ -15204,14 +15087,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpMediaTypeWithQualityHeaderValue};
 
     static PyGetSetDef getset_HttpMediaTypeWithQualityHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpMediaTypeWithQualityHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpMediaTypeWithQualityHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpMediaTypeWithQualityHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpMediaTypeWithQualityHeaderValue_Static[] = 
     {
@@ -15221,14 +15102,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpMediaTypeWithQualityHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpMediaTypeWithQualityHeaderValue_Static
-    };
+        type_slots_HttpMediaTypeWithQualityHeaderValue_Static};
 
     // ----- HttpMediaTypeWithQualityHeaderValueCollection class --------------------
 
@@ -16125,13 +16004,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpMediaTypeWithQualityHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpMediaTypeWithQualityHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMediaTypeWithQualityHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpMediaTypeWithQualityHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpMediaTypeWithQualityHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpMediaTypeWithQualityHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMediaTypeWithQualityHeaderValueCollection) },
@@ -16144,8 +16021,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpMediaTypeWithQualityHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpMediaTypeWithQualityHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpMediaTypeWithQualityHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpMediaTypeWithQualityHeaderValueCollection",
@@ -17049,13 +16925,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpMethodHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpMethodHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMethodHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpMethodHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpMethodHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpMethodHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMethodHeaderValueCollection) },
@@ -17068,8 +16942,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpMethodHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpMethodHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpMethodHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpMethodHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpMethodHeaderValueCollection",
@@ -17417,14 +17290,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpNameValueHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpNameValueHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpNameValueHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpNameValueHeaderValue[] = {
         { "value", reinterpret_cast<getter>(HttpNameValueHeaderValue_get_Value), reinterpret_cast<setter>(HttpNameValueHeaderValue_put_Value), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(HttpNameValueHeaderValue_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpNameValueHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpNameValueHeaderValue) },
@@ -17432,8 +17303,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpNameValueHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpNameValueHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpNameValueHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpNameValueHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpNameValueHeaderValue",
@@ -17443,14 +17313,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpNameValueHeaderValue};
 
     static PyGetSetDef getset_HttpNameValueHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpNameValueHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpNameValueHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpNameValueHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpNameValueHeaderValue_Static[] = 
     {
@@ -17460,14 +17328,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpNameValueHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpNameValueHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpNameValueHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpNameValueHeaderValue_Static
-    };
+        type_slots_HttpNameValueHeaderValue_Static};
 
     // ----- HttpProductHeaderValue class --------------------
 
@@ -17769,14 +17635,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpProductHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpProductHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpProductHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpProductHeaderValue[] = {
         { "name", reinterpret_cast<getter>(HttpProductHeaderValue_get_Name), nullptr, nullptr, nullptr },
         { "version", reinterpret_cast<getter>(HttpProductHeaderValue_get_Version), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpProductHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProductHeaderValue) },
@@ -17784,8 +17648,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpProductHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpProductHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpProductHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpProductHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpProductHeaderValue",
@@ -17795,14 +17658,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpProductHeaderValue};
 
     static PyGetSetDef getset_HttpProductHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpProductHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpProductHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpProductHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpProductHeaderValue_Static[] = 
     {
@@ -17812,14 +17673,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpProductHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpProductHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpProductHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpProductHeaderValue_Static
-    };
+        type_slots_HttpProductHeaderValue_Static};
 
     // ----- HttpProductInfoHeaderValue class --------------------
 
@@ -18121,14 +17980,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpProductInfoHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpProductInfoHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpProductInfoHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpProductInfoHeaderValue[] = {
         { "comment", reinterpret_cast<getter>(HttpProductInfoHeaderValue_get_Comment), nullptr, nullptr, nullptr },
         { "product", reinterpret_cast<getter>(HttpProductInfoHeaderValue_get_Product), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpProductInfoHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProductInfoHeaderValue) },
@@ -18136,8 +17993,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpProductInfoHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpProductInfoHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpProductInfoHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpProductInfoHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpProductInfoHeaderValue",
@@ -18147,14 +18003,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpProductInfoHeaderValue};
 
     static PyGetSetDef getset_HttpProductInfoHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpProductInfoHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpProductInfoHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpProductInfoHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpProductInfoHeaderValue_Static[] = 
     {
@@ -18164,14 +18018,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpProductInfoHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpProductInfoHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpProductInfoHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpProductInfoHeaderValue_Static
-    };
+        type_slots_HttpProductInfoHeaderValue_Static};
 
     // ----- HttpProductInfoHeaderValueCollection class --------------------
 
@@ -19068,13 +18920,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpProductInfoHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpProductInfoHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpProductInfoHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpProductInfoHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpProductInfoHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpProductInfoHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProductInfoHeaderValueCollection) },
@@ -19087,8 +18937,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpProductInfoHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpProductInfoHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpProductInfoHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpProductInfoHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpProductInfoHeaderValueCollection",
@@ -20639,8 +20488,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_append_without_validation", reinterpret_cast<PyCFunction>(HttpRequestHeaderCollection_TryAppendWithoutValidation), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpRequestHeaderCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpRequestHeaderCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpRequestHeaderCollection[] = {
         { "size", reinterpret_cast<getter>(HttpRequestHeaderCollection_get_Size), nullptr, nullptr, nullptr },
@@ -20662,8 +20510,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "expect", reinterpret_cast<getter>(HttpRequestHeaderCollection_get_Expect), nullptr, nullptr, nullptr },
         { "transfer_encoding", reinterpret_cast<getter>(HttpRequestHeaderCollection_get_TransferEncoding), nullptr, nullptr, nullptr },
         { "user_agent", reinterpret_cast<getter>(HttpRequestHeaderCollection_get_UserAgent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpRequestHeaderCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpRequestHeaderCollection) },
@@ -20676,8 +20523,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_mp_length, reinterpret_cast<void*>(_map_length_HttpRequestHeaderCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_HttpRequestHeaderCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_HttpRequestHeaderCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpRequestHeaderCollection = {
         "winrt._winrt_windows_web_http_headers.HttpRequestHeaderCollection",
@@ -21793,8 +21639,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_append_without_validation", reinterpret_cast<PyCFunction>(HttpResponseHeaderCollection_TryAppendWithoutValidation), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpResponseHeaderCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpResponseHeaderCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpResponseHeaderCollection[] = {
         { "size", reinterpret_cast<getter>(HttpResponseHeaderCollection_get_Size), nullptr, nullptr, nullptr },
@@ -21808,8 +21653,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "proxy_authenticate", reinterpret_cast<getter>(HttpResponseHeaderCollection_get_ProxyAuthenticate), nullptr, nullptr, nullptr },
         { "transfer_encoding", reinterpret_cast<getter>(HttpResponseHeaderCollection_get_TransferEncoding), nullptr, nullptr, nullptr },
         { "www_authenticate", reinterpret_cast<getter>(HttpResponseHeaderCollection_get_WwwAuthenticate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpResponseHeaderCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpResponseHeaderCollection) },
@@ -21822,8 +21666,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_mp_length, reinterpret_cast<void*>(_map_length_HttpResponseHeaderCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_HttpResponseHeaderCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_HttpResponseHeaderCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpResponseHeaderCollection = {
         "winrt._winrt_windows_web_http_headers.HttpResponseHeaderCollection",
@@ -22116,14 +21959,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "to_string", reinterpret_cast<PyCFunction>(HttpTransferCodingHeaderValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpTransferCodingHeaderValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpTransferCodingHeaderValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpTransferCodingHeaderValue[] = {
         { "parameters", reinterpret_cast<getter>(HttpTransferCodingHeaderValue_get_Parameters), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(HttpTransferCodingHeaderValue_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpTransferCodingHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpTransferCodingHeaderValue) },
@@ -22131,8 +21972,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpTransferCodingHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpTransferCodingHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpTransferCodingHeaderValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpTransferCodingHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpTransferCodingHeaderValue",
@@ -22142,14 +21982,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         _type_slots_HttpTransferCodingHeaderValue};
 
     static PyGetSetDef getset_HttpTransferCodingHeaderValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpTransferCodingHeaderValue_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(HttpTransferCodingHeaderValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(HttpTransferCodingHeaderValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpTransferCodingHeaderValue_Static[] = 
     {
@@ -22159,14 +21997,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Spec type_spec_HttpTransferCodingHeaderValue_Static =
-    {
+    static PyType_Spec type_spec_HttpTransferCodingHeaderValue_Static = {
         "winrt._winrt_windows_web_http_headers.HttpTransferCodingHeaderValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpTransferCodingHeaderValue_Static
-    };
+        type_slots_HttpTransferCodingHeaderValue_Static};
 
     // ----- HttpTransferCodingHeaderValueCollection class --------------------
 
@@ -23063,13 +22899,11 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "try_parse_add", reinterpret_cast<PyCFunction>(HttpTransferCodingHeaderValueCollection_TryParseAdd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpTransferCodingHeaderValueCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpTransferCodingHeaderValueCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpTransferCodingHeaderValueCollection[] = {
         { "size", reinterpret_cast<getter>(HttpTransferCodingHeaderValueCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpTransferCodingHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpTransferCodingHeaderValueCollection) },
@@ -23082,8 +22916,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpTransferCodingHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpTransferCodingHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpTransferCodingHeaderValueCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpTransferCodingHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpTransferCodingHeaderValueCollection",

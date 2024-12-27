@@ -102,21 +102,18 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     static PyMethodDef _methods_GpioPinProviderValueChangedEventArgs[] = {
         { "_assign_array_", _assign_array_GpioPinProviderValueChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioPinProviderValueChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GpioPinProviderValueChangedEventArgs[] = {
         { "edge", reinterpret_cast<getter>(GpioPinProviderValueChangedEventArgs_get_Edge), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GpioPinProviderValueChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioPinProviderValueChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioPinProviderValueChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioPinProviderValueChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioPinProviderValueChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GpioPinProviderValueChangedEventArgs = {
         "winrt._winrt_windows_devices_gpio_provider.GpioPinProviderValueChangedEventArgs",
@@ -243,21 +240,18 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { "open_pin_provider", reinterpret_cast<PyCFunction>(IGpioControllerProvider_OpenPinProvider), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IGpioControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGpioControllerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGpioControllerProvider[] = {
         { "pin_count", reinterpret_cast<getter>(IGpioControllerProvider_get_PinCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGpioControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGpioControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGpioControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGpioControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGpioControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGpioControllerProvider = {
         "winrt._winrt_windows_devices_gpio_provider.IGpioControllerProvider",
@@ -377,13 +371,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     static PyMethodDef methods_ImplementsIGpioControllerProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGpioControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGpioControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGpioControllerProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGpioControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGpioControllerProvider = {
         "winrt._winrt_windows_devices_gpio_provider.ImplementsIGpioControllerProvider",
@@ -845,23 +837,20 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { "remove_value_changed", reinterpret_cast<PyCFunction>(IGpioPinProvider_remove_ValueChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_IGpioPinProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGpioPinProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGpioPinProvider[] = {
         { "debounce_timeout", reinterpret_cast<getter>(IGpioPinProvider_get_DebounceTimeout), reinterpret_cast<setter>(IGpioPinProvider_put_DebounceTimeout), nullptr, nullptr },
         { "pin_number", reinterpret_cast<getter>(IGpioPinProvider_get_PinNumber), nullptr, nullptr, nullptr },
         { "sharing_mode", reinterpret_cast<getter>(IGpioPinProvider_get_SharingMode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGpioPinProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGpioPinProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGpioPinProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGpioPinProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGpioPinProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGpioPinProvider = {
         "winrt._winrt_windows_devices_gpio_provider.IGpioPinProvider",
@@ -1206,13 +1195,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     static PyMethodDef methods_ImplementsIGpioPinProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGpioPinProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGpioPinProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGpioPinProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGpioPinProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGpioPinProvider = {
         "winrt._winrt_windows_devices_gpio_provider.ImplementsIGpioPinProvider",
@@ -1306,20 +1293,17 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { "get_controllers", reinterpret_cast<PyCFunction>(IGpioProvider_GetControllers), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IGpioProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGpioProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGpioProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGpioProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGpioProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGpioProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGpioProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGpioProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGpioProvider = {
         "winrt._winrt_windows_devices_gpio_provider.IGpioProvider",
@@ -1401,13 +1385,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     static PyMethodDef methods_ImplementsIGpioProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGpioProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGpioProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGpioProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGpioProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGpioProvider = {
         "winrt._winrt_windows_devices_gpio_provider.ImplementsIGpioProvider",

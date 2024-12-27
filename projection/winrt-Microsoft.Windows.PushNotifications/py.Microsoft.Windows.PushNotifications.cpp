@@ -150,22 +150,19 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { "close", reinterpret_cast<PyCFunction>(PushNotificationChannel_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PushNotificationChannel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PushNotificationChannel), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PushNotificationChannel[] = {
         { "expiration_time", reinterpret_cast<getter>(PushNotificationChannel_get_ExpirationTime), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(PushNotificationChannel_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PushNotificationChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationChannel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PushNotificationChannel = {
         "winrt._winrt_microsoft_windows_pushnotifications.PushNotificationChannel",
@@ -308,23 +305,20 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
     static PyMethodDef _methods_PushNotificationCreateChannelResult[] = {
         { "_assign_array_", _assign_array_PushNotificationCreateChannelResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PushNotificationCreateChannelResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PushNotificationCreateChannelResult[] = {
         { "channel", reinterpret_cast<getter>(PushNotificationCreateChannelResult_get_Channel), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(PushNotificationCreateChannelResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(PushNotificationCreateChannelResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PushNotificationCreateChannelResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationCreateChannelResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationCreateChannelResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationCreateChannelResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationCreateChannelResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PushNotificationCreateChannelResult = {
         "winrt._winrt_microsoft_windows_pushnotifications.PushNotificationCreateChannelResult",
@@ -683,20 +677,17 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { "remove_push_received", reinterpret_cast<PyCFunction>(PushNotificationManager_remove_PushReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_PushNotificationManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PushNotificationManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PushNotificationManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PushNotificationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PushNotificationManager = {
         "winrt._winrt_microsoft_windows_pushnotifications.PushNotificationManager",
@@ -707,13 +698,11 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyGetSetDef getset_PushNotificationManager_Static[] = {
         { "default", reinterpret_cast<getter>(PushNotificationManager_get_Default), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PushNotificationManager_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(PushNotificationManager_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PushNotificationManager_Static[] = 
     {
@@ -723,14 +712,12 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { }
     };
 
-    static PyType_Spec type_spec_PushNotificationManager_Static =
-    {
+    static PyType_Spec type_spec_PushNotificationManager_Static = {
         "winrt._winrt_microsoft_windows_pushnotifications.PushNotificationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PushNotificationManager_Static
-    };
+        type_slots_PushNotificationManager_Static};
 
     // ----- PushNotificationReceivedEventArgs class --------------------
 
@@ -914,21 +901,18 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { "remove_canceled", reinterpret_cast<PyCFunction>(PushNotificationReceivedEventArgs_remove_Canceled), METH_O, nullptr },
         { "_assign_array_", _assign_array_PushNotificationReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PushNotificationReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PushNotificationReceivedEventArgs[] = {
         { "payload", reinterpret_cast<getter>(PushNotificationReceivedEventArgs_get_Payload), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PushNotificationReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PushNotificationReceivedEventArgs = {
         "winrt._winrt_microsoft_windows_pushnotifications.PushNotificationReceivedEventArgs",
@@ -1008,8 +992,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyMethodDef _methods_PushNotificationCreateChannelStatus[] = {
         { "_assign_array_", _assign_array_PushNotificationCreateChannelStatus, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* PushNotificationCreateChannelStatus_get_status(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, void* /*unused*/) noexcept
     {
@@ -1114,8 +1097,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { "status", reinterpret_cast<getter>(PushNotificationCreateChannelStatus_get_status), reinterpret_cast<setter>(PushNotificationCreateChannelStatus_set_status), nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(PushNotificationCreateChannelStatus_get_extendedError), reinterpret_cast<setter>(PushNotificationCreateChannelStatus_set_extendedError), nullptr, nullptr },
         { "retry_count", reinterpret_cast<getter>(PushNotificationCreateChannelStatus_get_retryCount), reinterpret_cast<setter>(PushNotificationCreateChannelStatus_set_retryCount), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_PushNotificationCreateChannelStatus(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, PyObject* other, int op) noexcept
     {
@@ -1183,8 +1165,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationCreateChannelStatus) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PushNotificationCreateChannelStatus) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_PushNotificationCreateChannelStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PushNotificationCreateChannelStatus = {
         "winrt._winrt_microsoft_windows_pushnotifications.PushNotificationCreateChannelStatus",

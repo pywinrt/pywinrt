@@ -518,8 +518,7 @@ namespace py::cpp::Windows::Media::Core
         { "copy", reinterpret_cast<PyCFunction>(AudioStreamDescriptor_Copy), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AudioStreamDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioStreamDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioStreamDescriptor[] = {
         { "encoding_properties", reinterpret_cast<getter>(AudioStreamDescriptor_get_EncodingProperties), nullptr, nullptr, nullptr },
@@ -529,16 +528,14 @@ namespace py::cpp::Windows::Media::Core
         { "language", reinterpret_cast<getter>(AudioStreamDescriptor_get_Language), reinterpret_cast<setter>(AudioStreamDescriptor_put_Language), nullptr, nullptr },
         { "is_selected", reinterpret_cast<getter>(AudioStreamDescriptor_get_IsSelected), nullptr, nullptr, nullptr },
         { "label", reinterpret_cast<getter>(AudioStreamDescriptor_get_Label), reinterpret_cast<setter>(AudioStreamDescriptor_put_Label), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioStreamDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioStreamDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioStreamDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioStreamDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioStreamDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioStreamDescriptor = {
         "winrt._winrt_windows_media_core.AudioStreamDescriptor",
@@ -948,8 +945,7 @@ namespace py::cpp::Windows::Media::Core
         { "remove_open_failed", reinterpret_cast<PyCFunction>(AudioTrack_remove_OpenFailed), METH_O, nullptr },
         { "_assign_array_", _assign_array_AudioTrack, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioTrack), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioTrack[] = {
         { "name", reinterpret_cast<getter>(AudioTrack_get_Name), nullptr, nullptr, nullptr },
@@ -959,16 +955,14 @@ namespace py::cpp::Windows::Media::Core
         { "id", reinterpret_cast<getter>(AudioTrack_get_Id), nullptr, nullptr, nullptr },
         { "language", reinterpret_cast<getter>(AudioTrack_get_Language), nullptr, nullptr, nullptr },
         { "track_kind", reinterpret_cast<getter>(AudioTrack_get_TrackKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioTrack[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioTrack) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioTrack) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioTrack) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioTrack) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioTrack = {
         "winrt._winrt_windows_media_core.AudioTrack",
@@ -1051,21 +1045,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_AudioTrackOpenFailedEventArgs[] = {
         { "_assign_array_", _assign_array_AudioTrackOpenFailedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioTrackOpenFailedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioTrackOpenFailedEventArgs[] = {
         { "extended_error", reinterpret_cast<getter>(AudioTrackOpenFailedEventArgs_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioTrackOpenFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioTrackOpenFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioTrackOpenFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioTrackOpenFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioTrackOpenFailedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioTrackOpenFailedEventArgs = {
         "winrt._winrt_windows_media_core.AudioTrackOpenFailedEventArgs",
@@ -1238,24 +1229,21 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_AudioTrackSupportInfo[] = {
         { "_assign_array_", _assign_array_AudioTrackSupportInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioTrackSupportInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioTrackSupportInfo[] = {
         { "decoder_status", reinterpret_cast<getter>(AudioTrackSupportInfo_get_DecoderStatus), nullptr, nullptr, nullptr },
         { "degradation", reinterpret_cast<getter>(AudioTrackSupportInfo_get_Degradation), nullptr, nullptr, nullptr },
         { "degradation_reason", reinterpret_cast<getter>(AudioTrackSupportInfo_get_DegradationReason), nullptr, nullptr, nullptr },
         { "media_source_status", reinterpret_cast<getter>(AudioTrackSupportInfo_get_MediaSourceStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioTrackSupportInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioTrackSupportInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioTrackSupportInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioTrackSupportInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioTrackSupportInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioTrackSupportInfo = {
         "winrt._winrt_windows_media_core.AudioTrackSupportInfo",
@@ -1606,24 +1594,21 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_ChapterCue[] = {
         { "_assign_array_", _assign_array_ChapterCue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ChapterCue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ChapterCue[] = {
         { "title", reinterpret_cast<getter>(ChapterCue_get_Title), reinterpret_cast<setter>(ChapterCue_put_Title), nullptr, nullptr },
         { "start_time", reinterpret_cast<getter>(ChapterCue_get_StartTime), reinterpret_cast<setter>(ChapterCue_put_StartTime), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(ChapterCue_get_Id), reinterpret_cast<setter>(ChapterCue_put_Id), nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(ChapterCue_get_Duration), reinterpret_cast<setter>(ChapterCue_put_Duration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ChapterCue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ChapterCue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ChapterCue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ChapterCue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ChapterCue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ChapterCue = {
         "winrt._winrt_windows_media_core.ChapterCue",
@@ -1826,8 +1811,7 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_CodecInfo[] = {
         { "_assign_array_", _assign_array_CodecInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CodecInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CodecInfo[] = {
         { "category", reinterpret_cast<getter>(CodecInfo_get_Category), nullptr, nullptr, nullptr },
@@ -1835,16 +1819,14 @@ namespace py::cpp::Windows::Media::Core
         { "is_trusted", reinterpret_cast<getter>(CodecInfo_get_IsTrusted), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(CodecInfo_get_Kind), nullptr, nullptr, nullptr },
         { "subtypes", reinterpret_cast<getter>(CodecInfo_get_Subtypes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CodecInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CodecInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CodecInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CodecInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CodecInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CodecInfo = {
         "winrt._winrt_windows_media_core.CodecInfo",
@@ -1964,20 +1946,17 @@ namespace py::cpp::Windows::Media::Core
         { "find_all_async", reinterpret_cast<PyCFunction>(CodecQuery_FindAllAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CodecQuery, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CodecQuery), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CodecQuery[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CodecQuery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CodecQuery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CodecQuery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CodecQuery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CodecQuery) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CodecQuery = {
         "winrt._winrt_windows_media_core.CodecQuery",
@@ -3526,19 +3505,16 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef _methods_CodecSubtypes[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CodecSubtypes[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CodecSubtypes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CodecSubtypes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CodecSubtypes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CodecSubtypes) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CodecSubtypes = {
         "winrt._winrt_windows_media_core.CodecSubtypes",
@@ -3599,12 +3575,10 @@ namespace py::cpp::Windows::Media::Core
         { "video_format_wmv2", reinterpret_cast<getter>(CodecSubtypes_get_VideoFormatWmv2), nullptr, nullptr, nullptr },
         { "video_format_wmv3", reinterpret_cast<getter>(CodecSubtypes_get_VideoFormatWmv3), nullptr, nullptr, nullptr },
         { "video_format_wvc1", reinterpret_cast<getter>(CodecSubtypes_get_VideoFormatWvc1), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CodecSubtypes_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CodecSubtypes_Static[] = 
     {
@@ -3614,14 +3588,12 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
-    static PyType_Spec type_spec_CodecSubtypes_Static =
-    {
+    static PyType_Spec type_spec_CodecSubtypes_Static = {
         "winrt._winrt_windows_media_core.CodecSubtypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CodecSubtypes_Static
-    };
+        type_slots_CodecSubtypes_Static};
 
     // ----- DataCue class --------------------
 
@@ -3995,8 +3967,7 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_DataCue[] = {
         { "_assign_array_", _assign_array_DataCue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataCue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DataCue[] = {
         { "data", reinterpret_cast<getter>(DataCue_get_Data), reinterpret_cast<setter>(DataCue_put_Data), nullptr, nullptr },
@@ -4004,16 +3975,14 @@ namespace py::cpp::Windows::Media::Core
         { "start_time", reinterpret_cast<getter>(DataCue_get_StartTime), reinterpret_cast<setter>(DataCue_put_StartTime), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(DataCue_get_Id), reinterpret_cast<setter>(DataCue_put_Id), nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(DataCue_get_Duration), reinterpret_cast<setter>(DataCue_put_Duration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DataCue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataCue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataCue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataCue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataCue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DataCue = {
         "winrt._winrt_windows_media_core.DataCue",
@@ -4096,21 +4065,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_FaceDetectedEventArgs[] = {
         { "_assign_array_", _assign_array_FaceDetectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceDetectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FaceDetectedEventArgs[] = {
         { "result_frame", reinterpret_cast<getter>(FaceDetectedEventArgs_get_ResultFrame), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FaceDetectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FaceDetectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FaceDetectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FaceDetectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FaceDetectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FaceDetectedEventArgs = {
         "winrt._winrt_windows_media_core.FaceDetectedEventArgs",
@@ -4412,22 +4378,19 @@ namespace py::cpp::Windows::Media::Core
         { "remove_face_detected", reinterpret_cast<PyCFunction>(FaceDetectionEffect_remove_FaceDetected), METH_O, nullptr },
         { "_assign_array_", _assign_array_FaceDetectionEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceDetectionEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FaceDetectionEffect[] = {
         { "enabled", reinterpret_cast<getter>(FaceDetectionEffect_get_Enabled), reinterpret_cast<setter>(FaceDetectionEffect_put_Enabled), nullptr, nullptr },
         { "desired_detection_interval", reinterpret_cast<getter>(FaceDetectionEffect_get_DesiredDetectionInterval), reinterpret_cast<setter>(FaceDetectionEffect_put_DesiredDetectionInterval), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FaceDetectionEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FaceDetectionEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FaceDetectionEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FaceDetectionEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FaceDetectionEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FaceDetectionEffect = {
         "winrt._winrt_windows_media_core.FaceDetectionEffect",
@@ -4700,24 +4663,21 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_FaceDetectionEffectDefinition[] = {
         { "_assign_array_", _assign_array_FaceDetectionEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceDetectionEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FaceDetectionEffectDefinition[] = {
         { "synchronous_detection_enabled", reinterpret_cast<getter>(FaceDetectionEffectDefinition_get_SynchronousDetectionEnabled), reinterpret_cast<setter>(FaceDetectionEffectDefinition_put_SynchronousDetectionEnabled), nullptr, nullptr },
         { "detection_mode", reinterpret_cast<getter>(FaceDetectionEffectDefinition_get_DetectionMode), reinterpret_cast<setter>(FaceDetectionEffectDefinition_put_DetectionMode), nullptr, nullptr },
         { "activatable_class_id", reinterpret_cast<getter>(FaceDetectionEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(FaceDetectionEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FaceDetectionEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FaceDetectionEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FaceDetectionEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FaceDetectionEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FaceDetectionEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FaceDetectionEffectDefinition = {
         "winrt._winrt_windows_media_core.FaceDetectionEffectDefinition",
@@ -5233,8 +5193,7 @@ namespace py::cpp::Windows::Media::Core
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceDetectionEffectFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_FaceDetectionEffectFrame), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_FaceDetectionEffectFrame), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FaceDetectionEffectFrame[] = {
         { "detected_faces", reinterpret_cast<getter>(FaceDetectionEffectFrame_get_DetectedFaces), nullptr, nullptr, nullptr },
@@ -5245,16 +5204,14 @@ namespace py::cpp::Windows::Media::Core
         { "extended_properties", reinterpret_cast<getter>(FaceDetectionEffectFrame_get_ExtendedProperties), nullptr, nullptr, nullptr },
         { "is_read_only", reinterpret_cast<getter>(FaceDetectionEffectFrame_get_IsReadOnly), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(FaceDetectionEffectFrame_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FaceDetectionEffectFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FaceDetectionEffectFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FaceDetectionEffectFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FaceDetectionEffectFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FaceDetectionEffectFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FaceDetectionEffectFrame = {
         "winrt._winrt_windows_media_core.FaceDetectionEffectFrame",
@@ -5376,21 +5333,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_HighDynamicRangeControl[] = {
         { "_assign_array_", _assign_array_HighDynamicRangeControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HighDynamicRangeControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HighDynamicRangeControl[] = {
         { "enabled", reinterpret_cast<getter>(HighDynamicRangeControl_get_Enabled), reinterpret_cast<setter>(HighDynamicRangeControl_put_Enabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HighDynamicRangeControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HighDynamicRangeControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HighDynamicRangeControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HighDynamicRangeControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HighDynamicRangeControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HighDynamicRangeControl = {
         "winrt._winrt_windows_media_core.HighDynamicRangeControl",
@@ -5503,22 +5457,19 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_HighDynamicRangeOutput[] = {
         { "_assign_array_", _assign_array_HighDynamicRangeOutput, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HighDynamicRangeOutput), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HighDynamicRangeOutput[] = {
         { "certainty", reinterpret_cast<getter>(HighDynamicRangeOutput_get_Certainty), nullptr, nullptr, nullptr },
         { "frame_controllers", reinterpret_cast<getter>(HighDynamicRangeOutput_get_FrameControllers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HighDynamicRangeOutput[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HighDynamicRangeOutput) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HighDynamicRangeOutput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HighDynamicRangeOutput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HighDynamicRangeOutput) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HighDynamicRangeOutput = {
         "winrt._winrt_windows_media_core.HighDynamicRangeOutput",
@@ -6007,8 +5958,7 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_ImageCue[] = {
         { "_assign_array_", _assign_array_ImageCue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageCue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageCue[] = {
         { "software_bitmap", reinterpret_cast<getter>(ImageCue_get_SoftwareBitmap), reinterpret_cast<setter>(ImageCue_put_SoftwareBitmap), nullptr, nullptr },
@@ -6017,16 +5967,14 @@ namespace py::cpp::Windows::Media::Core
         { "start_time", reinterpret_cast<getter>(ImageCue_get_StartTime), reinterpret_cast<setter>(ImageCue_put_StartTime), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(ImageCue_get_Id), reinterpret_cast<setter>(ImageCue_put_Id), nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(ImageCue_get_Duration), reinterpret_cast<setter>(ImageCue_put_Duration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageCue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageCue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageCue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageCue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageCue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageCue = {
         "winrt._winrt_windows_media_core.ImageCue",
@@ -6180,22 +6128,19 @@ namespace py::cpp::Windows::Media::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(InitializeMediaStreamSourceRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InitializeMediaStreamSourceRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InitializeMediaStreamSourceRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InitializeMediaStreamSourceRequestedEventArgs[] = {
         { "random_access_stream", reinterpret_cast<getter>(InitializeMediaStreamSourceRequestedEventArgs_get_RandomAccessStream), nullptr, nullptr, nullptr },
         { "source", reinterpret_cast<getter>(InitializeMediaStreamSourceRequestedEventArgs_get_Source), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InitializeMediaStreamSourceRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InitializeMediaStreamSourceRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InitializeMediaStreamSourceRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InitializeMediaStreamSourceRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InitializeMediaStreamSourceRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InitializeMediaStreamSourceRequestedEventArgs = {
         "winrt._winrt_windows_media_core.InitializeMediaStreamSourceRequestedEventArgs",
@@ -6316,19 +6261,16 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef _methods_LowLightFusion[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LowLightFusion[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LowLightFusion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLightFusion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLightFusion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLightFusion) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LowLightFusion = {
         "winrt._winrt_windows_media_core.LowLightFusion",
@@ -6340,13 +6282,11 @@ namespace py::cpp::Windows::Media::Core
     static PyGetSetDef getset_LowLightFusion_Static[] = {
         { "max_supported_frame_count", reinterpret_cast<getter>(LowLightFusion_get_MaxSupportedFrameCount), nullptr, nullptr, nullptr },
         { "supported_bitmap_pixel_formats", reinterpret_cast<getter>(LowLightFusion_get_SupportedBitmapPixelFormats), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LowLightFusion_Static[] = {
         { "fuse_async", reinterpret_cast<PyCFunction>(LowLightFusion_FuseAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LowLightFusion_Static[] = 
     {
@@ -6356,14 +6296,12 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
-    static PyType_Spec type_spec_LowLightFusion_Static =
-    {
+    static PyType_Spec type_spec_LowLightFusion_Static = {
         "winrt._winrt_windows_media_core.LowLightFusion_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LowLightFusion_Static
-    };
+        type_slots_LowLightFusion_Static};
 
     // ----- LowLightFusionResult class --------------------
 
@@ -6506,21 +6444,18 @@ namespace py::cpp::Windows::Media::Core
         { "_from", reinterpret_cast<PyCFunction>(_from_LowLightFusionResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LowLightFusionResult), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_LowLightFusionResult), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LowLightFusionResult[] = {
         { "frame", reinterpret_cast<getter>(LowLightFusionResult_get_Frame), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LowLightFusionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLightFusionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LowLightFusionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLightFusionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLightFusionResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LowLightFusionResult = {
         "winrt._winrt_windows_media_core.LowLightFusionResult",
@@ -6761,22 +6696,19 @@ namespace py::cpp::Windows::Media::Core
         { "remove_binding", reinterpret_cast<PyCFunction>(MediaBinder_remove_Binding), METH_O, nullptr },
         { "_assign_array_", _assign_array_MediaBinder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaBinder), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaBinder[] = {
         { "token", reinterpret_cast<getter>(MediaBinder_get_Token), reinterpret_cast<setter>(MediaBinder_put_Token), nullptr, nullptr },
         { "source", reinterpret_cast<getter>(MediaBinder_get_Source), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaBinder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaBinder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaBinder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaBinder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaBinder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaBinder = {
         "winrt._winrt_windows_media_core.MediaBinder",
@@ -7233,21 +7165,18 @@ namespace py::cpp::Windows::Media::Core
         { "remove_canceled", reinterpret_cast<PyCFunction>(MediaBindingEventArgs_remove_Canceled), METH_O, nullptr },
         { "_assign_array_", _assign_array_MediaBindingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaBindingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaBindingEventArgs[] = {
         { "media_binder", reinterpret_cast<getter>(MediaBindingEventArgs_get_MediaBinder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaBindingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaBindingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaBindingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaBindingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaBindingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaBindingEventArgs = {
         "winrt._winrt_windows_media_core.MediaBindingEventArgs",
@@ -7330,21 +7259,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaCueEventArgs[] = {
         { "_assign_array_", _assign_array_MediaCueEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaCueEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaCueEventArgs[] = {
         { "cue", reinterpret_cast<getter>(MediaCueEventArgs_get_Cue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaCueEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaCueEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaCueEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaCueEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaCueEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaCueEventArgs = {
         "winrt._winrt_windows_media_core.MediaCueEventArgs",
@@ -8475,8 +8401,7 @@ namespace py::cpp::Windows::Media::Core
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaSource), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaSource), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaSource), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaSource[] = {
         { "custom_properties", reinterpret_cast<getter>(MediaSource_get_CustomProperties), nullptr, nullptr, nullptr },
@@ -8490,16 +8415,14 @@ namespace py::cpp::Windows::Media::Core
         { "mse_stream_source", reinterpret_cast<getter>(MediaSource_get_MseStreamSource), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(MediaSource_get_Uri), nullptr, nullptr, nullptr },
         { "download_operation", reinterpret_cast<getter>(MediaSource_get_DownloadOperation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaSource = {
         "winrt._winrt_windows_media_core.MediaSource",
@@ -8509,8 +8432,7 @@ namespace py::cpp::Windows::Media::Core
         _type_slots_MediaSource};
 
     static PyGetSetDef getset_MediaSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MediaSource_Static[] = {
         { "create_from_adaptive_media_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromAdaptiveMediaSource), METH_VARARGS, nullptr },
@@ -8524,8 +8446,7 @@ namespace py::cpp::Windows::Media::Core
         { "create_from_stream", reinterpret_cast<PyCFunction>(MediaSource_CreateFromStream), METH_VARARGS, nullptr },
         { "create_from_stream_reference", reinterpret_cast<PyCFunction>(MediaSource_CreateFromStreamReference), METH_VARARGS, nullptr },
         { "create_from_uri", reinterpret_cast<PyCFunction>(MediaSource_CreateFromUri), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MediaSource_Static[] = 
     {
@@ -8535,14 +8456,12 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
-    static PyType_Spec type_spec_MediaSource_Static =
-    {
+    static PyType_Spec type_spec_MediaSource_Static = {
         "winrt._winrt_windows_media_core.MediaSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaSource_Static
-    };
+        type_slots_MediaSource_Static};
 
     // ----- MediaSourceAppServiceConnection class --------------------
 
@@ -8721,20 +8640,17 @@ namespace py::cpp::Windows::Media::Core
         { "remove_initialize_media_stream_source_requested", reinterpret_cast<PyCFunction>(MediaSourceAppServiceConnection_remove_InitializeMediaStreamSourceRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_MediaSourceAppServiceConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaSourceAppServiceConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaSourceAppServiceConnection[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaSourceAppServiceConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaSourceAppServiceConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaSourceAppServiceConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaSourceAppServiceConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaSourceAppServiceConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaSourceAppServiceConnection = {
         "winrt._winrt_windows_media_core.MediaSourceAppServiceConnection",
@@ -8817,21 +8733,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaSourceError[] = {
         { "_assign_array_", _assign_array_MediaSourceError, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaSourceError), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaSourceError[] = {
         { "extended_error", reinterpret_cast<getter>(MediaSourceError_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaSourceError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaSourceError) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaSourceError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaSourceError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaSourceError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaSourceError = {
         "winrt._winrt_windows_media_core.MediaSourceError",
@@ -8914,21 +8827,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaSourceOpenOperationCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_MediaSourceOpenOperationCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaSourceOpenOperationCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaSourceOpenOperationCompletedEventArgs[] = {
         { "error", reinterpret_cast<getter>(MediaSourceOpenOperationCompletedEventArgs_get_Error), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaSourceOpenOperationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaSourceOpenOperationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaSourceOpenOperationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaSourceOpenOperationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaSourceOpenOperationCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaSourceOpenOperationCompletedEventArgs = {
         "winrt._winrt_windows_media_core.MediaSourceOpenOperationCompletedEventArgs",
@@ -9041,22 +8951,19 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaSourceStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_MediaSourceStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaSourceStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaSourceStateChangedEventArgs[] = {
         { "new_state", reinterpret_cast<getter>(MediaSourceStateChangedEventArgs_get_NewState), nullptr, nullptr, nullptr },
         { "old_state", reinterpret_cast<getter>(MediaSourceStateChangedEventArgs_get_OldState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaSourceStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaSourceStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaSourceStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaSourceStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaSourceStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaSourceStateChangedEventArgs = {
         "winrt._winrt_windows_media_core.MediaSourceStateChangedEventArgs",
@@ -9732,8 +9639,7 @@ namespace py::cpp::Windows::Media::Core
         { "remove_processed", reinterpret_cast<PyCFunction>(MediaStreamSample_remove_Processed), METH_O, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSample, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSample), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSample[] = {
         { "key_frame", reinterpret_cast<getter>(MediaStreamSample_get_KeyFrame), reinterpret_cast<setter>(MediaStreamSample_put_KeyFrame), nullptr, nullptr },
@@ -9745,16 +9651,14 @@ namespace py::cpp::Windows::Media::Core
         { "protection", reinterpret_cast<getter>(MediaStreamSample_get_Protection), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MediaStreamSample_get_Timestamp), nullptr, nullptr, nullptr },
         { "direct3d11_surface", reinterpret_cast<getter>(MediaStreamSample_get_Direct3D11Surface), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSample[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSample) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSample) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSample) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSample) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSample = {
         "winrt._winrt_windows_media_core.MediaStreamSample",
@@ -9764,15 +9668,13 @@ namespace py::cpp::Windows::Media::Core
         _type_slots_MediaStreamSample};
 
     static PyGetSetDef getset_MediaStreamSample_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MediaStreamSample_Static[] = {
         { "create_from_buffer", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_direct3d11_surface", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromDirect3D11Surface), METH_VARARGS, nullptr },
         { "create_from_stream_async", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromStreamAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MediaStreamSample_Static[] = 
     {
@@ -9782,14 +9684,12 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
-    static PyType_Spec type_spec_MediaStreamSample_Static =
-    {
+    static PyType_Spec type_spec_MediaStreamSample_Static = {
         "winrt._winrt_windows_media_core.MediaStreamSample_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaStreamSample_Static
-    };
+        type_slots_MediaStreamSample_Static};
 
     // ----- MediaStreamSamplePropertySet class --------------------
 
@@ -10295,13 +10195,11 @@ namespace py::cpp::Windows::Media::Core
         { "remove", reinterpret_cast<PyCFunction>(MediaStreamSamplePropertySet_Remove), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSamplePropertySet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSamplePropertySet), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSamplePropertySet[] = {
         { "size", reinterpret_cast<getter>(MediaStreamSamplePropertySet_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSamplePropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSamplePropertySet) },
@@ -10313,8 +10211,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_mp_length, reinterpret_cast<void*>(_map_length_MediaStreamSamplePropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_MediaStreamSamplePropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_MediaStreamSamplePropertySet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSamplePropertySet = {
         "winrt._winrt_windows_media_core.MediaStreamSamplePropertySet",
@@ -10649,20 +10546,17 @@ namespace py::cpp::Windows::Media::Core
         { "set_sub_sample_mapping", reinterpret_cast<PyCFunction>(MediaStreamSampleProtectionProperties_SetSubSampleMapping), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSampleProtectionProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSampleProtectionProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSampleProtectionProperties[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSampleProtectionProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSampleProtectionProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSampleProtectionProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSampleProtectionProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSampleProtectionProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSampleProtectionProperties = {
         "winrt._winrt_windows_media_core.MediaStreamSampleProtectionProperties",
@@ -11879,8 +11773,7 @@ namespace py::cpp::Windows::Media::Core
         { "remove_sample_rendered", reinterpret_cast<PyCFunction>(MediaStreamSource_remove_SampleRendered), METH_O, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSource[] = {
         { "thumbnail", reinterpret_cast<getter>(MediaStreamSource_get_Thumbnail), reinterpret_cast<setter>(MediaStreamSource_put_Thumbnail), nullptr, nullptr },
@@ -11892,16 +11785,14 @@ namespace py::cpp::Windows::Media::Core
         { "video_properties", reinterpret_cast<getter>(MediaStreamSource_get_VideoProperties), nullptr, nullptr, nullptr },
         { "max_supported_playback_rate", reinterpret_cast<getter>(MediaStreamSource_get_MaxSupportedPlaybackRate), reinterpret_cast<setter>(MediaStreamSource_put_MaxSupportedPlaybackRate), nullptr, nullptr },
         { "is_live", reinterpret_cast<getter>(MediaStreamSource_get_IsLive), reinterpret_cast<setter>(MediaStreamSource_put_IsLive), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSource = {
         "winrt._winrt_windows_media_core.MediaStreamSource",
@@ -11984,21 +11875,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaStreamSourceClosedEventArgs[] = {
         { "_assign_array_", _assign_array_MediaStreamSourceClosedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceClosedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceClosedEventArgs[] = {
         { "request", reinterpret_cast<getter>(MediaStreamSourceClosedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceClosedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceClosedEventArgs = {
         "winrt._winrt_windows_media_core.MediaStreamSourceClosedEventArgs",
@@ -12081,21 +11969,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaStreamSourceClosedRequest[] = {
         { "_assign_array_", _assign_array_MediaStreamSourceClosedRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceClosedRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceClosedRequest[] = {
         { "reason", reinterpret_cast<getter>(MediaStreamSourceClosedRequest_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceClosedRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceClosedRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceClosedRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceClosedRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceClosedRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceClosedRequest = {
         "winrt._winrt_windows_media_core.MediaStreamSourceClosedRequest",
@@ -12178,21 +12063,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaStreamSourceSampleRenderedEventArgs[] = {
         { "_assign_array_", _assign_array_MediaStreamSourceSampleRenderedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceSampleRenderedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceSampleRenderedEventArgs[] = {
         { "sample_lag", reinterpret_cast<getter>(MediaStreamSourceSampleRenderedEventArgs_get_SampleLag), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceSampleRenderedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceSampleRenderedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceSampleRenderedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceSampleRenderedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceSampleRenderedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceSampleRenderedEventArgs = {
         "winrt._winrt_windows_media_core.MediaStreamSourceSampleRenderedEventArgs",
@@ -12429,22 +12311,19 @@ namespace py::cpp::Windows::Media::Core
         { "report_sample_progress", reinterpret_cast<PyCFunction>(MediaStreamSourceSampleRequest_ReportSampleProgress), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSourceSampleRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceSampleRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceSampleRequest[] = {
         { "sample", reinterpret_cast<getter>(MediaStreamSourceSampleRequest_get_Sample), reinterpret_cast<setter>(MediaStreamSourceSampleRequest_put_Sample), nullptr, nullptr },
         { "stream_descriptor", reinterpret_cast<getter>(MediaStreamSourceSampleRequest_get_StreamDescriptor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceSampleRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceSampleRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceSampleRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceSampleRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceSampleRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceSampleRequest = {
         "winrt._winrt_windows_media_core.MediaStreamSourceSampleRequest",
@@ -12539,20 +12418,17 @@ namespace py::cpp::Windows::Media::Core
         { "complete", reinterpret_cast<PyCFunction>(MediaStreamSourceSampleRequestDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSourceSampleRequestDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceSampleRequestDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceSampleRequestDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceSampleRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceSampleRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceSampleRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceSampleRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceSampleRequestDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceSampleRequestDeferral = {
         "winrt._winrt_windows_media_core.MediaStreamSourceSampleRequestDeferral",
@@ -12635,21 +12511,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaStreamSourceSampleRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_MediaStreamSourceSampleRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceSampleRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceSampleRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(MediaStreamSourceSampleRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceSampleRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceSampleRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceSampleRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceSampleRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceSampleRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceSampleRequestedEventArgs = {
         "winrt._winrt_windows_media_core.MediaStreamSourceSampleRequestedEventArgs",
@@ -12732,21 +12605,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaStreamSourceStartingEventArgs[] = {
         { "_assign_array_", _assign_array_MediaStreamSourceStartingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceStartingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceStartingEventArgs[] = {
         { "request", reinterpret_cast<getter>(MediaStreamSourceStartingEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceStartingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceStartingEventArgs = {
         "winrt._winrt_windows_media_core.MediaStreamSourceStartingEventArgs",
@@ -12914,21 +12784,18 @@ namespace py::cpp::Windows::Media::Core
         { "set_actual_start_position", reinterpret_cast<PyCFunction>(MediaStreamSourceStartingRequest_SetActualStartPosition), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSourceStartingRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceStartingRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceStartingRequest[] = {
         { "start_position", reinterpret_cast<getter>(MediaStreamSourceStartingRequest_get_StartPosition), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceStartingRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceStartingRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceStartingRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceStartingRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceStartingRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceStartingRequest = {
         "winrt._winrt_windows_media_core.MediaStreamSourceStartingRequest",
@@ -13023,20 +12890,17 @@ namespace py::cpp::Windows::Media::Core
         { "complete", reinterpret_cast<PyCFunction>(MediaStreamSourceStartingRequestDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSourceStartingRequestDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceStartingRequestDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceStartingRequestDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceStartingRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceStartingRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceStartingRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceStartingRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceStartingRequestDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceStartingRequestDeferral = {
         "winrt._winrt_windows_media_core.MediaStreamSourceStartingRequestDeferral",
@@ -13190,22 +13054,19 @@ namespace py::cpp::Windows::Media::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(MediaStreamSourceSwitchStreamsRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSourceSwitchStreamsRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceSwitchStreamsRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceSwitchStreamsRequest[] = {
         { "new_stream_descriptor", reinterpret_cast<getter>(MediaStreamSourceSwitchStreamsRequest_get_NewStreamDescriptor), nullptr, nullptr, nullptr },
         { "old_stream_descriptor", reinterpret_cast<getter>(MediaStreamSourceSwitchStreamsRequest_get_OldStreamDescriptor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceSwitchStreamsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceSwitchStreamsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceSwitchStreamsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceSwitchStreamsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceSwitchStreamsRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceSwitchStreamsRequest = {
         "winrt._winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequest",
@@ -13300,20 +13161,17 @@ namespace py::cpp::Windows::Media::Core
         { "complete", reinterpret_cast<PyCFunction>(MediaStreamSourceSwitchStreamsRequestDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSourceSwitchStreamsRequestDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceSwitchStreamsRequestDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceSwitchStreamsRequestDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceSwitchStreamsRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceSwitchStreamsRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceSwitchStreamsRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceSwitchStreamsRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceSwitchStreamsRequestDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceSwitchStreamsRequestDeferral = {
         "winrt._winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequestDeferral",
@@ -13396,21 +13254,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MediaStreamSourceSwitchStreamsRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_MediaStreamSourceSwitchStreamsRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaStreamSourceSwitchStreamsRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaStreamSourceSwitchStreamsRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(MediaStreamSourceSwitchStreamsRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaStreamSourceSwitchStreamsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaStreamSourceSwitchStreamsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaStreamSourceSwitchStreamsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaStreamSourceSwitchStreamsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaStreamSourceSwitchStreamsRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaStreamSourceSwitchStreamsRequestedEventArgs = {
         "winrt._winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequestedEventArgs",
@@ -14354,8 +14209,7 @@ namespace py::cpp::Windows::Media::Core
         { "remove_updated", reinterpret_cast<PyCFunction>(MseSourceBuffer_remove_Updated), METH_O, nullptr },
         { "_assign_array_", _assign_array_MseSourceBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MseSourceBuffer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MseSourceBuffer[] = {
         { "timestamp_offset", reinterpret_cast<getter>(MseSourceBuffer_get_TimestampOffset), reinterpret_cast<setter>(MseSourceBuffer_put_TimestampOffset), nullptr, nullptr },
@@ -14364,16 +14218,14 @@ namespace py::cpp::Windows::Media::Core
         { "append_window_end", reinterpret_cast<getter>(MseSourceBuffer_get_AppendWindowEnd), reinterpret_cast<setter>(MseSourceBuffer_put_AppendWindowEnd), nullptr, nullptr },
         { "buffered", reinterpret_cast<getter>(MseSourceBuffer_get_Buffered), nullptr, nullptr, nullptr },
         { "is_updating", reinterpret_cast<getter>(MseSourceBuffer_get_IsUpdating), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MseSourceBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MseSourceBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MseSourceBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MseSourceBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MseSourceBuffer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MseSourceBuffer = {
         "winrt._winrt_windows_media_core.MseSourceBuffer",
@@ -14590,21 +14442,18 @@ namespace py::cpp::Windows::Media::Core
         { "remove_source_buffer_removed", reinterpret_cast<PyCFunction>(MseSourceBufferList_remove_SourceBufferRemoved), METH_O, nullptr },
         { "_assign_array_", _assign_array_MseSourceBufferList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MseSourceBufferList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MseSourceBufferList[] = {
         { "buffers", reinterpret_cast<getter>(MseSourceBufferList_get_Buffers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MseSourceBufferList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MseSourceBufferList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MseSourceBufferList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MseSourceBufferList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MseSourceBufferList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MseSourceBufferList = {
         "winrt._winrt_windows_media_core.MseSourceBufferList",
@@ -15281,8 +15130,7 @@ namespace py::cpp::Windows::Media::Core
         { "remove_opened", reinterpret_cast<PyCFunction>(MseStreamSource_remove_Opened), METH_O, nullptr },
         { "_assign_array_", _assign_array_MseStreamSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MseStreamSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MseStreamSource[] = {
         { "duration", reinterpret_cast<getter>(MseStreamSource_get_Duration), reinterpret_cast<setter>(MseStreamSource_put_Duration), nullptr, nullptr },
@@ -15290,16 +15138,14 @@ namespace py::cpp::Windows::Media::Core
         { "ready_state", reinterpret_cast<getter>(MseStreamSource_get_ReadyState), nullptr, nullptr, nullptr },
         { "source_buffers", reinterpret_cast<getter>(MseStreamSource_get_SourceBuffers), nullptr, nullptr, nullptr },
         { "live_seekable_range", reinterpret_cast<getter>(MseStreamSource_get_LiveSeekableRange), reinterpret_cast<setter>(MseStreamSource_put_LiveSeekableRange), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MseStreamSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MseStreamSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MseStreamSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MseStreamSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MseStreamSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MseStreamSource = {
         "winrt._winrt_windows_media_core.MseStreamSource",
@@ -15309,13 +15155,11 @@ namespace py::cpp::Windows::Media::Core
         _type_slots_MseStreamSource};
 
     static PyGetSetDef getset_MseStreamSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MseStreamSource_Static[] = {
         { "is_content_type_supported", reinterpret_cast<PyCFunction>(MseStreamSource_IsContentTypeSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MseStreamSource_Static[] = 
     {
@@ -15325,14 +15169,12 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
-    static PyType_Spec type_spec_MseStreamSource_Static =
-    {
+    static PyType_Spec type_spec_MseStreamSource_Static = {
         "winrt._winrt_windows_media_core.MseStreamSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MseStreamSource_Static
-    };
+        type_slots_MseStreamSource_Static};
 
     // ----- SceneAnalysisEffect class --------------------
 
@@ -15588,22 +15430,19 @@ namespace py::cpp::Windows::Media::Core
         { "remove_scene_analyzed", reinterpret_cast<PyCFunction>(SceneAnalysisEffect_remove_SceneAnalyzed), METH_O, nullptr },
         { "_assign_array_", _assign_array_SceneAnalysisEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneAnalysisEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SceneAnalysisEffect[] = {
         { "desired_analysis_interval", reinterpret_cast<getter>(SceneAnalysisEffect_get_DesiredAnalysisInterval), reinterpret_cast<setter>(SceneAnalysisEffect_put_DesiredAnalysisInterval), nullptr, nullptr },
         { "high_dynamic_range_analyzer", reinterpret_cast<getter>(SceneAnalysisEffect_get_HighDynamicRangeAnalyzer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SceneAnalysisEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneAnalysisEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneAnalysisEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneAnalysisEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneAnalysisEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SceneAnalysisEffect = {
         "winrt._winrt_windows_media_core.SceneAnalysisEffect",
@@ -15738,22 +15577,19 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_SceneAnalysisEffectDefinition[] = {
         { "_assign_array_", _assign_array_SceneAnalysisEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneAnalysisEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SceneAnalysisEffectDefinition[] = {
         { "activatable_class_id", reinterpret_cast<getter>(SceneAnalysisEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(SceneAnalysisEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SceneAnalysisEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneAnalysisEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneAnalysisEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneAnalysisEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneAnalysisEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SceneAnalysisEffectDefinition = {
         "winrt._winrt_windows_media_core.SceneAnalysisEffectDefinition",
@@ -16329,8 +16165,7 @@ namespace py::cpp::Windows::Media::Core
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneAnalysisEffectFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SceneAnalysisEffectFrame), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_SceneAnalysisEffectFrame), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SceneAnalysisEffectFrame[] = {
         { "frame_control_values", reinterpret_cast<getter>(SceneAnalysisEffectFrame_get_FrameControlValues), nullptr, nullptr, nullptr },
@@ -16343,16 +16178,14 @@ namespace py::cpp::Windows::Media::Core
         { "extended_properties", reinterpret_cast<getter>(SceneAnalysisEffectFrame_get_ExtendedProperties), nullptr, nullptr, nullptr },
         { "is_read_only", reinterpret_cast<getter>(SceneAnalysisEffectFrame_get_IsReadOnly), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(SceneAnalysisEffectFrame_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SceneAnalysisEffectFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneAnalysisEffectFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneAnalysisEffectFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneAnalysisEffectFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneAnalysisEffectFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SceneAnalysisEffectFrame = {
         "winrt._winrt_windows_media_core.SceneAnalysisEffectFrame",
@@ -16435,21 +16268,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_SceneAnalyzedEventArgs[] = {
         { "_assign_array_", _assign_array_SceneAnalyzedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneAnalyzedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SceneAnalyzedEventArgs[] = {
         { "result_frame", reinterpret_cast<getter>(SceneAnalyzedEventArgs_get_ResultFrame), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SceneAnalyzedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneAnalyzedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneAnalyzedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneAnalyzedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneAnalyzedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SceneAnalyzedEventArgs = {
         "winrt._winrt_windows_media_core.SceneAnalyzedEventArgs",
@@ -16938,8 +16768,7 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_SpeechCue[] = {
         { "_assign_array_", _assign_array_SpeechCue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpeechCue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpeechCue[] = {
         { "start_time", reinterpret_cast<getter>(SpeechCue_get_StartTime), reinterpret_cast<setter>(SpeechCue_put_StartTime), nullptr, nullptr },
@@ -16948,16 +16777,14 @@ namespace py::cpp::Windows::Media::Core
         { "text", reinterpret_cast<getter>(SpeechCue_get_Text), reinterpret_cast<setter>(SpeechCue_put_Text), nullptr, nullptr },
         { "start_position_in_input", reinterpret_cast<getter>(SpeechCue_get_StartPositionInInput), reinterpret_cast<setter>(SpeechCue_put_StartPositionInInput), nullptr, nullptr },
         { "end_position_in_input", reinterpret_cast<getter>(SpeechCue_get_EndPositionInInput), reinterpret_cast<setter>(SpeechCue_put_EndPositionInInput), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpeechCue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechCue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechCue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechCue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechCue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpeechCue = {
         "winrt._winrt_windows_media_core.SpeechCue",
@@ -17342,8 +17169,7 @@ namespace py::cpp::Windows::Media::Core
         { "copy", reinterpret_cast<PyCFunction>(TimedMetadataStreamDescriptor_Copy), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TimedMetadataStreamDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedMetadataStreamDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedMetadataStreamDescriptor[] = {
         { "name", reinterpret_cast<getter>(TimedMetadataStreamDescriptor_get_Name), reinterpret_cast<setter>(TimedMetadataStreamDescriptor_put_Name), nullptr, nullptr },
@@ -17351,16 +17177,14 @@ namespace py::cpp::Windows::Media::Core
         { "is_selected", reinterpret_cast<getter>(TimedMetadataStreamDescriptor_get_IsSelected), nullptr, nullptr, nullptr },
         { "label", reinterpret_cast<getter>(TimedMetadataStreamDescriptor_get_Label), reinterpret_cast<setter>(TimedMetadataStreamDescriptor_put_Label), nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(TimedMetadataStreamDescriptor_get_EncodingProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedMetadataStreamDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedMetadataStreamDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedMetadataStreamDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedMetadataStreamDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedMetadataStreamDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedMetadataStreamDescriptor = {
         "winrt._winrt_windows_media_core.TimedMetadataStreamDescriptor",
@@ -18067,8 +17891,7 @@ namespace py::cpp::Windows::Media::Core
         { "remove_track_failed", reinterpret_cast<PyCFunction>(TimedMetadataTrack_remove_TrackFailed), METH_O, nullptr },
         { "_assign_array_", _assign_array_TimedMetadataTrack, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedMetadataTrack), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedMetadataTrack[] = {
         { "label", reinterpret_cast<getter>(TimedMetadataTrack_get_Label), reinterpret_cast<setter>(TimedMetadataTrack_put_Label), nullptr, nullptr },
@@ -18081,16 +17904,14 @@ namespace py::cpp::Windows::Media::Core
         { "timed_metadata_kind", reinterpret_cast<getter>(TimedMetadataTrack_get_TimedMetadataKind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(TimedMetadataTrack_get_Name), nullptr, nullptr, nullptr },
         { "playback_item", reinterpret_cast<getter>(TimedMetadataTrack_get_PlaybackItem), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedMetadataTrack[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedMetadataTrack) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedMetadataTrack) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedMetadataTrack) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedMetadataTrack) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedMetadataTrack = {
         "winrt._winrt_windows_media_core.TimedMetadataTrack",
@@ -18203,22 +18024,19 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedMetadataTrackError[] = {
         { "_assign_array_", _assign_array_TimedMetadataTrackError, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedMetadataTrackError), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedMetadataTrackError[] = {
         { "error_code", reinterpret_cast<getter>(TimedMetadataTrackError_get_ErrorCode), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(TimedMetadataTrackError_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedMetadataTrackError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedMetadataTrackError) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedMetadataTrackError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedMetadataTrackError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedMetadataTrackError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedMetadataTrackError = {
         "winrt._winrt_windows_media_core.TimedMetadataTrackError",
@@ -18301,21 +18119,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedMetadataTrackFailedEventArgs[] = {
         { "_assign_array_", _assign_array_TimedMetadataTrackFailedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedMetadataTrackFailedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedMetadataTrackFailedEventArgs[] = {
         { "error", reinterpret_cast<getter>(TimedMetadataTrackFailedEventArgs_get_Error), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedMetadataTrackFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedMetadataTrackFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedMetadataTrackFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedMetadataTrackFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedMetadataTrackFailedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedMetadataTrackFailedEventArgs = {
         "winrt._winrt_windows_media_core.TimedMetadataTrackFailedEventArgs",
@@ -18575,23 +18390,20 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedTextBouten[] = {
         { "_assign_array_", _assign_array_TimedTextBouten, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedTextBouten), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedTextBouten[] = {
         { "type", reinterpret_cast<getter>(TimedTextBouten_get_Type), reinterpret_cast<setter>(TimedTextBouten_put_Type), nullptr, nullptr },
         { "position", reinterpret_cast<getter>(TimedTextBouten_get_Position), reinterpret_cast<setter>(TimedTextBouten_put_Position), nullptr, nullptr },
         { "color", reinterpret_cast<getter>(TimedTextBouten_get_Color), reinterpret_cast<setter>(TimedTextBouten_put_Color), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedTextBouten[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextBouten) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextBouten) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextBouten) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextBouten) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextBouten = {
         "winrt._winrt_windows_media_core.TimedTextBouten",
@@ -19041,8 +18853,7 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedTextCue[] = {
         { "_assign_array_", _assign_array_TimedTextCue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedTextCue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedTextCue[] = {
         { "start_time", reinterpret_cast<getter>(TimedTextCue_get_StartTime), reinterpret_cast<setter>(TimedTextCue_put_StartTime), nullptr, nullptr },
@@ -19051,16 +18862,14 @@ namespace py::cpp::Windows::Media::Core
         { "cue_style", reinterpret_cast<getter>(TimedTextCue_get_CueStyle), reinterpret_cast<setter>(TimedTextCue_put_CueStyle), nullptr, nullptr },
         { "cue_region", reinterpret_cast<getter>(TimedTextCue_get_CueRegion), reinterpret_cast<setter>(TimedTextCue_put_CueRegion), nullptr, nullptr },
         { "lines", reinterpret_cast<getter>(TimedTextCue_get_Lines), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedTextCue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextCue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextCue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextCue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextCue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextCue = {
         "winrt._winrt_windows_media_core.TimedTextCue",
@@ -19234,22 +19043,19 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedTextLine[] = {
         { "_assign_array_", _assign_array_TimedTextLine, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedTextLine), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedTextLine[] = {
         { "text", reinterpret_cast<getter>(TimedTextLine_get_Text), reinterpret_cast<setter>(TimedTextLine_put_Text), nullptr, nullptr },
         { "subformats", reinterpret_cast<getter>(TimedTextLine_get_Subformats), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedTextLine[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextLine) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextLine) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextLine) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextLine) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextLine = {
         "winrt._winrt_windows_media_core.TimedTextLine",
@@ -20152,8 +19958,7 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedTextRegion[] = {
         { "_assign_array_", _assign_array_TimedTextRegion, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedTextRegion), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedTextRegion[] = {
         { "name", reinterpret_cast<getter>(TimedTextRegion_get_Name), reinterpret_cast<setter>(TimedTextRegion_put_Name), nullptr, nullptr },
@@ -20168,16 +19973,14 @@ namespace py::cpp::Windows::Media::Core
         { "text_wrapping", reinterpret_cast<getter>(TimedTextRegion_get_TextWrapping), reinterpret_cast<setter>(TimedTextRegion_put_TextWrapping), nullptr, nullptr },
         { "scroll_mode", reinterpret_cast<getter>(TimedTextRegion_get_ScrollMode), reinterpret_cast<setter>(TimedTextRegion_put_ScrollMode), nullptr, nullptr },
         { "position", reinterpret_cast<getter>(TimedTextRegion_get_Position), reinterpret_cast<setter>(TimedTextRegion_put_Position), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedTextRegion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextRegion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextRegion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextRegion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextRegion) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextRegion = {
         "winrt._winrt_windows_media_core.TimedTextRegion",
@@ -20506,24 +20309,21 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedTextRuby[] = {
         { "_assign_array_", _assign_array_TimedTextRuby, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedTextRuby), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedTextRuby[] = {
         { "text", reinterpret_cast<getter>(TimedTextRuby_get_Text), reinterpret_cast<setter>(TimedTextRuby_put_Text), nullptr, nullptr },
         { "reserve", reinterpret_cast<getter>(TimedTextRuby_get_Reserve), reinterpret_cast<setter>(TimedTextRuby_put_Reserve), nullptr, nullptr },
         { "position", reinterpret_cast<getter>(TimedTextRuby_get_Position), reinterpret_cast<setter>(TimedTextRuby_put_Position), nullptr, nullptr },
         { "align", reinterpret_cast<getter>(TimedTextRuby_get_Align), reinterpret_cast<setter>(TimedTextRuby_put_Align), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedTextRuby[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextRuby) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextRuby) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextRuby) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextRuby) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextRuby = {
         "winrt._winrt_windows_media_core.TimedTextRuby",
@@ -20987,20 +20787,17 @@ namespace py::cpp::Windows::Media::Core
         { "remove_resolved", reinterpret_cast<PyCFunction>(TimedTextSource_remove_Resolved), METH_O, nullptr },
         { "_assign_array_", _assign_array_TimedTextSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedTextSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedTextSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedTextSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextSource = {
         "winrt._winrt_windows_media_core.TimedTextSource",
@@ -21010,8 +20807,7 @@ namespace py::cpp::Windows::Media::Core
         _type_slots_TimedTextSource};
 
     static PyGetSetDef getset_TimedTextSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TimedTextSource_Static[] = {
         { "create_from_stream", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromStream), METH_VARARGS, nullptr },
@@ -21022,8 +20818,7 @@ namespace py::cpp::Windows::Media::Core
         { "create_from_uri_with_index", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUriWithIndex), METH_VARARGS, nullptr },
         { "create_from_uri_with_index_and_language", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUriWithIndexAndLanguage), METH_VARARGS, nullptr },
         { "create_from_uri_with_language", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUriWithLanguage), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TimedTextSource_Static[] = 
     {
@@ -21033,14 +20828,12 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
-    static PyType_Spec type_spec_TimedTextSource_Static =
-    {
+    static PyType_Spec type_spec_TimedTextSource_Static = {
         "winrt._winrt_windows_media_core.TimedTextSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TimedTextSource_Static
-    };
+        type_slots_TimedTextSource_Static};
 
     // ----- TimedTextSourceResolveResultEventArgs class --------------------
 
@@ -21146,22 +20939,19 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedTextSourceResolveResultEventArgs[] = {
         { "_assign_array_", _assign_array_TimedTextSourceResolveResultEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedTextSourceResolveResultEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedTextSourceResolveResultEventArgs[] = {
         { "error", reinterpret_cast<getter>(TimedTextSourceResolveResultEventArgs_get_Error), nullptr, nullptr, nullptr },
         { "tracks", reinterpret_cast<getter>(TimedTextSourceResolveResultEventArgs_get_Tracks), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedTextSourceResolveResultEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextSourceResolveResultEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextSourceResolveResultEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextSourceResolveResultEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextSourceResolveResultEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextSourceResolveResultEventArgs = {
         "winrt._winrt_windows_media_core.TimedTextSourceResolveResultEventArgs",
@@ -22538,8 +22328,7 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedTextStyle[] = {
         { "_assign_array_", _assign_array_TimedTextStyle, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedTextStyle), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedTextStyle[] = {
         { "line_alignment", reinterpret_cast<getter>(TimedTextStyle_get_LineAlignment), reinterpret_cast<setter>(TimedTextStyle_put_LineAlignment), nullptr, nullptr },
@@ -22562,16 +22351,14 @@ namespace py::cpp::Windows::Media::Core
         { "font_angle_in_degrees", reinterpret_cast<getter>(TimedTextStyle_get_FontAngleInDegrees), reinterpret_cast<setter>(TimedTextStyle_put_FontAngleInDegrees), nullptr, nullptr },
         { "bouten", reinterpret_cast<getter>(TimedTextStyle_get_Bouten), nullptr, nullptr, nullptr },
         { "ruby", reinterpret_cast<getter>(TimedTextStyle_get_Ruby), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedTextStyle[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextStyle) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextStyle) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextStyle) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextStyle) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextStyle = {
         "winrt._winrt_windows_media_core.TimedTextStyle",
@@ -22853,23 +22640,20 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_TimedTextSubformat[] = {
         { "_assign_array_", _assign_array_TimedTextSubformat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedTextSubformat), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedTextSubformat[] = {
         { "subformat_style", reinterpret_cast<getter>(TimedTextSubformat_get_SubformatStyle), reinterpret_cast<setter>(TimedTextSubformat_put_SubformatStyle), nullptr, nullptr },
         { "start_index", reinterpret_cast<getter>(TimedTextSubformat_get_StartIndex), reinterpret_cast<setter>(TimedTextSubformat_put_StartIndex), nullptr, nullptr },
         { "length", reinterpret_cast<getter>(TimedTextSubformat_get_Length), reinterpret_cast<setter>(TimedTextSubformat_put_Length), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedTextSubformat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextSubformat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextSubformat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextSubformat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextSubformat) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextSubformat = {
         "winrt._winrt_windows_media_core.TimedTextSubformat",
@@ -23146,21 +22930,18 @@ namespace py::cpp::Windows::Media::Core
         { "remove_enabled_changed", reinterpret_cast<PyCFunction>(VideoStabilizationEffect_remove_EnabledChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_VideoStabilizationEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoStabilizationEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoStabilizationEffect[] = {
         { "enabled", reinterpret_cast<getter>(VideoStabilizationEffect_get_Enabled), reinterpret_cast<setter>(VideoStabilizationEffect_put_Enabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoStabilizationEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoStabilizationEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoStabilizationEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoStabilizationEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoStabilizationEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoStabilizationEffect = {
         "winrt._winrt_windows_media_core.VideoStabilizationEffect",
@@ -23295,22 +23076,19 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_VideoStabilizationEffectDefinition[] = {
         { "_assign_array_", _assign_array_VideoStabilizationEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoStabilizationEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoStabilizationEffectDefinition[] = {
         { "activatable_class_id", reinterpret_cast<getter>(VideoStabilizationEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(VideoStabilizationEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoStabilizationEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoStabilizationEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoStabilizationEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoStabilizationEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoStabilizationEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoStabilizationEffectDefinition = {
         "winrt._winrt_windows_media_core.VideoStabilizationEffectDefinition",
@@ -23393,21 +23171,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_VideoStabilizationEffectEnabledChangedEventArgs[] = {
         { "_assign_array_", _assign_array_VideoStabilizationEffectEnabledChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoStabilizationEffectEnabledChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoStabilizationEffectEnabledChangedEventArgs[] = {
         { "reason", reinterpret_cast<getter>(VideoStabilizationEffectEnabledChangedEventArgs_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoStabilizationEffectEnabledChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoStabilizationEffectEnabledChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoStabilizationEffectEnabledChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoStabilizationEffectEnabledChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoStabilizationEffectEnabledChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoStabilizationEffectEnabledChangedEventArgs = {
         "winrt._winrt_windows_media_core.VideoStabilizationEffectEnabledChangedEventArgs",
@@ -23792,8 +23567,7 @@ namespace py::cpp::Windows::Media::Core
         { "copy", reinterpret_cast<PyCFunction>(VideoStreamDescriptor_Copy), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VideoStreamDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoStreamDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoStreamDescriptor[] = {
         { "name", reinterpret_cast<getter>(VideoStreamDescriptor_get_Name), reinterpret_cast<setter>(VideoStreamDescriptor_put_Name), nullptr, nullptr },
@@ -23801,16 +23575,14 @@ namespace py::cpp::Windows::Media::Core
         { "is_selected", reinterpret_cast<getter>(VideoStreamDescriptor_get_IsSelected), nullptr, nullptr, nullptr },
         { "label", reinterpret_cast<getter>(VideoStreamDescriptor_get_Label), reinterpret_cast<setter>(VideoStreamDescriptor_put_Label), nullptr, nullptr },
         { "encoding_properties", reinterpret_cast<getter>(VideoStreamDescriptor_get_EncodingProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoStreamDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoStreamDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoStreamDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoStreamDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoStreamDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoStreamDescriptor = {
         "winrt._winrt_windows_media_core.VideoStreamDescriptor",
@@ -24220,8 +23992,7 @@ namespace py::cpp::Windows::Media::Core
         { "remove_open_failed", reinterpret_cast<PyCFunction>(VideoTrack_remove_OpenFailed), METH_O, nullptr },
         { "_assign_array_", _assign_array_VideoTrack, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoTrack), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoTrack[] = {
         { "label", reinterpret_cast<getter>(VideoTrack_get_Label), reinterpret_cast<setter>(VideoTrack_put_Label), nullptr, nullptr },
@@ -24231,16 +24002,14 @@ namespace py::cpp::Windows::Media::Core
         { "name", reinterpret_cast<getter>(VideoTrack_get_Name), nullptr, nullptr, nullptr },
         { "playback_item", reinterpret_cast<getter>(VideoTrack_get_PlaybackItem), nullptr, nullptr, nullptr },
         { "support_info", reinterpret_cast<getter>(VideoTrack_get_SupportInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoTrack[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoTrack) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoTrack) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoTrack) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoTrack) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoTrack = {
         "winrt._winrt_windows_media_core.VideoTrack",
@@ -24323,21 +24092,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_VideoTrackOpenFailedEventArgs[] = {
         { "_assign_array_", _assign_array_VideoTrackOpenFailedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoTrackOpenFailedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoTrackOpenFailedEventArgs[] = {
         { "extended_error", reinterpret_cast<getter>(VideoTrackOpenFailedEventArgs_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoTrackOpenFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoTrackOpenFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoTrackOpenFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoTrackOpenFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoTrackOpenFailedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoTrackOpenFailedEventArgs = {
         "winrt._winrt_windows_media_core.VideoTrackOpenFailedEventArgs",
@@ -24450,22 +24216,19 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_VideoTrackSupportInfo[] = {
         { "_assign_array_", _assign_array_VideoTrackSupportInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoTrackSupportInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoTrackSupportInfo[] = {
         { "decoder_status", reinterpret_cast<getter>(VideoTrackSupportInfo_get_DecoderStatus), nullptr, nullptr, nullptr },
         { "media_source_status", reinterpret_cast<getter>(VideoTrackSupportInfo_get_MediaSourceStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoTrackSupportInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoTrackSupportInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoTrackSupportInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoTrackSupportInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoTrackSupportInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoTrackSupportInfo = {
         "winrt._winrt_windows_media_core.VideoTrackSupportInfo",
@@ -24725,23 +24488,20 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_IMediaCue[] = {
         { "_assign_array_", _assign_array_IMediaCue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaCue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMediaCue[] = {
         { "duration", reinterpret_cast<getter>(IMediaCue_get_Duration), reinterpret_cast<setter>(IMediaCue_put_Duration), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(IMediaCue_get_Id), reinterpret_cast<setter>(IMediaCue_put_Id), nullptr, nullptr },
         { "start_time", reinterpret_cast<getter>(IMediaCue_get_StartTime), reinterpret_cast<setter>(IMediaCue_put_StartTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMediaCue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaCue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaCue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaCue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaCue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMediaCue = {
         "winrt._winrt_windows_media_core.IMediaCue",
@@ -24926,13 +24686,11 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef methods_ImplementsIMediaCue[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaCue), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaCue), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMediaCue[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaCue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMediaCue = {
         "winrt._winrt_windows_media_core.ImplementsIMediaCue",
@@ -24985,20 +24743,17 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_IMediaSource[] = {
         { "_assign_array_", _assign_array_IMediaSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMediaSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMediaSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMediaSource = {
         "winrt._winrt_windows_media_core.IMediaSource",
@@ -25054,13 +24809,11 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef methods_ImplementsIMediaSource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaSource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMediaSource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMediaSource = {
         "winrt._winrt_windows_media_core.ImplementsIMediaSource",
@@ -25281,23 +25034,20 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_IMediaStreamDescriptor[] = {
         { "_assign_array_", _assign_array_IMediaStreamDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaStreamDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMediaStreamDescriptor[] = {
         { "is_selected", reinterpret_cast<getter>(IMediaStreamDescriptor_get_IsSelected), nullptr, nullptr, nullptr },
         { "language", reinterpret_cast<getter>(IMediaStreamDescriptor_get_Language), reinterpret_cast<setter>(IMediaStreamDescriptor_put_Language), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(IMediaStreamDescriptor_get_Name), reinterpret_cast<setter>(IMediaStreamDescriptor_put_Name), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMediaStreamDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaStreamDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaStreamDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaStreamDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaStreamDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMediaStreamDescriptor = {
         "winrt._winrt_windows_media_core.IMediaStreamDescriptor",
@@ -25459,13 +25209,11 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef methods_ImplementsIMediaStreamDescriptor[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaStreamDescriptor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaStreamDescriptor), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMediaStreamDescriptor[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaStreamDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMediaStreamDescriptor = {
         "winrt._winrt_windows_media_core.ImplementsIMediaStreamDescriptor",
@@ -25755,24 +25503,21 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_IMediaStreamDescriptor2[] = {
         { "_assign_array_", _assign_array_IMediaStreamDescriptor2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaStreamDescriptor2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMediaStreamDescriptor2[] = {
         { "label", reinterpret_cast<getter>(IMediaStreamDescriptor2_get_Label), reinterpret_cast<setter>(IMediaStreamDescriptor2_put_Label), nullptr, nullptr },
         { "is_selected", reinterpret_cast<getter>(IMediaStreamDescriptor2_get_IsSelected), nullptr, nullptr, nullptr },
         { "language", reinterpret_cast<getter>(IMediaStreamDescriptor2_get_Language), reinterpret_cast<setter>(IMediaStreamDescriptor2_put_Language), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(IMediaStreamDescriptor2_get_Name), reinterpret_cast<setter>(IMediaStreamDescriptor2_put_Name), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMediaStreamDescriptor2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaStreamDescriptor2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaStreamDescriptor2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaStreamDescriptor2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaStreamDescriptor2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMediaStreamDescriptor2 = {
         "winrt._winrt_windows_media_core.IMediaStreamDescriptor2",
@@ -25977,13 +25722,11 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef methods_ImplementsIMediaStreamDescriptor2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaStreamDescriptor2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaStreamDescriptor2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMediaStreamDescriptor2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaStreamDescriptor2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMediaStreamDescriptor2 = {
         "winrt._winrt_windows_media_core.ImplementsIMediaStreamDescriptor2",
@@ -26195,24 +25938,21 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_IMediaTrack[] = {
         { "_assign_array_", _assign_array_IMediaTrack, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaTrack), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMediaTrack[] = {
         { "id", reinterpret_cast<getter>(IMediaTrack_get_Id), nullptr, nullptr, nullptr },
         { "label", reinterpret_cast<getter>(IMediaTrack_get_Label), reinterpret_cast<setter>(IMediaTrack_put_Label), nullptr, nullptr },
         { "language", reinterpret_cast<getter>(IMediaTrack_get_Language), nullptr, nullptr, nullptr },
         { "track_kind", reinterpret_cast<getter>(IMediaTrack_get_TrackKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMediaTrack[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaTrack) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaTrack) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaTrack) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaTrack) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMediaTrack = {
         "winrt._winrt_windows_media_core.IMediaTrack",
@@ -26371,13 +26111,11 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef methods_ImplementsIMediaTrack[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaTrack), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaTrack), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMediaTrack[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaTrack) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMediaTrack = {
         "winrt._winrt_windows_media_core.ImplementsIMediaTrack",
@@ -26566,21 +26304,18 @@ namespace py::cpp::Windows::Media::Core
         { "remove_selected_index_changed", reinterpret_cast<PyCFunction>(ISingleSelectMediaTrackList_remove_SelectedIndexChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ISingleSelectMediaTrackList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISingleSelectMediaTrackList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISingleSelectMediaTrackList[] = {
         { "selected_index", reinterpret_cast<getter>(ISingleSelectMediaTrackList_get_SelectedIndex), reinterpret_cast<setter>(ISingleSelectMediaTrackList_put_SelectedIndex), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISingleSelectMediaTrackList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISingleSelectMediaTrackList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISingleSelectMediaTrackList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISingleSelectMediaTrackList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISingleSelectMediaTrackList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISingleSelectMediaTrackList = {
         "winrt._winrt_windows_media_core.ISingleSelectMediaTrackList",
@@ -26741,13 +26476,11 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef methods_ImplementsISingleSelectMediaTrackList[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISingleSelectMediaTrackList), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISingleSelectMediaTrackList), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISingleSelectMediaTrackList[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISingleSelectMediaTrackList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISingleSelectMediaTrackList = {
         "winrt._winrt_windows_media_core.ImplementsISingleSelectMediaTrackList",
@@ -26830,21 +26563,18 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_ITimedMetadataTrackProvider[] = {
         { "_assign_array_", _assign_array_ITimedMetadataTrackProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITimedMetadataTrackProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITimedMetadataTrackProvider[] = {
         { "timed_metadata_tracks", reinterpret_cast<getter>(ITimedMetadataTrackProvider_get_TimedMetadataTracks), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITimedMetadataTrackProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITimedMetadataTrackProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITimedMetadataTrackProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITimedMetadataTrackProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITimedMetadataTrackProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITimedMetadataTrackProvider = {
         "winrt._winrt_windows_media_core.ITimedMetadataTrackProvider",
@@ -26920,13 +26650,11 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef methods_ImplementsITimedMetadataTrackProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITimedMetadataTrackProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITimedMetadataTrackProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITimedMetadataTrackProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITimedMetadataTrackProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITimedMetadataTrackProvider = {
         "winrt._winrt_windows_media_core.ImplementsITimedMetadataTrackProvider",
@@ -27004,8 +26732,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_MseTimeRange[] = {
         { "_assign_array_", _assign_array_MseTimeRange, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* MseTimeRange_get_Start(py::wrapper::Windows::Media::Core::MseTimeRange* self, void* /*unused*/) noexcept
     {
@@ -27076,8 +26803,7 @@ namespace py::cpp::Windows::Media::Core
     static PyGetSetDef _getset_MseTimeRange[] = {
         { "start", reinterpret_cast<getter>(MseTimeRange_get_Start), reinterpret_cast<setter>(MseTimeRange_set_Start), nullptr, nullptr },
         { "end", reinterpret_cast<getter>(MseTimeRange_get_End), reinterpret_cast<setter>(MseTimeRange_set_End), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_MseTimeRange(py::wrapper::Windows::Media::Core::MseTimeRange* self, PyObject* other, int op) noexcept
     {
@@ -27139,8 +26865,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MseTimeRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_MseTimeRange) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_MseTimeRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MseTimeRange = {
         "winrt._winrt_windows_media_core.MseTimeRange",
@@ -27218,8 +26943,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_TimedTextDouble[] = {
         { "_assign_array_", _assign_array_TimedTextDouble, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* TimedTextDouble_get_Value(py::wrapper::Windows::Media::Core::TimedTextDouble* self, void* /*unused*/) noexcept
     {
@@ -27290,8 +27014,7 @@ namespace py::cpp::Windows::Media::Core
     static PyGetSetDef _getset_TimedTextDouble[] = {
         { "value", reinterpret_cast<getter>(TimedTextDouble_get_Value), reinterpret_cast<setter>(TimedTextDouble_set_Value), nullptr, nullptr },
         { "unit", reinterpret_cast<getter>(TimedTextDouble_get_Unit), reinterpret_cast<setter>(TimedTextDouble_set_Unit), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_TimedTextDouble(py::wrapper::Windows::Media::Core::TimedTextDouble* self, PyObject* other, int op) noexcept
     {
@@ -27353,8 +27076,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextDouble) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextDouble) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_TimedTextDouble) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextDouble = {
         "winrt._winrt_windows_media_core.TimedTextDouble",
@@ -27438,8 +27160,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_TimedTextPadding[] = {
         { "_assign_array_", _assign_array_TimedTextPadding, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* TimedTextPadding_get_Before(py::wrapper::Windows::Media::Core::TimedTextPadding* self, void* /*unused*/) noexcept
     {
@@ -27612,8 +27333,7 @@ namespace py::cpp::Windows::Media::Core
         { "start", reinterpret_cast<getter>(TimedTextPadding_get_Start), reinterpret_cast<setter>(TimedTextPadding_set_Start), nullptr, nullptr },
         { "end", reinterpret_cast<getter>(TimedTextPadding_get_End), reinterpret_cast<setter>(TimedTextPadding_set_End), nullptr, nullptr },
         { "unit", reinterpret_cast<getter>(TimedTextPadding_get_Unit), reinterpret_cast<setter>(TimedTextPadding_set_Unit), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_TimedTextPadding(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* other, int op) noexcept
     {
@@ -27693,8 +27413,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPadding) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextPadding) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_TimedTextPadding) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextPadding = {
         "winrt._winrt_windows_media_core.TimedTextPadding",
@@ -27774,8 +27493,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_TimedTextPoint[] = {
         { "_assign_array_", _assign_array_TimedTextPoint, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* TimedTextPoint_get_X(py::wrapper::Windows::Media::Core::TimedTextPoint* self, void* /*unused*/) noexcept
     {
@@ -27880,8 +27598,7 @@ namespace py::cpp::Windows::Media::Core
         { "x", reinterpret_cast<getter>(TimedTextPoint_get_X), reinterpret_cast<setter>(TimedTextPoint_set_X), nullptr, nullptr },
         { "y", reinterpret_cast<getter>(TimedTextPoint_get_Y), reinterpret_cast<setter>(TimedTextPoint_set_Y), nullptr, nullptr },
         { "unit", reinterpret_cast<getter>(TimedTextPoint_get_Unit), reinterpret_cast<setter>(TimedTextPoint_set_Unit), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_TimedTextPoint(py::wrapper::Windows::Media::Core::TimedTextPoint* self, PyObject* other, int op) noexcept
     {
@@ -27949,8 +27666,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPoint) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextPoint) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_TimedTextPoint) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextPoint = {
         "winrt._winrt_windows_media_core.TimedTextPoint",
@@ -28030,8 +27746,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_TimedTextSize[] = {
         { "_assign_array_", _assign_array_TimedTextSize, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* TimedTextSize_get_Height(py::wrapper::Windows::Media::Core::TimedTextSize* self, void* /*unused*/) noexcept
     {
@@ -28136,8 +27851,7 @@ namespace py::cpp::Windows::Media::Core
         { "height", reinterpret_cast<getter>(TimedTextSize_get_Height), reinterpret_cast<setter>(TimedTextSize_set_Height), nullptr, nullptr },
         { "width", reinterpret_cast<getter>(TimedTextSize_get_Width), reinterpret_cast<setter>(TimedTextSize_set_Width), nullptr, nullptr },
         { "unit", reinterpret_cast<getter>(TimedTextSize_get_Unit), reinterpret_cast<setter>(TimedTextSize_set_Unit), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_TimedTextSize(py::wrapper::Windows::Media::Core::TimedTextSize* self, PyObject* other, int op) noexcept
     {
@@ -28205,8 +27919,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextSize) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextSize) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_TimedTextSize) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedTextSize = {
         "winrt._winrt_windows_media_core.TimedTextSize",

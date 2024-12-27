@@ -454,8 +454,7 @@ namespace py::cpp::Windows::Devices::Scanners
         { "scan_preview_to_stream_async", reinterpret_cast<PyCFunction>(ImageScanner_ScanPreviewToStreamAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ImageScanner, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageScanner), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageScanner[] = {
         { "auto_configuration", reinterpret_cast<getter>(ImageScanner_get_AutoConfiguration), nullptr, nullptr, nullptr },
@@ -463,16 +462,14 @@ namespace py::cpp::Windows::Devices::Scanners
         { "device_id", reinterpret_cast<getter>(ImageScanner_get_DeviceId), nullptr, nullptr, nullptr },
         { "feeder_configuration", reinterpret_cast<getter>(ImageScanner_get_FeederConfiguration), nullptr, nullptr, nullptr },
         { "flatbed_configuration", reinterpret_cast<getter>(ImageScanner_get_FlatbedConfiguration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageScanner[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScanner) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScanner) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScanner) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScanner) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageScanner = {
         "winrt._winrt_windows_devices_scanners.ImageScanner",
@@ -482,14 +479,12 @@ namespace py::cpp::Windows::Devices::Scanners
         _type_slots_ImageScanner};
 
     static PyGetSetDef getset_ImageScanner_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ImageScanner_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(ImageScanner_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(ImageScanner_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImageScanner_Static[] = 
     {
@@ -499,14 +494,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Spec type_spec_ImageScanner_Static =
-    {
+    static PyType_Spec type_spec_ImageScanner_Static = {
         "winrt._winrt_windows_devices_scanners.ImageScanner_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ImageScanner_Static
-    };
+        type_slots_ImageScanner_Static};
 
     // ----- ImageScannerAutoConfiguration class --------------------
 
@@ -694,22 +687,19 @@ namespace py::cpp::Windows::Devices::Scanners
         { "is_format_supported", reinterpret_cast<PyCFunction>(ImageScannerAutoConfiguration_IsFormatSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ImageScannerAutoConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageScannerAutoConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageScannerAutoConfiguration[] = {
         { "format", reinterpret_cast<getter>(ImageScannerAutoConfiguration_get_Format), reinterpret_cast<setter>(ImageScannerAutoConfiguration_put_Format), nullptr, nullptr },
         { "default_format", reinterpret_cast<getter>(ImageScannerAutoConfiguration_get_DefaultFormat), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageScannerAutoConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerAutoConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerAutoConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerAutoConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerAutoConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageScannerAutoConfiguration = {
         "winrt._winrt_windows_devices_scanners.ImageScannerAutoConfiguration",
@@ -2432,8 +2422,7 @@ namespace py::cpp::Windows::Devices::Scanners
         { "is_page_size_supported", reinterpret_cast<PyCFunction>(ImageScannerFeederConfiguration_IsPageSizeSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ImageScannerFeederConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageScannerFeederConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageScannerFeederConfiguration[] = {
         { "scan_ahead", reinterpret_cast<getter>(ImageScannerFeederConfiguration_get_ScanAhead), reinterpret_cast<setter>(ImageScannerFeederConfiguration_put_ScanAhead), nullptr, nullptr },
@@ -2469,16 +2458,14 @@ namespace py::cpp::Windows::Devices::Scanners
         { "contrast_step", reinterpret_cast<getter>(ImageScannerFeederConfiguration_get_ContrastStep), nullptr, nullptr, nullptr },
         { "brightness_step", reinterpret_cast<getter>(ImageScannerFeederConfiguration_get_BrightnessStep), nullptr, nullptr, nullptr },
         { "actual_resolution", reinterpret_cast<getter>(ImageScannerFeederConfiguration_get_ActualResolution), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageScannerFeederConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerFeederConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerFeederConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerFeederConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerFeederConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageScannerFeederConfiguration = {
         "winrt._winrt_windows_devices_scanners.ImageScannerFeederConfiguration",
@@ -3623,8 +3610,7 @@ namespace py::cpp::Windows::Devices::Scanners
         { "is_format_supported", reinterpret_cast<PyCFunction>(ImageScannerFlatbedConfiguration_IsFormatSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ImageScannerFlatbedConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageScannerFlatbedConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageScannerFlatbedConfiguration[] = {
         { "format", reinterpret_cast<getter>(ImageScannerFlatbedConfiguration_get_Format), reinterpret_cast<setter>(ImageScannerFlatbedConfiguration_put_Format), nullptr, nullptr },
@@ -3650,16 +3636,14 @@ namespace py::cpp::Windows::Devices::Scanners
         { "min_resolution", reinterpret_cast<getter>(ImageScannerFlatbedConfiguration_get_MinResolution), nullptr, nullptr, nullptr },
         { "optical_resolution", reinterpret_cast<getter>(ImageScannerFlatbedConfiguration_get_OpticalResolution), nullptr, nullptr, nullptr },
         { "min_scan_area", reinterpret_cast<getter>(ImageScannerFlatbedConfiguration_get_MinScanArea), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageScannerFlatbedConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerFlatbedConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerFlatbedConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerFlatbedConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerFlatbedConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageScannerFlatbedConfiguration = {
         "winrt._winrt_windows_devices_scanners.ImageScannerFlatbedConfiguration",
@@ -3772,22 +3756,19 @@ namespace py::cpp::Windows::Devices::Scanners
     static PyMethodDef _methods_ImageScannerPreviewResult[] = {
         { "_assign_array_", _assign_array_ImageScannerPreviewResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageScannerPreviewResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageScannerPreviewResult[] = {
         { "format", reinterpret_cast<getter>(ImageScannerPreviewResult_get_Format), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(ImageScannerPreviewResult_get_Succeeded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageScannerPreviewResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerPreviewResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerPreviewResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerPreviewResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerPreviewResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageScannerPreviewResult = {
         "winrt._winrt_windows_devices_scanners.ImageScannerPreviewResult",
@@ -3870,21 +3851,18 @@ namespace py::cpp::Windows::Devices::Scanners
     static PyMethodDef _methods_ImageScannerScanResult[] = {
         { "_assign_array_", _assign_array_ImageScannerScanResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageScannerScanResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageScannerScanResult[] = {
         { "scanned_files", reinterpret_cast<getter>(ImageScannerScanResult_get_ScannedFiles), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageScannerScanResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerScanResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerScanResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerScanResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerScanResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageScannerScanResult = {
         "winrt._winrt_windows_devices_scanners.ImageScannerScanResult",
@@ -4079,22 +4057,19 @@ namespace py::cpp::Windows::Devices::Scanners
         { "is_format_supported", reinterpret_cast<PyCFunction>(IImageScannerFormatConfiguration_IsFormatSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IImageScannerFormatConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IImageScannerFormatConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IImageScannerFormatConfiguration[] = {
         { "default_format", reinterpret_cast<getter>(IImageScannerFormatConfiguration_get_DefaultFormat), nullptr, nullptr, nullptr },
         { "format", reinterpret_cast<getter>(IImageScannerFormatConfiguration_get_Format), reinterpret_cast<setter>(IImageScannerFormatConfiguration_put_Format), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IImageScannerFormatConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IImageScannerFormatConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IImageScannerFormatConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IImageScannerFormatConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IImageScannerFormatConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IImageScannerFormatConfiguration = {
         "winrt._winrt_windows_devices_scanners.IImageScannerFormatConfiguration",
@@ -4245,13 +4220,11 @@ namespace py::cpp::Windows::Devices::Scanners
     static PyMethodDef methods_ImplementsIImageScannerFormatConfiguration[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIImageScannerFormatConfiguration), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIImageScannerFormatConfiguration), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIImageScannerFormatConfiguration[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIImageScannerFormatConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIImageScannerFormatConfiguration = {
         "winrt._winrt_windows_devices_scanners.ImplementsIImageScannerFormatConfiguration",
@@ -5396,8 +5369,7 @@ namespace py::cpp::Windows::Devices::Scanners
         { "is_format_supported", reinterpret_cast<PyCFunction>(IImageScannerSourceConfiguration_IsFormatSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IImageScannerSourceConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IImageScannerSourceConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IImageScannerSourceConfiguration[] = {
         { "actual_resolution", reinterpret_cast<getter>(IImageScannerSourceConfiguration_get_ActualResolution), nullptr, nullptr, nullptr },
@@ -5423,16 +5395,14 @@ namespace py::cpp::Windows::Devices::Scanners
         { "selected_scan_region", reinterpret_cast<getter>(IImageScannerSourceConfiguration_get_SelectedScanRegion), reinterpret_cast<setter>(IImageScannerSourceConfiguration_put_SelectedScanRegion), nullptr, nullptr },
         { "default_format", reinterpret_cast<getter>(IImageScannerSourceConfiguration_get_DefaultFormat), nullptr, nullptr, nullptr },
         { "format", reinterpret_cast<getter>(IImageScannerSourceConfiguration_get_Format), reinterpret_cast<setter>(IImageScannerSourceConfiguration_put_Format), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IImageScannerSourceConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IImageScannerSourceConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IImageScannerSourceConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IImageScannerSourceConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IImageScannerSourceConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IImageScannerSourceConfiguration = {
         "winrt._winrt_windows_devices_scanners.IImageScannerSourceConfiguration",
@@ -6205,13 +6175,11 @@ namespace py::cpp::Windows::Devices::Scanners
     static PyMethodDef methods_ImplementsIImageScannerSourceConfiguration[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIImageScannerSourceConfiguration), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIImageScannerSourceConfiguration), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIImageScannerSourceConfiguration[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIImageScannerSourceConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIImageScannerSourceConfiguration = {
         "winrt._winrt_windows_devices_scanners.ImplementsIImageScannerSourceConfiguration",
@@ -6289,8 +6257,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyMethodDef _methods_ImageScannerResolution[] = {
         { "_assign_array_", _assign_array_ImageScannerResolution, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* ImageScannerResolution_get_DpiX(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, void* /*unused*/) noexcept
     {
@@ -6361,8 +6328,7 @@ namespace py::cpp::Windows::Devices::Scanners
     static PyGetSetDef _getset_ImageScannerResolution[] = {
         { "dpi_x", reinterpret_cast<getter>(ImageScannerResolution_get_DpiX), reinterpret_cast<setter>(ImageScannerResolution_set_DpiX), nullptr, nullptr },
         { "dpi_y", reinterpret_cast<getter>(ImageScannerResolution_get_DpiY), reinterpret_cast<setter>(ImageScannerResolution_set_DpiY), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_ImageScannerResolution(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, PyObject* other, int op) noexcept
     {
@@ -6424,8 +6390,7 @@ namespace py::cpp::Windows::Devices::Scanners
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerResolution) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ImageScannerResolution) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_ImageScannerResolution) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageScannerResolution = {
         "winrt._winrt_windows_devices_scanners.ImageScannerResolution",

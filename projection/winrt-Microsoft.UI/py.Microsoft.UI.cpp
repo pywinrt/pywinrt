@@ -135,20 +135,17 @@ namespace py::cpp::Microsoft::UI
     static PyMethodDef _methods_ColorHelper[] = {
         { "_assign_array_", _assign_array_ColorHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorHelper), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ColorHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ColorHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ColorHelper = {
         "winrt._winrt_microsoft_ui.ColorHelper",
@@ -158,14 +155,12 @@ namespace py::cpp::Microsoft::UI
         _type_slots_ColorHelper};
 
     static PyGetSetDef getset_ColorHelper_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ColorHelper_Static[] = {
         { "from_argb", reinterpret_cast<PyCFunction>(ColorHelper_FromArgb), METH_VARARGS, nullptr },
         { "to_display_name", reinterpret_cast<PyCFunction>(ColorHelper_ToDisplayName), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ColorHelper_Static[] = 
     {
@@ -175,14 +170,12 @@ namespace py::cpp::Microsoft::UI
         { }
     };
 
-    static PyType_Spec type_spec_ColorHelper_Static =
-    {
+    static PyType_Spec type_spec_ColorHelper_Static = {
         "winrt._winrt_microsoft_ui.ColorHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ColorHelper_Static
-    };
+        type_slots_ColorHelper_Static};
 
     // ----- Colors class --------------------
 
@@ -4458,20 +4451,17 @@ namespace py::cpp::Microsoft::UI
     static PyMethodDef _methods_Colors[] = {
         { "_assign_array_", _assign_array_Colors, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Colors), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Colors[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Colors[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Colors) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Colors) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Colors) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Colors) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Colors = {
         "winrt._winrt_microsoft_ui.Colors",
@@ -4622,12 +4612,10 @@ namespace py::cpp::Microsoft::UI
         { "white_smoke", reinterpret_cast<getter>(Colors_get_WhiteSmoke), nullptr, nullptr, nullptr },
         { "yellow", reinterpret_cast<getter>(Colors_get_Yellow), nullptr, nullptr, nullptr },
         { "yellow_green", reinterpret_cast<getter>(Colors_get_YellowGreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Colors_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Colors_Static[] = 
     {
@@ -4637,14 +4625,12 @@ namespace py::cpp::Microsoft::UI
         { }
     };
 
-    static PyType_Spec type_spec_Colors_Static =
-    {
+    static PyType_Spec type_spec_Colors_Static = {
         "winrt._winrt_microsoft_ui.Colors_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Colors_Static
-    };
+        type_slots_Colors_Static};
 
     // ----- IClosableNotifier interface --------------------
 
@@ -4854,21 +4840,18 @@ namespace py::cpp::Microsoft::UI
         { "remove_framework_closed", reinterpret_cast<PyCFunction>(IClosableNotifier_remove_FrameworkClosed), METH_O, nullptr },
         { "_assign_array_", _assign_array_IClosableNotifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IClosableNotifier), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IClosableNotifier[] = {
         { "is_closed", reinterpret_cast<getter>(IClosableNotifier_get_IsClosed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IClosableNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IClosableNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IClosableNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IClosableNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IClosableNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IClosableNotifier = {
         "winrt._winrt_microsoft_ui.IClosableNotifier",
@@ -5068,13 +5051,11 @@ namespace py::cpp::Microsoft::UI
     static PyMethodDef methods_ImplementsIClosableNotifier[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIClosableNotifier), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIClosableNotifier), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIClosableNotifier[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIClosableNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIClosableNotifier = {
         "winrt._winrt_microsoft_ui.ImplementsIClosableNotifier",
@@ -5150,8 +5131,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyMethodDef _methods_DisplayId[] = {
         { "_assign_array_", _assign_array_DisplayId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* DisplayId_get_Value(py::wrapper::Microsoft::UI::DisplayId* self, void* /*unused*/) noexcept
     {
@@ -5188,8 +5168,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyGetSetDef _getset_DisplayId[] = {
         { "value", reinterpret_cast<getter>(DisplayId_get_Value), reinterpret_cast<setter>(DisplayId_set_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_DisplayId(py::wrapper::Microsoft::UI::DisplayId* self, PyObject* other, int op) noexcept
     {
@@ -5245,8 +5224,7 @@ namespace py::cpp::Microsoft::UI
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DisplayId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_DisplayId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayId = {
         "winrt._winrt_microsoft_ui.DisplayId",
@@ -5322,8 +5300,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyMethodDef _methods_IconId[] = {
         { "_assign_array_", _assign_array_IconId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* IconId_get_Value(py::wrapper::Microsoft::UI::IconId* self, void* /*unused*/) noexcept
     {
@@ -5360,8 +5337,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyGetSetDef _getset_IconId[] = {
         { "value", reinterpret_cast<getter>(IconId_get_Value), reinterpret_cast<setter>(IconId_set_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_IconId(py::wrapper::Microsoft::UI::IconId* self, PyObject* other, int op) noexcept
     {
@@ -5417,8 +5393,7 @@ namespace py::cpp::Microsoft::UI
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IconId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_IconId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_IconId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IconId = {
         "winrt._winrt_microsoft_ui.IconId",
@@ -5494,8 +5469,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyMethodDef _methods_WindowId[] = {
         { "_assign_array_", _assign_array_WindowId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* WindowId_get_Value(py::wrapper::Microsoft::UI::WindowId* self, void* /*unused*/) noexcept
     {
@@ -5532,8 +5506,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyGetSetDef _getset_WindowId[] = {
         { "value", reinterpret_cast<getter>(WindowId_get_Value), reinterpret_cast<setter>(WindowId_set_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_WindowId(py::wrapper::Microsoft::UI::WindowId* self, PyObject* other, int op) noexcept
     {
@@ -5589,8 +5562,7 @@ namespace py::cpp::Microsoft::UI
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_WindowId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_WindowId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowId = {
         "winrt._winrt_microsoft_ui.WindowId",

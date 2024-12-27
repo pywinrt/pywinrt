@@ -138,23 +138,20 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static PyMethodDef _methods_PhoneCallBlockedTriggerDetails[] = {
         { "_assign_array_", _assign_array_PhoneCallBlockedTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneCallBlockedTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneCallBlockedTriggerDetails[] = {
         { "call_blocked_reason", reinterpret_cast<getter>(PhoneCallBlockedTriggerDetails_get_CallBlockedReason), nullptr, nullptr, nullptr },
         { "line_id", reinterpret_cast<getter>(PhoneCallBlockedTriggerDetails_get_LineId), nullptr, nullptr, nullptr },
         { "phone_number", reinterpret_cast<getter>(PhoneCallBlockedTriggerDetails_get_PhoneNumber), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneCallBlockedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallBlockedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneCallBlockedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallBlockedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallBlockedTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneCallBlockedTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_calls_background.PhoneCallBlockedTriggerDetails",
@@ -267,22 +264,19 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static PyMethodDef _methods_PhoneCallOriginDataRequestTriggerDetails[] = {
         { "_assign_array_", _assign_array_PhoneCallOriginDataRequestTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneCallOriginDataRequestTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneCallOriginDataRequestTriggerDetails[] = {
         { "phone_number", reinterpret_cast<getter>(PhoneCallOriginDataRequestTriggerDetails_get_PhoneNumber), nullptr, nullptr, nullptr },
         { "request_id", reinterpret_cast<getter>(PhoneCallOriginDataRequestTriggerDetails_get_RequestId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneCallOriginDataRequestTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallOriginDataRequestTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneCallOriginDataRequestTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallOriginDataRequestTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallOriginDataRequestTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneCallOriginDataRequestTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_calls_background.PhoneCallOriginDataRequestTriggerDetails",
@@ -515,8 +509,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static PyMethodDef _methods_PhoneIncomingCallDismissedTriggerDetails[] = {
         { "_assign_array_", _assign_array_PhoneIncomingCallDismissedTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneIncomingCallDismissedTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneIncomingCallDismissedTriggerDetails[] = {
         { "dismissal_time", reinterpret_cast<getter>(PhoneIncomingCallDismissedTriggerDetails_get_DismissalTime), nullptr, nullptr, nullptr },
@@ -525,16 +518,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
         { "phone_number", reinterpret_cast<getter>(PhoneIncomingCallDismissedTriggerDetails_get_PhoneNumber), nullptr, nullptr, nullptr },
         { "reason", reinterpret_cast<getter>(PhoneIncomingCallDismissedTriggerDetails_get_Reason), nullptr, nullptr, nullptr },
         { "text_reply_message", reinterpret_cast<getter>(PhoneIncomingCallDismissedTriggerDetails_get_TextReplyMessage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneIncomingCallDismissedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneIncomingCallDismissedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneIncomingCallDismissedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneIncomingCallDismissedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneIncomingCallDismissedTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneIncomingCallDismissedTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_calls_background.PhoneIncomingCallDismissedTriggerDetails",
@@ -647,22 +638,19 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static PyMethodDef _methods_PhoneIncomingCallNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_PhoneIncomingCallNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneIncomingCallNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneIncomingCallNotificationTriggerDetails[] = {
         { "call_id", reinterpret_cast<getter>(PhoneIncomingCallNotificationTriggerDetails_get_CallId), nullptr, nullptr, nullptr },
         { "line_id", reinterpret_cast<getter>(PhoneIncomingCallNotificationTriggerDetails_get_LineId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneIncomingCallNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneIncomingCallNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneIncomingCallNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneIncomingCallNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneIncomingCallNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneIncomingCallNotificationTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_calls_background.PhoneIncomingCallNotificationTriggerDetails",
@@ -818,22 +806,19 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
         { "has_line_property_changed", reinterpret_cast<PyCFunction>(PhoneLineChangedTriggerDetails_HasLinePropertyChanged), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PhoneLineChangedTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneLineChangedTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneLineChangedTriggerDetails[] = {
         { "change_type", reinterpret_cast<getter>(PhoneLineChangedTriggerDetails_get_ChangeType), nullptr, nullptr, nullptr },
         { "line_id", reinterpret_cast<getter>(PhoneLineChangedTriggerDetails_get_LineId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneLineChangedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneLineChangedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneLineChangedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneLineChangedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneLineChangedTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneLineChangedTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_calls_background.PhoneLineChangedTriggerDetails",
@@ -976,23 +961,20 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static PyMethodDef _methods_PhoneNewVoicemailMessageTriggerDetails[] = {
         { "_assign_array_", _assign_array_PhoneNewVoicemailMessageTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneNewVoicemailMessageTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneNewVoicemailMessageTriggerDetails[] = {
         { "line_id", reinterpret_cast<getter>(PhoneNewVoicemailMessageTriggerDetails_get_LineId), nullptr, nullptr, nullptr },
         { "operator_message", reinterpret_cast<getter>(PhoneNewVoicemailMessageTriggerDetails_get_OperatorMessage), nullptr, nullptr, nullptr },
         { "voicemail_count", reinterpret_cast<getter>(PhoneNewVoicemailMessageTriggerDetails_get_VoicemailCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneNewVoicemailMessageTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneNewVoicemailMessageTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneNewVoicemailMessageTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneNewVoicemailMessageTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneNewVoicemailMessageTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneNewVoicemailMessageTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_calls_background.PhoneNewVoicemailMessageTriggerDetails",

@@ -78,21 +78,18 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     static PyMethodDef _methods_NotePlacementChangedPreviewEventArgs[] = {
         { "_assign_array_", _assign_array_NotePlacementChangedPreviewEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NotePlacementChangedPreviewEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NotePlacementChangedPreviewEventArgs[] = {
         { "view_id", reinterpret_cast<getter>(NotePlacementChangedPreviewEventArgs_get_ViewId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NotePlacementChangedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotePlacementChangedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotePlacementChangedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotePlacementChangedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotePlacementChangedPreviewEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NotePlacementChangedPreviewEventArgs = {
         "winrt._winrt_windows_applicationmodel_preview_notes.NotePlacementChangedPreviewEventArgs",
@@ -205,22 +202,19 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     static PyMethodDef _methods_NoteVisibilityChangedPreviewEventArgs[] = {
         { "_assign_array_", _assign_array_NoteVisibilityChangedPreviewEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NoteVisibilityChangedPreviewEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NoteVisibilityChangedPreviewEventArgs[] = {
         { "is_visible", reinterpret_cast<getter>(NoteVisibilityChangedPreviewEventArgs_get_IsVisible), nullptr, nullptr, nullptr },
         { "view_id", reinterpret_cast<getter>(NoteVisibilityChangedPreviewEventArgs_get_ViewId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NoteVisibilityChangedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NoteVisibilityChangedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NoteVisibilityChangedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NoteVisibilityChangedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NoteVisibilityChangedPreviewEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NoteVisibilityChangedPreviewEventArgs = {
         "winrt._winrt_windows_applicationmodel_preview_notes.NoteVisibilityChangedPreviewEventArgs",
@@ -1071,21 +1065,18 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { "remove_system_lock_state_changed", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_remove_SystemLockStateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_NotesWindowManagerPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NotesWindowManagerPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NotesWindowManagerPreview[] = {
         { "is_screen_locked", reinterpret_cast<getter>(NotesWindowManagerPreview_get_IsScreenLocked), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NotesWindowManagerPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotesWindowManagerPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotesWindowManagerPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotesWindowManagerPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotesWindowManagerPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NotesWindowManagerPreview = {
         "winrt._winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreview",
@@ -1095,13 +1086,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         _type_slots_NotesWindowManagerPreview};
 
     static PyGetSetDef getset_NotesWindowManagerPreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_NotesWindowManagerPreview_Static[] = {
         { "get_for_current_app", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_GetForCurrentApp), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_NotesWindowManagerPreview_Static[] = 
     {
@@ -1111,14 +1100,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { }
     };
 
-    static PyType_Spec type_spec_NotesWindowManagerPreview_Static =
-    {
+    static PyType_Spec type_spec_NotesWindowManagerPreview_Static = {
         "winrt._winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_NotesWindowManagerPreview_Static
-    };
+        type_slots_NotesWindowManagerPreview_Static};
 
     // ----- NotesWindowManagerPreviewShowNoteOptions class --------------------
 
@@ -1255,21 +1242,18 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     static PyMethodDef _methods_NotesWindowManagerPreviewShowNoteOptions[] = {
         { "_assign_array_", _assign_array_NotesWindowManagerPreviewShowNoteOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NotesWindowManagerPreviewShowNoteOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NotesWindowManagerPreviewShowNoteOptions[] = {
         { "show_with_focus", reinterpret_cast<getter>(NotesWindowManagerPreviewShowNoteOptions_get_ShowWithFocus), reinterpret_cast<setter>(NotesWindowManagerPreviewShowNoteOptions_put_ShowWithFocus), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NotesWindowManagerPreviewShowNoteOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotesWindowManagerPreviewShowNoteOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotesWindowManagerPreviewShowNoteOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotesWindowManagerPreviewShowNoteOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotesWindowManagerPreviewShowNoteOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NotesWindowManagerPreviewShowNoteOptions = {
         "winrt._winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreviewShowNoteOptions",

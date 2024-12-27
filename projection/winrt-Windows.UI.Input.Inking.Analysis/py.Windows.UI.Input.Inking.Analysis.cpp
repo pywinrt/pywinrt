@@ -299,8 +299,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(InkAnalysisInkBullet_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalysisInkBullet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisInkBullet), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisInkBullet[] = {
         { "recognized_text", reinterpret_cast<getter>(InkAnalysisInkBullet_get_RecognizedText), nullptr, nullptr, nullptr },
@@ -310,16 +309,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "kind", reinterpret_cast<getter>(InkAnalysisInkBullet_get_Kind), nullptr, nullptr, nullptr },
         { "parent", reinterpret_cast<getter>(InkAnalysisInkBullet_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(InkAnalysisInkBullet_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisInkBullet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisInkBullet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisInkBullet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisInkBullet) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisInkBullet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisInkBullet = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisInkBullet",
@@ -683,8 +680,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(InkAnalysisInkDrawing_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalysisInkDrawing, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisInkDrawing), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisInkDrawing[] = {
         { "center", reinterpret_cast<getter>(InkAnalysisInkDrawing_get_Center), nullptr, nullptr, nullptr },
@@ -696,16 +692,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "kind", reinterpret_cast<getter>(InkAnalysisInkDrawing_get_Kind), nullptr, nullptr, nullptr },
         { "parent", reinterpret_cast<getter>(InkAnalysisInkDrawing_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(InkAnalysisInkDrawing_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisInkDrawing[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisInkDrawing) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisInkDrawing) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisInkDrawing) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisInkDrawing) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisInkDrawing = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisInkDrawing",
@@ -1039,8 +1033,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(InkAnalysisInkWord_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalysisInkWord, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisInkWord), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisInkWord[] = {
         { "recognized_text", reinterpret_cast<getter>(InkAnalysisInkWord_get_RecognizedText), nullptr, nullptr, nullptr },
@@ -1051,16 +1044,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "kind", reinterpret_cast<getter>(InkAnalysisInkWord_get_Kind), nullptr, nullptr, nullptr },
         { "parent", reinterpret_cast<getter>(InkAnalysisInkWord_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(InkAnalysisInkWord_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisInkWord[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisInkWord) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisInkWord) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisInkWord) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisInkWord) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisInkWord = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisInkWord",
@@ -1394,8 +1385,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(InkAnalysisLine_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalysisLine, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisLine), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisLine[] = {
         { "indent_level", reinterpret_cast<getter>(InkAnalysisLine_get_IndentLevel), nullptr, nullptr, nullptr },
@@ -1406,16 +1396,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "kind", reinterpret_cast<getter>(InkAnalysisLine_get_Kind), nullptr, nullptr, nullptr },
         { "parent", reinterpret_cast<getter>(InkAnalysisLine_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(InkAnalysisLine_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisLine[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisLine) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisLine) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisLine) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisLine) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisLine = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisLine",
@@ -1719,8 +1707,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(InkAnalysisListItem_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalysisListItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisListItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisListItem[] = {
         { "recognized_text", reinterpret_cast<getter>(InkAnalysisListItem_get_RecognizedText), nullptr, nullptr, nullptr },
@@ -1730,16 +1717,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "kind", reinterpret_cast<getter>(InkAnalysisListItem_get_Kind), nullptr, nullptr, nullptr },
         { "parent", reinterpret_cast<getter>(InkAnalysisListItem_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(InkAnalysisListItem_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisListItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisListItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisListItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisListItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisListItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisListItem = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisListItem",
@@ -2013,8 +1998,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(InkAnalysisNode_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalysisNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisNode), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisNode[] = {
         { "bounding_rect", reinterpret_cast<getter>(InkAnalysisNode_get_BoundingRect), nullptr, nullptr, nullptr },
@@ -2023,16 +2007,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "kind", reinterpret_cast<getter>(InkAnalysisNode_get_Kind), nullptr, nullptr, nullptr },
         { "parent", reinterpret_cast<getter>(InkAnalysisNode_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(InkAnalysisNode_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisNode = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisNode",
@@ -2336,8 +2318,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(InkAnalysisParagraph_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalysisParagraph, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisParagraph), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisParagraph[] = {
         { "bounding_rect", reinterpret_cast<getter>(InkAnalysisParagraph_get_BoundingRect), nullptr, nullptr, nullptr },
@@ -2347,16 +2328,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "parent", reinterpret_cast<getter>(InkAnalysisParagraph_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(InkAnalysisParagraph_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
         { "recognized_text", reinterpret_cast<getter>(InkAnalysisParagraph_get_RecognizedText), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisParagraph[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisParagraph) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisParagraph) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisParagraph) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisParagraph) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisParagraph = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisParagraph",
@@ -2439,21 +2418,18 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static PyMethodDef _methods_InkAnalysisResult[] = {
         { "_assign_array_", _assign_array_InkAnalysisResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisResult[] = {
         { "status", reinterpret_cast<getter>(InkAnalysisResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisResult = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisResult",
@@ -2800,8 +2776,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(InkAnalysisRoot_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalysisRoot, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisRoot), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisRoot[] = {
         { "bounding_rect", reinterpret_cast<getter>(InkAnalysisRoot_get_BoundingRect), nullptr, nullptr, nullptr },
@@ -2811,16 +2786,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "parent", reinterpret_cast<getter>(InkAnalysisRoot_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(InkAnalysisRoot_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
         { "recognized_text", reinterpret_cast<getter>(InkAnalysisRoot_get_RecognizedText), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisRoot[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisRoot) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisRoot) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisRoot) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisRoot) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisRoot = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisRoot",
@@ -3124,8 +3097,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(InkAnalysisWritingRegion_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalysisWritingRegion, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalysisWritingRegion), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalysisWritingRegion[] = {
         { "bounding_rect", reinterpret_cast<getter>(InkAnalysisWritingRegion_get_BoundingRect), nullptr, nullptr, nullptr },
@@ -3135,16 +3107,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "parent", reinterpret_cast<getter>(InkAnalysisWritingRegion_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(InkAnalysisWritingRegion_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
         { "recognized_text", reinterpret_cast<getter>(InkAnalysisWritingRegion_get_RecognizedText), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalysisWritingRegion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisWritingRegion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisWritingRegion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisWritingRegion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisWritingRegion) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalysisWritingRegion = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisWritingRegion",
@@ -3627,22 +3597,19 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "set_stroke_data_kind", reinterpret_cast<PyCFunction>(InkAnalyzer_SetStrokeDataKind), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkAnalyzer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkAnalyzer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InkAnalyzer[] = {
         { "analysis_root", reinterpret_cast<getter>(InkAnalyzer_get_AnalysisRoot), nullptr, nullptr, nullptr },
         { "is_analyzing", reinterpret_cast<getter>(InkAnalyzer_get_IsAnalyzing), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InkAnalyzer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalyzer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalyzer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalyzer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalyzer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InkAnalyzer = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalyzer",
@@ -3916,8 +3883,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(IInkAnalysisNode_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IInkAnalysisNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInkAnalysisNode), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IInkAnalysisNode[] = {
         { "bounding_rect", reinterpret_cast<getter>(IInkAnalysisNode_get_BoundingRect), nullptr, nullptr, nullptr },
@@ -3926,16 +3892,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "kind", reinterpret_cast<getter>(IInkAnalysisNode_get_Kind), nullptr, nullptr, nullptr },
         { "parent", reinterpret_cast<getter>(IInkAnalysisNode_get_Parent), nullptr, nullptr, nullptr },
         { "rotated_bounding_rect", reinterpret_cast<getter>(IInkAnalysisNode_get_RotatedBoundingRect), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IInkAnalysisNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkAnalysisNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkAnalysisNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkAnalysisNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkAnalysisNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IInkAnalysisNode = {
         "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalysisNode",
@@ -4137,13 +4101,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static PyMethodDef methods_ImplementsIInkAnalysisNode[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInkAnalysisNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInkAnalysisNode), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIInkAnalysisNode[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIInkAnalysisNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIInkAnalysisNode = {
         "winrt._winrt_windows_ui_input_inking_analysis.ImplementsIInkAnalysisNode",
@@ -4237,20 +4199,17 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { "create_analyzer", reinterpret_cast<PyCFunction>(IInkAnalyzerFactory_CreateAnalyzer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IInkAnalyzerFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInkAnalyzerFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IInkAnalyzerFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IInkAnalyzerFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkAnalyzerFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkAnalyzerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkAnalyzerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkAnalyzerFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IInkAnalyzerFactory = {
         "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalyzerFactory",
@@ -4332,13 +4291,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static PyMethodDef methods_ImplementsIInkAnalyzerFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInkAnalyzerFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInkAnalyzerFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIInkAnalyzerFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIInkAnalyzerFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIInkAnalyzerFactory = {
         "winrt._winrt_windows_ui_input_inking_analysis.ImplementsIInkAnalyzerFactory",

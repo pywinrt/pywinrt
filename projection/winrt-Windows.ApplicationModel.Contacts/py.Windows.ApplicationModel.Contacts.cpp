@@ -267,20 +267,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "unlink_raw_contact_async", reinterpret_cast<PyCFunction>(AggregateContactManager_UnlinkRawContactAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AggregateContactManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AggregateContactManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AggregateContactManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AggregateContactManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AggregateContactManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AggregateContactManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AggregateContactManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AggregateContactManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AggregateContactManager = {
         "winrt._winrt_windows_applicationmodel_contacts.AggregateContactManager",
@@ -2257,8 +2254,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_Contact[] = {
         { "_assign_array_", _assign_array_Contact, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Contact), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Contact[] = {
         { "thumbnail", reinterpret_cast<getter>(Contact_get_Thumbnail), reinterpret_cast<setter>(Contact_put_Thumbnail), nullptr, nullptr },
@@ -2301,16 +2297,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "first_name", reinterpret_cast<getter>(Contact_get_FirstName), reinterpret_cast<setter>(Contact_put_FirstName), nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(Contact_get_DisplayName), nullptr, nullptr, nullptr },
         { "yomi_display_name", reinterpret_cast<getter>(Contact_get_YomiDisplayName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Contact[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Contact) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Contact) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Contact) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Contact) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Contact = {
         "winrt._winrt_windows_applicationmodel_contacts.Contact",
@@ -2868,8 +2862,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactAddress[] = {
         { "_assign_array_", _assign_array_ContactAddress, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactAddress), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactAddress[] = {
         { "street_address", reinterpret_cast<getter>(ContactAddress_get_StreetAddress), reinterpret_cast<setter>(ContactAddress_put_StreetAddress), nullptr, nullptr },
@@ -2879,16 +2872,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "kind", reinterpret_cast<getter>(ContactAddress_get_Kind), reinterpret_cast<setter>(ContactAddress_put_Kind), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(ContactAddress_get_Description), reinterpret_cast<setter>(ContactAddress_put_Description), nullptr, nullptr },
         { "country", reinterpret_cast<getter>(ContactAddress_get_Country), reinterpret_cast<setter>(ContactAddress_put_Country), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactAddress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactAddress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactAddress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactAddress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactAddress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactAddress = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactAddress",
@@ -3359,8 +3350,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactAnnotation[] = {
         { "_assign_array_", _assign_array_ContactAnnotation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactAnnotation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactAnnotation[] = {
         { "supported_operations", reinterpret_cast<getter>(ContactAnnotation_get_SupportedOperations), reinterpret_cast<setter>(ContactAnnotation_put_SupportedOperations), nullptr, nullptr },
@@ -3371,16 +3361,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "is_disabled", reinterpret_cast<getter>(ContactAnnotation_get_IsDisabled), nullptr, nullptr, nullptr },
         { "provider_properties", reinterpret_cast<getter>(ContactAnnotation_get_ProviderProperties), nullptr, nullptr, nullptr },
         { "contact_list_id", reinterpret_cast<getter>(ContactAnnotation_get_ContactListId), reinterpret_cast<setter>(ContactAnnotation_put_ContactListId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactAnnotation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactAnnotation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactAnnotation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactAnnotation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactAnnotation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactAnnotation = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactAnnotation",
@@ -3777,23 +3765,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "try_save_annotation_async", reinterpret_cast<PyCFunction>(ContactAnnotationList_TrySaveAnnotationAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactAnnotationList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactAnnotationList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactAnnotationList[] = {
         { "id", reinterpret_cast<getter>(ContactAnnotationList_get_Id), nullptr, nullptr, nullptr },
         { "provider_package_family_name", reinterpret_cast<getter>(ContactAnnotationList_get_ProviderPackageFamilyName), nullptr, nullptr, nullptr },
         { "user_data_account_id", reinterpret_cast<getter>(ContactAnnotationList_get_UserDataAccountId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactAnnotationList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactAnnotationList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactAnnotationList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactAnnotationList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactAnnotationList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactAnnotationList = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactAnnotationList",
@@ -4229,20 +4214,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "get_annotation_list_async", reinterpret_cast<PyCFunction>(ContactAnnotationStore_GetAnnotationListAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactAnnotationStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactAnnotationStore), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactAnnotationStore[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactAnnotationStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactAnnotationStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactAnnotationStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactAnnotationStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactAnnotationStore) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactAnnotationStore = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactAnnotationStore",
@@ -4355,22 +4337,19 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactBatch[] = {
         { "_assign_array_", _assign_array_ContactBatch, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactBatch), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactBatch[] = {
         { "contacts", reinterpret_cast<getter>(ContactBatch_get_Contacts), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(ContactBatch_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactBatch) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactBatch = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactBatch",
@@ -4534,20 +4513,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactCardDelayedDataLoader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ContactCardDelayedDataLoader), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ContactCardDelayedDataLoader), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactCardDelayedDataLoader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactCardDelayedDataLoader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactCardDelayedDataLoader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactCardDelayedDataLoader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactCardDelayedDataLoader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactCardDelayedDataLoader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactCardDelayedDataLoader = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactCardDelayedDataLoader",
@@ -4790,23 +4766,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactCardOptions[] = {
         { "_assign_array_", _assign_array_ContactCardOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactCardOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactCardOptions[] = {
         { "initial_tab_kind", reinterpret_cast<getter>(ContactCardOptions_get_InitialTabKind), reinterpret_cast<setter>(ContactCardOptions_put_InitialTabKind), nullptr, nullptr },
         { "header_kind", reinterpret_cast<getter>(ContactCardOptions_get_HeaderKind), reinterpret_cast<setter>(ContactCardOptions_put_HeaderKind), nullptr, nullptr },
         { "server_search_contact_list_ids", reinterpret_cast<getter>(ContactCardOptions_get_ServerSearchContactListIds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactCardOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactCardOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactCardOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactCardOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactCardOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactCardOptions = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactCardOptions",
@@ -4919,22 +4892,19 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactChange[] = {
         { "_assign_array_", _assign_array_ContactChange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactChange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactChange[] = {
         { "change_type", reinterpret_cast<getter>(ContactChange_get_ChangeType), nullptr, nullptr, nullptr },
         { "contact", reinterpret_cast<getter>(ContactChange_get_Contact), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactChange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactChange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactChange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactChange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactChange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactChange = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactChange",
@@ -5114,20 +5084,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "read_batch_async", reinterpret_cast<PyCFunction>(ContactChangeReader_ReadBatchAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactChangeReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactChangeReader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactChangeReader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactChangeReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactChangeReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactChangeReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactChangeReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactChangeReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactChangeReader = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactChangeReader",
@@ -5335,21 +5302,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "reset", reinterpret_cast<PyCFunction>(ContactChangeTracker_Reset), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactChangeTracker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactChangeTracker), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactChangeTracker[] = {
         { "is_tracking", reinterpret_cast<getter>(ContactChangeTracker_get_IsTracking), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactChangeTracker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactChangeTracker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactChangeTracker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactChangeTracker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactChangeTracker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactChangeTracker = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactChangeTracker",
@@ -5444,20 +5408,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "complete", reinterpret_cast<PyCFunction>(ContactChangedDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactChangedDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactChangedDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactChangedDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactChangedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactChangedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactChangedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactChangedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactChangedDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactChangedDeferral = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactChangedDeferral",
@@ -5551,20 +5512,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "get_deferral", reinterpret_cast<PyCFunction>(ContactChangedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactChangedEventArgs",
@@ -5777,22 +5735,19 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactConnectedServiceAccount[] = {
         { "_assign_array_", _assign_array_ContactConnectedServiceAccount, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactConnectedServiceAccount), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactConnectedServiceAccount[] = {
         { "service_name", reinterpret_cast<getter>(ContactConnectedServiceAccount_get_ServiceName), reinterpret_cast<setter>(ContactConnectedServiceAccount_put_ServiceName), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(ContactConnectedServiceAccount_get_Id), reinterpret_cast<setter>(ContactConnectedServiceAccount_put_Id), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactConnectedServiceAccount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactConnectedServiceAccount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactConnectedServiceAccount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactConnectedServiceAccount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactConnectedServiceAccount) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactConnectedServiceAccount = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactConnectedServiceAccount",
@@ -6212,8 +6167,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactDate[] = {
         { "_assign_array_", _assign_array_ContactDate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactDate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactDate[] = {
         { "year", reinterpret_cast<getter>(ContactDate_get_Year), reinterpret_cast<setter>(ContactDate_put_Year), nullptr, nullptr },
@@ -6221,16 +6175,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "kind", reinterpret_cast<getter>(ContactDate_get_Kind), reinterpret_cast<setter>(ContactDate_put_Kind), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(ContactDate_get_Description), reinterpret_cast<setter>(ContactDate_put_Description), nullptr, nullptr },
         { "day", reinterpret_cast<getter>(ContactDate_get_Day), reinterpret_cast<setter>(ContactDate_put_Day), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactDate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactDate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactDate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactDate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactDate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactDate = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactDate",
@@ -6512,23 +6464,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactEmail[] = {
         { "_assign_array_", _assign_array_ContactEmail, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactEmail), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactEmail[] = {
         { "kind", reinterpret_cast<getter>(ContactEmail_get_Kind), reinterpret_cast<setter>(ContactEmail_put_Kind), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(ContactEmail_get_Description), reinterpret_cast<setter>(ContactEmail_put_Description), nullptr, nullptr },
         { "address", reinterpret_cast<getter>(ContactEmail_get_Address), reinterpret_cast<setter>(ContactEmail_put_Address), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactEmail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactEmail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactEmail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactEmail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactEmail) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactEmail = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactEmail",
@@ -6761,24 +6710,21 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactField[] = {
         { "_assign_array_", _assign_array_ContactField, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactField), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactField[] = {
         { "category", reinterpret_cast<getter>(ContactField_get_Category), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ContactField_get_Name), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(ContactField_get_Type), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(ContactField_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactField[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactField) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactField) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactField) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactField) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactField = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactField",
@@ -7258,20 +7204,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "create_location_default", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateLocation_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactFieldFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactFieldFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactFieldFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactFieldFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactFieldFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactFieldFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactFieldFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactFieldFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactFieldFactory = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactFieldFactory",
@@ -7324,20 +7267,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactGroup[] = {
         { "_assign_array_", _assign_array_ContactGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactGroup[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactGroup = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactGroup",
@@ -7654,8 +7594,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "query_custom_fields", reinterpret_cast<PyCFunction>(ContactInformation_QueryCustomFields), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactInformation[] = {
         { "custom_fields", reinterpret_cast<getter>(ContactInformation_get_CustomFields), nullptr, nullptr, nullptr },
@@ -7664,16 +7603,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "locations", reinterpret_cast<getter>(ContactInformation_get_Locations), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ContactInformation_get_Name), nullptr, nullptr, nullptr },
         { "phone_numbers", reinterpret_cast<getter>(ContactInformation_get_PhoneNumbers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactInformation = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactInformation",
@@ -8025,8 +7962,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactInstantMessageField[] = {
         { "_assign_array_", _assign_array_ContactInstantMessageField, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactInstantMessageField), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactInstantMessageField[] = {
         { "category", reinterpret_cast<getter>(ContactInstantMessageField_get_Category), nullptr, nullptr, nullptr },
@@ -8037,16 +7973,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "launch_uri", reinterpret_cast<getter>(ContactInstantMessageField_get_LaunchUri), nullptr, nullptr, nullptr },
         { "service", reinterpret_cast<getter>(ContactInstantMessageField_get_Service), nullptr, nullptr, nullptr },
         { "user_name", reinterpret_cast<getter>(ContactInstantMessageField_get_UserName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactInstantMessageField[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactInstantMessageField) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactInstantMessageField) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactInstantMessageField) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactInstantMessageField) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactInstantMessageField = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactInstantMessageField",
@@ -8673,8 +8607,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactJobInfo[] = {
         { "_assign_array_", _assign_array_ContactJobInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactJobInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactJobInfo[] = {
         { "title", reinterpret_cast<getter>(ContactJobInfo_get_Title), reinterpret_cast<setter>(ContactJobInfo_put_Title), nullptr, nullptr },
@@ -8685,16 +8618,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "company_yomi_name", reinterpret_cast<getter>(ContactJobInfo_get_CompanyYomiName), reinterpret_cast<setter>(ContactJobInfo_put_CompanyYomiName), nullptr, nullptr },
         { "company_name", reinterpret_cast<getter>(ContactJobInfo_get_CompanyName), reinterpret_cast<setter>(ContactJobInfo_put_CompanyName), nullptr, nullptr },
         { "company_address", reinterpret_cast<getter>(ContactJobInfo_get_CompanyAddress), reinterpret_cast<setter>(ContactJobInfo_put_CompanyAddress), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactJobInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactJobInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactJobInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactJobInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactJobInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactJobInfo = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactJobInfo",
@@ -8863,19 +8794,16 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_ContactLaunchActionVerbs[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactLaunchActionVerbs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactLaunchActionVerbs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactLaunchActionVerbs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactLaunchActionVerbs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactLaunchActionVerbs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactLaunchActionVerbs = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactLaunchActionVerbs",
@@ -8890,12 +8818,10 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "message", reinterpret_cast<getter>(ContactLaunchActionVerbs_get_Message), nullptr, nullptr, nullptr },
         { "post", reinterpret_cast<getter>(ContactLaunchActionVerbs_get_Post), nullptr, nullptr, nullptr },
         { "video_call", reinterpret_cast<getter>(ContactLaunchActionVerbs_get_VideoCall), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContactLaunchActionVerbs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContactLaunchActionVerbs_Static[] = 
     {
@@ -8905,14 +8831,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }
     };
 
-    static PyType_Spec type_spec_ContactLaunchActionVerbs_Static =
-    {
+    static PyType_Spec type_spec_ContactLaunchActionVerbs_Static = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactLaunchActionVerbs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContactLaunchActionVerbs_Static
-    };
+        type_slots_ContactLaunchActionVerbs_Static};
 
     // ----- ContactList class --------------------
 
@@ -10043,8 +9967,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "remove_contact_changed", reinterpret_cast<PyCFunction>(ContactList_remove_ContactChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ContactList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactList[] = {
         { "supports_server_search", reinterpret_cast<getter>(ContactList_get_SupportsServerSearch), reinterpret_cast<setter>(ContactList_put_SupportsServerSearch), nullptr, nullptr },
@@ -10059,16 +9982,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "user_data_account_id", reinterpret_cast<getter>(ContactList_get_UserDataAccountId), nullptr, nullptr, nullptr },
         { "sync_constraints", reinterpret_cast<getter>(ContactList_get_SyncConstraints), nullptr, nullptr, nullptr },
         { "limited_write_operations", reinterpret_cast<getter>(ContactList_get_LimitedWriteOperations), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactList = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactList",
@@ -10207,20 +10128,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "try_delete_contact_async", reinterpret_cast<PyCFunction>(ContactListLimitedWriteOperations_TryDeleteContactAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactListLimitedWriteOperations, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListLimitedWriteOperations), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListLimitedWriteOperations[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListLimitedWriteOperations[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListLimitedWriteOperations) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListLimitedWriteOperations) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListLimitedWriteOperations) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListLimitedWriteOperations) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListLimitedWriteOperations = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactListLimitedWriteOperations",
@@ -12205,8 +12123,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactListSyncConstraints[] = {
         { "_assign_array_", _assign_array_ContactListSyncConstraints, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListSyncConstraints), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListSyncConstraints[] = {
         { "can_sync_descriptions", reinterpret_cast<getter>(ContactListSyncConstraints_get_CanSyncDescriptions), reinterpret_cast<setter>(ContactListSyncConstraints_put_CanSyncDescriptions), nullptr, nullptr },
@@ -12237,16 +12154,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "max_websites", reinterpret_cast<getter>(ContactListSyncConstraints_get_MaxWebsites), reinterpret_cast<setter>(ContactListSyncConstraints_put_MaxWebsites), nullptr, nullptr },
         { "max_spouse_relationships", reinterpret_cast<getter>(ContactListSyncConstraints_get_MaxSpouseRelationships), reinterpret_cast<setter>(ContactListSyncConstraints_put_MaxSpouseRelationships), nullptr, nullptr },
         { "max_sibling_relationships", reinterpret_cast<getter>(ContactListSyncConstraints_get_MaxSiblingRelationships), reinterpret_cast<setter>(ContactListSyncConstraints_put_MaxSiblingRelationships), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListSyncConstraints[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListSyncConstraints) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListSyncConstraints) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListSyncConstraints) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListSyncConstraints) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListSyncConstraints = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactListSyncConstraints",
@@ -12614,23 +12529,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "remove_sync_status_changed", reinterpret_cast<PyCFunction>(ContactListSyncManager_remove_SyncStatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ContactListSyncManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListSyncManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListSyncManager[] = {
         { "status", reinterpret_cast<getter>(ContactListSyncManager_get_Status), reinterpret_cast<setter>(ContactListSyncManager_put_Status), nullptr, nullptr },
         { "last_successful_sync_time", reinterpret_cast<getter>(ContactListSyncManager_get_LastSuccessfulSyncTime), reinterpret_cast<setter>(ContactListSyncManager_put_LastSuccessfulSyncTime), nullptr, nullptr },
         { "last_attempted_sync_time", reinterpret_cast<getter>(ContactListSyncManager_get_LastAttemptedSyncTime), reinterpret_cast<setter>(ContactListSyncManager_put_LastAttemptedSyncTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListSyncManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListSyncManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListSyncManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListSyncManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListSyncManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListSyncManager = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactListSyncManager",
@@ -13044,8 +12956,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactLocationField[] = {
         { "_assign_array_", _assign_array_ContactLocationField, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactLocationField), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactLocationField[] = {
         { "category", reinterpret_cast<getter>(ContactLocationField_get_Category), nullptr, nullptr, nullptr },
@@ -13058,16 +12969,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "region", reinterpret_cast<getter>(ContactLocationField_get_Region), nullptr, nullptr, nullptr },
         { "street", reinterpret_cast<getter>(ContactLocationField_get_Street), nullptr, nullptr, nullptr },
         { "unstructured_address", reinterpret_cast<getter>(ContactLocationField_get_UnstructuredAddress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactLocationField[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactLocationField) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactLocationField) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactLocationField) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactLocationField) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactLocationField = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactLocationField",
@@ -13974,19 +13883,16 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_ContactManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactManager = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactManager",
@@ -13999,8 +13905,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "system_sort_order", reinterpret_cast<getter>(ContactManager_get_SystemSortOrder), reinterpret_cast<setter>(ContactManager_put_SystemSortOrder), nullptr, nullptr },
         { "system_display_name_order", reinterpret_cast<getter>(ContactManager_get_SystemDisplayNameOrder), reinterpret_cast<setter>(ContactManager_put_SystemDisplayNameOrder), nullptr, nullptr },
         { "include_middle_name_in_system_display_and_sort", reinterpret_cast<getter>(ContactManager_get_IncludeMiddleNameInSystemDisplayAndSort), reinterpret_cast<setter>(ContactManager_put_IncludeMiddleNameInSystemDisplayAndSort), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContactManager_Static[] = {
         { "convert_contact_to_v_card_async", reinterpret_cast<PyCFunction>(ContactManager_ConvertContactToVCardAsync), METH_VARARGS, nullptr },
@@ -14019,8 +13924,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "show_delay_loaded_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowDelayLoadedContactCard), METH_VARARGS, nullptr },
         { "show_delay_loaded_contact_card_with_options", reinterpret_cast<PyCFunction>(ContactManager_ShowDelayLoadedContactCardWithOptions), METH_VARARGS, nullptr },
         { "show_full_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowFullContactCard), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContactManager_Static[] = 
     {
@@ -14030,14 +13934,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }
     };
 
-    static PyType_Spec type_spec_ContactManager_Static =
-    {
+    static PyType_Spec type_spec_ContactManager_Static = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContactManager_Static
-    };
+        type_slots_ContactManager_Static};
 
     // ----- ContactManagerForUser class --------------------
 
@@ -14512,23 +14414,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "show_full_contact_card", reinterpret_cast<PyCFunction>(ContactManagerForUser_ShowFullContactCard), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactManagerForUser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactManagerForUser[] = {
         { "system_sort_order", reinterpret_cast<getter>(ContactManagerForUser_get_SystemSortOrder), reinterpret_cast<setter>(ContactManagerForUser_put_SystemSortOrder), nullptr, nullptr },
         { "system_display_name_order", reinterpret_cast<getter>(ContactManagerForUser_get_SystemDisplayNameOrder), reinterpret_cast<setter>(ContactManagerForUser_put_SystemDisplayNameOrder), nullptr, nullptr },
         { "user", reinterpret_cast<getter>(ContactManagerForUser_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactManagerForUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactManagerForUser = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactManagerForUser",
@@ -14671,23 +14570,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactMatchReason[] = {
         { "_assign_array_", _assign_array_ContactMatchReason, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactMatchReason), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactMatchReason[] = {
         { "field", reinterpret_cast<getter>(ContactMatchReason_get_Field), nullptr, nullptr, nullptr },
         { "segments", reinterpret_cast<getter>(ContactMatchReason_get_Segments), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(ContactMatchReason_get_Text), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactMatchReason[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactMatchReason) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactMatchReason) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactMatchReason) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactMatchReason) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactMatchReason = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactMatchReason",
@@ -14985,21 +14881,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "remove_launch_full_app_requested", reinterpret_cast<PyCFunction>(ContactPanel_remove_LaunchFullAppRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_ContactPanel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactPanel), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactPanel[] = {
         { "header_color", reinterpret_cast<getter>(ContactPanel_get_HeaderColor), reinterpret_cast<setter>(ContactPanel_put_HeaderColor), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactPanel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPanel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPanel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactPanel = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactPanel",
@@ -15093,20 +14986,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "get_deferral", reinterpret_cast<PyCFunction>(ContactPanelClosingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactPanelClosingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactPanelClosingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactPanelClosingEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactPanelClosingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPanelClosingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPanelClosingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPanelClosingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPanelClosingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactPanelClosingEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactPanelClosingEventArgs",
@@ -15228,21 +15118,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactPanelLaunchFullAppRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_ContactPanelLaunchFullAppRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactPanelLaunchFullAppRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactPanelLaunchFullAppRequestedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(ContactPanelLaunchFullAppRequestedEventArgs_get_Handled), reinterpret_cast<setter>(ContactPanelLaunchFullAppRequestedEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactPanelLaunchFullAppRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPanelLaunchFullAppRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPanelLaunchFullAppRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPanelLaunchFullAppRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPanelLaunchFullAppRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactPanelLaunchFullAppRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactPanelLaunchFullAppRequestedEventArgs",
@@ -15524,23 +15411,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactPhone[] = {
         { "_assign_array_", _assign_array_ContactPhone, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactPhone), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactPhone[] = {
         { "number", reinterpret_cast<getter>(ContactPhone_get_Number), reinterpret_cast<setter>(ContactPhone_put_Number), nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ContactPhone_get_Kind), reinterpret_cast<setter>(ContactPhone_put_Kind), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(ContactPhone_get_Description), reinterpret_cast<setter>(ContactPhone_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactPhone[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPhone) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPhone) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPhone) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPhone) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactPhone = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactPhone",
@@ -16089,8 +15973,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "pick_single_contact_async", reinterpret_cast<PyCFunction>(ContactPicker_PickSingleContactAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactPicker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactPicker), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactPicker[] = {
         { "selection_mode", reinterpret_cast<getter>(ContactPicker_get_SelectionMode), reinterpret_cast<setter>(ContactPicker_put_SelectionMode), nullptr, nullptr },
@@ -16098,16 +15981,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "desired_fields", reinterpret_cast<getter>(ContactPicker_get_DesiredFields), nullptr, nullptr, nullptr },
         { "desired_fields_with_contact_field_type", reinterpret_cast<getter>(ContactPicker_get_DesiredFieldsWithContactFieldType), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(ContactPicker_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactPicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPicker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactPicker = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactPicker",
@@ -16117,14 +15998,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         _type_slots_ContactPicker};
 
     static PyGetSetDef getset_ContactPicker_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContactPicker_Static[] = {
         { "create_for_user", reinterpret_cast<PyCFunction>(ContactPicker_CreateForUser), METH_VARARGS, nullptr },
         { "is_supported_async", reinterpret_cast<PyCFunction>(ContactPicker_IsSupportedAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContactPicker_Static[] = 
     {
@@ -16134,14 +16013,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }
     };
 
-    static PyType_Spec type_spec_ContactPicker_Static =
-    {
+    static PyType_Spec type_spec_ContactPicker_Static = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactPicker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContactPicker_Static
-    };
+        type_slots_ContactPicker_Static};
 
     // ----- ContactQueryOptions class --------------------
 
@@ -16537,8 +16414,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactQueryOptions[] = {
         { "_assign_array_", _assign_array_ContactQueryOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactQueryOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactQueryOptions[] = {
         { "include_contacts_from_hidden_lists", reinterpret_cast<getter>(ContactQueryOptions_get_IncludeContactsFromHiddenLists), reinterpret_cast<setter>(ContactQueryOptions_put_IncludeContactsFromHiddenLists), nullptr, nullptr },
@@ -16547,16 +16423,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "annotation_list_ids", reinterpret_cast<getter>(ContactQueryOptions_get_AnnotationListIds), nullptr, nullptr, nullptr },
         { "contact_list_ids", reinterpret_cast<getter>(ContactQueryOptions_get_ContactListIds), nullptr, nullptr, nullptr },
         { "text_search", reinterpret_cast<getter>(ContactQueryOptions_get_TextSearch), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactQueryOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactQueryOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactQueryOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactQueryOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactQueryOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactQueryOptions = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactQueryOptions",
@@ -16816,23 +16690,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactQueryTextSearch[] = {
         { "_assign_array_", _assign_array_ContactQueryTextSearch, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactQueryTextSearch), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactQueryTextSearch[] = {
         { "text", reinterpret_cast<getter>(ContactQueryTextSearch_get_Text), reinterpret_cast<setter>(ContactQueryTextSearch_put_Text), nullptr, nullptr },
         { "search_scope", reinterpret_cast<getter>(ContactQueryTextSearch_get_SearchScope), reinterpret_cast<setter>(ContactQueryTextSearch_put_SearchScope), nullptr, nullptr },
         { "fields", reinterpret_cast<getter>(ContactQueryTextSearch_get_Fields), reinterpret_cast<setter>(ContactQueryTextSearch_put_Fields), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactQueryTextSearch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactQueryTextSearch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactQueryTextSearch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactQueryTextSearch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactQueryTextSearch) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactQueryTextSearch = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactQueryTextSearch",
@@ -16969,20 +16840,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "read_batch_async", reinterpret_cast<PyCFunction>(ContactReader_ReadBatchAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactReader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactReader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactReader = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactReader",
@@ -17264,23 +17132,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactSignificantOther[] = {
         { "_assign_array_", _assign_array_ContactSignificantOther, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactSignificantOther), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactSignificantOther[] = {
         { "name", reinterpret_cast<getter>(ContactSignificantOther_get_Name), reinterpret_cast<setter>(ContactSignificantOther_put_Name), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(ContactSignificantOther_get_Description), reinterpret_cast<setter>(ContactSignificantOther_put_Description), nullptr, nullptr },
         { "relationship", reinterpret_cast<getter>(ContactSignificantOther_get_Relationship), reinterpret_cast<setter>(ContactSignificantOther_put_Relationship), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactSignificantOther[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactSignificantOther) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactSignificantOther) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactSignificantOther) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactSignificantOther) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactSignificantOther = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactSignificantOther",
@@ -17926,22 +17791,19 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "remove_contact_changed", reinterpret_cast<PyCFunction>(ContactStore_remove_ContactChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ContactStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactStore), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactStore[] = {
         { "aggregate_contact_manager", reinterpret_cast<getter>(ContactStore_get_AggregateContactManager), nullptr, nullptr, nullptr },
         { "change_tracker", reinterpret_cast<getter>(ContactStore_get_ChangeTracker), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactStore) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactStore = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactStore",
@@ -17994,20 +17856,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactStoreNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_ContactStoreNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactStoreNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactStoreNotificationTriggerDetails[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactStoreNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactStoreNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactStoreNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactStoreNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactStoreNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactStoreNotificationTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactStoreNotificationTriggerDetails",
@@ -18289,23 +18148,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_ContactWebsite[] = {
         { "_assign_array_", _assign_array_ContactWebsite, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactWebsite), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactWebsite[] = {
         { "uri", reinterpret_cast<getter>(ContactWebsite_get_Uri), reinterpret_cast<setter>(ContactWebsite_put_Uri), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(ContactWebsite_get_Description), reinterpret_cast<setter>(ContactWebsite_put_Description), nullptr, nullptr },
         { "raw_value", reinterpret_cast<getter>(ContactWebsite_get_RawValue), reinterpret_cast<setter>(ContactWebsite_put_RawValue), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactWebsite[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactWebsite) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactWebsite) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactWebsite) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactWebsite) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactWebsite = {
         "winrt._winrt_windows_applicationmodel_contacts.ContactWebsite",
@@ -18449,21 +18305,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_FullContactCardOptions[] = {
         { "_assign_array_", _assign_array_FullContactCardOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FullContactCardOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FullContactCardOptions[] = {
         { "desired_remaining_view", reinterpret_cast<getter>(FullContactCardOptions_get_DesiredRemainingView), reinterpret_cast<setter>(FullContactCardOptions_put_DesiredRemainingView), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FullContactCardOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FullContactCardOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FullContactCardOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FullContactCardOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FullContactCardOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FullContactCardOptions = {
         "winrt._winrt_windows_applicationmodel_contacts.FullContactCardOptions",
@@ -18686,19 +18539,16 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_KnownContactField[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownContactField[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownContactField[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownContactField) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownContactField) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownContactField) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownContactField = {
         "winrt._winrt_windows_applicationmodel_contacts.KnownContactField",
@@ -18712,14 +18562,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "instant_message", reinterpret_cast<getter>(KnownContactField_get_InstantMessage), nullptr, nullptr, nullptr },
         { "location", reinterpret_cast<getter>(KnownContactField_get_Location), nullptr, nullptr, nullptr },
         { "phone_number", reinterpret_cast<getter>(KnownContactField_get_PhoneNumber), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownContactField_Static[] = {
         { "convert_name_to_type", reinterpret_cast<PyCFunction>(KnownContactField_ConvertNameToType), METH_VARARGS, nullptr },
         { "convert_type_to_name", reinterpret_cast<PyCFunction>(KnownContactField_ConvertTypeToName), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownContactField_Static[] = 
     {
@@ -18729,14 +18577,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }
     };
 
-    static PyType_Spec type_spec_KnownContactField_Static =
-    {
+    static PyType_Spec type_spec_KnownContactField_Static = {
         "winrt._winrt_windows_applicationmodel_contacts.KnownContactField_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownContactField_Static
-    };
+        type_slots_KnownContactField_Static};
 
     // ----- PinnedContactIdsQueryResult class --------------------
 
@@ -18812,21 +18658,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_PinnedContactIdsQueryResult[] = {
         { "_assign_array_", _assign_array_PinnedContactIdsQueryResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PinnedContactIdsQueryResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PinnedContactIdsQueryResult[] = {
         { "contact_ids", reinterpret_cast<getter>(PinnedContactIdsQueryResult_get_ContactIds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PinnedContactIdsQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PinnedContactIdsQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PinnedContactIdsQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PinnedContactIdsQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PinnedContactIdsQueryResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PinnedContactIdsQueryResult = {
         "winrt._winrt_windows_applicationmodel_contacts.PinnedContactIdsQueryResult",
@@ -19335,21 +19178,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "signal_contact_activity", reinterpret_cast<PyCFunction>(PinnedContactManager_SignalContactActivity), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PinnedContactManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PinnedContactManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PinnedContactManager[] = {
         { "user", reinterpret_cast<getter>(PinnedContactManager_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PinnedContactManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PinnedContactManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PinnedContactManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PinnedContactManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PinnedContactManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PinnedContactManager = {
         "winrt._winrt_windows_applicationmodel_contacts.PinnedContactManager",
@@ -19359,15 +19199,13 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         _type_slots_PinnedContactManager};
 
     static PyGetSetDef getset_PinnedContactManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PinnedContactManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(PinnedContactManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(PinnedContactManager_GetForUser), METH_VARARGS, nullptr },
         { "is_supported", reinterpret_cast<PyCFunction>(PinnedContactManager_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PinnedContactManager_Static[] = 
     {
@@ -19377,14 +19215,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }
     };
 
-    static PyType_Spec type_spec_PinnedContactManager_Static =
-    {
+    static PyType_Spec type_spec_PinnedContactManager_Static = {
         "winrt._winrt_windows_applicationmodel_contacts.PinnedContactManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PinnedContactManager_Static
-    };
+        type_slots_PinnedContactManager_Static};
 
     // ----- IContactField interface --------------------
 
@@ -19550,24 +19386,21 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef _methods_IContactField[] = {
         { "_assign_array_", _assign_array_IContactField, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactField), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactField[] = {
         { "category", reinterpret_cast<getter>(IContactField_get_Category), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(IContactField_get_Name), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IContactField_get_Type), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IContactField_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactField[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactField) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactField) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactField) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactField) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactField = {
         "winrt._winrt_windows_applicationmodel_contacts.IContactField",
@@ -19703,13 +19536,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef methods_ImplementsIContactField[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactField), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactField), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactField[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactField) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactField = {
         "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactField",
@@ -19897,20 +19728,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "create_field_default", reinterpret_cast<PyCFunction>(IContactFieldFactory_CreateField_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactFieldFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactFieldFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactFieldFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactFieldFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactFieldFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactFieldFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactFieldFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactFieldFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactFieldFactory = {
         "winrt._winrt_windows_applicationmodel_contacts.IContactFieldFactory",
@@ -20116,13 +19944,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef methods_ImplementsIContactFieldFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactFieldFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactFieldFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactFieldFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactFieldFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactFieldFactory = {
         "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactFieldFactory",
@@ -20309,20 +20135,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "create_instant_message_default", reinterpret_cast<PyCFunction>(IContactInstantMessageFieldFactory_CreateInstantMessage_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactInstantMessageFieldFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactInstantMessageFieldFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactInstantMessageFieldFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactInstantMessageFieldFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactInstantMessageFieldFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactInstantMessageFieldFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactInstantMessageFieldFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactInstantMessageFieldFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactInstantMessageFieldFactory = {
         "winrt._winrt_windows_applicationmodel_contacts.IContactInstantMessageFieldFactory",
@@ -20516,13 +20339,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef methods_ImplementsIContactInstantMessageFieldFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactInstantMessageFieldFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactInstantMessageFieldFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactInstantMessageFieldFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactInstantMessageFieldFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactInstantMessageFieldFactory = {
         "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactInstantMessageFieldFactory",
@@ -20711,20 +20532,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "create_location_default", reinterpret_cast<PyCFunction>(IContactLocationFieldFactory_CreateLocation_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactLocationFieldFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactLocationFieldFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactLocationFieldFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactLocationFieldFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactLocationFieldFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactLocationFieldFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactLocationFieldFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactLocationFieldFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactLocationFieldFactory = {
         "winrt._winrt_windows_applicationmodel_contacts.IContactLocationFieldFactory",
@@ -20930,13 +20748,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static PyMethodDef methods_ImplementsIContactLocationFieldFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactLocationFieldFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactLocationFieldFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactLocationFieldFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactLocationFieldFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactLocationFieldFactory = {
         "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactLocationFieldFactory",

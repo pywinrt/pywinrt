@@ -288,8 +288,7 @@ namespace py::cpp::Windows::System::Update
     static PyMethodDef _methods_SystemUpdateItem[] = {
         { "_assign_array_", _assign_array_SystemUpdateItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemUpdateItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemUpdateItem[] = {
         { "description", reinterpret_cast<getter>(SystemUpdateItem_get_Description), nullptr, nullptr, nullptr },
@@ -300,16 +299,14 @@ namespace py::cpp::Windows::System::Update
         { "revision", reinterpret_cast<getter>(SystemUpdateItem_get_Revision), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(SystemUpdateItem_get_State), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(SystemUpdateItem_get_Title), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemUpdateItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemUpdateItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemUpdateItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemUpdateItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemUpdateItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemUpdateItem = {
         "winrt._winrt_windows_system_update.SystemUpdateItem",
@@ -452,23 +449,20 @@ namespace py::cpp::Windows::System::Update
     static PyMethodDef _methods_SystemUpdateLastErrorInfo[] = {
         { "_assign_array_", _assign_array_SystemUpdateLastErrorInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemUpdateLastErrorInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemUpdateLastErrorInfo[] = {
         { "extended_error", reinterpret_cast<getter>(SystemUpdateLastErrorInfo_get_ExtendedError), nullptr, nullptr, nullptr },
         { "is_interactive", reinterpret_cast<getter>(SystemUpdateLastErrorInfo_get_IsInteractive), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(SystemUpdateLastErrorInfo_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemUpdateLastErrorInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemUpdateLastErrorInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemUpdateLastErrorInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemUpdateLastErrorInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemUpdateLastErrorInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemUpdateLastErrorInfo = {
         "winrt._winrt_windows_system_update.SystemUpdateLastErrorInfo",
@@ -1336,19 +1330,16 @@ namespace py::cpp::Windows::System::Update
     }
 
     static PyMethodDef _methods_SystemUpdateManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemUpdateManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemUpdateManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemUpdateManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemUpdateManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemUpdateManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemUpdateManager = {
         "winrt._winrt_windows_system_update.SystemUpdateManager",
@@ -1369,8 +1360,7 @@ namespace py::cpp::Windows::System::Update
         { "user_active_hours_end", reinterpret_cast<getter>(SystemUpdateManager_get_UserActiveHoursEnd), nullptr, nullptr, nullptr },
         { "user_active_hours_max", reinterpret_cast<getter>(SystemUpdateManager_get_UserActiveHoursMax), nullptr, nullptr, nullptr },
         { "user_active_hours_start", reinterpret_cast<getter>(SystemUpdateManager_get_UserActiveHoursStart), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SystemUpdateManager_Static[] = {
         { "block_automatic_reboot_async", reinterpret_cast<PyCFunction>(SystemUpdateManager_BlockAutomaticRebootAsync), METH_VARARGS, nullptr },
@@ -1386,8 +1376,7 @@ namespace py::cpp::Windows::System::Update
         { "unblock_automatic_reboot_async", reinterpret_cast<PyCFunction>(SystemUpdateManager_UnblockAutomaticRebootAsync), METH_VARARGS, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(SystemUpdateManager_add_StateChanged), METH_O, nullptr },
         { "remove_state_changed", reinterpret_cast<PyCFunction>(SystemUpdateManager_remove_StateChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SystemUpdateManager_Static[] = 
     {
@@ -1397,14 +1386,12 @@ namespace py::cpp::Windows::System::Update
         { }
     };
 
-    static PyType_Spec type_spec_SystemUpdateManager_Static =
-    {
+    static PyType_Spec type_spec_SystemUpdateManager_Static = {
         "winrt._winrt_windows_system_update.SystemUpdateManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemUpdateManager_Static
-    };
+        type_slots_SystemUpdateManager_Static};
 
     // ----- Windows.System.Update Initialization --------------------
 

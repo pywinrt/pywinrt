@@ -208,22 +208,19 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
     static PyMethodDef _methods_AddPackageDependencyOptions[] = {
         { "_assign_array_", _assign_array_AddPackageDependencyOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AddPackageDependencyOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AddPackageDependencyOptions[] = {
         { "rank", reinterpret_cast<getter>(AddPackageDependencyOptions_get_Rank), reinterpret_cast<setter>(AddPackageDependencyOptions_put_Rank), nullptr, nullptr },
         { "prepend_if_rank_collision", reinterpret_cast<getter>(AddPackageDependencyOptions_get_PrependIfRankCollision), reinterpret_cast<setter>(AddPackageDependencyOptions_put_PrependIfRankCollision), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AddPackageDependencyOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddPackageDependencyOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddPackageDependencyOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddPackageDependencyOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddPackageDependencyOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AddPackageDependencyOptions = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.AddPackageDependencyOptions",
@@ -574,24 +571,21 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
     static PyMethodDef _methods_CreatePackageDependencyOptions[] = {
         { "_assign_array_", _assign_array_CreatePackageDependencyOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CreatePackageDependencyOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CreatePackageDependencyOptions[] = {
         { "verify_dependency_resolution", reinterpret_cast<getter>(CreatePackageDependencyOptions_get_VerifyDependencyResolution), reinterpret_cast<setter>(CreatePackageDependencyOptions_put_VerifyDependencyResolution), nullptr, nullptr },
         { "lifetime_artifact_kind", reinterpret_cast<getter>(CreatePackageDependencyOptions_get_LifetimeArtifactKind), reinterpret_cast<setter>(CreatePackageDependencyOptions_put_LifetimeArtifactKind), nullptr, nullptr },
         { "lifetime_artifact", reinterpret_cast<getter>(CreatePackageDependencyOptions_get_LifetimeArtifact), reinterpret_cast<setter>(CreatePackageDependencyOptions_put_LifetimeArtifact), nullptr, nullptr },
         { "architectures", reinterpret_cast<getter>(CreatePackageDependencyOptions_get_Architectures), reinterpret_cast<setter>(CreatePackageDependencyOptions_put_Architectures), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CreatePackageDependencyOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreatePackageDependencyOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreatePackageDependencyOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreatePackageDependencyOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreatePackageDependencyOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CreatePackageDependencyOptions = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.CreatePackageDependencyOptions",
@@ -1075,21 +1069,18 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { "delete", reinterpret_cast<PyCFunction>(PackageDependency_Delete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageDependency, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageDependency), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageDependency[] = {
         { "id", reinterpret_cast<getter>(PackageDependency_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageDependency[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDependency) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageDependency) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDependency) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependency) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageDependency = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependency",
@@ -1101,8 +1092,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
     static PyGetSetDef getset_PackageDependency_Static[] = {
         { "generation_id", reinterpret_cast<getter>(PackageDependency_get_GenerationId), nullptr, nullptr, nullptr },
         { "package_graph_revision_id", reinterpret_cast<getter>(PackageDependency_get_PackageGraphRevisionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PackageDependency_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(PackageDependency_Create), METH_VARARGS, nullptr },
@@ -1110,8 +1100,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { "create_for_system", reinterpret_cast<PyCFunction>(PackageDependency_CreateForSystem), METH_VARARGS, nullptr },
         { "get_from_id", reinterpret_cast<PyCFunction>(PackageDependency_GetFromId), METH_VARARGS, nullptr },
         { "get_from_id_for_system", reinterpret_cast<PyCFunction>(PackageDependency_GetFromIdForSystem), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PackageDependency_Static[] = 
     {
@@ -1121,14 +1110,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { }
     };
 
-    static PyType_Spec type_spec_PackageDependency_Static =
-    {
+    static PyType_Spec type_spec_PackageDependency_Static = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependency_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PackageDependency_Static
-    };
+        type_slots_PackageDependency_Static};
 
     // ----- PackageDependencyContext class --------------------
 
@@ -1330,23 +1317,20 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { "remove", reinterpret_cast<PyCFunction>(PackageDependencyContext_Remove), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageDependencyContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageDependencyContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageDependencyContext[] = {
         { "context_id", reinterpret_cast<getter>(PackageDependencyContext_get_ContextId), nullptr, nullptr, nullptr },
         { "package_dependency_id", reinterpret_cast<getter>(PackageDependencyContext_get_PackageDependencyId), nullptr, nullptr, nullptr },
         { "package_full_name", reinterpret_cast<getter>(PackageDependencyContext_get_PackageFullName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageDependencyContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDependencyContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageDependencyContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDependencyContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependencyContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageDependencyContext = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyContext",
@@ -1395,19 +1379,16 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
     }
 
     static PyMethodDef _methods_PackageDependencyRank[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageDependencyRank[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageDependencyRank[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDependencyRank) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDependencyRank) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependencyRank) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageDependencyRank = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyRank",
@@ -1418,12 +1399,10 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyGetSetDef getset_PackageDependencyRank_Static[] = {
         { "default", reinterpret_cast<getter>(PackageDependencyRank_get_Default), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PackageDependencyRank_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PackageDependencyRank_Static[] = 
     {
@@ -1433,14 +1412,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { }
     };
 
-    static PyType_Spec type_spec_PackageDependencyRank_Static =
-    {
+    static PyType_Spec type_spec_PackageDependencyRank_Static = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyRank_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PackageDependencyRank_Static
-    };
+        type_slots_PackageDependencyRank_Static};
 
     // ----- PackageDependencyContextId struct --------------------
 
@@ -1509,8 +1486,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyMethodDef _methods_PackageDependencyContextId[] = {
         { "_assign_array_", _assign_array_PackageDependencyContextId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* PackageDependencyContextId_get_Id(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId* self, void* /*unused*/) noexcept
     {
@@ -1547,8 +1523,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyGetSetDef _getset_PackageDependencyContextId[] = {
         { "id", reinterpret_cast<getter>(PackageDependencyContextId_get_Id), reinterpret_cast<setter>(PackageDependencyContextId_set_Id), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_PackageDependencyContextId(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId* self, PyObject* other, int op) noexcept
     {
@@ -1604,8 +1579,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependencyContextId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PackageDependencyContextId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_PackageDependencyContextId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageDependencyContextId = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyContextId",

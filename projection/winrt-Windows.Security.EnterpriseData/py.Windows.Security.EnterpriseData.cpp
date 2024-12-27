@@ -108,22 +108,19 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_BufferProtectUnprotectResult[] = {
         { "_assign_array_", _assign_array_BufferProtectUnprotectResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BufferProtectUnprotectResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BufferProtectUnprotectResult[] = {
         { "buffer", reinterpret_cast<getter>(BufferProtectUnprotectResult_get_Buffer), nullptr, nullptr, nullptr },
         { "protection_info", reinterpret_cast<getter>(BufferProtectUnprotectResult_get_ProtectionInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BufferProtectUnprotectResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BufferProtectUnprotectResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BufferProtectUnprotectResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BufferProtectUnprotectResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BufferProtectUnprotectResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BufferProtectUnprotectResult = {
         "winrt._winrt_windows_security_enterprisedata.BufferProtectUnprotectResult",
@@ -236,22 +233,19 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_DataProtectionInfo[] = {
         { "_assign_array_", _assign_array_DataProtectionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataProtectionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DataProtectionInfo[] = {
         { "identity", reinterpret_cast<getter>(DataProtectionInfo_get_Identity), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(DataProtectionInfo_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DataProtectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataProtectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataProtectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataProtectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataProtectionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DataProtectionInfo = {
         "winrt._winrt_windows_security_enterprisedata.DataProtectionInfo",
@@ -526,19 +520,16 @@ namespace py::cpp::Windows::Security::EnterpriseData
     }
 
     static PyMethodDef _methods_DataProtectionManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DataProtectionManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DataProtectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataProtectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataProtectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataProtectionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DataProtectionManager = {
         "winrt._winrt_windows_security_enterprisedata.DataProtectionManager",
@@ -548,8 +539,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
         _type_slots_DataProtectionManager};
 
     static PyGetSetDef getset_DataProtectionManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DataProtectionManager_Static[] = {
         { "get_protection_info_async", reinterpret_cast<PyCFunction>(DataProtectionManager_GetProtectionInfoAsync), METH_VARARGS, nullptr },
@@ -558,8 +548,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "protect_stream_async", reinterpret_cast<PyCFunction>(DataProtectionManager_ProtectStreamAsync), METH_VARARGS, nullptr },
         { "unprotect_async", reinterpret_cast<PyCFunction>(DataProtectionManager_UnprotectAsync), METH_VARARGS, nullptr },
         { "unprotect_stream_async", reinterpret_cast<PyCFunction>(DataProtectionManager_UnprotectStreamAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DataProtectionManager_Static[] = 
     {
@@ -569,14 +558,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Spec type_spec_DataProtectionManager_Static =
-    {
+    static PyType_Spec type_spec_DataProtectionManager_Static = {
         "winrt._winrt_windows_security_enterprisedata.DataProtectionManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DataProtectionManager_Static
-    };
+        type_slots_DataProtectionManager_Static};
 
     // ----- FileProtectionInfo class --------------------
 
@@ -742,24 +729,21 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_FileProtectionInfo[] = {
         { "_assign_array_", _assign_array_FileProtectionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileProtectionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileProtectionInfo[] = {
         { "identity", reinterpret_cast<getter>(FileProtectionInfo_get_Identity), nullptr, nullptr, nullptr },
         { "is_roamable", reinterpret_cast<getter>(FileProtectionInfo_get_IsRoamable), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(FileProtectionInfo_get_Status), nullptr, nullptr, nullptr },
         { "is_protect_while_open_supported", reinterpret_cast<getter>(FileProtectionInfo_get_IsProtectWhileOpenSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileProtectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileProtectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileProtectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileProtectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileProtectionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileProtectionInfo = {
         "winrt._winrt_windows_security_enterprisedata.FileProtectionInfo",
@@ -1292,19 +1276,16 @@ namespace py::cpp::Windows::Security::EnterpriseData
     }
 
     static PyMethodDef _methods_FileProtectionManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileProtectionManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileProtectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileProtectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileProtectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileProtectionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileProtectionManager = {
         "winrt._winrt_windows_security_enterprisedata.FileProtectionManager",
@@ -1314,8 +1295,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
         _type_slots_FileProtectionManager};
 
     static PyGetSetDef getset_FileProtectionManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FileProtectionManager_Static[] = {
         { "copy_protection_async", reinterpret_cast<PyCFunction>(FileProtectionManager_CopyProtectionAsync), METH_VARARGS, nullptr },
@@ -1330,8 +1310,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "save_file_as_container_with_sharing_async", reinterpret_cast<PyCFunction>(FileProtectionManager_SaveFileAsContainerWithSharingAsync), METH_VARARGS, nullptr },
         { "unprotect_async", reinterpret_cast<PyCFunction>(FileProtectionManager_UnprotectAsync), METH_VARARGS, nullptr },
         { "unprotect_with_options_async", reinterpret_cast<PyCFunction>(FileProtectionManager_UnprotectWithOptionsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FileProtectionManager_Static[] = 
     {
@@ -1341,14 +1320,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Spec type_spec_FileProtectionManager_Static =
-    {
+    static PyType_Spec type_spec_FileProtectionManager_Static = {
         "winrt._winrt_windows_security_enterprisedata.FileProtectionManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FileProtectionManager_Static
-    };
+        type_slots_FileProtectionManager_Static};
 
     // ----- FileRevocationManager class --------------------
 
@@ -1531,19 +1508,16 @@ namespace py::cpp::Windows::Security::EnterpriseData
     }
 
     static PyMethodDef _methods_FileRevocationManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileRevocationManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileRevocationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileRevocationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileRevocationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileRevocationManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileRevocationManager = {
         "winrt._winrt_windows_security_enterprisedata.FileRevocationManager",
@@ -1553,16 +1527,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         _type_slots_FileRevocationManager};
 
     static PyGetSetDef getset_FileRevocationManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FileRevocationManager_Static[] = {
         { "copy_protection_async", reinterpret_cast<PyCFunction>(FileRevocationManager_CopyProtectionAsync), METH_VARARGS, nullptr },
         { "get_status_async", reinterpret_cast<PyCFunction>(FileRevocationManager_GetStatusAsync), METH_VARARGS, nullptr },
         { "protect_async", reinterpret_cast<PyCFunction>(FileRevocationManager_ProtectAsync), METH_VARARGS, nullptr },
         { "revoke", reinterpret_cast<PyCFunction>(FileRevocationManager_Revoke), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FileRevocationManager_Static[] = 
     {
@@ -1572,14 +1544,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Spec type_spec_FileRevocationManager_Static =
-    {
+    static PyType_Spec type_spec_FileRevocationManager_Static = {
         "winrt._winrt_windows_security_enterprisedata.FileRevocationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FileRevocationManager_Static
-    };
+        type_slots_FileRevocationManager_Static};
 
     // ----- FileUnprotectOptions class --------------------
 
@@ -1718,21 +1688,18 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_FileUnprotectOptions[] = {
         { "_assign_array_", _assign_array_FileUnprotectOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileUnprotectOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileUnprotectOptions[] = {
         { "audit", reinterpret_cast<getter>(FileUnprotectOptions_get_Audit), reinterpret_cast<setter>(FileUnprotectOptions_put_Audit), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileUnprotectOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileUnprotectOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileUnprotectOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileUnprotectOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileUnprotectOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileUnprotectOptions = {
         "winrt._winrt_windows_security_enterprisedata.FileUnprotectOptions",
@@ -1815,21 +1782,18 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_ProtectedAccessResumedEventArgs[] = {
         { "_assign_array_", _assign_array_ProtectedAccessResumedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectedAccessResumedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtectedAccessResumedEventArgs[] = {
         { "identities", reinterpret_cast<getter>(ProtectedAccessResumedEventArgs_get_Identities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtectedAccessResumedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedAccessResumedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedAccessResumedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedAccessResumedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedAccessResumedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtectedAccessResumedEventArgs = {
         "winrt._winrt_windows_security_enterprisedata.ProtectedAccessResumedEventArgs",
@@ -1983,22 +1947,19 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "get_deferral", reinterpret_cast<PyCFunction>(ProtectedAccessSuspendingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProtectedAccessSuspendingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectedAccessSuspendingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtectedAccessSuspendingEventArgs[] = {
         { "deadline", reinterpret_cast<getter>(ProtectedAccessSuspendingEventArgs_get_Deadline), nullptr, nullptr, nullptr },
         { "identities", reinterpret_cast<getter>(ProtectedAccessSuspendingEventArgs_get_Identities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtectedAccessSuspendingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedAccessSuspendingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedAccessSuspendingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedAccessSuspendingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedAccessSuspendingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtectedAccessSuspendingEventArgs = {
         "winrt._winrt_windows_security_enterprisedata.ProtectedAccessSuspendingEventArgs",
@@ -2111,22 +2072,19 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_ProtectedContainerExportResult[] = {
         { "_assign_array_", _assign_array_ProtectedContainerExportResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectedContainerExportResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtectedContainerExportResult[] = {
         { "file", reinterpret_cast<getter>(ProtectedContainerExportResult_get_File), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(ProtectedContainerExportResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtectedContainerExportResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedContainerExportResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedContainerExportResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedContainerExportResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedContainerExportResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtectedContainerExportResult = {
         "winrt._winrt_windows_security_enterprisedata.ProtectedContainerExportResult",
@@ -2239,22 +2197,19 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_ProtectedContainerImportResult[] = {
         { "_assign_array_", _assign_array_ProtectedContainerImportResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectedContainerImportResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtectedContainerImportResult[] = {
         { "file", reinterpret_cast<getter>(ProtectedContainerImportResult_get_File), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(ProtectedContainerImportResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtectedContainerImportResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedContainerImportResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedContainerImportResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedContainerImportResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedContainerImportResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtectedContainerImportResult = {
         "winrt._winrt_windows_security_enterprisedata.ProtectedContainerImportResult",
@@ -2337,21 +2292,18 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_ProtectedContentRevokedEventArgs[] = {
         { "_assign_array_", _assign_array_ProtectedContentRevokedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectedContentRevokedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtectedContentRevokedEventArgs[] = {
         { "identities", reinterpret_cast<getter>(ProtectedContentRevokedEventArgs_get_Identities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtectedContentRevokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedContentRevokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedContentRevokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedContentRevokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedContentRevokedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtectedContentRevokedEventArgs = {
         "winrt._winrt_windows_security_enterprisedata.ProtectedContentRevokedEventArgs",
@@ -2494,23 +2446,20 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_ProtectedFileCreateResult[] = {
         { "_assign_array_", _assign_array_ProtectedFileCreateResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectedFileCreateResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtectedFileCreateResult[] = {
         { "file", reinterpret_cast<getter>(ProtectedFileCreateResult_get_File), nullptr, nullptr, nullptr },
         { "protection_info", reinterpret_cast<getter>(ProtectedFileCreateResult_get_ProtectionInfo), nullptr, nullptr, nullptr },
         { "stream", reinterpret_cast<getter>(ProtectedFileCreateResult_get_Stream), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtectedFileCreateResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedFileCreateResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedFileCreateResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedFileCreateResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedFileCreateResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtectedFileCreateResult = {
         "winrt._winrt_windows_security_enterprisedata.ProtectedFileCreateResult",
@@ -2882,24 +2831,21 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_ProtectionPolicyAuditInfo[] = {
         { "_assign_array_", _assign_array_ProtectionPolicyAuditInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectionPolicyAuditInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtectionPolicyAuditInfo[] = {
         { "target_description", reinterpret_cast<getter>(ProtectionPolicyAuditInfo_get_TargetDescription), reinterpret_cast<setter>(ProtectionPolicyAuditInfo_put_TargetDescription), nullptr, nullptr },
         { "source_description", reinterpret_cast<getter>(ProtectionPolicyAuditInfo_get_SourceDescription), reinterpret_cast<setter>(ProtectionPolicyAuditInfo_put_SourceDescription), nullptr, nullptr },
         { "data_description", reinterpret_cast<getter>(ProtectionPolicyAuditInfo_get_DataDescription), reinterpret_cast<setter>(ProtectionPolicyAuditInfo_put_DataDescription), nullptr, nullptr },
         { "action", reinterpret_cast<getter>(ProtectionPolicyAuditInfo_get_Action), reinterpret_cast<setter>(ProtectionPolicyAuditInfo_put_Action), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtectionPolicyAuditInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectionPolicyAuditInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectionPolicyAuditInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectionPolicyAuditInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectionPolicyAuditInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtectionPolicyAuditInfo = {
         "winrt._winrt_windows_security_enterprisedata.ProtectionPolicyAuditInfo",
@@ -4709,22 +4655,19 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef _methods_ProtectionPolicyManager[] = {
         { "_assign_array_", _assign_array_ProtectionPolicyManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectionPolicyManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtectionPolicyManager[] = {
         { "identity", reinterpret_cast<getter>(ProtectionPolicyManager_get_Identity), reinterpret_cast<setter>(ProtectionPolicyManager_put_Identity), nullptr, nullptr },
         { "show_enterprise_indicator", reinterpret_cast<getter>(ProtectionPolicyManager_get_ShowEnterpriseIndicator), reinterpret_cast<setter>(ProtectionPolicyManager_put_ShowEnterpriseIndicator), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtectionPolicyManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectionPolicyManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectionPolicyManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectionPolicyManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectionPolicyManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtectionPolicyManager = {
         "winrt._winrt_windows_security_enterprisedata.ProtectionPolicyManager",
@@ -4736,8 +4679,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyGetSetDef getset_ProtectionPolicyManager_Static[] = {
         { "is_protection_enabled", reinterpret_cast<getter>(ProtectionPolicyManager_get_IsProtectionEnabled), nullptr, nullptr, nullptr },
         { "primary_managed_identity", reinterpret_cast<getter>(ProtectionPolicyManager_get_PrimaryManagedIdentity), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ProtectionPolicyManager_Static[] = {
         { "check_access", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CheckAccess), METH_VARARGS, nullptr },
@@ -4778,8 +4720,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "remove_protected_access_suspending", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_ProtectedAccessSuspending), METH_O, nullptr },
         { "add_protected_content_revoked", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_ProtectedContentRevoked), METH_O, nullptr },
         { "remove_protected_content_revoked", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_ProtectedContentRevoked), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ProtectionPolicyManager_Static[] = 
     {
@@ -4789,14 +4730,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Spec type_spec_ProtectionPolicyManager_Static =
-    {
+    static PyType_Spec type_spec_ProtectionPolicyManager_Static = {
         "winrt._winrt_windows_security_enterprisedata.ProtectionPolicyManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ProtectionPolicyManager_Static
-    };
+        type_slots_ProtectionPolicyManager_Static};
 
     // ----- ThreadNetworkContext class --------------------
 
@@ -4909,20 +4848,17 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "_from", reinterpret_cast<PyCFunction>(_from_ThreadNetworkContext), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ThreadNetworkContext), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ThreadNetworkContext), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ThreadNetworkContext[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ThreadNetworkContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ThreadNetworkContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ThreadNetworkContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ThreadNetworkContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ThreadNetworkContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ThreadNetworkContext = {
         "winrt._winrt_windows_security_enterprisedata.ThreadNetworkContext",

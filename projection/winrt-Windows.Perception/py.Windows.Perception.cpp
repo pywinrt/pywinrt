@@ -138,23 +138,20 @@ namespace py::cpp::Windows::Perception
     static PyMethodDef _methods_PerceptionTimestamp[] = {
         { "_assign_array_", _assign_array_PerceptionTimestamp, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionTimestamp), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionTimestamp[] = {
         { "prediction_amount", reinterpret_cast<getter>(PerceptionTimestamp_get_PredictionAmount), nullptr, nullptr, nullptr },
         { "target_time", reinterpret_cast<getter>(PerceptionTimestamp_get_TargetTime), nullptr, nullptr, nullptr },
         { "system_relative_target_time", reinterpret_cast<getter>(PerceptionTimestamp_get_SystemRelativeTargetTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionTimestamp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionTimestamp) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionTimestamp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionTimestamp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionTimestamp) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionTimestamp = {
         "winrt._winrt_windows_perception.PerceptionTimestamp",
@@ -257,19 +254,16 @@ namespace py::cpp::Windows::Perception
     }
 
     static PyMethodDef _methods_PerceptionTimestampHelper[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionTimestampHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionTimestampHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionTimestampHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionTimestampHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionTimestampHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionTimestampHelper = {
         "winrt._winrt_windows_perception.PerceptionTimestampHelper",
@@ -279,14 +273,12 @@ namespace py::cpp::Windows::Perception
         _type_slots_PerceptionTimestampHelper};
 
     static PyGetSetDef getset_PerceptionTimestampHelper_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PerceptionTimestampHelper_Static[] = {
         { "from_historical_target_time", reinterpret_cast<PyCFunction>(PerceptionTimestampHelper_FromHistoricalTargetTime), METH_VARARGS, nullptr },
         { "from_system_relative_target_time", reinterpret_cast<PyCFunction>(PerceptionTimestampHelper_FromSystemRelativeTargetTime), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PerceptionTimestampHelper_Static[] = 
     {
@@ -296,14 +288,12 @@ namespace py::cpp::Windows::Perception
         { }
     };
 
-    static PyType_Spec type_spec_PerceptionTimestampHelper_Static =
-    {
+    static PyType_Spec type_spec_PerceptionTimestampHelper_Static = {
         "winrt._winrt_windows_perception.PerceptionTimestampHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PerceptionTimestampHelper_Static
-    };
+        type_slots_PerceptionTimestampHelper_Static};
 
     // ----- Windows.Perception Initialization --------------------
 

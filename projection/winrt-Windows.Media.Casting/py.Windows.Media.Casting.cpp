@@ -462,23 +462,20 @@ namespace py::cpp::Windows::Media::Casting
         { "_from", reinterpret_cast<PyCFunction>(_from_CastingConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CastingConnection), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_CastingConnection), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CastingConnection[] = {
         { "source", reinterpret_cast<getter>(CastingConnection_get_Source), reinterpret_cast<setter>(CastingConnection_put_Source), nullptr, nullptr },
         { "device", reinterpret_cast<getter>(CastingConnection_get_Device), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(CastingConnection_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CastingConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CastingConnection = {
         "winrt._winrt_windows_media_casting.CastingConnection",
@@ -591,22 +588,19 @@ namespace py::cpp::Windows::Media::Casting
     static PyMethodDef _methods_CastingConnectionErrorOccurredEventArgs[] = {
         { "_assign_array_", _assign_array_CastingConnectionErrorOccurredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CastingConnectionErrorOccurredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CastingConnectionErrorOccurredEventArgs[] = {
         { "error_status", reinterpret_cast<getter>(CastingConnectionErrorOccurredEventArgs_get_ErrorStatus), nullptr, nullptr, nullptr },
         { "message", reinterpret_cast<getter>(CastingConnectionErrorOccurredEventArgs_get_Message), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CastingConnectionErrorOccurredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingConnectionErrorOccurredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingConnectionErrorOccurredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingConnectionErrorOccurredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingConnectionErrorOccurredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CastingConnectionErrorOccurredEventArgs = {
         "winrt._winrt_windows_media_casting.CastingConnectionErrorOccurredEventArgs",
@@ -999,23 +993,20 @@ namespace py::cpp::Windows::Media::Casting
         { "get_supported_casting_playback_types_async", reinterpret_cast<PyCFunction>(CastingDevice_GetSupportedCastingPlaybackTypesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CastingDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CastingDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CastingDevice[] = {
         { "friendly_name", reinterpret_cast<getter>(CastingDevice_get_FriendlyName), nullptr, nullptr, nullptr },
         { "icon", reinterpret_cast<getter>(CastingDevice_get_Icon), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(CastingDevice_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CastingDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CastingDevice = {
         "winrt._winrt_windows_media_casting.CastingDevice",
@@ -1025,16 +1016,14 @@ namespace py::cpp::Windows::Media::Casting
         _type_slots_CastingDevice};
 
     static PyGetSetDef getset_CastingDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CastingDevice_Static[] = {
         { "device_info_supports_casting_async", reinterpret_cast<PyCFunction>(CastingDevice_DeviceInfoSupportsCastingAsync), METH_VARARGS, nullptr },
         { "from_id_async", reinterpret_cast<PyCFunction>(CastingDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(CastingDevice_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_from_casting_source_async", reinterpret_cast<PyCFunction>(CastingDevice_GetDeviceSelectorFromCastingSourceAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CastingDevice_Static[] = 
     {
@@ -1044,14 +1033,12 @@ namespace py::cpp::Windows::Media::Casting
         { }
     };
 
-    static PyType_Spec type_spec_CastingDevice_Static =
-    {
+    static PyType_Spec type_spec_CastingDevice_Static = {
         "winrt._winrt_windows_media_casting.CastingDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CastingDevice_Static
-    };
+        type_slots_CastingDevice_Static};
 
     // ----- CastingDevicePicker class --------------------
 
@@ -1444,22 +1431,19 @@ namespace py::cpp::Windows::Media::Casting
         { "remove_casting_device_selected", reinterpret_cast<PyCFunction>(CastingDevicePicker_remove_CastingDeviceSelected), METH_O, nullptr },
         { "_assign_array_", _assign_array_CastingDevicePicker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CastingDevicePicker), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CastingDevicePicker[] = {
         { "appearance", reinterpret_cast<getter>(CastingDevicePicker_get_Appearance), nullptr, nullptr, nullptr },
         { "filter", reinterpret_cast<getter>(CastingDevicePicker_get_Filter), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CastingDevicePicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingDevicePicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingDevicePicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingDevicePicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingDevicePicker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CastingDevicePicker = {
         "winrt._winrt_windows_media_casting.CastingDevicePicker",
@@ -1749,24 +1733,21 @@ namespace py::cpp::Windows::Media::Casting
     static PyMethodDef _methods_CastingDevicePickerFilter[] = {
         { "_assign_array_", _assign_array_CastingDevicePickerFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CastingDevicePickerFilter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CastingDevicePickerFilter[] = {
         { "supports_video", reinterpret_cast<getter>(CastingDevicePickerFilter_get_SupportsVideo), reinterpret_cast<setter>(CastingDevicePickerFilter_put_SupportsVideo), nullptr, nullptr },
         { "supports_pictures", reinterpret_cast<getter>(CastingDevicePickerFilter_get_SupportsPictures), reinterpret_cast<setter>(CastingDevicePickerFilter_put_SupportsPictures), nullptr, nullptr },
         { "supports_audio", reinterpret_cast<getter>(CastingDevicePickerFilter_get_SupportsAudio), reinterpret_cast<setter>(CastingDevicePickerFilter_put_SupportsAudio), nullptr, nullptr },
         { "supported_casting_sources", reinterpret_cast<getter>(CastingDevicePickerFilter_get_SupportedCastingSources), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CastingDevicePickerFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingDevicePickerFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingDevicePickerFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingDevicePickerFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingDevicePickerFilter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CastingDevicePickerFilter = {
         "winrt._winrt_windows_media_casting.CastingDevicePickerFilter",
@@ -1849,21 +1830,18 @@ namespace py::cpp::Windows::Media::Casting
     static PyMethodDef _methods_CastingDeviceSelectedEventArgs[] = {
         { "_assign_array_", _assign_array_CastingDeviceSelectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CastingDeviceSelectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CastingDeviceSelectedEventArgs[] = {
         { "selected_casting_device", reinterpret_cast<getter>(CastingDeviceSelectedEventArgs_get_SelectedCastingDevice), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CastingDeviceSelectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingDeviceSelectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingDeviceSelectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingDeviceSelectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingDeviceSelectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CastingDeviceSelectedEventArgs = {
         "winrt._winrt_windows_media_casting.CastingDeviceSelectedEventArgs",
@@ -1985,21 +1963,18 @@ namespace py::cpp::Windows::Media::Casting
     static PyMethodDef _methods_CastingSource[] = {
         { "_assign_array_", _assign_array_CastingSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CastingSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CastingSource[] = {
         { "preferred_source_uri", reinterpret_cast<getter>(CastingSource_get_PreferredSourceUri), reinterpret_cast<setter>(CastingSource_put_PreferredSourceUri), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CastingSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CastingSource = {
         "winrt._winrt_windows_media_casting.CastingSource",

@@ -335,23 +335,20 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { "stop", reinterpret_cast<PyCFunction>(ConditionForceEffect_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ConditionForceEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConditionForceEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConditionForceEffect[] = {
         { "kind", reinterpret_cast<getter>(ConditionForceEffect_get_Kind), nullptr, nullptr, nullptr },
         { "gain", reinterpret_cast<getter>(ConditionForceEffect_get_Gain), reinterpret_cast<setter>(ConditionForceEffect_put_Gain), nullptr, nullptr },
         { "state", reinterpret_cast<getter>(ConditionForceEffect_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConditionForceEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConditionForceEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConditionForceEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConditionForceEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConditionForceEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConditionForceEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.ConditionForceEffect",
@@ -706,22 +703,19 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { "stop", reinterpret_cast<PyCFunction>(ConstantForceEffect_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ConstantForceEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConstantForceEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConstantForceEffect[] = {
         { "gain", reinterpret_cast<getter>(ConstantForceEffect_get_Gain), reinterpret_cast<setter>(ConstantForceEffect_put_Gain), nullptr, nullptr },
         { "state", reinterpret_cast<getter>(ConstantForceEffect_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConstantForceEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConstantForceEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConstantForceEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConstantForceEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConstantForceEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConstantForceEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.ConstantForceEffect",
@@ -1268,24 +1262,21 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { "try_unload_effect_async", reinterpret_cast<PyCFunction>(ForceFeedbackMotor_TryUnloadEffectAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ForceFeedbackMotor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ForceFeedbackMotor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ForceFeedbackMotor[] = {
         { "master_gain", reinterpret_cast<getter>(ForceFeedbackMotor_get_MasterGain), reinterpret_cast<setter>(ForceFeedbackMotor_put_MasterGain), nullptr, nullptr },
         { "are_effects_paused", reinterpret_cast<getter>(ForceFeedbackMotor_get_AreEffectsPaused), nullptr, nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(ForceFeedbackMotor_get_IsEnabled), nullptr, nullptr, nullptr },
         { "supported_axes", reinterpret_cast<getter>(ForceFeedbackMotor_get_SupportedAxes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ForceFeedbackMotor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ForceFeedbackMotor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ForceFeedbackMotor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ForceFeedbackMotor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ForceFeedbackMotor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ForceFeedbackMotor = {
         "winrt._winrt_windows_gaming_input_forcefeedback.ForceFeedbackMotor",
@@ -1678,23 +1669,20 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { "stop", reinterpret_cast<PyCFunction>(PeriodicForceEffect_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PeriodicForceEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PeriodicForceEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PeriodicForceEffect[] = {
         { "gain", reinterpret_cast<getter>(PeriodicForceEffect_get_Gain), reinterpret_cast<setter>(PeriodicForceEffect_put_Gain), nullptr, nullptr },
         { "state", reinterpret_cast<getter>(PeriodicForceEffect_get_State), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(PeriodicForceEffect_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PeriodicForceEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PeriodicForceEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PeriodicForceEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PeriodicForceEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PeriodicForceEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PeriodicForceEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.PeriodicForceEffect",
@@ -2051,22 +2039,19 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { "stop", reinterpret_cast<PyCFunction>(RampForceEffect_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RampForceEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RampForceEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RampForceEffect[] = {
         { "gain", reinterpret_cast<getter>(RampForceEffect_get_Gain), reinterpret_cast<setter>(RampForceEffect_put_Gain), nullptr, nullptr },
         { "state", reinterpret_cast<getter>(RampForceEffect_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RampForceEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RampForceEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RampForceEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RampForceEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RampForceEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RampForceEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.RampForceEffect",
@@ -2302,22 +2287,19 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { "stop", reinterpret_cast<PyCFunction>(IForceFeedbackEffect_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IForceFeedbackEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IForceFeedbackEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IForceFeedbackEffect[] = {
         { "gain", reinterpret_cast<getter>(IForceFeedbackEffect_get_Gain), reinterpret_cast<setter>(IForceFeedbackEffect_put_Gain), nullptr, nullptr },
         { "state", reinterpret_cast<getter>(IForceFeedbackEffect_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IForceFeedbackEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IForceFeedbackEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IForceFeedbackEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IForceFeedbackEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IForceFeedbackEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IForceFeedbackEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.IForceFeedbackEffect",
@@ -2484,13 +2466,11 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     static PyMethodDef methods_ImplementsIForceFeedbackEffect[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIForceFeedbackEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIForceFeedbackEffect), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIForceFeedbackEffect[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIForceFeedbackEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIForceFeedbackEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.ImplementsIForceFeedbackEffect",

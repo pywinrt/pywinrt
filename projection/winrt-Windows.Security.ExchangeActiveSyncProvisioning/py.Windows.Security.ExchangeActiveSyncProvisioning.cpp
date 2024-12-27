@@ -310,8 +310,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     static PyMethodDef _methods_EasClientDeviceInformation[] = {
         { "_assign_array_", _assign_array_EasClientDeviceInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasClientDeviceInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EasClientDeviceInformation[] = {
         { "friendly_name", reinterpret_cast<getter>(EasClientDeviceInformation_get_FriendlyName), nullptr, nullptr, nullptr },
@@ -322,16 +321,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { "system_sku", reinterpret_cast<getter>(EasClientDeviceInformation_get_SystemSku), nullptr, nullptr, nullptr },
         { "system_firmware_version", reinterpret_cast<getter>(EasClientDeviceInformation_get_SystemFirmwareVersion), nullptr, nullptr, nullptr },
         { "system_hardware_version", reinterpret_cast<getter>(EasClientDeviceInformation_get_SystemHardwareVersion), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EasClientDeviceInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasClientDeviceInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasClientDeviceInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasClientDeviceInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasClientDeviceInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EasClientDeviceInformation = {
         "winrt._winrt_windows_security_exchangeactivesyncprovisioning.EasClientDeviceInformation",
@@ -1040,8 +1037,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { "check_compliance", reinterpret_cast<PyCFunction>(EasClientSecurityPolicy_CheckCompliance), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EasClientSecurityPolicy, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasClientSecurityPolicy), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EasClientSecurityPolicy[] = {
         { "require_encryption", reinterpret_cast<getter>(EasClientSecurityPolicy_get_RequireEncryption), reinterpret_cast<setter>(EasClientSecurityPolicy_put_RequireEncryption), nullptr, nullptr },
@@ -1052,16 +1048,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { "max_password_failed_attempts", reinterpret_cast<getter>(EasClientSecurityPolicy_get_MaxPasswordFailedAttempts), reinterpret_cast<setter>(EasClientSecurityPolicy_put_MaxPasswordFailedAttempts), nullptr, nullptr },
         { "max_inactivity_time_lock", reinterpret_cast<getter>(EasClientSecurityPolicy_get_MaxInactivityTimeLock), reinterpret_cast<setter>(EasClientSecurityPolicy_put_MaxInactivityTimeLock), nullptr, nullptr },
         { "disallow_convenience_logon", reinterpret_cast<getter>(EasClientSecurityPolicy_get_DisallowConvenienceLogon), reinterpret_cast<setter>(EasClientSecurityPolicy_put_DisallowConvenienceLogon), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EasClientSecurityPolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasClientSecurityPolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasClientSecurityPolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasClientSecurityPolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasClientSecurityPolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EasClientSecurityPolicy = {
         "winrt._winrt_windows_security_exchangeactivesyncprovisioning.EasClientSecurityPolicy",
@@ -1414,8 +1408,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     static PyMethodDef _methods_EasComplianceResults[] = {
         { "_assign_array_", _assign_array_EasComplianceResults, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasComplianceResults), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EasComplianceResults[] = {
         { "compliant", reinterpret_cast<getter>(EasComplianceResults_get_Compliant), nullptr, nullptr, nullptr },
@@ -1428,16 +1421,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { "password_history_result", reinterpret_cast<getter>(EasComplianceResults_get_PasswordHistoryResult), nullptr, nullptr, nullptr },
         { "require_encryption_result", reinterpret_cast<getter>(EasComplianceResults_get_RequireEncryptionResult), nullptr, nullptr, nullptr },
         { "encryption_provider_type", reinterpret_cast<getter>(EasComplianceResults_get_EncryptionProviderType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EasComplianceResults[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasComplianceResults) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasComplianceResults) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasComplianceResults) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasComplianceResults) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EasComplianceResults = {
         "winrt._winrt_windows_security_exchangeactivesyncprovisioning.EasComplianceResults",

@@ -57,19 +57,16 @@ namespace py::cpp::Windows::Perception::Automation::Core
     }
 
     static PyMethodDef _methods_CorePerceptionAutomation[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CorePerceptionAutomation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CorePerceptionAutomation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CorePerceptionAutomation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CorePerceptionAutomation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CorePerceptionAutomation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CorePerceptionAutomation = {
         "winrt._winrt_windows_perception_automation_core.CorePerceptionAutomation",
@@ -79,13 +76,11 @@ namespace py::cpp::Windows::Perception::Automation::Core
         _type_slots_CorePerceptionAutomation};
 
     static PyGetSetDef getset_CorePerceptionAutomation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CorePerceptionAutomation_Static[] = {
         { "set_activation_factory_provider", reinterpret_cast<PyCFunction>(CorePerceptionAutomation_SetActivationFactoryProvider), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CorePerceptionAutomation_Static[] = 
     {
@@ -95,14 +90,12 @@ namespace py::cpp::Windows::Perception::Automation::Core
         { }
     };
 
-    static PyType_Spec type_spec_CorePerceptionAutomation_Static =
-    {
+    static PyType_Spec type_spec_CorePerceptionAutomation_Static = {
         "winrt._winrt_windows_perception_automation_core.CorePerceptionAutomation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CorePerceptionAutomation_Static
-    };
+        type_slots_CorePerceptionAutomation_Static};
 
     // ----- Windows.Perception.Automation.Core Initialization --------------------
 

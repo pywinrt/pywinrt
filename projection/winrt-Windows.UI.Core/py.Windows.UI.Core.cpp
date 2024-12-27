@@ -237,8 +237,7 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_AcceleratorKeyEventArgs[] = {
         { "_assign_array_", _assign_array_AcceleratorKeyEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AcceleratorKeyEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AcceleratorKeyEventArgs[] = {
         { "event_type", reinterpret_cast<getter>(AcceleratorKeyEventArgs_get_EventType), nullptr, nullptr, nullptr },
@@ -246,16 +245,14 @@ namespace py::cpp::Windows::UI::Core
         { "virtual_key", reinterpret_cast<getter>(AcceleratorKeyEventArgs_get_VirtualKey), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(AcceleratorKeyEventArgs_get_DeviceId), nullptr, nullptr, nullptr },
         { "handled", reinterpret_cast<getter>(AcceleratorKeyEventArgs_get_Handled), reinterpret_cast<setter>(AcceleratorKeyEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AcceleratorKeyEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AcceleratorKeyEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AcceleratorKeyEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AcceleratorKeyEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AcceleratorKeyEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AcceleratorKeyEventArgs = {
         "winrt._winrt_windows_ui_core.AcceleratorKeyEventArgs",
@@ -446,22 +443,19 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_AutomationProviderRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_AutomationProviderRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AutomationProviderRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AutomationProviderRequestedEventArgs[] = {
         { "automation_provider", reinterpret_cast<getter>(AutomationProviderRequestedEventArgs_get_AutomationProvider), reinterpret_cast<setter>(AutomationProviderRequestedEventArgs_put_AutomationProvider), nullptr, nullptr },
         { "handled", reinterpret_cast<getter>(AutomationProviderRequestedEventArgs_get_Handled), reinterpret_cast<setter>(AutomationProviderRequestedEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AutomationProviderRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationProviderRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationProviderRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationProviderRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationProviderRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AutomationProviderRequestedEventArgs = {
         "winrt._winrt_windows_ui_core.AutomationProviderRequestedEventArgs",
@@ -583,21 +577,18 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_BackRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_BackRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackRequestedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(BackRequestedEventArgs_get_Handled), reinterpret_cast<setter>(BackRequestedEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackRequestedEventArgs = {
         "winrt._winrt_windows_ui_core.BackRequestedEventArgs",
@@ -779,23 +770,20 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_CharacterReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_CharacterReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CharacterReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CharacterReceivedEventArgs[] = {
         { "key_code", reinterpret_cast<getter>(CharacterReceivedEventArgs_get_KeyCode), nullptr, nullptr, nullptr },
         { "key_status", reinterpret_cast<getter>(CharacterReceivedEventArgs_get_KeyStatus), nullptr, nullptr, nullptr },
         { "handled", reinterpret_cast<getter>(CharacterReceivedEventArgs_get_Handled), reinterpret_cast<setter>(CharacterReceivedEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CharacterReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CharacterReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CharacterReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CharacterReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CharacterReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CharacterReceivedEventArgs = {
         "winrt._winrt_windows_ui_core.CharacterReceivedEventArgs",
@@ -977,23 +965,20 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_ClosestInteractiveBoundsRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_ClosestInteractiveBoundsRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClosestInteractiveBoundsRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClosestInteractiveBoundsRequestedEventArgs[] = {
         { "closest_interactive_bounds", reinterpret_cast<getter>(ClosestInteractiveBoundsRequestedEventArgs_get_ClosestInteractiveBounds), reinterpret_cast<setter>(ClosestInteractiveBoundsRequestedEventArgs_put_ClosestInteractiveBounds), nullptr, nullptr },
         { "pointer_position", reinterpret_cast<getter>(ClosestInteractiveBoundsRequestedEventArgs_get_PointerPosition), nullptr, nullptr, nullptr },
         { "search_bounds", reinterpret_cast<getter>(ClosestInteractiveBoundsRequestedEventArgs_get_SearchBounds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClosestInteractiveBoundsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClosestInteractiveBoundsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClosestInteractiveBoundsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClosestInteractiveBoundsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClosestInteractiveBoundsRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClosestInteractiveBoundsRequestedEventArgs = {
         "winrt._winrt_windows_ui_core.ClosestInteractiveBoundsRequestedEventArgs",
@@ -1113,20 +1098,17 @@ namespace py::cpp::Windows::UI::Core
         { "remove_accelerator_key_activated", reinterpret_cast<PyCFunction>(CoreAcceleratorKeys_remove_AcceleratorKeyActivated), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreAcceleratorKeys, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreAcceleratorKeys), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreAcceleratorKeys[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreAcceleratorKeys[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreAcceleratorKeys) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreAcceleratorKeys) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreAcceleratorKeys) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreAcceleratorKeys) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreAcceleratorKeys = {
         "winrt._winrt_windows_ui_core.CoreAcceleratorKeys",
@@ -2640,8 +2622,7 @@ namespace py::cpp::Windows::UI::Core
         { "remove_closest_interactive_bounds_requested", reinterpret_cast<PyCFunction>(CoreComponentInputSource_remove_ClosestInteractiveBoundsRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreComponentInputSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreComponentInputSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreComponentInputSource[] = {
         { "has_focus", reinterpret_cast<getter>(CoreComponentInputSource_get_HasFocus), nullptr, nullptr, nullptr },
@@ -2651,16 +2632,14 @@ namespace py::cpp::Windows::UI::Core
         { "has_capture", reinterpret_cast<getter>(CoreComponentInputSource_get_HasCapture), nullptr, nullptr, nullptr },
         { "pointer_position", reinterpret_cast<getter>(CoreComponentInputSource_get_PointerPosition), nullptr, nullptr, nullptr },
         { "dispatcher_queue", reinterpret_cast<getter>(CoreComponentInputSource_get_DispatcherQueue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreComponentInputSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreComponentInputSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreComponentInputSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreComponentInputSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreComponentInputSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreComponentInputSource = {
         "winrt._winrt_windows_ui_core.CoreComponentInputSource",
@@ -2798,22 +2777,19 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_CoreCursor[] = {
         { "_assign_array_", _assign_array_CoreCursor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreCursor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreCursor[] = {
         { "id", reinterpret_cast<getter>(CoreCursor_get_Id), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(CoreCursor_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreCursor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreCursor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreCursor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreCursor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreCursor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreCursor = {
         "winrt._winrt_windows_ui_core.CoreCursor",
@@ -3376,22 +3352,19 @@ namespace py::cpp::Windows::UI::Core
         { "remove_accelerator_key_activated", reinterpret_cast<PyCFunction>(CoreDispatcher_remove_AcceleratorKeyActivated), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreDispatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreDispatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreDispatcher[] = {
         { "has_thread_access", reinterpret_cast<getter>(CoreDispatcher_get_HasThreadAccess), nullptr, nullptr, nullptr },
         { "current_priority", reinterpret_cast<getter>(CoreDispatcher_get_CurrentPriority), reinterpret_cast<setter>(CoreDispatcher_put_CurrentPriority), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreDispatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDispatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDispatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDispatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDispatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreDispatcher = {
         "winrt._winrt_windows_ui_core.CoreDispatcher",
@@ -4523,8 +4496,7 @@ namespace py::cpp::Windows::UI::Core
         { "remove_pointer_routed_to", reinterpret_cast<PyCFunction>(CoreIndependentInputSource_remove_PointerRoutedTo), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreIndependentInputSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreIndependentInputSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreIndependentInputSource[] = {
         { "is_input_enabled", reinterpret_cast<getter>(CoreIndependentInputSource_get_IsInputEnabled), reinterpret_cast<setter>(CoreIndependentInputSource_put_IsInputEnabled), nullptr, nullptr },
@@ -4533,16 +4505,14 @@ namespace py::cpp::Windows::UI::Core
         { "has_capture", reinterpret_cast<getter>(CoreIndependentInputSource_get_HasCapture), nullptr, nullptr, nullptr },
         { "pointer_position", reinterpret_cast<getter>(CoreIndependentInputSource_get_PointerPosition), nullptr, nullptr, nullptr },
         { "dispatcher_queue", reinterpret_cast<getter>(CoreIndependentInputSource_get_DispatcherQueue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreIndependentInputSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreIndependentInputSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreIndependentInputSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreIndependentInputSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreIndependentInputSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreIndependentInputSource = {
         "winrt._winrt_windows_ui_core.CoreIndependentInputSource",
@@ -5004,23 +4974,20 @@ namespace py::cpp::Windows::UI::Core
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreIndependentInputSourceController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CoreIndependentInputSourceController), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_CoreIndependentInputSourceController), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreIndependentInputSourceController[] = {
         { "is_transparent_for_uncontrolled_input", reinterpret_cast<getter>(CoreIndependentInputSourceController_get_IsTransparentForUncontrolledInput), reinterpret_cast<setter>(CoreIndependentInputSourceController_put_IsTransparentForUncontrolledInput), nullptr, nullptr },
         { "is_palm_rejection_enabled", reinterpret_cast<getter>(CoreIndependentInputSourceController_get_IsPalmRejectionEnabled), reinterpret_cast<setter>(CoreIndependentInputSourceController_put_IsPalmRejectionEnabled), nullptr, nullptr },
         { "source", reinterpret_cast<getter>(CoreIndependentInputSourceController_get_Source), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreIndependentInputSourceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreIndependentInputSourceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreIndependentInputSourceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreIndependentInputSourceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreIndependentInputSourceController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreIndependentInputSourceController = {
         "winrt._winrt_windows_ui_core.CoreIndependentInputSourceController",
@@ -5030,14 +4997,12 @@ namespace py::cpp::Windows::UI::Core
         _type_slots_CoreIndependentInputSourceController};
 
     static PyGetSetDef getset_CoreIndependentInputSourceController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreIndependentInputSourceController_Static[] = {
         { "create_for_ivisual_element", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_CreateForIVisualElement), METH_VARARGS, nullptr },
         { "create_for_visual", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_CreateForVisual), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreIndependentInputSourceController_Static[] = 
     {
@@ -5047,14 +5012,12 @@ namespace py::cpp::Windows::UI::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreIndependentInputSourceController_Static =
-    {
+    static PyType_Spec type_spec_CoreIndependentInputSourceController_Static = {
         "winrt._winrt_windows_ui_core.CoreIndependentInputSourceController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreIndependentInputSourceController_Static
-    };
+        type_slots_CoreIndependentInputSourceController_Static};
 
     // ----- CoreWindow class --------------------
 
@@ -7492,8 +7455,7 @@ namespace py::cpp::Windows::UI::Core
         { "remove_resize_started", reinterpret_cast<PyCFunction>(CoreWindow_remove_ResizeStarted), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWindow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWindow), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWindow[] = {
         { "pointer_position", reinterpret_cast<getter>(CoreWindow_get_PointerPosition), reinterpret_cast<setter>(CoreWindow_put_PointerPosition), nullptr, nullptr },
@@ -7508,16 +7470,14 @@ namespace py::cpp::Windows::UI::Core
         { "activation_mode", reinterpret_cast<getter>(CoreWindow_get_ActivationMode), nullptr, nullptr, nullptr },
         { "dispatcher_queue", reinterpret_cast<getter>(CoreWindow_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { "ui_context", reinterpret_cast<getter>(CoreWindow_get_UIContext), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWindow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWindow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWindow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWindow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWindow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWindow = {
         "winrt._winrt_windows_ui_core.CoreWindow",
@@ -7527,13 +7487,11 @@ namespace py::cpp::Windows::UI::Core
         _type_slots_CoreWindow};
 
     static PyGetSetDef getset_CoreWindow_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreWindow_Static[] = {
         { "get_for_current_thread", reinterpret_cast<PyCFunction>(CoreWindow_GetForCurrentThread), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreWindow_Static[] = 
     {
@@ -7543,14 +7501,12 @@ namespace py::cpp::Windows::UI::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreWindow_Static =
-    {
+    static PyType_Spec type_spec_CoreWindow_Static = {
         "winrt._winrt_windows_ui_core.CoreWindow_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreWindow_Static
-    };
+        type_slots_CoreWindow_Static};
 
     // ----- CoreWindowDialog class --------------------
 
@@ -8176,8 +8132,7 @@ namespace py::cpp::Windows::UI::Core
         { "remove_showing", reinterpret_cast<PyCFunction>(CoreWindowDialog_remove_Showing), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWindowDialog, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWindowDialog), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWindowDialog[] = {
         { "title", reinterpret_cast<getter>(CoreWindowDialog_get_Title), reinterpret_cast<setter>(CoreWindowDialog_put_Title), nullptr, nullptr },
@@ -8188,16 +8143,14 @@ namespace py::cpp::Windows::UI::Core
         { "commands", reinterpret_cast<getter>(CoreWindowDialog_get_Commands), nullptr, nullptr, nullptr },
         { "max_size", reinterpret_cast<getter>(CoreWindowDialog_get_MaxSize), nullptr, nullptr, nullptr },
         { "min_size", reinterpret_cast<getter>(CoreWindowDialog_get_MinSize), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWindowDialog[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWindowDialog) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWindowDialog) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWindowDialog) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWindowDialog) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWindowDialog = {
         "winrt._winrt_windows_ui_core.CoreWindowDialog",
@@ -8319,21 +8272,18 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_CoreWindowEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWindowEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWindowEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWindowEventArgs[] = {
         { "handled", reinterpret_cast<getter>(CoreWindowEventArgs_get_Handled), reinterpret_cast<setter>(CoreWindowEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWindowEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWindowEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWindowEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWindowEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWindowEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWindowEventArgs = {
         "winrt._winrt_windows_ui_core.CoreWindowEventArgs",
@@ -8900,8 +8850,7 @@ namespace py::cpp::Windows::UI::Core
         { "remove_showing", reinterpret_cast<PyCFunction>(CoreWindowFlyout_remove_Showing), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWindowFlyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWindowFlyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWindowFlyout[] = {
         { "title", reinterpret_cast<getter>(CoreWindowFlyout_get_Title), reinterpret_cast<setter>(CoreWindowFlyout_put_Title), nullptr, nullptr },
@@ -8911,16 +8860,14 @@ namespace py::cpp::Windows::UI::Core
         { "commands", reinterpret_cast<getter>(CoreWindowFlyout_get_Commands), nullptr, nullptr, nullptr },
         { "max_size", reinterpret_cast<getter>(CoreWindowFlyout_get_MaxSize), nullptr, nullptr, nullptr },
         { "min_size", reinterpret_cast<getter>(CoreWindowFlyout_get_MinSize), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWindowFlyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWindowFlyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWindowFlyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWindowFlyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWindowFlyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWindowFlyout = {
         "winrt._winrt_windows_ui_core.CoreWindowFlyout",
@@ -9017,20 +8964,17 @@ namespace py::cpp::Windows::UI::Core
         { "set_desired_size", reinterpret_cast<PyCFunction>(CoreWindowPopupShowingEventArgs_SetDesiredSize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWindowPopupShowingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWindowPopupShowingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWindowPopupShowingEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWindowPopupShowingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWindowPopupShowingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWindowPopupShowingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWindowPopupShowingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWindowPopupShowingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWindowPopupShowingEventArgs = {
         "winrt._winrt_windows_ui_core.CoreWindowPopupShowingEventArgs",
@@ -9234,21 +9178,18 @@ namespace py::cpp::Windows::UI::Core
         { "notify_layout_completed", reinterpret_cast<PyCFunction>(CoreWindowResizeManager_NotifyLayoutCompleted), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWindowResizeManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWindowResizeManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWindowResizeManager[] = {
         { "should_wait_for_layout_completion", reinterpret_cast<getter>(CoreWindowResizeManager_get_ShouldWaitForLayoutCompletion), reinterpret_cast<setter>(CoreWindowResizeManager_put_ShouldWaitForLayoutCompletion), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWindowResizeManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWindowResizeManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWindowResizeManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWindowResizeManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWindowResizeManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWindowResizeManager = {
         "winrt._winrt_windows_ui_core.CoreWindowResizeManager",
@@ -9258,13 +9199,11 @@ namespace py::cpp::Windows::UI::Core
         _type_slots_CoreWindowResizeManager};
 
     static PyGetSetDef getset_CoreWindowResizeManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreWindowResizeManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreWindowResizeManager_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreWindowResizeManager_Static[] = 
     {
@@ -9274,14 +9213,12 @@ namespace py::cpp::Windows::UI::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreWindowResizeManager_Static =
-    {
+    static PyType_Spec type_spec_CoreWindowResizeManager_Static = {
         "winrt._winrt_windows_ui_core.CoreWindowResizeManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreWindowResizeManager_Static
-    };
+        type_slots_CoreWindowResizeManager_Static};
 
     // ----- IdleDispatchedHandlerArgs class --------------------
 
@@ -9357,21 +9294,18 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_IdleDispatchedHandlerArgs[] = {
         { "_assign_array_", _assign_array_IdleDispatchedHandlerArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IdleDispatchedHandlerArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IdleDispatchedHandlerArgs[] = {
         { "is_dispatcher_idle", reinterpret_cast<getter>(IdleDispatchedHandlerArgs_get_IsDispatcherIdle), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IdleDispatchedHandlerArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IdleDispatchedHandlerArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IdleDispatchedHandlerArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IdleDispatchedHandlerArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IdleDispatchedHandlerArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IdleDispatchedHandlerArgs = {
         "winrt._winrt_windows_ui_core.IdleDispatchedHandlerArgs",
@@ -9523,22 +9457,19 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_InputEnabledEventArgs[] = {
         { "_assign_array_", _assign_array_InputEnabledEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputEnabledEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InputEnabledEventArgs[] = {
         { "handled", reinterpret_cast<getter>(InputEnabledEventArgs_get_Handled), reinterpret_cast<setter>(InputEnabledEventArgs_put_Handled), nullptr, nullptr },
         { "input_enabled", reinterpret_cast<getter>(InputEnabledEventArgs_get_InputEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InputEnabledEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputEnabledEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputEnabledEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputEnabledEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputEnabledEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InputEnabledEventArgs = {
         "winrt._winrt_windows_ui_core.InputEnabledEventArgs",
@@ -9750,24 +9681,21 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_KeyEventArgs[] = {
         { "_assign_array_", _assign_array_KeyEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyEventArgs[] = {
         { "handled", reinterpret_cast<getter>(KeyEventArgs_get_Handled), reinterpret_cast<setter>(KeyEventArgs_put_Handled), nullptr, nullptr },
         { "key_status", reinterpret_cast<getter>(KeyEventArgs_get_KeyStatus), nullptr, nullptr, nullptr },
         { "virtual_key", reinterpret_cast<getter>(KeyEventArgs_get_VirtualKey), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(KeyEventArgs_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyEventArgs = {
         "winrt._winrt_windows_ui_core.KeyEventArgs",
@@ -9990,23 +9918,20 @@ namespace py::cpp::Windows::UI::Core
         { "get_intermediate_points", reinterpret_cast<PyCFunction>(PointerEventArgs_GetIntermediatePoints), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PointerEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PointerEventArgs[] = {
         { "handled", reinterpret_cast<getter>(PointerEventArgs_get_Handled), reinterpret_cast<setter>(PointerEventArgs_put_Handled), nullptr, nullptr },
         { "current_point", reinterpret_cast<getter>(PointerEventArgs_get_CurrentPoint), nullptr, nullptr, nullptr },
         { "key_modifiers", reinterpret_cast<getter>(PointerEventArgs_get_KeyModifiers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PointerEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointerEventArgs = {
         "winrt._winrt_windows_ui_core.PointerEventArgs",
@@ -10235,21 +10160,18 @@ namespace py::cpp::Windows::UI::Core
         { "remove_back_requested", reinterpret_cast<PyCFunction>(SystemNavigationManager_remove_BackRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_SystemNavigationManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemNavigationManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemNavigationManager[] = {
         { "app_view_back_button_visibility", reinterpret_cast<getter>(SystemNavigationManager_get_AppViewBackButtonVisibility), reinterpret_cast<setter>(SystemNavigationManager_put_AppViewBackButtonVisibility), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemNavigationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemNavigationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemNavigationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemNavigationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemNavigationManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemNavigationManager = {
         "winrt._winrt_windows_ui_core.SystemNavigationManager",
@@ -10259,13 +10181,11 @@ namespace py::cpp::Windows::UI::Core
         _type_slots_SystemNavigationManager};
 
     static PyGetSetDef getset_SystemNavigationManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SystemNavigationManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(SystemNavigationManager_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SystemNavigationManager_Static[] = 
     {
@@ -10275,14 +10195,12 @@ namespace py::cpp::Windows::UI::Core
         { }
     };
 
-    static PyType_Spec type_spec_SystemNavigationManager_Static =
-    {
+    static PyType_Spec type_spec_SystemNavigationManager_Static = {
         "winrt._winrt_windows_ui_core.SystemNavigationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemNavigationManager_Static
-    };
+        type_slots_SystemNavigationManager_Static};
 
     // ----- TouchHitTestingEventArgs class --------------------
 
@@ -10612,24 +10530,21 @@ namespace py::cpp::Windows::UI::Core
         { "evaluate_proximity_to_rect", reinterpret_cast<PyCFunction>(TouchHitTestingEventArgs_EvaluateProximityToRect), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TouchHitTestingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TouchHitTestingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TouchHitTestingEventArgs[] = {
         { "handled", reinterpret_cast<getter>(TouchHitTestingEventArgs_get_Handled), reinterpret_cast<setter>(TouchHitTestingEventArgs_put_Handled), nullptr, nullptr },
         { "proximity_evaluation", reinterpret_cast<getter>(TouchHitTestingEventArgs_get_ProximityEvaluation), reinterpret_cast<setter>(TouchHitTestingEventArgs_put_ProximityEvaluation), nullptr, nullptr },
         { "bounding_box", reinterpret_cast<getter>(TouchHitTestingEventArgs_get_BoundingBox), nullptr, nullptr, nullptr },
         { "point", reinterpret_cast<getter>(TouchHitTestingEventArgs_get_Point), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TouchHitTestingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TouchHitTestingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TouchHitTestingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TouchHitTestingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TouchHitTestingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TouchHitTestingEventArgs = {
         "winrt._winrt_windows_ui_core.TouchHitTestingEventArgs",
@@ -10781,22 +10696,19 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_VisibilityChangedEventArgs[] = {
         { "_assign_array_", _assign_array_VisibilityChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisibilityChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VisibilityChangedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(VisibilityChangedEventArgs_get_Handled), reinterpret_cast<setter>(VisibilityChangedEventArgs_put_Handled), nullptr, nullptr },
         { "visible", reinterpret_cast<getter>(VisibilityChangedEventArgs_get_Visible), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VisibilityChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisibilityChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisibilityChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisibilityChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisibilityChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VisibilityChangedEventArgs = {
         "winrt._winrt_windows_ui_core.VisibilityChangedEventArgs",
@@ -10948,22 +10860,19 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_WindowActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_WindowActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowActivatedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(WindowActivatedEventArgs_get_Handled), reinterpret_cast<setter>(WindowActivatedEventArgs_put_Handled), nullptr, nullptr },
         { "window_activation_state", reinterpret_cast<getter>(WindowActivatedEventArgs_get_WindowActivationState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowActivatedEventArgs = {
         "winrt._winrt_windows_ui_core.WindowActivatedEventArgs",
@@ -11115,22 +11024,19 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_WindowSizeChangedEventArgs[] = {
         { "_assign_array_", _assign_array_WindowSizeChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowSizeChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowSizeChangedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(WindowSizeChangedEventArgs_get_Handled), reinterpret_cast<setter>(WindowSizeChangedEventArgs_put_Handled), nullptr, nullptr },
         { "size", reinterpret_cast<getter>(WindowSizeChangedEventArgs_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowSizeChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowSizeChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowSizeChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowSizeChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowSizeChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowSizeChangedEventArgs = {
         "winrt._winrt_windows_ui_core.WindowSizeChangedEventArgs",
@@ -11250,20 +11156,17 @@ namespace py::cpp::Windows::UI::Core
         { "remove_accelerator_key_activated", reinterpret_cast<PyCFunction>(ICoreAcceleratorKeys_remove_AcceleratorKeyActivated), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICoreAcceleratorKeys, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreAcceleratorKeys), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICoreAcceleratorKeys[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICoreAcceleratorKeys[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreAcceleratorKeys) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreAcceleratorKeys) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreAcceleratorKeys) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreAcceleratorKeys) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICoreAcceleratorKeys = {
         "winrt._winrt_windows_ui_core.ICoreAcceleratorKeys",
@@ -11381,13 +11284,11 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef methods_ImplementsICoreAcceleratorKeys[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreAcceleratorKeys), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreAcceleratorKeys), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICoreAcceleratorKeys[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICoreAcceleratorKeys) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICoreAcceleratorKeys = {
         "winrt._winrt_windows_ui_core.ImplementsICoreAcceleratorKeys",
@@ -11606,22 +11507,19 @@ namespace py::cpp::Windows::UI::Core
         { "remove_input_enabled", reinterpret_cast<PyCFunction>(ICoreInputSourceBase_remove_InputEnabled), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICoreInputSourceBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreInputSourceBase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICoreInputSourceBase[] = {
         { "dispatcher", reinterpret_cast<getter>(ICoreInputSourceBase_get_Dispatcher), nullptr, nullptr, nullptr },
         { "is_input_enabled", reinterpret_cast<getter>(ICoreInputSourceBase_get_IsInputEnabled), reinterpret_cast<setter>(ICoreInputSourceBase_put_IsInputEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICoreInputSourceBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreInputSourceBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreInputSourceBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreInputSourceBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreInputSourceBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICoreInputSourceBase = {
         "winrt._winrt_windows_ui_core.ICoreInputSourceBase",
@@ -11802,13 +11700,11 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef methods_ImplementsICoreInputSourceBase[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreInputSourceBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreInputSourceBase), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICoreInputSourceBase[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICoreInputSourceBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICoreInputSourceBase = {
         "winrt._winrt_windows_ui_core.ImplementsICoreInputSourceBase",
@@ -12543,23 +12439,20 @@ namespace py::cpp::Windows::UI::Core
         { "remove_pointer_wheel_changed", reinterpret_cast<PyCFunction>(ICorePointerInputSource_remove_PointerWheelChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICorePointerInputSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICorePointerInputSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICorePointerInputSource[] = {
         { "has_capture", reinterpret_cast<getter>(ICorePointerInputSource_get_HasCapture), nullptr, nullptr, nullptr },
         { "pointer_cursor", reinterpret_cast<getter>(ICorePointerInputSource_get_PointerCursor), reinterpret_cast<setter>(ICorePointerInputSource_put_PointerCursor), nullptr, nullptr },
         { "pointer_position", reinterpret_cast<getter>(ICorePointerInputSource_get_PointerPosition), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICorePointerInputSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICorePointerInputSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICorePointerInputSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICorePointerInputSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICorePointerInputSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICorePointerInputSource = {
         "winrt._winrt_windows_ui_core.ICorePointerInputSource",
@@ -13180,13 +13073,11 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef methods_ImplementsICorePointerInputSource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICorePointerInputSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICorePointerInputSource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICorePointerInputSource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICorePointerInputSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICorePointerInputSource = {
         "winrt._winrt_windows_ui_core.ImplementsICorePointerInputSource",
@@ -13951,24 +13842,21 @@ namespace py::cpp::Windows::UI::Core
         { "remove_pointer_wheel_changed", reinterpret_cast<PyCFunction>(ICorePointerInputSource2_remove_PointerWheelChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICorePointerInputSource2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICorePointerInputSource2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICorePointerInputSource2[] = {
         { "dispatcher_queue", reinterpret_cast<getter>(ICorePointerInputSource2_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { "has_capture", reinterpret_cast<getter>(ICorePointerInputSource2_get_HasCapture), nullptr, nullptr, nullptr },
         { "pointer_cursor", reinterpret_cast<getter>(ICorePointerInputSource2_get_PointerCursor), reinterpret_cast<setter>(ICorePointerInputSource2_put_PointerCursor), nullptr, nullptr },
         { "pointer_position", reinterpret_cast<getter>(ICorePointerInputSource2_get_PointerPosition), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICorePointerInputSource2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICorePointerInputSource2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICorePointerInputSource2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICorePointerInputSource2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICorePointerInputSource2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICorePointerInputSource2 = {
         "winrt._winrt_windows_ui_core.ICorePointerInputSource2",
@@ -14609,13 +14497,11 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef methods_ImplementsICorePointerInputSource2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICorePointerInputSource2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICorePointerInputSource2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICorePointerInputSource2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICorePointerInputSource2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICorePointerInputSource2 = {
         "winrt._winrt_windows_ui_core.ImplementsICorePointerInputSource2",
@@ -14869,20 +14755,17 @@ namespace py::cpp::Windows::UI::Core
         { "remove_pointer_routed_to", reinterpret_cast<PyCFunction>(ICorePointerRedirector_remove_PointerRoutedTo), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICorePointerRedirector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICorePointerRedirector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICorePointerRedirector[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICorePointerRedirector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICorePointerRedirector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICorePointerRedirector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICorePointerRedirector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICorePointerRedirector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICorePointerRedirector = {
         "winrt._winrt_windows_ui_core.ICorePointerRedirector",
@@ -15124,13 +15007,11 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef methods_ImplementsICorePointerRedirector[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICorePointerRedirector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICorePointerRedirector), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICorePointerRedirector[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICorePointerRedirector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICorePointerRedirector = {
         "winrt._winrt_windows_ui_core.ImplementsICorePointerRedirector",
@@ -16963,8 +16844,7 @@ namespace py::cpp::Windows::UI::Core
         { "remove_visibility_changed", reinterpret_cast<PyCFunction>(ICoreWindow_remove_VisibilityChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICoreWindow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreWindow), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICoreWindow[] = {
         { "automation_host_provider", reinterpret_cast<getter>(ICoreWindow_get_AutomationHostProvider), nullptr, nullptr, nullptr },
@@ -16976,16 +16856,14 @@ namespace py::cpp::Windows::UI::Core
         { "pointer_cursor", reinterpret_cast<getter>(ICoreWindow_get_PointerCursor), reinterpret_cast<setter>(ICoreWindow_put_PointerCursor), nullptr, nullptr },
         { "pointer_position", reinterpret_cast<getter>(ICoreWindow_get_PointerPosition), nullptr, nullptr, nullptr },
         { "visible", reinterpret_cast<getter>(ICoreWindow_get_Visible), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICoreWindow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreWindow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreWindow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreWindow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreWindow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICoreWindow = {
         "winrt._winrt_windows_ui_core.ICoreWindow",
@@ -18504,13 +18382,11 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef methods_ImplementsICoreWindow[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreWindow), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreWindow), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICoreWindow[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICoreWindow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICoreWindow = {
         "winrt._winrt_windows_ui_core.ImplementsICoreWindow",
@@ -18632,21 +18508,18 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_ICoreWindowEventArgs[] = {
         { "_assign_array_", _assign_array_ICoreWindowEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreWindowEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICoreWindowEventArgs[] = {
         { "handled", reinterpret_cast<getter>(ICoreWindowEventArgs_get_Handled), reinterpret_cast<setter>(ICoreWindowEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICoreWindowEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreWindowEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreWindowEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreWindowEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreWindowEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICoreWindowEventArgs = {
         "winrt._winrt_windows_ui_core.ICoreWindowEventArgs",
@@ -18745,13 +18618,11 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef methods_ImplementsICoreWindowEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreWindowEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreWindowEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICoreWindowEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICoreWindowEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICoreWindowEventArgs = {
         "winrt._winrt_windows_ui_core.ImplementsICoreWindowEventArgs",
@@ -18848,20 +18719,17 @@ namespace py::cpp::Windows::UI::Core
         { "initialize", reinterpret_cast<PyCFunction>(IInitializeWithCoreWindow_Initialize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IInitializeWithCoreWindow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInitializeWithCoreWindow), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IInitializeWithCoreWindow[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IInitializeWithCoreWindow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInitializeWithCoreWindow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInitializeWithCoreWindow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInitializeWithCoreWindow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInitializeWithCoreWindow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IInitializeWithCoreWindow = {
         "winrt._winrt_windows_ui_core.IInitializeWithCoreWindow",
@@ -18947,13 +18815,11 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef methods_ImplementsIInitializeWithCoreWindow[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInitializeWithCoreWindow), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInitializeWithCoreWindow), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIInitializeWithCoreWindow[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIInitializeWithCoreWindow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIInitializeWithCoreWindow = {
         "winrt._winrt_windows_ui_core.ImplementsIInitializeWithCoreWindow",
@@ -19039,8 +18905,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyMethodDef _methods_CorePhysicalKeyStatus[] = {
         { "_assign_array_", _assign_array_CorePhysicalKeyStatus, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* CorePhysicalKeyStatus_get_RepeatCount(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, void* /*unused*/) noexcept
     {
@@ -19247,8 +19112,7 @@ namespace py::cpp::Windows::UI::Core
         { "is_menu_key_down", reinterpret_cast<getter>(CorePhysicalKeyStatus_get_IsMenuKeyDown), reinterpret_cast<setter>(CorePhysicalKeyStatus_set_IsMenuKeyDown), nullptr, nullptr },
         { "was_key_down", reinterpret_cast<getter>(CorePhysicalKeyStatus_get_WasKeyDown), reinterpret_cast<setter>(CorePhysicalKeyStatus_set_WasKeyDown), nullptr, nullptr },
         { "is_key_released", reinterpret_cast<getter>(CorePhysicalKeyStatus_get_IsKeyReleased), reinterpret_cast<setter>(CorePhysicalKeyStatus_set_IsKeyReleased), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_CorePhysicalKeyStatus(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* other, int op) noexcept
     {
@@ -19334,8 +19198,7 @@ namespace py::cpp::Windows::UI::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CorePhysicalKeyStatus) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CorePhysicalKeyStatus) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_CorePhysicalKeyStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CorePhysicalKeyStatus = {
         "winrt._winrt_windows_ui_core.CorePhysicalKeyStatus",
@@ -19413,8 +19276,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyMethodDef _methods_CoreProximityEvaluation[] = {
         { "_assign_array_", _assign_array_CoreProximityEvaluation, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* CoreProximityEvaluation_get_Score(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, void* /*unused*/) noexcept
     {
@@ -19485,8 +19347,7 @@ namespace py::cpp::Windows::UI::Core
     static PyGetSetDef _getset_CoreProximityEvaluation[] = {
         { "score", reinterpret_cast<getter>(CoreProximityEvaluation_get_Score), reinterpret_cast<setter>(CoreProximityEvaluation_set_Score), nullptr, nullptr },
         { "adjusted_point", reinterpret_cast<getter>(CoreProximityEvaluation_get_AdjustedPoint), reinterpret_cast<setter>(CoreProximityEvaluation_set_AdjustedPoint), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_CoreProximityEvaluation(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, PyObject* other, int op) noexcept
     {
@@ -19548,8 +19409,7 @@ namespace py::cpp::Windows::UI::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreProximityEvaluation) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CoreProximityEvaluation) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_CoreProximityEvaluation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreProximityEvaluation = {
         "winrt._winrt_windows_ui_core.CoreProximityEvaluation",

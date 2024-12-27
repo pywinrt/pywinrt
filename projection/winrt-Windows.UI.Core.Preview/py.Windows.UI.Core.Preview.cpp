@@ -90,20 +90,17 @@ namespace py::cpp::Windows::UI::Core::Preview
     static PyMethodDef _methods_CoreAppWindowPreview[] = {
         { "_assign_array_", _assign_array_CoreAppWindowPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreAppWindowPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreAppWindowPreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreAppWindowPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreAppWindowPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreAppWindowPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreAppWindowPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreAppWindowPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreAppWindowPreview = {
         "winrt._winrt_windows_ui_core_preview.CoreAppWindowPreview",
@@ -113,13 +110,11 @@ namespace py::cpp::Windows::UI::Core::Preview
         _type_slots_CoreAppWindowPreview};
 
     static PyGetSetDef getset_CoreAppWindowPreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreAppWindowPreview_Static[] = {
         { "get_id_from_window", reinterpret_cast<PyCFunction>(CoreAppWindowPreview_GetIdFromWindow), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreAppWindowPreview_Static[] = 
     {
@@ -129,14 +124,12 @@ namespace py::cpp::Windows::UI::Core::Preview
         { }
     };
 
-    static PyType_Spec type_spec_CoreAppWindowPreview_Static =
-    {
+    static PyType_Spec type_spec_CoreAppWindowPreview_Static = {
         "winrt._winrt_windows_ui_core_preview.CoreAppWindowPreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreAppWindowPreview_Static
-    };
+        type_slots_CoreAppWindowPreview_Static};
 
     // ----- SystemNavigationCloseRequestedPreviewEventArgs class --------------------
 
@@ -292,21 +285,18 @@ namespace py::cpp::Windows::UI::Core::Preview
         { "get_deferral", reinterpret_cast<PyCFunction>(SystemNavigationCloseRequestedPreviewEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SystemNavigationCloseRequestedPreviewEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemNavigationCloseRequestedPreviewEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemNavigationCloseRequestedPreviewEventArgs[] = {
         { "handled", reinterpret_cast<getter>(SystemNavigationCloseRequestedPreviewEventArgs_get_Handled), reinterpret_cast<setter>(SystemNavigationCloseRequestedPreviewEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemNavigationCloseRequestedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemNavigationCloseRequestedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemNavigationCloseRequestedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemNavigationCloseRequestedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemNavigationCloseRequestedPreviewEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemNavigationCloseRequestedPreviewEventArgs = {
         "winrt._winrt_windows_ui_core_preview.SystemNavigationCloseRequestedPreviewEventArgs",
@@ -466,20 +456,17 @@ namespace py::cpp::Windows::UI::Core::Preview
         { "remove_close_requested", reinterpret_cast<PyCFunction>(SystemNavigationManagerPreview_remove_CloseRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_SystemNavigationManagerPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemNavigationManagerPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemNavigationManagerPreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemNavigationManagerPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemNavigationManagerPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemNavigationManagerPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemNavigationManagerPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemNavigationManagerPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemNavigationManagerPreview = {
         "winrt._winrt_windows_ui_core_preview.SystemNavigationManagerPreview",
@@ -489,13 +476,11 @@ namespace py::cpp::Windows::UI::Core::Preview
         _type_slots_SystemNavigationManagerPreview};
 
     static PyGetSetDef getset_SystemNavigationManagerPreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SystemNavigationManagerPreview_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(SystemNavigationManagerPreview_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SystemNavigationManagerPreview_Static[] = 
     {
@@ -505,14 +490,12 @@ namespace py::cpp::Windows::UI::Core::Preview
         { }
     };
 
-    static PyType_Spec type_spec_SystemNavigationManagerPreview_Static =
-    {
+    static PyType_Spec type_spec_SystemNavigationManagerPreview_Static = {
         "winrt._winrt_windows_ui_core_preview.SystemNavigationManagerPreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemNavigationManagerPreview_Static
-    };
+        type_slots_SystemNavigationManagerPreview_Static};
 
     // ----- Windows.UI.Core.Preview Initialization --------------------
 

@@ -463,20 +463,17 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         { "format_with_output_format", reinterpret_cast<PyCFunction>(PhoneNumberFormatter_FormatWithOutputFormat), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PhoneNumberFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneNumberFormatter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneNumberFormatter[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneNumberFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneNumberFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneNumberFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneNumberFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneNumberFormatter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneNumberFormatter = {
         "winrt._winrt_windows_globalization_phonenumberformatting.PhoneNumberFormatter",
@@ -486,16 +483,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         _type_slots_PhoneNumberFormatter};
 
     static PyGetSetDef getset_PhoneNumberFormatter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PhoneNumberFormatter_Static[] = {
         { "get_country_code_for_region", reinterpret_cast<PyCFunction>(PhoneNumberFormatter_GetCountryCodeForRegion), METH_VARARGS, nullptr },
         { "get_national_direct_dialing_prefix_for_region", reinterpret_cast<PyCFunction>(PhoneNumberFormatter_GetNationalDirectDialingPrefixForRegion), METH_VARARGS, nullptr },
         { "try_create", reinterpret_cast<PyCFunction>(PhoneNumberFormatter_TryCreate), METH_VARARGS, nullptr },
         { "wrap_with_left_to_right_markers", reinterpret_cast<PyCFunction>(PhoneNumberFormatter_WrapWithLeftToRightMarkers), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PhoneNumberFormatter_Static[] = 
     {
@@ -505,14 +500,12 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         { }
     };
 
-    static PyType_Spec type_spec_PhoneNumberFormatter_Static =
-    {
+    static PyType_Spec type_spec_PhoneNumberFormatter_Static = {
         "winrt._winrt_windows_globalization_phonenumberformatting.PhoneNumberFormatter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PhoneNumberFormatter_Static
-    };
+        type_slots_PhoneNumberFormatter_Static};
 
     // ----- PhoneNumberInfo class --------------------
 
@@ -1061,14 +1054,12 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         { "to_string", reinterpret_cast<PyCFunction>(PhoneNumberInfo_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PhoneNumberInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneNumberInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneNumberInfo[] = {
         { "country_code", reinterpret_cast<getter>(PhoneNumberInfo_get_CountryCode), nullptr, nullptr, nullptr },
         { "phone_number", reinterpret_cast<getter>(PhoneNumberInfo_get_PhoneNumber), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneNumberInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneNumberInfo) },
@@ -1076,8 +1067,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneNumberInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneNumberInfo) },
         { Py_tp_str, reinterpret_cast<void*>(_str_PhoneNumberInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneNumberInfo = {
         "winrt._winrt_windows_globalization_phonenumberformatting.PhoneNumberInfo",
@@ -1087,14 +1077,12 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         _type_slots_PhoneNumberInfo};
 
     static PyGetSetDef getset_PhoneNumberInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PhoneNumberInfo_Static[] = {
         { "try_parse", reinterpret_cast<PyCFunction>(PhoneNumberInfo_TryParse), METH_VARARGS, nullptr },
         { "try_parse_with_region", reinterpret_cast<PyCFunction>(PhoneNumberInfo_TryParseWithRegion), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PhoneNumberInfo_Static[] = 
     {
@@ -1104,14 +1092,12 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         { }
     };
 
-    static PyType_Spec type_spec_PhoneNumberInfo_Static =
-    {
+    static PyType_Spec type_spec_PhoneNumberInfo_Static = {
         "winrt._winrt_windows_globalization_phonenumberformatting.PhoneNumberInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PhoneNumberInfo_Static
-    };
+        type_slots_PhoneNumberInfo_Static};
 
     // ----- Windows.Globalization.PhoneNumberFormatting Initialization --------------------
 

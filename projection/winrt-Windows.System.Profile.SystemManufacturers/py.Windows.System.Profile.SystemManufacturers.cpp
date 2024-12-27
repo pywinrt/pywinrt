@@ -138,23 +138,20 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     static PyMethodDef _methods_OemSupportInfo[] = {
         { "_assign_array_", _assign_array_OemSupportInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OemSupportInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OemSupportInfo[] = {
         { "support_app_link", reinterpret_cast<getter>(OemSupportInfo_get_SupportAppLink), nullptr, nullptr, nullptr },
         { "support_link", reinterpret_cast<getter>(OemSupportInfo_get_SupportLink), nullptr, nullptr, nullptr },
         { "support_provider", reinterpret_cast<getter>(OemSupportInfo_get_SupportProvider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OemSupportInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OemSupportInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OemSupportInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OemSupportInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OemSupportInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OemSupportInfo = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.OemSupportInfo",
@@ -203,19 +200,16 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     }
 
     static PyMethodDef _methods_SmbiosInformation[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmbiosInformation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmbiosInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmbiosInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmbiosInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmbiosInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmbiosInformation = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.SmbiosInformation",
@@ -226,12 +220,10 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyGetSetDef getset_SmbiosInformation_Static[] = {
         { "serial_number", reinterpret_cast<getter>(SmbiosInformation_get_SerialNumber), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmbiosInformation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmbiosInformation_Static[] = 
     {
@@ -241,14 +233,12 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { }
     };
 
-    static PyType_Spec type_spec_SmbiosInformation_Static =
-    {
+    static PyType_Spec type_spec_SmbiosInformation_Static = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.SmbiosInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmbiosInformation_Static
-    };
+        type_slots_SmbiosInformation_Static};
 
     // ----- SystemSupportDeviceInfo class --------------------
 
@@ -504,8 +494,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     static PyMethodDef _methods_SystemSupportDeviceInfo[] = {
         { "_assign_array_", _assign_array_SystemSupportDeviceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemSupportDeviceInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemSupportDeviceInfo[] = {
         { "friendly_name", reinterpret_cast<getter>(SystemSupportDeviceInfo_get_FriendlyName), nullptr, nullptr, nullptr },
@@ -515,16 +504,14 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { "system_manufacturer", reinterpret_cast<getter>(SystemSupportDeviceInfo_get_SystemManufacturer), nullptr, nullptr, nullptr },
         { "system_product_name", reinterpret_cast<getter>(SystemSupportDeviceInfo_get_SystemProductName), nullptr, nullptr, nullptr },
         { "system_sku", reinterpret_cast<getter>(SystemSupportDeviceInfo_get_SystemSku), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemSupportDeviceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemSupportDeviceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemSupportDeviceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemSupportDeviceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemSupportDeviceInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemSupportDeviceInfo = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.SystemSupportDeviceInfo",
@@ -633,19 +620,16 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     }
 
     static PyMethodDef _methods_SystemSupportInfo[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemSupportInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemSupportInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemSupportInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemSupportInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemSupportInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemSupportInfo = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.SystemSupportInfo",
@@ -658,12 +642,10 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { "local_system_edition", reinterpret_cast<getter>(SystemSupportInfo_get_LocalSystemEdition), nullptr, nullptr, nullptr },
         { "oem_support_info", reinterpret_cast<getter>(SystemSupportInfo_get_OemSupportInfo), nullptr, nullptr, nullptr },
         { "local_device_info", reinterpret_cast<getter>(SystemSupportInfo_get_LocalDeviceInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SystemSupportInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SystemSupportInfo_Static[] = 
     {
@@ -673,14 +655,12 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { }
     };
 
-    static PyType_Spec type_spec_SystemSupportInfo_Static =
-    {
+    static PyType_Spec type_spec_SystemSupportInfo_Static = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.SystemSupportInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemSupportInfo_Static
-    };
+        type_slots_SystemSupportInfo_Static};
 
     // ----- Windows.System.Profile.SystemManufacturers Initialization --------------------
 

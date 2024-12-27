@@ -337,8 +337,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
     static PyMethodDef _methods_QuickLink[] = {
         { "_assign_array_", _assign_array_QuickLink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QuickLink), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_QuickLink[] = {
         { "title", reinterpret_cast<getter>(QuickLink_get_Title), reinterpret_cast<setter>(QuickLink_put_Title), nullptr, nullptr },
@@ -346,16 +345,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
         { "id", reinterpret_cast<getter>(QuickLink_get_Id), reinterpret_cast<setter>(QuickLink_put_Id), nullptr, nullptr },
         { "supported_data_formats", reinterpret_cast<getter>(QuickLink_get_SupportedDataFormats), nullptr, nullptr, nullptr },
         { "supported_file_types", reinterpret_cast<getter>(QuickLink_get_SupportedFileTypes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_QuickLink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuickLink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuickLink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuickLink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuickLink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_QuickLink = {
         "winrt._winrt_windows_applicationmodel_datatransfer_sharetarget.QuickLink",
@@ -838,23 +835,20 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
         { "report_submitted_background_task", reinterpret_cast<PyCFunction>(ShareOperation_ReportSubmittedBackgroundTask), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ShareOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ShareOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ShareOperation[] = {
         { "data", reinterpret_cast<getter>(ShareOperation_get_Data), nullptr, nullptr, nullptr },
         { "quick_link_id", reinterpret_cast<getter>(ShareOperation_get_QuickLinkId), nullptr, nullptr, nullptr },
         { "contacts", reinterpret_cast<getter>(ShareOperation_get_Contacts), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ShareOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ShareOperation = {
         "winrt._winrt_windows_applicationmodel_datatransfer_sharetarget.ShareOperation",

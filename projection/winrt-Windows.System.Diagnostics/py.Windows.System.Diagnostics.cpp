@@ -108,22 +108,19 @@ namespace py::cpp::Windows::System::Diagnostics
     static PyMethodDef _methods_DiagnosticActionResult[] = {
         { "_assign_array_", _assign_array_DiagnosticActionResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiagnosticActionResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DiagnosticActionResult[] = {
         { "extended_error", reinterpret_cast<getter>(DiagnosticActionResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "results", reinterpret_cast<getter>(DiagnosticActionResult_get_Results), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DiagnosticActionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiagnosticActionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiagnosticActionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiagnosticActionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiagnosticActionResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DiagnosticActionResult = {
         "winrt._winrt_windows_system_diagnostics.DiagnosticActionResult",
@@ -374,20 +371,17 @@ namespace py::cpp::Windows::System::Diagnostics
         { "run_diagnostic_action_from_string_async", reinterpret_cast<PyCFunction>(DiagnosticInvoker_RunDiagnosticActionFromStringAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DiagnosticInvoker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiagnosticInvoker), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DiagnosticInvoker[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DiagnosticInvoker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiagnosticInvoker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiagnosticInvoker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiagnosticInvoker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiagnosticInvoker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DiagnosticInvoker = {
         "winrt._winrt_windows_system_diagnostics.DiagnosticInvoker",
@@ -398,14 +392,12 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyGetSetDef getset_DiagnosticInvoker_Static[] = {
         { "is_supported", reinterpret_cast<getter>(DiagnosticInvoker_get_IsSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DiagnosticInvoker_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(DiagnosticInvoker_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(DiagnosticInvoker_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DiagnosticInvoker_Static[] = 
     {
@@ -415,14 +407,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Spec type_spec_DiagnosticInvoker_Static =
-    {
+    static PyType_Spec type_spec_DiagnosticInvoker_Static = {
         "winrt._winrt_windows_system_diagnostics.DiagnosticInvoker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DiagnosticInvoker_Static
-    };
+        type_slots_DiagnosticInvoker_Static};
 
     // ----- ProcessCpuUsage class --------------------
 
@@ -509,20 +499,17 @@ namespace py::cpp::Windows::System::Diagnostics
         { "get_report", reinterpret_cast<PyCFunction>(ProcessCpuUsage_GetReport), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProcessCpuUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessCpuUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessCpuUsage[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessCpuUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessCpuUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessCpuUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessCpuUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessCpuUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessCpuUsage = {
         "winrt._winrt_windows_system_diagnostics.ProcessCpuUsage",
@@ -635,22 +622,19 @@ namespace py::cpp::Windows::System::Diagnostics
     static PyMethodDef _methods_ProcessCpuUsageReport[] = {
         { "_assign_array_", _assign_array_ProcessCpuUsageReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessCpuUsageReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessCpuUsageReport[] = {
         { "kernel_time", reinterpret_cast<getter>(ProcessCpuUsageReport_get_KernelTime), nullptr, nullptr, nullptr },
         { "user_time", reinterpret_cast<getter>(ProcessCpuUsageReport_get_UserTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessCpuUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessCpuUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessCpuUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessCpuUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessCpuUsageReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessCpuUsageReport = {
         "winrt._winrt_windows_system_diagnostics.ProcessCpuUsageReport",
@@ -1106,8 +1090,7 @@ namespace py::cpp::Windows::System::Diagnostics
         { "get_app_diagnostic_infos", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_GetAppDiagnosticInfos), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProcessDiagnosticInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessDiagnosticInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessDiagnosticInfo[] = {
         { "cpu_usage", reinterpret_cast<getter>(ProcessDiagnosticInfo_get_CpuUsage), nullptr, nullptr, nullptr },
@@ -1118,16 +1101,14 @@ namespace py::cpp::Windows::System::Diagnostics
         { "process_id", reinterpret_cast<getter>(ProcessDiagnosticInfo_get_ProcessId), nullptr, nullptr, nullptr },
         { "process_start_time", reinterpret_cast<getter>(ProcessDiagnosticInfo_get_ProcessStartTime), nullptr, nullptr, nullptr },
         { "is_packaged", reinterpret_cast<getter>(ProcessDiagnosticInfo_get_IsPackaged), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessDiagnosticInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessDiagnosticInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessDiagnosticInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessDiagnosticInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessDiagnosticInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessDiagnosticInfo = {
         "winrt._winrt_windows_system_diagnostics.ProcessDiagnosticInfo",
@@ -1137,15 +1118,13 @@ namespace py::cpp::Windows::System::Diagnostics
         _type_slots_ProcessDiagnosticInfo};
 
     static PyGetSetDef getset_ProcessDiagnosticInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ProcessDiagnosticInfo_Static[] = {
         { "get_for_current_process", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_GetForCurrentProcess), METH_VARARGS, nullptr },
         { "get_for_processes", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_GetForProcesses), METH_VARARGS, nullptr },
         { "try_get_for_process_id", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_TryGetForProcessId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ProcessDiagnosticInfo_Static[] = 
     {
@@ -1155,14 +1134,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Spec type_spec_ProcessDiagnosticInfo_Static =
-    {
+    static PyType_Spec type_spec_ProcessDiagnosticInfo_Static = {
         "winrt._winrt_windows_system_diagnostics.ProcessDiagnosticInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ProcessDiagnosticInfo_Static
-    };
+        type_slots_ProcessDiagnosticInfo_Static};
 
     // ----- ProcessDiskUsage class --------------------
 
@@ -1249,20 +1226,17 @@ namespace py::cpp::Windows::System::Diagnostics
         { "get_report", reinterpret_cast<PyCFunction>(ProcessDiskUsage_GetReport), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProcessDiskUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessDiskUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessDiskUsage[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessDiskUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessDiskUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessDiskUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessDiskUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessDiskUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessDiskUsage = {
         "winrt._winrt_windows_system_diagnostics.ProcessDiskUsage",
@@ -1495,8 +1469,7 @@ namespace py::cpp::Windows::System::Diagnostics
     static PyMethodDef _methods_ProcessDiskUsageReport[] = {
         { "_assign_array_", _assign_array_ProcessDiskUsageReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessDiskUsageReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessDiskUsageReport[] = {
         { "bytes_read_count", reinterpret_cast<getter>(ProcessDiskUsageReport_get_BytesReadCount), nullptr, nullptr, nullptr },
@@ -1505,16 +1478,14 @@ namespace py::cpp::Windows::System::Diagnostics
         { "other_operation_count", reinterpret_cast<getter>(ProcessDiskUsageReport_get_OtherOperationCount), nullptr, nullptr, nullptr },
         { "read_operation_count", reinterpret_cast<getter>(ProcessDiskUsageReport_get_ReadOperationCount), nullptr, nullptr, nullptr },
         { "write_operation_count", reinterpret_cast<getter>(ProcessDiskUsageReport_get_WriteOperationCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessDiskUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessDiskUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessDiskUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessDiskUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessDiskUsageReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessDiskUsageReport = {
         "winrt._winrt_windows_system_diagnostics.ProcessDiskUsageReport",
@@ -1608,20 +1579,17 @@ namespace py::cpp::Windows::System::Diagnostics
         { "get_report", reinterpret_cast<PyCFunction>(ProcessMemoryUsage_GetReport), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProcessMemoryUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessMemoryUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessMemoryUsage[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessMemoryUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessMemoryUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessMemoryUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessMemoryUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessMemoryUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessMemoryUsage = {
         "winrt._winrt_windows_system_diagnostics.ProcessMemoryUsage",
@@ -2034,8 +2002,7 @@ namespace py::cpp::Windows::System::Diagnostics
     static PyMethodDef _methods_ProcessMemoryUsageReport[] = {
         { "_assign_array_", _assign_array_ProcessMemoryUsageReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessMemoryUsageReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessMemoryUsageReport[] = {
         { "non_paged_pool_size_in_bytes", reinterpret_cast<getter>(ProcessMemoryUsageReport_get_NonPagedPoolSizeInBytes), nullptr, nullptr, nullptr },
@@ -2050,16 +2017,14 @@ namespace py::cpp::Windows::System::Diagnostics
         { "private_page_count", reinterpret_cast<getter>(ProcessMemoryUsageReport_get_PrivatePageCount), nullptr, nullptr, nullptr },
         { "virtual_memory_size_in_bytes", reinterpret_cast<getter>(ProcessMemoryUsageReport_get_VirtualMemorySizeInBytes), nullptr, nullptr, nullptr },
         { "working_set_size_in_bytes", reinterpret_cast<getter>(ProcessMemoryUsageReport_get_WorkingSetSizeInBytes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessMemoryUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessMemoryUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessMemoryUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessMemoryUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessMemoryUsageReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessMemoryUsageReport = {
         "winrt._winrt_windows_system_diagnostics.ProcessMemoryUsageReport",
@@ -2153,20 +2118,17 @@ namespace py::cpp::Windows::System::Diagnostics
         { "get_report", reinterpret_cast<PyCFunction>(SystemCpuUsage_GetReport), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SystemCpuUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemCpuUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemCpuUsage[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemCpuUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemCpuUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemCpuUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemCpuUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemCpuUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemCpuUsage = {
         "winrt._winrt_windows_system_diagnostics.SystemCpuUsage",
@@ -2309,23 +2271,20 @@ namespace py::cpp::Windows::System::Diagnostics
     static PyMethodDef _methods_SystemCpuUsageReport[] = {
         { "_assign_array_", _assign_array_SystemCpuUsageReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemCpuUsageReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemCpuUsageReport[] = {
         { "idle_time", reinterpret_cast<getter>(SystemCpuUsageReport_get_IdleTime), nullptr, nullptr, nullptr },
         { "kernel_time", reinterpret_cast<getter>(SystemCpuUsageReport_get_KernelTime), nullptr, nullptr, nullptr },
         { "user_time", reinterpret_cast<getter>(SystemCpuUsageReport_get_UserTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemCpuUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemCpuUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemCpuUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemCpuUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemCpuUsageReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemCpuUsageReport = {
         "winrt._winrt_windows_system_diagnostics.SystemCpuUsageReport",
@@ -2550,22 +2509,19 @@ namespace py::cpp::Windows::System::Diagnostics
     static PyMethodDef _methods_SystemDiagnosticInfo[] = {
         { "_assign_array_", _assign_array_SystemDiagnosticInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemDiagnosticInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemDiagnosticInfo[] = {
         { "cpu_usage", reinterpret_cast<getter>(SystemDiagnosticInfo_get_CpuUsage), nullptr, nullptr, nullptr },
         { "memory_usage", reinterpret_cast<getter>(SystemDiagnosticInfo_get_MemoryUsage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemDiagnosticInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemDiagnosticInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemDiagnosticInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemDiagnosticInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemDiagnosticInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemDiagnosticInfo = {
         "winrt._winrt_windows_system_diagnostics.SystemDiagnosticInfo",
@@ -2576,14 +2532,12 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyGetSetDef getset_SystemDiagnosticInfo_Static[] = {
         { "preferred_architecture", reinterpret_cast<getter>(SystemDiagnosticInfo_get_PreferredArchitecture), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SystemDiagnosticInfo_Static[] = {
         { "get_for_current_system", reinterpret_cast<PyCFunction>(SystemDiagnosticInfo_GetForCurrentSystem), METH_VARARGS, nullptr },
         { "is_architecture_supported", reinterpret_cast<PyCFunction>(SystemDiagnosticInfo_IsArchitectureSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SystemDiagnosticInfo_Static[] = 
     {
@@ -2593,14 +2547,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Spec type_spec_SystemDiagnosticInfo_Static =
-    {
+    static PyType_Spec type_spec_SystemDiagnosticInfo_Static = {
         "winrt._winrt_windows_system_diagnostics.SystemDiagnosticInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemDiagnosticInfo_Static
-    };
+        type_slots_SystemDiagnosticInfo_Static};
 
     // ----- SystemMemoryUsage class --------------------
 
@@ -2687,20 +2639,17 @@ namespace py::cpp::Windows::System::Diagnostics
         { "get_report", reinterpret_cast<PyCFunction>(SystemMemoryUsage_GetReport), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SystemMemoryUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemMemoryUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemMemoryUsage[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemMemoryUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemMemoryUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemMemoryUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemMemoryUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemMemoryUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemMemoryUsage = {
         "winrt._winrt_windows_system_diagnostics.SystemMemoryUsage",
@@ -2843,23 +2792,20 @@ namespace py::cpp::Windows::System::Diagnostics
     static PyMethodDef _methods_SystemMemoryUsageReport[] = {
         { "_assign_array_", _assign_array_SystemMemoryUsageReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemMemoryUsageReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemMemoryUsageReport[] = {
         { "available_size_in_bytes", reinterpret_cast<getter>(SystemMemoryUsageReport_get_AvailableSizeInBytes), nullptr, nullptr, nullptr },
         { "committed_size_in_bytes", reinterpret_cast<getter>(SystemMemoryUsageReport_get_CommittedSizeInBytes), nullptr, nullptr, nullptr },
         { "total_physical_size_in_bytes", reinterpret_cast<getter>(SystemMemoryUsageReport_get_TotalPhysicalSizeInBytes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemMemoryUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemMemoryUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemMemoryUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemMemoryUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemMemoryUsageReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemMemoryUsageReport = {
         "winrt._winrt_windows_system_diagnostics.SystemMemoryUsageReport",

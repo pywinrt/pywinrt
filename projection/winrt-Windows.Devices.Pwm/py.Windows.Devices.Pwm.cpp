@@ -460,24 +460,21 @@ namespace py::cpp::Windows::Devices::Pwm
         { "set_desired_frequency", reinterpret_cast<PyCFunction>(PwmController_SetDesiredFrequency), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PwmController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PwmController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PwmController[] = {
         { "actual_frequency", reinterpret_cast<getter>(PwmController_get_ActualFrequency), nullptr, nullptr, nullptr },
         { "max_frequency", reinterpret_cast<getter>(PwmController_get_MaxFrequency), nullptr, nullptr, nullptr },
         { "min_frequency", reinterpret_cast<getter>(PwmController_get_MinFrequency), nullptr, nullptr, nullptr },
         { "pin_count", reinterpret_cast<getter>(PwmController_get_PinCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PwmController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PwmController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PwmController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PwmController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PwmController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PwmController = {
         "winrt._winrt_windows_devices_pwm.PwmController",
@@ -487,8 +484,7 @@ namespace py::cpp::Windows::Devices::Pwm
         _type_slots_PwmController};
 
     static PyGetSetDef getset_PwmController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PwmController_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(PwmController_FromIdAsync), METH_VARARGS, nullptr },
@@ -496,8 +492,7 @@ namespace py::cpp::Windows::Devices::Pwm
         { "get_default_async", reinterpret_cast<PyCFunction>(PwmController_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(PwmController_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(PwmController_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PwmController_Static[] = 
     {
@@ -507,14 +502,12 @@ namespace py::cpp::Windows::Devices::Pwm
         { }
     };
 
-    static PyType_Spec type_spec_PwmController_Static =
-    {
+    static PyType_Spec type_spec_PwmController_Static = {
         "winrt._winrt_windows_devices_pwm.PwmController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PwmController_Static
-    };
+        type_slots_PwmController_Static};
 
     // ----- PwmPin class --------------------
 
@@ -925,23 +918,20 @@ namespace py::cpp::Windows::Devices::Pwm
         { "_from", reinterpret_cast<PyCFunction>(_from_PwmPin), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PwmPin), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_PwmPin), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PwmPin[] = {
         { "polarity", reinterpret_cast<getter>(PwmPin_get_Polarity), reinterpret_cast<setter>(PwmPin_put_Polarity), nullptr, nullptr },
         { "controller", reinterpret_cast<getter>(PwmPin_get_Controller), nullptr, nullptr, nullptr },
         { "is_started", reinterpret_cast<getter>(PwmPin_get_IsStarted), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PwmPin[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PwmPin) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PwmPin) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PwmPin) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PwmPin) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PwmPin = {
         "winrt._winrt_windows_devices_pwm.PwmPin",

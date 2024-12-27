@@ -229,21 +229,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static PyMethodDef _methods_ColorPickerSlider[] = {
         { "_assign_array_", _assign_array_ColorPickerSlider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorPickerSlider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ColorPickerSlider[] = {
         { "color_channel", reinterpret_cast<getter>(ColorPickerSlider_get_ColorChannel), reinterpret_cast<setter>(ColorPickerSlider_put_ColorChannel), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ColorPickerSlider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorPickerSlider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorPickerSlider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorPickerSlider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorPickerSlider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ColorPickerSlider = {
         "winrt._winrt_windows_ui_xaml_controls_primitives_2.ColorPickerSlider",
@@ -254,12 +251,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyGetSetDef getset_ColorPickerSlider_Static[] = {
         { "color_channel_property", reinterpret_cast<getter>(ColorPickerSlider_get_ColorChannelProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ColorPickerSlider_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ColorPickerSlider_Static[] = 
     {
@@ -269,14 +264,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Spec type_spec_ColorPickerSlider_Static =
-    {
+    static PyType_Spec type_spec_ColorPickerSlider_Static = {
         "winrt._winrt_windows_ui_xaml_controls_primitives_2.ColorPickerSlider_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ColorPickerSlider_Static
-    };
+        type_slots_ColorPickerSlider_Static};
 
     // ----- Windows.UI.Xaml.Controls.Primitives Initialization --------------------
 

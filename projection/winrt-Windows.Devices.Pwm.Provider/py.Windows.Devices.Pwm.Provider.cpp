@@ -433,24 +433,21 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         { "set_pulse_parameters", reinterpret_cast<PyCFunction>(IPwmControllerProvider_SetPulseParameters), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPwmControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPwmControllerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPwmControllerProvider[] = {
         { "actual_frequency", reinterpret_cast<getter>(IPwmControllerProvider_get_ActualFrequency), nullptr, nullptr, nullptr },
         { "max_frequency", reinterpret_cast<getter>(IPwmControllerProvider_get_MaxFrequency), nullptr, nullptr, nullptr },
         { "min_frequency", reinterpret_cast<getter>(IPwmControllerProvider_get_MinFrequency), nullptr, nullptr, nullptr },
         { "pin_count", reinterpret_cast<getter>(IPwmControllerProvider_get_PinCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPwmControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPwmControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPwmControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPwmControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPwmControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPwmControllerProvider = {
         "winrt._winrt_windows_devices_pwm_provider.IPwmControllerProvider",
@@ -786,13 +783,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
     static PyMethodDef methods_ImplementsIPwmControllerProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPwmControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPwmControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPwmControllerProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPwmControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPwmControllerProvider = {
         "winrt._winrt_windows_devices_pwm_provider.ImplementsIPwmControllerProvider",
@@ -886,20 +881,17 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         { "get_controllers", reinterpret_cast<PyCFunction>(IPwmProvider_GetControllers), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPwmProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPwmProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPwmProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPwmProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPwmProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPwmProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPwmProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPwmProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPwmProvider = {
         "winrt._winrt_windows_devices_pwm_provider.IPwmProvider",
@@ -981,13 +973,11 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
     static PyMethodDef methods_ImplementsIPwmProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPwmProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPwmProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPwmProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPwmProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPwmProvider = {
         "winrt._winrt_windows_devices_pwm_provider.ImplementsIPwmProvider",

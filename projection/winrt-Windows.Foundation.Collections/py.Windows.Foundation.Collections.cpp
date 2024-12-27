@@ -597,13 +597,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "remove_map_changed", reinterpret_cast<PyCFunction>(PropertySet_remove_MapChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_PropertySet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PropertySet), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PropertySet[] = {
         { "size", reinterpret_cast<getter>(PropertySet_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PropertySet) },
@@ -615,8 +613,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_PropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_PropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_PropertySet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PropertySet = {
         "winrt._winrt_windows_foundation_collections.PropertySet",
@@ -1218,13 +1215,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "remove_map_changed", reinterpret_cast<PyCFunction>(StringMap_remove_MapChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_StringMap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StringMap), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StringMap[] = {
         { "size", reinterpret_cast<getter>(StringMap_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StringMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StringMap) },
@@ -1236,8 +1231,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_StringMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_StringMap) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_StringMap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StringMap = {
         "winrt._winrt_windows_foundation_collections.StringMap",
@@ -1839,13 +1833,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "remove_map_changed", reinterpret_cast<PyCFunction>(ValueSet_remove_MapChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ValueSet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ValueSet), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ValueSet[] = {
         { "size", reinterpret_cast<getter>(ValueSet_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ValueSet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ValueSet) },
@@ -1857,8 +1849,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_ValueSet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_ValueSet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_ValueSet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ValueSet = {
         "winrt._winrt_windows_foundation_collections.ValueSet",
@@ -1898,12 +1889,10 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef _methods_IIterable[] = {
         { "first", reinterpret_cast<PyCFunction>(IIterable_First), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IIterable[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IIterable) },
@@ -1911,8 +1900,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIterable) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_IIterable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IIterable = {
         "winrt._winrt_windows_foundation_collections.IIterable",
@@ -1960,13 +1948,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIIterable[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIterable), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIterable), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIIterable[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIIterable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIIterable = {
         "winrt._winrt_windows_foundation_collections.ImplementsIIterable",
@@ -2069,14 +2055,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { "get_many", reinterpret_cast<PyCFunction>(IIterator_GetMany), METH_VARARGS, nullptr },
         { "move_next", reinterpret_cast<PyCFunction>(IIterator_MoveNext), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IIterator[] = {
         { "current", reinterpret_cast<getter>(IIterator_get_Current), nullptr, nullptr, nullptr },
         { "has_current", reinterpret_cast<getter>(IIterator_get_HasCurrent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IIterator) },
@@ -2085,8 +2069,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_IIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_IIterator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IIterator = {
         "winrt._winrt_windows_foundation_collections.IIterator",
@@ -2134,13 +2117,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIIterator[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIterator), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIterator), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIIterator[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIIterator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIIterator = {
         "winrt._winrt_windows_foundation_collections.ImplementsIIterator",
@@ -2221,22 +2202,19 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyMethodDef _methods_IKeyValuePair[] = {
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IKeyValuePair[] = {
         { "key", reinterpret_cast<getter>(IKeyValuePair_get_Key), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IKeyValuePair_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IKeyValuePair[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IKeyValuePair) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IKeyValuePair) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IKeyValuePair) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IKeyValuePair) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IKeyValuePair = {
         "winrt._winrt_windows_foundation_collections.IKeyValuePair",
@@ -2284,13 +2262,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIKeyValuePair[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIKeyValuePair), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIKeyValuePair), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIKeyValuePair[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIKeyValuePair) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIKeyValuePair = {
         "winrt._winrt_windows_foundation_collections.ImplementsIKeyValuePair",
@@ -2371,22 +2347,19 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyMethodDef _methods_IMapChangedEventArgs[] = {
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMapChangedEventArgs[] = {
         { "collection_change", reinterpret_cast<getter>(IMapChangedEventArgs_get_CollectionChange), nullptr, nullptr, nullptr },
         { "key", reinterpret_cast<getter>(IMapChangedEventArgs_get_Key), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMapChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMapChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMapChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMapChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMapChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMapChangedEventArgs = {
         "winrt._winrt_windows_foundation_collections.IMapChangedEventArgs",
@@ -2434,13 +2407,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIMapChangedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMapChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMapChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMapChangedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMapChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMapChangedEventArgs = {
         "winrt._winrt_windows_foundation_collections.ImplementsIMapChangedEventArgs",
@@ -2539,13 +2510,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "lookup", reinterpret_cast<PyCFunction>(IMapView_Lookup), METH_VARARGS, nullptr },
         { "split", reinterpret_cast<PyCFunction>(IMapView_Split), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMapView[] = {
         { "size", reinterpret_cast<getter>(IMapView_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMapView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMapView) },
@@ -2556,8 +2525,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_IMapView) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_IMapView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_IMapView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMapView = {
         "winrt._winrt_windows_foundation_collections.IMapView",
@@ -2605,13 +2573,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIMapView[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMapView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMapView), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMapView[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMapView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMapView = {
         "winrt._winrt_windows_foundation_collections.ImplementsIMapView",
@@ -2733,13 +2699,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "lookup", reinterpret_cast<PyCFunction>(IMap_Lookup), METH_VARARGS, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(IMap_Remove), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMap[] = {
         { "size", reinterpret_cast<getter>(IMap_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMap) },
@@ -2751,8 +2715,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_IMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_IMap) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_IMap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMap = {
         "winrt._winrt_windows_foundation_collections.IMap",
@@ -2800,13 +2763,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIMap[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMap), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMap), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMap[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMap = {
         "winrt._winrt_windows_foundation_collections.ImplementsIMap",
@@ -2982,13 +2943,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "add_map_changed", reinterpret_cast<PyCFunction>(IObservableMap_add_MapChanged), METH_O, nullptr },
         { "remove_map_changed", reinterpret_cast<PyCFunction>(IObservableMap_remove_MapChanged), METH_O, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IObservableMap[] = {
         { "size", reinterpret_cast<getter>(IObservableMap_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IObservableMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IObservableMap) },
@@ -3000,8 +2959,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_IObservableMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_IObservableMap) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_IObservableMap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IObservableMap = {
         "winrt._winrt_windows_foundation_collections.IObservableMap",
@@ -3049,13 +3007,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIObservableMap[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIObservableMap), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIObservableMap), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIObservableMap[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIObservableMap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIObservableMap = {
         "winrt._winrt_windows_foundation_collections.ImplementsIObservableMap",
@@ -3261,13 +3217,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "add_vector_changed", reinterpret_cast<PyCFunction>(IObservableVector_add_VectorChanged), METH_O, nullptr },
         { "remove_vector_changed", reinterpret_cast<PyCFunction>(IObservableVector_remove_VectorChanged), METH_O, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IObservableVector[] = {
         { "size", reinterpret_cast<getter>(IObservableVector_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IObservableVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IObservableVector) },
@@ -3279,8 +3233,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_IObservableVector) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_IObservableVector) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_IObservableVector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IObservableVector = {
         "winrt._winrt_windows_foundation_collections.IObservableVector",
@@ -3328,13 +3281,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIObservableVector[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIObservableVector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIObservableVector), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIObservableVector[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIObservableVector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIObservableVector = {
         "winrt._winrt_windows_foundation_collections.ImplementsIObservableVector",
@@ -3914,13 +3865,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "remove_map_changed", reinterpret_cast<PyCFunction>(IPropertySet_remove_MapChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_IPropertySet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPropertySet), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPropertySet[] = {
         { "size", reinterpret_cast<getter>(IPropertySet_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPropertySet) },
@@ -3932,8 +3881,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_IPropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_IPropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_IPropertySet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPropertySet = {
         "winrt._winrt_windows_foundation_collections.IPropertySet",
@@ -4285,13 +4233,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIPropertySet[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertySet), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertySet), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPropertySet[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPropertySet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPropertySet = {
         "winrt._winrt_windows_foundation_collections.ImplementsIPropertySet",
@@ -4404,22 +4350,19 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef _methods_IVectorChangedEventArgs[] = {
         { "_assign_array_", _assign_array_IVectorChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVectorChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVectorChangedEventArgs[] = {
         { "collection_change", reinterpret_cast<getter>(IVectorChangedEventArgs_get_CollectionChange), nullptr, nullptr, nullptr },
         { "index", reinterpret_cast<getter>(IVectorChangedEventArgs_get_Index), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVectorChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVectorChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVectorChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVectorChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVectorChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVectorChangedEventArgs = {
         "winrt._winrt_windows_foundation_collections.IVectorChangedEventArgs",
@@ -4515,13 +4458,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIVectorChangedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVectorChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVectorChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVectorChangedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVectorChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVectorChangedEventArgs = {
         "winrt._winrt_windows_foundation_collections.ImplementsIVectorChangedEventArgs",
@@ -4620,13 +4561,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "get_many", reinterpret_cast<PyCFunction>(IVectorView_GetMany), METH_VARARGS, nullptr },
         { "index_of", reinterpret_cast<PyCFunction>(IVectorView_IndexOf), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVectorView[] = {
         { "size", reinterpret_cast<getter>(IVectorView_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVectorView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVectorView) },
@@ -4637,8 +4576,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_IVectorView) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_IVectorView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_IVectorView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVectorView = {
         "winrt._winrt_windows_foundation_collections.IVectorView",
@@ -4686,13 +4624,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIVectorView[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVectorView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVectorView), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVectorView[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVectorView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVectorView = {
         "winrt._winrt_windows_foundation_collections.ImplementsIVectorView",
@@ -4844,13 +4780,11 @@ namespace py::cpp::Windows::Foundation::Collections
         { "replace_all", reinterpret_cast<PyCFunction>(IVector_ReplaceAll), METH_VARARGS, nullptr },
         { "set_at", reinterpret_cast<PyCFunction>(IVector_SetAt), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVector[] = {
         { "size", reinterpret_cast<getter>(IVector_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVector) },
@@ -4862,8 +4796,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_IVector) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_IVector) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_IVector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVector = {
         "winrt._winrt_windows_foundation_collections.IVector",
@@ -4911,13 +4844,11 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef methods_ImplementsIVector[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVector), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVector[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVector = {
         "winrt._winrt_windows_foundation_collections.ImplementsIVector",

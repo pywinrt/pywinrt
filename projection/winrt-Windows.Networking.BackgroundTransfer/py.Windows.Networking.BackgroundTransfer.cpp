@@ -1150,8 +1150,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "set_request_header", reinterpret_cast<PyCFunction>(BackgroundDownloader_SetRequestHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundDownloader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundDownloader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundDownloader[] = {
         { "failure_toast_notification", reinterpret_cast<getter>(BackgroundDownloader_get_FailureToastNotification), reinterpret_cast<setter>(BackgroundDownloader_put_FailureToastNotification), nullptr, nullptr },
@@ -1165,16 +1164,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "method", reinterpret_cast<getter>(BackgroundDownloader_get_Method), reinterpret_cast<setter>(BackgroundDownloader_put_Method), nullptr, nullptr },
         { "proxy_credential", reinterpret_cast<getter>(BackgroundDownloader_get_ProxyCredential), reinterpret_cast<setter>(BackgroundDownloader_put_ProxyCredential), nullptr, nullptr },
         { "server_credential", reinterpret_cast<getter>(BackgroundDownloader_get_ServerCredential), reinterpret_cast<setter>(BackgroundDownloader_put_ServerCredential), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundDownloader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundDownloader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundDownloader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundDownloader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundDownloader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundDownloader = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundDownloader",
@@ -1184,16 +1181,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         _type_slots_BackgroundDownloader};
 
     static PyGetSetDef getset_BackgroundDownloader_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BackgroundDownloader_Static[] = {
         { "get_current_downloads_async", reinterpret_cast<PyCFunction>(BackgroundDownloader_GetCurrentDownloadsAsync), METH_VARARGS, nullptr },
         { "get_current_downloads_for_group_async", reinterpret_cast<PyCFunction>(BackgroundDownloader_GetCurrentDownloadsForGroupAsync), METH_VARARGS, nullptr },
         { "get_current_downloads_for_transfer_group_async", reinterpret_cast<PyCFunction>(BackgroundDownloader_GetCurrentDownloadsForTransferGroupAsync), METH_VARARGS, nullptr },
         { "request_unconstrained_downloads_async", reinterpret_cast<PyCFunction>(BackgroundDownloader_RequestUnconstrainedDownloadsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BackgroundDownloader_Static[] = 
     {
@@ -1203,14 +1198,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundDownloader_Static =
-    {
+    static PyType_Spec type_spec_BackgroundDownloader_Static = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundDownloader_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundDownloader_Static
-    };
+        type_slots_BackgroundDownloader_Static};
 
     // ----- BackgroundTransferCompletionGroup class --------------------
 
@@ -1380,22 +1373,19 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "enable", reinterpret_cast<PyCFunction>(BackgroundTransferCompletionGroup_Enable), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundTransferCompletionGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundTransferCompletionGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundTransferCompletionGroup[] = {
         { "is_enabled", reinterpret_cast<getter>(BackgroundTransferCompletionGroup_get_IsEnabled), nullptr, nullptr, nullptr },
         { "trigger", reinterpret_cast<getter>(BackgroundTransferCompletionGroup_get_Trigger), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundTransferCompletionGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferCompletionGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTransferCompletionGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferCompletionGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferCompletionGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundTransferCompletionGroup = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferCompletionGroup",
@@ -1508,22 +1498,19 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef _methods_BackgroundTransferCompletionGroupTriggerDetails[] = {
         { "_assign_array_", _assign_array_BackgroundTransferCompletionGroupTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundTransferCompletionGroupTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundTransferCompletionGroupTriggerDetails[] = {
         { "downloads", reinterpret_cast<getter>(BackgroundTransferCompletionGroupTriggerDetails_get_Downloads), nullptr, nullptr, nullptr },
         { "uploads", reinterpret_cast<getter>(BackgroundTransferCompletionGroupTriggerDetails_get_Uploads), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundTransferCompletionGroupTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferCompletionGroupTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTransferCompletionGroupTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferCompletionGroupTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferCompletionGroupTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundTransferCompletionGroupTriggerDetails = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferCompletionGroupTriggerDetails",
@@ -1762,20 +1749,17 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "set_text", reinterpret_cast<PyCFunction>(BackgroundTransferContentPart_SetText), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundTransferContentPart, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundTransferContentPart), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundTransferContentPart[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundTransferContentPart[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferContentPart) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTransferContentPart) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferContentPart) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferContentPart) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundTransferContentPart = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferContentPart",
@@ -1836,19 +1820,16 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     }
 
     static PyMethodDef _methods_BackgroundTransferError[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundTransferError[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundTransferError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundTransferError = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferError",
@@ -1858,13 +1839,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         _type_slots_BackgroundTransferError};
 
     static PyGetSetDef getset_BackgroundTransferError_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BackgroundTransferError_Static[] = {
         { "get_status", reinterpret_cast<PyCFunction>(BackgroundTransferError_GetStatus), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BackgroundTransferError_Static[] = 
     {
@@ -1874,14 +1853,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundTransferError_Static =
-    {
+    static PyType_Spec type_spec_BackgroundTransferError_Static = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferError_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundTransferError_Static
-    };
+        type_slots_BackgroundTransferError_Static};
 
     // ----- BackgroundTransferGroup class --------------------
 
@@ -2068,22 +2045,19 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef _methods_BackgroundTransferGroup[] = {
         { "_assign_array_", _assign_array_BackgroundTransferGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundTransferGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundTransferGroup[] = {
         { "transfer_behavior", reinterpret_cast<getter>(BackgroundTransferGroup_get_TransferBehavior), reinterpret_cast<setter>(BackgroundTransferGroup_put_TransferBehavior), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(BackgroundTransferGroup_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundTransferGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTransferGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundTransferGroup = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferGroup",
@@ -2093,13 +2067,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         _type_slots_BackgroundTransferGroup};
 
     static PyGetSetDef getset_BackgroundTransferGroup_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BackgroundTransferGroup_Static[] = {
         { "create_group", reinterpret_cast<PyCFunction>(BackgroundTransferGroup_CreateGroup), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BackgroundTransferGroup_Static[] = 
     {
@@ -2109,14 +2081,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundTransferGroup_Static =
-    {
+    static PyType_Spec type_spec_BackgroundTransferGroup_Static = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferGroup_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundTransferGroup_Static
-    };
+        type_slots_BackgroundTransferGroup_Static};
 
     // ----- BackgroundTransferRangesDownloadedEventArgs class --------------------
 
@@ -2263,22 +2233,19 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "get_deferral", reinterpret_cast<PyCFunction>(BackgroundTransferRangesDownloadedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundTransferRangesDownloadedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundTransferRangesDownloadedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundTransferRangesDownloadedEventArgs[] = {
         { "added_ranges", reinterpret_cast<getter>(BackgroundTransferRangesDownloadedEventArgs_get_AddedRanges), nullptr, nullptr, nullptr },
         { "was_download_restarted", reinterpret_cast<getter>(BackgroundTransferRangesDownloadedEventArgs_get_WasDownloadRestarted), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundTransferRangesDownloadedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferRangesDownloadedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTransferRangesDownloadedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferRangesDownloadedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferRangesDownloadedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundTransferRangesDownloadedEventArgs = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferRangesDownloadedEventArgs",
@@ -3522,8 +3489,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "set_request_header", reinterpret_cast<PyCFunction>(BackgroundUploader_SetRequestHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundUploader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundUploader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundUploader[] = {
         { "server_credential", reinterpret_cast<getter>(BackgroundUploader_get_ServerCredential), reinterpret_cast<setter>(BackgroundUploader_put_ServerCredential), nullptr, nullptr },
@@ -3537,16 +3503,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "success_tile_notification", reinterpret_cast<getter>(BackgroundUploader_get_SuccessTileNotification), reinterpret_cast<setter>(BackgroundUploader_put_SuccessTileNotification), nullptr, nullptr },
         { "failure_toast_notification", reinterpret_cast<getter>(BackgroundUploader_get_FailureToastNotification), reinterpret_cast<setter>(BackgroundUploader_put_FailureToastNotification), nullptr, nullptr },
         { "completion_group", reinterpret_cast<getter>(BackgroundUploader_get_CompletionGroup), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundUploader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundUploader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundUploader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundUploader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundUploader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundUploader = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundUploader",
@@ -3556,16 +3520,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         _type_slots_BackgroundUploader};
 
     static PyGetSetDef getset_BackgroundUploader_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BackgroundUploader_Static[] = {
         { "get_current_uploads_async", reinterpret_cast<PyCFunction>(BackgroundUploader_GetCurrentUploadsAsync), METH_VARARGS, nullptr },
         { "get_current_uploads_for_group_async", reinterpret_cast<PyCFunction>(BackgroundUploader_GetCurrentUploadsForGroupAsync), METH_VARARGS, nullptr },
         { "get_current_uploads_for_transfer_group_async", reinterpret_cast<PyCFunction>(BackgroundUploader_GetCurrentUploadsForTransferGroupAsync), METH_VARARGS, nullptr },
         { "request_unconstrained_uploads_async", reinterpret_cast<PyCFunction>(BackgroundUploader_RequestUnconstrainedUploadsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BackgroundUploader_Static[] = 
     {
@@ -3575,14 +3537,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundUploader_Static =
-    {
+    static PyType_Spec type_spec_BackgroundUploader_Static = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundUploader_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundUploader_Static
-    };
+        type_slots_BackgroundUploader_Static};
 
     // ----- ContentPrefetcher class --------------------
 
@@ -3723,19 +3683,16 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     }
 
     static PyMethodDef _methods_ContentPrefetcher[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentPrefetcher[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentPrefetcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentPrefetcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentPrefetcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentPrefetcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentPrefetcher = {
         "winrt._winrt_windows_networking_backgroundtransfer.ContentPrefetcher",
@@ -3748,12 +3705,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "indirect_content_uri", reinterpret_cast<getter>(ContentPrefetcher_get_IndirectContentUri), reinterpret_cast<setter>(ContentPrefetcher_put_IndirectContentUri), nullptr, nullptr },
         { "content_uris", reinterpret_cast<getter>(ContentPrefetcher_get_ContentUris), nullptr, nullptr, nullptr },
         { "last_successful_prefetch_time", reinterpret_cast<getter>(ContentPrefetcher_get_LastSuccessfulPrefetchTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentPrefetcher_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentPrefetcher_Static[] = 
     {
@@ -3763,14 +3718,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }
     };
 
-    static PyType_Spec type_spec_ContentPrefetcher_Static =
-    {
+    static PyType_Spec type_spec_ContentPrefetcher_Static = {
         "winrt._winrt_windows_networking_backgroundtransfer.ContentPrefetcher_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContentPrefetcher_Static
-    };
+        type_slots_ContentPrefetcher_Static};
 
     // ----- DownloadOperation class --------------------
 
@@ -4862,8 +4815,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "remove_ranges_downloaded", reinterpret_cast<PyCFunction>(DownloadOperation_remove_RangesDownloaded), METH_O, nullptr },
         { "_assign_array_", _assign_array_DownloadOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DownloadOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DownloadOperation[] = {
         { "cost_policy", reinterpret_cast<getter>(DownloadOperation_get_CostPolicy), reinterpret_cast<setter>(DownloadOperation_put_CostPolicy), nullptr, nullptr },
@@ -4878,16 +4830,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "is_random_access_required", reinterpret_cast<getter>(DownloadOperation_get_IsRandomAccessRequired), reinterpret_cast<setter>(DownloadOperation_put_IsRandomAccessRequired), nullptr, nullptr },
         { "current_web_error_status", reinterpret_cast<getter>(DownloadOperation_get_CurrentWebErrorStatus), nullptr, nullptr, nullptr },
         { "recoverable_web_error_statuses", reinterpret_cast<getter>(DownloadOperation_get_RecoverableWebErrorStatuses), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DownloadOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DownloadOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DownloadOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DownloadOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DownloadOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DownloadOperation = {
         "winrt._winrt_windows_networking_backgroundtransfer.DownloadOperation",
@@ -5060,24 +5010,21 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef _methods_ResponseInformation[] = {
         { "_assign_array_", _assign_array_ResponseInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResponseInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResponseInformation[] = {
         { "actual_uri", reinterpret_cast<getter>(ResponseInformation_get_ActualUri), nullptr, nullptr, nullptr },
         { "headers", reinterpret_cast<getter>(ResponseInformation_get_Headers), nullptr, nullptr, nullptr },
         { "is_resumable", reinterpret_cast<getter>(ResponseInformation_get_IsResumable), nullptr, nullptr, nullptr },
         { "status_code", reinterpret_cast<getter>(ResponseInformation_get_StatusCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResponseInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResponseInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResponseInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResponseInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResponseInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResponseInformation = {
         "winrt._winrt_windows_networking_backgroundtransfer.ResponseInformation",
@@ -5160,21 +5107,18 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef _methods_UnconstrainedTransferRequestResult[] = {
         { "_assign_array_", _assign_array_UnconstrainedTransferRequestResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UnconstrainedTransferRequestResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UnconstrainedTransferRequestResult[] = {
         { "is_unconstrained", reinterpret_cast<getter>(UnconstrainedTransferRequestResult_get_IsUnconstrained), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UnconstrainedTransferRequestResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UnconstrainedTransferRequestResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UnconstrainedTransferRequestResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UnconstrainedTransferRequestResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UnconstrainedTransferRequestResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UnconstrainedTransferRequestResult = {
         "winrt._winrt_windows_networking_backgroundtransfer.UnconstrainedTransferRequestResult",
@@ -5872,8 +5816,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "start_async", reinterpret_cast<PyCFunction>(UploadOperation_StartAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UploadOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UploadOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UploadOperation[] = {
         { "cost_policy", reinterpret_cast<getter>(UploadOperation_get_CostPolicy), reinterpret_cast<setter>(UploadOperation_put_CostPolicy), nullptr, nullptr },
@@ -5885,16 +5828,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "progress", reinterpret_cast<getter>(UploadOperation_get_Progress), nullptr, nullptr, nullptr },
         { "source_file", reinterpret_cast<getter>(UploadOperation_get_SourceFile), nullptr, nullptr, nullptr },
         { "transfer_group", reinterpret_cast<getter>(UploadOperation_get_TransferGroup), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UploadOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UploadOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UploadOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UploadOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UploadOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UploadOperation = {
         "winrt._winrt_windows_networking_backgroundtransfer.UploadOperation",
@@ -6337,8 +6278,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "set_request_header", reinterpret_cast<PyCFunction>(IBackgroundTransferBase_SetRequestHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBackgroundTransferBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferBase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBackgroundTransferBase[] = {
         { "cost_policy", reinterpret_cast<getter>(IBackgroundTransferBase_get_CostPolicy), reinterpret_cast<setter>(IBackgroundTransferBase_put_CostPolicy), nullptr, nullptr },
@@ -6346,16 +6286,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "method", reinterpret_cast<getter>(IBackgroundTransferBase_get_Method), reinterpret_cast<setter>(IBackgroundTransferBase_put_Method), nullptr, nullptr },
         { "proxy_credential", reinterpret_cast<getter>(IBackgroundTransferBase_get_ProxyCredential), reinterpret_cast<setter>(IBackgroundTransferBase_put_ProxyCredential), nullptr, nullptr },
         { "server_credential", reinterpret_cast<getter>(IBackgroundTransferBase_get_ServerCredential), reinterpret_cast<setter>(IBackgroundTransferBase_put_ServerCredential), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBackgroundTransferBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTransferBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTransferBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTransferBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTransferBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBackgroundTransferBase = {
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferBase",
@@ -6668,13 +6606,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef methods_ImplementsIBackgroundTransferBase[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTransferBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTransferBase), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBackgroundTransferBase[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBackgroundTransferBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTransferBase = {
         "winrt._winrt_windows_networking_backgroundtransfer.ImplementsIBackgroundTransferBase",
@@ -6814,20 +6750,17 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "create_with_name_and_file_name", reinterpret_cast<PyCFunction>(IBackgroundTransferContentPartFactory_CreateWithNameAndFileName), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBackgroundTransferContentPartFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferContentPartFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBackgroundTransferContentPartFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBackgroundTransferContentPartFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTransferContentPartFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTransferContentPartFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTransferContentPartFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTransferContentPartFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBackgroundTransferContentPartFactory = {
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferContentPartFactory",
@@ -6959,13 +6892,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef methods_ImplementsIBackgroundTransferContentPartFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTransferContentPartFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTransferContentPartFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBackgroundTransferContentPartFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBackgroundTransferContentPartFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTransferContentPartFactory = {
         "winrt._winrt_windows_networking_backgroundtransfer.ImplementsIBackgroundTransferContentPartFactory",
@@ -7291,8 +7222,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "get_result_stream_at", reinterpret_cast<PyCFunction>(IBackgroundTransferOperation_GetResultStreamAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBackgroundTransferOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBackgroundTransferOperation[] = {
         { "cost_policy", reinterpret_cast<getter>(IBackgroundTransferOperation_get_CostPolicy), reinterpret_cast<setter>(IBackgroundTransferOperation_put_CostPolicy), nullptr, nullptr },
@@ -7300,16 +7230,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "guid", reinterpret_cast<getter>(IBackgroundTransferOperation_get_Guid), nullptr, nullptr, nullptr },
         { "method", reinterpret_cast<getter>(IBackgroundTransferOperation_get_Method), nullptr, nullptr, nullptr },
         { "requested_uri", reinterpret_cast<getter>(IBackgroundTransferOperation_get_RequestedUri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBackgroundTransferOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTransferOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTransferOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTransferOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTransferOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBackgroundTransferOperation = {
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperation",
@@ -7546,13 +7474,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef methods_ImplementsIBackgroundTransferOperation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTransferOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTransferOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBackgroundTransferOperation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBackgroundTransferOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTransferOperation = {
         "winrt._winrt_windows_networking_backgroundtransfer.ImplementsIBackgroundTransferOperation",
@@ -7674,21 +7600,18 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef _methods_IBackgroundTransferOperationPriority[] = {
         { "_assign_array_", _assign_array_IBackgroundTransferOperationPriority, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferOperationPriority), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBackgroundTransferOperationPriority[] = {
         { "priority", reinterpret_cast<getter>(IBackgroundTransferOperationPriority_get_Priority), reinterpret_cast<setter>(IBackgroundTransferOperationPriority_put_Priority), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBackgroundTransferOperationPriority[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTransferOperationPriority) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTransferOperationPriority) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTransferOperationPriority) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTransferOperationPriority) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBackgroundTransferOperationPriority = {
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperationPriority",
@@ -7787,13 +7710,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyMethodDef methods_ImplementsIBackgroundTransferOperationPriority[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTransferOperationPriority), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTransferOperationPriority), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBackgroundTransferOperationPriority[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBackgroundTransferOperationPriority) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTransferOperationPriority = {
         "winrt._winrt_windows_networking_backgroundtransfer.ImplementsIBackgroundTransferOperationPriority",
@@ -7877,8 +7798,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyMethodDef _methods_BackgroundDownloadProgress[] = {
         { "_assign_array_", _assign_array_BackgroundDownloadProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* BackgroundDownloadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, void* /*unused*/) noexcept
     {
@@ -8051,8 +7971,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "status", reinterpret_cast<getter>(BackgroundDownloadProgress_get_Status), reinterpret_cast<setter>(BackgroundDownloadProgress_set_Status), nullptr, nullptr },
         { "has_response_changed", reinterpret_cast<getter>(BackgroundDownloadProgress_get_HasResponseChanged), reinterpret_cast<setter>(BackgroundDownloadProgress_set_HasResponseChanged), nullptr, nullptr },
         { "has_restarted", reinterpret_cast<getter>(BackgroundDownloadProgress_get_HasRestarted), reinterpret_cast<setter>(BackgroundDownloadProgress_set_HasRestarted), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_BackgroundDownloadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* other, int op) noexcept
     {
@@ -8132,8 +8051,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundDownloadProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BackgroundDownloadProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_BackgroundDownloadProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundDownloadProgress = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundDownloadProgress",
@@ -8211,8 +8129,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyMethodDef _methods_BackgroundTransferFileRange[] = {
         { "_assign_array_", _assign_array_BackgroundTransferFileRange, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* BackgroundTransferFileRange_get_Offset(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, void* /*unused*/) noexcept
     {
@@ -8283,8 +8200,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static PyGetSetDef _getset_BackgroundTransferFileRange[] = {
         { "offset", reinterpret_cast<getter>(BackgroundTransferFileRange_get_Offset), reinterpret_cast<setter>(BackgroundTransferFileRange_set_Offset), nullptr, nullptr },
         { "length", reinterpret_cast<getter>(BackgroundTransferFileRange_get_Length), reinterpret_cast<setter>(BackgroundTransferFileRange_set_Length), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_BackgroundTransferFileRange(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, PyObject* other, int op) noexcept
     {
@@ -8346,8 +8262,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferFileRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BackgroundTransferFileRange) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_BackgroundTransferFileRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundTransferFileRange = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferFileRange",
@@ -8435,8 +8350,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyMethodDef _methods_BackgroundUploadProgress[] = {
         { "_assign_array_", _assign_array_BackgroundUploadProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* BackgroundUploadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, void* /*unused*/) noexcept
     {
@@ -8677,8 +8591,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { "status", reinterpret_cast<getter>(BackgroundUploadProgress_get_Status), reinterpret_cast<setter>(BackgroundUploadProgress_set_Status), nullptr, nullptr },
         { "has_response_changed", reinterpret_cast<getter>(BackgroundUploadProgress_get_HasResponseChanged), reinterpret_cast<setter>(BackgroundUploadProgress_set_HasResponseChanged), nullptr, nullptr },
         { "has_restarted", reinterpret_cast<getter>(BackgroundUploadProgress_get_HasRestarted), reinterpret_cast<setter>(BackgroundUploadProgress_set_HasRestarted), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_BackgroundUploadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* other, int op) noexcept
     {
@@ -8770,8 +8683,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundUploadProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BackgroundUploadProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_BackgroundUploadProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundUploadProgress = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundUploadProgress",

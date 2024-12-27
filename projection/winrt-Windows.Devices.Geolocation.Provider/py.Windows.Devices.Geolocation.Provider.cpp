@@ -254,21 +254,18 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
         { "remove_is_overridden_changed", reinterpret_cast<PyCFunction>(GeolocationProvider_remove_IsOverriddenChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_GeolocationProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GeolocationProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GeolocationProvider[] = {
         { "is_overridden", reinterpret_cast<getter>(GeolocationProvider_get_IsOverridden), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GeolocationProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeolocationProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeolocationProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeolocationProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeolocationProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GeolocationProvider = {
         "winrt._winrt_windows_devices_geolocation_provider.GeolocationProvider",

@@ -197,20 +197,17 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { "remove_unlocking", reinterpret_cast<PyCFunction>(LockApplicationHost_remove_Unlocking), METH_O, nullptr },
         { "_assign_array_", _assign_array_LockApplicationHost, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LockApplicationHost), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockApplicationHost[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockApplicationHost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockApplicationHost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockApplicationHost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockApplicationHost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockApplicationHost) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockApplicationHost = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockApplicationHost",
@@ -220,13 +217,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         _type_slots_LockApplicationHost};
 
     static PyGetSetDef getset_LockApplicationHost_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LockApplicationHost_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(LockApplicationHost_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LockApplicationHost_Static[] = 
     {
@@ -236,14 +231,12 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { }
     };
 
-    static PyType_Spec type_spec_LockApplicationHost_Static =
-    {
+    static PyType_Spec type_spec_LockApplicationHost_Static = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockApplicationHost_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LockApplicationHost_Static
-    };
+        type_slots_LockApplicationHost_Static};
 
     // ----- LockScreenBadge class --------------------
 
@@ -451,24 +444,21 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { "launch_app", reinterpret_cast<PyCFunction>(LockScreenBadge_LaunchApp), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LockScreenBadge, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LockScreenBadge), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockScreenBadge[] = {
         { "automation_name", reinterpret_cast<getter>(LockScreenBadge_get_AutomationName), nullptr, nullptr, nullptr },
         { "glyph", reinterpret_cast<getter>(LockScreenBadge_get_Glyph), nullptr, nullptr, nullptr },
         { "logo", reinterpret_cast<getter>(LockScreenBadge_get_Logo), nullptr, nullptr, nullptr },
         { "number", reinterpret_cast<getter>(LockScreenBadge_get_Number), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockScreenBadge[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenBadge) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenBadge) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenBadge) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenBadge) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockScreenBadge = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenBadge",
@@ -909,24 +899,21 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { "remove_lock_screen_image_changed", reinterpret_cast<PyCFunction>(LockScreenInfo_remove_LockScreenImageChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_LockScreenInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LockScreenInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockScreenInfo[] = {
         { "alarm_icon", reinterpret_cast<getter>(LockScreenInfo_get_AlarmIcon), nullptr, nullptr, nullptr },
         { "badges", reinterpret_cast<getter>(LockScreenInfo_get_Badges), nullptr, nullptr, nullptr },
         { "detail_text", reinterpret_cast<getter>(LockScreenInfo_get_DetailText), nullptr, nullptr, nullptr },
         { "lock_screen_image", reinterpret_cast<getter>(LockScreenInfo_get_LockScreenImage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockScreenInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockScreenInfo = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenInfo",
@@ -1021,20 +1008,17 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { "complete", reinterpret_cast<PyCFunction>(LockScreenUnlockingDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LockScreenUnlockingDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LockScreenUnlockingDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockScreenUnlockingDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockScreenUnlockingDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenUnlockingDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenUnlockingDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenUnlockingDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenUnlockingDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockScreenUnlockingDeferral = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingDeferral",
@@ -1158,21 +1142,18 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { "get_deferral", reinterpret_cast<PyCFunction>(LockScreenUnlockingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LockScreenUnlockingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LockScreenUnlockingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockScreenUnlockingEventArgs[] = {
         { "deadline", reinterpret_cast<getter>(LockScreenUnlockingEventArgs_get_Deadline), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockScreenUnlockingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenUnlockingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenUnlockingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenUnlockingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenUnlockingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockScreenUnlockingEventArgs = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingEventArgs",

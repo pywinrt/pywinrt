@@ -284,19 +284,16 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
     }
 
     static PyMethodDef _methods_KnownResourceQualifierName[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownResourceQualifierName[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownResourceQualifierName[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownResourceQualifierName) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownResourceQualifierName) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownResourceQualifierName) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownResourceQualifierName = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.KnownResourceQualifierName",
@@ -315,12 +312,10 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { "scale", reinterpret_cast<getter>(KnownResourceQualifierName_get_Scale), nullptr, nullptr, nullptr },
         { "target_size", reinterpret_cast<getter>(KnownResourceQualifierName_get_TargetSize), nullptr, nullptr, nullptr },
         { "theme", reinterpret_cast<getter>(KnownResourceQualifierName_get_Theme), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownResourceQualifierName_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownResourceQualifierName_Static[] = 
     {
@@ -330,14 +325,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { }
     };
 
-    static PyType_Spec type_spec_KnownResourceQualifierName_Static =
-    {
+    static PyType_Spec type_spec_KnownResourceQualifierName_Static = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.KnownResourceQualifierName_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownResourceQualifierName_Static
-    };
+        type_slots_KnownResourceQualifierName_Static};
 
     // ----- ResourceCandidate class --------------------
 
@@ -543,24 +536,21 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
     static PyMethodDef _methods_ResourceCandidate[] = {
         { "_assign_array_", _assign_array_ResourceCandidate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceCandidate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResourceCandidate[] = {
         { "kind", reinterpret_cast<getter>(ResourceCandidate_get_Kind), nullptr, nullptr, nullptr },
         { "qualifier_values", reinterpret_cast<getter>(ResourceCandidate_get_QualifierValues), nullptr, nullptr, nullptr },
         { "value_as_bytes", reinterpret_cast<getter>(ResourceCandidate_get_ValueAsBytes), nullptr, nullptr, nullptr },
         { "value_as_string", reinterpret_cast<getter>(ResourceCandidate_get_ValueAsString), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResourceCandidate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceCandidate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceCandidate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceCandidate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceCandidate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResourceCandidate = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.ResourceCandidate",
@@ -643,21 +633,18 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
     static PyMethodDef _methods_ResourceContext[] = {
         { "_assign_array_", _assign_array_ResourceContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResourceContext[] = {
         { "qualifier_values", reinterpret_cast<getter>(ResourceContext_get_QualifierValues), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResourceContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResourceContext = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.ResourceContext",
@@ -889,20 +876,17 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { "get_string_for_uri", reinterpret_cast<PyCFunction>(ResourceLoader_GetStringForUri), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ResourceLoader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceLoader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResourceLoader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResourceLoader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceLoader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceLoader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceLoader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceLoader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResourceLoader = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.ResourceLoader",
@@ -912,13 +896,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         _type_slots_ResourceLoader};
 
     static PyGetSetDef getset_ResourceLoader_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ResourceLoader_Static[] = {
         { "get_default_resource_file_path", reinterpret_cast<PyCFunction>(ResourceLoader_GetDefaultResourceFilePath), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ResourceLoader_Static[] = 
     {
@@ -928,14 +910,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { }
     };
 
-    static PyType_Spec type_spec_ResourceLoader_Static =
-    {
+    static PyType_Spec type_spec_ResourceLoader_Static = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.ResourceLoader_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ResourceLoader_Static
-    };
+        type_slots_ResourceLoader_Static};
 
     // ----- ResourceManager class --------------------
 
@@ -1156,21 +1136,18 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { "remove_resource_not_found", reinterpret_cast<PyCFunction>(ResourceManager_remove_ResourceNotFound), METH_O, nullptr },
         { "_assign_array_", _assign_array_ResourceManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResourceManager[] = {
         { "main_resource_map", reinterpret_cast<getter>(ResourceManager_get_MainResourceMap), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResourceManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResourceManager = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.ResourceManager",
@@ -1600,21 +1577,18 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { "try_get_value_with_context", reinterpret_cast<PyCFunction>(ResourceMap_TryGetValueWithContext), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ResourceMap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceMap), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResourceMap[] = {
         { "resource_count", reinterpret_cast<getter>(ResourceMap_get_ResourceCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResourceMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceMap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceMap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceMap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResourceMap = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.ResourceMap",
@@ -1771,22 +1745,19 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { "set_resolved_candidate", reinterpret_cast<PyCFunction>(ResourceNotFoundEventArgs_SetResolvedCandidate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ResourceNotFoundEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceNotFoundEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResourceNotFoundEventArgs[] = {
         { "context", reinterpret_cast<getter>(ResourceNotFoundEventArgs_get_Context), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ResourceNotFoundEventArgs_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResourceNotFoundEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceNotFoundEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceNotFoundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceNotFoundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceNotFoundEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResourceNotFoundEventArgs = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.ResourceNotFoundEventArgs",
@@ -1869,21 +1840,18 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
     static PyMethodDef _methods_IResourceContext[] = {
         { "_assign_array_", _assign_array_IResourceContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IResourceContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IResourceContext[] = {
         { "qualifier_values", reinterpret_cast<getter>(IResourceContext_get_QualifierValues), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IResourceContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IResourceContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IResourceContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IResourceContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IResourceContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IResourceContext = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.IResourceContext",
@@ -1959,13 +1927,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
     static PyMethodDef methods_ImplementsIResourceContext[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIResourceContext), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIResourceContext), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIResourceContext[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIResourceContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIResourceContext = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.ImplementsIResourceContext",
@@ -2156,21 +2122,18 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { "remove_resource_not_found", reinterpret_cast<PyCFunction>(IResourceManager_remove_ResourceNotFound), METH_O, nullptr },
         { "_assign_array_", _assign_array_IResourceManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IResourceManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IResourceManager[] = {
         { "main_resource_map", reinterpret_cast<getter>(IResourceManager_get_MainResourceMap), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IResourceManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IResourceManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IResourceManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IResourceManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IResourceManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IResourceManager = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.IResourceManager",
@@ -2334,13 +2297,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
     static PyMethodDef methods_ImplementsIResourceManager[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIResourceManager), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIResourceManager), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIResourceManager[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIResourceManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIResourceManager = {
         "winrt._winrt_microsoft_windows_applicationmodel_resources.ImplementsIResourceManager",

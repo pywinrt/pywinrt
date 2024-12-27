@@ -222,23 +222,20 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "launch_for_user_async", reinterpret_cast<PyCFunction>(AppListEntry_LaunchForUserAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppListEntry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppListEntry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppListEntry[] = {
         { "display_info", reinterpret_cast<getter>(AppListEntry_get_DisplayInfo), nullptr, nullptr, nullptr },
         { "app_user_model_id", reinterpret_cast<getter>(AppListEntry_get_AppUserModelId), nullptr, nullptr, nullptr },
         { "app_info", reinterpret_cast<getter>(AppListEntry_get_AppInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppListEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppListEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppListEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppListEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppListEntry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppListEntry = {
         "winrt._winrt_windows_applicationmodel_core.AppListEntry",
@@ -1334,19 +1331,16 @@ namespace py::cpp::Windows::ApplicationModel::Core
     }
 
     static PyMethodDef _methods_CoreApplication[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreApplication[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreApplication[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreApplication) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreApplication) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreApplication) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreApplication = {
         "winrt._winrt_windows_applicationmodel_core.CoreApplication",
@@ -1360,8 +1354,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "properties", reinterpret_cast<getter>(CoreApplication_get_Properties), nullptr, nullptr, nullptr },
         { "main_view", reinterpret_cast<getter>(CoreApplication_get_MainView), nullptr, nullptr, nullptr },
         { "views", reinterpret_cast<getter>(CoreApplication_get_Views), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreApplication_Static[] = {
         { "create_new_view", reinterpret_cast<PyCFunction>(CoreApplication_CreateNewView), METH_VARARGS, nullptr },
@@ -1390,8 +1383,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "remove_resuming", reinterpret_cast<PyCFunction>(CoreApplication_remove_Resuming), METH_O, nullptr },
         { "add_suspending", reinterpret_cast<PyCFunction>(CoreApplication_add_Suspending), METH_O, nullptr },
         { "remove_suspending", reinterpret_cast<PyCFunction>(CoreApplication_remove_Suspending), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreApplication_Static[] = 
     {
@@ -1401,14 +1393,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreApplication_Static =
-    {
+    static PyType_Spec type_spec_CoreApplication_Static = {
         "winrt._winrt_windows_applicationmodel_core.CoreApplication_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreApplication_Static
-    };
+        type_slots_CoreApplication_Static};
 
     // ----- CoreApplicationView class --------------------
 
@@ -1828,8 +1818,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "remove_hosted_view_closing", reinterpret_cast<PyCFunction>(CoreApplicationView_remove_HostedViewClosing), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreApplicationView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreApplicationView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreApplicationView[] = {
         { "core_window", reinterpret_cast<getter>(CoreApplicationView_get_CoreWindow), nullptr, nullptr, nullptr },
@@ -1840,16 +1829,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "title_bar", reinterpret_cast<getter>(CoreApplicationView_get_TitleBar), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(CoreApplicationView_get_Properties), nullptr, nullptr, nullptr },
         { "dispatcher_queue", reinterpret_cast<getter>(CoreApplicationView_get_DispatcherQueue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreApplicationView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreApplicationView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreApplicationView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreApplicationView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreApplicationView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreApplicationView = {
         "winrt._winrt_windows_applicationmodel_core.CoreApplicationView",
@@ -2225,8 +2212,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "remove_layout_metrics_changed", reinterpret_cast<PyCFunction>(CoreApplicationViewTitleBar_remove_LayoutMetricsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreApplicationViewTitleBar, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreApplicationViewTitleBar), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreApplicationViewTitleBar[] = {
         { "extend_view_into_title_bar", reinterpret_cast<getter>(CoreApplicationViewTitleBar_get_ExtendViewIntoTitleBar), reinterpret_cast<setter>(CoreApplicationViewTitleBar_put_ExtendViewIntoTitleBar), nullptr, nullptr },
@@ -2234,16 +2220,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "is_visible", reinterpret_cast<getter>(CoreApplicationViewTitleBar_get_IsVisible), nullptr, nullptr, nullptr },
         { "system_overlay_left_inset", reinterpret_cast<getter>(CoreApplicationViewTitleBar_get_SystemOverlayLeftInset), nullptr, nullptr, nullptr },
         { "system_overlay_right_inset", reinterpret_cast<getter>(CoreApplicationViewTitleBar_get_SystemOverlayRightInset), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreApplicationViewTitleBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreApplicationViewTitleBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreApplicationViewTitleBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreApplicationViewTitleBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreApplicationViewTitleBar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreApplicationViewTitleBar = {
         "winrt._winrt_windows_applicationmodel_core.CoreApplicationViewTitleBar",
@@ -2337,20 +2321,17 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(HostedViewClosingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HostedViewClosingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HostedViewClosingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HostedViewClosingEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HostedViewClosingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HostedViewClosingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HostedViewClosingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HostedViewClosingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HostedViewClosingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HostedViewClosingEventArgs = {
         "winrt._winrt_windows_applicationmodel_core.HostedViewClosingEventArgs",
@@ -2475,21 +2456,18 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "propagate", reinterpret_cast<PyCFunction>(UnhandledError_Propagate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UnhandledError, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UnhandledError), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UnhandledError[] = {
         { "handled", reinterpret_cast<getter>(UnhandledError_get_Handled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UnhandledError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UnhandledError) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UnhandledError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UnhandledError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UnhandledError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UnhandledError = {
         "winrt._winrt_windows_applicationmodel_core.UnhandledError",
@@ -2572,21 +2550,18 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static PyMethodDef _methods_UnhandledErrorDetectedEventArgs[] = {
         { "_assign_array_", _assign_array_UnhandledErrorDetectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UnhandledErrorDetectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UnhandledErrorDetectedEventArgs[] = {
         { "unhandled_error", reinterpret_cast<getter>(UnhandledErrorDetectedEventArgs_get_UnhandledError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UnhandledErrorDetectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UnhandledErrorDetectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UnhandledErrorDetectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UnhandledErrorDetectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UnhandledErrorDetectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UnhandledErrorDetectedEventArgs = {
         "winrt._winrt_windows_applicationmodel_core.UnhandledErrorDetectedEventArgs",
@@ -2706,20 +2681,17 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "remove_unhandled_error_detected", reinterpret_cast<PyCFunction>(ICoreApplicationUnhandledError_remove_UnhandledErrorDetected), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICoreApplicationUnhandledError, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreApplicationUnhandledError), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICoreApplicationUnhandledError[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICoreApplicationUnhandledError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreApplicationUnhandledError) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreApplicationUnhandledError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreApplicationUnhandledError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreApplicationUnhandledError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICoreApplicationUnhandledError = {
         "winrt._winrt_windows_applicationmodel_core.ICoreApplicationUnhandledError",
@@ -2837,13 +2809,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static PyMethodDef methods_ImplementsICoreApplicationUnhandledError[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreApplicationUnhandledError), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreApplicationUnhandledError), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICoreApplicationUnhandledError[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICoreApplicationUnhandledError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICoreApplicationUnhandledError = {
         "winrt._winrt_windows_applicationmodel_core.ImplementsICoreApplicationUnhandledError",
@@ -3112,20 +3082,17 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "uninitialize", reinterpret_cast<PyCFunction>(IFrameworkView_Uninitialize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFrameworkView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFrameworkView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFrameworkView[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFrameworkView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFrameworkView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFrameworkView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFrameworkView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFrameworkView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFrameworkView = {
         "winrt._winrt_windows_applicationmodel_core.IFrameworkView",
@@ -3319,13 +3286,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static PyMethodDef methods_ImplementsIFrameworkView[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFrameworkView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFrameworkView), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFrameworkView[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFrameworkView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFrameworkView = {
         "winrt._winrt_windows_applicationmodel_core.ImplementsIFrameworkView",
@@ -3419,20 +3384,17 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "create_view", reinterpret_cast<PyCFunction>(IFrameworkViewSource_CreateView), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFrameworkViewSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFrameworkViewSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFrameworkViewSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFrameworkViewSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFrameworkViewSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFrameworkViewSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFrameworkViewSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFrameworkViewSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFrameworkViewSource = {
         "winrt._winrt_windows_applicationmodel_core.IFrameworkViewSource",
@@ -3514,13 +3476,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static PyMethodDef methods_ImplementsIFrameworkViewSource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFrameworkViewSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFrameworkViewSource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFrameworkViewSource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFrameworkViewSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFrameworkViewSource = {
         "winrt._winrt_windows_applicationmodel_core.ImplementsIFrameworkViewSource",

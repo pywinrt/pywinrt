@@ -464,19 +464,16 @@ namespace py::cpp::Windows::Devices::Haptics
     }
 
     static PyMethodDef _methods_KnownSimpleHapticsControllerWaveforms[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownSimpleHapticsControllerWaveforms[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownSimpleHapticsControllerWaveforms[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownSimpleHapticsControllerWaveforms) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownSimpleHapticsControllerWaveforms) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownSimpleHapticsControllerWaveforms) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms = {
         "winrt._winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms",
@@ -501,12 +498,10 @@ namespace py::cpp::Windows::Devices::Haptics
         { "marker_continuous", reinterpret_cast<getter>(KnownSimpleHapticsControllerWaveforms_get_MarkerContinuous), nullptr, nullptr, nullptr },
         { "pencil_continuous", reinterpret_cast<getter>(KnownSimpleHapticsControllerWaveforms_get_PencilContinuous), nullptr, nullptr, nullptr },
         { "success", reinterpret_cast<getter>(KnownSimpleHapticsControllerWaveforms_get_Success), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownSimpleHapticsControllerWaveforms_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownSimpleHapticsControllerWaveforms_Static[] = 
     {
@@ -516,14 +511,12 @@ namespace py::cpp::Windows::Devices::Haptics
         { }
     };
 
-    static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms_Static =
-    {
+    static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms_Static = {
         "winrt._winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownSimpleHapticsControllerWaveforms_Static
-    };
+        type_slots_KnownSimpleHapticsControllerWaveforms_Static};
 
     // ----- SimpleHapticsController class --------------------
 
@@ -973,8 +966,7 @@ namespace py::cpp::Windows::Devices::Haptics
         { "stop_feedback", reinterpret_cast<PyCFunction>(SimpleHapticsController_StopFeedback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SimpleHapticsController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SimpleHapticsController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SimpleHapticsController[] = {
         { "id", reinterpret_cast<getter>(SimpleHapticsController_get_Id), nullptr, nullptr, nullptr },
@@ -983,16 +975,14 @@ namespace py::cpp::Windows::Devices::Haptics
         { "is_play_duration_supported", reinterpret_cast<getter>(SimpleHapticsController_get_IsPlayDurationSupported), nullptr, nullptr, nullptr },
         { "is_replay_pause_interval_supported", reinterpret_cast<getter>(SimpleHapticsController_get_IsReplayPauseIntervalSupported), nullptr, nullptr, nullptr },
         { "supported_feedback", reinterpret_cast<getter>(SimpleHapticsController_get_SupportedFeedback), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SimpleHapticsController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SimpleHapticsController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SimpleHapticsController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SimpleHapticsController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SimpleHapticsController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SimpleHapticsController = {
         "winrt._winrt_windows_devices_haptics.SimpleHapticsController",
@@ -1105,22 +1095,19 @@ namespace py::cpp::Windows::Devices::Haptics
     static PyMethodDef _methods_SimpleHapticsControllerFeedback[] = {
         { "_assign_array_", _assign_array_SimpleHapticsControllerFeedback, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SimpleHapticsControllerFeedback), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SimpleHapticsControllerFeedback[] = {
         { "duration", reinterpret_cast<getter>(SimpleHapticsControllerFeedback_get_Duration), nullptr, nullptr, nullptr },
         { "waveform", reinterpret_cast<getter>(SimpleHapticsControllerFeedback_get_Waveform), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SimpleHapticsControllerFeedback[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SimpleHapticsControllerFeedback) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SimpleHapticsControllerFeedback) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SimpleHapticsControllerFeedback) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SimpleHapticsControllerFeedback) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SimpleHapticsControllerFeedback = {
         "winrt._winrt_windows_devices_haptics.SimpleHapticsControllerFeedback",
@@ -1435,22 +1422,19 @@ namespace py::cpp::Windows::Devices::Haptics
     static PyMethodDef _methods_VibrationDevice[] = {
         { "_assign_array_", _assign_array_VibrationDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VibrationDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VibrationDevice[] = {
         { "id", reinterpret_cast<getter>(VibrationDevice_get_Id), nullptr, nullptr, nullptr },
         { "simple_haptics_controller", reinterpret_cast<getter>(VibrationDevice_get_SimpleHapticsController), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VibrationDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VibrationDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VibrationDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VibrationDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VibrationDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VibrationDevice = {
         "winrt._winrt_windows_devices_haptics.VibrationDevice",
@@ -1460,8 +1444,7 @@ namespace py::cpp::Windows::Devices::Haptics
         _type_slots_VibrationDevice};
 
     static PyGetSetDef getset_VibrationDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_VibrationDevice_Static[] = {
         { "find_all_async", reinterpret_cast<PyCFunction>(VibrationDevice_FindAllAsync), METH_VARARGS, nullptr },
@@ -1469,8 +1452,7 @@ namespace py::cpp::Windows::Devices::Haptics
         { "get_default_async", reinterpret_cast<PyCFunction>(VibrationDevice_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(VibrationDevice_GetDeviceSelector), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(VibrationDevice_RequestAccessAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_VibrationDevice_Static[] = 
     {
@@ -1480,14 +1462,12 @@ namespace py::cpp::Windows::Devices::Haptics
         { }
     };
 
-    static PyType_Spec type_spec_VibrationDevice_Static =
-    {
+    static PyType_Spec type_spec_VibrationDevice_Static = {
         "winrt._winrt_windows_devices_haptics.VibrationDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VibrationDevice_Static
-    };
+        type_slots_VibrationDevice_Static};
 
     // ----- Windows.Devices.Haptics Initialization --------------------
 

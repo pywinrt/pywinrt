@@ -399,20 +399,17 @@ namespace py::cpp::Windows::UI::Notifications::Management
         { "remove_notification_changed", reinterpret_cast<PyCFunction>(UserNotificationListener_remove_NotificationChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_UserNotificationListener, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserNotificationListener), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserNotificationListener[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserNotificationListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserNotificationListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserNotificationListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserNotificationListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserNotificationListener) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserNotificationListener = {
         "winrt._winrt_windows_ui_notifications_management.UserNotificationListener",
@@ -423,12 +420,10 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyGetSetDef getset_UserNotificationListener_Static[] = {
         { "current", reinterpret_cast<getter>(UserNotificationListener_get_Current), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserNotificationListener_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserNotificationListener_Static[] = 
     {
@@ -438,14 +433,12 @@ namespace py::cpp::Windows::UI::Notifications::Management
         { }
     };
 
-    static PyType_Spec type_spec_UserNotificationListener_Static =
-    {
+    static PyType_Spec type_spec_UserNotificationListener_Static = {
         "winrt._winrt_windows_ui_notifications_management.UserNotificationListener_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserNotificationListener_Static
-    };
+        type_slots_UserNotificationListener_Static};
 
     // ----- Windows.UI.Notifications.Management Initialization --------------------
 

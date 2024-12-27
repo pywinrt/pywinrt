@@ -226,8 +226,7 @@ namespace py::cpp::Windows::Devices
     static PyMethodDef _methods_LowLevelDevicesAggregateProvider[] = {
         { "_assign_array_", _assign_array_LowLevelDevicesAggregateProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LowLevelDevicesAggregateProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LowLevelDevicesAggregateProvider[] = {
         { "adc_controller_provider", reinterpret_cast<getter>(LowLevelDevicesAggregateProvider_get_AdcControllerProvider), nullptr, nullptr, nullptr },
@@ -235,16 +234,14 @@ namespace py::cpp::Windows::Devices
         { "i2c_controller_provider", reinterpret_cast<getter>(LowLevelDevicesAggregateProvider_get_I2cControllerProvider), nullptr, nullptr, nullptr },
         { "pwm_controller_provider", reinterpret_cast<getter>(LowLevelDevicesAggregateProvider_get_PwmControllerProvider), nullptr, nullptr, nullptr },
         { "spi_controller_provider", reinterpret_cast<getter>(LowLevelDevicesAggregateProvider_get_SpiControllerProvider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LowLevelDevicesAggregateProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLevelDevicesAggregateProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LowLevelDevicesAggregateProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLevelDevicesAggregateProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLevelDevicesAggregateProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LowLevelDevicesAggregateProvider = {
         "winrt._winrt_windows_devices.LowLevelDevicesAggregateProvider",
@@ -366,20 +363,17 @@ namespace py::cpp::Windows::Devices
     static PyMethodDef _methods_LowLevelDevicesController[] = {
         { "_assign_array_", _assign_array_LowLevelDevicesController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LowLevelDevicesController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LowLevelDevicesController[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LowLevelDevicesController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLevelDevicesController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LowLevelDevicesController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLevelDevicesController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLevelDevicesController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LowLevelDevicesController = {
         "winrt._winrt_windows_devices.LowLevelDevicesController",
@@ -390,12 +384,10 @@ namespace py::cpp::Windows::Devices
 
     static PyGetSetDef getset_LowLevelDevicesController_Static[] = {
         { "default_provider", reinterpret_cast<getter>(LowLevelDevicesController_get_DefaultProvider), reinterpret_cast<setter>(LowLevelDevicesController_put_DefaultProvider), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LowLevelDevicesController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LowLevelDevicesController_Static[] = 
     {
@@ -405,14 +397,12 @@ namespace py::cpp::Windows::Devices
         { }
     };
 
-    static PyType_Spec type_spec_LowLevelDevicesController_Static =
-    {
+    static PyType_Spec type_spec_LowLevelDevicesController_Static = {
         "winrt._winrt_windows_devices.LowLevelDevicesController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LowLevelDevicesController_Static
-    };
+        type_slots_LowLevelDevicesController_Static};
 
     // ----- ILowLevelDevicesAggregateProvider interface --------------------
 
@@ -608,8 +598,7 @@ namespace py::cpp::Windows::Devices
     static PyMethodDef _methods_ILowLevelDevicesAggregateProvider[] = {
         { "_assign_array_", _assign_array_ILowLevelDevicesAggregateProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILowLevelDevicesAggregateProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILowLevelDevicesAggregateProvider[] = {
         { "adc_controller_provider", reinterpret_cast<getter>(ILowLevelDevicesAggregateProvider_get_AdcControllerProvider), nullptr, nullptr, nullptr },
@@ -617,16 +606,14 @@ namespace py::cpp::Windows::Devices
         { "i2c_controller_provider", reinterpret_cast<getter>(ILowLevelDevicesAggregateProvider_get_I2cControllerProvider), nullptr, nullptr, nullptr },
         { "pwm_controller_provider", reinterpret_cast<getter>(ILowLevelDevicesAggregateProvider_get_PwmControllerProvider), nullptr, nullptr, nullptr },
         { "spi_controller_provider", reinterpret_cast<getter>(ILowLevelDevicesAggregateProvider_get_SpiControllerProvider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILowLevelDevicesAggregateProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILowLevelDevicesAggregateProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILowLevelDevicesAggregateProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILowLevelDevicesAggregateProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILowLevelDevicesAggregateProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILowLevelDevicesAggregateProvider = {
         "winrt._winrt_windows_devices.ILowLevelDevicesAggregateProvider",
@@ -782,13 +769,11 @@ namespace py::cpp::Windows::Devices
     static PyMethodDef methods_ImplementsILowLevelDevicesAggregateProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILowLevelDevicesAggregateProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILowLevelDevicesAggregateProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILowLevelDevicesAggregateProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILowLevelDevicesAggregateProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILowLevelDevicesAggregateProvider = {
         "winrt._winrt_windows_devices.ImplementsILowLevelDevicesAggregateProvider",

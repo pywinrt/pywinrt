@@ -139,19 +139,16 @@ namespace py::cpp::Windows::Phone::System::Power
     }
 
     static PyMethodDef _methods_PowerManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PowerManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PowerManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PowerManager = {
         "winrt._winrt_windows_phone_system_power.PowerManager",
@@ -163,14 +160,12 @@ namespace py::cpp::Windows::Phone::System::Power
     static PyGetSetDef getset_PowerManager_Static[] = {
         { "power_saving_mode", reinterpret_cast<getter>(PowerManager_get_PowerSavingMode), nullptr, nullptr, nullptr },
         { "power_saving_mode_enabled", reinterpret_cast<getter>(PowerManager_get_PowerSavingModeEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PowerManager_Static[] = {
         { "add_power_saving_mode_changed", reinterpret_cast<PyCFunction>(PowerManager_add_PowerSavingModeChanged), METH_O, nullptr },
         { "remove_power_saving_mode_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_PowerSavingModeChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PowerManager_Static[] = 
     {
@@ -180,14 +175,12 @@ namespace py::cpp::Windows::Phone::System::Power
         { }
     };
 
-    static PyType_Spec type_spec_PowerManager_Static =
-    {
+    static PyType_Spec type_spec_PowerManager_Static = {
         "winrt._winrt_windows_phone_system_power.PowerManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PowerManager_Static
-    };
+        type_slots_PowerManager_Static};
 
     // ----- Windows.Phone.System.Power Initialization --------------------
 

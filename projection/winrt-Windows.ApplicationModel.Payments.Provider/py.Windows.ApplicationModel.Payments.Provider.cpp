@@ -122,21 +122,18 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         { "report_can_make_payment_result", reinterpret_cast<PyCFunction>(PaymentAppCanMakePaymentTriggerDetails_ReportCanMakePaymentResult), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PaymentAppCanMakePaymentTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PaymentAppCanMakePaymentTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PaymentAppCanMakePaymentTriggerDetails[] = {
         { "request", reinterpret_cast<getter>(PaymentAppCanMakePaymentTriggerDetails_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PaymentAppCanMakePaymentTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentAppCanMakePaymentTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentAppCanMakePaymentTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentAppCanMakePaymentTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentAppCanMakePaymentTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PaymentAppCanMakePaymentTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppCanMakePaymentTriggerDetails",
@@ -303,20 +300,17 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         { "unregister_async", reinterpret_cast<PyCFunction>(PaymentAppManager_UnregisterAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PaymentAppManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PaymentAppManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PaymentAppManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PaymentAppManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentAppManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentAppManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentAppManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentAppManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PaymentAppManager = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppManager",
@@ -327,12 +321,10 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyGetSetDef getset_PaymentAppManager_Static[] = {
         { "current", reinterpret_cast<getter>(PaymentAppManager_get_Current), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PaymentAppManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PaymentAppManager_Static[] = 
     {
@@ -342,14 +334,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         { }
     };
 
-    static PyType_Spec type_spec_PaymentAppManager_Static =
-    {
+    static PyType_Spec type_spec_PaymentAppManager_Static = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PaymentAppManager_Static
-    };
+        type_slots_PaymentAppManager_Static};
 
     // ----- PaymentTransaction class --------------------
 
@@ -845,24 +835,21 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         { "update_shipping_address_async", reinterpret_cast<PyCFunction>(PaymentTransaction_UpdateShippingAddressAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PaymentTransaction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PaymentTransaction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PaymentTransaction[] = {
         { "payer_phone_number", reinterpret_cast<getter>(PaymentTransaction_get_PayerPhoneNumber), reinterpret_cast<setter>(PaymentTransaction_put_PayerPhoneNumber), nullptr, nullptr },
         { "payer_name", reinterpret_cast<getter>(PaymentTransaction_get_PayerName), reinterpret_cast<setter>(PaymentTransaction_put_PayerName), nullptr, nullptr },
         { "payer_email", reinterpret_cast<getter>(PaymentTransaction_get_PayerEmail), reinterpret_cast<setter>(PaymentTransaction_put_PayerEmail), nullptr, nullptr },
         { "payment_request", reinterpret_cast<getter>(PaymentTransaction_get_PaymentRequest), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PaymentTransaction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentTransaction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentTransaction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentTransaction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentTransaction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PaymentTransaction = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentTransaction",
@@ -872,13 +859,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         _type_slots_PaymentTransaction};
 
     static PyGetSetDef getset_PaymentTransaction_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PaymentTransaction_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(PaymentTransaction_FromIdAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PaymentTransaction_Static[] = 
     {
@@ -888,14 +873,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         { }
     };
 
-    static PyType_Spec type_spec_PaymentTransaction_Static =
-    {
+    static PyType_Spec type_spec_PaymentTransaction_Static = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentTransaction_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PaymentTransaction_Static
-    };
+        type_slots_PaymentTransaction_Static};
 
     // ----- PaymentTransactionAcceptResult class --------------------
 
@@ -971,21 +954,18 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     static PyMethodDef _methods_PaymentTransactionAcceptResult[] = {
         { "_assign_array_", _assign_array_PaymentTransactionAcceptResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PaymentTransactionAcceptResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PaymentTransactionAcceptResult[] = {
         { "status", reinterpret_cast<getter>(PaymentTransactionAcceptResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PaymentTransactionAcceptResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentTransactionAcceptResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentTransactionAcceptResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentTransactionAcceptResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentTransactionAcceptResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PaymentTransactionAcceptResult = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentTransactionAcceptResult",

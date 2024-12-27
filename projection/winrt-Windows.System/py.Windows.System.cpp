@@ -108,22 +108,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppActivationResult[] = {
         { "_assign_array_", _assign_array_AppActivationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppActivationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppActivationResult[] = {
         { "app_resource_group_info", reinterpret_cast<getter>(AppActivationResult_get_AppResourceGroupInfo), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(AppActivationResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppActivationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppActivationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppActivationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppActivationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppActivationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppActivationResult = {
         "winrt._winrt_windows_system.AppActivationResult",
@@ -573,21 +570,18 @@ namespace py::cpp::Windows::System
         { "launch_async", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_LaunchAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppDiagnosticInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppDiagnosticInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppDiagnosticInfo[] = {
         { "app_info", reinterpret_cast<getter>(AppDiagnosticInfo_get_AppInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppDiagnosticInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppDiagnosticInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppDiagnosticInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppDiagnosticInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppDiagnosticInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppDiagnosticInfo = {
         "winrt._winrt_windows_system.AppDiagnosticInfo",
@@ -597,8 +591,7 @@ namespace py::cpp::Windows::System
         _type_slots_AppDiagnosticInfo};
 
     static PyGetSetDef getset_AppDiagnosticInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppDiagnosticInfo_Static[] = {
         { "create_watcher", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_CreateWatcher), METH_VARARGS, nullptr },
@@ -607,8 +600,7 @@ namespace py::cpp::Windows::System
         { "request_info_for_app_async", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_RequestInfoForAppAsync), METH_VARARGS, nullptr },
         { "request_info_for_app_user_model_id", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_RequestInfoForAppUserModelId), METH_VARARGS, nullptr },
         { "request_info_for_package_async", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_RequestInfoForPackageAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppDiagnosticInfo_Static[] = 
     {
@@ -618,14 +610,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_AppDiagnosticInfo_Static =
-    {
+    static PyType_Spec type_spec_AppDiagnosticInfo_Static = {
         "winrt._winrt_windows_system.AppDiagnosticInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppDiagnosticInfo_Static
-    };
+        type_slots_AppDiagnosticInfo_Static};
 
     // ----- AppDiagnosticInfoWatcher class --------------------
 
@@ -1053,21 +1043,18 @@ namespace py::cpp::Windows::System
         { "remove_stopped", reinterpret_cast<PyCFunction>(AppDiagnosticInfoWatcher_remove_Stopped), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppDiagnosticInfoWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppDiagnosticInfoWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppDiagnosticInfoWatcher[] = {
         { "status", reinterpret_cast<getter>(AppDiagnosticInfoWatcher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppDiagnosticInfoWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppDiagnosticInfoWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppDiagnosticInfoWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppDiagnosticInfoWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppDiagnosticInfoWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppDiagnosticInfoWatcher = {
         "winrt._winrt_windows_system.AppDiagnosticInfoWatcher",
@@ -1150,21 +1137,18 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppDiagnosticInfoWatcherEventArgs[] = {
         { "_assign_array_", _assign_array_AppDiagnosticInfoWatcherEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppDiagnosticInfoWatcherEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppDiagnosticInfoWatcherEventArgs[] = {
         { "app_diagnostic_info", reinterpret_cast<getter>(AppDiagnosticInfoWatcherEventArgs_get_AppDiagnosticInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppDiagnosticInfoWatcherEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppDiagnosticInfoWatcherEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppDiagnosticInfoWatcherEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppDiagnosticInfoWatcherEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppDiagnosticInfoWatcherEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppDiagnosticInfoWatcherEventArgs = {
         "winrt._winrt_windows_system.AppDiagnosticInfoWatcherEventArgs",
@@ -1247,21 +1231,18 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppExecutionStateChangeResult[] = {
         { "_assign_array_", _assign_array_AppExecutionStateChangeResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppExecutionStateChangeResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppExecutionStateChangeResult[] = {
         { "extended_error", reinterpret_cast<getter>(AppExecutionStateChangeResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppExecutionStateChangeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppExecutionStateChangeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppExecutionStateChangeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppExecutionStateChangeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppExecutionStateChangeResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppExecutionStateChangeResult = {
         "winrt._winrt_windows_system.AppExecutionStateChangeResult",
@@ -1464,8 +1445,7 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppMemoryReport[] = {
         { "_assign_array_", _assign_array_AppMemoryReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppMemoryReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppMemoryReport[] = {
         { "peak_private_commit_usage", reinterpret_cast<getter>(AppMemoryReport_get_PeakPrivateCommitUsage), nullptr, nullptr, nullptr },
@@ -1473,16 +1453,14 @@ namespace py::cpp::Windows::System
         { "total_commit_limit", reinterpret_cast<getter>(AppMemoryReport_get_TotalCommitLimit), nullptr, nullptr, nullptr },
         { "total_commit_usage", reinterpret_cast<getter>(AppMemoryReport_get_TotalCommitUsage), nullptr, nullptr, nullptr },
         { "expected_total_commit_limit", reinterpret_cast<getter>(AppMemoryReport_get_ExpectedTotalCommitLimit), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppMemoryReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppMemoryReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppMemoryReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppMemoryReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppMemoryReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppMemoryReport = {
         "winrt._winrt_windows_system.AppMemoryReport",
@@ -1595,22 +1573,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppMemoryUsageLimitChangingEventArgs[] = {
         { "_assign_array_", _assign_array_AppMemoryUsageLimitChangingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppMemoryUsageLimitChangingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppMemoryUsageLimitChangingEventArgs[] = {
         { "new_limit", reinterpret_cast<getter>(AppMemoryUsageLimitChangingEventArgs_get_NewLimit), nullptr, nullptr, nullptr },
         { "old_limit", reinterpret_cast<getter>(AppMemoryUsageLimitChangingEventArgs_get_OldLimit), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppMemoryUsageLimitChangingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppMemoryUsageLimitChangingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppMemoryUsageLimitChangingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppMemoryUsageLimitChangingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppMemoryUsageLimitChangingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppMemoryUsageLimitChangingEventArgs = {
         "winrt._winrt_windows_system.AppMemoryUsageLimitChangingEventArgs",
@@ -1783,24 +1758,21 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppResourceGroupBackgroundTaskReport[] = {
         { "_assign_array_", _assign_array_AppResourceGroupBackgroundTaskReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppResourceGroupBackgroundTaskReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppResourceGroupBackgroundTaskReport[] = {
         { "entry_point", reinterpret_cast<getter>(AppResourceGroupBackgroundTaskReport_get_EntryPoint), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(AppResourceGroupBackgroundTaskReport_get_Name), nullptr, nullptr, nullptr },
         { "task_id", reinterpret_cast<getter>(AppResourceGroupBackgroundTaskReport_get_TaskId), nullptr, nullptr, nullptr },
         { "trigger", reinterpret_cast<getter>(AppResourceGroupBackgroundTaskReport_get_Trigger), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppResourceGroupBackgroundTaskReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupBackgroundTaskReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupBackgroundTaskReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupBackgroundTaskReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupBackgroundTaskReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppResourceGroupBackgroundTaskReport = {
         "winrt._winrt_windows_system.AppResourceGroupBackgroundTaskReport",
@@ -2200,22 +2172,19 @@ namespace py::cpp::Windows::System
         { "start_terminate_async", reinterpret_cast<PyCFunction>(AppResourceGroupInfo_StartTerminateAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppResourceGroupInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppResourceGroupInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppResourceGroupInfo[] = {
         { "instance_id", reinterpret_cast<getter>(AppResourceGroupInfo_get_InstanceId), nullptr, nullptr, nullptr },
         { "is_shared", reinterpret_cast<getter>(AppResourceGroupInfo_get_IsShared), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppResourceGroupInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppResourceGroupInfo = {
         "winrt._winrt_windows_system.AppResourceGroupInfo",
@@ -2717,21 +2686,18 @@ namespace py::cpp::Windows::System
         { "remove_stopped", reinterpret_cast<PyCFunction>(AppResourceGroupInfoWatcher_remove_Stopped), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppResourceGroupInfoWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppResourceGroupInfoWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppResourceGroupInfoWatcher[] = {
         { "status", reinterpret_cast<getter>(AppResourceGroupInfoWatcher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppResourceGroupInfoWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupInfoWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupInfoWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupInfoWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupInfoWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppResourceGroupInfoWatcher = {
         "winrt._winrt_windows_system.AppResourceGroupInfoWatcher",
@@ -2844,22 +2810,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppResourceGroupInfoWatcherEventArgs[] = {
         { "_assign_array_", _assign_array_AppResourceGroupInfoWatcherEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppResourceGroupInfoWatcherEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppResourceGroupInfoWatcherEventArgs[] = {
         { "app_diagnostic_infos", reinterpret_cast<getter>(AppResourceGroupInfoWatcherEventArgs_get_AppDiagnosticInfos), nullptr, nullptr, nullptr },
         { "app_resource_group_info", reinterpret_cast<getter>(AppResourceGroupInfoWatcherEventArgs_get_AppResourceGroupInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppResourceGroupInfoWatcherEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupInfoWatcherEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupInfoWatcherEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupInfoWatcherEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupInfoWatcherEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppResourceGroupInfoWatcherEventArgs = {
         "winrt._winrt_windows_system.AppResourceGroupInfoWatcherEventArgs",
@@ -2972,22 +2935,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs[] = {
         { "app_diagnostic_infos", reinterpret_cast<getter>(AppResourceGroupInfoWatcherExecutionStateChangedEventArgs_get_AppDiagnosticInfos), nullptr, nullptr, nullptr },
         { "app_resource_group_info", reinterpret_cast<getter>(AppResourceGroupInfoWatcherExecutionStateChangedEventArgs_get_AppResourceGroupInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs = {
         "winrt._winrt_windows_system.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs",
@@ -3160,24 +3120,21 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppResourceGroupMemoryReport[] = {
         { "_assign_array_", _assign_array_AppResourceGroupMemoryReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppResourceGroupMemoryReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppResourceGroupMemoryReport[] = {
         { "commit_usage_level", reinterpret_cast<getter>(AppResourceGroupMemoryReport_get_CommitUsageLevel), nullptr, nullptr, nullptr },
         { "commit_usage_limit", reinterpret_cast<getter>(AppResourceGroupMemoryReport_get_CommitUsageLimit), nullptr, nullptr, nullptr },
         { "private_commit_usage", reinterpret_cast<getter>(AppResourceGroupMemoryReport_get_PrivateCommitUsage), nullptr, nullptr, nullptr },
         { "total_commit_usage", reinterpret_cast<getter>(AppResourceGroupMemoryReport_get_TotalCommitUsage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppResourceGroupMemoryReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupMemoryReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupMemoryReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupMemoryReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupMemoryReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppResourceGroupMemoryReport = {
         "winrt._winrt_windows_system.AppResourceGroupMemoryReport",
@@ -3290,22 +3247,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppResourceGroupStateReport[] = {
         { "_assign_array_", _assign_array_AppResourceGroupStateReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppResourceGroupStateReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppResourceGroupStateReport[] = {
         { "energy_quota_state", reinterpret_cast<getter>(AppResourceGroupStateReport_get_EnergyQuotaState), nullptr, nullptr, nullptr },
         { "execution_state", reinterpret_cast<getter>(AppResourceGroupStateReport_get_ExecutionState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppResourceGroupStateReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupStateReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupStateReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupStateReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupStateReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppResourceGroupStateReport = {
         "winrt._winrt_windows_system.AppResourceGroupStateReport",
@@ -3533,22 +3487,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_AppUriHandlerHost[] = {
         { "_assign_array_", _assign_array_AppUriHandlerHost, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppUriHandlerHost), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppUriHandlerHost[] = {
         { "name", reinterpret_cast<getter>(AppUriHandlerHost_get_Name), reinterpret_cast<setter>(AppUriHandlerHost_put_Name), nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(AppUriHandlerHost_get_IsEnabled), reinterpret_cast<setter>(AppUriHandlerHost_put_IsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppUriHandlerHost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppUriHandlerHost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppUriHandlerHost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppUriHandlerHost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppUriHandlerHost) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppUriHandlerHost = {
         "winrt._winrt_windows_system.AppUriHandlerHost",
@@ -3860,23 +3811,20 @@ namespace py::cpp::Windows::System
         { "update_hosts", reinterpret_cast<PyCFunction>(AppUriHandlerRegistration_UpdateHosts), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppUriHandlerRegistration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppUriHandlerRegistration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppUriHandlerRegistration[] = {
         { "name", reinterpret_cast<getter>(AppUriHandlerRegistration_get_Name), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(AppUriHandlerRegistration_get_User), nullptr, nullptr, nullptr },
         { "package_family_name", reinterpret_cast<getter>(AppUriHandlerRegistration_get_PackageFamilyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppUriHandlerRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppUriHandlerRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppUriHandlerRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppUriHandlerRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppUriHandlerRegistration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppUriHandlerRegistration = {
         "winrt._winrt_windows_system.AppUriHandlerRegistration",
@@ -4199,22 +4147,19 @@ namespace py::cpp::Windows::System
         { "try_get_registration", reinterpret_cast<PyCFunction>(AppUriHandlerRegistrationManager_TryGetRegistration), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppUriHandlerRegistrationManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppUriHandlerRegistrationManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppUriHandlerRegistrationManager[] = {
         { "user", reinterpret_cast<getter>(AppUriHandlerRegistrationManager_get_User), nullptr, nullptr, nullptr },
         { "package_family_name", reinterpret_cast<getter>(AppUriHandlerRegistrationManager_get_PackageFamilyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppUriHandlerRegistrationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppUriHandlerRegistrationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppUriHandlerRegistrationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppUriHandlerRegistrationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppUriHandlerRegistrationManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppUriHandlerRegistrationManager = {
         "winrt._winrt_windows_system.AppUriHandlerRegistrationManager",
@@ -4224,16 +4169,14 @@ namespace py::cpp::Windows::System
         _type_slots_AppUriHandlerRegistrationManager};
 
     static PyGetSetDef getset_AppUriHandlerRegistrationManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppUriHandlerRegistrationManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(AppUriHandlerRegistrationManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_package", reinterpret_cast<PyCFunction>(AppUriHandlerRegistrationManager_GetForPackage), METH_VARARGS, nullptr },
         { "get_for_package_for_user", reinterpret_cast<PyCFunction>(AppUriHandlerRegistrationManager_GetForPackageForUser), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(AppUriHandlerRegistrationManager_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppUriHandlerRegistrationManager_Static[] = 
     {
@@ -4243,14 +4186,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_AppUriHandlerRegistrationManager_Static =
-    {
+    static PyType_Spec type_spec_AppUriHandlerRegistrationManager_Static = {
         "winrt._winrt_windows_system.AppUriHandlerRegistrationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppUriHandlerRegistrationManager_Static
-    };
+        type_slots_AppUriHandlerRegistrationManager_Static};
 
     // ----- DateTimeSettings class --------------------
 
@@ -4305,19 +4246,16 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_DateTimeSettings[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DateTimeSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DateTimeSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DateTimeSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DateTimeSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DateTimeSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DateTimeSettings = {
         "winrt._winrt_windows_system.DateTimeSettings",
@@ -4327,13 +4265,11 @@ namespace py::cpp::Windows::System
         _type_slots_DateTimeSettings};
 
     static PyGetSetDef getset_DateTimeSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DateTimeSettings_Static[] = {
         { "set_system_date_time", reinterpret_cast<PyCFunction>(DateTimeSettings_SetSystemDateTime), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DateTimeSettings_Static[] = 
     {
@@ -4343,14 +4279,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_DateTimeSettings_Static =
-    {
+    static PyType_Spec type_spec_DateTimeSettings_Static = {
         "winrt._winrt_windows_system.DateTimeSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DateTimeSettings_Static
-    };
+        type_slots_DateTimeSettings_Static};
 
     // ----- DispatcherQueue class --------------------
 
@@ -4728,21 +4662,18 @@ namespace py::cpp::Windows::System
         { "remove_shutdown_starting", reinterpret_cast<PyCFunction>(DispatcherQueue_remove_ShutdownStarting), METH_O, nullptr },
         { "_assign_array_", _assign_array_DispatcherQueue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DispatcherQueue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DispatcherQueue[] = {
         { "has_thread_access", reinterpret_cast<getter>(DispatcherQueue_get_HasThreadAccess), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DispatcherQueue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DispatcherQueue = {
         "winrt._winrt_windows_system.DispatcherQueue",
@@ -4752,13 +4683,11 @@ namespace py::cpp::Windows::System
         _type_slots_DispatcherQueue};
 
     static PyGetSetDef getset_DispatcherQueue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DispatcherQueue_Static[] = {
         { "get_for_current_thread", reinterpret_cast<PyCFunction>(DispatcherQueue_GetForCurrentThread), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DispatcherQueue_Static[] = 
     {
@@ -4768,14 +4697,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_DispatcherQueue_Static =
-    {
+    static PyType_Spec type_spec_DispatcherQueue_Static = {
         "winrt._winrt_windows_system.DispatcherQueue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DispatcherQueue_Static
-    };
+        type_slots_DispatcherQueue_Static};
 
     // ----- DispatcherQueueController class --------------------
 
@@ -4932,21 +4859,18 @@ namespace py::cpp::Windows::System
         { "shutdown_queue_async", reinterpret_cast<PyCFunction>(DispatcherQueueController_ShutdownQueueAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DispatcherQueueController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DispatcherQueueController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DispatcherQueueController[] = {
         { "dispatcher_queue", reinterpret_cast<getter>(DispatcherQueueController_get_DispatcherQueue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DispatcherQueueController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DispatcherQueueController = {
         "winrt._winrt_windows_system.DispatcherQueueController",
@@ -4956,13 +4880,11 @@ namespace py::cpp::Windows::System
         _type_slots_DispatcherQueueController};
 
     static PyGetSetDef getset_DispatcherQueueController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DispatcherQueueController_Static[] = {
         { "create_on_dedicated_thread", reinterpret_cast<PyCFunction>(DispatcherQueueController_CreateOnDedicatedThread), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DispatcherQueueController_Static[] = 
     {
@@ -4972,14 +4894,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_DispatcherQueueController_Static =
-    {
+    static PyType_Spec type_spec_DispatcherQueueController_Static = {
         "winrt._winrt_windows_system.DispatcherQueueController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DispatcherQueueController_Static
-    };
+        type_slots_DispatcherQueueController_Static};
 
     // ----- DispatcherQueueShutdownStartingEventArgs class --------------------
 
@@ -5066,20 +4986,17 @@ namespace py::cpp::Windows::System
         { "get_deferral", reinterpret_cast<PyCFunction>(DispatcherQueueShutdownStartingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DispatcherQueueShutdownStartingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DispatcherQueueShutdownStartingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DispatcherQueueShutdownStartingEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DispatcherQueueShutdownStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueShutdownStartingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DispatcherQueueShutdownStartingEventArgs = {
         "winrt._winrt_windows_system.DispatcherQueueShutdownStartingEventArgs",
@@ -5451,23 +5368,20 @@ namespace py::cpp::Windows::System
         { "remove_tick", reinterpret_cast<PyCFunction>(DispatcherQueueTimer_remove_Tick), METH_O, nullptr },
         { "_assign_array_", _assign_array_DispatcherQueueTimer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DispatcherQueueTimer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DispatcherQueueTimer[] = {
         { "is_repeating", reinterpret_cast<getter>(DispatcherQueueTimer_get_IsRepeating), reinterpret_cast<setter>(DispatcherQueueTimer_put_IsRepeating), nullptr, nullptr },
         { "interval", reinterpret_cast<getter>(DispatcherQueueTimer_get_Interval), reinterpret_cast<setter>(DispatcherQueueTimer_put_Interval), nullptr, nullptr },
         { "is_running", reinterpret_cast<getter>(DispatcherQueueTimer_get_IsRunning), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DispatcherQueueTimer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueTimer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueTimer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueTimer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueTimer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DispatcherQueueTimer = {
         "winrt._winrt_windows_system.DispatcherQueueTimer",
@@ -5641,22 +5555,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_FolderLauncherOptions[] = {
         { "_assign_array_", _assign_array_FolderLauncherOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FolderLauncherOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FolderLauncherOptions[] = {
         { "items_to_select", reinterpret_cast<getter>(FolderLauncherOptions_get_ItemsToSelect), nullptr, nullptr, nullptr },
         { "desired_remaining_view", reinterpret_cast<getter>(FolderLauncherOptions_get_DesiredRemainingView), reinterpret_cast<setter>(FolderLauncherOptions_put_DesiredRemainingView), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FolderLauncherOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FolderLauncherOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FolderLauncherOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FolderLauncherOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FolderLauncherOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FolderLauncherOptions = {
         "winrt._winrt_windows_system.FolderLauncherOptions",
@@ -5975,19 +5886,16 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_KnownUserProperties[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownUserProperties[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownUserProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownUserProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownUserProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownUserProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownUserProperties = {
         "winrt._winrt_windows_system.KnownUserProperties",
@@ -6007,12 +5915,10 @@ namespace py::cpp::Windows::System
         { "provider_name", reinterpret_cast<getter>(KnownUserProperties_get_ProviderName), nullptr, nullptr, nullptr },
         { "session_initiation_protocol_uri", reinterpret_cast<getter>(KnownUserProperties_get_SessionInitiationProtocolUri), nullptr, nullptr, nullptr },
         { "age_enforcement_region", reinterpret_cast<getter>(KnownUserProperties_get_AgeEnforcementRegion), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownUserProperties_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownUserProperties_Static[] = 
     {
@@ -6022,14 +5928,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_KnownUserProperties_Static =
-    {
+    static PyType_Spec type_spec_KnownUserProperties_Static = {
         "winrt._winrt_windows_system.KnownUserProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownUserProperties_Static
-    };
+        type_slots_KnownUserProperties_Static};
 
     // ----- LaunchUriResult class --------------------
 
@@ -6135,22 +6039,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_LaunchUriResult[] = {
         { "_assign_array_", _assign_array_LaunchUriResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LaunchUriResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LaunchUriResult[] = {
         { "result", reinterpret_cast<getter>(LaunchUriResult_get_Result), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(LaunchUriResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LaunchUriResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LaunchUriResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LaunchUriResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LaunchUriResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LaunchUriResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LaunchUriResult = {
         "winrt._winrt_windows_system.LaunchUriResult",
@@ -7374,19 +7275,16 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_Launcher[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Launcher[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Launcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Launcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Launcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Launcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Launcher = {
         "winrt._winrt_windows_system.Launcher",
@@ -7396,8 +7294,7 @@ namespace py::cpp::Windows::System
         _type_slots_Launcher};
 
     static PyGetSetDef getset_Launcher_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Launcher_Static[] = {
         { "find_app_uri_handlers_async", reinterpret_cast<PyCFunction>(Launcher_FindAppUriHandlersAsync), METH_VARARGS, nullptr },
@@ -7428,8 +7325,7 @@ namespace py::cpp::Windows::System
         { "query_file_support_with_package_family_name_async", reinterpret_cast<PyCFunction>(Launcher_QueryFileSupportWithPackageFamilyNameAsync), METH_VARARGS, nullptr },
         { "query_uri_support_async", reinterpret_cast<PyCFunction>(Launcher_QueryUriSupportAsync), METH_VARARGS, nullptr },
         { "query_uri_support_with_package_family_name_async", reinterpret_cast<PyCFunction>(Launcher_QueryUriSupportWithPackageFamilyNameAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Launcher_Static[] = 
     {
@@ -7439,14 +7335,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_Launcher_Static =
-    {
+    static PyType_Spec type_spec_Launcher_Static = {
         "winrt._winrt_windows_system.Launcher_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Launcher_Static
-    };
+        type_slots_Launcher_Static};
 
     // ----- LauncherOptions class --------------------
 
@@ -8303,8 +8197,7 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_LauncherOptions[] = {
         { "_assign_array_", _assign_array_LauncherOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LauncherOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LauncherOptions[] = {
         { "treat_as_untrusted", reinterpret_cast<getter>(LauncherOptions_get_TreatAsUntrusted), reinterpret_cast<setter>(LauncherOptions_put_TreatAsUntrusted), nullptr, nullptr },
@@ -8319,16 +8212,14 @@ namespace py::cpp::Windows::System
         { "ignore_app_uri_handlers", reinterpret_cast<getter>(LauncherOptions_get_IgnoreAppUriHandlers), reinterpret_cast<setter>(LauncherOptions_put_IgnoreAppUriHandlers), nullptr, nullptr },
         { "limit_picker_to_current_app_and_app_uri_handlers", reinterpret_cast<getter>(LauncherOptions_get_LimitPickerToCurrentAppAndAppUriHandlers), reinterpret_cast<setter>(LauncherOptions_put_LimitPickerToCurrentAppAndAppUriHandlers), nullptr, nullptr },
         { "desired_remaining_view", reinterpret_cast<getter>(LauncherOptions_get_DesiredRemainingView), reinterpret_cast<setter>(LauncherOptions_put_DesiredRemainingView), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LauncherOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LauncherOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LauncherOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LauncherOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LauncherOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LauncherOptions = {
         "winrt._winrt_windows_system.LauncherOptions",
@@ -8588,23 +8479,20 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_LauncherUIOptions[] = {
         { "_assign_array_", _assign_array_LauncherUIOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LauncherUIOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LauncherUIOptions[] = {
         { "selection_rect", reinterpret_cast<getter>(LauncherUIOptions_get_SelectionRect), reinterpret_cast<setter>(LauncherUIOptions_put_SelectionRect), nullptr, nullptr },
         { "preferred_placement", reinterpret_cast<getter>(LauncherUIOptions_get_PreferredPlacement), reinterpret_cast<setter>(LauncherUIOptions_put_PreferredPlacement), nullptr, nullptr },
         { "invocation_point", reinterpret_cast<getter>(LauncherUIOptions_get_InvocationPoint), reinterpret_cast<setter>(LauncherUIOptions_put_InvocationPoint), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LauncherUIOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LauncherUIOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LauncherUIOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LauncherUIOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LauncherUIOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LauncherUIOptions = {
         "winrt._winrt_windows_system.LauncherUIOptions",
@@ -9060,19 +8948,16 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_MemoryManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MemoryManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MemoryManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MemoryManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MemoryManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MemoryManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MemoryManager = {
         "winrt._winrt_windows_system.MemoryManager",
@@ -9086,8 +8971,7 @@ namespace py::cpp::Windows::System
         { "app_memory_usage_level", reinterpret_cast<getter>(MemoryManager_get_AppMemoryUsageLevel), nullptr, nullptr, nullptr },
         { "app_memory_usage_limit", reinterpret_cast<getter>(MemoryManager_get_AppMemoryUsageLimit), nullptr, nullptr, nullptr },
         { "expected_app_memory_usage_limit", reinterpret_cast<getter>(MemoryManager_get_ExpectedAppMemoryUsageLimit), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MemoryManager_Static[] = {
         { "get_app_memory_report", reinterpret_cast<PyCFunction>(MemoryManager_GetAppMemoryReport), METH_VARARGS, nullptr },
@@ -9099,8 +8983,7 @@ namespace py::cpp::Windows::System
         { "remove_app_memory_usage_increased", reinterpret_cast<PyCFunction>(MemoryManager_remove_AppMemoryUsageIncreased), METH_O, nullptr },
         { "add_app_memory_usage_limit_changing", reinterpret_cast<PyCFunction>(MemoryManager_add_AppMemoryUsageLimitChanging), METH_O, nullptr },
         { "remove_app_memory_usage_limit_changing", reinterpret_cast<PyCFunction>(MemoryManager_remove_AppMemoryUsageLimitChanging), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MemoryManager_Static[] = 
     {
@@ -9110,14 +8993,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_MemoryManager_Static =
-    {
+    static PyType_Spec type_spec_MemoryManager_Static = {
         "winrt._winrt_windows_system.MemoryManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MemoryManager_Static
-    };
+        type_slots_MemoryManager_Static};
 
     // ----- ProcessLauncher class --------------------
 
@@ -9216,19 +9097,16 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_ProcessLauncher[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessLauncher[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessLauncher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessLauncher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessLauncher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessLauncher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessLauncher = {
         "winrt._winrt_windows_system.ProcessLauncher",
@@ -9238,14 +9116,12 @@ namespace py::cpp::Windows::System
         _type_slots_ProcessLauncher};
 
     static PyGetSetDef getset_ProcessLauncher_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ProcessLauncher_Static[] = {
         { "run_to_completion_async", reinterpret_cast<PyCFunction>(ProcessLauncher_RunToCompletionAsync), METH_VARARGS, nullptr },
         { "run_to_completion_async_with_options", reinterpret_cast<PyCFunction>(ProcessLauncher_RunToCompletionAsyncWithOptions), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ProcessLauncher_Static[] = 
     {
@@ -9255,14 +9131,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_ProcessLauncher_Static =
-    {
+    static PyType_Spec type_spec_ProcessLauncher_Static = {
         "winrt._winrt_windows_system.ProcessLauncher_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ProcessLauncher_Static
-    };
+        type_slots_ProcessLauncher_Static};
 
     // ----- ProcessLauncherOptions class --------------------
 
@@ -9606,24 +9480,21 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_ProcessLauncherOptions[] = {
         { "_assign_array_", _assign_array_ProcessLauncherOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessLauncherOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessLauncherOptions[] = {
         { "working_directory", reinterpret_cast<getter>(ProcessLauncherOptions_get_WorkingDirectory), reinterpret_cast<setter>(ProcessLauncherOptions_put_WorkingDirectory), nullptr, nullptr },
         { "standard_output", reinterpret_cast<getter>(ProcessLauncherOptions_get_StandardOutput), reinterpret_cast<setter>(ProcessLauncherOptions_put_StandardOutput), nullptr, nullptr },
         { "standard_input", reinterpret_cast<getter>(ProcessLauncherOptions_get_StandardInput), reinterpret_cast<setter>(ProcessLauncherOptions_put_StandardInput), nullptr, nullptr },
         { "standard_error", reinterpret_cast<getter>(ProcessLauncherOptions_get_StandardError), reinterpret_cast<setter>(ProcessLauncherOptions_put_StandardError), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessLauncherOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessLauncherOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessLauncherOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessLauncherOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessLauncherOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessLauncherOptions = {
         "winrt._winrt_windows_system.ProcessLauncherOptions",
@@ -9706,21 +9577,18 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_ProcessLauncherResult[] = {
         { "_assign_array_", _assign_array_ProcessLauncherResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessLauncherResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessLauncherResult[] = {
         { "exit_code", reinterpret_cast<getter>(ProcessLauncherResult_get_ExitCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessLauncherResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessLauncherResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessLauncherResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessLauncherResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessLauncherResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessLauncherResult = {
         "winrt._winrt_windows_system.ProcessLauncherResult",
@@ -9833,22 +9701,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_ProcessMemoryReport[] = {
         { "_assign_array_", _assign_array_ProcessMemoryReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessMemoryReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessMemoryReport[] = {
         { "private_working_set_usage", reinterpret_cast<getter>(ProcessMemoryReport_get_PrivateWorkingSetUsage), nullptr, nullptr, nullptr },
         { "total_working_set_usage", reinterpret_cast<getter>(ProcessMemoryReport_get_TotalWorkingSetUsage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessMemoryReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessMemoryReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessMemoryReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessMemoryReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessMemoryReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessMemoryReport = {
         "winrt._winrt_windows_system.ProcessMemoryReport",
@@ -9945,20 +9810,17 @@ namespace py::cpp::Windows::System
         { "report_completed", reinterpret_cast<PyCFunction>(ProtocolForResultsOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProtocolForResultsOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtocolForResultsOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtocolForResultsOperation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtocolForResultsOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtocolForResultsOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtocolForResultsOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtocolForResultsOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtocolForResultsOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtocolForResultsOperation = {
         "winrt._winrt_windows_system.ProtocolForResultsOperation",
@@ -10109,19 +9971,16 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_RemoteLauncher[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemoteLauncher[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemoteLauncher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteLauncher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteLauncher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteLauncher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemoteLauncher = {
         "winrt._winrt_windows_system.RemoteLauncher",
@@ -10131,15 +9990,13 @@ namespace py::cpp::Windows::System
         _type_slots_RemoteLauncher};
 
     static PyGetSetDef getset_RemoteLauncher_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RemoteLauncher_Static[] = {
         { "launch_uri_async", reinterpret_cast<PyCFunction>(RemoteLauncher_LaunchUriAsync), METH_VARARGS, nullptr },
         { "launch_uri_with_data_async", reinterpret_cast<PyCFunction>(RemoteLauncher_LaunchUriWithDataAsync), METH_VARARGS, nullptr },
         { "launch_uri_with_options_async", reinterpret_cast<PyCFunction>(RemoteLauncher_LaunchUriWithOptionsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RemoteLauncher_Static[] = 
     {
@@ -10149,14 +10006,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_RemoteLauncher_Static =
-    {
+    static PyType_Spec type_spec_RemoteLauncher_Static = {
         "winrt._winrt_windows_system.RemoteLauncher_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RemoteLauncher_Static
-    };
+        type_slots_RemoteLauncher_Static};
 
     // ----- RemoteLauncherOptions class --------------------
 
@@ -10323,22 +10178,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_RemoteLauncherOptions[] = {
         { "_assign_array_", _assign_array_RemoteLauncherOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteLauncherOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemoteLauncherOptions[] = {
         { "fallback_uri", reinterpret_cast<getter>(RemoteLauncherOptions_get_FallbackUri), reinterpret_cast<setter>(RemoteLauncherOptions_put_FallbackUri), nullptr, nullptr },
         { "preferred_app_ids", reinterpret_cast<getter>(RemoteLauncherOptions_get_PreferredAppIds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemoteLauncherOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteLauncherOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteLauncherOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteLauncherOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteLauncherOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemoteLauncherOptions = {
         "winrt._winrt_windows_system.RemoteLauncherOptions",
@@ -10571,19 +10423,16 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_ShutdownManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ShutdownManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ShutdownManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShutdownManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShutdownManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShutdownManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ShutdownManager = {
         "winrt._winrt_windows_system.ShutdownManager",
@@ -10593,8 +10442,7 @@ namespace py::cpp::Windows::System
         _type_slots_ShutdownManager};
 
     static PyGetSetDef getset_ShutdownManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ShutdownManager_Static[] = {
         { "begin_shutdown", reinterpret_cast<PyCFunction>(ShutdownManager_BeginShutdown), METH_VARARGS, nullptr },
@@ -10602,8 +10450,7 @@ namespace py::cpp::Windows::System
         { "enter_power_state", reinterpret_cast<PyCFunction>(ShutdownManager_EnterPowerState), METH_VARARGS, nullptr },
         { "enter_power_state_with_time_span", reinterpret_cast<PyCFunction>(ShutdownManager_EnterPowerStateWithTimeSpan), METH_VARARGS, nullptr },
         { "is_power_state_supported", reinterpret_cast<PyCFunction>(ShutdownManager_IsPowerStateSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ShutdownManager_Static[] = 
     {
@@ -10613,14 +10460,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_ShutdownManager_Static =
-    {
+    static PyType_Spec type_spec_ShutdownManager_Static = {
         "winrt._winrt_windows_system.ShutdownManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ShutdownManager_Static
-    };
+        type_slots_ShutdownManager_Static};
 
     // ----- TimeZoneSettings class --------------------
 
@@ -10807,19 +10652,16 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_TimeZoneSettings[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimeZoneSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimeZoneSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimeZoneSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimeZoneSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimeZoneSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimeZoneSettings = {
         "winrt._winrt_windows_system.TimeZoneSettings",
@@ -10832,14 +10674,12 @@ namespace py::cpp::Windows::System
         { "can_change_time_zone", reinterpret_cast<getter>(TimeZoneSettings_get_CanChangeTimeZone), nullptr, nullptr, nullptr },
         { "current_time_zone_display_name", reinterpret_cast<getter>(TimeZoneSettings_get_CurrentTimeZoneDisplayName), nullptr, nullptr, nullptr },
         { "supported_time_zone_display_names", reinterpret_cast<getter>(TimeZoneSettings_get_SupportedTimeZoneDisplayNames), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TimeZoneSettings_Static[] = {
         { "auto_update_time_zone_async", reinterpret_cast<PyCFunction>(TimeZoneSettings_AutoUpdateTimeZoneAsync), METH_VARARGS, nullptr },
         { "change_time_zone_by_display_name", reinterpret_cast<PyCFunction>(TimeZoneSettings_ChangeTimeZoneByDisplayName), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TimeZoneSettings_Static[] = 
     {
@@ -10849,14 +10689,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_TimeZoneSettings_Static =
-    {
+    static PyType_Spec type_spec_TimeZoneSettings_Static = {
         "winrt._winrt_windows_system.TimeZoneSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TimeZoneSettings_Static
-    };
+        type_slots_TimeZoneSettings_Static};
 
     // ----- User class --------------------
 
@@ -11411,23 +11249,20 @@ namespace py::cpp::Windows::System
         { "get_property_async", reinterpret_cast<PyCFunction>(User_GetPropertyAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_User, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_User), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_User[] = {
         { "authentication_status", reinterpret_cast<getter>(User_get_AuthenticationStatus), nullptr, nullptr, nullptr },
         { "non_roamable_id", reinterpret_cast<getter>(User_get_NonRoamableId), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(User_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_User[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_User) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_User) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_User) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_User) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_User = {
         "winrt._winrt_windows_system.User",
@@ -11437,8 +11272,7 @@ namespace py::cpp::Windows::System
         _type_slots_User};
 
     static PyGetSetDef getset_User_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_User_Static[] = {
         { "create_watcher", reinterpret_cast<PyCFunction>(User_CreateWatcher), METH_VARARGS, nullptr },
@@ -11447,8 +11281,7 @@ namespace py::cpp::Windows::System
         { "find_all_async_by_type_and_status", reinterpret_cast<PyCFunction>(User_FindAllAsyncByTypeAndStatus), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(User_GetDefault), METH_VARARGS, nullptr },
         { "get_from_id", reinterpret_cast<PyCFunction>(User_GetFromId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_User_Static[] = 
     {
@@ -11458,14 +11291,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_User_Static =
-    {
+    static PyType_Spec type_spec_User_Static = {
         "winrt._winrt_windows_system.User_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_User_Static
-    };
+        type_slots_User_Static};
 
     // ----- UserAuthenticationStatusChangeDeferral class --------------------
 
@@ -11553,20 +11384,17 @@ namespace py::cpp::Windows::System
         { "complete", reinterpret_cast<PyCFunction>(UserAuthenticationStatusChangeDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserAuthenticationStatusChangeDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserAuthenticationStatusChangeDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserAuthenticationStatusChangeDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserAuthenticationStatusChangeDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserAuthenticationStatusChangeDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserAuthenticationStatusChangeDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserAuthenticationStatusChangeDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserAuthenticationStatusChangeDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserAuthenticationStatusChangeDeferral = {
         "winrt._winrt_windows_system.UserAuthenticationStatusChangeDeferral",
@@ -11750,23 +11578,20 @@ namespace py::cpp::Windows::System
         { "get_deferral", reinterpret_cast<PyCFunction>(UserAuthenticationStatusChangingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserAuthenticationStatusChangingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserAuthenticationStatusChangingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserAuthenticationStatusChangingEventArgs[] = {
         { "current_status", reinterpret_cast<getter>(UserAuthenticationStatusChangingEventArgs_get_CurrentStatus), nullptr, nullptr, nullptr },
         { "new_status", reinterpret_cast<getter>(UserAuthenticationStatusChangingEventArgs_get_NewStatus), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(UserAuthenticationStatusChangingEventArgs_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserAuthenticationStatusChangingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserAuthenticationStatusChangingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserAuthenticationStatusChangingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserAuthenticationStatusChangingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserAuthenticationStatusChangingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserAuthenticationStatusChangingEventArgs = {
         "winrt._winrt_windows_system.UserAuthenticationStatusChangingEventArgs",
@@ -11879,22 +11704,19 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_UserChangedEventArgs[] = {
         { "_assign_array_", _assign_array_UserChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserChangedEventArgs[] = {
         { "user", reinterpret_cast<getter>(UserChangedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "changed_property_kinds", reinterpret_cast<getter>(UserChangedEventArgs_get_ChangedPropertyKinds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserChangedEventArgs = {
         "winrt._winrt_windows_system.UserChangedEventArgs",
@@ -12020,19 +11842,16 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_UserDeviceAssociation[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDeviceAssociation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDeviceAssociation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDeviceAssociation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDeviceAssociation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDeviceAssociation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDeviceAssociation = {
         "winrt._winrt_windows_system.UserDeviceAssociation",
@@ -12042,15 +11861,13 @@ namespace py::cpp::Windows::System
         _type_slots_UserDeviceAssociation};
 
     static PyGetSetDef getset_UserDeviceAssociation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserDeviceAssociation_Static[] = {
         { "find_user_from_device_id", reinterpret_cast<PyCFunction>(UserDeviceAssociation_FindUserFromDeviceId), METH_VARARGS, nullptr },
         { "add_user_device_association_changed", reinterpret_cast<PyCFunction>(UserDeviceAssociation_add_UserDeviceAssociationChanged), METH_O, nullptr },
         { "remove_user_device_association_changed", reinterpret_cast<PyCFunction>(UserDeviceAssociation_remove_UserDeviceAssociationChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserDeviceAssociation_Static[] = 
     {
@@ -12060,14 +11877,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_UserDeviceAssociation_Static =
-    {
+    static PyType_Spec type_spec_UserDeviceAssociation_Static = {
         "winrt._winrt_windows_system.UserDeviceAssociation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserDeviceAssociation_Static
-    };
+        type_slots_UserDeviceAssociation_Static};
 
     // ----- UserDeviceAssociationChangedEventArgs class --------------------
 
@@ -12203,23 +12018,20 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_UserDeviceAssociationChangedEventArgs[] = {
         { "_assign_array_", _assign_array_UserDeviceAssociationChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDeviceAssociationChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDeviceAssociationChangedEventArgs[] = {
         { "device_id", reinterpret_cast<getter>(UserDeviceAssociationChangedEventArgs_get_DeviceId), nullptr, nullptr, nullptr },
         { "new_user", reinterpret_cast<getter>(UserDeviceAssociationChangedEventArgs_get_NewUser), nullptr, nullptr, nullptr },
         { "old_user", reinterpret_cast<getter>(UserDeviceAssociationChangedEventArgs_get_OldUser), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDeviceAssociationChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDeviceAssociationChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDeviceAssociationChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDeviceAssociationChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDeviceAssociationChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDeviceAssociationChangedEventArgs = {
         "winrt._winrt_windows_system.UserDeviceAssociationChangedEventArgs",
@@ -12513,22 +12325,19 @@ namespace py::cpp::Windows::System
         { "pick_single_user_async", reinterpret_cast<PyCFunction>(UserPicker_PickSingleUserAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserPicker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserPicker), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserPicker[] = {
         { "suggested_selected_user", reinterpret_cast<getter>(UserPicker_get_SuggestedSelectedUser), reinterpret_cast<setter>(UserPicker_put_SuggestedSelectedUser), nullptr, nullptr },
         { "allow_guest_accounts", reinterpret_cast<getter>(UserPicker_get_AllowGuestAccounts), reinterpret_cast<setter>(UserPicker_put_AllowGuestAccounts), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserPicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserPicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserPicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserPicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserPicker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserPicker = {
         "winrt._winrt_windows_system.UserPicker",
@@ -12538,13 +12347,11 @@ namespace py::cpp::Windows::System
         _type_slots_UserPicker};
 
     static PyGetSetDef getset_UserPicker_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserPicker_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(UserPicker_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserPicker_Static[] = 
     {
@@ -12554,14 +12361,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_UserPicker_Static =
-    {
+    static PyType_Spec type_spec_UserPicker_Static = {
         "winrt._winrt_windows_system.UserPicker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserPicker_Static
-    };
+        type_slots_UserPicker_Static};
 
     // ----- UserWatcher class --------------------
 
@@ -13190,21 +12995,18 @@ namespace py::cpp::Windows::System
         { "remove_updated", reinterpret_cast<PyCFunction>(UserWatcher_remove_Updated), METH_O, nullptr },
         { "_assign_array_", _assign_array_UserWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserWatcher[] = {
         { "status", reinterpret_cast<getter>(UserWatcher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserWatcher = {
         "winrt._winrt_windows_system.UserWatcher",
@@ -13326,21 +13128,18 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_ILauncherViewOptions[] = {
         { "_assign_array_", _assign_array_ILauncherViewOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILauncherViewOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILauncherViewOptions[] = {
         { "desired_remaining_view", reinterpret_cast<getter>(ILauncherViewOptions_get_DesiredRemainingView), reinterpret_cast<setter>(ILauncherViewOptions_put_DesiredRemainingView), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILauncherViewOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILauncherViewOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILauncherViewOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILauncherViewOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILauncherViewOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILauncherViewOptions = {
         "winrt._winrt_windows_system.ILauncherViewOptions",
@@ -13439,13 +13238,11 @@ namespace py::cpp::Windows::System
     static PyMethodDef methods_ImplementsILauncherViewOptions[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILauncherViewOptions), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILauncherViewOptions), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILauncherViewOptions[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILauncherViewOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILauncherViewOptions = {
         "winrt._winrt_windows_system.ImplementsILauncherViewOptions",

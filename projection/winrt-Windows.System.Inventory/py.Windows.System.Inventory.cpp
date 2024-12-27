@@ -266,16 +266,14 @@ namespace py::cpp::Windows::System::Inventory
         { "to_string", reinterpret_cast<PyCFunction>(InstalledDesktopApp_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InstalledDesktopApp, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InstalledDesktopApp), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InstalledDesktopApp[] = {
         { "display_name", reinterpret_cast<getter>(InstalledDesktopApp_get_DisplayName), nullptr, nullptr, nullptr },
         { "display_version", reinterpret_cast<getter>(InstalledDesktopApp_get_DisplayVersion), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(InstalledDesktopApp_get_Id), nullptr, nullptr, nullptr },
         { "publisher", reinterpret_cast<getter>(InstalledDesktopApp_get_Publisher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InstalledDesktopApp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InstalledDesktopApp) },
@@ -283,8 +281,7 @@ namespace py::cpp::Windows::System::Inventory
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InstalledDesktopApp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InstalledDesktopApp) },
         { Py_tp_str, reinterpret_cast<void*>(_str_InstalledDesktopApp) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InstalledDesktopApp = {
         "winrt._winrt_windows_system_inventory.InstalledDesktopApp",
@@ -294,13 +291,11 @@ namespace py::cpp::Windows::System::Inventory
         _type_slots_InstalledDesktopApp};
 
     static PyGetSetDef getset_InstalledDesktopApp_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_InstalledDesktopApp_Static[] = {
         { "get_inventory_async", reinterpret_cast<PyCFunction>(InstalledDesktopApp_GetInventoryAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_InstalledDesktopApp_Static[] = 
     {
@@ -310,14 +305,12 @@ namespace py::cpp::Windows::System::Inventory
         { }
     };
 
-    static PyType_Spec type_spec_InstalledDesktopApp_Static =
-    {
+    static PyType_Spec type_spec_InstalledDesktopApp_Static = {
         "winrt._winrt_windows_system_inventory.InstalledDesktopApp_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_InstalledDesktopApp_Static
-    };
+        type_slots_InstalledDesktopApp_Static};
 
     // ----- Windows.System.Inventory Initialization --------------------
 

@@ -224,21 +224,18 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { "remove_target_requested", reinterpret_cast<PyCFunction>(CoreDragDropManager_remove_TargetRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreDragDropManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreDragDropManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreDragDropManager[] = {
         { "are_concurrent_operations_enabled", reinterpret_cast<getter>(CoreDragDropManager_get_AreConcurrentOperationsEnabled), reinterpret_cast<setter>(CoreDragDropManager_put_AreConcurrentOperationsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreDragDropManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDragDropManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDragDropManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDragDropManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDragDropManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreDragDropManager = {
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragDropManager",
@@ -248,13 +245,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         _type_slots_CoreDragDropManager};
 
     static PyGetSetDef getset_CoreDragDropManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreDragDropManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreDragDropManager_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreDragDropManager_Static[] = 
     {
@@ -264,14 +259,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreDragDropManager_Static =
-    {
+    static PyType_Spec type_spec_CoreDragDropManager_Static = {
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragDropManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreDragDropManager_Static
-    };
+        type_slots_CoreDragDropManager_Static};
 
     // ----- CoreDragInfo class --------------------
 
@@ -437,24 +430,21 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     static PyMethodDef _methods_CoreDragInfo[] = {
         { "_assign_array_", _assign_array_CoreDragInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreDragInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreDragInfo[] = {
         { "data", reinterpret_cast<getter>(CoreDragInfo_get_Data), nullptr, nullptr, nullptr },
         { "modifiers", reinterpret_cast<getter>(CoreDragInfo_get_Modifiers), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(CoreDragInfo_get_Position), nullptr, nullptr, nullptr },
         { "allowed_operations", reinterpret_cast<getter>(CoreDragInfo_get_AllowedOperations), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreDragInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDragInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDragInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDragInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDragInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreDragInfo = {
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragInfo",
@@ -871,23 +861,20 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { "start_async", reinterpret_cast<PyCFunction>(CoreDragOperation_StartAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreDragOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreDragOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreDragOperation[] = {
         { "drag_ui_content_mode", reinterpret_cast<getter>(CoreDragOperation_get_DragUIContentMode), reinterpret_cast<setter>(CoreDragOperation_put_DragUIContentMode), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(CoreDragOperation_get_Data), nullptr, nullptr, nullptr },
         { "allowed_operations", reinterpret_cast<getter>(CoreDragOperation_get_AllowedOperations), reinterpret_cast<setter>(CoreDragOperation_put_AllowedOperations), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreDragOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDragOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDragOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDragOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDragOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreDragOperation = {
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragOperation",
@@ -1347,24 +1334,21 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { "set_content_from_software_bitmap_with_anchor_point", reinterpret_cast<PyCFunction>(CoreDragUIOverride_SetContentFromSoftwareBitmapWithAnchorPoint), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreDragUIOverride, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreDragUIOverride), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreDragUIOverride[] = {
         { "is_glyph_visible", reinterpret_cast<getter>(CoreDragUIOverride_get_IsGlyphVisible), reinterpret_cast<setter>(CoreDragUIOverride_put_IsGlyphVisible), nullptr, nullptr },
         { "is_content_visible", reinterpret_cast<getter>(CoreDragUIOverride_get_IsContentVisible), reinterpret_cast<setter>(CoreDragUIOverride_put_IsContentVisible), nullptr, nullptr },
         { "is_caption_visible", reinterpret_cast<getter>(CoreDragUIOverride_get_IsCaptionVisible), reinterpret_cast<setter>(CoreDragUIOverride_put_IsCaptionVisible), nullptr, nullptr },
         { "caption", reinterpret_cast<getter>(CoreDragUIOverride_get_Caption), reinterpret_cast<setter>(CoreDragUIOverride_put_Caption), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreDragUIOverride[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDragUIOverride) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDragUIOverride) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDragUIOverride) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDragUIOverride) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreDragUIOverride = {
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragUIOverride",
@@ -1461,20 +1445,17 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { "set_target", reinterpret_cast<PyCFunction>(CoreDropOperationTargetRequestedEventArgs_SetTarget), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreDropOperationTargetRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreDropOperationTargetRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreDropOperationTargetRequestedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreDropOperationTargetRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDropOperationTargetRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDropOperationTargetRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDropOperationTargetRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDropOperationTargetRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreDropOperationTargetRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDropOperationTargetRequestedEventArgs",
@@ -1701,20 +1682,17 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { "over_async", reinterpret_cast<PyCFunction>(ICoreDropOperationTarget_OverAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICoreDropOperationTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreDropOperationTarget), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICoreDropOperationTarget[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICoreDropOperationTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreDropOperationTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreDropOperationTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreDropOperationTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreDropOperationTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICoreDropOperationTarget = {
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.ICoreDropOperationTarget",
@@ -1922,13 +1900,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     static PyMethodDef methods_ImplementsICoreDropOperationTarget[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreDropOperationTarget), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreDropOperationTarget), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICoreDropOperationTarget[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICoreDropOperationTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICoreDropOperationTarget = {
         "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.ImplementsICoreDropOperationTarget",

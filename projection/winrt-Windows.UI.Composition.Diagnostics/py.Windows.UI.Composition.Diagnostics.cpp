@@ -225,20 +225,17 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
         { "show_redraw", reinterpret_cast<PyCFunction>(CompositionDebugHeatMaps_ShowRedraw), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionDebugHeatMaps, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionDebugHeatMaps), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionDebugHeatMaps[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionDebugHeatMaps[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionDebugHeatMaps) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionDebugHeatMaps) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionDebugHeatMaps) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionDebugHeatMaps) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionDebugHeatMaps = {
         "winrt._winrt_windows_ui_composition_diagnostics.CompositionDebugHeatMaps",
@@ -363,21 +360,18 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
     static PyMethodDef _methods_CompositionDebugSettings[] = {
         { "_assign_array_", _assign_array_CompositionDebugSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionDebugSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionDebugSettings[] = {
         { "heat_maps", reinterpret_cast<getter>(CompositionDebugSettings_get_HeatMaps), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionDebugSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionDebugSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionDebugSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionDebugSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionDebugSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionDebugSettings = {
         "winrt._winrt_windows_ui_composition_diagnostics.CompositionDebugSettings",
@@ -387,13 +381,11 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
         _type_slots_CompositionDebugSettings};
 
     static PyGetSetDef getset_CompositionDebugSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionDebugSettings_Static[] = {
         { "try_get_settings", reinterpret_cast<PyCFunction>(CompositionDebugSettings_TryGetSettings), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionDebugSettings_Static[] = 
     {
@@ -403,14 +395,12 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
         { }
     };
 
-    static PyType_Spec type_spec_CompositionDebugSettings_Static =
-    {
+    static PyType_Spec type_spec_CompositionDebugSettings_Static = {
         "winrt._winrt_windows_ui_composition_diagnostics.CompositionDebugSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CompositionDebugSettings_Static
-    };
+        type_slots_CompositionDebugSettings_Static};
 
     // ----- Windows.UI.Composition.Diagnostics Initialization --------------------
 

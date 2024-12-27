@@ -92,20 +92,17 @@ namespace py::cpp::Windows::Media::Effects
         { "set_echo_cancellation_render_endpoint", reinterpret_cast<PyCFunction>(AcousticEchoCancellationConfiguration_SetEchoCancellationRenderEndpoint), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AcousticEchoCancellationConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AcousticEchoCancellationConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AcousticEchoCancellationConfiguration[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AcousticEchoCancellationConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AcousticEchoCancellationConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AcousticEchoCancellationConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AcousticEchoCancellationConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AcousticEchoCancellationConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AcousticEchoCancellationConfiguration = {
         "winrt._winrt_windows_media_effects.AcousticEchoCancellationConfiguration",
@@ -266,20 +263,17 @@ namespace py::cpp::Windows::Media::Effects
         { "remove_audio_capture_effects_changed", reinterpret_cast<PyCFunction>(AudioCaptureEffectsManager_remove_AudioCaptureEffectsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AudioCaptureEffectsManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioCaptureEffectsManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioCaptureEffectsManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioCaptureEffectsManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioCaptureEffectsManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioCaptureEffectsManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioCaptureEffectsManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioCaptureEffectsManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioCaptureEffectsManager = {
         "winrt._winrt_windows_media_effects.AudioCaptureEffectsManager",
@@ -496,24 +490,21 @@ namespace py::cpp::Windows::Media::Effects
         { "set_state", reinterpret_cast<PyCFunction>(AudioEffect_SetState), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AudioEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioEffect[] = {
         { "audio_effect_type", reinterpret_cast<getter>(AudioEffect_get_AudioEffectType), nullptr, nullptr, nullptr },
         { "acoustic_echo_cancellation_configuration", reinterpret_cast<getter>(AudioEffect_get_AcousticEchoCancellationConfiguration), nullptr, nullptr, nullptr },
         { "can_set_state", reinterpret_cast<getter>(AudioEffect_get_CanSetState), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(AudioEffect_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioEffect = {
         "winrt._winrt_windows_media_effects.AudioEffect",
@@ -666,22 +657,19 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_AudioEffectDefinition[] = {
         { "_assign_array_", _assign_array_AudioEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioEffectDefinition[] = {
         { "activatable_class_id", reinterpret_cast<getter>(AudioEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(AudioEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioEffectDefinition = {
         "winrt._winrt_windows_media_effects.AudioEffectDefinition",
@@ -874,19 +862,16 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef _methods_AudioEffectsManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioEffectsManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioEffectsManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioEffectsManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEffectsManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEffectsManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioEffectsManager = {
         "winrt._winrt_windows_media_effects.AudioEffectsManager",
@@ -896,16 +881,14 @@ namespace py::cpp::Windows::Media::Effects
         _type_slots_AudioEffectsManager};
 
     static PyGetSetDef getset_AudioEffectsManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AudioEffectsManager_Static[] = {
         { "create_audio_capture_effects_manager", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioCaptureEffectsManager), METH_VARARGS, nullptr },
         { "create_audio_capture_effects_manager_with_mode", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioCaptureEffectsManagerWithMode), METH_VARARGS, nullptr },
         { "create_audio_render_effects_manager", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioRenderEffectsManager), METH_VARARGS, nullptr },
         { "create_audio_render_effects_manager_with_mode", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioRenderEffectsManagerWithMode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AudioEffectsManager_Static[] = 
     {
@@ -915,14 +898,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Spec type_spec_AudioEffectsManager_Static =
-    {
+    static PyType_Spec type_spec_AudioEffectsManager_Static = {
         "winrt._winrt_windows_media_effects.AudioEffectsManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AudioEffectsManager_Static
-    };
+        type_slots_AudioEffectsManager_Static};
 
     // ----- AudioRenderEffectsManager class --------------------
 
@@ -1178,22 +1159,19 @@ namespace py::cpp::Windows::Media::Effects
         { "remove_audio_render_effects_changed", reinterpret_cast<PyCFunction>(AudioRenderEffectsManager_remove_AudioRenderEffectsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AudioRenderEffectsManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioRenderEffectsManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioRenderEffectsManager[] = {
         { "effects_provider_settings_label", reinterpret_cast<getter>(AudioRenderEffectsManager_get_EffectsProviderSettingsLabel), nullptr, nullptr, nullptr },
         { "effects_provider_thumbnail", reinterpret_cast<getter>(AudioRenderEffectsManager_get_EffectsProviderThumbnail), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioRenderEffectsManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioRenderEffectsManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioRenderEffectsManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioRenderEffectsManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioRenderEffectsManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioRenderEffectsManager = {
         "winrt._winrt_windows_media_effects.AudioRenderEffectsManager",
@@ -1379,23 +1357,20 @@ namespace py::cpp::Windows::Media::Effects
         { "get_overlay_for_surface", reinterpret_cast<PyCFunction>(CompositeVideoFrameContext_GetOverlayForSurface), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositeVideoFrameContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositeVideoFrameContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositeVideoFrameContext[] = {
         { "background_frame", reinterpret_cast<getter>(CompositeVideoFrameContext_get_BackgroundFrame), nullptr, nullptr, nullptr },
         { "output_frame", reinterpret_cast<getter>(CompositeVideoFrameContext_get_OutputFrame), nullptr, nullptr, nullptr },
         { "surfaces_to_overlay", reinterpret_cast<getter>(CompositeVideoFrameContext_get_SurfacesToOverlay), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositeVideoFrameContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositeVideoFrameContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositeVideoFrameContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositeVideoFrameContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositeVideoFrameContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositeVideoFrameContext = {
         "winrt._winrt_windows_media_effects.CompositeVideoFrameContext",
@@ -1508,22 +1483,19 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_ProcessAudioFrameContext[] = {
         { "_assign_array_", _assign_array_ProcessAudioFrameContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessAudioFrameContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessAudioFrameContext[] = {
         { "input_frame", reinterpret_cast<getter>(ProcessAudioFrameContext_get_InputFrame), nullptr, nullptr, nullptr },
         { "output_frame", reinterpret_cast<getter>(ProcessAudioFrameContext_get_OutputFrame), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessAudioFrameContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessAudioFrameContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessAudioFrameContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessAudioFrameContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessAudioFrameContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessAudioFrameContext = {
         "winrt._winrt_windows_media_effects.ProcessAudioFrameContext",
@@ -1636,22 +1608,19 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_ProcessVideoFrameContext[] = {
         { "_assign_array_", _assign_array_ProcessVideoFrameContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessVideoFrameContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessVideoFrameContext[] = {
         { "input_frame", reinterpret_cast<getter>(ProcessVideoFrameContext_get_InputFrame), nullptr, nullptr, nullptr },
         { "output_frame", reinterpret_cast<getter>(ProcessVideoFrameContext_get_OutputFrame), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessVideoFrameContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessVideoFrameContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessVideoFrameContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessVideoFrameContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessVideoFrameContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessVideoFrameContext = {
         "winrt._winrt_windows_media_effects.ProcessVideoFrameContext",
@@ -1855,23 +1824,20 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_SlowMotionEffectDefinition[] = {
         { "_assign_array_", _assign_array_SlowMotionEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SlowMotionEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SlowMotionEffectDefinition[] = {
         { "time_stretch_rate", reinterpret_cast<getter>(SlowMotionEffectDefinition_get_TimeStretchRate), reinterpret_cast<setter>(SlowMotionEffectDefinition_put_TimeStretchRate), nullptr, nullptr },
         { "activatable_class_id", reinterpret_cast<getter>(SlowMotionEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(SlowMotionEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SlowMotionEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SlowMotionEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SlowMotionEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SlowMotionEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SlowMotionEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SlowMotionEffectDefinition = {
         "winrt._winrt_windows_media_effects.SlowMotionEffectDefinition",
@@ -2024,22 +1990,19 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_VideoCompositorDefinition[] = {
         { "_assign_array_", _assign_array_VideoCompositorDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoCompositorDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoCompositorDefinition[] = {
         { "activatable_class_id", reinterpret_cast<getter>(VideoCompositorDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(VideoCompositorDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoCompositorDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoCompositorDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoCompositorDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoCompositorDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoCompositorDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoCompositorDefinition = {
         "winrt._winrt_windows_media_effects.VideoCompositorDefinition",
@@ -2192,22 +2155,19 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_VideoEffectDefinition[] = {
         { "_assign_array_", _assign_array_VideoEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoEffectDefinition[] = {
         { "activatable_class_id", reinterpret_cast<getter>(VideoEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(VideoEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoEffectDefinition = {
         "winrt._winrt_windows_media_effects.VideoEffectDefinition",
@@ -2786,8 +2746,7 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_VideoTransformEffectDefinition[] = {
         { "_assign_array_", _assign_array_VideoTransformEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoTransformEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoTransformEffectDefinition[] = {
         { "activatable_class_id", reinterpret_cast<getter>(VideoTransformEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
@@ -2799,16 +2758,14 @@ namespace py::cpp::Windows::Media::Effects
         { "mirror", reinterpret_cast<getter>(VideoTransformEffectDefinition_get_Mirror), reinterpret_cast<setter>(VideoTransformEffectDefinition_put_Mirror), nullptr, nullptr },
         { "crop_rectangle", reinterpret_cast<getter>(VideoTransformEffectDefinition_get_CropRectangle), reinterpret_cast<setter>(VideoTransformEffectDefinition_put_CropRectangle), nullptr, nullptr },
         { "spherical_projection", reinterpret_cast<getter>(VideoTransformEffectDefinition_get_SphericalProjection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoTransformEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoTransformEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoTransformEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoTransformEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoTransformEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoTransformEffectDefinition = {
         "winrt._winrt_windows_media_effects.VideoTransformEffectDefinition",
@@ -3206,8 +3163,7 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_VideoTransformSphericalProjection[] = {
         { "_assign_array_", _assign_array_VideoTransformSphericalProjection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoTransformSphericalProjection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoTransformSphericalProjection[] = {
         { "view_orientation", reinterpret_cast<getter>(VideoTransformSphericalProjection_get_ViewOrientation), reinterpret_cast<setter>(VideoTransformSphericalProjection_put_ViewOrientation), nullptr, nullptr },
@@ -3215,16 +3171,14 @@ namespace py::cpp::Windows::Media::Effects
         { "is_enabled", reinterpret_cast<getter>(VideoTransformSphericalProjection_get_IsEnabled), reinterpret_cast<setter>(VideoTransformSphericalProjection_put_IsEnabled), nullptr, nullptr },
         { "horizontal_field_of_view_in_degrees", reinterpret_cast<getter>(VideoTransformSphericalProjection_get_HorizontalFieldOfViewInDegrees), reinterpret_cast<setter>(VideoTransformSphericalProjection_put_HorizontalFieldOfViewInDegrees), nullptr, nullptr },
         { "frame_format", reinterpret_cast<getter>(VideoTransformSphericalProjection_get_FrameFormat), reinterpret_cast<setter>(VideoTransformSphericalProjection_put_FrameFormat), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoTransformSphericalProjection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoTransformSphericalProjection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoTransformSphericalProjection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoTransformSphericalProjection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoTransformSphericalProjection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoTransformSphericalProjection = {
         "winrt._winrt_windows_media_effects.VideoTransformSphericalProjection",
@@ -3337,22 +3291,19 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_IAudioEffectDefinition[] = {
         { "_assign_array_", _assign_array_IAudioEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAudioEffectDefinition[] = {
         { "activatable_class_id", reinterpret_cast<getter>(IAudioEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(IAudioEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAudioEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAudioEffectDefinition = {
         "winrt._winrt_windows_media_effects.IAudioEffectDefinition",
@@ -3448,13 +3399,11 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef methods_ImplementsIAudioEffectDefinition[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioEffectDefinition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioEffectDefinition), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAudioEffectDefinition[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAudioEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAudioEffectDefinition = {
         "winrt._winrt_windows_media_effects.ImplementsIAudioEffectDefinition",
@@ -3785,22 +3734,19 @@ namespace py::cpp::Windows::Media::Effects
         { "set_properties", reinterpret_cast<PyCFunction>(IBasicAudioEffect_SetProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBasicAudioEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBasicAudioEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBasicAudioEffect[] = {
         { "supported_encoding_properties", reinterpret_cast<getter>(IBasicAudioEffect_get_SupportedEncodingProperties), nullptr, nullptr, nullptr },
         { "use_input_frame_for_output", reinterpret_cast<getter>(IBasicAudioEffect_get_UseInputFrameForOutput), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBasicAudioEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBasicAudioEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBasicAudioEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBasicAudioEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBasicAudioEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBasicAudioEffect = {
         "winrt._winrt_windows_media_effects.IBasicAudioEffect",
@@ -4040,13 +3986,11 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef methods_ImplementsIBasicAudioEffect[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBasicAudioEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBasicAudioEffect), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBasicAudioEffect[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBasicAudioEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBasicAudioEffect = {
         "winrt._winrt_windows_media_effects.ImplementsIBasicAudioEffect",
@@ -4438,24 +4382,21 @@ namespace py::cpp::Windows::Media::Effects
         { "set_properties", reinterpret_cast<PyCFunction>(IBasicVideoEffect_SetProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBasicVideoEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBasicVideoEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBasicVideoEffect[] = {
         { "is_read_only", reinterpret_cast<getter>(IBasicVideoEffect_get_IsReadOnly), nullptr, nullptr, nullptr },
         { "supported_encoding_properties", reinterpret_cast<getter>(IBasicVideoEffect_get_SupportedEncodingProperties), nullptr, nullptr, nullptr },
         { "supported_memory_types", reinterpret_cast<getter>(IBasicVideoEffect_get_SupportedMemoryTypes), nullptr, nullptr, nullptr },
         { "time_independent", reinterpret_cast<getter>(IBasicVideoEffect_get_TimeIndependent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBasicVideoEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBasicVideoEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBasicVideoEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBasicVideoEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBasicVideoEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBasicVideoEffect = {
         "winrt._winrt_windows_media_effects.IBasicVideoEffect",
@@ -4747,13 +4688,11 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef methods_ImplementsIBasicVideoEffect[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBasicVideoEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBasicVideoEffect), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBasicVideoEffect[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBasicVideoEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBasicVideoEffect = {
         "winrt._winrt_windows_media_effects.ImplementsIBasicVideoEffect",
@@ -5055,21 +4994,18 @@ namespace py::cpp::Windows::Media::Effects
         { "set_properties", reinterpret_cast<PyCFunction>(IVideoCompositor_SetProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVideoCompositor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVideoCompositor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVideoCompositor[] = {
         { "time_independent", reinterpret_cast<getter>(IVideoCompositor_get_TimeIndependent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVideoCompositor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVideoCompositor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVideoCompositor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVideoCompositor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVideoCompositor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVideoCompositor = {
         "winrt._winrt_windows_media_effects.IVideoCompositor",
@@ -5301,13 +5237,11 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef methods_ImplementsIVideoCompositor[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVideoCompositor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVideoCompositor), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVideoCompositor[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVideoCompositor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVideoCompositor = {
         "winrt._winrt_windows_media_effects.ImplementsIVideoCompositor",
@@ -5420,22 +5354,19 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_IVideoCompositorDefinition[] = {
         { "_assign_array_", _assign_array_IVideoCompositorDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVideoCompositorDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVideoCompositorDefinition[] = {
         { "activatable_class_id", reinterpret_cast<getter>(IVideoCompositorDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(IVideoCompositorDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVideoCompositorDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVideoCompositorDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVideoCompositorDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVideoCompositorDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVideoCompositorDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVideoCompositorDefinition = {
         "winrt._winrt_windows_media_effects.IVideoCompositorDefinition",
@@ -5531,13 +5462,11 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef methods_ImplementsIVideoCompositorDefinition[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVideoCompositorDefinition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVideoCompositorDefinition), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVideoCompositorDefinition[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVideoCompositorDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVideoCompositorDefinition = {
         "winrt._winrt_windows_media_effects.ImplementsIVideoCompositorDefinition",
@@ -5650,22 +5579,19 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef _methods_IVideoEffectDefinition[] = {
         { "_assign_array_", _assign_array_IVideoEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVideoEffectDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVideoEffectDefinition[] = {
         { "activatable_class_id", reinterpret_cast<getter>(IVideoEffectDefinition_get_ActivatableClassId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(IVideoEffectDefinition_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVideoEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVideoEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVideoEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVideoEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVideoEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVideoEffectDefinition = {
         "winrt._winrt_windows_media_effects.IVideoEffectDefinition",
@@ -5761,13 +5687,11 @@ namespace py::cpp::Windows::Media::Effects
     static PyMethodDef methods_ImplementsIVideoEffectDefinition[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVideoEffectDefinition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVideoEffectDefinition), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVideoEffectDefinition[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVideoEffectDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVideoEffectDefinition = {
         "winrt._winrt_windows_media_effects.ImplementsIVideoEffectDefinition",

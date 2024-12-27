@@ -359,19 +359,16 @@ namespace py::cpp::Windows::Security::Authentication::Web
     }
 
     static PyMethodDef _methods_WebAuthenticationBroker[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAuthenticationBroker[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAuthenticationBroker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationBroker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationBroker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationBroker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAuthenticationBroker = {
         "winrt._winrt_windows_security_authentication_web.WebAuthenticationBroker",
@@ -381,8 +378,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
         _type_slots_WebAuthenticationBroker};
 
     static PyGetSetDef getset_WebAuthenticationBroker_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WebAuthenticationBroker_Static[] = {
         { "authenticate_and_continue", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateAndContinue), METH_VARARGS, nullptr },
@@ -393,8 +389,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
         { "authenticate_with_callback_uri_continuation_data_and_options_and_continue", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateWithCallbackUriContinuationDataAndOptionsAndContinue), METH_VARARGS, nullptr },
         { "authenticate_without_callback_uri_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateWithoutCallbackUriAsync), METH_VARARGS, nullptr },
         { "get_current_application_callback_uri", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_GetCurrentApplicationCallbackUri), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WebAuthenticationBroker_Static[] = 
     {
@@ -404,14 +399,12 @@ namespace py::cpp::Windows::Security::Authentication::Web
         { }
     };
 
-    static PyType_Spec type_spec_WebAuthenticationBroker_Static =
-    {
+    static PyType_Spec type_spec_WebAuthenticationBroker_Static = {
         "winrt._winrt_windows_security_authentication_web.WebAuthenticationBroker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WebAuthenticationBroker_Static
-    };
+        type_slots_WebAuthenticationBroker_Static};
 
     // ----- WebAuthenticationResult class --------------------
 
@@ -547,23 +540,20 @@ namespace py::cpp::Windows::Security::Authentication::Web
     static PyMethodDef _methods_WebAuthenticationResult[] = {
         { "_assign_array_", _assign_array_WebAuthenticationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAuthenticationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAuthenticationResult[] = {
         { "response_data", reinterpret_cast<getter>(WebAuthenticationResult_get_ResponseData), nullptr, nullptr, nullptr },
         { "response_error_detail", reinterpret_cast<getter>(WebAuthenticationResult_get_ResponseErrorDetail), nullptr, nullptr, nullptr },
         { "response_status", reinterpret_cast<getter>(WebAuthenticationResult_get_ResponseStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAuthenticationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAuthenticationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAuthenticationResult = {
         "winrt._winrt_windows_security_authentication_web.WebAuthenticationResult",

@@ -328,20 +328,17 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
         { "remove_items_changed", reinterpret_cast<PyCFunction>(WalletItemSystemStore_remove_ItemsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_WalletItemSystemStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletItemSystemStore), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletItemSystemStore[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletItemSystemStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletItemSystemStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletItemSystemStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletItemSystemStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletItemSystemStore) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletItemSystemStore = {
         "winrt._winrt_windows_applicationmodel_wallet_system.WalletItemSystemStore",
@@ -400,19 +397,16 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
     }
 
     static PyMethodDef _methods_WalletManagerSystem[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletManagerSystem[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletManagerSystem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletManagerSystem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletManagerSystem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletManagerSystem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletManagerSystem = {
         "winrt._winrt_windows_applicationmodel_wallet_system.WalletManagerSystem",
@@ -422,13 +416,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
         _type_slots_WalletManagerSystem};
 
     static PyGetSetDef getset_WalletManagerSystem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WalletManagerSystem_Static[] = {
         { "request_store_async", reinterpret_cast<PyCFunction>(WalletManagerSystem_RequestStoreAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WalletManagerSystem_Static[] = 
     {
@@ -438,14 +430,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
         { }
     };
 
-    static PyType_Spec type_spec_WalletManagerSystem_Static =
-    {
+    static PyType_Spec type_spec_WalletManagerSystem_Static = {
         "winrt._winrt_windows_applicationmodel_wallet_system.WalletManagerSystem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WalletManagerSystem_Static
-    };
+        type_slots_WalletManagerSystem_Static};
 
     // ----- Windows.ApplicationModel.Wallet.System Initialization --------------------
 

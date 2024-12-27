@@ -44,19 +44,16 @@ namespace py::cpp::Windows::Phone::System::Profile
     }
 
     static PyMethodDef _methods_RetailMode[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RetailMode[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RetailMode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RetailMode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RetailMode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RetailMode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RetailMode = {
         "winrt._winrt_windows_phone_system_profile.RetailMode",
@@ -67,12 +64,10 @@ namespace py::cpp::Windows::Phone::System::Profile
 
     static PyGetSetDef getset_RetailMode_Static[] = {
         { "retail_mode_enabled", reinterpret_cast<getter>(RetailMode_get_RetailModeEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RetailMode_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RetailMode_Static[] = 
     {
@@ -82,14 +77,12 @@ namespace py::cpp::Windows::Phone::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_RetailMode_Static =
-    {
+    static PyType_Spec type_spec_RetailMode_Static = {
         "winrt._winrt_windows_phone_system_profile.RetailMode_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RetailMode_Static
-    };
+        type_slots_RetailMode_Static};
 
     // ----- Windows.Phone.System.Profile Initialization --------------------
 

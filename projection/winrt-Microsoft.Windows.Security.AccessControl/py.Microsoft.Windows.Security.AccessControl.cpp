@@ -102,19 +102,16 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
     }
 
     static PyMethodDef _methods_SecurityDescriptorHelpers[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecurityDescriptorHelpers[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecurityDescriptorHelpers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecurityDescriptorHelpers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecurityDescriptorHelpers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecurityDescriptorHelpers) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecurityDescriptorHelpers = {
         "winrt._winrt_microsoft_windows_security_accesscontrol.SecurityDescriptorHelpers",
@@ -124,14 +121,12 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         _type_slots_SecurityDescriptorHelpers};
 
     static PyGetSetDef getset_SecurityDescriptorHelpers_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SecurityDescriptorHelpers_Static[] = {
         { "get_sddl_for_app_container_names", reinterpret_cast<PyCFunction>(SecurityDescriptorHelpers_GetSddlForAppContainerNames), METH_VARARGS, nullptr },
         { "get_security_descriptor_bytes_from_app_container_names", reinterpret_cast<PyCFunction>(SecurityDescriptorHelpers_GetSecurityDescriptorBytesFromAppContainerNames), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SecurityDescriptorHelpers_Static[] = 
     {
@@ -141,14 +136,12 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         { }
     };
 
-    static PyType_Spec type_spec_SecurityDescriptorHelpers_Static =
-    {
+    static PyType_Spec type_spec_SecurityDescriptorHelpers_Static = {
         "winrt._winrt_microsoft_windows_security_accesscontrol.SecurityDescriptorHelpers_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SecurityDescriptorHelpers_Static
-    };
+        type_slots_SecurityDescriptorHelpers_Static};
 
     // ----- AppContainerNameAndAccess struct --------------------
 
@@ -219,8 +212,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
     static PyMethodDef _methods_AppContainerNameAndAccess[] = {
         { "_assign_array_", _assign_array_AppContainerNameAndAccess, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* AppContainerNameAndAccess_get_appContainerName(py::wrapper::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess* self, void* /*unused*/) noexcept
     {
@@ -291,8 +283,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
     static PyGetSetDef _getset_AppContainerNameAndAccess[] = {
         { "app_container_name", reinterpret_cast<getter>(AppContainerNameAndAccess_get_appContainerName), reinterpret_cast<setter>(AppContainerNameAndAccess_set_appContainerName), nullptr, nullptr },
         { "access_mask", reinterpret_cast<getter>(AppContainerNameAndAccess_get_accessMask), reinterpret_cast<setter>(AppContainerNameAndAccess_set_accessMask), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_AppContainerNameAndAccess(py::wrapper::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess* self, PyObject* other, int op) noexcept
     {
@@ -354,8 +345,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppContainerNameAndAccess) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AppContainerNameAndAccess) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_AppContainerNameAndAccess) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppContainerNameAndAccess = {
         "winrt._winrt_microsoft_windows_security_accesscontrol.AppContainerNameAndAccess",

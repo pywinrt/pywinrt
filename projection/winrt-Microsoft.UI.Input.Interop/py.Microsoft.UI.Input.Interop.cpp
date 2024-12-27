@@ -56,19 +56,16 @@ namespace py::cpp::Microsoft::UI::Input::Interop
     }
 
     static PyMethodDef _methods_PenDeviceInterop[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PenDeviceInterop[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PenDeviceInterop[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenDeviceInterop) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenDeviceInterop) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenDeviceInterop) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PenDeviceInterop = {
         "winrt._winrt_microsoft_ui_input_interop.PenDeviceInterop",
@@ -78,13 +75,11 @@ namespace py::cpp::Microsoft::UI::Input::Interop
         _type_slots_PenDeviceInterop};
 
     static PyGetSetDef getset_PenDeviceInterop_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PenDeviceInterop_Static[] = {
         { "from_pointer_point", reinterpret_cast<PyCFunction>(PenDeviceInterop_FromPointerPoint), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PenDeviceInterop_Static[] = 
     {
@@ -94,14 +89,12 @@ namespace py::cpp::Microsoft::UI::Input::Interop
         { }
     };
 
-    static PyType_Spec type_spec_PenDeviceInterop_Static =
-    {
+    static PyType_Spec type_spec_PenDeviceInterop_Static = {
         "winrt._winrt_microsoft_ui_input_interop.PenDeviceInterop_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PenDeviceInterop_Static
-    };
+        type_slots_PenDeviceInterop_Static};
 
     // ----- Microsoft.UI.Input.Interop Initialization --------------------
 

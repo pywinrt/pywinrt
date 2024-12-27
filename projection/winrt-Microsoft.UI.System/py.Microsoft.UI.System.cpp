@@ -217,22 +217,19 @@ namespace py::cpp::Microsoft::UI::System
         { "remove_changed", reinterpret_cast<PyCFunction>(ThemeSettings_remove_Changed), METH_O, nullptr },
         { "_assign_array_", _assign_array_ThemeSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ThemeSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ThemeSettings[] = {
         { "high_contrast", reinterpret_cast<getter>(ThemeSettings_get_HighContrast), nullptr, nullptr, nullptr },
         { "high_contrast_scheme", reinterpret_cast<getter>(ThemeSettings_get_HighContrastScheme), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ThemeSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ThemeSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ThemeSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ThemeSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ThemeSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ThemeSettings = {
         "winrt._winrt_microsoft_ui_system.ThemeSettings",
@@ -242,13 +239,11 @@ namespace py::cpp::Microsoft::UI::System
         _type_slots_ThemeSettings};
 
     static PyGetSetDef getset_ThemeSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ThemeSettings_Static[] = {
         { "create_for_window_id", reinterpret_cast<PyCFunction>(ThemeSettings_CreateForWindowId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ThemeSettings_Static[] = 
     {
@@ -258,14 +253,12 @@ namespace py::cpp::Microsoft::UI::System
         { }
     };
 
-    static PyType_Spec type_spec_ThemeSettings_Static =
-    {
+    static PyType_Spec type_spec_ThemeSettings_Static = {
         "winrt._winrt_microsoft_ui_system.ThemeSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ThemeSettings_Static
-    };
+        type_slots_ThemeSettings_Static};
 
     // ----- Microsoft.UI.System Initialization --------------------
 

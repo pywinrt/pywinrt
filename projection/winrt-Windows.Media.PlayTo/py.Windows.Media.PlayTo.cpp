@@ -78,21 +78,18 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_CurrentTimeChangeRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_CurrentTimeChangeRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CurrentTimeChangeRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CurrentTimeChangeRequestedEventArgs[] = {
         { "time", reinterpret_cast<getter>(CurrentTimeChangeRequestedEventArgs_get_Time), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CurrentTimeChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrentTimeChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CurrentTimeChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrentTimeChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrentTimeChangeRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CurrentTimeChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.CurrentTimeChangeRequestedEventArgs",
@@ -175,21 +172,18 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_MuteChangeRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_MuteChangeRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MuteChangeRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MuteChangeRequestedEventArgs[] = {
         { "mute", reinterpret_cast<getter>(MuteChangeRequestedEventArgs_get_Mute), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MuteChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MuteChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MuteChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MuteChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MuteChangeRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MuteChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.MuteChangeRequestedEventArgs",
@@ -473,21 +467,18 @@ namespace py::cpp::Windows::Media::PlayTo
         { "remove_transferred", reinterpret_cast<PyCFunction>(PlayToConnection_remove_Transferred), METH_O, nullptr },
         { "_assign_array_", _assign_array_PlayToConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToConnection[] = {
         { "state", reinterpret_cast<getter>(PlayToConnection_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToConnection = {
         "winrt._winrt_windows_media_playto.PlayToConnection",
@@ -600,22 +591,19 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_PlayToConnectionErrorEventArgs[] = {
         { "_assign_array_", _assign_array_PlayToConnectionErrorEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToConnectionErrorEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToConnectionErrorEventArgs[] = {
         { "code", reinterpret_cast<getter>(PlayToConnectionErrorEventArgs_get_Code), nullptr, nullptr, nullptr },
         { "message", reinterpret_cast<getter>(PlayToConnectionErrorEventArgs_get_Message), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToConnectionErrorEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToConnectionErrorEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToConnectionErrorEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToConnectionErrorEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToConnectionErrorEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToConnectionErrorEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToConnectionErrorEventArgs",
@@ -728,22 +716,19 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_PlayToConnectionStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_PlayToConnectionStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToConnectionStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToConnectionStateChangedEventArgs[] = {
         { "current_state", reinterpret_cast<getter>(PlayToConnectionStateChangedEventArgs_get_CurrentState), nullptr, nullptr, nullptr },
         { "previous_state", reinterpret_cast<getter>(PlayToConnectionStateChangedEventArgs_get_PreviousState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToConnectionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToConnectionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToConnectionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToConnectionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToConnectionStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToConnectionStateChangedEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToConnectionStateChangedEventArgs",
@@ -856,22 +841,19 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_PlayToConnectionTransferredEventArgs[] = {
         { "_assign_array_", _assign_array_PlayToConnectionTransferredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToConnectionTransferredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToConnectionTransferredEventArgs[] = {
         { "current_source", reinterpret_cast<getter>(PlayToConnectionTransferredEventArgs_get_CurrentSource), nullptr, nullptr, nullptr },
         { "previous_source", reinterpret_cast<getter>(PlayToConnectionTransferredEventArgs_get_PreviousSource), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToConnectionTransferredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToConnectionTransferredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToConnectionTransferredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToConnectionTransferredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToConnectionTransferredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToConnectionTransferredEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToConnectionTransferredEventArgs",
@@ -1208,21 +1190,18 @@ namespace py::cpp::Windows::Media::PlayTo
         { "remove_source_selected", reinterpret_cast<PyCFunction>(PlayToManager_remove_SourceSelected), METH_O, nullptr },
         { "_assign_array_", _assign_array_PlayToManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToManager[] = {
         { "default_source_selection", reinterpret_cast<getter>(PlayToManager_get_DefaultSourceSelection), reinterpret_cast<setter>(PlayToManager_put_DefaultSourceSelection), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToManager = {
         "winrt._winrt_windows_media_playto.PlayToManager",
@@ -1232,14 +1211,12 @@ namespace py::cpp::Windows::Media::PlayTo
         _type_slots_PlayToManager};
 
     static PyGetSetDef getset_PlayToManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlayToManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(PlayToManager_GetForCurrentView), METH_VARARGS, nullptr },
         { "show_play_to_ui", reinterpret_cast<PyCFunction>(PlayToManager_ShowPlayToUI), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlayToManager_Static[] = 
     {
@@ -1249,14 +1226,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Spec type_spec_PlayToManager_Static =
-    {
+    static PyType_Spec type_spec_PlayToManager_Static = {
         "winrt._winrt_windows_media_playto.PlayToManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlayToManager_Static
-    };
+        type_slots_PlayToManager_Static};
 
     // ----- PlayToReceiver class --------------------
 
@@ -2828,8 +2803,7 @@ namespace py::cpp::Windows::Media::PlayTo
         { "remove_volume_change_requested", reinterpret_cast<PyCFunction>(PlayToReceiver_remove_VolumeChangeRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_PlayToReceiver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToReceiver), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToReceiver[] = {
         { "supports_video", reinterpret_cast<getter>(PlayToReceiver_get_SupportsVideo), reinterpret_cast<setter>(PlayToReceiver_put_SupportsVideo), nullptr, nullptr },
@@ -2837,16 +2811,14 @@ namespace py::cpp::Windows::Media::PlayTo
         { "supports_audio", reinterpret_cast<getter>(PlayToReceiver_get_SupportsAudio), reinterpret_cast<setter>(PlayToReceiver_put_SupportsAudio), nullptr, nullptr },
         { "friendly_name", reinterpret_cast<getter>(PlayToReceiver_get_FriendlyName), reinterpret_cast<setter>(PlayToReceiver_put_FriendlyName), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(PlayToReceiver_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToReceiver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToReceiver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToReceiver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToReceiver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToReceiver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToReceiver = {
         "winrt._winrt_windows_media_playto.PlayToReceiver",
@@ -3109,23 +3081,20 @@ namespace py::cpp::Windows::Media::PlayTo
         { "play_next", reinterpret_cast<PyCFunction>(PlayToSource_PlayNext), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayToSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToSource[] = {
         { "next", reinterpret_cast<getter>(PlayToSource_get_Next), reinterpret_cast<setter>(PlayToSource_put_Next), nullptr, nullptr },
         { "connection", reinterpret_cast<getter>(PlayToSource_get_Connection), nullptr, nullptr, nullptr },
         { "preferred_source_uri", reinterpret_cast<getter>(PlayToSource_get_PreferredSourceUri), reinterpret_cast<setter>(PlayToSource_put_PreferredSourceUri), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToSource = {
         "winrt._winrt_windows_media_playto.PlayToSource",
@@ -3220,20 +3189,17 @@ namespace py::cpp::Windows::Media::PlayTo
         { "complete", reinterpret_cast<PyCFunction>(PlayToSourceDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayToSourceDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToSourceDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToSourceDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToSourceDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSourceDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSourceDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSourceDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSourceDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToSourceDeferral = {
         "winrt._winrt_windows_media_playto.PlayToSourceDeferral",
@@ -3445,21 +3411,18 @@ namespace py::cpp::Windows::Media::PlayTo
         { "set_source", reinterpret_cast<PyCFunction>(PlayToSourceRequest_SetSource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayToSourceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToSourceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToSourceRequest[] = {
         { "deadline", reinterpret_cast<getter>(PlayToSourceRequest_get_Deadline), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToSourceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSourceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSourceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSourceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSourceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToSourceRequest = {
         "winrt._winrt_windows_media_playto.PlayToSourceRequest",
@@ -3542,21 +3505,18 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_PlayToSourceRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_PlayToSourceRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToSourceRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToSourceRequestedEventArgs[] = {
         { "source_request", reinterpret_cast<getter>(PlayToSourceRequestedEventArgs_get_SourceRequest), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToSourceRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSourceRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSourceRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSourceRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSourceRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToSourceRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToSourceRequestedEventArgs",
@@ -3759,8 +3719,7 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_PlayToSourceSelectedEventArgs[] = {
         { "_assign_array_", _assign_array_PlayToSourceSelectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayToSourceSelectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayToSourceSelectedEventArgs[] = {
         { "friendly_name", reinterpret_cast<getter>(PlayToSourceSelectedEventArgs_get_FriendlyName), nullptr, nullptr, nullptr },
@@ -3768,16 +3727,14 @@ namespace py::cpp::Windows::Media::PlayTo
         { "supports_audio", reinterpret_cast<getter>(PlayToSourceSelectedEventArgs_get_SupportsAudio), nullptr, nullptr, nullptr },
         { "supports_image", reinterpret_cast<getter>(PlayToSourceSelectedEventArgs_get_SupportsImage), nullptr, nullptr, nullptr },
         { "supports_video", reinterpret_cast<getter>(PlayToSourceSelectedEventArgs_get_SupportsVideo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayToSourceSelectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSourceSelectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSourceSelectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSourceSelectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSourceSelectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayToSourceSelectedEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToSourceSelectedEventArgs",
@@ -3860,21 +3817,18 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_PlaybackRateChangeRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_PlaybackRateChangeRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlaybackRateChangeRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlaybackRateChangeRequestedEventArgs[] = {
         { "rate", reinterpret_cast<getter>(PlaybackRateChangeRequestedEventArgs_get_Rate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlaybackRateChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlaybackRateChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlaybackRateChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlaybackRateChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlaybackRateChangeRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlaybackRateChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.PlaybackRateChangeRequestedEventArgs",
@@ -4227,8 +4181,7 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_SourceChangeRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_SourceChangeRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SourceChangeRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SourceChangeRequestedEventArgs[] = {
         { "album", reinterpret_cast<getter>(SourceChangeRequestedEventArgs_get_Album), nullptr, nullptr, nullptr },
@@ -4241,16 +4194,14 @@ namespace py::cpp::Windows::Media::PlayTo
         { "stream", reinterpret_cast<getter>(SourceChangeRequestedEventArgs_get_Stream), nullptr, nullptr, nullptr },
         { "thumbnail", reinterpret_cast<getter>(SourceChangeRequestedEventArgs_get_Thumbnail), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(SourceChangeRequestedEventArgs_get_Title), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SourceChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SourceChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SourceChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SourceChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SourceChangeRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SourceChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.SourceChangeRequestedEventArgs",
@@ -4333,21 +4284,18 @@ namespace py::cpp::Windows::Media::PlayTo
     static PyMethodDef _methods_VolumeChangeRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_VolumeChangeRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VolumeChangeRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VolumeChangeRequestedEventArgs[] = {
         { "volume", reinterpret_cast<getter>(VolumeChangeRequestedEventArgs_get_Volume), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VolumeChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VolumeChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VolumeChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VolumeChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VolumeChangeRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VolumeChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.VolumeChangeRequestedEventArgs",

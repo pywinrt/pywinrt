@@ -203,21 +203,18 @@ namespace py::cpp::Windows::Media::DialProtocol
         { "stop_async", reinterpret_cast<PyCFunction>(DialApp_StopAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DialApp, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialApp), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialApp[] = {
         { "app_name", reinterpret_cast<getter>(DialApp_get_AppName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialApp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialApp) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialApp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialApp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialApp) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialApp = {
         "winrt._winrt_windows_media_dialprotocol.DialApp",
@@ -330,22 +327,19 @@ namespace py::cpp::Windows::Media::DialProtocol
     static PyMethodDef _methods_DialAppStateDetails[] = {
         { "_assign_array_", _assign_array_DialAppStateDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialAppStateDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialAppStateDetails[] = {
         { "full_xml", reinterpret_cast<getter>(DialAppStateDetails_get_FullXml), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(DialAppStateDetails_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialAppStateDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialAppStateDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialAppStateDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialAppStateDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialAppStateDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialAppStateDetails = {
         "winrt._winrt_windows_media_dialprotocol.DialAppStateDetails",
@@ -657,23 +651,20 @@ namespace py::cpp::Windows::Media::DialProtocol
         { "get_dial_app", reinterpret_cast<PyCFunction>(DialDevice_GetDialApp), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DialDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialDevice[] = {
         { "id", reinterpret_cast<getter>(DialDevice_get_Id), nullptr, nullptr, nullptr },
         { "friendly_name", reinterpret_cast<getter>(DialDevice_get_FriendlyName), nullptr, nullptr, nullptr },
         { "thumbnail", reinterpret_cast<getter>(DialDevice_get_Thumbnail), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialDevice = {
         "winrt._winrt_windows_media_dialprotocol.DialDevice",
@@ -683,15 +674,13 @@ namespace py::cpp::Windows::Media::DialProtocol
         _type_slots_DialDevice};
 
     static PyGetSetDef getset_DialDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DialDevice_Static[] = {
         { "device_info_supports_dial_async", reinterpret_cast<PyCFunction>(DialDevice_DeviceInfoSupportsDialAsync), METH_VARARGS, nullptr },
         { "from_id_async", reinterpret_cast<PyCFunction>(DialDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(DialDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DialDevice_Static[] = 
     {
@@ -701,14 +690,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Spec type_spec_DialDevice_Static =
-    {
+    static PyType_Spec type_spec_DialDevice_Static = {
         "winrt._winrt_windows_media_dialprotocol.DialDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DialDevice_Static
-    };
+        type_slots_DialDevice_Static};
 
     // ----- DialDevicePicker class --------------------
 
@@ -1300,22 +1287,19 @@ namespace py::cpp::Windows::Media::DialProtocol
         { "remove_disconnect_button_clicked", reinterpret_cast<PyCFunction>(DialDevicePicker_remove_DisconnectButtonClicked), METH_O, nullptr },
         { "_assign_array_", _assign_array_DialDevicePicker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialDevicePicker), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialDevicePicker[] = {
         { "appearance", reinterpret_cast<getter>(DialDevicePicker_get_Appearance), nullptr, nullptr, nullptr },
         { "filter", reinterpret_cast<getter>(DialDevicePicker_get_Filter), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialDevicePicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDevicePicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDevicePicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDevicePicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDevicePicker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialDevicePicker = {
         "winrt._winrt_windows_media_dialprotocol.DialDevicePicker",
@@ -1398,21 +1382,18 @@ namespace py::cpp::Windows::Media::DialProtocol
     static PyMethodDef _methods_DialDevicePickerFilter[] = {
         { "_assign_array_", _assign_array_DialDevicePickerFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialDevicePickerFilter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialDevicePickerFilter[] = {
         { "supported_app_names", reinterpret_cast<getter>(DialDevicePickerFilter_get_SupportedAppNames), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialDevicePickerFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDevicePickerFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDevicePickerFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDevicePickerFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDevicePickerFilter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialDevicePickerFilter = {
         "winrt._winrt_windows_media_dialprotocol.DialDevicePickerFilter",
@@ -1495,21 +1476,18 @@ namespace py::cpp::Windows::Media::DialProtocol
     static PyMethodDef _methods_DialDeviceSelectedEventArgs[] = {
         { "_assign_array_", _assign_array_DialDeviceSelectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialDeviceSelectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialDeviceSelectedEventArgs[] = {
         { "selected_dial_device", reinterpret_cast<getter>(DialDeviceSelectedEventArgs_get_SelectedDialDevice), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialDeviceSelectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDeviceSelectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDeviceSelectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDeviceSelectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDeviceSelectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialDeviceSelectedEventArgs = {
         "winrt._winrt_windows_media_dialprotocol.DialDeviceSelectedEventArgs",
@@ -1592,21 +1570,18 @@ namespace py::cpp::Windows::Media::DialProtocol
     static PyMethodDef _methods_DialDisconnectButtonClickedEventArgs[] = {
         { "_assign_array_", _assign_array_DialDisconnectButtonClickedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialDisconnectButtonClickedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialDisconnectButtonClickedEventArgs[] = {
         { "device", reinterpret_cast<getter>(DialDisconnectButtonClickedEventArgs_get_Device), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialDisconnectButtonClickedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDisconnectButtonClickedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDisconnectButtonClickedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDisconnectButtonClickedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDisconnectButtonClickedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialDisconnectButtonClickedEventArgs = {
         "winrt._winrt_windows_media_dialprotocol.DialDisconnectButtonClickedEventArgs",
@@ -1814,20 +1789,17 @@ namespace py::cpp::Windows::Media::DialProtocol
         { "set_additional_data_async", reinterpret_cast<PyCFunction>(DialReceiverApp_SetAdditionalDataAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DialReceiverApp, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialReceiverApp), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialReceiverApp[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialReceiverApp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialReceiverApp) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialReceiverApp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialReceiverApp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialReceiverApp) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialReceiverApp = {
         "winrt._winrt_windows_media_dialprotocol.DialReceiverApp",
@@ -1838,12 +1810,10 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyGetSetDef getset_DialReceiverApp_Static[] = {
         { "current", reinterpret_cast<getter>(DialReceiverApp_get_Current), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DialReceiverApp_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DialReceiverApp_Static[] = 
     {
@@ -1853,14 +1823,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Spec type_spec_DialReceiverApp_Static =
-    {
+    static PyType_Spec type_spec_DialReceiverApp_Static = {
         "winrt._winrt_windows_media_dialprotocol.DialReceiverApp_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DialReceiverApp_Static
-    };
+        type_slots_DialReceiverApp_Static};
 
     // ----- Windows.Media.DialProtocol Initialization --------------------
 

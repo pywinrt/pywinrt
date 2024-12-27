@@ -61,19 +61,16 @@ namespace py::cpp::Windows::Storage::Provider
     }
 
     static PyMethodDef _methods_CachedFileUpdater[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CachedFileUpdater[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CachedFileUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CachedFileUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CachedFileUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CachedFileUpdater) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CachedFileUpdater = {
         "winrt._winrt_windows_storage_provider.CachedFileUpdater",
@@ -83,13 +80,11 @@ namespace py::cpp::Windows::Storage::Provider
         _type_slots_CachedFileUpdater};
 
     static PyGetSetDef getset_CachedFileUpdater_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CachedFileUpdater_Static[] = {
         { "set_update_information", reinterpret_cast<PyCFunction>(CachedFileUpdater_SetUpdateInformation), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CachedFileUpdater_Static[] = 
     {
@@ -99,14 +94,12 @@ namespace py::cpp::Windows::Storage::Provider
         { }
     };
 
-    static PyType_Spec type_spec_CachedFileUpdater_Static =
-    {
+    static PyType_Spec type_spec_CachedFileUpdater_Static = {
         "winrt._winrt_windows_storage_provider.CachedFileUpdater_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CachedFileUpdater_Static
-    };
+        type_slots_CachedFileUpdater_Static};
 
     // ----- CachedFileUpdaterUI class --------------------
 
@@ -486,24 +479,21 @@ namespace py::cpp::Windows::Storage::Provider
         { "remove_ui_requested", reinterpret_cast<PyCFunction>(CachedFileUpdaterUI_remove_UIRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_CachedFileUpdaterUI, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CachedFileUpdaterUI), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CachedFileUpdaterUI[] = {
         { "title", reinterpret_cast<getter>(CachedFileUpdaterUI_get_Title), reinterpret_cast<setter>(CachedFileUpdaterUI_put_Title), nullptr, nullptr },
         { "ui_status", reinterpret_cast<getter>(CachedFileUpdaterUI_get_UIStatus), nullptr, nullptr, nullptr },
         { "update_target", reinterpret_cast<getter>(CachedFileUpdaterUI_get_UpdateTarget), nullptr, nullptr, nullptr },
         { "update_request", reinterpret_cast<getter>(CachedFileUpdaterUI_get_UpdateRequest), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CachedFileUpdaterUI[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CachedFileUpdaterUI) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CachedFileUpdaterUI) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CachedFileUpdaterUI) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CachedFileUpdaterUI) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CachedFileUpdaterUI = {
         "winrt._winrt_windows_storage_provider.CachedFileUpdaterUI",
@@ -839,24 +829,21 @@ namespace py::cpp::Windows::Storage::Provider
         { "update_local_file", reinterpret_cast<PyCFunction>(FileUpdateRequest_UpdateLocalFile), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FileUpdateRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileUpdateRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileUpdateRequest[] = {
         { "status", reinterpret_cast<getter>(FileUpdateRequest_get_Status), reinterpret_cast<setter>(FileUpdateRequest_put_Status), nullptr, nullptr },
         { "content_id", reinterpret_cast<getter>(FileUpdateRequest_get_ContentId), nullptr, nullptr, nullptr },
         { "file", reinterpret_cast<getter>(FileUpdateRequest_get_File), nullptr, nullptr, nullptr },
         { "user_input_needed_message", reinterpret_cast<getter>(FileUpdateRequest_get_UserInputNeededMessage), reinterpret_cast<setter>(FileUpdateRequest_put_UserInputNeededMessage), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileUpdateRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileUpdateRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileUpdateRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileUpdateRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileUpdateRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileUpdateRequest = {
         "winrt._winrt_windows_storage_provider.FileUpdateRequest",
@@ -951,20 +938,17 @@ namespace py::cpp::Windows::Storage::Provider
         { "complete", reinterpret_cast<PyCFunction>(FileUpdateRequestDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FileUpdateRequestDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileUpdateRequestDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileUpdateRequestDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileUpdateRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileUpdateRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileUpdateRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileUpdateRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileUpdateRequestDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileUpdateRequestDeferral = {
         "winrt._winrt_windows_storage_provider.FileUpdateRequestDeferral",
@@ -1047,21 +1031,18 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_FileUpdateRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_FileUpdateRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileUpdateRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileUpdateRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(FileUpdateRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileUpdateRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileUpdateRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileUpdateRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileUpdateRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileUpdateRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileUpdateRequestedEventArgs = {
         "winrt._winrt_windows_storage_provider.FileUpdateRequestedEventArgs",
@@ -1199,22 +1180,19 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderFileTypeInfo[] = {
         { "_assign_array_", _assign_array_StorageProviderFileTypeInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderFileTypeInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderFileTypeInfo[] = {
         { "file_extension", reinterpret_cast<getter>(StorageProviderFileTypeInfo_get_FileExtension), nullptr, nullptr, nullptr },
         { "icon_resource", reinterpret_cast<getter>(StorageProviderFileTypeInfo_get_IconResource), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderFileTypeInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderFileTypeInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderFileTypeInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderFileTypeInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderFileTypeInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderFileTypeInfo = {
         "winrt._winrt_windows_storage_provider.StorageProviderFileTypeInfo",
@@ -1496,23 +1474,20 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderGetContentInfoForPathResult[] = {
         { "_assign_array_", _assign_array_StorageProviderGetContentInfoForPathResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderGetContentInfoForPathResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderGetContentInfoForPathResult[] = {
         { "status", reinterpret_cast<getter>(StorageProviderGetContentInfoForPathResult_get_Status), reinterpret_cast<setter>(StorageProviderGetContentInfoForPathResult_put_Status), nullptr, nullptr },
         { "content_uri", reinterpret_cast<getter>(StorageProviderGetContentInfoForPathResult_get_ContentUri), reinterpret_cast<setter>(StorageProviderGetContentInfoForPathResult_put_ContentUri), nullptr, nullptr },
         { "content_id", reinterpret_cast<getter>(StorageProviderGetContentInfoForPathResult_get_ContentId), reinterpret_cast<setter>(StorageProviderGetContentInfoForPathResult_put_ContentId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderGetContentInfoForPathResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderGetContentInfoForPathResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderGetContentInfoForPathResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderGetContentInfoForPathResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderGetContentInfoForPathResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderGetContentInfoForPathResult = {
         "winrt._winrt_windows_storage_provider.StorageProviderGetContentInfoForPathResult",
@@ -1725,22 +1700,19 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderGetPathForContentUriResult[] = {
         { "_assign_array_", _assign_array_StorageProviderGetPathForContentUriResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderGetPathForContentUriResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderGetPathForContentUriResult[] = {
         { "status", reinterpret_cast<getter>(StorageProviderGetPathForContentUriResult_get_Status), reinterpret_cast<setter>(StorageProviderGetPathForContentUriResult_put_Status), nullptr, nullptr },
         { "path", reinterpret_cast<getter>(StorageProviderGetPathForContentUriResult_get_Path), reinterpret_cast<setter>(StorageProviderGetPathForContentUriResult_put_Path), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderGetPathForContentUriResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderGetPathForContentUriResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderGetPathForContentUriResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderGetPathForContentUriResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderGetPathForContentUriResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderGetPathForContentUriResult = {
         "winrt._winrt_windows_storage_provider.StorageProviderGetPathForContentUriResult",
@@ -1802,19 +1774,16 @@ namespace py::cpp::Windows::Storage::Provider
     }
 
     static PyMethodDef _methods_StorageProviderItemProperties[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderItemProperties[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderItemProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderItemProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderItemProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderItemProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderItemProperties = {
         "winrt._winrt_windows_storage_provider.StorageProviderItemProperties",
@@ -1824,13 +1793,11 @@ namespace py::cpp::Windows::Storage::Provider
         _type_slots_StorageProviderItemProperties};
 
     static PyGetSetDef getset_StorageProviderItemProperties_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StorageProviderItemProperties_Static[] = {
         { "set_async", reinterpret_cast<PyCFunction>(StorageProviderItemProperties_SetAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StorageProviderItemProperties_Static[] = 
     {
@@ -1840,14 +1807,12 @@ namespace py::cpp::Windows::Storage::Provider
         { }
     };
 
-    static PyType_Spec type_spec_StorageProviderItemProperties_Static =
-    {
+    static PyType_Spec type_spec_StorageProviderItemProperties_Static = {
         "winrt._winrt_windows_storage_provider.StorageProviderItemProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StorageProviderItemProperties_Static
-    };
+        type_slots_StorageProviderItemProperties_Static};
 
     // ----- StorageProviderItemProperty class --------------------
 
@@ -2122,23 +2087,20 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderItemProperty[] = {
         { "_assign_array_", _assign_array_StorageProviderItemProperty, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderItemProperty), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderItemProperty[] = {
         { "value", reinterpret_cast<getter>(StorageProviderItemProperty_get_Value), reinterpret_cast<setter>(StorageProviderItemProperty_put_Value), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(StorageProviderItemProperty_get_Id), reinterpret_cast<setter>(StorageProviderItemProperty_put_Id), nullptr, nullptr },
         { "icon_resource", reinterpret_cast<getter>(StorageProviderItemProperty_get_IconResource), reinterpret_cast<setter>(StorageProviderItemProperty_put_IconResource), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderItemProperty[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderItemProperty) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderItemProperty) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderItemProperty) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderItemProperty) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderItemProperty = {
         "winrt._winrt_windows_storage_provider.StorageProviderItemProperty",
@@ -2351,22 +2313,19 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderItemPropertyDefinition[] = {
         { "_assign_array_", _assign_array_StorageProviderItemPropertyDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderItemPropertyDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderItemPropertyDefinition[] = {
         { "id", reinterpret_cast<getter>(StorageProviderItemPropertyDefinition_get_Id), reinterpret_cast<setter>(StorageProviderItemPropertyDefinition_put_Id), nullptr, nullptr },
         { "display_name_resource", reinterpret_cast<getter>(StorageProviderItemPropertyDefinition_get_DisplayNameResource), reinterpret_cast<setter>(StorageProviderItemPropertyDefinition_put_DisplayNameResource), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderItemPropertyDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderItemPropertyDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderItemPropertyDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderItemPropertyDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderItemPropertyDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderItemPropertyDefinition = {
         "winrt._winrt_windows_storage_provider.StorageProviderItemPropertyDefinition",
@@ -2579,22 +2538,19 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderKnownFolderEntry[] = {
         { "_assign_array_", _assign_array_StorageProviderKnownFolderEntry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderKnownFolderEntry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderKnownFolderEntry[] = {
         { "status", reinterpret_cast<getter>(StorageProviderKnownFolderEntry_get_Status), reinterpret_cast<setter>(StorageProviderKnownFolderEntry_put_Status), nullptr, nullptr },
         { "known_folder_id", reinterpret_cast<getter>(StorageProviderKnownFolderEntry_get_KnownFolderId), reinterpret_cast<setter>(StorageProviderKnownFolderEntry_put_KnownFolderId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderKnownFolderEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderKnownFolderEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderKnownFolderEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderKnownFolderEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderKnownFolderEntry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderKnownFolderEntry = {
         "winrt._winrt_windows_storage_provider.StorageProviderKnownFolderEntry",
@@ -2837,23 +2793,20 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderKnownFolderSyncInfo[] = {
         { "_assign_array_", _assign_array_StorageProviderKnownFolderSyncInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderKnownFolderSyncInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderKnownFolderSyncInfo[] = {
         { "sync_requested", reinterpret_cast<getter>(StorageProviderKnownFolderSyncInfo_get_SyncRequested), reinterpret_cast<setter>(StorageProviderKnownFolderSyncInfo_put_SyncRequested), nullptr, nullptr },
         { "provider_display_name", reinterpret_cast<getter>(StorageProviderKnownFolderSyncInfo_get_ProviderDisplayName), reinterpret_cast<setter>(StorageProviderKnownFolderSyncInfo_put_ProviderDisplayName), nullptr, nullptr },
         { "known_folder_entries", reinterpret_cast<getter>(StorageProviderKnownFolderSyncInfo_get_KnownFolderEntries), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderKnownFolderSyncInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderKnownFolderSyncInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderKnownFolderSyncInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderKnownFolderSyncInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderKnownFolderSyncInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderKnownFolderSyncInfo = {
         "winrt._winrt_windows_storage_provider.StorageProviderKnownFolderSyncInfo",
@@ -2966,22 +2919,19 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderKnownFolderSyncRequestArgs[] = {
         { "_assign_array_", _assign_array_StorageProviderKnownFolderSyncRequestArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderKnownFolderSyncRequestArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderKnownFolderSyncRequestArgs[] = {
         { "known_folders", reinterpret_cast<getter>(StorageProviderKnownFolderSyncRequestArgs_get_KnownFolders), nullptr, nullptr, nullptr },
         { "source", reinterpret_cast<getter>(StorageProviderKnownFolderSyncRequestArgs_get_Source), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderKnownFolderSyncRequestArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderKnownFolderSyncRequestArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderKnownFolderSyncRequestArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderKnownFolderSyncRequestArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderKnownFolderSyncRequestArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderKnownFolderSyncRequestArgs = {
         "winrt._winrt_windows_storage_provider.StorageProviderKnownFolderSyncRequestArgs",
@@ -3194,22 +3144,19 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderMoreInfoUI[] = {
         { "_assign_array_", _assign_array_StorageProviderMoreInfoUI, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderMoreInfoUI), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderMoreInfoUI[] = {
         { "message", reinterpret_cast<getter>(StorageProviderMoreInfoUI_get_Message), reinterpret_cast<setter>(StorageProviderMoreInfoUI_put_Message), nullptr, nullptr },
         { "command", reinterpret_cast<getter>(StorageProviderMoreInfoUI_get_Command), reinterpret_cast<setter>(StorageProviderMoreInfoUI_put_Command), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderMoreInfoUI[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderMoreInfoUI) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderMoreInfoUI) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderMoreInfoUI) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderMoreInfoUI) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderMoreInfoUI = {
         "winrt._winrt_windows_storage_provider.StorageProviderMoreInfoUI",
@@ -3560,24 +3507,21 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderQuotaUI[] = {
         { "_assign_array_", _assign_array_StorageProviderQuotaUI, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderQuotaUI), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderQuotaUI[] = {
         { "quota_used_label", reinterpret_cast<getter>(StorageProviderQuotaUI_get_QuotaUsedLabel), reinterpret_cast<setter>(StorageProviderQuotaUI_put_QuotaUsedLabel), nullptr, nullptr },
         { "quota_used_in_bytes", reinterpret_cast<getter>(StorageProviderQuotaUI_get_QuotaUsedInBytes), reinterpret_cast<setter>(StorageProviderQuotaUI_put_QuotaUsedInBytes), nullptr, nullptr },
         { "quota_used_color", reinterpret_cast<getter>(StorageProviderQuotaUI_get_QuotaUsedColor), reinterpret_cast<setter>(StorageProviderQuotaUI_put_QuotaUsedColor), nullptr, nullptr },
         { "quota_total_in_bytes", reinterpret_cast<getter>(StorageProviderQuotaUI_get_QuotaTotalInBytes), reinterpret_cast<setter>(StorageProviderQuotaUI_put_QuotaTotalInBytes), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderQuotaUI[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderQuotaUI) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderQuotaUI) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderQuotaUI) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderQuotaUI) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderQuotaUI = {
         "winrt._winrt_windows_storage_provider.StorageProviderQuotaUI",
@@ -4204,8 +4148,7 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderStatusUI[] = {
         { "_assign_array_", _assign_array_StorageProviderStatusUI, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderStatusUI), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderStatusUI[] = {
         { "sync_status_command", reinterpret_cast<getter>(StorageProviderStatusUI_get_SyncStatusCommand), reinterpret_cast<setter>(StorageProviderStatusUI_put_SyncStatusCommand), nullptr, nullptr },
@@ -4216,16 +4159,14 @@ namespace py::cpp::Windows::Storage::Provider
         { "provider_secondary_commands", reinterpret_cast<getter>(StorageProviderStatusUI_get_ProviderSecondaryCommands), reinterpret_cast<setter>(StorageProviderStatusUI_put_ProviderSecondaryCommands), nullptr, nullptr },
         { "provider_primary_command", reinterpret_cast<getter>(StorageProviderStatusUI_get_ProviderPrimaryCommand), reinterpret_cast<setter>(StorageProviderStatusUI_put_ProviderPrimaryCommand), nullptr, nullptr },
         { "more_info_ui", reinterpret_cast<getter>(StorageProviderStatusUI_get_MoreInfoUI), reinterpret_cast<setter>(StorageProviderStatusUI_put_MoreInfoUI), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderStatusUI[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderStatusUI) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderStatusUI) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderStatusUI) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderStatusUI) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderStatusUI = {
         "winrt._winrt_windows_storage_provider.StorageProviderStatusUI",
@@ -5464,8 +5405,7 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef _methods_StorageProviderSyncRootInfo[] = {
         { "_assign_array_", _assign_array_StorageProviderSyncRootInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderSyncRootInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderSyncRootInfo[] = {
         { "version", reinterpret_cast<getter>(StorageProviderSyncRootInfo_get_Version), reinterpret_cast<setter>(StorageProviderSyncRootInfo_put_Version), nullptr, nullptr },
@@ -5486,16 +5426,14 @@ namespace py::cpp::Windows::Storage::Provider
         { "storage_provider_item_property_definitions", reinterpret_cast<getter>(StorageProviderSyncRootInfo_get_StorageProviderItemPropertyDefinitions), nullptr, nullptr, nullptr },
         { "provider_id", reinterpret_cast<getter>(StorageProviderSyncRootInfo_get_ProviderId), reinterpret_cast<setter>(StorageProviderSyncRootInfo_put_ProviderId), nullptr, nullptr },
         { "fallback_file_type_info", reinterpret_cast<getter>(StorageProviderSyncRootInfo_get_FallbackFileTypeInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderSyncRootInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderSyncRootInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderSyncRootInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderSyncRootInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderSyncRootInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderSyncRootInfo = {
         "winrt._winrt_windows_storage_provider.StorageProviderSyncRootInfo",
@@ -5764,19 +5702,16 @@ namespace py::cpp::Windows::Storage::Provider
     }
 
     static PyMethodDef _methods_StorageProviderSyncRootManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageProviderSyncRootManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageProviderSyncRootManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderSyncRootManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderSyncRootManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderSyncRootManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageProviderSyncRootManager = {
         "winrt._winrt_windows_storage_provider.StorageProviderSyncRootManager",
@@ -5786,8 +5721,7 @@ namespace py::cpp::Windows::Storage::Provider
         _type_slots_StorageProviderSyncRootManager};
 
     static PyGetSetDef getset_StorageProviderSyncRootManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StorageProviderSyncRootManager_Static[] = {
         { "get_current_sync_roots", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_GetCurrentSyncRoots), METH_VARARGS, nullptr },
@@ -5796,8 +5730,7 @@ namespace py::cpp::Windows::Storage::Provider
         { "is_supported", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_IsSupported), METH_VARARGS, nullptr },
         { "register", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_Register), METH_VARARGS, nullptr },
         { "unregister", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_Unregister), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StorageProviderSyncRootManager_Static[] = 
     {
@@ -5807,14 +5740,12 @@ namespace py::cpp::Windows::Storage::Provider
         { }
     };
 
-    static PyType_Spec type_spec_StorageProviderSyncRootManager_Static =
-    {
+    static PyType_Spec type_spec_StorageProviderSyncRootManager_Static = {
         "winrt._winrt_windows_storage_provider.StorageProviderSyncRootManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StorageProviderSyncRootManager_Static
-    };
+        type_slots_StorageProviderSyncRootManager_Static};
 
     // ----- IStorageProviderItemPropertySource interface --------------------
 
@@ -5903,20 +5834,17 @@ namespace py::cpp::Windows::Storage::Provider
         { "get_item_properties", reinterpret_cast<PyCFunction>(IStorageProviderItemPropertySource_GetItemProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderItemPropertySource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderItemPropertySource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageProviderItemPropertySource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageProviderItemPropertySource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderItemPropertySource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderItemPropertySource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderItemPropertySource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderItemPropertySource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageProviderItemPropertySource = {
         "winrt._winrt_windows_storage_provider.IStorageProviderItemPropertySource",
@@ -6004,13 +5932,11 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef methods_ImplementsIStorageProviderItemPropertySource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderItemPropertySource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderItemPropertySource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageProviderItemPropertySource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderItemPropertySource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderItemPropertySource = {
         "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderItemPropertySource",
@@ -6171,20 +6097,17 @@ namespace py::cpp::Windows::Storage::Provider
         { "remove_known_folder_sync_info_changed", reinterpret_cast<PyCFunction>(IStorageProviderKnownFolderSyncInfoSource_remove_KnownFolderSyncInfoChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderKnownFolderSyncInfoSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderKnownFolderSyncInfoSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageProviderKnownFolderSyncInfoSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageProviderKnownFolderSyncInfoSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderKnownFolderSyncInfoSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderKnownFolderSyncInfoSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderKnownFolderSyncInfoSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderKnownFolderSyncInfoSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageProviderKnownFolderSyncInfoSource = {
         "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSource",
@@ -6328,13 +6251,11 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef methods_ImplementsIStorageProviderKnownFolderSyncInfoSource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderKnownFolderSyncInfoSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderKnownFolderSyncInfoSource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderKnownFolderSyncInfoSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderKnownFolderSyncInfoSource = {
         "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderKnownFolderSyncInfoSource",
@@ -6428,20 +6349,17 @@ namespace py::cpp::Windows::Storage::Provider
         { "get_known_folder_sync_info_source", reinterpret_cast<PyCFunction>(IStorageProviderKnownFolderSyncInfoSourceFactory_GetKnownFolderSyncInfoSource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderKnownFolderSyncInfoSourceFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderKnownFolderSyncInfoSourceFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageProviderKnownFolderSyncInfoSourceFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageProviderKnownFolderSyncInfoSourceFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderKnownFolderSyncInfoSourceFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderKnownFolderSyncInfoSourceFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderKnownFolderSyncInfoSourceFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderKnownFolderSyncInfoSourceFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageProviderKnownFolderSyncInfoSourceFactory = {
         "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSourceFactory",
@@ -6523,13 +6441,11 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef methods_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory = {
         "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory",
@@ -6625,20 +6541,17 @@ namespace py::cpp::Windows::Storage::Provider
         { "is_property_supported", reinterpret_cast<PyCFunction>(IStorageProviderPropertyCapabilities_IsPropertySupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderPropertyCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderPropertyCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageProviderPropertyCapabilities[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageProviderPropertyCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderPropertyCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderPropertyCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderPropertyCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderPropertyCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageProviderPropertyCapabilities = {
         "winrt._winrt_windows_storage_provider.IStorageProviderPropertyCapabilities",
@@ -6726,13 +6639,11 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef methods_ImplementsIStorageProviderPropertyCapabilities[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderPropertyCapabilities), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderPropertyCapabilities), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageProviderPropertyCapabilities[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderPropertyCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderPropertyCapabilities = {
         "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderPropertyCapabilities",
@@ -6914,20 +6825,17 @@ namespace py::cpp::Windows::Storage::Provider
         { "get_state", reinterpret_cast<PyCFunction>(IStorageProviderShareLinkSource_GetState), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderShareLinkSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderShareLinkSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageProviderShareLinkSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageProviderShareLinkSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderShareLinkSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderShareLinkSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderShareLinkSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderShareLinkSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageProviderShareLinkSource = {
         "winrt._winrt_windows_storage_provider.IStorageProviderShareLinkSource",
@@ -7079,13 +6987,11 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef methods_ImplementsIStorageProviderShareLinkSource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderShareLinkSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderShareLinkSource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageProviderShareLinkSource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderShareLinkSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderShareLinkSource = {
         "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderShareLinkSource",
@@ -7246,20 +7152,17 @@ namespace py::cpp::Windows::Storage::Provider
         { "remove_status_ui_changed", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISource_remove_StatusUIChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderStatusUISource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderStatusUISource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageProviderStatusUISource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageProviderStatusUISource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderStatusUISource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderStatusUISource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderStatusUISource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderStatusUISource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageProviderStatusUISource = {
         "winrt._winrt_windows_storage_provider.IStorageProviderStatusUISource",
@@ -7403,13 +7306,11 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef methods_ImplementsIStorageProviderStatusUISource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderStatusUISource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderStatusUISource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageProviderStatusUISource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderStatusUISource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderStatusUISource = {
         "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderStatusUISource",
@@ -7505,20 +7406,17 @@ namespace py::cpp::Windows::Storage::Provider
         { "get_status_ui_source", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISourceFactory_GetStatusUISource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderStatusUISourceFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderStatusUISourceFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageProviderStatusUISourceFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageProviderStatusUISourceFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderStatusUISourceFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderStatusUISourceFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderStatusUISourceFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderStatusUISourceFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageProviderStatusUISourceFactory = {
         "winrt._winrt_windows_storage_provider.IStorageProviderStatusUISourceFactory",
@@ -7606,13 +7504,11 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef methods_ImplementsIStorageProviderStatusUISourceFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderStatusUISourceFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderStatusUISourceFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageProviderStatusUISourceFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderStatusUISourceFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderStatusUISourceFactory = {
         "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderStatusUISourceFactory",
@@ -7827,24 +7723,21 @@ namespace py::cpp::Windows::Storage::Provider
         { "invoke", reinterpret_cast<PyCFunction>(IStorageProviderUICommand_Invoke), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderUICommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderUICommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageProviderUICommand[] = {
         { "description", reinterpret_cast<getter>(IStorageProviderUICommand_get_Description), nullptr, nullptr, nullptr },
         { "icon", reinterpret_cast<getter>(IStorageProviderUICommand_get_Icon), nullptr, nullptr, nullptr },
         { "label", reinterpret_cast<getter>(IStorageProviderUICommand_get_Label), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(IStorageProviderUICommand_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageProviderUICommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderUICommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderUICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderUICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderUICommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageProviderUICommand = {
         "winrt._winrt_windows_storage_provider.IStorageProviderUICommand",
@@ -8004,13 +7897,11 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef methods_ImplementsIStorageProviderUICommand[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderUICommand), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderUICommand), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageProviderUICommand[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderUICommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderUICommand = {
         "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderUICommand",
@@ -8153,20 +8044,17 @@ namespace py::cpp::Windows::Storage::Provider
         { "get_path_for_content_uri", reinterpret_cast<PyCFunction>(IStorageProviderUriSource_GetPathForContentUri), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderUriSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderUriSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageProviderUriSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageProviderUriSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderUriSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderUriSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderUriSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderUriSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageProviderUriSource = {
         "winrt._winrt_windows_storage_provider.IStorageProviderUriSource",
@@ -8306,13 +8194,11 @@ namespace py::cpp::Windows::Storage::Provider
     static PyMethodDef methods_ImplementsIStorageProviderUriSource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderUriSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderUriSource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageProviderUriSource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderUriSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderUriSource = {
         "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderUriSource",

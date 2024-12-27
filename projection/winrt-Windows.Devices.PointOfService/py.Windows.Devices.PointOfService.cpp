@@ -731,23 +731,20 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScanner), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BarcodeScanner), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_BarcodeScanner), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeScanner[] = {
         { "capabilities", reinterpret_cast<getter>(BarcodeScanner_get_Capabilities), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(BarcodeScanner_get_DeviceId), nullptr, nullptr, nullptr },
         { "video_device_id", reinterpret_cast<getter>(BarcodeScanner_get_VideoDeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeScanner[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScanner) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScanner) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScanner) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScanner) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeScanner = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeScanner",
@@ -757,16 +754,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_BarcodeScanner};
 
     static PyGetSetDef getset_BarcodeScanner_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BarcodeScanner_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(BarcodeScanner_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BarcodeScanner_Static[] = 
     {
@@ -776,14 +771,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_BarcodeScanner_Static =
-    {
+    static PyType_Spec type_spec_BarcodeScanner_Static = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeScanner_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BarcodeScanner_Static
-    };
+        type_slots_BarcodeScanner_Static};
 
     // ----- BarcodeScannerCapabilities class --------------------
 
@@ -1009,8 +1002,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_BarcodeScannerCapabilities[] = {
         { "_assign_array_", _assign_array_BarcodeScannerCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeScannerCapabilities[] = {
         { "is_image_preview_supported", reinterpret_cast<getter>(BarcodeScannerCapabilities_get_IsImagePreviewSupported), nullptr, nullptr, nullptr },
@@ -1019,16 +1011,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "power_reporting_type", reinterpret_cast<getter>(BarcodeScannerCapabilities_get_PowerReportingType), nullptr, nullptr, nullptr },
         { "is_software_trigger_supported", reinterpret_cast<getter>(BarcodeScannerCapabilities_get_IsSoftwareTriggerSupported), nullptr, nullptr, nullptr },
         { "is_video_preview_supported", reinterpret_cast<getter>(BarcodeScannerCapabilities_get_IsVideoPreviewSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeScannerCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeScannerCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeScannerCapabilities",
@@ -1111,21 +1101,18 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_BarcodeScannerDataReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_BarcodeScannerDataReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerDataReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeScannerDataReceivedEventArgs[] = {
         { "report", reinterpret_cast<getter>(BarcodeScannerDataReceivedEventArgs_get_Report), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeScannerDataReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerDataReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerDataReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerDataReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerDataReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeScannerDataReceivedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeScannerDataReceivedEventArgs",
@@ -1268,23 +1255,20 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_BarcodeScannerErrorOccurredEventArgs[] = {
         { "_assign_array_", _assign_array_BarcodeScannerErrorOccurredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerErrorOccurredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeScannerErrorOccurredEventArgs[] = {
         { "error_data", reinterpret_cast<getter>(BarcodeScannerErrorOccurredEventArgs_get_ErrorData), nullptr, nullptr, nullptr },
         { "is_retriable", reinterpret_cast<getter>(BarcodeScannerErrorOccurredEventArgs_get_IsRetriable), nullptr, nullptr, nullptr },
         { "partial_input_data", reinterpret_cast<getter>(BarcodeScannerErrorOccurredEventArgs_get_PartialInputData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeScannerErrorOccurredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerErrorOccurredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerErrorOccurredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerErrorOccurredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerErrorOccurredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeScannerErrorOccurredEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeScannerErrorOccurredEventArgs",
@@ -1367,21 +1351,18 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_BarcodeScannerImagePreviewReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_BarcodeScannerImagePreviewReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerImagePreviewReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeScannerImagePreviewReceivedEventArgs[] = {
         { "preview", reinterpret_cast<getter>(BarcodeScannerImagePreviewReceivedEventArgs_get_Preview), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeScannerImagePreviewReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerImagePreviewReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerImagePreviewReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerImagePreviewReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerImagePreviewReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeScannerImagePreviewReceivedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeScannerImagePreviewReceivedEventArgs",
@@ -1550,23 +1531,20 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_BarcodeScannerReport[] = {
         { "_assign_array_", _assign_array_BarcodeScannerReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeScannerReport[] = {
         { "scan_data", reinterpret_cast<getter>(BarcodeScannerReport_get_ScanData), nullptr, nullptr, nullptr },
         { "scan_data_label", reinterpret_cast<getter>(BarcodeScannerReport_get_ScanDataLabel), nullptr, nullptr, nullptr },
         { "scan_data_type", reinterpret_cast<getter>(BarcodeScannerReport_get_ScanDataType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeScannerReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeScannerReport = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeScannerReport",
@@ -1679,22 +1657,19 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_BarcodeScannerStatusUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_BarcodeScannerStatusUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerStatusUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeScannerStatusUpdatedEventArgs[] = {
         { "extended_status", reinterpret_cast<getter>(BarcodeScannerStatusUpdatedEventArgs_get_ExtendedStatus), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(BarcodeScannerStatusUpdatedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeScannerStatusUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerStatusUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerStatusUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerStatusUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerStatusUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeScannerStatusUpdatedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeScannerStatusUpdatedEventArgs",
@@ -4575,19 +4550,16 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef _methods_BarcodeSymbologies[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeSymbologies[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeSymbologies[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeSymbologies) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeSymbologies) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeSymbologies) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeSymbologies = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeSymbologies",
@@ -4691,13 +4663,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "us_intelligent_pkg", reinterpret_cast<getter>(BarcodeSymbologies_get_UsIntelligentPkg), nullptr, nullptr, nullptr },
         { "us_planet", reinterpret_cast<getter>(BarcodeSymbologies_get_UsPlanet), nullptr, nullptr, nullptr },
         { "gs1_d_w_code", reinterpret_cast<getter>(BarcodeSymbologies_get_Gs1DWCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BarcodeSymbologies_Static[] = {
         { "get_name", reinterpret_cast<PyCFunction>(BarcodeSymbologies_GetName), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BarcodeSymbologies_Static[] = 
     {
@@ -4707,14 +4677,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_BarcodeSymbologies_Static =
-    {
+    static PyType_Spec type_spec_BarcodeSymbologies_Static = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeSymbologies_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BarcodeSymbologies_Static
-    };
+        type_slots_BarcodeSymbologies_Static};
 
     // ----- BarcodeSymbologyAttributes class --------------------
 
@@ -5195,8 +5163,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_BarcodeSymbologyAttributes[] = {
         { "_assign_array_", _assign_array_BarcodeSymbologyAttributes, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeSymbologyAttributes), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeSymbologyAttributes[] = {
         { "is_check_digit_validation_enabled", reinterpret_cast<getter>(BarcodeSymbologyAttributes_get_IsCheckDigitValidationEnabled), reinterpret_cast<setter>(BarcodeSymbologyAttributes_put_IsCheckDigitValidationEnabled), nullptr, nullptr },
@@ -5207,16 +5174,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_check_digit_transmission_supported", reinterpret_cast<getter>(BarcodeSymbologyAttributes_get_IsCheckDigitTransmissionSupported), nullptr, nullptr, nullptr },
         { "is_check_digit_validation_supported", reinterpret_cast<getter>(BarcodeSymbologyAttributes_get_IsCheckDigitValidationSupported), nullptr, nullptr, nullptr },
         { "is_decode_length_supported", reinterpret_cast<getter>(BarcodeSymbologyAttributes_get_IsDecodeLengthSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeSymbologyAttributes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeSymbologyAttributes) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeSymbologyAttributes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeSymbologyAttributes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeSymbologyAttributes) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeSymbologyAttributes = {
         "winrt._winrt_windows_devices_pointofservice.BarcodeSymbologyAttributes",
@@ -5844,8 +5809,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_CashDrawer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CashDrawer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_CashDrawer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CashDrawer[] = {
         { "capabilities", reinterpret_cast<getter>(CashDrawer_get_Capabilities), nullptr, nullptr, nullptr },
@@ -5853,16 +5817,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "drawer_event_source", reinterpret_cast<getter>(CashDrawer_get_DrawerEventSource), nullptr, nullptr, nullptr },
         { "is_drawer_open", reinterpret_cast<getter>(CashDrawer_get_IsDrawerOpen), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(CashDrawer_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CashDrawer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CashDrawer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CashDrawer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CashDrawer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CashDrawer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CashDrawer = {
         "winrt._winrt_windows_devices_pointofservice.CashDrawer",
@@ -5872,16 +5834,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_CashDrawer};
 
     static PyGetSetDef getset_CashDrawer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CashDrawer_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(CashDrawer_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(CashDrawer_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(CashDrawer_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(CashDrawer_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CashDrawer_Static[] = 
     {
@@ -5891,14 +5851,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_CashDrawer_Static =
-    {
+    static PyType_Spec type_spec_CashDrawer_Static = {
         "winrt._winrt_windows_devices_pointofservice.CashDrawer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CashDrawer_Static
-    };
+        type_slots_CashDrawer_Static};
 
     // ----- CashDrawerCapabilities class --------------------
 
@@ -6124,8 +6082,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_CashDrawerCapabilities[] = {
         { "_assign_array_", _assign_array_CashDrawerCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CashDrawerCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CashDrawerCapabilities[] = {
         { "is_drawer_open_sensor_available", reinterpret_cast<getter>(CashDrawerCapabilities_get_IsDrawerOpenSensorAvailable), nullptr, nullptr, nullptr },
@@ -6134,16 +6091,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_status_multi_drawer_detect_supported", reinterpret_cast<getter>(CashDrawerCapabilities_get_IsStatusMultiDrawerDetectSupported), nullptr, nullptr, nullptr },
         { "is_status_reporting_supported", reinterpret_cast<getter>(CashDrawerCapabilities_get_IsStatusReportingSupported), nullptr, nullptr, nullptr },
         { "power_reporting_type", reinterpret_cast<getter>(CashDrawerCapabilities_get_PowerReportingType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CashDrawerCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CashDrawerCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CashDrawerCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CashDrawerCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CashDrawerCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CashDrawerCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.CashDrawerCapabilities",
@@ -6580,24 +6535,21 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "remove_alarm_timeout_expired", reinterpret_cast<PyCFunction>(CashDrawerCloseAlarm_remove_AlarmTimeoutExpired), METH_O, nullptr },
         { "_assign_array_", _assign_array_CashDrawerCloseAlarm, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CashDrawerCloseAlarm), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CashDrawerCloseAlarm[] = {
         { "beep_frequency", reinterpret_cast<getter>(CashDrawerCloseAlarm_get_BeepFrequency), reinterpret_cast<setter>(CashDrawerCloseAlarm_put_BeepFrequency), nullptr, nullptr },
         { "beep_duration", reinterpret_cast<getter>(CashDrawerCloseAlarm_get_BeepDuration), reinterpret_cast<setter>(CashDrawerCloseAlarm_put_BeepDuration), nullptr, nullptr },
         { "beep_delay", reinterpret_cast<getter>(CashDrawerCloseAlarm_get_BeepDelay), reinterpret_cast<setter>(CashDrawerCloseAlarm_put_BeepDelay), nullptr, nullptr },
         { "alarm_timeout", reinterpret_cast<getter>(CashDrawerCloseAlarm_get_AlarmTimeout), reinterpret_cast<setter>(CashDrawerCloseAlarm_put_AlarmTimeout), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CashDrawerCloseAlarm[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CashDrawerCloseAlarm) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CashDrawerCloseAlarm) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CashDrawerCloseAlarm) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CashDrawerCloseAlarm) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CashDrawerCloseAlarm = {
         "winrt._winrt_windows_devices_pointofservice.CashDrawerCloseAlarm",
@@ -6680,21 +6632,18 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_CashDrawerClosedEventArgs[] = {
         { "_assign_array_", _assign_array_CashDrawerClosedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CashDrawerClosedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CashDrawerClosedEventArgs[] = {
         { "cash_drawer", reinterpret_cast<getter>(CashDrawerClosedEventArgs_get_CashDrawer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CashDrawerClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CashDrawerClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CashDrawerClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CashDrawerClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CashDrawerClosedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CashDrawerClosedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.CashDrawerClosedEventArgs",
@@ -6881,20 +6830,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "remove_drawer_opened", reinterpret_cast<PyCFunction>(CashDrawerEventSource_remove_DrawerOpened), METH_O, nullptr },
         { "_assign_array_", _assign_array_CashDrawerEventSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CashDrawerEventSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CashDrawerEventSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CashDrawerEventSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CashDrawerEventSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CashDrawerEventSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CashDrawerEventSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CashDrawerEventSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CashDrawerEventSource = {
         "winrt._winrt_windows_devices_pointofservice.CashDrawerEventSource",
@@ -6977,21 +6923,18 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_CashDrawerOpenedEventArgs[] = {
         { "_assign_array_", _assign_array_CashDrawerOpenedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CashDrawerOpenedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CashDrawerOpenedEventArgs[] = {
         { "cash_drawer", reinterpret_cast<getter>(CashDrawerOpenedEventArgs_get_CashDrawer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CashDrawerOpenedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CashDrawerOpenedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CashDrawerOpenedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CashDrawerOpenedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CashDrawerOpenedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CashDrawerOpenedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.CashDrawerOpenedEventArgs",
@@ -7104,22 +7047,19 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_CashDrawerStatus[] = {
         { "_assign_array_", _assign_array_CashDrawerStatus, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CashDrawerStatus), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CashDrawerStatus[] = {
         { "extended_status", reinterpret_cast<getter>(CashDrawerStatus_get_ExtendedStatus), nullptr, nullptr, nullptr },
         { "status_kind", reinterpret_cast<getter>(CashDrawerStatus_get_StatusKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CashDrawerStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CashDrawerStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CashDrawerStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CashDrawerStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CashDrawerStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CashDrawerStatus = {
         "winrt._winrt_windows_devices_pointofservice.CashDrawerStatus",
@@ -7202,21 +7142,18 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_CashDrawerStatusUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_CashDrawerStatusUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CashDrawerStatusUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CashDrawerStatusUpdatedEventArgs[] = {
         { "status", reinterpret_cast<getter>(CashDrawerStatusUpdatedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CashDrawerStatusUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CashDrawerStatusUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CashDrawerStatusUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CashDrawerStatusUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CashDrawerStatusUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CashDrawerStatusUpdatedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.CashDrawerStatusUpdatedEventArgs",
@@ -8620,8 +8557,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedBarcodeScanner), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedBarcodeScanner), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedBarcodeScanner), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedBarcodeScanner[] = {
         { "is_disabled_on_data_received", reinterpret_cast<getter>(ClaimedBarcodeScanner_get_IsDisabledOnDataReceived), reinterpret_cast<setter>(ClaimedBarcodeScanner_put_IsDisabledOnDataReceived), nullptr, nullptr },
@@ -8629,16 +8565,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "device_id", reinterpret_cast<getter>(ClaimedBarcodeScanner_get_DeviceId), nullptr, nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(ClaimedBarcodeScanner_get_IsEnabled), nullptr, nullptr, nullptr },
         { "is_video_preview_shown_on_enable", reinterpret_cast<getter>(ClaimedBarcodeScanner_get_IsVideoPreviewShownOnEnable), reinterpret_cast<setter>(ClaimedBarcodeScanner_put_IsVideoPreviewShownOnEnable), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedBarcodeScanner[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedBarcodeScanner) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedBarcodeScanner) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedBarcodeScanner) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedBarcodeScanner) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedBarcodeScanner = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedBarcodeScanner",
@@ -8691,20 +8625,17 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_ClaimedBarcodeScannerClosedEventArgs[] = {
         { "_assign_array_", _assign_array_ClaimedBarcodeScannerClosedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedBarcodeScannerClosedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedBarcodeScannerClosedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedBarcodeScannerClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedBarcodeScannerClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedBarcodeScannerClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedBarcodeScannerClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedBarcodeScannerClosedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedBarcodeScannerClosedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedBarcodeScannerClosedEventArgs",
@@ -9328,24 +9259,21 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedCashDrawer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedCashDrawer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedCashDrawer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedCashDrawer[] = {
         { "close_alarm", reinterpret_cast<getter>(ClaimedCashDrawer_get_CloseAlarm), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(ClaimedCashDrawer_get_DeviceId), nullptr, nullptr, nullptr },
         { "is_drawer_open", reinterpret_cast<getter>(ClaimedCashDrawer_get_IsDrawerOpen), nullptr, nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(ClaimedCashDrawer_get_IsEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedCashDrawer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedCashDrawer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedCashDrawer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedCashDrawer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedCashDrawer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedCashDrawer = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedCashDrawer",
@@ -9398,20 +9326,17 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_ClaimedCashDrawerClosedEventArgs[] = {
         { "_assign_array_", _assign_array_ClaimedCashDrawerClosedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedCashDrawerClosedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedCashDrawerClosedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedCashDrawerClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedCashDrawerClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedCashDrawerClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedCashDrawerClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedCashDrawerClosedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedCashDrawerClosedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedCashDrawerClosedEventArgs",
@@ -10133,8 +10058,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "validate_data", reinterpret_cast<PyCFunction>(ClaimedJournalPrinter_ValidateData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ClaimedJournalPrinter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedJournalPrinter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedJournalPrinter[] = {
         { "line_spacing", reinterpret_cast<getter>(ClaimedJournalPrinter_get_LineSpacing), reinterpret_cast<setter>(ClaimedJournalPrinter_put_LineSpacing), nullptr, nullptr },
@@ -10150,16 +10074,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_paper_near_end", reinterpret_cast<getter>(ClaimedJournalPrinter_get_IsPaperNearEnd), nullptr, nullptr, nullptr },
         { "is_ready_to_print", reinterpret_cast<getter>(ClaimedJournalPrinter_get_IsReadyToPrint), nullptr, nullptr, nullptr },
         { "line_width", reinterpret_cast<getter>(ClaimedJournalPrinter_get_LineWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedJournalPrinter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedJournalPrinter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedJournalPrinter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedJournalPrinter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedJournalPrinter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedJournalPrinter = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedJournalPrinter",
@@ -11480,8 +11402,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedLineDisplay), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedLineDisplay), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedLineDisplay), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedLineDisplay[] = {
         { "capabilities", reinterpret_cast<getter>(ClaimedLineDisplay_get_Capabilities), nullptr, nullptr, nullptr },
@@ -11496,16 +11417,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "max_bitmap_size_in_pixels", reinterpret_cast<getter>(ClaimedLineDisplay_get_MaxBitmapSizeInPixels), nullptr, nullptr, nullptr },
         { "supported_character_sets", reinterpret_cast<getter>(ClaimedLineDisplay_get_SupportedCharacterSets), nullptr, nullptr, nullptr },
         { "supported_screen_sizes_in_characters", reinterpret_cast<getter>(ClaimedLineDisplay_get_SupportedScreenSizesInCharacters), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedLineDisplay[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedLineDisplay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedLineDisplay) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedLineDisplay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedLineDisplay) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedLineDisplay = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedLineDisplay",
@@ -11515,15 +11434,13 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_ClaimedLineDisplay};
 
     static PyGetSetDef getset_ClaimedLineDisplay_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ClaimedLineDisplay_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ClaimedLineDisplay_Static[] = 
     {
@@ -11533,14 +11450,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_ClaimedLineDisplay_Static =
-    {
+    static PyType_Spec type_spec_ClaimedLineDisplay_Static = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedLineDisplay_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ClaimedLineDisplay_Static
-    };
+        type_slots_ClaimedLineDisplay_Static};
 
     // ----- ClaimedLineDisplayClosedEventArgs class --------------------
 
@@ -11586,20 +11501,17 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_ClaimedLineDisplayClosedEventArgs[] = {
         { "_assign_array_", _assign_array_ClaimedLineDisplayClosedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedLineDisplayClosedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedLineDisplayClosedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedLineDisplayClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedLineDisplayClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedLineDisplayClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedLineDisplayClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedLineDisplayClosedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedLineDisplayClosedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedLineDisplayClosedEventArgs",
@@ -12981,8 +12893,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedMagneticStripeReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedMagneticStripeReader), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedMagneticStripeReader), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedMagneticStripeReader[] = {
         { "tracks_to_read", reinterpret_cast<getter>(ClaimedMagneticStripeReader_get_TracksToRead), reinterpret_cast<setter>(ClaimedMagneticStripeReader_put_TracksToRead), nullptr, nullptr },
@@ -12993,16 +12904,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "device_id", reinterpret_cast<getter>(ClaimedMagneticStripeReader_get_DeviceId), nullptr, nullptr, nullptr },
         { "is_device_authenticated", reinterpret_cast<getter>(ClaimedMagneticStripeReader_get_IsDeviceAuthenticated), nullptr, nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(ClaimedMagneticStripeReader_get_IsEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedMagneticStripeReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedMagneticStripeReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedMagneticStripeReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedMagneticStripeReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedMagneticStripeReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedMagneticStripeReader = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedMagneticStripeReader",
@@ -13055,20 +12964,17 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_ClaimedMagneticStripeReaderClosedEventArgs[] = {
         { "_assign_array_", _assign_array_ClaimedMagneticStripeReaderClosedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedMagneticStripeReaderClosedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedMagneticStripeReaderClosedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedMagneticStripeReaderClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedMagneticStripeReaderClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedMagneticStripeReaderClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedMagneticStripeReaderClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedMagneticStripeReaderClosedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedMagneticStripeReaderClosedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedMagneticStripeReaderClosedEventArgs",
@@ -13918,8 +13824,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedPosPrinter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedPosPrinter), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedPosPrinter), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedPosPrinter[] = {
         { "map_mode", reinterpret_cast<getter>(ClaimedPosPrinter_get_MapMode), reinterpret_cast<setter>(ClaimedPosPrinter_put_MapMode), nullptr, nullptr },
@@ -13931,16 +13836,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "journal", reinterpret_cast<getter>(ClaimedPosPrinter_get_Journal), nullptr, nullptr, nullptr },
         { "receipt", reinterpret_cast<getter>(ClaimedPosPrinter_get_Receipt), nullptr, nullptr, nullptr },
         { "slip", reinterpret_cast<getter>(ClaimedPosPrinter_get_Slip), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedPosPrinter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedPosPrinter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedPosPrinter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedPosPrinter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedPosPrinter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedPosPrinter = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedPosPrinter",
@@ -13993,20 +13896,17 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_ClaimedPosPrinterClosedEventArgs[] = {
         { "_assign_array_", _assign_array_ClaimedPosPrinterClosedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedPosPrinterClosedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedPosPrinterClosedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedPosPrinterClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedPosPrinterClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedPosPrinterClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedPosPrinterClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedPosPrinterClosedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedPosPrinterClosedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedPosPrinterClosedEventArgs",
@@ -14878,8 +14778,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "validate_data", reinterpret_cast<PyCFunction>(ClaimedReceiptPrinter_ValidateData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ClaimedReceiptPrinter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedReceiptPrinter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedReceiptPrinter[] = {
         { "lines_to_paper_cut", reinterpret_cast<getter>(ClaimedReceiptPrinter_get_LinesToPaperCut), nullptr, nullptr, nullptr },
@@ -14900,16 +14799,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_paper_near_end", reinterpret_cast<getter>(ClaimedReceiptPrinter_get_IsPaperNearEnd), nullptr, nullptr, nullptr },
         { "is_ready_to_print", reinterpret_cast<getter>(ClaimedReceiptPrinter_get_IsReadyToPrint), nullptr, nullptr, nullptr },
         { "line_width", reinterpret_cast<getter>(ClaimedReceiptPrinter_get_LineWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedReceiptPrinter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedReceiptPrinter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedReceiptPrinter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedReceiptPrinter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedReceiptPrinter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedReceiptPrinter = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedReceiptPrinter",
@@ -16055,8 +15952,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "validate_data", reinterpret_cast<PyCFunction>(ClaimedSlipPrinter_ValidateData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ClaimedSlipPrinter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedSlipPrinter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClaimedSlipPrinter[] = {
         { "lines_near_end_to_end", reinterpret_cast<getter>(ClaimedSlipPrinter_get_LinesNearEndToEnd), nullptr, nullptr, nullptr },
@@ -16079,16 +15975,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_paper_near_end", reinterpret_cast<getter>(ClaimedSlipPrinter_get_IsPaperNearEnd), nullptr, nullptr, nullptr },
         { "is_ready_to_print", reinterpret_cast<getter>(ClaimedSlipPrinter_get_IsReadyToPrint), nullptr, nullptr, nullptr },
         { "line_width", reinterpret_cast<getter>(ClaimedSlipPrinter_get_LineWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClaimedSlipPrinter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClaimedSlipPrinter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClaimedSlipPrinter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClaimedSlipPrinter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClaimedSlipPrinter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClaimedSlipPrinter = {
         "winrt._winrt_windows_devices_pointofservice.ClaimedSlipPrinter",
@@ -16433,20 +16327,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "print_newline", reinterpret_cast<PyCFunction>(JournalPrintJob_PrintNewline), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_JournalPrintJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JournalPrintJob), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JournalPrintJob[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JournalPrintJob[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JournalPrintJob) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JournalPrintJob) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JournalPrintJob) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JournalPrintJob) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JournalPrintJob = {
         "winrt._winrt_windows_devices_pointofservice.JournalPrintJob",
@@ -17069,8 +16960,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_JournalPrinterCapabilities[] = {
         { "_assign_array_", _assign_array_JournalPrinterCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JournalPrinterCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JournalPrinterCapabilities[] = {
         { "cartridge_sensors", reinterpret_cast<getter>(JournalPrinterCapabilities_get_CartridgeSensors), nullptr, nullptr, nullptr },
@@ -17092,16 +16982,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_strikethrough_supported", reinterpret_cast<getter>(JournalPrinterCapabilities_get_IsStrikethroughSupported), nullptr, nullptr, nullptr },
         { "is_subscript_supported", reinterpret_cast<getter>(JournalPrinterCapabilities_get_IsSubscriptSupported), nullptr, nullptr, nullptr },
         { "is_superscript_supported", reinterpret_cast<getter>(JournalPrinterCapabilities_get_IsSuperscriptSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JournalPrinterCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JournalPrinterCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JournalPrinterCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JournalPrinterCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JournalPrinterCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JournalPrinterCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.JournalPrinterCapabilities",
@@ -17707,8 +17595,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplay), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LineDisplay), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_LineDisplay), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplay[] = {
         { "capabilities", reinterpret_cast<getter>(LineDisplay_get_Capabilities), nullptr, nullptr, nullptr },
@@ -17718,16 +17605,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "device_service_version", reinterpret_cast<getter>(LineDisplay_get_DeviceServiceVersion), nullptr, nullptr, nullptr },
         { "physical_device_description", reinterpret_cast<getter>(LineDisplay_get_PhysicalDeviceDescription), nullptr, nullptr, nullptr },
         { "physical_device_name", reinterpret_cast<getter>(LineDisplay_get_PhysicalDeviceName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplay[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplay) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplay) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplay = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplay",
@@ -17738,16 +17623,14 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyGetSetDef getset_LineDisplay_Static[] = {
         { "statistics_category_selector", reinterpret_cast<getter>(LineDisplay_get_StatisticsCategorySelector), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LineDisplay_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(LineDisplay_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(LineDisplay_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(LineDisplay_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(LineDisplay_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LineDisplay_Static[] = 
     {
@@ -17757,14 +17640,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_LineDisplay_Static =
-    {
+    static PyType_Spec type_spec_LineDisplay_Static = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplay_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LineDisplay_Static
-    };
+        type_slots_LineDisplay_Static};
 
     // ----- LineDisplayAttributes class --------------------
 
@@ -18293,8 +18174,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_LineDisplayAttributes[] = {
         { "_assign_array_", _assign_array_LineDisplayAttributes, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayAttributes), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayAttributes[] = {
         { "screen_size_in_characters", reinterpret_cast<getter>(LineDisplayAttributes_get_ScreenSizeInCharacters), reinterpret_cast<setter>(LineDisplayAttributes_put_ScreenSizeInCharacters), nullptr, nullptr },
@@ -18304,16 +18184,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "character_set", reinterpret_cast<getter>(LineDisplayAttributes_get_CharacterSet), reinterpret_cast<setter>(LineDisplayAttributes_put_CharacterSet), nullptr, nullptr },
         { "brightness", reinterpret_cast<getter>(LineDisplayAttributes_get_Brightness), reinterpret_cast<setter>(LineDisplayAttributes_put_Brightness), nullptr, nullptr },
         { "blink_rate", reinterpret_cast<getter>(LineDisplayAttributes_get_BlinkRate), reinterpret_cast<setter>(LineDisplayAttributes_put_BlinkRate), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayAttributes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayAttributes) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayAttributes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayAttributes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayAttributes) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayAttributes = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayAttributes",
@@ -18906,8 +18784,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_LineDisplayCapabilities[] = {
         { "_assign_array_", _assign_array_LineDisplayCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayCapabilities[] = {
         { "can_blink", reinterpret_cast<getter>(LineDisplayCapabilities_get_CanBlink), nullptr, nullptr, nullptr },
@@ -18928,16 +18805,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "power_reporting_type", reinterpret_cast<getter>(LineDisplayCapabilities_get_PowerReportingType), nullptr, nullptr, nullptr },
         { "supported_descriptors", reinterpret_cast<getter>(LineDisplayCapabilities_get_SupportedDescriptors), nullptr, nullptr, nullptr },
         { "supported_windows", reinterpret_cast<getter>(LineDisplayCapabilities_get_SupportedWindows), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayCapabilities",
@@ -19284,8 +19159,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "try_update_attributes_async", reinterpret_cast<PyCFunction>(LineDisplayCursor_TryUpdateAttributesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LineDisplayCursor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayCursor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayCursor[] = {
         { "can_customize", reinterpret_cast<getter>(LineDisplayCursor_get_CanCustomize), nullptr, nullptr, nullptr },
@@ -19295,16 +19169,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_other_supported", reinterpret_cast<getter>(LineDisplayCursor_get_IsOtherSupported), nullptr, nullptr, nullptr },
         { "is_reverse_supported", reinterpret_cast<getter>(LineDisplayCursor_get_IsReverseSupported), nullptr, nullptr, nullptr },
         { "is_underline_supported", reinterpret_cast<getter>(LineDisplayCursor_get_IsUnderlineSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayCursor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayCursor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayCursor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayCursor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayCursor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayCursor = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayCursor",
@@ -19633,24 +19505,21 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_LineDisplayCursorAttributes[] = {
         { "_assign_array_", _assign_array_LineDisplayCursorAttributes, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayCursorAttributes), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayCursorAttributes[] = {
         { "position", reinterpret_cast<getter>(LineDisplayCursorAttributes_get_Position), reinterpret_cast<setter>(LineDisplayCursorAttributes_put_Position), nullptr, nullptr },
         { "is_blink_enabled", reinterpret_cast<getter>(LineDisplayCursorAttributes_get_IsBlinkEnabled), reinterpret_cast<setter>(LineDisplayCursorAttributes_put_IsBlinkEnabled), nullptr, nullptr },
         { "is_auto_advance_enabled", reinterpret_cast<getter>(LineDisplayCursorAttributes_get_IsAutoAdvanceEnabled), reinterpret_cast<setter>(LineDisplayCursorAttributes_put_IsAutoAdvanceEnabled), nullptr, nullptr },
         { "cursor_type", reinterpret_cast<getter>(LineDisplayCursorAttributes_get_CursorType), reinterpret_cast<setter>(LineDisplayCursorAttributes_put_CursorType), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayCursorAttributes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayCursorAttributes) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayCursorAttributes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayCursorAttributes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayCursorAttributes) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayCursorAttributes = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayCursorAttributes",
@@ -19807,22 +19676,19 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "try_redefine_async", reinterpret_cast<PyCFunction>(LineDisplayCustomGlyphs_TryRedefineAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LineDisplayCustomGlyphs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayCustomGlyphs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayCustomGlyphs[] = {
         { "size_in_pixels", reinterpret_cast<getter>(LineDisplayCustomGlyphs_get_SizeInPixels), nullptr, nullptr, nullptr },
         { "supported_glyph_codes", reinterpret_cast<getter>(LineDisplayCustomGlyphs_get_SupportedGlyphCodes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayCustomGlyphs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayCustomGlyphs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayCustomGlyphs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayCustomGlyphs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayCustomGlyphs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayCustomGlyphs = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayCustomGlyphs",
@@ -20166,23 +20032,20 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "try_stop_scrolling_async", reinterpret_cast<PyCFunction>(LineDisplayMarquee_TryStopScrollingAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LineDisplayMarquee, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayMarquee), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayMarquee[] = {
         { "scroll_wait_interval", reinterpret_cast<getter>(LineDisplayMarquee_get_ScrollWaitInterval), reinterpret_cast<setter>(LineDisplayMarquee_put_ScrollWaitInterval), nullptr, nullptr },
         { "repeat_wait_interval", reinterpret_cast<getter>(LineDisplayMarquee_get_RepeatWaitInterval), reinterpret_cast<setter>(LineDisplayMarquee_put_RepeatWaitInterval), nullptr, nullptr },
         { "format", reinterpret_cast<getter>(LineDisplayMarquee_get_Format), reinterpret_cast<setter>(LineDisplayMarquee_put_Format), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayMarquee[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayMarquee) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayMarquee) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayMarquee) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayMarquee) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayMarquee = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayMarquee",
@@ -20325,23 +20188,20 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_LineDisplayStatisticsCategorySelector[] = {
         { "_assign_array_", _assign_array_LineDisplayStatisticsCategorySelector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayStatisticsCategorySelector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayStatisticsCategorySelector[] = {
         { "all_statistics", reinterpret_cast<getter>(LineDisplayStatisticsCategorySelector_get_AllStatistics), nullptr, nullptr, nullptr },
         { "manufacturer_statistics", reinterpret_cast<getter>(LineDisplayStatisticsCategorySelector_get_ManufacturerStatistics), nullptr, nullptr, nullptr },
         { "unified_pos_statistics", reinterpret_cast<getter>(LineDisplayStatisticsCategorySelector_get_UnifiedPosStatistics), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayStatisticsCategorySelector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayStatisticsCategorySelector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayStatisticsCategorySelector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayStatisticsCategorySelector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayStatisticsCategorySelector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayStatisticsCategorySelector = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayStatisticsCategorySelector",
@@ -20424,21 +20284,18 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_LineDisplayStatusUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_LineDisplayStatusUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayStatusUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayStatusUpdatedEventArgs[] = {
         { "status", reinterpret_cast<getter>(LineDisplayStatusUpdatedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayStatusUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayStatusUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayStatusUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayStatusUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayStatusUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayStatusUpdatedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayStatusUpdatedEventArgs",
@@ -20562,21 +20419,18 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "try_delete_async", reinterpret_cast<PyCFunction>(LineDisplayStoredBitmap_TryDeleteAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LineDisplayStoredBitmap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayStoredBitmap), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayStoredBitmap[] = {
         { "escape_sequence", reinterpret_cast<getter>(LineDisplayStoredBitmap_get_EscapeSequence), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayStoredBitmap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayStoredBitmap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayStoredBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayStoredBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayStoredBitmap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayStoredBitmap = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayStoredBitmap",
@@ -21420,24 +21274,21 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayWindow), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LineDisplayWindow), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_LineDisplayWindow), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LineDisplayWindow[] = {
         { "inter_character_wait_interval", reinterpret_cast<getter>(LineDisplayWindow_get_InterCharacterWaitInterval), reinterpret_cast<setter>(LineDisplayWindow_put_InterCharacterWaitInterval), nullptr, nullptr },
         { "size_in_characters", reinterpret_cast<getter>(LineDisplayWindow_get_SizeInCharacters), nullptr, nullptr, nullptr },
         { "cursor", reinterpret_cast<getter>(LineDisplayWindow_get_Cursor), nullptr, nullptr, nullptr },
         { "marquee", reinterpret_cast<getter>(LineDisplayWindow_get_Marquee), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LineDisplayWindow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineDisplayWindow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineDisplayWindow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineDisplayWindow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineDisplayWindow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LineDisplayWindow = {
         "winrt._winrt_windows_devices_pointofservice.LineDisplayWindow",
@@ -22076,24 +21927,21 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MagneticStripeReader), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MagneticStripeReader), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReader[] = {
         { "capabilities", reinterpret_cast<getter>(MagneticStripeReader_get_Capabilities), nullptr, nullptr, nullptr },
         { "device_authentication_protocol", reinterpret_cast<getter>(MagneticStripeReader_get_DeviceAuthenticationProtocol), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(MagneticStripeReader_get_DeviceId), nullptr, nullptr, nullptr },
         { "supported_card_types", reinterpret_cast<getter>(MagneticStripeReader_get_SupportedCardTypes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagneticStripeReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReader = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReader",
@@ -22103,16 +21951,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_MagneticStripeReader};
 
     static PyGetSetDef getset_MagneticStripeReader_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MagneticStripeReader_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MagneticStripeReader_Static[] = 
     {
@@ -22122,14 +21968,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_MagneticStripeReader_Static =
-    {
+    static PyType_Spec type_spec_MagneticStripeReader_Static = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReader_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MagneticStripeReader_Static
-    };
+        type_slots_MagneticStripeReader_Static};
 
     // ----- MagneticStripeReaderAamvaCardDataReceivedEventArgs class --------------------
 
@@ -22745,8 +22589,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_MagneticStripeReaderAamvaCardDataReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_MagneticStripeReaderAamvaCardDataReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReaderAamvaCardDataReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderAamvaCardDataReceivedEventArgs[] = {
         { "address", reinterpret_cast<getter>(MagneticStripeReaderAamvaCardDataReceivedEventArgs_get_Address), nullptr, nullptr, nullptr },
@@ -22768,16 +22611,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "suffix", reinterpret_cast<getter>(MagneticStripeReaderAamvaCardDataReceivedEventArgs_get_Suffix), nullptr, nullptr, nullptr },
         { "surname", reinterpret_cast<getter>(MagneticStripeReaderAamvaCardDataReceivedEventArgs_get_Surname), nullptr, nullptr, nullptr },
         { "weight", reinterpret_cast<getter>(MagneticStripeReaderAamvaCardDataReceivedEventArgs_get_Weight), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderAamvaCardDataReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderAamvaCardDataReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagneticStripeReaderAamvaCardDataReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderAamvaCardDataReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderAamvaCardDataReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderAamvaCardDataReceivedEventArgs",
@@ -23100,8 +22941,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_MagneticStripeReaderBankCardDataReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_MagneticStripeReaderBankCardDataReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReaderBankCardDataReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderBankCardDataReceivedEventArgs[] = {
         { "account_number", reinterpret_cast<getter>(MagneticStripeReaderBankCardDataReceivedEventArgs_get_AccountNumber), nullptr, nullptr, nullptr },
@@ -23113,16 +22953,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "suffix", reinterpret_cast<getter>(MagneticStripeReaderBankCardDataReceivedEventArgs_get_Suffix), nullptr, nullptr, nullptr },
         { "surname", reinterpret_cast<getter>(MagneticStripeReaderBankCardDataReceivedEventArgs_get_Surname), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(MagneticStripeReaderBankCardDataReceivedEventArgs_get_Title), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderBankCardDataReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderBankCardDataReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagneticStripeReaderBankCardDataReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderBankCardDataReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderBankCardDataReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderBankCardDataReceivedEventArgs",
@@ -23505,8 +23343,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_MagneticStripeReaderCapabilities[] = {
         { "_assign_array_", _assign_array_MagneticStripeReaderCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReaderCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderCapabilities[] = {
         { "authentication_level", reinterpret_cast<getter>(MagneticStripeReaderCapabilities_get_AuthenticationLevel), nullptr, nullptr, nullptr },
@@ -23520,16 +23357,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_transmit_sentinels_supported", reinterpret_cast<getter>(MagneticStripeReaderCapabilities_get_IsTransmitSentinelsSupported), nullptr, nullptr, nullptr },
         { "power_reporting_type", reinterpret_cast<getter>(MagneticStripeReaderCapabilities_get_PowerReportingType), nullptr, nullptr, nullptr },
         { "supported_encryption_algorithms", reinterpret_cast<getter>(MagneticStripeReaderCapabilities_get_SupportedEncryptionAlgorithms), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagneticStripeReaderCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderCapabilities",
@@ -23668,19 +23503,16 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef _methods_MagneticStripeReaderCardTypes[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderCardTypes[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderCardTypes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderCardTypes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderCardTypes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderCardTypes) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderCardTypes = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderCardTypes",
@@ -23694,12 +23526,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "bank", reinterpret_cast<getter>(MagneticStripeReaderCardTypes_get_Bank), nullptr, nullptr, nullptr },
         { "extended_base", reinterpret_cast<getter>(MagneticStripeReaderCardTypes_get_ExtendedBase), nullptr, nullptr, nullptr },
         { "unknown", reinterpret_cast<getter>(MagneticStripeReaderCardTypes_get_Unknown), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MagneticStripeReaderCardTypes_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MagneticStripeReaderCardTypes_Static[] = 
     {
@@ -23709,14 +23539,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_MagneticStripeReaderCardTypes_Static =
-    {
+    static PyType_Spec type_spec_MagneticStripeReaderCardTypes_Static = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderCardTypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MagneticStripeReaderCardTypes_Static
-    };
+        type_slots_MagneticStripeReaderCardTypes_Static};
 
     // ----- MagneticStripeReaderEncryptionAlgorithms class --------------------
 
@@ -23818,19 +23646,16 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef _methods_MagneticStripeReaderEncryptionAlgorithms[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderEncryptionAlgorithms[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderEncryptionAlgorithms[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderEncryptionAlgorithms) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderEncryptionAlgorithms) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderEncryptionAlgorithms) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderEncryptionAlgorithms = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderEncryptionAlgorithms",
@@ -23843,12 +23668,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "extended_base", reinterpret_cast<getter>(MagneticStripeReaderEncryptionAlgorithms_get_ExtendedBase), nullptr, nullptr, nullptr },
         { "none", reinterpret_cast<getter>(MagneticStripeReaderEncryptionAlgorithms_get_None), nullptr, nullptr, nullptr },
         { "triple_des_dukpt", reinterpret_cast<getter>(MagneticStripeReaderEncryptionAlgorithms_get_TripleDesDukpt), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MagneticStripeReaderEncryptionAlgorithms_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MagneticStripeReaderEncryptionAlgorithms_Static[] = 
     {
@@ -23858,14 +23681,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_MagneticStripeReaderEncryptionAlgorithms_Static =
-    {
+    static PyType_Spec type_spec_MagneticStripeReaderEncryptionAlgorithms_Static = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderEncryptionAlgorithms_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MagneticStripeReaderEncryptionAlgorithms_Static
-    };
+        type_slots_MagneticStripeReaderEncryptionAlgorithms_Static};
 
     // ----- MagneticStripeReaderErrorOccurredEventArgs class --------------------
 
@@ -24091,8 +23912,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_MagneticStripeReaderErrorOccurredEventArgs[] = {
         { "_assign_array_", _assign_array_MagneticStripeReaderErrorOccurredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReaderErrorOccurredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderErrorOccurredEventArgs[] = {
         { "error_data", reinterpret_cast<getter>(MagneticStripeReaderErrorOccurredEventArgs_get_ErrorData), nullptr, nullptr, nullptr },
@@ -24101,16 +23921,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "track2_status", reinterpret_cast<getter>(MagneticStripeReaderErrorOccurredEventArgs_get_Track2Status), nullptr, nullptr, nullptr },
         { "track3_status", reinterpret_cast<getter>(MagneticStripeReaderErrorOccurredEventArgs_get_Track3Status), nullptr, nullptr, nullptr },
         { "track4_status", reinterpret_cast<getter>(MagneticStripeReaderErrorOccurredEventArgs_get_Track4Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderErrorOccurredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderErrorOccurredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagneticStripeReaderErrorOccurredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderErrorOccurredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderErrorOccurredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderErrorOccurredEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderErrorOccurredEventArgs",
@@ -24433,8 +24251,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_MagneticStripeReaderReport[] = {
         { "_assign_array_", _assign_array_MagneticStripeReaderReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReaderReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderReport[] = {
         { "additional_security_information", reinterpret_cast<getter>(MagneticStripeReaderReport_get_AdditionalSecurityInformation), nullptr, nullptr, nullptr },
@@ -24446,16 +24263,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "track2", reinterpret_cast<getter>(MagneticStripeReaderReport_get_Track2), nullptr, nullptr, nullptr },
         { "track3", reinterpret_cast<getter>(MagneticStripeReaderReport_get_Track3), nullptr, nullptr, nullptr },
         { "track4", reinterpret_cast<getter>(MagneticStripeReaderReport_get_Track4), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagneticStripeReaderReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderReport = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderReport",
@@ -24568,22 +24383,19 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_MagneticStripeReaderStatusUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_MagneticStripeReaderStatusUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReaderStatusUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderStatusUpdatedEventArgs[] = {
         { "extended_status", reinterpret_cast<getter>(MagneticStripeReaderStatusUpdatedEventArgs_get_ExtendedStatus), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(MagneticStripeReaderStatusUpdatedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderStatusUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderStatusUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagneticStripeReaderStatusUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderStatusUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderStatusUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderStatusUpdatedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderStatusUpdatedEventArgs",
@@ -24726,23 +24538,20 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_MagneticStripeReaderTrackData[] = {
         { "_assign_array_", _assign_array_MagneticStripeReaderTrackData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReaderTrackData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderTrackData[] = {
         { "data", reinterpret_cast<getter>(MagneticStripeReaderTrackData_get_Data), nullptr, nullptr, nullptr },
         { "discretionary_data", reinterpret_cast<getter>(MagneticStripeReaderTrackData_get_DiscretionaryData), nullptr, nullptr, nullptr },
         { "encrypted_data", reinterpret_cast<getter>(MagneticStripeReaderTrackData_get_EncryptedData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderTrackData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderTrackData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagneticStripeReaderTrackData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderTrackData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderTrackData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderTrackData = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderTrackData",
@@ -24825,21 +24634,18 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs[] = {
         { "report", reinterpret_cast<getter>(MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs_get_Report), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs",
@@ -25540,8 +25346,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_from", reinterpret_cast<PyCFunction>(_from_PosPrinter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PosPrinter), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_PosPrinter), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PosPrinter[] = {
         { "capabilities", reinterpret_cast<getter>(PosPrinter_get_Capabilities), nullptr, nullptr, nullptr },
@@ -25550,16 +25355,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "supported_character_sets", reinterpret_cast<getter>(PosPrinter_get_SupportedCharacterSets), nullptr, nullptr, nullptr },
         { "supported_type_faces", reinterpret_cast<getter>(PosPrinter_get_SupportedTypeFaces), nullptr, nullptr, nullptr },
         { "supported_barcode_symbologies", reinterpret_cast<getter>(PosPrinter_get_SupportedBarcodeSymbologies), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PosPrinter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PosPrinter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PosPrinter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PosPrinter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PosPrinter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PosPrinter = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinter",
@@ -25569,16 +25372,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_PosPrinter};
 
     static PyGetSetDef getset_PosPrinter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PosPrinter_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(PosPrinter_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(PosPrinter_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(PosPrinter_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(PosPrinter_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PosPrinter_Static[] = 
     {
@@ -25588,14 +25389,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_PosPrinter_Static =
-    {
+    static PyType_Spec type_spec_PosPrinter_Static = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PosPrinter_Static
-    };
+        type_slots_PosPrinter_Static};
 
     // ----- PosPrinterCapabilities class --------------------
 
@@ -25941,8 +25740,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_PosPrinterCapabilities[] = {
         { "_assign_array_", _assign_array_PosPrinterCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PosPrinterCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PosPrinterCapabilities[] = {
         { "can_map_character_set", reinterpret_cast<getter>(PosPrinterCapabilities_get_CanMapCharacterSet), nullptr, nullptr, nullptr },
@@ -25955,16 +25753,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "power_reporting_type", reinterpret_cast<getter>(PosPrinterCapabilities_get_PowerReportingType), nullptr, nullptr, nullptr },
         { "receipt", reinterpret_cast<getter>(PosPrinterCapabilities_get_Receipt), nullptr, nullptr, nullptr },
         { "slip", reinterpret_cast<getter>(PosPrinterCapabilities_get_Slip), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PosPrinterCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PosPrinterCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PosPrinterCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PosPrinterCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PosPrinterCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PosPrinterCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinterCapabilities",
@@ -26073,19 +25869,16 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef _methods_PosPrinterCharacterSetIds[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PosPrinterCharacterSetIds[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PosPrinterCharacterSetIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PosPrinterCharacterSetIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PosPrinterCharacterSetIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PosPrinterCharacterSetIds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PosPrinterCharacterSetIds = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinterCharacterSetIds",
@@ -26098,12 +25891,10 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "ansi", reinterpret_cast<getter>(PosPrinterCharacterSetIds_get_Ansi), nullptr, nullptr, nullptr },
         { "ascii", reinterpret_cast<getter>(PosPrinterCharacterSetIds_get_Ascii), nullptr, nullptr, nullptr },
         { "utf16_l_e", reinterpret_cast<getter>(PosPrinterCharacterSetIds_get_Utf16LE), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PosPrinterCharacterSetIds_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PosPrinterCharacterSetIds_Static[] = 
     {
@@ -26113,14 +25904,12 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Spec type_spec_PosPrinterCharacterSetIds_Static =
-    {
+    static PyType_Spec type_spec_PosPrinterCharacterSetIds_Static = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinterCharacterSetIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PosPrinterCharacterSetIds_Static
-    };
+        type_slots_PosPrinterCharacterSetIds_Static};
 
     // ----- PosPrinterFontProperty class --------------------
 
@@ -26256,23 +26045,20 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_PosPrinterFontProperty[] = {
         { "_assign_array_", _assign_array_PosPrinterFontProperty, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PosPrinterFontProperty), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PosPrinterFontProperty[] = {
         { "character_sizes", reinterpret_cast<getter>(PosPrinterFontProperty_get_CharacterSizes), nullptr, nullptr, nullptr },
         { "is_scalable_to_any_size", reinterpret_cast<getter>(PosPrinterFontProperty_get_IsScalableToAnySize), nullptr, nullptr, nullptr },
         { "type_face", reinterpret_cast<getter>(PosPrinterFontProperty_get_TypeFace), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PosPrinterFontProperty[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PosPrinterFontProperty) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PosPrinterFontProperty) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PosPrinterFontProperty) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PosPrinterFontProperty) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PosPrinterFontProperty = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinterFontProperty",
@@ -27244,8 +27030,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_PosPrinterPrintOptions[] = {
         { "_assign_array_", _assign_array_PosPrinterPrintOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PosPrinterPrintOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PosPrinterPrintOptions[] = {
         { "underline", reinterpret_cast<getter>(PosPrinterPrintOptions_get_Underline), reinterpret_cast<setter>(PosPrinterPrintOptions_put_Underline), nullptr, nullptr },
@@ -27261,16 +27046,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "character_height", reinterpret_cast<getter>(PosPrinterPrintOptions_get_CharacterHeight), reinterpret_cast<setter>(PosPrinterPrintOptions_put_CharacterHeight), nullptr, nullptr },
         { "bold", reinterpret_cast<getter>(PosPrinterPrintOptions_get_Bold), reinterpret_cast<setter>(PosPrinterPrintOptions_put_Bold), nullptr, nullptr },
         { "alignment", reinterpret_cast<getter>(PosPrinterPrintOptions_get_Alignment), reinterpret_cast<setter>(PosPrinterPrintOptions_put_Alignment), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PosPrinterPrintOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PosPrinterPrintOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PosPrinterPrintOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PosPrinterPrintOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PosPrinterPrintOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PosPrinterPrintOptions = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinterPrintOptions",
@@ -27323,20 +27106,17 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_PosPrinterReleaseDeviceRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_PosPrinterReleaseDeviceRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PosPrinterReleaseDeviceRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PosPrinterReleaseDeviceRequestedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PosPrinterReleaseDeviceRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PosPrinterReleaseDeviceRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PosPrinterReleaseDeviceRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PosPrinterReleaseDeviceRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PosPrinterReleaseDeviceRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PosPrinterReleaseDeviceRequestedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinterReleaseDeviceRequestedEventArgs",
@@ -27449,22 +27229,19 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_PosPrinterStatus[] = {
         { "_assign_array_", _assign_array_PosPrinterStatus, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PosPrinterStatus), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PosPrinterStatus[] = {
         { "extended_status", reinterpret_cast<getter>(PosPrinterStatus_get_ExtendedStatus), nullptr, nullptr, nullptr },
         { "status_kind", reinterpret_cast<getter>(PosPrinterStatus_get_StatusKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PosPrinterStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PosPrinterStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PosPrinterStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PosPrinterStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PosPrinterStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PosPrinterStatus = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinterStatus",
@@ -27547,21 +27324,18 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_PosPrinterStatusUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_PosPrinterStatusUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PosPrinterStatusUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PosPrinterStatusUpdatedEventArgs[] = {
         { "status", reinterpret_cast<getter>(PosPrinterStatusUpdatedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PosPrinterStatusUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PosPrinterStatusUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PosPrinterStatusUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PosPrinterStatusUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PosPrinterStatusUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PosPrinterStatusUpdatedEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.PosPrinterStatusUpdatedEventArgs",
@@ -28769,20 +28543,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "stamp_paper", reinterpret_cast<PyCFunction>(ReceiptPrintJob_StampPaper), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ReceiptPrintJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ReceiptPrintJob), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ReceiptPrintJob[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ReceiptPrintJob[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReceiptPrintJob) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReceiptPrintJob) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReceiptPrintJob) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReceiptPrintJob) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ReceiptPrintJob = {
         "winrt._winrt_windows_devices_pointofservice.ReceiptPrintJob",
@@ -29765,8 +29536,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_ReceiptPrinterCapabilities[] = {
         { "_assign_array_", _assign_array_ReceiptPrinterCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ReceiptPrinterCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ReceiptPrinterCapabilities[] = {
         { "cartridge_sensors", reinterpret_cast<getter>(ReceiptPrinterCapabilities_get_CartridgeSensors), nullptr, nullptr, nullptr },
@@ -29800,16 +29570,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_strikethrough_supported", reinterpret_cast<getter>(ReceiptPrinterCapabilities_get_IsStrikethroughSupported), nullptr, nullptr, nullptr },
         { "is_subscript_supported", reinterpret_cast<getter>(ReceiptPrinterCapabilities_get_IsSubscriptSupported), nullptr, nullptr, nullptr },
         { "is_superscript_supported", reinterpret_cast<getter>(ReceiptPrinterCapabilities_get_IsSuperscriptSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ReceiptPrinterCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReceiptPrinterCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReceiptPrinterCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReceiptPrinterCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReceiptPrinterCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ReceiptPrinterCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.ReceiptPrinterCapabilities",
@@ -30845,20 +30613,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "set_print_rotation", reinterpret_cast<PyCFunction>(SlipPrintJob_SetPrintRotation), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SlipPrintJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SlipPrintJob), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SlipPrintJob[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SlipPrintJob[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SlipPrintJob) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SlipPrintJob) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SlipPrintJob) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SlipPrintJob) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SlipPrintJob = {
         "winrt._winrt_windows_devices_pointofservice.SlipPrintJob",
@@ -31811,8 +31576,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_SlipPrinterCapabilities[] = {
         { "_assign_array_", _assign_array_SlipPrinterCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SlipPrinterCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SlipPrinterCapabilities[] = {
         { "cartridge_sensors", reinterpret_cast<getter>(SlipPrinterCapabilities_get_CartridgeSensors), nullptr, nullptr, nullptr },
@@ -31845,16 +31609,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_strikethrough_supported", reinterpret_cast<getter>(SlipPrinterCapabilities_get_IsStrikethroughSupported), nullptr, nullptr, nullptr },
         { "is_subscript_supported", reinterpret_cast<getter>(SlipPrinterCapabilities_get_IsSubscriptSupported), nullptr, nullptr, nullptr },
         { "is_superscript_supported", reinterpret_cast<getter>(SlipPrinterCapabilities_get_IsSuperscriptSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SlipPrinterCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SlipPrinterCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SlipPrinterCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SlipPrinterCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SlipPrinterCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SlipPrinterCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.SlipPrinterCapabilities",
@@ -32054,24 +31816,21 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_UnifiedPosErrorData[] = {
         { "_assign_array_", _assign_array_UnifiedPosErrorData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UnifiedPosErrorData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UnifiedPosErrorData[] = {
         { "extended_reason", reinterpret_cast<getter>(UnifiedPosErrorData_get_ExtendedReason), nullptr, nullptr, nullptr },
         { "message", reinterpret_cast<getter>(UnifiedPosErrorData_get_Message), nullptr, nullptr, nullptr },
         { "reason", reinterpret_cast<getter>(UnifiedPosErrorData_get_Reason), nullptr, nullptr, nullptr },
         { "severity", reinterpret_cast<getter>(UnifiedPosErrorData_get_Severity), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UnifiedPosErrorData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UnifiedPosErrorData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UnifiedPosErrorData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UnifiedPosErrorData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UnifiedPosErrorData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UnifiedPosErrorData = {
         "winrt._winrt_windows_devices_pointofservice.UnifiedPosErrorData",
@@ -32154,21 +31913,18 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_ICashDrawerEventSourceEventArgs[] = {
         { "_assign_array_", _assign_array_ICashDrawerEventSourceEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICashDrawerEventSourceEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICashDrawerEventSourceEventArgs[] = {
         { "cash_drawer", reinterpret_cast<getter>(ICashDrawerEventSourceEventArgs_get_CashDrawer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICashDrawerEventSourceEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICashDrawerEventSourceEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICashDrawerEventSourceEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICashDrawerEventSourceEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICashDrawerEventSourceEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICashDrawerEventSourceEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.ICashDrawerEventSourceEventArgs",
@@ -32244,13 +32000,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef methods_ImplementsICashDrawerEventSourceEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICashDrawerEventSourceEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICashDrawerEventSourceEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICashDrawerEventSourceEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICashDrawerEventSourceEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICashDrawerEventSourceEventArgs = {
         "winrt._winrt_windows_devices_pointofservice.ImplementsICashDrawerEventSourceEventArgs",
@@ -32931,8 +32685,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "validate_data", reinterpret_cast<PyCFunction>(ICommonClaimedPosPrinterStation_ValidateData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICommonClaimedPosPrinterStation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICommonClaimedPosPrinterStation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICommonClaimedPosPrinterStation[] = {
         { "characters_per_line", reinterpret_cast<getter>(ICommonClaimedPosPrinterStation_get_CharactersPerLine), reinterpret_cast<setter>(ICommonClaimedPosPrinterStation_put_CharactersPerLine), nullptr, nullptr },
@@ -32948,16 +32701,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "line_height", reinterpret_cast<getter>(ICommonClaimedPosPrinterStation_get_LineHeight), reinterpret_cast<setter>(ICommonClaimedPosPrinterStation_put_LineHeight), nullptr, nullptr },
         { "line_spacing", reinterpret_cast<getter>(ICommonClaimedPosPrinterStation_get_LineSpacing), reinterpret_cast<setter>(ICommonClaimedPosPrinterStation_put_LineSpacing), nullptr, nullptr },
         { "line_width", reinterpret_cast<getter>(ICommonClaimedPosPrinterStation_get_LineWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICommonClaimedPosPrinterStation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICommonClaimedPosPrinterStation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommonClaimedPosPrinterStation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommonClaimedPosPrinterStation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommonClaimedPosPrinterStation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICommonClaimedPosPrinterStation = {
         "winrt._winrt_windows_devices_pointofservice.ICommonClaimedPosPrinterStation",
@@ -33420,13 +33171,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef methods_ImplementsICommonClaimedPosPrinterStation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommonClaimedPosPrinterStation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommonClaimedPosPrinterStation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICommonClaimedPosPrinterStation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICommonClaimedPosPrinterStation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICommonClaimedPosPrinterStation = {
         "winrt._winrt_windows_devices_pointofservice.ImplementsICommonClaimedPosPrinterStation",
@@ -33869,8 +33618,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_ICommonPosPrintStationCapabilities[] = {
         { "_assign_array_", _assign_array_ICommonPosPrintStationCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICommonPosPrintStationCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICommonPosPrintStationCapabilities[] = {
         { "cartridge_sensors", reinterpret_cast<getter>(ICommonPosPrintStationCapabilities_get_CartridgeSensors), nullptr, nullptr, nullptr },
@@ -33886,16 +33634,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_printer_present", reinterpret_cast<getter>(ICommonPosPrintStationCapabilities_get_IsPrinterPresent), nullptr, nullptr, nullptr },
         { "is_underline_supported", reinterpret_cast<getter>(ICommonPosPrintStationCapabilities_get_IsUnderlineSupported), nullptr, nullptr, nullptr },
         { "supported_characters_per_line", reinterpret_cast<getter>(ICommonPosPrintStationCapabilities_get_SupportedCharactersPerLine), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICommonPosPrintStationCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICommonPosPrintStationCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommonPosPrintStationCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommonPosPrintStationCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommonPosPrintStationCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICommonPosPrintStationCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.ICommonPosPrintStationCapabilities",
@@ -34211,13 +33957,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef methods_ImplementsICommonPosPrintStationCapabilities[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommonPosPrintStationCapabilities), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommonPosPrintStationCapabilities), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICommonPosPrintStationCapabilities[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICommonPosPrintStationCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICommonPosPrintStationCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.ImplementsICommonPosPrintStationCapabilities",
@@ -34930,8 +34674,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef _methods_ICommonReceiptSlipCapabilities[] = {
         { "_assign_array_", _assign_array_ICommonReceiptSlipCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICommonReceiptSlipCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICommonReceiptSlipCapabilities[] = {
         { "is180_rotation_supported", reinterpret_cast<getter>(ICommonReceiptSlipCapabilities_get_Is180RotationSupported), nullptr, nullptr, nullptr },
@@ -34956,16 +34699,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "is_printer_present", reinterpret_cast<getter>(ICommonReceiptSlipCapabilities_get_IsPrinterPresent), nullptr, nullptr, nullptr },
         { "is_underline_supported", reinterpret_cast<getter>(ICommonReceiptSlipCapabilities_get_IsUnderlineSupported), nullptr, nullptr, nullptr },
         { "supported_characters_per_line", reinterpret_cast<getter>(ICommonReceiptSlipCapabilities_get_SupportedCharactersPerLine), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICommonReceiptSlipCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICommonReceiptSlipCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommonReceiptSlipCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommonReceiptSlipCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommonReceiptSlipCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICommonReceiptSlipCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.ICommonReceiptSlipCapabilities",
@@ -35461,13 +35202,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef methods_ImplementsICommonReceiptSlipCapabilities[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommonReceiptSlipCapabilities), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommonReceiptSlipCapabilities), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICommonReceiptSlipCapabilities[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICommonReceiptSlipCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICommonReceiptSlipCapabilities = {
         "winrt._winrt_windows_devices_pointofservice.ImplementsICommonReceiptSlipCapabilities",
@@ -35691,20 +35430,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "print_newline", reinterpret_cast<PyCFunction>(IPosPrinterJob_PrintNewline), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPosPrinterJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPosPrinterJob), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPosPrinterJob[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPosPrinterJob[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPosPrinterJob) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPosPrinterJob) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPosPrinterJob) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPosPrinterJob) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPosPrinterJob = {
         "winrt._winrt_windows_devices_pointofservice.IPosPrinterJob",
@@ -35870,13 +35606,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef methods_ImplementsIPosPrinterJob[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPosPrinterJob), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPosPrinterJob), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPosPrinterJob[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPosPrinterJob) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPosPrinterJob = {
         "winrt._winrt_windows_devices_pointofservice.ImplementsIPosPrinterJob",
@@ -36791,20 +36525,17 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "set_print_rotation", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetPrintRotation), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IReceiptOrSlipJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IReceiptOrSlipJob), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IReceiptOrSlipJob[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IReceiptOrSlipJob[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IReceiptOrSlipJob) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IReceiptOrSlipJob) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IReceiptOrSlipJob) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IReceiptOrSlipJob) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IReceiptOrSlipJob = {
         "winrt._winrt_windows_devices_pointofservice.IReceiptOrSlipJob",
@@ -37678,13 +37409,11 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef methods_ImplementsIReceiptOrSlipJob[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIReceiptOrSlipJob), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIReceiptOrSlipJob), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIReceiptOrSlipJob[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIReceiptOrSlipJob) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIReceiptOrSlipJob = {
         "winrt._winrt_windows_devices_pointofservice.ImplementsIReceiptOrSlipJob",
@@ -37762,8 +37491,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyMethodDef _methods_SizeUInt32[] = {
         { "_assign_array_", _assign_array_SizeUInt32, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* SizeUInt32_get_Width(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, void* /*unused*/) noexcept
     {
@@ -37834,8 +37562,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyGetSetDef _getset_SizeUInt32[] = {
         { "width", reinterpret_cast<getter>(SizeUInt32_get_Width), reinterpret_cast<setter>(SizeUInt32_set_Width), nullptr, nullptr },
         { "height", reinterpret_cast<getter>(SizeUInt32_get_Height), reinterpret_cast<setter>(SizeUInt32_set_Height), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_SizeUInt32(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, PyObject* other, int op) noexcept
     {
@@ -37897,8 +37624,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SizeUInt32) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SizeUInt32) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_SizeUInt32) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SizeUInt32 = {
         "winrt._winrt_windows_devices_pointofservice.SizeUInt32",

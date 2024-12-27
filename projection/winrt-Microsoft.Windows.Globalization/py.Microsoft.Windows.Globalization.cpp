@@ -143,19 +143,16 @@ namespace py::cpp::Microsoft::Windows::Globalization
     }
 
     static PyMethodDef _methods_ApplicationLanguages[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationLanguages[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationLanguages[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationLanguages) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationLanguages) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationLanguages) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationLanguages = {
         "winrt._winrt_microsoft_windows_globalization.ApplicationLanguages",
@@ -168,12 +165,10 @@ namespace py::cpp::Microsoft::Windows::Globalization
         { "primary_language_override", reinterpret_cast<getter>(ApplicationLanguages_get_PrimaryLanguageOverride), reinterpret_cast<setter>(ApplicationLanguages_put_PrimaryLanguageOverride), nullptr, nullptr },
         { "languages", reinterpret_cast<getter>(ApplicationLanguages_get_Languages), nullptr, nullptr, nullptr },
         { "manifest_languages", reinterpret_cast<getter>(ApplicationLanguages_get_ManifestLanguages), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApplicationLanguages_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApplicationLanguages_Static[] = 
     {
@@ -183,14 +178,12 @@ namespace py::cpp::Microsoft::Windows::Globalization
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationLanguages_Static =
-    {
+    static PyType_Spec type_spec_ApplicationLanguages_Static = {
         "winrt._winrt_microsoft_windows_globalization.ApplicationLanguages_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationLanguages_Static
-    };
+        type_slots_ApplicationLanguages_Static};
 
     // ----- Microsoft.Windows.Globalization Initialization --------------------
 

@@ -92,20 +92,17 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
     static PyMethodDef _methods_WindowManagementPreview[] = {
         { "_assign_array_", _assign_array_WindowManagementPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowManagementPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowManagementPreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowManagementPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowManagementPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowManagementPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowManagementPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowManagementPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowManagementPreview = {
         "winrt._winrt_windows_ui_windowmanagement_preview.WindowManagementPreview",
@@ -115,13 +112,11 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
         _type_slots_WindowManagementPreview};
 
     static PyGetSetDef getset_WindowManagementPreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WindowManagementPreview_Static[] = {
         { "set_preferred_min_size", reinterpret_cast<PyCFunction>(WindowManagementPreview_SetPreferredMinSize), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WindowManagementPreview_Static[] = 
     {
@@ -131,14 +126,12 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
         { }
     };
 
-    static PyType_Spec type_spec_WindowManagementPreview_Static =
-    {
+    static PyType_Spec type_spec_WindowManagementPreview_Static = {
         "winrt._winrt_windows_ui_windowmanagement_preview.WindowManagementPreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WindowManagementPreview_Static
-    };
+        type_slots_WindowManagementPreview_Static};
 
     // ----- Windows.UI.WindowManagement.Preview Initialization --------------------
 

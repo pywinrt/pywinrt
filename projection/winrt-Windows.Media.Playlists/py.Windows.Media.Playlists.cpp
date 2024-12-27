@@ -274,21 +274,18 @@ namespace py::cpp::Windows::Media::Playlists
         { "save_async", reinterpret_cast<PyCFunction>(Playlist_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Playlist, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Playlist), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Playlist[] = {
         { "files", reinterpret_cast<getter>(Playlist_get_Files), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Playlist[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Playlist) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Playlist) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Playlist) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Playlist) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Playlist = {
         "winrt._winrt_windows_media_playlists.Playlist",
@@ -298,13 +295,11 @@ namespace py::cpp::Windows::Media::Playlists
         _type_slots_Playlist};
 
     static PyGetSetDef getset_Playlist_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Playlist_Static[] = {
         { "load_async", reinterpret_cast<PyCFunction>(Playlist_LoadAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Playlist_Static[] = 
     {
@@ -314,14 +309,12 @@ namespace py::cpp::Windows::Media::Playlists
         { }
     };
 
-    static PyType_Spec type_spec_Playlist_Static =
-    {
+    static PyType_Spec type_spec_Playlist_Static = {
         "winrt._winrt_windows_media_playlists.Playlist_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Playlist_Static
-    };
+        type_slots_Playlist_Static};
 
     // ----- Windows.Media.Playlists Initialization --------------------
 

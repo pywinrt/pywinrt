@@ -56,19 +56,16 @@ namespace py::cpp::Windows::Web
     }
 
     static PyMethodDef _methods_WebError[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebError[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebError = {
         "winrt._winrt_windows_web.WebError",
@@ -78,13 +75,11 @@ namespace py::cpp::Windows::Web
         _type_slots_WebError};
 
     static PyGetSetDef getset_WebError_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WebError_Static[] = {
         { "get_status", reinterpret_cast<PyCFunction>(WebError_GetStatus), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WebError_Static[] = 
     {
@@ -94,14 +89,12 @@ namespace py::cpp::Windows::Web
         { }
     };
 
-    static PyType_Spec type_spec_WebError_Static =
-    {
+    static PyType_Spec type_spec_WebError_Static = {
         "winrt._winrt_windows_web.WebError_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WebError_Static
-    };
+        type_slots_WebError_Static};
 
     // ----- IUriToStreamResolver interface --------------------
 
@@ -190,20 +183,17 @@ namespace py::cpp::Windows::Web
         { "uri_to_stream_async", reinterpret_cast<PyCFunction>(IUriToStreamResolver_UriToStreamAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IUriToStreamResolver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IUriToStreamResolver), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IUriToStreamResolver[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IUriToStreamResolver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUriToStreamResolver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUriToStreamResolver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUriToStreamResolver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUriToStreamResolver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IUriToStreamResolver = {
         "winrt._winrt_windows_web.IUriToStreamResolver",
@@ -291,13 +281,11 @@ namespace py::cpp::Windows::Web
     static PyMethodDef methods_ImplementsIUriToStreamResolver[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUriToStreamResolver), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUriToStreamResolver), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIUriToStreamResolver[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIUriToStreamResolver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIUriToStreamResolver = {
         "winrt._winrt_windows_web.ImplementsIUriToStreamResolver",

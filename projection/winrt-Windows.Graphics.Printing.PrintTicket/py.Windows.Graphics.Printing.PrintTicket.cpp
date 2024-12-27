@@ -676,8 +676,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { "get_parameter_definition", reinterpret_cast<PyCFunction>(PrintTicketCapabilities_GetParameterDefinition), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintTicketCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTicketCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTicketCapabilities[] = {
         { "document_binding_feature", reinterpret_cast<getter>(PrintTicketCapabilities_get_DocumentBindingFeature), nullptr, nullptr, nullptr },
@@ -698,16 +697,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { "page_resolution_feature", reinterpret_cast<getter>(PrintTicketCapabilities_get_PageResolutionFeature), nullptr, nullptr, nullptr },
         { "xml_namespace", reinterpret_cast<getter>(PrintTicketCapabilities_get_XmlNamespace), nullptr, nullptr, nullptr },
         { "xml_node", reinterpret_cast<getter>(PrintTicketCapabilities_get_XmlNode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTicketCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTicketCapabilities = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketCapabilities",
@@ -1069,8 +1066,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { "set_selected_option", reinterpret_cast<PyCFunction>(PrintTicketFeature_SetSelectedOption), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintTicketFeature, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTicketFeature), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTicketFeature[] = {
         { "display_name", reinterpret_cast<getter>(PrintTicketFeature_get_DisplayName), nullptr, nullptr, nullptr },
@@ -1079,16 +1075,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { "selection_type", reinterpret_cast<getter>(PrintTicketFeature_get_SelectionType), nullptr, nullptr, nullptr },
         { "xml_namespace", reinterpret_cast<getter>(PrintTicketFeature_get_XmlNamespace), nullptr, nullptr, nullptr },
         { "xml_node", reinterpret_cast<getter>(PrintTicketFeature_get_XmlNode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTicketFeature[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketFeature) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketFeature) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketFeature) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketFeature) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTicketFeature = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketFeature",
@@ -1437,24 +1431,21 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { "get_scored_property_value", reinterpret_cast<PyCFunction>(PrintTicketOption_GetScoredPropertyValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintTicketOption, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTicketOption), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTicketOption[] = {
         { "display_name", reinterpret_cast<getter>(PrintTicketOption_get_DisplayName), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(PrintTicketOption_get_Name), nullptr, nullptr, nullptr },
         { "xml_namespace", reinterpret_cast<getter>(PrintTicketOption_get_XmlNamespace), nullptr, nullptr, nullptr },
         { "xml_node", reinterpret_cast<getter>(PrintTicketOption_get_XmlNode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTicketOption[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketOption) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketOption) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTicketOption = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketOption",
@@ -1717,8 +1708,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static PyMethodDef _methods_PrintTicketParameterDefinition[] = {
         { "_assign_array_", _assign_array_PrintTicketParameterDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTicketParameterDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTicketParameterDefinition[] = {
         { "data_type", reinterpret_cast<getter>(PrintTicketParameterDefinition_get_DataType), nullptr, nullptr, nullptr },
@@ -1728,16 +1718,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { "unit_type", reinterpret_cast<getter>(PrintTicketParameterDefinition_get_UnitType), nullptr, nullptr, nullptr },
         { "xml_namespace", reinterpret_cast<getter>(PrintTicketParameterDefinition_get_XmlNamespace), nullptr, nullptr, nullptr },
         { "xml_node", reinterpret_cast<getter>(PrintTicketParameterDefinition_get_XmlNode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTicketParameterDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketParameterDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketParameterDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketParameterDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketParameterDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTicketParameterDefinition = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketParameterDefinition",
@@ -1949,24 +1937,21 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static PyMethodDef _methods_PrintTicketParameterInitializer[] = {
         { "_assign_array_", _assign_array_PrintTicketParameterInitializer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTicketParameterInitializer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTicketParameterInitializer[] = {
         { "value", reinterpret_cast<getter>(PrintTicketParameterInitializer_get_Value), reinterpret_cast<setter>(PrintTicketParameterInitializer_put_Value), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(PrintTicketParameterInitializer_get_Name), nullptr, nullptr, nullptr },
         { "xml_namespace", reinterpret_cast<getter>(PrintTicketParameterInitializer_get_XmlNamespace), nullptr, nullptr, nullptr },
         { "xml_node", reinterpret_cast<getter>(PrintTicketParameterInitializer_get_XmlNode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTicketParameterInitializer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketParameterInitializer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketParameterInitializer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketParameterInitializer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketParameterInitializer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTicketParameterInitializer = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketParameterInitializer",
@@ -2131,21 +2116,18 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { "get_value_as_string", reinterpret_cast<PyCFunction>(PrintTicketValue_GetValueAsString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintTicketValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTicketValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTicketValue[] = {
         { "type", reinterpret_cast<getter>(PrintTicketValue_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTicketValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTicketValue = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketValue",
@@ -3082,8 +3064,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { "validate_async", reinterpret_cast<PyCFunction>(WorkflowPrintTicket_ValidateAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WorkflowPrintTicket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WorkflowPrintTicket), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WorkflowPrintTicket[] = {
         { "document_binding_feature", reinterpret_cast<getter>(WorkflowPrintTicket_get_DocumentBindingFeature), nullptr, nullptr, nullptr },
@@ -3104,16 +3085,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { "page_resolution_feature", reinterpret_cast<getter>(WorkflowPrintTicket_get_PageResolutionFeature), nullptr, nullptr, nullptr },
         { "xml_namespace", reinterpret_cast<getter>(WorkflowPrintTicket_get_XmlNamespace), nullptr, nullptr, nullptr },
         { "xml_node", reinterpret_cast<getter>(WorkflowPrintTicket_get_XmlNode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WorkflowPrintTicket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WorkflowPrintTicket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WorkflowPrintTicket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WorkflowPrintTicket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WorkflowPrintTicket) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WorkflowPrintTicket = {
         "winrt._winrt_windows_graphics_printing_printticket.WorkflowPrintTicket",
@@ -3226,22 +3205,19 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static PyMethodDef _methods_WorkflowPrintTicketValidationResult[] = {
         { "_assign_array_", _assign_array_WorkflowPrintTicketValidationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WorkflowPrintTicketValidationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WorkflowPrintTicketValidationResult[] = {
         { "extended_error", reinterpret_cast<getter>(WorkflowPrintTicketValidationResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "validated", reinterpret_cast<getter>(WorkflowPrintTicketValidationResult_get_Validated), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WorkflowPrintTicketValidationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WorkflowPrintTicketValidationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WorkflowPrintTicketValidationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WorkflowPrintTicketValidationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WorkflowPrintTicketValidationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WorkflowPrintTicketValidationResult = {
         "winrt._winrt_windows_graphics_printing_printticket.WorkflowPrintTicketValidationResult",

@@ -361,19 +361,16 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     }
 
     static PyMethodDef _methods_PlatformDiagnosticActions[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlatformDiagnosticActions[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlatformDiagnosticActions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformDiagnosticActions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformDiagnosticActions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformDiagnosticActions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlatformDiagnosticActions = {
         "winrt._winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticActions",
@@ -383,8 +380,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         _type_slots_PlatformDiagnosticActions};
 
     static PyGetSetDef getset_PlatformDiagnosticActions_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlatformDiagnosticActions_Static[] = {
         { "download_latest_settings_for_namespace", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_DownloadLatestSettingsForNamespace), METH_VARARGS, nullptr },
@@ -395,8 +391,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         { "is_scenario_enabled", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_IsScenarioEnabled), METH_VARARGS, nullptr },
         { "is_trace_running", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_IsTraceRunning), METH_VARARGS, nullptr },
         { "try_escalate_scenario", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_TryEscalateScenario), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlatformDiagnosticActions_Static[] = 
     {
@@ -406,14 +401,12 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         { }
     };
 
-    static PyType_Spec type_spec_PlatformDiagnosticActions_Static =
-    {
+    static PyType_Spec type_spec_PlatformDiagnosticActions_Static = {
         "winrt._winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticActions_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlatformDiagnosticActions_Static
-    };
+        type_slots_PlatformDiagnosticActions_Static};
 
     // ----- PlatformDiagnosticTraceInfo class --------------------
 
@@ -639,8 +632,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     static PyMethodDef _methods_PlatformDiagnosticTraceInfo[] = {
         { "_assign_array_", _assign_array_PlatformDiagnosticTraceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlatformDiagnosticTraceInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlatformDiagnosticTraceInfo[] = {
         { "is_auto_logger", reinterpret_cast<getter>(PlatformDiagnosticTraceInfo_get_IsAutoLogger), nullptr, nullptr, nullptr },
@@ -649,16 +641,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         { "priority", reinterpret_cast<getter>(PlatformDiagnosticTraceInfo_get_Priority), nullptr, nullptr, nullptr },
         { "profile_hash", reinterpret_cast<getter>(PlatformDiagnosticTraceInfo_get_ProfileHash), nullptr, nullptr, nullptr },
         { "scenario_id", reinterpret_cast<getter>(PlatformDiagnosticTraceInfo_get_ScenarioId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlatformDiagnosticTraceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformDiagnosticTraceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlatformDiagnosticTraceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformDiagnosticTraceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformDiagnosticTraceInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlatformDiagnosticTraceInfo = {
         "winrt._winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceInfo",
@@ -771,22 +761,19 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     static PyMethodDef _methods_PlatformDiagnosticTraceRuntimeInfo[] = {
         { "_assign_array_", _assign_array_PlatformDiagnosticTraceRuntimeInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlatformDiagnosticTraceRuntimeInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlatformDiagnosticTraceRuntimeInfo[] = {
         { "etw_runtime_file_time", reinterpret_cast<getter>(PlatformDiagnosticTraceRuntimeInfo_get_EtwRuntimeFileTime), nullptr, nullptr, nullptr },
         { "runtime_file_time", reinterpret_cast<getter>(PlatformDiagnosticTraceRuntimeInfo_get_RuntimeFileTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlatformDiagnosticTraceRuntimeInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformDiagnosticTraceRuntimeInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlatformDiagnosticTraceRuntimeInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformDiagnosticTraceRuntimeInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformDiagnosticTraceRuntimeInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlatformDiagnosticTraceRuntimeInfo = {
         "winrt._winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceRuntimeInfo",

@@ -186,22 +186,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_AmbientLight[] = {
         { "_assign_array_", _assign_array_AmbientLight, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AmbientLight), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AmbientLight[] = {
         { "color", reinterpret_cast<getter>(AmbientLight_get_Color), reinterpret_cast<setter>(AmbientLight_put_Color), nullptr, nullptr },
         { "intensity", reinterpret_cast<getter>(AmbientLight_get_Intensity), reinterpret_cast<setter>(AmbientLight_put_Intensity), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AmbientLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AmbientLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AmbientLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AmbientLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AmbientLight) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AmbientLight = {
         "winrt._winrt_microsoft_ui_composition.AmbientLight",
@@ -605,23 +602,20 @@ namespace py::cpp::Microsoft::UI::Composition
         { "resume", reinterpret_cast<PyCFunction>(AnimationController_Resume), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimationController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimationController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimationController[] = {
         { "progress_behavior", reinterpret_cast<getter>(AnimationController_get_ProgressBehavior), reinterpret_cast<setter>(AnimationController_put_ProgressBehavior), nullptr, nullptr },
         { "progress", reinterpret_cast<getter>(AnimationController_get_Progress), reinterpret_cast<setter>(AnimationController_put_Progress), nullptr, nullptr },
         { "playback_rate", reinterpret_cast<getter>(AnimationController_get_PlaybackRate), reinterpret_cast<setter>(AnimationController_put_PlaybackRate), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimationController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimationController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimationController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimationController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimationController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimationController = {
         "winrt._winrt_microsoft_ui_composition.AnimationController",
@@ -633,12 +627,10 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyGetSetDef getset_AnimationController_Static[] = {
         { "max_playback_rate", reinterpret_cast<getter>(AnimationController_get_MaxPlaybackRate), nullptr, nullptr, nullptr },
         { "min_playback_rate", reinterpret_cast<getter>(AnimationController_get_MinPlaybackRate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AnimationController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AnimationController_Static[] = 
     {
@@ -648,14 +640,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_AnimationController_Static =
-    {
+    static PyType_Spec type_spec_AnimationController_Static = {
         "winrt._winrt_microsoft_ui_composition.AnimationController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AnimationController_Static
-    };
+        type_slots_AnimationController_Static};
 
     // ----- AnimationPropertyInfo class --------------------
 
@@ -852,21 +842,18 @@ namespace py::cpp::Microsoft::UI::Composition
         { "get_resolved_composition_object_property", reinterpret_cast<PyCFunction>(AnimationPropertyInfo_GetResolvedCompositionObjectProperty), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimationPropertyInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimationPropertyInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimationPropertyInfo[] = {
         { "access_mode", reinterpret_cast<getter>(AnimationPropertyInfo_get_AccessMode), reinterpret_cast<setter>(AnimationPropertyInfo_put_AccessMode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimationPropertyInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimationPropertyInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimationPropertyInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimationPropertyInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimationPropertyInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimationPropertyInfo = {
         "winrt._winrt_microsoft_ui_composition.AnimationPropertyInfo",
@@ -979,22 +966,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_BackEasingFunction[] = {
         { "_assign_array_", _assign_array_BackEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackEasingFunction[] = {
         { "amplitude", reinterpret_cast<getter>(BackEasingFunction_get_Amplitude), nullptr, nullptr, nullptr },
         { "mode", reinterpret_cast<getter>(BackEasingFunction_get_Mode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.BackEasingFunction",
@@ -1092,20 +1076,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "insert_key_frame", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BooleanKeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BooleanKeyFrameAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BooleanKeyFrameAnimation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BooleanKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BooleanKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BooleanKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BooleanKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BooleanKeyFrameAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BooleanKeyFrameAnimation = {
         "winrt._winrt_microsoft_ui_composition.BooleanKeyFrameAnimation",
@@ -1248,23 +1229,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_BounceEasingFunction[] = {
         { "_assign_array_", _assign_array_BounceEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BounceEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BounceEasingFunction[] = {
         { "bounces", reinterpret_cast<getter>(BounceEasingFunction_get_Bounces), nullptr, nullptr, nullptr },
         { "bounciness", reinterpret_cast<getter>(BounceEasingFunction_get_Bounciness), nullptr, nullptr, nullptr },
         { "mode", reinterpret_cast<getter>(BounceEasingFunction_get_Mode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BounceEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BounceEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.BounceEasingFunction",
@@ -1455,22 +1433,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_BounceScalarNaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_BounceScalarNaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BounceScalarNaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BounceScalarNaturalMotionAnimation[] = {
         { "restitution", reinterpret_cast<getter>(BounceScalarNaturalMotionAnimation_get_Restitution), reinterpret_cast<setter>(BounceScalarNaturalMotionAnimation_put_Restitution), nullptr, nullptr },
         { "acceleration", reinterpret_cast<getter>(BounceScalarNaturalMotionAnimation_get_Acceleration), reinterpret_cast<setter>(BounceScalarNaturalMotionAnimation_put_Acceleration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BounceScalarNaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceScalarNaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceScalarNaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceScalarNaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceScalarNaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BounceScalarNaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.BounceScalarNaturalMotionAnimation",
@@ -1661,22 +1636,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_BounceVector2NaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_BounceVector2NaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BounceVector2NaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BounceVector2NaturalMotionAnimation[] = {
         { "restitution", reinterpret_cast<getter>(BounceVector2NaturalMotionAnimation_get_Restitution), reinterpret_cast<setter>(BounceVector2NaturalMotionAnimation_put_Restitution), nullptr, nullptr },
         { "acceleration", reinterpret_cast<getter>(BounceVector2NaturalMotionAnimation_get_Acceleration), reinterpret_cast<setter>(BounceVector2NaturalMotionAnimation_put_Acceleration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BounceVector2NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceVector2NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceVector2NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceVector2NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceVector2NaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BounceVector2NaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.BounceVector2NaturalMotionAnimation",
@@ -1867,22 +1839,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_BounceVector3NaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_BounceVector3NaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BounceVector3NaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BounceVector3NaturalMotionAnimation[] = {
         { "restitution", reinterpret_cast<getter>(BounceVector3NaturalMotionAnimation_get_Restitution), reinterpret_cast<setter>(BounceVector3NaturalMotionAnimation_put_Restitution), nullptr, nullptr },
         { "acceleration", reinterpret_cast<getter>(BounceVector3NaturalMotionAnimation_get_Acceleration), reinterpret_cast<setter>(BounceVector3NaturalMotionAnimation_put_Acceleration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BounceVector3NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceVector3NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceVector3NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceVector3NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceVector3NaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BounceVector3NaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.BounceVector3NaturalMotionAnimation",
@@ -1965,21 +1934,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CircleEasingFunction[] = {
         { "_assign_array_", _assign_array_CircleEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CircleEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CircleEasingFunction[] = {
         { "mode", reinterpret_cast<getter>(CircleEasingFunction_get_Mode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CircleEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CircleEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CircleEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CircleEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CircleEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CircleEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.CircleEasingFunction",
@@ -2192,21 +2158,18 @@ namespace py::cpp::Microsoft::UI::Composition
         { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ColorKeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorKeyFrameAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ColorKeyFrameAnimation[] = {
         { "interpolation_color_space", reinterpret_cast<getter>(ColorKeyFrameAnimation_get_InterpolationColorSpace), reinterpret_cast<setter>(ColorKeyFrameAnimation_put_InterpolationColorSpace), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ColorKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorKeyFrameAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ColorKeyFrameAnimation = {
         "winrt._winrt_microsoft_ui_composition.ColorKeyFrameAnimation",
@@ -2939,22 +2902,19 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(CompositionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionAnimation[] = {
         { "target", reinterpret_cast<getter>(CompositionAnimation_get_Target), reinterpret_cast<setter>(CompositionAnimation_put_Target), nullptr, nullptr },
         { "initial_value_expressions", reinterpret_cast<getter>(CompositionAnimation_get_InitialValueExpressions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionAnimation = {
         "winrt._winrt_microsoft_ui_composition.CompositionAnimation",
@@ -2964,12 +2924,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionAnimation};
 
     static PyGetSetDef getset_CompositionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionAnimation_Static[] = 
     {
@@ -2979,14 +2937,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionAnimation_Static =
-    {
+    static PyType_Spec type_spec_CompositionAnimation_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionAnimation_Static
-    };
+        type_slots_CompositionAnimation_Static};
 
     // ----- CompositionAnimationGroup class --------------------
 
@@ -3250,13 +3206,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(CompositionAnimationGroup_RemoveAll), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionAnimationGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionAnimationGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionAnimationGroup[] = {
         { "count", reinterpret_cast<getter>(CompositionAnimationGroup_get_Count), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionAnimationGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionAnimationGroup) },
@@ -3264,8 +3218,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionAnimationGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionAnimationGroup) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CompositionAnimationGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionAnimationGroup = {
         "winrt._winrt_microsoft_ui_composition.CompositionAnimationGroup",
@@ -3314,19 +3267,16 @@ namespace py::cpp::Microsoft::UI::Composition
     }
 
     static PyMethodDef _methods_CompositionApiInformation[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionApiInformation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionApiInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionApiInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionApiInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionApiInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionApiInformation = {
         "winrt._winrt_microsoft_ui_composition.CompositionApiInformation",
@@ -3337,12 +3287,10 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyGetSetDef getset_CompositionApiInformation_Static[] = {
         { "api_version", reinterpret_cast<getter>(CompositionApiInformation_get_ApiVersion), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionApiInformation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionApiInformation_Static[] = 
     {
@@ -3352,14 +3300,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionApiInformation_Static =
-    {
+    static PyType_Spec type_spec_CompositionApiInformation_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionApiInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CompositionApiInformation_Static
-    };
+        type_slots_CompositionApiInformation_Static};
 
     // ----- CompositionBackdropBrush class --------------------
 
@@ -3405,20 +3351,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionBackdropBrush[] = {
         { "_assign_array_", _assign_array_CompositionBackdropBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionBackdropBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionBackdropBrush[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionBackdropBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionBackdropBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionBackdropBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionBackdropBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionBackdropBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionBackdropBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionBackdropBrush",
@@ -3471,20 +3414,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionBatchCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_CompositionBatchCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionBatchCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionBatchCompletedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionBatchCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionBatchCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionBatchCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionBatchCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionBatchCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionBatchCompletedEventArgs = {
         "winrt._winrt_microsoft_ui_composition.CompositionBatchCompletedEventArgs",
@@ -3537,20 +3477,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionBrush[] = {
         { "_assign_array_", _assign_array_CompositionBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionBrush[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionBrush",
@@ -3560,12 +3497,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionBrush};
 
     static PyGetSetDef getset_CompositionBrush_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionBrush_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionBrush_Static[] = 
     {
@@ -3575,14 +3510,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionBrush_Static =
-    {
+    static PyType_Spec type_spec_CompositionBrush_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionBrush_Static
-    };
+        type_slots_CompositionBrush_Static};
 
     // ----- CompositionCapabilities class --------------------
 
@@ -3799,20 +3732,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_changed", reinterpret_cast<PyCFunction>(CompositionCapabilities_remove_Changed), METH_O, nullptr },
         { "_assign_array_", _assign_array_CompositionCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionCapabilities[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionCapabilities = {
         "winrt._winrt_microsoft_ui_composition.CompositionCapabilities",
@@ -4348,8 +4278,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionClip[] = {
         { "_assign_array_", _assign_array_CompositionClip, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionClip), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionClip[] = {
         { "transform_matrix", reinterpret_cast<getter>(CompositionClip_get_TransformMatrix), reinterpret_cast<setter>(CompositionClip_put_TransformMatrix), nullptr, nullptr },
@@ -4359,16 +4288,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "offset", reinterpret_cast<getter>(CompositionClip_get_Offset), reinterpret_cast<setter>(CompositionClip_put_Offset), nullptr, nullptr },
         { "center_point", reinterpret_cast<getter>(CompositionClip_get_CenterPoint), reinterpret_cast<setter>(CompositionClip_put_CenterPoint), nullptr, nullptr },
         { "anchor_point", reinterpret_cast<getter>(CompositionClip_get_AnchorPoint), reinterpret_cast<setter>(CompositionClip_put_AnchorPoint), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionClip) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionClip = {
         "winrt._winrt_microsoft_ui_composition.CompositionClip",
@@ -4378,12 +4305,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionClip};
 
     static PyGetSetDef getset_CompositionClip_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionClip_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionClip_Static[] = 
     {
@@ -4393,14 +4318,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionClip_Static =
-    {
+    static PyType_Spec type_spec_CompositionClip_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionClip_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionClip_Static
-    };
+        type_slots_CompositionClip_Static};
 
     // ----- CompositionColorBrush class --------------------
 
@@ -4515,21 +4438,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionColorBrush[] = {
         { "_assign_array_", _assign_array_CompositionColorBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionColorBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionColorBrush[] = {
         { "color", reinterpret_cast<getter>(CompositionColorBrush_get_Color), reinterpret_cast<setter>(CompositionColorBrush_put_Color), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionColorBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionColorBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionColorBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionColorBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionColorBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionColorBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionColorBrush",
@@ -4720,22 +4640,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionColorGradientStop[] = {
         { "_assign_array_", _assign_array_CompositionColorGradientStop, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionColorGradientStop), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionColorGradientStop[] = {
         { "offset", reinterpret_cast<getter>(CompositionColorGradientStop_get_Offset), reinterpret_cast<setter>(CompositionColorGradientStop_put_Offset), nullptr, nullptr },
         { "color", reinterpret_cast<getter>(CompositionColorGradientStop_get_Color), reinterpret_cast<setter>(CompositionColorGradientStop_put_Color), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionColorGradientStop[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionColorGradientStop) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionColorGradientStop) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionColorGradientStop) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionColorGradientStop) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionColorGradientStop = {
         "winrt._winrt_microsoft_ui_composition.CompositionColorGradientStop",
@@ -5494,13 +5411,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_at", reinterpret_cast<PyCFunction>(CompositionColorGradientStopCollection_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionColorGradientStopCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionColorGradientStopCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionColorGradientStopCollection[] = {
         { "size", reinterpret_cast<getter>(CompositionColorGradientStopCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionColorGradientStopCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionColorGradientStopCollection) },
@@ -5512,8 +5427,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_CompositionColorGradientStopCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_CompositionColorGradientStopCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_CompositionColorGradientStopCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionColorGradientStopCollection = {
         "winrt._winrt_microsoft_ui_composition.CompositionColorGradientStopCollection",
@@ -5693,22 +5607,19 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_completed", reinterpret_cast<PyCFunction>(CompositionCommitBatch_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_CompositionCommitBatch, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionCommitBatch), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionCommitBatch[] = {
         { "is_active", reinterpret_cast<getter>(CompositionCommitBatch_get_IsActive), nullptr, nullptr, nullptr },
         { "is_ended", reinterpret_cast<getter>(CompositionCommitBatch_get_IsEnded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionCommitBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionCommitBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionCommitBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionCommitBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionCommitBatch) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionCommitBatch = {
         "winrt._winrt_microsoft_ui_composition.CompositionCommitBatch",
@@ -5791,21 +5702,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionContainerShape[] = {
         { "_assign_array_", _assign_array_CompositionContainerShape, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionContainerShape), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionContainerShape[] = {
         { "shapes", reinterpret_cast<getter>(CompositionContainerShape_get_Shapes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionContainerShape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionContainerShape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionContainerShape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionContainerShape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionContainerShape) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionContainerShape = {
         "winrt._winrt_microsoft_ui_composition.CompositionContainerShape",
@@ -6202,24 +6110,21 @@ namespace py::cpp::Microsoft::UI::Composition
         { "scroll_with_clip", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_ScrollWithClip), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionDrawingSurface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionDrawingSurface), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionDrawingSurface[] = {
         { "alpha_mode", reinterpret_cast<getter>(CompositionDrawingSurface_get_AlphaMode), nullptr, nullptr, nullptr },
         { "pixel_format", reinterpret_cast<getter>(CompositionDrawingSurface_get_PixelFormat), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(CompositionDrawingSurface_get_Size), nullptr, nullptr, nullptr },
         { "size_int32", reinterpret_cast<getter>(CompositionDrawingSurface_get_SizeInt32), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionDrawingSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionDrawingSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionDrawingSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionDrawingSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionDrawingSurface) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionDrawingSurface = {
         "winrt._winrt_microsoft_ui_composition.CompositionDrawingSurface",
@@ -6229,12 +6134,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionDrawingSurface};
 
     static PyGetSetDef getset_CompositionDrawingSurface_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionDrawingSurface_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionDrawingSurface_Static[] = 
     {
@@ -6244,14 +6147,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionDrawingSurface_Static =
-    {
+    static PyType_Spec type_spec_CompositionDrawingSurface_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionDrawingSurface_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionDrawingSurface_Static
-    };
+        type_slots_CompositionDrawingSurface_Static};
 
     // ----- CompositionEasingFunction class --------------------
 
@@ -6776,20 +6677,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionEasingFunction[] = {
         { "_assign_array_", _assign_array_CompositionEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionEasingFunction[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.CompositionEasingFunction",
@@ -6799,8 +6697,7 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionEasingFunction};
 
     static PyGetSetDef getset_CompositionEasingFunction_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionEasingFunction_Static[] = {
         { "create_back_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateBackEasingFunction), METH_VARARGS, nullptr },
@@ -6814,8 +6711,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "create_sine_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateSineEasingFunction), METH_VARARGS, nullptr },
         { "create_step_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateStepEasingFunction), METH_VARARGS, nullptr },
         { "create_step_easing_function_with_step_count", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateStepEasingFunctionWithStepCount), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionEasingFunction_Static[] = 
     {
@@ -6825,14 +6721,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionEasingFunction_Static =
-    {
+    static PyType_Spec type_spec_CompositionEasingFunction_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionEasingFunction_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionEasingFunction_Static
-    };
+        type_slots_CompositionEasingFunction_Static};
 
     // ----- CompositionEffectBrush class --------------------
 
@@ -6966,20 +6860,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_source_parameter", reinterpret_cast<PyCFunction>(CompositionEffectBrush_SetSourceParameter), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionEffectBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionEffectBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionEffectBrush[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionEffectBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEffectBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEffectBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEffectBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEffectBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionEffectBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionEffectBrush",
@@ -7133,22 +7024,19 @@ namespace py::cpp::Microsoft::UI::Composition
         { "create_brush", reinterpret_cast<PyCFunction>(CompositionEffectFactory_CreateBrush), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionEffectFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionEffectFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionEffectFactory[] = {
         { "extended_error", reinterpret_cast<getter>(CompositionEffectFactory_get_ExtendedError), nullptr, nullptr, nullptr },
         { "load_status", reinterpret_cast<getter>(CompositionEffectFactory_get_LoadStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionEffectFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEffectFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEffectFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEffectFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEffectFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionEffectFactory = {
         "winrt._winrt_microsoft_ui_composition.CompositionEffectFactory",
@@ -7255,21 +7143,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionEffectSourceParameter[] = {
         { "_assign_array_", _assign_array_CompositionEffectSourceParameter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionEffectSourceParameter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionEffectSourceParameter[] = {
         { "name", reinterpret_cast<getter>(CompositionEffectSourceParameter_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionEffectSourceParameter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEffectSourceParameter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEffectSourceParameter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEffectSourceParameter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEffectSourceParameter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionEffectSourceParameter = {
         "winrt._winrt_microsoft_ui_composition.CompositionEffectSourceParameter",
@@ -7460,22 +7345,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionEllipseGeometry[] = {
         { "_assign_array_", _assign_array_CompositionEllipseGeometry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionEllipseGeometry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionEllipseGeometry[] = {
         { "radius", reinterpret_cast<getter>(CompositionEllipseGeometry_get_Radius), reinterpret_cast<setter>(CompositionEllipseGeometry_put_Radius), nullptr, nullptr },
         { "center", reinterpret_cast<getter>(CompositionEllipseGeometry_get_Center), reinterpret_cast<setter>(CompositionEllipseGeometry_put_Center), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionEllipseGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEllipseGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEllipseGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEllipseGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEllipseGeometry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionEllipseGeometry = {
         "winrt._winrt_microsoft_ui_composition.CompositionEllipseGeometry",
@@ -7666,22 +7548,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionGeometricClip[] = {
         { "_assign_array_", _assign_array_CompositionGeometricClip, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionGeometricClip), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionGeometricClip[] = {
         { "view_box", reinterpret_cast<getter>(CompositionGeometricClip_get_ViewBox), reinterpret_cast<setter>(CompositionGeometricClip_put_ViewBox), nullptr, nullptr },
         { "geometry", reinterpret_cast<getter>(CompositionGeometricClip_get_Geometry), reinterpret_cast<setter>(CompositionGeometricClip_put_Geometry), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionGeometricClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionGeometricClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionGeometricClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionGeometricClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionGeometricClip) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionGeometricClip = {
         "winrt._winrt_microsoft_ui_composition.CompositionGeometricClip",
@@ -7941,23 +7820,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionGeometry[] = {
         { "_assign_array_", _assign_array_CompositionGeometry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionGeometry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionGeometry[] = {
         { "trim_start", reinterpret_cast<getter>(CompositionGeometry_get_TrimStart), reinterpret_cast<setter>(CompositionGeometry_put_TrimStart), nullptr, nullptr },
         { "trim_offset", reinterpret_cast<getter>(CompositionGeometry_get_TrimOffset), reinterpret_cast<setter>(CompositionGeometry_put_TrimOffset), nullptr, nullptr },
         { "trim_end", reinterpret_cast<getter>(CompositionGeometry_get_TrimEnd), reinterpret_cast<setter>(CompositionGeometry_put_TrimEnd), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionGeometry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionGeometry = {
         "winrt._winrt_microsoft_ui_composition.CompositionGeometry",
@@ -7967,12 +7843,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionGeometry};
 
     static PyGetSetDef getset_CompositionGeometry_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionGeometry_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionGeometry_Static[] = 
     {
@@ -7982,14 +7856,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionGeometry_Static =
-    {
+    static PyType_Spec type_spec_CompositionGeometry_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionGeometry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionGeometry_Static
-    };
+        type_slots_CompositionGeometry_Static};
 
     // ----- CompositionGradientBrush class --------------------
 
@@ -8755,8 +8627,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionGradientBrush[] = {
         { "_assign_array_", _assign_array_CompositionGradientBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionGradientBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionGradientBrush[] = {
         { "transform_matrix", reinterpret_cast<getter>(CompositionGradientBrush_get_TransformMatrix), reinterpret_cast<setter>(CompositionGradientBrush_put_TransformMatrix), nullptr, nullptr },
@@ -8770,16 +8641,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "anchor_point", reinterpret_cast<getter>(CompositionGradientBrush_get_AnchorPoint), reinterpret_cast<setter>(CompositionGradientBrush_put_AnchorPoint), nullptr, nullptr },
         { "color_stops", reinterpret_cast<getter>(CompositionGradientBrush_get_ColorStops), nullptr, nullptr, nullptr },
         { "mapping_mode", reinterpret_cast<getter>(CompositionGradientBrush_get_MappingMode), reinterpret_cast<setter>(CompositionGradientBrush_put_MappingMode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionGradientBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionGradientBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionGradientBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionGradientBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionGradientBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionGradientBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionGradientBrush",
@@ -8789,12 +8658,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionGradientBrush};
 
     static PyGetSetDef getset_CompositionGradientBrush_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionGradientBrush_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionGradientBrush_Static[] = 
     {
@@ -8804,14 +8671,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionGradientBrush_Static =
-    {
+    static PyType_Spec type_spec_CompositionGradientBrush_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionGradientBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionGradientBrush_Static
-    };
+        type_slots_CompositionGradientBrush_Static};
 
     // ----- CompositionGraphicsDevice class --------------------
 
@@ -9193,20 +9058,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_rendering_device_replaced", reinterpret_cast<PyCFunction>(CompositionGraphicsDevice_remove_RenderingDeviceReplaced), METH_O, nullptr },
         { "_assign_array_", _assign_array_CompositionGraphicsDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionGraphicsDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionGraphicsDevice[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionGraphicsDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionGraphicsDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionGraphicsDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionGraphicsDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionGraphicsDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionGraphicsDevice = {
         "winrt._winrt_microsoft_ui_composition.CompositionGraphicsDevice",
@@ -9388,23 +9250,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionLight[] = {
         { "_assign_array_", _assign_array_CompositionLight, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionLight), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionLight[] = {
         { "targets", reinterpret_cast<getter>(CompositionLight_get_Targets), nullptr, nullptr, nullptr },
         { "exclusions_from_targets", reinterpret_cast<getter>(CompositionLight_get_ExclusionsFromTargets), nullptr, nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(CompositionLight_get_IsEnabled), reinterpret_cast<setter>(CompositionLight_put_IsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionLight) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionLight = {
         "winrt._winrt_microsoft_ui_composition.CompositionLight",
@@ -9414,12 +9273,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionLight};
 
     static PyGetSetDef getset_CompositionLight_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionLight_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionLight_Static[] = 
     {
@@ -9429,14 +9286,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionLight_Static =
-    {
+    static PyType_Spec type_spec_CompositionLight_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionLight_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionLight_Static
-    };
+        type_slots_CompositionLight_Static};
 
     // ----- CompositionLineGeometry class --------------------
 
@@ -9620,22 +9475,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionLineGeometry[] = {
         { "_assign_array_", _assign_array_CompositionLineGeometry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionLineGeometry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionLineGeometry[] = {
         { "start", reinterpret_cast<getter>(CompositionLineGeometry_get_Start), reinterpret_cast<setter>(CompositionLineGeometry_put_Start), nullptr, nullptr },
         { "end", reinterpret_cast<getter>(CompositionLineGeometry_get_End), reinterpret_cast<setter>(CompositionLineGeometry_put_End), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionLineGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionLineGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionLineGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionLineGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionLineGeometry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionLineGeometry = {
         "winrt._winrt_microsoft_ui_composition.CompositionLineGeometry",
@@ -9826,22 +9678,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionLinearGradientBrush[] = {
         { "_assign_array_", _assign_array_CompositionLinearGradientBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionLinearGradientBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionLinearGradientBrush[] = {
         { "start_point", reinterpret_cast<getter>(CompositionLinearGradientBrush_get_StartPoint), reinterpret_cast<setter>(CompositionLinearGradientBrush_put_StartPoint), nullptr, nullptr },
         { "end_point", reinterpret_cast<getter>(CompositionLinearGradientBrush_get_EndPoint), reinterpret_cast<setter>(CompositionLinearGradientBrush_put_EndPoint), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionLinearGradientBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionLinearGradientBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionLinearGradientBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionLinearGradientBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionLinearGradientBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionLinearGradientBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionLinearGradientBrush",
@@ -10032,22 +9881,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionMaskBrush[] = {
         { "_assign_array_", _assign_array_CompositionMaskBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionMaskBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionMaskBrush[] = {
         { "source", reinterpret_cast<getter>(CompositionMaskBrush_get_Source), reinterpret_cast<setter>(CompositionMaskBrush_put_Source), nullptr, nullptr },
         { "mask", reinterpret_cast<getter>(CompositionMaskBrush_get_Mask), reinterpret_cast<setter>(CompositionMaskBrush_put_Mask), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionMaskBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionMaskBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionMaskBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionMaskBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionMaskBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionMaskBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionMaskBrush",
@@ -10263,24 +10109,21 @@ namespace py::cpp::Microsoft::UI::Composition
         { "get_drawing_surface_for_level", reinterpret_cast<PyCFunction>(CompositionMipmapSurface_GetDrawingSurfaceForLevel), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionMipmapSurface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionMipmapSurface), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionMipmapSurface[] = {
         { "alpha_mode", reinterpret_cast<getter>(CompositionMipmapSurface_get_AlphaMode), nullptr, nullptr, nullptr },
         { "level_count", reinterpret_cast<getter>(CompositionMipmapSurface_get_LevelCount), nullptr, nullptr, nullptr },
         { "pixel_format", reinterpret_cast<getter>(CompositionMipmapSurface_get_PixelFormat), nullptr, nullptr, nullptr },
         { "size_int32", reinterpret_cast<getter>(CompositionMipmapSurface_get_SizeInt32), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionMipmapSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionMipmapSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionMipmapSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionMipmapSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionMipmapSurface) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionMipmapSurface = {
         "winrt._winrt_microsoft_ui_composition.CompositionMipmapSurface",
@@ -11205,8 +11048,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_insets_with_values", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_SetInsetsWithValues), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionNineGridBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionNineGridBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionNineGridBrush[] = {
         { "top_inset_scale", reinterpret_cast<getter>(CompositionNineGridBrush_get_TopInsetScale), reinterpret_cast<setter>(CompositionNineGridBrush_put_TopInsetScale), nullptr, nullptr },
@@ -11219,16 +11061,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "is_center_hollow", reinterpret_cast<getter>(CompositionNineGridBrush_get_IsCenterHollow), reinterpret_cast<setter>(CompositionNineGridBrush_put_IsCenterHollow), nullptr, nullptr },
         { "bottom_inset_scale", reinterpret_cast<getter>(CompositionNineGridBrush_get_BottomInsetScale), reinterpret_cast<setter>(CompositionNineGridBrush_put_BottomInsetScale), nullptr, nullptr },
         { "bottom_inset", reinterpret_cast<getter>(CompositionNineGridBrush_get_BottomInset), reinterpret_cast<setter>(CompositionNineGridBrush_put_BottomInset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionNineGridBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionNineGridBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionNineGridBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionNineGridBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionNineGridBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionNineGridBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionNineGridBrush",
@@ -11976,8 +11816,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionObject), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CompositionObject), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_CompositionObject), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionObject[] = {
         { "compositor", reinterpret_cast<getter>(CompositionObject_get_Compositor), nullptr, nullptr, nullptr },
@@ -11985,16 +11824,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "implicit_animations", reinterpret_cast<getter>(CompositionObject_get_ImplicitAnimations), reinterpret_cast<setter>(CompositionObject_put_ImplicitAnimations), nullptr, nullptr },
         { "comment", reinterpret_cast<getter>(CompositionObject_get_Comment), reinterpret_cast<setter>(CompositionObject_put_Comment), nullptr, nullptr },
         { "dispatcher_queue", reinterpret_cast<getter>(CompositionObject_get_DispatcherQueue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionObject) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionObject = {
         "winrt._winrt_microsoft_ui_composition.CompositionObject",
@@ -12004,14 +11841,12 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionObject};
 
     static PyGetSetDef getset_CompositionObject_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionObject_Static[] = {
         { "start_animation_group_with_ianimation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationGroupWithIAnimationObject), METH_VARARGS, nullptr },
         { "start_animation_with_ianimation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationWithIAnimationObject), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionObject_Static[] = 
     {
@@ -12021,14 +11856,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionObject_Static =
-    {
+    static PyType_Spec type_spec_CompositionObject_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionObject_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionObject_Static
-    };
+        type_slots_CompositionObject_Static};
 
     // ----- CompositionPath class --------------------
 
@@ -12098,20 +11931,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionPath[] = {
         { "_assign_array_", _assign_array_CompositionPath, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionPath), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionPath[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionPath[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionPath) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionPath) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionPath) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionPath) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionPath = {
         "winrt._winrt_microsoft_ui_composition.CompositionPath",
@@ -12233,21 +12063,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionPathGeometry[] = {
         { "_assign_array_", _assign_array_CompositionPathGeometry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionPathGeometry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionPathGeometry[] = {
         { "path", reinterpret_cast<getter>(CompositionPathGeometry_get_Path), reinterpret_cast<setter>(CompositionPathGeometry_put_Path), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionPathGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionPathGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionPathGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionPathGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionPathGeometry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionPathGeometry = {
         "winrt._winrt_microsoft_ui_composition.CompositionPathGeometry",
@@ -12636,8 +12463,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionProjectedShadow[] = {
         { "_assign_array_", _assign_array_CompositionProjectedShadow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionProjectedShadow), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionProjectedShadow[] = {
         { "min_blur_radius", reinterpret_cast<getter>(CompositionProjectedShadow_get_MinBlurRadius), reinterpret_cast<setter>(CompositionProjectedShadow_put_MinBlurRadius), nullptr, nullptr },
@@ -12646,16 +12472,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "blur_radius_multiplier", reinterpret_cast<getter>(CompositionProjectedShadow_get_BlurRadiusMultiplier), reinterpret_cast<setter>(CompositionProjectedShadow_put_BlurRadiusMultiplier), nullptr, nullptr },
         { "casters", reinterpret_cast<getter>(CompositionProjectedShadow_get_Casters), nullptr, nullptr, nullptr },
         { "receivers", reinterpret_cast<getter>(CompositionProjectedShadow_get_Receivers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionProjectedShadow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionProjectedShadow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionProjectedShadow = {
         "winrt._winrt_microsoft_ui_composition.CompositionProjectedShadow",
@@ -12846,22 +12670,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionProjectedShadowCaster[] = {
         { "_assign_array_", _assign_array_CompositionProjectedShadowCaster, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionProjectedShadowCaster), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionProjectedShadowCaster[] = {
         { "casting_visual", reinterpret_cast<getter>(CompositionProjectedShadowCaster_get_CastingVisual), reinterpret_cast<setter>(CompositionProjectedShadowCaster_put_CastingVisual), nullptr, nullptr },
         { "brush", reinterpret_cast<getter>(CompositionProjectedShadowCaster_get_Brush), reinterpret_cast<setter>(CompositionProjectedShadowCaster_put_Brush), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionProjectedShadowCaster[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadowCaster) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionProjectedShadowCaster) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadowCaster) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadowCaster) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionProjectedShadowCaster = {
         "winrt._winrt_microsoft_ui_composition.CompositionProjectedShadowCaster",
@@ -13296,13 +13117,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCasterCollection_RemoveAll), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionProjectedShadowCasterCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionProjectedShadowCasterCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionProjectedShadowCasterCollection[] = {
         { "count", reinterpret_cast<getter>(CompositionProjectedShadowCasterCollection_get_Count), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionProjectedShadowCasterCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadowCasterCollection) },
@@ -13310,8 +13129,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadowCasterCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadowCasterCollection) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CompositionProjectedShadowCasterCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection = {
         "winrt._winrt_microsoft_ui_composition.CompositionProjectedShadowCasterCollection",
@@ -13322,12 +13140,10 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyGetSetDef getset_CompositionProjectedShadowCasterCollection_Static[] = {
         { "max_respected_casters", reinterpret_cast<getter>(CompositionProjectedShadowCasterCollection_get_MaxRespectedCasters), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionProjectedShadowCasterCollection_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionProjectedShadowCasterCollection_Static[] = 
     {
@@ -13337,14 +13153,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection_Static =
-    {
+    static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionProjectedShadowCasterCollection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CompositionProjectedShadowCasterCollection_Static
-    };
+        type_slots_CompositionProjectedShadowCasterCollection_Static};
 
     // ----- CompositionProjectedShadowReceiver class --------------------
 
@@ -13459,21 +13273,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionProjectedShadowReceiver[] = {
         { "_assign_array_", _assign_array_CompositionProjectedShadowReceiver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionProjectedShadowReceiver), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionProjectedShadowReceiver[] = {
         { "receiving_visual", reinterpret_cast<getter>(CompositionProjectedShadowReceiver_get_ReceivingVisual), reinterpret_cast<setter>(CompositionProjectedShadowReceiver_put_ReceivingVisual), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionProjectedShadowReceiver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadowReceiver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionProjectedShadowReceiver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadowReceiver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadowReceiver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionProjectedShadowReceiver = {
         "winrt._winrt_microsoft_ui_composition.CompositionProjectedShadowReceiver",
@@ -13744,13 +13555,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiverUnorderedCollection_RemoveAll), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionProjectedShadowReceiverUnorderedCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionProjectedShadowReceiverUnorderedCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionProjectedShadowReceiverUnorderedCollection[] = {
         { "count", reinterpret_cast<getter>(CompositionProjectedShadowReceiverUnorderedCollection_get_Count), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionProjectedShadowReceiverUnorderedCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadowReceiverUnorderedCollection) },
@@ -13758,8 +13567,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadowReceiverUnorderedCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadowReceiverUnorderedCollection) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CompositionProjectedShadowReceiverUnorderedCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionProjectedShadowReceiverUnorderedCollection = {
         "winrt._winrt_microsoft_ui_composition.CompositionProjectedShadowReceiverUnorderedCollection",
@@ -14730,20 +14538,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "try_get_vector4", reinterpret_cast<PyCFunction>(CompositionPropertySet_TryGetVector4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionPropertySet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionPropertySet), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionPropertySet[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionPropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionPropertySet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionPropertySet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionPropertySet) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionPropertySet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionPropertySet = {
         "winrt._winrt_microsoft_ui_composition.CompositionPropertySet",
@@ -15003,23 +14808,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionRadialGradientBrush[] = {
         { "_assign_array_", _assign_array_CompositionRadialGradientBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionRadialGradientBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionRadialGradientBrush[] = {
         { "gradient_origin_offset", reinterpret_cast<getter>(CompositionRadialGradientBrush_get_GradientOriginOffset), reinterpret_cast<setter>(CompositionRadialGradientBrush_put_GradientOriginOffset), nullptr, nullptr },
         { "ellipse_radius", reinterpret_cast<getter>(CompositionRadialGradientBrush_get_EllipseRadius), reinterpret_cast<setter>(CompositionRadialGradientBrush_put_EllipseRadius), nullptr, nullptr },
         { "ellipse_center", reinterpret_cast<getter>(CompositionRadialGradientBrush_get_EllipseCenter), reinterpret_cast<setter>(CompositionRadialGradientBrush_put_EllipseCenter), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionRadialGradientBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionRadialGradientBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionRadialGradientBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionRadialGradientBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionRadialGradientBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionRadialGradientBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionRadialGradientBrush",
@@ -15210,22 +15012,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionRectangleGeometry[] = {
         { "_assign_array_", _assign_array_CompositionRectangleGeometry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionRectangleGeometry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionRectangleGeometry[] = {
         { "size", reinterpret_cast<getter>(CompositionRectangleGeometry_get_Size), reinterpret_cast<setter>(CompositionRectangleGeometry_put_Size), nullptr, nullptr },
         { "offset", reinterpret_cast<getter>(CompositionRectangleGeometry_get_Offset), reinterpret_cast<setter>(CompositionRectangleGeometry_put_Offset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionRectangleGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionRectangleGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionRectangleGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionRectangleGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionRectangleGeometry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionRectangleGeometry = {
         "winrt._winrt_microsoft_ui_composition.CompositionRectangleGeometry",
@@ -15485,23 +15284,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionRoundedRectangleGeometry[] = {
         { "_assign_array_", _assign_array_CompositionRoundedRectangleGeometry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionRoundedRectangleGeometry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionRoundedRectangleGeometry[] = {
         { "size", reinterpret_cast<getter>(CompositionRoundedRectangleGeometry_get_Size), reinterpret_cast<setter>(CompositionRoundedRectangleGeometry_put_Size), nullptr, nullptr },
         { "offset", reinterpret_cast<getter>(CompositionRoundedRectangleGeometry_get_Offset), reinterpret_cast<setter>(CompositionRoundedRectangleGeometry_put_Offset), nullptr, nullptr },
         { "corner_radius", reinterpret_cast<getter>(CompositionRoundedRectangleGeometry_get_CornerRadius), reinterpret_cast<setter>(CompositionRoundedRectangleGeometry_put_CornerRadius), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionRoundedRectangleGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionRoundedRectangleGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionRoundedRectangleGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionRoundedRectangleGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionRoundedRectangleGeometry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionRoundedRectangleGeometry = {
         "winrt._winrt_microsoft_ui_composition.CompositionRoundedRectangleGeometry",
@@ -15807,22 +15603,19 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_completed", reinterpret_cast<PyCFunction>(CompositionScopedBatch_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_CompositionScopedBatch, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionScopedBatch), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionScopedBatch[] = {
         { "is_active", reinterpret_cast<getter>(CompositionScopedBatch_get_IsActive), nullptr, nullptr, nullptr },
         { "is_ended", reinterpret_cast<getter>(CompositionScopedBatch_get_IsEnded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionScopedBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionScopedBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionScopedBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionScopedBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionScopedBatch) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionScopedBatch = {
         "winrt._winrt_microsoft_ui_composition.CompositionScopedBatch",
@@ -15875,20 +15668,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionShadow[] = {
         { "_assign_array_", _assign_array_CompositionShadow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionShadow), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionShadow[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionShadow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionShadow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionShadow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionShadow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionShadow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionShadow = {
         "winrt._winrt_microsoft_ui_composition.CompositionShadow",
@@ -15898,12 +15688,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionShadow};
 
     static PyGetSetDef getset_CompositionShadow_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionShadow_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionShadow_Static[] = 
     {
@@ -15913,14 +15701,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionShadow_Static =
-    {
+    static PyType_Spec type_spec_CompositionShadow_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionShadow_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionShadow_Static
-    };
+        type_slots_CompositionShadow_Static};
 
     // ----- CompositionShape class --------------------
 
@@ -16380,8 +16166,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionShape[] = {
         { "_assign_array_", _assign_array_CompositionShape, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionShape), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionShape[] = {
         { "transform_matrix", reinterpret_cast<getter>(CompositionShape_get_TransformMatrix), reinterpret_cast<setter>(CompositionShape_put_TransformMatrix), nullptr, nullptr },
@@ -16390,16 +16175,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "rotation_angle", reinterpret_cast<getter>(CompositionShape_get_RotationAngle), reinterpret_cast<setter>(CompositionShape_put_RotationAngle), nullptr, nullptr },
         { "offset", reinterpret_cast<getter>(CompositionShape_get_Offset), reinterpret_cast<setter>(CompositionShape_put_Offset), nullptr, nullptr },
         { "center_point", reinterpret_cast<getter>(CompositionShape_get_CenterPoint), reinterpret_cast<setter>(CompositionShape_put_CenterPoint), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionShape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionShape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionShape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionShape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionShape) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionShape = {
         "winrt._winrt_microsoft_ui_composition.CompositionShape",
@@ -16409,12 +16192,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionShape};
 
     static PyGetSetDef getset_CompositionShape_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionShape_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionShape_Static[] = 
     {
@@ -16424,14 +16205,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionShape_Static =
-    {
+    static PyType_Spec type_spec_CompositionShape_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionShape_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionShape_Static
-    };
+        type_slots_CompositionShape_Static};
 
     // ----- CompositionShapeCollection class --------------------
 
@@ -17183,13 +16962,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_at", reinterpret_cast<PyCFunction>(CompositionShapeCollection_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionShapeCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionShapeCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionShapeCollection[] = {
         { "size", reinterpret_cast<getter>(CompositionShapeCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionShapeCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionShapeCollection) },
@@ -17201,8 +16978,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_CompositionShapeCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_CompositionShapeCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_CompositionShapeCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionShapeCollection = {
         "winrt._winrt_microsoft_ui_composition.CompositionShapeCollection",
@@ -18044,8 +17820,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionSpriteShape[] = {
         { "_assign_array_", _assign_array_CompositionSpriteShape, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionSpriteShape), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionSpriteShape[] = {
         { "stroke_thickness", reinterpret_cast<getter>(CompositionSpriteShape_get_StrokeThickness), reinterpret_cast<setter>(CompositionSpriteShape_put_StrokeThickness), nullptr, nullptr },
@@ -18060,16 +17835,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "geometry", reinterpret_cast<getter>(CompositionSpriteShape_get_Geometry), reinterpret_cast<setter>(CompositionSpriteShape_put_Geometry), nullptr, nullptr },
         { "fill_brush", reinterpret_cast<getter>(CompositionSpriteShape_get_FillBrush), reinterpret_cast<setter>(CompositionSpriteShape_put_FillBrush), nullptr, nullptr },
         { "stroke_dash_array", reinterpret_cast<getter>(CompositionSpriteShape_get_StrokeDashArray), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionSpriteShape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionSpriteShape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionSpriteShape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionSpriteShape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionSpriteShape) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionSpriteShape = {
         "winrt._winrt_microsoft_ui_composition.CompositionSpriteShape",
@@ -18828,13 +18601,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_at", reinterpret_cast<PyCFunction>(CompositionStrokeDashArray_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionStrokeDashArray, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionStrokeDashArray), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionStrokeDashArray[] = {
         { "size", reinterpret_cast<getter>(CompositionStrokeDashArray_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionStrokeDashArray[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionStrokeDashArray) },
@@ -18846,8 +18617,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_CompositionStrokeDashArray) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_CompositionStrokeDashArray) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_CompositionStrokeDashArray) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionStrokeDashArray = {
         "winrt._winrt_microsoft_ui_composition.CompositionStrokeDashArray",
@@ -19797,8 +19567,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionSurfaceBrush[] = {
         { "_assign_array_", _assign_array_CompositionSurfaceBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionSurfaceBrush), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionSurfaceBrush[] = {
         { "vertical_alignment_ratio", reinterpret_cast<getter>(CompositionSurfaceBrush_get_VerticalAlignmentRatio), reinterpret_cast<setter>(CompositionSurfaceBrush_put_VerticalAlignmentRatio), nullptr, nullptr },
@@ -19814,16 +19583,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "center_point", reinterpret_cast<getter>(CompositionSurfaceBrush_get_CenterPoint), reinterpret_cast<setter>(CompositionSurfaceBrush_put_CenterPoint), nullptr, nullptr },
         { "anchor_point", reinterpret_cast<getter>(CompositionSurfaceBrush_get_AnchorPoint), reinterpret_cast<setter>(CompositionSurfaceBrush_put_AnchorPoint), nullptr, nullptr },
         { "snap_to_pixels", reinterpret_cast<getter>(CompositionSurfaceBrush_get_SnapToPixels), reinterpret_cast<setter>(CompositionSurfaceBrush_put_SnapToPixels), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionSurfaceBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionSurfaceBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionSurfaceBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionSurfaceBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionSurfaceBrush) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionSurfaceBrush = {
         "winrt._winrt_microsoft_ui_composition.CompositionSurfaceBrush",
@@ -19876,20 +19643,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionTransform[] = {
         { "_assign_array_", _assign_array_CompositionTransform, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionTransform), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionTransform[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionTransform) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionTransform = {
         "winrt._winrt_microsoft_ui_composition.CompositionTransform",
@@ -19899,12 +19663,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionTransform};
 
     static PyGetSetDef getset_CompositionTransform_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionTransform_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionTransform_Static[] = 
     {
@@ -19914,14 +19676,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionTransform_Static =
-    {
+    static PyType_Spec type_spec_CompositionTransform_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionTransform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionTransform_Static
-    };
+        type_slots_CompositionTransform_Static};
 
     // ----- CompositionViewBox class --------------------
 
@@ -20312,8 +20072,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionViewBox[] = {
         { "_assign_array_", _assign_array_CompositionViewBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionViewBox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionViewBox[] = {
         { "vertical_alignment_ratio", reinterpret_cast<getter>(CompositionViewBox_get_VerticalAlignmentRatio), reinterpret_cast<setter>(CompositionViewBox_put_VerticalAlignmentRatio), nullptr, nullptr },
@@ -20321,16 +20080,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "size", reinterpret_cast<getter>(CompositionViewBox_get_Size), reinterpret_cast<setter>(CompositionViewBox_put_Size), nullptr, nullptr },
         { "offset", reinterpret_cast<getter>(CompositionViewBox_get_Offset), reinterpret_cast<setter>(CompositionViewBox_put_Offset), nullptr, nullptr },
         { "horizontal_alignment_ratio", reinterpret_cast<getter>(CompositionViewBox_get_HorizontalAlignmentRatio), reinterpret_cast<setter>(CompositionViewBox_put_HorizontalAlignmentRatio), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionViewBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionViewBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionViewBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionViewBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionViewBox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionViewBox = {
         "winrt._winrt_microsoft_ui_composition.CompositionViewBox",
@@ -20427,20 +20184,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "trim", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_Trim), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionVirtualDrawingSurface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionVirtualDrawingSurface), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionVirtualDrawingSurface[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionVirtualDrawingSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionVirtualDrawingSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionVirtualDrawingSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionVirtualDrawingSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionVirtualDrawingSurface) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionVirtualDrawingSurface = {
         "winrt._winrt_microsoft_ui_composition.CompositionVirtualDrawingSurface",
@@ -20450,12 +20204,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_CompositionVirtualDrawingSurface};
 
     static PyGetSetDef getset_CompositionVirtualDrawingSurface_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompositionVirtualDrawingSurface_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompositionVirtualDrawingSurface_Static[] = 
     {
@@ -20465,14 +20217,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_CompositionVirtualDrawingSurface_Static =
-    {
+    static PyType_Spec type_spec_CompositionVirtualDrawingSurface_Static = {
         "winrt._winrt_microsoft_ui_composition.CompositionVirtualDrawingSurface_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CompositionVirtualDrawingSurface_Static
-    };
+        type_slots_CompositionVirtualDrawingSurface_Static};
 
     // ----- CompositionVisualSurface class --------------------
 
@@ -20725,23 +20475,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CompositionVisualSurface[] = {
         { "_assign_array_", _assign_array_CompositionVisualSurface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionVisualSurface), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositionVisualSurface[] = {
         { "source_visual", reinterpret_cast<getter>(CompositionVisualSurface_get_SourceVisual), reinterpret_cast<setter>(CompositionVisualSurface_put_SourceVisual), nullptr, nullptr },
         { "source_size", reinterpret_cast<getter>(CompositionVisualSurface_get_SourceSize), reinterpret_cast<setter>(CompositionVisualSurface_put_SourceSize), nullptr, nullptr },
         { "source_offset", reinterpret_cast<getter>(CompositionVisualSurface_get_SourceOffset), reinterpret_cast<setter>(CompositionVisualSurface_put_SourceOffset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositionVisualSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionVisualSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionVisualSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionVisualSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionVisualSurface) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositionVisualSurface = {
         "winrt._winrt_microsoft_ui_composition.CompositionVisualSurface",
@@ -24154,23 +23901,20 @@ namespace py::cpp::Microsoft::UI::Composition
         { "_from", reinterpret_cast<PyCFunction>(_from_Compositor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Compositor), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_Compositor), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Compositor[] = {
         { "global_playback_rate", reinterpret_cast<getter>(Compositor_get_GlobalPlaybackRate), reinterpret_cast<setter>(Compositor_put_GlobalPlaybackRate), nullptr, nullptr },
         { "comment", reinterpret_cast<getter>(Compositor_get_Comment), reinterpret_cast<setter>(Compositor_put_Comment), nullptr, nullptr },
         { "dispatcher_queue", reinterpret_cast<getter>(Compositor_get_DispatcherQueue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Compositor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Compositor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Compositor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Compositor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Compositor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Compositor = {
         "winrt._winrt_microsoft_ui_composition.Compositor",
@@ -24182,12 +23926,10 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyGetSetDef getset_Compositor_Static[] = {
         { "max_global_playback_rate", reinterpret_cast<getter>(Compositor_get_MaxGlobalPlaybackRate), nullptr, nullptr, nullptr },
         { "min_global_playback_rate", reinterpret_cast<getter>(Compositor_get_MinGlobalPlaybackRate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Compositor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Compositor_Static[] = 
     {
@@ -24197,14 +23939,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_Compositor_Static =
-    {
+    static PyType_Spec type_spec_Compositor_Static = {
         "winrt._winrt_microsoft_ui_composition.Compositor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Compositor_Static
-    };
+        type_slots_Compositor_Static};
 
     // ----- ContainerVisual class --------------------
 
@@ -24280,21 +24020,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_ContainerVisual[] = {
         { "_assign_array_", _assign_array_ContainerVisual, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContainerVisual), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContainerVisual[] = {
         { "children", reinterpret_cast<getter>(ContainerVisual_get_Children), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContainerVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContainerVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContainerVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContainerVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContainerVisual) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContainerVisual = {
         "winrt._winrt_microsoft_ui_composition.ContainerVisual",
@@ -24304,12 +24041,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_ContainerVisual};
 
     static PyGetSetDef getset_ContainerVisual_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContainerVisual_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContainerVisual_Static[] = 
     {
@@ -24319,14 +24054,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_ContainerVisual_Static =
-    {
+    static PyType_Spec type_spec_ContainerVisual_Static = {
         "winrt._winrt_microsoft_ui_composition.ContainerVisual_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ContainerVisual_Static
-    };
+        type_slots_ContainerVisual_Static};
 
     // ----- CubicBezierEasingFunction class --------------------
 
@@ -24432,22 +24165,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_CubicBezierEasingFunction[] = {
         { "_assign_array_", _assign_array_CubicBezierEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CubicBezierEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CubicBezierEasingFunction[] = {
         { "control_point1", reinterpret_cast<getter>(CubicBezierEasingFunction_get_ControlPoint1), nullptr, nullptr, nullptr },
         { "control_point2", reinterpret_cast<getter>(CubicBezierEasingFunction_get_ControlPoint2), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CubicBezierEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CubicBezierEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CubicBezierEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CubicBezierEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CubicBezierEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CubicBezierEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.CubicBezierEasingFunction",
@@ -24776,24 +24506,21 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_DistantLight[] = {
         { "_assign_array_", _assign_array_DistantLight, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DistantLight), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DistantLight[] = {
         { "direction", reinterpret_cast<getter>(DistantLight_get_Direction), reinterpret_cast<setter>(DistantLight_put_Direction), nullptr, nullptr },
         { "coordinate_space", reinterpret_cast<getter>(DistantLight_get_CoordinateSpace), reinterpret_cast<setter>(DistantLight_put_CoordinateSpace), nullptr, nullptr },
         { "color", reinterpret_cast<getter>(DistantLight_get_Color), reinterpret_cast<setter>(DistantLight_put_Color), nullptr, nullptr },
         { "intensity", reinterpret_cast<getter>(DistantLight_get_Intensity), reinterpret_cast<setter>(DistantLight_put_Intensity), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DistantLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DistantLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DistantLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DistantLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DistantLight) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DistantLight = {
         "winrt._winrt_microsoft_ui_composition.DistantLight",
@@ -25260,8 +24987,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_DropShadow[] = {
         { "_assign_array_", _assign_array_DropShadow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DropShadow), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DropShadow[] = {
         { "opacity", reinterpret_cast<getter>(DropShadow_get_Opacity), reinterpret_cast<setter>(DropShadow_put_Opacity), nullptr, nullptr },
@@ -25270,16 +24996,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "color", reinterpret_cast<getter>(DropShadow_get_Color), reinterpret_cast<setter>(DropShadow_put_Color), nullptr, nullptr },
         { "blur_radius", reinterpret_cast<getter>(DropShadow_get_BlurRadius), reinterpret_cast<setter>(DropShadow_put_BlurRadius), nullptr, nullptr },
         { "source_policy", reinterpret_cast<getter>(DropShadow_get_SourcePolicy), reinterpret_cast<setter>(DropShadow_put_SourcePolicy), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DropShadow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DropShadow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DropShadow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DropShadow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DropShadow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DropShadow = {
         "winrt._winrt_microsoft_ui_composition.DropShadow",
@@ -25422,23 +25146,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_ElasticEasingFunction[] = {
         { "_assign_array_", _assign_array_ElasticEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ElasticEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ElasticEasingFunction[] = {
         { "mode", reinterpret_cast<getter>(ElasticEasingFunction_get_Mode), nullptr, nullptr, nullptr },
         { "oscillations", reinterpret_cast<getter>(ElasticEasingFunction_get_Oscillations), nullptr, nullptr, nullptr },
         { "springiness", reinterpret_cast<getter>(ElasticEasingFunction_get_Springiness), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ElasticEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ElasticEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ElasticEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ElasticEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ElasticEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ElasticEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.ElasticEasingFunction",
@@ -25551,22 +25272,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_ExponentialEasingFunction[] = {
         { "_assign_array_", _assign_array_ExponentialEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExponentialEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExponentialEasingFunction[] = {
         { "exponent", reinterpret_cast<getter>(ExponentialEasingFunction_get_Exponent), nullptr, nullptr, nullptr },
         { "mode", reinterpret_cast<getter>(ExponentialEasingFunction_get_Mode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExponentialEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExponentialEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExponentialEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExponentialEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExponentialEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExponentialEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.ExponentialEasingFunction",
@@ -25688,21 +25406,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_ExpressionAnimation[] = {
         { "_assign_array_", _assign_array_ExpressionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExpressionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExpressionAnimation[] = {
         { "expression", reinterpret_cast<getter>(ExpressionAnimation_get_Expression), reinterpret_cast<setter>(ExpressionAnimation_put_Expression), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExpressionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExpressionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExpressionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExpressionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExpressionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExpressionAnimation = {
         "winrt._winrt_microsoft_ui_composition.ExpressionAnimation",
@@ -26215,13 +25930,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove", reinterpret_cast<PyCFunction>(ImplicitAnimationCollection_Remove), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ImplicitAnimationCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImplicitAnimationCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImplicitAnimationCollection[] = {
         { "size", reinterpret_cast<getter>(ImplicitAnimationCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImplicitAnimationCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImplicitAnimationCollection) },
@@ -26233,8 +25946,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_mp_length, reinterpret_cast<void*>(_map_length_ImplicitAnimationCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_ImplicitAnimationCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_ImplicitAnimationCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplicitAnimationCollection = {
         "winrt._winrt_microsoft_ui_composition.ImplicitAnimationCollection",
@@ -26747,13 +26459,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove", reinterpret_cast<PyCFunction>(InitialValueExpressionCollection_Remove), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InitialValueExpressionCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InitialValueExpressionCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InitialValueExpressionCollection[] = {
         { "size", reinterpret_cast<getter>(InitialValueExpressionCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InitialValueExpressionCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InitialValueExpressionCollection) },
@@ -26765,8 +26475,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_mp_length, reinterpret_cast<void*>(_map_length_InitialValueExpressionCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_InitialValueExpressionCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_InitialValueExpressionCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InitialValueExpressionCollection = {
         "winrt._winrt_microsoft_ui_composition.InitialValueExpressionCollection",
@@ -27095,24 +26804,21 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_InsetClip[] = {
         { "_assign_array_", _assign_array_InsetClip, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InsetClip), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InsetClip[] = {
         { "top_inset", reinterpret_cast<getter>(InsetClip_get_TopInset), reinterpret_cast<setter>(InsetClip_put_TopInset), nullptr, nullptr },
         { "right_inset", reinterpret_cast<getter>(InsetClip_get_RightInset), reinterpret_cast<setter>(InsetClip_put_RightInset), nullptr, nullptr },
         { "left_inset", reinterpret_cast<getter>(InsetClip_get_LeftInset), reinterpret_cast<setter>(InsetClip_put_LeftInset), nullptr, nullptr },
         { "bottom_inset", reinterpret_cast<getter>(InsetClip_get_BottomInset), reinterpret_cast<setter>(InsetClip_put_BottomInset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InsetClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InsetClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InsetClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InsetClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InsetClip) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InsetClip = {
         "winrt._winrt_microsoft_ui_composition.InsetClip",
@@ -27769,8 +27475,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_KeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyFrameAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyFrameAnimation[] = {
         { "stop_behavior", reinterpret_cast<getter>(KeyFrameAnimation_get_StopBehavior), reinterpret_cast<setter>(KeyFrameAnimation_put_StopBehavior), nullptr, nullptr },
@@ -27781,16 +27486,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "key_frame_count", reinterpret_cast<getter>(KeyFrameAnimation_get_KeyFrameCount), nullptr, nullptr, nullptr },
         { "direction", reinterpret_cast<getter>(KeyFrameAnimation_get_Direction), reinterpret_cast<setter>(KeyFrameAnimation_put_Direction), nullptr, nullptr },
         { "delay_behavior", reinterpret_cast<getter>(KeyFrameAnimation_get_DelayBehavior), reinterpret_cast<setter>(KeyFrameAnimation_put_DelayBehavior), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyFrameAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyFrameAnimation = {
         "winrt._winrt_microsoft_ui_composition.KeyFrameAnimation",
@@ -27800,12 +27503,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_KeyFrameAnimation};
 
     static PyGetSetDef getset_KeyFrameAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KeyFrameAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KeyFrameAnimation_Static[] = 
     {
@@ -27815,14 +27516,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_KeyFrameAnimation_Static =
-    {
+    static PyType_Spec type_spec_KeyFrameAnimation_Static = {
         "winrt._winrt_microsoft_ui_composition.KeyFrameAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_KeyFrameAnimation_Static
-    };
+        type_slots_KeyFrameAnimation_Static};
 
     // ----- LayerVisual class --------------------
 
@@ -28006,22 +27705,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_LayerVisual[] = {
         { "_assign_array_", _assign_array_LayerVisual, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LayerVisual), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LayerVisual[] = {
         { "effect", reinterpret_cast<getter>(LayerVisual_get_Effect), reinterpret_cast<setter>(LayerVisual_put_Effect), nullptr, nullptr },
         { "shadow", reinterpret_cast<getter>(LayerVisual_get_Shadow), reinterpret_cast<setter>(LayerVisual_put_Shadow), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LayerVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LayerVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LayerVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LayerVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LayerVisual) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LayerVisual = {
         "winrt._winrt_microsoft_ui_composition.LayerVisual",
@@ -28074,20 +27770,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_LinearEasingFunction[] = {
         { "_assign_array_", _assign_array_LinearEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LinearEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LinearEasingFunction[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LinearEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LinearEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LinearEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LinearEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LinearEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LinearEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.LinearEasingFunction",
@@ -28347,23 +28040,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_NaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_NaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NaturalMotionAnimation[] = {
         { "stop_behavior", reinterpret_cast<getter>(NaturalMotionAnimation_get_StopBehavior), reinterpret_cast<setter>(NaturalMotionAnimation_put_StopBehavior), nullptr, nullptr },
         { "delay_time", reinterpret_cast<getter>(NaturalMotionAnimation_get_DelayTime), reinterpret_cast<setter>(NaturalMotionAnimation_put_DelayTime), nullptr, nullptr },
         { "delay_behavior", reinterpret_cast<getter>(NaturalMotionAnimation_get_DelayBehavior), reinterpret_cast<setter>(NaturalMotionAnimation_put_DelayBehavior), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.NaturalMotionAnimation",
@@ -28373,12 +28063,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_NaturalMotionAnimation};
 
     static PyGetSetDef getset_NaturalMotionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_NaturalMotionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_NaturalMotionAnimation_Static[] = 
     {
@@ -28388,14 +28076,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_NaturalMotionAnimation_Static =
-    {
+    static PyType_Spec type_spec_NaturalMotionAnimation_Static = {
         "winrt._winrt_microsoft_ui_composition.NaturalMotionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_NaturalMotionAnimation_Static
-    };
+        type_slots_NaturalMotionAnimation_Static};
 
     // ----- PathKeyFrameAnimation class --------------------
 
@@ -28532,20 +28218,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PathKeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PathKeyFrameAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PathKeyFrameAnimation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PathKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PathKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PathKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PathKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PathKeyFrameAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PathKeyFrameAnimation = {
         "winrt._winrt_microsoft_ui_composition.PathKeyFrameAnimation",
@@ -29219,8 +28902,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_PointLight[] = {
         { "_assign_array_", _assign_array_PointLight, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointLight), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PointLight[] = {
         { "quadratic_attenuation", reinterpret_cast<getter>(PointLight_get_QuadraticAttenuation), reinterpret_cast<setter>(PointLight_put_QuadraticAttenuation), nullptr, nullptr },
@@ -29232,16 +28914,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "intensity", reinterpret_cast<getter>(PointLight_get_Intensity), reinterpret_cast<setter>(PointLight_put_Intensity), nullptr, nullptr },
         { "min_attenuation_cutoff", reinterpret_cast<getter>(PointLight_get_MinAttenuationCutoff), reinterpret_cast<setter>(PointLight_put_MinAttenuationCutoff), nullptr, nullptr },
         { "max_attenuation_cutoff", reinterpret_cast<getter>(PointLight_get_MaxAttenuationCutoff), reinterpret_cast<setter>(PointLight_put_MaxAttenuationCutoff), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PointLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointLight) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointLight = {
         "winrt._winrt_microsoft_ui_composition.PointLight",
@@ -29354,22 +29034,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_PowerEasingFunction[] = {
         { "_assign_array_", _assign_array_PowerEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PowerEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PowerEasingFunction[] = {
         { "mode", reinterpret_cast<getter>(PowerEasingFunction_get_Mode), nullptr, nullptr, nullptr },
         { "power", reinterpret_cast<getter>(PowerEasingFunction_get_Power), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PowerEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PowerEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PowerEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.PowerEasingFunction",
@@ -29513,20 +29190,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_QuaternionKeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QuaternionKeyFrameAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_QuaternionKeyFrameAnimation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_QuaternionKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuaternionKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuaternionKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuaternionKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuaternionKeyFrameAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_QuaternionKeyFrameAnimation = {
         "winrt._winrt_microsoft_ui_composition.QuaternionKeyFrameAnimation",
@@ -30131,8 +29805,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_RectangleClip[] = {
         { "_assign_array_", _assign_array_RectangleClip, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RectangleClip), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RectangleClip[] = {
         { "top_right_radius", reinterpret_cast<getter>(RectangleClip_get_TopRightRadius), reinterpret_cast<setter>(RectangleClip_put_TopRightRadius), nullptr, nullptr },
@@ -30143,16 +29816,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "bottom_right_radius", reinterpret_cast<getter>(RectangleClip_get_BottomRightRadius), reinterpret_cast<setter>(RectangleClip_put_BottomRightRadius), nullptr, nullptr },
         { "bottom_left_radius", reinterpret_cast<getter>(RectangleClip_get_BottomLeftRadius), reinterpret_cast<setter>(RectangleClip_put_BottomLeftRadius), nullptr, nullptr },
         { "bottom", reinterpret_cast<getter>(RectangleClip_get_Bottom), reinterpret_cast<setter>(RectangleClip_put_Bottom), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RectangleClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RectangleClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RectangleClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RectangleClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RectangleClip) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RectangleClip = {
         "winrt._winrt_microsoft_ui_composition.RectangleClip",
@@ -30274,21 +29945,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_RedirectVisual[] = {
         { "_assign_array_", _assign_array_RedirectVisual, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RedirectVisual), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RedirectVisual[] = {
         { "source", reinterpret_cast<getter>(RedirectVisual_get_Source), reinterpret_cast<setter>(RedirectVisual_put_Source), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RedirectVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RedirectVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RedirectVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RedirectVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RedirectVisual) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RedirectVisual = {
         "winrt._winrt_microsoft_ui_composition.RedirectVisual",
@@ -30371,21 +30039,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_RenderingDeviceReplacedEventArgs[] = {
         { "_assign_array_", _assign_array_RenderingDeviceReplacedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RenderingDeviceReplacedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RenderingDeviceReplacedEventArgs[] = {
         { "graphics_device", reinterpret_cast<getter>(RenderingDeviceReplacedEventArgs_get_GraphicsDevice), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RenderingDeviceReplacedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RenderingDeviceReplacedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RenderingDeviceReplacedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RenderingDeviceReplacedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RenderingDeviceReplacedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RenderingDeviceReplacedEventArgs = {
         "winrt._winrt_microsoft_ui_composition.RenderingDeviceReplacedEventArgs",
@@ -30529,20 +30194,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ScalarKeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ScalarKeyFrameAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ScalarKeyFrameAnimation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ScalarKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScalarKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScalarKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScalarKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScalarKeyFrameAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ScalarKeyFrameAnimation = {
         "winrt._winrt_microsoft_ui_composition.ScalarKeyFrameAnimation",
@@ -30802,23 +30464,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_ScalarNaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_ScalarNaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ScalarNaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ScalarNaturalMotionAnimation[] = {
         { "initial_velocity", reinterpret_cast<getter>(ScalarNaturalMotionAnimation_get_InitialVelocity), reinterpret_cast<setter>(ScalarNaturalMotionAnimation_put_InitialVelocity), nullptr, nullptr },
         { "initial_value", reinterpret_cast<getter>(ScalarNaturalMotionAnimation_get_InitialValue), reinterpret_cast<setter>(ScalarNaturalMotionAnimation_put_InitialValue), nullptr, nullptr },
         { "final_value", reinterpret_cast<getter>(ScalarNaturalMotionAnimation_get_FinalValue), reinterpret_cast<setter>(ScalarNaturalMotionAnimation_put_FinalValue), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ScalarNaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScalarNaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScalarNaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScalarNaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScalarNaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ScalarNaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.ScalarNaturalMotionAnimation",
@@ -30828,12 +30487,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_ScalarNaturalMotionAnimation};
 
     static PyGetSetDef getset_ScalarNaturalMotionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ScalarNaturalMotionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ScalarNaturalMotionAnimation_Static[] = 
     {
@@ -30843,14 +30500,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_ScalarNaturalMotionAnimation_Static =
-    {
+    static PyType_Spec type_spec_ScalarNaturalMotionAnimation_Static = {
         "winrt._winrt_microsoft_ui_composition.ScalarNaturalMotionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ScalarNaturalMotionAnimation_Static
-    };
+        type_slots_ScalarNaturalMotionAnimation_Static};
 
     // ----- ShapeVisual class --------------------
 
@@ -30995,22 +30650,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_ShapeVisual[] = {
         { "_assign_array_", _assign_array_ShapeVisual, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ShapeVisual), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ShapeVisual[] = {
         { "view_box", reinterpret_cast<getter>(ShapeVisual_get_ViewBox), reinterpret_cast<setter>(ShapeVisual_put_ViewBox), nullptr, nullptr },
         { "shapes", reinterpret_cast<getter>(ShapeVisual_get_Shapes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ShapeVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShapeVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShapeVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShapeVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShapeVisual) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ShapeVisual = {
         "winrt._winrt_microsoft_ui_composition.ShapeVisual",
@@ -31093,21 +30745,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_SineEasingFunction[] = {
         { "_assign_array_", _assign_array_SineEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SineEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SineEasingFunction[] = {
         { "mode", reinterpret_cast<getter>(SineEasingFunction_get_Mode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SineEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SineEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SineEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SineEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SineEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SineEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.SineEasingFunction",
@@ -32264,8 +31913,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_SpotLight[] = {
         { "_assign_array_", _assign_array_SpotLight, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpotLight), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpotLight[] = {
         { "quadratic_attenuation", reinterpret_cast<getter>(SpotLight_get_QuadraticAttenuation), reinterpret_cast<setter>(SpotLight_put_QuadraticAttenuation), nullptr, nullptr },
@@ -32284,16 +31932,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "inner_cone_intensity", reinterpret_cast<getter>(SpotLight_get_InnerConeIntensity), reinterpret_cast<setter>(SpotLight_put_InnerConeIntensity), nullptr, nullptr },
         { "min_attenuation_cutoff", reinterpret_cast<getter>(SpotLight_get_MinAttenuationCutoff), reinterpret_cast<setter>(SpotLight_put_MinAttenuationCutoff), nullptr, nullptr },
         { "max_attenuation_cutoff", reinterpret_cast<getter>(SpotLight_get_MaxAttenuationCutoff), reinterpret_cast<setter>(SpotLight_put_MaxAttenuationCutoff), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpotLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpotLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpotLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpotLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpotLight) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpotLight = {
         "winrt._winrt_microsoft_ui_composition.SpotLight",
@@ -32484,22 +32130,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_SpringScalarNaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_SpringScalarNaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpringScalarNaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpringScalarNaturalMotionAnimation[] = {
         { "period", reinterpret_cast<getter>(SpringScalarNaturalMotionAnimation_get_Period), reinterpret_cast<setter>(SpringScalarNaturalMotionAnimation_put_Period), nullptr, nullptr },
         { "damping_ratio", reinterpret_cast<getter>(SpringScalarNaturalMotionAnimation_get_DampingRatio), reinterpret_cast<setter>(SpringScalarNaturalMotionAnimation_put_DampingRatio), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpringScalarNaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpringScalarNaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpringScalarNaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpringScalarNaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpringScalarNaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpringScalarNaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.SpringScalarNaturalMotionAnimation",
@@ -32690,22 +32333,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_SpringVector2NaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_SpringVector2NaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpringVector2NaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpringVector2NaturalMotionAnimation[] = {
         { "period", reinterpret_cast<getter>(SpringVector2NaturalMotionAnimation_get_Period), reinterpret_cast<setter>(SpringVector2NaturalMotionAnimation_put_Period), nullptr, nullptr },
         { "damping_ratio", reinterpret_cast<getter>(SpringVector2NaturalMotionAnimation_get_DampingRatio), reinterpret_cast<setter>(SpringVector2NaturalMotionAnimation_put_DampingRatio), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpringVector2NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpringVector2NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpringVector2NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpringVector2NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpringVector2NaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpringVector2NaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.SpringVector2NaturalMotionAnimation",
@@ -32896,22 +32536,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_SpringVector3NaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_SpringVector3NaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpringVector3NaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpringVector3NaturalMotionAnimation[] = {
         { "period", reinterpret_cast<getter>(SpringVector3NaturalMotionAnimation_get_Period), reinterpret_cast<setter>(SpringVector3NaturalMotionAnimation_put_Period), nullptr, nullptr },
         { "damping_ratio", reinterpret_cast<getter>(SpringVector3NaturalMotionAnimation_get_DampingRatio), reinterpret_cast<setter>(SpringVector3NaturalMotionAnimation_put_DampingRatio), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpringVector3NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpringVector3NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpringVector3NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpringVector3NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpringVector3NaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpringVector3NaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.SpringVector3NaturalMotionAnimation",
@@ -33102,22 +32739,19 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_SpriteVisual[] = {
         { "_assign_array_", _assign_array_SpriteVisual, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpriteVisual), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpriteVisual[] = {
         { "brush", reinterpret_cast<getter>(SpriteVisual_get_Brush), reinterpret_cast<setter>(SpriteVisual_put_Brush), nullptr, nullptr },
         { "shadow", reinterpret_cast<getter>(SpriteVisual_get_Shadow), reinterpret_cast<setter>(SpriteVisual_put_Shadow), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpriteVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpriteVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpriteVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpriteVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpriteVisual) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpriteVisual = {
         "winrt._winrt_microsoft_ui_composition.SpriteVisual",
@@ -33515,8 +33149,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_StepEasingFunction[] = {
         { "_assign_array_", _assign_array_StepEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StepEasingFunction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StepEasingFunction[] = {
         { "step_count", reinterpret_cast<getter>(StepEasingFunction_get_StepCount), reinterpret_cast<setter>(StepEasingFunction_put_StepCount), nullptr, nullptr },
@@ -33524,16 +33157,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "is_final_step_single_frame", reinterpret_cast<getter>(StepEasingFunction_get_IsFinalStepSingleFrame), reinterpret_cast<setter>(StepEasingFunction_put_IsFinalStepSingleFrame), nullptr, nullptr },
         { "initial_step", reinterpret_cast<getter>(StepEasingFunction_get_InitialStep), reinterpret_cast<setter>(StepEasingFunction_put_InitialStep), nullptr, nullptr },
         { "final_step", reinterpret_cast<getter>(StepEasingFunction_get_FinalStep), reinterpret_cast<setter>(StepEasingFunction_put_FinalStep), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StepEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StepEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StepEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StepEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StepEasingFunction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StepEasingFunction = {
         "winrt._winrt_microsoft_ui_composition.StepEasingFunction",
@@ -33677,20 +33308,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector2KeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Vector2KeyFrameAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Vector2KeyFrameAnimation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Vector2KeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector2KeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2KeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2KeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2KeyFrameAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Vector2KeyFrameAnimation = {
         "winrt._winrt_microsoft_ui_composition.Vector2KeyFrameAnimation",
@@ -33950,23 +33578,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_Vector2NaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_Vector2NaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Vector2NaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Vector2NaturalMotionAnimation[] = {
         { "initial_velocity", reinterpret_cast<getter>(Vector2NaturalMotionAnimation_get_InitialVelocity), reinterpret_cast<setter>(Vector2NaturalMotionAnimation_put_InitialVelocity), nullptr, nullptr },
         { "initial_value", reinterpret_cast<getter>(Vector2NaturalMotionAnimation_get_InitialValue), reinterpret_cast<setter>(Vector2NaturalMotionAnimation_put_InitialValue), nullptr, nullptr },
         { "final_value", reinterpret_cast<getter>(Vector2NaturalMotionAnimation_get_FinalValue), reinterpret_cast<setter>(Vector2NaturalMotionAnimation_put_FinalValue), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Vector2NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector2NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2NaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Vector2NaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.Vector2NaturalMotionAnimation",
@@ -33976,12 +33601,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_Vector2NaturalMotionAnimation};
 
     static PyGetSetDef getset_Vector2NaturalMotionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Vector2NaturalMotionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Vector2NaturalMotionAnimation_Static[] = 
     {
@@ -33991,14 +33614,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_Vector2NaturalMotionAnimation_Static =
-    {
+    static PyType_Spec type_spec_Vector2NaturalMotionAnimation_Static = {
         "winrt._winrt_microsoft_ui_composition.Vector2NaturalMotionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Vector2NaturalMotionAnimation_Static
-    };
+        type_slots_Vector2NaturalMotionAnimation_Static};
 
     // ----- Vector3KeyFrameAnimation class --------------------
 
@@ -34135,20 +33756,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector3KeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Vector3KeyFrameAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Vector3KeyFrameAnimation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Vector3KeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector3KeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3KeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3KeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3KeyFrameAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Vector3KeyFrameAnimation = {
         "winrt._winrt_microsoft_ui_composition.Vector3KeyFrameAnimation",
@@ -34408,23 +34026,20 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_Vector3NaturalMotionAnimation[] = {
         { "_assign_array_", _assign_array_Vector3NaturalMotionAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Vector3NaturalMotionAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Vector3NaturalMotionAnimation[] = {
         { "initial_velocity", reinterpret_cast<getter>(Vector3NaturalMotionAnimation_get_InitialVelocity), reinterpret_cast<setter>(Vector3NaturalMotionAnimation_put_InitialVelocity), nullptr, nullptr },
         { "initial_value", reinterpret_cast<getter>(Vector3NaturalMotionAnimation_get_InitialValue), reinterpret_cast<setter>(Vector3NaturalMotionAnimation_put_InitialValue), nullptr, nullptr },
         { "final_value", reinterpret_cast<getter>(Vector3NaturalMotionAnimation_get_FinalValue), reinterpret_cast<setter>(Vector3NaturalMotionAnimation_put_FinalValue), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Vector3NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector3NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3NaturalMotionAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Vector3NaturalMotionAnimation = {
         "winrt._winrt_microsoft_ui_composition.Vector3NaturalMotionAnimation",
@@ -34434,12 +34049,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_Vector3NaturalMotionAnimation};
 
     static PyGetSetDef getset_Vector3NaturalMotionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Vector3NaturalMotionAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Vector3NaturalMotionAnimation_Static[] = 
     {
@@ -34449,14 +34062,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_Vector3NaturalMotionAnimation_Static =
-    {
+    static PyType_Spec type_spec_Vector3NaturalMotionAnimation_Static = {
         "winrt._winrt_microsoft_ui_composition.Vector3NaturalMotionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Vector3NaturalMotionAnimation_Static
-    };
+        type_slots_Vector3NaturalMotionAnimation_Static};
 
     // ----- Vector4KeyFrameAnimation class --------------------
 
@@ -34593,20 +34204,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector4KeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Vector4KeyFrameAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Vector4KeyFrameAnimation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Vector4KeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector4KeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector4KeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector4KeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector4KeyFrameAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Vector4KeyFrameAnimation = {
         "winrt._winrt_microsoft_ui_composition.Vector4KeyFrameAnimation",
@@ -36138,8 +35746,7 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_Visual[] = {
         { "_assign_array_", _assign_array_Visual, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Visual), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Visual[] = {
         { "transform_matrix", reinterpret_cast<getter>(Visual_get_TransformMatrix), reinterpret_cast<setter>(Visual_put_TransformMatrix), nullptr, nullptr },
@@ -36164,16 +35771,14 @@ namespace py::cpp::Microsoft::UI::Composition
         { "parent_for_transform", reinterpret_cast<getter>(Visual_get_ParentForTransform), reinterpret_cast<setter>(Visual_put_ParentForTransform), nullptr, nullptr },
         { "is_hit_test_visible", reinterpret_cast<getter>(Visual_get_IsHitTestVisible), reinterpret_cast<setter>(Visual_put_IsHitTestVisible), nullptr, nullptr },
         { "is_pixel_snapping_enabled", reinterpret_cast<getter>(Visual_get_IsPixelSnappingEnabled), reinterpret_cast<setter>(Visual_put_IsPixelSnappingEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Visual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Visual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Visual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Visual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Visual) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Visual = {
         "winrt._winrt_microsoft_ui_composition.Visual",
@@ -36183,12 +35788,10 @@ namespace py::cpp::Microsoft::UI::Composition
         _type_slots_Visual};
 
     static PyGetSetDef getset_Visual_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Visual_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Visual_Static[] = 
     {
@@ -36198,14 +35801,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { }
     };
 
-    static PyType_Spec type_spec_Visual_Static =
-    {
+    static PyType_Spec type_spec_Visual_Static = {
         "winrt._winrt_microsoft_ui_composition.Visual_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Visual_Static
-    };
+        type_slots_Visual_Static};
 
     // ----- VisualCollection class --------------------
 
@@ -36603,13 +36204,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(VisualCollection_RemoveAll), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VisualCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VisualCollection[] = {
         { "count", reinterpret_cast<getter>(VisualCollection_get_Count), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VisualCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualCollection) },
@@ -36617,8 +36216,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualCollection) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_VisualCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VisualCollection = {
         "winrt._winrt_microsoft_ui_composition.VisualCollection",
@@ -36889,13 +36487,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(VisualUnorderedCollection_RemoveAll), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VisualUnorderedCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualUnorderedCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VisualUnorderedCollection[] = {
         { "count", reinterpret_cast<getter>(VisualUnorderedCollection_get_Count), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VisualUnorderedCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualUnorderedCollection) },
@@ -36903,8 +36499,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualUnorderedCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualUnorderedCollection) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_VisualUnorderedCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VisualUnorderedCollection = {
         "winrt._winrt_microsoft_ui_composition.VisualUnorderedCollection",
@@ -37002,20 +36597,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(IAnimationObject_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAnimationObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAnimationObject), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAnimationObject[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAnimationObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAnimationObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnimationObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnimationObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnimationObject) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAnimationObject = {
         "winrt._winrt_microsoft_ui_composition.IAnimationObject",
@@ -37113,13 +36705,11 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef methods_ImplementsIAnimationObject[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAnimationObject), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAnimationObject), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAnimationObject[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAnimationObject) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAnimationObject = {
         "winrt._winrt_microsoft_ui_composition.ImplementsIAnimationObject",
@@ -37172,20 +36762,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_ICompositionAnimationBase[] = {
         { "_assign_array_", _assign_array_ICompositionAnimationBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionAnimationBase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICompositionAnimationBase[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICompositionAnimationBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionAnimationBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionAnimationBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionAnimationBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionAnimationBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICompositionAnimationBase = {
         "winrt._winrt_microsoft_ui_composition.ICompositionAnimationBase",
@@ -37241,13 +36828,11 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef methods_ImplementsICompositionAnimationBase[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionAnimationBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionAnimationBase), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICompositionAnimationBase[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICompositionAnimationBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICompositionAnimationBase = {
         "winrt._winrt_microsoft_ui_composition.ImplementsICompositionAnimationBase",
@@ -37369,21 +36954,18 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_ICompositionSupportsSystemBackdrop[] = {
         { "_assign_array_", _assign_array_ICompositionSupportsSystemBackdrop, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSupportsSystemBackdrop), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICompositionSupportsSystemBackdrop[] = {
         { "system_backdrop", reinterpret_cast<getter>(ICompositionSupportsSystemBackdrop_get_SystemBackdrop), reinterpret_cast<setter>(ICompositionSupportsSystemBackdrop_put_SystemBackdrop), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICompositionSupportsSystemBackdrop[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionSupportsSystemBackdrop) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionSupportsSystemBackdrop) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionSupportsSystemBackdrop) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionSupportsSystemBackdrop) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICompositionSupportsSystemBackdrop = {
         "winrt._winrt_microsoft_ui_composition.ICompositionSupportsSystemBackdrop",
@@ -37482,13 +37064,11 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef methods_ImplementsICompositionSupportsSystemBackdrop[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSupportsSystemBackdrop), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSupportsSystemBackdrop), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICompositionSupportsSystemBackdrop[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICompositionSupportsSystemBackdrop) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICompositionSupportsSystemBackdrop = {
         "winrt._winrt_microsoft_ui_composition.ImplementsICompositionSupportsSystemBackdrop",
@@ -37541,20 +37121,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_ICompositionSurface[] = {
         { "_assign_array_", _assign_array_ICompositionSurface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSurface), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICompositionSurface[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICompositionSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionSurface) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICompositionSurface = {
         "winrt._winrt_microsoft_ui_composition.ICompositionSurface",
@@ -37610,13 +37187,11 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef methods_ImplementsICompositionSurface[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSurface), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSurface), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICompositionSurface[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICompositionSurface) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICompositionSurface = {
         "winrt._winrt_microsoft_ui_composition.ImplementsICompositionSurface",
@@ -37710,20 +37285,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "get_real_surface", reinterpret_cast<PyCFunction>(ICompositionSurfaceFacade_GetRealSurface), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICompositionSurfaceFacade, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSurfaceFacade), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICompositionSurfaceFacade[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICompositionSurfaceFacade[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionSurfaceFacade) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionSurfaceFacade) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionSurfaceFacade) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionSurfaceFacade) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICompositionSurfaceFacade = {
         "winrt._winrt_microsoft_ui_composition.ICompositionSurfaceFacade",
@@ -37805,13 +37377,11 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef methods_ImplementsICompositionSurfaceFacade[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSurfaceFacade), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSurfaceFacade), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICompositionSurfaceFacade[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICompositionSurfaceFacade) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICompositionSurfaceFacade = {
         "winrt._winrt_microsoft_ui_composition.ImplementsICompositionSurfaceFacade",
@@ -37864,20 +37434,17 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef _methods_IVisualElement[] = {
         { "_assign_array_", _assign_array_IVisualElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVisualElement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVisualElement[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVisualElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVisualElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVisualElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVisualElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVisualElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVisualElement = {
         "winrt._winrt_microsoft_ui_composition.IVisualElement",
@@ -37933,13 +37500,11 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef methods_ImplementsIVisualElement[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVisualElement), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVisualElement), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVisualElement[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVisualElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVisualElement = {
         "winrt._winrt_microsoft_ui_composition.ImplementsIVisualElement",
@@ -38033,20 +37598,17 @@ namespace py::cpp::Microsoft::UI::Composition
         { "get_visual_internal", reinterpret_cast<PyCFunction>(IVisualElement2_GetVisualInternal), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVisualElement2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVisualElement2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVisualElement2[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVisualElement2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVisualElement2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVisualElement2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVisualElement2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVisualElement2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVisualElement2 = {
         "winrt._winrt_microsoft_ui_composition.IVisualElement2",
@@ -38128,13 +37690,11 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyMethodDef methods_ImplementsIVisualElement2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVisualElement2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVisualElement2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVisualElement2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVisualElement2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVisualElement2 = {
         "winrt._winrt_microsoft_ui_composition.ImplementsIVisualElement2",

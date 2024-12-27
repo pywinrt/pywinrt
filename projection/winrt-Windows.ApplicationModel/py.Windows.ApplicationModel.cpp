@@ -151,22 +151,19 @@ namespace py::cpp::Windows::ApplicationModel
         { "get_logo", reinterpret_cast<PyCFunction>(AppDisplayInfo_GetLogo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppDisplayInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppDisplayInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppDisplayInfo[] = {
         { "description", reinterpret_cast<getter>(AppDisplayInfo_get_Description), nullptr, nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(AppDisplayInfo_get_DisplayName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppDisplayInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppDisplayInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppDisplayInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppDisplayInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppDisplayInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppDisplayInfo = {
         "winrt._winrt_windows_applicationmodel.AppDisplayInfo",
@@ -544,8 +541,7 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_AppInfo[] = {
         { "_assign_array_", _assign_array_AppInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInfo[] = {
         { "app_user_model_id", reinterpret_cast<getter>(AppInfo_get_AppUserModelId), nullptr, nullptr, nullptr },
@@ -555,16 +551,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "package", reinterpret_cast<getter>(AppInfo_get_Package), nullptr, nullptr, nullptr },
         { "execution_context", reinterpret_cast<getter>(AppInfo_get_ExecutionContext), nullptr, nullptr, nullptr },
         { "supported_file_extensions", reinterpret_cast<getter>(AppInfo_get_SupportedFileExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInfo = {
         "winrt._winrt_windows_applicationmodel.AppInfo",
@@ -575,14 +569,12 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyGetSetDef getset_AppInfo_Static[] = {
         { "current", reinterpret_cast<getter>(AppInfo_get_Current), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppInfo_Static[] = {
         { "get_from_app_user_model_id", reinterpret_cast<PyCFunction>(AppInfo_GetFromAppUserModelId), METH_VARARGS, nullptr },
         { "get_from_app_user_model_id_for_user", reinterpret_cast<PyCFunction>(AppInfo_GetFromAppUserModelIdForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppInfo_Static[] = 
     {
@@ -592,14 +584,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_AppInfo_Static =
-    {
+    static PyType_Spec type_spec_AppInfo_Static = {
         "winrt._winrt_windows_applicationmodel.AppInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppInfo_Static
-    };
+        type_slots_AppInfo_Static};
 
     // ----- AppInstallerInfo class --------------------
 
@@ -1125,8 +1115,7 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_AppInstallerInfo[] = {
         { "_assign_array_", _assign_array_AppInstallerInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInstallerInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInstallerInfo[] = {
         { "uri", reinterpret_cast<getter>(AppInstallerInfo_get_Uri), nullptr, nullptr, nullptr },
@@ -1145,16 +1134,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "update_blocks_activation", reinterpret_cast<getter>(AppInstallerInfo_get_UpdateBlocksActivation), nullptr, nullptr, nullptr },
         { "update_uris", reinterpret_cast<getter>(AppInstallerInfo_get_UpdateUris), nullptr, nullptr, nullptr },
         { "version", reinterpret_cast<getter>(AppInstallerInfo_get_Version), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInstallerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallerInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallerInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInstallerInfo = {
         "winrt._winrt_windows_applicationmodel.AppInstallerInfo",
@@ -1502,22 +1489,19 @@ namespace py::cpp::Windows::ApplicationModel
         { "redirect_activation_to", reinterpret_cast<PyCFunction>(AppInstance_RedirectActivationTo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppInstance, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInstance), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInstance[] = {
         { "is_current_instance", reinterpret_cast<getter>(AppInstance_get_IsCurrentInstance), nullptr, nullptr, nullptr },
         { "key", reinterpret_cast<getter>(AppInstance_get_Key), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInstance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstance) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstance) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInstance = {
         "winrt._winrt_windows_applicationmodel.AppInstance",
@@ -1528,16 +1512,14 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyGetSetDef getset_AppInstance_Static[] = {
         { "recommended_instance", reinterpret_cast<getter>(AppInstance_get_RecommendedInstance), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppInstance_Static[] = {
         { "find_or_register_instance_for_key", reinterpret_cast<PyCFunction>(AppInstance_FindOrRegisterInstanceForKey), METH_VARARGS, nullptr },
         { "get_activated_event_args", reinterpret_cast<PyCFunction>(AppInstance_GetActivatedEventArgs), METH_VARARGS, nullptr },
         { "get_instances", reinterpret_cast<PyCFunction>(AppInstance_GetInstances), METH_VARARGS, nullptr },
         { "unregister", reinterpret_cast<PyCFunction>(AppInstance_Unregister), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppInstance_Static[] = 
     {
@@ -1547,14 +1529,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_AppInstance_Static =
-    {
+    static PyType_Spec type_spec_AppInstance_Static = {
         "winrt._winrt_windows_applicationmodel.AppInstance_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppInstance_Static
-    };
+        type_slots_AppInstance_Static};
 
     // ----- CameraApplicationManager class --------------------
 
@@ -1607,19 +1587,16 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef _methods_CameraApplicationManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CameraApplicationManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CameraApplicationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraApplicationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraApplicationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraApplicationManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CameraApplicationManager = {
         "winrt._winrt_windows_applicationmodel.CameraApplicationManager",
@@ -1629,13 +1606,11 @@ namespace py::cpp::Windows::ApplicationModel
         _type_slots_CameraApplicationManager};
 
     static PyGetSetDef getset_CameraApplicationManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CameraApplicationManager_Static[] = {
         { "show_installed_applications_ui", reinterpret_cast<PyCFunction>(CameraApplicationManager_ShowInstalledApplicationsUI), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CameraApplicationManager_Static[] = 
     {
@@ -1645,14 +1620,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_CameraApplicationManager_Static =
-    {
+    static PyType_Spec type_spec_CameraApplicationManager_Static = {
         "winrt._winrt_windows_applicationmodel.CameraApplicationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CameraApplicationManager_Static
-    };
+        type_slots_CameraApplicationManager_Static};
 
     // ----- DesignMode class --------------------
 
@@ -1724,19 +1697,16 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef _methods_DesignMode[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesignMode[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesignMode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesignMode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesignMode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesignMode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesignMode = {
         "winrt._winrt_windows_applicationmodel.DesignMode",
@@ -1748,12 +1718,10 @@ namespace py::cpp::Windows::ApplicationModel
     static PyGetSetDef getset_DesignMode_Static[] = {
         { "design_mode_enabled", reinterpret_cast<getter>(DesignMode_get_DesignModeEnabled), nullptr, nullptr, nullptr },
         { "design_mode2_enabled", reinterpret_cast<getter>(DesignMode_get_DesignMode2Enabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DesignMode_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DesignMode_Static[] = 
     {
@@ -1763,14 +1731,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_DesignMode_Static =
-    {
+    static PyType_Spec type_spec_DesignMode_Static = {
         "winrt._winrt_windows_applicationmodel.DesignMode_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DesignMode_Static
-    };
+        type_slots_DesignMode_Static};
 
     // ----- EnteredBackgroundEventArgs class --------------------
 
@@ -1857,20 +1823,17 @@ namespace py::cpp::Windows::ApplicationModel
         { "get_deferral", reinterpret_cast<PyCFunction>(EnteredBackgroundEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EnteredBackgroundEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EnteredBackgroundEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EnteredBackgroundEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EnteredBackgroundEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnteredBackgroundEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnteredBackgroundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnteredBackgroundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnteredBackgroundEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EnteredBackgroundEventArgs = {
         "winrt._winrt_windows_applicationmodel.EnteredBackgroundEventArgs",
@@ -2292,8 +2255,7 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_FindRelatedPackagesOptions[] = {
         { "_assign_array_", _assign_array_FindRelatedPackagesOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FindRelatedPackagesOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FindRelatedPackagesOptions[] = {
         { "relationship", reinterpret_cast<getter>(FindRelatedPackagesOptions_get_Relationship), reinterpret_cast<setter>(FindRelatedPackagesOptions_put_Relationship), nullptr, nullptr },
@@ -2301,16 +2263,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "include_optionals", reinterpret_cast<getter>(FindRelatedPackagesOptions_get_IncludeOptionals), reinterpret_cast<setter>(FindRelatedPackagesOptions_put_IncludeOptionals), nullptr, nullptr },
         { "include_host_runtimes", reinterpret_cast<getter>(FindRelatedPackagesOptions_get_IncludeHostRuntimes), reinterpret_cast<setter>(FindRelatedPackagesOptions_put_IncludeHostRuntimes), nullptr, nullptr },
         { "include_frameworks", reinterpret_cast<getter>(FindRelatedPackagesOptions_get_IncludeFrameworks), reinterpret_cast<setter>(FindRelatedPackagesOptions_put_IncludeFrameworks), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FindRelatedPackagesOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FindRelatedPackagesOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FindRelatedPackagesOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FindRelatedPackagesOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FindRelatedPackagesOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FindRelatedPackagesOptions = {
         "winrt._winrt_windows_applicationmodel.FindRelatedPackagesOptions",
@@ -2423,22 +2383,19 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_FullTrustProcessLaunchResult[] = {
         { "_assign_array_", _assign_array_FullTrustProcessLaunchResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FullTrustProcessLaunchResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FullTrustProcessLaunchResult[] = {
         { "extended_error", reinterpret_cast<getter>(FullTrustProcessLaunchResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "launch_result", reinterpret_cast<getter>(FullTrustProcessLaunchResult_get_LaunchResult), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FullTrustProcessLaunchResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FullTrustProcessLaunchResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FullTrustProcessLaunchResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FullTrustProcessLaunchResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FullTrustProcessLaunchResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FullTrustProcessLaunchResult = {
         "winrt._winrt_windows_applicationmodel.FullTrustProcessLaunchResult",
@@ -2709,19 +2666,16 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef _methods_FullTrustProcessLauncher[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FullTrustProcessLauncher[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FullTrustProcessLauncher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FullTrustProcessLauncher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FullTrustProcessLauncher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FullTrustProcessLauncher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FullTrustProcessLauncher = {
         "winrt._winrt_windows_applicationmodel.FullTrustProcessLauncher",
@@ -2731,8 +2685,7 @@ namespace py::cpp::Windows::ApplicationModel
         _type_slots_FullTrustProcessLauncher};
 
     static PyGetSetDef getset_FullTrustProcessLauncher_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FullTrustProcessLauncher_Static[] = {
         { "launch_full_trust_process_for_app_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForAppAsync), METH_VARARGS, nullptr },
@@ -2741,8 +2694,7 @@ namespace py::cpp::Windows::ApplicationModel
         { "launch_full_trust_process_for_current_app_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForCurrentAppAsync), METH_VARARGS, nullptr },
         { "launch_full_trust_process_for_current_app_with_arguments_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForCurrentAppWithArgumentsAsync), METH_VARARGS, nullptr },
         { "launch_full_trust_process_for_current_app_with_parameters_async", reinterpret_cast<PyCFunction>(FullTrustProcessLauncher_LaunchFullTrustProcessForCurrentAppWithParametersAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FullTrustProcessLauncher_Static[] = 
     {
@@ -2752,14 +2704,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_FullTrustProcessLauncher_Static =
-    {
+    static PyType_Spec type_spec_FullTrustProcessLauncher_Static = {
         "winrt._winrt_windows_applicationmodel.FullTrustProcessLauncher_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FullTrustProcessLauncher_Static
-    };
+        type_slots_FullTrustProcessLauncher_Static};
 
     // ----- LeavingBackgroundEventArgs class --------------------
 
@@ -2846,20 +2796,17 @@ namespace py::cpp::Windows::ApplicationModel
         { "get_deferral", reinterpret_cast<PyCFunction>(LeavingBackgroundEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LeavingBackgroundEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LeavingBackgroundEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LeavingBackgroundEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LeavingBackgroundEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LeavingBackgroundEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LeavingBackgroundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LeavingBackgroundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LeavingBackgroundEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LeavingBackgroundEventArgs = {
         "winrt._winrt_windows_applicationmodel.LeavingBackgroundEventArgs",
@@ -3002,23 +2949,20 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_LimitedAccessFeatureRequestResult[] = {
         { "_assign_array_", _assign_array_LimitedAccessFeatureRequestResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LimitedAccessFeatureRequestResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LimitedAccessFeatureRequestResult[] = {
         { "estimated_removal_date", reinterpret_cast<getter>(LimitedAccessFeatureRequestResult_get_EstimatedRemovalDate), nullptr, nullptr, nullptr },
         { "feature_id", reinterpret_cast<getter>(LimitedAccessFeatureRequestResult_get_FeatureId), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(LimitedAccessFeatureRequestResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LimitedAccessFeatureRequestResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LimitedAccessFeatureRequestResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LimitedAccessFeatureRequestResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LimitedAccessFeatureRequestResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LimitedAccessFeatureRequestResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LimitedAccessFeatureRequestResult = {
         "winrt._winrt_windows_applicationmodel.LimitedAccessFeatureRequestResult",
@@ -3081,19 +3025,16 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef _methods_LimitedAccessFeatures[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LimitedAccessFeatures[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LimitedAccessFeatures[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LimitedAccessFeatures) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LimitedAccessFeatures) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LimitedAccessFeatures) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LimitedAccessFeatures = {
         "winrt._winrt_windows_applicationmodel.LimitedAccessFeatures",
@@ -3103,13 +3044,11 @@ namespace py::cpp::Windows::ApplicationModel
         _type_slots_LimitedAccessFeatures};
 
     static PyGetSetDef getset_LimitedAccessFeatures_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LimitedAccessFeatures_Static[] = {
         { "try_unlock_feature", reinterpret_cast<PyCFunction>(LimitedAccessFeatures_TryUnlockFeature), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LimitedAccessFeatures_Static[] = 
     {
@@ -3119,14 +3058,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_LimitedAccessFeatures_Static =
-    {
+    static PyType_Spec type_spec_LimitedAccessFeatures_Static = {
         "winrt._winrt_windows_applicationmodel.LimitedAccessFeatures_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LimitedAccessFeatures_Static
-    };
+        type_slots_LimitedAccessFeatures_Static};
 
     // ----- Package class --------------------
 
@@ -4662,8 +4599,7 @@ namespace py::cpp::Windows::ApplicationModel
         { "verify_content_integrity_async", reinterpret_cast<PyCFunction>(Package_VerifyContentIntegrityAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Package, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Package), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Package[] = {
         { "dependencies", reinterpret_cast<getter>(Package_get_Dependencies), nullptr, nullptr, nullptr },
@@ -4695,16 +4631,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "user_external_path", reinterpret_cast<getter>(Package_get_UserExternalPath), nullptr, nullptr, nullptr },
         { "source_uri_scheme_name", reinterpret_cast<getter>(Package_get_SourceUriSchemeName), nullptr, nullptr, nullptr },
         { "install_date", reinterpret_cast<getter>(Package_get_InstallDate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Package[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Package) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Package) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Package) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Package) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Package = {
         "winrt._winrt_windows_applicationmodel.Package",
@@ -4715,12 +4649,10 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyGetSetDef getset_Package_Static[] = {
         { "current", reinterpret_cast<getter>(Package_get_Current), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Package_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Package_Static[] = 
     {
@@ -4730,14 +4662,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_Package_Static =
-    {
+    static PyType_Spec type_spec_Package_Static = {
         "winrt._winrt_windows_applicationmodel.Package_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Package_Static
-    };
+        type_slots_Package_Static};
 
     // ----- PackageCatalog class --------------------
 
@@ -5481,20 +5411,17 @@ namespace py::cpp::Windows::ApplicationModel
         { "remove_package_content_group_staging", reinterpret_cast<PyCFunction>(PackageCatalog_remove_PackageContentGroupStaging), METH_O, nullptr },
         { "_assign_array_", _assign_array_PackageCatalog, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageCatalog), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageCatalog[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageCatalog[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageCatalog) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageCatalog) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageCatalog) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageCatalog) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageCatalog = {
         "winrt._winrt_windows_applicationmodel.PackageCatalog",
@@ -5504,15 +5431,13 @@ namespace py::cpp::Windows::ApplicationModel
         _type_slots_PackageCatalog};
 
     static PyGetSetDef getset_PackageCatalog_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PackageCatalog_Static[] = {
         { "open_for_current_package", reinterpret_cast<PyCFunction>(PackageCatalog_OpenForCurrentPackage), METH_VARARGS, nullptr },
         { "open_for_current_user", reinterpret_cast<PyCFunction>(PackageCatalog_OpenForCurrentUser), METH_VARARGS, nullptr },
         { "open_for_package", reinterpret_cast<PyCFunction>(PackageCatalog_OpenForPackage), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PackageCatalog_Static[] = 
     {
@@ -5522,14 +5447,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_PackageCatalog_Static =
-    {
+    static PyType_Spec type_spec_PackageCatalog_Static = {
         "winrt._winrt_windows_applicationmodel.PackageCatalog_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PackageCatalog_Static
-    };
+        type_slots_PackageCatalog_Static};
 
     // ----- PackageCatalogAddOptionalPackageResult class --------------------
 
@@ -5635,22 +5558,19 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageCatalogAddOptionalPackageResult[] = {
         { "_assign_array_", _assign_array_PackageCatalogAddOptionalPackageResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageCatalogAddOptionalPackageResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageCatalogAddOptionalPackageResult[] = {
         { "extended_error", reinterpret_cast<getter>(PackageCatalogAddOptionalPackageResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageCatalogAddOptionalPackageResult_get_Package), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageCatalogAddOptionalPackageResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageCatalogAddOptionalPackageResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageCatalogAddOptionalPackageResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageCatalogAddOptionalPackageResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageCatalogAddOptionalPackageResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageCatalogAddOptionalPackageResult = {
         "winrt._winrt_windows_applicationmodel.PackageCatalogAddOptionalPackageResult",
@@ -5793,23 +5713,20 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageCatalogAddResourcePackageResult[] = {
         { "_assign_array_", _assign_array_PackageCatalogAddResourcePackageResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageCatalogAddResourcePackageResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageCatalogAddResourcePackageResult[] = {
         { "extended_error", reinterpret_cast<getter>(PackageCatalogAddResourcePackageResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "is_complete", reinterpret_cast<getter>(PackageCatalogAddResourcePackageResult_get_IsComplete), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageCatalogAddResourcePackageResult_get_Package), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageCatalogAddResourcePackageResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageCatalogAddResourcePackageResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageCatalogAddResourcePackageResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageCatalogAddResourcePackageResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageCatalogAddResourcePackageResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageCatalogAddResourcePackageResult = {
         "winrt._winrt_windows_applicationmodel.PackageCatalogAddResourcePackageResult",
@@ -5922,22 +5839,19 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageCatalogRemoveOptionalPackagesResult[] = {
         { "_assign_array_", _assign_array_PackageCatalogRemoveOptionalPackagesResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageCatalogRemoveOptionalPackagesResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageCatalogRemoveOptionalPackagesResult[] = {
         { "extended_error", reinterpret_cast<getter>(PackageCatalogRemoveOptionalPackagesResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "packages_removed", reinterpret_cast<getter>(PackageCatalogRemoveOptionalPackagesResult_get_PackagesRemoved), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageCatalogRemoveOptionalPackagesResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageCatalogRemoveOptionalPackagesResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageCatalogRemoveOptionalPackagesResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageCatalogRemoveOptionalPackagesResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageCatalogRemoveOptionalPackagesResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageCatalogRemoveOptionalPackagesResult = {
         "winrt._winrt_windows_applicationmodel.PackageCatalogRemoveOptionalPackagesResult",
@@ -6050,22 +5964,19 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageCatalogRemoveResourcePackagesResult[] = {
         { "_assign_array_", _assign_array_PackageCatalogRemoveResourcePackagesResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageCatalogRemoveResourcePackagesResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageCatalogRemoveResourcePackagesResult[] = {
         { "extended_error", reinterpret_cast<getter>(PackageCatalogRemoveResourcePackagesResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "packages_removed", reinterpret_cast<getter>(PackageCatalogRemoveResourcePackagesResult_get_PackagesRemoved), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageCatalogRemoveResourcePackagesResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageCatalogRemoveResourcePackagesResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageCatalogRemoveResourcePackagesResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageCatalogRemoveResourcePackagesResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageCatalogRemoveResourcePackagesResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageCatalogRemoveResourcePackagesResult = {
         "winrt._winrt_windows_applicationmodel.PackageCatalogRemoveResourcePackagesResult",
@@ -6268,24 +6179,21 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageContentGroup[] = {
         { "_assign_array_", _assign_array_PackageContentGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageContentGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageContentGroup[] = {
         { "is_required", reinterpret_cast<getter>(PackageContentGroup_get_IsRequired), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(PackageContentGroup_get_Name), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageContentGroup_get_Package), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(PackageContentGroup_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageContentGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageContentGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageContentGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageContentGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageContentGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageContentGroup = {
         "winrt._winrt_windows_applicationmodel.PackageContentGroup",
@@ -6296,12 +6204,10 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyGetSetDef getset_PackageContentGroup_Static[] = {
         { "required_group_name", reinterpret_cast<getter>(PackageContentGroup_get_RequiredGroupName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PackageContentGroup_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PackageContentGroup_Static[] = 
     {
@@ -6311,14 +6217,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_PackageContentGroup_Static =
-    {
+    static PyType_Spec type_spec_PackageContentGroup_Static = {
         "winrt._winrt_windows_applicationmodel.PackageContentGroup_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PackageContentGroup_Static
-    };
+        type_slots_PackageContentGroup_Static};
 
     // ----- PackageContentGroupStagingEventArgs class --------------------
 
@@ -6574,8 +6478,7 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageContentGroupStagingEventArgs[] = {
         { "_assign_array_", _assign_array_PackageContentGroupStagingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageContentGroupStagingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageContentGroupStagingEventArgs[] = {
         { "activity_id", reinterpret_cast<getter>(PackageContentGroupStagingEventArgs_get_ActivityId), nullptr, nullptr, nullptr },
@@ -6585,16 +6488,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "is_content_group_required", reinterpret_cast<getter>(PackageContentGroupStagingEventArgs_get_IsContentGroupRequired), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageContentGroupStagingEventArgs_get_Package), nullptr, nullptr, nullptr },
         { "progress", reinterpret_cast<getter>(PackageContentGroupStagingEventArgs_get_Progress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageContentGroupStagingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageContentGroupStagingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageContentGroupStagingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageContentGroupStagingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageContentGroupStagingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageContentGroupStagingEventArgs = {
         "winrt._winrt_windows_applicationmodel.PackageContentGroupStagingEventArgs",
@@ -6947,8 +6848,7 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageId[] = {
         { "_assign_array_", _assign_array_PackageId, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageId), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageId[] = {
         { "architecture", reinterpret_cast<getter>(PackageId_get_Architecture), nullptr, nullptr, nullptr },
@@ -6961,16 +6861,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "version", reinterpret_cast<getter>(PackageId_get_Version), nullptr, nullptr, nullptr },
         { "author", reinterpret_cast<getter>(PackageId_get_Author), nullptr, nullptr, nullptr },
         { "product_id", reinterpret_cast<getter>(PackageId_get_ProductId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageId = {
         "winrt._winrt_windows_applicationmodel.PackageId",
@@ -7173,8 +7071,7 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageInstallingEventArgs[] = {
         { "_assign_array_", _assign_array_PackageInstallingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageInstallingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageInstallingEventArgs[] = {
         { "activity_id", reinterpret_cast<getter>(PackageInstallingEventArgs_get_ActivityId), nullptr, nullptr, nullptr },
@@ -7182,16 +7079,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "is_complete", reinterpret_cast<getter>(PackageInstallingEventArgs_get_IsComplete), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageInstallingEventArgs_get_Package), nullptr, nullptr, nullptr },
         { "progress", reinterpret_cast<getter>(PackageInstallingEventArgs_get_Progress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageInstallingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageInstallingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageInstallingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageInstallingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageInstallingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageInstallingEventArgs = {
         "winrt._winrt_windows_applicationmodel.PackageInstallingEventArgs",
@@ -7394,8 +7289,7 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageStagingEventArgs[] = {
         { "_assign_array_", _assign_array_PackageStagingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageStagingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageStagingEventArgs[] = {
         { "activity_id", reinterpret_cast<getter>(PackageStagingEventArgs_get_ActivityId), nullptr, nullptr, nullptr },
@@ -7403,16 +7297,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "is_complete", reinterpret_cast<getter>(PackageStagingEventArgs_get_IsComplete), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageStagingEventArgs_get_Package), nullptr, nullptr, nullptr },
         { "progress", reinterpret_cast<getter>(PackageStagingEventArgs_get_Progress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageStagingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageStagingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageStagingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageStagingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageStagingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageStagingEventArgs = {
         "winrt._winrt_windows_applicationmodel.PackageStagingEventArgs",
@@ -7866,8 +7758,7 @@ namespace py::cpp::Windows::ApplicationModel
         { "verify_is_ok", reinterpret_cast<PyCFunction>(PackageStatus_VerifyIsOK), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageStatus, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageStatus), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageStatus[] = {
         { "data_offline", reinterpret_cast<getter>(PackageStatus_get_DataOffline), nullptr, nullptr, nullptr },
@@ -7882,16 +7773,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "servicing", reinterpret_cast<getter>(PackageStatus_get_Servicing), nullptr, nullptr, nullptr },
         { "tampered", reinterpret_cast<getter>(PackageStatus_get_Tampered), nullptr, nullptr, nullptr },
         { "is_partially_staged", reinterpret_cast<getter>(PackageStatus_get_IsPartiallyStaged), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageStatus = {
         "winrt._winrt_windows_applicationmodel.PackageStatus",
@@ -7974,21 +7863,18 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageStatusChangedEventArgs[] = {
         { "_assign_array_", _assign_array_PackageStatusChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageStatusChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageStatusChangedEventArgs[] = {
         { "package", reinterpret_cast<getter>(PackageStatusChangedEventArgs_get_Package), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageStatusChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageStatusChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel.PackageStatusChangedEventArgs",
@@ -8191,8 +8077,7 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageUninstallingEventArgs[] = {
         { "_assign_array_", _assign_array_PackageUninstallingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageUninstallingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageUninstallingEventArgs[] = {
         { "activity_id", reinterpret_cast<getter>(PackageUninstallingEventArgs_get_ActivityId), nullptr, nullptr, nullptr },
@@ -8200,16 +8085,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "is_complete", reinterpret_cast<getter>(PackageUninstallingEventArgs_get_IsComplete), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageUninstallingEventArgs_get_Package), nullptr, nullptr, nullptr },
         { "progress", reinterpret_cast<getter>(PackageUninstallingEventArgs_get_Progress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageUninstallingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageUninstallingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageUninstallingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageUninstallingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageUninstallingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageUninstallingEventArgs = {
         "winrt._winrt_windows_applicationmodel.PackageUninstallingEventArgs",
@@ -8322,22 +8205,19 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageUpdateAvailabilityResult[] = {
         { "_assign_array_", _assign_array_PackageUpdateAvailabilityResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageUpdateAvailabilityResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageUpdateAvailabilityResult[] = {
         { "availability", reinterpret_cast<getter>(PackageUpdateAvailabilityResult_get_Availability), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(PackageUpdateAvailabilityResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageUpdateAvailabilityResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageUpdateAvailabilityResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageUpdateAvailabilityResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageUpdateAvailabilityResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageUpdateAvailabilityResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageUpdateAvailabilityResult = {
         "winrt._winrt_windows_applicationmodel.PackageUpdateAvailabilityResult",
@@ -8570,8 +8450,7 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_PackageUpdatingEventArgs[] = {
         { "_assign_array_", _assign_array_PackageUpdatingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageUpdatingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageUpdatingEventArgs[] = {
         { "activity_id", reinterpret_cast<getter>(PackageUpdatingEventArgs_get_ActivityId), nullptr, nullptr, nullptr },
@@ -8580,16 +8459,14 @@ namespace py::cpp::Windows::ApplicationModel
         { "progress", reinterpret_cast<getter>(PackageUpdatingEventArgs_get_Progress), nullptr, nullptr, nullptr },
         { "source_package", reinterpret_cast<getter>(PackageUpdatingEventArgs_get_SourcePackage), nullptr, nullptr, nullptr },
         { "target_package", reinterpret_cast<getter>(PackageUpdatingEventArgs_get_TargetPackage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageUpdatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageUpdatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageUpdatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageUpdatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageUpdatingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageUpdatingEventArgs = {
         "winrt._winrt_windows_applicationmodel.PackageUpdatingEventArgs",
@@ -8867,22 +8744,19 @@ namespace py::cpp::Windows::ApplicationModel
         { "request_enable_async", reinterpret_cast<PyCFunction>(StartupTask_RequestEnableAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StartupTask, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StartupTask), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StartupTask[] = {
         { "state", reinterpret_cast<getter>(StartupTask_get_State), nullptr, nullptr, nullptr },
         { "task_id", reinterpret_cast<getter>(StartupTask_get_TaskId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StartupTask[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StartupTask) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StartupTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StartupTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StartupTask) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StartupTask = {
         "winrt._winrt_windows_applicationmodel.StartupTask",
@@ -8892,14 +8766,12 @@ namespace py::cpp::Windows::ApplicationModel
         _type_slots_StartupTask};
 
     static PyGetSetDef getset_StartupTask_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StartupTask_Static[] = {
         { "get_async", reinterpret_cast<PyCFunction>(StartupTask_GetAsync), METH_VARARGS, nullptr },
         { "get_for_current_package_async", reinterpret_cast<PyCFunction>(StartupTask_GetForCurrentPackageAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StartupTask_Static[] = 
     {
@@ -8909,14 +8781,12 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_StartupTask_Static =
-    {
+    static PyType_Spec type_spec_StartupTask_Static = {
         "winrt._winrt_windows_applicationmodel.StartupTask_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StartupTask_Static
-    };
+        type_slots_StartupTask_Static};
 
     // ----- SuspendingDeferral class --------------------
 
@@ -9004,20 +8874,17 @@ namespace py::cpp::Windows::ApplicationModel
         { "complete", reinterpret_cast<PyCFunction>(SuspendingDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SuspendingDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SuspendingDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SuspendingDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SuspendingDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SuspendingDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SuspendingDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SuspendingDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SuspendingDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SuspendingDeferral = {
         "winrt._winrt_windows_applicationmodel.SuspendingDeferral",
@@ -9100,21 +8967,18 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_SuspendingEventArgs[] = {
         { "_assign_array_", _assign_array_SuspendingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SuspendingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SuspendingEventArgs[] = {
         { "suspending_operation", reinterpret_cast<getter>(SuspendingEventArgs_get_SuspendingOperation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SuspendingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SuspendingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SuspendingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SuspendingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SuspendingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SuspendingEventArgs = {
         "winrt._winrt_windows_applicationmodel.SuspendingEventArgs",
@@ -9238,21 +9102,18 @@ namespace py::cpp::Windows::ApplicationModel
         { "get_deferral", reinterpret_cast<PyCFunction>(SuspendingOperation_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SuspendingOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SuspendingOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SuspendingOperation[] = {
         { "deadline", reinterpret_cast<getter>(SuspendingOperation_get_Deadline), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SuspendingOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SuspendingOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SuspendingOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SuspendingOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SuspendingOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SuspendingOperation = {
         "winrt._winrt_windows_applicationmodel.SuspendingOperation",
@@ -9346,20 +9207,17 @@ namespace py::cpp::Windows::ApplicationModel
         { "get_deferral", reinterpret_cast<PyCFunction>(IEnteredBackgroundEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IEnteredBackgroundEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IEnteredBackgroundEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IEnteredBackgroundEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IEnteredBackgroundEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IEnteredBackgroundEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IEnteredBackgroundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IEnteredBackgroundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IEnteredBackgroundEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IEnteredBackgroundEventArgs = {
         "winrt._winrt_windows_applicationmodel.IEnteredBackgroundEventArgs",
@@ -9441,13 +9299,11 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef methods_ImplementsIEnteredBackgroundEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIEnteredBackgroundEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIEnteredBackgroundEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIEnteredBackgroundEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIEnteredBackgroundEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIEnteredBackgroundEventArgs = {
         "winrt._winrt_windows_applicationmodel.ImplementsIEnteredBackgroundEventArgs",
@@ -9541,20 +9397,17 @@ namespace py::cpp::Windows::ApplicationModel
         { "get_deferral", reinterpret_cast<PyCFunction>(ILeavingBackgroundEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ILeavingBackgroundEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILeavingBackgroundEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILeavingBackgroundEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILeavingBackgroundEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILeavingBackgroundEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILeavingBackgroundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILeavingBackgroundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILeavingBackgroundEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILeavingBackgroundEventArgs = {
         "winrt._winrt_windows_applicationmodel.ILeavingBackgroundEventArgs",
@@ -9636,13 +9489,11 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef methods_ImplementsILeavingBackgroundEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILeavingBackgroundEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILeavingBackgroundEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILeavingBackgroundEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILeavingBackgroundEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILeavingBackgroundEventArgs = {
         "winrt._winrt_windows_applicationmodel.ImplementsILeavingBackgroundEventArgs",
@@ -9738,20 +9589,17 @@ namespace py::cpp::Windows::ApplicationModel
         { "open_for_package", reinterpret_cast<PyCFunction>(IPackageCatalogStatics2_OpenForPackage), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPackageCatalogStatics2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPackageCatalogStatics2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPackageCatalogStatics2[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPackageCatalogStatics2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPackageCatalogStatics2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPackageCatalogStatics2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPackageCatalogStatics2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPackageCatalogStatics2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPackageCatalogStatics2 = {
         "winrt._winrt_windows_applicationmodel.IPackageCatalogStatics2",
@@ -9839,13 +9687,11 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef methods_ImplementsIPackageCatalogStatics2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPackageCatalogStatics2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPackageCatalogStatics2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPackageCatalogStatics2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPackageCatalogStatics2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPackageCatalogStatics2 = {
         "winrt._winrt_windows_applicationmodel.ImplementsIPackageCatalogStatics2",
@@ -9940,20 +9786,17 @@ namespace py::cpp::Windows::ApplicationModel
         { "complete", reinterpret_cast<PyCFunction>(ISuspendingDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISuspendingDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISuspendingDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISuspendingDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISuspendingDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISuspendingDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISuspendingDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISuspendingDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISuspendingDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISuspendingDeferral = {
         "winrt._winrt_windows_applicationmodel.ISuspendingDeferral",
@@ -10033,13 +9876,11 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef methods_ImplementsISuspendingDeferral[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISuspendingDeferral), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISuspendingDeferral), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISuspendingDeferral[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISuspendingDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISuspendingDeferral = {
         "winrt._winrt_windows_applicationmodel.ImplementsISuspendingDeferral",
@@ -10122,21 +9963,18 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef _methods_ISuspendingEventArgs[] = {
         { "_assign_array_", _assign_array_ISuspendingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISuspendingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISuspendingEventArgs[] = {
         { "suspending_operation", reinterpret_cast<getter>(ISuspendingEventArgs_get_SuspendingOperation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISuspendingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISuspendingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISuspendingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISuspendingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISuspendingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISuspendingEventArgs = {
         "winrt._winrt_windows_applicationmodel.ISuspendingEventArgs",
@@ -10212,13 +10050,11 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef methods_ImplementsISuspendingEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISuspendingEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISuspendingEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISuspendingEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISuspendingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISuspendingEventArgs = {
         "winrt._winrt_windows_applicationmodel.ImplementsISuspendingEventArgs",
@@ -10342,21 +10178,18 @@ namespace py::cpp::Windows::ApplicationModel
         { "get_deferral", reinterpret_cast<PyCFunction>(ISuspendingOperation_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISuspendingOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISuspendingOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISuspendingOperation[] = {
         { "deadline", reinterpret_cast<getter>(ISuspendingOperation_get_Deadline), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISuspendingOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISuspendingOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISuspendingOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISuspendingOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISuspendingOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISuspendingOperation = {
         "winrt._winrt_windows_applicationmodel.ISuspendingOperation",
@@ -10458,13 +10291,11 @@ namespace py::cpp::Windows::ApplicationModel
     static PyMethodDef methods_ImplementsISuspendingOperation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISuspendingOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISuspendingOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISuspendingOperation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISuspendingOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISuspendingOperation = {
         "winrt._winrt_windows_applicationmodel.ImplementsISuspendingOperation",
@@ -10540,8 +10371,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyMethodDef _methods_PackageInstallProgress[] = {
         { "_assign_array_", _assign_array_PackageInstallProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* PackageInstallProgress_get_PercentComplete(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, void* /*unused*/) noexcept
     {
@@ -10578,8 +10408,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyGetSetDef _getset_PackageInstallProgress[] = {
         { "percent_complete", reinterpret_cast<getter>(PackageInstallProgress_get_PercentComplete), reinterpret_cast<setter>(PackageInstallProgress_set_PercentComplete), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_PackageInstallProgress(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, PyObject* other, int op) noexcept
     {
@@ -10635,8 +10464,7 @@ namespace py::cpp::Windows::ApplicationModel
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageInstallProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PackageInstallProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_PackageInstallProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageInstallProgress = {
         "winrt._winrt_windows_applicationmodel.PackageInstallProgress",
@@ -10718,8 +10546,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyMethodDef _methods_PackageVersion[] = {
         { "_assign_array_", _assign_array_PackageVersion, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* PackageVersion_get_Major(py::wrapper::Windows::ApplicationModel::PackageVersion* self, void* /*unused*/) noexcept
     {
@@ -10858,8 +10685,7 @@ namespace py::cpp::Windows::ApplicationModel
         { "minor", reinterpret_cast<getter>(PackageVersion_get_Minor), reinterpret_cast<setter>(PackageVersion_set_Minor), nullptr, nullptr },
         { "build", reinterpret_cast<getter>(PackageVersion_get_Build), reinterpret_cast<setter>(PackageVersion_set_Build), nullptr, nullptr },
         { "revision", reinterpret_cast<getter>(PackageVersion_get_Revision), reinterpret_cast<setter>(PackageVersion_set_Revision), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_PackageVersion(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* other, int op) noexcept
     {
@@ -10933,8 +10759,7 @@ namespace py::cpp::Windows::ApplicationModel
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageVersion) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PackageVersion) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_PackageVersion) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageVersion = {
         "winrt._winrt_windows_applicationmodel.PackageVersion",

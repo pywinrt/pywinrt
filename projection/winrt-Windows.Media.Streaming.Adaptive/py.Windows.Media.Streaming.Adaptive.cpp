@@ -1421,8 +1421,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSource), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AdaptiveMediaSource), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AdaptiveMediaSource), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSource[] = {
         { "initial_bitrate", reinterpret_cast<getter>(AdaptiveMediaSource_get_InitialBitrate), reinterpret_cast<setter>(AdaptiveMediaSource_put_InitialBitrate), nullptr, nullptr },
@@ -1441,16 +1440,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "diagnostics", reinterpret_cast<getter>(AdaptiveMediaSource_get_Diagnostics), nullptr, nullptr, nullptr },
         { "max_seekable_window_size", reinterpret_cast<getter>(AdaptiveMediaSource_get_MaxSeekableWindowSize), nullptr, nullptr, nullptr },
         { "min_live_offset", reinterpret_cast<getter>(AdaptiveMediaSource_get_MinLiveOffset), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSource = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSource",
@@ -1460,8 +1457,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         _type_slots_AdaptiveMediaSource};
 
     static PyGetSetDef getset_AdaptiveMediaSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AdaptiveMediaSource_Static[] = {
         { "create_from_stream_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromStreamAsync), METH_VARARGS, nullptr },
@@ -1469,8 +1465,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "create_from_uri_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromUriAsync), METH_VARARGS, nullptr },
         { "create_from_uri_with_downloader_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromUriWithDownloaderAsync), METH_VARARGS, nullptr },
         { "is_content_type_supported", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_IsContentTypeSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AdaptiveMediaSource_Static[] = 
     {
@@ -1480,14 +1475,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSource_Static =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSource_Static = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AdaptiveMediaSource_Static
-    };
+        type_slots_AdaptiveMediaSource_Static};
 
     // ----- AdaptiveMediaSourceAdvancedSettings class --------------------
 
@@ -1740,23 +1733,20 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourceAdvancedSettings[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourceAdvancedSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceAdvancedSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceAdvancedSettings[] = {
         { "desired_bitrate_headroom_ratio", reinterpret_cast<getter>(AdaptiveMediaSourceAdvancedSettings_get_DesiredBitrateHeadroomRatio), reinterpret_cast<setter>(AdaptiveMediaSourceAdvancedSettings_put_DesiredBitrateHeadroomRatio), nullptr, nullptr },
         { "bitrate_downgrade_trigger_ratio", reinterpret_cast<getter>(AdaptiveMediaSourceAdvancedSettings_get_BitrateDowngradeTriggerRatio), reinterpret_cast<setter>(AdaptiveMediaSourceAdvancedSettings_put_BitrateDowngradeTriggerRatio), nullptr, nullptr },
         { "all_segments_independent", reinterpret_cast<getter>(AdaptiveMediaSourceAdvancedSettings_get_AllSegmentsIndependent), reinterpret_cast<setter>(AdaptiveMediaSourceAdvancedSettings_put_AllSegmentsIndependent), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceAdvancedSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceAdvancedSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceAdvancedSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceAdvancedSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceAdvancedSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceAdvancedSettings = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceAdvancedSettings",
@@ -1899,23 +1889,20 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourceCorrelatedTimes[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourceCorrelatedTimes, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceCorrelatedTimes), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceCorrelatedTimes[] = {
         { "position", reinterpret_cast<getter>(AdaptiveMediaSourceCorrelatedTimes_get_Position), nullptr, nullptr, nullptr },
         { "presentation_time_stamp", reinterpret_cast<getter>(AdaptiveMediaSourceCorrelatedTimes_get_PresentationTimeStamp), nullptr, nullptr, nullptr },
         { "program_date_time", reinterpret_cast<getter>(AdaptiveMediaSourceCorrelatedTimes_get_ProgramDateTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceCorrelatedTimes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceCorrelatedTimes) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceCorrelatedTimes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceCorrelatedTimes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceCorrelatedTimes) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceCorrelatedTimes = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceCorrelatedTimes",
@@ -2088,24 +2075,21 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourceCreationResult[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourceCreationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceCreationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceCreationResult[] = {
         { "http_response_message", reinterpret_cast<getter>(AdaptiveMediaSourceCreationResult_get_HttpResponseMessage), nullptr, nullptr, nullptr },
         { "media_source", reinterpret_cast<getter>(AdaptiveMediaSourceCreationResult_get_MediaSource), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(AdaptiveMediaSourceCreationResult_get_Status), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(AdaptiveMediaSourceCreationResult_get_ExtendedError), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceCreationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceCreationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceCreationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceCreationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceCreationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceCreationResult = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceCreationResult",
@@ -2518,8 +2502,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourceDiagnosticAvailableEventArgs[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourceDiagnosticAvailableEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceDiagnosticAvailableEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceDiagnosticAvailableEventArgs[] = {
         { "bitrate", reinterpret_cast<getter>(AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_Bitrate), nullptr, nullptr, nullptr },
@@ -2534,16 +2517,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "extended_error", reinterpret_cast<getter>(AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ExtendedError), nullptr, nullptr, nullptr },
         { "resource_content_type", reinterpret_cast<getter>(AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ResourceContentType), nullptr, nullptr, nullptr },
         { "resource_duration", reinterpret_cast<getter>(AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ResourceDuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceDiagnosticAvailableEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDiagnosticAvailableEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDiagnosticAvailableEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDiagnosticAvailableEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDiagnosticAvailableEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs",
@@ -2663,20 +2644,17 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "remove_diagnostic_available", reinterpret_cast<PyCFunction>(AdaptiveMediaSourceDiagnostics_remove_DiagnosticAvailable), METH_O, nullptr },
         { "_assign_array_", _assign_array_AdaptiveMediaSourceDiagnostics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceDiagnostics), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceDiagnostics[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceDiagnostics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDiagnostics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDiagnostics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDiagnostics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDiagnostics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDiagnostics = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDiagnostics",
@@ -2819,23 +2797,20 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourceDownloadBitrateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceDownloadBitrateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceDownloadBitrateChangedEventArgs[] = {
         { "new_value", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadBitrateChangedEventArgs_get_NewValue), nullptr, nullptr, nullptr },
         { "old_value", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadBitrateChangedEventArgs_get_OldValue), nullptr, nullptr, nullptr },
         { "reason", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadBitrateChangedEventArgs_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadBitrateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadBitrateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadBitrateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadBitrateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadBitrateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs",
@@ -3188,8 +3163,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourceDownloadCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourceDownloadCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceDownloadCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceDownloadCompletedEventArgs[] = {
         { "http_response_message", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadCompletedEventArgs_get_HttpResponseMessage), nullptr, nullptr, nullptr },
@@ -3202,16 +3176,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "statistics", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadCompletedEventArgs_get_Statistics), nullptr, nullptr, nullptr },
         { "resource_content_type", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadCompletedEventArgs_get_ResourceContentType), nullptr, nullptr, nullptr },
         { "resource_duration", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadCompletedEventArgs_get_ResourceDuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs",
@@ -3594,8 +3566,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourceDownloadFailedEventArgs[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourceDownloadFailedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceDownloadFailedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceDownloadFailedEventArgs[] = {
         { "http_response_message", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadFailedEventArgs_get_HttpResponseMessage), nullptr, nullptr, nullptr },
@@ -3609,16 +3580,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "statistics", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadFailedEventArgs_get_Statistics), nullptr, nullptr, nullptr },
         { "resource_content_type", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadFailedEventArgs_get_ResourceContentType), nullptr, nullptr, nullptr },
         { "resource_duration", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadFailedEventArgs_get_ResourceDuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadFailedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadFailedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadFailedEventArgs",
@@ -3713,20 +3682,17 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "complete", reinterpret_cast<PyCFunction>(AdaptiveMediaSourceDownloadRequestedDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AdaptiveMediaSourceDownloadRequestedDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceDownloadRequestedDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceDownloadRequestedDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadRequestedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadRequestedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadRequestedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadRequestedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadRequestedDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedDeferral = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadRequestedDeferral",
@@ -4090,8 +4056,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "get_deferral", reinterpret_cast<PyCFunction>(AdaptiveMediaSourceDownloadRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AdaptiveMediaSourceDownloadRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceDownloadRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceDownloadRequestedEventArgs[] = {
         { "resource_byte_range_length", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadRequestedEventArgs_get_ResourceByteRangeLength), nullptr, nullptr, nullptr },
@@ -4103,16 +4068,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "request_id", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadRequestedEventArgs_get_RequestId), nullptr, nullptr, nullptr },
         { "resource_content_type", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadRequestedEventArgs_get_ResourceContentType), nullptr, nullptr, nullptr },
         { "resource_duration", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadRequestedEventArgs_get_ResourceDuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs",
@@ -4648,8 +4611,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourceDownloadResult[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourceDownloadResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceDownloadResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceDownloadResult[] = {
         { "resource_uri", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadResult_get_ResourceUri), reinterpret_cast<setter>(AdaptiveMediaSourceDownloadResult_put_ResourceUri), nullptr, nullptr },
@@ -4659,16 +4621,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { "buffer", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadResult_get_Buffer), reinterpret_cast<setter>(AdaptiveMediaSourceDownloadResult_put_Buffer), nullptr, nullptr },
         { "resource_byte_range_offset", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadResult_get_ResourceByteRangeOffset), reinterpret_cast<setter>(AdaptiveMediaSourceDownloadResult_put_ResourceByteRangeOffset), nullptr, nullptr },
         { "resource_byte_range_length", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadResult_get_ResourceByteRangeLength), reinterpret_cast<setter>(AdaptiveMediaSourceDownloadResult_put_ResourceByteRangeLength), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadResult = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadResult",
@@ -4841,24 +4801,21 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourceDownloadStatistics[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourceDownloadStatistics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourceDownloadStatistics), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourceDownloadStatistics[] = {
         { "content_bytes_received_count", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadStatistics_get_ContentBytesReceivedCount), nullptr, nullptr, nullptr },
         { "time_to_first_byte_received", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadStatistics_get_TimeToFirstByteReceived), nullptr, nullptr, nullptr },
         { "time_to_headers_received", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadStatistics_get_TimeToHeadersReceived), nullptr, nullptr, nullptr },
         { "time_to_last_byte_received", reinterpret_cast<getter>(AdaptiveMediaSourceDownloadStatistics_get_TimeToLastByteReceived), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadStatistics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadStatistics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadStatistics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadStatistics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadStatistics = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadStatistics",
@@ -5001,23 +4958,20 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static PyMethodDef _methods_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs[] = {
         { "audio_only", reinterpret_cast<getter>(AdaptiveMediaSourcePlaybackBitrateChangedEventArgs_get_AudioOnly), nullptr, nullptr, nullptr },
         { "new_value", reinterpret_cast<getter>(AdaptiveMediaSourcePlaybackBitrateChangedEventArgs_get_NewValue), nullptr, nullptr, nullptr },
         { "old_value", reinterpret_cast<getter>(AdaptiveMediaSourcePlaybackBitrateChangedEventArgs_get_OldValue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs",

@@ -85,19 +85,16 @@ namespace py::cpp::Windows::Phone::System
     }
 
     static PyMethodDef _methods_SystemProtection[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemProtection[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemProtection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemProtection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemProtection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemProtection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemProtection = {
         "winrt._winrt_windows_phone_system.SystemProtection",
@@ -108,13 +105,11 @@ namespace py::cpp::Windows::Phone::System
 
     static PyGetSetDef getset_SystemProtection_Static[] = {
         { "screen_locked", reinterpret_cast<getter>(SystemProtection_get_ScreenLocked), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SystemProtection_Static[] = {
         { "request_screen_unlock", reinterpret_cast<PyCFunction>(SystemProtection_RequestScreenUnlock), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SystemProtection_Static[] = 
     {
@@ -124,14 +119,12 @@ namespace py::cpp::Windows::Phone::System
         { }
     };
 
-    static PyType_Spec type_spec_SystemProtection_Static =
-    {
+    static PyType_Spec type_spec_SystemProtection_Static = {
         "winrt._winrt_windows_phone_system.SystemProtection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemProtection_Static
-    };
+        type_slots_SystemProtection_Static};
 
     // ----- Windows.Phone.System Initialization --------------------
 

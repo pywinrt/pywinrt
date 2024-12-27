@@ -160,23 +160,20 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiActiveSensingMessage[] = {
         { "_assign_array_", _assign_array_MidiActiveSensingMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiActiveSensingMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiActiveSensingMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiActiveSensingMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiActiveSensingMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiActiveSensingMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiActiveSensingMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiActiveSensingMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiActiveSensingMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiActiveSensingMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiActiveSensingMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiActiveSensingMessage = {
         "winrt._winrt_windows_devices_midi.MidiActiveSensingMessage",
@@ -404,8 +401,7 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiChannelPressureMessage[] = {
         { "_assign_array_", _assign_array_MidiChannelPressureMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiChannelPressureMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiChannelPressureMessage[] = {
         { "channel", reinterpret_cast<getter>(MidiChannelPressureMessage_get_Channel), nullptr, nullptr, nullptr },
@@ -413,16 +409,14 @@ namespace py::cpp::Windows::Devices::Midi
         { "raw_data", reinterpret_cast<getter>(MidiChannelPressureMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiChannelPressureMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiChannelPressureMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiChannelPressureMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiChannelPressureMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiChannelPressureMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiChannelPressureMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiChannelPressureMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiChannelPressureMessage = {
         "winrt._winrt_windows_devices_midi.MidiChannelPressureMessage",
@@ -587,23 +581,20 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiContinueMessage[] = {
         { "_assign_array_", _assign_array_MidiContinueMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiContinueMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiContinueMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiContinueMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiContinueMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiContinueMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiContinueMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiContinueMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiContinueMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiContinueMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiContinueMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiContinueMessage = {
         "winrt._winrt_windows_devices_midi.MidiContinueMessage",
@@ -862,8 +853,7 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiControlChangeMessage[] = {
         { "_assign_array_", _assign_array_MidiControlChangeMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiControlChangeMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiControlChangeMessage[] = {
         { "channel", reinterpret_cast<getter>(MidiControlChangeMessage_get_Channel), nullptr, nullptr, nullptr },
@@ -872,16 +862,14 @@ namespace py::cpp::Windows::Devices::Midi
         { "raw_data", reinterpret_cast<getter>(MidiControlChangeMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiControlChangeMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiControlChangeMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiControlChangeMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiControlChangeMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiControlChangeMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiControlChangeMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiControlChangeMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiControlChangeMessage = {
         "winrt._winrt_windows_devices_midi.MidiControlChangeMessage",
@@ -1180,21 +1168,18 @@ namespace py::cpp::Windows::Devices::Midi
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiInPort), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MidiInPort), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MidiInPort), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiInPort[] = {
         { "device_id", reinterpret_cast<getter>(MidiInPort_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiInPort[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiInPort) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiInPort) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiInPort) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiInPort) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiInPort = {
         "winrt._winrt_windows_devices_midi.MidiInPort",
@@ -1204,14 +1189,12 @@ namespace py::cpp::Windows::Devices::Midi
         _type_slots_MidiInPort};
 
     static PyGetSetDef getset_MidiInPort_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MidiInPort_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(MidiInPort_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(MidiInPort_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MidiInPort_Static[] = 
     {
@@ -1221,14 +1204,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Spec type_spec_MidiInPort_Static =
-    {
+    static PyType_Spec type_spec_MidiInPort_Static = {
         "winrt._winrt_windows_devices_midi.MidiInPort_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MidiInPort_Static
-    };
+        type_slots_MidiInPort_Static};
 
     // ----- MidiMessageReceivedEventArgs class --------------------
 
@@ -1304,21 +1285,18 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiMessageReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_MidiMessageReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiMessageReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiMessageReceivedEventArgs[] = {
         { "message", reinterpret_cast<getter>(MidiMessageReceivedEventArgs_get_Message), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiMessageReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiMessageReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiMessageReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiMessageReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiMessageReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiMessageReceivedEventArgs = {
         "winrt._winrt_windows_devices_midi.MidiMessageReceivedEventArgs",
@@ -1577,8 +1555,7 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiNoteOffMessage[] = {
         { "_assign_array_", _assign_array_MidiNoteOffMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiNoteOffMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiNoteOffMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiNoteOffMessage_get_RawData), nullptr, nullptr, nullptr },
@@ -1587,16 +1564,14 @@ namespace py::cpp::Windows::Devices::Midi
         { "channel", reinterpret_cast<getter>(MidiNoteOffMessage_get_Channel), nullptr, nullptr, nullptr },
         { "note", reinterpret_cast<getter>(MidiNoteOffMessage_get_Note), nullptr, nullptr, nullptr },
         { "velocity", reinterpret_cast<getter>(MidiNoteOffMessage_get_Velocity), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiNoteOffMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiNoteOffMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiNoteOffMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiNoteOffMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiNoteOffMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiNoteOffMessage = {
         "winrt._winrt_windows_devices_midi.MidiNoteOffMessage",
@@ -1855,8 +1830,7 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiNoteOnMessage[] = {
         { "_assign_array_", _assign_array_MidiNoteOnMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiNoteOnMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiNoteOnMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiNoteOnMessage_get_RawData), nullptr, nullptr, nullptr },
@@ -1865,16 +1839,14 @@ namespace py::cpp::Windows::Devices::Midi
         { "channel", reinterpret_cast<getter>(MidiNoteOnMessage_get_Channel), nullptr, nullptr, nullptr },
         { "note", reinterpret_cast<getter>(MidiNoteOnMessage_get_Note), nullptr, nullptr, nullptr },
         { "velocity", reinterpret_cast<getter>(MidiNoteOnMessage_get_Velocity), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiNoteOnMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiNoteOnMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiNoteOnMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiNoteOnMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiNoteOnMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiNoteOnMessage = {
         "winrt._winrt_windows_devices_midi.MidiNoteOnMessage",
@@ -2194,21 +2166,18 @@ namespace py::cpp::Windows::Devices::Midi
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiOutPort), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MidiOutPort), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MidiOutPort), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiOutPort[] = {
         { "device_id", reinterpret_cast<getter>(MidiOutPort_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiOutPort[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiOutPort) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiOutPort) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiOutPort) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiOutPort) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiOutPort = {
         "winrt._winrt_windows_devices_midi.MidiOutPort",
@@ -2218,14 +2187,12 @@ namespace py::cpp::Windows::Devices::Midi
         _type_slots_MidiOutPort};
 
     static PyGetSetDef getset_MidiOutPort_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MidiOutPort_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(MidiOutPort_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(MidiOutPort_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MidiOutPort_Static[] = 
     {
@@ -2235,14 +2202,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Spec type_spec_MidiOutPort_Static =
-    {
+    static PyType_Spec type_spec_MidiOutPort_Static = {
         "winrt._winrt_windows_devices_midi.MidiOutPort_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MidiOutPort_Static
-    };
+        type_slots_MidiOutPort_Static};
 
     // ----- MidiPitchBendChangeMessage class --------------------
 
@@ -2463,8 +2428,7 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiPitchBendChangeMessage[] = {
         { "_assign_array_", _assign_array_MidiPitchBendChangeMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiPitchBendChangeMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiPitchBendChangeMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiPitchBendChangeMessage_get_RawData), nullptr, nullptr, nullptr },
@@ -2472,16 +2436,14 @@ namespace py::cpp::Windows::Devices::Midi
         { "type", reinterpret_cast<getter>(MidiPitchBendChangeMessage_get_Type), nullptr, nullptr, nullptr },
         { "bend", reinterpret_cast<getter>(MidiPitchBendChangeMessage_get_Bend), nullptr, nullptr, nullptr },
         { "channel", reinterpret_cast<getter>(MidiPitchBendChangeMessage_get_Channel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiPitchBendChangeMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiPitchBendChangeMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiPitchBendChangeMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiPitchBendChangeMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiPitchBendChangeMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiPitchBendChangeMessage = {
         "winrt._winrt_windows_devices_midi.MidiPitchBendChangeMessage",
@@ -2740,8 +2702,7 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiPolyphonicKeyPressureMessage[] = {
         { "_assign_array_", _assign_array_MidiPolyphonicKeyPressureMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiPolyphonicKeyPressureMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiPolyphonicKeyPressureMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiPolyphonicKeyPressureMessage_get_RawData), nullptr, nullptr, nullptr },
@@ -2750,16 +2711,14 @@ namespace py::cpp::Windows::Devices::Midi
         { "channel", reinterpret_cast<getter>(MidiPolyphonicKeyPressureMessage_get_Channel), nullptr, nullptr, nullptr },
         { "note", reinterpret_cast<getter>(MidiPolyphonicKeyPressureMessage_get_Note), nullptr, nullptr, nullptr },
         { "pressure", reinterpret_cast<getter>(MidiPolyphonicKeyPressureMessage_get_Pressure), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiPolyphonicKeyPressureMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiPolyphonicKeyPressureMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiPolyphonicKeyPressureMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiPolyphonicKeyPressureMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiPolyphonicKeyPressureMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiPolyphonicKeyPressureMessage = {
         "winrt._winrt_windows_devices_midi.MidiPolyphonicKeyPressureMessage",
@@ -2987,8 +2946,7 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiProgramChangeMessage[] = {
         { "_assign_array_", _assign_array_MidiProgramChangeMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiProgramChangeMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiProgramChangeMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiProgramChangeMessage_get_RawData), nullptr, nullptr, nullptr },
@@ -2996,16 +2954,14 @@ namespace py::cpp::Windows::Devices::Midi
         { "type", reinterpret_cast<getter>(MidiProgramChangeMessage_get_Type), nullptr, nullptr, nullptr },
         { "channel", reinterpret_cast<getter>(MidiProgramChangeMessage_get_Channel), nullptr, nullptr, nullptr },
         { "program", reinterpret_cast<getter>(MidiProgramChangeMessage_get_Program), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiProgramChangeMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiProgramChangeMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiProgramChangeMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiProgramChangeMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiProgramChangeMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiProgramChangeMessage = {
         "winrt._winrt_windows_devices_midi.MidiProgramChangeMessage",
@@ -3202,24 +3158,21 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiSongPositionPointerMessage[] = {
         { "_assign_array_", _assign_array_MidiSongPositionPointerMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiSongPositionPointerMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiSongPositionPointerMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiSongPositionPointerMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiSongPositionPointerMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiSongPositionPointerMessage_get_Type), nullptr, nullptr, nullptr },
         { "beats", reinterpret_cast<getter>(MidiSongPositionPointerMessage_get_Beats), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiSongPositionPointerMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSongPositionPointerMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSongPositionPointerMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSongPositionPointerMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSongPositionPointerMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiSongPositionPointerMessage = {
         "winrt._winrt_windows_devices_midi.MidiSongPositionPointerMessage",
@@ -3416,24 +3369,21 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiSongSelectMessage[] = {
         { "_assign_array_", _assign_array_MidiSongSelectMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiSongSelectMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiSongSelectMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiSongSelectMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiSongSelectMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiSongSelectMessage_get_Type), nullptr, nullptr, nullptr },
         { "song", reinterpret_cast<getter>(MidiSongSelectMessage_get_Song), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiSongSelectMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSongSelectMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSongSelectMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSongSelectMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSongSelectMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiSongSelectMessage = {
         "winrt._winrt_windows_devices_midi.MidiSongSelectMessage",
@@ -3598,23 +3548,20 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiStartMessage[] = {
         { "_assign_array_", _assign_array_MidiStartMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiStartMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiStartMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiStartMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiStartMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiStartMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiStartMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiStartMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiStartMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiStartMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiStartMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiStartMessage = {
         "winrt._winrt_windows_devices_midi.MidiStartMessage",
@@ -3779,23 +3726,20 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiStopMessage[] = {
         { "_assign_array_", _assign_array_MidiStopMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiStopMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiStopMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiStopMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiStopMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiStopMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiStopMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiStopMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiStopMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiStopMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiStopMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiStopMessage = {
         "winrt._winrt_windows_devices_midi.MidiStopMessage",
@@ -4256,23 +4200,20 @@ namespace py::cpp::Windows::Devices::Midi
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiSynthesizer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MidiSynthesizer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MidiSynthesizer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiSynthesizer[] = {
         { "device_id", reinterpret_cast<getter>(MidiSynthesizer_get_DeviceId), nullptr, nullptr, nullptr },
         { "volume", reinterpret_cast<getter>(MidiSynthesizer_get_Volume), reinterpret_cast<setter>(MidiSynthesizer_put_Volume), nullptr, nullptr },
         { "audio_device", reinterpret_cast<getter>(MidiSynthesizer_get_AudioDevice), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiSynthesizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSynthesizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSynthesizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSynthesizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSynthesizer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiSynthesizer = {
         "winrt._winrt_windows_devices_midi.MidiSynthesizer",
@@ -4282,15 +4223,13 @@ namespace py::cpp::Windows::Devices::Midi
         _type_slots_MidiSynthesizer};
 
     static PyGetSetDef getset_MidiSynthesizer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MidiSynthesizer_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(MidiSynthesizer_CreateAsync), METH_VARARGS, nullptr },
         { "create_from_audio_device_async", reinterpret_cast<PyCFunction>(MidiSynthesizer_CreateFromAudioDeviceAsync), METH_VARARGS, nullptr },
         { "is_synthesizer", reinterpret_cast<PyCFunction>(MidiSynthesizer_IsSynthesizer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MidiSynthesizer_Static[] = 
     {
@@ -4300,14 +4239,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Spec type_spec_MidiSynthesizer_Static =
-    {
+    static PyType_Spec type_spec_MidiSynthesizer_Static = {
         "winrt._winrt_windows_devices_midi.MidiSynthesizer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MidiSynthesizer_Static
-    };
+        type_slots_MidiSynthesizer_Static};
 
     // ----- MidiSystemExclusiveMessage class --------------------
 
@@ -4467,23 +4404,20 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiSystemExclusiveMessage[] = {
         { "_assign_array_", _assign_array_MidiSystemExclusiveMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiSystemExclusiveMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiSystemExclusiveMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiSystemExclusiveMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiSystemExclusiveMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiSystemExclusiveMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiSystemExclusiveMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSystemExclusiveMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSystemExclusiveMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSystemExclusiveMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSystemExclusiveMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiSystemExclusiveMessage = {
         "winrt._winrt_windows_devices_midi.MidiSystemExclusiveMessage",
@@ -4648,23 +4582,20 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiSystemResetMessage[] = {
         { "_assign_array_", _assign_array_MidiSystemResetMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiSystemResetMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiSystemResetMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiSystemResetMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiSystemResetMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiSystemResetMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiSystemResetMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSystemResetMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSystemResetMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSystemResetMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSystemResetMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiSystemResetMessage = {
         "winrt._winrt_windows_devices_midi.MidiSystemResetMessage",
@@ -4892,8 +4823,7 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiTimeCodeMessage[] = {
         { "_assign_array_", _assign_array_MidiTimeCodeMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiTimeCodeMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiTimeCodeMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiTimeCodeMessage_get_RawData), nullptr, nullptr, nullptr },
@@ -4901,16 +4831,14 @@ namespace py::cpp::Windows::Devices::Midi
         { "type", reinterpret_cast<getter>(MidiTimeCodeMessage_get_Type), nullptr, nullptr, nullptr },
         { "frame_type", reinterpret_cast<getter>(MidiTimeCodeMessage_get_FrameType), nullptr, nullptr, nullptr },
         { "values", reinterpret_cast<getter>(MidiTimeCodeMessage_get_Values), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiTimeCodeMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiTimeCodeMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiTimeCodeMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiTimeCodeMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiTimeCodeMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiTimeCodeMessage = {
         "winrt._winrt_windows_devices_midi.MidiTimeCodeMessage",
@@ -5075,23 +5003,20 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiTimingClockMessage[] = {
         { "_assign_array_", _assign_array_MidiTimingClockMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiTimingClockMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiTimingClockMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiTimingClockMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiTimingClockMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiTimingClockMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiTimingClockMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiTimingClockMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiTimingClockMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiTimingClockMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiTimingClockMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiTimingClockMessage = {
         "winrt._winrt_windows_devices_midi.MidiTimingClockMessage",
@@ -5256,23 +5181,20 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_MidiTuneRequestMessage[] = {
         { "_assign_array_", _assign_array_MidiTuneRequestMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiTuneRequestMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MidiTuneRequestMessage[] = {
         { "raw_data", reinterpret_cast<getter>(MidiTuneRequestMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MidiTuneRequestMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MidiTuneRequestMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MidiTuneRequestMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiTuneRequestMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiTuneRequestMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiTuneRequestMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiTuneRequestMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MidiTuneRequestMessage = {
         "winrt._winrt_windows_devices_midi.MidiTuneRequestMessage",
@@ -5415,23 +5337,20 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef _methods_IMidiMessage[] = {
         { "_assign_array_", _assign_array_IMidiMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMidiMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMidiMessage[] = {
         { "raw_data", reinterpret_cast<getter>(IMidiMessage_get_RawData), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(IMidiMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IMidiMessage_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMidiMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMidiMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMidiMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMidiMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMidiMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMidiMessage = {
         "winrt._winrt_windows_devices_midi.IMidiMessage",
@@ -5547,13 +5466,11 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef methods_ImplementsIMidiMessage[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMidiMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMidiMessage), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMidiMessage[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMidiMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMidiMessage = {
         "winrt._winrt_windows_devices_midi.ImplementsIMidiMessage",
@@ -5791,21 +5708,18 @@ namespace py::cpp::Windows::Devices::Midi
         { "_from", reinterpret_cast<PyCFunction>(_from_IMidiOutPort), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMidiOutPort), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMidiOutPort), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMidiOutPort[] = {
         { "device_id", reinterpret_cast<getter>(IMidiOutPort_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMidiOutPort[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMidiOutPort) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMidiOutPort) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMidiOutPort) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMidiOutPort) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMidiOutPort = {
         "winrt._winrt_windows_devices_midi.IMidiOutPort",
@@ -5965,13 +5879,11 @@ namespace py::cpp::Windows::Devices::Midi
     static PyMethodDef methods_ImplementsIMidiOutPort[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMidiOutPort), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMidiOutPort), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMidiOutPort[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMidiOutPort) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMidiOutPort = {
         "winrt._winrt_windows_devices_midi.ImplementsIMidiOutPort",

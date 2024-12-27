@@ -715,8 +715,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailAttachment[] = {
         { "_assign_array_", _assign_array_EmailAttachment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailAttachment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailAttachment[] = {
         { "file_name", reinterpret_cast<getter>(EmailAttachment_get_FileName), reinterpret_cast<setter>(EmailAttachment_put_FileName), nullptr, nullptr },
@@ -729,16 +728,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "content_id", reinterpret_cast<getter>(EmailAttachment_get_ContentId), reinterpret_cast<setter>(EmailAttachment_put_ContentId), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(EmailAttachment_get_Id), nullptr, nullptr, nullptr },
         { "is_from_base_message", reinterpret_cast<getter>(EmailAttachment_get_IsFromBaseMessage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailAttachment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailAttachment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailAttachment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailAttachment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailAttachment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailAttachment = {
         "winrt._winrt_windows_applicationmodel_email.EmailAttachment",
@@ -1265,8 +1262,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "find_messages_with_count_async", reinterpret_cast<PyCFunction>(EmailConversation_FindMessagesWithCountAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailConversation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailConversation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailConversation[] = {
         { "flag_state", reinterpret_cast<getter>(EmailConversation_get_FlagState), nullptr, nullptr, nullptr },
@@ -1282,16 +1278,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "preview", reinterpret_cast<getter>(EmailConversation_get_Preview), nullptr, nullptr, nullptr },
         { "subject", reinterpret_cast<getter>(EmailConversation_get_Subject), nullptr, nullptr, nullptr },
         { "unread_message_count", reinterpret_cast<getter>(EmailConversation_get_UnreadMessageCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailConversation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailConversation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailConversation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailConversation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailConversation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailConversation = {
         "winrt._winrt_windows_applicationmodel_email.EmailConversation",
@@ -1404,22 +1398,19 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailConversationBatch[] = {
         { "_assign_array_", _assign_array_EmailConversationBatch, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailConversationBatch), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailConversationBatch[] = {
         { "conversations", reinterpret_cast<getter>(EmailConversationBatch_get_Conversations), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(EmailConversationBatch_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailConversationBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailConversationBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailConversationBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailConversationBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailConversationBatch) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailConversationBatch = {
         "winrt._winrt_windows_applicationmodel_email.EmailConversationBatch",
@@ -1513,20 +1504,17 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "read_batch_async", reinterpret_cast<PyCFunction>(EmailConversationReader_ReadBatchAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailConversationReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailConversationReader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailConversationReader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailConversationReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailConversationReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailConversationReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailConversationReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailConversationReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailConversationReader = {
         "winrt._winrt_windows_applicationmodel_email.EmailConversationReader",
@@ -2523,8 +2511,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "try_save_async", reinterpret_cast<PyCFunction>(EmailFolder_TrySaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailFolder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailFolder), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailFolder[] = {
         { "remote_id", reinterpret_cast<getter>(EmailFolder_get_RemoteId), reinterpret_cast<setter>(EmailFolder_put_RemoteId), nullptr, nullptr },
@@ -2535,16 +2522,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "kind", reinterpret_cast<getter>(EmailFolder_get_Kind), nullptr, nullptr, nullptr },
         { "mailbox_id", reinterpret_cast<getter>(EmailFolder_get_MailboxId), nullptr, nullptr, nullptr },
         { "parent_folder_id", reinterpret_cast<getter>(EmailFolder_get_ParentFolderId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailFolder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailFolder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailFolder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailFolder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailFolder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailFolder = {
         "winrt._winrt_windows_applicationmodel_email.EmailFolder",
@@ -3463,8 +3448,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailIrmInfo[] = {
         { "_assign_array_", _assign_array_EmailIrmInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailIrmInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailIrmInfo[] = {
         { "can_remove_irm_on_response", reinterpret_cast<getter>(EmailIrmInfo_get_CanRemoveIrmOnResponse), reinterpret_cast<setter>(EmailIrmInfo_put_CanRemoveIrmOnResponse), nullptr, nullptr },
@@ -3479,16 +3463,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "is_irm_originator", reinterpret_cast<getter>(EmailIrmInfo_get_IsIrmOriginator), reinterpret_cast<setter>(EmailIrmInfo_put_IsIrmOriginator), nullptr, nullptr },
         { "expiration_date", reinterpret_cast<getter>(EmailIrmInfo_get_ExpirationDate), reinterpret_cast<setter>(EmailIrmInfo_put_ExpirationDate), nullptr, nullptr },
         { "can_reply_all", reinterpret_cast<getter>(EmailIrmInfo_get_CanReplyAll), reinterpret_cast<setter>(EmailIrmInfo_put_CanReplyAll), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailIrmInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailIrmInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailIrmInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailIrmInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailIrmInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailIrmInfo = {
         "winrt._winrt_windows_applicationmodel_email.EmailIrmInfo",
@@ -3787,23 +3769,20 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailIrmTemplate[] = {
         { "_assign_array_", _assign_array_EmailIrmTemplate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailIrmTemplate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailIrmTemplate[] = {
         { "name", reinterpret_cast<getter>(EmailIrmTemplate_get_Name), reinterpret_cast<setter>(EmailIrmTemplate_put_Name), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(EmailIrmTemplate_get_Id), reinterpret_cast<setter>(EmailIrmTemplate_put_Id), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(EmailIrmTemplate_get_Description), reinterpret_cast<setter>(EmailIrmTemplate_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailIrmTemplate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailIrmTemplate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailIrmTemplate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailIrmTemplate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailIrmTemplate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailIrmTemplate = {
         "winrt._winrt_windows_applicationmodel_email.EmailIrmTemplate",
@@ -3976,24 +3955,21 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailItemCounts[] = {
         { "_assign_array_", _assign_array_EmailItemCounts, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailItemCounts), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailItemCounts[] = {
         { "flagged", reinterpret_cast<getter>(EmailItemCounts_get_Flagged), nullptr, nullptr, nullptr },
         { "important", reinterpret_cast<getter>(EmailItemCounts_get_Important), nullptr, nullptr, nullptr },
         { "total", reinterpret_cast<getter>(EmailItemCounts_get_Total), nullptr, nullptr, nullptr },
         { "unread", reinterpret_cast<getter>(EmailItemCounts_get_Unread), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailItemCounts[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailItemCounts) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailItemCounts) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailItemCounts) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailItemCounts) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailItemCounts = {
         "winrt._winrt_windows_applicationmodel_email.EmailItemCounts",
@@ -6386,8 +6362,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "remove_mailbox_changed", reinterpret_cast<PyCFunction>(EmailMailbox_remove_MailboxChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_EmailMailbox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailbox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailbox[] = {
         { "other_app_write_access", reinterpret_cast<getter>(EmailMailbox_get_OtherAppWriteAccess), reinterpret_cast<setter>(EmailMailbox_put_OtherAppWriteAccess), nullptr, nullptr },
@@ -6407,16 +6382,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "linked_mailbox_id", reinterpret_cast<getter>(EmailMailbox_get_LinkedMailboxId), nullptr, nullptr, nullptr },
         { "network_account_id", reinterpret_cast<getter>(EmailMailbox_get_NetworkAccountId), nullptr, nullptr, nullptr },
         { "network_id", reinterpret_cast<getter>(EmailMailbox_get_NetworkId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailbox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailbox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailbox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailbox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailbox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailbox = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailbox",
@@ -6529,22 +6502,19 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailMailboxAction[] = {
         { "_assign_array_", _assign_array_EmailMailboxAction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxAction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxAction[] = {
         { "change_number", reinterpret_cast<getter>(EmailMailboxAction_get_ChangeNumber), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(EmailMailboxAction_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxAction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxAction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxAction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxAction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxAction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxAction = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxAction",
@@ -6735,22 +6705,19 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailMailboxAutoReply[] = {
         { "_assign_array_", _assign_array_EmailMailboxAutoReply, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxAutoReply), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxAutoReply[] = {
         { "response", reinterpret_cast<getter>(EmailMailboxAutoReply_get_Response), reinterpret_cast<setter>(EmailMailboxAutoReply_put_Response), nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(EmailMailboxAutoReply_get_IsEnabled), reinterpret_cast<setter>(EmailMailboxAutoReply_put_IsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxAutoReply[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxAutoReply) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxAutoReply) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxAutoReply) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxAutoReply) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxAutoReply = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxAutoReply",
@@ -7191,8 +7158,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailMailboxAutoReplySettings[] = {
         { "_assign_array_", _assign_array_EmailMailboxAutoReplySettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxAutoReplySettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxAutoReplySettings[] = {
         { "start_time", reinterpret_cast<getter>(EmailMailboxAutoReplySettings_get_StartTime), reinterpret_cast<setter>(EmailMailboxAutoReplySettings_put_StartTime), nullptr, nullptr },
@@ -7202,16 +7168,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "internal_reply", reinterpret_cast<getter>(EmailMailboxAutoReplySettings_get_InternalReply), nullptr, nullptr, nullptr },
         { "known_external_reply", reinterpret_cast<getter>(EmailMailboxAutoReplySettings_get_KnownExternalReply), nullptr, nullptr, nullptr },
         { "unknown_external_reply", reinterpret_cast<getter>(EmailMailboxAutoReplySettings_get_UnknownExternalReply), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxAutoReplySettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxAutoReplySettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxAutoReplySettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxAutoReplySettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxAutoReplySettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxAutoReplySettings = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxAutoReplySettings",
@@ -8230,8 +8194,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailMailboxCapabilities[] = {
         { "_assign_array_", _assign_array_EmailMailboxCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxCapabilities[] = {
         { "can_smart_send", reinterpret_cast<getter>(EmailMailboxCapabilities_get_CanSmartSend), reinterpret_cast<setter>(EmailMailboxCapabilities_put_CanSmartSend), nullptr, nullptr },
@@ -8248,16 +8211,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "can_empty_folder", reinterpret_cast<getter>(EmailMailboxCapabilities_get_CanEmptyFolder), reinterpret_cast<setter>(EmailMailboxCapabilities_put_CanEmptyFolder), nullptr, nullptr },
         { "can_delete_folder", reinterpret_cast<getter>(EmailMailboxCapabilities_get_CanDeleteFolder), reinterpret_cast<setter>(EmailMailboxCapabilities_put_CanDeleteFolder), nullptr, nullptr },
         { "can_create_folder", reinterpret_cast<getter>(EmailMailboxCapabilities_get_CanCreateFolder), reinterpret_cast<setter>(EmailMailboxCapabilities_put_CanCreateFolder), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxCapabilities = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxCapabilities",
@@ -8430,24 +8391,21 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailMailboxChange[] = {
         { "_assign_array_", _assign_array_EmailMailboxChange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxChange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxChange[] = {
         { "change_type", reinterpret_cast<getter>(EmailMailboxChange_get_ChangeType), nullptr, nullptr, nullptr },
         { "folder", reinterpret_cast<getter>(EmailMailboxChange_get_Folder), nullptr, nullptr, nullptr },
         { "mailbox_actions", reinterpret_cast<getter>(EmailMailboxChange_get_MailboxActions), nullptr, nullptr, nullptr },
         { "message", reinterpret_cast<getter>(EmailMailboxChange_get_Message), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxChange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxChange = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxChange",
@@ -8627,20 +8585,17 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "read_batch_async", reinterpret_cast<PyCFunction>(EmailMailboxChangeReader_ReadBatchAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxChangeReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxChangeReader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxChangeReader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxChangeReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChangeReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChangeReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChangeReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChangeReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxChangeReader = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxChangeReader",
@@ -8848,21 +8803,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "reset", reinterpret_cast<PyCFunction>(EmailMailboxChangeTracker_Reset), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxChangeTracker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxChangeTracker), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxChangeTracker[] = {
         { "is_tracking", reinterpret_cast<getter>(EmailMailboxChangeTracker_get_IsTracking), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxChangeTracker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChangeTracker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChangeTracker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChangeTracker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChangeTracker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxChangeTracker = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxChangeTracker",
@@ -8957,20 +8909,17 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "complete", reinterpret_cast<PyCFunction>(EmailMailboxChangedDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxChangedDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxChangedDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxChangedDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxChangedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChangedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChangedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChangedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChangedDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxChangedDeferral = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxChangedDeferral",
@@ -9064,20 +9013,17 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxChangedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxChangedEventArgs",
@@ -9190,22 +9136,19 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailMailboxCreateFolderResult[] = {
         { "_assign_array_", _assign_array_EmailMailboxCreateFolderResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxCreateFolderResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxCreateFolderResult[] = {
         { "folder", reinterpret_cast<getter>(EmailMailboxCreateFolderResult_get_Folder), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(EmailMailboxCreateFolderResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxCreateFolderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxCreateFolderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxCreateFolderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxCreateFolderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxCreateFolderResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxCreateFolderResult = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxCreateFolderResult",
@@ -9672,8 +9615,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailMailboxPolicies[] = {
         { "_assign_array_", _assign_array_EmailMailboxPolicies, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxPolicies), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxPolicies[] = {
         { "required_smime_signing_algorithm", reinterpret_cast<getter>(EmailMailboxPolicies_get_RequiredSmimeSigningAlgorithm), reinterpret_cast<setter>(EmailMailboxPolicies_put_RequiredSmimeSigningAlgorithm), nullptr, nullptr },
@@ -9682,16 +9624,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "allow_smime_soft_certificates", reinterpret_cast<getter>(EmailMailboxPolicies_get_AllowSmimeSoftCertificates), reinterpret_cast<setter>(EmailMailboxPolicies_put_AllowSmimeSoftCertificates), nullptr, nullptr },
         { "must_sign_smime_messages", reinterpret_cast<getter>(EmailMailboxPolicies_get_MustSignSmimeMessages), reinterpret_cast<setter>(EmailMailboxPolicies_put_MustSignSmimeMessages), nullptr, nullptr },
         { "must_encrypt_smime_messages", reinterpret_cast<getter>(EmailMailboxPolicies_get_MustEncryptSmimeMessages), reinterpret_cast<setter>(EmailMailboxPolicies_put_MustEncryptSmimeMessages), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxPolicies[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxPolicies) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxPolicies) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxPolicies) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxPolicies) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxPolicies = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxPolicies",
@@ -10059,23 +9999,20 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "remove_sync_status_changed", reinterpret_cast<PyCFunction>(EmailMailboxSyncManager_remove_SyncStatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxSyncManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxSyncManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxSyncManager[] = {
         { "status", reinterpret_cast<getter>(EmailMailboxSyncManager_get_Status), reinterpret_cast<setter>(EmailMailboxSyncManager_put_Status), nullptr, nullptr },
         { "last_successful_sync_time", reinterpret_cast<getter>(EmailMailboxSyncManager_get_LastSuccessfulSyncTime), reinterpret_cast<setter>(EmailMailboxSyncManager_put_LastSuccessfulSyncTime), nullptr, nullptr },
         { "last_attempted_sync_time", reinterpret_cast<getter>(EmailMailboxSyncManager_get_LastAttemptedSyncTime), reinterpret_cast<setter>(EmailMailboxSyncManager_put_LastAttemptedSyncTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxSyncManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxSyncManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxSyncManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxSyncManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxSyncManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxSyncManager = {
         "winrt._winrt_windows_applicationmodel_email.EmailMailboxSyncManager",
@@ -10220,19 +10157,16 @@ namespace py::cpp::Windows::ApplicationModel::Email
     }
 
     static PyMethodDef _methods_EmailManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailManager = {
         "winrt._winrt_windows_applicationmodel_email.EmailManager",
@@ -10242,15 +10176,13 @@ namespace py::cpp::Windows::ApplicationModel::Email
         _type_slots_EmailManager};
 
     static PyGetSetDef getset_EmailManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EmailManager_Static[] = {
         { "get_for_user", reinterpret_cast<PyCFunction>(EmailManager_GetForUser), METH_VARARGS, nullptr },
         { "request_store_async", reinterpret_cast<PyCFunction>(EmailManager_RequestStoreAsync), METH_VARARGS, nullptr },
         { "show_compose_new_email_async", reinterpret_cast<PyCFunction>(EmailManager_ShowComposeNewEmailAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EmailManager_Static[] = 
     {
@@ -10260,14 +10192,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Spec type_spec_EmailManager_Static =
-    {
+    static PyType_Spec type_spec_EmailManager_Static = {
         "winrt._winrt_windows_applicationmodel_email.EmailManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EmailManager_Static
-    };
+        type_slots_EmailManager_Static};
 
     // ----- EmailManagerForUser class --------------------
 
@@ -10429,21 +10359,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "show_compose_new_email_async", reinterpret_cast<PyCFunction>(EmailManagerForUser_ShowComposeNewEmailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailManagerForUser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailManagerForUser[] = {
         { "user", reinterpret_cast<getter>(EmailManagerForUser_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailManagerForUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailManagerForUser = {
         "winrt._winrt_windows_applicationmodel_email.EmailManagerForUser",
@@ -11445,8 +11372,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailMeetingInfo[] = {
         { "_assign_array_", _assign_array_EmailMeetingInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMeetingInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMeetingInfo[] = {
         { "location", reinterpret_cast<getter>(EmailMeetingInfo_get_Location), reinterpret_cast<setter>(EmailMeetingInfo_put_Location), nullptr, nullptr },
@@ -11463,16 +11389,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "recurrence", reinterpret_cast<getter>(EmailMeetingInfo_get_Recurrence), reinterpret_cast<setter>(EmailMeetingInfo_put_Recurrence), nullptr, nullptr },
         { "proposed_start_time", reinterpret_cast<getter>(EmailMeetingInfo_get_ProposedStartTime), reinterpret_cast<setter>(EmailMeetingInfo_put_ProposedStartTime), nullptr, nullptr },
         { "is_reported_out_of_date_by_server", reinterpret_cast<getter>(EmailMeetingInfo_get_IsReportedOutOfDateByServer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMeetingInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMeetingInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMeetingInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMeetingInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMeetingInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMeetingInfo = {
         "winrt._winrt_windows_applicationmodel_email.EmailMeetingInfo",
@@ -13564,8 +13488,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "set_body_stream", reinterpret_cast<PyCFunction>(EmailMessage_SetBodyStream), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMessage[] = {
         { "subject", reinterpret_cast<getter>(EmailMessage_get_Subject), reinterpret_cast<setter>(EmailMessage_put_Subject), nullptr, nullptr },
@@ -13605,16 +13528,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "smime_data", reinterpret_cast<getter>(EmailMessage_get_SmimeData), reinterpret_cast<setter>(EmailMessage_put_SmimeData), nullptr, nullptr },
         { "sent_representing", reinterpret_cast<getter>(EmailMessage_get_SentRepresenting), reinterpret_cast<setter>(EmailMessage_put_SentRepresenting), nullptr, nullptr },
         { "reply_to", reinterpret_cast<getter>(EmailMessage_get_ReplyTo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMessage = {
         "winrt._winrt_windows_applicationmodel_email.EmailMessage",
@@ -13727,22 +13648,19 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailMessageBatch[] = {
         { "_assign_array_", _assign_array_EmailMessageBatch, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMessageBatch), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMessageBatch[] = {
         { "messages", reinterpret_cast<getter>(EmailMessageBatch_get_Messages), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(EmailMessageBatch_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMessageBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMessageBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMessageBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMessageBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMessageBatch) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMessageBatch = {
         "winrt._winrt_windows_applicationmodel_email.EmailMessageBatch",
@@ -13836,20 +13754,17 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "read_batch_async", reinterpret_cast<PyCFunction>(EmailMessageReader_ReadBatchAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMessageReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMessageReader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMessageReader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMessageReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMessageReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMessageReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMessageReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMessageReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMessageReader = {
         "winrt._winrt_windows_applicationmodel_email.EmailMessageReader",
@@ -14222,8 +14137,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailQueryOptions[] = {
         { "_assign_array_", _assign_array_EmailQueryOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailQueryOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailQueryOptions[] = {
         { "sort_property", reinterpret_cast<getter>(EmailQueryOptions_get_SortProperty), reinterpret_cast<setter>(EmailQueryOptions_put_SortProperty), nullptr, nullptr },
@@ -14231,16 +14145,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "kind", reinterpret_cast<getter>(EmailQueryOptions_get_Kind), reinterpret_cast<setter>(EmailQueryOptions_put_Kind), nullptr, nullptr },
         { "folder_ids", reinterpret_cast<getter>(EmailQueryOptions_get_FolderIds), nullptr, nullptr, nullptr },
         { "text_search", reinterpret_cast<getter>(EmailQueryOptions_get_TextSearch), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailQueryOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailQueryOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailQueryOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailQueryOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailQueryOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailQueryOptions = {
         "winrt._winrt_windows_applicationmodel_email.EmailQueryOptions",
@@ -14500,23 +14412,20 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailQueryTextSearch[] = {
         { "_assign_array_", _assign_array_EmailQueryTextSearch, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailQueryTextSearch), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailQueryTextSearch[] = {
         { "text", reinterpret_cast<getter>(EmailQueryTextSearch_get_Text), reinterpret_cast<setter>(EmailQueryTextSearch_put_Text), nullptr, nullptr },
         { "search_scope", reinterpret_cast<getter>(EmailQueryTextSearch_get_SearchScope), reinterpret_cast<setter>(EmailQueryTextSearch_put_SearchScope), nullptr, nullptr },
         { "fields", reinterpret_cast<getter>(EmailQueryTextSearch_get_Fields), reinterpret_cast<setter>(EmailQueryTextSearch_put_Fields), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailQueryTextSearch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailQueryTextSearch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailQueryTextSearch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailQueryTextSearch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailQueryTextSearch) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailQueryTextSearch = {
         "winrt._winrt_windows_applicationmodel_email.EmailQueryTextSearch",
@@ -14760,22 +14669,19 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailRecipient[] = {
         { "_assign_array_", _assign_array_EmailRecipient, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailRecipient), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailRecipient[] = {
         { "name", reinterpret_cast<getter>(EmailRecipient_get_Name), reinterpret_cast<setter>(EmailRecipient_put_Name), nullptr, nullptr },
         { "address", reinterpret_cast<getter>(EmailRecipient_get_Address), reinterpret_cast<setter>(EmailRecipient_put_Address), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailRecipient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailRecipient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailRecipient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailRecipient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailRecipient) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailRecipient = {
         "winrt._winrt_windows_applicationmodel_email.EmailRecipient",
@@ -14993,22 +14899,19 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "set_public_keys", reinterpret_cast<PyCFunction>(EmailRecipientResolutionResult_SetPublicKeys), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailRecipientResolutionResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailRecipientResolutionResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailRecipientResolutionResult[] = {
         { "status", reinterpret_cast<getter>(EmailRecipientResolutionResult_get_Status), reinterpret_cast<setter>(EmailRecipientResolutionResult_put_Status), nullptr, nullptr },
         { "public_keys", reinterpret_cast<getter>(EmailRecipientResolutionResult_get_PublicKeys), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailRecipientResolutionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailRecipientResolutionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailRecipientResolutionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailRecipientResolutionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailRecipientResolutionResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailRecipientResolutionResult = {
         "winrt._winrt_windows_applicationmodel_email.EmailRecipientResolutionResult",
@@ -15531,20 +15434,17 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "get_message_reader_with_options", reinterpret_cast<PyCFunction>(EmailStore_GetMessageReaderWithOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailStore), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailStore[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailStore) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailStore = {
         "winrt._winrt_windows_applicationmodel_email.EmailStore",
@@ -15597,20 +15497,17 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static PyMethodDef _methods_EmailStoreNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_EmailStoreNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailStoreNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailStoreNotificationTriggerDetails[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailStoreNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailStoreNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailStoreNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailStoreNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailStoreNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailStoreNotificationTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_email.EmailStoreNotificationTriggerDetails",

@@ -78,21 +78,18 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_CardAddedEventArgs[] = {
         { "_assign_array_", _assign_array_CardAddedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CardAddedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CardAddedEventArgs[] = {
         { "smart_card", reinterpret_cast<getter>(CardAddedEventArgs_get_SmartCard), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CardAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CardAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CardAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CardAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CardAddedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CardAddedEventArgs = {
         "winrt._winrt_windows_devices_smartcards.CardAddedEventArgs",
@@ -175,21 +172,18 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_CardRemovedEventArgs[] = {
         { "_assign_array_", _assign_array_CardRemovedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CardRemovedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CardRemovedEventArgs[] = {
         { "smart_card", reinterpret_cast<getter>(CardRemovedEventArgs_get_SmartCard), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CardRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CardRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CardRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CardRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CardRemovedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CardRemovedEventArgs = {
         "winrt._winrt_windows_devices_smartcards.CardRemovedEventArgs",
@@ -268,19 +262,16 @@ namespace py::cpp::Windows::Devices::SmartCards
     }
 
     static PyMethodDef _methods_KnownSmartCardAppletIds[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownSmartCardAppletIds[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownSmartCardAppletIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownSmartCardAppletIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownSmartCardAppletIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownSmartCardAppletIds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownSmartCardAppletIds = {
         "winrt._winrt_windows_devices_smartcards.KnownSmartCardAppletIds",
@@ -292,12 +283,10 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyGetSetDef getset_KnownSmartCardAppletIds_Static[] = {
         { "payment_system_environment", reinterpret_cast<getter>(KnownSmartCardAppletIds_get_PaymentSystemEnvironment), nullptr, nullptr, nullptr },
         { "proximity_payment_system_environment", reinterpret_cast<getter>(KnownSmartCardAppletIds_get_ProximityPaymentSystemEnvironment), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownSmartCardAppletIds_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownSmartCardAppletIds_Static[] = 
     {
@@ -307,14 +296,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { }
     };
 
-    static PyType_Spec type_spec_KnownSmartCardAppletIds_Static =
-    {
+    static PyType_Spec type_spec_KnownSmartCardAppletIds_Static = {
         "winrt._winrt_windows_devices_smartcards.KnownSmartCardAppletIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownSmartCardAppletIds_Static
-    };
+        type_slots_KnownSmartCardAppletIds_Static};
 
     // ----- SmartCard class --------------------
 
@@ -513,21 +500,18 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "get_status_async", reinterpret_cast<PyCFunction>(SmartCard_GetStatusAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCard, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCard), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCard[] = {
         { "reader", reinterpret_cast<getter>(SmartCard_get_Reader), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCard) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCard) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCard = {
         "winrt._winrt_windows_devices_smartcards.SmartCard",
@@ -1193,8 +1177,7 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardAppletIdGroup[] = {
         { "_assign_array_", _assign_array_SmartCardAppletIdGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardAppletIdGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardAppletIdGroup[] = {
         { "smart_card_emulation_type", reinterpret_cast<getter>(SmartCardAppletIdGroup_get_SmartCardEmulationType), reinterpret_cast<setter>(SmartCardAppletIdGroup_put_SmartCardEmulationType), nullptr, nullptr },
@@ -1206,16 +1189,14 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "logo", reinterpret_cast<getter>(SmartCardAppletIdGroup_get_Logo), reinterpret_cast<setter>(SmartCardAppletIdGroup_put_Logo), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(SmartCardAppletIdGroup_get_Description), reinterpret_cast<setter>(SmartCardAppletIdGroup_put_Description), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(SmartCardAppletIdGroup_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardAppletIdGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardAppletIdGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardAppletIdGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardAppletIdGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardAppletIdGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardAppletIdGroup = {
         "winrt._winrt_windows_devices_smartcards.SmartCardAppletIdGroup",
@@ -1226,12 +1207,10 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyGetSetDef getset_SmartCardAppletIdGroup_Static[] = {
         { "max_applet_ids", reinterpret_cast<getter>(SmartCardAppletIdGroup_get_MaxAppletIds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmartCardAppletIdGroup_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmartCardAppletIdGroup_Static[] = 
     {
@@ -1241,14 +1220,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { }
     };
 
-    static PyType_Spec type_spec_SmartCardAppletIdGroup_Static =
-    {
+    static PyType_Spec type_spec_SmartCardAppletIdGroup_Static = {
         "winrt._winrt_windows_devices_smartcards.SmartCardAppletIdGroup_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmartCardAppletIdGroup_Static
-    };
+        type_slots_SmartCardAppletIdGroup_Static};
 
     // ----- SmartCardAppletIdGroupRegistration class --------------------
 
@@ -1543,24 +1520,21 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "set_properties_async", reinterpret_cast<PyCFunction>(SmartCardAppletIdGroupRegistration_SetPropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardAppletIdGroupRegistration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardAppletIdGroupRegistration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardAppletIdGroupRegistration[] = {
         { "activation_policy", reinterpret_cast<getter>(SmartCardAppletIdGroupRegistration_get_ActivationPolicy), nullptr, nullptr, nullptr },
         { "applet_id_group", reinterpret_cast<getter>(SmartCardAppletIdGroupRegistration_get_AppletIdGroup), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(SmartCardAppletIdGroupRegistration_get_Id), nullptr, nullptr, nullptr },
         { "smart_card_reader_id", reinterpret_cast<getter>(SmartCardAppletIdGroupRegistration_get_SmartCardReaderId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardAppletIdGroupRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardAppletIdGroupRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardAppletIdGroupRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardAppletIdGroupRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardAppletIdGroupRegistration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardAppletIdGroupRegistration = {
         "winrt._winrt_windows_devices_smartcards.SmartCardAppletIdGroupRegistration",
@@ -2190,8 +2164,7 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardAutomaticResponseApdu[] = {
         { "_assign_array_", _assign_array_SmartCardAutomaticResponseApdu, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardAutomaticResponseApdu), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardAutomaticResponseApdu[] = {
         { "should_match_length", reinterpret_cast<getter>(SmartCardAutomaticResponseApdu_get_ShouldMatchLength), reinterpret_cast<setter>(SmartCardAutomaticResponseApdu_put_ShouldMatchLength), nullptr, nullptr },
@@ -2202,16 +2175,14 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "output_state", reinterpret_cast<getter>(SmartCardAutomaticResponseApdu_get_OutputState), reinterpret_cast<setter>(SmartCardAutomaticResponseApdu_put_OutputState), nullptr, nullptr },
         { "input_state", reinterpret_cast<getter>(SmartCardAutomaticResponseApdu_get_InputState), reinterpret_cast<setter>(SmartCardAutomaticResponseApdu_put_InputState), nullptr, nullptr },
         { "allow_when_cryptogram_generator_not_prepared", reinterpret_cast<getter>(SmartCardAutomaticResponseApdu_get_AllowWhenCryptogramGeneratorNotPrepared), reinterpret_cast<setter>(SmartCardAutomaticResponseApdu_put_AllowWhenCryptogramGeneratorNotPrepared), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardAutomaticResponseApdu[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardAutomaticResponseApdu) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardAutomaticResponseApdu) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardAutomaticResponseApdu) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardAutomaticResponseApdu) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardAutomaticResponseApdu = {
         "winrt._winrt_windows_devices_smartcards.SmartCardAutomaticResponseApdu",
@@ -2537,21 +2508,18 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardChallengeContext), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SmartCardChallengeContext), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_SmartCardChallengeContext), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardChallengeContext[] = {
         { "challenge", reinterpret_cast<getter>(SmartCardChallengeContext_get_Challenge), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardChallengeContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardChallengeContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardChallengeContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardChallengeContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardChallengeContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardChallengeContext = {
         "winrt._winrt_windows_devices_smartcards.SmartCardChallengeContext",
@@ -2714,20 +2682,17 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SmartCardConnection), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_SmartCardConnection), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardConnection[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardConnection = {
         "winrt._winrt_windows_devices_smartcards.SmartCardConnection",
@@ -3537,8 +3502,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "validate_request_apdu_async", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_ValidateRequestApduAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardCryptogramGenerator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramGenerator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramGenerator[] = {
         { "supported_cryptogram_algorithms", reinterpret_cast<getter>(SmartCardCryptogramGenerator_get_SupportedCryptogramAlgorithms), nullptr, nullptr, nullptr },
@@ -3546,16 +3510,14 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "supported_cryptogram_material_package_formats", reinterpret_cast<getter>(SmartCardCryptogramGenerator_get_SupportedCryptogramMaterialPackageFormats), nullptr, nullptr, nullptr },
         { "supported_cryptogram_material_types", reinterpret_cast<getter>(SmartCardCryptogramGenerator_get_SupportedCryptogramMaterialTypes), nullptr, nullptr, nullptr },
         { "supported_smart_card_cryptogram_storage_key_capabilities", reinterpret_cast<getter>(SmartCardCryptogramGenerator_get_SupportedSmartCardCryptogramStorageKeyCapabilities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramGenerator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramGenerator = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramGenerator",
@@ -3565,14 +3527,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         _type_slots_SmartCardCryptogramGenerator};
 
     static PyGetSetDef getset_SmartCardCryptogramGenerator_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmartCardCryptogramGenerator_Static[] = {
         { "get_smart_card_cryptogram_generator_async", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_GetSmartCardCryptogramGeneratorAsync), METH_VARARGS, nullptr },
         { "is_supported", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmartCardCryptogramGenerator_Static[] = 
     {
@@ -3582,14 +3542,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { }
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramGenerator_Static =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramGenerator_Static = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramGenerator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmartCardCryptogramGenerator_Static
-    };
+        type_slots_SmartCardCryptogramGenerator_Static};
 
     // ----- SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult class --------------------
 
@@ -3717,22 +3675,19 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult[] = {
         { "_assign_array_", _assign_array_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult[] = {
         { "characteristics", reinterpret_cast<getter>(SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_get_Characteristics), nullptr, nullptr, nullptr },
         { "operation_status", reinterpret_cast<getter>(SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_get_OperationStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult",
@@ -3867,22 +3822,19 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult[] = {
         { "_assign_array_", _assign_array_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult[] = {
         { "characteristics", reinterpret_cast<getter>(SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_get_Characteristics), nullptr, nullptr, nullptr },
         { "operation_status", reinterpret_cast<getter>(SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_get_OperationStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult",
@@ -4017,22 +3969,19 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult[] = {
         { "_assign_array_", _assign_array_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult[] = {
         { "characteristics", reinterpret_cast<getter>(SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_get_Characteristics), nullptr, nullptr, nullptr },
         { "operation_status", reinterpret_cast<getter>(SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_get_OperationStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult",
@@ -4347,8 +4296,7 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardCryptogramMaterialCharacteristics[] = {
         { "_assign_array_", _assign_array_SmartCardCryptogramMaterialCharacteristics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramMaterialCharacteristics), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramMaterialCharacteristics[] = {
         { "allowed_algorithms", reinterpret_cast<getter>(SmartCardCryptogramMaterialCharacteristics_get_AllowedAlgorithms), nullptr, nullptr, nullptr },
@@ -4359,16 +4307,14 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "material_type", reinterpret_cast<getter>(SmartCardCryptogramMaterialCharacteristics_get_MaterialType), nullptr, nullptr, nullptr },
         { "protection_method", reinterpret_cast<getter>(SmartCardCryptogramMaterialCharacteristics_get_ProtectionMethod), nullptr, nullptr, nullptr },
         { "protection_version", reinterpret_cast<getter>(SmartCardCryptogramMaterialCharacteristics_get_ProtectionVersion), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramMaterialCharacteristics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramMaterialCharacteristics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramMaterialCharacteristics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramMaterialCharacteristics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramMaterialCharacteristics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramMaterialCharacteristics = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramMaterialCharacteristics",
@@ -4563,24 +4509,21 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardCryptogramMaterialPackageCharacteristics[] = {
         { "_assign_array_", _assign_array_SmartCardCryptogramMaterialPackageCharacteristics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramMaterialPackageCharacteristics), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramMaterialPackageCharacteristics[] = {
         { "date_imported", reinterpret_cast<getter>(SmartCardCryptogramMaterialPackageCharacteristics_get_DateImported), nullptr, nullptr, nullptr },
         { "package_format", reinterpret_cast<getter>(SmartCardCryptogramMaterialPackageCharacteristics_get_PackageFormat), nullptr, nullptr, nullptr },
         { "package_name", reinterpret_cast<getter>(SmartCardCryptogramMaterialPackageCharacteristics_get_PackageName), nullptr, nullptr, nullptr },
         { "storage_key_name", reinterpret_cast<getter>(SmartCardCryptogramMaterialPackageCharacteristics_get_StorageKeyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramMaterialPackageCharacteristics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramMaterialPackageCharacteristics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramMaterialPackageCharacteristics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramMaterialPackageCharacteristics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramMaterialPackageCharacteristics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramMaterialPackageCharacteristics = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramMaterialPackageCharacteristics",
@@ -4693,22 +4636,19 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardCryptogramMaterialPossessionProof[] = {
         { "_assign_array_", _assign_array_SmartCardCryptogramMaterialPossessionProof, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramMaterialPossessionProof), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramMaterialPossessionProof[] = {
         { "operation_status", reinterpret_cast<getter>(SmartCardCryptogramMaterialPossessionProof_get_OperationStatus), nullptr, nullptr, nullptr },
         { "proof", reinterpret_cast<getter>(SmartCardCryptogramMaterialPossessionProof_get_Proof), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramMaterialPossessionProof[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramMaterialPossessionProof) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramMaterialPossessionProof) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramMaterialPossessionProof) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramMaterialPossessionProof) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramMaterialPossessionProof = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramMaterialPossessionProof",
@@ -5404,8 +5344,7 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardCryptogramPlacementStep[] = {
         { "_assign_array_", _assign_array_SmartCardCryptogramPlacementStep, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramPlacementStep), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramPlacementStep[] = {
         { "template_offset", reinterpret_cast<getter>(SmartCardCryptogramPlacementStep_get_TemplateOffset), reinterpret_cast<setter>(SmartCardCryptogramPlacementStep_put_TemplateOffset), nullptr, nullptr },
@@ -5417,16 +5356,14 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "cryptogram_length", reinterpret_cast<getter>(SmartCardCryptogramPlacementStep_get_CryptogramLength), reinterpret_cast<setter>(SmartCardCryptogramPlacementStep_put_CryptogramLength), nullptr, nullptr },
         { "chained_output_step", reinterpret_cast<getter>(SmartCardCryptogramPlacementStep_get_ChainedOutputStep), reinterpret_cast<setter>(SmartCardCryptogramPlacementStep_put_ChainedOutputStep), nullptr, nullptr },
         { "algorithm", reinterpret_cast<getter>(SmartCardCryptogramPlacementStep_get_Algorithm), reinterpret_cast<setter>(SmartCardCryptogramPlacementStep_put_Algorithm), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramPlacementStep[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramPlacementStep) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramPlacementStep) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramPlacementStep) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramPlacementStep) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramPlacementStep = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramPlacementStep",
@@ -5621,24 +5558,21 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardCryptogramStorageKeyCharacteristics[] = {
         { "_assign_array_", _assign_array_SmartCardCryptogramStorageKeyCharacteristics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramStorageKeyCharacteristics), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramStorageKeyCharacteristics[] = {
         { "algorithm", reinterpret_cast<getter>(SmartCardCryptogramStorageKeyCharacteristics_get_Algorithm), nullptr, nullptr, nullptr },
         { "capabilities", reinterpret_cast<getter>(SmartCardCryptogramStorageKeyCharacteristics_get_Capabilities), nullptr, nullptr, nullptr },
         { "date_created", reinterpret_cast<getter>(SmartCardCryptogramStorageKeyCharacteristics_get_DateCreated), nullptr, nullptr, nullptr },
         { "storage_key_name", reinterpret_cast<getter>(SmartCardCryptogramStorageKeyCharacteristics_get_StorageKeyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramStorageKeyCharacteristics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramStorageKeyCharacteristics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramStorageKeyCharacteristics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramStorageKeyCharacteristics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramStorageKeyCharacteristics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramStorageKeyCharacteristics = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramStorageKeyCharacteristics",
@@ -5931,8 +5865,7 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardCryptogramStorageKeyInfo[] = {
         { "_assign_array_", _assign_array_SmartCardCryptogramStorageKeyInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardCryptogramStorageKeyInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardCryptogramStorageKeyInfo[] = {
         { "attestation", reinterpret_cast<getter>(SmartCardCryptogramStorageKeyInfo_get_Attestation), nullptr, nullptr, nullptr },
@@ -5943,16 +5876,14 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "public_key", reinterpret_cast<getter>(SmartCardCryptogramStorageKeyInfo_get_PublicKey), nullptr, nullptr, nullptr },
         { "public_key_blob_type", reinterpret_cast<getter>(SmartCardCryptogramStorageKeyInfo_get_PublicKeyBlobType), nullptr, nullptr, nullptr },
         { "operational_requirements", reinterpret_cast<getter>(SmartCardCryptogramStorageKeyInfo_get_OperationalRequirements), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardCryptogramStorageKeyInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardCryptogramStorageKeyInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardCryptogramStorageKeyInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardCryptogramStorageKeyInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardCryptogramStorageKeyInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardCryptogramStorageKeyInfo = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramStorageKeyInfo",
@@ -6486,21 +6417,18 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "remove_connection_deactivated", reinterpret_cast<PyCFunction>(SmartCardEmulator_remove_ConnectionDeactivated), METH_O, nullptr },
         { "_assign_array_", _assign_array_SmartCardEmulator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardEmulator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardEmulator[] = {
         { "enablement_policy", reinterpret_cast<getter>(SmartCardEmulator_get_EnablementPolicy), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardEmulator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardEmulator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardEmulator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardEmulator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardEmulator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardEmulator = {
         "winrt._winrt_windows_devices_smartcards.SmartCardEmulator",
@@ -6511,8 +6439,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyGetSetDef getset_SmartCardEmulator_Static[] = {
         { "max_applet_id_group_registrations", reinterpret_cast<getter>(SmartCardEmulator_get_MaxAppletIdGroupRegistrations), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmartCardEmulator_Static[] = {
         { "get_applet_id_group_registrations_async", reinterpret_cast<PyCFunction>(SmartCardEmulator_GetAppletIdGroupRegistrationsAsync), METH_VARARGS, nullptr },
@@ -6520,8 +6447,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "is_supported", reinterpret_cast<PyCFunction>(SmartCardEmulator_IsSupported), METH_VARARGS, nullptr },
         { "register_applet_id_group_async", reinterpret_cast<PyCFunction>(SmartCardEmulator_RegisterAppletIdGroupAsync), METH_VARARGS, nullptr },
         { "unregister_applet_id_group_async", reinterpret_cast<PyCFunction>(SmartCardEmulator_UnregisterAppletIdGroupAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmartCardEmulator_Static[] = 
     {
@@ -6531,14 +6457,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { }
     };
 
-    static PyType_Spec type_spec_SmartCardEmulator_Static =
-    {
+    static PyType_Spec type_spec_SmartCardEmulator_Static = {
         "winrt._winrt_windows_devices_smartcards.SmartCardEmulator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmartCardEmulator_Static
-    };
+        type_slots_SmartCardEmulator_Static};
 
     // ----- SmartCardEmulatorApduReceivedEventArgs class --------------------
 
@@ -6880,24 +6804,21 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "try_respond_with_state_async", reinterpret_cast<PyCFunction>(SmartCardEmulatorApduReceivedEventArgs_TryRespondWithStateAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardEmulatorApduReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardEmulatorApduReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardEmulatorApduReceivedEventArgs[] = {
         { "automatic_response_status", reinterpret_cast<getter>(SmartCardEmulatorApduReceivedEventArgs_get_AutomaticResponseStatus), nullptr, nullptr, nullptr },
         { "command_apdu", reinterpret_cast<getter>(SmartCardEmulatorApduReceivedEventArgs_get_CommandApdu), nullptr, nullptr, nullptr },
         { "connection_properties", reinterpret_cast<getter>(SmartCardEmulatorApduReceivedEventArgs_get_ConnectionProperties), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(SmartCardEmulatorApduReceivedEventArgs_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardEmulatorApduReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardEmulatorApduReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardEmulatorApduReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardEmulatorApduReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardEmulatorApduReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardEmulatorApduReceivedEventArgs = {
         "winrt._winrt_windows_devices_smartcards.SmartCardEmulatorApduReceivedEventArgs",
@@ -7010,22 +6931,19 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardEmulatorConnectionDeactivatedEventArgs[] = {
         { "_assign_array_", _assign_array_SmartCardEmulatorConnectionDeactivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardEmulatorConnectionDeactivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardEmulatorConnectionDeactivatedEventArgs[] = {
         { "connection_properties", reinterpret_cast<getter>(SmartCardEmulatorConnectionDeactivatedEventArgs_get_ConnectionProperties), nullptr, nullptr, nullptr },
         { "reason", reinterpret_cast<getter>(SmartCardEmulatorConnectionDeactivatedEventArgs_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardEmulatorConnectionDeactivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardEmulatorConnectionDeactivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardEmulatorConnectionDeactivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardEmulatorConnectionDeactivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardEmulatorConnectionDeactivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardEmulatorConnectionDeactivatedEventArgs = {
         "winrt._winrt_windows_devices_smartcards.SmartCardEmulatorConnectionDeactivatedEventArgs",
@@ -7138,22 +7056,19 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardEmulatorConnectionProperties[] = {
         { "_assign_array_", _assign_array_SmartCardEmulatorConnectionProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardEmulatorConnectionProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardEmulatorConnectionProperties[] = {
         { "id", reinterpret_cast<getter>(SmartCardEmulatorConnectionProperties_get_Id), nullptr, nullptr, nullptr },
         { "source", reinterpret_cast<getter>(SmartCardEmulatorConnectionProperties_get_Source), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardEmulatorConnectionProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardEmulatorConnectionProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardEmulatorConnectionProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardEmulatorConnectionProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardEmulatorConnectionProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardEmulatorConnectionProperties = {
         "winrt._winrt_windows_devices_smartcards.SmartCardEmulatorConnectionProperties",
@@ -7642,8 +7557,7 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef _methods_SmartCardPinPolicy[] = {
         { "_assign_array_", _assign_array_SmartCardPinPolicy, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardPinPolicy), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardPinPolicy[] = {
         { "uppercase_letters", reinterpret_cast<getter>(SmartCardPinPolicy_get_UppercaseLetters), reinterpret_cast<setter>(SmartCardPinPolicy_put_UppercaseLetters), nullptr, nullptr },
@@ -7652,16 +7566,14 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "max_length", reinterpret_cast<getter>(SmartCardPinPolicy_get_MaxLength), reinterpret_cast<setter>(SmartCardPinPolicy_put_MaxLength), nullptr, nullptr },
         { "lowercase_letters", reinterpret_cast<getter>(SmartCardPinPolicy_get_LowercaseLetters), reinterpret_cast<setter>(SmartCardPinPolicy_put_LowercaseLetters), nullptr, nullptr },
         { "digits", reinterpret_cast<getter>(SmartCardPinPolicy_get_Digits), reinterpret_cast<setter>(SmartCardPinPolicy_put_Digits), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardPinPolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardPinPolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardPinPolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardPinPolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardPinPolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardPinPolicy = {
         "winrt._winrt_windows_devices_smartcards.SmartCardPinPolicy",
@@ -7756,20 +7668,17 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "complete", reinterpret_cast<PyCFunction>(SmartCardPinResetDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardPinResetDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardPinResetDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardPinResetDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardPinResetDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardPinResetDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardPinResetDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardPinResetDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardPinResetDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardPinResetDeferral = {
         "winrt._winrt_windows_devices_smartcards.SmartCardPinResetDeferral",
@@ -7967,22 +7876,19 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "set_response", reinterpret_cast<PyCFunction>(SmartCardPinResetRequest_SetResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardPinResetRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardPinResetRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardPinResetRequest[] = {
         { "challenge", reinterpret_cast<getter>(SmartCardPinResetRequest_get_Challenge), nullptr, nullptr, nullptr },
         { "deadline", reinterpret_cast<getter>(SmartCardPinResetRequest_get_Deadline), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardPinResetRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardPinResetRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardPinResetRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardPinResetRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardPinResetRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardPinResetRequest = {
         "winrt._winrt_windows_devices_smartcards.SmartCardPinResetRequest",
@@ -8575,21 +8481,18 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "request_pin_reset_async", reinterpret_cast<PyCFunction>(SmartCardProvisioning_RequestPinResetAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardProvisioning, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardProvisioning), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardProvisioning[] = {
         { "smart_card", reinterpret_cast<getter>(SmartCardProvisioning_get_SmartCard), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardProvisioning[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardProvisioning) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardProvisioning) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardProvisioning) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardProvisioning) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardProvisioning = {
         "winrt._winrt_windows_devices_smartcards.SmartCardProvisioning",
@@ -8599,8 +8502,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         _type_slots_SmartCardProvisioning};
 
     static PyGetSetDef getset_SmartCardProvisioning_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmartCardProvisioning_Static[] = {
         { "from_smart_card_async", reinterpret_cast<PyCFunction>(SmartCardProvisioning_FromSmartCardAsync), METH_VARARGS, nullptr },
@@ -8609,8 +8511,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "request_virtual_smart_card_creation_async", reinterpret_cast<PyCFunction>(SmartCardProvisioning_RequestVirtualSmartCardCreationAsync), METH_VARARGS, nullptr },
         { "request_virtual_smart_card_creation_async_with_card_id", reinterpret_cast<PyCFunction>(SmartCardProvisioning_RequestVirtualSmartCardCreationAsyncWithCardId), METH_VARARGS, nullptr },
         { "request_virtual_smart_card_deletion_async", reinterpret_cast<PyCFunction>(SmartCardProvisioning_RequestVirtualSmartCardDeletionAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmartCardProvisioning_Static[] = 
     {
@@ -8620,14 +8521,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { }
     };
 
-    static PyType_Spec type_spec_SmartCardProvisioning_Static =
-    {
+    static PyType_Spec type_spec_SmartCardProvisioning_Static = {
         "winrt._winrt_windows_devices_smartcards.SmartCardProvisioning_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmartCardProvisioning_Static
-    };
+        type_slots_SmartCardProvisioning_Static};
 
     // ----- SmartCardReader class --------------------
 
@@ -9103,23 +9002,20 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "remove_card_removed", reinterpret_cast<PyCFunction>(SmartCardReader_remove_CardRemoved), METH_O, nullptr },
         { "_assign_array_", _assign_array_SmartCardReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardReader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardReader[] = {
         { "device_id", reinterpret_cast<getter>(SmartCardReader_get_DeviceId), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(SmartCardReader_get_Kind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(SmartCardReader_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardReader = {
         "winrt._winrt_windows_devices_smartcards.SmartCardReader",
@@ -9129,15 +9025,13 @@ namespace py::cpp::Windows::Devices::SmartCards
         _type_slots_SmartCardReader};
 
     static PyGetSetDef getset_SmartCardReader_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmartCardReader_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(SmartCardReader_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(SmartCardReader_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_with_kind", reinterpret_cast<PyCFunction>(SmartCardReader_GetDeviceSelectorWithKind), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmartCardReader_Static[] = 
     {
@@ -9147,14 +9041,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { }
     };
 
-    static PyType_Spec type_spec_SmartCardReader_Static =
-    {
+    static PyType_Spec type_spec_SmartCardReader_Static = {
         "winrt._winrt_windows_devices_smartcards.SmartCardReader_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmartCardReader_Static
-    };
+        type_slots_SmartCardReader_Static};
 
     // ----- SmartCardTriggerDetails class --------------------
 
@@ -9437,8 +9329,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "try_launch_current_app_with_behavior_async", reinterpret_cast<PyCFunction>(SmartCardTriggerDetails_TryLaunchCurrentAppWithBehaviorAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartCardTriggerDetails[] = {
         { "source_applet_id", reinterpret_cast<getter>(SmartCardTriggerDetails_get_SourceAppletId), nullptr, nullptr, nullptr },
@@ -9446,16 +9337,14 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "trigger_type", reinterpret_cast<getter>(SmartCardTriggerDetails_get_TriggerType), nullptr, nullptr, nullptr },
         { "emulator", reinterpret_cast<getter>(SmartCardTriggerDetails_get_Emulator), nullptr, nullptr, nullptr },
         { "smart_card", reinterpret_cast<getter>(SmartCardTriggerDetails_get_SmartCard), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartCardTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartCardTriggerDetails = {
         "winrt._winrt_windows_devices_smartcards.SmartCardTriggerDetails",

@@ -227,21 +227,18 @@ namespace py::cpp::Windows::Devices::Adc
         { "_from", reinterpret_cast<PyCFunction>(_from_AdcChannel), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AdcChannel), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AdcChannel), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdcChannel[] = {
         { "controller", reinterpret_cast<getter>(AdcChannel_get_Controller), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdcChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdcChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdcChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdcChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdcChannel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdcChannel = {
         "winrt._winrt_windows_devices_adc.AdcChannel",
@@ -651,8 +648,7 @@ namespace py::cpp::Windows::Devices::Adc
         { "open_channel", reinterpret_cast<PyCFunction>(AdcController_OpenChannel), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AdcController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdcController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdcController[] = {
         { "channel_mode", reinterpret_cast<getter>(AdcController_get_ChannelMode), reinterpret_cast<setter>(AdcController_put_ChannelMode), nullptr, nullptr },
@@ -660,16 +656,14 @@ namespace py::cpp::Windows::Devices::Adc
         { "max_value", reinterpret_cast<getter>(AdcController_get_MaxValue), nullptr, nullptr, nullptr },
         { "min_value", reinterpret_cast<getter>(AdcController_get_MinValue), nullptr, nullptr, nullptr },
         { "resolution_in_bits", reinterpret_cast<getter>(AdcController_get_ResolutionInBits), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdcController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdcController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdcController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdcController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdcController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdcController = {
         "winrt._winrt_windows_devices_adc.AdcController",
@@ -679,14 +673,12 @@ namespace py::cpp::Windows::Devices::Adc
         _type_slots_AdcController};
 
     static PyGetSetDef getset_AdcController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AdcController_Static[] = {
         { "get_controllers_async", reinterpret_cast<PyCFunction>(AdcController_GetControllersAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(AdcController_GetDefaultAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AdcController_Static[] = 
     {
@@ -696,14 +688,12 @@ namespace py::cpp::Windows::Devices::Adc
         { }
     };
 
-    static PyType_Spec type_spec_AdcController_Static =
-    {
+    static PyType_Spec type_spec_AdcController_Static = {
         "winrt._winrt_windows_devices_adc.AdcController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AdcController_Static
-    };
+        type_slots_AdcController_Static};
 
     // ----- Windows.Devices.Adc Initialization --------------------
 

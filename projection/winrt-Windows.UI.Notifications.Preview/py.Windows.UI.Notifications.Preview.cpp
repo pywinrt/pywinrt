@@ -58,19 +58,16 @@ namespace py::cpp::Windows::UI::Notifications::Preview
     }
 
     static PyMethodDef _methods_ToastOcclusionManagerPreview[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastOcclusionManagerPreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastOcclusionManagerPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastOcclusionManagerPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastOcclusionManagerPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastOcclusionManagerPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastOcclusionManagerPreview = {
         "winrt._winrt_windows_ui_notifications_preview.ToastOcclusionManagerPreview",
@@ -80,13 +77,11 @@ namespace py::cpp::Windows::UI::Notifications::Preview
         _type_slots_ToastOcclusionManagerPreview};
 
     static PyGetSetDef getset_ToastOcclusionManagerPreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ToastOcclusionManagerPreview_Static[] = {
         { "set_toast_window_margin", reinterpret_cast<PyCFunction>(ToastOcclusionManagerPreview_SetToastWindowMargin), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ToastOcclusionManagerPreview_Static[] = 
     {
@@ -96,14 +91,12 @@ namespace py::cpp::Windows::UI::Notifications::Preview
         { }
     };
 
-    static PyType_Spec type_spec_ToastOcclusionManagerPreview_Static =
-    {
+    static PyType_Spec type_spec_ToastOcclusionManagerPreview_Static = {
         "winrt._winrt_windows_ui_notifications_preview.ToastOcclusionManagerPreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ToastOcclusionManagerPreview_Static
-    };
+        type_slots_ToastOcclusionManagerPreview_Static};
 
     // ----- Windows.UI.Notifications.Preview Initialization --------------------
 

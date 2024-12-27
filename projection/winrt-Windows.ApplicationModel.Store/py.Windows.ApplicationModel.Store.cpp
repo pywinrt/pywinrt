@@ -733,19 +733,16 @@ namespace py::cpp::Windows::ApplicationModel::Store
     }
 
     static PyMethodDef _methods_CurrentApp[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CurrentApp[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CurrentApp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrentApp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrentApp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrentApp) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CurrentApp = {
         "winrt._winrt_windows_applicationmodel_store.CurrentApp",
@@ -758,8 +755,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { "app_id", reinterpret_cast<getter>(CurrentApp_get_AppId), nullptr, nullptr, nullptr },
         { "license_information", reinterpret_cast<getter>(CurrentApp_get_LicenseInformation), nullptr, nullptr, nullptr },
         { "link_uri", reinterpret_cast<getter>(CurrentApp_get_LinkUri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CurrentApp_Static[] = {
         { "get_app_purchase_campaign_id_async", reinterpret_cast<PyCFunction>(CurrentApp_GetAppPurchaseCampaignIdAsync), METH_VARARGS, nullptr },
@@ -777,8 +773,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { "request_product_purchase_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestProductPurchaseAsync), METH_VARARGS, nullptr },
         { "request_product_purchase_with_display_properties_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestProductPurchaseWithDisplayPropertiesAsync), METH_VARARGS, nullptr },
         { "request_product_purchase_with_results_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestProductPurchaseWithResultsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CurrentApp_Static[] = 
     {
@@ -788,14 +783,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Spec type_spec_CurrentApp_Static =
-    {
+    static PyType_Spec type_spec_CurrentApp_Static = {
         "winrt._winrt_windows_applicationmodel_store.CurrentApp_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CurrentApp_Static
-    };
+        type_slots_CurrentApp_Static};
 
     // ----- CurrentAppSimulator class --------------------
 
@@ -1439,19 +1432,16 @@ namespace py::cpp::Windows::ApplicationModel::Store
     }
 
     static PyMethodDef _methods_CurrentAppSimulator[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CurrentAppSimulator[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CurrentAppSimulator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrentAppSimulator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrentAppSimulator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrentAppSimulator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CurrentAppSimulator = {
         "winrt._winrt_windows_applicationmodel_store.CurrentAppSimulator",
@@ -1464,8 +1454,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { "app_id", reinterpret_cast<getter>(CurrentAppSimulator_get_AppId), nullptr, nullptr, nullptr },
         { "license_information", reinterpret_cast<getter>(CurrentAppSimulator_get_LicenseInformation), nullptr, nullptr, nullptr },
         { "link_uri", reinterpret_cast<getter>(CurrentAppSimulator_get_LinkUri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CurrentAppSimulator_Static[] = {
         { "get_app_purchase_campaign_id_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_GetAppPurchaseCampaignIdAsync), METH_VARARGS, nullptr },
@@ -1481,8 +1470,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { "request_product_purchase_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestProductPurchaseAsync), METH_VARARGS, nullptr },
         { "request_product_purchase_with_display_properties_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestProductPurchaseWithDisplayPropertiesAsync), METH_VARARGS, nullptr },
         { "request_product_purchase_with_results_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestProductPurchaseWithResultsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CurrentAppSimulator_Static[] = 
     {
@@ -1492,14 +1480,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Spec type_spec_CurrentAppSimulator_Static =
-    {
+    static PyType_Spec type_spec_CurrentAppSimulator_Static = {
         "winrt._winrt_windows_applicationmodel_store.CurrentAppSimulator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CurrentAppSimulator_Static
-    };
+        type_slots_CurrentAppSimulator_Static};
 
     // ----- LicenseInformation class --------------------
 
@@ -1732,24 +1718,21 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { "remove_license_changed", reinterpret_cast<PyCFunction>(LicenseInformation_remove_LicenseChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_LicenseInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LicenseInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LicenseInformation[] = {
         { "expiration_date", reinterpret_cast<getter>(LicenseInformation_get_ExpirationDate), nullptr, nullptr, nullptr },
         { "is_active", reinterpret_cast<getter>(LicenseInformation_get_IsActive), nullptr, nullptr, nullptr },
         { "is_trial", reinterpret_cast<getter>(LicenseInformation_get_IsTrial), nullptr, nullptr, nullptr },
         { "product_licenses", reinterpret_cast<getter>(LicenseInformation_get_ProductLicenses), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LicenseInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LicenseInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LicenseInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LicenseInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LicenseInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LicenseInformation = {
         "winrt._winrt_windows_applicationmodel_store.LicenseInformation",
@@ -2102,8 +2085,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
     static PyMethodDef _methods_ListingInformation[] = {
         { "_assign_array_", _assign_array_ListingInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ListingInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ListingInformation[] = {
         { "age_rating", reinterpret_cast<getter>(ListingInformation_get_AgeRating), nullptr, nullptr, nullptr },
@@ -2116,16 +2098,14 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { "formatted_base_price", reinterpret_cast<getter>(ListingInformation_get_FormattedBasePrice), nullptr, nullptr, nullptr },
         { "is_on_sale", reinterpret_cast<getter>(ListingInformation_get_IsOnSale), nullptr, nullptr, nullptr },
         { "sale_end_date", reinterpret_cast<getter>(ListingInformation_get_SaleEndDate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ListingInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListingInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListingInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListingInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListingInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ListingInformation = {
         "winrt._winrt_windows_applicationmodel_store.ListingInformation",
@@ -2298,24 +2278,21 @@ namespace py::cpp::Windows::ApplicationModel::Store
     static PyMethodDef _methods_ProductLicense[] = {
         { "_assign_array_", _assign_array_ProductLicense, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProductLicense), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProductLicense[] = {
         { "expiration_date", reinterpret_cast<getter>(ProductLicense_get_ExpirationDate), nullptr, nullptr, nullptr },
         { "is_active", reinterpret_cast<getter>(ProductLicense_get_IsActive), nullptr, nullptr, nullptr },
         { "product_id", reinterpret_cast<getter>(ProductLicense_get_ProductId), nullptr, nullptr, nullptr },
         { "is_consumable", reinterpret_cast<getter>(ProductLicense_get_IsConsumable), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProductLicense[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProductLicense) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProductLicense) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProductLicense) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProductLicense) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProductLicense = {
         "winrt._winrt_windows_applicationmodel_store.ProductLicense",
@@ -2728,8 +2705,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
     static PyMethodDef _methods_ProductListing[] = {
         { "_assign_array_", _assign_array_ProductListing, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProductListing), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProductListing[] = {
         { "formatted_price", reinterpret_cast<getter>(ProductListing_get_FormattedPrice), nullptr, nullptr, nullptr },
@@ -2744,16 +2720,14 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { "keywords", reinterpret_cast<getter>(ProductListing_get_Keywords), nullptr, nullptr, nullptr },
         { "tag", reinterpret_cast<getter>(ProductListing_get_Tag), nullptr, nullptr, nullptr },
         { "product_type", reinterpret_cast<getter>(ProductListing_get_ProductType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProductListing[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProductListing) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProductListing) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProductListing) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProductListing) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProductListing = {
         "winrt._winrt_windows_applicationmodel_store.ProductListing",
@@ -3050,23 +3024,20 @@ namespace py::cpp::Windows::ApplicationModel::Store
     static PyMethodDef _methods_ProductPurchaseDisplayProperties[] = {
         { "_assign_array_", _assign_array_ProductPurchaseDisplayProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProductPurchaseDisplayProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProductPurchaseDisplayProperties[] = {
         { "name", reinterpret_cast<getter>(ProductPurchaseDisplayProperties_get_Name), reinterpret_cast<setter>(ProductPurchaseDisplayProperties_put_Name), nullptr, nullptr },
         { "image", reinterpret_cast<getter>(ProductPurchaseDisplayProperties_get_Image), reinterpret_cast<setter>(ProductPurchaseDisplayProperties_put_Image), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(ProductPurchaseDisplayProperties_get_Description), reinterpret_cast<setter>(ProductPurchaseDisplayProperties_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProductPurchaseDisplayProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProductPurchaseDisplayProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProductPurchaseDisplayProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProductPurchaseDisplayProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProductPurchaseDisplayProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProductPurchaseDisplayProperties = {
         "winrt._winrt_windows_applicationmodel_store.ProductPurchaseDisplayProperties",
@@ -3239,24 +3210,21 @@ namespace py::cpp::Windows::ApplicationModel::Store
     static PyMethodDef _methods_PurchaseResults[] = {
         { "_assign_array_", _assign_array_PurchaseResults, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PurchaseResults), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PurchaseResults[] = {
         { "offer_id", reinterpret_cast<getter>(PurchaseResults_get_OfferId), nullptr, nullptr, nullptr },
         { "receipt_xml", reinterpret_cast<getter>(PurchaseResults_get_ReceiptXml), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(PurchaseResults_get_Status), nullptr, nullptr, nullptr },
         { "transaction_id", reinterpret_cast<getter>(PurchaseResults_get_TransactionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PurchaseResults[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PurchaseResults) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PurchaseResults) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PurchaseResults) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PurchaseResults) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PurchaseResults = {
         "winrt._winrt_windows_applicationmodel_store.PurchaseResults",
@@ -3399,23 +3367,20 @@ namespace py::cpp::Windows::ApplicationModel::Store
     static PyMethodDef _methods_UnfulfilledConsumable[] = {
         { "_assign_array_", _assign_array_UnfulfilledConsumable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UnfulfilledConsumable), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UnfulfilledConsumable[] = {
         { "offer_id", reinterpret_cast<getter>(UnfulfilledConsumable_get_OfferId), nullptr, nullptr, nullptr },
         { "product_id", reinterpret_cast<getter>(UnfulfilledConsumable_get_ProductId), nullptr, nullptr, nullptr },
         { "transaction_id", reinterpret_cast<getter>(UnfulfilledConsumable_get_TransactionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UnfulfilledConsumable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UnfulfilledConsumable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UnfulfilledConsumable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UnfulfilledConsumable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UnfulfilledConsumable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UnfulfilledConsumable = {
         "winrt._winrt_windows_applicationmodel_store.UnfulfilledConsumable",

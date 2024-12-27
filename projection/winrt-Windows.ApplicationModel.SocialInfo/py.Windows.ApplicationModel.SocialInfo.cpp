@@ -397,8 +397,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static PyMethodDef _methods_SocialFeedChildItem[] = {
         { "_assign_array_", _assign_array_SocialFeedChildItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SocialFeedChildItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SocialFeedChildItem[] = {
         { "timestamp", reinterpret_cast<getter>(SocialFeedChildItem_get_Timestamp), reinterpret_cast<setter>(SocialFeedChildItem_put_Timestamp), nullptr, nullptr },
@@ -408,16 +407,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { "primary_content", reinterpret_cast<getter>(SocialFeedChildItem_get_PrimaryContent), nullptr, nullptr, nullptr },
         { "secondary_content", reinterpret_cast<getter>(SocialFeedChildItem_get_SecondaryContent), nullptr, nullptr, nullptr },
         { "thumbnails", reinterpret_cast<getter>(SocialFeedChildItem_get_Thumbnails), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SocialFeedChildItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialFeedChildItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialFeedChildItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialFeedChildItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialFeedChildItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SocialFeedChildItem = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialFeedChildItem",
@@ -677,23 +674,20 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static PyMethodDef _methods_SocialFeedContent[] = {
         { "_assign_array_", _assign_array_SocialFeedContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SocialFeedContent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SocialFeedContent[] = {
         { "title", reinterpret_cast<getter>(SocialFeedContent_get_Title), reinterpret_cast<setter>(SocialFeedContent_put_Title), nullptr, nullptr },
         { "target_uri", reinterpret_cast<getter>(SocialFeedContent_get_TargetUri), reinterpret_cast<setter>(SocialFeedContent_put_TargetUri), nullptr, nullptr },
         { "message", reinterpret_cast<getter>(SocialFeedContent_get_Message), reinterpret_cast<setter>(SocialFeedContent_put_Message), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SocialFeedContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialFeedContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialFeedContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialFeedContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialFeedContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SocialFeedContent = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialFeedContent",
@@ -1440,8 +1434,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static PyMethodDef _methods_SocialFeedItem[] = {
         { "_assign_array_", _assign_array_SocialFeedItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SocialFeedItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SocialFeedItem[] = {
         { "timestamp", reinterpret_cast<getter>(SocialFeedItem_get_Timestamp), reinterpret_cast<setter>(SocialFeedItem_put_Timestamp), nullptr, nullptr },
@@ -1456,16 +1449,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { "thumbnails", reinterpret_cast<getter>(SocialFeedItem_get_Thumbnails), nullptr, nullptr, nullptr },
         { "primary_content", reinterpret_cast<getter>(SocialFeedItem_get_PrimaryContent), nullptr, nullptr, nullptr },
         { "secondary_content", reinterpret_cast<getter>(SocialFeedItem_get_SecondaryContent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SocialFeedItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialFeedItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialFeedItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialFeedItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialFeedItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SocialFeedItem = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialFeedItem",
@@ -1846,8 +1837,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static PyMethodDef _methods_SocialFeedSharedItem[] = {
         { "_assign_array_", _assign_array_SocialFeedSharedItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SocialFeedSharedItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SocialFeedSharedItem[] = {
         { "timestamp", reinterpret_cast<getter>(SocialFeedSharedItem_get_Timestamp), reinterpret_cast<setter>(SocialFeedSharedItem_put_Timestamp), nullptr, nullptr },
@@ -1855,16 +1845,14 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { "target_uri", reinterpret_cast<getter>(SocialFeedSharedItem_get_TargetUri), reinterpret_cast<setter>(SocialFeedSharedItem_put_TargetUri), nullptr, nullptr },
         { "original_source", reinterpret_cast<getter>(SocialFeedSharedItem_get_OriginalSource), reinterpret_cast<setter>(SocialFeedSharedItem_put_OriginalSource), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(SocialFeedSharedItem_get_Content), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SocialFeedSharedItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialFeedSharedItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialFeedSharedItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialFeedSharedItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialFeedSharedItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SocialFeedSharedItem = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialFeedSharedItem",
@@ -2189,23 +2177,20 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { "set_image_async", reinterpret_cast<PyCFunction>(SocialItemThumbnail_SetImageAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SocialItemThumbnail, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SocialItemThumbnail), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SocialItemThumbnail[] = {
         { "target_uri", reinterpret_cast<getter>(SocialItemThumbnail_get_TargetUri), reinterpret_cast<setter>(SocialItemThumbnail_put_TargetUri), nullptr, nullptr },
         { "image_uri", reinterpret_cast<getter>(SocialItemThumbnail_get_ImageUri), reinterpret_cast<setter>(SocialItemThumbnail_put_ImageUri), nullptr, nullptr },
         { "bitmap_size", reinterpret_cast<getter>(SocialItemThumbnail_get_BitmapSize), reinterpret_cast<setter>(SocialItemThumbnail_put_BitmapSize), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SocialItemThumbnail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialItemThumbnail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialItemThumbnail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialItemThumbnail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialItemThumbnail) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SocialItemThumbnail = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialItemThumbnail",
@@ -2534,24 +2519,21 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static PyMethodDef _methods_SocialUserInfo[] = {
         { "_assign_array_", _assign_array_SocialUserInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SocialUserInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SocialUserInfo[] = {
         { "user_name", reinterpret_cast<getter>(SocialUserInfo_get_UserName), reinterpret_cast<setter>(SocialUserInfo_put_UserName), nullptr, nullptr },
         { "target_uri", reinterpret_cast<getter>(SocialUserInfo_get_TargetUri), reinterpret_cast<setter>(SocialUserInfo_put_TargetUri), nullptr, nullptr },
         { "remote_id", reinterpret_cast<getter>(SocialUserInfo_get_RemoteId), reinterpret_cast<setter>(SocialUserInfo_put_RemoteId), nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(SocialUserInfo_get_DisplayName), reinterpret_cast<setter>(SocialUserInfo_put_DisplayName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SocialUserInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialUserInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialUserInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialUserInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialUserInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SocialUserInfo = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialUserInfo",

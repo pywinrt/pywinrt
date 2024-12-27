@@ -425,20 +425,17 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "remove_sync_requested", reinterpret_cast<PyCFunction>(UserDataTaskDataProviderConnection_remove_SyncRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskDataProviderConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskDataProviderConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskDataProviderConnection[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskDataProviderConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskDataProviderConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskDataProviderConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskDataProviderConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskDataProviderConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskDataProviderConnection = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderConnection",
@@ -521,21 +518,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static PyMethodDef _methods_UserDataTaskDataProviderTriggerDetails[] = {
         { "_assign_array_", _assign_array_UserDataTaskDataProviderTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskDataProviderTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskDataProviderTriggerDetails[] = {
         { "connection", reinterpret_cast<getter>(UserDataTaskDataProviderTriggerDetails_get_Connection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskDataProviderTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskDataProviderTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskDataProviderTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskDataProviderTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskDataProviderTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskDataProviderTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderTriggerDetails",
@@ -732,22 +726,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(UserDataTaskListCompleteTaskRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListCompleteTaskRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListCompleteTaskRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListCompleteTaskRequest[] = {
         { "task_id", reinterpret_cast<getter>(UserDataTaskListCompleteTaskRequest_get_TaskId), nullptr, nullptr, nullptr },
         { "task_list_id", reinterpret_cast<getter>(UserDataTaskListCompleteTaskRequest_get_TaskListId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListCompleteTaskRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListCompleteTaskRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListCompleteTaskRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListCompleteTaskRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListCompleteTaskRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListCompleteTaskRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCompleteTaskRequest",
@@ -871,21 +862,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(UserDataTaskListCompleteTaskRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListCompleteTaskRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListCompleteTaskRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListCompleteTaskRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(UserDataTaskListCompleteTaskRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListCompleteTaskRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListCompleteTaskRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListCompleteTaskRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListCompleteTaskRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListCompleteTaskRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListCompleteTaskRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCompleteTaskRequestEventArgs",
@@ -1082,22 +1070,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(UserDataTaskListCreateOrUpdateTaskRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListCreateOrUpdateTaskRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListCreateOrUpdateTaskRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListCreateOrUpdateTaskRequest[] = {
         { "task", reinterpret_cast<getter>(UserDataTaskListCreateOrUpdateTaskRequest_get_Task), nullptr, nullptr, nullptr },
         { "task_list_id", reinterpret_cast<getter>(UserDataTaskListCreateOrUpdateTaskRequest_get_TaskListId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListCreateOrUpdateTaskRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListCreateOrUpdateTaskRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListCreateOrUpdateTaskRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListCreateOrUpdateTaskRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListCreateOrUpdateTaskRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListCreateOrUpdateTaskRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCreateOrUpdateTaskRequest",
@@ -1221,21 +1206,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(UserDataTaskListCreateOrUpdateTaskRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListCreateOrUpdateTaskRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListCreateOrUpdateTaskRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListCreateOrUpdateTaskRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(UserDataTaskListCreateOrUpdateTaskRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListCreateOrUpdateTaskRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListCreateOrUpdateTaskRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListCreateOrUpdateTaskRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListCreateOrUpdateTaskRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListCreateOrUpdateTaskRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListCreateOrUpdateTaskRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs",
@@ -1430,22 +1412,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(UserDataTaskListDeleteTaskRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListDeleteTaskRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListDeleteTaskRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListDeleteTaskRequest[] = {
         { "task_id", reinterpret_cast<getter>(UserDataTaskListDeleteTaskRequest_get_TaskId), nullptr, nullptr, nullptr },
         { "task_list_id", reinterpret_cast<getter>(UserDataTaskListDeleteTaskRequest_get_TaskListId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListDeleteTaskRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListDeleteTaskRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListDeleteTaskRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListDeleteTaskRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListDeleteTaskRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListDeleteTaskRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListDeleteTaskRequest",
@@ -1569,21 +1548,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(UserDataTaskListDeleteTaskRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListDeleteTaskRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListDeleteTaskRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListDeleteTaskRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(UserDataTaskListDeleteTaskRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListDeleteTaskRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListDeleteTaskRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListDeleteTaskRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListDeleteTaskRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListDeleteTaskRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListDeleteTaskRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListDeleteTaskRequestEventArgs",
@@ -1778,22 +1754,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(UserDataTaskListSkipOccurrenceRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListSkipOccurrenceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListSkipOccurrenceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListSkipOccurrenceRequest[] = {
         { "task_id", reinterpret_cast<getter>(UserDataTaskListSkipOccurrenceRequest_get_TaskId), nullptr, nullptr, nullptr },
         { "task_list_id", reinterpret_cast<getter>(UserDataTaskListSkipOccurrenceRequest_get_TaskListId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListSkipOccurrenceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListSkipOccurrenceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListSkipOccurrenceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListSkipOccurrenceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListSkipOccurrenceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListSkipOccurrenceRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSkipOccurrenceRequest",
@@ -1917,21 +1890,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(UserDataTaskListSkipOccurrenceRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListSkipOccurrenceRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListSkipOccurrenceRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListSkipOccurrenceRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(UserDataTaskListSkipOccurrenceRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListSkipOccurrenceRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListSkipOccurrenceRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListSkipOccurrenceRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListSkipOccurrenceRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListSkipOccurrenceRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListSkipOccurrenceRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSkipOccurrenceRequestEventArgs",
@@ -2096,21 +2066,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(UserDataTaskListSyncManagerSyncRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListSyncManagerSyncRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListSyncManagerSyncRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListSyncManagerSyncRequest[] = {
         { "task_list_id", reinterpret_cast<getter>(UserDataTaskListSyncManagerSyncRequest_get_TaskListId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListSyncManagerSyncRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListSyncManagerSyncRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListSyncManagerSyncRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListSyncManagerSyncRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListSyncManagerSyncRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListSyncManagerSyncRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSyncManagerSyncRequest",
@@ -2234,21 +2201,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(UserDataTaskListSyncManagerSyncRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListSyncManagerSyncRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListSyncManagerSyncRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListSyncManagerSyncRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(UserDataTaskListSyncManagerSyncRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListSyncManagerSyncRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListSyncManagerSyncRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListSyncManagerSyncRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListSyncManagerSyncRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListSyncManagerSyncRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListSyncManagerSyncRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSyncManagerSyncRequestEventArgs",

@@ -154,20 +154,17 @@ namespace py::cpp::Windows::System::Display
         { "request_release", reinterpret_cast<PyCFunction>(DisplayRequest_RequestRelease), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DisplayRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayRequest[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayRequest = {
         "winrt._winrt_windows_system_display.DisplayRequest",

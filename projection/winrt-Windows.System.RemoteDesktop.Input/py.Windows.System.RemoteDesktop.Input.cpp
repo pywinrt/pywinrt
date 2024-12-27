@@ -403,21 +403,18 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteTextConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_RemoteTextConnection), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_RemoteTextConnection), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemoteTextConnection[] = {
         { "is_enabled", reinterpret_cast<getter>(RemoteTextConnection_get_IsEnabled), reinterpret_cast<setter>(RemoteTextConnection_put_IsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemoteTextConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteTextConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteTextConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteTextConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteTextConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemoteTextConnection = {
         "winrt._winrt_windows_system_remotedesktop_input.RemoteTextConnection",

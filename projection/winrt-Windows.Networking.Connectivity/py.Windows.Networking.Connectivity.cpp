@@ -198,8 +198,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_AttributedNetworkUsage[] = {
         { "_assign_array_", _assign_array_AttributedNetworkUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AttributedNetworkUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AttributedNetworkUsage[] = {
         { "attribution_id", reinterpret_cast<getter>(AttributedNetworkUsage_get_AttributionId), nullptr, nullptr, nullptr },
@@ -207,16 +206,14 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "attribution_thumbnail", reinterpret_cast<getter>(AttributedNetworkUsage_get_AttributionThumbnail), nullptr, nullptr, nullptr },
         { "bytes_received", reinterpret_cast<getter>(AttributedNetworkUsage_get_BytesReceived), nullptr, nullptr, nullptr },
         { "bytes_sent", reinterpret_cast<getter>(AttributedNetworkUsage_get_BytesSent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AttributedNetworkUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AttributedNetworkUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AttributedNetworkUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AttributedNetworkUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AttributedNetworkUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AttributedNetworkUsage = {
         "winrt._winrt_windows_networking_connectivity.AttributedNetworkUsage",
@@ -774,8 +771,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_CellularApnContext[] = {
         { "_assign_array_", _assign_array_CellularApnContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CellularApnContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CellularApnContext[] = {
         { "user_name", reinterpret_cast<getter>(CellularApnContext_get_UserName), reinterpret_cast<setter>(CellularApnContext_put_UserName), nullptr, nullptr },
@@ -785,16 +781,14 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "authentication_type", reinterpret_cast<getter>(CellularApnContext_get_AuthenticationType), reinterpret_cast<setter>(CellularApnContext_put_AuthenticationType), nullptr, nullptr },
         { "access_point_name", reinterpret_cast<getter>(CellularApnContext_get_AccessPointName), reinterpret_cast<setter>(CellularApnContext_put_AccessPointName), nullptr, nullptr },
         { "profile_name", reinterpret_cast<getter>(CellularApnContext_get_ProfileName), reinterpret_cast<setter>(CellularApnContext_put_ProfileName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CellularApnContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CellularApnContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CellularApnContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CellularApnContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CellularApnContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CellularApnContext = {
         "winrt._winrt_windows_networking_connectivity.CellularApnContext",
@@ -997,8 +991,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_ConnectionCost[] = {
         { "_assign_array_", _assign_array_ConnectionCost, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectionCost), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectionCost[] = {
         { "approaching_data_limit", reinterpret_cast<getter>(ConnectionCost_get_ApproachingDataLimit), nullptr, nullptr, nullptr },
@@ -1006,16 +999,14 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "over_data_limit", reinterpret_cast<getter>(ConnectionCost_get_OverDataLimit), nullptr, nullptr, nullptr },
         { "roaming", reinterpret_cast<getter>(ConnectionCost_get_Roaming), nullptr, nullptr, nullptr },
         { "background_data_usage_restricted", reinterpret_cast<getter>(ConnectionCost_get_BackgroundDataUsageRestricted), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectionCost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionCost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionCost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionCost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionCost) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectionCost = {
         "winrt._winrt_windows_networking_connectivity.ConnectionCost",
@@ -1938,8 +1929,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "try_delete_async", reinterpret_cast<PyCFunction>(ConnectionProfile_TryDeleteAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ConnectionProfile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectionProfile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectionProfile[] = {
         { "network_adapter", reinterpret_cast<getter>(ConnectionProfile_get_NetworkAdapter), nullptr, nullptr, nullptr },
@@ -1951,16 +1941,14 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "wlan_connection_profile_details", reinterpret_cast<getter>(ConnectionProfile_get_WlanConnectionProfileDetails), nullptr, nullptr, nullptr },
         { "wwan_connection_profile_details", reinterpret_cast<getter>(ConnectionProfile_get_WwanConnectionProfileDetails), nullptr, nullptr, nullptr },
         { "can_delete", reinterpret_cast<getter>(ConnectionProfile_get_CanDelete), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectionProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionProfile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectionProfile = {
         "winrt._winrt_windows_networking_connectivity.ConnectionProfile",
@@ -2686,8 +2674,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_ConnectionProfileFilter[] = {
         { "_assign_array_", _assign_array_ConnectionProfileFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectionProfileFilter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectionProfileFilter[] = {
         { "service_provider_guid", reinterpret_cast<getter>(ConnectionProfileFilter_get_ServiceProviderGuid), reinterpret_cast<setter>(ConnectionProfileFilter_put_ServiceProviderGuid), nullptr, nullptr },
@@ -2700,16 +2687,14 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "is_background_data_usage_restricted", reinterpret_cast<getter>(ConnectionProfileFilter_get_IsBackgroundDataUsageRestricted), reinterpret_cast<setter>(ConnectionProfileFilter_put_IsBackgroundDataUsageRestricted), nullptr, nullptr },
         { "raw_data", reinterpret_cast<getter>(ConnectionProfileFilter_get_RawData), nullptr, nullptr, nullptr },
         { "purpose_guid", reinterpret_cast<getter>(ConnectionProfileFilter_get_PurposeGuid), reinterpret_cast<setter>(ConnectionProfileFilter_put_PurposeGuid), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectionProfileFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionProfileFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionProfileFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionProfileFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionProfileFilter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectionProfileFilter = {
         "winrt._winrt_windows_networking_connectivity.ConnectionProfileFilter",
@@ -2859,21 +2844,18 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectionSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ConnectionSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ConnectionSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectionSession[] = {
         { "connection_profile", reinterpret_cast<getter>(ConnectionSession_get_ConnectionProfile), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectionSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectionSession = {
         "winrt._winrt_windows_networking_connectivity.ConnectionSession",
@@ -2986,22 +2968,19 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_ConnectivityInterval[] = {
         { "_assign_array_", _assign_array_ConnectivityInterval, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectivityInterval), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectivityInterval[] = {
         { "connection_duration", reinterpret_cast<getter>(ConnectivityInterval_get_ConnectionDuration), nullptr, nullptr, nullptr },
         { "start_time", reinterpret_cast<getter>(ConnectivityInterval_get_StartTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectivityInterval[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectivityInterval) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectivityInterval) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectivityInterval) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectivityInterval) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectivityInterval = {
         "winrt._winrt_windows_networking_connectivity.ConnectivityInterval",
@@ -3148,19 +3127,16 @@ namespace py::cpp::Windows::Networking::Connectivity
     }
 
     static PyMethodDef _methods_ConnectivityManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectivityManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectivityManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectivityManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectivityManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectivityManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectivityManager = {
         "winrt._winrt_windows_networking_connectivity.ConnectivityManager",
@@ -3170,15 +3146,13 @@ namespace py::cpp::Windows::Networking::Connectivity
         _type_slots_ConnectivityManager};
 
     static PyGetSetDef getset_ConnectivityManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ConnectivityManager_Static[] = {
         { "acquire_connection_async", reinterpret_cast<PyCFunction>(ConnectivityManager_AcquireConnectionAsync), METH_VARARGS, nullptr },
         { "add_http_route_policy", reinterpret_cast<PyCFunction>(ConnectivityManager_AddHttpRoutePolicy), METH_VARARGS, nullptr },
         { "remove_http_route_policy", reinterpret_cast<PyCFunction>(ConnectivityManager_RemoveHttpRoutePolicy), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ConnectivityManager_Static[] = 
     {
@@ -3188,14 +3162,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Spec type_spec_ConnectivityManager_Static =
-    {
+    static PyType_Spec type_spec_ConnectivityManager_Static = {
         "winrt._winrt_windows_networking_connectivity.ConnectivityManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ConnectivityManager_Static
-    };
+        type_slots_ConnectivityManager_Static};
 
     // ----- DataPlanStatus class --------------------
 
@@ -3421,8 +3393,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_DataPlanStatus[] = {
         { "_assign_array_", _assign_array_DataPlanStatus, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataPlanStatus), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DataPlanStatus[] = {
         { "data_limit_in_megabytes", reinterpret_cast<getter>(DataPlanStatus_get_DataLimitInMegabytes), nullptr, nullptr, nullptr },
@@ -3431,16 +3402,14 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "max_transfer_size_in_megabytes", reinterpret_cast<getter>(DataPlanStatus_get_MaxTransferSizeInMegabytes), nullptr, nullptr, nullptr },
         { "next_billing_cycle", reinterpret_cast<getter>(DataPlanStatus_get_NextBillingCycle), nullptr, nullptr, nullptr },
         { "outbound_bits_per_second", reinterpret_cast<getter>(DataPlanStatus_get_OutboundBitsPerSecond), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DataPlanStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataPlanStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataPlanStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataPlanStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataPlanStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DataPlanStatus = {
         "winrt._winrt_windows_networking_connectivity.DataPlanStatus",
@@ -3553,22 +3522,19 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_DataPlanUsage[] = {
         { "_assign_array_", _assign_array_DataPlanUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataPlanUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DataPlanUsage[] = {
         { "last_sync_time", reinterpret_cast<getter>(DataPlanUsage_get_LastSyncTime), nullptr, nullptr, nullptr },
         { "megabytes_used", reinterpret_cast<getter>(DataPlanUsage_get_MegabytesUsed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DataPlanUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataPlanUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataPlanUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataPlanUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataPlanUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DataPlanUsage = {
         "winrt._winrt_windows_networking_connectivity.DataPlanUsage",
@@ -3681,22 +3647,19 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_DataUsage[] = {
         { "_assign_array_", _assign_array_DataUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DataUsage[] = {
         { "bytes_received", reinterpret_cast<getter>(DataUsage_get_BytesReceived), nullptr, nullptr, nullptr },
         { "bytes_sent", reinterpret_cast<getter>(DataUsage_get_BytesSent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DataUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DataUsage = {
         "winrt._winrt_windows_networking_connectivity.DataUsage",
@@ -3809,22 +3772,19 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_IPInformation[] = {
         { "_assign_array_", _assign_array_IPInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPInformation[] = {
         { "network_adapter", reinterpret_cast<getter>(IPInformation_get_NetworkAdapter), nullptr, nullptr, nullptr },
         { "prefix_length", reinterpret_cast<getter>(IPInformation_get_PrefixLength), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPInformation = {
         "winrt._winrt_windows_networking_connectivity.IPInformation",
@@ -3967,23 +3927,20 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_LanIdentifier[] = {
         { "_assign_array_", _assign_array_LanIdentifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LanIdentifier), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LanIdentifier[] = {
         { "infrastructure_id", reinterpret_cast<getter>(LanIdentifier_get_InfrastructureId), nullptr, nullptr, nullptr },
         { "network_adapter_id", reinterpret_cast<getter>(LanIdentifier_get_NetworkAdapterId), nullptr, nullptr, nullptr },
         { "port_id", reinterpret_cast<getter>(LanIdentifier_get_PortId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LanIdentifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LanIdentifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LanIdentifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LanIdentifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LanIdentifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LanIdentifier = {
         "winrt._winrt_windows_networking_connectivity.LanIdentifier",
@@ -4096,22 +4053,19 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_LanIdentifierData[] = {
         { "_assign_array_", _assign_array_LanIdentifierData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LanIdentifierData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LanIdentifierData[] = {
         { "type", reinterpret_cast<getter>(LanIdentifierData_get_Type), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(LanIdentifierData_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LanIdentifierData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LanIdentifierData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LanIdentifierData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LanIdentifierData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LanIdentifierData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LanIdentifierData = {
         "winrt._winrt_windows_networking_connectivity.LanIdentifierData",
@@ -4355,8 +4309,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "get_connected_profile_async", reinterpret_cast<PyCFunction>(NetworkAdapter_GetConnectedProfileAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NetworkAdapter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkAdapter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkAdapter[] = {
         { "iana_interface_type", reinterpret_cast<getter>(NetworkAdapter_get_IanaInterfaceType), nullptr, nullptr, nullptr },
@@ -4364,16 +4317,14 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "network_adapter_id", reinterpret_cast<getter>(NetworkAdapter_get_NetworkAdapterId), nullptr, nullptr, nullptr },
         { "network_item", reinterpret_cast<getter>(NetworkAdapter_get_NetworkItem), nullptr, nullptr, nullptr },
         { "outbound_max_bits_per_second", reinterpret_cast<getter>(NetworkAdapter_get_OutboundMaxBitsPerSecond), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkAdapter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkAdapter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkAdapter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkAdapter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkAdapter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkAdapter = {
         "winrt._winrt_windows_networking_connectivity.NetworkAdapter",
@@ -4744,19 +4695,16 @@ namespace py::cpp::Windows::Networking::Connectivity
     }
 
     static PyMethodDef _methods_NetworkInformation[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkInformation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkInformation = {
         "winrt._winrt_windows_networking_connectivity.NetworkInformation",
@@ -4766,8 +4714,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         _type_slots_NetworkInformation};
 
     static PyGetSetDef getset_NetworkInformation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_NetworkInformation_Static[] = {
         { "find_connection_profiles_async", reinterpret_cast<PyCFunction>(NetworkInformation_FindConnectionProfilesAsync), METH_VARARGS, nullptr },
@@ -4779,8 +4726,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "get_sorted_endpoint_pairs", reinterpret_cast<PyCFunction>(NetworkInformation_GetSortedEndpointPairs), METH_VARARGS, nullptr },
         { "add_network_status_changed", reinterpret_cast<PyCFunction>(NetworkInformation_add_NetworkStatusChanged), METH_O, nullptr },
         { "remove_network_status_changed", reinterpret_cast<PyCFunction>(NetworkInformation_remove_NetworkStatusChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_NetworkInformation_Static[] = 
     {
@@ -4790,14 +4736,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Spec type_spec_NetworkInformation_Static =
-    {
+    static PyType_Spec type_spec_NetworkInformation_Static = {
         "winrt._winrt_windows_networking_connectivity.NetworkInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_NetworkInformation_Static
-    };
+        type_slots_NetworkInformation_Static};
 
     // ----- NetworkItem class --------------------
 
@@ -4914,21 +4858,18 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "get_network_types", reinterpret_cast<PyCFunction>(NetworkItem_GetNetworkTypes), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NetworkItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkItem[] = {
         { "network_id", reinterpret_cast<getter>(NetworkItem_get_NetworkId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkItem = {
         "winrt._winrt_windows_networking_connectivity.NetworkItem",
@@ -5041,22 +4982,19 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_NetworkSecuritySettings[] = {
         { "_assign_array_", _assign_array_NetworkSecuritySettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkSecuritySettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkSecuritySettings[] = {
         { "network_authentication_type", reinterpret_cast<getter>(NetworkSecuritySettings_get_NetworkAuthenticationType), nullptr, nullptr, nullptr },
         { "network_encryption_type", reinterpret_cast<getter>(NetworkSecuritySettings_get_NetworkEncryptionType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkSecuritySettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkSecuritySettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkSecuritySettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkSecuritySettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkSecuritySettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkSecuritySettings = {
         "winrt._winrt_windows_networking_connectivity.NetworkSecuritySettings",
@@ -5349,8 +5287,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_NetworkStateChangeEventDetails[] = {
         { "_assign_array_", _assign_array_NetworkStateChangeEventDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkStateChangeEventDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkStateChangeEventDetails[] = {
         { "has_new_connection_cost", reinterpret_cast<getter>(NetworkStateChangeEventDetails_get_HasNewConnectionCost), nullptr, nullptr, nullptr },
@@ -5361,16 +5298,14 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "has_new_wwan_registration_state", reinterpret_cast<getter>(NetworkStateChangeEventDetails_get_HasNewWwanRegistrationState), nullptr, nullptr, nullptr },
         { "has_new_tethering_client_count", reinterpret_cast<getter>(NetworkStateChangeEventDetails_get_HasNewTetheringClientCount), nullptr, nullptr, nullptr },
         { "has_new_tethering_operational_state", reinterpret_cast<getter>(NetworkStateChangeEventDetails_get_HasNewTetheringOperationalState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkStateChangeEventDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkStateChangeEventDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkStateChangeEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkStateChangeEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkStateChangeEventDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkStateChangeEventDetails = {
         "winrt._winrt_windows_networking_connectivity.NetworkStateChangeEventDetails",
@@ -5513,23 +5448,20 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_NetworkUsage[] = {
         { "_assign_array_", _assign_array_NetworkUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkUsage[] = {
         { "bytes_received", reinterpret_cast<getter>(NetworkUsage_get_BytesReceived), nullptr, nullptr, nullptr },
         { "bytes_sent", reinterpret_cast<getter>(NetworkUsage_get_BytesSent), nullptr, nullptr, nullptr },
         { "connection_duration", reinterpret_cast<getter>(NetworkUsage_get_ConnectionDuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkUsage = {
         "winrt._winrt_windows_networking_connectivity.NetworkUsage",
@@ -5672,23 +5604,20 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_ProviderNetworkUsage[] = {
         { "_assign_array_", _assign_array_ProviderNetworkUsage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProviderNetworkUsage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProviderNetworkUsage[] = {
         { "bytes_received", reinterpret_cast<getter>(ProviderNetworkUsage_get_BytesReceived), nullptr, nullptr, nullptr },
         { "bytes_sent", reinterpret_cast<getter>(ProviderNetworkUsage_get_BytesSent), nullptr, nullptr, nullptr },
         { "provider_id", reinterpret_cast<getter>(ProviderNetworkUsage_get_ProviderId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProviderNetworkUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProviderNetworkUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProviderNetworkUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProviderNetworkUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProviderNetworkUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProviderNetworkUsage = {
         "winrt._winrt_windows_networking_connectivity.ProviderNetworkUsage",
@@ -5801,22 +5730,19 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_ProxyConfiguration[] = {
         { "_assign_array_", _assign_array_ProxyConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProxyConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProxyConfiguration[] = {
         { "can_connect_directly", reinterpret_cast<getter>(ProxyConfiguration_get_CanConnectDirectly), nullptr, nullptr, nullptr },
         { "proxy_uris", reinterpret_cast<getter>(ProxyConfiguration_get_ProxyUris), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProxyConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProxyConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProxyConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProxyConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProxyConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProxyConfiguration = {
         "winrt._winrt_windows_networking_connectivity.ProxyConfiguration",
@@ -5985,23 +5911,20 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyMethodDef _methods_RoutePolicy[] = {
         { "_assign_array_", _assign_array_RoutePolicy, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RoutePolicy), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RoutePolicy[] = {
         { "connection_profile", reinterpret_cast<getter>(RoutePolicy_get_ConnectionProfile), nullptr, nullptr, nullptr },
         { "host_name", reinterpret_cast<getter>(RoutePolicy_get_HostName), nullptr, nullptr, nullptr },
         { "host_name_type", reinterpret_cast<getter>(RoutePolicy_get_HostNameType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RoutePolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RoutePolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RoutePolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RoutePolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RoutePolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RoutePolicy = {
         "winrt._winrt_windows_networking_connectivity.RoutePolicy",
@@ -6095,20 +6018,17 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "get_connected_ssid", reinterpret_cast<PyCFunction>(WlanConnectionProfileDetails_GetConnectedSsid), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WlanConnectionProfileDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WlanConnectionProfileDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WlanConnectionProfileDetails[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WlanConnectionProfileDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WlanConnectionProfileDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WlanConnectionProfileDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WlanConnectionProfileDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WlanConnectionProfileDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WlanConnectionProfileDetails = {
         "winrt._winrt_windows_networking_connectivity.WlanConnectionProfileDetails",
@@ -6363,24 +6283,21 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "get_network_registration_state", reinterpret_cast<PyCFunction>(WwanConnectionProfileDetails_GetNetworkRegistrationState), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WwanConnectionProfileDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WwanConnectionProfileDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WwanConnectionProfileDetails[] = {
         { "access_point_name", reinterpret_cast<getter>(WwanConnectionProfileDetails_get_AccessPointName), nullptr, nullptr, nullptr },
         { "home_provider_id", reinterpret_cast<getter>(WwanConnectionProfileDetails_get_HomeProviderId), nullptr, nullptr, nullptr },
         { "ip_kind", reinterpret_cast<getter>(WwanConnectionProfileDetails_get_IPKind), nullptr, nullptr, nullptr },
         { "purpose_guids", reinterpret_cast<getter>(WwanConnectionProfileDetails_get_PurposeGuids), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WwanConnectionProfileDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WwanConnectionProfileDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WwanConnectionProfileDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WwanConnectionProfileDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WwanConnectionProfileDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WwanConnectionProfileDetails = {
         "winrt._winrt_windows_networking_connectivity.WwanConnectionProfileDetails",
@@ -6458,8 +6375,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyMethodDef _methods_NetworkUsageStates[] = {
         { "_assign_array_", _assign_array_NetworkUsageStates, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* NetworkUsageStates_get_Roaming(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, void* /*unused*/) noexcept
     {
@@ -6530,8 +6446,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyGetSetDef _getset_NetworkUsageStates[] = {
         { "roaming", reinterpret_cast<getter>(NetworkUsageStates_get_Roaming), reinterpret_cast<setter>(NetworkUsageStates_set_Roaming), nullptr, nullptr },
         { "shared", reinterpret_cast<getter>(NetworkUsageStates_get_Shared), reinterpret_cast<setter>(NetworkUsageStates_set_Shared), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_NetworkUsageStates(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, PyObject* other, int op) noexcept
     {
@@ -6593,8 +6508,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkUsageStates) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_NetworkUsageStates) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_NetworkUsageStates) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkUsageStates = {
         "winrt._winrt_windows_networking_connectivity.NetworkUsageStates",

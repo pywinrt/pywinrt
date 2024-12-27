@@ -373,24 +373,21 @@ namespace py::cpp::Windows::ApplicationModel::PackageExtensions
         { "get_public_path", reinterpret_cast<PyCFunction>(PackageExtension_GetPublicPath), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageExtension), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageExtension[] = {
         { "description", reinterpret_cast<getter>(PackageExtension_get_Description), nullptr, nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(PackageExtension_get_DisplayName), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(PackageExtension_get_Id), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageExtension_get_Package), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageExtension[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageExtension) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageExtension) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageExtension) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageExtension) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageExtension = {
         "winrt._winrt_windows_applicationmodel_packageextensions.PackageExtension",
@@ -945,20 +942,17 @@ namespace py::cpp::Windows::ApplicationModel::PackageExtensions
         { "remove_package_updating", reinterpret_cast<PyCFunction>(PackageExtensionCatalog_remove_PackageUpdating), METH_O, nullptr },
         { "_assign_array_", _assign_array_PackageExtensionCatalog, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageExtensionCatalog), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageExtensionCatalog[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageExtensionCatalog[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageExtensionCatalog) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageExtensionCatalog) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageExtensionCatalog) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageExtensionCatalog) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageExtensionCatalog = {
         "winrt._winrt_windows_applicationmodel_packageextensions.PackageExtensionCatalog",
@@ -968,13 +962,11 @@ namespace py::cpp::Windows::ApplicationModel::PackageExtensions
         _type_slots_PackageExtensionCatalog};
 
     static PyGetSetDef getset_PackageExtensionCatalog_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PackageExtensionCatalog_Static[] = {
         { "open", reinterpret_cast<PyCFunction>(PackageExtensionCatalog_Open), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PackageExtensionCatalog_Static[] = 
     {
@@ -984,14 +976,12 @@ namespace py::cpp::Windows::ApplicationModel::PackageExtensions
         { }
     };
 
-    static PyType_Spec type_spec_PackageExtensionCatalog_Static =
-    {
+    static PyType_Spec type_spec_PackageExtensionCatalog_Static = {
         "winrt._winrt_windows_applicationmodel_packageextensions.PackageExtensionCatalog_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PackageExtensionCatalog_Static
-    };
+        type_slots_PackageExtensionCatalog_Static};
 
     // ----- PackageExtensionPackageInstalledEventArgs class --------------------
 
@@ -1127,23 +1117,20 @@ namespace py::cpp::Windows::ApplicationModel::PackageExtensions
     static PyMethodDef _methods_PackageExtensionPackageInstalledEventArgs[] = {
         { "_assign_array_", _assign_array_PackageExtensionPackageInstalledEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageExtensionPackageInstalledEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageExtensionPackageInstalledEventArgs[] = {
         { "extensions", reinterpret_cast<getter>(PackageExtensionPackageInstalledEventArgs_get_Extensions), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageExtensionPackageInstalledEventArgs_get_Package), nullptr, nullptr, nullptr },
         { "package_extension_name", reinterpret_cast<getter>(PackageExtensionPackageInstalledEventArgs_get_PackageExtensionName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageExtensionPackageInstalledEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageExtensionPackageInstalledEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageExtensionPackageInstalledEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageExtensionPackageInstalledEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageExtensionPackageInstalledEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageExtensionPackageInstalledEventArgs = {
         "winrt._winrt_windows_applicationmodel_packageextensions.PackageExtensionPackageInstalledEventArgs",
@@ -1256,22 +1243,19 @@ namespace py::cpp::Windows::ApplicationModel::PackageExtensions
     static PyMethodDef _methods_PackageExtensionPackageStatusChangedEventArgs[] = {
         { "_assign_array_", _assign_array_PackageExtensionPackageStatusChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageExtensionPackageStatusChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageExtensionPackageStatusChangedEventArgs[] = {
         { "package", reinterpret_cast<getter>(PackageExtensionPackageStatusChangedEventArgs_get_Package), nullptr, nullptr, nullptr },
         { "package_extension_name", reinterpret_cast<getter>(PackageExtensionPackageStatusChangedEventArgs_get_PackageExtensionName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageExtensionPackageStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageExtensionPackageStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageExtensionPackageStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageExtensionPackageStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageExtensionPackageStatusChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageExtensionPackageStatusChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_packageextensions.PackageExtensionPackageStatusChangedEventArgs",
@@ -1384,22 +1368,19 @@ namespace py::cpp::Windows::ApplicationModel::PackageExtensions
     static PyMethodDef _methods_PackageExtensionPackageUninstallingEventArgs[] = {
         { "_assign_array_", _assign_array_PackageExtensionPackageUninstallingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageExtensionPackageUninstallingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageExtensionPackageUninstallingEventArgs[] = {
         { "package", reinterpret_cast<getter>(PackageExtensionPackageUninstallingEventArgs_get_Package), nullptr, nullptr, nullptr },
         { "package_extension_name", reinterpret_cast<getter>(PackageExtensionPackageUninstallingEventArgs_get_PackageExtensionName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageExtensionPackageUninstallingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageExtensionPackageUninstallingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageExtensionPackageUninstallingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageExtensionPackageUninstallingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageExtensionPackageUninstallingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageExtensionPackageUninstallingEventArgs = {
         "winrt._winrt_windows_applicationmodel_packageextensions.PackageExtensionPackageUninstallingEventArgs",
@@ -1542,23 +1523,20 @@ namespace py::cpp::Windows::ApplicationModel::PackageExtensions
     static PyMethodDef _methods_PackageExtensionPackageUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_PackageExtensionPackageUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageExtensionPackageUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageExtensionPackageUpdatedEventArgs[] = {
         { "extensions", reinterpret_cast<getter>(PackageExtensionPackageUpdatedEventArgs_get_Extensions), nullptr, nullptr, nullptr },
         { "package", reinterpret_cast<getter>(PackageExtensionPackageUpdatedEventArgs_get_Package), nullptr, nullptr, nullptr },
         { "package_extension_name", reinterpret_cast<getter>(PackageExtensionPackageUpdatedEventArgs_get_PackageExtensionName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageExtensionPackageUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageExtensionPackageUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageExtensionPackageUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageExtensionPackageUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageExtensionPackageUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageExtensionPackageUpdatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_packageextensions.PackageExtensionPackageUpdatedEventArgs",
@@ -1671,22 +1649,19 @@ namespace py::cpp::Windows::ApplicationModel::PackageExtensions
     static PyMethodDef _methods_PackageExtensionPackageUpdatingEventArgs[] = {
         { "_assign_array_", _assign_array_PackageExtensionPackageUpdatingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageExtensionPackageUpdatingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageExtensionPackageUpdatingEventArgs[] = {
         { "package", reinterpret_cast<getter>(PackageExtensionPackageUpdatingEventArgs_get_Package), nullptr, nullptr, nullptr },
         { "package_extension_name", reinterpret_cast<getter>(PackageExtensionPackageUpdatingEventArgs_get_PackageExtensionName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageExtensionPackageUpdatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageExtensionPackageUpdatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageExtensionPackageUpdatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageExtensionPackageUpdatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageExtensionPackageUpdatingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageExtensionPackageUpdatingEventArgs = {
         "winrt._winrt_windows_applicationmodel_packageextensions.PackageExtensionPackageUpdatingEventArgs",

@@ -56,19 +56,16 @@ namespace py::cpp::Windows::Data::Html
     }
 
     static PyMethodDef _methods_HtmlUtilities[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HtmlUtilities[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HtmlUtilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HtmlUtilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HtmlUtilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HtmlUtilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HtmlUtilities = {
         "winrt._winrt_windows_data_html.HtmlUtilities",
@@ -78,13 +75,11 @@ namespace py::cpp::Windows::Data::Html
         _type_slots_HtmlUtilities};
 
     static PyGetSetDef getset_HtmlUtilities_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HtmlUtilities_Static[] = {
         { "convert_to_text", reinterpret_cast<PyCFunction>(HtmlUtilities_ConvertToText), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HtmlUtilities_Static[] = 
     {
@@ -94,14 +89,12 @@ namespace py::cpp::Windows::Data::Html
         { }
     };
 
-    static PyType_Spec type_spec_HtmlUtilities_Static =
-    {
+    static PyType_Spec type_spec_HtmlUtilities_Static = {
         "winrt._winrt_windows_data_html.HtmlUtilities_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HtmlUtilities_Static
-    };
+        type_slots_HtmlUtilities_Static};
 
     // ----- Windows.Data.Html Initialization --------------------
 

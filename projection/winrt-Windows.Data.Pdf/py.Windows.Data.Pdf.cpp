@@ -321,22 +321,19 @@ namespace py::cpp::Windows::Data::Pdf
         { "get_page", reinterpret_cast<PyCFunction>(PdfDocument_GetPage), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PdfDocument, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PdfDocument), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PdfDocument[] = {
         { "is_password_protected", reinterpret_cast<getter>(PdfDocument_get_IsPasswordProtected), nullptr, nullptr, nullptr },
         { "page_count", reinterpret_cast<getter>(PdfDocument_get_PageCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PdfDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdfDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdfDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdfDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdfDocument) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PdfDocument = {
         "winrt._winrt_windows_data_pdf.PdfDocument",
@@ -346,16 +343,14 @@ namespace py::cpp::Windows::Data::Pdf
         _type_slots_PdfDocument};
 
     static PyGetSetDef getset_PdfDocument_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PdfDocument_Static[] = {
         { "load_from_file_async", reinterpret_cast<PyCFunction>(PdfDocument_LoadFromFileAsync), METH_VARARGS, nullptr },
         { "load_from_file_with_password_async", reinterpret_cast<PyCFunction>(PdfDocument_LoadFromFileWithPasswordAsync), METH_VARARGS, nullptr },
         { "load_from_stream_async", reinterpret_cast<PyCFunction>(PdfDocument_LoadFromStreamAsync), METH_VARARGS, nullptr },
         { "load_from_stream_with_password_async", reinterpret_cast<PyCFunction>(PdfDocument_LoadFromStreamWithPasswordAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PdfDocument_Static[] = 
     {
@@ -365,14 +360,12 @@ namespace py::cpp::Windows::Data::Pdf
         { }
     };
 
-    static PyType_Spec type_spec_PdfDocument_Static =
-    {
+    static PyType_Spec type_spec_PdfDocument_Static = {
         "winrt._winrt_windows_data_pdf.PdfDocument_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PdfDocument_Static
-    };
+        type_slots_PdfDocument_Static};
 
     // ----- PdfPage class --------------------
 
@@ -763,8 +756,7 @@ namespace py::cpp::Windows::Data::Pdf
         { "_from", reinterpret_cast<PyCFunction>(_from_PdfPage), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PdfPage), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_PdfPage), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PdfPage[] = {
         { "dimensions", reinterpret_cast<getter>(PdfPage_get_Dimensions), nullptr, nullptr, nullptr },
@@ -772,16 +764,14 @@ namespace py::cpp::Windows::Data::Pdf
         { "preferred_zoom", reinterpret_cast<getter>(PdfPage_get_PreferredZoom), nullptr, nullptr, nullptr },
         { "rotation", reinterpret_cast<getter>(PdfPage_get_Rotation), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(PdfPage_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PdfPage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdfPage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdfPage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdfPage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdfPage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PdfPage = {
         "winrt._winrt_windows_data_pdf.PdfPage",
@@ -984,8 +974,7 @@ namespace py::cpp::Windows::Data::Pdf
     static PyMethodDef _methods_PdfPageDimensions[] = {
         { "_assign_array_", _assign_array_PdfPageDimensions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PdfPageDimensions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PdfPageDimensions[] = {
         { "art_box", reinterpret_cast<getter>(PdfPageDimensions_get_ArtBox), nullptr, nullptr, nullptr },
@@ -993,16 +982,14 @@ namespace py::cpp::Windows::Data::Pdf
         { "crop_box", reinterpret_cast<getter>(PdfPageDimensions_get_CropBox), nullptr, nullptr, nullptr },
         { "media_box", reinterpret_cast<getter>(PdfPageDimensions_get_MediaBox), nullptr, nullptr, nullptr },
         { "trim_box", reinterpret_cast<getter>(PdfPageDimensions_get_TrimBox), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PdfPageDimensions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdfPageDimensions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdfPageDimensions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdfPageDimensions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdfPageDimensions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PdfPageDimensions = {
         "winrt._winrt_windows_data_pdf.PdfPageDimensions",
@@ -1491,8 +1478,7 @@ namespace py::cpp::Windows::Data::Pdf
     static PyMethodDef _methods_PdfPageRenderOptions[] = {
         { "_assign_array_", _assign_array_PdfPageRenderOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PdfPageRenderOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PdfPageRenderOptions[] = {
         { "source_rect", reinterpret_cast<getter>(PdfPageRenderOptions_get_SourceRect), reinterpret_cast<setter>(PdfPageRenderOptions_put_SourceRect), nullptr, nullptr },
@@ -1501,16 +1487,14 @@ namespace py::cpp::Windows::Data::Pdf
         { "destination_height", reinterpret_cast<getter>(PdfPageRenderOptions_get_DestinationHeight), reinterpret_cast<setter>(PdfPageRenderOptions_put_DestinationHeight), nullptr, nullptr },
         { "bitmap_encoder_id", reinterpret_cast<getter>(PdfPageRenderOptions_get_BitmapEncoderId), reinterpret_cast<setter>(PdfPageRenderOptions_put_BitmapEncoderId), nullptr, nullptr },
         { "background_color", reinterpret_cast<getter>(PdfPageRenderOptions_get_BackgroundColor), reinterpret_cast<setter>(PdfPageRenderOptions_put_BackgroundColor), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PdfPageRenderOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdfPageRenderOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdfPageRenderOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdfPageRenderOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdfPageRenderOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PdfPageRenderOptions = {
         "winrt._winrt_windows_data_pdf.PdfPageRenderOptions",

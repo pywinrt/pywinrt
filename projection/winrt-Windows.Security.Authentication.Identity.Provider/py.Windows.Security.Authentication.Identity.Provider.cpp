@@ -446,24 +446,21 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { "finish_authentication_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_FinishAuthenticationAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorAuthentication, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryAuthenticationFactorAuthentication), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecondaryAuthenticationFactorAuthentication[] = {
         { "device_configuration_data", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthentication_get_DeviceConfigurationData), nullptr, nullptr, nullptr },
         { "device_nonce", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthentication_get_DeviceNonce), nullptr, nullptr, nullptr },
         { "service_authentication_hmac", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthentication_get_ServiceAuthenticationHmac), nullptr, nullptr, nullptr },
         { "session_nonce", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthentication_get_SessionNonce), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthentication[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorAuthentication) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorAuthentication) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorAuthentication) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorAuthentication) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthentication = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthentication",
@@ -473,8 +470,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         _type_slots_SecondaryAuthenticationFactorAuthentication};
 
     static PyGetSetDef getset_SecondaryAuthenticationFactorAuthentication_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SecondaryAuthenticationFactorAuthentication_Static[] = {
         { "get_authentication_stage_info_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_GetAuthenticationStageInfoAsync), METH_VARARGS, nullptr },
@@ -482,8 +478,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { "start_authentication_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_StartAuthenticationAsync), METH_VARARGS, nullptr },
         { "add_authentication_stage_changed", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_add_AuthenticationStageChanged), METH_O, nullptr },
         { "remove_authentication_stage_changed", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_remove_AuthenticationStageChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SecondaryAuthenticationFactorAuthentication_Static[] = 
     {
@@ -493,14 +488,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { }
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthentication_Static =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthentication_Static = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthentication_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SecondaryAuthenticationFactorAuthentication_Static
-    };
+        type_slots_SecondaryAuthenticationFactorAuthentication_Static};
 
     // ----- SecondaryAuthenticationFactorAuthenticationResult class --------------------
 
@@ -606,22 +599,19 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static PyMethodDef _methods_SecondaryAuthenticationFactorAuthenticationResult[] = {
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorAuthenticationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryAuthenticationFactorAuthenticationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecondaryAuthenticationFactorAuthenticationResult[] = {
         { "authentication", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthenticationResult_get_Authentication), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthenticationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorAuthenticationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorAuthenticationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorAuthenticationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorAuthenticationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationResult = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthenticationResult",
@@ -704,21 +694,18 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static PyMethodDef _methods_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs[] = {
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs[] = {
         { "stage_info", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs_get_StageInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs",
@@ -861,23 +848,20 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static PyMethodDef _methods_SecondaryAuthenticationFactorAuthenticationStageInfo[] = {
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorAuthenticationStageInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryAuthenticationFactorAuthenticationStageInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecondaryAuthenticationFactorAuthenticationStageInfo[] = {
         { "device_id", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthenticationStageInfo_get_DeviceId), nullptr, nullptr, nullptr },
         { "scenario", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthenticationStageInfo_get_Scenario), nullptr, nullptr, nullptr },
         { "stage", reinterpret_cast<getter>(SecondaryAuthenticationFactorAuthenticationStageInfo_get_Stage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationStageInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorAuthenticationStageInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorAuthenticationStageInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorAuthenticationStageInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorAuthenticationStageInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationStageInfo = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthenticationStageInfo",
@@ -1153,8 +1137,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { "update_device_presence_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorInfo_UpdateDevicePresenceAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryAuthenticationFactorInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecondaryAuthenticationFactorInfo[] = {
         { "device_configuration_data", reinterpret_cast<getter>(SecondaryAuthenticationFactorInfo_get_DeviceConfigurationData), nullptr, nullptr, nullptr },
@@ -1163,16 +1146,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { "device_model_number", reinterpret_cast<getter>(SecondaryAuthenticationFactorInfo_get_DeviceModelNumber), nullptr, nullptr, nullptr },
         { "is_authentication_supported", reinterpret_cast<getter>(SecondaryAuthenticationFactorInfo_get_IsAuthenticationSupported), nullptr, nullptr, nullptr },
         { "presence_monitoring_mode", reinterpret_cast<getter>(SecondaryAuthenticationFactorInfo_get_PresenceMonitoringMode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecondaryAuthenticationFactorInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorInfo = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorInfo",
@@ -1658,20 +1639,17 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { "finish_registering_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_FinishRegisteringDeviceAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorRegistration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryAuthenticationFactorRegistration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecondaryAuthenticationFactorRegistration[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecondaryAuthenticationFactorRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorRegistration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistration = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorRegistration",
@@ -1681,8 +1659,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         _type_slots_SecondaryAuthenticationFactorRegistration};
 
     static PyGetSetDef getset_SecondaryAuthenticationFactorRegistration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SecondaryAuthenticationFactorRegistration_Static[] = {
         { "find_all_registered_device_info_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_FindAllRegisteredDeviceInfoAsync), METH_VARARGS, nullptr },
@@ -1693,8 +1670,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { "unregister_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UnregisterDeviceAsync), METH_VARARGS, nullptr },
         { "unregister_device_presence_monitoring_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UnregisterDevicePresenceMonitoringAsync), METH_VARARGS, nullptr },
         { "update_device_configuration_data_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UpdateDeviceConfigurationDataAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SecondaryAuthenticationFactorRegistration_Static[] = 
     {
@@ -1704,14 +1680,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { }
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistration_Static =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistration_Static = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorRegistration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SecondaryAuthenticationFactorRegistration_Static
-    };
+        type_slots_SecondaryAuthenticationFactorRegistration_Static};
 
     // ----- SecondaryAuthenticationFactorRegistrationResult class --------------------
 
@@ -1817,22 +1791,19 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static PyMethodDef _methods_SecondaryAuthenticationFactorRegistrationResult[] = {
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorRegistrationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryAuthenticationFactorRegistrationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecondaryAuthenticationFactorRegistrationResult[] = {
         { "registration", reinterpret_cast<getter>(SecondaryAuthenticationFactorRegistrationResult_get_Registration), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(SecondaryAuthenticationFactorRegistrationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecondaryAuthenticationFactorRegistrationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorRegistrationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorRegistrationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorRegistrationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorRegistrationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistrationResult = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorRegistrationResult",

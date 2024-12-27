@@ -771,8 +771,7 @@ namespace py::cpp::Microsoft::Windows::Storage
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationData), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ApplicationData), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ApplicationData), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationData[] = {
         { "is_machine_path_supported", reinterpret_cast<getter>(ApplicationData_get_IsMachinePathSupported), nullptr, nullptr, nullptr },
@@ -787,16 +786,14 @@ namespace py::cpp::Microsoft::Windows::Storage
         { "shared_local_path", reinterpret_cast<getter>(ApplicationData_get_SharedLocalPath), nullptr, nullptr, nullptr },
         { "temporary_folder", reinterpret_cast<getter>(ApplicationData_get_TemporaryFolder), nullptr, nullptr, nullptr },
         { "temporary_path", reinterpret_cast<getter>(ApplicationData_get_TemporaryPath), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationData = {
         "winrt._winrt_microsoft_windows_storage.ApplicationData",
@@ -806,15 +803,13 @@ namespace py::cpp::Microsoft::Windows::Storage
         _type_slots_ApplicationData};
 
     static PyGetSetDef getset_ApplicationData_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApplicationData_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(ApplicationData_GetDefault), METH_VARARGS, nullptr },
         { "get_for_package_family", reinterpret_cast<PyCFunction>(ApplicationData_GetForPackageFamily), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(ApplicationData_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApplicationData_Static[] = 
     {
@@ -824,14 +819,12 @@ namespace py::cpp::Microsoft::Windows::Storage
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationData_Static =
-    {
+    static PyType_Spec type_spec_ApplicationData_Static = {
         "winrt._winrt_microsoft_windows_storage.ApplicationData_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationData_Static
-    };
+        type_slots_ApplicationData_Static};
 
     // ----- ApplicationDataContainer class --------------------
 
@@ -1152,24 +1145,21 @@ namespace py::cpp::Microsoft::Windows::Storage
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationDataContainer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ApplicationDataContainer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ApplicationDataContainer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationDataContainer[] = {
         { "containers", reinterpret_cast<getter>(ApplicationDataContainer_get_Containers), nullptr, nullptr, nullptr },
         { "locality", reinterpret_cast<getter>(ApplicationDataContainer_get_Locality), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ApplicationDataContainer_get_Name), nullptr, nullptr, nullptr },
         { "values", reinterpret_cast<getter>(ApplicationDataContainer_get_Values), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationDataContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationDataContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationDataContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationDataContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationDataContainer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationDataContainer = {
         "winrt._winrt_microsoft_windows_storage.ApplicationDataContainer",

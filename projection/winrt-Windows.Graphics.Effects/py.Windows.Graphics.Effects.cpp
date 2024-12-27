@@ -117,21 +117,18 @@ namespace py::cpp::Windows::Graphics::Effects
     static PyMethodDef _methods_IGraphicsEffect[] = {
         { "_assign_array_", _assign_array_IGraphicsEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGraphicsEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGraphicsEffect[] = {
         { "name", reinterpret_cast<getter>(IGraphicsEffect_get_Name), reinterpret_cast<setter>(IGraphicsEffect_put_Name), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGraphicsEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGraphicsEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGraphicsEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGraphicsEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGraphicsEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGraphicsEffect = {
         "winrt._winrt_windows_graphics_effects.IGraphicsEffect",
@@ -230,13 +227,11 @@ namespace py::cpp::Windows::Graphics::Effects
     static PyMethodDef methods_ImplementsIGraphicsEffect[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGraphicsEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGraphicsEffect), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGraphicsEffect[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGraphicsEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGraphicsEffect = {
         "winrt._winrt_windows_graphics_effects.ImplementsIGraphicsEffect",
@@ -289,20 +284,17 @@ namespace py::cpp::Windows::Graphics::Effects
     static PyMethodDef _methods_IGraphicsEffectSource[] = {
         { "_assign_array_", _assign_array_IGraphicsEffectSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGraphicsEffectSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGraphicsEffectSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGraphicsEffectSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGraphicsEffectSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGraphicsEffectSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGraphicsEffectSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGraphicsEffectSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGraphicsEffectSource = {
         "winrt._winrt_windows_graphics_effects.IGraphicsEffectSource",
@@ -358,13 +350,11 @@ namespace py::cpp::Windows::Graphics::Effects
     static PyMethodDef methods_ImplementsIGraphicsEffectSource[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGraphicsEffectSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGraphicsEffectSource), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGraphicsEffectSource[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGraphicsEffectSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGraphicsEffectSource = {
         "winrt._winrt_windows_graphics_effects.ImplementsIGraphicsEffectSource",

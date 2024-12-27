@@ -174,20 +174,17 @@ namespace py::cpp::Windows::Phone::Devices::Notification
         { "vibrate", reinterpret_cast<PyCFunction>(VibrationDevice_Vibrate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VibrationDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VibrationDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VibrationDevice[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VibrationDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VibrationDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VibrationDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VibrationDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VibrationDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VibrationDevice = {
         "winrt._winrt_windows_phone_devices_notification.VibrationDevice",
@@ -197,13 +194,11 @@ namespace py::cpp::Windows::Phone::Devices::Notification
         _type_slots_VibrationDevice};
 
     static PyGetSetDef getset_VibrationDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_VibrationDevice_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(VibrationDevice_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_VibrationDevice_Static[] = 
     {
@@ -213,14 +208,12 @@ namespace py::cpp::Windows::Phone::Devices::Notification
         { }
     };
 
-    static PyType_Spec type_spec_VibrationDevice_Static =
-    {
+    static PyType_Spec type_spec_VibrationDevice_Static = {
         "winrt._winrt_windows_phone_devices_notification.VibrationDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VibrationDevice_Static
-    };
+        type_slots_VibrationDevice_Static};
 
     // ----- Windows.Phone.Devices.Notification Initialization --------------------
 

@@ -265,23 +265,20 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(BasicProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BasicProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BasicProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BasicProperties[] = {
         { "date_modified", reinterpret_cast<getter>(BasicProperties_get_DateModified), nullptr, nullptr, nullptr },
         { "item_date", reinterpret_cast<getter>(BasicProperties_get_ItemDate), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(BasicProperties_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BasicProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BasicProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BasicProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BasicProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BasicProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BasicProperties = {
         "winrt._winrt_windows_storage_fileproperties.BasicProperties",
@@ -659,24 +656,21 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(DocumentProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DocumentProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DocumentProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DocumentProperties[] = {
         { "title", reinterpret_cast<getter>(DocumentProperties_get_Title), reinterpret_cast<setter>(DocumentProperties_put_Title), nullptr, nullptr },
         { "comment", reinterpret_cast<getter>(DocumentProperties_get_Comment), reinterpret_cast<setter>(DocumentProperties_put_Comment), nullptr, nullptr },
         { "author", reinterpret_cast<getter>(DocumentProperties_get_Author), nullptr, nullptr, nullptr },
         { "keywords", reinterpret_cast<getter>(DocumentProperties_get_Keywords), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DocumentProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DocumentProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DocumentProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DocumentProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DocumentProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DocumentProperties = {
         "winrt._winrt_windows_storage_fileproperties.DocumentProperties",
@@ -823,19 +817,16 @@ namespace py::cpp::Windows::Storage::FileProperties
     }
 
     static PyMethodDef _methods_GeotagHelper[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GeotagHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GeotagHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeotagHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeotagHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeotagHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GeotagHelper = {
         "winrt._winrt_windows_storage_fileproperties.GeotagHelper",
@@ -845,15 +836,13 @@ namespace py::cpp::Windows::Storage::FileProperties
         _type_slots_GeotagHelper};
 
     static PyGetSetDef getset_GeotagHelper_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GeotagHelper_Static[] = {
         { "get_geotag_async", reinterpret_cast<PyCFunction>(GeotagHelper_GetGeotagAsync), METH_VARARGS, nullptr },
         { "set_geotag_async", reinterpret_cast<PyCFunction>(GeotagHelper_SetGeotagAsync), METH_VARARGS, nullptr },
         { "set_geotag_from_geolocator_async", reinterpret_cast<PyCFunction>(GeotagHelper_SetGeotagFromGeolocatorAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GeotagHelper_Static[] = 
     {
@@ -863,14 +852,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Spec type_spec_GeotagHelper_Static =
-    {
+    static PyType_Spec type_spec_GeotagHelper_Static = {
         "winrt._winrt_windows_storage_fileproperties.GeotagHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GeotagHelper_Static
-    };
+        type_slots_GeotagHelper_Static};
 
     // ----- ImageProperties class --------------------
 
@@ -1598,8 +1585,7 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(ImageProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ImageProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageProperties[] = {
         { "title", reinterpret_cast<getter>(ImageProperties_get_Title), reinterpret_cast<setter>(ImageProperties_put_Title), nullptr, nullptr },
@@ -1614,16 +1600,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "orientation", reinterpret_cast<getter>(ImageProperties_get_Orientation), nullptr, nullptr, nullptr },
         { "people_names", reinterpret_cast<getter>(ImageProperties_get_PeopleNames), nullptr, nullptr, nullptr },
         { "width", reinterpret_cast<getter>(ImageProperties_get_Width), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageProperties = {
         "winrt._winrt_windows_storage_fileproperties.ImageProperties",
@@ -2634,8 +2618,7 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(MusicProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MusicProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MusicProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MusicProperties[] = {
         { "year", reinterpret_cast<getter>(MusicProperties_get_Year), reinterpret_cast<setter>(MusicProperties_put_Year), nullptr, nullptr },
@@ -2654,16 +2637,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "genre", reinterpret_cast<getter>(MusicProperties_get_Genre), nullptr, nullptr, nullptr },
         { "producers", reinterpret_cast<getter>(MusicProperties_get_Producers), nullptr, nullptr, nullptr },
         { "writers", reinterpret_cast<getter>(MusicProperties_get_Writers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MusicProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MusicProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MusicProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MusicProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MusicProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MusicProperties = {
         "winrt._winrt_windows_storage_fileproperties.MusicProperties",
@@ -3007,20 +2988,17 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(StorageItemContentProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StorageItemContentProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageItemContentProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageItemContentProperties[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageItemContentProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageItemContentProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageItemContentProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageItemContentProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageItemContentProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageItemContentProperties = {
         "winrt._winrt_windows_storage_fileproperties.StorageItemContentProperties",
@@ -3749,8 +3727,7 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageItemThumbnail), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_StorageItemThumbnail), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_StorageItemThumbnail), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageItemThumbnail[] = {
         { "original_height", reinterpret_cast<getter>(StorageItemThumbnail_get_OriginalHeight), nullptr, nullptr, nullptr },
@@ -3762,16 +3739,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "can_read", reinterpret_cast<getter>(StorageItemThumbnail_get_CanRead), nullptr, nullptr, nullptr },
         { "can_write", reinterpret_cast<getter>(StorageItemThumbnail_get_CanWrite), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(StorageItemThumbnail_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageItemThumbnail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageItemThumbnail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageItemThumbnail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageItemThumbnail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageItemThumbnail) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageItemThumbnail = {
         "winrt._winrt_windows_storage_fileproperties.StorageItemThumbnail",
@@ -4626,8 +4601,7 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(VideoProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VideoProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoProperties[] = {
         { "year", reinterpret_cast<getter>(VideoProperties_get_Year), reinterpret_cast<setter>(VideoProperties_put_Year), nullptr, nullptr },
@@ -4646,16 +4620,14 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "producers", reinterpret_cast<getter>(VideoProperties_get_Producers), nullptr, nullptr, nullptr },
         { "width", reinterpret_cast<getter>(VideoProperties_get_Width), nullptr, nullptr, nullptr },
         { "writers", reinterpret_cast<getter>(VideoProperties_get_Writers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoProperties = {
         "winrt._winrt_windows_storage_fileproperties.VideoProperties",
@@ -4835,20 +4807,17 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(IStorageItemExtraProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageItemExtraProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemExtraProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageItemExtraProperties[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageItemExtraProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemExtraProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemExtraProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemExtraProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemExtraProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageItemExtraProperties = {
         "winrt._winrt_windows_storage_fileproperties.IStorageItemExtraProperties",
@@ -4994,13 +4963,11 @@ namespace py::cpp::Windows::Storage::FileProperties
     static PyMethodDef methods_ImplementsIStorageItemExtraProperties[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItemExtraProperties), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItemExtraProperties), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageItemExtraProperties[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageItemExtraProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItemExtraProperties = {
         "winrt._winrt_windows_storage_fileproperties.ImplementsIStorageItemExtraProperties",

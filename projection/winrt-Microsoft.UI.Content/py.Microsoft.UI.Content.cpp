@@ -392,20 +392,17 @@ namespace py::cpp::Microsoft::UI::Content
         { "convert_screen_to_local_with_rect", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertScreenToLocalWithRect), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentCoordinateConverter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentCoordinateConverter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentCoordinateConverter[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentCoordinateConverter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentCoordinateConverter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentCoordinateConverter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentCoordinateConverter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentCoordinateConverter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentCoordinateConverter = {
         "winrt._winrt_microsoft_ui_content.ContentCoordinateConverter",
@@ -415,13 +412,11 @@ namespace py::cpp::Microsoft::UI::Content
         _type_slots_ContentCoordinateConverter};
 
     static PyGetSetDef getset_ContentCoordinateConverter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentCoordinateConverter_Static[] = {
         { "create_for_window_id", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_CreateForWindowId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentCoordinateConverter_Static[] = 
     {
@@ -431,14 +426,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Spec type_spec_ContentCoordinateConverter_Static =
-    {
+    static PyType_Spec type_spec_ContentCoordinateConverter_Static = {
         "winrt._winrt_microsoft_ui_content.ContentCoordinateConverter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ContentCoordinateConverter_Static
-    };
+        type_slots_ContentCoordinateConverter_Static};
 
     // ----- ContentDeferral class --------------------
 
@@ -526,20 +519,17 @@ namespace py::cpp::Microsoft::UI::Content
         { "complete", reinterpret_cast<PyCFunction>(ContentDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentDeferral = {
         "winrt._winrt_microsoft_ui_content.ContentDeferral",
@@ -622,21 +612,18 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_ContentEnvironmentSettingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_ContentEnvironmentSettingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentEnvironmentSettingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentEnvironmentSettingChangedEventArgs[] = {
         { "setting_name", reinterpret_cast<getter>(ContentEnvironmentSettingChangedEventArgs_get_SettingName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentEnvironmentSettingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentEnvironmentSettingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentEnvironmentSettingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentEnvironmentSettingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentEnvironmentSettingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentEnvironmentSettingChangedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentEnvironmentSettingChangedEventArgs",
@@ -749,22 +736,19 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_ContentEnvironmentStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_ContentEnvironmentStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentEnvironmentStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentEnvironmentStateChangedEventArgs[] = {
         { "did_app_window_id_change", reinterpret_cast<getter>(ContentEnvironmentStateChangedEventArgs_get_DidAppWindowIdChange), nullptr, nullptr, nullptr },
         { "did_display_id_change", reinterpret_cast<getter>(ContentEnvironmentStateChangedEventArgs_get_DidDisplayIdChange), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentEnvironmentStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentEnvironmentStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentEnvironmentStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentEnvironmentStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentEnvironmentStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentEnvironmentStateChangedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentEnvironmentStateChangedEventArgs",
@@ -2191,8 +2175,7 @@ namespace py::cpp::Microsoft::UI::Content
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentIsland), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ContentIsland), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ContentIsland), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentIsland[] = {
         { "system_backdrop", reinterpret_cast<getter>(ContentIsland_get_SystemBackdrop), reinterpret_cast<setter>(ContentIsland_put_SystemBackdrop), nullptr, nullptr },
@@ -2212,16 +2195,14 @@ namespace py::cpp::Microsoft::UI::Content
         { "layout_direction", reinterpret_cast<getter>(ContentIsland_get_LayoutDirection), nullptr, nullptr, nullptr },
         { "rasterization_scale", reinterpret_cast<getter>(ContentIsland_get_RasterizationScale), nullptr, nullptr, nullptr },
         { "is_closed", reinterpret_cast<getter>(ContentIsland_get_IsClosed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentIsland[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIsland) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIsland) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIsland) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIsland) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentIsland = {
         "winrt._winrt_microsoft_ui_content.ContentIsland",
@@ -2231,8 +2212,7 @@ namespace py::cpp::Microsoft::UI::Content
         _type_slots_ContentIsland};
 
     static PyGetSetDef getset_ContentIsland_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentIsland_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(ContentIsland_Create), METH_VARARGS, nullptr },
@@ -2240,8 +2220,7 @@ namespace py::cpp::Microsoft::UI::Content
         { "find_all_for_current_thread", reinterpret_cast<PyCFunction>(ContentIsland_FindAllForCurrentThread), METH_VARARGS, nullptr },
         { "get_by_visual", reinterpret_cast<PyCFunction>(ContentIsland_GetByVisual), METH_VARARGS, nullptr },
         { "get_from_id", reinterpret_cast<PyCFunction>(ContentIsland_GetFromId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentIsland_Static[] = 
     {
@@ -2251,14 +2230,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Spec type_spec_ContentIsland_Static =
-    {
+    static PyType_Spec type_spec_ContentIsland_Static = {
         "winrt._winrt_microsoft_ui_content.ContentIsland_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ContentIsland_Static
-    };
+        type_slots_ContentIsland_Static};
 
     // ----- ContentIslandAutomationProviderRequestedEventArgs class --------------------
 
@@ -2442,22 +2419,19 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_ContentIslandAutomationProviderRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_ContentIslandAutomationProviderRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentIslandAutomationProviderRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentIslandAutomationProviderRequestedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(ContentIslandAutomationProviderRequestedEventArgs_get_Handled), reinterpret_cast<setter>(ContentIslandAutomationProviderRequestedEventArgs_put_Handled), nullptr, nullptr },
         { "automation_provider", reinterpret_cast<getter>(ContentIslandAutomationProviderRequestedEventArgs_get_AutomationProvider), reinterpret_cast<setter>(ContentIslandAutomationProviderRequestedEventArgs_put_AutomationProvider), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentIslandAutomationProviderRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIslandAutomationProviderRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIslandAutomationProviderRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIslandAutomationProviderRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIslandAutomationProviderRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentIslandAutomationProviderRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentIslandAutomationProviderRequestedEventArgs",
@@ -2704,22 +2678,19 @@ namespace py::cpp::Microsoft::UI::Content
         { "remove_state_changed", reinterpret_cast<PyCFunction>(ContentIslandEnvironment_remove_StateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ContentIslandEnvironment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentIslandEnvironment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentIslandEnvironment[] = {
         { "app_window_id", reinterpret_cast<getter>(ContentIslandEnvironment_get_AppWindowId), nullptr, nullptr, nullptr },
         { "display_id", reinterpret_cast<getter>(ContentIslandEnvironment_get_DisplayId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentIslandEnvironment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIslandEnvironment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIslandEnvironment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIslandEnvironment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIslandEnvironment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentIslandEnvironment = {
         "winrt._winrt_microsoft_ui_content.ContentIslandEnvironment",
@@ -2729,12 +2700,10 @@ namespace py::cpp::Microsoft::UI::Content
         _type_slots_ContentIslandEnvironment};
 
     static PyGetSetDef getset_ContentIslandEnvironment_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentIslandEnvironment_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentIslandEnvironment_Static[] = 
     {
@@ -2744,14 +2713,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Spec type_spec_ContentIslandEnvironment_Static =
-    {
+    static PyType_Spec type_spec_ContentIslandEnvironment_Static = {
         "winrt._winrt_microsoft_ui_content.ContentIslandEnvironment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ContentIslandEnvironment_Static
-    };
+        type_slots_ContentIslandEnvironment_Static};
 
     // ----- ContentIslandStateChangedEventArgs class --------------------
 
@@ -2947,8 +2914,7 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_ContentIslandStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_ContentIslandStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentIslandStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentIslandStateChangedEventArgs[] = {
         { "did_actual_size_change", reinterpret_cast<getter>(ContentIslandStateChangedEventArgs_get_DidActualSizeChange), nullptr, nullptr, nullptr },
@@ -2956,16 +2922,14 @@ namespace py::cpp::Microsoft::UI::Content
         { "did_rasterization_scale_change", reinterpret_cast<getter>(ContentIslandStateChangedEventArgs_get_DidRasterizationScaleChange), nullptr, nullptr, nullptr },
         { "did_site_enabled_change", reinterpret_cast<getter>(ContentIslandStateChangedEventArgs_get_DidSiteEnabledChange), nullptr, nullptr, nullptr },
         { "did_site_visible_change", reinterpret_cast<getter>(ContentIslandStateChangedEventArgs_get_DidSiteVisibleChange), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentIslandStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIslandStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIslandStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIslandStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIslandStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentIslandStateChangedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentIslandStateChangedEventArgs",
@@ -4119,8 +4083,7 @@ namespace py::cpp::Microsoft::UI::Content
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentSite), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ContentSite), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ContentSite), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentSite[] = {
         { "should_apply_rasterization_scale", reinterpret_cast<getter>(ContentSite_get_ShouldApplyRasterizationScale), reinterpret_cast<setter>(ContentSite_put_ShouldApplyRasterizationScale), nullptr, nullptr },
@@ -4139,16 +4102,14 @@ namespace py::cpp::Microsoft::UI::Content
         { "requested_size", reinterpret_cast<getter>(ContentSite_get_RequestedSize), nullptr, nullptr, nullptr },
         { "view", reinterpret_cast<getter>(ContentSite_get_View), nullptr, nullptr, nullptr },
         { "is_closed", reinterpret_cast<getter>(ContentSite_get_IsClosed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentSite[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSite) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSite) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSite) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSite) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentSite = {
         "winrt._winrt_microsoft_ui_content.ContentSite",
@@ -4158,12 +4119,10 @@ namespace py::cpp::Microsoft::UI::Content
         _type_slots_ContentSite};
 
     static PyGetSetDef getset_ContentSite_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentSite_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentSite_Static[] = 
     {
@@ -4173,14 +4132,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Spec type_spec_ContentSite_Static =
-    {
+    static PyType_Spec type_spec_ContentSite_Static = {
         "winrt._winrt_microsoft_ui_content.ContentSite_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ContentSite_Static
-    };
+        type_slots_ContentSite_Static};
 
     // ----- ContentSiteEnvironment class --------------------
 
@@ -4438,23 +4395,20 @@ namespace py::cpp::Microsoft::UI::Content
         { "notify_setting_changed", reinterpret_cast<PyCFunction>(ContentSiteEnvironment_NotifySettingChanged), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentSiteEnvironment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentSiteEnvironment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentSiteEnvironment[] = {
         { "display_id", reinterpret_cast<getter>(ContentSiteEnvironment_get_DisplayId), reinterpret_cast<setter>(ContentSiteEnvironment_put_DisplayId), nullptr, nullptr },
         { "app_window_id", reinterpret_cast<getter>(ContentSiteEnvironment_get_AppWindowId), reinterpret_cast<setter>(ContentSiteEnvironment_put_AppWindowId), nullptr, nullptr },
         { "view", reinterpret_cast<getter>(ContentSiteEnvironment_get_View), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentSiteEnvironment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSiteEnvironment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSiteEnvironment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSiteEnvironment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSiteEnvironment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentSiteEnvironment = {
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironment",
@@ -4464,12 +4418,10 @@ namespace py::cpp::Microsoft::UI::Content
         _type_slots_ContentSiteEnvironment};
 
     static PyGetSetDef getset_ContentSiteEnvironment_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentSiteEnvironment_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentSiteEnvironment_Static[] = 
     {
@@ -4479,14 +4431,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Spec type_spec_ContentSiteEnvironment_Static =
-    {
+    static PyType_Spec type_spec_ContentSiteEnvironment_Static = {
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ContentSiteEnvironment_Static
-    };
+        type_slots_ContentSiteEnvironment_Static};
 
     // ----- ContentSiteEnvironmentView class --------------------
 
@@ -4592,22 +4542,19 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_ContentSiteEnvironmentView[] = {
         { "_assign_array_", _assign_array_ContentSiteEnvironmentView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentSiteEnvironmentView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentSiteEnvironmentView[] = {
         { "app_window_id", reinterpret_cast<getter>(ContentSiteEnvironmentView_get_AppWindowId), nullptr, nullptr, nullptr },
         { "display_id", reinterpret_cast<getter>(ContentSiteEnvironmentView_get_DisplayId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentSiteEnvironmentView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSiteEnvironmentView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSiteEnvironmentView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSiteEnvironmentView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSiteEnvironmentView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentSiteEnvironmentView = {
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironmentView",
@@ -4617,12 +4564,10 @@ namespace py::cpp::Microsoft::UI::Content
         _type_slots_ContentSiteEnvironmentView};
 
     static PyGetSetDef getset_ContentSiteEnvironmentView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentSiteEnvironmentView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentSiteEnvironmentView_Static[] = 
     {
@@ -4632,14 +4577,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Spec type_spec_ContentSiteEnvironmentView_Static =
-    {
+    static PyType_Spec type_spec_ContentSiteEnvironmentView_Static = {
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironmentView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ContentSiteEnvironmentView_Static
-    };
+        type_slots_ContentSiteEnvironmentView_Static};
 
     // ----- ContentSiteRequestedStateChangedEventArgs class --------------------
 
@@ -4715,21 +4658,18 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_ContentSiteRequestedStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_ContentSiteRequestedStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentSiteRequestedStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentSiteRequestedStateChangedEventArgs[] = {
         { "did_requested_size_change", reinterpret_cast<getter>(ContentSiteRequestedStateChangedEventArgs_get_DidRequestedSizeChange), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentSiteRequestedStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSiteRequestedStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSiteRequestedStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSiteRequestedStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSiteRequestedStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentSiteRequestedStateChangedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentSiteRequestedStateChangedEventArgs",
@@ -5202,8 +5142,7 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_ContentSiteView[] = {
         { "_assign_array_", _assign_array_ContentSiteView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentSiteView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentSiteView[] = {
         { "actual_size", reinterpret_cast<getter>(ContentSiteView_get_ActualSize), nullptr, nullptr, nullptr },
@@ -5220,16 +5159,14 @@ namespace py::cpp::Microsoft::UI::Content
         { "rasterization_scale", reinterpret_cast<getter>(ContentSiteView_get_RasterizationScale), nullptr, nullptr, nullptr },
         { "requested_size", reinterpret_cast<getter>(ContentSiteView_get_RequestedSize), nullptr, nullptr, nullptr },
         { "should_apply_rasterization_scale", reinterpret_cast<getter>(ContentSiteView_get_ShouldApplyRasterizationScale), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentSiteView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSiteView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSiteView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSiteView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSiteView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentSiteView = {
         "winrt._winrt_microsoft_ui_content.ContentSiteView",
@@ -5239,12 +5176,10 @@ namespace py::cpp::Microsoft::UI::Content
         _type_slots_ContentSiteView};
 
     static PyGetSetDef getset_ContentSiteView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentSiteView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentSiteView_Static[] = 
     {
@@ -5254,14 +5189,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Spec type_spec_ContentSiteView_Static =
-    {
+    static PyType_Spec type_spec_ContentSiteView_Static = {
         "winrt._winrt_microsoft_ui_content.ContentSiteView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ContentSiteView_Static
-    };
+        type_slots_ContentSiteView_Static};
 
     // ----- DesktopChildSiteBridge class --------------------
 
@@ -5449,22 +5382,19 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_DesktopChildSiteBridge[] = {
         { "_assign_array_", _assign_array_DesktopChildSiteBridge, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopChildSiteBridge), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesktopChildSiteBridge[] = {
         { "resize_policy", reinterpret_cast<getter>(DesktopChildSiteBridge_get_ResizePolicy), reinterpret_cast<setter>(DesktopChildSiteBridge_put_ResizePolicy), nullptr, nullptr },
         { "site_view", reinterpret_cast<getter>(DesktopChildSiteBridge_get_SiteView), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesktopChildSiteBridge[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopChildSiteBridge) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopChildSiteBridge) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopChildSiteBridge) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopChildSiteBridge) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesktopChildSiteBridge = {
         "winrt._winrt_microsoft_ui_content.DesktopChildSiteBridge",
@@ -5474,13 +5404,11 @@ namespace py::cpp::Microsoft::UI::Content
         _type_slots_DesktopChildSiteBridge};
 
     static PyGetSetDef getset_DesktopChildSiteBridge_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DesktopChildSiteBridge_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_Create), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DesktopChildSiteBridge_Static[] = 
     {
@@ -5490,14 +5418,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Spec type_spec_DesktopChildSiteBridge_Static =
-    {
+    static PyType_Spec type_spec_DesktopChildSiteBridge_Static = {
         "winrt._winrt_microsoft_ui_content.DesktopChildSiteBridge_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DesktopChildSiteBridge_Static
-    };
+        type_slots_DesktopChildSiteBridge_Static};
 
     // ----- DesktopSiteBridge class --------------------
 
@@ -6456,8 +6382,7 @@ namespace py::cpp::Microsoft::UI::Content
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopSiteBridge), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesktopSiteBridge), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesktopSiteBridge), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesktopSiteBridge[] = {
         { "override_scale", reinterpret_cast<getter>(DesktopSiteBridge_get_OverrideScale), reinterpret_cast<setter>(DesktopSiteBridge_put_OverrideScale), nullptr, nullptr },
@@ -6467,16 +6392,14 @@ namespace py::cpp::Microsoft::UI::Content
         { "is_visible", reinterpret_cast<getter>(DesktopSiteBridge_get_IsVisible), nullptr, nullptr, nullptr },
         { "window_id", reinterpret_cast<getter>(DesktopSiteBridge_get_WindowId), nullptr, nullptr, nullptr },
         { "is_closed", reinterpret_cast<getter>(DesktopSiteBridge_get_IsClosed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesktopSiteBridge[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopSiteBridge) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopSiteBridge) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopSiteBridge) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopSiteBridge) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesktopSiteBridge = {
         "winrt._winrt_microsoft_ui_content.DesktopSiteBridge",
@@ -6486,13 +6409,11 @@ namespace py::cpp::Microsoft::UI::Content
         _type_slots_DesktopSiteBridge};
 
     static PyGetSetDef getset_DesktopSiteBridge_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DesktopSiteBridge_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(DesktopSiteBridge_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DesktopSiteBridge_Static[] = 
     {
@@ -6502,14 +6423,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Spec type_spec_DesktopSiteBridge_Static =
-    {
+    static PyType_Spec type_spec_DesktopSiteBridge_Static = {
         "winrt._winrt_microsoft_ui_content.DesktopSiteBridge_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_DesktopSiteBridge_Static
-    };
+        type_slots_DesktopSiteBridge_Static};
 
     // ----- IContentSiteBridge interface --------------------
 
@@ -6790,23 +6709,20 @@ namespace py::cpp::Microsoft::UI::Content
         { "_from", reinterpret_cast<PyCFunction>(_from_IContentSiteBridge), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IContentSiteBridge), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IContentSiteBridge), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContentSiteBridge[] = {
         { "dispatcher_queue", reinterpret_cast<getter>(IContentSiteBridge_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { "layout_direction_override", reinterpret_cast<getter>(IContentSiteBridge_get_LayoutDirectionOverride), reinterpret_cast<setter>(IContentSiteBridge_put_LayoutDirectionOverride), nullptr, nullptr },
         { "override_scale", reinterpret_cast<getter>(IContentSiteBridge_get_OverrideScale), reinterpret_cast<setter>(IContentSiteBridge_put_OverrideScale), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContentSiteBridge[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContentSiteBridge) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentSiteBridge) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentSiteBridge) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentSiteBridge) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContentSiteBridge = {
         "winrt._winrt_microsoft_ui_content.IContentSiteBridge",
@@ -6992,13 +6908,11 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef methods_ImplementsIContentSiteBridge[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContentSiteBridge), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContentSiteBridge), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContentSiteBridge[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContentSiteBridge) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContentSiteBridge = {
         "winrt._winrt_microsoft_ui_content.ImplementsIContentSiteBridge",

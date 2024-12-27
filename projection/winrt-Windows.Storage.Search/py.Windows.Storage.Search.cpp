@@ -552,21 +552,18 @@ namespace py::cpp::Windows::Storage::Search
         { "update_async", reinterpret_cast<PyCFunction>(ContentIndexer_UpdateAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentIndexer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentIndexer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentIndexer[] = {
         { "revision", reinterpret_cast<getter>(ContentIndexer_get_Revision), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentIndexer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIndexer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIndexer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIndexer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIndexer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentIndexer = {
         "winrt._winrt_windows_storage_search.ContentIndexer",
@@ -576,14 +573,12 @@ namespace py::cpp::Windows::Storage::Search
         _type_slots_ContentIndexer};
 
     static PyGetSetDef getset_ContentIndexer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentIndexer_Static[] = {
         { "get_indexer", reinterpret_cast<PyCFunction>(ContentIndexer_GetIndexer), METH_VARARGS, nullptr },
         { "get_indexer_with_name", reinterpret_cast<PyCFunction>(ContentIndexer_GetIndexerWithName), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentIndexer_Static[] = 
     {
@@ -593,14 +588,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Spec type_spec_ContentIndexer_Static =
-    {
+    static PyType_Spec type_spec_ContentIndexer_Static = {
         "winrt._winrt_windows_storage_search.ContentIndexer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContentIndexer_Static
-    };
+        type_slots_ContentIndexer_Static};
 
     // ----- ContentIndexerQuery class --------------------
 
@@ -887,21 +880,18 @@ namespace py::cpp::Windows::Storage::Search
         { "get_range_async", reinterpret_cast<PyCFunction>(ContentIndexerQuery_GetRangeAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentIndexerQuery, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentIndexerQuery), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentIndexerQuery[] = {
         { "query_folder", reinterpret_cast<getter>(ContentIndexerQuery_get_QueryFolder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentIndexerQuery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIndexerQuery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIndexerQuery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIndexerQuery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIndexerQuery) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentIndexerQuery = {
         "winrt._winrt_windows_storage_search.ContentIndexerQuery",
@@ -1213,24 +1203,21 @@ namespace py::cpp::Windows::Storage::Search
     static PyMethodDef _methods_IndexableContent[] = {
         { "_assign_array_", _assign_array_IndexableContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IndexableContent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IndexableContent[] = {
         { "stream_content_type", reinterpret_cast<getter>(IndexableContent_get_StreamContentType), reinterpret_cast<setter>(IndexableContent_put_StreamContentType), nullptr, nullptr },
         { "stream", reinterpret_cast<getter>(IndexableContent_get_Stream), reinterpret_cast<setter>(IndexableContent_put_Stream), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(IndexableContent_get_Id), reinterpret_cast<setter>(IndexableContent_put_Id), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(IndexableContent_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IndexableContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IndexableContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IndexableContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IndexableContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IndexableContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IndexableContent = {
         "winrt._winrt_windows_storage_search.IndexableContent",
@@ -2007,8 +1994,7 @@ namespace py::cpp::Windows::Storage::Search
         { "set_thumbnail_prefetch", reinterpret_cast<PyCFunction>(QueryOptions_SetThumbnailPrefetch), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_QueryOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QueryOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_QueryOptions[] = {
         { "user_search_filter", reinterpret_cast<getter>(QueryOptions_get_UserSearchFilter), reinterpret_cast<setter>(QueryOptions_put_UserSearchFilter), nullptr, nullptr },
@@ -2021,16 +2007,14 @@ namespace py::cpp::Windows::Storage::Search
         { "group_property_name", reinterpret_cast<getter>(QueryOptions_get_GroupPropertyName), nullptr, nullptr, nullptr },
         { "sort_order", reinterpret_cast<getter>(QueryOptions_get_SortOrder), nullptr, nullptr, nullptr },
         { "storage_provider_id_filter", reinterpret_cast<getter>(QueryOptions_get_StorageProviderIdFilter), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_QueryOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QueryOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QueryOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QueryOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QueryOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_QueryOptions = {
         "winrt._winrt_windows_storage_search.QueryOptions",
@@ -2789,13 +2773,11 @@ namespace py::cpp::Windows::Storage::Search
         { "set_at", reinterpret_cast<PyCFunction>(SortEntryVector_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SortEntryVector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SortEntryVector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SortEntryVector[] = {
         { "size", reinterpret_cast<getter>(SortEntryVector_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SortEntryVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SortEntryVector) },
@@ -2807,8 +2789,7 @@ namespace py::cpp::Windows::Storage::Search
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_SortEntryVector) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_SortEntryVector) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_SortEntryVector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SortEntryVector = {
         "winrt._winrt_windows_storage_search.SortEntryVector",
@@ -3322,21 +3303,18 @@ namespace py::cpp::Windows::Storage::Search
         { "remove_options_changed", reinterpret_cast<PyCFunction>(StorageFileQueryResult_remove_OptionsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_StorageFileQueryResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageFileQueryResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageFileQueryResult[] = {
         { "folder", reinterpret_cast<getter>(StorageFileQueryResult_get_Folder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageFileQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageFileQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageFileQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageFileQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageFileQueryResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageFileQueryResult = {
         "winrt._winrt_windows_storage_search.StorageFileQueryResult",
@@ -3807,21 +3785,18 @@ namespace py::cpp::Windows::Storage::Search
         { "remove_options_changed", reinterpret_cast<PyCFunction>(StorageFolderQueryResult_remove_OptionsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_StorageFolderQueryResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageFolderQueryResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageFolderQueryResult[] = {
         { "folder", reinterpret_cast<getter>(StorageFolderQueryResult_get_Folder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageFolderQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageFolderQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageFolderQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageFolderQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageFolderQueryResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageFolderQueryResult = {
         "winrt._winrt_windows_storage_search.StorageFolderQueryResult",
@@ -4292,21 +4267,18 @@ namespace py::cpp::Windows::Storage::Search
         { "remove_options_changed", reinterpret_cast<PyCFunction>(StorageItemQueryResult_remove_OptionsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_StorageItemQueryResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageItemQueryResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageItemQueryResult[] = {
         { "folder", reinterpret_cast<getter>(StorageItemQueryResult_get_Folder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageItemQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageItemQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageItemQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageItemQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageItemQueryResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageItemQueryResult = {
         "winrt._winrt_windows_storage_search.StorageItemQueryResult",
@@ -4419,22 +4391,19 @@ namespace py::cpp::Windows::Storage::Search
     static PyMethodDef _methods_StorageLibraryChangeTrackerTriggerDetails[] = {
         { "_assign_array_", _assign_array_StorageLibraryChangeTrackerTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageLibraryChangeTrackerTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageLibraryChangeTrackerTriggerDetails[] = {
         { "change_tracker", reinterpret_cast<getter>(StorageLibraryChangeTrackerTriggerDetails_get_ChangeTracker), nullptr, nullptr, nullptr },
         { "folder", reinterpret_cast<getter>(StorageLibraryChangeTrackerTriggerDetails_get_Folder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageLibraryChangeTrackerTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageLibraryChangeTrackerTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageLibraryChangeTrackerTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageLibraryChangeTrackerTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageLibraryChangeTrackerTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageLibraryChangeTrackerTriggerDetails = {
         "winrt._winrt_windows_storage_search.StorageLibraryChangeTrackerTriggerDetails",
@@ -4560,21 +4529,18 @@ namespace py::cpp::Windows::Storage::Search
         { "create_modified_since_query", reinterpret_cast<PyCFunction>(StorageLibraryContentChangedTriggerDetails_CreateModifiedSinceQuery), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StorageLibraryContentChangedTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageLibraryContentChangedTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageLibraryContentChangedTriggerDetails[] = {
         { "folder", reinterpret_cast<getter>(StorageLibraryContentChangedTriggerDetails_get_Folder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageLibraryContentChangedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageLibraryContentChangedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageLibraryContentChangedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageLibraryContentChangedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageLibraryContentChangedTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageLibraryContentChangedTriggerDetails = {
         "winrt._winrt_windows_storage_search.StorageLibraryContentChangedTriggerDetails",
@@ -4787,22 +4753,19 @@ namespace py::cpp::Windows::Storage::Search
     static PyMethodDef _methods_ValueAndLanguage[] = {
         { "_assign_array_", _assign_array_ValueAndLanguage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ValueAndLanguage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ValueAndLanguage[] = {
         { "value", reinterpret_cast<getter>(ValueAndLanguage_get_Value), reinterpret_cast<setter>(ValueAndLanguage_put_Value), nullptr, nullptr },
         { "language", reinterpret_cast<getter>(ValueAndLanguage_get_Language), reinterpret_cast<setter>(ValueAndLanguage_put_Language), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ValueAndLanguage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ValueAndLanguage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ValueAndLanguage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ValueAndLanguage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ValueAndLanguage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ValueAndLanguage = {
         "winrt._winrt_windows_storage_search.ValueAndLanguage",
@@ -5092,24 +5055,21 @@ namespace py::cpp::Windows::Storage::Search
     static PyMethodDef _methods_IIndexableContent[] = {
         { "_assign_array_", _assign_array_IIndexableContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IIndexableContent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IIndexableContent[] = {
         { "id", reinterpret_cast<getter>(IIndexableContent_get_Id), reinterpret_cast<setter>(IIndexableContent_put_Id), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(IIndexableContent_get_Properties), nullptr, nullptr, nullptr },
         { "stream", reinterpret_cast<getter>(IIndexableContent_get_Stream), reinterpret_cast<setter>(IIndexableContent_put_Stream), nullptr, nullptr },
         { "stream_content_type", reinterpret_cast<getter>(IIndexableContent_get_StreamContentType), reinterpret_cast<setter>(IIndexableContent_put_StreamContentType), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IIndexableContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IIndexableContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IIndexableContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIndexableContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIndexableContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IIndexableContent = {
         "winrt._winrt_windows_storage_search.IIndexableContent",
@@ -5314,13 +5274,11 @@ namespace py::cpp::Windows::Storage::Search
     static PyMethodDef methods_ImplementsIIndexableContent[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIndexableContent), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIndexableContent), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIIndexableContent[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIIndexableContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIIndexableContent = {
         "winrt._winrt_windows_storage_search.ImplementsIIndexableContent",
@@ -6101,20 +6059,17 @@ namespace py::cpp::Windows::Storage::Search
         { "is_common_folder_query_supported", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_IsCommonFolderQuerySupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageFolderQueryOperations, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFolderQueryOperations), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageFolderQueryOperations[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageFolderQueryOperations[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageFolderQueryOperations) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageFolderQueryOperations) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageFolderQueryOperations) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageFolderQueryOperations) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageFolderQueryOperations = {
         "winrt._winrt_windows_storage_search.IStorageFolderQueryOperations",
@@ -6738,13 +6693,11 @@ namespace py::cpp::Windows::Storage::Search
     static PyMethodDef methods_ImplementsIStorageFolderQueryOperations[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageFolderQueryOperations), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageFolderQueryOperations), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageFolderQueryOperations[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageFolderQueryOperations) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageFolderQueryOperations = {
         "winrt._winrt_windows_storage_search.ImplementsIStorageFolderQueryOperations",
@@ -7130,21 +7083,18 @@ namespace py::cpp::Windows::Storage::Search
         { "remove_options_changed", reinterpret_cast<PyCFunction>(IStorageQueryResultBase_remove_OptionsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_IStorageQueryResultBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageQueryResultBase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageQueryResultBase[] = {
         { "folder", reinterpret_cast<getter>(IStorageQueryResultBase_get_Folder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageQueryResultBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageQueryResultBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageQueryResultBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageQueryResultBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageQueryResultBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageQueryResultBase = {
         "winrt._winrt_windows_storage_search.IStorageQueryResultBase",
@@ -7458,13 +7408,11 @@ namespace py::cpp::Windows::Storage::Search
     static PyMethodDef methods_ImplementsIStorageQueryResultBase[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageQueryResultBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageQueryResultBase), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageQueryResultBase[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageQueryResultBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageQueryResultBase = {
         "winrt._winrt_windows_storage_search.ImplementsIStorageQueryResultBase",
@@ -7542,8 +7490,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyMethodDef _methods_SortEntry[] = {
         { "_assign_array_", _assign_array_SortEntry, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* SortEntry_get_PropertyName(py::wrapper::Windows::Storage::Search::SortEntry* self, void* /*unused*/) noexcept
     {
@@ -7614,8 +7561,7 @@ namespace py::cpp::Windows::Storage::Search
     static PyGetSetDef _getset_SortEntry[] = {
         { "property_name", reinterpret_cast<getter>(SortEntry_get_PropertyName), reinterpret_cast<setter>(SortEntry_set_PropertyName), nullptr, nullptr },
         { "ascending_order", reinterpret_cast<getter>(SortEntry_get_AscendingOrder), reinterpret_cast<setter>(SortEntry_set_AscendingOrder), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_SortEntry(py::wrapper::Windows::Storage::Search::SortEntry* self, PyObject* other, int op) noexcept
     {
@@ -7677,8 +7623,7 @@ namespace py::cpp::Windows::Storage::Search
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SortEntry) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SortEntry) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_SortEntry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SortEntry = {
         "winrt._winrt_windows_storage_search.SortEntry",

@@ -108,22 +108,19 @@ namespace py::cpp::Windows::Globalization::Collation
     static PyMethodDef _methods_CharacterGrouping[] = {
         { "_assign_array_", _assign_array_CharacterGrouping, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CharacterGrouping), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CharacterGrouping[] = {
         { "first", reinterpret_cast<getter>(CharacterGrouping_get_First), nullptr, nullptr, nullptr },
         { "label", reinterpret_cast<getter>(CharacterGrouping_get_Label), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CharacterGrouping[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CharacterGrouping) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CharacterGrouping) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CharacterGrouping) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CharacterGrouping) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CharacterGrouping = {
         "winrt._winrt_windows_globalization_collation.CharacterGrouping",
@@ -588,13 +585,11 @@ namespace py::cpp::Windows::Globalization::Collation
         { "lookup", reinterpret_cast<PyCFunction>(CharacterGroupings_Lookup), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CharacterGroupings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CharacterGroupings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CharacterGroupings[] = {
         { "size", reinterpret_cast<getter>(CharacterGroupings_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CharacterGroupings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CharacterGroupings) },
@@ -605,8 +600,7 @@ namespace py::cpp::Windows::Globalization::Collation
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_CharacterGroupings) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_CharacterGroupings) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_CharacterGroupings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CharacterGroupings = {
         "winrt._winrt_windows_globalization_collation.CharacterGroupings",

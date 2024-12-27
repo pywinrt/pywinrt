@@ -445,19 +445,16 @@ namespace py::cpp::Windows::Foundation::Metadata
     }
 
     static PyMethodDef _methods_ApiInformation[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApiInformation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApiInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApiInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApiInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApiInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApiInformation = {
         "winrt._winrt_windows_foundation_metadata.ApiInformation",
@@ -467,8 +464,7 @@ namespace py::cpp::Windows::Foundation::Metadata
         _type_slots_ApiInformation};
 
     static PyGetSetDef getset_ApiInformation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApiInformation_Static[] = {
         { "is_api_contract_present_by_major", reinterpret_cast<PyCFunction>(ApiInformation_IsApiContractPresentByMajor), METH_VARARGS, nullptr },
@@ -481,8 +477,7 @@ namespace py::cpp::Windows::Foundation::Metadata
         { "is_read_only_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsReadOnlyPropertyPresent), METH_VARARGS, nullptr },
         { "is_type_present", reinterpret_cast<PyCFunction>(ApiInformation_IsTypePresent), METH_VARARGS, nullptr },
         { "is_writeable_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsWriteablePropertyPresent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApiInformation_Static[] = 
     {
@@ -492,14 +487,12 @@ namespace py::cpp::Windows::Foundation::Metadata
         { }
     };
 
-    static PyType_Spec type_spec_ApiInformation_Static =
-    {
+    static PyType_Spec type_spec_ApiInformation_Static = {
         "winrt._winrt_windows_foundation_metadata.ApiInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApiInformation_Static
-    };
+        type_slots_ApiInformation_Static};
 
     // ----- Windows.Foundation.Metadata Initialization --------------------
 

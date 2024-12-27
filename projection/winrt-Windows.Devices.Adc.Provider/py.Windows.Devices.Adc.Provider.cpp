@@ -411,8 +411,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { "release_channel", reinterpret_cast<PyCFunction>(IAdcControllerProvider_ReleaseChannel), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAdcControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAdcControllerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAdcControllerProvider[] = {
         { "channel_count", reinterpret_cast<getter>(IAdcControllerProvider_get_ChannelCount), nullptr, nullptr, nullptr },
@@ -420,16 +419,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { "max_value", reinterpret_cast<getter>(IAdcControllerProvider_get_MaxValue), nullptr, nullptr, nullptr },
         { "min_value", reinterpret_cast<getter>(IAdcControllerProvider_get_MinValue), nullptr, nullptr, nullptr },
         { "resolution_in_bits", reinterpret_cast<getter>(IAdcControllerProvider_get_ResolutionInBits), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAdcControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdcControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdcControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdcControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdcControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAdcControllerProvider = {
         "winrt._winrt_windows_devices_adc_provider.IAdcControllerProvider",
@@ -732,13 +729,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
     static PyMethodDef methods_ImplementsIAdcControllerProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAdcControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAdcControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAdcControllerProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAdcControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAdcControllerProvider = {
         "winrt._winrt_windows_devices_adc_provider.ImplementsIAdcControllerProvider",
@@ -832,20 +827,17 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { "get_controllers", reinterpret_cast<PyCFunction>(IAdcProvider_GetControllers), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAdcProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAdcProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAdcProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAdcProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdcProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdcProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdcProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdcProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAdcProvider = {
         "winrt._winrt_windows_devices_adc_provider.IAdcProvider",
@@ -927,13 +919,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
     static PyMethodDef methods_ImplementsIAdcProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAdcProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAdcProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAdcProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAdcProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAdcProvider = {
         "winrt._winrt_windows_devices_adc_provider.ImplementsIAdcProvider",

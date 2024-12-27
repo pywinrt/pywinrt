@@ -988,8 +988,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static PyMethodDef _methods_UserDataTask[] = {
         { "_assign_array_", _assign_array_UserDataTask, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTask), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTask[] = {
         { "regeneration_properties", reinterpret_cast<getter>(UserDataTask_get_RegenerationProperties), reinterpret_cast<setter>(UserDataTask_put_RegenerationProperties), nullptr, nullptr },
@@ -1007,16 +1006,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "id", reinterpret_cast<getter>(UserDataTask_get_Id), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(UserDataTask_get_Kind), nullptr, nullptr, nullptr },
         { "list_id", reinterpret_cast<getter>(UserDataTask_get_ListId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTask[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTask) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTask) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTask = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTask",
@@ -1099,21 +1096,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static PyMethodDef _methods_UserDataTaskBatch[] = {
         { "_assign_array_", _assign_array_UserDataTaskBatch, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskBatch), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskBatch[] = {
         { "tasks", reinterpret_cast<getter>(UserDataTaskBatch_get_Tasks), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskBatch) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskBatch = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskBatch",
@@ -1859,8 +1853,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "save_task_async", reinterpret_cast<PyCFunction>(UserDataTaskList_SaveTaskAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskList[] = {
         { "other_app_write_access", reinterpret_cast<getter>(UserDataTaskList_get_OtherAppWriteAccess), reinterpret_cast<setter>(UserDataTaskList_put_OtherAppWriteAccess), nullptr, nullptr },
@@ -1871,16 +1864,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "source_display_name", reinterpret_cast<getter>(UserDataTaskList_get_SourceDisplayName), nullptr, nullptr, nullptr },
         { "sync_manager", reinterpret_cast<getter>(UserDataTaskList_get_SyncManager), nullptr, nullptr, nullptr },
         { "user_data_account_id", reinterpret_cast<getter>(UserDataTaskList_get_UserDataAccountId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskList = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskList",
@@ -2105,20 +2096,17 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "try_skip_occurrence_async", reinterpret_cast<PyCFunction>(UserDataTaskListLimitedWriteOperations_TrySkipOccurrenceAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListLimitedWriteOperations, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListLimitedWriteOperations), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListLimitedWriteOperations[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListLimitedWriteOperations[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListLimitedWriteOperations) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListLimitedWriteOperations) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListLimitedWriteOperations) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListLimitedWriteOperations) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListLimitedWriteOperations = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskListLimitedWriteOperations",
@@ -2486,23 +2474,20 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "remove_sync_status_changed", reinterpret_cast<PyCFunction>(UserDataTaskListSyncManager_remove_SyncStatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskListSyncManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskListSyncManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskListSyncManager[] = {
         { "status", reinterpret_cast<getter>(UserDataTaskListSyncManager_get_Status), reinterpret_cast<setter>(UserDataTaskListSyncManager_put_Status), nullptr, nullptr },
         { "last_successful_sync_time", reinterpret_cast<getter>(UserDataTaskListSyncManager_get_LastSuccessfulSyncTime), reinterpret_cast<setter>(UserDataTaskListSyncManager_put_LastSuccessfulSyncTime), nullptr, nullptr },
         { "last_attempted_sync_time", reinterpret_cast<getter>(UserDataTaskListSyncManager_get_LastAttemptedSyncTime), reinterpret_cast<setter>(UserDataTaskListSyncManager_put_LastAttemptedSyncTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskListSyncManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListSyncManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListSyncManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListSyncManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListSyncManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskListSyncManager = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskListSyncManager",
@@ -2710,21 +2695,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "request_store_async", reinterpret_cast<PyCFunction>(UserDataTaskManager_RequestStoreAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskManager[] = {
         { "user", reinterpret_cast<getter>(UserDataTaskManager_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskManager = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskManager",
@@ -2734,14 +2716,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         _type_slots_UserDataTaskManager};
 
     static PyGetSetDef getset_UserDataTaskManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserDataTaskManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(UserDataTaskManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(UserDataTaskManager_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserDataTaskManager_Static[] = 
     {
@@ -2751,14 +2731,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Spec type_spec_UserDataTaskManager_Static =
-    {
+    static PyType_Spec type_spec_UserDataTaskManager_Static = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserDataTaskManager_Static
-    };
+        type_slots_UserDataTaskManager_Static};
 
     // ----- UserDataTaskQueryOptions class --------------------
 
@@ -2964,22 +2942,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static PyMethodDef _methods_UserDataTaskQueryOptions[] = {
         { "_assign_array_", _assign_array_UserDataTaskQueryOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskQueryOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskQueryOptions[] = {
         { "sort_property", reinterpret_cast<getter>(UserDataTaskQueryOptions_get_SortProperty), reinterpret_cast<setter>(UserDataTaskQueryOptions_put_SortProperty), nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(UserDataTaskQueryOptions_get_Kind), reinterpret_cast<setter>(UserDataTaskQueryOptions_put_Kind), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskQueryOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskQueryOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskQueryOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskQueryOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskQueryOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskQueryOptions = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskQueryOptions",
@@ -3073,20 +3048,17 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "read_batch_async", reinterpret_cast<PyCFunction>(UserDataTaskReader_ReadBatchAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskReader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskReader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskReader = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskReader",
@@ -3713,8 +3685,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static PyMethodDef _methods_UserDataTaskRecurrenceProperties[] = {
         { "_assign_array_", _assign_array_UserDataTaskRecurrenceProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskRecurrenceProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskRecurrenceProperties[] = {
         { "week_of_month", reinterpret_cast<getter>(UserDataTaskRecurrenceProperties_get_WeekOfMonth), reinterpret_cast<setter>(UserDataTaskRecurrenceProperties_put_WeekOfMonth), nullptr, nullptr },
@@ -3725,16 +3696,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "interval", reinterpret_cast<getter>(UserDataTaskRecurrenceProperties_get_Interval), reinterpret_cast<setter>(UserDataTaskRecurrenceProperties_put_Interval), nullptr, nullptr },
         { "days_of_week", reinterpret_cast<getter>(UserDataTaskRecurrenceProperties_get_DaysOfWeek), reinterpret_cast<setter>(UserDataTaskRecurrenceProperties_put_DaysOfWeek), nullptr, nullptr },
         { "day", reinterpret_cast<getter>(UserDataTaskRecurrenceProperties_get_Day), reinterpret_cast<setter>(UserDataTaskRecurrenceProperties_put_Day), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskRecurrenceProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskRecurrenceProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskRecurrenceProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskRecurrenceProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskRecurrenceProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskRecurrenceProperties = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskRecurrenceProperties",
@@ -4085,24 +4054,21 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static PyMethodDef _methods_UserDataTaskRegenerationProperties[] = {
         { "_assign_array_", _assign_array_UserDataTaskRegenerationProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskRegenerationProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskRegenerationProperties[] = {
         { "until", reinterpret_cast<getter>(UserDataTaskRegenerationProperties_get_Until), reinterpret_cast<setter>(UserDataTaskRegenerationProperties_put_Until), nullptr, nullptr },
         { "unit", reinterpret_cast<getter>(UserDataTaskRegenerationProperties_get_Unit), reinterpret_cast<setter>(UserDataTaskRegenerationProperties_put_Unit), nullptr, nullptr },
         { "occurrences", reinterpret_cast<getter>(UserDataTaskRegenerationProperties_get_Occurrences), reinterpret_cast<setter>(UserDataTaskRegenerationProperties_put_Occurrences), nullptr, nullptr },
         { "interval", reinterpret_cast<getter>(UserDataTaskRegenerationProperties_get_Interval), reinterpret_cast<setter>(UserDataTaskRegenerationProperties_put_Interval), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskRegenerationProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskRegenerationProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskRegenerationProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskRegenerationProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskRegenerationProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskRegenerationProperties = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskRegenerationProperties",
@@ -4326,20 +4292,17 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "get_list_async", reinterpret_cast<PyCFunction>(UserDataTaskStore_GetListAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataTaskStore), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataTaskStore[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataTaskStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskStore) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataTaskStore = {
         "winrt._winrt_windows_applicationmodel_userdatatasks.UserDataTaskStore",

@@ -360,20 +360,17 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { "remove_account_commands_requested", reinterpret_cast<PyCFunction>(AccountsSettingsPane_remove_AccountCommandsRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_AccountsSettingsPane, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccountsSettingsPane), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccountsSettingsPane[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccountsSettingsPane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccountsSettingsPane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccountsSettingsPane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccountsSettingsPane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccountsSettingsPane) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccountsSettingsPane = {
         "winrt._winrt_windows_ui_applicationsettings.AccountsSettingsPane",
@@ -383,8 +380,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         _type_slots_AccountsSettingsPane};
 
     static PyGetSetDef getset_AccountsSettingsPane_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AccountsSettingsPane_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(AccountsSettingsPane_GetForCurrentView), METH_VARARGS, nullptr },
@@ -393,8 +389,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { "show_add_account_for_user_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowAddAccountForUserAsync), METH_VARARGS, nullptr },
         { "show_manage_accounts_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowManageAccountsAsync), METH_VARARGS, nullptr },
         { "show_manage_accounts_for_user_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowManageAccountsForUserAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AccountsSettingsPane_Static[] = 
     {
@@ -404,14 +399,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Spec type_spec_AccountsSettingsPane_Static =
-    {
+    static PyType_Spec type_spec_AccountsSettingsPane_Static = {
         "winrt._winrt_windows_ui_applicationsettings.AccountsSettingsPane_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AccountsSettingsPane_Static
-    };
+        type_slots_AccountsSettingsPane_Static};
 
     // ----- AccountsSettingsPaneCommandsRequestedEventArgs class --------------------
 
@@ -717,8 +710,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { "get_deferral", reinterpret_cast<PyCFunction>(AccountsSettingsPaneCommandsRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AccountsSettingsPaneCommandsRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccountsSettingsPaneCommandsRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccountsSettingsPaneCommandsRequestedEventArgs[] = {
         { "header_text", reinterpret_cast<getter>(AccountsSettingsPaneCommandsRequestedEventArgs_get_HeaderText), reinterpret_cast<setter>(AccountsSettingsPaneCommandsRequestedEventArgs_put_HeaderText), nullptr, nullptr },
@@ -727,16 +719,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { "web_account_commands", reinterpret_cast<getter>(AccountsSettingsPaneCommandsRequestedEventArgs_get_WebAccountCommands), nullptr, nullptr, nullptr },
         { "web_account_provider_commands", reinterpret_cast<getter>(AccountsSettingsPaneCommandsRequestedEventArgs_get_WebAccountProviderCommands), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(AccountsSettingsPaneCommandsRequestedEventArgs_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccountsSettingsPaneCommandsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccountsSettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccountsSettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccountsSettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccountsSettingsPaneCommandsRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccountsSettingsPaneCommandsRequestedEventArgs = {
         "winrt._winrt_windows_ui_applicationsettings.AccountsSettingsPaneCommandsRequestedEventArgs",
@@ -831,20 +821,17 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { "complete", reinterpret_cast<PyCFunction>(AccountsSettingsPaneEventDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AccountsSettingsPaneEventDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccountsSettingsPaneEventDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccountsSettingsPaneEventDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccountsSettingsPaneEventDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccountsSettingsPaneEventDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccountsSettingsPaneEventDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccountsSettingsPaneEventDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccountsSettingsPaneEventDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccountsSettingsPaneEventDeferral = {
         "winrt._winrt_windows_ui_applicationsettings.AccountsSettingsPaneEventDeferral",
@@ -997,22 +984,19 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static PyMethodDef _methods_CredentialCommand[] = {
         { "_assign_array_", _assign_array_CredentialCommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CredentialCommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CredentialCommand[] = {
         { "credential_deleted", reinterpret_cast<getter>(CredentialCommand_get_CredentialDeleted), nullptr, nullptr, nullptr },
         { "password_credential", reinterpret_cast<getter>(CredentialCommand_get_PasswordCredential), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CredentialCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CredentialCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CredentialCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CredentialCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CredentialCommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CredentialCommand = {
         "winrt._winrt_windows_ui_applicationsettings.CredentialCommand",
@@ -1328,23 +1312,20 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static PyMethodDef _methods_SettingsCommand[] = {
         { "_assign_array_", _assign_array_SettingsCommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SettingsCommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SettingsCommand[] = {
         { "label", reinterpret_cast<getter>(SettingsCommand_get_Label), reinterpret_cast<setter>(SettingsCommand_put_Label), nullptr, nullptr },
         { "invoked", reinterpret_cast<getter>(SettingsCommand_get_Invoked), reinterpret_cast<setter>(SettingsCommand_put_Invoked), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(SettingsCommand_get_Id), reinterpret_cast<setter>(SettingsCommand_put_Id), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SettingsCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SettingsCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SettingsCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SettingsCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SettingsCommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SettingsCommand = {
         "winrt._winrt_windows_ui_applicationsettings.SettingsCommand",
@@ -1355,12 +1336,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyGetSetDef getset_SettingsCommand_Static[] = {
         { "accounts_command", reinterpret_cast<getter>(SettingsCommand_get_AccountsCommand), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SettingsCommand_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SettingsCommand_Static[] = 
     {
@@ -1370,14 +1349,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Spec type_spec_SettingsCommand_Static =
-    {
+    static PyType_Spec type_spec_SettingsCommand_Static = {
         "winrt._winrt_windows_ui_applicationsettings.SettingsCommand_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SettingsCommand_Static
-    };
+        type_slots_SettingsCommand_Static};
 
     // ----- SettingsPane class --------------------
 
@@ -1601,20 +1578,17 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { "remove_commands_requested", reinterpret_cast<PyCFunction>(SettingsPane_remove_CommandsRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_SettingsPane, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SettingsPane), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SettingsPane[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SettingsPane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SettingsPane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SettingsPane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SettingsPane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SettingsPane) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SettingsPane = {
         "winrt._winrt_windows_ui_applicationsettings.SettingsPane",
@@ -1625,14 +1599,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyGetSetDef getset_SettingsPane_Static[] = {
         { "edge", reinterpret_cast<getter>(SettingsPane_get_Edge), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SettingsPane_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(SettingsPane_GetForCurrentView), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(SettingsPane_Show), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SettingsPane_Static[] = 
     {
@@ -1642,14 +1614,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Spec type_spec_SettingsPane_Static =
-    {
+    static PyType_Spec type_spec_SettingsPane_Static = {
         "winrt._winrt_windows_ui_applicationsettings.SettingsPane_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SettingsPane_Static
-    };
+        type_slots_SettingsPane_Static};
 
     // ----- SettingsPaneCommandsRequest class --------------------
 
@@ -1725,21 +1695,18 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static PyMethodDef _methods_SettingsPaneCommandsRequest[] = {
         { "_assign_array_", _assign_array_SettingsPaneCommandsRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SettingsPaneCommandsRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SettingsPaneCommandsRequest[] = {
         { "application_commands", reinterpret_cast<getter>(SettingsPaneCommandsRequest_get_ApplicationCommands), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SettingsPaneCommandsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SettingsPaneCommandsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SettingsPaneCommandsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SettingsPaneCommandsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SettingsPaneCommandsRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SettingsPaneCommandsRequest = {
         "winrt._winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequest",
@@ -1822,21 +1789,18 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static PyMethodDef _methods_SettingsPaneCommandsRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_SettingsPaneCommandsRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SettingsPaneCommandsRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SettingsPaneCommandsRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(SettingsPaneCommandsRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SettingsPaneCommandsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SettingsPaneCommandsRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SettingsPaneCommandsRequestedEventArgs = {
         "winrt._winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequestedEventArgs",
@@ -2005,23 +1969,20 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static PyMethodDef _methods_WebAccountCommand[] = {
         { "_assign_array_", _assign_array_WebAccountCommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountCommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountCommand[] = {
         { "actions", reinterpret_cast<getter>(WebAccountCommand_get_Actions), nullptr, nullptr, nullptr },
         { "invoked", reinterpret_cast<getter>(WebAccountCommand_get_Invoked), nullptr, nullptr, nullptr },
         { "web_account", reinterpret_cast<getter>(WebAccountCommand_get_WebAccount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountCommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountCommand = {
         "winrt._winrt_windows_ui_applicationsettings.WebAccountCommand",
@@ -2104,21 +2065,18 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static PyMethodDef _methods_WebAccountInvokedArgs[] = {
         { "_assign_array_", _assign_array_WebAccountInvokedArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountInvokedArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountInvokedArgs[] = {
         { "action", reinterpret_cast<getter>(WebAccountInvokedArgs_get_Action), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountInvokedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountInvokedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountInvokedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountInvokedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountInvokedArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountInvokedArgs = {
         "winrt._winrt_windows_ui_applicationsettings.WebAccountInvokedArgs",
@@ -2256,22 +2214,19 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static PyMethodDef _methods_WebAccountProviderCommand[] = {
         { "_assign_array_", _assign_array_WebAccountProviderCommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderCommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderCommand[] = {
         { "invoked", reinterpret_cast<getter>(WebAccountProviderCommand_get_Invoked), nullptr, nullptr, nullptr },
         { "web_account_provider", reinterpret_cast<getter>(WebAccountProviderCommand_get_WebAccountProvider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderCommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderCommand = {
         "winrt._winrt_windows_ui_applicationsettings.WebAccountProviderCommand",

@@ -1095,20 +1095,17 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "remove_validate_certificates_requested", reinterpret_cast<PyCFunction>(EmailDataProviderConnection_remove_ValidateCertificatesRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_EmailDataProviderConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailDataProviderConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailDataProviderConnection[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailDataProviderConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailDataProviderConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailDataProviderConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailDataProviderConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailDataProviderConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailDataProviderConnection = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderConnection",
@@ -1191,21 +1188,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
     static PyMethodDef _methods_EmailDataProviderTriggerDetails[] = {
         { "_assign_array_", _assign_array_EmailDataProviderTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailDataProviderTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailDataProviderTriggerDetails[] = {
         { "connection", reinterpret_cast<getter>(EmailDataProviderTriggerDetails_get_Connection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailDataProviderTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailDataProviderTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailDataProviderTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailDataProviderTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailDataProviderTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailDataProviderTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderTriggerDetails",
@@ -1434,23 +1428,20 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxCreateFolderRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxCreateFolderRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxCreateFolderRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxCreateFolderRequest[] = {
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxCreateFolderRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(EmailMailboxCreateFolderRequest_get_Name), nullptr, nullptr, nullptr },
         { "parent_folder_id", reinterpret_cast<getter>(EmailMailboxCreateFolderRequest_get_ParentFolderId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxCreateFolderRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxCreateFolderRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxCreateFolderRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxCreateFolderRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxCreateFolderRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxCreateFolderRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxCreateFolderRequest",
@@ -1574,21 +1565,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxCreateFolderRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxCreateFolderRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxCreateFolderRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxCreateFolderRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxCreateFolderRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxCreateFolderRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxCreateFolderRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxCreateFolderRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxCreateFolderRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxCreateFolderRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxCreateFolderRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxCreateFolderRequestEventArgs",
@@ -1785,22 +1773,19 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxDeleteFolderRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxDeleteFolderRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxDeleteFolderRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxDeleteFolderRequest[] = {
         { "email_folder_id", reinterpret_cast<getter>(EmailMailboxDeleteFolderRequest_get_EmailFolderId), nullptr, nullptr, nullptr },
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxDeleteFolderRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxDeleteFolderRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxDeleteFolderRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxDeleteFolderRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxDeleteFolderRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxDeleteFolderRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxDeleteFolderRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDeleteFolderRequest",
@@ -1924,21 +1909,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxDeleteFolderRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxDeleteFolderRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxDeleteFolderRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxDeleteFolderRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxDeleteFolderRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxDeleteFolderRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxDeleteFolderRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxDeleteFolderRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxDeleteFolderRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxDeleteFolderRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxDeleteFolderRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDeleteFolderRequestEventArgs",
@@ -2163,23 +2145,20 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxDownloadAttachmentRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxDownloadAttachmentRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxDownloadAttachmentRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxDownloadAttachmentRequest[] = {
         { "email_attachment_id", reinterpret_cast<getter>(EmailMailboxDownloadAttachmentRequest_get_EmailAttachmentId), nullptr, nullptr, nullptr },
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxDownloadAttachmentRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
         { "email_message_id", reinterpret_cast<getter>(EmailMailboxDownloadAttachmentRequest_get_EmailMessageId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxDownloadAttachmentRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxDownloadAttachmentRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxDownloadAttachmentRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxDownloadAttachmentRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxDownloadAttachmentRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxDownloadAttachmentRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadAttachmentRequest",
@@ -2303,21 +2282,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxDownloadAttachmentRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxDownloadAttachmentRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxDownloadAttachmentRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxDownloadAttachmentRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxDownloadAttachmentRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxDownloadAttachmentRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxDownloadAttachmentRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxDownloadAttachmentRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxDownloadAttachmentRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxDownloadAttachmentRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxDownloadAttachmentRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadAttachmentRequestEventArgs",
@@ -2512,22 +2488,19 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxDownloadMessageRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxDownloadMessageRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxDownloadMessageRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxDownloadMessageRequest[] = {
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxDownloadMessageRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
         { "email_message_id", reinterpret_cast<getter>(EmailMailboxDownloadMessageRequest_get_EmailMessageId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxDownloadMessageRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxDownloadMessageRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxDownloadMessageRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxDownloadMessageRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxDownloadMessageRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxDownloadMessageRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadMessageRequest",
@@ -2651,21 +2624,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxDownloadMessageRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxDownloadMessageRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxDownloadMessageRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxDownloadMessageRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxDownloadMessageRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxDownloadMessageRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxDownloadMessageRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxDownloadMessageRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxDownloadMessageRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxDownloadMessageRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxDownloadMessageRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadMessageRequestEventArgs",
@@ -2862,22 +2832,19 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxEmptyFolderRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxEmptyFolderRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxEmptyFolderRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxEmptyFolderRequest[] = {
         { "email_folder_id", reinterpret_cast<getter>(EmailMailboxEmptyFolderRequest_get_EmailFolderId), nullptr, nullptr, nullptr },
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxEmptyFolderRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxEmptyFolderRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxEmptyFolderRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxEmptyFolderRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxEmptyFolderRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxEmptyFolderRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxEmptyFolderRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxEmptyFolderRequest",
@@ -3001,21 +2968,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxEmptyFolderRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxEmptyFolderRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxEmptyFolderRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxEmptyFolderRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxEmptyFolderRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxEmptyFolderRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxEmptyFolderRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxEmptyFolderRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxEmptyFolderRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxEmptyFolderRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxEmptyFolderRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxEmptyFolderRequestEventArgs",
@@ -3360,8 +3324,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxForwardMeetingRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxForwardMeetingRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxForwardMeetingRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxForwardMeetingRequest[] = {
         { "comment", reinterpret_cast<getter>(EmailMailboxForwardMeetingRequest_get_Comment), nullptr, nullptr, nullptr },
@@ -3371,16 +3334,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "forward_header_type", reinterpret_cast<getter>(EmailMailboxForwardMeetingRequest_get_ForwardHeaderType), nullptr, nullptr, nullptr },
         { "recipients", reinterpret_cast<getter>(EmailMailboxForwardMeetingRequest_get_Recipients), nullptr, nullptr, nullptr },
         { "subject", reinterpret_cast<getter>(EmailMailboxForwardMeetingRequest_get_Subject), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxForwardMeetingRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxForwardMeetingRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxForwardMeetingRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxForwardMeetingRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxForwardMeetingRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxForwardMeetingRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxForwardMeetingRequest",
@@ -3504,21 +3465,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxForwardMeetingRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxForwardMeetingRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxForwardMeetingRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxForwardMeetingRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxForwardMeetingRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxForwardMeetingRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxForwardMeetingRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxForwardMeetingRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxForwardMeetingRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxForwardMeetingRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxForwardMeetingRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxForwardMeetingRequestEventArgs",
@@ -3715,22 +3673,19 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxGetAutoReplySettingsRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxGetAutoReplySettingsRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxGetAutoReplySettingsRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxGetAutoReplySettingsRequest[] = {
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxGetAutoReplySettingsRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
         { "requested_format", reinterpret_cast<getter>(EmailMailboxGetAutoReplySettingsRequest_get_RequestedFormat), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxGetAutoReplySettingsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxGetAutoReplySettingsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxGetAutoReplySettingsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxGetAutoReplySettingsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxGetAutoReplySettingsRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxGetAutoReplySettingsRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxGetAutoReplySettingsRequest",
@@ -3854,21 +3809,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxGetAutoReplySettingsRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxGetAutoReplySettingsRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxGetAutoReplySettingsRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxGetAutoReplySettingsRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxGetAutoReplySettingsRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxGetAutoReplySettingsRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxGetAutoReplySettingsRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxGetAutoReplySettingsRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxGetAutoReplySettingsRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxGetAutoReplySettingsRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxGetAutoReplySettingsRequestEventArgs",
@@ -4123,24 +4075,21 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxMoveFolderRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxMoveFolderRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxMoveFolderRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxMoveFolderRequest[] = {
         { "email_folder_id", reinterpret_cast<getter>(EmailMailboxMoveFolderRequest_get_EmailFolderId), nullptr, nullptr, nullptr },
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxMoveFolderRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
         { "new_folder_name", reinterpret_cast<getter>(EmailMailboxMoveFolderRequest_get_NewFolderName), nullptr, nullptr, nullptr },
         { "new_parent_folder_id", reinterpret_cast<getter>(EmailMailboxMoveFolderRequest_get_NewParentFolderId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxMoveFolderRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxMoveFolderRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxMoveFolderRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxMoveFolderRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxMoveFolderRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxMoveFolderRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxMoveFolderRequest",
@@ -4264,21 +4213,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxMoveFolderRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxMoveFolderRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxMoveFolderRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxMoveFolderRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxMoveFolderRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxMoveFolderRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxMoveFolderRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxMoveFolderRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxMoveFolderRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxMoveFolderRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxMoveFolderRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxMoveFolderRequestEventArgs",
@@ -4593,8 +4539,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxProposeNewTimeForMeetingRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxProposeNewTimeForMeetingRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxProposeNewTimeForMeetingRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxProposeNewTimeForMeetingRequest[] = {
         { "comment", reinterpret_cast<getter>(EmailMailboxProposeNewTimeForMeetingRequest_get_Comment), nullptr, nullptr, nullptr },
@@ -4603,16 +4548,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "new_duration", reinterpret_cast<getter>(EmailMailboxProposeNewTimeForMeetingRequest_get_NewDuration), nullptr, nullptr, nullptr },
         { "new_start_time", reinterpret_cast<getter>(EmailMailboxProposeNewTimeForMeetingRequest_get_NewStartTime), nullptr, nullptr, nullptr },
         { "subject", reinterpret_cast<getter>(EmailMailboxProposeNewTimeForMeetingRequest_get_Subject), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxProposeNewTimeForMeetingRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxProposeNewTimeForMeetingRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxProposeNewTimeForMeetingRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxProposeNewTimeForMeetingRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxProposeNewTimeForMeetingRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxProposeNewTimeForMeetingRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxProposeNewTimeForMeetingRequest",
@@ -4736,21 +4679,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxProposeNewTimeForMeetingRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxProposeNewTimeForMeetingRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxProposeNewTimeForMeetingRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxProposeNewTimeForMeetingRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxProposeNewTimeForMeetingRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxProposeNewTimeForMeetingRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxProposeNewTimeForMeetingRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxProposeNewTimeForMeetingRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxProposeNewTimeForMeetingRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs",
@@ -4947,22 +4887,19 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxResolveRecipientsRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxResolveRecipientsRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxResolveRecipientsRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxResolveRecipientsRequest[] = {
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxResolveRecipientsRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
         { "recipients", reinterpret_cast<getter>(EmailMailboxResolveRecipientsRequest_get_Recipients), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxResolveRecipientsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxResolveRecipientsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxResolveRecipientsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxResolveRecipientsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxResolveRecipientsRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxResolveRecipientsRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxResolveRecipientsRequest",
@@ -5086,21 +5023,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxResolveRecipientsRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxResolveRecipientsRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxResolveRecipientsRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxResolveRecipientsRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxResolveRecipientsRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxResolveRecipientsRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxResolveRecipientsRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxResolveRecipientsRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxResolveRecipientsRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxResolveRecipientsRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxResolveRecipientsRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxResolveRecipientsRequestEventArgs",
@@ -5430,8 +5364,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "save_message_async", reinterpret_cast<PyCFunction>(EmailMailboxServerSearchReadBatchRequest_SaveMessageAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxServerSearchReadBatchRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxServerSearchReadBatchRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxServerSearchReadBatchRequest[] = {
         { "email_folder_id", reinterpret_cast<getter>(EmailMailboxServerSearchReadBatchRequest_get_EmailFolderId), nullptr, nullptr, nullptr },
@@ -5439,16 +5372,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "options", reinterpret_cast<getter>(EmailMailboxServerSearchReadBatchRequest_get_Options), nullptr, nullptr, nullptr },
         { "session_id", reinterpret_cast<getter>(EmailMailboxServerSearchReadBatchRequest_get_SessionId), nullptr, nullptr, nullptr },
         { "suggested_batch_size", reinterpret_cast<getter>(EmailMailboxServerSearchReadBatchRequest_get_SuggestedBatchSize), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxServerSearchReadBatchRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxServerSearchReadBatchRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxServerSearchReadBatchRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxServerSearchReadBatchRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxServerSearchReadBatchRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxServerSearchReadBatchRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxServerSearchReadBatchRequest",
@@ -5572,21 +5503,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxServerSearchReadBatchRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxServerSearchReadBatchRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxServerSearchReadBatchRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxServerSearchReadBatchRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxServerSearchReadBatchRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxServerSearchReadBatchRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxServerSearchReadBatchRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxServerSearchReadBatchRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxServerSearchReadBatchRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxServerSearchReadBatchRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxServerSearchReadBatchRequestEventArgs",
@@ -5781,22 +5709,19 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxSetAutoReplySettingsRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxSetAutoReplySettingsRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxSetAutoReplySettingsRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxSetAutoReplySettingsRequest[] = {
         { "auto_reply_settings", reinterpret_cast<getter>(EmailMailboxSetAutoReplySettingsRequest_get_AutoReplySettings), nullptr, nullptr, nullptr },
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxSetAutoReplySettingsRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxSetAutoReplySettingsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxSetAutoReplySettingsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxSetAutoReplySettingsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxSetAutoReplySettingsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxSetAutoReplySettingsRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxSetAutoReplySettingsRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSetAutoReplySettingsRequest",
@@ -5920,21 +5845,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxSetAutoReplySettingsRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxSetAutoReplySettingsRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxSetAutoReplySettingsRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxSetAutoReplySettingsRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxSetAutoReplySettingsRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxSetAutoReplySettingsRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxSetAutoReplySettingsRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxSetAutoReplySettingsRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxSetAutoReplySettingsRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxSetAutoReplySettingsRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSetAutoReplySettingsRequestEventArgs",
@@ -6099,21 +6021,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxSyncManagerSyncRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxSyncManagerSyncRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxSyncManagerSyncRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxSyncManagerSyncRequest[] = {
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxSyncManagerSyncRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxSyncManagerSyncRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxSyncManagerSyncRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxSyncManagerSyncRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxSyncManagerSyncRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxSyncManagerSyncRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxSyncManagerSyncRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSyncManagerSyncRequest",
@@ -6237,21 +6156,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxSyncManagerSyncRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxSyncManagerSyncRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxSyncManagerSyncRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxSyncManagerSyncRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxSyncManagerSyncRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxSyncManagerSyncRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxSyncManagerSyncRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxSyncManagerSyncRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxSyncManagerSyncRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxSyncManagerSyncRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxSyncManagerSyncRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSyncManagerSyncRequestEventArgs",
@@ -6566,8 +6482,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxUpdateMeetingResponseRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxUpdateMeetingResponseRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxUpdateMeetingResponseRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxUpdateMeetingResponseRequest[] = {
         { "comment", reinterpret_cast<getter>(EmailMailboxUpdateMeetingResponseRequest_get_Comment), nullptr, nullptr, nullptr },
@@ -6576,16 +6491,14 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "response", reinterpret_cast<getter>(EmailMailboxUpdateMeetingResponseRequest_get_Response), nullptr, nullptr, nullptr },
         { "send_update", reinterpret_cast<getter>(EmailMailboxUpdateMeetingResponseRequest_get_SendUpdate), nullptr, nullptr, nullptr },
         { "subject", reinterpret_cast<getter>(EmailMailboxUpdateMeetingResponseRequest_get_Subject), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxUpdateMeetingResponseRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxUpdateMeetingResponseRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxUpdateMeetingResponseRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxUpdateMeetingResponseRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxUpdateMeetingResponseRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxUpdateMeetingResponseRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxUpdateMeetingResponseRequest",
@@ -6709,21 +6622,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxUpdateMeetingResponseRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxUpdateMeetingResponseRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxUpdateMeetingResponseRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxUpdateMeetingResponseRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxUpdateMeetingResponseRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxUpdateMeetingResponseRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxUpdateMeetingResponseRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxUpdateMeetingResponseRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxUpdateMeetingResponseRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxUpdateMeetingResponseRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxUpdateMeetingResponseRequestEventArgs",
@@ -6920,22 +6830,19 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(EmailMailboxValidateCertificatesRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxValidateCertificatesRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxValidateCertificatesRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxValidateCertificatesRequest[] = {
         { "certificates", reinterpret_cast<getter>(EmailMailboxValidateCertificatesRequest_get_Certificates), nullptr, nullptr, nullptr },
         { "email_mailbox_id", reinterpret_cast<getter>(EmailMailboxValidateCertificatesRequest_get_EmailMailboxId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxValidateCertificatesRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxValidateCertificatesRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxValidateCertificatesRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxValidateCertificatesRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxValidateCertificatesRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxValidateCertificatesRequest = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxValidateCertificatesRequest",
@@ -7059,21 +6966,18 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(EmailMailboxValidateCertificatesRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailMailboxValidateCertificatesRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailMailboxValidateCertificatesRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailMailboxValidateCertificatesRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(EmailMailboxValidateCertificatesRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailMailboxValidateCertificatesRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxValidateCertificatesRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxValidateCertificatesRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxValidateCertificatesRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxValidateCertificatesRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailMailboxValidateCertificatesRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxValidateCertificatesRequestEventArgs",

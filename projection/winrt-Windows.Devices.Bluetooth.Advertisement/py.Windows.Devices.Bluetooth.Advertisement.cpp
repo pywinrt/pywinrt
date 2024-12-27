@@ -384,8 +384,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "get_sections_by_type", reinterpret_cast<PyCFunction>(BluetoothLEAdvertisement_GetSectionsByType), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BluetoothLEAdvertisement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisement[] = {
         { "local_name", reinterpret_cast<getter>(BluetoothLEAdvertisement_get_LocalName), reinterpret_cast<setter>(BluetoothLEAdvertisement_put_LocalName), nullptr, nullptr },
@@ -393,16 +392,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "data_sections", reinterpret_cast<getter>(BluetoothLEAdvertisement_get_DataSections), nullptr, nullptr, nullptr },
         { "manufacturer_data", reinterpret_cast<getter>(BluetoothLEAdvertisement_get_ManufacturerData), nullptr, nullptr, nullptr },
         { "service_uuids", reinterpret_cast<getter>(BluetoothLEAdvertisement_get_ServiceUuids), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisement = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisement",
@@ -701,23 +698,20 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static PyMethodDef _methods_BluetoothLEAdvertisementBytePattern[] = {
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementBytePattern, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementBytePattern), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementBytePattern[] = {
         { "offset", reinterpret_cast<getter>(BluetoothLEAdvertisementBytePattern_get_Offset), reinterpret_cast<setter>(BluetoothLEAdvertisementBytePattern_put_Offset), nullptr, nullptr },
         { "data_type", reinterpret_cast<getter>(BluetoothLEAdvertisementBytePattern_get_DataType), reinterpret_cast<setter>(BluetoothLEAdvertisementBytePattern_put_DataType), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(BluetoothLEAdvertisementBytePattern_get_Data), reinterpret_cast<setter>(BluetoothLEAdvertisementBytePattern_put_Data), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementBytePattern[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementBytePattern) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementBytePattern) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementBytePattern) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementBytePattern) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementBytePattern = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementBytePattern",
@@ -946,22 +940,19 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static PyMethodDef _methods_BluetoothLEAdvertisementDataSection[] = {
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementDataSection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementDataSection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementDataSection[] = {
         { "data_type", reinterpret_cast<getter>(BluetoothLEAdvertisementDataSection_get_DataType), reinterpret_cast<setter>(BluetoothLEAdvertisementDataSection_put_DataType), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(BluetoothLEAdvertisementDataSection_get_Data), reinterpret_cast<setter>(BluetoothLEAdvertisementDataSection_put_Data), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementDataSection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementDataSection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementDataSection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementDataSection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementDataSection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementDataSection = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataSection",
@@ -1640,19 +1631,16 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     }
 
     static PyMethodDef _methods_BluetoothLEAdvertisementDataTypes[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementDataTypes[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementDataTypes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementDataTypes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementDataTypes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementDataTypes) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementDataTypes = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataTypes",
@@ -1684,12 +1672,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "service_solicitation32_bit_uuids", reinterpret_cast<getter>(BluetoothLEAdvertisementDataTypes_get_ServiceSolicitation32BitUuids), nullptr, nullptr, nullptr },
         { "shortened_local_name", reinterpret_cast<getter>(BluetoothLEAdvertisementDataTypes_get_ShortenedLocalName), nullptr, nullptr, nullptr },
         { "tx_power_level", reinterpret_cast<getter>(BluetoothLEAdvertisementDataTypes_get_TxPowerLevel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BluetoothLEAdvertisementDataTypes_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BluetoothLEAdvertisementDataTypes_Static[] = 
     {
@@ -1699,14 +1685,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Spec type_spec_BluetoothLEAdvertisementDataTypes_Static =
-    {
+    static PyType_Spec type_spec_BluetoothLEAdvertisementDataTypes_Static = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataTypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BluetoothLEAdvertisementDataTypes_Static
-    };
+        type_slots_BluetoothLEAdvertisementDataTypes_Static};
 
     // ----- BluetoothLEAdvertisementFilter class --------------------
 
@@ -1873,22 +1857,19 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static PyMethodDef _methods_BluetoothLEAdvertisementFilter[] = {
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementFilter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementFilter[] = {
         { "advertisement", reinterpret_cast<getter>(BluetoothLEAdvertisementFilter_get_Advertisement), reinterpret_cast<setter>(BluetoothLEAdvertisementFilter_put_Advertisement), nullptr, nullptr },
         { "byte_patterns", reinterpret_cast<getter>(BluetoothLEAdvertisementFilter_get_BytePatterns), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementFilter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementFilter = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementFilter",
@@ -2465,8 +2446,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "remove_status_changed", reinterpret_cast<PyCFunction>(BluetoothLEAdvertisementPublisher_remove_StatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementPublisher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementPublisher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementPublisher[] = {
         { "advertisement", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_Advertisement), nullptr, nullptr, nullptr },
@@ -2475,16 +2455,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "preferred_transmit_power_level_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_PreferredTransmitPowerLevelInDBm), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisher_put_PreferredTransmitPowerLevelInDBm), nullptr, nullptr },
         { "is_anonymous", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_IsAnonymous), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisher_put_IsAnonymous), nullptr, nullptr },
         { "include_transmit_power_level", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_IncludeTransmitPowerLevel), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisher_put_IncludeTransmitPowerLevel), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementPublisher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementPublisher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementPublisher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementPublisher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisher = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPublisher",
@@ -2627,23 +2605,20 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static PyMethodDef _methods_BluetoothLEAdvertisementPublisherStatusChangedEventArgs[] = {
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementPublisherStatusChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementPublisherStatusChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementPublisherStatusChangedEventArgs[] = {
         { "error", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherStatusChangedEventArgs_get_Error), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherStatusChangedEventArgs_get_Status), nullptr, nullptr, nullptr },
         { "selected_transmit_power_level_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherStatusChangedEventArgs_get_SelectedTransmitPowerLevelInDBm), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisherStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementPublisherStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementPublisherStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementPublisherStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementPublisherStatusChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherStatusChangedEventArgs = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs",
@@ -3056,8 +3031,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static PyMethodDef _methods_BluetoothLEAdvertisementReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementReceivedEventArgs[] = {
         { "advertisement", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_Advertisement), nullptr, nullptr, nullptr },
@@ -3072,16 +3046,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "is_scan_response", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_IsScanResponse), nullptr, nullptr, nullptr },
         { "is_scannable", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_IsScannable), nullptr, nullptr, nullptr },
         { "transmit_power_level_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_TransmitPowerLevelInDBm), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementReceivedEventArgs = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementReceivedEventArgs",
@@ -3815,8 +3787,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "remove_stopped", reinterpret_cast<PyCFunction>(BluetoothLEAdvertisementWatcher_remove_Stopped), METH_O, nullptr },
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementWatcher[] = {
         { "signal_strength_filter", reinterpret_cast<getter>(BluetoothLEAdvertisementWatcher_get_SignalStrengthFilter), reinterpret_cast<setter>(BluetoothLEAdvertisementWatcher_put_SignalStrengthFilter), nullptr, nullptr },
@@ -3828,16 +3799,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "min_sampling_interval", reinterpret_cast<getter>(BluetoothLEAdvertisementWatcher_get_MinSamplingInterval), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(BluetoothLEAdvertisementWatcher_get_Status), nullptr, nullptr, nullptr },
         { "allow_extended_advertisements", reinterpret_cast<getter>(BluetoothLEAdvertisementWatcher_get_AllowExtendedAdvertisements), reinterpret_cast<setter>(BluetoothLEAdvertisementWatcher_put_AllowExtendedAdvertisements), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcher = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementWatcher",
@@ -3920,21 +3889,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static PyMethodDef _methods_BluetoothLEAdvertisementWatcherStoppedEventArgs[] = {
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementWatcherStoppedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementWatcherStoppedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementWatcherStoppedEventArgs[] = {
         { "error", reinterpret_cast<getter>(BluetoothLEAdvertisementWatcherStoppedEventArgs_get_Error), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcherStoppedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementWatcherStoppedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementWatcherStoppedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementWatcherStoppedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementWatcherStoppedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherStoppedEventArgs = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs",
@@ -4163,22 +4129,19 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static PyMethodDef _methods_BluetoothLEManufacturerData[] = {
         { "_assign_array_", _assign_array_BluetoothLEManufacturerData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEManufacturerData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEManufacturerData[] = {
         { "data", reinterpret_cast<getter>(BluetoothLEManufacturerData_get_Data), reinterpret_cast<setter>(BluetoothLEManufacturerData_put_Data), nullptr, nullptr },
         { "company_id", reinterpret_cast<getter>(BluetoothLEManufacturerData_get_CompanyId), reinterpret_cast<setter>(BluetoothLEManufacturerData_put_CompanyId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEManufacturerData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEManufacturerData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEManufacturerData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEManufacturerData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEManufacturerData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEManufacturerData = {
         "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEManufacturerData",

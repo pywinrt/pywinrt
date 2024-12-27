@@ -1796,8 +1796,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { "remove_thumbnail_updated", reinterpret_cast<PyCFunction>(FileInformation_remove_ThumbnailUpdated), METH_O, nullptr },
         { "_assign_array_", _assign_array_FileInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileInformation[] = {
         { "basic_properties", reinterpret_cast<getter>(FileInformation_get_BasicProperties), nullptr, nullptr, nullptr },
@@ -1818,16 +1817,14 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { "folder_relative_id", reinterpret_cast<getter>(FileInformation_get_FolderRelativeId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(FileInformation_get_Properties), nullptr, nullptr, nullptr },
         { "provider", reinterpret_cast<getter>(FileInformation_get_Provider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileInformation = {
         "winrt._winrt_windows_storage_bulkaccess.FileInformation",
@@ -2337,20 +2334,17 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { "get_virtualized_items_vector", reinterpret_cast<PyCFunction>(FileInformationFactory_GetVirtualizedItemsVector), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FileInformationFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileInformationFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileInformationFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileInformationFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileInformationFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileInformationFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileInformationFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileInformationFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileInformationFactory = {
         "winrt._winrt_windows_storage_bulkaccess.FileInformationFactory",
@@ -4655,8 +4649,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { "remove_thumbnail_updated", reinterpret_cast<PyCFunction>(FolderInformation_remove_ThumbnailUpdated), METH_O, nullptr },
         { "_assign_array_", _assign_array_FolderInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FolderInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FolderInformation[] = {
         { "basic_properties", reinterpret_cast<getter>(FolderInformation_get_BasicProperties), nullptr, nullptr, nullptr },
@@ -4674,16 +4667,14 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { "folder_relative_id", reinterpret_cast<getter>(FolderInformation_get_FolderRelativeId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(FolderInformation_get_Properties), nullptr, nullptr, nullptr },
         { "provider", reinterpret_cast<getter>(FolderInformation_get_Provider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FolderInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FolderInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FolderInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FolderInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FolderInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FolderInformation = {
         "winrt._winrt_windows_storage_bulkaccess.FolderInformation",
@@ -5050,8 +5041,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { "remove_thumbnail_updated", reinterpret_cast<PyCFunction>(IStorageItemInformation_remove_ThumbnailUpdated), METH_O, nullptr },
         { "_assign_array_", _assign_array_IStorageItemInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageItemInformation[] = {
         { "basic_properties", reinterpret_cast<getter>(IStorageItemInformation_get_BasicProperties), nullptr, nullptr, nullptr },
@@ -5060,16 +5050,14 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { "music_properties", reinterpret_cast<getter>(IStorageItemInformation_get_MusicProperties), nullptr, nullptr, nullptr },
         { "thumbnail", reinterpret_cast<getter>(IStorageItemInformation_get_Thumbnail), nullptr, nullptr, nullptr },
         { "video_properties", reinterpret_cast<getter>(IStorageItemInformation_get_VideoProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageItemInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageItemInformation = {
         "winrt._winrt_windows_storage_bulkaccess.IStorageItemInformation",
@@ -5369,13 +5357,11 @@ namespace py::cpp::Windows::Storage::BulkAccess
     static PyMethodDef methods_ImplementsIStorageItemInformation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItemInformation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItemInformation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageItemInformation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageItemInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItemInformation = {
         "winrt._winrt_windows_storage_bulkaccess.ImplementsIStorageItemInformation",

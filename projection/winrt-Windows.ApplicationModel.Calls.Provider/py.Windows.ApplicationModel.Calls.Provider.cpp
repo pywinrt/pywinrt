@@ -415,8 +415,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
     static PyMethodDef _methods_PhoneCallOrigin[] = {
         { "_assign_array_", _assign_array_PhoneCallOrigin, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneCallOrigin), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneCallOrigin[] = {
         { "location", reinterpret_cast<getter>(PhoneCallOrigin_get_Location), reinterpret_cast<setter>(PhoneCallOrigin_put_Location), nullptr, nullptr },
@@ -424,16 +423,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
         { "category", reinterpret_cast<getter>(PhoneCallOrigin_get_Category), reinterpret_cast<setter>(PhoneCallOrigin_put_Category), nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(PhoneCallOrigin_get_DisplayName), reinterpret_cast<setter>(PhoneCallOrigin_put_DisplayName), nullptr, nullptr },
         { "display_picture", reinterpret_cast<getter>(PhoneCallOrigin_get_DisplayPicture), reinterpret_cast<setter>(PhoneCallOrigin_put_DisplayPicture), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneCallOrigin[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallOrigin) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneCallOrigin) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallOrigin) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallOrigin) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneCallOrigin = {
         "winrt._winrt_windows_applicationmodel_calls_provider.PhoneCallOrigin",
@@ -637,19 +634,16 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
     }
 
     static PyMethodDef _methods_PhoneCallOriginManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneCallOriginManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneCallOriginManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallOriginManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallOriginManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallOriginManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneCallOriginManager = {
         "winrt._winrt_windows_applicationmodel_calls_provider.PhoneCallOriginManager",
@@ -661,15 +655,13 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
     static PyGetSetDef getset_PhoneCallOriginManager_Static[] = {
         { "is_current_app_active_call_origin_app", reinterpret_cast<getter>(PhoneCallOriginManager_get_IsCurrentAppActiveCallOriginApp), nullptr, nullptr, nullptr },
         { "is_supported", reinterpret_cast<getter>(PhoneCallOriginManager_get_IsSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PhoneCallOriginManager_Static[] = {
         { "request_set_as_active_call_origin_app_async", reinterpret_cast<PyCFunction>(PhoneCallOriginManager_RequestSetAsActiveCallOriginAppAsync), METH_VARARGS, nullptr },
         { "set_call_origin", reinterpret_cast<PyCFunction>(PhoneCallOriginManager_SetCallOrigin), METH_VARARGS, nullptr },
         { "show_phone_call_origin_settings_ui", reinterpret_cast<PyCFunction>(PhoneCallOriginManager_ShowPhoneCallOriginSettingsUI), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PhoneCallOriginManager_Static[] = 
     {
@@ -679,14 +671,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
         { }
     };
 
-    static PyType_Spec type_spec_PhoneCallOriginManager_Static =
-    {
+    static PyType_Spec type_spec_PhoneCallOriginManager_Static = {
         "winrt._winrt_windows_applicationmodel_calls_provider.PhoneCallOriginManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PhoneCallOriginManager_Static
-    };
+        type_slots_PhoneCallOriginManager_Static};
 
     // ----- Windows.ApplicationModel.Calls.Provider Initialization --------------------
 

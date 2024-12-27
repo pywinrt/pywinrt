@@ -1649,8 +1649,7 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "remove_destroying", reinterpret_cast<PyCFunction>(AppWindow_remove_Destroying), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppWindow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppWindow), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppWindow[] = {
         { "title", reinterpret_cast<getter>(AppWindow_get_Title), reinterpret_cast<setter>(AppWindow_put_Title), nullptr, nullptr },
@@ -1664,16 +1663,14 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "title_bar", reinterpret_cast<getter>(AppWindow_get_TitleBar), nullptr, nullptr, nullptr },
         { "client_size", reinterpret_cast<getter>(AppWindow_get_ClientSize), nullptr, nullptr, nullptr },
         { "dispatcher_queue", reinterpret_cast<getter>(AppWindow_get_DispatcherQueue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppWindow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppWindow = {
         "winrt._winrt_microsoft_ui_windowing.AppWindow",
@@ -1683,8 +1680,7 @@ namespace py::cpp::Microsoft::UI::Windowing
         _type_slots_AppWindow};
 
     static PyGetSetDef getset_AppWindow_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppWindow_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(AppWindow_Create), METH_VARARGS, nullptr },
@@ -1692,8 +1688,7 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "create_with_presenter", reinterpret_cast<PyCFunction>(AppWindow_CreateWithPresenter), METH_VARARGS, nullptr },
         { "create_with_presenter_and_owner", reinterpret_cast<PyCFunction>(AppWindow_CreateWithPresenterAndOwner), METH_VARARGS, nullptr },
         { "get_from_window_id", reinterpret_cast<PyCFunction>(AppWindow_GetFromWindowId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppWindow_Static[] = 
     {
@@ -1703,14 +1698,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Spec type_spec_AppWindow_Static =
-    {
+    static PyType_Spec type_spec_AppWindow_Static = {
         "winrt._winrt_microsoft_ui_windowing.AppWindow_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppWindow_Static
-    };
+        type_slots_AppWindow_Static};
 
     // ----- AppWindowChangedEventArgs class --------------------
 
@@ -1996,8 +1989,7 @@ namespace py::cpp::Microsoft::UI::Windowing
     static PyMethodDef _methods_AppWindowChangedEventArgs[] = {
         { "_assign_array_", _assign_array_AppWindowChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppWindowChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppWindowChangedEventArgs[] = {
         { "did_position_change", reinterpret_cast<getter>(AppWindowChangedEventArgs_get_DidPositionChange), nullptr, nullptr, nullptr },
@@ -2008,16 +2000,14 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "is_z_order_at_bottom", reinterpret_cast<getter>(AppWindowChangedEventArgs_get_IsZOrderAtBottom), nullptr, nullptr, nullptr },
         { "is_z_order_at_top", reinterpret_cast<getter>(AppWindowChangedEventArgs_get_IsZOrderAtTop), nullptr, nullptr, nullptr },
         { "z_order_below_window_id", reinterpret_cast<getter>(AppWindowChangedEventArgs_get_ZOrderBelowWindowId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppWindowChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindowChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindowChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindowChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindowChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppWindowChangedEventArgs = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowChangedEventArgs",
@@ -2139,21 +2129,18 @@ namespace py::cpp::Microsoft::UI::Windowing
     static PyMethodDef _methods_AppWindowClosingEventArgs[] = {
         { "_assign_array_", _assign_array_AppWindowClosingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppWindowClosingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppWindowClosingEventArgs[] = {
         { "cancel", reinterpret_cast<getter>(AppWindowClosingEventArgs_get_Cancel), reinterpret_cast<setter>(AppWindowClosingEventArgs_put_Cancel), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppWindowClosingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindowClosingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindowClosingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindowClosingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindowClosingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppWindowClosingEventArgs = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowClosingEventArgs",
@@ -2236,21 +2223,18 @@ namespace py::cpp::Microsoft::UI::Windowing
     static PyMethodDef _methods_AppWindowPresenter[] = {
         { "_assign_array_", _assign_array_AppWindowPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppWindowPresenter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppWindowPresenter[] = {
         { "kind", reinterpret_cast<getter>(AppWindowPresenter_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppWindowPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindowPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindowPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindowPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindowPresenter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppWindowPresenter = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowPresenter",
@@ -2260,12 +2244,10 @@ namespace py::cpp::Microsoft::UI::Windowing
         _type_slots_AppWindowPresenter};
 
     static PyGetSetDef getset_AppWindowPresenter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppWindowPresenter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppWindowPresenter_Static[] = 
     {
@@ -2275,14 +2257,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Spec type_spec_AppWindowPresenter_Static =
-    {
+    static PyType_Spec type_spec_AppWindowPresenter_Static = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_AppWindowPresenter_Static
-    };
+        type_slots_AppWindowPresenter_Static};
 
     // ----- AppWindowTitleBar class --------------------
 
@@ -3579,8 +3559,7 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "set_drag_rectangles", reinterpret_cast<PyCFunction>(AppWindowTitleBar_SetDragRectangles), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppWindowTitleBar, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppWindowTitleBar), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppWindowTitleBar[] = {
         { "inactive_foreground_color", reinterpret_cast<getter>(AppWindowTitleBar_get_InactiveForegroundColor), reinterpret_cast<setter>(AppWindowTitleBar_put_InactiveForegroundColor), nullptr, nullptr },
@@ -3601,16 +3580,14 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "left_inset", reinterpret_cast<getter>(AppWindowTitleBar_get_LeftInset), nullptr, nullptr, nullptr },
         { "right_inset", reinterpret_cast<getter>(AppWindowTitleBar_get_RightInset), nullptr, nullptr, nullptr },
         { "preferred_height_option", reinterpret_cast<getter>(AppWindowTitleBar_get_PreferredHeightOption), reinterpret_cast<setter>(AppWindowTitleBar_put_PreferredHeightOption), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppWindowTitleBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindowTitleBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindowTitleBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindowTitleBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindowTitleBar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppWindowTitleBar = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowTitleBar",
@@ -3620,13 +3597,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         _type_slots_AppWindowTitleBar};
 
     static PyGetSetDef getset_AppWindowTitleBar_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppWindowTitleBar_Static[] = {
         { "is_customization_supported", reinterpret_cast<PyCFunction>(AppWindowTitleBar_IsCustomizationSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppWindowTitleBar_Static[] = 
     {
@@ -3636,14 +3611,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Spec type_spec_AppWindowTitleBar_Static =
-    {
+    static PyType_Spec type_spec_AppWindowTitleBar_Static = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowTitleBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppWindowTitleBar_Static
-    };
+        type_slots_AppWindowTitleBar_Static};
 
     // ----- CompactOverlayPresenter class --------------------
 
@@ -3798,21 +3771,18 @@ namespace py::cpp::Microsoft::UI::Windowing
     static PyMethodDef _methods_CompactOverlayPresenter[] = {
         { "_assign_array_", _assign_array_CompactOverlayPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompactOverlayPresenter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompactOverlayPresenter[] = {
         { "initial_size", reinterpret_cast<getter>(CompactOverlayPresenter_get_InitialSize), reinterpret_cast<setter>(CompactOverlayPresenter_put_InitialSize), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompactOverlayPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompactOverlayPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompactOverlayPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompactOverlayPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompactOverlayPresenter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompactOverlayPresenter = {
         "winrt._winrt_microsoft_ui_windowing.CompactOverlayPresenter",
@@ -3822,13 +3792,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         _type_slots_CompactOverlayPresenter};
 
     static PyGetSetDef getset_CompactOverlayPresenter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CompactOverlayPresenter_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(CompactOverlayPresenter_Create), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CompactOverlayPresenter_Static[] = 
     {
@@ -3838,14 +3806,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Spec type_spec_CompactOverlayPresenter_Static =
-    {
+    static PyType_Spec type_spec_CompactOverlayPresenter_Static = {
         "winrt._winrt_microsoft_ui_windowing.CompactOverlayPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CompactOverlayPresenter_Static
-    };
+        type_slots_CompactOverlayPresenter_Static};
 
     // ----- DisplayArea class --------------------
 
@@ -4292,24 +4258,21 @@ namespace py::cpp::Microsoft::UI::Windowing
     static PyMethodDef _methods_DisplayArea[] = {
         { "_assign_array_", _assign_array_DisplayArea, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayArea), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayArea[] = {
         { "display_id", reinterpret_cast<getter>(DisplayArea_get_DisplayId), nullptr, nullptr, nullptr },
         { "is_primary", reinterpret_cast<getter>(DisplayArea_get_IsPrimary), nullptr, nullptr, nullptr },
         { "outer_bounds", reinterpret_cast<getter>(DisplayArea_get_OuterBounds), nullptr, nullptr, nullptr },
         { "work_area", reinterpret_cast<getter>(DisplayArea_get_WorkArea), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayArea[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayArea) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayArea) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayArea) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayArea) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayArea = {
         "winrt._winrt_microsoft_ui_windowing.DisplayArea",
@@ -4320,8 +4283,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyGetSetDef getset_DisplayArea_Static[] = {
         { "primary", reinterpret_cast<getter>(DisplayArea_get_Primary), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DisplayArea_Static[] = {
         { "create_watcher", reinterpret_cast<PyCFunction>(DisplayArea_CreateWatcher), METH_VARARGS, nullptr },
@@ -4330,8 +4292,7 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "get_from_point", reinterpret_cast<PyCFunction>(DisplayArea_GetFromPoint), METH_VARARGS, nullptr },
         { "get_from_rect", reinterpret_cast<PyCFunction>(DisplayArea_GetFromRect), METH_VARARGS, nullptr },
         { "get_from_window_id", reinterpret_cast<PyCFunction>(DisplayArea_GetFromWindowId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DisplayArea_Static[] = 
     {
@@ -4341,14 +4302,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Spec type_spec_DisplayArea_Static =
-    {
+    static PyType_Spec type_spec_DisplayArea_Static = {
         "winrt._winrt_microsoft_ui_windowing.DisplayArea_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DisplayArea_Static
-    };
+        type_slots_DisplayArea_Static};
 
     // ----- DisplayAreaWatcher class --------------------
 
@@ -4843,21 +4802,18 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "remove_updated", reinterpret_cast<PyCFunction>(DisplayAreaWatcher_remove_Updated), METH_O, nullptr },
         { "_assign_array_", _assign_array_DisplayAreaWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayAreaWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayAreaWatcher[] = {
         { "status", reinterpret_cast<getter>(DisplayAreaWatcher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayAreaWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayAreaWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayAreaWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayAreaWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAreaWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayAreaWatcher = {
         "winrt._winrt_microsoft_ui_windowing.DisplayAreaWatcher",
@@ -4950,20 +4906,17 @@ namespace py::cpp::Microsoft::UI::Windowing
     static PyMethodDef _methods_FullScreenPresenter[] = {
         { "_assign_array_", _assign_array_FullScreenPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FullScreenPresenter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FullScreenPresenter[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FullScreenPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FullScreenPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FullScreenPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FullScreenPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FullScreenPresenter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FullScreenPresenter = {
         "winrt._winrt_microsoft_ui_windowing.FullScreenPresenter",
@@ -4973,13 +4926,11 @@ namespace py::cpp::Microsoft::UI::Windowing
         _type_slots_FullScreenPresenter};
 
     static PyGetSetDef getset_FullScreenPresenter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FullScreenPresenter_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(FullScreenPresenter_Create), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FullScreenPresenter_Static[] = 
     {
@@ -4989,14 +4940,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Spec type_spec_FullScreenPresenter_Static =
-    {
+    static PyType_Spec type_spec_FullScreenPresenter_Static = {
         "winrt._winrt_microsoft_ui_windowing.FullScreenPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FullScreenPresenter_Static
-    };
+        type_slots_FullScreenPresenter_Static};
 
     // ----- OverlappedPresenter class --------------------
 
@@ -5926,8 +5875,7 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "set_border_and_title_bar", reinterpret_cast<PyCFunction>(OverlappedPresenter_SetBorderAndTitleBar), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_OverlappedPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OverlappedPresenter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OverlappedPresenter[] = {
         { "is_resizable", reinterpret_cast<getter>(OverlappedPresenter_get_IsResizable), reinterpret_cast<setter>(OverlappedPresenter_put_IsResizable), nullptr, nullptr },
@@ -5938,16 +5886,14 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "has_border", reinterpret_cast<getter>(OverlappedPresenter_get_HasBorder), nullptr, nullptr, nullptr },
         { "has_title_bar", reinterpret_cast<getter>(OverlappedPresenter_get_HasTitleBar), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(OverlappedPresenter_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OverlappedPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OverlappedPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OverlappedPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OverlappedPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OverlappedPresenter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OverlappedPresenter = {
         "winrt._winrt_microsoft_ui_windowing.OverlappedPresenter",
@@ -5958,16 +5904,14 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyGetSetDef getset_OverlappedPresenter_Static[] = {
         { "requested_startup_state", reinterpret_cast<getter>(OverlappedPresenter_get_RequestedStartupState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_OverlappedPresenter_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(OverlappedPresenter_Create), METH_VARARGS, nullptr },
         { "create_for_context_menu", reinterpret_cast<PyCFunction>(OverlappedPresenter_CreateForContextMenu), METH_VARARGS, nullptr },
         { "create_for_dialog", reinterpret_cast<PyCFunction>(OverlappedPresenter_CreateForDialog), METH_VARARGS, nullptr },
         { "create_for_tool_window", reinterpret_cast<PyCFunction>(OverlappedPresenter_CreateForToolWindow), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_OverlappedPresenter_Static[] = 
     {
@@ -5977,14 +5921,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Spec type_spec_OverlappedPresenter_Static =
-    {
+    static PyType_Spec type_spec_OverlappedPresenter_Static = {
         "winrt._winrt_microsoft_ui_windowing.OverlappedPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_OverlappedPresenter_Static
-    };
+        type_slots_OverlappedPresenter_Static};
 
     // ----- Microsoft.UI.Windowing Initialization --------------------
 

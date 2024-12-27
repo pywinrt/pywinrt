@@ -180,23 +180,20 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef _methods_WebAccountClientView[] = {
         { "_assign_array_", _assign_array_WebAccountClientView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountClientView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountClientView[] = {
         { "account_pairwise_id", reinterpret_cast<getter>(WebAccountClientView_get_AccountPairwiseId), nullptr, nullptr, nullptr },
         { "application_callback_uri", reinterpret_cast<getter>(WebAccountClientView_get_ApplicationCallbackUri), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(WebAccountClientView_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountClientView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountClientView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountClientView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountClientView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountClientView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountClientView = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountClientView",
@@ -1249,19 +1246,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     }
 
     static PyMethodDef _methods_WebAccountManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountManager = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountManager",
@@ -1271,8 +1265,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         _type_slots_WebAccountManager};
 
     static PyGetSetDef getset_WebAccountManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WebAccountManager_Static[] = {
         { "add_web_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountAsync), METH_VARARGS, nullptr },
@@ -1299,8 +1292,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "set_view_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetViewAsync), METH_VARARGS, nullptr },
         { "set_web_account_picture_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetWebAccountPictureAsync), METH_VARARGS, nullptr },
         { "update_web_account_properties_async", reinterpret_cast<PyCFunction>(WebAccountManager_UpdateWebAccountPropertiesAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WebAccountManager_Static[] = 
     {
@@ -1310,14 +1302,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }
     };
 
-    static PyType_Spec type_spec_WebAccountManager_Static =
-    {
+    static PyType_Spec type_spec_WebAccountManager_Static = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WebAccountManager_Static
-    };
+        type_slots_WebAccountManager_Static};
 
     // ----- WebAccountProviderAddAccountOperation class --------------------
 
@@ -1435,21 +1425,18 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_completed", reinterpret_cast<PyCFunction>(WebAccountProviderAddAccountOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccountProviderAddAccountOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderAddAccountOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderAddAccountOperation[] = {
         { "kind", reinterpret_cast<getter>(WebAccountProviderAddAccountOperation_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderAddAccountOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderAddAccountOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderAddAccountOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderAddAccountOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderAddAccountOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderAddAccountOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountProviderAddAccountOperation",
@@ -1648,22 +1635,19 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_error", reinterpret_cast<PyCFunction>(WebAccountProviderDeleteAccountOperation_ReportError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccountProviderDeleteAccountOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderDeleteAccountOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderDeleteAccountOperation[] = {
         { "web_account", reinterpret_cast<getter>(WebAccountProviderDeleteAccountOperation_get_WebAccount), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(WebAccountProviderDeleteAccountOperation_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderDeleteAccountOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderDeleteAccountOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderDeleteAccountOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderDeleteAccountOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderDeleteAccountOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderDeleteAccountOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountProviderDeleteAccountOperation",
@@ -2047,24 +2031,21 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_user_interaction_required_with_error", reinterpret_cast<PyCFunction>(WebAccountProviderGetTokenSilentOperation_ReportUserInteractionRequiredWithError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccountProviderGetTokenSilentOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderGetTokenSilentOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderGetTokenSilentOperation[] = {
         { "kind", reinterpret_cast<getter>(WebAccountProviderGetTokenSilentOperation_get_Kind), nullptr, nullptr, nullptr },
         { "cache_expiration_time", reinterpret_cast<getter>(WebAccountProviderGetTokenSilentOperation_get_CacheExpirationTime), reinterpret_cast<setter>(WebAccountProviderGetTokenSilentOperation_put_CacheExpirationTime), nullptr, nullptr },
         { "provider_request", reinterpret_cast<getter>(WebAccountProviderGetTokenSilentOperation_get_ProviderRequest), nullptr, nullptr, nullptr },
         { "provider_responses", reinterpret_cast<getter>(WebAccountProviderGetTokenSilentOperation_get_ProviderResponses), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderGetTokenSilentOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderGetTokenSilentOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderGetTokenSilentOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderGetTokenSilentOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderGetTokenSilentOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderGetTokenSilentOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountProviderGetTokenSilentOperation",
@@ -2219,22 +2200,19 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_completed", reinterpret_cast<PyCFunction>(WebAccountProviderManageAccountOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccountProviderManageAccountOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderManageAccountOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderManageAccountOperation[] = {
         { "web_account", reinterpret_cast<getter>(WebAccountProviderManageAccountOperation_get_WebAccount), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(WebAccountProviderManageAccountOperation_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderManageAccountOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderManageAccountOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderManageAccountOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderManageAccountOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderManageAccountOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderManageAccountOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountProviderManageAccountOperation",
@@ -2574,24 +2552,21 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_user_canceled", reinterpret_cast<PyCFunction>(WebAccountProviderRequestTokenOperation_ReportUserCanceled), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccountProviderRequestTokenOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderRequestTokenOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderRequestTokenOperation[] = {
         { "kind", reinterpret_cast<getter>(WebAccountProviderRequestTokenOperation_get_Kind), nullptr, nullptr, nullptr },
         { "cache_expiration_time", reinterpret_cast<getter>(WebAccountProviderRequestTokenOperation_get_CacheExpirationTime), reinterpret_cast<setter>(WebAccountProviderRequestTokenOperation_put_CacheExpirationTime), nullptr, nullptr },
         { "provider_request", reinterpret_cast<getter>(WebAccountProviderRequestTokenOperation_get_ProviderRequest), nullptr, nullptr, nullptr },
         { "provider_responses", reinterpret_cast<getter>(WebAccountProviderRequestTokenOperation_get_ProviderResponses), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderRequestTokenOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderRequestTokenOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderRequestTokenOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderRequestTokenOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderRequestTokenOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderRequestTokenOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountProviderRequestTokenOperation",
@@ -2919,8 +2894,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_error", reinterpret_cast<PyCFunction>(WebAccountProviderRetrieveCookiesOperation_ReportError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccountProviderRetrieveCookiesOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderRetrieveCookiesOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderRetrieveCookiesOperation[] = {
         { "kind", reinterpret_cast<getter>(WebAccountProviderRetrieveCookiesOperation_get_Kind), nullptr, nullptr, nullptr },
@@ -2928,16 +2902,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "application_callback_uri", reinterpret_cast<getter>(WebAccountProviderRetrieveCookiesOperation_get_ApplicationCallbackUri), nullptr, nullptr, nullptr },
         { "context", reinterpret_cast<getter>(WebAccountProviderRetrieveCookiesOperation_get_Context), nullptr, nullptr, nullptr },
         { "cookies", reinterpret_cast<getter>(WebAccountProviderRetrieveCookiesOperation_get_Cookies), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderRetrieveCookiesOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderRetrieveCookiesOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderRetrieveCookiesOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderRetrieveCookiesOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderRetrieveCookiesOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderRetrieveCookiesOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountProviderRetrieveCookiesOperation",
@@ -3196,24 +3168,21 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_error", reinterpret_cast<PyCFunction>(WebAccountProviderSignOutAccountOperation_ReportError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccountProviderSignOutAccountOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderSignOutAccountOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderSignOutAccountOperation[] = {
         { "kind", reinterpret_cast<getter>(WebAccountProviderSignOutAccountOperation_get_Kind), nullptr, nullptr, nullptr },
         { "application_callback_uri", reinterpret_cast<getter>(WebAccountProviderSignOutAccountOperation_get_ApplicationCallbackUri), nullptr, nullptr, nullptr },
         { "client_id", reinterpret_cast<getter>(WebAccountProviderSignOutAccountOperation_get_ClientId), nullptr, nullptr, nullptr },
         { "web_account", reinterpret_cast<getter>(WebAccountProviderSignOutAccountOperation_get_WebAccount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderSignOutAccountOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderSignOutAccountOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderSignOutAccountOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderSignOutAccountOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderSignOutAccountOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderSignOutAccountOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountProviderSignOutAccountOperation",
@@ -3326,22 +3295,19 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef _methods_WebAccountProviderTriggerDetails[] = {
         { "_assign_array_", _assign_array_WebAccountProviderTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderTriggerDetails[] = {
         { "operation", reinterpret_cast<getter>(WebAccountProviderTriggerDetails_get_Operation), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(WebAccountProviderTriggerDetails_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderTriggerDetails = {
         "winrt._winrt_windows_security_authentication_web_provider.WebAccountProviderTriggerDetails",
@@ -3705,8 +3671,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "get_application_token_binding_key_id_async", reinterpret_cast<PyCFunction>(WebProviderTokenRequest_GetApplicationTokenBindingKeyIdAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebProviderTokenRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebProviderTokenRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebProviderTokenRequest[] = {
         { "application_callback_uri", reinterpret_cast<getter>(WebProviderTokenRequest_get_ApplicationCallbackUri), nullptr, nullptr, nullptr },
@@ -3715,16 +3680,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "web_accounts", reinterpret_cast<getter>(WebProviderTokenRequest_get_WebAccounts), nullptr, nullptr, nullptr },
         { "application_package_family_name", reinterpret_cast<getter>(WebProviderTokenRequest_get_ApplicationPackageFamilyName), nullptr, nullptr, nullptr },
         { "application_process_name", reinterpret_cast<getter>(WebProviderTokenRequest_get_ApplicationProcessName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebProviderTokenRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebProviderTokenRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebProviderTokenRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebProviderTokenRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebProviderTokenRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebProviderTokenRequest = {
         "winrt._winrt_windows_security_authentication_web_provider.WebProviderTokenRequest",
@@ -3831,21 +3794,18 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef _methods_WebProviderTokenResponse[] = {
         { "_assign_array_", _assign_array_WebProviderTokenResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebProviderTokenResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebProviderTokenResponse[] = {
         { "client_response", reinterpret_cast<getter>(WebProviderTokenResponse_get_ClientResponse), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebProviderTokenResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebProviderTokenResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebProviderTokenResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebProviderTokenResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebProviderTokenResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebProviderTokenResponse = {
         "winrt._winrt_windows_security_authentication_web_provider.WebProviderTokenResponse",
@@ -3984,20 +3944,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_error", reinterpret_cast<PyCFunction>(IWebAccountProviderBaseReportOperation_ReportError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IWebAccountProviderBaseReportOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderBaseReportOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAccountProviderBaseReportOperation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderBaseReportOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderBaseReportOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderBaseReportOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderBaseReportOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderBaseReportOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAccountProviderBaseReportOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderBaseReportOperation",
@@ -4107,13 +4064,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef methods_ImplementsIWebAccountProviderBaseReportOperation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderBaseReportOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderBaseReportOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAccountProviderBaseReportOperation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderBaseReportOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderBaseReportOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderBaseReportOperation",
@@ -4196,21 +4151,18 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef _methods_IWebAccountProviderOperation[] = {
         { "_assign_array_", _assign_array_IWebAccountProviderOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAccountProviderOperation[] = {
         { "kind", reinterpret_cast<getter>(IWebAccountProviderOperation_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAccountProviderOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderOperation",
@@ -4286,13 +4238,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef methods_ImplementsIWebAccountProviderOperation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAccountProviderOperation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderOperation",
@@ -4517,20 +4467,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_user_interaction_required_with_error", reinterpret_cast<PyCFunction>(IWebAccountProviderSilentReportOperation_ReportUserInteractionRequiredWithError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IWebAccountProviderSilentReportOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderSilentReportOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAccountProviderSilentReportOperation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderSilentReportOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderSilentReportOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderSilentReportOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderSilentReportOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderSilentReportOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAccountProviderSilentReportOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderSilentReportOperation",
@@ -4694,13 +4641,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef methods_ImplementsIWebAccountProviderSilentReportOperation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderSilentReportOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderSilentReportOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAccountProviderSilentReportOperation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderSilentReportOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderSilentReportOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderSilentReportOperation",
@@ -4783,21 +4728,18 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef _methods_IWebAccountProviderTokenObjects[] = {
         { "_assign_array_", _assign_array_IWebAccountProviderTokenObjects, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderTokenObjects), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAccountProviderTokenObjects[] = {
         { "operation", reinterpret_cast<getter>(IWebAccountProviderTokenObjects_get_Operation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderTokenObjects[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderTokenObjects) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderTokenObjects) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderTokenObjects) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderTokenObjects) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAccountProviderTokenObjects = {
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenObjects",
@@ -4873,13 +4815,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef methods_ImplementsIWebAccountProviderTokenObjects[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderTokenObjects), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderTokenObjects), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAccountProviderTokenObjects[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderTokenObjects) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderTokenObjects = {
         "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderTokenObjects",
@@ -4992,22 +4932,19 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef _methods_IWebAccountProviderTokenObjects2[] = {
         { "_assign_array_", _assign_array_IWebAccountProviderTokenObjects2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderTokenObjects2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAccountProviderTokenObjects2[] = {
         { "user", reinterpret_cast<getter>(IWebAccountProviderTokenObjects2_get_User), nullptr, nullptr, nullptr },
         { "operation", reinterpret_cast<getter>(IWebAccountProviderTokenObjects2_get_Operation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderTokenObjects2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderTokenObjects2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderTokenObjects2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderTokenObjects2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderTokenObjects2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAccountProviderTokenObjects2 = {
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenObjects2",
@@ -5103,13 +5040,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef methods_ImplementsIWebAccountProviderTokenObjects2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderTokenObjects2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderTokenObjects2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAccountProviderTokenObjects2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderTokenObjects2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderTokenObjects2 = {
         "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderTokenObjects2",
@@ -5321,24 +5256,21 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef _methods_IWebAccountProviderTokenOperation[] = {
         { "_assign_array_", _assign_array_IWebAccountProviderTokenOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderTokenOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAccountProviderTokenOperation[] = {
         { "cache_expiration_time", reinterpret_cast<getter>(IWebAccountProviderTokenOperation_get_CacheExpirationTime), reinterpret_cast<setter>(IWebAccountProviderTokenOperation_put_CacheExpirationTime), nullptr, nullptr },
         { "provider_request", reinterpret_cast<getter>(IWebAccountProviderTokenOperation_get_ProviderRequest), nullptr, nullptr, nullptr },
         { "provider_responses", reinterpret_cast<getter>(IWebAccountProviderTokenOperation_get_ProviderResponses), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IWebAccountProviderTokenOperation_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderTokenOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderTokenOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderTokenOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderTokenOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderTokenOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAccountProviderTokenOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenOperation",
@@ -5497,13 +5429,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef methods_ImplementsIWebAccountProviderTokenOperation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderTokenOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderTokenOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAccountProviderTokenOperation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderTokenOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderTokenOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderTokenOperation",
@@ -5684,20 +5614,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_user_canceled", reinterpret_cast<PyCFunction>(IWebAccountProviderUIReportOperation_ReportUserCanceled), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IWebAccountProviderUIReportOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderUIReportOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAccountProviderUIReportOperation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderUIReportOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderUIReportOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderUIReportOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderUIReportOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderUIReportOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAccountProviderUIReportOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderUIReportOperation",
@@ -5831,13 +5758,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef methods_ImplementsIWebAccountProviderUIReportOperation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderUIReportOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderUIReportOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAccountProviderUIReportOperation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderUIReportOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderUIReportOperation = {
         "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderUIReportOperation",

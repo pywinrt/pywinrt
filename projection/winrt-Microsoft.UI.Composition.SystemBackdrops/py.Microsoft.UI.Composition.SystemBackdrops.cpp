@@ -1085,8 +1085,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopAcrylicController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesktopAcrylicController), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesktopAcrylicController), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesktopAcrylicController[] = {
         { "tint_opacity", reinterpret_cast<getter>(DesktopAcrylicController_get_TintOpacity), reinterpret_cast<setter>(DesktopAcrylicController_put_TintOpacity), nullptr, nullptr },
@@ -1096,16 +1095,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "kind", reinterpret_cast<getter>(DesktopAcrylicController_get_Kind), reinterpret_cast<setter>(DesktopAcrylicController_put_Kind), nullptr, nullptr },
         { "state", reinterpret_cast<getter>(DesktopAcrylicController_get_State), nullptr, nullptr, nullptr },
         { "is_closed", reinterpret_cast<getter>(DesktopAcrylicController_get_IsClosed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesktopAcrylicController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopAcrylicController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopAcrylicController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopAcrylicController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopAcrylicController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesktopAcrylicController = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.DesktopAcrylicController",
@@ -1115,13 +1112,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         _type_slots_DesktopAcrylicController};
 
     static PyGetSetDef getset_DesktopAcrylicController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DesktopAcrylicController_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(DesktopAcrylicController_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DesktopAcrylicController_Static[] = 
     {
@@ -1131,14 +1126,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }
     };
 
-    static PyType_Spec type_spec_DesktopAcrylicController_Static =
-    {
+    static PyType_Spec type_spec_DesktopAcrylicController_Static = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.DesktopAcrylicController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DesktopAcrylicController_Static
-    };
+        type_slots_DesktopAcrylicController_Static};
 
     // ----- MicaController class --------------------
 
@@ -2221,8 +2214,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "_from", reinterpret_cast<PyCFunction>(_from_MicaController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MicaController), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MicaController), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MicaController[] = {
         { "tint_opacity", reinterpret_cast<getter>(MicaController_get_TintOpacity), reinterpret_cast<setter>(MicaController_put_TintOpacity), nullptr, nullptr },
@@ -2232,16 +2224,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "kind", reinterpret_cast<getter>(MicaController_get_Kind), reinterpret_cast<setter>(MicaController_put_Kind), nullptr, nullptr },
         { "state", reinterpret_cast<getter>(MicaController_get_State), nullptr, nullptr, nullptr },
         { "is_closed", reinterpret_cast<getter>(MicaController_get_IsClosed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MicaController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MicaController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MicaController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MicaController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MicaController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MicaController = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.MicaController",
@@ -2251,13 +2241,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         _type_slots_MicaController};
 
     static PyGetSetDef getset_MicaController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MicaController_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(MicaController_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MicaController_Static[] = 
     {
@@ -2267,14 +2255,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }
     };
 
-    static PyType_Spec type_spec_MicaController_Static =
-    {
+    static PyType_Spec type_spec_MicaController_Static = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.MicaController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MicaController_Static
-    };
+        type_slots_MicaController_Static};
 
     // ----- SystemBackdropConfiguration class --------------------
 
@@ -2618,24 +2604,21 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     static PyMethodDef _methods_SystemBackdropConfiguration[] = {
         { "_assign_array_", _assign_array_SystemBackdropConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemBackdropConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemBackdropConfiguration[] = {
         { "theme", reinterpret_cast<getter>(SystemBackdropConfiguration_get_Theme), reinterpret_cast<setter>(SystemBackdropConfiguration_put_Theme), nullptr, nullptr },
         { "is_input_active", reinterpret_cast<getter>(SystemBackdropConfiguration_get_IsInputActive), reinterpret_cast<setter>(SystemBackdropConfiguration_put_IsInputActive), nullptr, nullptr },
         { "is_high_contrast", reinterpret_cast<getter>(SystemBackdropConfiguration_get_IsHighContrast), reinterpret_cast<setter>(SystemBackdropConfiguration_put_IsHighContrast), nullptr, nullptr },
         { "high_contrast_background_color", reinterpret_cast<getter>(SystemBackdropConfiguration_get_HighContrastBackgroundColor), reinterpret_cast<setter>(SystemBackdropConfiguration_put_HighContrastBackgroundColor), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemBackdropConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemBackdropConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemBackdropConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemBackdropConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemBackdropConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemBackdropConfiguration = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.SystemBackdropConfiguration",
@@ -2843,20 +2826,17 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "_from", reinterpret_cast<PyCFunction>(_from_ISystemBackdropController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ISystemBackdropController), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ISystemBackdropController), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISystemBackdropController[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISystemBackdropController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISystemBackdropController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISystemBackdropController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISystemBackdropController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISystemBackdropController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISystemBackdropController = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropController",
@@ -3024,13 +3004,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     static PyMethodDef methods_ImplementsISystemBackdropController[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISystemBackdropController), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISystemBackdropController), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISystemBackdropController[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISystemBackdropController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISystemBackdropController = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.ImplementsISystemBackdropController",
@@ -3507,21 +3485,18 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "_from", reinterpret_cast<PyCFunction>(_from_ISystemBackdropControllerWithTargets), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ISystemBackdropControllerWithTargets), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ISystemBackdropControllerWithTargets), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISystemBackdropControllerWithTargets[] = {
         { "state", reinterpret_cast<getter>(ISystemBackdropControllerWithTargets_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISystemBackdropControllerWithTargets[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISystemBackdropControllerWithTargets) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISystemBackdropControllerWithTargets) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISystemBackdropControllerWithTargets) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISystemBackdropControllerWithTargets) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISystemBackdropControllerWithTargets = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropControllerWithTargets",
@@ -3889,13 +3864,11 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     static PyMethodDef methods_ImplementsISystemBackdropControllerWithTargets[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISystemBackdropControllerWithTargets), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISystemBackdropControllerWithTargets), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISystemBackdropControllerWithTargets[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISystemBackdropControllerWithTargets) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISystemBackdropControllerWithTargets = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.ImplementsISystemBackdropControllerWithTargets",

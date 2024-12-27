@@ -1084,8 +1084,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "remove_image_opened", reinterpret_cast<PyCFunction>(BitmapImage_remove_ImageOpened), METH_O, nullptr },
         { "_assign_array_", _assign_array_BitmapImage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapImage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapImage[] = {
         { "uri_source", reinterpret_cast<getter>(BitmapImage_get_UriSource), reinterpret_cast<setter>(BitmapImage_put_UriSource), nullptr, nullptr },
@@ -1096,16 +1095,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "auto_play", reinterpret_cast<getter>(BitmapImage_get_AutoPlay), reinterpret_cast<setter>(BitmapImage_put_AutoPlay), nullptr, nullptr },
         { "is_animated_bitmap", reinterpret_cast<getter>(BitmapImage_get_IsAnimatedBitmap), nullptr, nullptr, nullptr },
         { "is_playing", reinterpret_cast<getter>(BitmapImage_get_IsPlaying), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapImage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapImage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapImage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapImage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapImage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapImage = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.BitmapImage",
@@ -1123,12 +1120,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "is_animated_bitmap_property", reinterpret_cast<getter>(BitmapImage_get_IsAnimatedBitmapProperty), nullptr, nullptr, nullptr },
         { "is_playing_property", reinterpret_cast<getter>(BitmapImage_get_IsPlayingProperty), nullptr, nullptr, nullptr },
         { "uri_source_property", reinterpret_cast<getter>(BitmapImage_get_UriSourceProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BitmapImage_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BitmapImage_Static[] = 
     {
@@ -1138,14 +1133,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Spec type_spec_BitmapImage_Static =
-    {
+    static PyType_Spec type_spec_BitmapImage_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.BitmapImage_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BitmapImage_Static
-    };
+        type_slots_BitmapImage_Static};
 
     // ----- BitmapSource class --------------------
 
@@ -1427,22 +1420,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "set_source_async", reinterpret_cast<PyCFunction>(BitmapSource_SetSourceAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapSource[] = {
         { "pixel_height", reinterpret_cast<getter>(BitmapSource_get_PixelHeight), nullptr, nullptr, nullptr },
         { "pixel_width", reinterpret_cast<getter>(BitmapSource_get_PixelWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.BitmapSource",
@@ -1454,12 +1444,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
     static PyGetSetDef getset_BitmapSource_Static[] = {
         { "pixel_height_property", reinterpret_cast<getter>(BitmapSource_get_PixelHeightProperty), nullptr, nullptr, nullptr },
         { "pixel_width_property", reinterpret_cast<getter>(BitmapSource_get_PixelWidthProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BitmapSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BitmapSource_Static[] = 
     {
@@ -1469,14 +1457,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Spec type_spec_BitmapSource_Static =
-    {
+    static PyType_Spec type_spec_BitmapSource_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.BitmapSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_BitmapSource_Static
-    };
+        type_slots_BitmapSource_Static};
 
     // ----- DownloadProgressEventArgs class --------------------
 
@@ -1591,21 +1577,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
     static PyMethodDef _methods_DownloadProgressEventArgs[] = {
         { "_assign_array_", _assign_array_DownloadProgressEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DownloadProgressEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DownloadProgressEventArgs[] = {
         { "progress", reinterpret_cast<getter>(DownloadProgressEventArgs_get_Progress), reinterpret_cast<setter>(DownloadProgressEventArgs_put_Progress), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DownloadProgressEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DownloadProgressEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DownloadProgressEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DownloadProgressEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DownloadProgressEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DownloadProgressEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.DownloadProgressEventArgs",
@@ -1929,22 +1912,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "render_to_size_async", reinterpret_cast<PyCFunction>(RenderTargetBitmap_RenderToSizeAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RenderTargetBitmap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RenderTargetBitmap), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RenderTargetBitmap[] = {
         { "pixel_height", reinterpret_cast<getter>(RenderTargetBitmap_get_PixelHeight), nullptr, nullptr, nullptr },
         { "pixel_width", reinterpret_cast<getter>(RenderTargetBitmap_get_PixelWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RenderTargetBitmap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RenderTargetBitmap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RenderTargetBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RenderTargetBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RenderTargetBitmap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RenderTargetBitmap = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.RenderTargetBitmap",
@@ -1956,12 +1936,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
     static PyGetSetDef getset_RenderTargetBitmap_Static[] = {
         { "pixel_height_property", reinterpret_cast<getter>(RenderTargetBitmap_get_PixelHeightProperty), nullptr, nullptr, nullptr },
         { "pixel_width_property", reinterpret_cast<getter>(RenderTargetBitmap_get_PixelWidthProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RenderTargetBitmap_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RenderTargetBitmap_Static[] = 
     {
@@ -1971,14 +1949,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Spec type_spec_RenderTargetBitmap_Static =
-    {
+    static PyType_Spec type_spec_RenderTargetBitmap_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.RenderTargetBitmap_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RenderTargetBitmap_Static
-    };
+        type_slots_RenderTargetBitmap_Static};
 
     // ----- SoftwareBitmapSource class --------------------
 
@@ -2156,20 +2132,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "_from", reinterpret_cast<PyCFunction>(_from_SoftwareBitmapSource), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SoftwareBitmapSource), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_SoftwareBitmapSource), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SoftwareBitmapSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SoftwareBitmapSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SoftwareBitmapSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SoftwareBitmapSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SoftwareBitmapSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SoftwareBitmapSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SoftwareBitmapSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SoftwareBitmapSource",
@@ -2348,20 +2321,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
     static PyMethodDef _methods_SurfaceImageSource[] = {
         { "_assign_array_", _assign_array_SurfaceImageSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SurfaceImageSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SurfaceImageSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SurfaceImageSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SurfaceImageSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SurfaceImageSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SurfaceImageSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SurfaceImageSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SurfaceImageSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SurfaceImageSource",
@@ -2371,12 +2341,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         _type_slots_SurfaceImageSource};
 
     static PyGetSetDef getset_SurfaceImageSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SurfaceImageSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SurfaceImageSource_Static[] = 
     {
@@ -2386,14 +2354,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Spec type_spec_SurfaceImageSource_Static =
-    {
+    static PyType_Spec type_spec_SurfaceImageSource_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SurfaceImageSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_SurfaceImageSource_Static
-    };
+        type_slots_SurfaceImageSource_Static};
 
     // ----- SvgImageSource class --------------------
 
@@ -3034,23 +3000,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "remove_opened", reinterpret_cast<PyCFunction>(SvgImageSource_remove_Opened), METH_O, nullptr },
         { "_assign_array_", _assign_array_SvgImageSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SvgImageSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SvgImageSource[] = {
         { "uri_source", reinterpret_cast<getter>(SvgImageSource_get_UriSource), reinterpret_cast<setter>(SvgImageSource_put_UriSource), nullptr, nullptr },
         { "rasterize_pixel_width", reinterpret_cast<getter>(SvgImageSource_get_RasterizePixelWidth), reinterpret_cast<setter>(SvgImageSource_put_RasterizePixelWidth), nullptr, nullptr },
         { "rasterize_pixel_height", reinterpret_cast<getter>(SvgImageSource_get_RasterizePixelHeight), reinterpret_cast<setter>(SvgImageSource_put_RasterizePixelHeight), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SvgImageSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SvgImageSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SvgImageSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SvgImageSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SvgImageSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SvgImageSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SvgImageSource",
@@ -3063,12 +3026,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "rasterize_pixel_height_property", reinterpret_cast<getter>(SvgImageSource_get_RasterizePixelHeightProperty), nullptr, nullptr, nullptr },
         { "rasterize_pixel_width_property", reinterpret_cast<getter>(SvgImageSource_get_RasterizePixelWidthProperty), nullptr, nullptr, nullptr },
         { "uri_source_property", reinterpret_cast<getter>(SvgImageSource_get_UriSourceProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SvgImageSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SvgImageSource_Static[] = 
     {
@@ -3078,14 +3039,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Spec type_spec_SvgImageSource_Static =
-    {
+    static PyType_Spec type_spec_SvgImageSource_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SvgImageSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_SvgImageSource_Static
-    };
+        type_slots_SvgImageSource_Static};
 
     // ----- SvgImageSourceFailedEventArgs class --------------------
 
@@ -3161,21 +3120,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
     static PyMethodDef _methods_SvgImageSourceFailedEventArgs[] = {
         { "_assign_array_", _assign_array_SvgImageSourceFailedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SvgImageSourceFailedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SvgImageSourceFailedEventArgs[] = {
         { "status", reinterpret_cast<getter>(SvgImageSourceFailedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SvgImageSourceFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SvgImageSourceFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SvgImageSourceFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SvgImageSourceFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SvgImageSourceFailedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SvgImageSourceFailedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SvgImageSourceFailedEventArgs",
@@ -3228,20 +3184,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
     static PyMethodDef _methods_SvgImageSourceOpenedEventArgs[] = {
         { "_assign_array_", _assign_array_SvgImageSourceOpenedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SvgImageSourceOpenedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SvgImageSourceOpenedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SvgImageSourceOpenedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SvgImageSourceOpenedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SvgImageSourceOpenedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SvgImageSourceOpenedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SvgImageSourceOpenedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SvgImageSourceOpenedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SvgImageSourceOpenedEventArgs",
@@ -3336,20 +3289,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
     static PyMethodDef _methods_VirtualSurfaceImageSource[] = {
         { "_assign_array_", _assign_array_VirtualSurfaceImageSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VirtualSurfaceImageSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VirtualSurfaceImageSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VirtualSurfaceImageSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VirtualSurfaceImageSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VirtualSurfaceImageSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VirtualSurfaceImageSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VirtualSurfaceImageSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VirtualSurfaceImageSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.VirtualSurfaceImageSource",
@@ -3499,21 +3449,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "invalidate", reinterpret_cast<PyCFunction>(WriteableBitmap_Invalidate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WriteableBitmap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WriteableBitmap), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WriteableBitmap[] = {
         { "pixel_buffer", reinterpret_cast<getter>(WriteableBitmap_get_PixelBuffer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WriteableBitmap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WriteableBitmap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WriteableBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WriteableBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WriteableBitmap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WriteableBitmap = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.WriteableBitmap",
@@ -3671,20 +3618,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "_on_run", reinterpret_cast<PyCFunction>(XamlRenderingBackgroundTask_OnRun), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlRenderingBackgroundTask, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlRenderingBackgroundTask), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XamlRenderingBackgroundTask[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XamlRenderingBackgroundTask[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlRenderingBackgroundTask) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlRenderingBackgroundTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlRenderingBackgroundTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlRenderingBackgroundTask) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XamlRenderingBackgroundTask = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.XamlRenderingBackgroundTask",
@@ -3694,12 +3638,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         _type_slots_XamlRenderingBackgroundTask};
 
     static PyGetSetDef getset_XamlRenderingBackgroundTask_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_XamlRenderingBackgroundTask_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_XamlRenderingBackgroundTask_Static[] = 
     {
@@ -3709,14 +3651,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Spec type_spec_XamlRenderingBackgroundTask_Static =
-    {
+    static PyType_Spec type_spec_XamlRenderingBackgroundTask_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.XamlRenderingBackgroundTask_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_XamlRenderingBackgroundTask_Static
-    };
+        type_slots_XamlRenderingBackgroundTask_Static};
 
     // ----- Microsoft.UI.Xaml.Media.Imaging Initialization --------------------
 

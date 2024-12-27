@@ -246,21 +246,18 @@ namespace py::cpp::Windows::Security::Credentials
         { "retrieve_public_key_with_default_blob_type", reinterpret_cast<PyCFunction>(KeyCredential_RetrievePublicKeyWithDefaultBlobType), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_KeyCredential, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyCredential), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyCredential[] = {
         { "name", reinterpret_cast<getter>(KeyCredential_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredential) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyCredential = {
         "winrt._winrt_windows_security_credentials.KeyCredential",
@@ -403,23 +400,20 @@ namespace py::cpp::Windows::Security::Credentials
     static PyMethodDef _methods_KeyCredentialAttestationResult[] = {
         { "_assign_array_", _assign_array_KeyCredentialAttestationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyCredentialAttestationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyCredentialAttestationResult[] = {
         { "attestation_buffer", reinterpret_cast<getter>(KeyCredentialAttestationResult_get_AttestationBuffer), nullptr, nullptr, nullptr },
         { "certificate_chain_buffer", reinterpret_cast<getter>(KeyCredentialAttestationResult_get_CertificateChainBuffer), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(KeyCredentialAttestationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyCredentialAttestationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredentialAttestationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyCredentialAttestationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredentialAttestationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredentialAttestationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyCredentialAttestationResult = {
         "winrt._winrt_windows_security_credentials.KeyCredentialAttestationResult",
@@ -645,19 +639,16 @@ namespace py::cpp::Windows::Security::Credentials
     }
 
     static PyMethodDef _methods_KeyCredentialManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyCredentialManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyCredentialManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredentialManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredentialManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredentialManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyCredentialManager = {
         "winrt._winrt_windows_security_credentials.KeyCredentialManager",
@@ -667,8 +658,7 @@ namespace py::cpp::Windows::Security::Credentials
         _type_slots_KeyCredentialManager};
 
     static PyGetSetDef getset_KeyCredentialManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KeyCredentialManager_Static[] = {
         { "delete_async", reinterpret_cast<PyCFunction>(KeyCredentialManager_DeleteAsync), METH_VARARGS, nullptr },
@@ -676,8 +666,7 @@ namespace py::cpp::Windows::Security::Credentials
         { "open_async", reinterpret_cast<PyCFunction>(KeyCredentialManager_OpenAsync), METH_VARARGS, nullptr },
         { "renew_attestation_async", reinterpret_cast<PyCFunction>(KeyCredentialManager_RenewAttestationAsync), METH_VARARGS, nullptr },
         { "request_create_async", reinterpret_cast<PyCFunction>(KeyCredentialManager_RequestCreateAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KeyCredentialManager_Static[] = 
     {
@@ -687,14 +676,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Spec type_spec_KeyCredentialManager_Static =
-    {
+    static PyType_Spec type_spec_KeyCredentialManager_Static = {
         "winrt._winrt_windows_security_credentials.KeyCredentialManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KeyCredentialManager_Static
-    };
+        type_slots_KeyCredentialManager_Static};
 
     // ----- KeyCredentialOperationResult class --------------------
 
@@ -800,22 +787,19 @@ namespace py::cpp::Windows::Security::Credentials
     static PyMethodDef _methods_KeyCredentialOperationResult[] = {
         { "_assign_array_", _assign_array_KeyCredentialOperationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyCredentialOperationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyCredentialOperationResult[] = {
         { "result", reinterpret_cast<getter>(KeyCredentialOperationResult_get_Result), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(KeyCredentialOperationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyCredentialOperationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredentialOperationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyCredentialOperationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredentialOperationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredentialOperationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyCredentialOperationResult = {
         "winrt._winrt_windows_security_credentials.KeyCredentialOperationResult",
@@ -928,22 +912,19 @@ namespace py::cpp::Windows::Security::Credentials
     static PyMethodDef _methods_KeyCredentialRetrievalResult[] = {
         { "_assign_array_", _assign_array_KeyCredentialRetrievalResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyCredentialRetrievalResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyCredentialRetrievalResult[] = {
         { "credential", reinterpret_cast<getter>(KeyCredentialRetrievalResult_get_Credential), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(KeyCredentialRetrievalResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyCredentialRetrievalResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredentialRetrievalResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyCredentialRetrievalResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredentialRetrievalResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredentialRetrievalResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyCredentialRetrievalResult = {
         "winrt._winrt_windows_security_credentials.KeyCredentialRetrievalResult",
@@ -1314,24 +1295,21 @@ namespace py::cpp::Windows::Security::Credentials
         { "retrieve_password", reinterpret_cast<PyCFunction>(PasswordCredential_RetrievePassword), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PasswordCredential, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PasswordCredential), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PasswordCredential[] = {
         { "user_name", reinterpret_cast<getter>(PasswordCredential_get_UserName), reinterpret_cast<setter>(PasswordCredential_put_UserName), nullptr, nullptr },
         { "resource", reinterpret_cast<getter>(PasswordCredential_get_Resource), reinterpret_cast<setter>(PasswordCredential_put_Resource), nullptr, nullptr },
         { "password", reinterpret_cast<getter>(PasswordCredential_get_Password), reinterpret_cast<setter>(PasswordCredential_put_Password), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(PasswordCredential_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PasswordCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PasswordCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PasswordCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PasswordCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PasswordCredential) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PasswordCredential = {
         "winrt._winrt_windows_security_credentials.PasswordCredential",
@@ -1933,13 +1911,11 @@ namespace py::cpp::Windows::Security::Credentials
         { "remove_map_changed", reinterpret_cast<PyCFunction>(PasswordCredentialPropertyStore_remove_MapChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_PasswordCredentialPropertyStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PasswordCredentialPropertyStore), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PasswordCredentialPropertyStore[] = {
         { "size", reinterpret_cast<getter>(PasswordCredentialPropertyStore_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PasswordCredentialPropertyStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PasswordCredentialPropertyStore) },
@@ -1951,8 +1927,7 @@ namespace py::cpp::Windows::Security::Credentials
         { Py_mp_length, reinterpret_cast<void*>(_map_length_PasswordCredentialPropertyStore) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_PasswordCredentialPropertyStore) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_PasswordCredentialPropertyStore) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PasswordCredentialPropertyStore = {
         "winrt._winrt_windows_security_credentials.PasswordCredentialPropertyStore",
@@ -2286,20 +2261,17 @@ namespace py::cpp::Windows::Security::Credentials
         { "retrieve_all", reinterpret_cast<PyCFunction>(PasswordVault_RetrieveAll), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PasswordVault, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PasswordVault), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PasswordVault[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PasswordVault[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PasswordVault) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PasswordVault) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PasswordVault) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PasswordVault) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PasswordVault = {
         "winrt._winrt_windows_security_credentials.PasswordVault",
@@ -2655,8 +2627,7 @@ namespace py::cpp::Windows::Security::Credentials
         { "sign_out_with_client_id_async", reinterpret_cast<PyCFunction>(WebAccount_SignOutWithClientIdAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccount, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccount), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccount[] = {
         { "state", reinterpret_cast<getter>(WebAccount_get_State), nullptr, nullptr, nullptr },
@@ -2664,16 +2635,14 @@ namespace py::cpp::Windows::Security::Credentials
         { "web_account_provider", reinterpret_cast<getter>(WebAccount_get_WebAccountProvider), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(WebAccount_get_Id), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(WebAccount_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccount) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccount = {
         "winrt._winrt_windows_security_credentials.WebAccount",
@@ -2962,8 +2931,7 @@ namespace py::cpp::Windows::Security::Credentials
     static PyMethodDef _methods_WebAccountProvider[] = {
         { "_assign_array_", _assign_array_WebAccountProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProvider[] = {
         { "display_name", reinterpret_cast<getter>(WebAccountProvider_get_DisplayName), nullptr, nullptr, nullptr },
@@ -2973,16 +2941,14 @@ namespace py::cpp::Windows::Security::Credentials
         { "display_purpose", reinterpret_cast<getter>(WebAccountProvider_get_DisplayPurpose), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(WebAccountProvider_get_User), nullptr, nullptr, nullptr },
         { "is_system_provider", reinterpret_cast<getter>(WebAccountProvider_get_IsSystemProvider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProvider = {
         "winrt._winrt_windows_security_credentials.WebAccountProvider",
@@ -3125,23 +3091,20 @@ namespace py::cpp::Windows::Security::Credentials
     static PyMethodDef _methods_IWebAccount[] = {
         { "_assign_array_", _assign_array_IWebAccount, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccount), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAccount[] = {
         { "state", reinterpret_cast<getter>(IWebAccount_get_State), nullptr, nullptr, nullptr },
         { "user_name", reinterpret_cast<getter>(IWebAccount_get_UserName), nullptr, nullptr, nullptr },
         { "web_account_provider", reinterpret_cast<getter>(IWebAccount_get_WebAccountProvider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAccount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccount) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAccount = {
         "winrt._winrt_windows_security_credentials.IWebAccount",
@@ -3257,13 +3220,11 @@ namespace py::cpp::Windows::Security::Credentials
     static PyMethodDef methods_ImplementsIWebAccount[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccount), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccount), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAccount[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccount) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccount = {
         "winrt._winrt_windows_security_credentials.ImplementsIWebAccount",

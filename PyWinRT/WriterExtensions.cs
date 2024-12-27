@@ -336,33 +336,25 @@ static class WriterExtensions
         );
         w.WriteBlankLine();
 
-        w.Write($"static PyMethodDef methods_Implements{type.Name}[] = ");
-        w.WriteBlock(
-            () =>
-            {
-                w.WriteLine(
-                    $"{{ \"_guid_\", reinterpret_cast<PyCFunction>(_guid_Implements{type.Name}), METH_NOARGS | METH_STATIC, nullptr }},"
-                );
-                w.WriteLine(
-                    $"{{ \"_make_\", reinterpret_cast<PyCFunction>(_make_Implements{type.Name}), METH_VARARGS | METH_STATIC, nullptr }},"
-                );
-                w.WriteLine("{ }");
-            },
-            ";"
+        w.WriteLine($"static PyMethodDef methods_Implements{type.Name}[] = {{");
+        w.Indent++;
+        w.WriteLine(
+            $"{{ \"_guid_\", reinterpret_cast<PyCFunction>(_guid_Implements{type.Name}), METH_NOARGS | METH_STATIC, nullptr }},"
         );
+        w.WriteLine(
+            $"{{ \"_make_\", reinterpret_cast<PyCFunction>(_make_Implements{type.Name}), METH_VARARGS | METH_STATIC, nullptr }},"
+        );
+        w.WriteLine("{ }};");
+        w.Indent--;
         w.WriteBlankLine();
 
-        w.Write($"static PyType_Slot type_slots_Implements{type.Name}[] = ");
-        w.WriteBlock(
-            () =>
-            {
-                w.WriteLine(
-                    $"{{ Py_tp_methods, reinterpret_cast<void*>(methods_Implements{type.Name}) }},"
-                );
-                w.WriteLine("{ }");
-            },
-            ";"
+        w.WriteLine($"static PyType_Slot type_slots_Implements{type.Name}[] = {{");
+        w.Indent++;
+        w.WriteLine(
+            $"{{ Py_tp_methods, reinterpret_cast<void*>(methods_Implements{type.Name}) }},"
         );
+        w.WriteLine("{ }};");
+        w.Indent--;
         w.WriteBlankLine();
 
         w.WriteLine($"static PyType_Spec type_spec_Implements{type.Name} = {{");
@@ -404,22 +396,16 @@ static class WriterExtensions
         );
 
         w.WriteBlankLine();
-        w.WriteLine($"static PyType_Spec type_spec_{type.Name}_Static =");
-        w.WriteBlock(
-            () =>
-            {
-                w.WriteLine(
-                    $"\"winrt.{type.Namespace.ToNsModuleName()}{moduleSuffix}.{type.Name}_Static\","
-                );
-                w.WriteLine("static_cast<int>(PyType_Type.tp_basicsize),");
-                w.WriteLine("static_cast<int>(PyType_Type.tp_itemsize),");
-                w.WriteLine(
-                    $"Py_TPFLAGS_DEFAULT{(type.IsComposable ? " | Py_TPFLAGS_BASETYPE" : "")},"
-                );
-                w.WriteLine($"type_slots_{type.Name}_Static");
-            },
-            ";"
+        w.WriteLine($"static PyType_Spec type_spec_{type.Name}_Static = {{");
+        w.Indent++;
+        w.WriteLine(
+            $"\"winrt.{type.Namespace.ToNsModuleName()}{moduleSuffix}.{type.Name}_Static\","
         );
+        w.WriteLine("static_cast<int>(PyType_Type.tp_basicsize),");
+        w.WriteLine("static_cast<int>(PyType_Type.tp_itemsize),");
+        w.WriteLine($"Py_TPFLAGS_DEFAULT{(type.IsComposable ? " | Py_TPFLAGS_BASETYPE" : "")},");
+        w.WriteLine($"type_slots_{type.Name}_Static}};");
+        w.Indent--;
     }
 
     static void WriteMetaclassPropertyGetsetTable(this IndentedTextWriter w, ProjectedType type)
@@ -427,65 +413,58 @@ static class WriterExtensions
         var typeName = type.Name.ToNonGeneric();
 
         w.WriteBlankLine();
-        w.Write($"static PyGetSetDef getset_{typeName}_Static[] = ");
-        w.WriteBlock(
-            () =>
-            {
-                foreach (var prop in type.Properties.Where(p => p.IsStatic))
-                {
-                    var setter = prop.SetMethod is null
-                        ? "nullptr"
-                        : $"reinterpret_cast<setter>({type.Name}_put_{prop.Name})";
+        w.WriteLine($"static PyGetSetDef getset_{typeName}_Static[] = {{");
+        w.Indent++;
+        foreach (var prop in type.Properties.Where(p => p.IsStatic))
+        {
+            var setter = prop.SetMethod is null
+                ? "nullptr"
+                : $"reinterpret_cast<setter>({type.Name}_put_{prop.Name})";
 
-                    w.WriteLine(
-                        $"{{ \"{prop.Name.ToPythonIdentifier(isTypeMethod: true)}\", reinterpret_cast<getter>({typeName}_get_{prop.Name}), {setter}, nullptr, nullptr }},"
-                    );
-                }
+            w.WriteLine(
+                $"{{ \"{prop.Name.ToPythonIdentifier(isTypeMethod: true)}\", reinterpret_cast<getter>({typeName}_get_{prop.Name}), {setter}, nullptr, nullptr }},"
+            );
+        }
 
-                if (type.Type.IsCustomNumeric())
-                {
-                    w.WriteNumberCommonValuesGetSetDefs(type);
-                }
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberCommonValuesGetSetDefs(type);
+        }
 
-                w.WriteLine("{ }");
-            },
-            ";"
-        );
+        w.WriteLine("{ }};");
+        w.Indent--;
     }
 
     static void WriteMetaclassMethodTable(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteBlankLine();
-        w.Write($"static PyMethodDef methods_{type.Name}_Static[] = ");
-        w.WriteBlock(
-            () =>
-            {
-                foreach (var method in type.Methods.Where(m => m.IsStatic).DistinctBy(m => m.Name))
-                {
-                    w.WriteLine(
-                        $"{{ \"{method.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), METH_VARARGS, nullptr }},"
-                    );
-                }
+        w.WriteLine($"static PyMethodDef methods_{type.Name}_Static[] = {{");
+        w.Indent++;
 
-                foreach (var @event in type.Events.Where(e => e.IsStatic))
-                {
-                    w.WriteLine(
-                        $"{{ \"{@event.AddMethod.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.AddMethod.Name}), METH_O, nullptr }},"
-                    );
-                    w.WriteLine(
-                        $"{{ \"{@event.RemoveMethod.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.RemoveMethod.Name}), METH_O, nullptr }},"
-                    );
-                }
+        foreach (var method in type.Methods.Where(m => m.IsStatic).DistinctBy(m => m.Name))
+        {
+            w.WriteLine(
+                $"{{ \"{method.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), METH_VARARGS, nullptr }},"
+            );
+        }
 
-                if (type.Type.IsCustomNumeric())
-                {
-                    w.WriteNumberFactoryFunctionDefs(type);
-                }
+        foreach (var @event in type.Events.Where(e => e.IsStatic))
+        {
+            w.WriteLine(
+                $"{{ \"{@event.AddMethod.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.AddMethod.Name}), METH_O, nullptr }},"
+            );
+            w.WriteLine(
+                $"{{ \"{@event.RemoveMethod.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.RemoveMethod.Name}), METH_O, nullptr }},"
+            );
+        }
 
-                w.WriteLine("{ }");
-            },
-            ";"
-        );
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberFactoryFunctionDefs(type);
+        }
+
+        w.WriteLine("{ }};");
+        w.Indent--;
     }
 
     public static void WriteTypeSpec(
@@ -519,109 +498,87 @@ static class WriterExtensions
         var name = type.Name.ToNonGeneric();
 
         w.WriteBlankLine();
-        w.Write($"static PyType_Slot _type_slots_{name}[] = ");
-        w.WriteBlock(
-            () =>
+        w.WriteLine($"static PyType_Slot _type_slots_{name}[] = {{");
+        w.Indent++;
+        w.WriteLine($"{{ Py_tp_new, reinterpret_cast<void*>(_new_{name}) }},");
+
+        if (type.Category == Category.Struct)
+        {
+            w.WriteLine($"{{ Py_tp_init, reinterpret_cast<void*>(_init_{name}) }},");
+        }
+
+        if (!type.IsStatic)
+        {
+            w.WriteLine($"{{ Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_{name}) }},");
+        }
+
+        w.WriteLine($"{{ Py_tp_methods, reinterpret_cast<void*>(_methods_{name}) }},");
+        w.WriteLine($"{{ Py_tp_getset, reinterpret_cast<void*>(_getset_{name}) }},");
+
+        if (type.Type.IsCustomNumeric() && type.Name != "Plane")
+        {
+            w.WriteNumberSlots(type);
+        }
+
+        if (type.Category == Category.Struct)
+        {
+            w.WriteLine($"{{ Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_{name}) }},");
+            w.WriteLine($"{{ Py_tp_repr, reinterpret_cast<void*>(_repr_{name}) }},");
+        }
+
+        if (type.IsPyBuffer)
+        {
+            w.WriteLine($"{{ Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_{name}) }},");
+        }
+
+        if (type.IsPyStringable)
+        {
+            w.WriteLine($"{{ Py_tp_str, reinterpret_cast<void*>(_str_{name}) }},");
+        }
+
+        if (type.IsPyAwaitable)
+        {
+            w.WriteLine($"{{ Py_am_await, reinterpret_cast<void*>(_await_{name}) }},");
+        }
+
+        if (type.IsPyIterable)
+        {
+            w.WriteLine($"{{ Py_tp_iter, reinterpret_cast<void*>(_iterator_{name}) }},");
+        }
+
+        if (type.IsPyIterator)
+        {
+            w.WriteLine($"{{ Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_{name}) }},");
+        }
+
+        if (type.IsPySequence)
+        {
+            w.WriteLine($"{{ Py_sq_length, reinterpret_cast<void*>(_seq_length_{name}) }},");
+            w.WriteLine($"{{ Py_sq_item, reinterpret_cast<void*>(_seq_item_{name}) }},");
+            w.WriteLine($"{{ Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_{name}) }},");
+
+            if (type.IsPyMutableSequence)
             {
-                w.WriteLine($"{{ Py_tp_new, reinterpret_cast<void*>(_new_{name}) }},");
+                w.WriteLine($"{{ Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_{name}) }},");
+            }
+        }
 
-                if (type.Category == Category.Struct)
-                {
-                    w.WriteLine($"{{ Py_tp_init, reinterpret_cast<void*>(_init_{name}) }},");
-                }
+        if (type.IsPyMapping)
+        {
+            w.WriteLine($"{{ Py_sq_contains, reinterpret_cast<void*>(_map_contains_{name}) }},");
+            w.WriteLine($"{{ Py_mp_length, reinterpret_cast<void*>(_map_length_{name}) }},");
+            w.WriteLine($"{{ Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_{name}) }},");
 
-                if (!type.IsStatic)
-                {
-                    w.WriteLine($"{{ Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_{name}) }},");
-                }
+            if (type.IsPyMutableMapping)
+            {
+                w.WriteLine(
+                    $"{{ Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_{name}) }},"
+                );
+            }
+        }
 
-                w.WriteLine($"{{ Py_tp_methods, reinterpret_cast<void*>(_methods_{name}) }},");
-                w.WriteLine($"{{ Py_tp_getset, reinterpret_cast<void*>(_getset_{name}) }},");
-
-                if (type.Type.IsCustomNumeric() && type.Name != "Plane")
-                {
-                    w.WriteNumberSlots(type);
-                }
-
-                if (type.Category == Category.Struct)
-                {
-                    w.WriteLine(
-                        $"{{ Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_{name}) }},"
-                    );
-                    w.WriteLine($"{{ Py_tp_repr, reinterpret_cast<void*>(_repr_{name}) }},");
-                }
-
-                if (type.IsPyBuffer)
-                {
-                    w.WriteLine(
-                        $"{{ Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_{name}) }},"
-                    );
-                }
-
-                if (type.IsPyStringable)
-                {
-                    w.WriteLine($"{{ Py_tp_str, reinterpret_cast<void*>(_str_{name}) }},");
-                }
-
-                if (type.IsPyAwaitable)
-                {
-                    w.WriteLine($"{{ Py_am_await, reinterpret_cast<void*>(_await_{name}) }},");
-                }
-
-                if (type.IsPyIterable)
-                {
-                    w.WriteLine($"{{ Py_tp_iter, reinterpret_cast<void*>(_iterator_{name}) }},");
-                }
-
-                if (type.IsPyIterator)
-                {
-                    w.WriteLine(
-                        $"{{ Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_{name}) }},"
-                    );
-                }
-
-                if (type.IsPySequence)
-                {
-                    w.WriteLine(
-                        $"{{ Py_sq_length, reinterpret_cast<void*>(_seq_length_{name}) }},"
-                    );
-                    w.WriteLine($"{{ Py_sq_item, reinterpret_cast<void*>(_seq_item_{name}) }},");
-                    w.WriteLine(
-                        $"{{ Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_{name}) }},"
-                    );
-
-                    if (type.IsPyMutableSequence)
-                    {
-                        w.WriteLine(
-                            $"{{ Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_{name}) }},"
-                        );
-                    }
-                }
-
-                if (type.IsPyMapping)
-                {
-                    w.WriteLine(
-                        $"{{ Py_sq_contains, reinterpret_cast<void*>(_map_contains_{name}) }},"
-                    );
-                    w.WriteLine(
-                        $"{{ Py_mp_length, reinterpret_cast<void*>(_map_length_{name}) }},"
-                    );
-                    w.WriteLine(
-                        $"{{ Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_{name}) }},"
-                    );
-
-                    if (type.IsPyMutableMapping)
-                    {
-                        w.WriteLine(
-                            $"{{ Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_{name}) }},"
-                        );
-                    }
-                }
-
-                w.WriteLine("{ }");
-            },
-            ";"
-        );
+        w.WriteLine("{ }};");
+        w.Indent--;
     }
 
     public static void WriteGetSetTable(this IndentedTextWriter w, ProjectedType type)
@@ -638,30 +595,27 @@ static class WriterExtensions
         }
 
         w.WriteBlankLine();
-        w.Write($"static PyGetSetDef _getset_{type.Name}[] = ");
-        w.WriteBlock(
-            () =>
-            {
-                if (type.Category == Category.Struct)
-                {
-                    foreach (var field in type.Type.Fields)
-                    {
-                        writeRow(field.Name, $"get_{field.Name}", $"set_{field.Name}");
-                    }
-                }
-                else if (type.Category == Category.Class || type.Category == Category.Interface)
-                {
-                    // static properties are implemented in the metaclass
-                    foreach (var prop in type.Properties.Where(p => !p.IsStatic))
-                    {
-                        writeRow(prop.Name, prop.GetMethod.Name, prop.SetMethod?.Name ?? "");
-                    }
-                }
+        w.WriteLine($"static PyGetSetDef _getset_{type.Name}[] = {{");
+        w.Indent++;
 
-                w.WriteLine("{ }");
-            },
-            ";"
-        );
+        if (type.Category == Category.Struct)
+        {
+            foreach (var field in type.Type.Fields)
+            {
+                writeRow(field.Name, $"get_{field.Name}", $"set_{field.Name}");
+            }
+        }
+        else if (type.Category == Category.Class || type.Category == Category.Interface)
+        {
+            // static properties are implemented in the metaclass
+            foreach (var prop in type.Properties.Where(p => !p.IsStatic))
+            {
+                writeRow(prop.Name, prop.GetMethod.Name, prop.SetMethod?.Name ?? "");
+            }
+        }
+
+        w.WriteLine("{ }};");
+        w.Indent--;
     }
 
     public static void WriteMethodTable(this IndentedTextWriter w, ProjectedType type)
@@ -685,66 +639,63 @@ static class WriterExtensions
         }
 
         w.WriteBlankLine();
-        w.Write($"static PyMethodDef _methods_{type.Name}[] = ");
-        w.WriteBlock(
-            () =>
-            {
-                foreach (var method in type.Methods.Where(m => !m.IsStatic).DistinctBy(m => m.Name))
-                {
-                    writeRow(method);
-                }
+        w.WriteLine($"static PyMethodDef _methods_{type.Name}[] = {{");
+        w.Indent++;
 
-                if (type.Type.IsCustomNumeric())
-                {
-                    w.WriteNumberMethodDefs(type);
-                }
+        foreach (var method in type.Methods.Where(m => !m.IsStatic).DistinctBy(m => m.Name))
+        {
+            writeRow(method);
+        }
 
-                foreach (var evt in type.Events.Where(e => !e.IsStatic))
-                {
-                    writeRow(evt.AddMethod);
-                    writeRow(evt.RemoveMethod);
-                }
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberMethodDefs(type);
+        }
 
-                if (!(type.IsGeneric || type.IsStatic))
-                {
-                    w.WriteLine(
-                        $"{{ \"_assign_array_\", _assign_array_{type.Name}, METH_O | METH_STATIC, nullptr }},"
-                    );
-                }
+        foreach (var evt in type.Events.Where(e => !e.IsStatic))
+        {
+            writeRow(evt.AddMethod);
+            writeRow(evt.RemoveMethod);
+        }
 
-                // TODO: support _from for generic types
+        if (!(type.IsGeneric || type.IsStatic))
+        {
+            w.WriteLine(
+                $"{{ \"_assign_array_\", _assign_array_{type.Name}, METH_O | METH_STATIC, nullptr }},"
+            );
+        }
 
-                if (
-                    (type.Category == Category.Class || type.Category == Category.Interface)
-                    && !(type.IsGeneric || type.IsStatic)
-                )
-                {
-                    w.WriteLine(
-                        $"{{ \"_from\", reinterpret_cast<PyCFunction>(_from_{type.Name}), METH_O | METH_STATIC, nullptr }},"
-                    );
-                }
+        // TODO: support _from for generic types
 
-                if (type.IsPyCloseable)
-                {
-                    w.WriteLine(
-                        $"{{ \"__enter__\", reinterpret_cast<PyCFunction>(_enter_{type.Name}), METH_NOARGS, nullptr }},"
-                    );
-                    w.WriteLine(
-                        $"{{ \"__exit__\", reinterpret_cast<PyCFunction>(_exit_{type.Name}), METH_VARARGS, nullptr }},"
-                    );
-                }
+        if (
+            (type.Category == Category.Class || type.Category == Category.Interface)
+            && !(type.IsGeneric || type.IsStatic)
+        )
+        {
+            w.WriteLine(
+                $"{{ \"_from\", reinterpret_cast<PyCFunction>(_from_{type.Name}), METH_O | METH_STATIC, nullptr }},"
+            );
+        }
 
-                if (type.IsGeneric)
-                {
-                    w.WriteLine(
-                        $"{{ \"__class_getitem__\", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR(\"See PEP 585\") }},"
-                    );
-                }
+        if (type.IsPyCloseable)
+        {
+            w.WriteLine(
+                $"{{ \"__enter__\", reinterpret_cast<PyCFunction>(_enter_{type.Name}), METH_NOARGS, nullptr }},"
+            );
+            w.WriteLine(
+                $"{{ \"__exit__\", reinterpret_cast<PyCFunction>(_exit_{type.Name}), METH_VARARGS, nullptr }},"
+            );
+        }
 
-                w.WriteLine("{ }");
-            },
-            ";"
-        );
+        if (type.IsGeneric)
+        {
+            w.WriteLine(
+                $"{{ \"__class_getitem__\", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR(\"See PEP 585\") }},"
+            );
+        }
+
+        w.WriteLine("{ }};");
+        w.Indent--;
     }
 
     static void WriteNewFunction(this IndentedTextWriter w, ProjectedType type)

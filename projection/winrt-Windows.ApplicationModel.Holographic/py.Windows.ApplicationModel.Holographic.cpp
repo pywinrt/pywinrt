@@ -223,20 +223,17 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
         { "set_placement_override_with_max_size", reinterpret_cast<PyCFunction>(HolographicKeyboard_SetPlacementOverrideWithMaxSize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicKeyboard, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicKeyboard), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicKeyboard[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicKeyboard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicKeyboard) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicKeyboard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicKeyboard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicKeyboard) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicKeyboard = {
         "winrt._winrt_windows_applicationmodel_holographic.HolographicKeyboard",
@@ -246,13 +243,11 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
         _type_slots_HolographicKeyboard};
 
     static PyGetSetDef getset_HolographicKeyboard_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HolographicKeyboard_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(HolographicKeyboard_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HolographicKeyboard_Static[] = 
     {
@@ -262,14 +257,12 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
         { }
     };
 
-    static PyType_Spec type_spec_HolographicKeyboard_Static =
-    {
+    static PyType_Spec type_spec_HolographicKeyboard_Static = {
         "winrt._winrt_windows_applicationmodel_holographic.HolographicKeyboard_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HolographicKeyboard_Static
-    };
+        type_slots_HolographicKeyboard_Static};
 
     // ----- Windows.ApplicationModel.Holographic Initialization --------------------
 

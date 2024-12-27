@@ -78,21 +78,18 @@ namespace py::cpp::Windows::UI::Composition::Desktop
     static PyMethodDef _methods_DesktopWindowTarget[] = {
         { "_assign_array_", _assign_array_DesktopWindowTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopWindowTarget), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesktopWindowTarget[] = {
         { "is_topmost", reinterpret_cast<getter>(DesktopWindowTarget_get_IsTopmost), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesktopWindowTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopWindowTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopWindowTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopWindowTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopWindowTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesktopWindowTarget = {
         "winrt._winrt_windows_ui_composition_desktop.DesktopWindowTarget",

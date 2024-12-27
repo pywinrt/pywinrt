@@ -258,8 +258,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_ImageVariableDescriptorPreview[] = {
         { "_assign_array_", _assign_array_ImageVariableDescriptorPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageVariableDescriptorPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageVariableDescriptorPreview[] = {
         { "bitmap_pixel_format", reinterpret_cast<getter>(ImageVariableDescriptorPreview_get_BitmapPixelFormat), nullptr, nullptr, nullptr },
@@ -269,16 +268,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { "is_required", reinterpret_cast<getter>(ImageVariableDescriptorPreview_get_IsRequired), nullptr, nullptr, nullptr },
         { "model_feature_kind", reinterpret_cast<getter>(ImageVariableDescriptorPreview_get_ModelFeatureKind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ImageVariableDescriptorPreview_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageVariableDescriptorPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageVariableDescriptorPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageVariableDescriptorPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageVariableDescriptorPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageVariableDescriptorPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.ImageVariableDescriptorPreview",
@@ -676,8 +673,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_InferencingOptionsPreview[] = {
         { "_assign_array_", _assign_array_InferencingOptionsPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InferencingOptionsPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InferencingOptionsPreview[] = {
         { "reclaim_memory_after_evaluation", reinterpret_cast<getter>(InferencingOptionsPreview_get_ReclaimMemoryAfterEvaluation), reinterpret_cast<setter>(InferencingOptionsPreview_put_ReclaimMemoryAfterEvaluation), nullptr, nullptr },
@@ -685,16 +681,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { "minimize_memory_allocation", reinterpret_cast<getter>(InferencingOptionsPreview_get_MinimizeMemoryAllocation), reinterpret_cast<setter>(InferencingOptionsPreview_put_MinimizeMemoryAllocation), nullptr, nullptr },
         { "max_batch_size", reinterpret_cast<getter>(InferencingOptionsPreview_get_MaxBatchSize), reinterpret_cast<setter>(InferencingOptionsPreview_put_MaxBatchSize), nullptr, nullptr },
         { "is_tracing_enabled", reinterpret_cast<getter>(InferencingOptionsPreview_get_IsTracingEnabled), reinterpret_cast<setter>(InferencingOptionsPreview_put_IsTracingEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InferencingOptionsPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InferencingOptionsPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InferencingOptionsPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InferencingOptionsPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InferencingOptionsPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InferencingOptionsPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.InferencingOptionsPreview",
@@ -1212,13 +1206,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { "split", reinterpret_cast<PyCFunction>(LearningModelBindingPreview_Split), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LearningModelBindingPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelBindingPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelBindingPreview[] = {
         { "size", reinterpret_cast<getter>(LearningModelBindingPreview_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelBindingPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelBindingPreview) },
@@ -1229,8 +1221,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_LearningModelBindingPreview) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_LearningModelBindingPreview) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_LearningModelBindingPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelBindingPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelBindingPreview",
@@ -1523,8 +1514,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_LearningModelDescriptionPreview[] = {
         { "_assign_array_", _assign_array_LearningModelDescriptionPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelDescriptionPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelDescriptionPreview[] = {
         { "author", reinterpret_cast<getter>(LearningModelDescriptionPreview_get_Author), nullptr, nullptr, nullptr },
@@ -1535,16 +1525,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { "name", reinterpret_cast<getter>(LearningModelDescriptionPreview_get_Name), nullptr, nullptr, nullptr },
         { "output_features", reinterpret_cast<getter>(LearningModelDescriptionPreview_get_OutputFeatures), nullptr, nullptr, nullptr },
         { "version", reinterpret_cast<getter>(LearningModelDescriptionPreview_get_Version), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelDescriptionPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelDescriptionPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LearningModelDescriptionPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LearningModelDescriptionPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LearningModelDescriptionPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelDescriptionPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelDescriptionPreview",
@@ -1657,22 +1645,19 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_LearningModelEvaluationResultPreview[] = {
         { "_assign_array_", _assign_array_LearningModelEvaluationResultPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelEvaluationResultPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelEvaluationResultPreview[] = {
         { "correlation_id", reinterpret_cast<getter>(LearningModelEvaluationResultPreview_get_CorrelationId), nullptr, nullptr, nullptr },
         { "outputs", reinterpret_cast<getter>(LearningModelEvaluationResultPreview_get_Outputs), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelEvaluationResultPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelEvaluationResultPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LearningModelEvaluationResultPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LearningModelEvaluationResultPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LearningModelEvaluationResultPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelEvaluationResultPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelEvaluationResultPreview",
@@ -1996,22 +1981,19 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { "evaluate_features_async", reinterpret_cast<PyCFunction>(LearningModelPreview_EvaluateFeaturesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LearningModelPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelPreview[] = {
         { "inferencing_options", reinterpret_cast<getter>(LearningModelPreview_get_InferencingOptions), reinterpret_cast<setter>(LearningModelPreview_put_InferencingOptions), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(LearningModelPreview_get_Description), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LearningModelPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LearningModelPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LearningModelPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelPreview",
@@ -2021,14 +2003,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         _type_slots_LearningModelPreview};
 
     static PyGetSetDef getset_LearningModelPreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LearningModelPreview_Static[] = {
         { "load_model_from_storage_file_async", reinterpret_cast<PyCFunction>(LearningModelPreview_LoadModelFromStorageFileAsync), METH_VARARGS, nullptr },
         { "load_model_from_stream_async", reinterpret_cast<PyCFunction>(LearningModelPreview_LoadModelFromStreamAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LearningModelPreview_Static[] = 
     {
@@ -2038,14 +2018,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { }
     };
 
-    static PyType_Spec type_spec_LearningModelPreview_Static =
-    {
+    static PyType_Spec type_spec_LearningModelPreview_Static = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelPreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LearningModelPreview_Static
-    };
+        type_slots_LearningModelPreview_Static};
 
     // ----- LearningModelVariableDescriptorPreview class --------------------
 
@@ -2211,24 +2189,21 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_LearningModelVariableDescriptorPreview[] = {
         { "_assign_array_", _assign_array_LearningModelVariableDescriptorPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelVariableDescriptorPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelVariableDescriptorPreview[] = {
         { "description", reinterpret_cast<getter>(LearningModelVariableDescriptorPreview_get_Description), nullptr, nullptr, nullptr },
         { "is_required", reinterpret_cast<getter>(LearningModelVariableDescriptorPreview_get_IsRequired), nullptr, nullptr, nullptr },
         { "model_feature_kind", reinterpret_cast<getter>(LearningModelVariableDescriptorPreview_get_ModelFeatureKind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(LearningModelVariableDescriptorPreview_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelVariableDescriptorPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelVariableDescriptorPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LearningModelVariableDescriptorPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LearningModelVariableDescriptorPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LearningModelVariableDescriptorPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelVariableDescriptorPreview",
@@ -2521,8 +2496,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_MapVariableDescriptorPreview[] = {
         { "_assign_array_", _assign_array_MapVariableDescriptorPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapVariableDescriptorPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapVariableDescriptorPreview[] = {
         { "description", reinterpret_cast<getter>(MapVariableDescriptorPreview_get_Description), nullptr, nullptr, nullptr },
@@ -2533,16 +2507,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { "key_kind", reinterpret_cast<getter>(MapVariableDescriptorPreview_get_KeyKind), nullptr, nullptr, nullptr },
         { "valid_integer_keys", reinterpret_cast<getter>(MapVariableDescriptorPreview_get_ValidIntegerKeys), nullptr, nullptr, nullptr },
         { "valid_string_keys", reinterpret_cast<getter>(MapVariableDescriptorPreview_get_ValidStringKeys), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapVariableDescriptorPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapVariableDescriptorPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapVariableDescriptorPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapVariableDescriptorPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapVariableDescriptorPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.MapVariableDescriptorPreview",
@@ -2745,8 +2717,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_SequenceVariableDescriptorPreview[] = {
         { "_assign_array_", _assign_array_SequenceVariableDescriptorPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SequenceVariableDescriptorPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SequenceVariableDescriptorPreview[] = {
         { "description", reinterpret_cast<getter>(SequenceVariableDescriptorPreview_get_Description), nullptr, nullptr, nullptr },
@@ -2754,16 +2725,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { "model_feature_kind", reinterpret_cast<getter>(SequenceVariableDescriptorPreview_get_ModelFeatureKind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(SequenceVariableDescriptorPreview_get_Name), nullptr, nullptr, nullptr },
         { "element_type", reinterpret_cast<getter>(SequenceVariableDescriptorPreview_get_ElementType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SequenceVariableDescriptorPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SequenceVariableDescriptorPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SequenceVariableDescriptorPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SequenceVariableDescriptorPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SequenceVariableDescriptorPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SequenceVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.SequenceVariableDescriptorPreview",
@@ -2996,8 +2965,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_TensorVariableDescriptorPreview[] = {
         { "_assign_array_", _assign_array_TensorVariableDescriptorPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorVariableDescriptorPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorVariableDescriptorPreview[] = {
         { "description", reinterpret_cast<getter>(TensorVariableDescriptorPreview_get_Description), nullptr, nullptr, nullptr },
@@ -3006,16 +2974,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { "name", reinterpret_cast<getter>(TensorVariableDescriptorPreview_get_Name), nullptr, nullptr, nullptr },
         { "data_type", reinterpret_cast<getter>(TensorVariableDescriptorPreview_get_DataType), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorVariableDescriptorPreview_get_Shape), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorVariableDescriptorPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorVariableDescriptorPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorVariableDescriptorPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorVariableDescriptorPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorVariableDescriptorPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.TensorVariableDescriptorPreview",
@@ -3188,24 +3154,21 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_ILearningModelVariableDescriptorPreview[] = {
         { "_assign_array_", _assign_array_ILearningModelVariableDescriptorPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelVariableDescriptorPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILearningModelVariableDescriptorPreview[] = {
         { "description", reinterpret_cast<getter>(ILearningModelVariableDescriptorPreview_get_Description), nullptr, nullptr, nullptr },
         { "is_required", reinterpret_cast<getter>(ILearningModelVariableDescriptorPreview_get_IsRequired), nullptr, nullptr, nullptr },
         { "model_feature_kind", reinterpret_cast<getter>(ILearningModelVariableDescriptorPreview_get_ModelFeatureKind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ILearningModelVariableDescriptorPreview_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILearningModelVariableDescriptorPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILearningModelVariableDescriptorPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILearningModelVariableDescriptorPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILearningModelVariableDescriptorPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILearningModelVariableDescriptorPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILearningModelVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.ILearningModelVariableDescriptorPreview",
@@ -3341,13 +3304,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef methods_ImplementsILearningModelVariableDescriptorPreview[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelVariableDescriptorPreview), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelVariableDescriptorPreview), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILearningModelVariableDescriptorPreview[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILearningModelVariableDescriptorPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILearningModelVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.ImplementsILearningModelVariableDescriptorPreview",

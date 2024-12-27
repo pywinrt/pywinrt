@@ -954,21 +954,18 @@ namespace py::cpp::Windows::Security::Isolation
         { "unregister_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_UnregisterMessageReceiver), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironment[] = {
         { "id", reinterpret_cast<getter>(IsolatedWindowsEnvironment_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironment = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironment",
@@ -978,16 +975,14 @@ namespace py::cpp::Windows::Security::Isolation
         _type_slots_IsolatedWindowsEnvironment};
 
     static PyGetSetDef getset_IsolatedWindowsEnvironment_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_IsolatedWindowsEnvironment_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_CreateAsync), METH_VARARGS, nullptr },
         { "create_with_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_CreateWithTelemetryAsync), METH_VARARGS, nullptr },
         { "find_by_owner_id", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_FindByOwnerId), METH_VARARGS, nullptr },
         { "get_by_id", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_GetById), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_IsolatedWindowsEnvironment_Static[] = 
     {
@@ -997,14 +992,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironment_Static =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironment_Static = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_IsolatedWindowsEnvironment_Static
-    };
+        type_slots_IsolatedWindowsEnvironment_Static};
 
     // ----- IsolatedWindowsEnvironmentCreateResult class --------------------
 
@@ -1184,23 +1177,20 @@ namespace py::cpp::Windows::Security::Isolation
         { "change_creation_priority", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentCreateResult_ChangeCreationPriority), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentCreateResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentCreateResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentCreateResult[] = {
         { "environment", reinterpret_cast<getter>(IsolatedWindowsEnvironmentCreateResult_get_Environment), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(IsolatedWindowsEnvironmentCreateResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IsolatedWindowsEnvironmentCreateResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentCreateResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentCreateResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentCreateResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentCreateResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentCreateResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateResult",
@@ -1415,24 +1405,21 @@ namespace py::cpp::Windows::Security::Isolation
         { "close", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentFile_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentFile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentFile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentFile[] = {
         { "host_path", reinterpret_cast<getter>(IsolatedWindowsEnvironmentFile_get_HostPath), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(IsolatedWindowsEnvironmentFile_get_Id), nullptr, nullptr, nullptr },
         { "guest_path", reinterpret_cast<getter>(IsolatedWindowsEnvironmentFile_get_GuestPath), nullptr, nullptr, nullptr },
         { "is_read_only", reinterpret_cast<getter>(IsolatedWindowsEnvironmentFile_get_IsReadOnly), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentFile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentFile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentFile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentFile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentFile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentFile = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentFile",
@@ -1511,19 +1498,16 @@ namespace py::cpp::Windows::Security::Isolation
     }
 
     static PyMethodDef _methods_IsolatedWindowsEnvironmentHost[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentHost[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentHost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentHost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentHost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentHost) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentHost",
@@ -1535,12 +1519,10 @@ namespace py::cpp::Windows::Security::Isolation
     static PyGetSetDef getset_IsolatedWindowsEnvironmentHost_Static[] = {
         { "host_errors", reinterpret_cast<getter>(IsolatedWindowsEnvironmentHost_get_HostErrors), nullptr, nullptr, nullptr },
         { "is_ready", reinterpret_cast<getter>(IsolatedWindowsEnvironmentHost_get_IsReady), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_IsolatedWindowsEnvironmentHost_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_IsolatedWindowsEnvironmentHost_Static[] = 
     {
@@ -1550,14 +1532,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost_Static =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost_Static = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentHost_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_IsolatedWindowsEnvironmentHost_Static
-    };
+        type_slots_IsolatedWindowsEnvironmentHost_Static};
 
     // ----- IsolatedWindowsEnvironmentLaunchFileResult class --------------------
 
@@ -1693,23 +1673,20 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentLaunchFileResult[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentLaunchFileResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentLaunchFileResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentLaunchFileResult[] = {
         { "extended_error", reinterpret_cast<getter>(IsolatedWindowsEnvironmentLaunchFileResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "file", reinterpret_cast<getter>(IsolatedWindowsEnvironmentLaunchFileResult_get_File), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IsolatedWindowsEnvironmentLaunchFileResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentLaunchFileResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentLaunchFileResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentLaunchFileResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentLaunchFileResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentLaunchFileResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentLaunchFileResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentLaunchFileResult",
@@ -2648,8 +2625,7 @@ namespace py::cpp::Windows::Security::Isolation
         { "share_host_folder_for_untrusted_items", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentOptions_ShareHostFolderForUntrustedItems), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentOptions[] = {
         { "persist_user_profile", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOptions_get_PersistUserProfile), reinterpret_cast<setter>(IsolatedWindowsEnvironmentOptions_put_PersistUserProfile), nullptr, nullptr },
@@ -2665,16 +2641,14 @@ namespace py::cpp::Windows::Security::Isolation
         { "creation_priority", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOptions_get_CreationPriority), reinterpret_cast<setter>(IsolatedWindowsEnvironmentOptions_put_CreationPriority), nullptr, nullptr },
         { "allowed_clipboard_formats_to_host", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOptions_get_AllowedClipboardFormatsToHost), reinterpret_cast<setter>(IsolatedWindowsEnvironmentOptions_put_AllowedClipboardFormatsToHost), nullptr, nullptr },
         { "allowed_clipboard_formats_to_environment", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOptions_get_AllowedClipboardFormatsToEnvironment), reinterpret_cast<setter>(IsolatedWindowsEnvironmentOptions_put_AllowedClipboardFormatsToEnvironment), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOptions = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOptions",
@@ -2779,19 +2753,16 @@ namespace py::cpp::Windows::Security::Isolation
     }
 
     static PyMethodDef _methods_IsolatedWindowsEnvironmentOwnerRegistration[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentOwnerRegistration[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOwnerRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentOwnerRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentOwnerRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentOwnerRegistration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistration = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistration",
@@ -2801,14 +2772,12 @@ namespace py::cpp::Windows::Security::Isolation
         _type_slots_IsolatedWindowsEnvironmentOwnerRegistration};
 
     static PyGetSetDef getset_IsolatedWindowsEnvironmentOwnerRegistration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_IsolatedWindowsEnvironmentOwnerRegistration_Static[] = {
         { "register", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentOwnerRegistration_Register), METH_VARARGS, nullptr },
         { "unregister", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentOwnerRegistration_Unregister), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_IsolatedWindowsEnvironmentOwnerRegistration_Static[] = 
     {
@@ -2818,14 +2787,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistration_Static =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistration_Static = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_IsolatedWindowsEnvironmentOwnerRegistration_Static
-    };
+        type_slots_IsolatedWindowsEnvironmentOwnerRegistration_Static};
 
     // ----- IsolatedWindowsEnvironmentOwnerRegistrationData class --------------------
 
@@ -3013,24 +2980,21 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentOwnerRegistrationData[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentOwnerRegistrationData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentOwnerRegistrationData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentOwnerRegistrationData[] = {
         { "activation_file_extensions", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOwnerRegistrationData_get_ActivationFileExtensions), nullptr, nullptr, nullptr },
         { "processes_runnable_as_system", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOwnerRegistrationData_get_ProcessesRunnableAsSystem), nullptr, nullptr, nullptr },
         { "processes_runnable_as_user", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOwnerRegistrationData_get_ProcessesRunnableAsUser), nullptr, nullptr, nullptr },
         { "shareable_folders", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOwnerRegistrationData_get_ShareableFolders), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentOwnerRegistrationData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentOwnerRegistrationData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentOwnerRegistrationData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentOwnerRegistrationData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistrationData",
@@ -3143,22 +3107,19 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentOwnerRegistrationResult[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentOwnerRegistrationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentOwnerRegistrationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentOwnerRegistrationResult[] = {
         { "extended_error", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOwnerRegistrationResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IsolatedWindowsEnvironmentOwnerRegistrationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentOwnerRegistrationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentOwnerRegistrationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentOwnerRegistrationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentOwnerRegistrationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult",
@@ -3271,22 +3232,19 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentPostMessageResult[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentPostMessageResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentPostMessageResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentPostMessageResult[] = {
         { "extended_error", reinterpret_cast<getter>(IsolatedWindowsEnvironmentPostMessageResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IsolatedWindowsEnvironmentPostMessageResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentPostMessageResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentPostMessageResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentPostMessageResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentPostMessageResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentPostMessageResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentPostMessageResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentPostMessageResult",
@@ -3526,22 +3484,19 @@ namespace py::cpp::Windows::Security::Isolation
         { "wait_for_exit_with_timeout", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentProcess_WaitForExitWithTimeout), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentProcess, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentProcess), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentProcess[] = {
         { "exit_code", reinterpret_cast<getter>(IsolatedWindowsEnvironmentProcess_get_ExitCode), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(IsolatedWindowsEnvironmentProcess_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentProcess[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentProcess) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentProcess) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentProcess) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentProcess) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentProcess = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentProcess",
@@ -3685,21 +3640,18 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentShareFileRequestOptions[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentShareFileRequestOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentShareFileRequestOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentShareFileRequestOptions[] = {
         { "allow_write", reinterpret_cast<getter>(IsolatedWindowsEnvironmentShareFileRequestOptions_get_AllowWrite), reinterpret_cast<setter>(IsolatedWindowsEnvironmentShareFileRequestOptions_put_AllowWrite), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFileRequestOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentShareFileRequestOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentShareFileRequestOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentShareFileRequestOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentShareFileRequestOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFileRequestOptions",
@@ -3842,23 +3794,20 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentShareFileResult[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentShareFileResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentShareFileResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentShareFileResult[] = {
         { "extended_error", reinterpret_cast<getter>(IsolatedWindowsEnvironmentShareFileResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "file", reinterpret_cast<getter>(IsolatedWindowsEnvironmentShareFileResult_get_File), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IsolatedWindowsEnvironmentShareFileResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFileResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentShareFileResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentShareFileResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentShareFileResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentShareFileResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFileResult",
@@ -4002,21 +3951,18 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentShareFolderRequestOptions[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentShareFolderRequestOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentShareFolderRequestOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentShareFolderRequestOptions[] = {
         { "allow_write", reinterpret_cast<getter>(IsolatedWindowsEnvironmentShareFolderRequestOptions_get_AllowWrite), reinterpret_cast<setter>(IsolatedWindowsEnvironmentShareFolderRequestOptions_put_AllowWrite), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFolderRequestOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentShareFolderRequestOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentShareFolderRequestOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentShareFolderRequestOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentShareFolderRequestOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions",
@@ -4129,22 +4075,19 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentShareFolderResult[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentShareFolderResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentShareFolderResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentShareFolderResult[] = {
         { "extended_error", reinterpret_cast<getter>(IsolatedWindowsEnvironmentShareFolderResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IsolatedWindowsEnvironmentShareFolderResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFolderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentShareFolderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentShareFolderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentShareFolderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentShareFolderResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFolderResult",
@@ -4287,23 +4230,20 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentStartProcessResult[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentStartProcessResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentStartProcessResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentStartProcessResult[] = {
         { "extended_error", reinterpret_cast<getter>(IsolatedWindowsEnvironmentStartProcessResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "process", reinterpret_cast<getter>(IsolatedWindowsEnvironmentStartProcessResult_get_Process), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IsolatedWindowsEnvironmentStartProcessResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentStartProcessResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentStartProcessResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentStartProcessResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentStartProcessResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentStartProcessResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentStartProcessResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentStartProcessResult",
@@ -4447,21 +4387,18 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironmentTelemetryParameters[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentTelemetryParameters, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentTelemetryParameters), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentTelemetryParameters[] = {
         { "correlation_id", reinterpret_cast<getter>(IsolatedWindowsEnvironmentTelemetryParameters_get_CorrelationId), reinterpret_cast<setter>(IsolatedWindowsEnvironmentTelemetryParameters_put_CorrelationId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentTelemetryParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentTelemetryParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentTelemetryParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentTelemetryParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentTelemetryParameters) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentTelemetryParameters = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentTelemetryParameters",
@@ -4656,22 +4593,19 @@ namespace py::cpp::Windows::Security::Isolation
         { "try_wait_for_sign_in_with_progress_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentUserInfo_TryWaitForSignInWithProgressAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentUserInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironmentUserInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentUserInfo[] = {
         { "environment_user_name", reinterpret_cast<getter>(IsolatedWindowsEnvironmentUserInfo_get_EnvironmentUserName), nullptr, nullptr, nullptr },
         { "environment_user_sid", reinterpret_cast<getter>(IsolatedWindowsEnvironmentUserInfo_get_EnvironmentUserSid), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentUserInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentUserInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentUserInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentUserInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentUserInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentUserInfo = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentUserInfo",
@@ -4863,19 +4797,16 @@ namespace py::cpp::Windows::Security::Isolation
     }
 
     static PyMethodDef _methods_IsolatedWindowsHostMessenger[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsolatedWindowsHostMessenger[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsolatedWindowsHostMessenger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsHostMessenger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsHostMessenger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsHostMessenger) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsHostMessenger = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsHostMessenger",
@@ -4885,16 +4816,14 @@ namespace py::cpp::Windows::Security::Isolation
         _type_slots_IsolatedWindowsHostMessenger};
 
     static PyGetSetDef getset_IsolatedWindowsHostMessenger_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_IsolatedWindowsHostMessenger_Static[] = {
         { "get_file_id", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_GetFileId), METH_VARARGS, nullptr },
         { "post_message_to_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_PostMessageToReceiver), METH_VARARGS, nullptr },
         { "register_host_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_RegisterHostMessageReceiver), METH_VARARGS, nullptr },
         { "unregister_host_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_UnregisterHostMessageReceiver), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_IsolatedWindowsHostMessenger_Static[] = 
     {
@@ -4904,14 +4833,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsHostMessenger_Static =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsHostMessenger_Static = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsHostMessenger_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_IsolatedWindowsHostMessenger_Static
-    };
+        type_slots_IsolatedWindowsHostMessenger_Static};
 
     // ----- IsolatedWindowsEnvironmentCreateProgress struct --------------------
 
@@ -4982,8 +4909,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyMethodDef _methods_IsolatedWindowsEnvironmentCreateProgress[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentCreateProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* IsolatedWindowsEnvironmentCreateProgress_get_State(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, void* /*unused*/) noexcept
     {
@@ -5054,8 +4980,7 @@ namespace py::cpp::Windows::Security::Isolation
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentCreateProgress[] = {
         { "state", reinterpret_cast<getter>(IsolatedWindowsEnvironmentCreateProgress_get_State), reinterpret_cast<setter>(IsolatedWindowsEnvironmentCreateProgress_set_State), nullptr, nullptr },
         { "percent_complete", reinterpret_cast<getter>(IsolatedWindowsEnvironmentCreateProgress_get_PercentComplete), reinterpret_cast<setter>(IsolatedWindowsEnvironmentCreateProgress_set_PercentComplete), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_IsolatedWindowsEnvironmentCreateProgress(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, PyObject* other, int op) noexcept
     {
@@ -5117,8 +5042,7 @@ namespace py::cpp::Windows::Security::Isolation
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_IsolatedWindowsEnvironmentCreateProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateProgress = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateProgress",

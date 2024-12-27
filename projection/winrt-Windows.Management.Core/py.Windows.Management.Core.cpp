@@ -90,20 +90,17 @@ namespace py::cpp::Windows::Management::Core
     static PyMethodDef _methods_ApplicationDataManager[] = {
         { "_assign_array_", _assign_array_ApplicationDataManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationDataManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationDataManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationDataManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationDataManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationDataManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationDataManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationDataManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationDataManager = {
         "winrt._winrt_windows_management_core.ApplicationDataManager",
@@ -113,13 +110,11 @@ namespace py::cpp::Windows::Management::Core
         _type_slots_ApplicationDataManager};
 
     static PyGetSetDef getset_ApplicationDataManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApplicationDataManager_Static[] = {
         { "create_for_package_family", reinterpret_cast<PyCFunction>(ApplicationDataManager_CreateForPackageFamily), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApplicationDataManager_Static[] = 
     {
@@ -129,14 +124,12 @@ namespace py::cpp::Windows::Management::Core
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationDataManager_Static =
-    {
+    static PyType_Spec type_spec_ApplicationDataManager_Static = {
         "winrt._winrt_windows_management_core.ApplicationDataManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationDataManager_Static
-    };
+        type_slots_ApplicationDataManager_Static};
 
     // ----- Windows.Management.Core Initialization --------------------
 

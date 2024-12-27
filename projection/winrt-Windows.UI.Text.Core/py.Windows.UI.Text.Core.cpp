@@ -149,22 +149,19 @@ namespace py::cpp::Windows::UI::Text::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreTextCompositionCompletedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreTextCompositionCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextCompositionCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextCompositionCompletedEventArgs[] = {
         { "composition_segments", reinterpret_cast<getter>(CoreTextCompositionCompletedEventArgs_get_CompositionSegments), nullptr, nullptr, nullptr },
         { "is_canceled", reinterpret_cast<getter>(CoreTextCompositionCompletedEventArgs_get_IsCanceled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextCompositionCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextCompositionCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextCompositionCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextCompositionCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextCompositionCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextCompositionCompletedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextCompositionCompletedEventArgs",
@@ -277,22 +274,19 @@ namespace py::cpp::Windows::UI::Text::Core
     static PyMethodDef _methods_CoreTextCompositionSegment[] = {
         { "_assign_array_", _assign_array_CoreTextCompositionSegment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextCompositionSegment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextCompositionSegment[] = {
         { "preconversion_string", reinterpret_cast<getter>(CoreTextCompositionSegment_get_PreconversionString), nullptr, nullptr, nullptr },
         { "range", reinterpret_cast<getter>(CoreTextCompositionSegment_get_Range), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextCompositionSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextCompositionSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextCompositionSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextCompositionSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextCompositionSegment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextCompositionSegment = {
         "winrt._winrt_windows_ui_text_core.CoreTextCompositionSegment",
@@ -416,21 +410,18 @@ namespace py::cpp::Windows::UI::Text::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreTextCompositionStartedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreTextCompositionStartedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextCompositionStartedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextCompositionStartedEventArgs[] = {
         { "is_canceled", reinterpret_cast<getter>(CoreTextCompositionStartedEventArgs_get_IsCanceled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextCompositionStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextCompositionStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextCompositionStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextCompositionStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextCompositionStartedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextCompositionStartedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextCompositionStartedEventArgs",
@@ -1645,24 +1636,21 @@ namespace py::cpp::Windows::UI::Text::Core
         { "remove_notify_focus_leave_completed", reinterpret_cast<PyCFunction>(CoreTextEditContext_remove_NotifyFocusLeaveCompleted), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreTextEditContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextEditContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextEditContext[] = {
         { "name", reinterpret_cast<getter>(CoreTextEditContext_get_Name), reinterpret_cast<setter>(CoreTextEditContext_put_Name), nullptr, nullptr },
         { "is_read_only", reinterpret_cast<getter>(CoreTextEditContext_get_IsReadOnly), reinterpret_cast<setter>(CoreTextEditContext_put_IsReadOnly), nullptr, nullptr },
         { "input_scope", reinterpret_cast<getter>(CoreTextEditContext_get_InputScope), reinterpret_cast<setter>(CoreTextEditContext_put_InputScope), nullptr, nullptr },
         { "input_pane_display_policy", reinterpret_cast<getter>(CoreTextEditContext_get_InputPaneDisplayPolicy), reinterpret_cast<setter>(CoreTextEditContext_put_InputPaneDisplayPolicy), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextEditContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextEditContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextEditContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextEditContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextEditContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextEditContext = {
         "winrt._winrt_windows_ui_text_core.CoreTextEditContext",
@@ -2035,8 +2023,7 @@ namespace py::cpp::Windows::UI::Text::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreTextFormatUpdatingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreTextFormatUpdatingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextFormatUpdatingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextFormatUpdatingEventArgs[] = {
         { "result", reinterpret_cast<getter>(CoreTextFormatUpdatingEventArgs_get_Result), reinterpret_cast<setter>(CoreTextFormatUpdatingEventArgs_put_Result), nullptr, nullptr },
@@ -2047,16 +2034,14 @@ namespace py::cpp::Windows::UI::Text::Core
         { "text_color", reinterpret_cast<getter>(CoreTextFormatUpdatingEventArgs_get_TextColor), nullptr, nullptr, nullptr },
         { "underline_color", reinterpret_cast<getter>(CoreTextFormatUpdatingEventArgs_get_UnderlineColor), nullptr, nullptr, nullptr },
         { "underline_type", reinterpret_cast<getter>(CoreTextFormatUpdatingEventArgs_get_UnderlineType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextFormatUpdatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextFormatUpdatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextFormatUpdatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextFormatUpdatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextFormatUpdatingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextFormatUpdatingEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextFormatUpdatingEventArgs",
@@ -2247,22 +2232,19 @@ namespace py::cpp::Windows::UI::Text::Core
     static PyMethodDef _methods_CoreTextLayoutBounds[] = {
         { "_assign_array_", _assign_array_CoreTextLayoutBounds, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextLayoutBounds), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextLayoutBounds[] = {
         { "text_bounds", reinterpret_cast<getter>(CoreTextLayoutBounds_get_TextBounds), reinterpret_cast<setter>(CoreTextLayoutBounds_put_TextBounds), nullptr, nullptr },
         { "control_bounds", reinterpret_cast<getter>(CoreTextLayoutBounds_get_ControlBounds), reinterpret_cast<setter>(CoreTextLayoutBounds_put_ControlBounds), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextLayoutBounds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextLayoutBounds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextLayoutBounds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextLayoutBounds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextLayoutBounds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextLayoutBounds = {
         "winrt._winrt_windows_ui_text_core.CoreTextLayoutBounds",
@@ -2476,24 +2458,21 @@ namespace py::cpp::Windows::UI::Text::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreTextLayoutRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreTextLayoutRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextLayoutRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextLayoutRequest[] = {
         { "is_canceled", reinterpret_cast<getter>(CoreTextLayoutRequest_get_IsCanceled), nullptr, nullptr, nullptr },
         { "layout_bounds", reinterpret_cast<getter>(CoreTextLayoutRequest_get_LayoutBounds), nullptr, nullptr, nullptr },
         { "range", reinterpret_cast<getter>(CoreTextLayoutRequest_get_Range), nullptr, nullptr, nullptr },
         { "layout_bounds_visual_pixels", reinterpret_cast<getter>(CoreTextLayoutRequest_get_LayoutBoundsVisualPixels), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextLayoutRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextLayoutRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextLayoutRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextLayoutRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextLayoutRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextLayoutRequest = {
         "winrt._winrt_windows_ui_text_core.CoreTextLayoutRequest",
@@ -2576,21 +2555,18 @@ namespace py::cpp::Windows::UI::Text::Core
     static PyMethodDef _methods_CoreTextLayoutRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreTextLayoutRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextLayoutRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextLayoutRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(CoreTextLayoutRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextLayoutRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextLayoutRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextLayoutRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextLayoutRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextLayoutRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextLayoutRequestedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextLayoutRequestedEventArgs",
@@ -2783,22 +2759,19 @@ namespace py::cpp::Windows::UI::Text::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreTextSelectionRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreTextSelectionRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextSelectionRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextSelectionRequest[] = {
         { "selection", reinterpret_cast<getter>(CoreTextSelectionRequest_get_Selection), reinterpret_cast<setter>(CoreTextSelectionRequest_put_Selection), nullptr, nullptr },
         { "is_canceled", reinterpret_cast<getter>(CoreTextSelectionRequest_get_IsCanceled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextSelectionRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextSelectionRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextSelectionRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextSelectionRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextSelectionRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextSelectionRequest = {
         "winrt._winrt_windows_ui_text_core.CoreTextSelectionRequest",
@@ -2881,21 +2854,18 @@ namespace py::cpp::Windows::UI::Text::Core
     static PyMethodDef _methods_CoreTextSelectionRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreTextSelectionRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextSelectionRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextSelectionRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(CoreTextSelectionRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextSelectionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextSelectionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextSelectionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextSelectionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextSelectionRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextSelectionRequestedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextSelectionRequestedEventArgs",
@@ -3118,23 +3088,20 @@ namespace py::cpp::Windows::UI::Text::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreTextSelectionUpdatingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreTextSelectionUpdatingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextSelectionUpdatingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextSelectionUpdatingEventArgs[] = {
         { "result", reinterpret_cast<getter>(CoreTextSelectionUpdatingEventArgs_get_Result), reinterpret_cast<setter>(CoreTextSelectionUpdatingEventArgs_put_Result), nullptr, nullptr },
         { "is_canceled", reinterpret_cast<getter>(CoreTextSelectionUpdatingEventArgs_get_IsCanceled), nullptr, nullptr, nullptr },
         { "selection", reinterpret_cast<getter>(CoreTextSelectionUpdatingEventArgs_get_Selection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextSelectionUpdatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextSelectionUpdatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextSelectionUpdatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextSelectionUpdatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextSelectionUpdatingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextSelectionUpdatingEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextSelectionUpdatingEventArgs",
@@ -3183,19 +3150,16 @@ namespace py::cpp::Windows::UI::Text::Core
     }
 
     static PyMethodDef _methods_CoreTextServicesConstants[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextServicesConstants[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextServicesConstants[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextServicesConstants) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextServicesConstants) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextServicesConstants) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextServicesConstants = {
         "winrt._winrt_windows_ui_text_core.CoreTextServicesConstants",
@@ -3206,12 +3170,10 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyGetSetDef getset_CoreTextServicesConstants_Static[] = {
         { "hidden_character", reinterpret_cast<getter>(CoreTextServicesConstants_get_HiddenCharacter), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreTextServicesConstants_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreTextServicesConstants_Static[] = 
     {
@@ -3221,14 +3183,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreTextServicesConstants_Static =
-    {
+    static PyType_Spec type_spec_CoreTextServicesConstants_Static = {
         "winrt._winrt_windows_ui_text_core.CoreTextServicesConstants_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreTextServicesConstants_Static
-    };
+        type_slots_CoreTextServicesConstants_Static};
 
     // ----- CoreTextServicesManager class --------------------
 
@@ -3452,21 +3412,18 @@ namespace py::cpp::Windows::UI::Text::Core
         { "remove_input_language_changed", reinterpret_cast<PyCFunction>(CoreTextServicesManager_remove_InputLanguageChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreTextServicesManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextServicesManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextServicesManager[] = {
         { "input_language", reinterpret_cast<getter>(CoreTextServicesManager_get_InputLanguage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextServicesManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextServicesManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextServicesManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextServicesManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextServicesManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextServicesManager = {
         "winrt._winrt_windows_ui_text_core.CoreTextServicesManager",
@@ -3476,13 +3433,11 @@ namespace py::cpp::Windows::UI::Text::Core
         _type_slots_CoreTextServicesManager};
 
     static PyGetSetDef getset_CoreTextServicesManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreTextServicesManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreTextServicesManager_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreTextServicesManager_Static[] = 
     {
@@ -3492,14 +3447,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreTextServicesManager_Static =
-    {
+    static PyType_Spec type_spec_CoreTextServicesManager_Static = {
         "winrt._winrt_windows_ui_text_core.CoreTextServicesManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreTextServicesManager_Static
-    };
+        type_slots_CoreTextServicesManager_Static};
 
     // ----- CoreTextTextRequest class --------------------
 
@@ -3715,23 +3668,20 @@ namespace py::cpp::Windows::UI::Text::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreTextTextRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreTextTextRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextTextRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextTextRequest[] = {
         { "text", reinterpret_cast<getter>(CoreTextTextRequest_get_Text), reinterpret_cast<setter>(CoreTextTextRequest_put_Text), nullptr, nullptr },
         { "is_canceled", reinterpret_cast<getter>(CoreTextTextRequest_get_IsCanceled), nullptr, nullptr, nullptr },
         { "range", reinterpret_cast<getter>(CoreTextTextRequest_get_Range), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextTextRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextTextRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextTextRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextTextRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextTextRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextTextRequest = {
         "winrt._winrt_windows_ui_text_core.CoreTextTextRequest",
@@ -3814,21 +3764,18 @@ namespace py::cpp::Windows::UI::Text::Core
     static PyMethodDef _methods_CoreTextTextRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreTextTextRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextTextRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextTextRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(CoreTextTextRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextTextRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextTextRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextTextRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextTextRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextTextRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextTextRequestedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextTextRequestedEventArgs",
@@ -4141,8 +4088,7 @@ namespace py::cpp::Windows::UI::Text::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreTextTextUpdatingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreTextTextUpdatingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreTextTextUpdatingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreTextTextUpdatingEventArgs[] = {
         { "result", reinterpret_cast<getter>(CoreTextTextUpdatingEventArgs_get_Result), reinterpret_cast<setter>(CoreTextTextUpdatingEventArgs_put_Result), nullptr, nullptr },
@@ -4151,16 +4097,14 @@ namespace py::cpp::Windows::UI::Text::Core
         { "new_selection", reinterpret_cast<getter>(CoreTextTextUpdatingEventArgs_get_NewSelection), nullptr, nullptr, nullptr },
         { "range", reinterpret_cast<getter>(CoreTextTextUpdatingEventArgs_get_Range), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(CoreTextTextUpdatingEventArgs_get_Text), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreTextTextUpdatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextTextUpdatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextTextUpdatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextTextUpdatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextTextUpdatingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextTextUpdatingEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextTextUpdatingEventArgs",
@@ -4238,8 +4182,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyMethodDef _methods_CoreTextRange[] = {
         { "_assign_array_", _assign_array_CoreTextRange, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* CoreTextRange_get_StartCaretPosition(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, void* /*unused*/) noexcept
     {
@@ -4310,8 +4253,7 @@ namespace py::cpp::Windows::UI::Text::Core
     static PyGetSetDef _getset_CoreTextRange[] = {
         { "start_caret_position", reinterpret_cast<getter>(CoreTextRange_get_StartCaretPosition), reinterpret_cast<setter>(CoreTextRange_set_StartCaretPosition), nullptr, nullptr },
         { "end_caret_position", reinterpret_cast<getter>(CoreTextRange_get_EndCaretPosition), reinterpret_cast<setter>(CoreTextRange_set_EndCaretPosition), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_CoreTextRange(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, PyObject* other, int op) noexcept
     {
@@ -4373,8 +4315,7 @@ namespace py::cpp::Windows::UI::Text::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CoreTextRange) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_CoreTextRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreTextRange = {
         "winrt._winrt_windows_ui_text_core.CoreTextRange",

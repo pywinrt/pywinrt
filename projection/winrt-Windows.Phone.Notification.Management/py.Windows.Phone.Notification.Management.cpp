@@ -2559,19 +2559,16 @@ namespace py::cpp::Windows::Phone::Notification::Management
     }
 
     static PyMethodDef _methods_AccessoryManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccessoryManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccessoryManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessoryManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessoryManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessoryManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccessoryManager = {
         "winrt._winrt_windows_phone_notification_management.AccessoryManager",
@@ -2592,8 +2589,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "is_phone_pin_locked", reinterpret_cast<getter>(AccessoryManager_get_IsPhonePinLocked), nullptr, nullptr, nullptr },
         { "speed_dial_list", reinterpret_cast<getter>(AccessoryManager_get_SpeedDialList), nullptr, nullptr, nullptr },
         { "volume_info", reinterpret_cast<getter>(AccessoryManager_get_VolumeInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AccessoryManager_Static[] = {
         { "accept_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_AcceptPhoneCall), METH_VARARGS, nullptr },
@@ -2646,8 +2642,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "snooze_reminder_for_specified_time", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeReminderForSpecifiedTime), METH_VARARGS, nullptr },
         { "swap_phone_calls", reinterpret_cast<PyCFunction>(AccessoryManager_SwapPhoneCalls), METH_VARARGS, nullptr },
         { "update_email_read_status", reinterpret_cast<PyCFunction>(AccessoryManager_UpdateEmailReadStatus), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AccessoryManager_Static[] = 
     {
@@ -2657,14 +2652,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Spec type_spec_AccessoryManager_Static =
-    {
+    static PyType_Spec type_spec_AccessoryManager_Static = {
         "winrt._winrt_windows_phone_notification_management.AccessoryManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AccessoryManager_Static
-    };
+        type_slots_AccessoryManager_Static};
 
     // ----- AlarmNotificationTriggerDetails class --------------------
 
@@ -3049,8 +3042,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_AlarmNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_AlarmNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AlarmNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AlarmNotificationTriggerDetails[] = {
         { "started_processing", reinterpret_cast<getter>(AlarmNotificationTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(AlarmNotificationTriggerDetails_put_StartedProcessing), nullptr, nullptr },
@@ -3063,16 +3055,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "timestamp", reinterpret_cast<getter>(AlarmNotificationTriggerDetails_get_Timestamp), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(AlarmNotificationTriggerDetails_get_Title), nullptr, nullptr, nullptr },
         { "instance_id", reinterpret_cast<getter>(AlarmNotificationTriggerDetails_get_InstanceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AlarmNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AlarmNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AlarmNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AlarmNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AlarmNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AlarmNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.AlarmNotificationTriggerDetails",
@@ -3185,22 +3175,19 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_AppNotificationInfo[] = {
         { "_assign_array_", _assign_array_AppNotificationInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppNotificationInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppNotificationInfo[] = {
         { "id", reinterpret_cast<getter>(AppNotificationInfo_get_Id), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(AppNotificationInfo_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppNotificationInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotificationInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotificationInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotificationInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotificationInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppNotificationInfo = {
         "winrt._winrt_windows_phone_notification_management.AppNotificationInfo",
@@ -3313,22 +3300,19 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_BinaryId[] = {
         { "_assign_array_", _assign_array_BinaryId, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BinaryId), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BinaryId[] = {
         { "id", reinterpret_cast<getter>(BinaryId_get_Id), nullptr, nullptr, nullptr },
         { "length", reinterpret_cast<getter>(BinaryId_get_Length), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BinaryId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BinaryId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BinaryId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BinaryId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BinaryId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BinaryId = {
         "winrt._winrt_windows_phone_notification_management.BinaryId",
@@ -3630,8 +3614,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_CalendarChangedNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_CalendarChangedNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CalendarChangedNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CalendarChangedNotificationTriggerDetails[] = {
         { "started_processing", reinterpret_cast<getter>(CalendarChangedNotificationTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(CalendarChangedNotificationTriggerDetails_put_StartedProcessing), nullptr, nullptr },
@@ -3641,16 +3624,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "time_created", reinterpret_cast<getter>(CalendarChangedNotificationTriggerDetails_get_TimeCreated), nullptr, nullptr, nullptr },
         { "event_type", reinterpret_cast<getter>(CalendarChangedNotificationTriggerDetails_get_EventType), nullptr, nullptr, nullptr },
         { "item_id", reinterpret_cast<getter>(CalendarChangedNotificationTriggerDetails_get_ItemId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CalendarChangedNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CalendarChangedNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CalendarChangedNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CalendarChangedNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CalendarChangedNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CalendarChangedNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.CalendarChangedNotificationTriggerDetails",
@@ -4192,8 +4173,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_CortanaTileNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_CortanaTileNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CortanaTileNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CortanaTileNotificationTriggerDetails[] = {
         { "started_processing", reinterpret_cast<getter>(CortanaTileNotificationTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(CortanaTileNotificationTriggerDetails_put_StartedProcessing), nullptr, nullptr },
@@ -4211,16 +4191,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "non_wrapped_small_content4", reinterpret_cast<getter>(CortanaTileNotificationTriggerDetails_get_NonWrappedSmallContent4), nullptr, nullptr, nullptr },
         { "source", reinterpret_cast<getter>(CortanaTileNotificationTriggerDetails_get_Source), nullptr, nullptr, nullptr },
         { "tile_id", reinterpret_cast<getter>(CortanaTileNotificationTriggerDetails_get_TileId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CortanaTileNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaTileNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaTileNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaTileNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaTileNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CortanaTileNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.CortanaTileNotificationTriggerDetails",
@@ -4333,22 +4311,19 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_EmailAccountInfo[] = {
         { "_assign_array_", _assign_array_EmailAccountInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailAccountInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailAccountInfo[] = {
         { "display_name", reinterpret_cast<getter>(EmailAccountInfo_get_DisplayName), nullptr, nullptr, nullptr },
         { "is_notification_enabled", reinterpret_cast<getter>(EmailAccountInfo_get_IsNotificationEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailAccountInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailAccountInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailAccountInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailAccountInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailAccountInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailAccountInfo = {
         "winrt._winrt_windows_phone_notification_management.EmailAccountInfo",
@@ -4461,22 +4436,19 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_EmailFolderInfo[] = {
         { "_assign_array_", _assign_array_EmailFolderInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailFolderInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailFolderInfo[] = {
         { "display_name", reinterpret_cast<getter>(EmailFolderInfo_get_DisplayName), nullptr, nullptr, nullptr },
         { "is_notification_enabled", reinterpret_cast<getter>(EmailFolderInfo_get_IsNotificationEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailFolderInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailFolderInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailFolderInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailFolderInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailFolderInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailFolderInfo = {
         "winrt._winrt_windows_phone_notification_management.EmailFolderInfo",
@@ -4928,8 +4900,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_EmailNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_EmailNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailNotificationTriggerDetails[] = {
         { "started_processing", reinterpret_cast<getter>(EmailNotificationTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(EmailNotificationTriggerDetails_put_StartedProcessing), nullptr, nullptr },
@@ -4944,16 +4915,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "sender_name", reinterpret_cast<getter>(EmailNotificationTriggerDetails_get_SenderName), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(EmailNotificationTriggerDetails_get_Timestamp), nullptr, nullptr, nullptr },
         { "message_entry_id", reinterpret_cast<getter>(EmailNotificationTriggerDetails_get_MessageEntryId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.EmailNotificationTriggerDetails",
@@ -5315,8 +5284,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_EmailReadNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_EmailReadNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailReadNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmailReadNotificationTriggerDetails[] = {
         { "started_processing", reinterpret_cast<getter>(EmailReadNotificationTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(EmailReadNotificationTriggerDetails_put_StartedProcessing), nullptr, nullptr },
@@ -5328,16 +5296,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "is_read", reinterpret_cast<getter>(EmailReadNotificationTriggerDetails_get_IsRead), nullptr, nullptr, nullptr },
         { "message_entry_id", reinterpret_cast<getter>(EmailReadNotificationTriggerDetails_get_MessageEntryId), nullptr, nullptr, nullptr },
         { "parent_folder_name", reinterpret_cast<getter>(EmailReadNotificationTriggerDetails_get_ParentFolderName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmailReadNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailReadNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailReadNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailReadNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailReadNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmailReadNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.EmailReadNotificationTriggerDetails",
@@ -5639,8 +5605,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_MediaControlsTriggerDetails[] = {
         { "_assign_array_", _assign_array_MediaControlsTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaControlsTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaControlsTriggerDetails[] = {
         { "started_processing", reinterpret_cast<getter>(MediaControlsTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(MediaControlsTriggerDetails_put_StartedProcessing), nullptr, nullptr },
@@ -5650,16 +5615,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "time_created", reinterpret_cast<getter>(MediaControlsTriggerDetails_get_TimeCreated), nullptr, nullptr, nullptr },
         { "media_metadata", reinterpret_cast<getter>(MediaControlsTriggerDetails_get_MediaMetadata), nullptr, nullptr, nullptr },
         { "playback_status", reinterpret_cast<getter>(MediaControlsTriggerDetails_get_PlaybackStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaControlsTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaControlsTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaControlsTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaControlsTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaControlsTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaControlsTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.MediaControlsTriggerDetails",
@@ -5922,8 +5885,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_MediaMetadata[] = {
         { "_assign_array_", _assign_array_MediaMetadata, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaMetadata), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaMetadata[] = {
         { "album", reinterpret_cast<getter>(MediaMetadata_get_Album), nullptr, nullptr, nullptr },
@@ -5933,16 +5895,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "thumbnail", reinterpret_cast<getter>(MediaMetadata_get_Thumbnail), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(MediaMetadata_get_Title), nullptr, nullptr, nullptr },
         { "track", reinterpret_cast<getter>(MediaMetadata_get_Track), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaMetadata[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaMetadata) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaMetadata) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaMetadata) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaMetadata) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaMetadata = {
         "winrt._winrt_windows_phone_notification_management.MediaMetadata",
@@ -6355,8 +6315,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_PhoneCallDetails[] = {
         { "_assign_array_", _assign_array_PhoneCallDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneCallDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneCallDetails[] = {
         { "call_direction", reinterpret_cast<getter>(PhoneCallDetails_get_CallDirection), nullptr, nullptr, nullptr },
@@ -6371,16 +6330,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "preset_text_responses", reinterpret_cast<getter>(PhoneCallDetails_get_PresetTextResponses), nullptr, nullptr, nullptr },
         { "start_time", reinterpret_cast<getter>(PhoneCallDetails_get_StartTime), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(PhoneCallDetails_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneCallDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneCallDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneCallDetails = {
         "winrt._winrt_windows_phone_notification_management.PhoneCallDetails",
@@ -6643,8 +6600,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_PhoneLineDetails[] = {
         { "_assign_array_", _assign_array_PhoneLineDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneLineDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneLineDetails[] = {
         { "default_outgoing_line", reinterpret_cast<getter>(PhoneLineDetails_get_DefaultOutgoingLine), nullptr, nullptr, nullptr },
@@ -6654,16 +6610,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "registration_state", reinterpret_cast<getter>(PhoneLineDetails_get_RegistrationState), nullptr, nullptr, nullptr },
         { "voicemail_count", reinterpret_cast<getter>(PhoneLineDetails_get_VoicemailCount), nullptr, nullptr, nullptr },
         { "missed_call_count", reinterpret_cast<getter>(PhoneLineDetails_get_MissedCallCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneLineDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneLineDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneLineDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneLineDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneLineDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneLineDetails = {
         "winrt._winrt_windows_phone_notification_management.PhoneLineDetails",
@@ -6995,8 +6949,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_PhoneNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_PhoneNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneNotificationTriggerDetails[] = {
         { "started_processing", reinterpret_cast<getter>(PhoneNotificationTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(PhoneNotificationTriggerDetails_put_StartedProcessing), nullptr, nullptr },
@@ -7007,16 +6960,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "call_details", reinterpret_cast<getter>(PhoneNotificationTriggerDetails_get_CallDetails), nullptr, nullptr, nullptr },
         { "phone_line_changed_id", reinterpret_cast<getter>(PhoneNotificationTriggerDetails_get_PhoneLineChangedId), nullptr, nullptr, nullptr },
         { "phone_notification_type", reinterpret_cast<getter>(PhoneNotificationTriggerDetails_get_PhoneNotificationType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.PhoneNotificationTriggerDetails",
@@ -7498,8 +7449,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_ReminderNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_ReminderNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ReminderNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ReminderNotificationTriggerDetails[] = {
         { "started_processing", reinterpret_cast<getter>(ReminderNotificationTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(ReminderNotificationTriggerDetails_put_StartedProcessing), nullptr, nullptr },
@@ -7515,16 +7465,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "timestamp", reinterpret_cast<getter>(ReminderNotificationTriggerDetails_get_Timestamp), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(ReminderNotificationTriggerDetails_get_Title), nullptr, nullptr, nullptr },
         { "instance_id", reinterpret_cast<getter>(ReminderNotificationTriggerDetails_get_InstanceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ReminderNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReminderNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReminderNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReminderNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReminderNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ReminderNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.ReminderNotificationTriggerDetails",
@@ -7667,23 +7615,20 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_SpeedDialEntry[] = {
         { "_assign_array_", _assign_array_SpeedDialEntry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpeedDialEntry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpeedDialEntry[] = {
         { "contact_name", reinterpret_cast<getter>(SpeedDialEntry_get_ContactName), nullptr, nullptr, nullptr },
         { "number_type", reinterpret_cast<getter>(SpeedDialEntry_get_NumberType), nullptr, nullptr, nullptr },
         { "phone_number", reinterpret_cast<getter>(SpeedDialEntry_get_PhoneNumber), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpeedDialEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeedDialEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeedDialEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeedDialEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeedDialEntry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpeedDialEntry = {
         "winrt._winrt_windows_phone_notification_management.SpeedDialEntry",
@@ -7796,22 +7741,19 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_TextResponse[] = {
         { "_assign_array_", _assign_array_TextResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TextResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TextResponse[] = {
         { "content", reinterpret_cast<getter>(TextResponse_get_Content), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(TextResponse_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TextResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TextResponse = {
         "winrt._winrt_windows_phone_notification_management.TextResponse",
@@ -8233,8 +8175,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_ToastNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_ToastNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastNotificationTriggerDetails[] = {
         { "started_processing", reinterpret_cast<getter>(ToastNotificationTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(ToastNotificationTriggerDetails_put_StartedProcessing), nullptr, nullptr },
@@ -8248,16 +8189,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "text3", reinterpret_cast<getter>(ToastNotificationTriggerDetails_get_Text3), nullptr, nullptr, nullptr },
         { "text4", reinterpret_cast<getter>(ToastNotificationTriggerDetails_get_Text4), nullptr, nullptr, nullptr },
         { "instance_id", reinterpret_cast<getter>(ToastNotificationTriggerDetails_get_InstanceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.ToastNotificationTriggerDetails",
@@ -8460,8 +8399,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_VolumeInfo[] = {
         { "_assign_array_", _assign_array_VolumeInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VolumeInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VolumeInfo[] = {
         { "call_volume", reinterpret_cast<getter>(VolumeInfo_get_CallVolume), nullptr, nullptr, nullptr },
@@ -8469,16 +8407,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "is_vibrate_enabled", reinterpret_cast<getter>(VolumeInfo_get_IsVibrateEnabled), nullptr, nullptr, nullptr },
         { "media_volume", reinterpret_cast<getter>(VolumeInfo_get_MediaVolume), nullptr, nullptr, nullptr },
         { "system_volume", reinterpret_cast<getter>(VolumeInfo_get_SystemVolume), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VolumeInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VolumeInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VolumeInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VolumeInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VolumeInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VolumeInfo = {
         "winrt._winrt_windows_phone_notification_management.VolumeInfo",
@@ -8720,8 +8656,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef _methods_IAccessoryNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_IAccessoryNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAccessoryNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAccessoryNotificationTriggerDetails[] = {
         { "accessory_notification_type", reinterpret_cast<getter>(IAccessoryNotificationTriggerDetails_get_AccessoryNotificationType), nullptr, nullptr, nullptr },
@@ -8729,16 +8664,14 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "app_id", reinterpret_cast<getter>(IAccessoryNotificationTriggerDetails_get_AppId), nullptr, nullptr, nullptr },
         { "started_processing", reinterpret_cast<getter>(IAccessoryNotificationTriggerDetails_get_StartedProcessing), reinterpret_cast<setter>(IAccessoryNotificationTriggerDetails_put_StartedProcessing), nullptr, nullptr },
         { "time_created", reinterpret_cast<getter>(IAccessoryNotificationTriggerDetails_get_TimeCreated), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAccessoryNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAccessoryNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAccessoryNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAccessoryNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAccessoryNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAccessoryNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.IAccessoryNotificationTriggerDetails",
@@ -8917,13 +8850,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static PyMethodDef methods_ImplementsIAccessoryNotificationTriggerDetails[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAccessoryNotificationTriggerDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAccessoryNotificationTriggerDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAccessoryNotificationTriggerDetails[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAccessoryNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAccessoryNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.ImplementsIAccessoryNotificationTriggerDetails",

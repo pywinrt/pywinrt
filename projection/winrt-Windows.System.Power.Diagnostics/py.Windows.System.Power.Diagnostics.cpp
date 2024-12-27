@@ -125,19 +125,16 @@ namespace py::cpp::Windows::System::Power::Diagnostics
     }
 
     static PyMethodDef _methods_BackgroundEnergyDiagnostics[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundEnergyDiagnostics[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundEnergyDiagnostics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundEnergyDiagnostics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundEnergyDiagnostics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundEnergyDiagnostics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundEnergyDiagnostics = {
         "winrt._winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics",
@@ -148,14 +145,12 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyGetSetDef getset_BackgroundEnergyDiagnostics_Static[] = {
         { "device_specific_conversion_factor", reinterpret_cast<getter>(BackgroundEnergyDiagnostics_get_DeviceSpecificConversionFactor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BackgroundEnergyDiagnostics_Static[] = {
         { "compute_total_energy_usage", reinterpret_cast<PyCFunction>(BackgroundEnergyDiagnostics_ComputeTotalEnergyUsage), METH_VARARGS, nullptr },
         { "reset_total_energy_usage", reinterpret_cast<PyCFunction>(BackgroundEnergyDiagnostics_ResetTotalEnergyUsage), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BackgroundEnergyDiagnostics_Static[] = 
     {
@@ -165,14 +160,12 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundEnergyDiagnostics_Static =
-    {
+    static PyType_Spec type_spec_BackgroundEnergyDiagnostics_Static = {
         "winrt._winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundEnergyDiagnostics_Static
-    };
+        type_slots_BackgroundEnergyDiagnostics_Static};
 
     // ----- ForegroundEnergyDiagnostics class --------------------
 
@@ -295,19 +288,16 @@ namespace py::cpp::Windows::System::Power::Diagnostics
     }
 
     static PyMethodDef _methods_ForegroundEnergyDiagnostics[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ForegroundEnergyDiagnostics[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ForegroundEnergyDiagnostics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ForegroundEnergyDiagnostics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ForegroundEnergyDiagnostics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ForegroundEnergyDiagnostics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ForegroundEnergyDiagnostics = {
         "winrt._winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics",
@@ -318,14 +308,12 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyGetSetDef getset_ForegroundEnergyDiagnostics_Static[] = {
         { "device_specific_conversion_factor", reinterpret_cast<getter>(ForegroundEnergyDiagnostics_get_DeviceSpecificConversionFactor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ForegroundEnergyDiagnostics_Static[] = {
         { "compute_total_energy_usage", reinterpret_cast<PyCFunction>(ForegroundEnergyDiagnostics_ComputeTotalEnergyUsage), METH_VARARGS, nullptr },
         { "reset_total_energy_usage", reinterpret_cast<PyCFunction>(ForegroundEnergyDiagnostics_ResetTotalEnergyUsage), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ForegroundEnergyDiagnostics_Static[] = 
     {
@@ -335,14 +323,12 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         { }
     };
 
-    static PyType_Spec type_spec_ForegroundEnergyDiagnostics_Static =
-    {
+    static PyType_Spec type_spec_ForegroundEnergyDiagnostics_Static = {
         "winrt._winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ForegroundEnergyDiagnostics_Static
-    };
+        type_slots_ForegroundEnergyDiagnostics_Static};
 
     // ----- Windows.System.Power.Diagnostics Initialization --------------------
 

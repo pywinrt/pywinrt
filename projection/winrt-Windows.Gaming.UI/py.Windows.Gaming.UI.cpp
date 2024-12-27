@@ -204,19 +204,16 @@ namespace py::cpp::Windows::Gaming::UI
     }
 
     static PyMethodDef _methods_GameBar[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GameBar[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GameBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameBar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameBar = {
         "winrt._winrt_windows_gaming_ui.GameBar",
@@ -228,16 +225,14 @@ namespace py::cpp::Windows::Gaming::UI
     static PyGetSetDef getset_GameBar_Static[] = {
         { "is_input_redirected", reinterpret_cast<getter>(GameBar_get_IsInputRedirected), nullptr, nullptr, nullptr },
         { "visible", reinterpret_cast<getter>(GameBar_get_Visible), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GameBar_Static[] = {
         { "add_is_input_redirected_changed", reinterpret_cast<PyCFunction>(GameBar_add_IsInputRedirectedChanged), METH_O, nullptr },
         { "remove_is_input_redirected_changed", reinterpret_cast<PyCFunction>(GameBar_remove_IsInputRedirectedChanged), METH_O, nullptr },
         { "add_visibility_changed", reinterpret_cast<PyCFunction>(GameBar_add_VisibilityChanged), METH_O, nullptr },
         { "remove_visibility_changed", reinterpret_cast<PyCFunction>(GameBar_remove_VisibilityChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GameBar_Static[] = 
     {
@@ -247,14 +242,12 @@ namespace py::cpp::Windows::Gaming::UI
         { }
     };
 
-    static PyType_Spec type_spec_GameBar_Static =
-    {
+    static PyType_Spec type_spec_GameBar_Static = {
         "winrt._winrt_windows_gaming_ui.GameBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GameBar_Static
-    };
+        type_slots_GameBar_Static};
 
     // ----- GameChatMessageReceivedEventArgs class --------------------
 
@@ -450,8 +443,7 @@ namespace py::cpp::Windows::Gaming::UI
     static PyMethodDef _methods_GameChatMessageReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_GameChatMessageReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameChatMessageReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GameChatMessageReceivedEventArgs[] = {
         { "app_display_name", reinterpret_cast<getter>(GameChatMessageReceivedEventArgs_get_AppDisplayName), nullptr, nullptr, nullptr },
@@ -459,16 +451,14 @@ namespace py::cpp::Windows::Gaming::UI
         { "message", reinterpret_cast<getter>(GameChatMessageReceivedEventArgs_get_Message), nullptr, nullptr, nullptr },
         { "origin", reinterpret_cast<getter>(GameChatMessageReceivedEventArgs_get_Origin), nullptr, nullptr, nullptr },
         { "sender_name", reinterpret_cast<getter>(GameChatMessageReceivedEventArgs_get_SenderName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GameChatMessageReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameChatMessageReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameChatMessageReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameChatMessageReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameChatMessageReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameChatMessageReceivedEventArgs = {
         "winrt._winrt_windows_gaming_ui.GameChatMessageReceivedEventArgs",
@@ -676,21 +666,18 @@ namespace py::cpp::Windows::Gaming::UI
         { "add_message", reinterpret_cast<PyCFunction>(GameChatOverlay_AddMessage), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GameChatOverlay, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameChatOverlay), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GameChatOverlay[] = {
         { "desired_position", reinterpret_cast<getter>(GameChatOverlay_get_DesiredPosition), reinterpret_cast<setter>(GameChatOverlay_put_DesiredPosition), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GameChatOverlay[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameChatOverlay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameChatOverlay) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameChatOverlay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameChatOverlay) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameChatOverlay = {
         "winrt._winrt_windows_gaming_ui.GameChatOverlay",
@@ -700,13 +687,11 @@ namespace py::cpp::Windows::Gaming::UI
         _type_slots_GameChatOverlay};
 
     static PyGetSetDef getset_GameChatOverlay_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GameChatOverlay_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(GameChatOverlay_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GameChatOverlay_Static[] = 
     {
@@ -716,14 +701,12 @@ namespace py::cpp::Windows::Gaming::UI
         { }
     };
 
-    static PyType_Spec type_spec_GameChatOverlay_Static =
-    {
+    static PyType_Spec type_spec_GameChatOverlay_Static = {
         "winrt._winrt_windows_gaming_ui.GameChatOverlay_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GameChatOverlay_Static
-    };
+        type_slots_GameChatOverlay_Static};
 
     // ----- GameChatOverlayMessageSource class --------------------
 
@@ -902,20 +885,17 @@ namespace py::cpp::Windows::Gaming::UI
         { "remove_message_received", reinterpret_cast<PyCFunction>(GameChatOverlayMessageSource_remove_MessageReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_GameChatOverlayMessageSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameChatOverlayMessageSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GameChatOverlayMessageSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GameChatOverlayMessageSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameChatOverlayMessageSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameChatOverlayMessageSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameChatOverlayMessageSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameChatOverlayMessageSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameChatOverlayMessageSource = {
         "winrt._winrt_windows_gaming_ui.GameChatOverlayMessageSource",
@@ -1132,24 +1112,21 @@ namespace py::cpp::Windows::Gaming::UI
         { "report_completed", reinterpret_cast<PyCFunction>(GameUIProviderActivatedEventArgs_ReportCompleted), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GameUIProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameUIProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GameUIProviderActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(GameUIProviderActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(GameUIProviderActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(GameUIProviderActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "game_ui_args", reinterpret_cast<getter>(GameUIProviderActivatedEventArgs_get_GameUIArgs), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GameUIProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameUIProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameUIProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameUIProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameUIProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameUIProviderActivatedEventArgs = {
         "winrt._winrt_windows_gaming_ui.GameUIProviderActivatedEventArgs",

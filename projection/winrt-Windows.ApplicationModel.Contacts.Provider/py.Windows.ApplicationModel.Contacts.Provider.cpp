@@ -367,23 +367,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
         { "remove_contact_removed", reinterpret_cast<PyCFunction>(ContactPickerUI_remove_ContactRemoved), METH_O, nullptr },
         { "_assign_array_", _assign_array_ContactPickerUI, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactPickerUI), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactPickerUI[] = {
         { "desired_fields", reinterpret_cast<getter>(ContactPickerUI_get_DesiredFields), nullptr, nullptr, nullptr },
         { "selection_mode", reinterpret_cast<getter>(ContactPickerUI_get_SelectionMode), nullptr, nullptr, nullptr },
         { "desired_fields_with_contact_field_type", reinterpret_cast<getter>(ContactPickerUI_get_DesiredFieldsWithContactFieldType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactPickerUI[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPickerUI) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPickerUI) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPickerUI) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPickerUI) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactPickerUI = {
         "winrt._winrt_windows_applicationmodel_contacts_provider.ContactPickerUI",
@@ -466,21 +463,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
     static PyMethodDef _methods_ContactRemovedEventArgs[] = {
         { "_assign_array_", _assign_array_ContactRemovedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactRemovedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactRemovedEventArgs[] = {
         { "id", reinterpret_cast<getter>(ContactRemovedEventArgs_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactRemovedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactRemovedEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts_provider.ContactRemovedEventArgs",

@@ -313,19 +313,16 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     }
 
     static PyMethodDef _methods_AsyncCausalityTracer[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AsyncCausalityTracer[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AsyncCausalityTracer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AsyncCausalityTracer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AsyncCausalityTracer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AsyncCausalityTracer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AsyncCausalityTracer = {
         "winrt._winrt_windows_foundation_diagnostics.AsyncCausalityTracer",
@@ -335,8 +332,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         _type_slots_AsyncCausalityTracer};
 
     static PyGetSetDef getset_AsyncCausalityTracer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AsyncCausalityTracer_Static[] = {
         { "trace_operation_completion", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceOperationCompletion), METH_VARARGS, nullptr },
@@ -346,8 +342,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "trace_synchronous_work_start", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceSynchronousWorkStart), METH_VARARGS, nullptr },
         { "add_tracing_status_changed", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_add_TracingStatusChanged), METH_O, nullptr },
         { "remove_tracing_status_changed", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_remove_TracingStatusChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AsyncCausalityTracer_Static[] = 
     {
@@ -357,14 +352,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Spec type_spec_AsyncCausalityTracer_Static =
-    {
+    static PyType_Spec type_spec_AsyncCausalityTracer_Static = {
         "winrt._winrt_windows_foundation_diagnostics.AsyncCausalityTracer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AsyncCausalityTracer_Static
-    };
+        type_slots_AsyncCausalityTracer_Static};
 
     // ----- ErrorDetails class --------------------
 
@@ -542,23 +535,20 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef _methods_ErrorDetails[] = {
         { "_assign_array_", _assign_array_ErrorDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ErrorDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ErrorDetails[] = {
         { "description", reinterpret_cast<getter>(ErrorDetails_get_Description), nullptr, nullptr, nullptr },
         { "help_uri", reinterpret_cast<getter>(ErrorDetails_get_HelpUri), nullptr, nullptr, nullptr },
         { "long_description", reinterpret_cast<getter>(ErrorDetails_get_LongDescription), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ErrorDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ErrorDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ErrorDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ErrorDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ErrorDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ErrorDetails = {
         "winrt._winrt_windows_foundation_diagnostics.ErrorDetails",
@@ -568,13 +558,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         _type_slots_ErrorDetails};
 
     static PyGetSetDef getset_ErrorDetails_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ErrorDetails_Static[] = {
         { "create_from_h_result_async", reinterpret_cast<PyCFunction>(ErrorDetails_CreateFromHResultAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ErrorDetails_Static[] = 
     {
@@ -584,14 +572,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Spec type_spec_ErrorDetails_Static =
-    {
+    static PyType_Spec type_spec_ErrorDetails_Static = {
         "winrt._winrt_windows_foundation_diagnostics.ErrorDetails_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ErrorDetails_Static
-    };
+        type_slots_ErrorDetails_Static};
 
     // ----- FileLoggingSession class --------------------
 
@@ -999,21 +985,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_from", reinterpret_cast<PyCFunction>(_from_FileLoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_FileLoggingSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_FileLoggingSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileLoggingSession[] = {
         { "name", reinterpret_cast<getter>(FileLoggingSession_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileLoggingSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileLoggingSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileLoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileLoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileLoggingSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileLoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.FileLoggingSession",
@@ -1096,21 +1079,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef _methods_LogFileGeneratedEventArgs[] = {
         { "_assign_array_", _assign_array_LogFileGeneratedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LogFileGeneratedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LogFileGeneratedEventArgs[] = {
         { "file", reinterpret_cast<getter>(LogFileGeneratedEventArgs_get_File), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LogFileGeneratedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LogFileGeneratedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LogFileGeneratedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LogFileGeneratedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LogFileGeneratedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LogFileGeneratedEventArgs = {
         "winrt._winrt_windows_foundation_diagnostics.LogFileGeneratedEventArgs",
@@ -1985,23 +1965,20 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingActivity), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LoggingActivity), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_LoggingActivity), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LoggingActivity[] = {
         { "id", reinterpret_cast<getter>(LoggingActivity_get_Id), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(LoggingActivity_get_Name), nullptr, nullptr, nullptr },
         { "channel", reinterpret_cast<getter>(LoggingActivity_get_Channel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LoggingActivity[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingActivity) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingActivity) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingActivity) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingActivity) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LoggingActivity = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingActivity",
@@ -3033,24 +3010,21 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingChannel), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LoggingChannel), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_LoggingChannel), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LoggingChannel[] = {
         { "enabled", reinterpret_cast<getter>(LoggingChannel_get_Enabled), nullptr, nullptr, nullptr },
         { "level", reinterpret_cast<getter>(LoggingChannel_get_Level), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(LoggingChannel_get_Name), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(LoggingChannel_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LoggingChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingChannel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LoggingChannel = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingChannel",
@@ -3209,21 +3183,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef _methods_LoggingChannelOptions[] = {
         { "_assign_array_", _assign_array_LoggingChannelOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingChannelOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LoggingChannelOptions[] = {
         { "group", reinterpret_cast<getter>(LoggingChannelOptions_get_Group), reinterpret_cast<setter>(LoggingChannelOptions_put_Group), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LoggingChannelOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingChannelOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingChannelOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingChannelOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingChannelOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LoggingChannelOptions = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingChannelOptions",
@@ -8574,20 +8545,17 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "end_struct", reinterpret_cast<PyCFunction>(LoggingFields_EndStruct), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LoggingFields, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingFields), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LoggingFields[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LoggingFields[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingFields) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingFields) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingFields) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingFields) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LoggingFields = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingFields",
@@ -9091,8 +9059,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef _methods_LoggingOptions[] = {
         { "_assign_array_", _assign_array_LoggingOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LoggingOptions[] = {
         { "task", reinterpret_cast<getter>(LoggingOptions_get_Task), reinterpret_cast<setter>(LoggingOptions_put_Task), nullptr, nullptr },
@@ -9101,16 +9068,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "opcode", reinterpret_cast<getter>(LoggingOptions_get_Opcode), reinterpret_cast<setter>(LoggingOptions_put_Opcode), nullptr, nullptr },
         { "keywords", reinterpret_cast<getter>(LoggingOptions_get_Keywords), reinterpret_cast<setter>(LoggingOptions_put_Keywords), nullptr, nullptr },
         { "activity_id", reinterpret_cast<getter>(LoggingOptions_get_ActivityId), reinterpret_cast<setter>(LoggingOptions_put_ActivityId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LoggingOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LoggingOptions = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingOptions",
@@ -9461,21 +9426,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LoggingSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_LoggingSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LoggingSession[] = {
         { "name", reinterpret_cast<getter>(LoggingSession_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LoggingSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingSession",
@@ -9635,20 +9597,17 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "set_error_options", reinterpret_cast<PyCFunction>(RuntimeBrokerErrorSettings_SetErrorOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RuntimeBrokerErrorSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RuntimeBrokerErrorSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RuntimeBrokerErrorSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RuntimeBrokerErrorSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RuntimeBrokerErrorSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RuntimeBrokerErrorSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RuntimeBrokerErrorSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RuntimeBrokerErrorSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RuntimeBrokerErrorSettings = {
         "winrt._winrt_windows_foundation_diagnostics.RuntimeBrokerErrorSettings",
@@ -9761,22 +9720,19 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef _methods_TracingStatusChangedEventArgs[] = {
         { "_assign_array_", _assign_array_TracingStatusChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TracingStatusChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TracingStatusChangedEventArgs[] = {
         { "enabled", reinterpret_cast<getter>(TracingStatusChangedEventArgs_get_Enabled), nullptr, nullptr, nullptr },
         { "trace_level", reinterpret_cast<getter>(TracingStatusChangedEventArgs_get_TraceLevel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TracingStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TracingStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TracingStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TracingStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TracingStatusChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TracingStatusChangedEventArgs = {
         "winrt._winrt_windows_foundation_diagnostics.TracingStatusChangedEventArgs",
@@ -9914,20 +9870,17 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "set_error_options", reinterpret_cast<PyCFunction>(IErrorReportingSettings_SetErrorOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IErrorReportingSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IErrorReportingSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IErrorReportingSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IErrorReportingSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IErrorReportingSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IErrorReportingSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IErrorReportingSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IErrorReportingSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IErrorReportingSettings = {
         "winrt._winrt_windows_foundation_diagnostics.IErrorReportingSettings",
@@ -10039,13 +9992,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef methods_ImplementsIErrorReportingSettings[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIErrorReportingSettings), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIErrorReportingSettings), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIErrorReportingSettings[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIErrorReportingSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIErrorReportingSettings = {
         "winrt._winrt_windows_foundation_diagnostics.ImplementsIErrorReportingSettings",
@@ -10436,21 +10387,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileLoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IFileLoggingSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IFileLoggingSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileLoggingSession[] = {
         { "name", reinterpret_cast<getter>(IFileLoggingSession_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileLoggingSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileLoggingSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileLoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileLoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileLoggingSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileLoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.IFileLoggingSession",
@@ -10740,13 +10688,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef methods_ImplementsIFileLoggingSession[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileLoggingSession), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileLoggingSession), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileLoggingSession[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileLoggingSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileLoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.ImplementsIFileLoggingSession",
@@ -11203,23 +11149,20 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingChannel), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ILoggingChannel), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ILoggingChannel), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILoggingChannel[] = {
         { "enabled", reinterpret_cast<getter>(ILoggingChannel_get_Enabled), nullptr, nullptr, nullptr },
         { "level", reinterpret_cast<getter>(ILoggingChannel_get_Level), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ILoggingChannel_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILoggingChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILoggingChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILoggingChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILoggingChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILoggingChannel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILoggingChannel = {
         "winrt._winrt_windows_foundation_diagnostics.ILoggingChannel",
@@ -11583,13 +11526,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef methods_ImplementsILoggingChannel[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILoggingChannel), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILoggingChannel), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILoggingChannel[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILoggingChannel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILoggingChannel = {
         "winrt._winrt_windows_foundation_diagnostics.ImplementsILoggingChannel",
@@ -11916,21 +11857,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ILoggingSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ILoggingSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILoggingSession[] = {
         { "name", reinterpret_cast<getter>(ILoggingSession_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILoggingSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILoggingSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILoggingSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.ILoggingSession",
@@ -12176,13 +12114,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef methods_ImplementsILoggingSession[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILoggingSession), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILoggingSession), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILoggingSession[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILoggingSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.ImplementsILoggingSession",
@@ -12723,20 +12659,17 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "start_activity_with_fields_and_options", reinterpret_cast<PyCFunction>(ILoggingTarget_StartActivityWithFieldsAndOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ILoggingTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingTarget), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILoggingTarget[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILoggingTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILoggingTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILoggingTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILoggingTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILoggingTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILoggingTarget = {
         "winrt._winrt_windows_foundation_diagnostics.ILoggingTarget",
@@ -13250,13 +13183,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef methods_ImplementsILoggingTarget[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILoggingTarget), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILoggingTarget), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILoggingTarget[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILoggingTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILoggingTarget = {
         "winrt._winrt_windows_foundation_diagnostics.ImplementsILoggingTarget",

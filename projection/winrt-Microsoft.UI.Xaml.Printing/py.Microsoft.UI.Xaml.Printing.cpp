@@ -100,21 +100,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
     static PyMethodDef _methods_AddPagesEventArgs[] = {
         { "_assign_array_", _assign_array_AddPagesEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AddPagesEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AddPagesEventArgs[] = {
         { "print_task_options", reinterpret_cast<getter>(AddPagesEventArgs_get_PrintTaskOptions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AddPagesEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddPagesEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddPagesEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddPagesEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddPagesEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AddPagesEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_printing.AddPagesEventArgs",
@@ -219,21 +216,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
     static PyMethodDef _methods_GetPreviewPageEventArgs[] = {
         { "_assign_array_", _assign_array_GetPreviewPageEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GetPreviewPageEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GetPreviewPageEventArgs[] = {
         { "page_number", reinterpret_cast<getter>(GetPreviewPageEventArgs_get_PageNumber), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GetPreviewPageEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetPreviewPageEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetPreviewPageEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetPreviewPageEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetPreviewPageEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GetPreviewPageEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_printing.GetPreviewPageEventArgs",
@@ -368,22 +362,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
     static PyMethodDef _methods_PaginateEventArgs[] = {
         { "_assign_array_", _assign_array_PaginateEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PaginateEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PaginateEventArgs[] = {
         { "current_preview_page_number", reinterpret_cast<getter>(PaginateEventArgs_get_CurrentPreviewPageNumber), nullptr, nullptr, nullptr },
         { "print_task_options", reinterpret_cast<getter>(PaginateEventArgs_get_PrintTaskOptions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PaginateEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaginateEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaginateEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaginateEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaginateEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PaginateEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_printing.PaginateEventArgs",
@@ -997,21 +988,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
         { "remove_paginate", reinterpret_cast<PyCFunction>(PrintDocument_remove_Paginate), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintDocument, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintDocument), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintDocument[] = {
         { "document_source", reinterpret_cast<getter>(PrintDocument_get_DocumentSource), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintDocument) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintDocument = {
         "winrt._winrt_microsoft_ui_xaml_printing.PrintDocument",
@@ -1022,12 +1010,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
 
     static PyGetSetDef getset_PrintDocument_Static[] = {
         { "document_source_property", reinterpret_cast<getter>(PrintDocument_get_DocumentSourceProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PrintDocument_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PrintDocument_Static[] = 
     {
@@ -1037,14 +1023,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
         { }
     };
 
-    static PyType_Spec type_spec_PrintDocument_Static =
-    {
+    static PyType_Spec type_spec_PrintDocument_Static = {
         "winrt._winrt_microsoft_ui_xaml_printing.PrintDocument_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_PrintDocument_Static
-    };
+        type_slots_PrintDocument_Static};
 
     // ----- Microsoft.UI.Xaml.Printing Initialization --------------------
 

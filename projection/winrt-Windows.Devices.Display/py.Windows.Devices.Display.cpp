@@ -815,8 +815,7 @@ namespace py::cpp::Windows::Devices::Display
         { "get_descriptor", reinterpret_cast<PyCFunction>(DisplayMonitor_GetDescriptor), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DisplayMonitor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayMonitor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayMonitor[] = {
         { "blue_primary", reinterpret_cast<getter>(DisplayMonitor_get_BluePrimary), nullptr, nullptr, nullptr },
@@ -839,16 +838,14 @@ namespace py::cpp::Windows::Devices::Display
         { "usage_kind", reinterpret_cast<getter>(DisplayMonitor_get_UsageKind), nullptr, nullptr, nullptr },
         { "white_point", reinterpret_cast<getter>(DisplayMonitor_get_WhitePoint), nullptr, nullptr, nullptr },
         { "is_dolby_vision_supported_in_hdr_mode", reinterpret_cast<getter>(DisplayMonitor_get_IsDolbyVisionSupportedInHdrMode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayMonitor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayMonitor = {
         "winrt._winrt_windows_devices_display.DisplayMonitor",
@@ -858,15 +855,13 @@ namespace py::cpp::Windows::Devices::Display
         _type_slots_DisplayMonitor};
 
     static PyGetSetDef getset_DisplayMonitor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DisplayMonitor_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(DisplayMonitor_FromIdAsync), METH_VARARGS, nullptr },
         { "from_interface_id_async", reinterpret_cast<PyCFunction>(DisplayMonitor_FromInterfaceIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(DisplayMonitor_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DisplayMonitor_Static[] = 
     {
@@ -876,14 +871,12 @@ namespace py::cpp::Windows::Devices::Display
         { }
     };
 
-    static PyType_Spec type_spec_DisplayMonitor_Static =
-    {
+    static PyType_Spec type_spec_DisplayMonitor_Static = {
         "winrt._winrt_windows_devices_display.DisplayMonitor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DisplayMonitor_Static
-    };
+        type_slots_DisplayMonitor_Static};
 
     // ----- Windows.Devices.Display Initialization --------------------
 

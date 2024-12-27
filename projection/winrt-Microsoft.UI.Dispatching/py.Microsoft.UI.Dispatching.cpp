@@ -112,20 +112,17 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { "complete", reinterpret_cast<PyCFunction>(DispatcherExitDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DispatcherExitDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DispatcherExitDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DispatcherExitDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DispatcherExitDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherExitDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherExitDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherExitDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherExitDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DispatcherExitDeferral = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherExitDeferral",
@@ -815,21 +812,18 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { "remove_framework_shutdown_starting", reinterpret_cast<PyCFunction>(DispatcherQueue_remove_FrameworkShutdownStarting), METH_O, nullptr },
         { "_assign_array_", _assign_array_DispatcherQueue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DispatcherQueue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DispatcherQueue[] = {
         { "has_thread_access", reinterpret_cast<getter>(DispatcherQueue_get_HasThreadAccess), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DispatcherQueue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DispatcherQueue = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueue",
@@ -839,13 +833,11 @@ namespace py::cpp::Microsoft::UI::Dispatching
         _type_slots_DispatcherQueue};
 
     static PyGetSetDef getset_DispatcherQueue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DispatcherQueue_Static[] = {
         { "get_for_current_thread", reinterpret_cast<PyCFunction>(DispatcherQueue_GetForCurrentThread), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DispatcherQueue_Static[] = 
     {
@@ -855,14 +847,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { }
     };
 
-    static PyType_Spec type_spec_DispatcherQueue_Static =
-    {
+    static PyType_Spec type_spec_DispatcherQueue_Static = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DispatcherQueue_Static
-    };
+        type_slots_DispatcherQueue_Static};
 
     // ----- DispatcherQueueController class --------------------
 
@@ -1101,21 +1091,18 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { "shutdown_queue_async", reinterpret_cast<PyCFunction>(DispatcherQueueController_ShutdownQueueAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DispatcherQueueController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DispatcherQueueController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DispatcherQueueController[] = {
         { "dispatcher_queue", reinterpret_cast<getter>(DispatcherQueueController_get_DispatcherQueue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DispatcherQueueController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DispatcherQueueController = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueueController",
@@ -1125,14 +1112,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         _type_slots_DispatcherQueueController};
 
     static PyGetSetDef getset_DispatcherQueueController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DispatcherQueueController_Static[] = {
         { "create_on_current_thread", reinterpret_cast<PyCFunction>(DispatcherQueueController_CreateOnCurrentThread), METH_VARARGS, nullptr },
         { "create_on_dedicated_thread", reinterpret_cast<PyCFunction>(DispatcherQueueController_CreateOnDedicatedThread), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DispatcherQueueController_Static[] = 
     {
@@ -1142,14 +1127,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { }
     };
 
-    static PyType_Spec type_spec_DispatcherQueueController_Static =
-    {
+    static PyType_Spec type_spec_DispatcherQueueController_Static = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueueController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DispatcherQueueController_Static
-    };
+        type_slots_DispatcherQueueController_Static};
 
     // ----- DispatcherQueueShutdownStartingEventArgs class --------------------
 
@@ -1236,20 +1219,17 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { "get_deferral", reinterpret_cast<PyCFunction>(DispatcherQueueShutdownStartingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DispatcherQueueShutdownStartingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DispatcherQueueShutdownStartingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DispatcherQueueShutdownStartingEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DispatcherQueueShutdownStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueShutdownStartingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DispatcherQueueShutdownStartingEventArgs = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueueShutdownStartingEventArgs",
@@ -1621,23 +1601,20 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { "remove_tick", reinterpret_cast<PyCFunction>(DispatcherQueueTimer_remove_Tick), METH_O, nullptr },
         { "_assign_array_", _assign_array_DispatcherQueueTimer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DispatcherQueueTimer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DispatcherQueueTimer[] = {
         { "is_repeating", reinterpret_cast<getter>(DispatcherQueueTimer_get_IsRepeating), reinterpret_cast<setter>(DispatcherQueueTimer_put_IsRepeating), nullptr, nullptr },
         { "interval", reinterpret_cast<getter>(DispatcherQueueTimer_get_Interval), reinterpret_cast<setter>(DispatcherQueueTimer_put_Interval), nullptr, nullptr },
         { "is_running", reinterpret_cast<getter>(DispatcherQueueTimer_get_IsRunning), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DispatcherQueueTimer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueTimer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueTimer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueTimer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueTimer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DispatcherQueueTimer = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueueTimer",

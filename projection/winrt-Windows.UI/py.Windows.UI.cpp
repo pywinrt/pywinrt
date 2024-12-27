@@ -135,20 +135,17 @@ namespace py::cpp::Windows::UI
     static PyMethodDef _methods_ColorHelper[] = {
         { "_assign_array_", _assign_array_ColorHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorHelper), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ColorHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ColorHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ColorHelper = {
         "winrt._winrt_windows_ui.ColorHelper",
@@ -158,14 +155,12 @@ namespace py::cpp::Windows::UI
         _type_slots_ColorHelper};
 
     static PyGetSetDef getset_ColorHelper_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ColorHelper_Static[] = {
         { "from_argb", reinterpret_cast<PyCFunction>(ColorHelper_FromArgb), METH_VARARGS, nullptr },
         { "to_display_name", reinterpret_cast<PyCFunction>(ColorHelper_ToDisplayName), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ColorHelper_Static[] = 
     {
@@ -175,14 +170,12 @@ namespace py::cpp::Windows::UI
         { }
     };
 
-    static PyType_Spec type_spec_ColorHelper_Static =
-    {
+    static PyType_Spec type_spec_ColorHelper_Static = {
         "winrt._winrt_windows_ui.ColorHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ColorHelper_Static
-    };
+        type_slots_ColorHelper_Static};
 
     // ----- Colors class --------------------
 
@@ -4458,20 +4451,17 @@ namespace py::cpp::Windows::UI
     static PyMethodDef _methods_Colors[] = {
         { "_assign_array_", _assign_array_Colors, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Colors), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Colors[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Colors[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Colors) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Colors) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Colors) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Colors) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Colors = {
         "winrt._winrt_windows_ui.Colors",
@@ -4622,12 +4612,10 @@ namespace py::cpp::Windows::UI
         { "white_smoke", reinterpret_cast<getter>(Colors_get_WhiteSmoke), nullptr, nullptr, nullptr },
         { "yellow", reinterpret_cast<getter>(Colors_get_Yellow), nullptr, nullptr, nullptr },
         { "yellow_green", reinterpret_cast<getter>(Colors_get_YellowGreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Colors_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Colors_Static[] = 
     {
@@ -4637,14 +4625,12 @@ namespace py::cpp::Windows::UI
         { }
     };
 
-    static PyType_Spec type_spec_Colors_Static =
-    {
+    static PyType_Spec type_spec_Colors_Static = {
         "winrt._winrt_windows_ui.Colors_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Colors_Static
-    };
+        type_slots_Colors_Static};
 
     // ----- UIContentRoot class --------------------
 
@@ -4720,21 +4706,18 @@ namespace py::cpp::Windows::UI
     static PyMethodDef _methods_UIContentRoot[] = {
         { "_assign_array_", _assign_array_UIContentRoot, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UIContentRoot), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UIContentRoot[] = {
         { "ui_context", reinterpret_cast<getter>(UIContentRoot_get_UIContext), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UIContentRoot[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UIContentRoot) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UIContentRoot) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UIContentRoot) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UIContentRoot) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UIContentRoot = {
         "winrt._winrt_windows_ui.UIContentRoot",
@@ -4787,20 +4770,17 @@ namespace py::cpp::Windows::UI
     static PyMethodDef _methods_UIContext[] = {
         { "_assign_array_", _assign_array_UIContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UIContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UIContext[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UIContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UIContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UIContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UIContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UIContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UIContext = {
         "winrt._winrt_windows_ui.UIContext",
@@ -4882,8 +4862,7 @@ namespace py::cpp::Windows::UI
 
     static PyMethodDef _methods_Color[] = {
         { "_assign_array_", _assign_array_Color, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Color_get_A(py::wrapper::Windows::UI::Color* self, void* /*unused*/) noexcept
     {
@@ -5022,8 +5001,7 @@ namespace py::cpp::Windows::UI
         { "r", reinterpret_cast<getter>(Color_get_R), reinterpret_cast<setter>(Color_set_R), nullptr, nullptr },
         { "g", reinterpret_cast<getter>(Color_get_G), reinterpret_cast<setter>(Color_set_G), nullptr, nullptr },
         { "b", reinterpret_cast<getter>(Color_get_B), reinterpret_cast<setter>(Color_set_B), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_Color(py::wrapper::Windows::UI::Color* self, PyObject* other, int op) noexcept
     {
@@ -5097,8 +5075,7 @@ namespace py::cpp::Windows::UI
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Color) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Color) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Color) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Color = {
         "winrt._winrt_windows_ui.Color",
@@ -5174,8 +5151,7 @@ namespace py::cpp::Windows::UI
 
     static PyMethodDef _methods_WindowId[] = {
         { "_assign_array_", _assign_array_WindowId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* WindowId_get_Value(py::wrapper::Windows::UI::WindowId* self, void* /*unused*/) noexcept
     {
@@ -5212,8 +5188,7 @@ namespace py::cpp::Windows::UI
 
     static PyGetSetDef _getset_WindowId[] = {
         { "value", reinterpret_cast<getter>(WindowId_get_Value), reinterpret_cast<setter>(WindowId_set_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_WindowId(py::wrapper::Windows::UI::WindowId* self, PyObject* other, int op) noexcept
     {
@@ -5269,8 +5244,7 @@ namespace py::cpp::Windows::UI
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_WindowId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_WindowId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowId = {
         "winrt._winrt_windows_ui.WindowId",

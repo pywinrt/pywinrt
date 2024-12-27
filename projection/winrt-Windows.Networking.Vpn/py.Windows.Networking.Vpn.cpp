@@ -211,22 +211,19 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnAppId[] = {
         { "_assign_array_", _assign_array_VpnAppId, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnAppId), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnAppId[] = {
         { "value", reinterpret_cast<getter>(VpnAppId_get_Value), reinterpret_cast<setter>(VpnAppId_put_Value), nullptr, nullptr },
         { "type", reinterpret_cast<getter>(VpnAppId_get_Type), reinterpret_cast<setter>(VpnAppId_put_Type), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnAppId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnAppId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnAppId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnAppId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnAppId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnAppId = {
         "winrt._winrt_windows_networking_vpn.VpnAppId",
@@ -1965,8 +1962,7 @@ namespace py::cpp::Windows::Networking::Vpn
         { "remove_activity_state_change", reinterpret_cast<PyCFunction>(VpnChannel_remove_ActivityStateChange), METH_O, nullptr },
         { "_assign_array_", _assign_array_VpnChannel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnChannel), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnChannel[] = {
         { "plug_in_context", reinterpret_cast<getter>(VpnChannel_get_PlugInContext), reinterpret_cast<setter>(VpnChannel_put_PlugInContext), nullptr, nullptr },
@@ -1974,16 +1970,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "id", reinterpret_cast<getter>(VpnChannel_get_Id), nullptr, nullptr, nullptr },
         { "system_health", reinterpret_cast<getter>(VpnChannel_get_SystemHealth), nullptr, nullptr, nullptr },
         { "current_request_transport_context", reinterpret_cast<getter>(VpnChannel_get_CurrentRequestTransportContext), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnChannel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnChannel = {
         "winrt._winrt_windows_networking_vpn.VpnChannel",
@@ -1993,13 +1987,11 @@ namespace py::cpp::Windows::Networking::Vpn
         _type_slots_VpnChannel};
 
     static PyGetSetDef getset_VpnChannel_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_VpnChannel_Static[] = {
         { "process_event_async", reinterpret_cast<PyCFunction>(VpnChannel_ProcessEventAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_VpnChannel_Static[] = 
     {
@@ -2009,14 +2001,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Spec type_spec_VpnChannel_Static =
-    {
+    static PyType_Spec type_spec_VpnChannel_Static = {
         "winrt._winrt_windows_networking_vpn.VpnChannel_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VpnChannel_Static
-    };
+        type_slots_VpnChannel_Static};
 
     // ----- VpnChannelActivityEventArgs class --------------------
 
@@ -2092,21 +2082,18 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnChannelActivityEventArgs[] = {
         { "_assign_array_", _assign_array_VpnChannelActivityEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnChannelActivityEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnChannelActivityEventArgs[] = {
         { "type", reinterpret_cast<getter>(VpnChannelActivityEventArgs_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnChannelActivityEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnChannelActivityEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnChannelActivityEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnChannelActivityEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnChannelActivityEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnChannelActivityEventArgs = {
         "winrt._winrt_windows_networking_vpn.VpnChannelActivityEventArgs",
@@ -2189,21 +2176,18 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnChannelActivityStateChangedArgs[] = {
         { "_assign_array_", _assign_array_VpnChannelActivityStateChangedArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnChannelActivityStateChangedArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnChannelActivityStateChangedArgs[] = {
         { "activity_state", reinterpret_cast<getter>(VpnChannelActivityStateChangedArgs_get_ActivityState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnChannelActivityStateChangedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnChannelActivityStateChangedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnChannelActivityStateChangedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnChannelActivityStateChangedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnChannelActivityStateChangedArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnChannelActivityStateChangedArgs = {
         "winrt._winrt_windows_networking_vpn.VpnChannelActivityStateChangedArgs",
@@ -2376,24 +2360,21 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnChannelConfiguration[] = {
         { "_assign_array_", _assign_array_VpnChannelConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnChannelConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnChannelConfiguration[] = {
         { "custom_field", reinterpret_cast<getter>(VpnChannelConfiguration_get_CustomField), nullptr, nullptr, nullptr },
         { "server_host_name_list", reinterpret_cast<getter>(VpnChannelConfiguration_get_ServerHostNameList), nullptr, nullptr, nullptr },
         { "server_service_name", reinterpret_cast<getter>(VpnChannelConfiguration_get_ServerServiceName), nullptr, nullptr, nullptr },
         { "server_uris", reinterpret_cast<getter>(VpnChannelConfiguration_get_ServerUris), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnChannelConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnChannelConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnChannelConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnChannelConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnChannelConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnChannelConfiguration = {
         "winrt._winrt_windows_networking_vpn.VpnChannelConfiguration",
@@ -2566,24 +2547,21 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCredential[] = {
         { "_assign_array_", _assign_array_VpnCredential, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCredential), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCredential[] = {
         { "additional_pin", reinterpret_cast<getter>(VpnCredential_get_AdditionalPin), nullptr, nullptr, nullptr },
         { "certificate_credential", reinterpret_cast<getter>(VpnCredential_get_CertificateCredential), nullptr, nullptr, nullptr },
         { "old_password_credential", reinterpret_cast<getter>(VpnCredential_get_OldPasswordCredential), nullptr, nullptr, nullptr },
         { "passkey_credential", reinterpret_cast<getter>(VpnCredential_get_PasskeyCredential), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCredential) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCredential = {
         "winrt._winrt_windows_networking_vpn.VpnCredential",
@@ -2964,8 +2942,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCustomCheckBox[] = {
         { "_assign_array_", _assign_array_VpnCustomCheckBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCustomCheckBox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCustomCheckBox[] = {
         { "initial_check_state", reinterpret_cast<getter>(VpnCustomCheckBox_get_InitialCheckState), reinterpret_cast<setter>(VpnCustomCheckBox_put_InitialCheckState), nullptr, nullptr },
@@ -2973,16 +2950,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "label", reinterpret_cast<getter>(VpnCustomCheckBox_get_Label), reinterpret_cast<setter>(VpnCustomCheckBox_put_Label), nullptr, nullptr },
         { "compulsory", reinterpret_cast<getter>(VpnCustomCheckBox_get_Compulsory), reinterpret_cast<setter>(VpnCustomCheckBox_put_Compulsory), nullptr, nullptr },
         { "bordered", reinterpret_cast<getter>(VpnCustomCheckBox_get_Bordered), reinterpret_cast<setter>(VpnCustomCheckBox_put_Bordered), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCustomCheckBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomCheckBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomCheckBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomCheckBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomCheckBox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCustomCheckBox = {
         "winrt._winrt_windows_networking_vpn.VpnCustomCheckBox",
@@ -3363,8 +3338,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCustomComboBox[] = {
         { "_assign_array_", _assign_array_VpnCustomComboBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCustomComboBox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCustomComboBox[] = {
         { "options_text", reinterpret_cast<getter>(VpnCustomComboBox_get_OptionsText), reinterpret_cast<setter>(VpnCustomComboBox_put_OptionsText), nullptr, nullptr },
@@ -3372,16 +3346,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "label", reinterpret_cast<getter>(VpnCustomComboBox_get_Label), reinterpret_cast<setter>(VpnCustomComboBox_put_Label), nullptr, nullptr },
         { "compulsory", reinterpret_cast<getter>(VpnCustomComboBox_get_Compulsory), reinterpret_cast<setter>(VpnCustomComboBox_put_Compulsory), nullptr, nullptr },
         { "bordered", reinterpret_cast<getter>(VpnCustomComboBox_get_Bordered), reinterpret_cast<setter>(VpnCustomComboBox_put_Bordered), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCustomComboBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomComboBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomComboBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomComboBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomComboBox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCustomComboBox = {
         "winrt._winrt_windows_networking_vpn.VpnCustomComboBox",
@@ -3831,8 +3803,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCustomEditBox[] = {
         { "_assign_array_", _assign_array_VpnCustomEditBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCustomEditBox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCustomEditBox[] = {
         { "no_echo", reinterpret_cast<getter>(VpnCustomEditBox_get_NoEcho), reinterpret_cast<setter>(VpnCustomEditBox_put_NoEcho), nullptr, nullptr },
@@ -3841,16 +3812,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "label", reinterpret_cast<getter>(VpnCustomEditBox_get_Label), reinterpret_cast<setter>(VpnCustomEditBox_put_Label), nullptr, nullptr },
         { "compulsory", reinterpret_cast<getter>(VpnCustomEditBox_get_Compulsory), reinterpret_cast<setter>(VpnCustomEditBox_put_Compulsory), nullptr, nullptr },
         { "bordered", reinterpret_cast<getter>(VpnCustomEditBox_get_Bordered), reinterpret_cast<setter>(VpnCustomEditBox_put_Bordered), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCustomEditBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomEditBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomEditBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomEditBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomEditBox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCustomEditBox = {
         "winrt._winrt_windows_networking_vpn.VpnCustomEditBox",
@@ -4132,23 +4101,20 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCustomErrorBox[] = {
         { "_assign_array_", _assign_array_VpnCustomErrorBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCustomErrorBox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCustomErrorBox[] = {
         { "label", reinterpret_cast<getter>(VpnCustomErrorBox_get_Label), reinterpret_cast<setter>(VpnCustomErrorBox_put_Label), nullptr, nullptr },
         { "compulsory", reinterpret_cast<getter>(VpnCustomErrorBox_get_Compulsory), reinterpret_cast<setter>(VpnCustomErrorBox_put_Compulsory), nullptr, nullptr },
         { "bordered", reinterpret_cast<getter>(VpnCustomErrorBox_get_Bordered), reinterpret_cast<setter>(VpnCustomErrorBox_put_Bordered), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCustomErrorBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomErrorBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomErrorBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomErrorBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomErrorBox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCustomErrorBox = {
         "winrt._winrt_windows_networking_vpn.VpnCustomErrorBox",
@@ -4529,8 +4495,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCustomPromptBooleanInput[] = {
         { "_assign_array_", _assign_array_VpnCustomPromptBooleanInput, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCustomPromptBooleanInput), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCustomPromptBooleanInput[] = {
         { "initial_value", reinterpret_cast<getter>(VpnCustomPromptBooleanInput_get_InitialValue), reinterpret_cast<setter>(VpnCustomPromptBooleanInput_put_InitialValue), nullptr, nullptr },
@@ -4538,16 +4503,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "emphasized", reinterpret_cast<getter>(VpnCustomPromptBooleanInput_get_Emphasized), reinterpret_cast<setter>(VpnCustomPromptBooleanInput_put_Emphasized), nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(VpnCustomPromptBooleanInput_get_DisplayName), reinterpret_cast<setter>(VpnCustomPromptBooleanInput_put_DisplayName), nullptr, nullptr },
         { "compulsory", reinterpret_cast<getter>(VpnCustomPromptBooleanInput_get_Compulsory), reinterpret_cast<setter>(VpnCustomPromptBooleanInput_put_Compulsory), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCustomPromptBooleanInput[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomPromptBooleanInput) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomPromptBooleanInput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomPromptBooleanInput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomPromptBooleanInput) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCustomPromptBooleanInput = {
         "winrt._winrt_windows_networking_vpn.VpnCustomPromptBooleanInput",
@@ -4889,8 +4852,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCustomPromptOptionSelector[] = {
         { "_assign_array_", _assign_array_VpnCustomPromptOptionSelector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCustomPromptOptionSelector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCustomPromptOptionSelector[] = {
         { "emphasized", reinterpret_cast<getter>(VpnCustomPromptOptionSelector_get_Emphasized), reinterpret_cast<setter>(VpnCustomPromptOptionSelector_put_Emphasized), nullptr, nullptr },
@@ -4898,16 +4860,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "compulsory", reinterpret_cast<getter>(VpnCustomPromptOptionSelector_get_Compulsory), reinterpret_cast<setter>(VpnCustomPromptOptionSelector_put_Compulsory), nullptr, nullptr },
         { "options", reinterpret_cast<getter>(VpnCustomPromptOptionSelector_get_Options), nullptr, nullptr, nullptr },
         { "selected_index", reinterpret_cast<getter>(VpnCustomPromptOptionSelector_get_SelectedIndex), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCustomPromptOptionSelector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomPromptOptionSelector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomPromptOptionSelector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomPromptOptionSelector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomPromptOptionSelector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCustomPromptOptionSelector = {
         "winrt._winrt_windows_networking_vpn.VpnCustomPromptOptionSelector",
@@ -5258,24 +5218,21 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCustomPromptText[] = {
         { "_assign_array_", _assign_array_VpnCustomPromptText, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCustomPromptText), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCustomPromptText[] = {
         { "emphasized", reinterpret_cast<getter>(VpnCustomPromptText_get_Emphasized), reinterpret_cast<setter>(VpnCustomPromptText_put_Emphasized), nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(VpnCustomPromptText_get_DisplayName), reinterpret_cast<setter>(VpnCustomPromptText_put_DisplayName), nullptr, nullptr },
         { "compulsory", reinterpret_cast<getter>(VpnCustomPromptText_get_Compulsory), reinterpret_cast<setter>(VpnCustomPromptText_put_Compulsory), nullptr, nullptr },
         { "text", reinterpret_cast<getter>(VpnCustomPromptText_get_Text), reinterpret_cast<setter>(VpnCustomPromptText_put_Text), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCustomPromptText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomPromptText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomPromptText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomPromptText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomPromptText) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCustomPromptText = {
         "winrt._winrt_windows_networking_vpn.VpnCustomPromptText",
@@ -5725,8 +5682,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCustomPromptTextInput[] = {
         { "_assign_array_", _assign_array_VpnCustomPromptTextInput, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCustomPromptTextInput), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCustomPromptTextInput[] = {
         { "emphasized", reinterpret_cast<getter>(VpnCustomPromptTextInput_get_Emphasized), reinterpret_cast<setter>(VpnCustomPromptTextInput_put_Emphasized), nullptr, nullptr },
@@ -5735,16 +5691,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "placeholder_text", reinterpret_cast<getter>(VpnCustomPromptTextInput_get_PlaceholderText), reinterpret_cast<setter>(VpnCustomPromptTextInput_put_PlaceholderText), nullptr, nullptr },
         { "is_text_hidden", reinterpret_cast<getter>(VpnCustomPromptTextInput_get_IsTextHidden), reinterpret_cast<setter>(VpnCustomPromptTextInput_put_IsTextHidden), nullptr, nullptr },
         { "text", reinterpret_cast<getter>(VpnCustomPromptTextInput_get_Text), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCustomPromptTextInput[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomPromptTextInput) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomPromptTextInput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomPromptTextInput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomPromptTextInput) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCustomPromptTextInput = {
         "winrt._winrt_windows_networking_vpn.VpnCustomPromptTextInput",
@@ -6095,24 +6049,21 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnCustomTextBox[] = {
         { "_assign_array_", _assign_array_VpnCustomTextBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnCustomTextBox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnCustomTextBox[] = {
         { "label", reinterpret_cast<getter>(VpnCustomTextBox_get_Label), reinterpret_cast<setter>(VpnCustomTextBox_put_Label), nullptr, nullptr },
         { "compulsory", reinterpret_cast<getter>(VpnCustomTextBox_get_Compulsory), reinterpret_cast<setter>(VpnCustomTextBox_put_Compulsory), nullptr, nullptr },
         { "bordered", reinterpret_cast<getter>(VpnCustomTextBox_get_Bordered), reinterpret_cast<setter>(VpnCustomTextBox_put_Bordered), nullptr, nullptr },
         { "display_text", reinterpret_cast<getter>(VpnCustomTextBox_get_DisplayText), reinterpret_cast<setter>(VpnCustomTextBox_put_DisplayText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnCustomTextBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomTextBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomTextBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomTextBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomTextBox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnCustomTextBox = {
         "winrt._winrt_windows_networking_vpn.VpnCustomTextBox",
@@ -6286,22 +6237,19 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnDomainNameAssignment[] = {
         { "_assign_array_", _assign_array_VpnDomainNameAssignment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnDomainNameAssignment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnDomainNameAssignment[] = {
         { "proxy_auto_configuration_uri", reinterpret_cast<getter>(VpnDomainNameAssignment_get_ProxyAutoConfigurationUri), reinterpret_cast<setter>(VpnDomainNameAssignment_put_ProxyAutoConfigurationUri), nullptr, nullptr },
         { "domain_name_list", reinterpret_cast<getter>(VpnDomainNameAssignment_get_DomainNameList), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnDomainNameAssignment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnDomainNameAssignment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnDomainNameAssignment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnDomainNameAssignment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnDomainNameAssignment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnDomainNameAssignment = {
         "winrt._winrt_windows_networking_vpn.VpnDomainNameAssignment",
@@ -6609,8 +6557,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnDomainNameInfo[] = {
         { "_assign_array_", _assign_array_VpnDomainNameInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnDomainNameInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnDomainNameInfo[] = {
         { "domain_name_type", reinterpret_cast<getter>(VpnDomainNameInfo_get_DomainNameType), reinterpret_cast<setter>(VpnDomainNameInfo_put_DomainNameType), nullptr, nullptr },
@@ -6618,16 +6565,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "dns_servers", reinterpret_cast<getter>(VpnDomainNameInfo_get_DnsServers), nullptr, nullptr, nullptr },
         { "web_proxy_servers", reinterpret_cast<getter>(VpnDomainNameInfo_get_WebProxyServers), nullptr, nullptr, nullptr },
         { "web_proxy_uris", reinterpret_cast<getter>(VpnDomainNameInfo_get_WebProxyUris), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnDomainNameInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnDomainNameInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnDomainNameInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnDomainNameInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnDomainNameInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnDomainNameInfo = {
         "winrt._winrt_windows_networking_vpn.VpnDomainNameInfo",
@@ -6890,8 +6835,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnForegroundActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_VpnForegroundActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnForegroundActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnForegroundActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(VpnForegroundActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -6901,16 +6845,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "activation_operation", reinterpret_cast<getter>(VpnForegroundActivatedEventArgs_get_ActivationOperation), nullptr, nullptr, nullptr },
         { "profile_name", reinterpret_cast<getter>(VpnForegroundActivatedEventArgs_get_ProfileName), nullptr, nullptr, nullptr },
         { "shared_context", reinterpret_cast<getter>(VpnForegroundActivatedEventArgs_get_SharedContext), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnForegroundActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnForegroundActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnForegroundActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnForegroundActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnForegroundActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnForegroundActivatedEventArgs = {
         "winrt._winrt_windows_networking_vpn.VpnForegroundActivatedEventArgs",
@@ -7007,20 +6949,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "complete", reinterpret_cast<PyCFunction>(VpnForegroundActivationOperation_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VpnForegroundActivationOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnForegroundActivationOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnForegroundActivationOperation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnForegroundActivationOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnForegroundActivationOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnForegroundActivationOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnForegroundActivationOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnForegroundActivationOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnForegroundActivationOperation = {
         "winrt._winrt_windows_networking_vpn.VpnForegroundActivationOperation",
@@ -7147,20 +7086,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "get_address_info", reinterpret_cast<PyCFunction>(VpnInterfaceId_GetAddressInfo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VpnInterfaceId, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnInterfaceId), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnInterfaceId[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnInterfaceId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnInterfaceId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnInterfaceId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnInterfaceId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnInterfaceId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnInterfaceId = {
         "winrt._winrt_windows_networking_vpn.VpnInterfaceId",
@@ -7621,20 +7557,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "update_profile_from_xml_async", reinterpret_cast<PyCFunction>(VpnManagementAgent_UpdateProfileFromXmlAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VpnManagementAgent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnManagementAgent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnManagementAgent[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnManagementAgent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnManagementAgent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnManagementAgent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnManagementAgent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnManagementAgent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnManagementAgent = {
         "winrt._winrt_windows_networking_vpn.VpnManagementAgent",
@@ -7847,22 +7780,19 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnNamespaceAssignment[] = {
         { "_assign_array_", _assign_array_VpnNamespaceAssignment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnNamespaceAssignment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnNamespaceAssignment[] = {
         { "proxy_auto_config_uri", reinterpret_cast<getter>(VpnNamespaceAssignment_get_ProxyAutoConfigUri), reinterpret_cast<setter>(VpnNamespaceAssignment_put_ProxyAutoConfigUri), nullptr, nullptr },
         { "namespace_list", reinterpret_cast<getter>(VpnNamespaceAssignment_get_NamespaceList), reinterpret_cast<setter>(VpnNamespaceAssignment_put_NamespaceList), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnNamespaceAssignment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnNamespaceAssignment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnNamespaceAssignment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnNamespaceAssignment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnNamespaceAssignment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnNamespaceAssignment = {
         "winrt._winrt_windows_networking_vpn.VpnNamespaceAssignment",
@@ -8148,23 +8078,20 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnNamespaceInfo[] = {
         { "_assign_array_", _assign_array_VpnNamespaceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnNamespaceInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnNamespaceInfo[] = {
         { "web_proxy_servers", reinterpret_cast<getter>(VpnNamespaceInfo_get_WebProxyServers), reinterpret_cast<setter>(VpnNamespaceInfo_put_WebProxyServers), nullptr, nullptr },
         { "namespace", reinterpret_cast<getter>(VpnNamespaceInfo_get_Namespace), reinterpret_cast<setter>(VpnNamespaceInfo_put_Namespace), nullptr, nullptr },
         { "dns_servers", reinterpret_cast<getter>(VpnNamespaceInfo_get_DnsServers), reinterpret_cast<setter>(VpnNamespaceInfo_put_DnsServers), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnNamespaceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnNamespaceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnNamespaceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnNamespaceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnNamespaceInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnNamespaceInfo = {
         "winrt._winrt_windows_networking_vpn.VpnNamespaceInfo",
@@ -9040,8 +8967,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnNativeProfile[] = {
         { "_assign_array_", _assign_array_VpnNativeProfile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnNativeProfile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnNativeProfile[] = {
         { "user_authentication_method", reinterpret_cast<getter>(VpnNativeProfile_get_UserAuthenticationMethod), reinterpret_cast<setter>(VpnNativeProfile_put_UserAuthenticationMethod), nullptr, nullptr },
@@ -9059,16 +8985,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "app_triggers", reinterpret_cast<getter>(VpnNativeProfile_get_AppTriggers), nullptr, nullptr, nullptr },
         { "traffic_filters", reinterpret_cast<getter>(VpnNativeProfile_get_TrafficFilters), nullptr, nullptr, nullptr },
         { "domain_name_info_list", reinterpret_cast<getter>(VpnNativeProfile_get_DomainNameInfoList), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnNativeProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnNativeProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnNativeProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnNativeProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnNativeProfile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnNativeProfile = {
         "winrt._winrt_windows_networking_vpn.VpnNativeProfile",
@@ -9414,8 +9338,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnPacketBuffer[] = {
         { "_assign_array_", _assign_array_VpnPacketBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnPacketBuffer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnPacketBuffer[] = {
         { "transport_affinity", reinterpret_cast<getter>(VpnPacketBuffer_get_TransportAffinity), reinterpret_cast<setter>(VpnPacketBuffer_put_TransportAffinity), nullptr, nullptr },
@@ -9423,16 +9346,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "buffer", reinterpret_cast<getter>(VpnPacketBuffer_get_Buffer), nullptr, nullptr, nullptr },
         { "app_id", reinterpret_cast<getter>(VpnPacketBuffer_get_AppId), nullptr, nullptr, nullptr },
         { "transport_context", reinterpret_cast<getter>(VpnPacketBuffer_get_TransportContext), reinterpret_cast<setter>(VpnPacketBuffer_put_TransportContext), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnPacketBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnPacketBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnPacketBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnPacketBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnPacketBuffer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnPacketBuffer = {
         "winrt._winrt_windows_networking_vpn.VpnPacketBuffer",
@@ -9854,14 +9775,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { "remove_at_end", reinterpret_cast<PyCFunction>(VpnPacketBufferList_RemoveAtEnd), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VpnPacketBufferList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnPacketBufferList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnPacketBufferList[] = {
         { "status", reinterpret_cast<getter>(VpnPacketBufferList_get_Status), reinterpret_cast<setter>(VpnPacketBufferList_put_Status), nullptr, nullptr },
         { "size", reinterpret_cast<getter>(VpnPacketBufferList_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnPacketBufferList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnPacketBufferList) },
@@ -9869,8 +9788,7 @@ namespace py::cpp::Windows::Networking::Vpn
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnPacketBufferList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnPacketBufferList) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_VpnPacketBufferList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnPacketBufferList = {
         "winrt._winrt_windows_networking_vpn.VpnPacketBufferList",
@@ -10013,23 +9931,20 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnPickedCredential[] = {
         { "_assign_array_", _assign_array_VpnPickedCredential, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnPickedCredential), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnPickedCredential[] = {
         { "additional_pin", reinterpret_cast<getter>(VpnPickedCredential_get_AdditionalPin), nullptr, nullptr, nullptr },
         { "old_password_credential", reinterpret_cast<getter>(VpnPickedCredential_get_OldPasswordCredential), nullptr, nullptr, nullptr },
         { "passkey_credential", reinterpret_cast<getter>(VpnPickedCredential_get_PasskeyCredential), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnPickedCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnPickedCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnPickedCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnPickedCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnPickedCredential) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnPickedCredential = {
         "winrt._winrt_windows_networking_vpn.VpnPickedCredential",
@@ -10698,8 +10613,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnPlugInProfile[] = {
         { "_assign_array_", _assign_array_VpnPlugInProfile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnPlugInProfile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnPlugInProfile[] = {
         { "vpn_plugin_package_family_name", reinterpret_cast<getter>(VpnPlugInProfile_get_VpnPluginPackageFamilyName), reinterpret_cast<setter>(VpnPlugInProfile_put_VpnPluginPackageFamilyName), nullptr, nullptr },
@@ -10714,16 +10628,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "domain_name_info_list", reinterpret_cast<getter>(VpnPlugInProfile_get_DomainNameInfoList), nullptr, nullptr, nullptr },
         { "routes", reinterpret_cast<getter>(VpnPlugInProfile_get_Routes), nullptr, nullptr, nullptr },
         { "traffic_filters", reinterpret_cast<getter>(VpnPlugInProfile_get_TrafficFilters), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnPlugInProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnPlugInProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnPlugInProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnPlugInProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnPlugInProfile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnPlugInProfile = {
         "winrt._winrt_windows_networking_vpn.VpnPlugInProfile",
@@ -10939,22 +10851,19 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnRoute[] = {
         { "_assign_array_", _assign_array_VpnRoute, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnRoute), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnRoute[] = {
         { "prefix_size", reinterpret_cast<getter>(VpnRoute_get_PrefixSize), reinterpret_cast<setter>(VpnRoute_put_PrefixSize), nullptr, nullptr },
         { "address", reinterpret_cast<getter>(VpnRoute_get_Address), reinterpret_cast<setter>(VpnRoute_put_Address), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnRoute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnRoute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnRoute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnRoute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnRoute) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnRoute = {
         "winrt._winrt_windows_networking_vpn.VpnRoute",
@@ -11374,8 +11283,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnRouteAssignment[] = {
         { "_assign_array_", _assign_array_VpnRouteAssignment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnRouteAssignment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnRouteAssignment[] = {
         { "ipv6_inclusion_routes", reinterpret_cast<getter>(VpnRouteAssignment_get_Ipv6InclusionRoutes), reinterpret_cast<setter>(VpnRouteAssignment_put_Ipv6InclusionRoutes), nullptr, nullptr },
@@ -11383,16 +11291,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "ipv4_inclusion_routes", reinterpret_cast<getter>(VpnRouteAssignment_get_Ipv4InclusionRoutes), reinterpret_cast<setter>(VpnRouteAssignment_put_Ipv4InclusionRoutes), nullptr, nullptr },
         { "ipv4_exclusion_routes", reinterpret_cast<getter>(VpnRouteAssignment_get_Ipv4ExclusionRoutes), reinterpret_cast<setter>(VpnRouteAssignment_put_Ipv4ExclusionRoutes), nullptr, nullptr },
         { "exclude_local_subnets", reinterpret_cast<getter>(VpnRouteAssignment_get_ExcludeLocalSubnets), reinterpret_cast<setter>(VpnRouteAssignment_put_ExcludeLocalSubnets), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnRouteAssignment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnRouteAssignment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnRouteAssignment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnRouteAssignment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnRouteAssignment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnRouteAssignment = {
         "winrt._winrt_windows_networking_vpn.VpnRouteAssignment",
@@ -11475,21 +11381,18 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnSystemHealth[] = {
         { "_assign_array_", _assign_array_VpnSystemHealth, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnSystemHealth), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnSystemHealth[] = {
         { "statement_of_health", reinterpret_cast<getter>(VpnSystemHealth_get_StatementOfHealth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnSystemHealth[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnSystemHealth) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnSystemHealth) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnSystemHealth) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnSystemHealth) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnSystemHealth = {
         "winrt._winrt_windows_networking_vpn.VpnSystemHealth",
@@ -11923,8 +11826,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnTrafficFilter[] = {
         { "_assign_array_", _assign_array_VpnTrafficFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnTrafficFilter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnTrafficFilter[] = {
         { "routing_policy_type", reinterpret_cast<getter>(VpnTrafficFilter_get_RoutingPolicyType), reinterpret_cast<setter>(VpnTrafficFilter_put_RoutingPolicyType), nullptr, nullptr },
@@ -11935,16 +11837,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "local_port_ranges", reinterpret_cast<getter>(VpnTrafficFilter_get_LocalPortRanges), nullptr, nullptr, nullptr },
         { "remote_address_ranges", reinterpret_cast<getter>(VpnTrafficFilter_get_RemoteAddressRanges), nullptr, nullptr, nullptr },
         { "remote_port_ranges", reinterpret_cast<getter>(VpnTrafficFilter_get_RemotePortRanges), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnTrafficFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnTrafficFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnTrafficFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnTrafficFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnTrafficFilter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnTrafficFilter = {
         "winrt._winrt_windows_networking_vpn.VpnTrafficFilter",
@@ -12187,23 +12087,20 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_VpnTrafficFilterAssignment[] = {
         { "_assign_array_", _assign_array_VpnTrafficFilterAssignment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VpnTrafficFilterAssignment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VpnTrafficFilterAssignment[] = {
         { "allow_outbound", reinterpret_cast<getter>(VpnTrafficFilterAssignment_get_AllowOutbound), reinterpret_cast<setter>(VpnTrafficFilterAssignment_put_AllowOutbound), nullptr, nullptr },
         { "allow_inbound", reinterpret_cast<getter>(VpnTrafficFilterAssignment_get_AllowInbound), reinterpret_cast<setter>(VpnTrafficFilterAssignment_put_AllowInbound), nullptr, nullptr },
         { "traffic_filter_list", reinterpret_cast<getter>(VpnTrafficFilterAssignment_get_TrafficFilterList), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VpnTrafficFilterAssignment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnTrafficFilterAssignment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnTrafficFilterAssignment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnTrafficFilterAssignment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnTrafficFilterAssignment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VpnTrafficFilterAssignment = {
         "winrt._winrt_windows_networking_vpn.VpnTrafficFilterAssignment",
@@ -12301,20 +12198,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "process_event_async", reinterpret_cast<PyCFunction>(IVpnChannelStatics_ProcessEventAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVpnChannelStatics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnChannelStatics), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnChannelStatics[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnChannelStatics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnChannelStatics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnChannelStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnChannelStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnChannelStatics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnChannelStatics = {
         "winrt._winrt_windows_networking_vpn.IVpnChannelStatics",
@@ -12412,13 +12306,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnChannelStatics[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnChannelStatics), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnChannelStatics), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnChannelStatics[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnChannelStatics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnChannelStatics = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnChannelStatics",
@@ -12591,24 +12483,21 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_IVpnCredential[] = {
         { "_assign_array_", _assign_array_IVpnCredential, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnCredential), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnCredential[] = {
         { "additional_pin", reinterpret_cast<getter>(IVpnCredential_get_AdditionalPin), nullptr, nullptr, nullptr },
         { "certificate_credential", reinterpret_cast<getter>(IVpnCredential_get_CertificateCredential), nullptr, nullptr, nullptr },
         { "old_password_credential", reinterpret_cast<getter>(IVpnCredential_get_OldPasswordCredential), nullptr, nullptr, nullptr },
         { "passkey_credential", reinterpret_cast<getter>(IVpnCredential_get_PasskeyCredential), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnCredential) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnCredential = {
         "winrt._winrt_windows_networking_vpn.IVpnCredential",
@@ -12744,13 +12633,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnCredential[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnCredential), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnCredential), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnCredential[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnCredential) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnCredential = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnCredential",
@@ -13010,23 +12897,20 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_IVpnCustomPrompt[] = {
         { "_assign_array_", _assign_array_IVpnCustomPrompt, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnCustomPrompt), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnCustomPrompt[] = {
         { "bordered", reinterpret_cast<getter>(IVpnCustomPrompt_get_Bordered), reinterpret_cast<setter>(IVpnCustomPrompt_put_Bordered), nullptr, nullptr },
         { "compulsory", reinterpret_cast<getter>(IVpnCustomPrompt_get_Compulsory), reinterpret_cast<setter>(IVpnCustomPrompt_put_Compulsory), nullptr, nullptr },
         { "label", reinterpret_cast<getter>(IVpnCustomPrompt_get_Label), reinterpret_cast<setter>(IVpnCustomPrompt_put_Label), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnCustomPrompt[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnCustomPrompt) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnCustomPrompt) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnCustomPrompt) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnCustomPrompt) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnCustomPrompt = {
         "winrt._winrt_windows_networking_vpn.IVpnCustomPrompt",
@@ -13211,13 +13095,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnCustomPrompt[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnCustomPrompt), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnCustomPrompt), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnCustomPrompt[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnCustomPrompt) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnCustomPrompt = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnCustomPrompt",
@@ -13477,23 +13359,20 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_IVpnCustomPromptElement[] = {
         { "_assign_array_", _assign_array_IVpnCustomPromptElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnCustomPromptElement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnCustomPromptElement[] = {
         { "compulsory", reinterpret_cast<getter>(IVpnCustomPromptElement_get_Compulsory), reinterpret_cast<setter>(IVpnCustomPromptElement_put_Compulsory), nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(IVpnCustomPromptElement_get_DisplayName), reinterpret_cast<setter>(IVpnCustomPromptElement_put_DisplayName), nullptr, nullptr },
         { "emphasized", reinterpret_cast<getter>(IVpnCustomPromptElement_get_Emphasized), reinterpret_cast<setter>(IVpnCustomPromptElement_put_Emphasized), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnCustomPromptElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnCustomPromptElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnCustomPromptElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnCustomPromptElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnCustomPromptElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnCustomPromptElement = {
         "winrt._winrt_windows_networking_vpn.IVpnCustomPromptElement",
@@ -13678,13 +13557,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnCustomPromptElement[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnCustomPromptElement), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnCustomPromptElement), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnCustomPromptElement[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnCustomPromptElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnCustomPromptElement = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnCustomPromptElement",
@@ -13783,20 +13660,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "create_vpn_domain_name_info", reinterpret_cast<PyCFunction>(IVpnDomainNameInfoFactory_CreateVpnDomainNameInfo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVpnDomainNameInfoFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnDomainNameInfoFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnDomainNameInfoFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnDomainNameInfoFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnDomainNameInfoFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnDomainNameInfoFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnDomainNameInfoFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnDomainNameInfoFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnDomainNameInfoFactory = {
         "winrt._winrt_windows_networking_vpn.IVpnDomainNameInfoFactory",
@@ -13908,13 +13782,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnDomainNameInfoFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnDomainNameInfoFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnDomainNameInfoFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnDomainNameInfoFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnDomainNameInfoFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnDomainNameInfoFactory = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnDomainNameInfoFactory",
@@ -14010,20 +13882,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "create_vpn_interface_id", reinterpret_cast<PyCFunction>(IVpnInterfaceIdFactory_CreateVpnInterfaceId), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVpnInterfaceIdFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnInterfaceIdFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnInterfaceIdFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnInterfaceIdFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnInterfaceIdFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnInterfaceIdFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnInterfaceIdFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnInterfaceIdFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnInterfaceIdFactory = {
         "winrt._winrt_windows_networking_vpn.IVpnInterfaceIdFactory",
@@ -14111,13 +13980,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnInterfaceIdFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnInterfaceIdFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnInterfaceIdFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnInterfaceIdFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnInterfaceIdFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnInterfaceIdFactory = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnInterfaceIdFactory",
@@ -14215,20 +14082,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "create_vpn_namespace_info", reinterpret_cast<PyCFunction>(IVpnNamespaceInfoFactory_CreateVpnNamespaceInfo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVpnNamespaceInfoFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnNamespaceInfoFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnNamespaceInfoFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnNamespaceInfoFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnNamespaceInfoFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnNamespaceInfoFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnNamespaceInfoFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnNamespaceInfoFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnNamespaceInfoFactory = {
         "winrt._winrt_windows_networking_vpn.IVpnNamespaceInfoFactory",
@@ -14334,13 +14198,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnNamespaceInfoFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnNamespaceInfoFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnNamespaceInfoFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnNamespaceInfoFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnNamespaceInfoFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnNamespaceInfoFactory = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnNamespaceInfoFactory",
@@ -14438,20 +14300,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "create_vpn_packet_buffer", reinterpret_cast<PyCFunction>(IVpnPacketBufferFactory_CreateVpnPacketBuffer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVpnPacketBufferFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnPacketBufferFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnPacketBufferFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnPacketBufferFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnPacketBufferFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnPacketBufferFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnPacketBufferFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnPacketBufferFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnPacketBufferFactory = {
         "winrt._winrt_windows_networking_vpn.IVpnPacketBufferFactory",
@@ -14557,13 +14416,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnPacketBufferFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnPacketBufferFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnPacketBufferFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnPacketBufferFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnPacketBufferFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnPacketBufferFactory = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnPacketBufferFactory",
@@ -14848,20 +14705,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "get_keep_alive_payload", reinterpret_cast<PyCFunction>(IVpnPlugIn_GetKeepAlivePayload), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVpnPlugIn, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnPlugIn), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnPlugIn[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnPlugIn[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnPlugIn) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnPlugIn) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnPlugIn) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnPlugIn) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnPlugIn = {
         "winrt._winrt_windows_networking_vpn.IVpnPlugIn",
@@ -15111,13 +14965,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnPlugIn[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnPlugIn), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnPlugIn), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnPlugIn[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnPlugIn) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnPlugIn = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnPlugIn",
@@ -15215,20 +15067,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "reconnect_transport", reinterpret_cast<PyCFunction>(IVpnPlugInReconnectTransport_ReconnectTransport), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVpnPlugInReconnectTransport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnPlugInReconnectTransport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnPlugInReconnectTransport[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnPlugInReconnectTransport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnPlugInReconnectTransport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnPlugInReconnectTransport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnPlugInReconnectTransport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnPlugInReconnectTransport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnPlugInReconnectTransport = {
         "winrt._winrt_windows_networking_vpn.IVpnPlugInReconnectTransport",
@@ -15326,13 +15175,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnPlugInReconnectTransport[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnPlugInReconnectTransport), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnPlugInReconnectTransport), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnPlugInReconnectTransport[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnPlugInReconnectTransport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnPlugInReconnectTransport = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnPlugInReconnectTransport",
@@ -15712,8 +15559,7 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef _methods_IVpnProfile[] = {
         { "_assign_array_", _assign_array_IVpnProfile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnProfile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnProfile[] = {
         { "always_on", reinterpret_cast<getter>(IVpnProfile_get_AlwaysOn), reinterpret_cast<setter>(IVpnProfile_put_AlwaysOn), nullptr, nullptr },
@@ -15723,16 +15569,14 @@ namespace py::cpp::Windows::Networking::Vpn
         { "remember_credentials", reinterpret_cast<getter>(IVpnProfile_get_RememberCredentials), reinterpret_cast<setter>(IVpnProfile_put_RememberCredentials), nullptr, nullptr },
         { "routes", reinterpret_cast<getter>(IVpnProfile_get_Routes), nullptr, nullptr, nullptr },
         { "traffic_filters", reinterpret_cast<getter>(IVpnProfile_get_TrafficFilters), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnProfile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnProfile = {
         "winrt._winrt_windows_networking_vpn.IVpnProfile",
@@ -15997,13 +15841,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnProfile[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnProfile), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnProfile), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnProfile[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnProfile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnProfile = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnProfile",
@@ -16100,20 +15942,17 @@ namespace py::cpp::Windows::Networking::Vpn
         { "create_vpn_route", reinterpret_cast<PyCFunction>(IVpnRouteFactory_CreateVpnRoute), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVpnRouteFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnRouteFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVpnRouteFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVpnRouteFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnRouteFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnRouteFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnRouteFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnRouteFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVpnRouteFactory = {
         "winrt._winrt_windows_networking_vpn.IVpnRouteFactory",
@@ -16213,13 +16052,11 @@ namespace py::cpp::Windows::Networking::Vpn
     static PyMethodDef methods_ImplementsIVpnRouteFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnRouteFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnRouteFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVpnRouteFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVpnRouteFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVpnRouteFactory = {
         "winrt._winrt_windows_networking_vpn.ImplementsIVpnRouteFactory",

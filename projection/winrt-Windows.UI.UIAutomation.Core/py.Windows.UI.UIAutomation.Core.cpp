@@ -224,23 +224,20 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { "has_operand", reinterpret_cast<PyCFunction>(AutomationRemoteOperationResult_HasOperand), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AutomationRemoteOperationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AutomationRemoteOperationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AutomationRemoteOperationResult[] = {
         { "error_location", reinterpret_cast<getter>(AutomationRemoteOperationResult_get_ErrorLocation), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(AutomationRemoteOperationResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(AutomationRemoteOperationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AutomationRemoteOperationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationRemoteOperationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationRemoteOperationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationRemoteOperationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationRemoteOperationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AutomationRemoteOperationResult = {
         "winrt._winrt_windows_ui_uiautomation_core.AutomationRemoteOperationResult",
@@ -344,19 +341,16 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     }
 
     static PyMethodDef _methods_CoreAutomationRegistrar[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreAutomationRegistrar[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreAutomationRegistrar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreAutomationRegistrar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreAutomationRegistrar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreAutomationRegistrar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreAutomationRegistrar = {
         "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRegistrar",
@@ -366,14 +360,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         _type_slots_CoreAutomationRegistrar};
 
     static PyGetSetDef getset_CoreAutomationRegistrar_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreAutomationRegistrar_Static[] = {
         { "register_annotation_type", reinterpret_cast<PyCFunction>(CoreAutomationRegistrar_RegisterAnnotationType), METH_VARARGS, nullptr },
         { "unregister_annotation_type", reinterpret_cast<PyCFunction>(CoreAutomationRegistrar_UnregisterAnnotationType), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreAutomationRegistrar_Static[] = 
     {
@@ -383,14 +375,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreAutomationRegistrar_Static =
-    {
+    static PyType_Spec type_spec_CoreAutomationRegistrar_Static = {
         "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRegistrar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreAutomationRegistrar_Static
-    };
+        type_slots_CoreAutomationRegistrar_Static};
 
     // ----- CoreAutomationRemoteOperation class --------------------
 
@@ -723,20 +713,17 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { "is_opcode_supported", reinterpret_cast<PyCFunction>(CoreAutomationRemoteOperation_IsOpcodeSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreAutomationRemoteOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreAutomationRemoteOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreAutomationRemoteOperation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreAutomationRemoteOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreAutomationRemoteOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreAutomationRemoteOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreAutomationRemoteOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreAutomationRemoteOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreAutomationRemoteOperation = {
         "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperation",
@@ -923,20 +910,17 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { "set_operand2", reinterpret_cast<PyCFunction>(CoreAutomationRemoteOperationContext_SetOperand2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreAutomationRemoteOperationContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreAutomationRemoteOperationContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreAutomationRemoteOperationContext[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreAutomationRemoteOperationContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreAutomationRemoteOperationContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreAutomationRemoteOperationContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreAutomationRemoteOperationContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreAutomationRemoteOperationContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreAutomationRemoteOperationContext = {
         "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperationContext",
@@ -1322,21 +1306,18 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { "remove_disconnected", reinterpret_cast<PyCFunction>(RemoteAutomationClientSession_remove_Disconnected), METH_O, nullptr },
         { "_assign_array_", _assign_array_RemoteAutomationClientSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteAutomationClientSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemoteAutomationClientSession[] = {
         { "session_id", reinterpret_cast<getter>(RemoteAutomationClientSession_get_SessionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemoteAutomationClientSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteAutomationClientSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteAutomationClientSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteAutomationClientSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteAutomationClientSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemoteAutomationClientSession = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationClientSession",
@@ -1449,22 +1430,19 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static PyMethodDef _methods_RemoteAutomationConnectionRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_RemoteAutomationConnectionRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteAutomationConnectionRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemoteAutomationConnectionRequestedEventArgs[] = {
         { "local_pipe_name", reinterpret_cast<getter>(RemoteAutomationConnectionRequestedEventArgs_get_LocalPipeName), nullptr, nullptr, nullptr },
         { "remote_process_id", reinterpret_cast<getter>(RemoteAutomationConnectionRequestedEventArgs_get_RemoteProcessId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemoteAutomationConnectionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteAutomationConnectionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteAutomationConnectionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteAutomationConnectionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteAutomationConnectionRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemoteAutomationConnectionRequestedEventArgs = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationConnectionRequestedEventArgs",
@@ -1547,21 +1525,18 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static PyMethodDef _methods_RemoteAutomationDisconnectedEventArgs[] = {
         { "_assign_array_", _assign_array_RemoteAutomationDisconnectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteAutomationDisconnectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemoteAutomationDisconnectedEventArgs[] = {
         { "local_pipe_name", reinterpret_cast<getter>(RemoteAutomationDisconnectedEventArgs_get_LocalPipeName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemoteAutomationDisconnectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteAutomationDisconnectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteAutomationDisconnectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteAutomationDisconnectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteAutomationDisconnectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemoteAutomationDisconnectedEventArgs = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationDisconnectedEventArgs",
@@ -1623,19 +1598,16 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     }
 
     static PyMethodDef _methods_RemoteAutomationServer[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemoteAutomationServer[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemoteAutomationServer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteAutomationServer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteAutomationServer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteAutomationServer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemoteAutomationServer = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationServer",
@@ -1645,13 +1617,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         _type_slots_RemoteAutomationServer};
 
     static PyGetSetDef getset_RemoteAutomationServer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RemoteAutomationServer_Static[] = {
         { "report_session", reinterpret_cast<PyCFunction>(RemoteAutomationServer_ReportSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RemoteAutomationServer_Static[] = 
     {
@@ -1661,14 +1631,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }
     };
 
-    static PyType_Spec type_spec_RemoteAutomationServer_Static =
-    {
+    static PyType_Spec type_spec_RemoteAutomationServer_Static = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationServer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RemoteAutomationServer_Static
-    };
+        type_slots_RemoteAutomationServer_Static};
 
     // ----- RemoteAutomationWindow class --------------------
 
@@ -1785,21 +1753,18 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { "unregister_async", reinterpret_cast<PyCFunction>(RemoteAutomationWindow_UnregisterAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RemoteAutomationWindow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteAutomationWindow), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemoteAutomationWindow[] = {
         { "automation_provider", reinterpret_cast<getter>(RemoteAutomationWindow_get_AutomationProvider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemoteAutomationWindow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteAutomationWindow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteAutomationWindow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteAutomationWindow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteAutomationWindow) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemoteAutomationWindow = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationWindow",
@@ -1882,21 +1847,18 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static PyMethodDef _methods_ICoreAutomationConnectionBoundObjectProvider[] = {
         { "_assign_array_", _assign_array_ICoreAutomationConnectionBoundObjectProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreAutomationConnectionBoundObjectProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICoreAutomationConnectionBoundObjectProvider[] = {
         { "is_com_threading_required", reinterpret_cast<getter>(ICoreAutomationConnectionBoundObjectProvider_get_IsComThreadingRequired), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICoreAutomationConnectionBoundObjectProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreAutomationConnectionBoundObjectProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreAutomationConnectionBoundObjectProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreAutomationConnectionBoundObjectProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreAutomationConnectionBoundObjectProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICoreAutomationConnectionBoundObjectProvider = {
         "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationConnectionBoundObjectProvider",
@@ -1972,13 +1934,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static PyMethodDef methods_ImplementsICoreAutomationConnectionBoundObjectProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreAutomationConnectionBoundObjectProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreAutomationConnectionBoundObjectProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICoreAutomationConnectionBoundObjectProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICoreAutomationConnectionBoundObjectProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICoreAutomationConnectionBoundObjectProvider = {
         "winrt._winrt_windows_ui_uiautomation_core.ImplementsICoreAutomationConnectionBoundObjectProvider",
@@ -2120,20 +2080,17 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { "is_extension_supported", reinterpret_cast<PyCFunction>(ICoreAutomationRemoteOperationExtensionProvider_IsExtensionSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICoreAutomationRemoteOperationExtensionProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreAutomationRemoteOperationExtensionProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICoreAutomationRemoteOperationExtensionProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICoreAutomationRemoteOperationExtensionProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreAutomationRemoteOperationExtensionProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreAutomationRemoteOperationExtensionProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreAutomationRemoteOperationExtensionProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreAutomationRemoteOperationExtensionProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICoreAutomationRemoteOperationExtensionProvider = {
         "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationRemoteOperationExtensionProvider",
@@ -2269,13 +2226,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static PyMethodDef methods_ImplementsICoreAutomationRemoteOperationExtensionProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreAutomationRemoteOperationExtensionProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreAutomationRemoteOperationExtensionProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICoreAutomationRemoteOperationExtensionProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICoreAutomationRemoteOperationExtensionProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICoreAutomationRemoteOperationExtensionProvider = {
         "winrt._winrt_windows_ui_uiautomation_core.ImplementsICoreAutomationRemoteOperationExtensionProvider",
@@ -2351,8 +2306,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyMethodDef _methods_AutomationAnnotationTypeRegistration[] = {
         { "_assign_array_", _assign_array_AutomationAnnotationTypeRegistration, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* AutomationAnnotationTypeRegistration_get_LocalId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, void* /*unused*/) noexcept
     {
@@ -2389,8 +2343,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyGetSetDef _getset_AutomationAnnotationTypeRegistration[] = {
         { "local_id", reinterpret_cast<getter>(AutomationAnnotationTypeRegistration_get_LocalId), reinterpret_cast<setter>(AutomationAnnotationTypeRegistration_set_LocalId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_AutomationAnnotationTypeRegistration(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, PyObject* other, int op) noexcept
     {
@@ -2446,8 +2399,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationAnnotationTypeRegistration) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AutomationAnnotationTypeRegistration) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_AutomationAnnotationTypeRegistration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AutomationAnnotationTypeRegistration = {
         "winrt._winrt_windows_ui_uiautomation_core.AutomationAnnotationTypeRegistration",
@@ -2523,8 +2475,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyMethodDef _methods_AutomationRemoteOperationOperandId[] = {
         { "_assign_array_", _assign_array_AutomationRemoteOperationOperandId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* AutomationRemoteOperationOperandId_get_Value(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, void* /*unused*/) noexcept
     {
@@ -2561,8 +2512,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyGetSetDef _getset_AutomationRemoteOperationOperandId[] = {
         { "value", reinterpret_cast<getter>(AutomationRemoteOperationOperandId_get_Value), reinterpret_cast<setter>(AutomationRemoteOperationOperandId_set_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_AutomationRemoteOperationOperandId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, PyObject* other, int op) noexcept
     {
@@ -2618,8 +2568,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationRemoteOperationOperandId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AutomationRemoteOperationOperandId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_AutomationRemoteOperationOperandId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AutomationRemoteOperationOperandId = {
         "winrt._winrt_windows_ui_uiautomation_core.AutomationRemoteOperationOperandId",

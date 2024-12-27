@@ -600,20 +600,17 @@ namespace py::cpp::Windows::Media::Miracast
         { "remove_status_changed", reinterpret_cast<PyCFunction>(MiracastReceiver_remove_StatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_MiracastReceiver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiver), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiver[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiver = {
         "winrt._winrt_windows_media_miracast.MiracastReceiver",
@@ -726,22 +723,19 @@ namespace py::cpp::Windows::Media::Miracast
     static PyMethodDef _methods_MiracastReceiverApplySettingsResult[] = {
         { "_assign_array_", _assign_array_MiracastReceiverApplySettingsResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverApplySettingsResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverApplySettingsResult[] = {
         { "extended_error", reinterpret_cast<getter>(MiracastReceiverApplySettingsResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(MiracastReceiverApplySettingsResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverApplySettingsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverApplySettingsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverApplySettingsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverApplySettingsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverApplySettingsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverApplySettingsResult = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverApplySettingsResult",
@@ -1236,24 +1230,21 @@ namespace py::cpp::Windows::Media::Miracast
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MiracastReceiverConnection), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MiracastReceiverConnection), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverConnection[] = {
         { "cursor_image_channel", reinterpret_cast<getter>(MiracastReceiverConnection_get_CursorImageChannel), nullptr, nullptr, nullptr },
         { "input_devices", reinterpret_cast<getter>(MiracastReceiverConnection_get_InputDevices), nullptr, nullptr, nullptr },
         { "stream_control", reinterpret_cast<getter>(MiracastReceiverConnection_get_StreamControl), nullptr, nullptr, nullptr },
         { "transmitter", reinterpret_cast<getter>(MiracastReceiverConnection_get_Transmitter), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverConnection = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverConnection",
@@ -1407,22 +1398,19 @@ namespace py::cpp::Windows::Media::Miracast
         { "get_deferral", reinterpret_cast<PyCFunction>(MiracastReceiverConnectionCreatedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MiracastReceiverConnectionCreatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverConnectionCreatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverConnectionCreatedEventArgs[] = {
         { "connection", reinterpret_cast<getter>(MiracastReceiverConnectionCreatedEventArgs_get_Connection), nullptr, nullptr, nullptr },
         { "pin", reinterpret_cast<getter>(MiracastReceiverConnectionCreatedEventArgs_get_Pin), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverConnectionCreatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverConnectionCreatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverConnectionCreatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverConnectionCreatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverConnectionCreatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverConnectionCreatedEventArgs = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverConnectionCreatedEventArgs",
@@ -1729,24 +1717,21 @@ namespace py::cpp::Windows::Media::Miracast
         { "remove_position_changed", reinterpret_cast<PyCFunction>(MiracastReceiverCursorImageChannel_remove_PositionChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_MiracastReceiverCursorImageChannel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverCursorImageChannel), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverCursorImageChannel[] = {
         { "image_stream", reinterpret_cast<getter>(MiracastReceiverCursorImageChannel_get_ImageStream), nullptr, nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(MiracastReceiverCursorImageChannel_get_IsEnabled), nullptr, nullptr, nullptr },
         { "max_image_size", reinterpret_cast<getter>(MiracastReceiverCursorImageChannel_get_MaxImageSize), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MiracastReceiverCursorImageChannel_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverCursorImageChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverCursorImageChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverCursorImageChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverCursorImageChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverCursorImageChannel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverCursorImageChannel = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverCursorImageChannel",
@@ -1937,22 +1922,19 @@ namespace py::cpp::Windows::Media::Miracast
     static PyMethodDef _methods_MiracastReceiverCursorImageChannelSettings[] = {
         { "_assign_array_", _assign_array_MiracastReceiverCursorImageChannelSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverCursorImageChannelSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverCursorImageChannelSettings[] = {
         { "max_image_size", reinterpret_cast<getter>(MiracastReceiverCursorImageChannelSettings_get_MaxImageSize), reinterpret_cast<setter>(MiracastReceiverCursorImageChannelSettings_put_MaxImageSize), nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(MiracastReceiverCursorImageChannelSettings_get_IsEnabled), reinterpret_cast<setter>(MiracastReceiverCursorImageChannelSettings_put_IsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverCursorImageChannelSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverCursorImageChannelSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverCursorImageChannelSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverCursorImageChannelSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverCursorImageChannelSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverCursorImageChannelSettings = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverCursorImageChannelSettings",
@@ -2035,21 +2017,18 @@ namespace py::cpp::Windows::Media::Miracast
     static PyMethodDef _methods_MiracastReceiverDisconnectedEventArgs[] = {
         { "_assign_array_", _assign_array_MiracastReceiverDisconnectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverDisconnectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverDisconnectedEventArgs[] = {
         { "connection", reinterpret_cast<getter>(MiracastReceiverDisconnectedEventArgs_get_Connection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverDisconnectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverDisconnectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverDisconnectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverDisconnectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverDisconnectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverDisconnectedEventArgs = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverDisconnectedEventArgs",
@@ -2367,24 +2346,21 @@ namespace py::cpp::Windows::Media::Miracast
         { "remove_changed", reinterpret_cast<PyCFunction>(MiracastReceiverGameControllerDevice_remove_Changed), METH_O, nullptr },
         { "_assign_array_", _assign_array_MiracastReceiverGameControllerDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverGameControllerDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverGameControllerDevice[] = {
         { "transmit_input", reinterpret_cast<getter>(MiracastReceiverGameControllerDevice_get_TransmitInput), reinterpret_cast<setter>(MiracastReceiverGameControllerDevice_put_TransmitInput), nullptr, nullptr },
         { "mode", reinterpret_cast<getter>(MiracastReceiverGameControllerDevice_get_Mode), reinterpret_cast<setter>(MiracastReceiverGameControllerDevice_put_Mode), nullptr, nullptr },
         { "is_requested_by_transmitter", reinterpret_cast<getter>(MiracastReceiverGameControllerDevice_get_IsRequestedByTransmitter), nullptr, nullptr, nullptr },
         { "is_transmitting_input", reinterpret_cast<getter>(MiracastReceiverGameControllerDevice_get_IsTransmittingInput), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverGameControllerDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverGameControllerDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverGameControllerDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverGameControllerDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverGameControllerDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverGameControllerDevice = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverGameControllerDevice",
@@ -2497,22 +2473,19 @@ namespace py::cpp::Windows::Media::Miracast
     static PyMethodDef _methods_MiracastReceiverInputDevices[] = {
         { "_assign_array_", _assign_array_MiracastReceiverInputDevices, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverInputDevices), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverInputDevices[] = {
         { "game_controller", reinterpret_cast<getter>(MiracastReceiverInputDevices_get_GameController), nullptr, nullptr, nullptr },
         { "keyboard", reinterpret_cast<getter>(MiracastReceiverInputDevices_get_Keyboard), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverInputDevices[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverInputDevices) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverInputDevices) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverInputDevices) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverInputDevices) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverInputDevices = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverInputDevices",
@@ -2761,23 +2734,20 @@ namespace py::cpp::Windows::Media::Miracast
         { "remove_changed", reinterpret_cast<PyCFunction>(MiracastReceiverKeyboardDevice_remove_Changed), METH_O, nullptr },
         { "_assign_array_", _assign_array_MiracastReceiverKeyboardDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverKeyboardDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverKeyboardDevice[] = {
         { "transmit_input", reinterpret_cast<getter>(MiracastReceiverKeyboardDevice_get_TransmitInput), reinterpret_cast<setter>(MiracastReceiverKeyboardDevice_put_TransmitInput), nullptr, nullptr },
         { "is_requested_by_transmitter", reinterpret_cast<getter>(MiracastReceiverKeyboardDevice_get_IsRequestedByTransmitter), nullptr, nullptr, nullptr },
         { "is_transmitting_input", reinterpret_cast<getter>(MiracastReceiverKeyboardDevice_get_IsTransmittingInput), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverKeyboardDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverKeyboardDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverKeyboardDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverKeyboardDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverKeyboardDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverKeyboardDevice = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverKeyboardDevice",
@@ -2961,23 +2931,20 @@ namespace py::cpp::Windows::Media::Miracast
         { "get_deferral", reinterpret_cast<PyCFunction>(MiracastReceiverMediaSourceCreatedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MiracastReceiverMediaSourceCreatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverMediaSourceCreatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverMediaSourceCreatedEventArgs[] = {
         { "connection", reinterpret_cast<getter>(MiracastReceiverMediaSourceCreatedEventArgs_get_Connection), nullptr, nullptr, nullptr },
         { "cursor_image_channel_settings", reinterpret_cast<getter>(MiracastReceiverMediaSourceCreatedEventArgs_get_CursorImageChannelSettings), nullptr, nullptr, nullptr },
         { "media_source", reinterpret_cast<getter>(MiracastReceiverMediaSourceCreatedEventArgs_get_MediaSource), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverMediaSourceCreatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverMediaSourceCreatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverMediaSourceCreatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverMediaSourceCreatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverMediaSourceCreatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverMediaSourceCreatedEventArgs = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverMediaSourceCreatedEventArgs",
@@ -3518,22 +3485,19 @@ namespace py::cpp::Windows::Media::Miracast
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MiracastReceiverSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MiracastReceiverSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverSession[] = {
         { "max_simultaneous_connections", reinterpret_cast<getter>(MiracastReceiverSession_get_MaxSimultaneousConnections), reinterpret_cast<setter>(MiracastReceiverSession_put_MaxSimultaneousConnections), nullptr, nullptr },
         { "allow_connection_takeover", reinterpret_cast<getter>(MiracastReceiverSession_get_AllowConnectionTakeover), reinterpret_cast<setter>(MiracastReceiverSession_put_AllowConnectionTakeover), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverSession = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverSession",
@@ -3646,22 +3610,19 @@ namespace py::cpp::Windows::Media::Miracast
     static PyMethodDef _methods_MiracastReceiverSessionStartResult[] = {
         { "_assign_array_", _assign_array_MiracastReceiverSessionStartResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverSessionStartResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverSessionStartResult[] = {
         { "extended_error", reinterpret_cast<getter>(MiracastReceiverSessionStartResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(MiracastReceiverSessionStartResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverSessionStartResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverSessionStartResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverSessionStartResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverSessionStartResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverSessionStartResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverSessionStartResult = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverSessionStartResult",
@@ -4059,8 +4020,7 @@ namespace py::cpp::Windows::Media::Miracast
     static PyMethodDef _methods_MiracastReceiverSettings[] = {
         { "_assign_array_", _assign_array_MiracastReceiverSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverSettings[] = {
         { "require_authorization_from_known_transmitters", reinterpret_cast<getter>(MiracastReceiverSettings_get_RequireAuthorizationFromKnownTransmitters), reinterpret_cast<setter>(MiracastReceiverSettings_put_RequireAuthorizationFromKnownTransmitters), nullptr, nullptr },
@@ -4068,16 +4028,14 @@ namespace py::cpp::Windows::Media::Miracast
         { "model_name", reinterpret_cast<getter>(MiracastReceiverSettings_get_ModelName), reinterpret_cast<setter>(MiracastReceiverSettings_put_ModelName), nullptr, nullptr },
         { "friendly_name", reinterpret_cast<getter>(MiracastReceiverSettings_get_FriendlyName), reinterpret_cast<setter>(MiracastReceiverSettings_put_FriendlyName), nullptr, nullptr },
         { "authorization_method", reinterpret_cast<getter>(MiracastReceiverSettings_get_AuthorizationMethod), reinterpret_cast<setter>(MiracastReceiverSettings_put_AuthorizationMethod), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverSettings = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverSettings",
@@ -4280,8 +4238,7 @@ namespace py::cpp::Windows::Media::Miracast
     static PyMethodDef _methods_MiracastReceiverStatus[] = {
         { "_assign_array_", _assign_array_MiracastReceiverStatus, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverStatus), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverStatus[] = {
         { "is_connection_takeover_supported", reinterpret_cast<getter>(MiracastReceiverStatus_get_IsConnectionTakeoverSupported), nullptr, nullptr, nullptr },
@@ -4289,16 +4246,14 @@ namespace py::cpp::Windows::Media::Miracast
         { "listening_status", reinterpret_cast<getter>(MiracastReceiverStatus_get_ListeningStatus), nullptr, nullptr, nullptr },
         { "max_simultaneous_connections", reinterpret_cast<getter>(MiracastReceiverStatus_get_MaxSimultaneousConnections), nullptr, nullptr, nullptr },
         { "wi_fi_status", reinterpret_cast<getter>(MiracastReceiverStatus_get_WiFiStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverStatus = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverStatus",
@@ -4589,21 +4544,18 @@ namespace py::cpp::Windows::Media::Miracast
         { "suggest_video_stream_settings_async", reinterpret_cast<PyCFunction>(MiracastReceiverStreamControl_SuggestVideoStreamSettingsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MiracastReceiverStreamControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverStreamControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverStreamControl[] = {
         { "mute_audio", reinterpret_cast<getter>(MiracastReceiverStreamControl_get_MuteAudio), reinterpret_cast<setter>(MiracastReceiverStreamControl_put_MuteAudio), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverStreamControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverStreamControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverStreamControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverStreamControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverStreamControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverStreamControl = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverStreamControl",
@@ -4794,22 +4746,19 @@ namespace py::cpp::Windows::Media::Miracast
     static PyMethodDef _methods_MiracastReceiverVideoStreamSettings[] = {
         { "_assign_array_", _assign_array_MiracastReceiverVideoStreamSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastReceiverVideoStreamSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastReceiverVideoStreamSettings[] = {
         { "size", reinterpret_cast<getter>(MiracastReceiverVideoStreamSettings_get_Size), reinterpret_cast<setter>(MiracastReceiverVideoStreamSettings_put_Size), nullptr, nullptr },
         { "bitrate", reinterpret_cast<getter>(MiracastReceiverVideoStreamSettings_get_Bitrate), reinterpret_cast<setter>(MiracastReceiverVideoStreamSettings_put_Bitrate), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastReceiverVideoStreamSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastReceiverVideoStreamSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastReceiverVideoStreamSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastReceiverVideoStreamSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastReceiverVideoStreamSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastReceiverVideoStreamSettings = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverVideoStreamSettings",
@@ -5101,24 +5050,21 @@ namespace py::cpp::Windows::Media::Miracast
         { "get_connections", reinterpret_cast<PyCFunction>(MiracastTransmitter_GetConnections), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MiracastTransmitter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MiracastTransmitter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MiracastTransmitter[] = {
         { "name", reinterpret_cast<getter>(MiracastTransmitter_get_Name), reinterpret_cast<setter>(MiracastTransmitter_put_Name), nullptr, nullptr },
         { "authorization_status", reinterpret_cast<getter>(MiracastTransmitter_get_AuthorizationStatus), reinterpret_cast<setter>(MiracastTransmitter_put_AuthorizationStatus), nullptr, nullptr },
         { "last_connection_time", reinterpret_cast<getter>(MiracastTransmitter_get_LastConnectionTime), nullptr, nullptr, nullptr },
         { "mac_address", reinterpret_cast<getter>(MiracastTransmitter_get_MacAddress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MiracastTransmitter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MiracastTransmitter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MiracastTransmitter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MiracastTransmitter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MiracastTransmitter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MiracastTransmitter = {
         "winrt._winrt_windows_media_miracast.MiracastTransmitter",

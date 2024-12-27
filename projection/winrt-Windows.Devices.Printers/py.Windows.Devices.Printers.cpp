@@ -149,22 +149,19 @@ namespace py::cpp::Windows::Devices::Printers
         { "get_unsupported_values", reinterpret_cast<PyCFunction>(IppAttributeError_GetUnsupportedValues), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IppAttributeError, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IppAttributeError), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IppAttributeError[] = {
         { "extended_error", reinterpret_cast<getter>(IppAttributeError_get_ExtendedError), nullptr, nullptr, nullptr },
         { "reason", reinterpret_cast<getter>(IppAttributeError_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IppAttributeError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppAttributeError) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppAttributeError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppAttributeError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppAttributeError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IppAttributeError = {
         "winrt._winrt_windows_devices_printers.IppAttributeError",
@@ -2617,21 +2614,18 @@ namespace py::cpp::Windows::Devices::Printers
         { "get_uri_schema_array", reinterpret_cast<PyCFunction>(IppAttributeValue_GetUriSchemaArray), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IppAttributeValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IppAttributeValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IppAttributeValue[] = {
         { "kind", reinterpret_cast<getter>(IppAttributeValue_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IppAttributeValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppAttributeValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppAttributeValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppAttributeValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppAttributeValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IppAttributeValue = {
         "winrt._winrt_windows_devices_printers.IppAttributeValue",
@@ -2641,8 +2635,7 @@ namespace py::cpp::Windows::Devices::Printers
         _type_slots_IppAttributeValue};
 
     static PyGetSetDef getset_IppAttributeValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_IppAttributeValue_Static[] = {
         { "create_boolean", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateBoolean), METH_VARARGS, nullptr },
@@ -2684,8 +2677,7 @@ namespace py::cpp::Windows::Devices::Printers
         { "create_uri_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUriArray), METH_VARARGS, nullptr },
         { "create_uri_schema", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUriSchema), METH_VARARGS, nullptr },
         { "create_uri_schema_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUriSchemaArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_IppAttributeValue_Static[] = 
     {
@@ -2695,14 +2687,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Spec type_spec_IppAttributeValue_Static =
-    {
+    static PyType_Spec type_spec_IppAttributeValue_Static = {
         "winrt._winrt_windows_devices_printers.IppAttributeValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_IppAttributeValue_Static
-    };
+        type_slots_IppAttributeValue_Static};
 
     // ----- IppIntegerRange class --------------------
 
@@ -2833,22 +2823,19 @@ namespace py::cpp::Windows::Devices::Printers
     static PyMethodDef _methods_IppIntegerRange[] = {
         { "_assign_array_", _assign_array_IppIntegerRange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IppIntegerRange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IppIntegerRange[] = {
         { "end", reinterpret_cast<getter>(IppIntegerRange_get_End), nullptr, nullptr, nullptr },
         { "start", reinterpret_cast<getter>(IppIntegerRange_get_Start), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IppIntegerRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppIntegerRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppIntegerRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppIntegerRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppIntegerRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IppIntegerRange = {
         "winrt._winrt_windows_devices_printers.IppIntegerRange",
@@ -3709,8 +3696,7 @@ namespace py::cpp::Windows::Devices::Printers
         { "set_printer_attributes_from_buffer", reinterpret_cast<PyCFunction>(IppPrintDevice_SetPrinterAttributesFromBuffer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IppPrintDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IppPrintDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IppPrintDevice[] = {
         { "printer_name", reinterpret_cast<getter>(IppPrintDevice_get_PrinterName), nullptr, nullptr, nullptr },
@@ -3719,16 +3705,14 @@ namespace py::cpp::Windows::Devices::Printers
         { "user_default_print_ticket", reinterpret_cast<getter>(IppPrintDevice_get_UserDefaultPrintTicket), reinterpret_cast<setter>(IppPrintDevice_put_UserDefaultPrintTicket), nullptr, nullptr },
         { "can_modify_user_default_print_ticket", reinterpret_cast<getter>(IppPrintDevice_get_CanModifyUserDefaultPrintTicket), nullptr, nullptr, nullptr },
         { "device_kind", reinterpret_cast<getter>(IppPrintDevice_get_DeviceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IppPrintDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppPrintDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppPrintDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppPrintDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppPrintDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IppPrintDevice = {
         "winrt._winrt_windows_devices_printers.IppPrintDevice",
@@ -3738,16 +3722,14 @@ namespace py::cpp::Windows::Devices::Printers
         _type_slots_IppPrintDevice};
 
     static PyGetSetDef getset_IppPrintDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_IppPrintDevice_Static[] = {
         { "from_id", reinterpret_cast<PyCFunction>(IppPrintDevice_FromId), METH_VARARGS, nullptr },
         { "from_printer_name", reinterpret_cast<PyCFunction>(IppPrintDevice_FromPrinterName), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(IppPrintDevice_GetDeviceSelector), METH_VARARGS, nullptr },
         { "is_ipp_printer", reinterpret_cast<PyCFunction>(IppPrintDevice_IsIppPrinter), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_IppPrintDevice_Static[] = 
     {
@@ -3757,14 +3739,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Spec type_spec_IppPrintDevice_Static =
-    {
+    static PyType_Spec type_spec_IppPrintDevice_Static = {
         "winrt._winrt_windows_devices_printers.IppPrintDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_IppPrintDevice_Static
-    };
+        type_slots_IppPrintDevice_Static};
 
     // ----- IppResolution class --------------------
 
@@ -3926,23 +3906,20 @@ namespace py::cpp::Windows::Devices::Printers
     static PyMethodDef _methods_IppResolution[] = {
         { "_assign_array_", _assign_array_IppResolution, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IppResolution), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IppResolution[] = {
         { "height", reinterpret_cast<getter>(IppResolution_get_Height), nullptr, nullptr, nullptr },
         { "unit", reinterpret_cast<getter>(IppResolution_get_Unit), nullptr, nullptr, nullptr },
         { "width", reinterpret_cast<getter>(IppResolution_get_Width), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IppResolution[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppResolution) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppResolution) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppResolution) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppResolution) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IppResolution = {
         "winrt._winrt_windows_devices_printers.IppResolution",
@@ -4055,22 +4032,19 @@ namespace py::cpp::Windows::Devices::Printers
     static PyMethodDef _methods_IppSetAttributesResult[] = {
         { "_assign_array_", _assign_array_IppSetAttributesResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IppSetAttributesResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IppSetAttributesResult[] = {
         { "attribute_errors", reinterpret_cast<getter>(IppSetAttributesResult_get_AttributeErrors), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(IppSetAttributesResult_get_Succeeded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IppSetAttributesResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppSetAttributesResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppSetAttributesResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppSetAttributesResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppSetAttributesResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IppSetAttributesResult = {
         "winrt._winrt_windows_devices_printers.IppSetAttributesResult",
@@ -4208,22 +4182,19 @@ namespace py::cpp::Windows::Devices::Printers
     static PyMethodDef _methods_IppTextWithLanguage[] = {
         { "_assign_array_", _assign_array_IppTextWithLanguage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IppTextWithLanguage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IppTextWithLanguage[] = {
         { "language", reinterpret_cast<getter>(IppTextWithLanguage_get_Language), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IppTextWithLanguage_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IppTextWithLanguage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppTextWithLanguage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppTextWithLanguage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppTextWithLanguage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppTextWithLanguage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IppTextWithLanguage = {
         "winrt._winrt_windows_devices_printers.IppTextWithLanguage",
@@ -4436,22 +4407,19 @@ namespace py::cpp::Windows::Devices::Printers
     static PyMethodDef _methods_PageConfigurationSettings[] = {
         { "_assign_array_", _assign_array_PageConfigurationSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PageConfigurationSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PageConfigurationSettings[] = {
         { "size_source", reinterpret_cast<getter>(PageConfigurationSettings_get_SizeSource), reinterpret_cast<setter>(PageConfigurationSettings_put_SizeSource), nullptr, nullptr },
         { "orientation_source", reinterpret_cast<getter>(PageConfigurationSettings_get_OrientationSource), reinterpret_cast<setter>(PageConfigurationSettings_put_OrientationSource), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PageConfigurationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PageConfigurationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PageConfigurationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PageConfigurationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PageConfigurationSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PageConfigurationSettings = {
         "winrt._winrt_windows_devices_printers.PageConfigurationSettings",
@@ -4626,21 +4594,18 @@ namespace py::cpp::Windows::Devices::Printers
         { "start_print_job_with_task_options", reinterpret_cast<PyCFunction>(PdlPassthroughProvider_StartPrintJobWithTaskOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PdlPassthroughProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PdlPassthroughProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PdlPassthroughProvider[] = {
         { "supported_pdl_content_types", reinterpret_cast<getter>(PdlPassthroughProvider_get_SupportedPdlContentTypes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PdlPassthroughProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdlPassthroughProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdlPassthroughProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdlPassthroughProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdlPassthroughProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PdlPassthroughProvider = {
         "winrt._winrt_windows_devices_printers.PdlPassthroughProvider",
@@ -4873,21 +4838,18 @@ namespace py::cpp::Windows::Devices::Printers
         { "_from", reinterpret_cast<PyCFunction>(_from_PdlPassthroughTarget), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PdlPassthroughTarget), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_PdlPassthroughTarget), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PdlPassthroughTarget[] = {
         { "print_job_id", reinterpret_cast<getter>(PdlPassthroughTarget_get_PrintJobId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PdlPassthroughTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdlPassthroughTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdlPassthroughTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdlPassthroughTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdlPassthroughTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PdlPassthroughTarget = {
         "winrt._winrt_windows_devices_printers.PdlPassthroughTarget",
@@ -5052,21 +5014,18 @@ namespace py::cpp::Windows::Devices::Printers
     static PyMethodDef _methods_Print3DDevice[] = {
         { "_assign_array_", _assign_array_Print3DDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DDevice[] = {
         { "print_schema", reinterpret_cast<getter>(Print3DDevice_get_PrintSchema), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DDevice = {
         "winrt._winrt_windows_devices_printers.Print3DDevice",
@@ -5076,14 +5035,12 @@ namespace py::cpp::Windows::Devices::Printers
         _type_slots_Print3DDevice};
 
     static PyGetSetDef getset_Print3DDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Print3DDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Print3DDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Print3DDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Print3DDevice_Static[] = 
     {
@@ -5093,14 +5050,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Spec type_spec_Print3DDevice_Static =
-    {
+    static PyType_Spec type_spec_Print3DDevice_Static = {
         "winrt._winrt_windows_devices_printers.Print3DDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Print3DDevice_Static
-    };
+        type_slots_Print3DDevice_Static};
 
     // ----- PrintSchema class --------------------
 
@@ -5273,20 +5228,17 @@ namespace py::cpp::Windows::Devices::Printers
         { "merge_and_validate_with_default_print_ticket_async", reinterpret_cast<PyCFunction>(PrintSchema_MergeAndValidateWithDefaultPrintTicketAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintSchema, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintSchema), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintSchema[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintSchema[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSchema) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSchema) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSchema) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSchema) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintSchema = {
         "winrt._winrt_windows_devices_printers.PrintSchema",

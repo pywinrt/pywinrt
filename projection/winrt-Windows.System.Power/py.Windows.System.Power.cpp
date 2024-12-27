@@ -384,19 +384,16 @@ namespace py::cpp::Windows::System::Power
     }
 
     static PyMethodDef _methods_BackgroundEnergyManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundEnergyManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundEnergyManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundEnergyManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundEnergyManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundEnergyManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundEnergyManager = {
         "winrt._winrt_windows_system_power.BackgroundEnergyManager",
@@ -414,16 +411,14 @@ namespace py::cpp::Windows::System::Power
         { "recent_energy_usage", reinterpret_cast<getter>(BackgroundEnergyManager_get_RecentEnergyUsage), nullptr, nullptr, nullptr },
         { "recent_energy_usage_level", reinterpret_cast<getter>(BackgroundEnergyManager_get_RecentEnergyUsageLevel), nullptr, nullptr, nullptr },
         { "termination_usage_level", reinterpret_cast<getter>(BackgroundEnergyManager_get_TerminationUsageLevel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BackgroundEnergyManager_Static[] = {
         { "add_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_add_RecentEnergyUsageIncreased), METH_O, nullptr },
         { "remove_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_remove_RecentEnergyUsageIncreased), METH_O, nullptr },
         { "add_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_add_RecentEnergyUsageReturnedToLow), METH_O, nullptr },
         { "remove_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_remove_RecentEnergyUsageReturnedToLow), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BackgroundEnergyManager_Static[] = 
     {
@@ -433,14 +428,12 @@ namespace py::cpp::Windows::System::Power
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundEnergyManager_Static =
-    {
+    static PyType_Spec type_spec_BackgroundEnergyManager_Static = {
         "winrt._winrt_windows_system_power.BackgroundEnergyManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundEnergyManager_Static
-    };
+        type_slots_BackgroundEnergyManager_Static};
 
     // ----- ForegroundEnergyManager class --------------------
 
@@ -762,19 +755,16 @@ namespace py::cpp::Windows::System::Power
     }
 
     static PyMethodDef _methods_ForegroundEnergyManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ForegroundEnergyManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ForegroundEnergyManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ForegroundEnergyManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ForegroundEnergyManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ForegroundEnergyManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ForegroundEnergyManager = {
         "winrt._winrt_windows_system_power.ForegroundEnergyManager",
@@ -790,16 +780,14 @@ namespace py::cpp::Windows::System::Power
         { "near_max_acceptable_usage_level", reinterpret_cast<getter>(ForegroundEnergyManager_get_NearMaxAcceptableUsageLevel), nullptr, nullptr, nullptr },
         { "recent_energy_usage", reinterpret_cast<getter>(ForegroundEnergyManager_get_RecentEnergyUsage), nullptr, nullptr, nullptr },
         { "recent_energy_usage_level", reinterpret_cast<getter>(ForegroundEnergyManager_get_RecentEnergyUsageLevel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ForegroundEnergyManager_Static[] = {
         { "add_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_add_RecentEnergyUsageIncreased), METH_O, nullptr },
         { "remove_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_remove_RecentEnergyUsageIncreased), METH_O, nullptr },
         { "add_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_add_RecentEnergyUsageReturnedToLow), METH_O, nullptr },
         { "remove_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_remove_RecentEnergyUsageReturnedToLow), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ForegroundEnergyManager_Static[] = 
     {
@@ -809,14 +797,12 @@ namespace py::cpp::Windows::System::Power
         { }
     };
 
-    static PyType_Spec type_spec_ForegroundEnergyManager_Static =
-    {
+    static PyType_Spec type_spec_ForegroundEnergyManager_Static = {
         "winrt._winrt_windows_system_power.ForegroundEnergyManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ForegroundEnergyManager_Static
-    };
+        type_slots_ForegroundEnergyManager_Static};
 
     // ----- PowerManager class --------------------
 
@@ -1303,19 +1289,16 @@ namespace py::cpp::Windows::System::Power
     }
 
     static PyMethodDef _methods_PowerManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PowerManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PowerManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PowerManager = {
         "winrt._winrt_windows_system_power.PowerManager",
@@ -1330,8 +1313,7 @@ namespace py::cpp::Windows::System::Power
         { "power_supply_status", reinterpret_cast<getter>(PowerManager_get_PowerSupplyStatus), nullptr, nullptr, nullptr },
         { "remaining_charge_percent", reinterpret_cast<getter>(PowerManager_get_RemainingChargePercent), nullptr, nullptr, nullptr },
         { "remaining_discharge_time", reinterpret_cast<getter>(PowerManager_get_RemainingDischargeTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PowerManager_Static[] = {
         { "add_battery_status_changed", reinterpret_cast<PyCFunction>(PowerManager_add_BatteryStatusChanged), METH_O, nullptr },
@@ -1344,8 +1326,7 @@ namespace py::cpp::Windows::System::Power
         { "remove_remaining_charge_percent_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_RemainingChargePercentChanged), METH_O, nullptr },
         { "add_remaining_discharge_time_changed", reinterpret_cast<PyCFunction>(PowerManager_add_RemainingDischargeTimeChanged), METH_O, nullptr },
         { "remove_remaining_discharge_time_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_RemainingDischargeTimeChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PowerManager_Static[] = 
     {
@@ -1355,14 +1336,12 @@ namespace py::cpp::Windows::System::Power
         { }
     };
 
-    static PyType_Spec type_spec_PowerManager_Static =
-    {
+    static PyType_Spec type_spec_PowerManager_Static = {
         "winrt._winrt_windows_system_power.PowerManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PowerManager_Static
-    };
+        type_slots_PowerManager_Static};
 
     // ----- Windows.System.Power Initialization --------------------
 

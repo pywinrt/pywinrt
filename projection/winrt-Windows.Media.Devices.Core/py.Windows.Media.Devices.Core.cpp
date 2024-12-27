@@ -639,8 +639,7 @@ namespace py::cpp::Windows::Media::Devices::Core
         { "unproject_pixels_at_unit_depth", reinterpret_cast<PyCFunction>(CameraIntrinsics_UnprojectPixelsAtUnitDepth), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CameraIntrinsics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CameraIntrinsics), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CameraIntrinsics[] = {
         { "focal_length", reinterpret_cast<getter>(CameraIntrinsics_get_FocalLength), nullptr, nullptr, nullptr },
@@ -650,16 +649,14 @@ namespace py::cpp::Windows::Media::Devices::Core
         { "radial_distortion", reinterpret_cast<getter>(CameraIntrinsics_get_RadialDistortion), nullptr, nullptr, nullptr },
         { "tangential_distortion", reinterpret_cast<getter>(CameraIntrinsics_get_TangentialDistortion), nullptr, nullptr, nullptr },
         { "undistorted_projection_transform", reinterpret_cast<getter>(CameraIntrinsics_get_UndistortedProjectionTransform), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CameraIntrinsics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraIntrinsics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraIntrinsics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraIntrinsics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraIntrinsics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CameraIntrinsics = {
         "winrt._winrt_windows_media_devices_core.CameraIntrinsics",
@@ -961,20 +958,17 @@ namespace py::cpp::Windows::Media::Devices::Core
         { "_from", reinterpret_cast<PyCFunction>(_from_DepthCorrelatedCoordinateMapper), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DepthCorrelatedCoordinateMapper), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DepthCorrelatedCoordinateMapper), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DepthCorrelatedCoordinateMapper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DepthCorrelatedCoordinateMapper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DepthCorrelatedCoordinateMapper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DepthCorrelatedCoordinateMapper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DepthCorrelatedCoordinateMapper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DepthCorrelatedCoordinateMapper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DepthCorrelatedCoordinateMapper = {
         "winrt._winrt_windows_media_devices_core.DepthCorrelatedCoordinateMapper",
@@ -1207,8 +1201,7 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameControlCapabilities[] = {
         { "_assign_array_", _assign_array_FrameControlCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameControlCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameControlCapabilities[] = {
         { "exposure", reinterpret_cast<getter>(FrameControlCapabilities_get_Exposure), nullptr, nullptr, nullptr },
@@ -1217,16 +1210,14 @@ namespace py::cpp::Windows::Media::Devices::Core
         { "iso_speed", reinterpret_cast<getter>(FrameControlCapabilities_get_IsoSpeed), nullptr, nullptr, nullptr },
         { "photo_confirmation_supported", reinterpret_cast<getter>(FrameControlCapabilities_get_PhotoConfirmationSupported), nullptr, nullptr, nullptr },
         { "flash", reinterpret_cast<getter>(FrameControlCapabilities_get_Flash), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameControlCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameControlCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameControlCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameControlCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameControlCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameControlCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameControlCapabilities",
@@ -1520,8 +1511,7 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameController[] = {
         { "_assign_array_", _assign_array_FrameController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameController[] = {
         { "photo_confirmation_enabled", reinterpret_cast<getter>(FrameController_get_PhotoConfirmationEnabled), reinterpret_cast<setter>(FrameController_put_PhotoConfirmationEnabled), nullptr, nullptr },
@@ -1530,16 +1520,14 @@ namespace py::cpp::Windows::Media::Devices::Core
         { "focus_control", reinterpret_cast<getter>(FrameController_get_FocusControl), nullptr, nullptr, nullptr },
         { "iso_speed_control", reinterpret_cast<getter>(FrameController_get_IsoSpeedControl), nullptr, nullptr, nullptr },
         { "flash_control", reinterpret_cast<getter>(FrameController_get_FlashControl), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameController = {
         "winrt._winrt_windows_media_devices_core.FrameController",
@@ -1712,24 +1700,21 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameExposureCapabilities[] = {
         { "_assign_array_", _assign_array_FrameExposureCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameExposureCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameExposureCapabilities[] = {
         { "max", reinterpret_cast<getter>(FrameExposureCapabilities_get_Max), nullptr, nullptr, nullptr },
         { "min", reinterpret_cast<getter>(FrameExposureCapabilities_get_Min), nullptr, nullptr, nullptr },
         { "step", reinterpret_cast<getter>(FrameExposureCapabilities_get_Step), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(FrameExposureCapabilities_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameExposureCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameExposureCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameExposureCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameExposureCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameExposureCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameExposureCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameExposureCapabilities",
@@ -1902,24 +1887,21 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameExposureCompensationCapabilities[] = {
         { "_assign_array_", _assign_array_FrameExposureCompensationCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameExposureCompensationCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameExposureCompensationCapabilities[] = {
         { "max", reinterpret_cast<getter>(FrameExposureCompensationCapabilities_get_Max), nullptr, nullptr, nullptr },
         { "min", reinterpret_cast<getter>(FrameExposureCompensationCapabilities_get_Min), nullptr, nullptr, nullptr },
         { "step", reinterpret_cast<getter>(FrameExposureCompensationCapabilities_get_Step), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(FrameExposureCompensationCapabilities_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameExposureCompensationCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameExposureCompensationCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameExposureCompensationCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameExposureCompensationCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameExposureCompensationCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameExposureCompensationCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameExposureCompensationCapabilities",
@@ -2041,21 +2023,18 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameExposureCompensationControl[] = {
         { "_assign_array_", _assign_array_FrameExposureCompensationControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameExposureCompensationControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameExposureCompensationControl[] = {
         { "value", reinterpret_cast<getter>(FrameExposureCompensationControl_get_Value), reinterpret_cast<setter>(FrameExposureCompensationControl_put_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameExposureCompensationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameExposureCompensationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameExposureCompensationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameExposureCompensationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameExposureCompensationControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameExposureCompensationControl = {
         "winrt._winrt_windows_media_devices_core.FrameExposureCompensationControl",
@@ -2246,22 +2225,19 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameExposureControl[] = {
         { "_assign_array_", _assign_array_FrameExposureControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameExposureControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameExposureControl[] = {
         { "value", reinterpret_cast<getter>(FrameExposureControl_get_Value), reinterpret_cast<setter>(FrameExposureControl_put_Value), nullptr, nullptr },
         { "auto", reinterpret_cast<getter>(FrameExposureControl_get_Auto), reinterpret_cast<setter>(FrameExposureControl_put_Auto), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameExposureControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameExposureControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameExposureControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameExposureControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameExposureControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameExposureControl = {
         "winrt._winrt_windows_media_devices_core.FrameExposureControl",
@@ -2404,23 +2380,20 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameFlashCapabilities[] = {
         { "_assign_array_", _assign_array_FrameFlashCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameFlashCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameFlashCapabilities[] = {
         { "power_supported", reinterpret_cast<getter>(FrameFlashCapabilities_get_PowerSupported), nullptr, nullptr, nullptr },
         { "red_eye_reduction_supported", reinterpret_cast<getter>(FrameFlashCapabilities_get_RedEyeReductionSupported), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(FrameFlashCapabilities_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameFlashCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameFlashCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameFlashCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameFlashCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameFlashCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameFlashCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameFlashCapabilities",
@@ -2749,24 +2722,21 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameFlashControl[] = {
         { "_assign_array_", _assign_array_FrameFlashControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameFlashControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameFlashControl[] = {
         { "red_eye_reduction", reinterpret_cast<getter>(FrameFlashControl_get_RedEyeReduction), reinterpret_cast<setter>(FrameFlashControl_put_RedEyeReduction), nullptr, nullptr },
         { "power_percent", reinterpret_cast<getter>(FrameFlashControl_get_PowerPercent), reinterpret_cast<setter>(FrameFlashControl_put_PowerPercent), nullptr, nullptr },
         { "mode", reinterpret_cast<getter>(FrameFlashControl_get_Mode), reinterpret_cast<setter>(FrameFlashControl_put_Mode), nullptr, nullptr },
         { "auto", reinterpret_cast<getter>(FrameFlashControl_get_Auto), reinterpret_cast<setter>(FrameFlashControl_put_Auto), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameFlashControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameFlashControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameFlashControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameFlashControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameFlashControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameFlashControl = {
         "winrt._winrt_windows_media_devices_core.FrameFlashControl",
@@ -2939,24 +2909,21 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameFocusCapabilities[] = {
         { "_assign_array_", _assign_array_FrameFocusCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameFocusCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameFocusCapabilities[] = {
         { "max", reinterpret_cast<getter>(FrameFocusCapabilities_get_Max), nullptr, nullptr, nullptr },
         { "min", reinterpret_cast<getter>(FrameFocusCapabilities_get_Min), nullptr, nullptr, nullptr },
         { "step", reinterpret_cast<getter>(FrameFocusCapabilities_get_Step), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(FrameFocusCapabilities_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameFocusCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameFocusCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameFocusCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameFocusCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameFocusCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameFocusCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameFocusCapabilities",
@@ -3078,21 +3045,18 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameFocusControl[] = {
         { "_assign_array_", _assign_array_FrameFocusControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameFocusControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameFocusControl[] = {
         { "value", reinterpret_cast<getter>(FrameFocusControl_get_Value), reinterpret_cast<setter>(FrameFocusControl_put_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameFocusControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameFocusControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameFocusControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameFocusControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameFocusControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameFocusControl = {
         "winrt._winrt_windows_media_devices_core.FrameFocusControl",
@@ -3265,24 +3229,21 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameIsoSpeedCapabilities[] = {
         { "_assign_array_", _assign_array_FrameIsoSpeedCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameIsoSpeedCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameIsoSpeedCapabilities[] = {
         { "max", reinterpret_cast<getter>(FrameIsoSpeedCapabilities_get_Max), nullptr, nullptr, nullptr },
         { "min", reinterpret_cast<getter>(FrameIsoSpeedCapabilities_get_Min), nullptr, nullptr, nullptr },
         { "step", reinterpret_cast<getter>(FrameIsoSpeedCapabilities_get_Step), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(FrameIsoSpeedCapabilities_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameIsoSpeedCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameIsoSpeedCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameIsoSpeedCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameIsoSpeedCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameIsoSpeedCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameIsoSpeedCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameIsoSpeedCapabilities",
@@ -3473,22 +3434,19 @@ namespace py::cpp::Windows::Media::Devices::Core
     static PyMethodDef _methods_FrameIsoSpeedControl[] = {
         { "_assign_array_", _assign_array_FrameIsoSpeedControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameIsoSpeedControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameIsoSpeedControl[] = {
         { "value", reinterpret_cast<getter>(FrameIsoSpeedControl_get_Value), reinterpret_cast<setter>(FrameIsoSpeedControl_put_Value), nullptr, nullptr },
         { "auto", reinterpret_cast<getter>(FrameIsoSpeedControl_get_Auto), reinterpret_cast<setter>(FrameIsoSpeedControl_put_Auto), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameIsoSpeedControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameIsoSpeedControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameIsoSpeedControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameIsoSpeedControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameIsoSpeedControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameIsoSpeedControl = {
         "winrt._winrt_windows_media_devices_core.FrameIsoSpeedControl",
@@ -3814,8 +3772,7 @@ namespace py::cpp::Windows::Media::Devices::Core
         { "get_highest_concurrent_frame_rate", reinterpret_cast<PyCFunction>(VariablePhotoSequenceController_GetHighestConcurrentFrameRate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VariablePhotoSequenceController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VariablePhotoSequenceController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VariablePhotoSequenceController[] = {
         { "photos_per_second_limit", reinterpret_cast<getter>(VariablePhotoSequenceController_get_PhotosPerSecondLimit), reinterpret_cast<setter>(VariablePhotoSequenceController_put_PhotosPerSecondLimit), nullptr, nullptr },
@@ -3823,16 +3780,14 @@ namespace py::cpp::Windows::Media::Devices::Core
         { "frame_capabilities", reinterpret_cast<getter>(VariablePhotoSequenceController_get_FrameCapabilities), nullptr, nullptr, nullptr },
         { "max_photos_per_second", reinterpret_cast<getter>(VariablePhotoSequenceController_get_MaxPhotosPerSecond), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(VariablePhotoSequenceController_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VariablePhotoSequenceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VariablePhotoSequenceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VariablePhotoSequenceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VariablePhotoSequenceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VariablePhotoSequenceController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VariablePhotoSequenceController = {
         "winrt._winrt_windows_media_devices_core.VariablePhotoSequenceController",

@@ -533,21 +533,18 @@ namespace py::cpp::Microsoft::Windows::System
         { "set_environment_variable", reinterpret_cast<PyCFunction>(EnvironmentManager_SetEnvironmentVariable), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EnvironmentManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EnvironmentManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EnvironmentManager[] = {
         { "are_changes_tracked", reinterpret_cast<getter>(EnvironmentManager_get_AreChangesTracked), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EnvironmentManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnvironmentManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnvironmentManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnvironmentManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnvironmentManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EnvironmentManager = {
         "winrt._winrt_microsoft_windows_system.EnvironmentManager",
@@ -558,15 +555,13 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyGetSetDef getset_EnvironmentManager_Static[] = {
         { "is_supported", reinterpret_cast<getter>(EnvironmentManager_get_IsSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EnvironmentManager_Static[] = {
         { "get_for_machine", reinterpret_cast<PyCFunction>(EnvironmentManager_GetForMachine), METH_VARARGS, nullptr },
         { "get_for_process", reinterpret_cast<PyCFunction>(EnvironmentManager_GetForProcess), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(EnvironmentManager_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EnvironmentManager_Static[] = 
     {
@@ -576,14 +571,12 @@ namespace py::cpp::Microsoft::Windows::System
         { }
     };
 
-    static PyType_Spec type_spec_EnvironmentManager_Static =
-    {
+    static PyType_Spec type_spec_EnvironmentManager_Static = {
         "winrt._winrt_microsoft_windows_system.EnvironmentManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EnvironmentManager_Static
-    };
+        type_slots_EnvironmentManager_Static};
 
     // ----- Microsoft.Windows.System Initialization --------------------
 

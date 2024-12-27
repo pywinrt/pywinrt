@@ -404,8 +404,7 @@ namespace py::cpp::Microsoft::Graphics::Display
         { "is_hdr_metadata_format_currently_supported", reinterpret_cast<PyCFunction>(DisplayAdvancedColorInfo_IsHdrMetadataFormatCurrentlySupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DisplayAdvancedColorInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayAdvancedColorInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayAdvancedColorInfo[] = {
         { "blue_primary", reinterpret_cast<getter>(DisplayAdvancedColorInfo_get_BluePrimary), nullptr, nullptr, nullptr },
@@ -417,16 +416,14 @@ namespace py::cpp::Microsoft::Graphics::Display
         { "red_primary", reinterpret_cast<getter>(DisplayAdvancedColorInfo_get_RedPrimary), nullptr, nullptr, nullptr },
         { "sdr_white_level_in_nits", reinterpret_cast<getter>(DisplayAdvancedColorInfo_get_SdrWhiteLevelInNits), nullptr, nullptr, nullptr },
         { "white_point", reinterpret_cast<getter>(DisplayAdvancedColorInfo_get_WhitePoint), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayAdvancedColorInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayAdvancedColorInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayAdvancedColorInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayAdvancedColorInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAdvancedColorInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayAdvancedColorInfo = {
         "winrt._winrt_microsoft_graphics_display.DisplayAdvancedColorInfo",
@@ -1081,22 +1078,19 @@ namespace py::cpp::Microsoft::Graphics::Display
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayInformation), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DisplayInformation), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DisplayInformation), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DisplayInformation[] = {
         { "dispatcher_queue", reinterpret_cast<getter>(DisplayInformation_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { "is_stereo_enabled", reinterpret_cast<getter>(DisplayInformation_get_IsStereoEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DisplayInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayInformation = {
         "winrt._winrt_microsoft_graphics_display.DisplayInformation",
@@ -1106,14 +1100,12 @@ namespace py::cpp::Microsoft::Graphics::Display
         _type_slots_DisplayInformation};
 
     static PyGetSetDef getset_DisplayInformation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DisplayInformation_Static[] = {
         { "create_for_display_id", reinterpret_cast<PyCFunction>(DisplayInformation_CreateForDisplayId), METH_VARARGS, nullptr },
         { "create_for_window_id", reinterpret_cast<PyCFunction>(DisplayInformation_CreateForWindowId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DisplayInformation_Static[] = 
     {
@@ -1123,14 +1115,12 @@ namespace py::cpp::Microsoft::Graphics::Display
         { }
     };
 
-    static PyType_Spec type_spec_DisplayInformation_Static =
-    {
+    static PyType_Spec type_spec_DisplayInformation_Static = {
         "winrt._winrt_microsoft_graphics_display.DisplayInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DisplayInformation_Static
-    };
+        type_slots_DisplayInformation_Static};
 
     // ----- Microsoft.Graphics.Display Initialization --------------------
 

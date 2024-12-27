@@ -138,23 +138,20 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static PyMethodDef _methods_GuidanceAudioNotificationRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_GuidanceAudioNotificationRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceAudioNotificationRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceAudioNotificationRequestedEventArgs[] = {
         { "audio_file_paths", reinterpret_cast<getter>(GuidanceAudioNotificationRequestedEventArgs_get_AudioFilePaths), nullptr, nullptr, nullptr },
         { "audio_notification", reinterpret_cast<getter>(GuidanceAudioNotificationRequestedEventArgs_get_AudioNotification), nullptr, nullptr, nullptr },
         { "audio_text", reinterpret_cast<getter>(GuidanceAudioNotificationRequestedEventArgs_get_AudioText), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceAudioNotificationRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceAudioNotificationRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceAudioNotificationRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceAudioNotificationRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceAudioNotificationRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceAudioNotificationRequestedEventArgs = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceAudioNotificationRequestedEventArgs",
@@ -267,22 +264,19 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static PyMethodDef _methods_GuidanceLaneInfo[] = {
         { "_assign_array_", _assign_array_GuidanceLaneInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceLaneInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceLaneInfo[] = {
         { "is_on_route", reinterpret_cast<getter>(GuidanceLaneInfo_get_IsOnRoute), nullptr, nullptr, nullptr },
         { "lane_markers", reinterpret_cast<getter>(GuidanceLaneInfo_get_LaneMarkers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceLaneInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceLaneInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceLaneInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceLaneInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceLaneInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceLaneInfo = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceLaneInfo",
@@ -695,8 +689,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static PyMethodDef _methods_GuidanceManeuver[] = {
         { "_assign_array_", _assign_array_GuidanceManeuver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceManeuver), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceManeuver[] = {
         { "departure_road_name", reinterpret_cast<getter>(GuidanceManeuver_get_DepartureRoadName), nullptr, nullptr, nullptr },
@@ -711,16 +704,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "road_signpost", reinterpret_cast<getter>(GuidanceManeuver_get_RoadSignpost), nullptr, nullptr, nullptr },
         { "start_angle", reinterpret_cast<getter>(GuidanceManeuver_get_StartAngle), nullptr, nullptr, nullptr },
         { "start_location", reinterpret_cast<getter>(GuidanceManeuver_get_StartLocation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceManeuver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceManeuver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceManeuver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceManeuver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceManeuver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceManeuver = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceManeuver",
@@ -923,8 +914,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static PyMethodDef _methods_GuidanceMapMatchedCoordinate[] = {
         { "_assign_array_", _assign_array_GuidanceMapMatchedCoordinate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceMapMatchedCoordinate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceMapMatchedCoordinate[] = {
         { "current_heading", reinterpret_cast<getter>(GuidanceMapMatchedCoordinate_get_CurrentHeading), nullptr, nullptr, nullptr },
@@ -932,16 +922,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "is_on_street", reinterpret_cast<getter>(GuidanceMapMatchedCoordinate_get_IsOnStreet), nullptr, nullptr, nullptr },
         { "location", reinterpret_cast<getter>(GuidanceMapMatchedCoordinate_get_Location), nullptr, nullptr, nullptr },
         { "road", reinterpret_cast<getter>(GuidanceMapMatchedCoordinate_get_Road), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceMapMatchedCoordinate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceMapMatchedCoordinate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceMapMatchedCoordinate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceMapMatchedCoordinate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceMapMatchedCoordinate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceMapMatchedCoordinate = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceMapMatchedCoordinate",
@@ -2240,23 +2228,20 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "remove_audio_notification_requested", reinterpret_cast<PyCFunction>(GuidanceNavigator_remove_AudioNotificationRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_GuidanceNavigator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceNavigator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceNavigator[] = {
         { "audio_notifications", reinterpret_cast<getter>(GuidanceNavigator_get_AudioNotifications), reinterpret_cast<setter>(GuidanceNavigator_put_AudioNotifications), nullptr, nullptr },
         { "audio_measurement_system", reinterpret_cast<getter>(GuidanceNavigator_get_AudioMeasurementSystem), reinterpret_cast<setter>(GuidanceNavigator_put_AudioMeasurementSystem), nullptr, nullptr },
         { "is_guidance_audio_muted", reinterpret_cast<getter>(GuidanceNavigator_get_IsGuidanceAudioMuted), reinterpret_cast<setter>(GuidanceNavigator_put_IsGuidanceAudioMuted), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceNavigator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceNavigator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceNavigator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceNavigator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceNavigator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceNavigator = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceNavigator",
@@ -2267,13 +2252,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyGetSetDef getset_GuidanceNavigator_Static[] = {
         { "use_app_provided_voice", reinterpret_cast<getter>(GuidanceNavigator_get_UseAppProvidedVoice), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GuidanceNavigator_Static[] = {
         { "get_current", reinterpret_cast<PyCFunction>(GuidanceNavigator_GetCurrent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GuidanceNavigator_Static[] = 
     {
@@ -2283,14 +2266,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Spec type_spec_GuidanceNavigator_Static =
-    {
+    static PyType_Spec type_spec_GuidanceNavigator_Static = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceNavigator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GuidanceNavigator_Static
-    };
+        type_slots_GuidanceNavigator_Static};
 
     // ----- GuidanceReroutedEventArgs class --------------------
 
@@ -2366,21 +2347,18 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static PyMethodDef _methods_GuidanceReroutedEventArgs[] = {
         { "_assign_array_", _assign_array_GuidanceReroutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceReroutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceReroutedEventArgs[] = {
         { "route", reinterpret_cast<getter>(GuidanceReroutedEventArgs_get_Route), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceReroutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceReroutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceReroutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceReroutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceReroutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceReroutedEventArgs = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceReroutedEventArgs",
@@ -2733,8 +2711,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static PyMethodDef _methods_GuidanceRoadSegment[] = {
         { "_assign_array_", _assign_array_GuidanceRoadSegment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceRoadSegment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceRoadSegment[] = {
         { "id", reinterpret_cast<getter>(GuidanceRoadSegment_get_Id), nullptr, nullptr, nullptr },
@@ -2747,16 +2724,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "speed_limit", reinterpret_cast<getter>(GuidanceRoadSegment_get_SpeedLimit), nullptr, nullptr, nullptr },
         { "travel_time", reinterpret_cast<getter>(GuidanceRoadSegment_get_TravelTime), nullptr, nullptr, nullptr },
         { "is_scenic", reinterpret_cast<getter>(GuidanceRoadSegment_get_IsScenic), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceRoadSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceRoadSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceRoadSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceRoadSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceRoadSegment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceRoadSegment = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceRoadSegment",
@@ -2959,8 +2934,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static PyMethodDef _methods_GuidanceRoadSignpost[] = {
         { "_assign_array_", _assign_array_GuidanceRoadSignpost, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceRoadSignpost), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceRoadSignpost[] = {
         { "background_color", reinterpret_cast<getter>(GuidanceRoadSignpost_get_BackgroundColor), nullptr, nullptr, nullptr },
@@ -2968,16 +2942,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "exit_directions", reinterpret_cast<getter>(GuidanceRoadSignpost_get_ExitDirections), nullptr, nullptr, nullptr },
         { "exit_number", reinterpret_cast<getter>(GuidanceRoadSignpost_get_ExitNumber), nullptr, nullptr, nullptr },
         { "foreground_color", reinterpret_cast<getter>(GuidanceRoadSignpost_get_ForegroundColor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceRoadSignpost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceRoadSignpost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceRoadSignpost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceRoadSignpost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceRoadSignpost) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceRoadSignpost = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceRoadSignpost",
@@ -3335,8 +3307,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "convert_to_map_route", reinterpret_cast<PyCFunction>(GuidanceRoute_ConvertToMapRoute), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GuidanceRoute, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceRoute), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceRoute[] = {
         { "bounding_box", reinterpret_cast<getter>(GuidanceRoute_get_BoundingBox), nullptr, nullptr, nullptr },
@@ -3345,16 +3316,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "maneuvers", reinterpret_cast<getter>(GuidanceRoute_get_Maneuvers), nullptr, nullptr, nullptr },
         { "path", reinterpret_cast<getter>(GuidanceRoute_get_Path), nullptr, nullptr, nullptr },
         { "road_segments", reinterpret_cast<getter>(GuidanceRoute_get_RoadSegments), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceRoute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceRoute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceRoute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceRoute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceRoute) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceRoute = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceRoute",
@@ -3364,14 +3333,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         _type_slots_GuidanceRoute};
 
     static PyGetSetDef getset_GuidanceRoute_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GuidanceRoute_Static[] = {
         { "can_create_from_map_route", reinterpret_cast<PyCFunction>(GuidanceRoute_CanCreateFromMapRoute), METH_VARARGS, nullptr },
         { "try_create_from_map_route", reinterpret_cast<PyCFunction>(GuidanceRoute_TryCreateFromMapRoute), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GuidanceRoute_Static[] = 
     {
@@ -3381,14 +3348,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Spec type_spec_GuidanceRoute_Static =
-    {
+    static PyType_Spec type_spec_GuidanceRoute_Static = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceRoute_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GuidanceRoute_Static
-    };
+        type_slots_GuidanceRoute_Static};
 
     // ----- GuidanceTelemetryCollector class --------------------
 
@@ -3723,23 +3688,20 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "clear_local_data", reinterpret_cast<PyCFunction>(GuidanceTelemetryCollector_ClearLocalData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GuidanceTelemetryCollector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceTelemetryCollector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceTelemetryCollector[] = {
         { "upload_frequency", reinterpret_cast<getter>(GuidanceTelemetryCollector_get_UploadFrequency), reinterpret_cast<setter>(GuidanceTelemetryCollector_put_UploadFrequency), nullptr, nullptr },
         { "speed_trigger", reinterpret_cast<getter>(GuidanceTelemetryCollector_get_SpeedTrigger), reinterpret_cast<setter>(GuidanceTelemetryCollector_put_SpeedTrigger), nullptr, nullptr },
         { "enabled", reinterpret_cast<getter>(GuidanceTelemetryCollector_get_Enabled), reinterpret_cast<setter>(GuidanceTelemetryCollector_put_Enabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceTelemetryCollector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceTelemetryCollector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceTelemetryCollector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceTelemetryCollector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceTelemetryCollector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceTelemetryCollector = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceTelemetryCollector",
@@ -3749,13 +3711,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         _type_slots_GuidanceTelemetryCollector};
 
     static PyGetSetDef getset_GuidanceTelemetryCollector_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GuidanceTelemetryCollector_Static[] = {
         { "get_current", reinterpret_cast<PyCFunction>(GuidanceTelemetryCollector_GetCurrent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GuidanceTelemetryCollector_Static[] = 
     {
@@ -3765,14 +3725,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Spec type_spec_GuidanceTelemetryCollector_Static =
-    {
+    static PyType_Spec type_spec_GuidanceTelemetryCollector_Static = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceTelemetryCollector_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GuidanceTelemetryCollector_Static
-    };
+        type_slots_GuidanceTelemetryCollector_Static};
 
     // ----- GuidanceUpdatedEventArgs class --------------------
 
@@ -4238,8 +4196,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static PyMethodDef _methods_GuidanceUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_GuidanceUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidanceUpdatedEventArgs[] = {
         { "after_next_maneuver", reinterpret_cast<getter>(GuidanceUpdatedEventArgs_get_AfterNextManeuver), nullptr, nullptr, nullptr },
@@ -4256,16 +4213,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "road_name", reinterpret_cast<getter>(GuidanceUpdatedEventArgs_get_RoadName), nullptr, nullptr, nullptr },
         { "route", reinterpret_cast<getter>(GuidanceUpdatedEventArgs_get_Route), nullptr, nullptr, nullptr },
         { "time_to_destination", reinterpret_cast<getter>(GuidanceUpdatedEventArgs_get_TimeToDestination), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidanceUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidanceUpdatedEventArgs = {
         "winrt._winrt_windows_services_maps_guidance.GuidanceUpdatedEventArgs",

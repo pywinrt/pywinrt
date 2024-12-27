@@ -1423,14 +1423,12 @@ namespace py::cpp::Windows::Data::Json
         { "to_string", reinterpret_cast<PyCFunction>(JsonArray_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_JsonArray, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JsonArray), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JsonArray[] = {
         { "value_type", reinterpret_cast<getter>(JsonArray_get_ValueType), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(JsonArray_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JsonArray[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JsonArray) },
@@ -1443,8 +1441,7 @@ namespace py::cpp::Windows::Data::Json
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_JsonArray) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_JsonArray) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_JsonArray) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JsonArray = {
         "winrt._winrt_windows_data_json.JsonArray",
@@ -1454,14 +1451,12 @@ namespace py::cpp::Windows::Data::Json
         _type_slots_JsonArray};
 
     static PyGetSetDef getset_JsonArray_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_JsonArray_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(JsonArray_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(JsonArray_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_JsonArray_Static[] = 
     {
@@ -1471,14 +1466,12 @@ namespace py::cpp::Windows::Data::Json
         { }
     };
 
-    static PyType_Spec type_spec_JsonArray_Static =
-    {
+    static PyType_Spec type_spec_JsonArray_Static = {
         "winrt._winrt_windows_data_json.JsonArray_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_JsonArray_Static
-    };
+        type_slots_JsonArray_Static};
 
     // ----- JsonError class --------------------
 
@@ -1532,19 +1525,16 @@ namespace py::cpp::Windows::Data::Json
     }
 
     static PyMethodDef _methods_JsonError[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JsonError[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JsonError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JsonError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JsonError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JsonError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JsonError = {
         "winrt._winrt_windows_data_json.JsonError",
@@ -1554,13 +1544,11 @@ namespace py::cpp::Windows::Data::Json
         _type_slots_JsonError};
 
     static PyGetSetDef getset_JsonError_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_JsonError_Static[] = {
         { "get_json_status", reinterpret_cast<PyCFunction>(JsonError_GetJsonStatus), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_JsonError_Static[] = 
     {
@@ -1570,14 +1558,12 @@ namespace py::cpp::Windows::Data::Json
         { }
     };
 
-    static PyType_Spec type_spec_JsonError_Static =
-    {
+    static PyType_Spec type_spec_JsonError_Static = {
         "winrt._winrt_windows_data_json.JsonError_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_JsonError_Static
-    };
+        type_slots_JsonError_Static};
 
     // ----- JsonObject class --------------------
 
@@ -3104,14 +3090,12 @@ namespace py::cpp::Windows::Data::Json
         { "to_string", reinterpret_cast<PyCFunction>(JsonObject_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_JsonObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JsonObject), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JsonObject[] = {
         { "value_type", reinterpret_cast<getter>(JsonObject_get_ValueType), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(JsonObject_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JsonObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JsonObject) },
@@ -3124,8 +3108,7 @@ namespace py::cpp::Windows::Data::Json
         { Py_mp_length, reinterpret_cast<void*>(_map_length_JsonObject) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_JsonObject) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_JsonObject) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JsonObject = {
         "winrt._winrt_windows_data_json.JsonObject",
@@ -3135,14 +3118,12 @@ namespace py::cpp::Windows::Data::Json
         _type_slots_JsonObject};
 
     static PyGetSetDef getset_JsonObject_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_JsonObject_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(JsonObject_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(JsonObject_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_JsonObject_Static[] = 
     {
@@ -3152,14 +3133,12 @@ namespace py::cpp::Windows::Data::Json
         { }
     };
 
-    static PyType_Spec type_spec_JsonObject_Static =
-    {
+    static PyType_Spec type_spec_JsonObject_Static = {
         "winrt._winrt_windows_data_json.JsonObject_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_JsonObject_Static
-    };
+        type_slots_JsonObject_Static};
 
     // ----- JsonValue class --------------------
 
@@ -3803,13 +3782,11 @@ namespace py::cpp::Windows::Data::Json
         { "to_string", reinterpret_cast<PyCFunction>(JsonValue_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_JsonValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JsonValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JsonValue[] = {
         { "value_type", reinterpret_cast<getter>(JsonValue_get_ValueType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JsonValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JsonValue) },
@@ -3817,8 +3794,7 @@ namespace py::cpp::Windows::Data::Json
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JsonValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JsonValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_JsonValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JsonValue = {
         "winrt._winrt_windows_data_json.JsonValue",
@@ -3828,8 +3804,7 @@ namespace py::cpp::Windows::Data::Json
         _type_slots_JsonValue};
 
     static PyGetSetDef getset_JsonValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_JsonValue_Static[] = {
         { "create_boolean_value", reinterpret_cast<PyCFunction>(JsonValue_CreateBooleanValue), METH_VARARGS, nullptr },
@@ -3838,8 +3813,7 @@ namespace py::cpp::Windows::Data::Json
         { "create_string_value", reinterpret_cast<PyCFunction>(JsonValue_CreateStringValue), METH_VARARGS, nullptr },
         { "parse", reinterpret_cast<PyCFunction>(JsonValue_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(JsonValue_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_JsonValue_Static[] = 
     {
@@ -3849,14 +3823,12 @@ namespace py::cpp::Windows::Data::Json
         { }
     };
 
-    static PyType_Spec type_spec_JsonValue_Static =
-    {
+    static PyType_Spec type_spec_JsonValue_Static = {
         "winrt._winrt_windows_data_json.JsonValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_JsonValue_Static
-    };
+        type_slots_JsonValue_Static};
 
     // ----- IJsonValue interface --------------------
 
@@ -4178,21 +4150,18 @@ namespace py::cpp::Windows::Data::Json
         { "stringify", reinterpret_cast<PyCFunction>(IJsonValue_Stringify), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IJsonValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IJsonValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IJsonValue[] = {
         { "value_type", reinterpret_cast<getter>(IJsonValue_get_ValueType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IJsonValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IJsonValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IJsonValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IJsonValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IJsonValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IJsonValue = {
         "winrt._winrt_windows_data_json.IJsonValue",
@@ -4424,13 +4393,11 @@ namespace py::cpp::Windows::Data::Json
     static PyMethodDef methods_ImplementsIJsonValue[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIJsonValue), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIJsonValue), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIJsonValue[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIJsonValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIJsonValue = {
         "winrt._winrt_windows_data_json.ImplementsIJsonValue",

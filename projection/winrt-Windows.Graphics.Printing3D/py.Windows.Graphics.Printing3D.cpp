@@ -195,20 +195,17 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "remove_task_requested", reinterpret_cast<PyCFunction>(Print3DManager_remove_TaskRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_Print3DManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DManager = {
         "winrt._winrt_windows_graphics_printing3d.Print3DManager",
@@ -218,14 +215,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         _type_slots_Print3DManager};
 
     static PyGetSetDef getset_Print3DManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Print3DManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(Print3DManager_GetForCurrentView), METH_VARARGS, nullptr },
         { "show_print_ui_async", reinterpret_cast<PyCFunction>(Print3DManager_ShowPrintUIAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Print3DManager_Static[] = 
     {
@@ -235,14 +230,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { }
     };
 
-    static PyType_Spec type_spec_Print3DManager_Static =
-    {
+    static PyType_Spec type_spec_Print3DManager_Static = {
         "winrt._winrt_windows_graphics_printing3d.Print3DManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Print3DManager_Static
-    };
+        type_slots_Print3DManager_Static};
 
     // ----- Print3DTask class --------------------
 
@@ -519,21 +512,18 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "remove_submitting", reinterpret_cast<PyCFunction>(Print3DTask_remove_Submitting), METH_O, nullptr },
         { "_assign_array_", _assign_array_Print3DTask, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DTask), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DTask[] = {
         { "source", reinterpret_cast<getter>(Print3DTask_get_Source), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DTask[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DTask) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DTask) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DTask = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTask",
@@ -646,22 +636,19 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Print3DTaskCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_Print3DTaskCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DTaskCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DTaskCompletedEventArgs[] = {
         { "completion", reinterpret_cast<getter>(Print3DTaskCompletedEventArgs_get_Completion), nullptr, nullptr, nullptr },
         { "extended_status", reinterpret_cast<getter>(Print3DTaskCompletedEventArgs_get_ExtendedStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DTaskCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DTaskCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DTaskCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DTaskCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DTaskCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DTaskCompletedEventArgs = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskCompletedEventArgs",
@@ -759,20 +746,17 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "create_task", reinterpret_cast<PyCFunction>(Print3DTaskRequest_CreateTask), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Print3DTaskRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DTaskRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DTaskRequest[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DTaskRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DTaskRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DTaskRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DTaskRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DTaskRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DTaskRequest = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskRequest",
@@ -855,21 +839,18 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Print3DTaskRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_Print3DTaskRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DTaskRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DTaskRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(Print3DTaskRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DTaskRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DTaskRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DTaskRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DTaskRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DTaskRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DTaskRequestedEventArgs = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskRequestedEventArgs",
@@ -952,21 +933,18 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Print3DTaskSourceChangedEventArgs[] = {
         { "_assign_array_", _assign_array_Print3DTaskSourceChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DTaskSourceChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DTaskSourceChangedEventArgs[] = {
         { "source", reinterpret_cast<getter>(Print3DTaskSourceChangedEventArgs_get_Source), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DTaskSourceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DTaskSourceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DTaskSourceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DTaskSourceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DTaskSourceChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DTaskSourceChangedEventArgs = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskSourceChangedEventArgs",
@@ -1063,20 +1041,17 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "set_source", reinterpret_cast<PyCFunction>(Print3DTaskSourceRequestedArgs_SetSource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Print3DTaskSourceRequestedArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DTaskSourceRequestedArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DTaskSourceRequestedArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DTaskSourceRequestedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DTaskSourceRequestedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DTaskSourceRequestedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DTaskSourceRequestedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DTaskSourceRequestedArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DTaskSourceRequestedArgs = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskSourceRequestedArgs",
@@ -1626,8 +1601,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "save_model_to_package_async", reinterpret_cast<PyCFunction>(Printing3D3MFPackage_SaveModelToPackageAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Printing3D3MFPackage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3D3MFPackage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3D3MFPackage[] = {
         { "thumbnail", reinterpret_cast<getter>(Printing3D3MFPackage_get_Thumbnail), reinterpret_cast<setter>(Printing3D3MFPackage_put_Thumbnail), nullptr, nullptr },
@@ -1635,16 +1609,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "model_part", reinterpret_cast<getter>(Printing3D3MFPackage_get_ModelPart), reinterpret_cast<setter>(Printing3D3MFPackage_put_ModelPart), nullptr, nullptr },
         { "textures", reinterpret_cast<getter>(Printing3D3MFPackage_get_Textures), nullptr, nullptr, nullptr },
         { "compression", reinterpret_cast<getter>(Printing3D3MFPackage_get_Compression), reinterpret_cast<setter>(Printing3D3MFPackage_put_Compression), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3D3MFPackage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3D3MFPackage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3D3MFPackage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3D3MFPackage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3D3MFPackage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3D3MFPackage = {
         "winrt._winrt_windows_graphics_printing3d.Printing3D3MFPackage",
@@ -1654,13 +1626,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
         _type_slots_Printing3D3MFPackage};
 
     static PyGetSetDef getset_Printing3D3MFPackage_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Printing3D3MFPackage_Static[] = {
         { "load_async", reinterpret_cast<PyCFunction>(Printing3D3MFPackage_LoadAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Printing3D3MFPackage_Static[] = 
     {
@@ -1670,14 +1640,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { }
     };
 
-    static PyType_Spec type_spec_Printing3D3MFPackage_Static =
-    {
+    static PyType_Spec type_spec_Printing3D3MFPackage_Static = {
         "winrt._winrt_windows_graphics_printing3d.Printing3D3MFPackage_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Printing3D3MFPackage_Static
-    };
+        type_slots_Printing3D3MFPackage_Static};
 
     // ----- Printing3DBaseMaterial class --------------------
 
@@ -1943,22 +1911,19 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DBaseMaterial[] = {
         { "_assign_array_", _assign_array_Printing3DBaseMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DBaseMaterial), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DBaseMaterial[] = {
         { "name", reinterpret_cast<getter>(Printing3DBaseMaterial_get_Name), reinterpret_cast<setter>(Printing3DBaseMaterial_put_Name), nullptr, nullptr },
         { "color", reinterpret_cast<getter>(Printing3DBaseMaterial_get_Color), reinterpret_cast<setter>(Printing3DBaseMaterial_put_Color), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DBaseMaterial[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DBaseMaterial) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DBaseMaterial) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DBaseMaterial) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DBaseMaterial) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DBaseMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DBaseMaterial",
@@ -1970,12 +1935,10 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyGetSetDef getset_Printing3DBaseMaterial_Static[] = {
         { "abs", reinterpret_cast<getter>(Printing3DBaseMaterial_get_Abs), nullptr, nullptr, nullptr },
         { "pla", reinterpret_cast<getter>(Printing3DBaseMaterial_get_Pla), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Printing3DBaseMaterial_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Printing3DBaseMaterial_Static[] = 
     {
@@ -1985,14 +1948,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { }
     };
 
-    static PyType_Spec type_spec_Printing3DBaseMaterial_Static =
-    {
+    static PyType_Spec type_spec_Printing3DBaseMaterial_Static = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DBaseMaterial_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Printing3DBaseMaterial_Static
-    };
+        type_slots_Printing3DBaseMaterial_Static};
 
     // ----- Printing3DBaseMaterialGroup class --------------------
 
@@ -2122,22 +2083,19 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DBaseMaterialGroup[] = {
         { "_assign_array_", _assign_array_Printing3DBaseMaterialGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DBaseMaterialGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DBaseMaterialGroup[] = {
         { "bases", reinterpret_cast<getter>(Printing3DBaseMaterialGroup_get_Bases), nullptr, nullptr, nullptr },
         { "material_group_id", reinterpret_cast<getter>(Printing3DBaseMaterialGroup_get_MaterialGroupId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DBaseMaterialGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DBaseMaterialGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DBaseMaterialGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DBaseMaterialGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DBaseMaterialGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DBaseMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DBaseMaterialGroup",
@@ -2350,22 +2308,19 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DColorMaterial[] = {
         { "_assign_array_", _assign_array_Printing3DColorMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DColorMaterial), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DColorMaterial[] = {
         { "value", reinterpret_cast<getter>(Printing3DColorMaterial_get_Value), reinterpret_cast<setter>(Printing3DColorMaterial_put_Value), nullptr, nullptr },
         { "color", reinterpret_cast<getter>(Printing3DColorMaterial_get_Color), reinterpret_cast<setter>(Printing3DColorMaterial_put_Color), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DColorMaterial[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DColorMaterial) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DColorMaterial) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DColorMaterial) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DColorMaterial) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DColorMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DColorMaterial",
@@ -2502,22 +2457,19 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DColorMaterialGroup[] = {
         { "_assign_array_", _assign_array_Printing3DColorMaterialGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DColorMaterialGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DColorMaterialGroup[] = {
         { "colors", reinterpret_cast<getter>(Printing3DColorMaterialGroup_get_Colors), nullptr, nullptr, nullptr },
         { "material_group_id", reinterpret_cast<getter>(Printing3DColorMaterialGroup_get_MaterialGroupId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DColorMaterialGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DColorMaterialGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DColorMaterialGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DColorMaterialGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DColorMaterialGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DColorMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DColorMaterialGroup",
@@ -2967,8 +2919,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DComponent[] = {
         { "_assign_array_", _assign_array_Printing3DComponent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DComponent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DComponent[] = {
         { "type", reinterpret_cast<getter>(Printing3DComponent_get_Type), reinterpret_cast<setter>(Printing3DComponent_put_Type), nullptr, nullptr },
@@ -2977,16 +2928,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "name", reinterpret_cast<getter>(Printing3DComponent_get_Name), reinterpret_cast<setter>(Printing3DComponent_put_Name), nullptr, nullptr },
         { "mesh", reinterpret_cast<getter>(Printing3DComponent_get_Mesh), reinterpret_cast<setter>(Printing3DComponent_put_Mesh), nullptr, nullptr },
         { "components", reinterpret_cast<getter>(Printing3DComponent_get_Components), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DComponent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DComponent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DComponent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DComponent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DComponent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DComponent = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DComponent",
@@ -3199,22 +3148,19 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DComponentWithMatrix[] = {
         { "_assign_array_", _assign_array_Printing3DComponentWithMatrix, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DComponentWithMatrix), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DComponentWithMatrix[] = {
         { "matrix", reinterpret_cast<getter>(Printing3DComponentWithMatrix_get_Matrix), reinterpret_cast<setter>(Printing3DComponentWithMatrix_put_Matrix), nullptr, nullptr },
         { "component", reinterpret_cast<getter>(Printing3DComponentWithMatrix_get_Component), reinterpret_cast<setter>(Printing3DComponentWithMatrix_put_Component), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DComponentWithMatrix[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DComponentWithMatrix) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DComponentWithMatrix) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DComponentWithMatrix) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DComponentWithMatrix) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DComponentWithMatrix = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DComponentWithMatrix",
@@ -3319,21 +3265,18 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DCompositeMaterial[] = {
         { "_assign_array_", _assign_array_Printing3DCompositeMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DCompositeMaterial), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DCompositeMaterial[] = {
         { "values", reinterpret_cast<getter>(Printing3DCompositeMaterial_get_Values), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DCompositeMaterial[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DCompositeMaterial) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DCompositeMaterial) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DCompositeMaterial) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DCompositeMaterial) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DCompositeMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DCompositeMaterial",
@@ -3569,24 +3512,21 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DCompositeMaterialGroup[] = {
         { "_assign_array_", _assign_array_Printing3DCompositeMaterialGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DCompositeMaterialGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DCompositeMaterialGroup[] = {
         { "composites", reinterpret_cast<getter>(Printing3DCompositeMaterialGroup_get_Composites), nullptr, nullptr, nullptr },
         { "material_group_id", reinterpret_cast<getter>(Printing3DCompositeMaterialGroup_get_MaterialGroupId), nullptr, nullptr, nullptr },
         { "material_indices", reinterpret_cast<getter>(Printing3DCompositeMaterialGroup_get_MaterialIndices), nullptr, nullptr, nullptr },
         { "base_material_group", reinterpret_cast<getter>(Printing3DCompositeMaterialGroup_get_BaseMaterialGroup), reinterpret_cast<setter>(Printing3DCompositeMaterialGroup_put_BaseMaterialGroup), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DCompositeMaterialGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DCompositeMaterialGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DCompositeMaterialGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DCompositeMaterialGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DCompositeMaterialGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DCompositeMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DCompositeMaterialGroup",
@@ -3868,23 +3808,20 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DFaceReductionOptions[] = {
         { "_assign_array_", _assign_array_Printing3DFaceReductionOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DFaceReductionOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DFaceReductionOptions[] = {
         { "target_triangle_count", reinterpret_cast<getter>(Printing3DFaceReductionOptions_get_TargetTriangleCount), reinterpret_cast<setter>(Printing3DFaceReductionOptions_put_TargetTriangleCount), nullptr, nullptr },
         { "max_reduction_area", reinterpret_cast<getter>(Printing3DFaceReductionOptions_get_MaxReductionArea), reinterpret_cast<setter>(Printing3DFaceReductionOptions_put_MaxReductionArea), nullptr, nullptr },
         { "max_edge_length", reinterpret_cast<getter>(Printing3DFaceReductionOptions_get_MaxEdgeLength), reinterpret_cast<setter>(Printing3DFaceReductionOptions_put_MaxEdgeLength), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DFaceReductionOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DFaceReductionOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DFaceReductionOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DFaceReductionOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DFaceReductionOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DFaceReductionOptions = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DFaceReductionOptions",
@@ -4109,8 +4046,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DMaterial[] = {
         { "_assign_array_", _assign_array_Printing3DMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DMaterial), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DMaterial[] = {
         { "base_groups", reinterpret_cast<getter>(Printing3DMaterial_get_BaseGroups), nullptr, nullptr, nullptr },
@@ -4118,16 +4054,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "composite_groups", reinterpret_cast<getter>(Printing3DMaterial_get_CompositeGroups), nullptr, nullptr, nullptr },
         { "multiple_property_groups", reinterpret_cast<getter>(Printing3DMaterial_get_MultiplePropertyGroups), nullptr, nullptr, nullptr },
         { "texture2_coord_groups", reinterpret_cast<getter>(Printing3DMaterial_get_Texture2CoordGroups), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DMaterial[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DMaterial) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DMaterial) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DMaterial) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DMaterial) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMaterial",
@@ -5059,8 +4993,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "verify_async", reinterpret_cast<PyCFunction>(Printing3DMesh_VerifyAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Printing3DMesh, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DMesh), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DMesh[] = {
         { "vertex_positions_description", reinterpret_cast<getter>(Printing3DMesh_get_VertexPositionsDescription), reinterpret_cast<setter>(Printing3DMesh_put_VertexPositionsDescription), nullptr, nullptr },
@@ -5071,16 +5004,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "index_count", reinterpret_cast<getter>(Printing3DMesh_get_IndexCount), reinterpret_cast<setter>(Printing3DMesh_put_IndexCount), nullptr, nullptr },
         { "buffer_description_set", reinterpret_cast<getter>(Printing3DMesh_get_BufferDescriptionSet), nullptr, nullptr, nullptr },
         { "buffer_set", reinterpret_cast<getter>(Printing3DMesh_get_BufferSet), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DMesh[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DMesh) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DMesh) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DMesh) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DMesh) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DMesh = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMesh",
@@ -5223,23 +5154,20 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DMeshVerificationResult[] = {
         { "_assign_array_", _assign_array_Printing3DMeshVerificationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DMeshVerificationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DMeshVerificationResult[] = {
         { "is_valid", reinterpret_cast<getter>(Printing3DMeshVerificationResult_get_IsValid), nullptr, nullptr, nullptr },
         { "nonmanifold_triangles", reinterpret_cast<getter>(Printing3DMeshVerificationResult_get_NonmanifoldTriangles), nullptr, nullptr, nullptr },
         { "reversed_normal_triangles", reinterpret_cast<getter>(Printing3DMeshVerificationResult_get_ReversedNormalTriangles), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DMeshVerificationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DMeshVerificationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DMeshVerificationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DMeshVerificationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DMeshVerificationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DMeshVerificationResult = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMeshVerificationResult",
@@ -6075,8 +6003,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "try_reduce_faces_with_options_async", reinterpret_cast<PyCFunction>(Printing3DModel_TryReduceFacesWithOptionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Printing3DModel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DModel), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DModel[] = {
         { "version", reinterpret_cast<getter>(Printing3DModel_get_Version), reinterpret_cast<setter>(Printing3DModel_put_Version), nullptr, nullptr },
@@ -6088,16 +6015,14 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "metadata", reinterpret_cast<getter>(Printing3DModel_get_Metadata), nullptr, nullptr, nullptr },
         { "required_extensions", reinterpret_cast<getter>(Printing3DModel_get_RequiredExtensions), nullptr, nullptr, nullptr },
         { "textures", reinterpret_cast<getter>(Printing3DModel_get_Textures), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DModel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DModel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DModel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DModel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DModel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DModel = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DModel",
@@ -6379,23 +6304,20 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DModelTexture[] = {
         { "_assign_array_", _assign_array_Printing3DModelTexture, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DModelTexture), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DModelTexture[] = {
         { "tile_style_v", reinterpret_cast<getter>(Printing3DModelTexture_get_TileStyleV), reinterpret_cast<setter>(Printing3DModelTexture_put_TileStyleV), nullptr, nullptr },
         { "tile_style_u", reinterpret_cast<getter>(Printing3DModelTexture_get_TileStyleU), reinterpret_cast<setter>(Printing3DModelTexture_put_TileStyleU), nullptr, nullptr },
         { "texture_resource", reinterpret_cast<getter>(Printing3DModelTexture_get_TextureResource), reinterpret_cast<setter>(Printing3DModelTexture_put_TextureResource), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DModelTexture[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DModelTexture) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DModelTexture) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DModelTexture) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DModelTexture) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DModelTexture = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DModelTexture",
@@ -6500,21 +6422,18 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DMultiplePropertyMaterial[] = {
         { "_assign_array_", _assign_array_Printing3DMultiplePropertyMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DMultiplePropertyMaterial), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DMultiplePropertyMaterial[] = {
         { "material_indices", reinterpret_cast<getter>(Printing3DMultiplePropertyMaterial_get_MaterialIndices), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DMultiplePropertyMaterial[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DMultiplePropertyMaterial) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DMultiplePropertyMaterial) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DMultiplePropertyMaterial) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DMultiplePropertyMaterial) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DMultiplePropertyMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMultiplePropertyMaterial",
@@ -6681,23 +6600,20 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DMultiplePropertyMaterialGroup[] = {
         { "_assign_array_", _assign_array_Printing3DMultiplePropertyMaterialGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DMultiplePropertyMaterialGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DMultiplePropertyMaterialGroup[] = {
         { "material_group_id", reinterpret_cast<getter>(Printing3DMultiplePropertyMaterialGroup_get_MaterialGroupId), nullptr, nullptr, nullptr },
         { "material_group_indices", reinterpret_cast<getter>(Printing3DMultiplePropertyMaterialGroup_get_MaterialGroupIndices), nullptr, nullptr, nullptr },
         { "multiple_properties", reinterpret_cast<getter>(Printing3DMultiplePropertyMaterialGroup_get_MultipleProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DMultiplePropertyMaterialGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DMultiplePropertyMaterialGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DMultiplePropertyMaterialGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DMultiplePropertyMaterialGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DMultiplePropertyMaterialGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DMultiplePropertyMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMultiplePropertyMaterialGroup",
@@ -6979,23 +6895,20 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DTexture2CoordMaterial[] = {
         { "_assign_array_", _assign_array_Printing3DTexture2CoordMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DTexture2CoordMaterial), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DTexture2CoordMaterial[] = {
         { "v", reinterpret_cast<getter>(Printing3DTexture2CoordMaterial_get_V), reinterpret_cast<setter>(Printing3DTexture2CoordMaterial_put_V), nullptr, nullptr },
         { "u", reinterpret_cast<getter>(Printing3DTexture2CoordMaterial_get_U), reinterpret_cast<setter>(Printing3DTexture2CoordMaterial_put_U), nullptr, nullptr },
         { "texture", reinterpret_cast<getter>(Printing3DTexture2CoordMaterial_get_Texture), reinterpret_cast<setter>(Printing3DTexture2CoordMaterial_put_Texture), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DTexture2CoordMaterial[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DTexture2CoordMaterial) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DTexture2CoordMaterial) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DTexture2CoordMaterial) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DTexture2CoordMaterial) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DTexture2CoordMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DTexture2CoordMaterial",
@@ -7201,23 +7114,20 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DTexture2CoordMaterialGroup[] = {
         { "_assign_array_", _assign_array_Printing3DTexture2CoordMaterialGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DTexture2CoordMaterialGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DTexture2CoordMaterialGroup[] = {
         { "material_group_id", reinterpret_cast<getter>(Printing3DTexture2CoordMaterialGroup_get_MaterialGroupId), nullptr, nullptr, nullptr },
         { "texture2_coords", reinterpret_cast<getter>(Printing3DTexture2CoordMaterialGroup_get_Texture2Coords), nullptr, nullptr, nullptr },
         { "texture", reinterpret_cast<getter>(Printing3DTexture2CoordMaterialGroup_get_Texture), reinterpret_cast<setter>(Printing3DTexture2CoordMaterialGroup_put_Texture), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DTexture2CoordMaterialGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DTexture2CoordMaterialGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DTexture2CoordMaterialGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DTexture2CoordMaterialGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DTexture2CoordMaterialGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DTexture2CoordMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DTexture2CoordMaterialGroup",
@@ -7430,22 +7340,19 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyMethodDef _methods_Printing3DTextureResource[] = {
         { "_assign_array_", _assign_array_Printing3DTextureResource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DTextureResource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Printing3DTextureResource[] = {
         { "texture_data", reinterpret_cast<getter>(Printing3DTextureResource_get_TextureData), reinterpret_cast<setter>(Printing3DTextureResource_put_TextureData), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(Printing3DTextureResource_get_Name), reinterpret_cast<setter>(Printing3DTextureResource_put_Name), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Printing3DTextureResource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DTextureResource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DTextureResource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DTextureResource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DTextureResource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DTextureResource = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DTextureResource",
@@ -7523,8 +7430,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyMethodDef _methods_Printing3DBufferDescription[] = {
         { "_assign_array_", _assign_array_Printing3DBufferDescription, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Printing3DBufferDescription_get_Format(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, void* /*unused*/) noexcept
     {
@@ -7595,8 +7501,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static PyGetSetDef _getset_Printing3DBufferDescription[] = {
         { "format", reinterpret_cast<getter>(Printing3DBufferDescription_get_Format), reinterpret_cast<setter>(Printing3DBufferDescription_set_Format), nullptr, nullptr },
         { "stride", reinterpret_cast<getter>(Printing3DBufferDescription_get_Stride), reinterpret_cast<setter>(Printing3DBufferDescription_set_Stride), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_Printing3DBufferDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, PyObject* other, int op) noexcept
     {
@@ -7658,8 +7563,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DBufferDescription) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Printing3DBufferDescription) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Printing3DBufferDescription) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Printing3DBufferDescription = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DBufferDescription",

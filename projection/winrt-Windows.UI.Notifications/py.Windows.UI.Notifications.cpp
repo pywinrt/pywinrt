@@ -268,24 +268,21 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_AdaptiveNotificationText[] = {
         { "_assign_array_", _assign_array_AdaptiveNotificationText, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveNotificationText), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveNotificationText[] = {
         { "hints", reinterpret_cast<getter>(AdaptiveNotificationText_get_Hints), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(AdaptiveNotificationText_get_Kind), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(AdaptiveNotificationText_get_Text), reinterpret_cast<setter>(AdaptiveNotificationText_put_Text), nullptr, nullptr },
         { "language", reinterpret_cast<getter>(AdaptiveNotificationText_get_Language), reinterpret_cast<setter>(AdaptiveNotificationText_put_Language), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveNotificationText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveNotificationText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveNotificationText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveNotificationText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveNotificationText) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveNotificationText = {
         "winrt._winrt_windows_ui_notifications.AdaptiveNotificationText",
@@ -461,22 +458,19 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_BadgeNotification[] = {
         { "_assign_array_", _assign_array_BadgeNotification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BadgeNotification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BadgeNotification[] = {
         { "expiration_time", reinterpret_cast<getter>(BadgeNotification_get_ExpirationTime), reinterpret_cast<setter>(BadgeNotification_put_ExpirationTime), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(BadgeNotification_get_Content), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BadgeNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BadgeNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BadgeNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BadgeNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BadgeNotification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BadgeNotification = {
         "winrt._winrt_windows_ui_notifications.BadgeNotification",
@@ -703,19 +697,16 @@ namespace py::cpp::Windows::UI::Notifications
     }
 
     static PyMethodDef _methods_BadgeUpdateManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BadgeUpdateManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BadgeUpdateManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BadgeUpdateManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BadgeUpdateManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BadgeUpdateManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BadgeUpdateManager = {
         "winrt._winrt_windows_ui_notifications.BadgeUpdateManager",
@@ -725,8 +716,7 @@ namespace py::cpp::Windows::UI::Notifications
         _type_slots_BadgeUpdateManager};
 
     static PyGetSetDef getset_BadgeUpdateManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BadgeUpdateManager_Static[] = {
         { "create_badge_updater_for_application", reinterpret_cast<PyCFunction>(BadgeUpdateManager_CreateBadgeUpdaterForApplication), METH_VARARGS, nullptr },
@@ -734,8 +724,7 @@ namespace py::cpp::Windows::UI::Notifications
         { "create_badge_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(BadgeUpdateManager_CreateBadgeUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(BadgeUpdateManager_GetForUser), METH_VARARGS, nullptr },
         { "get_template_content", reinterpret_cast<PyCFunction>(BadgeUpdateManager_GetTemplateContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BadgeUpdateManager_Static[] = 
     {
@@ -745,14 +734,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Spec type_spec_BadgeUpdateManager_Static =
-    {
+    static PyType_Spec type_spec_BadgeUpdateManager_Static = {
         "winrt._winrt_windows_ui_notifications.BadgeUpdateManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BadgeUpdateManager_Static
-    };
+        type_slots_BadgeUpdateManager_Static};
 
     // ----- BadgeUpdateManagerForUser class --------------------
 
@@ -955,21 +942,18 @@ namespace py::cpp::Windows::UI::Notifications
         { "create_badge_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(BadgeUpdateManagerForUser_CreateBadgeUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BadgeUpdateManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BadgeUpdateManagerForUser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BadgeUpdateManagerForUser[] = {
         { "user", reinterpret_cast<getter>(BadgeUpdateManagerForUser_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BadgeUpdateManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BadgeUpdateManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BadgeUpdateManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BadgeUpdateManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BadgeUpdateManagerForUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BadgeUpdateManagerForUser = {
         "winrt._winrt_windows_ui_notifications.BadgeUpdateManagerForUser",
@@ -1241,20 +1225,17 @@ namespace py::cpp::Windows::UI::Notifications
         { "update", reinterpret_cast<PyCFunction>(BadgeUpdater_Update), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BadgeUpdater, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BadgeUpdater), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BadgeUpdater[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BadgeUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BadgeUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BadgeUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BadgeUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BadgeUpdater) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BadgeUpdater = {
         "winrt._winrt_windows_ui_notifications.BadgeUpdater",
@@ -1453,19 +1434,16 @@ namespace py::cpp::Windows::UI::Notifications
     }
 
     static PyMethodDef _methods_KnownAdaptiveNotificationHints[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownAdaptiveNotificationHints[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownAdaptiveNotificationHints[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownAdaptiveNotificationHints) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownAdaptiveNotificationHints) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownAdaptiveNotificationHints) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownAdaptiveNotificationHints = {
         "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationHints",
@@ -1481,12 +1459,10 @@ namespace py::cpp::Windows::UI::Notifications
         { "style", reinterpret_cast<getter>(KnownAdaptiveNotificationHints_get_Style), nullptr, nullptr, nullptr },
         { "text_stacking", reinterpret_cast<getter>(KnownAdaptiveNotificationHints_get_TextStacking), nullptr, nullptr, nullptr },
         { "wrap", reinterpret_cast<getter>(KnownAdaptiveNotificationHints_get_Wrap), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownAdaptiveNotificationHints_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownAdaptiveNotificationHints_Static[] = 
     {
@@ -1496,14 +1472,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Spec type_spec_KnownAdaptiveNotificationHints_Static =
-    {
+    static PyType_Spec type_spec_KnownAdaptiveNotificationHints_Static = {
         "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationHints_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownAdaptiveNotificationHints_Static
-    };
+        type_slots_KnownAdaptiveNotificationHints_Static};
 
     // ----- KnownAdaptiveNotificationTextStyles class --------------------
 
@@ -2085,19 +2059,16 @@ namespace py::cpp::Windows::UI::Notifications
     }
 
     static PyMethodDef _methods_KnownAdaptiveNotificationTextStyles[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownAdaptiveNotificationTextStyles[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownAdaptiveNotificationTextStyles[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownAdaptiveNotificationTextStyles) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownAdaptiveNotificationTextStyles) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownAdaptiveNotificationTextStyles) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownAdaptiveNotificationTextStyles = {
         "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationTextStyles",
@@ -2126,12 +2097,10 @@ namespace py::cpp::Windows::UI::Notifications
         { "title", reinterpret_cast<getter>(KnownAdaptiveNotificationTextStyles_get_Title), nullptr, nullptr, nullptr },
         { "title_numeral", reinterpret_cast<getter>(KnownAdaptiveNotificationTextStyles_get_TitleNumeral), nullptr, nullptr, nullptr },
         { "title_subtle", reinterpret_cast<getter>(KnownAdaptiveNotificationTextStyles_get_TitleSubtle), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownAdaptiveNotificationTextStyles_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownAdaptiveNotificationTextStyles_Static[] = 
     {
@@ -2141,14 +2110,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Spec type_spec_KnownAdaptiveNotificationTextStyles_Static =
-    {
+    static PyType_Spec type_spec_KnownAdaptiveNotificationTextStyles_Static = {
         "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationTextStyles_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownAdaptiveNotificationTextStyles_Static
-    };
+        type_slots_KnownAdaptiveNotificationTextStyles_Static};
 
     // ----- KnownNotificationBindings class --------------------
 
@@ -2190,19 +2157,16 @@ namespace py::cpp::Windows::UI::Notifications
     }
 
     static PyMethodDef _methods_KnownNotificationBindings[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownNotificationBindings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownNotificationBindings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownNotificationBindings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownNotificationBindings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownNotificationBindings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownNotificationBindings = {
         "winrt._winrt_windows_ui_notifications.KnownNotificationBindings",
@@ -2213,12 +2177,10 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyGetSetDef getset_KnownNotificationBindings_Static[] = {
         { "toast_generic", reinterpret_cast<getter>(KnownNotificationBindings_get_ToastGeneric), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownNotificationBindings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownNotificationBindings_Static[] = 
     {
@@ -2228,14 +2190,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Spec type_spec_KnownNotificationBindings_Static =
-    {
+    static PyType_Spec type_spec_KnownNotificationBindings_Static = {
         "winrt._winrt_windows_ui_notifications.KnownNotificationBindings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownNotificationBindings_Static
-    };
+        type_slots_KnownNotificationBindings_Static};
 
     // ----- Notification class --------------------
 
@@ -2441,22 +2401,19 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_Notification[] = {
         { "_assign_array_", _assign_array_Notification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Notification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Notification[] = {
         { "visual", reinterpret_cast<getter>(Notification_get_Visual), reinterpret_cast<setter>(Notification_put_Visual), nullptr, nullptr },
         { "expiration_time", reinterpret_cast<getter>(Notification_get_ExpirationTime), reinterpret_cast<setter>(Notification_put_ExpirationTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Notification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Notification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Notification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Notification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Notification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Notification = {
         "winrt._winrt_windows_ui_notifications.Notification",
@@ -2718,23 +2675,20 @@ namespace py::cpp::Windows::UI::Notifications
         { "get_text_elements", reinterpret_cast<PyCFunction>(NotificationBinding_GetTextElements), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NotificationBinding, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NotificationBinding), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NotificationBinding[] = {
         { "template", reinterpret_cast<getter>(NotificationBinding_get_Template), reinterpret_cast<setter>(NotificationBinding_put_Template), nullptr, nullptr },
         { "language", reinterpret_cast<getter>(NotificationBinding_get_Language), reinterpret_cast<setter>(NotificationBinding_put_Language), nullptr, nullptr },
         { "hints", reinterpret_cast<getter>(NotificationBinding_get_Hints), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NotificationBinding[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotificationBinding) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotificationBinding) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotificationBinding) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotificationBinding) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NotificationBinding = {
         "winrt._winrt_windows_ui_notifications.NotificationBinding",
@@ -2939,22 +2893,19 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_NotificationData[] = {
         { "_assign_array_", _assign_array_NotificationData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NotificationData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NotificationData[] = {
         { "sequence_number", reinterpret_cast<getter>(NotificationData_get_SequenceNumber), reinterpret_cast<setter>(NotificationData_put_SequenceNumber), nullptr, nullptr },
         { "values", reinterpret_cast<getter>(NotificationData_get_Values), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NotificationData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotificationData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotificationData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotificationData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotificationData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NotificationData = {
         "winrt._winrt_windows_ui_notifications.NotificationData",
@@ -3149,22 +3100,19 @@ namespace py::cpp::Windows::UI::Notifications
         { "get_binding", reinterpret_cast<PyCFunction>(NotificationVisual_GetBinding), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NotificationVisual, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NotificationVisual), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NotificationVisual[] = {
         { "language", reinterpret_cast<getter>(NotificationVisual_get_Language), reinterpret_cast<setter>(NotificationVisual_put_Language), nullptr, nullptr },
         { "bindings", reinterpret_cast<getter>(NotificationVisual_get_Bindings), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NotificationVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotificationVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotificationVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotificationVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotificationVisual) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NotificationVisual = {
         "winrt._winrt_windows_ui_notifications.NotificationVisual",
@@ -3509,8 +3457,7 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_ScheduledTileNotification[] = {
         { "_assign_array_", _assign_array_ScheduledTileNotification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ScheduledTileNotification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ScheduledTileNotification[] = {
         { "tag", reinterpret_cast<getter>(ScheduledTileNotification_get_Tag), reinterpret_cast<setter>(ScheduledTileNotification_put_Tag), nullptr, nullptr },
@@ -3518,16 +3465,14 @@ namespace py::cpp::Windows::UI::Notifications
         { "expiration_time", reinterpret_cast<getter>(ScheduledTileNotification_get_ExpirationTime), reinterpret_cast<setter>(ScheduledTileNotification_put_ExpirationTime), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(ScheduledTileNotification_get_Content), nullptr, nullptr, nullptr },
         { "delivery_time", reinterpret_cast<getter>(ScheduledTileNotification_get_DeliveryTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ScheduledTileNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScheduledTileNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScheduledTileNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScheduledTileNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScheduledTileNotification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ScheduledTileNotification = {
         "winrt._winrt_windows_ui_notifications.ScheduledTileNotification",
@@ -4226,8 +4171,7 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_ScheduledToastNotification[] = {
         { "_assign_array_", _assign_array_ScheduledToastNotification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ScheduledToastNotification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ScheduledToastNotification[] = {
         { "id", reinterpret_cast<getter>(ScheduledToastNotification_get_Id), reinterpret_cast<setter>(ScheduledToastNotification_put_Id), nullptr, nullptr },
@@ -4241,16 +4185,14 @@ namespace py::cpp::Windows::UI::Notifications
         { "remote_id", reinterpret_cast<getter>(ScheduledToastNotification_get_RemoteId), reinterpret_cast<setter>(ScheduledToastNotification_put_RemoteId), nullptr, nullptr },
         { "notification_mirroring", reinterpret_cast<getter>(ScheduledToastNotification_get_NotificationMirroring), reinterpret_cast<setter>(ScheduledToastNotification_put_NotificationMirroring), nullptr, nullptr },
         { "expiration_time", reinterpret_cast<getter>(ScheduledToastNotification_get_ExpirationTime), reinterpret_cast<setter>(ScheduledToastNotification_put_ExpirationTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ScheduledToastNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScheduledToastNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScheduledToastNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScheduledToastNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScheduledToastNotification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ScheduledToastNotification = {
         "winrt._winrt_windows_ui_notifications.ScheduledToastNotification",
@@ -4443,22 +4385,19 @@ namespace py::cpp::Windows::UI::Notifications
         { "get_deferral", reinterpret_cast<PyCFunction>(ScheduledToastNotificationShowingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ScheduledToastNotificationShowingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ScheduledToastNotificationShowingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ScheduledToastNotificationShowingEventArgs[] = {
         { "cancel", reinterpret_cast<getter>(ScheduledToastNotificationShowingEventArgs_get_Cancel), reinterpret_cast<setter>(ScheduledToastNotificationShowingEventArgs_put_Cancel), nullptr, nullptr },
         { "scheduled_toast_notification", reinterpret_cast<getter>(ScheduledToastNotificationShowingEventArgs_get_ScheduledToastNotification), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ScheduledToastNotificationShowingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScheduledToastNotificationShowingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScheduledToastNotificationShowingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScheduledToastNotificationShowingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScheduledToastNotificationShowingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ScheduledToastNotificationShowingEventArgs = {
         "winrt._winrt_windows_ui_notifications.ScheduledToastNotificationShowingEventArgs",
@@ -4541,21 +4480,18 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_ShownTileNotification[] = {
         { "_assign_array_", _assign_array_ShownTileNotification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ShownTileNotification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ShownTileNotification[] = {
         { "arguments", reinterpret_cast<getter>(ShownTileNotification_get_Arguments), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ShownTileNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShownTileNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShownTileNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShownTileNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShownTileNotification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ShownTileNotification = {
         "winrt._winrt_windows_ui_notifications.ShownTileNotification",
@@ -4731,22 +4667,19 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_TileFlyoutNotification[] = {
         { "_assign_array_", _assign_array_TileFlyoutNotification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TileFlyoutNotification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TileFlyoutNotification[] = {
         { "expiration_time", reinterpret_cast<getter>(TileFlyoutNotification_get_ExpirationTime), reinterpret_cast<setter>(TileFlyoutNotification_put_ExpirationTime), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(TileFlyoutNotification_get_Content), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TileFlyoutNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileFlyoutNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileFlyoutNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileFlyoutNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileFlyoutNotification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TileFlyoutNotification = {
         "winrt._winrt_windows_ui_notifications.TileFlyoutNotification",
@@ -4931,19 +4864,16 @@ namespace py::cpp::Windows::UI::Notifications
     }
 
     static PyMethodDef _methods_TileFlyoutUpdateManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TileFlyoutUpdateManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TileFlyoutUpdateManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileFlyoutUpdateManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileFlyoutUpdateManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileFlyoutUpdateManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TileFlyoutUpdateManager = {
         "winrt._winrt_windows_ui_notifications.TileFlyoutUpdateManager",
@@ -4953,16 +4883,14 @@ namespace py::cpp::Windows::UI::Notifications
         _type_slots_TileFlyoutUpdateManager};
 
     static PyGetSetDef getset_TileFlyoutUpdateManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TileFlyoutUpdateManager_Static[] = {
         { "create_tile_flyout_updater_for_application", reinterpret_cast<PyCFunction>(TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForApplication), METH_VARARGS, nullptr },
         { "create_tile_flyout_updater_for_application_with_id", reinterpret_cast<PyCFunction>(TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForApplicationWithId), METH_VARARGS, nullptr },
         { "create_tile_flyout_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "get_template_content", reinterpret_cast<PyCFunction>(TileFlyoutUpdateManager_GetTemplateContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TileFlyoutUpdateManager_Static[] = 
     {
@@ -4972,14 +4900,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Spec type_spec_TileFlyoutUpdateManager_Static =
-    {
+    static PyType_Spec type_spec_TileFlyoutUpdateManager_Static = {
         "winrt._winrt_windows_ui_notifications.TileFlyoutUpdateManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TileFlyoutUpdateManager_Static
-    };
+        type_slots_TileFlyoutUpdateManager_Static};
 
     // ----- TileFlyoutUpdater class --------------------
 
@@ -5274,21 +5200,18 @@ namespace py::cpp::Windows::UI::Notifications
         { "update", reinterpret_cast<PyCFunction>(TileFlyoutUpdater_Update), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TileFlyoutUpdater, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TileFlyoutUpdater), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TileFlyoutUpdater[] = {
         { "setting", reinterpret_cast<getter>(TileFlyoutUpdater_get_Setting), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TileFlyoutUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileFlyoutUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileFlyoutUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileFlyoutUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileFlyoutUpdater) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TileFlyoutUpdater = {
         "winrt._winrt_windows_ui_notifications.TileFlyoutUpdater",
@@ -5533,23 +5456,20 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_TileNotification[] = {
         { "_assign_array_", _assign_array_TileNotification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TileNotification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TileNotification[] = {
         { "tag", reinterpret_cast<getter>(TileNotification_get_Tag), reinterpret_cast<setter>(TileNotification_put_Tag), nullptr, nullptr },
         { "expiration_time", reinterpret_cast<getter>(TileNotification_get_ExpirationTime), reinterpret_cast<setter>(TileNotification_put_ExpirationTime), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(TileNotification_get_Content), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TileNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileNotification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TileNotification = {
         "winrt._winrt_windows_ui_notifications.TileNotification",
@@ -5776,19 +5696,16 @@ namespace py::cpp::Windows::UI::Notifications
     }
 
     static PyMethodDef _methods_TileUpdateManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TileUpdateManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TileUpdateManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileUpdateManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileUpdateManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileUpdateManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TileUpdateManager = {
         "winrt._winrt_windows_ui_notifications.TileUpdateManager",
@@ -5798,8 +5715,7 @@ namespace py::cpp::Windows::UI::Notifications
         _type_slots_TileUpdateManager};
 
     static PyGetSetDef getset_TileUpdateManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TileUpdateManager_Static[] = {
         { "create_tile_updater_for_application", reinterpret_cast<PyCFunction>(TileUpdateManager_CreateTileUpdaterForApplication), METH_VARARGS, nullptr },
@@ -5807,8 +5723,7 @@ namespace py::cpp::Windows::UI::Notifications
         { "create_tile_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(TileUpdateManager_CreateTileUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(TileUpdateManager_GetForUser), METH_VARARGS, nullptr },
         { "get_template_content", reinterpret_cast<PyCFunction>(TileUpdateManager_GetTemplateContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TileUpdateManager_Static[] = 
     {
@@ -5818,14 +5733,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Spec type_spec_TileUpdateManager_Static =
-    {
+    static PyType_Spec type_spec_TileUpdateManager_Static = {
         "winrt._winrt_windows_ui_notifications.TileUpdateManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TileUpdateManager_Static
-    };
+        type_slots_TileUpdateManager_Static};
 
     // ----- TileUpdateManagerForUser class --------------------
 
@@ -6028,21 +5941,18 @@ namespace py::cpp::Windows::UI::Notifications
         { "create_tile_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(TileUpdateManagerForUser_CreateTileUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TileUpdateManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TileUpdateManagerForUser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TileUpdateManagerForUser[] = {
         { "user", reinterpret_cast<getter>(TileUpdateManagerForUser_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TileUpdateManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileUpdateManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileUpdateManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileUpdateManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileUpdateManagerForUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TileUpdateManagerForUser = {
         "winrt._winrt_windows_ui_notifications.TileUpdateManagerForUser",
@@ -6740,21 +6650,18 @@ namespace py::cpp::Windows::UI::Notifications
         { "update", reinterpret_cast<PyCFunction>(TileUpdater_Update), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TileUpdater, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TileUpdater), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TileUpdater[] = {
         { "setting", reinterpret_cast<getter>(TileUpdater_get_Setting), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TileUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileUpdater) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TileUpdater = {
         "winrt._winrt_windows_ui_notifications.TileUpdater",
@@ -6867,22 +6774,19 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_ToastActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ToastActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastActivatedEventArgs[] = {
         { "arguments", reinterpret_cast<getter>(ToastActivatedEventArgs_get_Arguments), nullptr, nullptr, nullptr },
         { "user_input", reinterpret_cast<getter>(ToastActivatedEventArgs_get_UserInput), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastActivatedEventArgs = {
         "winrt._winrt_windows_ui_notifications.ToastActivatedEventArgs",
@@ -7199,24 +7103,21 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_ToastCollection[] = {
         { "_assign_array_", _assign_array_ToastCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastCollection[] = {
         { "launch_args", reinterpret_cast<getter>(ToastCollection_get_LaunchArgs), reinterpret_cast<setter>(ToastCollection_put_LaunchArgs), nullptr, nullptr },
         { "icon", reinterpret_cast<getter>(ToastCollection_get_Icon), reinterpret_cast<setter>(ToastCollection_put_Icon), nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(ToastCollection_get_DisplayName), reinterpret_cast<setter>(ToastCollection_put_DisplayName), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(ToastCollection_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastCollection = {
         "winrt._winrt_windows_ui_notifications.ToastCollection",
@@ -7540,22 +7441,19 @@ namespace py::cpp::Windows::UI::Notifications
         { "save_toast_collection_async", reinterpret_cast<PyCFunction>(ToastCollectionManager_SaveToastCollectionAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ToastCollectionManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastCollectionManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastCollectionManager[] = {
         { "app_id", reinterpret_cast<getter>(ToastCollectionManager_get_AppId), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(ToastCollectionManager_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastCollectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastCollectionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastCollectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastCollectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastCollectionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastCollectionManager = {
         "winrt._winrt_windows_ui_notifications.ToastCollectionManager",
@@ -7638,21 +7536,18 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_ToastDismissedEventArgs[] = {
         { "_assign_array_", _assign_array_ToastDismissedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastDismissedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastDismissedEventArgs[] = {
         { "reason", reinterpret_cast<getter>(ToastDismissedEventArgs_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastDismissedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastDismissedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastDismissedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastDismissedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastDismissedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastDismissedEventArgs = {
         "winrt._winrt_windows_ui_notifications.ToastDismissedEventArgs",
@@ -7735,21 +7630,18 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_ToastFailedEventArgs[] = {
         { "_assign_array_", _assign_array_ToastFailedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastFailedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastFailedEventArgs[] = {
         { "error_code", reinterpret_cast<getter>(ToastFailedEventArgs_get_ErrorCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastFailedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastFailedEventArgs = {
         "winrt._winrt_windows_ui_notifications.ToastFailedEventArgs",
@@ -8678,8 +8570,7 @@ namespace py::cpp::Windows::UI::Notifications
         { "remove_failed", reinterpret_cast<PyCFunction>(ToastNotification_remove_Failed), METH_O, nullptr },
         { "_assign_array_", _assign_array_ToastNotification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastNotification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastNotification[] = {
         { "expiration_time", reinterpret_cast<getter>(ToastNotification_get_ExpirationTime), reinterpret_cast<setter>(ToastNotification_put_ExpirationTime), nullptr, nullptr },
@@ -8692,16 +8583,14 @@ namespace py::cpp::Windows::UI::Notifications
         { "priority", reinterpret_cast<getter>(ToastNotification_get_Priority), reinterpret_cast<setter>(ToastNotification_put_Priority), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(ToastNotification_get_Data), reinterpret_cast<setter>(ToastNotification_put_Data), nullptr, nullptr },
         { "expires_on_reboot", reinterpret_cast<getter>(ToastNotification_get_ExpiresOnReboot), reinterpret_cast<setter>(ToastNotification_put_ExpiresOnReboot), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastNotification = {
         "winrt._winrt_windows_ui_notifications.ToastNotification",
@@ -8814,22 +8703,19 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_ToastNotificationActionTriggerDetail[] = {
         { "_assign_array_", _assign_array_ToastNotificationActionTriggerDetail, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastNotificationActionTriggerDetail), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastNotificationActionTriggerDetail[] = {
         { "argument", reinterpret_cast<getter>(ToastNotificationActionTriggerDetail_get_Argument), nullptr, nullptr, nullptr },
         { "user_input", reinterpret_cast<getter>(ToastNotificationActionTriggerDetail_get_UserInput), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastNotificationActionTriggerDetail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationActionTriggerDetail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationActionTriggerDetail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationActionTriggerDetail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationActionTriggerDetail) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastNotificationActionTriggerDetail = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationActionTriggerDetail",
@@ -9276,20 +9162,17 @@ namespace py::cpp::Windows::UI::Notifications
         { "remove_grouped_tag_with_id", reinterpret_cast<PyCFunction>(ToastNotificationHistory_RemoveGroupedTagWithId), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ToastNotificationHistory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastNotificationHistory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastNotificationHistory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastNotificationHistory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationHistory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationHistory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationHistory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationHistory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastNotificationHistory = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationHistory",
@@ -9402,22 +9285,19 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_ToastNotificationHistoryChangedTriggerDetail[] = {
         { "_assign_array_", _assign_array_ToastNotificationHistoryChangedTriggerDetail, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastNotificationHistoryChangedTriggerDetail), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastNotificationHistoryChangedTriggerDetail[] = {
         { "change_type", reinterpret_cast<getter>(ToastNotificationHistoryChangedTriggerDetail_get_ChangeType), nullptr, nullptr, nullptr },
         { "collection_id", reinterpret_cast<getter>(ToastNotificationHistoryChangedTriggerDetail_get_CollectionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastNotificationHistoryChangedTriggerDetail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationHistoryChangedTriggerDetail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationHistoryChangedTriggerDetail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationHistoryChangedTriggerDetail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationHistoryChangedTriggerDetail) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastNotificationHistoryChangedTriggerDetail = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationHistoryChangedTriggerDetail",
@@ -9715,19 +9595,16 @@ namespace py::cpp::Windows::UI::Notifications
     }
 
     static PyMethodDef _methods_ToastNotificationManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastNotificationManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastNotificationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastNotificationManager = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationManager",
@@ -9738,8 +9615,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyGetSetDef getset_ToastNotificationManager_Static[] = {
         { "history", reinterpret_cast<getter>(ToastNotificationManager_get_History), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ToastNotificationManager_Static[] = {
         { "configure_notification_mirroring", reinterpret_cast<PyCFunction>(ToastNotificationManager_ConfigureNotificationMirroring), METH_VARARGS, nullptr },
@@ -9748,8 +9624,7 @@ namespace py::cpp::Windows::UI::Notifications
         { "get_default", reinterpret_cast<PyCFunction>(ToastNotificationManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(ToastNotificationManager_GetForUser), METH_VARARGS, nullptr },
         { "get_template_content", reinterpret_cast<PyCFunction>(ToastNotificationManager_GetTemplateContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ToastNotificationManager_Static[] = 
     {
@@ -9759,14 +9634,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Spec type_spec_ToastNotificationManager_Static =
-    {
+    static PyType_Spec type_spec_ToastNotificationManager_Static = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ToastNotificationManager_Static
-    };
+        type_slots_ToastNotificationManager_Static};
 
     // ----- ToastNotificationManagerForUser class --------------------
 
@@ -10223,23 +10096,20 @@ namespace py::cpp::Windows::UI::Notifications
         { "remove_notification_mode_changed", reinterpret_cast<PyCFunction>(ToastNotificationManagerForUser_remove_NotificationModeChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ToastNotificationManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastNotificationManagerForUser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastNotificationManagerForUser[] = {
         { "history", reinterpret_cast<getter>(ToastNotificationManagerForUser_get_History), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(ToastNotificationManagerForUser_get_User), nullptr, nullptr, nullptr },
         { "notification_mode", reinterpret_cast<getter>(ToastNotificationManagerForUser_get_NotificationMode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastNotificationManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationManagerForUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastNotificationManagerForUser = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationManagerForUser",
@@ -10695,21 +10565,18 @@ namespace py::cpp::Windows::UI::Notifications
         { "remove_scheduled_toast_notification_showing", reinterpret_cast<PyCFunction>(ToastNotifier_remove_ScheduledToastNotificationShowing), METH_O, nullptr },
         { "_assign_array_", _assign_array_ToastNotifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastNotifier), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastNotifier[] = {
         { "setting", reinterpret_cast<getter>(ToastNotifier_get_Setting), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastNotifier = {
         "winrt._winrt_windows_ui_notifications.ToastNotifier",
@@ -10882,24 +10749,21 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_UserNotification[] = {
         { "_assign_array_", _assign_array_UserNotification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserNotification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserNotification[] = {
         { "app_info", reinterpret_cast<getter>(UserNotification_get_AppInfo), nullptr, nullptr, nullptr },
         { "creation_time", reinterpret_cast<getter>(UserNotification_get_CreationTime), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(UserNotification_get_Id), nullptr, nullptr, nullptr },
         { "notification", reinterpret_cast<getter>(UserNotification_get_Notification), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserNotification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserNotification = {
         "winrt._winrt_windows_ui_notifications.UserNotification",
@@ -11012,22 +10876,19 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_UserNotificationChangedEventArgs[] = {
         { "_assign_array_", _assign_array_UserNotificationChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserNotificationChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserNotificationChangedEventArgs[] = {
         { "change_kind", reinterpret_cast<getter>(UserNotificationChangedEventArgs_get_ChangeKind), nullptr, nullptr, nullptr },
         { "user_notification_id", reinterpret_cast<getter>(UserNotificationChangedEventArgs_get_UserNotificationId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserNotificationChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserNotificationChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserNotificationChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserNotificationChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserNotificationChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserNotificationChangedEventArgs = {
         "winrt._winrt_windows_ui_notifications.UserNotificationChangedEventArgs",
@@ -11140,22 +11001,19 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_IAdaptiveNotificationContent[] = {
         { "_assign_array_", _assign_array_IAdaptiveNotificationContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAdaptiveNotificationContent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAdaptiveNotificationContent[] = {
         { "hints", reinterpret_cast<getter>(IAdaptiveNotificationContent_get_Hints), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IAdaptiveNotificationContent_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAdaptiveNotificationContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdaptiveNotificationContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdaptiveNotificationContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdaptiveNotificationContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdaptiveNotificationContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAdaptiveNotificationContent = {
         "winrt._winrt_windows_ui_notifications.IAdaptiveNotificationContent",
@@ -11251,13 +11109,11 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef methods_ImplementsIAdaptiveNotificationContent[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAdaptiveNotificationContent), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAdaptiveNotificationContent), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAdaptiveNotificationContent[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAdaptiveNotificationContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAdaptiveNotificationContent = {
         "winrt._winrt_windows_ui_notifications.ImplementsIAdaptiveNotificationContent",

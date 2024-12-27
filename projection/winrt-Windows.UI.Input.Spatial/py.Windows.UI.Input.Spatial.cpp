@@ -1169,21 +1169,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "remove_tapped", reinterpret_cast<PyCFunction>(SpatialGestureRecognizer_remove_Tapped), METH_O, nullptr },
         { "_assign_array_", _assign_array_SpatialGestureRecognizer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialGestureRecognizer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialGestureRecognizer[] = {
         { "gesture_settings", reinterpret_cast<getter>(SpatialGestureRecognizer_get_GestureSettings), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialGestureRecognizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialGestureRecognizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialGestureRecognizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialGestureRecognizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialGestureRecognizer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialGestureRecognizer = {
         "winrt._winrt_windows_ui_input_spatial.SpatialGestureRecognizer",
@@ -1266,21 +1263,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialHoldCanceledEventArgs[] = {
         { "_assign_array_", _assign_array_SpatialHoldCanceledEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialHoldCanceledEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialHoldCanceledEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialHoldCanceledEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialHoldCanceledEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialHoldCanceledEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialHoldCanceledEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialHoldCanceledEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialHoldCanceledEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialHoldCanceledEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialHoldCanceledEventArgs",
@@ -1363,21 +1357,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialHoldCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_SpatialHoldCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialHoldCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialHoldCompletedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialHoldCompletedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialHoldCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialHoldCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialHoldCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialHoldCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialHoldCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialHoldCompletedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialHoldCompletedEventArgs",
@@ -1503,21 +1494,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_pointer_pose", reinterpret_cast<PyCFunction>(SpatialHoldStartedEventArgs_TryGetPointerPose), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialHoldStartedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialHoldStartedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialHoldStartedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialHoldStartedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialHoldStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialHoldStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialHoldStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialHoldStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialHoldStartedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialHoldStartedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialHoldStartedEventArgs",
@@ -1600,21 +1588,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialInteraction[] = {
         { "_assign_array_", _assign_array_SpatialInteraction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteraction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteraction[] = {
         { "source_state", reinterpret_cast<getter>(SpatialInteraction_get_SourceState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteraction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteraction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteraction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteraction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteraction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteraction = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteraction",
@@ -1929,8 +1914,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_renderable_model_async", reinterpret_cast<PyCFunction>(SpatialInteractionController_TryGetRenderableModelAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialInteractionController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteractionController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteractionController[] = {
         { "has_thumbstick", reinterpret_cast<getter>(SpatialInteractionController_get_HasThumbstick), nullptr, nullptr, nullptr },
@@ -1939,16 +1923,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "simple_haptics_controller", reinterpret_cast<getter>(SpatialInteractionController_get_SimpleHapticsController), nullptr, nullptr, nullptr },
         { "vendor_id", reinterpret_cast<getter>(SpatialInteractionController_get_VendorId), nullptr, nullptr, nullptr },
         { "version", reinterpret_cast<getter>(SpatialInteractionController_get_Version), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteractionController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteractionController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteractionController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteractionController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteractionController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteractionController = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionController",
@@ -2211,8 +2193,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialInteractionControllerProperties[] = {
         { "_assign_array_", _assign_array_SpatialInteractionControllerProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteractionControllerProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteractionControllerProperties[] = {
         { "is_thumbstick_pressed", reinterpret_cast<getter>(SpatialInteractionControllerProperties_get_IsThumbstickPressed), nullptr, nullptr, nullptr },
@@ -2222,16 +2203,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "thumbstick_y", reinterpret_cast<getter>(SpatialInteractionControllerProperties_get_ThumbstickY), nullptr, nullptr, nullptr },
         { "touchpad_x", reinterpret_cast<getter>(SpatialInteractionControllerProperties_get_TouchpadX), nullptr, nullptr, nullptr },
         { "touchpad_y", reinterpret_cast<getter>(SpatialInteractionControllerProperties_get_TouchpadY), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteractionControllerProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteractionControllerProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteractionControllerProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteractionControllerProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteractionControllerProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteractionControllerProperties = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionControllerProperties",
@@ -2417,23 +2396,20 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_pointer_pose", reinterpret_cast<PyCFunction>(SpatialInteractionDetectedEventArgs_TryGetPointerPose), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialInteractionDetectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteractionDetectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteractionDetectedEventArgs[] = {
         { "interaction", reinterpret_cast<getter>(SpatialInteractionDetectedEventArgs_get_Interaction), nullptr, nullptr, nullptr },
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialInteractionDetectedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
         { "interaction_source", reinterpret_cast<getter>(SpatialInteractionDetectedEventArgs_get_InteractionSource), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteractionDetectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteractionDetectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteractionDetectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteractionDetectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteractionDetectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteractionDetectedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionDetectedEventArgs",
@@ -3013,20 +2989,17 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "remove_source_updated", reinterpret_cast<PyCFunction>(SpatialInteractionManager_remove_SourceUpdated), METH_O, nullptr },
         { "_assign_array_", _assign_array_SpatialInteractionManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteractionManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteractionManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteractionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteractionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteractionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteractionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteractionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteractionManager = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionManager",
@@ -3036,14 +3009,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         _type_slots_SpatialInteractionManager};
 
     static PyGetSetDef getset_SpatialInteractionManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SpatialInteractionManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(SpatialInteractionManager_GetForCurrentView), METH_VARARGS, nullptr },
         { "is_source_kind_supported", reinterpret_cast<PyCFunction>(SpatialInteractionManager_IsSourceKindSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SpatialInteractionManager_Static[] = 
     {
@@ -3053,14 +3024,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { }
     };
 
-    static PyType_Spec type_spec_SpatialInteractionManager_Static =
-    {
+    static PyType_Spec type_spec_SpatialInteractionManager_Static = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpatialInteractionManager_Static
-    };
+        type_slots_SpatialInteractionManager_Static};
 
     // ----- SpatialInteractionSource class --------------------
 
@@ -3441,8 +3410,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_state_at_timestamp", reinterpret_cast<PyCFunction>(SpatialInteractionSource_TryGetStateAtTimestamp), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialInteractionSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteractionSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteractionSource[] = {
         { "id", reinterpret_cast<getter>(SpatialInteractionSource_get_Id), nullptr, nullptr, nullptr },
@@ -3452,16 +3420,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "is_menu_supported", reinterpret_cast<getter>(SpatialInteractionSource_get_IsMenuSupported), nullptr, nullptr, nullptr },
         { "is_pointing_supported", reinterpret_cast<getter>(SpatialInteractionSource_get_IsPointingSupported), nullptr, nullptr, nullptr },
         { "handedness", reinterpret_cast<getter>(SpatialInteractionSource_get_Handedness), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteractionSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteractionSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteractionSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteractionSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteractionSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteractionSource = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSource",
@@ -3574,22 +3540,19 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialInteractionSourceEventArgs[] = {
         { "_assign_array_", _assign_array_SpatialInteractionSourceEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteractionSourceEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteractionSourceEventArgs[] = {
         { "state", reinterpret_cast<getter>(SpatialInteractionSourceEventArgs_get_State), nullptr, nullptr, nullptr },
         { "press_kind", reinterpret_cast<getter>(SpatialInteractionSourceEventArgs_get_PressKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteractionSourceEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteractionSourceEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteractionSourceEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteractionSourceEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteractionSourceEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteractionSourceEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSourceEventArgs",
@@ -3822,8 +3785,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialInteractionSourceLocation[] = {
         { "_assign_array_", _assign_array_SpatialInteractionSourceLocation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteractionSourceLocation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteractionSourceLocation[] = {
         { "position", reinterpret_cast<getter>(SpatialInteractionSourceLocation_get_Position), nullptr, nullptr, nullptr },
@@ -3832,16 +3794,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "angular_velocity", reinterpret_cast<getter>(SpatialInteractionSourceLocation_get_AngularVelocity), nullptr, nullptr, nullptr },
         { "position_accuracy", reinterpret_cast<getter>(SpatialInteractionSourceLocation_get_PositionAccuracy), nullptr, nullptr, nullptr },
         { "source_pointer_pose", reinterpret_cast<getter>(SpatialInteractionSourceLocation_get_SourcePointerPose), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteractionSourceLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteractionSourceLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteractionSourceLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteractionSourceLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteractionSourceLocation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteractionSourceLocation = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSourceLocation",
@@ -4010,21 +3970,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_source_loss_mitigation_direction", reinterpret_cast<PyCFunction>(SpatialInteractionSourceProperties_TryGetSourceLossMitigationDirection), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialInteractionSourceProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteractionSourceProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteractionSourceProperties[] = {
         { "source_loss_risk", reinterpret_cast<getter>(SpatialInteractionSourceProperties_get_SourceLossRisk), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteractionSourceProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteractionSourceProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteractionSourceProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteractionSourceProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteractionSourceProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteractionSourceProperties = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSourceProperties",
@@ -4431,8 +4388,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_pointer_pose", reinterpret_cast<PyCFunction>(SpatialInteractionSourceState_TryGetPointerPose), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialInteractionSourceState, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialInteractionSourceState), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialInteractionSourceState[] = {
         { "is_pressed", reinterpret_cast<getter>(SpatialInteractionSourceState_get_IsPressed), nullptr, nullptr, nullptr },
@@ -4444,16 +4400,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "is_menu_pressed", reinterpret_cast<getter>(SpatialInteractionSourceState_get_IsMenuPressed), nullptr, nullptr, nullptr },
         { "is_select_pressed", reinterpret_cast<getter>(SpatialInteractionSourceState_get_IsSelectPressed), nullptr, nullptr, nullptr },
         { "select_pressed_value", reinterpret_cast<getter>(SpatialInteractionSourceState_get_SelectPressedValue), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialInteractionSourceState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialInteractionSourceState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialInteractionSourceState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialInteractionSourceState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialInteractionSourceState) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialInteractionSourceState = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSourceState",
@@ -4536,21 +4490,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialManipulationCanceledEventArgs[] = {
         { "_assign_array_", _assign_array_SpatialManipulationCanceledEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialManipulationCanceledEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialManipulationCanceledEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialManipulationCanceledEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialManipulationCanceledEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialManipulationCanceledEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialManipulationCanceledEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialManipulationCanceledEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialManipulationCanceledEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialManipulationCanceledEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationCanceledEventArgs",
@@ -4676,21 +4627,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_cumulative_delta", reinterpret_cast<PyCFunction>(SpatialManipulationCompletedEventArgs_TryGetCumulativeDelta), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialManipulationCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialManipulationCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialManipulationCompletedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialManipulationCompletedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialManipulationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialManipulationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialManipulationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialManipulationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialManipulationCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialManipulationCompletedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationCompletedEventArgs",
@@ -4773,21 +4721,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialManipulationDelta[] = {
         { "_assign_array_", _assign_array_SpatialManipulationDelta, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialManipulationDelta), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialManipulationDelta[] = {
         { "translation", reinterpret_cast<getter>(SpatialManipulationDelta_get_Translation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialManipulationDelta[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialManipulationDelta) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialManipulationDelta) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialManipulationDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialManipulationDelta) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialManipulationDelta = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationDelta",
@@ -4913,21 +4858,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_pointer_pose", reinterpret_cast<PyCFunction>(SpatialManipulationStartedEventArgs_TryGetPointerPose), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialManipulationStartedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialManipulationStartedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialManipulationStartedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialManipulationStartedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialManipulationStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialManipulationStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialManipulationStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialManipulationStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialManipulationStartedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialManipulationStartedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationStartedEventArgs",
@@ -5053,21 +4995,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_cumulative_delta", reinterpret_cast<PyCFunction>(SpatialManipulationUpdatedEventArgs_TryGetCumulativeDelta), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialManipulationUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialManipulationUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialManipulationUpdatedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialManipulationUpdatedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialManipulationUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialManipulationUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialManipulationUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialManipulationUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialManipulationUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialManipulationUpdatedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationUpdatedEventArgs",
@@ -5150,21 +5089,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialNavigationCanceledEventArgs[] = {
         { "_assign_array_", _assign_array_SpatialNavigationCanceledEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialNavigationCanceledEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialNavigationCanceledEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialNavigationCanceledEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialNavigationCanceledEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialNavigationCanceledEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialNavigationCanceledEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialNavigationCanceledEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialNavigationCanceledEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialNavigationCanceledEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialNavigationCanceledEventArgs",
@@ -5277,22 +5213,19 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialNavigationCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_SpatialNavigationCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialNavigationCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialNavigationCompletedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialNavigationCompletedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
         { "normalized_offset", reinterpret_cast<getter>(SpatialNavigationCompletedEventArgs_get_NormalizedOffset), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialNavigationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialNavigationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialNavigationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialNavigationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialNavigationCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialNavigationCompletedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialNavigationCompletedEventArgs",
@@ -5508,24 +5441,21 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_pointer_pose", reinterpret_cast<PyCFunction>(SpatialNavigationStartedEventArgs_TryGetPointerPose), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialNavigationStartedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialNavigationStartedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialNavigationStartedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialNavigationStartedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
         { "is_navigating_x", reinterpret_cast<getter>(SpatialNavigationStartedEventArgs_get_IsNavigatingX), nullptr, nullptr, nullptr },
         { "is_navigating_y", reinterpret_cast<getter>(SpatialNavigationStartedEventArgs_get_IsNavigatingY), nullptr, nullptr, nullptr },
         { "is_navigating_z", reinterpret_cast<getter>(SpatialNavigationStartedEventArgs_get_IsNavigatingZ), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialNavigationStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialNavigationStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialNavigationStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialNavigationStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialNavigationStartedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialNavigationStartedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialNavigationStartedEventArgs",
@@ -5638,22 +5568,19 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialNavigationUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_SpatialNavigationUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialNavigationUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialNavigationUpdatedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialNavigationUpdatedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
         { "normalized_offset", reinterpret_cast<getter>(SpatialNavigationUpdatedEventArgs_get_NormalizedOffset), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialNavigationUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialNavigationUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialNavigationUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialNavigationUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialNavigationUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialNavigationUpdatedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialNavigationUpdatedEventArgs",
@@ -5856,8 +5783,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialPointerInteractionSourcePose[] = {
         { "_assign_array_", _assign_array_SpatialPointerInteractionSourcePose, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialPointerInteractionSourcePose), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialPointerInteractionSourcePose[] = {
         { "forward_direction", reinterpret_cast<getter>(SpatialPointerInteractionSourcePose_get_ForwardDirection), nullptr, nullptr, nullptr },
@@ -5865,16 +5791,14 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "up_direction", reinterpret_cast<getter>(SpatialPointerInteractionSourcePose_get_UpDirection), nullptr, nullptr, nullptr },
         { "orientation", reinterpret_cast<getter>(SpatialPointerInteractionSourcePose_get_Orientation), nullptr, nullptr, nullptr },
         { "position_accuracy", reinterpret_cast<getter>(SpatialPointerInteractionSourcePose_get_PositionAccuracy), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialPointerInteractionSourcePose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialPointerInteractionSourcePose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialPointerInteractionSourcePose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialPointerInteractionSourcePose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialPointerInteractionSourcePose) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialPointerInteractionSourcePose = {
         "winrt._winrt_windows_ui_input_spatial.SpatialPointerInteractionSourcePose",
@@ -6133,24 +6057,21 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_interaction_source_pose", reinterpret_cast<PyCFunction>(SpatialPointerPose_TryGetInteractionSourcePose), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialPointerPose, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialPointerPose), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialPointerPose[] = {
         { "head", reinterpret_cast<getter>(SpatialPointerPose_get_Head), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(SpatialPointerPose_get_Timestamp), nullptr, nullptr, nullptr },
         { "eyes", reinterpret_cast<getter>(SpatialPointerPose_get_Eyes), nullptr, nullptr, nullptr },
         { "is_head_captured_by_system", reinterpret_cast<getter>(SpatialPointerPose_get_IsHeadCapturedBySystem), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialPointerPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialPointerPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialPointerPose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialPointerPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialPointerPose) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialPointerPose = {
         "winrt._winrt_windows_ui_input_spatial.SpatialPointerPose",
@@ -6160,13 +6081,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
         _type_slots_SpatialPointerPose};
 
     static PyGetSetDef getset_SpatialPointerPose_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SpatialPointerPose_Static[] = {
         { "try_get_at_timestamp", reinterpret_cast<PyCFunction>(SpatialPointerPose_TryGetAtTimestamp), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SpatialPointerPose_Static[] = 
     {
@@ -6176,14 +6095,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { }
     };
 
-    static PyType_Spec type_spec_SpatialPointerPose_Static =
-    {
+    static PyType_Spec type_spec_SpatialPointerPose_Static = {
         "winrt._winrt_windows_ui_input_spatial.SpatialPointerPose_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpatialPointerPose_Static
-    };
+        type_slots_SpatialPointerPose_Static};
 
     // ----- SpatialRecognitionEndedEventArgs class --------------------
 
@@ -6259,21 +6176,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static PyMethodDef _methods_SpatialRecognitionEndedEventArgs[] = {
         { "_assign_array_", _assign_array_SpatialRecognitionEndedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialRecognitionEndedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialRecognitionEndedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialRecognitionEndedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialRecognitionEndedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialRecognitionEndedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialRecognitionEndedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialRecognitionEndedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialRecognitionEndedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialRecognitionEndedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialRecognitionEndedEventArgs",
@@ -6442,21 +6356,18 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_pointer_pose", reinterpret_cast<PyCFunction>(SpatialRecognitionStartedEventArgs_TryGetPointerPose), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialRecognitionStartedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialRecognitionStartedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialRecognitionStartedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialRecognitionStartedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialRecognitionStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialRecognitionStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialRecognitionStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialRecognitionStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialRecognitionStartedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialRecognitionStartedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialRecognitionStartedEventArgs",
@@ -6612,22 +6523,19 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { "try_get_pointer_pose", reinterpret_cast<PyCFunction>(SpatialTappedEventArgs_TryGetPointerPose), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialTappedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialTappedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialTappedEventArgs[] = {
         { "interaction_source_kind", reinterpret_cast<getter>(SpatialTappedEventArgs_get_InteractionSourceKind), nullptr, nullptr, nullptr },
         { "tap_count", reinterpret_cast<getter>(SpatialTappedEventArgs_get_TapCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialTappedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialTappedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialTappedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialTappedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialTappedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialTappedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialTappedEventArgs",

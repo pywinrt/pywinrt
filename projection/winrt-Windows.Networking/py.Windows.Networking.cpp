@@ -351,24 +351,21 @@ namespace py::cpp::Windows::Networking
     static PyMethodDef _methods_EndpointPair[] = {
         { "_assign_array_", _assign_array_EndpointPair, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EndpointPair), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EndpointPair[] = {
         { "remote_service_name", reinterpret_cast<getter>(EndpointPair_get_RemoteServiceName), reinterpret_cast<setter>(EndpointPair_put_RemoteServiceName), nullptr, nullptr },
         { "remote_host_name", reinterpret_cast<getter>(EndpointPair_get_RemoteHostName), reinterpret_cast<setter>(EndpointPair_put_RemoteHostName), nullptr, nullptr },
         { "local_service_name", reinterpret_cast<getter>(EndpointPair_get_LocalServiceName), reinterpret_cast<setter>(EndpointPair_put_LocalServiceName), nullptr, nullptr },
         { "local_host_name", reinterpret_cast<getter>(EndpointPair_get_LocalHostName), reinterpret_cast<setter>(EndpointPair_put_LocalHostName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EndpointPair[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EndpointPair) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EndpointPair) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EndpointPair) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EndpointPair) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EndpointPair = {
         "winrt._winrt_windows_networking.EndpointPair",
@@ -739,8 +736,7 @@ namespace py::cpp::Windows::Networking
         { "to_string", reinterpret_cast<PyCFunction>(HostName_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HostName, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HostName), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HostName[] = {
         { "canonical_name", reinterpret_cast<getter>(HostName_get_CanonicalName), nullptr, nullptr, nullptr },
@@ -748,8 +744,7 @@ namespace py::cpp::Windows::Networking
         { "ip_information", reinterpret_cast<getter>(HostName_get_IPInformation), nullptr, nullptr, nullptr },
         { "raw_name", reinterpret_cast<getter>(HostName_get_RawName), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(HostName_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HostName[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HostName) },
@@ -757,8 +752,7 @@ namespace py::cpp::Windows::Networking
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HostName) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HostName) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HostName) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HostName = {
         "winrt._winrt_windows_networking.HostName",
@@ -768,13 +762,11 @@ namespace py::cpp::Windows::Networking
         _type_slots_HostName};
 
     static PyGetSetDef getset_HostName_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HostName_Static[] = {
         { "compare", reinterpret_cast<PyCFunction>(HostName_Compare), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HostName_Static[] = 
     {
@@ -784,14 +776,12 @@ namespace py::cpp::Windows::Networking
         { }
     };
 
-    static PyType_Spec type_spec_HostName_Static =
-    {
+    static PyType_Spec type_spec_HostName_Static = {
         "winrt._winrt_windows_networking.HostName_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HostName_Static
-    };
+        type_slots_HostName_Static};
 
     // ----- Windows.Networking Initialization --------------------
 

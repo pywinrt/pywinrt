@@ -48,20 +48,17 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     static PyMethodDef _methods_RequestingFocusOnKeyboardInputEventArgs[] = {
         { "_assign_array_", _assign_array_RequestingFocusOnKeyboardInputEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RequestingFocusOnKeyboardInputEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RequestingFocusOnKeyboardInputEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RequestingFocusOnKeyboardInputEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RequestingFocusOnKeyboardInputEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RequestingFocusOnKeyboardInputEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RequestingFocusOnKeyboardInputEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RequestingFocusOnKeyboardInputEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RequestingFocusOnKeyboardInputEventArgs = {
         "winrt._winrt_windows_applicationmodel_search_core.RequestingFocusOnKeyboardInputEventArgs",
@@ -294,8 +291,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     static PyMethodDef _methods_SearchSuggestion[] = {
         { "_assign_array_", _assign_array_SearchSuggestion, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchSuggestion), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchSuggestion[] = {
         { "detail_text", reinterpret_cast<getter>(SearchSuggestion_get_DetailText), nullptr, nullptr, nullptr },
@@ -304,16 +300,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { "kind", reinterpret_cast<getter>(SearchSuggestion_get_Kind), nullptr, nullptr, nullptr },
         { "tag", reinterpret_cast<getter>(SearchSuggestion_get_Tag), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(SearchSuggestion_get_Text), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchSuggestion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestion) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchSuggestion = {
         "winrt._winrt_windows_applicationmodel_search_core.SearchSuggestion",
@@ -1000,23 +994,20 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { "remove_suggestions_requested", reinterpret_cast<PyCFunction>(SearchSuggestionManager_remove_SuggestionsRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_SearchSuggestionManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchSuggestionManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchSuggestionManager[] = {
         { "search_history_enabled", reinterpret_cast<getter>(SearchSuggestionManager_get_SearchHistoryEnabled), reinterpret_cast<setter>(SearchSuggestionManager_put_SearchHistoryEnabled), nullptr, nullptr },
         { "search_history_context", reinterpret_cast<getter>(SearchSuggestionManager_get_SearchHistoryContext), reinterpret_cast<setter>(SearchSuggestionManager_put_SearchHistoryContext), nullptr, nullptr },
         { "suggestions", reinterpret_cast<getter>(SearchSuggestionManager_get_Suggestions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchSuggestionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchSuggestionManager = {
         "winrt._winrt_windows_applicationmodel_search_core.SearchSuggestionManager",
@@ -1189,24 +1180,21 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     static PyMethodDef _methods_SearchSuggestionsRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_SearchSuggestionsRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchSuggestionsRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchSuggestionsRequestedEventArgs[] = {
         { "language", reinterpret_cast<getter>(SearchSuggestionsRequestedEventArgs_get_Language), nullptr, nullptr, nullptr },
         { "linguistic_details", reinterpret_cast<getter>(SearchSuggestionsRequestedEventArgs_get_LinguisticDetails), nullptr, nullptr, nullptr },
         { "query_text", reinterpret_cast<getter>(SearchSuggestionsRequestedEventArgs_get_QueryText), nullptr, nullptr, nullptr },
         { "request", reinterpret_cast<getter>(SearchSuggestionsRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchSuggestionsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionsRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchSuggestionsRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search_core.SearchSuggestionsRequestedEventArgs",

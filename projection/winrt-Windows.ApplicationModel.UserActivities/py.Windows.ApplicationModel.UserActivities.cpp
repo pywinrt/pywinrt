@@ -825,8 +825,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "to_json", reinterpret_cast<PyCFunction>(UserActivity_ToJson), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserActivity, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivity), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivity[] = {
         { "fallback_uri", reinterpret_cast<getter>(UserActivity_get_FallbackUri), reinterpret_cast<setter>(UserActivity_put_FallbackUri), nullptr, nullptr },
@@ -838,16 +837,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "state", reinterpret_cast<getter>(UserActivity_get_State), nullptr, nullptr, nullptr },
         { "visual_elements", reinterpret_cast<getter>(UserActivity_get_VisualElements), nullptr, nullptr, nullptr },
         { "is_roamable", reinterpret_cast<getter>(UserActivity_get_IsRoamable), reinterpret_cast<setter>(UserActivity_put_IsRoamable), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivity[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivity) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivity) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivity) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivity) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivity = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivity",
@@ -857,15 +854,13 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         _type_slots_UserActivity};
 
     static PyGetSetDef getset_UserActivity_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserActivity_Static[] = {
         { "to_json_array", reinterpret_cast<PyCFunction>(UserActivity_ToJsonArray), METH_VARARGS, nullptr },
         { "try_parse_from_json", reinterpret_cast<PyCFunction>(UserActivity_TryParseFromJson), METH_VARARGS, nullptr },
         { "try_parse_from_json_array", reinterpret_cast<PyCFunction>(UserActivity_TryParseFromJsonArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserActivity_Static[] = 
     {
@@ -875,14 +870,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Spec type_spec_UserActivity_Static =
-    {
+    static PyType_Spec type_spec_UserActivity_Static = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivity_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserActivity_Static
-    };
+        type_slots_UserActivity_Static};
 
     // ----- UserActivityAttribution class --------------------
 
@@ -1172,23 +1165,20 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static PyMethodDef _methods_UserActivityAttribution[] = {
         { "_assign_array_", _assign_array_UserActivityAttribution, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivityAttribution), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivityAttribution[] = {
         { "icon_uri", reinterpret_cast<getter>(UserActivityAttribution_get_IconUri), reinterpret_cast<setter>(UserActivityAttribution_put_IconUri), nullptr, nullptr },
         { "alternate_text", reinterpret_cast<getter>(UserActivityAttribution_get_AlternateText), reinterpret_cast<setter>(UserActivityAttribution_put_AlternateText), nullptr, nullptr },
         { "add_image_query", reinterpret_cast<getter>(UserActivityAttribution_get_AddImageQuery), reinterpret_cast<setter>(UserActivityAttribution_put_AddImageQuery), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivityAttribution[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityAttribution) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityAttribution) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityAttribution) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityAttribution) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivityAttribution = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityAttribution",
@@ -1620,20 +1610,17 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "get_session_history_items_for_user_activity_async", reinterpret_cast<PyCFunction>(UserActivityChannel_GetSessionHistoryItemsForUserActivityAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserActivityChannel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivityChannel), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivityChannel[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivityChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityChannel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivityChannel = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityChannel",
@@ -1643,16 +1630,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         _type_slots_UserActivityChannel};
 
     static PyGetSetDef getset_UserActivityChannel_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserActivityChannel_Static[] = {
         { "disable_auto_session_creation", reinterpret_cast<PyCFunction>(UserActivityChannel_DisableAutoSessionCreation), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(UserActivityChannel_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(UserActivityChannel_GetForUser), METH_VARARGS, nullptr },
         { "try_get_for_web_account", reinterpret_cast<PyCFunction>(UserActivityChannel_TryGetForWebAccount), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserActivityChannel_Static[] = 
     {
@@ -1662,14 +1647,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Spec type_spec_UserActivityChannel_Static =
-    {
+    static PyType_Spec type_spec_UserActivityChannel_Static = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityChannel_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserActivityChannel_Static
-    };
+        type_slots_UserActivityChannel_Static};
 
     // ----- UserActivityContentInfo class --------------------
 
@@ -1798,20 +1781,17 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "to_json", reinterpret_cast<PyCFunction>(UserActivityContentInfo_ToJson), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserActivityContentInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivityContentInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivityContentInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivityContentInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityContentInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityContentInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityContentInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityContentInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivityContentInfo = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityContentInfo",
@@ -1821,13 +1801,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         _type_slots_UserActivityContentInfo};
 
     static PyGetSetDef getset_UserActivityContentInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserActivityContentInfo_Static[] = {
         { "from_json", reinterpret_cast<PyCFunction>(UserActivityContentInfo_FromJson), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserActivityContentInfo_Static[] = 
     {
@@ -1837,14 +1815,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Spec type_spec_UserActivityContentInfo_Static =
-    {
+    static PyType_Spec type_spec_UserActivityContentInfo_Static = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityContentInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserActivityContentInfo_Static
-    };
+        type_slots_UserActivityContentInfo_Static};
 
     // ----- UserActivityRequest class --------------------
 
@@ -1934,20 +1910,17 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "set_user_activity", reinterpret_cast<PyCFunction>(UserActivityRequest_SetUserActivity), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserActivityRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivityRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivityRequest[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivityRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivityRequest = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequest",
@@ -2107,20 +2080,17 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "remove_user_activity_requested", reinterpret_cast<PyCFunction>(UserActivityRequestManager_remove_UserActivityRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_UserActivityRequestManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivityRequestManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivityRequestManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivityRequestManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityRequestManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityRequestManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityRequestManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityRequestManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivityRequestManager = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequestManager",
@@ -2130,13 +2100,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         _type_slots_UserActivityRequestManager};
 
     static PyGetSetDef getset_UserActivityRequestManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserActivityRequestManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(UserActivityRequestManager_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserActivityRequestManager_Static[] = 
     {
@@ -2146,14 +2114,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Spec type_spec_UserActivityRequestManager_Static =
-    {
+    static PyType_Spec type_spec_UserActivityRequestManager_Static = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequestManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserActivityRequestManager_Static
-    };
+        type_slots_UserActivityRequestManager_Static};
 
     // ----- UserActivityRequestedEventArgs class --------------------
 
@@ -2270,21 +2236,18 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "get_deferral", reinterpret_cast<PyCFunction>(UserActivityRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserActivityRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivityRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivityRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(UserActivityRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivityRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivityRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequestedEventArgs",
@@ -2434,21 +2397,18 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivitySession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_UserActivitySession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_UserActivitySession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivitySession[] = {
         { "activity_id", reinterpret_cast<getter>(UserActivitySession_get_ActivityId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivitySession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivitySession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivitySession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivitySession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivitySession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivitySession = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivitySession",
@@ -2591,23 +2551,20 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static PyMethodDef _methods_UserActivitySessionHistoryItem[] = {
         { "_assign_array_", _assign_array_UserActivitySessionHistoryItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivitySessionHistoryItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivitySessionHistoryItem[] = {
         { "end_time", reinterpret_cast<getter>(UserActivitySessionHistoryItem_get_EndTime), nullptr, nullptr, nullptr },
         { "start_time", reinterpret_cast<getter>(UserActivitySessionHistoryItem_get_StartTime), nullptr, nullptr, nullptr },
         { "user_activity", reinterpret_cast<getter>(UserActivitySessionHistoryItem_get_UserActivity), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivitySessionHistoryItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivitySessionHistoryItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivitySessionHistoryItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivitySessionHistoryItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivitySessionHistoryItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivitySessionHistoryItem = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivitySessionHistoryItem",
@@ -3074,8 +3031,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static PyMethodDef _methods_UserActivityVisualElements[] = {
         { "_assign_array_", _assign_array_UserActivityVisualElements, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivityVisualElements), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserActivityVisualElements[] = {
         { "display_text", reinterpret_cast<getter>(UserActivityVisualElements_get_DisplayText), reinterpret_cast<setter>(UserActivityVisualElements_put_DisplayText), nullptr, nullptr },
@@ -3084,16 +3040,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "background_color", reinterpret_cast<getter>(UserActivityVisualElements_get_BackgroundColor), reinterpret_cast<setter>(UserActivityVisualElements_put_BackgroundColor), nullptr, nullptr },
         { "attribution", reinterpret_cast<getter>(UserActivityVisualElements_get_Attribution), reinterpret_cast<setter>(UserActivityVisualElements_put_Attribution), nullptr, nullptr },
         { "attribution_display_text", reinterpret_cast<getter>(UserActivityVisualElements_get_AttributionDisplayText), reinterpret_cast<setter>(UserActivityVisualElements_put_AttributionDisplayText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserActivityVisualElements[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityVisualElements) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityVisualElements) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityVisualElements) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityVisualElements) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserActivityVisualElements = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityVisualElements",
@@ -3187,20 +3141,17 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "to_json", reinterpret_cast<PyCFunction>(IUserActivityContentInfo_ToJson), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IUserActivityContentInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IUserActivityContentInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IUserActivityContentInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IUserActivityContentInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUserActivityContentInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUserActivityContentInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUserActivityContentInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUserActivityContentInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IUserActivityContentInfo = {
         "winrt._winrt_windows_applicationmodel_useractivities.IUserActivityContentInfo",
@@ -3282,13 +3233,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static PyMethodDef methods_ImplementsIUserActivityContentInfo[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUserActivityContentInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUserActivityContentInfo), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIUserActivityContentInfo[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIUserActivityContentInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIUserActivityContentInfo = {
         "winrt._winrt_windows_applicationmodel_useractivities.ImplementsIUserActivityContentInfo",

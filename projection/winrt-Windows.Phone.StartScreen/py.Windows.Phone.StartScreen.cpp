@@ -614,22 +614,19 @@ namespace py::cpp::Windows::Phone::StartScreen
         { "update_async", reinterpret_cast<PyCFunction>(DualSimTile_UpdateAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DualSimTile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DualSimTile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DualSimTile[] = {
         { "display_name", reinterpret_cast<getter>(DualSimTile_get_DisplayName), reinterpret_cast<setter>(DualSimTile_put_DisplayName), nullptr, nullptr },
         { "is_pinned_to_start", reinterpret_cast<getter>(DualSimTile_get_IsPinnedToStart), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DualSimTile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DualSimTile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DualSimTile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DualSimTile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DualSimTile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DualSimTile = {
         "winrt._winrt_windows_phone_startscreen.DualSimTile",
@@ -639,8 +636,7 @@ namespace py::cpp::Windows::Phone::StartScreen
         _type_slots_DualSimTile};
 
     static PyGetSetDef getset_DualSimTile_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DualSimTile_Static[] = {
         { "create_badge_updater_for_sim1", reinterpret_cast<PyCFunction>(DualSimTile_CreateBadgeUpdaterForSim1), METH_VARARGS, nullptr },
@@ -651,8 +647,7 @@ namespace py::cpp::Windows::Phone::StartScreen
         { "create_toast_notifier_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_CreateToastNotifierForSim2), METH_VARARGS, nullptr },
         { "get_tile_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_GetTileForSim2), METH_VARARGS, nullptr },
         { "update_display_name_for_sim1_async", reinterpret_cast<PyCFunction>(DualSimTile_UpdateDisplayNameForSim1Async), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DualSimTile_Static[] = 
     {
@@ -662,14 +657,12 @@ namespace py::cpp::Windows::Phone::StartScreen
         { }
     };
 
-    static PyType_Spec type_spec_DualSimTile_Static =
-    {
+    static PyType_Spec type_spec_DualSimTile_Static = {
         "winrt._winrt_windows_phone_startscreen.DualSimTile_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DualSimTile_Static
-    };
+        type_slots_DualSimTile_Static};
 
     // ----- IToastNotificationManagerStatics3 interface --------------------
 
@@ -758,20 +751,17 @@ namespace py::cpp::Windows::Phone::StartScreen
         { "create_toast_notifier_for_secondary_tile", reinterpret_cast<PyCFunction>(IToastNotificationManagerStatics3_CreateToastNotifierForSecondaryTile), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IToastNotificationManagerStatics3, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IToastNotificationManagerStatics3), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IToastNotificationManagerStatics3[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IToastNotificationManagerStatics3[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IToastNotificationManagerStatics3) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IToastNotificationManagerStatics3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IToastNotificationManagerStatics3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IToastNotificationManagerStatics3) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IToastNotificationManagerStatics3 = {
         "winrt._winrt_windows_phone_startscreen.IToastNotificationManagerStatics3",
@@ -859,13 +849,11 @@ namespace py::cpp::Windows::Phone::StartScreen
     static PyMethodDef methods_ImplementsIToastNotificationManagerStatics3[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIToastNotificationManagerStatics3), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIToastNotificationManagerStatics3), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIToastNotificationManagerStatics3[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIToastNotificationManagerStatics3) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIToastNotificationManagerStatics3 = {
         "winrt._winrt_windows_phone_startscreen.ImplementsIToastNotificationManagerStatics3",

@@ -56,19 +56,16 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     }
 
     static PyMethodDef _methods_AppServiceCatalog[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppServiceCatalog[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppServiceCatalog[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceCatalog) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceCatalog) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceCatalog) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppServiceCatalog = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceCatalog",
@@ -78,13 +75,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         _type_slots_AppServiceCatalog};
 
     static PyGetSetDef getset_AppServiceCatalog_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppServiceCatalog_Static[] = {
         { "find_app_service_providers_async", reinterpret_cast<PyCFunction>(AppServiceCatalog_FindAppServiceProvidersAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppServiceCatalog_Static[] = 
     {
@@ -94,14 +89,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Spec type_spec_AppServiceCatalog_Static =
-    {
+    static PyType_Spec type_spec_AppServiceCatalog_Static = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceCatalog_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppServiceCatalog_Static
-    };
+        type_slots_AppServiceCatalog_Static};
 
     // ----- AppServiceClosedEventArgs class --------------------
 
@@ -177,21 +170,18 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static PyMethodDef _methods_AppServiceClosedEventArgs[] = {
         { "_assign_array_", _assign_array_AppServiceClosedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppServiceClosedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppServiceClosedEventArgs[] = {
         { "status", reinterpret_cast<getter>(AppServiceClosedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppServiceClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceClosedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppServiceClosedEventArgs = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceClosedEventArgs",
@@ -845,23 +835,20 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { "_from", reinterpret_cast<PyCFunction>(_from_AppServiceConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AppServiceConnection), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_AppServiceConnection), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppServiceConnection[] = {
         { "package_family_name", reinterpret_cast<getter>(AppServiceConnection_get_PackageFamilyName), reinterpret_cast<setter>(AppServiceConnection_put_PackageFamilyName), nullptr, nullptr },
         { "app_service_name", reinterpret_cast<getter>(AppServiceConnection_get_AppServiceName), reinterpret_cast<setter>(AppServiceConnection_put_AppServiceName), nullptr, nullptr },
         { "user", reinterpret_cast<getter>(AppServiceConnection_get_User), reinterpret_cast<setter>(AppServiceConnection_put_User), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppServiceConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppServiceConnection = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceConnection",
@@ -871,13 +858,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         _type_slots_AppServiceConnection};
 
     static PyGetSetDef getset_AppServiceConnection_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppServiceConnection_Static[] = {
         { "send_stateless_message_async", reinterpret_cast<PyCFunction>(AppServiceConnection_SendStatelessMessageAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppServiceConnection_Static[] = 
     {
@@ -887,14 +872,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Spec type_spec_AppServiceConnection_Static =
-    {
+    static PyType_Spec type_spec_AppServiceConnection_Static = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceConnection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppServiceConnection_Static
-    };
+        type_slots_AppServiceConnection_Static};
 
     // ----- AppServiceDeferral class --------------------
 
@@ -982,20 +965,17 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { "complete", reinterpret_cast<PyCFunction>(AppServiceDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppServiceDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppServiceDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppServiceDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppServiceDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppServiceDeferral = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceDeferral",
@@ -1121,21 +1101,18 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { "send_response_async", reinterpret_cast<PyCFunction>(AppServiceRequest_SendResponseAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppServiceRequest[] = {
         { "message", reinterpret_cast<getter>(AppServiceRequest_get_Message), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppServiceRequest = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceRequest",
@@ -1259,21 +1236,18 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { "get_deferral", reinterpret_cast<PyCFunction>(AppServiceRequestReceivedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppServiceRequestReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppServiceRequestReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppServiceRequestReceivedEventArgs[] = {
         { "request", reinterpret_cast<getter>(AppServiceRequestReceivedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppServiceRequestReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceRequestReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceRequestReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceRequestReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceRequestReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppServiceRequestReceivedEventArgs = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceRequestReceivedEventArgs",
@@ -1386,22 +1360,19 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static PyMethodDef _methods_AppServiceResponse[] = {
         { "_assign_array_", _assign_array_AppServiceResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppServiceResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppServiceResponse[] = {
         { "message", reinterpret_cast<getter>(AppServiceResponse_get_Message), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(AppServiceResponse_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppServiceResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppServiceResponse = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceResponse",
@@ -1647,8 +1618,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { "check_caller_for_capability_async", reinterpret_cast<PyCFunction>(AppServiceTriggerDetails_CheckCallerForCapabilityAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppServiceTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppServiceTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppServiceTriggerDetails[] = {
         { "app_service_connection", reinterpret_cast<getter>(AppServiceTriggerDetails_get_AppServiceConnection), nullptr, nullptr, nullptr },
@@ -1656,16 +1626,14 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { "name", reinterpret_cast<getter>(AppServiceTriggerDetails_get_Name), nullptr, nullptr, nullptr },
         { "is_remote_system_connection", reinterpret_cast<getter>(AppServiceTriggerDetails_get_IsRemoteSystemConnection), nullptr, nullptr, nullptr },
         { "caller_remote_connection_token", reinterpret_cast<getter>(AppServiceTriggerDetails_get_CallerRemoteConnectionToken), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppServiceTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppServiceTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceTriggerDetails",
@@ -1778,22 +1746,19 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static PyMethodDef _methods_StatelessAppServiceResponse[] = {
         { "_assign_array_", _assign_array_StatelessAppServiceResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StatelessAppServiceResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StatelessAppServiceResponse[] = {
         { "message", reinterpret_cast<getter>(StatelessAppServiceResponse_get_Message), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(StatelessAppServiceResponse_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StatelessAppServiceResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StatelessAppServiceResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StatelessAppServiceResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StatelessAppServiceResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StatelessAppServiceResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StatelessAppServiceResponse = {
         "winrt._winrt_windows_applicationmodel_appservice.StatelessAppServiceResponse",

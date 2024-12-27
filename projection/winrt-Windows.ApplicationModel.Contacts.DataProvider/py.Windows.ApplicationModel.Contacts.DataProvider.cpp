@@ -358,20 +358,17 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { "remove_delete_contact_requested", reinterpret_cast<PyCFunction>(ContactDataProviderConnection_remove_DeleteContactRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_ContactDataProviderConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactDataProviderConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactDataProviderConnection[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactDataProviderConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactDataProviderConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactDataProviderConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactDataProviderConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactDataProviderConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactDataProviderConnection = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderConnection",
@@ -454,21 +451,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static PyMethodDef _methods_ContactDataProviderTriggerDetails[] = {
         { "_assign_array_", _assign_array_ContactDataProviderTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactDataProviderTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactDataProviderTriggerDetails[] = {
         { "connection", reinterpret_cast<getter>(ContactDataProviderTriggerDetails_get_Connection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactDataProviderTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactDataProviderTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactDataProviderTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactDataProviderTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactDataProviderTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactDataProviderTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderTriggerDetails",
@@ -665,22 +659,19 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(ContactListCreateOrUpdateContactRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactListCreateOrUpdateContactRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListCreateOrUpdateContactRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListCreateOrUpdateContactRequest[] = {
         { "contact", reinterpret_cast<getter>(ContactListCreateOrUpdateContactRequest_get_Contact), nullptr, nullptr, nullptr },
         { "contact_list_id", reinterpret_cast<getter>(ContactListCreateOrUpdateContactRequest_get_ContactListId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListCreateOrUpdateContactRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListCreateOrUpdateContactRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListCreateOrUpdateContactRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListCreateOrUpdateContactRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListCreateOrUpdateContactRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListCreateOrUpdateContactRequest = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequest",
@@ -804,21 +795,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(ContactListCreateOrUpdateContactRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactListCreateOrUpdateContactRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListCreateOrUpdateContactRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListCreateOrUpdateContactRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(ContactListCreateOrUpdateContactRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListCreateOrUpdateContactRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListCreateOrUpdateContactRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListCreateOrUpdateContactRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListCreateOrUpdateContactRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListCreateOrUpdateContactRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListCreateOrUpdateContactRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequestEventArgs",
@@ -1013,22 +1001,19 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(ContactListDeleteContactRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactListDeleteContactRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListDeleteContactRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListDeleteContactRequest[] = {
         { "contact_id", reinterpret_cast<getter>(ContactListDeleteContactRequest_get_ContactId), nullptr, nullptr, nullptr },
         { "contact_list_id", reinterpret_cast<getter>(ContactListDeleteContactRequest_get_ContactListId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListDeleteContactRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListDeleteContactRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListDeleteContactRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListDeleteContactRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListDeleteContactRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListDeleteContactRequest = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListDeleteContactRequest",
@@ -1152,21 +1137,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(ContactListDeleteContactRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactListDeleteContactRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListDeleteContactRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListDeleteContactRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(ContactListDeleteContactRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListDeleteContactRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListDeleteContactRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListDeleteContactRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListDeleteContactRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListDeleteContactRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListDeleteContactRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListDeleteContactRequestEventArgs",
@@ -1466,24 +1448,21 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { "save_contact_async", reinterpret_cast<PyCFunction>(ContactListServerSearchReadBatchRequest_SaveContactAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactListServerSearchReadBatchRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListServerSearchReadBatchRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListServerSearchReadBatchRequest[] = {
         { "contact_list_id", reinterpret_cast<getter>(ContactListServerSearchReadBatchRequest_get_ContactListId), nullptr, nullptr, nullptr },
         { "options", reinterpret_cast<getter>(ContactListServerSearchReadBatchRequest_get_Options), nullptr, nullptr, nullptr },
         { "session_id", reinterpret_cast<getter>(ContactListServerSearchReadBatchRequest_get_SessionId), nullptr, nullptr, nullptr },
         { "suggested_batch_size", reinterpret_cast<getter>(ContactListServerSearchReadBatchRequest_get_SuggestedBatchSize), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListServerSearchReadBatchRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListServerSearchReadBatchRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListServerSearchReadBatchRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListServerSearchReadBatchRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListServerSearchReadBatchRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListServerSearchReadBatchRequest = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListServerSearchReadBatchRequest",
@@ -1607,21 +1586,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(ContactListServerSearchReadBatchRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactListServerSearchReadBatchRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListServerSearchReadBatchRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListServerSearchReadBatchRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(ContactListServerSearchReadBatchRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListServerSearchReadBatchRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListServerSearchReadBatchRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListServerSearchReadBatchRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListServerSearchReadBatchRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListServerSearchReadBatchRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListServerSearchReadBatchRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListServerSearchReadBatchRequestEventArgs",
@@ -1786,21 +1762,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(ContactListSyncManagerSyncRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactListSyncManagerSyncRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListSyncManagerSyncRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListSyncManagerSyncRequest[] = {
         { "contact_list_id", reinterpret_cast<getter>(ContactListSyncManagerSyncRequest_get_ContactListId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListSyncManagerSyncRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListSyncManagerSyncRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListSyncManagerSyncRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListSyncManagerSyncRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListSyncManagerSyncRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListSyncManagerSyncRequest = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListSyncManagerSyncRequest",
@@ -1924,21 +1897,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(ContactListSyncManagerSyncRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactListSyncManagerSyncRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactListSyncManagerSyncRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactListSyncManagerSyncRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(ContactListSyncManagerSyncRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactListSyncManagerSyncRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactListSyncManagerSyncRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactListSyncManagerSyncRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactListSyncManagerSyncRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactListSyncManagerSyncRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactListSyncManagerSyncRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListSyncManagerSyncRequestEventArgs",

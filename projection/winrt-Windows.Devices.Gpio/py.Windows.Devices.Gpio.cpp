@@ -404,22 +404,19 @@ namespace py::cpp::Windows::Devices::Gpio
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioChangeCounter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_GpioChangeCounter), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_GpioChangeCounter), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GpioChangeCounter[] = {
         { "polarity", reinterpret_cast<getter>(GpioChangeCounter_get_Polarity), reinterpret_cast<setter>(GpioChangeCounter_put_Polarity), nullptr, nullptr },
         { "is_started", reinterpret_cast<getter>(GpioChangeCounter_get_IsStarted), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GpioChangeCounter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeCounter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeCounter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeCounter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeCounter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GpioChangeCounter = {
         "winrt._winrt_windows_devices_gpio.GpioChangeCounter",
@@ -1090,8 +1087,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioChangeReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_GpioChangeReader), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_GpioChangeReader), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GpioChangeReader[] = {
         { "polarity", reinterpret_cast<getter>(GpioChangeReader_get_Polarity), reinterpret_cast<setter>(GpioChangeReader_put_Polarity), nullptr, nullptr },
@@ -1100,16 +1096,14 @@ namespace py::cpp::Windows::Devices::Gpio
         { "is_overflowed", reinterpret_cast<getter>(GpioChangeReader_get_IsOverflowed), nullptr, nullptr, nullptr },
         { "is_started", reinterpret_cast<getter>(GpioChangeReader_get_IsStarted), nullptr, nullptr, nullptr },
         { "length", reinterpret_cast<getter>(GpioChangeReader_get_Length), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GpioChangeReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GpioChangeReader = {
         "winrt._winrt_windows_devices_gpio.GpioChangeReader",
@@ -1465,21 +1459,18 @@ namespace py::cpp::Windows::Devices::Gpio
         { "try_open_pin", reinterpret_cast<PyCFunction>(GpioController_TryOpenPin), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GpioController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GpioController[] = {
         { "pin_count", reinterpret_cast<getter>(GpioController_get_PinCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GpioController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GpioController = {
         "winrt._winrt_windows_devices_gpio.GpioController",
@@ -1489,15 +1480,13 @@ namespace py::cpp::Windows::Devices::Gpio
         _type_slots_GpioController};
 
     static PyGetSetDef getset_GpioController_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GpioController_Static[] = {
         { "get_controllers_async", reinterpret_cast<PyCFunction>(GpioController_GetControllersAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(GpioController_GetDefault), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(GpioController_GetDefaultAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GpioController_Static[] = 
     {
@@ -1507,14 +1496,12 @@ namespace py::cpp::Windows::Devices::Gpio
         { }
     };
 
-    static PyType_Spec type_spec_GpioController_Static =
-    {
+    static PyType_Spec type_spec_GpioController_Static = {
         "winrt._winrt_windows_devices_gpio.GpioController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GpioController_Static
-    };
+        type_slots_GpioController_Static};
 
     // ----- GpioPin class --------------------
 
@@ -2036,23 +2023,20 @@ namespace py::cpp::Windows::Devices::Gpio
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioPin), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_GpioPin), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_GpioPin), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GpioPin[] = {
         { "debounce_timeout", reinterpret_cast<getter>(GpioPin_get_DebounceTimeout), reinterpret_cast<setter>(GpioPin_put_DebounceTimeout), nullptr, nullptr },
         { "pin_number", reinterpret_cast<getter>(GpioPin_get_PinNumber), nullptr, nullptr, nullptr },
         { "sharing_mode", reinterpret_cast<getter>(GpioPin_get_SharingMode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GpioPin[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioPin) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioPin) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioPin) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioPin) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GpioPin = {
         "winrt._winrt_windows_devices_gpio.GpioPin",
@@ -2135,21 +2119,18 @@ namespace py::cpp::Windows::Devices::Gpio
     static PyMethodDef _methods_GpioPinValueChangedEventArgs[] = {
         { "_assign_array_", _assign_array_GpioPinValueChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioPinValueChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GpioPinValueChangedEventArgs[] = {
         { "edge", reinterpret_cast<getter>(GpioPinValueChangedEventArgs_get_Edge), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GpioPinValueChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioPinValueChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioPinValueChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioPinValueChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioPinValueChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GpioPinValueChangedEventArgs = {
         "winrt._winrt_windows_devices_gpio.GpioPinValueChangedEventArgs",
@@ -2227,8 +2208,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyMethodDef _methods_GpioChangeCount[] = {
         { "_assign_array_", _assign_array_GpioChangeCount, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* GpioChangeCount_get_Count(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, void* /*unused*/) noexcept
     {
@@ -2299,8 +2279,7 @@ namespace py::cpp::Windows::Devices::Gpio
     static PyGetSetDef _getset_GpioChangeCount[] = {
         { "count", reinterpret_cast<getter>(GpioChangeCount_get_Count), reinterpret_cast<setter>(GpioChangeCount_set_Count), nullptr, nullptr },
         { "relative_time", reinterpret_cast<getter>(GpioChangeCount_get_RelativeTime), reinterpret_cast<setter>(GpioChangeCount_set_RelativeTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_GpioChangeCount(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, PyObject* other, int op) noexcept
     {
@@ -2362,8 +2341,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeCount) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GpioChangeCount) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_GpioChangeCount) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GpioChangeCount = {
         "winrt._winrt_windows_devices_gpio.GpioChangeCount",
@@ -2441,8 +2419,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyMethodDef _methods_GpioChangeRecord[] = {
         { "_assign_array_", _assign_array_GpioChangeRecord, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* GpioChangeRecord_get_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, void* /*unused*/) noexcept
     {
@@ -2513,8 +2490,7 @@ namespace py::cpp::Windows::Devices::Gpio
     static PyGetSetDef _getset_GpioChangeRecord[] = {
         { "relative_time", reinterpret_cast<getter>(GpioChangeRecord_get_RelativeTime), reinterpret_cast<setter>(GpioChangeRecord_set_RelativeTime), nullptr, nullptr },
         { "edge", reinterpret_cast<getter>(GpioChangeRecord_get_Edge), reinterpret_cast<setter>(GpioChangeRecord_set_Edge), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_GpioChangeRecord(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, PyObject* other, int op) noexcept
     {
@@ -2576,8 +2552,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeRecord) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GpioChangeRecord) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_GpioChangeRecord) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GpioChangeRecord = {
         "winrt._winrt_windows_devices_gpio.GpioChangeRecord",

@@ -422,19 +422,16 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
     }
 
     static PyMethodDef _methods_GameService[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GameService[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GameService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameService) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameService = {
         "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameService",
@@ -445,8 +442,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyGetSetDef getset_GameService_Static[] = {
         { "service_uri", reinterpret_cast<getter>(GameService_get_ServiceUri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GameService_Static[] = {
         { "get_authentication_status", reinterpret_cast<PyCFunction>(GameService_GetAuthenticationStatus), METH_VARARGS, nullptr },
@@ -458,8 +454,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         { "grant_avatar_award", reinterpret_cast<PyCFunction>(GameService_GrantAvatarAward), METH_VARARGS, nullptr },
         { "notify_partner_token_expired", reinterpret_cast<PyCFunction>(GameService_NotifyPartnerTokenExpired), METH_VARARGS, nullptr },
         { "post_result", reinterpret_cast<PyCFunction>(GameService_PostResult), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GameService_Static[] = 
     {
@@ -469,14 +464,12 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         { }
     };
 
-    static PyType_Spec type_spec_GameService_Static =
-    {
+    static PyType_Spec type_spec_GameService_Static = {
         "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameService_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GameService_Static
-    };
+        type_slots_GameService_Static};
 
     // ----- GameServicePropertyCollection class --------------------
 
@@ -565,20 +558,17 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         { "get_property_async", reinterpret_cast<PyCFunction>(GameServicePropertyCollection_GetPropertyAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GameServicePropertyCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameServicePropertyCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GameServicePropertyCollection[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GameServicePropertyCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameServicePropertyCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameServicePropertyCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameServicePropertyCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameServicePropertyCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameServicePropertyCollection = {
         "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameServicePropertyCollection",

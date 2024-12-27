@@ -44,19 +44,16 @@ namespace py::cpp::Windows::System::RemoteDesktop
     }
 
     static PyMethodDef _methods_InteractiveSession[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InteractiveSession[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InteractiveSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractiveSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractiveSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractiveSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InteractiveSession = {
         "winrt._winrt_windows_system_remotedesktop.InteractiveSession",
@@ -67,12 +64,10 @@ namespace py::cpp::Windows::System::RemoteDesktop
 
     static PyGetSetDef getset_InteractiveSession_Static[] = {
         { "is_remote", reinterpret_cast<getter>(InteractiveSession_get_IsRemote), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_InteractiveSession_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_InteractiveSession_Static[] = 
     {
@@ -82,14 +77,12 @@ namespace py::cpp::Windows::System::RemoteDesktop
         { }
     };
 
-    static PyType_Spec type_spec_InteractiveSession_Static =
-    {
+    static PyType_Spec type_spec_InteractiveSession_Static = {
         "winrt._winrt_windows_system_remotedesktop.InteractiveSession_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_InteractiveSession_Static
-    };
+        type_slots_InteractiveSession_Static};
 
     // ----- Windows.System.RemoteDesktop Initialization --------------------
 

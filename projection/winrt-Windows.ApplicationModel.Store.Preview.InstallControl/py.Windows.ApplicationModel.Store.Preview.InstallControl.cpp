@@ -1075,8 +1075,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { "remove_status_changed", reinterpret_cast<PyCFunction>(AppInstallItem_remove_StatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppInstallItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInstallItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInstallItem[] = {
         { "install_type", reinterpret_cast<getter>(AppInstallItem_get_InstallType), nullptr, nullptr, nullptr },
@@ -1091,16 +1090,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { "pin_to_desktop_after_install", reinterpret_cast<getter>(AppInstallItem_get_PinToDesktopAfterInstall), reinterpret_cast<setter>(AppInstallItem_put_PinToDesktopAfterInstall), nullptr, nullptr },
         { "install_in_progress_toast_notification_mode", reinterpret_cast<getter>(AppInstallItem_get_InstallInProgressToastNotificationMode), reinterpret_cast<setter>(AppInstallItem_put_InstallInProgressToastNotificationMode), nullptr, nullptr },
         { "completed_install_toast_notification_mode", reinterpret_cast<getter>(AppInstallItem_get_CompletedInstallToastNotificationMode), reinterpret_cast<setter>(AppInstallItem_put_CompletedInstallToastNotificationMode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInstallItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInstallItem = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallItem",
@@ -3219,8 +3216,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { "remove_item_status_changed", reinterpret_cast<PyCFunction>(AppInstallManager_remove_ItemStatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppInstallManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInstallManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInstallManager[] = {
         { "auto_update_setting", reinterpret_cast<getter>(AppInstallManager_get_AutoUpdateSetting), reinterpret_cast<setter>(AppInstallManager_put_AutoUpdateSetting), nullptr, nullptr },
@@ -3228,16 +3224,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { "app_install_items", reinterpret_cast<getter>(AppInstallManager_get_AppInstallItems), nullptr, nullptr, nullptr },
         { "app_install_items_with_group_support", reinterpret_cast<getter>(AppInstallManager_get_AppInstallItemsWithGroupSupport), nullptr, nullptr, nullptr },
         { "can_install_for_all_users", reinterpret_cast<getter>(AppInstallManager_get_CanInstallForAllUsers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInstallManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInstallManager = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallManager",
@@ -3320,21 +3314,18 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static PyMethodDef _methods_AppInstallManagerItemEventArgs[] = {
         { "_assign_array_", _assign_array_AppInstallManagerItemEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInstallManagerItemEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInstallManagerItemEventArgs[] = {
         { "item", reinterpret_cast<getter>(AppInstallManagerItemEventArgs_get_Item), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInstallManagerItemEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallManagerItemEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallManagerItemEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallManagerItemEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallManagerItemEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInstallManagerItemEventArgs = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallManagerItemEventArgs",
@@ -4444,8 +4435,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static PyMethodDef _methods_AppInstallOptions[] = {
         { "_assign_array_", _assign_array_AppInstallOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInstallOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInstallOptions[] = {
         { "target_volume", reinterpret_cast<getter>(AppInstallOptions_get_TargetVolume), reinterpret_cast<setter>(AppInstallOptions_put_TargetVolume), nullptr, nullptr },
@@ -4463,16 +4453,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { "extended_campaign_id", reinterpret_cast<getter>(AppInstallOptions_get_ExtendedCampaignId), reinterpret_cast<setter>(AppInstallOptions_put_ExtendedCampaignId), nullptr, nullptr },
         { "completed_install_toast_notification_mode", reinterpret_cast<getter>(AppInstallOptions_get_CompletedInstallToastNotificationMode), reinterpret_cast<setter>(AppInstallOptions_put_CompletedInstallToastNotificationMode), nullptr, nullptr },
         { "campaign_id", reinterpret_cast<getter>(AppInstallOptions_get_CampaignId), reinterpret_cast<setter>(AppInstallOptions_put_CampaignId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInstallOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInstallOptions = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallOptions",
@@ -4765,8 +4753,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static PyMethodDef _methods_AppInstallStatus[] = {
         { "_assign_array_", _assign_array_AppInstallStatus, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInstallStatus), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInstallStatus[] = {
         { "bytes_downloaded", reinterpret_cast<getter>(AppInstallStatus_get_BytesDownloaded), nullptr, nullptr, nullptr },
@@ -4777,16 +4764,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { "ready_for_launch", reinterpret_cast<getter>(AppInstallStatus_get_ReadyForLaunch), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(AppInstallStatus_get_User), nullptr, nullptr, nullptr },
         { "is_staged", reinterpret_cast<getter>(AppInstallStatus_get_IsStaged), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInstallStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInstallStatus = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallStatus",
@@ -5068,23 +5053,20 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static PyMethodDef _methods_AppUpdateOptions[] = {
         { "_assign_array_", _assign_array_AppUpdateOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppUpdateOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppUpdateOptions[] = {
         { "catalog_id", reinterpret_cast<getter>(AppUpdateOptions_get_CatalogId), reinterpret_cast<setter>(AppUpdateOptions_put_CatalogId), nullptr, nullptr },
         { "allow_forced_app_restart", reinterpret_cast<getter>(AppUpdateOptions_get_AllowForcedAppRestart), reinterpret_cast<setter>(AppUpdateOptions_put_AllowForcedAppRestart), nullptr, nullptr },
         { "automatically_download_and_install_update_if_found", reinterpret_cast<getter>(AppUpdateOptions_get_AutomaticallyDownloadAndInstallUpdateIfFound), reinterpret_cast<setter>(AppUpdateOptions_put_AutomaticallyDownloadAndInstallUpdateIfFound), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppUpdateOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppUpdateOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppUpdateOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppUpdateOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppUpdateOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppUpdateOptions = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppUpdateOptions",
@@ -5287,8 +5269,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static PyMethodDef _methods_GetEntitlementResult[] = {
         { "_assign_array_", _assign_array_GetEntitlementResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GetEntitlementResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GetEntitlementResult[] = {
         { "status", reinterpret_cast<getter>(GetEntitlementResult_get_Status), nullptr, nullptr, nullptr },
@@ -5296,16 +5277,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { "is_already_owned", reinterpret_cast<getter>(GetEntitlementResult_get_IsAlreadyOwned), nullptr, nullptr, nullptr },
         { "order_id", reinterpret_cast<getter>(GetEntitlementResult_get_OrderId), nullptr, nullptr, nullptr },
         { "sku_id", reinterpret_cast<getter>(GetEntitlementResult_get_SkuId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GetEntitlementResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetEntitlementResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetEntitlementResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetEntitlementResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetEntitlementResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GetEntitlementResult = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.GetEntitlementResult",

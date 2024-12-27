@@ -615,8 +615,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
     static PyMethodDef _methods_AppNotification[] = {
         { "_assign_array_", _assign_array_AppNotification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppNotification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppNotification[] = {
         { "tag", reinterpret_cast<getter>(AppNotification_get_Tag), reinterpret_cast<setter>(AppNotification_put_Tag), nullptr, nullptr },
@@ -628,16 +627,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { "expiration", reinterpret_cast<getter>(AppNotification_get_Expiration), reinterpret_cast<setter>(AppNotification_put_Expiration), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(AppNotification_get_Id), nullptr, nullptr, nullptr },
         { "payload", reinterpret_cast<getter>(AppNotification_get_Payload), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppNotification = {
         "winrt._winrt_microsoft_windows_appnotifications.AppNotification",
@@ -780,23 +777,20 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
     static PyMethodDef _methods_AppNotificationActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_AppNotificationActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppNotificationActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppNotificationActivatedEventArgs[] = {
         { "argument", reinterpret_cast<getter>(AppNotificationActivatedEventArgs_get_Argument), nullptr, nullptr, nullptr },
         { "user_input", reinterpret_cast<getter>(AppNotificationActivatedEventArgs_get_UserInput), nullptr, nullptr, nullptr },
         { "arguments", reinterpret_cast<getter>(AppNotificationActivatedEventArgs_get_Arguments), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppNotificationActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotificationActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotificationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotificationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotificationActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppNotificationActivatedEventArgs = {
         "winrt._winrt_microsoft_windows_appnotifications.AppNotificationActivatedEventArgs",
@@ -1563,21 +1557,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { "remove_notification_invoked", reinterpret_cast<PyCFunction>(AppNotificationManager_remove_NotificationInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppNotificationManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppNotificationManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppNotificationManager[] = {
         { "setting", reinterpret_cast<getter>(AppNotificationManager_get_Setting), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppNotificationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotificationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotificationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotificationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotificationManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppNotificationManager = {
         "winrt._winrt_microsoft_windows_appnotifications.AppNotificationManager",
@@ -1588,13 +1579,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyGetSetDef getset_AppNotificationManager_Static[] = {
         { "default", reinterpret_cast<getter>(AppNotificationManager_get_Default), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppNotificationManager_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(AppNotificationManager_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppNotificationManager_Static[] = 
     {
@@ -1604,14 +1593,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { }
     };
 
-    static PyType_Spec type_spec_AppNotificationManager_Static =
-    {
+    static PyType_Spec type_spec_AppNotificationManager_Static = {
         "winrt._winrt_microsoft_windows_appnotifications.AppNotificationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppNotificationManager_Static
-    };
+        type_slots_AppNotificationManager_Static};
 
     // ----- AppNotificationProgressData class --------------------
 
@@ -2026,8 +2013,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
     static PyMethodDef _methods_AppNotificationProgressData[] = {
         { "_assign_array_", _assign_array_AppNotificationProgressData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppNotificationProgressData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppNotificationProgressData[] = {
         { "value_string_override", reinterpret_cast<getter>(AppNotificationProgressData_get_ValueStringOverride), reinterpret_cast<setter>(AppNotificationProgressData_put_ValueStringOverride), nullptr, nullptr },
@@ -2035,16 +2021,14 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { "title", reinterpret_cast<getter>(AppNotificationProgressData_get_Title), reinterpret_cast<setter>(AppNotificationProgressData_put_Title), nullptr, nullptr },
         { "status", reinterpret_cast<getter>(AppNotificationProgressData_get_Status), reinterpret_cast<setter>(AppNotificationProgressData_put_Status), nullptr, nullptr },
         { "sequence_number", reinterpret_cast<getter>(AppNotificationProgressData_get_SequenceNumber), reinterpret_cast<setter>(AppNotificationProgressData_put_SequenceNumber), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppNotificationProgressData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotificationProgressData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotificationProgressData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotificationProgressData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotificationProgressData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppNotificationProgressData = {
         "winrt._winrt_microsoft_windows_appnotifications.AppNotificationProgressData",

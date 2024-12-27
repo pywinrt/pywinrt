@@ -1220,8 +1220,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(DtdEntity_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DtdEntity, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DtdEntity), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DtdEntity[] = {
         { "notation_name", reinterpret_cast<getter>(DtdEntity_get_NotationName), nullptr, nullptr, nullptr },
@@ -1242,16 +1241,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "parent_node", reinterpret_cast<getter>(DtdEntity_get_ParentNode), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(DtdEntity_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(DtdEntity_get_InnerText), reinterpret_cast<setter>(DtdEntity_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DtdEntity[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DtdEntity) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DtdEntity) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DtdEntity) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DtdEntity) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DtdEntity = {
         "winrt._winrt_windows_data_xml_dom.DtdEntity",
@@ -2446,8 +2443,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(DtdNotation_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DtdNotation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DtdNotation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DtdNotation[] = {
         { "public_id", reinterpret_cast<getter>(DtdNotation_get_PublicId), nullptr, nullptr, nullptr },
@@ -2467,16 +2463,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "parent_node", reinterpret_cast<getter>(DtdNotation_get_ParentNode), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(DtdNotation_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(DtdNotation_get_InnerText), reinterpret_cast<setter>(DtdNotation_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DtdNotation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DtdNotation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DtdNotation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DtdNotation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DtdNotation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DtdNotation = {
         "winrt._winrt_windows_data_xml_dom.DtdNotation",
@@ -3740,8 +3734,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(XmlAttribute_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlAttribute, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlAttribute), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlAttribute[] = {
         { "value", reinterpret_cast<getter>(XmlAttribute_get_Value), reinterpret_cast<setter>(XmlAttribute_put_Value), nullptr, nullptr },
@@ -3762,16 +3755,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "parent_node", reinterpret_cast<getter>(XmlAttribute_get_ParentNode), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(XmlAttribute_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(XmlAttribute_get_InnerText), reinterpret_cast<setter>(XmlAttribute_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlAttribute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlAttribute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlAttribute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlAttribute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlAttribute) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlAttribute = {
         "winrt._winrt_windows_data_xml_dom.XmlAttribute",
@@ -5272,8 +5263,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "substring_data", reinterpret_cast<PyCFunction>(XmlCDataSection_SubstringData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlCDataSection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlCDataSection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlCDataSection[] = {
         { "data", reinterpret_cast<getter>(XmlCDataSection_get_Data), reinterpret_cast<setter>(XmlCDataSection_put_Data), nullptr, nullptr },
@@ -5293,16 +5283,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "parent_node", reinterpret_cast<getter>(XmlCDataSection_get_ParentNode), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(XmlCDataSection_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(XmlCDataSection_get_InnerText), reinterpret_cast<setter>(XmlCDataSection_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlCDataSection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlCDataSection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlCDataSection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlCDataSection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlCDataSection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlCDataSection = {
         "winrt._winrt_windows_data_xml_dom.XmlCDataSection",
@@ -6760,8 +6748,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "substring_data", reinterpret_cast<PyCFunction>(XmlComment_SubstringData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlComment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlComment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlComment[] = {
         { "data", reinterpret_cast<getter>(XmlComment_get_Data), reinterpret_cast<setter>(XmlComment_put_Data), nullptr, nullptr },
@@ -6781,16 +6768,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "parent_node", reinterpret_cast<getter>(XmlComment_get_ParentNode), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(XmlComment_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(XmlComment_get_InnerText), reinterpret_cast<setter>(XmlComment_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlComment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlComment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlComment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlComment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlComment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlComment = {
         "winrt._winrt_windows_data_xml_dom.XmlComment",
@@ -9019,8 +9004,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(XmlDocument_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlDocument, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlDocument), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlDocument[] = {
         { "doctype", reinterpret_cast<getter>(XmlDocument_get_Doctype), nullptr, nullptr, nullptr },
@@ -9042,16 +9026,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "owner_document", reinterpret_cast<getter>(XmlDocument_get_OwnerDocument), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(XmlDocument_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(XmlDocument_get_InnerText), reinterpret_cast<setter>(XmlDocument_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlDocument) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlDocument = {
         "winrt._winrt_windows_data_xml_dom.XmlDocument",
@@ -9061,16 +9043,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         _type_slots_XmlDocument};
 
     static PyGetSetDef getset_XmlDocument_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_XmlDocument_Static[] = {
         { "load_from_file_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromFileAsync), METH_VARARGS, nullptr },
         { "load_from_file_with_settings_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromFileWithSettingsAsync), METH_VARARGS, nullptr },
         { "load_from_uri_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromUriAsync), METH_VARARGS, nullptr },
         { "load_from_uri_with_settings_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromUriWithSettingsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_XmlDocument_Static[] = 
     {
@@ -9080,14 +9060,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Spec type_spec_XmlDocument_Static =
-    {
+    static PyType_Spec type_spec_XmlDocument_Static = {
         "winrt._winrt_windows_data_xml_dom.XmlDocument_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XmlDocument_Static
-    };
+        type_slots_XmlDocument_Static};
 
     // ----- XmlDocumentFragment class --------------------
 
@@ -10215,8 +10193,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(XmlDocumentFragment_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlDocumentFragment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlDocumentFragment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlDocumentFragment[] = {
         { "prefix", reinterpret_cast<getter>(XmlDocumentFragment_get_Prefix), reinterpret_cast<setter>(XmlDocumentFragment_put_Prefix), nullptr, nullptr },
@@ -10234,16 +10211,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "child_nodes", reinterpret_cast<getter>(XmlDocumentFragment_get_ChildNodes), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(XmlDocumentFragment_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(XmlDocumentFragment_get_InnerText), reinterpret_cast<setter>(XmlDocumentFragment_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlDocumentFragment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlDocumentFragment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlDocumentFragment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlDocumentFragment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlDocumentFragment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlDocumentFragment = {
         "winrt._winrt_windows_data_xml_dom.XmlDocumentFragment",
@@ -11468,8 +11443,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(XmlDocumentType_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlDocumentType, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlDocumentType), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlDocumentType[] = {
         { "entities", reinterpret_cast<getter>(XmlDocumentType_get_Entities), nullptr, nullptr, nullptr },
@@ -11490,16 +11464,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "parent_node", reinterpret_cast<getter>(XmlDocumentType_get_ParentNode), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(XmlDocumentType_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(XmlDocumentType_get_InnerText), reinterpret_cast<setter>(XmlDocumentType_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlDocumentType[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlDocumentType) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlDocumentType) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlDocumentType) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlDocumentType) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlDocumentType = {
         "winrt._winrt_windows_data_xml_dom.XmlDocumentType",
@@ -11596,20 +11568,17 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "has_feature", reinterpret_cast<PyCFunction>(XmlDomImplementation_HasFeature), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlDomImplementation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlDomImplementation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlDomImplementation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlDomImplementation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlDomImplementation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlDomImplementation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlDomImplementation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlDomImplementation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlDomImplementation = {
         "winrt._winrt_windows_data_xml_dom.XmlDomImplementation",
@@ -13300,8 +13269,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "set_attribute_node_ns", reinterpret_cast<PyCFunction>(XmlElement_SetAttributeNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlElement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlElement[] = {
         { "tag_name", reinterpret_cast<getter>(XmlElement_get_TagName), nullptr, nullptr, nullptr },
@@ -13320,16 +13288,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "child_nodes", reinterpret_cast<getter>(XmlElement_get_ChildNodes), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(XmlElement_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(XmlElement_get_InnerText), reinterpret_cast<setter>(XmlElement_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlElement = {
         "winrt._winrt_windows_data_xml_dom.XmlElement",
@@ -14464,8 +14430,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(XmlEntityReference_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlEntityReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlEntityReference), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlEntityReference[] = {
         { "prefix", reinterpret_cast<getter>(XmlEntityReference_get_Prefix), reinterpret_cast<setter>(XmlEntityReference_put_Prefix), nullptr, nullptr },
@@ -14483,16 +14448,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "child_nodes", reinterpret_cast<getter>(XmlEntityReference_get_ChildNodes), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(XmlEntityReference_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(XmlEntityReference_get_InnerText), reinterpret_cast<setter>(XmlEntityReference_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlEntityReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlEntityReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlEntityReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlEntityReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlEntityReference) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlEntityReference = {
         "winrt._winrt_windows_data_xml_dom.XmlEntityReference",
@@ -14912,8 +14875,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static PyMethodDef _methods_XmlLoadSettings[] = {
         { "_assign_array_", _assign_array_XmlLoadSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlLoadSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlLoadSettings[] = {
         { "validate_on_parse", reinterpret_cast<getter>(XmlLoadSettings_get_ValidateOnParse), reinterpret_cast<setter>(XmlLoadSettings_put_ValidateOnParse), nullptr, nullptr },
@@ -14921,16 +14883,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "prohibit_dtd", reinterpret_cast<getter>(XmlLoadSettings_get_ProhibitDtd), reinterpret_cast<setter>(XmlLoadSettings_put_ProhibitDtd), nullptr, nullptr },
         { "max_element_depth", reinterpret_cast<getter>(XmlLoadSettings_get_MaxElementDepth), reinterpret_cast<setter>(XmlLoadSettings_put_MaxElementDepth), nullptr, nullptr },
         { "element_content_white_space", reinterpret_cast<getter>(XmlLoadSettings_get_ElementContentWhiteSpace), reinterpret_cast<setter>(XmlLoadSettings_put_ElementContentWhiteSpace), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlLoadSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlLoadSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlLoadSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlLoadSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlLoadSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlLoadSettings = {
         "winrt._winrt_windows_data_xml_dom.XmlLoadSettings",
@@ -15648,14 +15608,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "set_named_item_ns", reinterpret_cast<PyCFunction>(XmlNamedNodeMap_SetNamedItemNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlNamedNodeMap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlNamedNodeMap), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlNamedNodeMap[] = {
         { "length", reinterpret_cast<getter>(XmlNamedNodeMap_get_Length), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(XmlNamedNodeMap_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlNamedNodeMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlNamedNodeMap) },
@@ -15666,8 +15624,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_XmlNamedNodeMap) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_XmlNamedNodeMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_XmlNamedNodeMap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlNamedNodeMap = {
         "winrt._winrt_windows_data_xml_dom.XmlNamedNodeMap",
@@ -16125,14 +16082,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "item", reinterpret_cast<PyCFunction>(XmlNodeList_Item), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlNodeList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlNodeList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlNodeList[] = {
         { "length", reinterpret_cast<getter>(XmlNodeList_get_Length), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(XmlNodeList_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlNodeList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlNodeList) },
@@ -16143,8 +16098,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_XmlNodeList) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_XmlNodeList) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_XmlNodeList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlNodeList = {
         "winrt._winrt_windows_data_xml_dom.XmlNodeList",
@@ -17378,8 +17332,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(XmlProcessingInstruction_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlProcessingInstruction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlProcessingInstruction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlProcessingInstruction[] = {
         { "prefix", reinterpret_cast<getter>(XmlProcessingInstruction_get_Prefix), reinterpret_cast<setter>(XmlProcessingInstruction_put_Prefix), nullptr, nullptr },
@@ -17399,16 +17352,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "inner_text", reinterpret_cast<getter>(XmlProcessingInstruction_get_InnerText), reinterpret_cast<setter>(XmlProcessingInstruction_put_InnerText), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(XmlProcessingInstruction_get_Data), reinterpret_cast<setter>(XmlProcessingInstruction_put_Data), nullptr, nullptr },
         { "target", reinterpret_cast<getter>(XmlProcessingInstruction_get_Target), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlProcessingInstruction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlProcessingInstruction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlProcessingInstruction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlProcessingInstruction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlProcessingInstruction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlProcessingInstruction = {
         "winrt._winrt_windows_data_xml_dom.XmlProcessingInstruction",
@@ -18909,8 +18860,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "substring_data", reinterpret_cast<PyCFunction>(XmlText_SubstringData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XmlText, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XmlText), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XmlText[] = {
         { "data", reinterpret_cast<getter>(XmlText_get_Data), reinterpret_cast<setter>(XmlText_put_Data), nullptr, nullptr },
@@ -18930,16 +18880,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "parent_node", reinterpret_cast<getter>(XmlText_get_ParentNode), nullptr, nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(XmlText_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(XmlText_get_InnerText), reinterpret_cast<setter>(XmlText_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XmlText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlText) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XmlText = {
         "winrt._winrt_windows_data_xml_dom.XmlText",
@@ -20397,8 +20345,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "substring_data", reinterpret_cast<PyCFunction>(IXmlCharacterData_SubstringData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlCharacterData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXmlCharacterData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXmlCharacterData[] = {
         { "data", reinterpret_cast<getter>(IXmlCharacterData_get_Data), reinterpret_cast<setter>(IXmlCharacterData_put_Data), nullptr, nullptr },
@@ -20418,16 +20365,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "prefix", reinterpret_cast<getter>(IXmlCharacterData_get_Prefix), reinterpret_cast<setter>(IXmlCharacterData_put_Prefix), nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(IXmlCharacterData_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(IXmlCharacterData_get_InnerText), reinterpret_cast<setter>(IXmlCharacterData_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXmlCharacterData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlCharacterData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlCharacterData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlCharacterData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlCharacterData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXmlCharacterData = {
         "winrt._winrt_windows_data_xml_dom.IXmlCharacterData",
@@ -21533,13 +21478,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static PyMethodDef methods_ImplementsIXmlCharacterData[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlCharacterData), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlCharacterData), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXmlCharacterData[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXmlCharacterData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXmlCharacterData = {
         "winrt._winrt_windows_data_xml_dom.ImplementsIXmlCharacterData",
@@ -22674,8 +22617,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(IXmlNode_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXmlNode), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXmlNode[] = {
         { "attributes", reinterpret_cast<getter>(IXmlNode_get_Attributes), nullptr, nullptr, nullptr },
@@ -22693,16 +22635,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "prefix", reinterpret_cast<getter>(IXmlNode_get_Prefix), reinterpret_cast<setter>(IXmlNode_put_Prefix), nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(IXmlNode_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(IXmlNode_get_InnerText), reinterpret_cast<setter>(IXmlNode_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXmlNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXmlNode = {
         "winrt._winrt_windows_data_xml_dom.IXmlNode",
@@ -23539,13 +23479,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static PyMethodDef methods_ImplementsIXmlNode[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlNode), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXmlNode[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXmlNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXmlNode = {
         "winrt._winrt_windows_data_xml_dom.ImplementsIXmlNode",
@@ -23772,20 +23710,17 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(IXmlNodeSelector_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlNodeSelector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXmlNodeSelector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXmlNodeSelector[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXmlNodeSelector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlNodeSelector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlNodeSelector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlNodeSelector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlNodeSelector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXmlNodeSelector = {
         "winrt._winrt_windows_data_xml_dom.IXmlNodeSelector",
@@ -23993,13 +23928,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static PyMethodDef methods_ImplementsIXmlNodeSelector[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlNodeSelector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlNodeSelector), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXmlNodeSelector[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXmlNodeSelector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXmlNodeSelector = {
         "winrt._winrt_windows_data_xml_dom.ImplementsIXmlNodeSelector",
@@ -24162,21 +24095,18 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "get_xml", reinterpret_cast<PyCFunction>(IXmlNodeSerializer_GetXml), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlNodeSerializer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXmlNodeSerializer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXmlNodeSerializer[] = {
         { "inner_text", reinterpret_cast<getter>(IXmlNodeSerializer_get_InnerText), reinterpret_cast<setter>(IXmlNodeSerializer_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXmlNodeSerializer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlNodeSerializer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlNodeSerializer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlNodeSerializer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlNodeSerializer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXmlNodeSerializer = {
         "winrt._winrt_windows_data_xml_dom.IXmlNodeSerializer",
@@ -24301,13 +24231,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static PyMethodDef methods_ImplementsIXmlNodeSerializer[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlNodeSerializer), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlNodeSerializer), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXmlNodeSerializer[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXmlNodeSerializer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXmlNodeSerializer = {
         "winrt._winrt_windows_data_xml_dom.ImplementsIXmlNodeSerializer",
@@ -25808,8 +25736,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "substring_data", reinterpret_cast<PyCFunction>(IXmlText_SubstringData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlText, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXmlText), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXmlText[] = {
         { "data", reinterpret_cast<getter>(IXmlText_get_Data), reinterpret_cast<setter>(IXmlText_put_Data), nullptr, nullptr },
@@ -25829,16 +25756,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "prefix", reinterpret_cast<getter>(IXmlText_get_Prefix), reinterpret_cast<setter>(IXmlText_put_Prefix), nullptr, nullptr },
         { "previous_sibling", reinterpret_cast<getter>(IXmlText_get_PreviousSibling), nullptr, nullptr, nullptr },
         { "inner_text", reinterpret_cast<getter>(IXmlText_get_InnerText), reinterpret_cast<setter>(IXmlText_put_InnerText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXmlText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlText) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXmlText = {
         "winrt._winrt_windows_data_xml_dom.IXmlText",
@@ -26976,13 +26901,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static PyMethodDef methods_ImplementsIXmlText[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlText), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlText), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXmlText[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXmlText) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXmlText = {
         "winrt._winrt_windows_data_xml_dom.ImplementsIXmlText",

@@ -338,16 +338,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "get_results", reinterpret_cast<PyCFunction>(DeleteSmsMessageOperation_GetResults), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DeleteSmsMessageOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeleteSmsMessageOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeleteSmsMessageOperation[] = {
         { "error_code", reinterpret_cast<getter>(DeleteSmsMessageOperation_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(DeleteSmsMessageOperation_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(DeleteSmsMessageOperation_get_Status), nullptr, nullptr, nullptr },
         { "completed", reinterpret_cast<getter>(DeleteSmsMessageOperation_get_Completed), reinterpret_cast<setter>(DeleteSmsMessageOperation_put_Completed), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeleteSmsMessageOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeleteSmsMessageOperation) },
@@ -355,8 +353,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSmsMessageOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSmsMessageOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_DeleteSmsMessageOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeleteSmsMessageOperation = {
         "winrt._winrt_windows_devices_sms.DeleteSmsMessageOperation",
@@ -699,16 +696,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "get_results", reinterpret_cast<PyCFunction>(DeleteSmsMessagesOperation_GetResults), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DeleteSmsMessagesOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeleteSmsMessagesOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeleteSmsMessagesOperation[] = {
         { "error_code", reinterpret_cast<getter>(DeleteSmsMessagesOperation_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(DeleteSmsMessagesOperation_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(DeleteSmsMessagesOperation_get_Status), nullptr, nullptr, nullptr },
         { "completed", reinterpret_cast<getter>(DeleteSmsMessagesOperation_get_Completed), reinterpret_cast<setter>(DeleteSmsMessagesOperation_put_Completed), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeleteSmsMessagesOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeleteSmsMessagesOperation) },
@@ -716,8 +711,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSmsMessagesOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSmsMessagesOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_DeleteSmsMessagesOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeleteSmsMessagesOperation = {
         "winrt._winrt_windows_devices_sms.DeleteSmsMessagesOperation",
@@ -1059,16 +1053,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "get_results", reinterpret_cast<PyCFunction>(GetSmsDeviceOperation_GetResults), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GetSmsDeviceOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GetSmsDeviceOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GetSmsDeviceOperation[] = {
         { "error_code", reinterpret_cast<getter>(GetSmsDeviceOperation_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(GetSmsDeviceOperation_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(GetSmsDeviceOperation_get_Status), nullptr, nullptr, nullptr },
         { "completed", reinterpret_cast<getter>(GetSmsDeviceOperation_get_Completed), reinterpret_cast<setter>(GetSmsDeviceOperation_put_Completed), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GetSmsDeviceOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetSmsDeviceOperation) },
@@ -1076,8 +1068,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetSmsDeviceOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetSmsDeviceOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_GetSmsDeviceOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GetSmsDeviceOperation = {
         "winrt._winrt_windows_devices_sms.GetSmsDeviceOperation",
@@ -1419,16 +1410,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "get_results", reinterpret_cast<PyCFunction>(GetSmsMessageOperation_GetResults), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GetSmsMessageOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GetSmsMessageOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GetSmsMessageOperation[] = {
         { "error_code", reinterpret_cast<getter>(GetSmsMessageOperation_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(GetSmsMessageOperation_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(GetSmsMessageOperation_get_Status), nullptr, nullptr, nullptr },
         { "completed", reinterpret_cast<getter>(GetSmsMessageOperation_get_Completed), reinterpret_cast<setter>(GetSmsMessageOperation_put_Completed), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GetSmsMessageOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetSmsMessageOperation) },
@@ -1436,8 +1425,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetSmsMessageOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetSmsMessageOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_GetSmsMessageOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GetSmsMessageOperation = {
         "winrt._winrt_windows_devices_sms.GetSmsMessageOperation",
@@ -1848,8 +1836,7 @@ namespace py::cpp::Windows::Devices::Sms
         { "get_results", reinterpret_cast<PyCFunction>(GetSmsMessagesOperation_GetResults), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GetSmsMessagesOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GetSmsMessagesOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GetSmsMessagesOperation[] = {
         { "error_code", reinterpret_cast<getter>(GetSmsMessagesOperation_get_ErrorCode), nullptr, nullptr, nullptr },
@@ -1857,8 +1844,7 @@ namespace py::cpp::Windows::Devices::Sms
         { "status", reinterpret_cast<getter>(GetSmsMessagesOperation_get_Status), nullptr, nullptr, nullptr },
         { "progress", reinterpret_cast<getter>(GetSmsMessagesOperation_get_Progress), reinterpret_cast<setter>(GetSmsMessagesOperation_put_Progress), nullptr, nullptr },
         { "completed", reinterpret_cast<getter>(GetSmsMessagesOperation_get_Completed), reinterpret_cast<setter>(GetSmsMessagesOperation_put_Completed), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GetSmsMessagesOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetSmsMessagesOperation) },
@@ -1866,8 +1852,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetSmsMessagesOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetSmsMessagesOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_GetSmsMessagesOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GetSmsMessagesOperation = {
         "winrt._winrt_windows_devices_sms.GetSmsMessagesOperation",
@@ -2210,16 +2195,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "get_results", reinterpret_cast<PyCFunction>(SendSmsMessageOperation_GetResults), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SendSmsMessageOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SendSmsMessageOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SendSmsMessageOperation[] = {
         { "error_code", reinterpret_cast<getter>(SendSmsMessageOperation_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(SendSmsMessageOperation_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(SendSmsMessageOperation_get_Status), nullptr, nullptr, nullptr },
         { "completed", reinterpret_cast<getter>(SendSmsMessageOperation_get_Completed), reinterpret_cast<setter>(SendSmsMessageOperation_put_Completed), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SendSmsMessageOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SendSmsMessageOperation) },
@@ -2227,8 +2210,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SendSmsMessageOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SendSmsMessageOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_SendSmsMessageOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SendSmsMessageOperation = {
         "winrt._winrt_windows_devices_sms.SendSmsMessageOperation",
@@ -3203,8 +3185,7 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsAppMessage[] = {
         { "_assign_array_", _assign_array_SmsAppMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsAppMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsAppMessage[] = {
         { "protocol_id", reinterpret_cast<getter>(SmsAppMessage_get_ProtocolId), reinterpret_cast<setter>(SmsAppMessage_put_ProtocolId), nullptr, nullptr },
@@ -3224,16 +3205,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "message_class", reinterpret_cast<getter>(SmsAppMessage_get_MessageClass), nullptr, nullptr, nullptr },
         { "message_type", reinterpret_cast<getter>(SmsAppMessage_get_MessageType), nullptr, nullptr, nullptr },
         { "sim_icc_id", reinterpret_cast<getter>(SmsAppMessage_get_SimIccId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsAppMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsAppMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsAppMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsAppMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsAppMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsAppMessage = {
         "winrt._winrt_windows_devices_sms.SmsAppMessage",
@@ -3522,23 +3501,20 @@ namespace py::cpp::Windows::Devices::Sms
         { "set_data", reinterpret_cast<PyCFunction>(SmsBinaryMessage_SetData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmsBinaryMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsBinaryMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsBinaryMessage[] = {
         { "format", reinterpret_cast<getter>(SmsBinaryMessage_get_Format), reinterpret_cast<setter>(SmsBinaryMessage_put_Format), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(SmsBinaryMessage_get_Id), nullptr, nullptr, nullptr },
         { "message_class", reinterpret_cast<getter>(SmsBinaryMessage_get_MessageClass), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsBinaryMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsBinaryMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsBinaryMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsBinaryMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsBinaryMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsBinaryMessage = {
         "winrt._winrt_windows_devices_sms.SmsBinaryMessage",
@@ -4041,8 +4017,7 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsBroadcastMessage[] = {
         { "_assign_array_", _assign_array_SmsBroadcastMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsBroadcastMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsBroadcastMessage[] = {
         { "body", reinterpret_cast<getter>(SmsBroadcastMessage_get_Body), nullptr, nullptr, nullptr },
@@ -4060,16 +4035,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "message_class", reinterpret_cast<getter>(SmsBroadcastMessage_get_MessageClass), nullptr, nullptr, nullptr },
         { "message_type", reinterpret_cast<getter>(SmsBroadcastMessage_get_MessageType), nullptr, nullptr, nullptr },
         { "sim_icc_id", reinterpret_cast<getter>(SmsBroadcastMessage_get_SimIccId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsBroadcastMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsBroadcastMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsBroadcastMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsBroadcastMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsBroadcastMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsBroadcastMessage = {
         "winrt._winrt_windows_devices_sms.SmsBroadcastMessage",
@@ -4626,24 +4599,21 @@ namespace py::cpp::Windows::Devices::Sms
         { "remove_sms_message_received", reinterpret_cast<PyCFunction>(SmsDevice_remove_SmsMessageReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_SmsDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsDevice[] = {
         { "account_phone_number", reinterpret_cast<getter>(SmsDevice_get_AccountPhoneNumber), nullptr, nullptr, nullptr },
         { "cellular_class", reinterpret_cast<getter>(SmsDevice_get_CellularClass), nullptr, nullptr, nullptr },
         { "device_status", reinterpret_cast<getter>(SmsDevice_get_DeviceStatus), nullptr, nullptr, nullptr },
         { "message_store", reinterpret_cast<getter>(SmsDevice_get_MessageStore), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsDevice = {
         "winrt._winrt_windows_devices_sms.SmsDevice",
@@ -4653,16 +4623,14 @@ namespace py::cpp::Windows::Devices::Sms
         _type_slots_SmsDevice};
 
     static PyGetSetDef getset_SmsDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmsDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(SmsDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "from_network_account_id_async", reinterpret_cast<PyCFunction>(SmsDevice_FromNetworkAccountIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(SmsDevice_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(SmsDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmsDevice_Static[] = 
     {
@@ -4672,14 +4640,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Spec type_spec_SmsDevice_Static =
-    {
+    static PyType_Spec type_spec_SmsDevice_Static = {
         "winrt._winrt_windows_devices_sms.SmsDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmsDevice_Static
-    };
+        type_slots_SmsDevice_Static};
 
     // ----- SmsDevice2 class --------------------
 
@@ -5261,8 +5227,7 @@ namespace py::cpp::Windows::Devices::Sms
         { "remove_device_status_changed", reinterpret_cast<PyCFunction>(SmsDevice2_remove_DeviceStatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_SmsDevice2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsDevice2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsDevice2[] = {
         { "smsc_address", reinterpret_cast<getter>(SmsDevice2_get_SmscAddress), reinterpret_cast<setter>(SmsDevice2_put_SmscAddress), nullptr, nullptr },
@@ -5271,16 +5236,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "device_id", reinterpret_cast<getter>(SmsDevice2_get_DeviceId), nullptr, nullptr, nullptr },
         { "device_status", reinterpret_cast<getter>(SmsDevice2_get_DeviceStatus), nullptr, nullptr, nullptr },
         { "parent_device_id", reinterpret_cast<getter>(SmsDevice2_get_ParentDeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsDevice2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsDevice2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsDevice2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsDevice2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsDevice2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsDevice2 = {
         "winrt._winrt_windows_devices_sms.SmsDevice2",
@@ -5290,16 +5253,14 @@ namespace py::cpp::Windows::Devices::Sms
         _type_slots_SmsDevice2};
 
     static PyGetSetDef getset_SmsDevice2_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmsDevice2_Static[] = {
         { "from_id", reinterpret_cast<PyCFunction>(SmsDevice2_FromId), METH_VARARGS, nullptr },
         { "from_parent_id", reinterpret_cast<PyCFunction>(SmsDevice2_FromParentId), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(SmsDevice2_GetDefault), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(SmsDevice2_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmsDevice2_Static[] = 
     {
@@ -5309,14 +5270,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Spec type_spec_SmsDevice2_Static =
-    {
+    static PyType_Spec type_spec_SmsDevice2_Static = {
         "winrt._winrt_windows_devices_sms.SmsDevice2_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmsDevice2_Static
-    };
+        type_slots_SmsDevice2_Static};
 
     // ----- SmsDeviceMessageStore class --------------------
 
@@ -5564,21 +5523,18 @@ namespace py::cpp::Windows::Devices::Sms
         { "get_messages_async", reinterpret_cast<PyCFunction>(SmsDeviceMessageStore_GetMessagesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmsDeviceMessageStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsDeviceMessageStore), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsDeviceMessageStore[] = {
         { "max_messages", reinterpret_cast<getter>(SmsDeviceMessageStore_get_MaxMessages), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsDeviceMessageStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsDeviceMessageStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsDeviceMessageStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsDeviceMessageStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsDeviceMessageStore) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsDeviceMessageStore = {
         "winrt._winrt_windows_devices_sms.SmsDeviceMessageStore",
@@ -6084,8 +6040,7 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsFilterRule[] = {
         { "_assign_array_", _assign_array_SmsFilterRule, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsFilterRule), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsFilterRule[] = {
         { "cellular_class", reinterpret_cast<getter>(SmsFilterRule_get_CellularClass), reinterpret_cast<setter>(SmsFilterRule_put_CellularClass), nullptr, nullptr },
@@ -6101,16 +6056,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "text_message_prefixes", reinterpret_cast<getter>(SmsFilterRule_get_TextMessagePrefixes), nullptr, nullptr, nullptr },
         { "wap_application_ids", reinterpret_cast<getter>(SmsFilterRule_get_WapApplicationIds), nullptr, nullptr, nullptr },
         { "wap_content_types", reinterpret_cast<getter>(SmsFilterRule_get_WapContentTypes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsFilterRule[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsFilterRule) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsFilterRule) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsFilterRule) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsFilterRule) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsFilterRule = {
         "winrt._winrt_windows_devices_sms.SmsFilterRule",
@@ -6247,22 +6200,19 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsFilterRules[] = {
         { "_assign_array_", _assign_array_SmsFilterRules, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsFilterRules), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsFilterRules[] = {
         { "action_type", reinterpret_cast<getter>(SmsFilterRules_get_ActionType), nullptr, nullptr, nullptr },
         { "rules", reinterpret_cast<getter>(SmsFilterRules_get_Rules), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsFilterRules[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsFilterRules) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsFilterRules) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsFilterRules) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsFilterRules) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsFilterRules = {
         "winrt._winrt_windows_devices_sms.SmsFilterRules",
@@ -6375,22 +6325,19 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsMessageReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_SmsMessageReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsMessageReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsMessageReceivedEventArgs[] = {
         { "binary_message", reinterpret_cast<getter>(SmsMessageReceivedEventArgs_get_BinaryMessage), nullptr, nullptr, nullptr },
         { "text_message", reinterpret_cast<getter>(SmsMessageReceivedEventArgs_get_TextMessage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsMessageReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsMessageReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsMessageReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsMessageReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsMessageReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsMessageReceivedEventArgs = {
         "winrt._winrt_windows_devices_sms.SmsMessageReceivedEventArgs",
@@ -6737,8 +6684,7 @@ namespace py::cpp::Windows::Devices::Sms
         { "drop", reinterpret_cast<PyCFunction>(SmsMessageReceivedTriggerDetails_Drop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmsMessageReceivedTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsMessageReceivedTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsMessageReceivedTriggerDetails[] = {
         { "app_message", reinterpret_cast<getter>(SmsMessageReceivedTriggerDetails_get_AppMessage), nullptr, nullptr, nullptr },
@@ -6748,16 +6694,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "text_message", reinterpret_cast<getter>(SmsMessageReceivedTriggerDetails_get_TextMessage), nullptr, nullptr, nullptr },
         { "voicemail_message", reinterpret_cast<getter>(SmsMessageReceivedTriggerDetails_get_VoicemailMessage), nullptr, nullptr, nullptr },
         { "wap_message", reinterpret_cast<getter>(SmsMessageReceivedTriggerDetails_get_WapMessage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsMessageReceivedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsMessageReceivedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsMessageReceivedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsMessageReceivedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsMessageReceivedTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsMessageReceivedTriggerDetails = {
         "winrt._winrt_windows_devices_sms.SmsMessageReceivedTriggerDetails",
@@ -7022,21 +6966,18 @@ namespace py::cpp::Windows::Devices::Sms
         { "remove_message_received", reinterpret_cast<PyCFunction>(SmsMessageRegistration_remove_MessageReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_SmsMessageRegistration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsMessageRegistration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsMessageRegistration[] = {
         { "id", reinterpret_cast<getter>(SmsMessageRegistration_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsMessageRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsMessageRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsMessageRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsMessageRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsMessageRegistration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsMessageRegistration = {
         "winrt._winrt_windows_devices_sms.SmsMessageRegistration",
@@ -7047,13 +6988,11 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyGetSetDef getset_SmsMessageRegistration_Static[] = {
         { "all_registrations", reinterpret_cast<getter>(SmsMessageRegistration_get_AllRegistrations), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmsMessageRegistration_Static[] = {
         { "register", reinterpret_cast<PyCFunction>(SmsMessageRegistration_Register), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmsMessageRegistration_Static[] = 
     {
@@ -7063,14 +7002,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Spec type_spec_SmsMessageRegistration_Static =
-    {
+    static PyType_Spec type_spec_SmsMessageRegistration_Static = {
         "winrt._winrt_windows_devices_sms.SmsMessageRegistration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmsMessageRegistration_Static
-    };
+        type_slots_SmsMessageRegistration_Static};
 
     // ----- SmsReceivedEventDetails class --------------------
 
@@ -7236,24 +7173,21 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsReceivedEventDetails[] = {
         { "_assign_array_", _assign_array_SmsReceivedEventDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsReceivedEventDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsReceivedEventDetails[] = {
         { "device_id", reinterpret_cast<getter>(SmsReceivedEventDetails_get_DeviceId), nullptr, nullptr, nullptr },
         { "message_index", reinterpret_cast<getter>(SmsReceivedEventDetails_get_MessageIndex), nullptr, nullptr, nullptr },
         { "binary_message", reinterpret_cast<getter>(SmsReceivedEventDetails_get_BinaryMessage), nullptr, nullptr, nullptr },
         { "message_class", reinterpret_cast<getter>(SmsReceivedEventDetails_get_MessageClass), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsReceivedEventDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsReceivedEventDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsReceivedEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsReceivedEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsReceivedEventDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsReceivedEventDetails = {
         "winrt._winrt_windows_devices_sms.SmsReceivedEventDetails",
@@ -7516,8 +7450,7 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsSendMessageResult[] = {
         { "_assign_array_", _assign_array_SmsSendMessageResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsSendMessageResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsSendMessageResult[] = {
         { "cellular_class", reinterpret_cast<getter>(SmsSendMessageResult_get_CellularClass), nullptr, nullptr, nullptr },
@@ -7527,16 +7460,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "modem_error_code", reinterpret_cast<getter>(SmsSendMessageResult_get_ModemErrorCode), nullptr, nullptr, nullptr },
         { "network_cause_code", reinterpret_cast<getter>(SmsSendMessageResult_get_NetworkCauseCode), nullptr, nullptr, nullptr },
         { "transport_failure_cause", reinterpret_cast<getter>(SmsSendMessageResult_get_TransportFailureCause), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsSendMessageResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsSendMessageResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsSendMessageResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsSendMessageResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsSendMessageResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsSendMessageResult = {
         "winrt._winrt_windows_devices_sms.SmsSendMessageResult",
@@ -7949,8 +7880,7 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsStatusMessage[] = {
         { "_assign_array_", _assign_array_SmsStatusMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsStatusMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsStatusMessage[] = {
         { "cellular_class", reinterpret_cast<getter>(SmsStatusMessage_get_CellularClass), nullptr, nullptr, nullptr },
@@ -7965,16 +7895,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "message_reference_number", reinterpret_cast<getter>(SmsStatusMessage_get_MessageReferenceNumber), nullptr, nullptr, nullptr },
         { "service_center_timestamp", reinterpret_cast<getter>(SmsStatusMessage_get_ServiceCenterTimestamp), nullptr, nullptr, nullptr },
         { "to", reinterpret_cast<getter>(SmsStatusMessage_get_To), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsStatusMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsStatusMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsStatusMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsStatusMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsStatusMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsStatusMessage = {
         "winrt._winrt_windows_devices_sms.SmsStatusMessage",
@@ -8633,8 +8561,7 @@ namespace py::cpp::Windows::Devices::Sms
         { "to_binary_messages", reinterpret_cast<PyCFunction>(SmsTextMessage_ToBinaryMessages), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmsTextMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsTextMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsTextMessage[] = {
         { "id", reinterpret_cast<getter>(SmsTextMessage_get_Id), nullptr, nullptr, nullptr },
@@ -8647,16 +8574,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "part_number", reinterpret_cast<getter>(SmsTextMessage_get_PartNumber), nullptr, nullptr, nullptr },
         { "part_reference_id", reinterpret_cast<getter>(SmsTextMessage_get_PartReferenceId), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(SmsTextMessage_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsTextMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsTextMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsTextMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsTextMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsTextMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsTextMessage = {
         "winrt._winrt_windows_devices_sms.SmsTextMessage",
@@ -8666,14 +8591,12 @@ namespace py::cpp::Windows::Devices::Sms
         _type_slots_SmsTextMessage};
 
     static PyGetSetDef getset_SmsTextMessage_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmsTextMessage_Static[] = {
         { "from_binary_data", reinterpret_cast<PyCFunction>(SmsTextMessage_FromBinaryData), METH_VARARGS, nullptr },
         { "from_binary_message", reinterpret_cast<PyCFunction>(SmsTextMessage_FromBinaryMessage), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmsTextMessage_Static[] = 
     {
@@ -8683,14 +8606,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Spec type_spec_SmsTextMessage_Static =
-    {
+    static PyType_Spec type_spec_SmsTextMessage_Static = {
         "winrt._winrt_windows_devices_sms.SmsTextMessage_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmsTextMessage_Static
-    };
+        type_slots_SmsTextMessage_Static};
 
     // ----- SmsTextMessage2 class --------------------
 
@@ -9442,8 +9363,7 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsTextMessage2[] = {
         { "_assign_array_", _assign_array_SmsTextMessage2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsTextMessage2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsTextMessage2[] = {
         { "message_type", reinterpret_cast<getter>(SmsTextMessage2_get_MessageType), nullptr, nullptr, nullptr },
@@ -9461,16 +9381,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "from_", reinterpret_cast<getter>(SmsTextMessage2_get_From), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(SmsTextMessage2_get_Timestamp), nullptr, nullptr, nullptr },
         { "teleservice_id", reinterpret_cast<getter>(SmsTextMessage2_get_TeleserviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsTextMessage2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsTextMessage2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsTextMessage2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsTextMessage2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsTextMessage2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsTextMessage2 = {
         "winrt._winrt_windows_devices_sms.SmsTextMessage2",
@@ -9793,8 +9711,7 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsVoicemailMessage[] = {
         { "_assign_array_", _assign_array_SmsVoicemailMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsVoicemailMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsVoicemailMessage[] = {
         { "cellular_class", reinterpret_cast<getter>(SmsVoicemailMessage_get_CellularClass), nullptr, nullptr, nullptr },
@@ -9806,16 +9723,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "message_count", reinterpret_cast<getter>(SmsVoicemailMessage_get_MessageCount), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(SmsVoicemailMessage_get_Timestamp), nullptr, nullptr, nullptr },
         { "to", reinterpret_cast<getter>(SmsVoicemailMessage_get_To), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsVoicemailMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsVoicemailMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsVoicemailMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsVoicemailMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsVoicemailMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsVoicemailMessage = {
         "winrt._winrt_windows_devices_sms.SmsVoicemailMessage",
@@ -10228,8 +10143,7 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_SmsWapMessage[] = {
         { "_assign_array_", _assign_array_SmsWapMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmsWapMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmsWapMessage[] = {
         { "cellular_class", reinterpret_cast<getter>(SmsWapMessage_get_CellularClass), nullptr, nullptr, nullptr },
@@ -10244,16 +10158,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "from_", reinterpret_cast<getter>(SmsWapMessage_get_From), nullptr, nullptr, nullptr },
         { "headers", reinterpret_cast<getter>(SmsWapMessage_get_Headers), nullptr, nullptr, nullptr },
         { "to", reinterpret_cast<getter>(SmsWapMessage_get_To), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmsWapMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsWapMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsWapMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsWapMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsWapMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsWapMessage = {
         "winrt._winrt_windows_devices_sms.SmsWapMessage",
@@ -10520,23 +10432,20 @@ namespace py::cpp::Windows::Devices::Sms
         { "set_data", reinterpret_cast<PyCFunction>(ISmsBinaryMessage_SetData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISmsBinaryMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsBinaryMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISmsBinaryMessage[] = {
         { "format", reinterpret_cast<getter>(ISmsBinaryMessage_get_Format), reinterpret_cast<setter>(ISmsBinaryMessage_put_Format), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(ISmsBinaryMessage_get_Id), nullptr, nullptr, nullptr },
         { "message_class", reinterpret_cast<getter>(ISmsBinaryMessage_get_MessageClass), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISmsBinaryMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsBinaryMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsBinaryMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsBinaryMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsBinaryMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISmsBinaryMessage = {
         "winrt._winrt_windows_devices_sms.ISmsBinaryMessage",
@@ -10732,13 +10641,11 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef methods_ImplementsISmsBinaryMessage[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsBinaryMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsBinaryMessage), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISmsBinaryMessage[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISmsBinaryMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISmsBinaryMessage = {
         "winrt._winrt_windows_devices_sms.ImplementsISmsBinaryMessage",
@@ -11131,24 +11038,21 @@ namespace py::cpp::Windows::Devices::Sms
         { "remove_sms_message_received", reinterpret_cast<PyCFunction>(ISmsDevice_remove_SmsMessageReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_ISmsDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISmsDevice[] = {
         { "account_phone_number", reinterpret_cast<getter>(ISmsDevice_get_AccountPhoneNumber), nullptr, nullptr, nullptr },
         { "cellular_class", reinterpret_cast<getter>(ISmsDevice_get_CellularClass), nullptr, nullptr, nullptr },
         { "device_status", reinterpret_cast<getter>(ISmsDevice_get_DeviceStatus), nullptr, nullptr, nullptr },
         { "message_store", reinterpret_cast<getter>(ISmsDevice_get_MessageStore), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISmsDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISmsDevice = {
         "winrt._winrt_windows_devices_sms.ISmsDevice",
@@ -11472,13 +11376,11 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef methods_ImplementsISmsDevice[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsDevice), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsDevice), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISmsDevice[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISmsDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISmsDevice = {
         "winrt._winrt_windows_devices_sms.ImplementsISmsDevice",
@@ -11591,22 +11493,19 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_ISmsMessage[] = {
         { "_assign_array_", _assign_array_ISmsMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISmsMessage[] = {
         { "id", reinterpret_cast<getter>(ISmsMessage_get_Id), nullptr, nullptr, nullptr },
         { "message_class", reinterpret_cast<getter>(ISmsMessage_get_MessageClass), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISmsMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISmsMessage = {
         "winrt._winrt_windows_devices_sms.ISmsMessage",
@@ -11702,13 +11601,11 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef methods_ImplementsISmsMessage[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsMessage), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISmsMessage[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISmsMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISmsMessage = {
         "winrt._winrt_windows_devices_sms.ImplementsISmsMessage",
@@ -11911,8 +11808,7 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef _methods_ISmsMessageBase[] = {
         { "_assign_array_", _assign_array_ISmsMessageBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsMessageBase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISmsMessageBase[] = {
         { "cellular_class", reinterpret_cast<getter>(ISmsMessageBase_get_CellularClass), nullptr, nullptr, nullptr },
@@ -11920,16 +11816,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "message_class", reinterpret_cast<getter>(ISmsMessageBase_get_MessageClass), nullptr, nullptr, nullptr },
         { "message_type", reinterpret_cast<getter>(ISmsMessageBase_get_MessageType), nullptr, nullptr, nullptr },
         { "sim_icc_id", reinterpret_cast<getter>(ISmsMessageBase_get_SimIccId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISmsMessageBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsMessageBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsMessageBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsMessageBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsMessageBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISmsMessageBase = {
         "winrt._winrt_windows_devices_sms.ISmsMessageBase",
@@ -12085,13 +11979,11 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef methods_ImplementsISmsMessageBase[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsMessageBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsMessageBase), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISmsMessageBase[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISmsMessageBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISmsMessageBase = {
         "winrt._winrt_windows_devices_sms.ImplementsISmsMessageBase",
@@ -12643,8 +12535,7 @@ namespace py::cpp::Windows::Devices::Sms
         { "to_binary_messages", reinterpret_cast<PyCFunction>(ISmsTextMessage_ToBinaryMessages), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISmsTextMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsTextMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISmsTextMessage[] = {
         { "body", reinterpret_cast<getter>(ISmsTextMessage_get_Body), reinterpret_cast<setter>(ISmsTextMessage_put_Body), nullptr, nullptr },
@@ -12657,16 +12548,14 @@ namespace py::cpp::Windows::Devices::Sms
         { "to", reinterpret_cast<getter>(ISmsTextMessage_get_To), reinterpret_cast<setter>(ISmsTextMessage_put_To), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(ISmsTextMessage_get_Id), nullptr, nullptr, nullptr },
         { "message_class", reinterpret_cast<getter>(ISmsTextMessage_get_MessageClass), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISmsTextMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsTextMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsTextMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsTextMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsTextMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISmsTextMessage = {
         "winrt._winrt_windows_devices_sms.ISmsTextMessage",
@@ -13046,13 +12935,11 @@ namespace py::cpp::Windows::Devices::Sms
     static PyMethodDef methods_ImplementsISmsTextMessage[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsTextMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsTextMessage), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISmsTextMessage[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISmsTextMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISmsTextMessage = {
         "winrt._winrt_windows_devices_sms.ImplementsISmsTextMessage",
@@ -13136,8 +13023,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyMethodDef _methods_SmsEncodedLength[] = {
         { "_assign_array_", _assign_array_SmsEncodedLength, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* SmsEncodedLength_get_SegmentCount(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, void* /*unused*/) noexcept
     {
@@ -13310,8 +13196,7 @@ namespace py::cpp::Windows::Devices::Sms
         { "characters_per_segment", reinterpret_cast<getter>(SmsEncodedLength_get_CharactersPerSegment), reinterpret_cast<setter>(SmsEncodedLength_set_CharactersPerSegment), nullptr, nullptr },
         { "byte_count_last_segment", reinterpret_cast<getter>(SmsEncodedLength_get_ByteCountLastSegment), reinterpret_cast<setter>(SmsEncodedLength_set_ByteCountLastSegment), nullptr, nullptr },
         { "bytes_per_segment", reinterpret_cast<getter>(SmsEncodedLength_get_BytesPerSegment), reinterpret_cast<setter>(SmsEncodedLength_set_BytesPerSegment), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_SmsEncodedLength(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* other, int op) noexcept
     {
@@ -13391,8 +13276,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsEncodedLength) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SmsEncodedLength) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_SmsEncodedLength) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmsEncodedLength = {
         "winrt._winrt_windows_devices_sms.SmsEncodedLength",

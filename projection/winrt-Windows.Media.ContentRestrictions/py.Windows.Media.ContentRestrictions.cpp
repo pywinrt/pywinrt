@@ -138,23 +138,20 @@ namespace py::cpp::Windows::Media::ContentRestrictions
     static PyMethodDef _methods_ContentRestrictionsBrowsePolicy[] = {
         { "_assign_array_", _assign_array_ContentRestrictionsBrowsePolicy, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentRestrictionsBrowsePolicy), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentRestrictionsBrowsePolicy[] = {
         { "geographic_region", reinterpret_cast<getter>(ContentRestrictionsBrowsePolicy_get_GeographicRegion), nullptr, nullptr, nullptr },
         { "max_browsable_age_rating", reinterpret_cast<getter>(ContentRestrictionsBrowsePolicy_get_MaxBrowsableAgeRating), nullptr, nullptr, nullptr },
         { "preferred_age_rating", reinterpret_cast<getter>(ContentRestrictionsBrowsePolicy_get_PreferredAgeRating), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentRestrictionsBrowsePolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentRestrictionsBrowsePolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentRestrictionsBrowsePolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentRestrictionsBrowsePolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentRestrictionsBrowsePolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentRestrictionsBrowsePolicy = {
         "winrt._winrt_windows_media_contentrestrictions.ContentRestrictionsBrowsePolicy",
@@ -578,8 +575,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
     static PyMethodDef _methods_RatedContentDescription[] = {
         { "_assign_array_", _assign_array_RatedContentDescription, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RatedContentDescription), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RatedContentDescription[] = {
         { "title", reinterpret_cast<getter>(RatedContentDescription_get_Title), reinterpret_cast<setter>(RatedContentDescription_put_Title), nullptr, nullptr },
@@ -587,16 +583,14 @@ namespace py::cpp::Windows::Media::ContentRestrictions
         { "image", reinterpret_cast<getter>(RatedContentDescription_get_Image), reinterpret_cast<setter>(RatedContentDescription_put_Image), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(RatedContentDescription_get_Id), reinterpret_cast<setter>(RatedContentDescription_put_Id), nullptr, nullptr },
         { "category", reinterpret_cast<getter>(RatedContentDescription_get_Category), reinterpret_cast<setter>(RatedContentDescription_put_Category), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RatedContentDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RatedContentDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RatedContentDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RatedContentDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RatedContentDescription) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RatedContentDescription = {
         "winrt._winrt_windows_media_contentrestrictions.RatedContentDescription",
@@ -880,20 +874,17 @@ namespace py::cpp::Windows::Media::ContentRestrictions
         { "remove_restrictions_changed", reinterpret_cast<PyCFunction>(RatedContentRestrictions_remove_RestrictionsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_RatedContentRestrictions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RatedContentRestrictions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RatedContentRestrictions[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RatedContentRestrictions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RatedContentRestrictions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RatedContentRestrictions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RatedContentRestrictions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RatedContentRestrictions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RatedContentRestrictions = {
         "winrt._winrt_windows_media_contentrestrictions.RatedContentRestrictions",

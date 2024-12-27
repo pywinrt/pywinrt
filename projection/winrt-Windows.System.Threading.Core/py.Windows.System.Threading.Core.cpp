@@ -146,20 +146,17 @@ namespace py::cpp::Windows::System::Threading::Core
         { "run_async", reinterpret_cast<PyCFunction>(PreallocatedWorkItem_RunAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PreallocatedWorkItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PreallocatedWorkItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PreallocatedWorkItem[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PreallocatedWorkItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreallocatedWorkItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreallocatedWorkItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreallocatedWorkItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreallocatedWorkItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PreallocatedWorkItem = {
         "winrt._winrt_windows_system_threading_core.PreallocatedWorkItem",
@@ -470,20 +467,17 @@ namespace py::cpp::Windows::System::Threading::Core
         { "terminate", reinterpret_cast<PyCFunction>(SignalNotifier_Terminate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SignalNotifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SignalNotifier), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SignalNotifier[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SignalNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SignalNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SignalNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SignalNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SignalNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SignalNotifier = {
         "winrt._winrt_windows_system_threading_core.SignalNotifier",
@@ -493,16 +487,14 @@ namespace py::cpp::Windows::System::Threading::Core
         _type_slots_SignalNotifier};
 
     static PyGetSetDef getset_SignalNotifier_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SignalNotifier_Static[] = {
         { "attach_to_event", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToEvent), METH_VARARGS, nullptr },
         { "attach_to_event_with_timeout", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToEventWithTimeout), METH_VARARGS, nullptr },
         { "attach_to_semaphore", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToSemaphore), METH_VARARGS, nullptr },
         { "attach_to_semaphore_with_timeout", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToSemaphoreWithTimeout), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SignalNotifier_Static[] = 
     {
@@ -512,14 +504,12 @@ namespace py::cpp::Windows::System::Threading::Core
         { }
     };
 
-    static PyType_Spec type_spec_SignalNotifier_Static =
-    {
+    static PyType_Spec type_spec_SignalNotifier_Static = {
         "winrt._winrt_windows_system_threading_core.SignalNotifier_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SignalNotifier_Static
-    };
+        type_slots_SignalNotifier_Static};
 
     // ----- Windows.System.Threading.Core Initialization --------------------
 

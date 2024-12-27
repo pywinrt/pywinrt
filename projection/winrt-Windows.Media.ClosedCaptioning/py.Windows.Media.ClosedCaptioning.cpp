@@ -439,19 +439,16 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
     }
 
     static PyMethodDef _methods_ClosedCaptionProperties[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClosedCaptionProperties[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClosedCaptionProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClosedCaptionProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClosedCaptionProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClosedCaptionProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClosedCaptionProperties = {
         "winrt._winrt_windows_media_closedcaptioning.ClosedCaptionProperties",
@@ -473,14 +470,12 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
         { "font_style", reinterpret_cast<getter>(ClosedCaptionProperties_get_FontStyle), nullptr, nullptr, nullptr },
         { "region_color", reinterpret_cast<getter>(ClosedCaptionProperties_get_RegionColor), nullptr, nullptr, nullptr },
         { "region_opacity", reinterpret_cast<getter>(ClosedCaptionProperties_get_RegionOpacity), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ClosedCaptionProperties_Static[] = {
         { "add_properties_changed", reinterpret_cast<PyCFunction>(ClosedCaptionProperties_add_PropertiesChanged), METH_O, nullptr },
         { "remove_properties_changed", reinterpret_cast<PyCFunction>(ClosedCaptionProperties_remove_PropertiesChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ClosedCaptionProperties_Static[] = 
     {
@@ -490,14 +485,12 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
         { }
     };
 
-    static PyType_Spec type_spec_ClosedCaptionProperties_Static =
-    {
+    static PyType_Spec type_spec_ClosedCaptionProperties_Static = {
         "winrt._winrt_windows_media_closedcaptioning.ClosedCaptionProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ClosedCaptionProperties_Static
-    };
+        type_slots_ClosedCaptionProperties_Static};
 
     // ----- Windows.Media.ClosedCaptioning Initialization --------------------
 

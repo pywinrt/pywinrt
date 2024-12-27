@@ -78,21 +78,18 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
     static PyMethodDef _methods_ExtendedExecutionRevokedEventArgs[] = {
         { "_assign_array_", _assign_array_ExtendedExecutionRevokedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExtendedExecutionRevokedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExtendedExecutionRevokedEventArgs[] = {
         { "reason", reinterpret_cast<getter>(ExtendedExecutionRevokedEventArgs_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExtendedExecutionRevokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExtendedExecutionRevokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExtendedExecutionRevokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExtendedExecutionRevokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExtendedExecutionRevokedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExtendedExecutionRevokedEventArgs = {
         "winrt._winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionRevokedEventArgs",
@@ -549,23 +546,20 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
         { "_from", reinterpret_cast<PyCFunction>(_from_ExtendedExecutionSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ExtendedExecutionSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ExtendedExecutionSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExtendedExecutionSession[] = {
         { "reason", reinterpret_cast<getter>(ExtendedExecutionSession_get_Reason), reinterpret_cast<setter>(ExtendedExecutionSession_put_Reason), nullptr, nullptr },
         { "percent_progress", reinterpret_cast<getter>(ExtendedExecutionSession_get_PercentProgress), reinterpret_cast<setter>(ExtendedExecutionSession_put_PercentProgress), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(ExtendedExecutionSession_get_Description), reinterpret_cast<setter>(ExtendedExecutionSession_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExtendedExecutionSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExtendedExecutionSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExtendedExecutionSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExtendedExecutionSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExtendedExecutionSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExtendedExecutionSession = {
         "winrt._winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionSession",

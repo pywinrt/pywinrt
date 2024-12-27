@@ -583,20 +583,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "remove_registration_completed", reinterpret_cast<PyCFunction>(NDClient_remove_RegistrationCompleted), METH_O, nullptr },
         { "_assign_array_", _assign_array_NDClient, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NDClient), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NDClient[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NDClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDClient) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NDClient = {
         "winrt._winrt_windows_media_protection_playready.NDClient",
@@ -734,22 +731,19 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_NDCustomData[] = {
         { "_assign_array_", _assign_array_NDCustomData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NDCustomData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NDCustomData[] = {
         { "custom_data", reinterpret_cast<getter>(NDCustomData_get_CustomData), nullptr, nullptr, nullptr },
         { "custom_data_type_id", reinterpret_cast<getter>(NDCustomData_get_CustomDataTypeID), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NDCustomData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDCustomData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDCustomData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDCustomData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDCustomData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NDCustomData = {
         "winrt._winrt_windows_media_protection_playready.NDCustomData",
@@ -1083,20 +1077,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "on_stream_opened", reinterpret_cast<PyCFunction>(NDDownloadEngineNotifier_OnStreamOpened), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NDDownloadEngineNotifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NDDownloadEngineNotifier), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NDDownloadEngineNotifier[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NDDownloadEngineNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDDownloadEngineNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDDownloadEngineNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDDownloadEngineNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDDownloadEngineNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NDDownloadEngineNotifier = {
         "winrt._winrt_windows_media_protection_playready.NDDownloadEngineNotifier",
@@ -1304,23 +1295,20 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_NDLicenseFetchDescriptor[] = {
         { "_assign_array_", _assign_array_NDLicenseFetchDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NDLicenseFetchDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NDLicenseFetchDescriptor[] = {
         { "license_fetch_challenge_custom_data", reinterpret_cast<getter>(NDLicenseFetchDescriptor_get_LicenseFetchChallengeCustomData), reinterpret_cast<setter>(NDLicenseFetchDescriptor_put_LicenseFetchChallengeCustomData), nullptr, nullptr },
         { "content_id", reinterpret_cast<getter>(NDLicenseFetchDescriptor_get_ContentID), nullptr, nullptr, nullptr },
         { "content_id_type", reinterpret_cast<getter>(NDLicenseFetchDescriptor_get_ContentIDType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NDLicenseFetchDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDLicenseFetchDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDLicenseFetchDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDLicenseFetchDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDLicenseFetchDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NDLicenseFetchDescriptor = {
         "winrt._winrt_windows_media_protection_playready.NDLicenseFetchDescriptor",
@@ -1438,20 +1426,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "get_file_u_r_ls", reinterpret_cast<PyCFunction>(NDStorageFileHelper_GetFileURLs), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NDStorageFileHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NDStorageFileHelper), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NDStorageFileHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NDStorageFileHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDStorageFileHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDStorageFileHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDStorageFileHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDStorageFileHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NDStorageFileHelper = {
         "winrt._winrt_windows_media_protection_playready.NDStorageFileHelper",
@@ -1710,20 +1695,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "on_sample_parsed", reinterpret_cast<PyCFunction>(NDStreamParserNotifier_OnSampleParsed), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NDStreamParserNotifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NDStreamParserNotifier), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NDStreamParserNotifier[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NDStreamParserNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDStreamParserNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDStreamParserNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDStreamParserNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDStreamParserNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NDStreamParserNotifier = {
         "winrt._winrt_windows_media_protection_playready.NDStreamParserNotifier",
@@ -1981,20 +1963,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "send_registration_request_async", reinterpret_cast<PyCFunction>(NDTCPMessenger_SendRegistrationRequestAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NDTCPMessenger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NDTCPMessenger), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NDTCPMessenger[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NDTCPMessenger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDTCPMessenger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDTCPMessenger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDTCPMessenger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDTCPMessenger) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NDTCPMessenger = {
         "winrt._winrt_windows_media_protection_playready.NDTCPMessenger",
@@ -2504,8 +2483,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "get_serialized_header", reinterpret_cast<PyCFunction>(PlayReadyContentHeader_GetSerializedHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyContentHeader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyContentHeader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyContentHeader[] = {
         { "custom_attributes", reinterpret_cast<getter>(PlayReadyContentHeader_get_CustomAttributes), nullptr, nullptr, nullptr },
@@ -2519,16 +2497,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "license_acquisition_user_interface_url", reinterpret_cast<getter>(PlayReadyContentHeader_get_LicenseAcquisitionUserInterfaceUrl), nullptr, nullptr, nullptr },
         { "key_id_strings", reinterpret_cast<getter>(PlayReadyContentHeader_get_KeyIdStrings), nullptr, nullptr, nullptr },
         { "key_ids", reinterpret_cast<getter>(PlayReadyContentHeader_get_KeyIds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyContentHeader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyContentHeader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyContentHeader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyContentHeader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyContentHeader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyContentHeader = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyContentHeader",
@@ -2589,19 +2565,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef _methods_PlayReadyContentResolver[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyContentResolver[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyContentResolver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyContentResolver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyContentResolver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyContentResolver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyContentResolver = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyContentResolver",
@@ -2611,13 +2584,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         _type_slots_PlayReadyContentResolver};
 
     static PyGetSetDef getset_PlayReadyContentResolver_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlayReadyContentResolver_Static[] = {
         { "service_request", reinterpret_cast<PyCFunction>(PlayReadyContentResolver_ServiceRequest), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlayReadyContentResolver_Static[] = 
     {
@@ -2627,14 +2598,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Spec type_spec_PlayReadyContentResolver_Static =
-    {
+    static PyType_Spec type_spec_PlayReadyContentResolver_Static = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyContentResolver_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlayReadyContentResolver_Static
-    };
+        type_slots_PlayReadyContentResolver_Static};
 
     // ----- PlayReadyDomain class --------------------
 
@@ -2830,8 +2799,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_PlayReadyDomain[] = {
         { "_assign_array_", _assign_array_PlayReadyDomain, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyDomain), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyDomain[] = {
         { "account_id", reinterpret_cast<getter>(PlayReadyDomain_get_AccountId), nullptr, nullptr, nullptr },
@@ -2839,16 +2807,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "friendly_name", reinterpret_cast<getter>(PlayReadyDomain_get_FriendlyName), nullptr, nullptr, nullptr },
         { "revision", reinterpret_cast<getter>(PlayReadyDomain_get_Revision), nullptr, nullptr, nullptr },
         { "service_id", reinterpret_cast<getter>(PlayReadyDomain_get_ServiceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyDomain[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomain) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyDomain) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyDomain) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomain) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyDomain = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyDomain",
@@ -2983,12 +2949,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "first", reinterpret_cast<PyCFunction>(PlayReadyDomainIterable_First), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyDomainIterable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyDomainIterable), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyDomainIterable[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyDomainIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomainIterable) },
@@ -2996,8 +2960,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyDomainIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomainIterable) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadyDomainIterable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyDomainIterable = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyDomainIterable",
@@ -3225,14 +3188,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "move_next", reinterpret_cast<PyCFunction>(PlayReadyDomainIterator_MoveNext), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyDomainIterator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyDomainIterator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyDomainIterator[] = {
         { "current", reinterpret_cast<getter>(PlayReadyDomainIterator_get_Current), nullptr, nullptr, nullptr },
         { "has_current", reinterpret_cast<getter>(PlayReadyDomainIterator_get_HasCurrent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyDomainIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomainIterator) },
@@ -3241,8 +3202,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomainIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadyDomainIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_PlayReadyDomainIterator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyDomainIterator = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyDomainIterator",
@@ -3918,8 +3878,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(PlayReadyDomainJoinServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyDomainJoinServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyDomainJoinServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyDomainJoinServiceRequest[] = {
         { "protection_system", reinterpret_cast<getter>(PlayReadyDomainJoinServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
@@ -3930,16 +3889,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(PlayReadyDomainJoinServiceRequest_get_Uri), reinterpret_cast<setter>(PlayReadyDomainJoinServiceRequest_put_Uri), nullptr, nullptr },
         { "challenge_custom_data", reinterpret_cast<getter>(PlayReadyDomainJoinServiceRequest_get_ChallengeCustomData), reinterpret_cast<setter>(PlayReadyDomainJoinServiceRequest_put_ChallengeCustomData), nullptr, nullptr },
         { "response_custom_data", reinterpret_cast<getter>(PlayReadyDomainJoinServiceRequest_get_ResponseCustomData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyDomainJoinServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomainJoinServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyDomainJoinServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyDomainJoinServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomainJoinServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyDomainJoinServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyDomainJoinServiceRequest",
@@ -4546,8 +4503,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(PlayReadyDomainLeaveServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyDomainLeaveServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyDomainLeaveServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyDomainLeaveServiceRequest[] = {
         { "protection_system", reinterpret_cast<getter>(PlayReadyDomainLeaveServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
@@ -4557,16 +4513,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(PlayReadyDomainLeaveServiceRequest_get_Uri), reinterpret_cast<setter>(PlayReadyDomainLeaveServiceRequest_put_Uri), nullptr, nullptr },
         { "challenge_custom_data", reinterpret_cast<getter>(PlayReadyDomainLeaveServiceRequest_get_ChallengeCustomData), reinterpret_cast<setter>(PlayReadyDomainLeaveServiceRequest_put_ChallengeCustomData), nullptr, nullptr },
         { "response_custom_data", reinterpret_cast<getter>(PlayReadyDomainLeaveServiceRequest_get_ResponseCustomData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyDomainLeaveServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomainLeaveServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyDomainLeaveServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyDomainLeaveServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomainLeaveServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyDomainLeaveServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyDomainLeaveServiceRequest",
@@ -4687,20 +4641,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "generate_data", reinterpret_cast<PyCFunction>(PlayReadyITADataGenerator_GenerateData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyITADataGenerator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyITADataGenerator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyITADataGenerator[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyITADataGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyITADataGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyITADataGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyITADataGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyITADataGenerator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyITADataGenerator = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyITADataGenerator",
@@ -5169,8 +5120,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(PlayReadyIndividualizationServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyIndividualizationServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyIndividualizationServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyIndividualizationServiceRequest[] = {
         { "protection_system", reinterpret_cast<getter>(PlayReadyIndividualizationServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
@@ -5178,16 +5128,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(PlayReadyIndividualizationServiceRequest_get_Uri), reinterpret_cast<setter>(PlayReadyIndividualizationServiceRequest_put_Uri), nullptr, nullptr },
         { "challenge_custom_data", reinterpret_cast<getter>(PlayReadyIndividualizationServiceRequest_get_ChallengeCustomData), reinterpret_cast<setter>(PlayReadyIndividualizationServiceRequest_put_ChallengeCustomData), nullptr, nullptr },
         { "response_custom_data", reinterpret_cast<getter>(PlayReadyIndividualizationServiceRequest_get_ResponseCustomData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyIndividualizationServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyIndividualizationServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyIndividualizationServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyIndividualizationServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyIndividualizationServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyIndividualizationServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyIndividualizationServiceRequest",
@@ -5583,8 +5531,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "get_k_i_d_at_chain_depth", reinterpret_cast<PyCFunction>(PlayReadyLicense_GetKIDAtChainDepth), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyLicense, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyLicense), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyLicense[] = {
         { "chain_depth", reinterpret_cast<getter>(PlayReadyLicense_get_ChainDepth), nullptr, nullptr, nullptr },
@@ -5597,16 +5544,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "in_memory_only", reinterpret_cast<getter>(PlayReadyLicense_get_InMemoryOnly), nullptr, nullptr, nullptr },
         { "secure_stop_id", reinterpret_cast<getter>(PlayReadyLicense_get_SecureStopId), nullptr, nullptr, nullptr },
         { "security_level", reinterpret_cast<getter>(PlayReadyLicense_get_SecurityLevel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyLicense[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicense) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyLicense) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicense) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicense) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyLicense = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyLicense",
@@ -6287,8 +6232,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(PlayReadyLicenseAcquisitionServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyLicenseAcquisitionServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyLicenseAcquisitionServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyLicenseAcquisitionServiceRequest[] = {
         { "protection_system", reinterpret_cast<getter>(PlayReadyLicenseAcquisitionServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
@@ -6299,16 +6243,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(PlayReadyLicenseAcquisitionServiceRequest_get_Uri), reinterpret_cast<setter>(PlayReadyLicenseAcquisitionServiceRequest_put_Uri), nullptr, nullptr },
         { "challenge_custom_data", reinterpret_cast<getter>(PlayReadyLicenseAcquisitionServiceRequest_get_ChallengeCustomData), reinterpret_cast<setter>(PlayReadyLicenseAcquisitionServiceRequest_put_ChallengeCustomData), nullptr, nullptr },
         { "response_custom_data", reinterpret_cast<getter>(PlayReadyLicenseAcquisitionServiceRequest_get_ResponseCustomData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyLicenseAcquisitionServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseAcquisitionServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyLicenseAcquisitionServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseAcquisitionServiceRequest",
@@ -6457,12 +6399,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "first", reinterpret_cast<PyCFunction>(PlayReadyLicenseIterable_First), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyLicenseIterable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyLicenseIterable), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyLicenseIterable[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyLicenseIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseIterable) },
@@ -6470,8 +6410,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicenseIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseIterable) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadyLicenseIterable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyLicenseIterable = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseIterable",
@@ -6699,14 +6638,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "move_next", reinterpret_cast<PyCFunction>(PlayReadyLicenseIterator_MoveNext), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyLicenseIterator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyLicenseIterator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyLicenseIterator[] = {
         { "current", reinterpret_cast<getter>(PlayReadyLicenseIterator_get_Current), nullptr, nullptr, nullptr },
         { "has_current", reinterpret_cast<getter>(PlayReadyLicenseIterator_get_HasCurrent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyLicenseIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseIterator) },
@@ -6715,8 +6652,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadyLicenseIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_PlayReadyLicenseIterator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyLicenseIterator = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseIterator",
@@ -6777,19 +6713,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef _methods_PlayReadyLicenseManagement[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyLicenseManagement[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyLicenseManagement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseManagement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicenseManagement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseManagement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyLicenseManagement = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseManagement",
@@ -6799,13 +6732,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         _type_slots_PlayReadyLicenseManagement};
 
     static PyGetSetDef getset_PlayReadyLicenseManagement_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlayReadyLicenseManagement_Static[] = {
         { "delete_licenses", reinterpret_cast<PyCFunction>(PlayReadyLicenseManagement_DeleteLicenses), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlayReadyLicenseManagement_Static[] = 
     {
@@ -6815,14 +6746,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Spec type_spec_PlayReadyLicenseManagement_Static =
-    {
+    static PyType_Spec type_spec_PlayReadyLicenseManagement_Static = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseManagement_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlayReadyLicenseManagement_Static
-    };
+        type_slots_PlayReadyLicenseManagement_Static};
 
     // ----- PlayReadyLicenseSession class --------------------
 
@@ -7021,20 +6950,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "create_license_iterable", reinterpret_cast<PyCFunction>(PlayReadyLicenseSession_CreateLicenseIterable), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyLicenseSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyLicenseSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyLicenseSession[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyLicenseSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyLicenseSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicenseSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyLicenseSession = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseSession",
@@ -7572,8 +7498,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(PlayReadyMeteringReportServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyMeteringReportServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyMeteringReportServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyMeteringReportServiceRequest[] = {
         { "protection_system", reinterpret_cast<getter>(PlayReadyMeteringReportServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
@@ -7582,16 +7507,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(PlayReadyMeteringReportServiceRequest_get_Uri), reinterpret_cast<setter>(PlayReadyMeteringReportServiceRequest_put_Uri), nullptr, nullptr },
         { "challenge_custom_data", reinterpret_cast<getter>(PlayReadyMeteringReportServiceRequest_get_ChallengeCustomData), reinterpret_cast<setter>(PlayReadyMeteringReportServiceRequest_put_ChallengeCustomData), nullptr, nullptr },
         { "response_custom_data", reinterpret_cast<getter>(PlayReadyMeteringReportServiceRequest_get_ResponseCustomData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyMeteringReportServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyMeteringReportServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyMeteringReportServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyMeteringReportServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyMeteringReportServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyMeteringReportServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyMeteringReportServiceRequest",
@@ -8060,8 +7983,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(PlayReadyRevocationServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadyRevocationServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadyRevocationServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyRevocationServiceRequest[] = {
         { "protection_system", reinterpret_cast<getter>(PlayReadyRevocationServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
@@ -8069,16 +7991,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(PlayReadyRevocationServiceRequest_get_Uri), reinterpret_cast<setter>(PlayReadyRevocationServiceRequest_put_Uri), nullptr, nullptr },
         { "challenge_custom_data", reinterpret_cast<getter>(PlayReadyRevocationServiceRequest_get_ChallengeCustomData), reinterpret_cast<setter>(PlayReadyRevocationServiceRequest_put_ChallengeCustomData), nullptr, nullptr },
         { "response_custom_data", reinterpret_cast<getter>(PlayReadyRevocationServiceRequest_get_ResponseCustomData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyRevocationServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyRevocationServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyRevocationServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyRevocationServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyRevocationServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyRevocationServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyRevocationServiceRequest",
@@ -8213,12 +8133,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "first", reinterpret_cast<PyCFunction>(PlayReadySecureStopIterable_First), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadySecureStopIterable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadySecureStopIterable), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadySecureStopIterable[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadySecureStopIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadySecureStopIterable) },
@@ -8226,8 +8144,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadySecureStopIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadySecureStopIterable) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadySecureStopIterable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadySecureStopIterable = {
         "winrt._winrt_windows_media_protection_playready.PlayReadySecureStopIterable",
@@ -8455,14 +8372,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "move_next", reinterpret_cast<PyCFunction>(PlayReadySecureStopIterator_MoveNext), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadySecureStopIterator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadySecureStopIterator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadySecureStopIterator[] = {
         { "current", reinterpret_cast<getter>(PlayReadySecureStopIterator_get_Current), nullptr, nullptr, nullptr },
         { "has_current", reinterpret_cast<getter>(PlayReadySecureStopIterator_get_HasCurrent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadySecureStopIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadySecureStopIterator) },
@@ -8471,8 +8386,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadySecureStopIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadySecureStopIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_PlayReadySecureStopIterator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadySecureStopIterator = {
         "winrt._winrt_windows_media_protection_playready.PlayReadySecureStopIterator",
@@ -9109,8 +9023,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(PlayReadySecureStopServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadySecureStopServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadySecureStopServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadySecureStopServiceRequest[] = {
         { "protection_system", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
@@ -9123,16 +9036,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_Uri), reinterpret_cast<setter>(PlayReadySecureStopServiceRequest_put_Uri), nullptr, nullptr },
         { "challenge_custom_data", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_ChallengeCustomData), reinterpret_cast<setter>(PlayReadySecureStopServiceRequest_put_ChallengeCustomData), nullptr, nullptr },
         { "response_custom_data", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_ResponseCustomData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadySecureStopServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadySecureStopServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadySecureStopServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadySecureStopServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadySecureStopServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadySecureStopServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.PlayReadySecureStopServiceRequest",
@@ -9286,22 +9197,19 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "get_message_body", reinterpret_cast<PyCFunction>(PlayReadySoapMessage_GetMessageBody), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlayReadySoapMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlayReadySoapMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadySoapMessage[] = {
         { "message_headers", reinterpret_cast<getter>(PlayReadySoapMessage_get_MessageHeaders), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(PlayReadySoapMessage_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadySoapMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadySoapMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadySoapMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadySoapMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadySoapMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadySoapMessage = {
         "winrt._winrt_windows_media_protection_playready.PlayReadySoapMessage",
@@ -9823,19 +9731,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef _methods_PlayReadyStatics[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlayReadyStatics[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlayReadyStatics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyStatics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlayReadyStatics = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyStatics",
@@ -9859,14 +9764,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "input_trust_authority_to_create", reinterpret_cast<getter>(PlayReadyStatics_get_InputTrustAuthorityToCreate), nullptr, nullptr, nullptr },
         { "hardware_drm_disabled_until_time", reinterpret_cast<getter>(PlayReadyStatics_get_HardwareDRMDisabledUntilTime), nullptr, nullptr, nullptr },
         { "hardware_drm_disabled_at_time", reinterpret_cast<getter>(PlayReadyStatics_get_HardwareDRMDisabledAtTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlayReadyStatics_Static[] = {
         { "check_supported_hardware", reinterpret_cast<PyCFunction>(PlayReadyStatics_CheckSupportedHardware), METH_VARARGS, nullptr },
         { "reset_hardware_drm_disabled", reinterpret_cast<PyCFunction>(PlayReadyStatics_ResetHardwareDRMDisabled), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlayReadyStatics_Static[] = 
     {
@@ -9876,14 +9779,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Spec type_spec_PlayReadyStatics_Static =
-    {
+    static PyType_Spec type_spec_PlayReadyStatics_Static = {
         "winrt._winrt_windows_media_protection_playready.PlayReadyStatics_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlayReadyStatics_Static
-    };
+        type_slots_PlayReadyStatics_Static};
 
     // ----- INDClosedCaptionDataReceivedEventArgs interface --------------------
 
@@ -10019,23 +9920,20 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDClosedCaptionDataReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_INDClosedCaptionDataReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDClosedCaptionDataReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDClosedCaptionDataReceivedEventArgs[] = {
         { "closed_caption_data", reinterpret_cast<getter>(INDClosedCaptionDataReceivedEventArgs_get_ClosedCaptionData), nullptr, nullptr, nullptr },
         { "closed_caption_data_format", reinterpret_cast<getter>(INDClosedCaptionDataReceivedEventArgs_get_ClosedCaptionDataFormat), nullptr, nullptr, nullptr },
         { "presentation_timestamp", reinterpret_cast<getter>(INDClosedCaptionDataReceivedEventArgs_get_PresentationTimestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDClosedCaptionDataReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDClosedCaptionDataReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDClosedCaptionDataReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDClosedCaptionDataReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDClosedCaptionDataReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDClosedCaptionDataReceivedEventArgs = {
         "winrt._winrt_windows_media_protection_playready.INDClosedCaptionDataReceivedEventArgs",
@@ -10152,13 +10050,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDClosedCaptionDataReceivedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDClosedCaptionDataReceivedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDClosedCaptionDataReceivedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDClosedCaptionDataReceivedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDClosedCaptionDataReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDClosedCaptionDataReceivedEventArgs = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDClosedCaptionDataReceivedEventArgs",
@@ -10271,22 +10167,19 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDCustomData[] = {
         { "_assign_array_", _assign_array_INDCustomData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDCustomData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDCustomData[] = {
         { "custom_data", reinterpret_cast<getter>(INDCustomData_get_CustomData), nullptr, nullptr, nullptr },
         { "custom_data_type_id", reinterpret_cast<getter>(INDCustomData_get_CustomDataTypeID), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDCustomData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDCustomData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDCustomData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDCustomData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDCustomData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDCustomData = {
         "winrt._winrt_windows_media_protection_playready.INDCustomData",
@@ -10384,13 +10277,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDCustomData[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDCustomData), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDCustomData), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDCustomData[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDCustomData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDCustomData = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDCustomData",
@@ -10778,24 +10669,21 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "seek", reinterpret_cast<PyCFunction>(INDDownloadEngine_Seek), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INDDownloadEngine, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDDownloadEngine), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDDownloadEngine[] = {
         { "buffer_full_max_threshold_in_samples", reinterpret_cast<getter>(INDDownloadEngine_get_BufferFullMaxThresholdInSamples), nullptr, nullptr, nullptr },
         { "buffer_full_min_threshold_in_samples", reinterpret_cast<getter>(INDDownloadEngine_get_BufferFullMinThresholdInSamples), nullptr, nullptr, nullptr },
         { "can_seek", reinterpret_cast<getter>(INDDownloadEngine_get_CanSeek), nullptr, nullptr, nullptr },
         { "notifier", reinterpret_cast<getter>(INDDownloadEngine_get_Notifier), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDDownloadEngine[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDDownloadEngine) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDDownloadEngine) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDDownloadEngine) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDDownloadEngine) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDDownloadEngine = {
         "winrt._winrt_windows_media_protection_playready.INDDownloadEngine",
@@ -11075,13 +10963,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDDownloadEngine[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDDownloadEngine), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDDownloadEngine), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDDownloadEngine[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDDownloadEngine) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDDownloadEngine = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDDownloadEngine",
@@ -11393,20 +11279,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "on_stream_opened", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnStreamOpened), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INDDownloadEngineNotifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDDownloadEngineNotifier), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDDownloadEngineNotifier[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDDownloadEngineNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDDownloadEngineNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDDownloadEngineNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDDownloadEngineNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDDownloadEngineNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDDownloadEngineNotifier = {
         "winrt._winrt_windows_media_protection_playready.INDDownloadEngineNotifier",
@@ -11636,13 +11519,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDDownloadEngineNotifier[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDDownloadEngineNotifier), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDDownloadEngineNotifier), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDDownloadEngineNotifier[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDDownloadEngineNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDDownloadEngineNotifier = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDDownloadEngineNotifier",
@@ -11725,21 +11606,18 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDLicenseFetchCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_INDLicenseFetchCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDLicenseFetchCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDLicenseFetchCompletedEventArgs[] = {
         { "response_custom_data", reinterpret_cast<getter>(INDLicenseFetchCompletedEventArgs_get_ResponseCustomData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDLicenseFetchCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDLicenseFetchCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDLicenseFetchCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDLicenseFetchCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDLicenseFetchCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDLicenseFetchCompletedEventArgs = {
         "winrt._winrt_windows_media_protection_playready.INDLicenseFetchCompletedEventArgs",
@@ -11815,13 +11693,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDLicenseFetchCompletedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDLicenseFetchCompletedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDLicenseFetchCompletedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDLicenseFetchCompletedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDLicenseFetchCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDLicenseFetchCompletedEventArgs = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDLicenseFetchCompletedEventArgs",
@@ -12003,23 +11879,20 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDLicenseFetchDescriptor[] = {
         { "_assign_array_", _assign_array_INDLicenseFetchDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDLicenseFetchDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDLicenseFetchDescriptor[] = {
         { "content_id", reinterpret_cast<getter>(INDLicenseFetchDescriptor_get_ContentID), nullptr, nullptr, nullptr },
         { "content_id_type", reinterpret_cast<getter>(INDLicenseFetchDescriptor_get_ContentIDType), nullptr, nullptr, nullptr },
         { "license_fetch_challenge_custom_data", reinterpret_cast<getter>(INDLicenseFetchDescriptor_get_LicenseFetchChallengeCustomData), reinterpret_cast<setter>(INDLicenseFetchDescriptor_put_LicenseFetchChallengeCustomData), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDLicenseFetchDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDLicenseFetchDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDLicenseFetchDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDLicenseFetchDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDLicenseFetchDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDLicenseFetchDescriptor = {
         "winrt._winrt_windows_media_protection_playready.INDLicenseFetchDescriptor",
@@ -12159,13 +12032,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDLicenseFetchDescriptor[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDLicenseFetchDescriptor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDLicenseFetchDescriptor), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDLicenseFetchDescriptor[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDLicenseFetchDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDLicenseFetchDescriptor = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDLicenseFetchDescriptor",
@@ -12248,21 +12119,18 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDLicenseFetchResult[] = {
         { "_assign_array_", _assign_array_INDLicenseFetchResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDLicenseFetchResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDLicenseFetchResult[] = {
         { "response_custom_data", reinterpret_cast<getter>(INDLicenseFetchResult_get_ResponseCustomData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDLicenseFetchResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDLicenseFetchResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDLicenseFetchResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDLicenseFetchResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDLicenseFetchResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDLicenseFetchResult = {
         "winrt._winrt_windows_media_protection_playready.INDLicenseFetchResult",
@@ -12338,13 +12206,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDLicenseFetchResult[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDLicenseFetchResult), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDLicenseFetchResult), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDLicenseFetchResult[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDLicenseFetchResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDLicenseFetchResult = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDLicenseFetchResult",
@@ -12577,20 +12443,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "send_registration_request_async", reinterpret_cast<PyCFunction>(INDMessenger_SendRegistrationRequestAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INDMessenger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDMessenger), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDMessenger[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDMessenger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDMessenger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDMessenger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDMessenger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDMessenger) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDMessenger = {
         "winrt._winrt_windows_media_protection_playready.INDMessenger",
@@ -12846,13 +12709,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDMessenger[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDMessenger), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDMessenger), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDMessenger[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDMessenger) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDMessenger = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDMessenger",
@@ -12935,21 +12796,18 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDProximityDetectionCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_INDProximityDetectionCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDProximityDetectionCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDProximityDetectionCompletedEventArgs[] = {
         { "proximity_detection_retry_count", reinterpret_cast<getter>(INDProximityDetectionCompletedEventArgs_get_ProximityDetectionRetryCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDProximityDetectionCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDProximityDetectionCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDProximityDetectionCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDProximityDetectionCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDProximityDetectionCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDProximityDetectionCompletedEventArgs = {
         "winrt._winrt_windows_media_protection_playready.INDProximityDetectionCompletedEventArgs",
@@ -13025,13 +12883,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDProximityDetectionCompletedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDProximityDetectionCompletedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDProximityDetectionCompletedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDProximityDetectionCompletedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDProximityDetectionCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDProximityDetectionCompletedEventArgs = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDProximityDetectionCompletedEventArgs",
@@ -13213,23 +13069,20 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDRegistrationCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_INDRegistrationCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDRegistrationCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDRegistrationCompletedEventArgs[] = {
         { "response_custom_data", reinterpret_cast<getter>(INDRegistrationCompletedEventArgs_get_ResponseCustomData), nullptr, nullptr, nullptr },
         { "transmitter_certificate_accepted", reinterpret_cast<getter>(INDRegistrationCompletedEventArgs_get_TransmitterCertificateAccepted), reinterpret_cast<setter>(INDRegistrationCompletedEventArgs_put_TransmitterCertificateAccepted), nullptr, nullptr },
         { "transmitter_properties", reinterpret_cast<getter>(INDRegistrationCompletedEventArgs_get_TransmitterProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDRegistrationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDRegistrationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDRegistrationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDRegistrationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDRegistrationCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDRegistrationCompletedEventArgs = {
         "winrt._winrt_windows_media_protection_playready.INDRegistrationCompletedEventArgs",
@@ -13368,13 +13221,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDRegistrationCompletedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDRegistrationCompletedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDRegistrationCompletedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDRegistrationCompletedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDRegistrationCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDRegistrationCompletedEventArgs = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDRegistrationCompletedEventArgs",
@@ -13457,21 +13308,18 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDSendResult[] = {
         { "_assign_array_", _assign_array_INDSendResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDSendResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDSendResult[] = {
         { "response", reinterpret_cast<getter>(INDSendResult_get_Response), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDSendResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDSendResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDSendResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDSendResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDSendResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDSendResult = {
         "winrt._winrt_windows_media_protection_playready.INDSendResult",
@@ -13548,13 +13396,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDSendResult[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDSendResult), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDSendResult), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDSendResult[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDSendResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDSendResult = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDSendResult",
@@ -13637,21 +13483,18 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDStartResult[] = {
         { "_assign_array_", _assign_array_INDStartResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDStartResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDStartResult[] = {
         { "media_stream_source", reinterpret_cast<getter>(INDStartResult_get_MediaStreamSource), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDStartResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDStartResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStartResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStartResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStartResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDStartResult = {
         "winrt._winrt_windows_media_protection_playready.INDStartResult",
@@ -13727,13 +13570,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDStartResult[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDStartResult), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDStartResult), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDStartResult[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDStartResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDStartResult = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDStartResult",
@@ -13829,20 +13670,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "get_file_u_r_ls", reinterpret_cast<PyCFunction>(INDStorageFileHelper_GetFileURLs), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INDStorageFileHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDStorageFileHelper), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDStorageFileHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDStorageFileHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDStorageFileHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStorageFileHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStorageFileHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStorageFileHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDStorageFileHelper = {
         "winrt._winrt_windows_media_protection_playready.INDStorageFileHelper",
@@ -13930,13 +13768,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDStorageFileHelper[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDStorageFileHelper), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDStorageFileHelper), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDStorageFileHelper[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDStorageFileHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDStorageFileHelper = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDStorageFileHelper",
@@ -14204,21 +14040,18 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "parse_data", reinterpret_cast<PyCFunction>(INDStreamParser_ParseData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INDStreamParser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDStreamParser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDStreamParser[] = {
         { "notifier", reinterpret_cast<getter>(INDStreamParser_get_Notifier), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDStreamParser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDStreamParser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStreamParser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStreamParser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStreamParser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDStreamParser = {
         "winrt._winrt_windows_media_protection_playready.INDStreamParser",
@@ -14406,13 +14239,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDStreamParser[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDStreamParser), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDStreamParser), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDStreamParser[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDStreamParser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDStreamParser = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDStreamParser",
@@ -14649,20 +14480,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "on_sample_parsed", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnSampleParsed), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INDStreamParserNotifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDStreamParserNotifier), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDStreamParserNotifier[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDStreamParserNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDStreamParserNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStreamParserNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStreamParserNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStreamParserNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDStreamParserNotifier = {
         "winrt._winrt_windows_media_protection_playready.INDStreamParserNotifier",
@@ -14904,13 +14732,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDStreamParserNotifier[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDStreamParserNotifier), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDStreamParserNotifier), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDStreamParserNotifier[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDStreamParserNotifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDStreamParserNotifier = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDStreamParserNotifier",
@@ -15293,8 +15119,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_INDTransmitterProperties[] = {
         { "_assign_array_", _assign_array_INDTransmitterProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDTransmitterProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INDTransmitterProperties[] = {
         { "certificate_type", reinterpret_cast<getter>(INDTransmitterProperties_get_CertificateType), nullptr, nullptr, nullptr },
@@ -15308,16 +15133,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "security_level", reinterpret_cast<getter>(INDTransmitterProperties_get_SecurityLevel), nullptr, nullptr, nullptr },
         { "security_version", reinterpret_cast<getter>(INDTransmitterProperties_get_SecurityVersion), nullptr, nullptr, nullptr },
         { "supported_features", reinterpret_cast<getter>(INDTransmitterProperties_get_SupportedFeatures), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INDTransmitterProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDTransmitterProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDTransmitterProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDTransmitterProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDTransmitterProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INDTransmitterProperties = {
         "winrt._winrt_windows_media_protection_playready.INDTransmitterProperties",
@@ -15596,13 +15419,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsINDTransmitterProperties[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDTransmitterProperties), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDTransmitterProperties), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINDTransmitterProperties[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINDTransmitterProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINDTransmitterProperties = {
         "winrt._winrt_windows_media_protection_playready.ImplementsINDTransmitterProperties",
@@ -15805,8 +15626,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef _methods_IPlayReadyDomain[] = {
         { "_assign_array_", _assign_array_IPlayReadyDomain, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyDomain), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPlayReadyDomain[] = {
         { "account_id", reinterpret_cast<getter>(IPlayReadyDomain_get_AccountId), nullptr, nullptr, nullptr },
@@ -15814,16 +15634,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "friendly_name", reinterpret_cast<getter>(IPlayReadyDomain_get_FriendlyName), nullptr, nullptr, nullptr },
         { "revision", reinterpret_cast<getter>(IPlayReadyDomain_get_Revision), nullptr, nullptr, nullptr },
         { "service_id", reinterpret_cast<getter>(IPlayReadyDomain_get_ServiceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPlayReadyDomain[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyDomain) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyDomain) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyDomain) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyDomain) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPlayReadyDomain = {
         "winrt._winrt_windows_media_protection_playready.IPlayReadyDomain",
@@ -15979,13 +15797,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsIPlayReadyDomain[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyDomain), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyDomain), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPlayReadyDomain[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPlayReadyDomain) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPlayReadyDomain = {
         "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyDomain",
@@ -16261,8 +16077,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "get_k_i_d_at_chain_depth", reinterpret_cast<PyCFunction>(IPlayReadyLicense_GetKIDAtChainDepth), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPlayReadyLicense, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyLicense), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPlayReadyLicense[] = {
         { "chain_depth", reinterpret_cast<getter>(IPlayReadyLicense_get_ChainDepth), nullptr, nullptr, nullptr },
@@ -16271,16 +16086,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "expire_after_first_play", reinterpret_cast<getter>(IPlayReadyLicense_get_ExpireAfterFirstPlay), nullptr, nullptr, nullptr },
         { "fully_evaluated", reinterpret_cast<getter>(IPlayReadyLicense_get_FullyEvaluated), nullptr, nullptr, nullptr },
         { "usable_for_play", reinterpret_cast<getter>(IPlayReadyLicense_get_UsableForPlay), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPlayReadyLicense[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicense) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicense) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicense) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicense) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPlayReadyLicense = {
         "winrt._winrt_windows_media_protection_playready.IPlayReadyLicense",
@@ -16488,13 +16301,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsIPlayReadyLicense[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyLicense), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyLicense), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPlayReadyLicense[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPlayReadyLicense) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPlayReadyLicense = {
         "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyLicense",
@@ -17079,8 +16890,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(IPlayReadyLicenseAcquisitionServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPlayReadyLicenseAcquisitionServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyLicenseAcquisitionServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPlayReadyLicenseAcquisitionServiceRequest[] = {
         { "content_header", reinterpret_cast<getter>(IPlayReadyLicenseAcquisitionServiceRequest_get_ContentHeader), reinterpret_cast<setter>(IPlayReadyLicenseAcquisitionServiceRequest_put_ContentHeader), nullptr, nullptr },
@@ -17090,16 +16900,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(IPlayReadyLicenseAcquisitionServiceRequest_get_Uri), reinterpret_cast<setter>(IPlayReadyLicenseAcquisitionServiceRequest_put_Uri), nullptr, nullptr },
         { "protection_system", reinterpret_cast<getter>(IPlayReadyLicenseAcquisitionServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IPlayReadyLicenseAcquisitionServiceRequest_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPlayReadyLicenseAcquisitionServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicenseAcquisitionServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPlayReadyLicenseAcquisitionServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.IPlayReadyLicenseAcquisitionServiceRequest",
@@ -17497,13 +17305,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsIPlayReadyLicenseAcquisitionServiceRequest[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyLicenseAcquisitionServiceRequest), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyLicenseAcquisitionServiceRequest), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPlayReadyLicenseAcquisitionServiceRequest[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPlayReadyLicenseAcquisitionServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPlayReadyLicenseAcquisitionServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyLicenseAcquisitionServiceRequest",
@@ -17641,20 +17447,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "create_l_a_service_request", reinterpret_cast<PyCFunction>(IPlayReadyLicenseSession_CreateLAServiceRequest), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPlayReadyLicenseSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyLicenseSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPlayReadyLicenseSession[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPlayReadyLicenseSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicenseSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicenseSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicenseSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicenseSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPlayReadyLicenseSession = {
         "winrt._winrt_windows_media_protection_playready.IPlayReadyLicenseSession",
@@ -17766,13 +17569,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsIPlayReadyLicenseSession[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyLicenseSession), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyLicenseSession), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPlayReadyLicenseSession[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPlayReadyLicenseSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPlayReadyLicenseSession = {
         "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyLicenseSession",
@@ -17954,20 +17755,17 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "create_license_iterable", reinterpret_cast<PyCFunction>(IPlayReadyLicenseSession2_CreateLicenseIterable), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPlayReadyLicenseSession2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyLicenseSession2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPlayReadyLicenseSession2[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPlayReadyLicenseSession2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicenseSession2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicenseSession2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicenseSession2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicenseSession2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPlayReadyLicenseSession2 = {
         "winrt._winrt_windows_media_protection_playready.IPlayReadyLicenseSession2",
@@ -18123,13 +17921,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsIPlayReadyLicenseSession2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyLicenseSession2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyLicenseSession2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPlayReadyLicenseSession2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPlayReadyLicenseSession2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPlayReadyLicenseSession2 = {
         "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyLicenseSession2",
@@ -18726,8 +18522,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(IPlayReadySecureStopServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPlayReadySecureStopServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadySecureStopServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPlayReadySecureStopServiceRequest[] = {
         { "publisher_certificate", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_PublisherCertificate), nullptr, nullptr, nullptr },
@@ -18740,16 +18535,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_Uri), reinterpret_cast<setter>(IPlayReadySecureStopServiceRequest_put_Uri), nullptr, nullptr },
         { "protection_system", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPlayReadySecureStopServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadySecureStopServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadySecureStopServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadySecureStopServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadySecureStopServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPlayReadySecureStopServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.IPlayReadySecureStopServiceRequest",
@@ -19162,13 +18955,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsIPlayReadySecureStopServiceRequest[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadySecureStopServiceRequest), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadySecureStopServiceRequest), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPlayReadySecureStopServiceRequest[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPlayReadySecureStopServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPlayReadySecureStopServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadySecureStopServiceRequest",
@@ -19615,8 +19406,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(IPlayReadyServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPlayReadyServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPlayReadyServiceRequest[] = {
         { "challenge_custom_data", reinterpret_cast<getter>(IPlayReadyServiceRequest_get_ChallengeCustomData), reinterpret_cast<setter>(IPlayReadyServiceRequest_put_ChallengeCustomData), nullptr, nullptr },
@@ -19624,16 +19414,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "uri", reinterpret_cast<getter>(IPlayReadyServiceRequest_get_Uri), reinterpret_cast<setter>(IPlayReadyServiceRequest_put_Uri), nullptr, nullptr },
         { "protection_system", reinterpret_cast<getter>(IPlayReadyServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IPlayReadyServiceRequest_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPlayReadyServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPlayReadyServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.IPlayReadyServiceRequest",
@@ -19945,13 +19733,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static PyMethodDef methods_ImplementsIPlayReadyServiceRequest[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyServiceRequest), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyServiceRequest), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPlayReadyServiceRequest[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPlayReadyServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPlayReadyServiceRequest = {
         "winrt._winrt_windows_media_protection_playready.ImplementsIPlayReadyServiceRequest",

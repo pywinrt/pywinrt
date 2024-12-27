@@ -415,8 +415,7 @@ namespace py::cpp::Windows::UI::Text
     static PyMethodDef _methods_ContentLinkInfo[] = {
         { "_assign_array_", _assign_array_ContentLinkInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentLinkInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentLinkInfo[] = {
         { "uri", reinterpret_cast<getter>(ContentLinkInfo_get_Uri), reinterpret_cast<setter>(ContentLinkInfo_put_Uri), nullptr, nullptr },
@@ -424,16 +423,14 @@ namespace py::cpp::Windows::UI::Text
         { "link_content_kind", reinterpret_cast<getter>(ContentLinkInfo_get_LinkContentKind), reinterpret_cast<setter>(ContentLinkInfo_put_LinkContentKind), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(ContentLinkInfo_get_Id), reinterpret_cast<setter>(ContentLinkInfo_put_Id), nullptr, nullptr },
         { "display_text", reinterpret_cast<getter>(ContentLinkInfo_get_DisplayText), reinterpret_cast<setter>(ContentLinkInfo_put_DisplayText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentLinkInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentLinkInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentLinkInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentLinkInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentLinkInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentLinkInfo = {
         "winrt._winrt_windows_ui_text.ContentLinkInfo",
@@ -816,20 +813,17 @@ namespace py::cpp::Windows::UI::Text
     static PyMethodDef _methods_FontWeights[] = {
         { "_assign_array_", _assign_array_FontWeights, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FontWeights), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FontWeights[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FontWeights[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FontWeights) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FontWeights) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FontWeights) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FontWeights) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FontWeights = {
         "winrt._winrt_windows_ui_text.FontWeights",
@@ -850,12 +844,10 @@ namespace py::cpp::Windows::UI::Text
         { "semi_bold", reinterpret_cast<getter>(FontWeights_get_SemiBold), nullptr, nullptr, nullptr },
         { "semi_light", reinterpret_cast<getter>(FontWeights_get_SemiLight), nullptr, nullptr, nullptr },
         { "thin", reinterpret_cast<getter>(FontWeights_get_Thin), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FontWeights_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FontWeights_Static[] = 
     {
@@ -865,14 +857,12 @@ namespace py::cpp::Windows::UI::Text
         { }
     };
 
-    static PyType_Spec type_spec_FontWeights_Static =
-    {
+    static PyType_Spec type_spec_FontWeights_Static = {
         "winrt._winrt_windows_ui_text.FontWeights_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FontWeights_Static
-    };
+        type_slots_FontWeights_Static};
 
     // ----- RichEditTextDocument class --------------------
 
@@ -2331,8 +2321,7 @@ namespace py::cpp::Windows::UI::Text
         { "undo", reinterpret_cast<PyCFunction>(RichEditTextDocument_Undo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RichEditTextDocument, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RichEditTextDocument), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RichEditTextDocument[] = {
         { "undo_limit", reinterpret_cast<getter>(RichEditTextDocument_get_UndoLimit), reinterpret_cast<setter>(RichEditTextDocument_put_UndoLimit), nullptr, nullptr },
@@ -2341,16 +2330,14 @@ namespace py::cpp::Windows::UI::Text
         { "selection", reinterpret_cast<getter>(RichEditTextDocument_get_Selection), nullptr, nullptr, nullptr },
         { "ignore_trailing_character_spacing", reinterpret_cast<getter>(RichEditTextDocument_get_IgnoreTrailingCharacterSpacing), reinterpret_cast<setter>(RichEditTextDocument_put_IgnoreTrailingCharacterSpacing), nullptr, nullptr },
         { "alignment_includes_trailing_whitespace", reinterpret_cast<getter>(RichEditTextDocument_get_AlignmentIncludesTrailingWhitespace), reinterpret_cast<setter>(RichEditTextDocument_put_AlignmentIncludesTrailingWhitespace), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RichEditTextDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RichEditTextDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RichEditTextDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RichEditTextDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RichEditTextDocument) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RichEditTextDocument = {
         "winrt._winrt_windows_ui_text.RichEditTextDocument",
@@ -4596,8 +4583,7 @@ namespace py::cpp::Windows::UI::Text
         { "start_of", reinterpret_cast<PyCFunction>(RichEditTextRange_StartOf), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RichEditTextRange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RichEditTextRange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RichEditTextRange[] = {
         { "content_link_info", reinterpret_cast<getter>(RichEditTextRange_get_ContentLinkInfo), reinterpret_cast<setter>(RichEditTextRange_put_ContentLinkInfo), nullptr, nullptr },
@@ -4612,16 +4598,14 @@ namespace py::cpp::Windows::UI::Text
         { "character", reinterpret_cast<getter>(RichEditTextRange_get_Character), reinterpret_cast<setter>(RichEditTextRange_put_Character), nullptr, nullptr },
         { "length", reinterpret_cast<getter>(RichEditTextRange_get_Length), nullptr, nullptr, nullptr },
         { "story_length", reinterpret_cast<getter>(RichEditTextRange_get_StoryLength), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RichEditTextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RichEditTextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RichEditTextRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RichEditTextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RichEditTextRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RichEditTextRange = {
         "winrt._winrt_windows_ui_text.RichEditTextRange",
@@ -4880,19 +4864,16 @@ namespace py::cpp::Windows::UI::Text
     }
 
     static PyMethodDef _methods_TextConstants[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TextConstants[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TextConstants[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextConstants) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextConstants) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextConstants) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TextConstants = {
         "winrt._winrt_windows_ui_text.TextConstants",
@@ -4910,12 +4891,10 @@ namespace py::cpp::Windows::UI::Text
         { "undefined_font_stretch", reinterpret_cast<getter>(TextConstants_get_UndefinedFontStretch), nullptr, nullptr, nullptr },
         { "undefined_font_style", reinterpret_cast<getter>(TextConstants_get_UndefinedFontStyle), nullptr, nullptr, nullptr },
         { "undefined_int32_value", reinterpret_cast<getter>(TextConstants_get_UndefinedInt32Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TextConstants_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TextConstants_Static[] = 
     {
@@ -4925,14 +4904,12 @@ namespace py::cpp::Windows::UI::Text
         { }
     };
 
-    static PyType_Spec type_spec_TextConstants_Static =
-    {
+    static PyType_Spec type_spec_TextConstants_Static = {
         "winrt._winrt_windows_ui_text.TextConstants_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TextConstants_Static
-    };
+        type_slots_TextConstants_Static};
 
     // ----- ITextCharacterFormat interface --------------------
 
@@ -6723,8 +6700,7 @@ namespace py::cpp::Windows::UI::Text
         { "set_clone", reinterpret_cast<PyCFunction>(ITextCharacterFormat_SetClone), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextCharacterFormat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextCharacterFormat), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextCharacterFormat[] = {
         { "all_caps", reinterpret_cast<getter>(ITextCharacterFormat_get_AllCaps), reinterpret_cast<setter>(ITextCharacterFormat_put_AllCaps), nullptr, nullptr },
@@ -6751,16 +6727,14 @@ namespace py::cpp::Windows::UI::Text
         { "text_script", reinterpret_cast<getter>(ITextCharacterFormat_get_TextScript), reinterpret_cast<setter>(ITextCharacterFormat_put_TextScript), nullptr, nullptr },
         { "underline", reinterpret_cast<getter>(ITextCharacterFormat_get_Underline), reinterpret_cast<setter>(ITextCharacterFormat_put_Underline), nullptr, nullptr },
         { "weight", reinterpret_cast<getter>(ITextCharacterFormat_get_Weight), reinterpret_cast<setter>(ITextCharacterFormat_put_Weight), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextCharacterFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextCharacterFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextCharacterFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextCharacterFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextCharacterFormat) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextCharacterFormat = {
         "winrt._winrt_windows_ui_text.ITextCharacterFormat",
@@ -7913,13 +7887,11 @@ namespace py::cpp::Windows::UI::Text
     static PyMethodDef methods_ImplementsITextCharacterFormat[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextCharacterFormat), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextCharacterFormat), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextCharacterFormat[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextCharacterFormat) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextCharacterFormat = {
         "winrt._winrt_windows_ui_text.ImplementsITextCharacterFormat",
@@ -9067,24 +9039,21 @@ namespace py::cpp::Windows::UI::Text
         { "undo", reinterpret_cast<PyCFunction>(ITextDocument_Undo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextDocument, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextDocument), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextDocument[] = {
         { "caret_type", reinterpret_cast<getter>(ITextDocument_get_CaretType), reinterpret_cast<setter>(ITextDocument_put_CaretType), nullptr, nullptr },
         { "default_tab_stop", reinterpret_cast<getter>(ITextDocument_get_DefaultTabStop), reinterpret_cast<setter>(ITextDocument_put_DefaultTabStop), nullptr, nullptr },
         { "selection", reinterpret_cast<getter>(ITextDocument_get_Selection), nullptr, nullptr, nullptr },
         { "undo_limit", reinterpret_cast<getter>(ITextDocument_get_UndoLimit), reinterpret_cast<setter>(ITextDocument_put_UndoLimit), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextDocument) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextDocument = {
         "winrt._winrt_windows_ui_text.ITextDocument",
@@ -9899,13 +9868,11 @@ namespace py::cpp::Windows::UI::Text
     static PyMethodDef methods_ImplementsITextDocument[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextDocument), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextDocument), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextDocument[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextDocument) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextDocument = {
         "winrt._winrt_windows_ui_text.ImplementsITextDocument",
@@ -11695,8 +11662,7 @@ namespace py::cpp::Windows::UI::Text
         { "set_line_spacing", reinterpret_cast<PyCFunction>(ITextParagraphFormat_SetLineSpacing), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextParagraphFormat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextParagraphFormat), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextParagraphFormat[] = {
         { "alignment", reinterpret_cast<getter>(ITextParagraphFormat_get_Alignment), reinterpret_cast<setter>(ITextParagraphFormat_put_Alignment), nullptr, nullptr },
@@ -11721,16 +11687,14 @@ namespace py::cpp::Windows::UI::Text
         { "style", reinterpret_cast<getter>(ITextParagraphFormat_get_Style), reinterpret_cast<setter>(ITextParagraphFormat_put_Style), nullptr, nullptr },
         { "tab_count", reinterpret_cast<getter>(ITextParagraphFormat_get_TabCount), nullptr, nullptr, nullptr },
         { "widow_control", reinterpret_cast<getter>(ITextParagraphFormat_get_WidowControl), reinterpret_cast<setter>(ITextParagraphFormat_put_WidowControl), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextParagraphFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextParagraphFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextParagraphFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextParagraphFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextParagraphFormat) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextParagraphFormat = {
         "winrt._winrt_windows_ui_text.ITextParagraphFormat",
@@ -12933,13 +12897,11 @@ namespace py::cpp::Windows::UI::Text
     static PyMethodDef methods_ImplementsITextParagraphFormat[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextParagraphFormat), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextParagraphFormat), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextParagraphFormat[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextParagraphFormat) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextParagraphFormat = {
         "winrt._winrt_windows_ui_text.ImplementsITextParagraphFormat",
@@ -15116,8 +15078,7 @@ namespace py::cpp::Windows::UI::Text
         { "start_of", reinterpret_cast<PyCFunction>(ITextRange_StartOf), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextRange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextRange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextRange[] = {
         { "character", reinterpret_cast<getter>(ITextRange_get_Character), reinterpret_cast<setter>(ITextRange_put_Character), nullptr, nullptr },
@@ -15131,16 +15092,14 @@ namespace py::cpp::Windows::UI::Text
         { "start_position", reinterpret_cast<getter>(ITextRange_get_StartPosition), reinterpret_cast<setter>(ITextRange_put_StartPosition), nullptr, nullptr },
         { "story_length", reinterpret_cast<getter>(ITextRange_get_StoryLength), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(ITextRange_get_Text), reinterpret_cast<setter>(ITextRange_put_Text), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextRange = {
         "winrt._winrt_windows_ui_text.ITextRange",
@@ -16825,13 +16784,11 @@ namespace py::cpp::Windows::UI::Text
     static PyMethodDef methods_ImplementsITextRange[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextRange), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextRange), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextRange[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextRange = {
         "winrt._winrt_windows_ui_text.ImplementsITextRange",
@@ -19419,8 +19376,7 @@ namespace py::cpp::Windows::UI::Text
         { "type_text", reinterpret_cast<PyCFunction>(ITextSelection_TypeText), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextSelection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextSelection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextSelection[] = {
         { "options", reinterpret_cast<getter>(ITextSelection_get_Options), reinterpret_cast<setter>(ITextSelection_put_Options), nullptr, nullptr },
@@ -19436,16 +19392,14 @@ namespace py::cpp::Windows::UI::Text
         { "start_position", reinterpret_cast<getter>(ITextSelection_get_StartPosition), reinterpret_cast<setter>(ITextSelection_put_StartPosition), nullptr, nullptr },
         { "story_length", reinterpret_cast<getter>(ITextSelection_get_StoryLength), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(ITextSelection_get_Text), reinterpret_cast<setter>(ITextSelection_put_Text), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextSelection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextSelection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextSelection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextSelection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextSelection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextSelection = {
         "winrt._winrt_windows_ui_text.ITextSelection",
@@ -21511,13 +21465,11 @@ namespace py::cpp::Windows::UI::Text
     static PyMethodDef methods_ImplementsITextSelection[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextSelection), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextSelection), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextSelection[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextSelection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextSelection = {
         "winrt._winrt_windows_ui_text.ImplementsITextSelection",
@@ -21593,8 +21545,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyMethodDef _methods_FontWeight[] = {
         { "_assign_array_", _assign_array_FontWeight, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* FontWeight_get_Weight(py::wrapper::Windows::UI::Text::FontWeight* self, void* /*unused*/) noexcept
     {
@@ -21631,8 +21582,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyGetSetDef _getset_FontWeight[] = {
         { "weight", reinterpret_cast<getter>(FontWeight_get_Weight), reinterpret_cast<setter>(FontWeight_set_Weight), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_FontWeight(py::wrapper::Windows::UI::Text::FontWeight* self, PyObject* other, int op) noexcept
     {
@@ -21688,8 +21638,7 @@ namespace py::cpp::Windows::UI::Text
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FontWeight) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_FontWeight) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_FontWeight) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FontWeight = {
         "winrt._winrt_windows_ui_text.FontWeight",
