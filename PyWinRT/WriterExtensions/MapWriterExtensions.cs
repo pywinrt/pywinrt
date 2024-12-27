@@ -14,19 +14,17 @@ static class MapWriterExtensions
             var self = type.GetMethodInvokeContext(method);
 
             w.WriteLine("py::pyobj_handle iter{py::convert([&]()");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("auto _gil = py::release_gil();");
-            w.WriteLine($"return {self}First();");
-            w.Indent--;
-            w.WriteLine("}())};");
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine("auto _gil = py::release_gil();");
+                    w.WriteLine($"return {self}First();");
+                },
+                "())};"
+            );
             w.WriteBlankLine();
             w.WriteLine("if (!iter)");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() => w.WriteLine("return nullptr;"));
             w.WriteBlankLine();
             w.WriteLine("return py::wrap_mapping_iter(iter.get());");
         });
@@ -47,34 +45,18 @@ static class MapWriterExtensions
     public static void WriteMapGenericInterfaceImpl(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine("int map_contains(PyObject* key) noexcept override");
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteMapContainsBody(type);
-        w.Indent--;
-        w.WriteLine("}");
+        w.WriteBlock(() => w.WriteMapContainsBody(type));
 
         w.WriteLine("Py_ssize_t map_length() noexcept override");
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteMapLengthBody(type);
-        w.Indent--;
-        w.WriteLine("}");
+        w.WriteBlock(() => w.WriteMapLengthBody(type));
 
         w.WriteLine("PyObject* map_subscript(PyObject* key) noexcept override");
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteMapSubscriptBody(type);
-        w.Indent--;
-        w.WriteLine("}");
+        w.WriteBlock(() => w.WriteMapSubscriptBody(type));
 
         if (type.IsPyMutableMapping)
         {
             w.WriteLine("int map_assign(PyObject* key, PyObject* value) noexcept override");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteMapAssignBody(type);
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() => w.WriteMapAssignBody(type));
         }
     }
 
@@ -122,12 +104,11 @@ static class MapWriterExtensions
             () =>
             {
                 w.WriteLine($"auto _key = py::convert_to<{keyType}>(key);");
-                w.WriteLine("{");
-                w.Indent++;
-                w.WriteLine("auto _gil = py::release_gil();");
-                w.WriteLine($"return static_cast<int>({self}HasKey(_key));");
-                w.Indent--;
-                w.WriteLine("}");
+                w.WriteBlock(() =>
+                {
+                    w.WriteLine("auto _gil = py::release_gil();");
+                    w.WriteLine($"return static_cast<int>({self}HasKey(_key));");
+                });
             },
             catchReturn: "-1"
         );
@@ -164,45 +145,43 @@ static class MapWriterExtensions
             // we use the CppWinRT extension TryLookup so we can raise
             // KeyError on failure.
             w.WriteLine("auto value = [&]()");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("auto _gil = py::release_gil();");
-            w.WriteLine($"return {self}TryLookup(_key);");
-            w.Indent--;
-            w.WriteLine("}();");
-            w.WriteBlankLine();
-            w.WriteLine("if (!value) {");
-            w.Indent++;
-
-            // there isn't a way to differentiate between a failed lookup
-            // and a null value for reference types, so we have to check
-            // check HasKey to avoid raising KeyError on actual null values.
-            w.WriteLine(
-                "if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)"
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine("auto _gil = py::release_gil();");
+                    w.WriteLine($"return {self}TryLookup(_key);");
+                },
+                "();"
             );
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("auto has_key = [&]()");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("auto _gil = py::release_gil();");
-            w.WriteLine($"return {self}HasKey(_key);");
-            w.Indent--;
-            w.WriteLine("}();");
             w.WriteBlankLine();
-            w.WriteLine("if (has_key)");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("Py_RETURN_NONE;");
-            w.Indent--;
-            w.WriteLine("}");
-            w.Indent--;
-            w.WriteLine("}");
-            w.WriteBlankLine();
-            w.WriteLine("PyErr_SetObject(PyExc_KeyError, key);");
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
+            w.Write("if (!value) ");
+            w.WriteBlock(() =>
+            {
+                // there isn't a way to differentiate between a failed lookup
+                // and a null value for reference types, so we have to check
+                // check HasKey to avoid raising KeyError on actual null values.
+                w.WriteLine(
+                    "if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)"
+                );
+                w.WriteBlock(() =>
+                {
+                    w.WriteLine("auto has_key = [&]()");
+                    w.WriteBlock(
+                        () =>
+                        {
+                            w.WriteLine("auto _gil = py::release_gil();");
+                            w.WriteLine($"return {self}HasKey(_key);");
+                        },
+                        "();"
+                    );
+                    w.WriteBlankLine();
+                    w.WriteLine("if (has_key)");
+                    w.WriteBlock(() => w.WriteLine("Py_RETURN_NONE;"));
+                });
+                w.WriteBlankLine();
+                w.WriteLine("PyErr_SetObject(PyExc_KeyError, key);");
+                w.WriteLine("return nullptr;");
+            });
             w.WriteBlankLine();
             w.WriteLine("return py::convert(value);");
         });
@@ -224,33 +203,31 @@ static class MapWriterExtensions
             {
                 w.WriteLine($"auto _key = py::convert_to<{keyType}>(key);");
                 w.WriteBlankLine();
-                w.WriteLine("if (value == nullptr) {");
-                w.Indent++;
-                w.WriteLine("bool did_remove;");
-                w.WriteLine("{");
-                w.Indent++;
-                w.WriteLine("auto _gil = py::release_gil();");
-                w.WriteLine($"did_remove = {self}TryRemove(_key);");
-                w.Indent--;
-                w.WriteLine("}");
-                w.WriteLine("if (!did_remove) {");
-                w.Indent++;
-                w.WriteLine("PyErr_SetObject(PyExc_KeyError, key);");
-                w.WriteLine("return -1;");
-                w.Indent--;
-                w.WriteLine("}");
-                w.WriteBlankLine();
-                w.WriteLine("return 0;");
-                w.Indent--;
-                w.WriteLine("}");
+                w.Write("if (value == nullptr) ");
+                w.WriteBlock(() =>
+                {
+                    w.WriteLine("bool did_remove;");
+                    w.WriteBlock(() =>
+                    {
+                        w.WriteLine("auto _gil = py::release_gil();");
+                        w.WriteLine($"did_remove = {self}TryRemove(_key);");
+                    });
+                    w.Write("if (!did_remove) ");
+                    w.WriteBlock(() =>
+                    {
+                        w.WriteLine("PyErr_SetObject(PyExc_KeyError, key);");
+                        w.WriteLine("return -1;");
+                    });
+                    w.WriteBlankLine();
+                    w.WriteLine("return 0;");
+                });
                 w.WriteBlankLine();
                 w.WriteLine($"auto _value = py::convert_to<{valueType}>(value);");
-                w.WriteLine("{");
-                w.Indent++;
-                w.WriteLine("auto _gil = py::release_gil();");
-                w.WriteLine($"{self}Insert(_key, _value);");
-                w.Indent--;
-                w.WriteLine("}");
+                w.WriteBlock(() =>
+                {
+                    w.WriteLine("auto _gil = py::release_gil();");
+                    w.WriteLine($"{self}Insert(_key, _value);");
+                });
                 w.WriteBlankLine();
                 w.WriteLine("return 0;");
             },

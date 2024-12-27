@@ -543,110 +543,98 @@ static class FileWriters
         w.WriteBlankLine();
 
         w.WriteLine($"namespace py::proj::{ns.ToCppNamespace()}");
-        w.WriteLine("{");
-        w.Indent++;
-
-        foreach (
-            var (i, iface) in members
-                .Interfaces.Where(i => i.IsGeneric)
-                .Select((iface, i) => (i, iface))
-        )
+        w.WriteBlock(() =>
         {
-            if (i > 0)
+            foreach (
+                var (i, iface) in members
+                    .Interfaces.Where(i => i.IsGeneric)
+                    .Select((iface, i) => (i, iface))
+            )
             {
-                w.WriteBlankLine();
+                if (i > 0)
+                {
+                    w.WriteBlankLine();
+                }
+
+                w.WriteGenericInterfaceDecl(iface);
             }
-
-            w.WriteGenericInterfaceDecl(iface);
-        }
-
-        w.Indent--;
-        w.WriteLine("}");
+        });
 
         w.WriteBlankLine();
         w.WriteLine($"namespace py::impl::{ns.ToCppNamespace()}");
-        w.WriteLine("{");
-        w.Indent++;
-
-        var n = 0;
-
-        foreach (var del in members.Delegates)
+        w.WriteBlock(() =>
         {
-            if (n++ > 0)
+            var n = 0;
+
+            foreach (var del in members.Delegates)
             {
-                w.WriteBlankLine();
+                if (n++ > 0)
+                {
+                    w.WriteBlankLine();
+                }
+
+                w.WriteDelegateCallableWrapper(del);
             }
 
-            w.WriteDelegateCallableWrapper(del);
-        }
-
-        foreach (var iface in members.Interfaces.Where(i => i.IsGeneric))
-        {
-            if (n++ > 0)
+            foreach (var iface in members.Interfaces.Where(i => i.IsGeneric))
             {
-                w.WriteBlankLine();
+                if (n++ > 0)
+                {
+                    w.WriteBlankLine();
+                }
+
+                w.WriteGenericInterfaceImpl(iface, componentDlls);
             }
-
-            w.WriteGenericInterfaceImpl(iface, componentDlls);
-        }
-
-        w.Indent--;
-        w.WriteLine("}");
+        });
 
         w.WriteBlankLine();
         w.WriteLine($"namespace py::wrapper::{ns.ToCppNamespace()}");
-        w.WriteLine("{");
-        w.Indent++;
-
-        foreach (
-            var type in members
-                .Classes.Concat(members.Interfaces)
-                .Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
-        )
+        w.WriteBlock(() =>
         {
-            w.WritePythonWrapperAlias(type);
-        }
-
-        w.Indent--;
-        w.WriteLine("}");
+            foreach (
+                var type in members
+                    .Classes.Concat(members.Interfaces)
+                    .Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+            )
+            {
+                w.WritePythonWrapperAlias(type);
+            }
+        });
 
         w.WriteBlankLine();
         w.WriteLine("namespace py");
-        w.WriteLine("{");
-        w.Indent++;
-
-        foreach (var type in members.Enums)
+        w.WriteBlock(() =>
         {
-            w.WriteEnumBufferFormat(type);
-        }
+            foreach (var type in members.Enums)
+            {
+                w.WriteEnumBufferFormat(type);
+            }
 
-        foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
-        {
-            w.WriteStructBufferFormat(type);
-        }
+            foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+            {
+                w.WriteStructBufferFormat(type);
+            }
 
-        foreach (
-            var type in members
-                .Enums.Concat(members.Classes)
-                .Concat(members.Interfaces)
-                .Concat(members.Structs)
-        )
-        {
-            w.WritePyTypeSpecializationStruct(type);
-        }
+            foreach (
+                var type in members
+                    .Enums.Concat(members.Classes)
+                    .Concat(members.Interfaces)
+                    .Concat(members.Structs)
+            )
+            {
+                w.WritePyTypeSpecializationStruct(type);
+            }
 
-        foreach (var type in members.Interfaces.Where(i => i.IsGeneric))
-        {
-            w.WriteGenericInterfaceTypeMapper(type);
-        }
+            foreach (var type in members.Interfaces.Where(i => i.IsGeneric))
+            {
+                w.WriteGenericInterfaceTypeMapper(type);
+            }
 
-        foreach (var type in members.Delegates)
-        {
-            w.WriteDelegateTypeMapper(type);
-        }
-
-        w.Indent--;
-        w.WriteLine("}");
+            foreach (var type in members.Delegates)
+            {
+                w.WriteDelegateTypeMapper(type);
+            }
+        });
 
         sw.WriteFileIfChanged(headerDir, $"py.{ns}.h");
     }
@@ -672,56 +660,57 @@ static class FileWriters
         w.WriteBlankLine();
 
         w.WriteLine($"namespace py::cpp::{ns.ToCppNamespace()}");
-        w.WriteLine("{");
-        w.Indent++;
-        var i = 0;
-
-        foreach (
-            var t in members
-                .Classes.Concat(members.Interfaces)
-                .Where(t => t.CircularDependencyDepth == dependencyDepth)
-        )
-        {
-            if (i++ > 0)
+        w.WriteBlock(
+            () =>
             {
-                w.WriteBlankLine();
-            }
+                var i = 0;
 
-            w.WriteInspectableType(t, componentDlls, moduleSuffix);
+                foreach (
+                    var t in members
+                        .Classes.Concat(members.Interfaces)
+                        .Where(t => t.CircularDependencyDepth == dependencyDepth)
+                )
+                {
+                    if (i++ > 0)
+                    {
+                        w.WriteBlankLine();
+                    }
 
-            if (t.Category == Category.Interface)
-            {
-                w.WriteBlankLine();
-                w.WriteImplementsInterfaceImpl(t, moduleSuffix);
-            }
+                    w.WriteInspectableType(t, componentDlls, moduleSuffix);
 
-            didWriteClass = true;
-        }
+                    if (t.Category == Category.Interface)
+                    {
+                        w.WriteBlankLine();
+                        w.WriteImplementsInterfaceImpl(t, moduleSuffix);
+                    }
 
-        foreach (
-            var t in members.Structs.Where(s =>
-                !s.Type.IsCustomizedStruct() && s.CircularDependencyDepth == dependencyDepth
-            )
-        )
-        {
-            if (i++ > 0)
-            {
-                w.WriteBlankLine();
-            }
+                    didWriteClass = true;
+                }
 
-            w.WriteStruct(t, moduleSuffix);
-            didWriteClass = true;
-        }
+                foreach (
+                    var t in members.Structs.Where(s =>
+                        !s.Type.IsCustomizedStruct() && s.CircularDependencyDepth == dependencyDepth
+                    )
+                )
+                {
+                    if (i++ > 0)
+                    {
+                        w.WriteBlankLine();
+                    }
 
-        if (i++ > 0)
-        {
-            w.WriteBlankLine();
-        }
+                    w.WriteStruct(t, moduleSuffix);
+                    didWriteClass = true;
+                }
 
-        w.WriteNamespaceInitialization(ns, moduleSuffix);
+                if (i++ > 0)
+                {
+                    w.WriteBlankLine();
+                }
 
-        w.Indent--;
-        w.WriteLine($"}} // py::cpp::{ns.ToCppNamespace()}");
+                w.WriteNamespaceInitialization(ns, moduleSuffix);
+            },
+            $" // py::cpp::{ns.ToCppNamespace()}"
+        );
         w.WriteBlankLine();
 
         w.WriteNamespaceModuleInitFunction(ns, members, dependencyDepth, moduleSuffix);

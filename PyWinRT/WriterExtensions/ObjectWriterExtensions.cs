@@ -618,107 +618,101 @@ static class ObjectWriterExtensions
         w.WriteBlankLine();
 
         w.WriteLine($"struct PyWinrt{type.Name} : py::py_obj_ref, BasePyWinrt{type.Name}");
-        w.WriteLine("{");
-        w.Indent++;
-
-        foreach (var ctor in type.Constructors)
-        {
-            var paramList = string.Join(
-                ", ",
-                ctor.Method.Parameters.Select(p => $"{p.ParameterType.ToCppTypeName()} {p.Name}")
-                    .Prepend("PyObject* py_obj")
-            );
-            var argList = string.Join(", ", ctor.Method.Parameters.Select(p => p.Name));
-
-            w.WriteLine(
-                $"PyWinrt{type.Name}({paramList}) : py::py_obj_ref(py_obj), BasePyWinrt{type.Name}({argList}) {{}}"
-            );
-        }
-
-        w.WriteBlankLine();
-        w.WriteLine("int32_t __stdcall GetPyObject(PyObject*& obj) override");
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteLine("obj = py::py_obj_ref::get_py_obj();");
-        w.WriteLine("return 0;");
-        w.Indent--;
-        w.WriteLine("}");
-
-        w.WriteBlankLine();
-        w.WriteLine(
-            "int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override"
-        );
-        w.WriteLine("{");
-        w.Indent++;
-        if (type.IsComposable)
-        {
-            w.WriteLine("inner = m_inner;");
-            w.WriteLine("return winrt::impl::error_ok;");
-        }
-        else
-        {
-            w.WriteLine("return winrt::impl::error_not_implemented;");
-        }
-        w.Indent--;
-        w.WriteLine("}");
-
-        w.WriteBlankLine();
-        w.WriteLine(
-            $"static void toggle_reference(PyWinrt{type.Name}* instance, bool is_last_reference)"
-        );
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteLine("py::py_obj_ref::toggle_reference(instance, is_last_reference);");
-        w.Indent--;
-        w.WriteLine("}");
-
-        w.WriteBlankLine();
-        w.WriteLine(
-            "int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override"
-        );
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteLine("return py::py_obj_ref::query_interface_tearoff(id, result);");
-        w.Indent--;
-        w.WriteLine("}");
-
-        foreach (var method in type.Methods.Where(m => m.IsOverridable))
-        {
-            w.WriteBlankLine();
-
-            var returnType = method.Method.ReturnType.ToCppTypeName();
-            var paramList = string.Join(
-                ", ",
-                method.Method.Parameters.Select(p => p.ToDelegateParam())
-            );
-
-            w.WriteLine($"{returnType} {method.CppName}({paramList})");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteDelegateInvoke(
-                method.Method,
-                "method.get()",
-                () =>
+        w.WriteBlock(
+            () =>
+            {
+                foreach (var ctor in type.Constructors)
                 {
-                    w.WriteLine("py::pyobj_handle self{get_py_obj()};");
-                    w.WriteBlankLine();
-                    w.WriteLine(
-                        $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{method.PyName}\")}};"
+                    var paramList = string.Join(
+                        ", ",
+                        ctor.Method.Parameters.Select(p =>
+                                $"{p.ParameterType.ToCppTypeName()} {p.Name}"
+                            )
+                            .Prepend("PyObject* py_obj")
                     );
-                    w.WriteLine("if (!method)");
-                    w.WriteLine("{");
-                    w.Indent++;
-                    w.WriteLine("throw python_exception();");
-                    w.Indent--;
-                    w.WriteLine("}");
-                    w.WriteBlankLine();
-                }
-            );
-            w.Indent--;
-            w.WriteLine("}");
-        }
+                    var argList = string.Join(", ", ctor.Method.Parameters.Select(p => p.Name));
 
-        w.Indent--;
-        w.WriteLine("};");
+                    w.WriteLine(
+                        $"PyWinrt{type.Name}({paramList}) : py::py_obj_ref(py_obj), BasePyWinrt{type.Name}({argList}) {{}}"
+                    );
+                }
+
+                w.WriteBlankLine();
+                w.WriteLine("int32_t __stdcall GetPyObject(PyObject*& obj) override");
+                w.WriteBlock(() =>
+                {
+                    w.WriteLine("obj = py::py_obj_ref::get_py_obj();");
+                    w.WriteLine("return 0;");
+                });
+
+                w.WriteBlankLine();
+                w.WriteLine(
+                    "int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override"
+                );
+                w.WriteBlock(() =>
+                {
+                    if (type.IsComposable)
+                    {
+                        w.WriteLine("inner = m_inner;");
+                        w.WriteLine("return winrt::impl::error_ok;");
+                    }
+                    else
+                    {
+                        w.WriteLine("return winrt::impl::error_not_implemented;");
+                    }
+                });
+
+                w.WriteBlankLine();
+                w.WriteLine(
+                    $"static void toggle_reference(PyWinrt{type.Name}* instance, bool is_last_reference)"
+                );
+                w.WriteBlock(
+                    () =>
+                        w.WriteLine(
+                            "py::py_obj_ref::toggle_reference(instance, is_last_reference);"
+                        )
+                );
+
+                w.WriteBlankLine();
+                w.WriteLine(
+                    "int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override"
+                );
+                w.WriteBlock(
+                    () => w.WriteLine("return py::py_obj_ref::query_interface_tearoff(id, result);")
+                );
+
+                foreach (var method in type.Methods.Where(m => m.IsOverridable))
+                {
+                    w.WriteBlankLine();
+
+                    var returnType = method.Method.ReturnType.ToCppTypeName();
+                    var paramList = string.Join(
+                        ", ",
+                        method.Method.Parameters.Select(p => p.ToDelegateParam())
+                    );
+
+                    w.WriteLine($"{returnType} {method.CppName}({paramList})");
+                    w.WriteBlock(
+                        () =>
+                            w.WriteDelegateInvoke(
+                                method.Method,
+                                "method.get()",
+                                () =>
+                                {
+                                    w.WriteLine("py::pyobj_handle self{get_py_obj()};");
+                                    w.WriteBlankLine();
+                                    w.WriteLine(
+                                        $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{method.PyName}\")}};"
+                                    );
+                                    w.WriteLine("if (!method)");
+                                    w.WriteBlock(() => w.WriteLine("throw python_exception();"));
+                                    w.WriteBlankLine();
+                                }
+                            )
+                    );
+                }
+            },
+            ";"
+        );
     }
 }
