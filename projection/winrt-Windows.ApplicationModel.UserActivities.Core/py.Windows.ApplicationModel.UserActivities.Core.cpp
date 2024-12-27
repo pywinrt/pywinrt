@@ -100,19 +100,16 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
     }
 
     static PyMethodDef _methods_CoreUserActivityManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreUserActivityManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreUserActivityManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreUserActivityManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreUserActivityManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreUserActivityManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreUserActivityManager = {
         "winrt._winrt_windows_applicationmodel_useractivities_core.CoreUserActivityManager",
@@ -122,14 +119,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
         _type_slots_CoreUserActivityManager};
 
     static PyGetSetDef getset_CoreUserActivityManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreUserActivityManager_Static[] = {
         { "create_user_activity_session_in_background", reinterpret_cast<PyCFunction>(CoreUserActivityManager_CreateUserActivitySessionInBackground), METH_VARARGS, nullptr },
         { "delete_user_activity_sessions_in_time_range_async", reinterpret_cast<PyCFunction>(CoreUserActivityManager_DeleteUserActivitySessionsInTimeRangeAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreUserActivityManager_Static[] = 
     {
@@ -139,14 +134,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreUserActivityManager_Static =
-    {
+    static PyType_Spec type_spec_CoreUserActivityManager_Static = {
         "winrt._winrt_windows_applicationmodel_useractivities_core.CoreUserActivityManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreUserActivityManager_Static
-    };
+        type_slots_CoreUserActivityManager_Static};
 
     // ----- Windows.ApplicationModel.UserActivities.Core Initialization --------------------
 

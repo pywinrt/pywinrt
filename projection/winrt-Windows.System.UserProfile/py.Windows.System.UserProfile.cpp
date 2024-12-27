@@ -86,19 +86,16 @@ namespace py::cpp::Windows::System::UserProfile
     }
 
     static PyMethodDef _methods_AdvertisingManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdvertisingManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdvertisingManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvertisingManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvertisingManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvertisingManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdvertisingManager = {
         "winrt._winrt_windows_system_userprofile.AdvertisingManager",
@@ -109,13 +106,11 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyGetSetDef getset_AdvertisingManager_Static[] = {
         { "advertising_id", reinterpret_cast<getter>(AdvertisingManager_get_AdvertisingId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AdvertisingManager_Static[] = {
         { "get_for_user", reinterpret_cast<PyCFunction>(AdvertisingManager_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AdvertisingManager_Static[] = 
     {
@@ -125,14 +120,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Spec type_spec_AdvertisingManager_Static =
-    {
+    static PyType_Spec type_spec_AdvertisingManager_Static = {
         "winrt._winrt_windows_system_userprofile.AdvertisingManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AdvertisingManager_Static
-    };
+        type_slots_AdvertisingManager_Static};
 
     // ----- AdvertisingManagerForUser class --------------------
 
@@ -238,22 +231,19 @@ namespace py::cpp::Windows::System::UserProfile
     static PyMethodDef _methods_AdvertisingManagerForUser[] = {
         { "_assign_array_", _assign_array_AdvertisingManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdvertisingManagerForUser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdvertisingManagerForUser[] = {
         { "advertising_id", reinterpret_cast<getter>(AdvertisingManagerForUser_get_AdvertisingId), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(AdvertisingManagerForUser_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdvertisingManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvertisingManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdvertisingManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvertisingManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvertisingManagerForUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdvertisingManagerForUser = {
         "winrt._winrt_windows_system_userprofile.AdvertisingManagerForUser",
@@ -478,23 +468,20 @@ namespace py::cpp::Windows::System::UserProfile
     static PyMethodDef _methods_AssignedAccessSettings[] = {
         { "_assign_array_", _assign_array_AssignedAccessSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AssignedAccessSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AssignedAccessSettings[] = {
         { "is_enabled", reinterpret_cast<getter>(AssignedAccessSettings_get_IsEnabled), nullptr, nullptr, nullptr },
         { "is_single_app_kiosk_mode", reinterpret_cast<getter>(AssignedAccessSettings_get_IsSingleAppKioskMode), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(AssignedAccessSettings_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AssignedAccessSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AssignedAccessSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AssignedAccessSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AssignedAccessSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AssignedAccessSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AssignedAccessSettings = {
         "winrt._winrt_windows_system_userprofile.AssignedAccessSettings",
@@ -504,14 +491,12 @@ namespace py::cpp::Windows::System::UserProfile
         _type_slots_AssignedAccessSettings};
 
     static PyGetSetDef getset_AssignedAccessSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AssignedAccessSettings_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(AssignedAccessSettings_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(AssignedAccessSettings_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AssignedAccessSettings_Static[] = 
     {
@@ -521,14 +506,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Spec type_spec_AssignedAccessSettings_Static =
-    {
+    static PyType_Spec type_spec_AssignedAccessSettings_Static = {
         "winrt._winrt_windows_system_userprofile.AssignedAccessSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AssignedAccessSettings_Static
-    };
+        type_slots_AssignedAccessSettings_Static};
 
     // ----- DiagnosticsSettings class --------------------
 
@@ -716,22 +699,19 @@ namespace py::cpp::Windows::System::UserProfile
     static PyMethodDef _methods_DiagnosticsSettings[] = {
         { "_assign_array_", _assign_array_DiagnosticsSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiagnosticsSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DiagnosticsSettings[] = {
         { "can_use_diagnostics_to_tailor_experiences", reinterpret_cast<getter>(DiagnosticsSettings_get_CanUseDiagnosticsToTailorExperiences), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(DiagnosticsSettings_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DiagnosticsSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiagnosticsSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiagnosticsSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiagnosticsSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiagnosticsSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DiagnosticsSettings = {
         "winrt._winrt_windows_system_userprofile.DiagnosticsSettings",
@@ -741,14 +721,12 @@ namespace py::cpp::Windows::System::UserProfile
         _type_slots_DiagnosticsSettings};
 
     static PyGetSetDef getset_DiagnosticsSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DiagnosticsSettings_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(DiagnosticsSettings_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(DiagnosticsSettings_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DiagnosticsSettings_Static[] = 
     {
@@ -758,14 +736,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Spec type_spec_DiagnosticsSettings_Static =
-    {
+    static PyType_Spec type_spec_DiagnosticsSettings_Static = {
         "winrt._winrt_windows_system_userprofile.DiagnosticsSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DiagnosticsSettings_Static
-    };
+        type_slots_DiagnosticsSettings_Static};
 
     // ----- FirstSignInSettings class --------------------
 
@@ -1159,13 +1135,11 @@ namespace py::cpp::Windows::System::UserProfile
         { "split", reinterpret_cast<PyCFunction>(FirstSignInSettings_Split), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FirstSignInSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FirstSignInSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FirstSignInSettings[] = {
         { "size", reinterpret_cast<getter>(FirstSignInSettings_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FirstSignInSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FirstSignInSettings) },
@@ -1176,8 +1150,7 @@ namespace py::cpp::Windows::System::UserProfile
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_FirstSignInSettings) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_FirstSignInSettings) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_FirstSignInSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FirstSignInSettings = {
         "winrt._winrt_windows_system_userprofile.FirstSignInSettings",
@@ -1187,13 +1160,11 @@ namespace py::cpp::Windows::System::UserProfile
         _type_slots_FirstSignInSettings};
 
     static PyGetSetDef getset_FirstSignInSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FirstSignInSettings_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(FirstSignInSettings_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FirstSignInSettings_Static[] = 
     {
@@ -1203,14 +1174,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Spec type_spec_FirstSignInSettings_Static =
-    {
+    static PyType_Spec type_spec_FirstSignInSettings_Static = {
         "winrt._winrt_windows_system_userprofile.FirstSignInSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FirstSignInSettings_Static
-    };
+        type_slots_FirstSignInSettings_Static};
 
     // ----- GlobalizationPreferences class --------------------
 
@@ -1528,19 +1497,16 @@ namespace py::cpp::Windows::System::UserProfile
     }
 
     static PyMethodDef _methods_GlobalizationPreferences[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GlobalizationPreferences[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GlobalizationPreferences[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GlobalizationPreferences) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GlobalizationPreferences) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GlobalizationPreferences) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GlobalizationPreferences = {
         "winrt._winrt_windows_system_userprofile.GlobalizationPreferences",
@@ -1556,15 +1522,13 @@ namespace py::cpp::Windows::System::UserProfile
         { "home_geographic_region", reinterpret_cast<getter>(GlobalizationPreferences_get_HomeGeographicRegion), nullptr, nullptr, nullptr },
         { "languages", reinterpret_cast<getter>(GlobalizationPreferences_get_Languages), nullptr, nullptr, nullptr },
         { "week_starts_on", reinterpret_cast<getter>(GlobalizationPreferences_get_WeekStartsOn), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GlobalizationPreferences_Static[] = {
         { "get_for_user", reinterpret_cast<PyCFunction>(GlobalizationPreferences_GetForUser), METH_VARARGS, nullptr },
         { "try_set_home_geographic_region", reinterpret_cast<PyCFunction>(GlobalizationPreferences_TrySetHomeGeographicRegion), METH_VARARGS, nullptr },
         { "try_set_languages", reinterpret_cast<PyCFunction>(GlobalizationPreferences_TrySetLanguages), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GlobalizationPreferences_Static[] = 
     {
@@ -1574,14 +1538,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Spec type_spec_GlobalizationPreferences_Static =
-    {
+    static PyType_Spec type_spec_GlobalizationPreferences_Static = {
         "winrt._winrt_windows_system_userprofile.GlobalizationPreferences_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GlobalizationPreferences_Static
-    };
+        type_slots_GlobalizationPreferences_Static};
 
     // ----- GlobalizationPreferencesForUser class --------------------
 
@@ -1837,8 +1799,7 @@ namespace py::cpp::Windows::System::UserProfile
     static PyMethodDef _methods_GlobalizationPreferencesForUser[] = {
         { "_assign_array_", _assign_array_GlobalizationPreferencesForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GlobalizationPreferencesForUser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GlobalizationPreferencesForUser[] = {
         { "calendars", reinterpret_cast<getter>(GlobalizationPreferencesForUser_get_Calendars), nullptr, nullptr, nullptr },
@@ -1848,16 +1809,14 @@ namespace py::cpp::Windows::System::UserProfile
         { "languages", reinterpret_cast<getter>(GlobalizationPreferencesForUser_get_Languages), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(GlobalizationPreferencesForUser_get_User), nullptr, nullptr, nullptr },
         { "week_starts_on", reinterpret_cast<getter>(GlobalizationPreferencesForUser_get_WeekStartsOn), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GlobalizationPreferencesForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GlobalizationPreferencesForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GlobalizationPreferencesForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GlobalizationPreferencesForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GlobalizationPreferencesForUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GlobalizationPreferencesForUser = {
         "winrt._winrt_windows_system_userprofile.GlobalizationPreferencesForUser",
@@ -2112,19 +2071,16 @@ namespace py::cpp::Windows::System::UserProfile
     }
 
     static PyMethodDef _methods_LockScreen[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockScreen[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockScreen[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreen) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreen) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreen) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockScreen = {
         "winrt._winrt_windows_system_userprofile.LockScreen",
@@ -2135,8 +2091,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyGetSetDef getset_LockScreen_Static[] = {
         { "original_image_file", reinterpret_cast<getter>(LockScreen_get_OriginalImageFile), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LockScreen_Static[] = {
         { "get_image_stream", reinterpret_cast<PyCFunction>(LockScreen_GetImageStream), METH_VARARGS, nullptr },
@@ -2144,8 +2099,7 @@ namespace py::cpp::Windows::System::UserProfile
         { "set_image_file_async", reinterpret_cast<PyCFunction>(LockScreen_SetImageFileAsync), METH_VARARGS, nullptr },
         { "set_image_stream_async", reinterpret_cast<PyCFunction>(LockScreen_SetImageStreamAsync), METH_VARARGS, nullptr },
         { "try_remove_image_feed", reinterpret_cast<PyCFunction>(LockScreen_TryRemoveImageFeed), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LockScreen_Static[] = 
     {
@@ -2155,14 +2109,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Spec type_spec_LockScreen_Static =
-    {
+    static PyType_Spec type_spec_LockScreen_Static = {
         "winrt._winrt_windows_system_userprofile.LockScreen_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LockScreen_Static
-    };
+        type_slots_LockScreen_Static};
 
     // ----- UserInformation class --------------------
 
@@ -2753,19 +2705,16 @@ namespace py::cpp::Windows::System::UserProfile
     }
 
     static PyMethodDef _methods_UserInformation[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserInformation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserInformation = {
         "winrt._winrt_windows_system_userprofile.UserInformation",
@@ -2777,8 +2726,7 @@ namespace py::cpp::Windows::System::UserProfile
     static PyGetSetDef getset_UserInformation_Static[] = {
         { "account_picture_change_enabled", reinterpret_cast<getter>(UserInformation_get_AccountPictureChangeEnabled), nullptr, nullptr, nullptr },
         { "name_access_allowed", reinterpret_cast<getter>(UserInformation_get_NameAccessAllowed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserInformation_Static[] = {
         { "get_account_picture", reinterpret_cast<PyCFunction>(UserInformation_GetAccountPicture), METH_VARARGS, nullptr },
@@ -2794,8 +2742,7 @@ namespace py::cpp::Windows::System::UserProfile
         { "set_account_pictures_from_streams_async", reinterpret_cast<PyCFunction>(UserInformation_SetAccountPicturesFromStreamsAsync), METH_VARARGS, nullptr },
         { "add_account_picture_changed", reinterpret_cast<PyCFunction>(UserInformation_add_AccountPictureChanged), METH_O, nullptr },
         { "remove_account_picture_changed", reinterpret_cast<PyCFunction>(UserInformation_remove_AccountPictureChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserInformation_Static[] = 
     {
@@ -2805,14 +2752,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Spec type_spec_UserInformation_Static =
-    {
+    static PyType_Spec type_spec_UserInformation_Static = {
         "winrt._winrt_windows_system_userprofile.UserInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserInformation_Static
-    };
+        type_slots_UserInformation_Static};
 
     // ----- UserProfilePersonalizationSettings class --------------------
 
@@ -3014,20 +2959,17 @@ namespace py::cpp::Windows::System::UserProfile
         { "try_set_wallpaper_image_async", reinterpret_cast<PyCFunction>(UserProfilePersonalizationSettings_TrySetWallpaperImageAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserProfilePersonalizationSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserProfilePersonalizationSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserProfilePersonalizationSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserProfilePersonalizationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserProfilePersonalizationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserProfilePersonalizationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserProfilePersonalizationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserProfilePersonalizationSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserProfilePersonalizationSettings = {
         "winrt._winrt_windows_system_userprofile.UserProfilePersonalizationSettings",
@@ -3038,13 +2980,11 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyGetSetDef getset_UserProfilePersonalizationSettings_Static[] = {
         { "current", reinterpret_cast<getter>(UserProfilePersonalizationSettings_get_Current), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserProfilePersonalizationSettings_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(UserProfilePersonalizationSettings_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserProfilePersonalizationSettings_Static[] = 
     {
@@ -3054,14 +2994,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Spec type_spec_UserProfilePersonalizationSettings_Static =
-    {
+    static PyType_Spec type_spec_UserProfilePersonalizationSettings_Static = {
         "winrt._winrt_windows_system_userprofile.UserProfilePersonalizationSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserProfilePersonalizationSettings_Static
-    };
+        type_slots_UserProfilePersonalizationSettings_Static};
 
     // ----- Windows.System.UserProfile Initialization --------------------
 

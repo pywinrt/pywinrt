@@ -208,22 +208,19 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
     static PyMethodDef _methods_DeploymentInitializeOptions[] = {
         { "_assign_array_", _assign_array_DeploymentInitializeOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeploymentInitializeOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeploymentInitializeOptions[] = {
         { "force_deployment", reinterpret_cast<getter>(DeploymentInitializeOptions_get_ForceDeployment), reinterpret_cast<setter>(DeploymentInitializeOptions_put_ForceDeployment), nullptr, nullptr },
         { "on_error_show_ui", reinterpret_cast<getter>(DeploymentInitializeOptions_get_OnErrorShowUI), reinterpret_cast<setter>(DeploymentInitializeOptions_put_OnErrorShowUI), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeploymentInitializeOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentInitializeOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentInitializeOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentInitializeOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentInitializeOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentInitializeOptions = {
         "winrt._winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentInitializeOptions",
@@ -353,19 +350,16 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
     }
 
     static PyMethodDef _methods_DeploymentManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeploymentManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeploymentManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentManager = {
         "winrt._winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentManager",
@@ -375,14 +369,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         _type_slots_DeploymentManager};
 
     static PyGetSetDef getset_DeploymentManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DeploymentManager_Static[] = {
         { "get_status", reinterpret_cast<PyCFunction>(DeploymentManager_GetStatus), METH_VARARGS, nullptr },
         { "initialize", reinterpret_cast<PyCFunction>(DeploymentManager_Initialize), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DeploymentManager_Static[] = 
     {
@@ -392,14 +384,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         { }
     };
 
-    static PyType_Spec type_spec_DeploymentManager_Static =
-    {
+    static PyType_Spec type_spec_DeploymentManager_Static = {
         "winrt._winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DeploymentManager_Static
-    };
+        type_slots_DeploymentManager_Static};
 
     // ----- DeploymentResult class --------------------
 
@@ -530,22 +520,19 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
     static PyMethodDef _methods_DeploymentResult[] = {
         { "_assign_array_", _assign_array_DeploymentResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeploymentResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeploymentResult[] = {
         { "extended_error", reinterpret_cast<getter>(DeploymentResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(DeploymentResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeploymentResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentResult = {
         "winrt._winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentResult",

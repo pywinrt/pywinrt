@@ -56,19 +56,16 @@ namespace py::cpp::Windows::Management::Deployment::Preview
     }
 
     static PyMethodDef _methods_ClassicAppManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClassicAppManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClassicAppManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClassicAppManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClassicAppManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClassicAppManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClassicAppManager = {
         "winrt._winrt_windows_management_deployment_preview.ClassicAppManager",
@@ -78,13 +75,11 @@ namespace py::cpp::Windows::Management::Deployment::Preview
         _type_slots_ClassicAppManager};
 
     static PyGetSetDef getset_ClassicAppManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ClassicAppManager_Static[] = {
         { "find_installed_app", reinterpret_cast<PyCFunction>(ClassicAppManager_FindInstalledApp), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ClassicAppManager_Static[] = 
     {
@@ -94,14 +89,12 @@ namespace py::cpp::Windows::Management::Deployment::Preview
         { }
     };
 
-    static PyType_Spec type_spec_ClassicAppManager_Static =
-    {
+    static PyType_Spec type_spec_ClassicAppManager_Static = {
         "winrt._winrt_windows_management_deployment_preview.ClassicAppManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ClassicAppManager_Static
-    };
+        type_slots_ClassicAppManager_Static};
 
     // ----- InstalledClassicAppInfo class --------------------
 
@@ -207,22 +200,19 @@ namespace py::cpp::Windows::Management::Deployment::Preview
     static PyMethodDef _methods_InstalledClassicAppInfo[] = {
         { "_assign_array_", _assign_array_InstalledClassicAppInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InstalledClassicAppInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InstalledClassicAppInfo[] = {
         { "display_name", reinterpret_cast<getter>(InstalledClassicAppInfo_get_DisplayName), nullptr, nullptr, nullptr },
         { "display_version", reinterpret_cast<getter>(InstalledClassicAppInfo_get_DisplayVersion), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InstalledClassicAppInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InstalledClassicAppInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InstalledClassicAppInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InstalledClassicAppInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InstalledClassicAppInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InstalledClassicAppInfo = {
         "winrt._winrt_windows_management_deployment_preview.InstalledClassicAppInfo",

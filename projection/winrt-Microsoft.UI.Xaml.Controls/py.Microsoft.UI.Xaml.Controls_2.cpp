@@ -814,8 +814,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_AppBarButton[] = {
         { "_assign_array_", _assign_array_AppBarButton, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppBarButton), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppBarButton[] = {
         { "label_position", reinterpret_cast<getter>(AppBarButton_get_LabelPosition), reinterpret_cast<setter>(AppBarButton_put_LabelPosition), nullptr, nullptr },
@@ -826,16 +825,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "is_compact", reinterpret_cast<getter>(AppBarButton_get_IsCompact), reinterpret_cast<setter>(AppBarButton_put_IsCompact), nullptr, nullptr },
         { "dynamic_overflow_order", reinterpret_cast<getter>(AppBarButton_get_DynamicOverflowOrder), reinterpret_cast<setter>(AppBarButton_put_DynamicOverflowOrder), nullptr, nullptr },
         { "is_in_overflow", reinterpret_cast<getter>(AppBarButton_get_IsInOverflow), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppBarButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBarButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBarButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBarButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBarButton) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppBarButton = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.AppBarButton",
@@ -852,12 +849,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "keyboard_accelerator_text_override_property", reinterpret_cast<getter>(AppBarButton_get_KeyboardAcceleratorTextOverrideProperty), nullptr, nullptr, nullptr },
         { "label_position_property", reinterpret_cast<getter>(AppBarButton_get_LabelPositionProperty), nullptr, nullptr, nullptr },
         { "label_property", reinterpret_cast<getter>(AppBarButton_get_LabelProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppBarButton_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppBarButton_Static[] = 
     {
@@ -867,14 +862,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_AppBarButton_Static =
-    {
+    static PyType_Spec type_spec_AppBarButton_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.AppBarButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_AppBarButton_Static
-    };
+        type_slots_AppBarButton_Static};
 
     // ----- AppBarToggleButton class --------------------
 
@@ -1686,8 +1679,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_AppBarToggleButton[] = {
         { "_assign_array_", _assign_array_AppBarToggleButton, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppBarToggleButton), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppBarToggleButton[] = {
         { "label_position", reinterpret_cast<getter>(AppBarToggleButton_get_LabelPosition), reinterpret_cast<setter>(AppBarToggleButton_put_LabelPosition), nullptr, nullptr },
@@ -1698,16 +1690,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "is_compact", reinterpret_cast<getter>(AppBarToggleButton_get_IsCompact), reinterpret_cast<setter>(AppBarToggleButton_put_IsCompact), nullptr, nullptr },
         { "dynamic_overflow_order", reinterpret_cast<getter>(AppBarToggleButton_get_DynamicOverflowOrder), reinterpret_cast<setter>(AppBarToggleButton_put_DynamicOverflowOrder), nullptr, nullptr },
         { "is_in_overflow", reinterpret_cast<getter>(AppBarToggleButton_get_IsInOverflow), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppBarToggleButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBarToggleButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBarToggleButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBarToggleButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBarToggleButton) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppBarToggleButton = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.AppBarToggleButton",
@@ -1724,12 +1714,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "keyboard_accelerator_text_override_property", reinterpret_cast<getter>(AppBarToggleButton_get_KeyboardAcceleratorTextOverrideProperty), nullptr, nullptr, nullptr },
         { "label_position_property", reinterpret_cast<getter>(AppBarToggleButton_get_LabelPositionProperty), nullptr, nullptr, nullptr },
         { "label_property", reinterpret_cast<getter>(AppBarToggleButton_get_LabelProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppBarToggleButton_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppBarToggleButton_Static[] = 
     {
@@ -1739,14 +1727,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_AppBarToggleButton_Static =
-    {
+    static PyType_Spec type_spec_AppBarToggleButton_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.AppBarToggleButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_AppBarToggleButton_Static
-    };
+        type_slots_AppBarToggleButton_Static};
 
     // ----- Button class --------------------
 
@@ -1973,21 +1959,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_Button[] = {
         { "_assign_array_", _assign_array_Button, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Button), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Button[] = {
         { "flyout", reinterpret_cast<getter>(Button_get_Flyout), reinterpret_cast<setter>(Button_put_Flyout), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Button[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Button) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Button) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Button) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Button) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Button = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.Button",
@@ -1998,12 +1981,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyGetSetDef getset_Button_Static[] = {
         { "flyout_property", reinterpret_cast<getter>(Button_get_FlyoutProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Button_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Button_Static[] = 
     {
@@ -2013,14 +1994,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_Button_Static =
-    {
+    static PyType_Spec type_spec_Button_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.Button_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Button_Static
-    };
+        type_slots_Button_Static};
 
     // ----- CheckBox class --------------------
 
@@ -2148,20 +2127,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_CheckBox[] = {
         { "_assign_array_", _assign_array_CheckBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CheckBox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CheckBox[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CheckBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CheckBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CheckBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CheckBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CheckBox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CheckBox = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.CheckBox",
@@ -2171,12 +2147,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_CheckBox};
 
     static PyGetSetDef getset_CheckBox_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CheckBox_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CheckBox_Static[] = 
     {
@@ -2186,14 +2160,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_CheckBox_Static =
-    {
+    static PyType_Spec type_spec_CheckBox_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.CheckBox_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CheckBox_Static
-    };
+        type_slots_CheckBox_Static};
 
     // ----- ComboBox class --------------------
 
@@ -4081,8 +4053,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "remove_text_submitted", reinterpret_cast<PyCFunction>(ComboBox_remove_TextSubmitted), METH_O, nullptr },
         { "_assign_array_", _assign_array_ComboBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ComboBox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ComboBox[] = {
         { "text_box_style", reinterpret_cast<getter>(ComboBox_get_TextBoxStyle), reinterpret_cast<setter>(ComboBox_put_TextBoxStyle), nullptr, nullptr },
@@ -4102,16 +4073,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "selection_box_item", reinterpret_cast<getter>(ComboBox_get_SelectionBoxItem), nullptr, nullptr, nullptr },
         { "selection_box_item_template", reinterpret_cast<getter>(ComboBox_get_SelectionBoxItemTemplate), nullptr, nullptr, nullptr },
         { "template_settings", reinterpret_cast<getter>(ComboBox_get_TemplateSettings), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ComboBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComboBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ComboBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComboBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComboBox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ComboBox = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ComboBox",
@@ -4134,12 +4103,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "selection_changed_trigger_property", reinterpret_cast<getter>(ComboBox_get_SelectionChangedTriggerProperty), nullptr, nullptr, nullptr },
         { "text_box_style_property", reinterpret_cast<getter>(ComboBox_get_TextBoxStyleProperty), nullptr, nullptr, nullptr },
         { "text_property", reinterpret_cast<getter>(ComboBox_get_TextProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ComboBox_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ComboBox_Static[] = 
     {
@@ -4149,14 +4116,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_ComboBox_Static =
-    {
+    static PyType_Spec type_spec_ComboBox_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ComboBox_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ComboBox_Static
-    };
+        type_slots_ComboBox_Static};
 
     // ----- ComboBoxItem class --------------------
 
@@ -4284,20 +4249,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_ComboBoxItem[] = {
         { "_assign_array_", _assign_array_ComboBoxItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ComboBoxItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ComboBoxItem[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ComboBoxItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComboBoxItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ComboBoxItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComboBoxItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComboBoxItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ComboBoxItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ComboBoxItem",
@@ -4307,12 +4269,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_ComboBoxItem};
 
     static PyGetSetDef getset_ComboBoxItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ComboBoxItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ComboBoxItem_Static[] = 
     {
@@ -4322,14 +4282,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_ComboBoxItem_Static =
-    {
+    static PyType_Spec type_spec_ComboBoxItem_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ComboBoxItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ComboBoxItem_Static
-    };
+        type_slots_ComboBoxItem_Static};
 
     // ----- CommandBarFlyout class --------------------
 
@@ -4586,23 +4544,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_CommandBarFlyout[] = {
         { "_assign_array_", _assign_array_CommandBarFlyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CommandBarFlyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CommandBarFlyout[] = {
         { "primary_commands", reinterpret_cast<getter>(CommandBarFlyout_get_PrimaryCommands), nullptr, nullptr, nullptr },
         { "secondary_commands", reinterpret_cast<getter>(CommandBarFlyout_get_SecondaryCommands), nullptr, nullptr, nullptr },
         { "always_expanded", reinterpret_cast<getter>(CommandBarFlyout_get_AlwaysExpanded), reinterpret_cast<setter>(CommandBarFlyout_put_AlwaysExpanded), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CommandBarFlyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommandBarFlyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommandBarFlyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommandBarFlyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommandBarFlyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CommandBarFlyout = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.CommandBarFlyout",
@@ -4612,12 +4567,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_CommandBarFlyout};
 
     static PyGetSetDef getset_CommandBarFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CommandBarFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CommandBarFlyout_Static[] = 
     {
@@ -4627,14 +4580,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_CommandBarFlyout_Static =
-    {
+    static PyType_Spec type_spec_CommandBarFlyout_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.CommandBarFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CommandBarFlyout_Static
-    };
+        type_slots_CommandBarFlyout_Static};
 
     // ----- DatePickerFlyout class --------------------
 
@@ -5802,8 +5753,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "remove_date_picked", reinterpret_cast<PyCFunction>(DatePickerFlyout_remove_DatePicked), METH_O, nullptr },
         { "_assign_array_", _assign_array_DatePickerFlyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DatePickerFlyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DatePickerFlyout[] = {
         { "year_visible", reinterpret_cast<getter>(DatePickerFlyout_get_YearVisible), reinterpret_cast<setter>(DatePickerFlyout_put_YearVisible), nullptr, nullptr },
@@ -5816,16 +5766,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "day_format", reinterpret_cast<getter>(DatePickerFlyout_get_DayFormat), reinterpret_cast<setter>(DatePickerFlyout_put_DayFormat), nullptr, nullptr },
         { "date", reinterpret_cast<getter>(DatePickerFlyout_get_Date), reinterpret_cast<setter>(DatePickerFlyout_put_Date), nullptr, nullptr },
         { "calendar_identifier", reinterpret_cast<getter>(DatePickerFlyout_get_CalendarIdentifier), reinterpret_cast<setter>(DatePickerFlyout_put_CalendarIdentifier), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DatePickerFlyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DatePickerFlyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DatePickerFlyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DatePickerFlyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DatePickerFlyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DatePickerFlyout = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.DatePickerFlyout",
@@ -5845,12 +5793,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "month_visible_property", reinterpret_cast<getter>(DatePickerFlyout_get_MonthVisibleProperty), nullptr, nullptr, nullptr },
         { "year_format_property", reinterpret_cast<getter>(DatePickerFlyout_get_YearFormatProperty), nullptr, nullptr, nullptr },
         { "year_visible_property", reinterpret_cast<getter>(DatePickerFlyout_get_YearVisibleProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DatePickerFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DatePickerFlyout_Static[] = 
     {
@@ -5860,14 +5806,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_DatePickerFlyout_Static =
-    {
+    static PyType_Spec type_spec_DatePickerFlyout_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.DatePickerFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DatePickerFlyout_Static
-    };
+        type_slots_DatePickerFlyout_Static};
 
     // ----- DropDownButton class --------------------
 
@@ -5995,20 +5939,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_DropDownButton[] = {
         { "_assign_array_", _assign_array_DropDownButton, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DropDownButton), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DropDownButton[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DropDownButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DropDownButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DropDownButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DropDownButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DropDownButton) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DropDownButton = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.DropDownButton",
@@ -6018,12 +5959,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_DropDownButton};
 
     static PyGetSetDef getset_DropDownButton_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DropDownButton_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DropDownButton_Static[] = 
     {
@@ -6033,14 +5972,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_DropDownButton_Static =
-    {
+    static PyType_Spec type_spec_DropDownButton_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.DropDownButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_DropDownButton_Static
-    };
+        type_slots_DropDownButton_Static};
 
     // ----- FlipView class --------------------
 
@@ -6267,21 +6204,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_FlipView[] = {
         { "_assign_array_", _assign_array_FlipView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FlipView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FlipView[] = {
         { "use_touch_animations_for_all_navigation", reinterpret_cast<getter>(FlipView_get_UseTouchAnimationsForAllNavigation), reinterpret_cast<setter>(FlipView_put_UseTouchAnimationsForAllNavigation), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FlipView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlipView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlipView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlipView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlipView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FlipView = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.FlipView",
@@ -6292,12 +6226,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyGetSetDef getset_FlipView_Static[] = {
         { "use_touch_animations_for_all_navigation_property", reinterpret_cast<getter>(FlipView_get_UseTouchAnimationsForAllNavigationProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FlipView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FlipView_Static[] = 
     {
@@ -6307,14 +6239,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_FlipView_Static =
-    {
+    static PyType_Spec type_spec_FlipView_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.FlipView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_FlipView_Static
-    };
+        type_slots_FlipView_Static};
 
     // ----- FlipViewItem class --------------------
 
@@ -6442,20 +6372,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_FlipViewItem[] = {
         { "_assign_array_", _assign_array_FlipViewItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FlipViewItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FlipViewItem[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FlipViewItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlipViewItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlipViewItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlipViewItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlipViewItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FlipViewItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.FlipViewItem",
@@ -6465,12 +6392,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_FlipViewItem};
 
     static PyGetSetDef getset_FlipViewItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FlipViewItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FlipViewItem_Static[] = 
     {
@@ -6480,14 +6405,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_FlipViewItem_Static =
-    {
+    static PyType_Spec type_spec_FlipViewItem_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.FlipViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_FlipViewItem_Static
-    };
+        type_slots_FlipViewItem_Static};
 
     // ----- Flyout class --------------------
 
@@ -6813,22 +6736,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_Flyout[] = {
         { "_assign_array_", _assign_array_Flyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Flyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Flyout[] = {
         { "flyout_presenter_style", reinterpret_cast<getter>(Flyout_get_FlyoutPresenterStyle), reinterpret_cast<setter>(Flyout_put_FlyoutPresenterStyle), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(Flyout_get_Content), reinterpret_cast<setter>(Flyout_put_Content), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Flyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Flyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Flyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Flyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Flyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Flyout = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.Flyout",
@@ -6840,12 +6760,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyGetSetDef getset_Flyout_Static[] = {
         { "content_property", reinterpret_cast<getter>(Flyout_get_ContentProperty), nullptr, nullptr, nullptr },
         { "flyout_presenter_style_property", reinterpret_cast<getter>(Flyout_get_FlyoutPresenterStyleProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Flyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Flyout_Static[] = 
     {
@@ -6855,14 +6773,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_Flyout_Static =
-    {
+    static PyType_Spec type_spec_Flyout_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.Flyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Flyout_Static
-    };
+        type_slots_Flyout_Static};
 
     // ----- GridView class --------------------
 
@@ -6990,20 +6906,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_GridView[] = {
         { "_assign_array_", _assign_array_GridView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GridView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GridView[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GridView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GridView = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.GridView",
@@ -7013,12 +6926,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_GridView};
 
     static PyGetSetDef getset_GridView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GridView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GridView_Static[] = 
     {
@@ -7028,14 +6939,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_GridView_Static =
-    {
+    static PyType_Spec type_spec_GridView_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.GridView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_GridView_Static
-    };
+        type_slots_GridView_Static};
 
     // ----- GridViewItem class --------------------
 
@@ -7193,21 +7102,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_GridViewItem[] = {
         { "_assign_array_", _assign_array_GridViewItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GridViewItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GridViewItem[] = {
         { "template_settings", reinterpret_cast<getter>(GridViewItem_get_TemplateSettings), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GridViewItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridViewItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridViewItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridViewItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridViewItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GridViewItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.GridViewItem",
@@ -7217,12 +7123,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_GridViewItem};
 
     static PyGetSetDef getset_GridViewItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GridViewItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GridViewItem_Static[] = 
     {
@@ -7232,14 +7136,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_GridViewItem_Static =
-    {
+    static PyType_Spec type_spec_GridViewItem_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.GridViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_GridViewItem_Static
-    };
+        type_slots_GridViewItem_Static};
 
     // ----- HyperlinkButton class --------------------
 
@@ -7466,21 +7368,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_HyperlinkButton[] = {
         { "_assign_array_", _assign_array_HyperlinkButton, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HyperlinkButton), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HyperlinkButton[] = {
         { "navigate_uri", reinterpret_cast<getter>(HyperlinkButton_get_NavigateUri), reinterpret_cast<setter>(HyperlinkButton_put_NavigateUri), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HyperlinkButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HyperlinkButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HyperlinkButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HyperlinkButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HyperlinkButton) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HyperlinkButton = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.HyperlinkButton",
@@ -7491,12 +7390,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyGetSetDef getset_HyperlinkButton_Static[] = {
         { "navigate_uri_property", reinterpret_cast<getter>(HyperlinkButton_get_NavigateUriProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HyperlinkButton_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HyperlinkButton_Static[] = 
     {
@@ -7506,14 +7403,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_HyperlinkButton_Static =
-    {
+    static PyType_Spec type_spec_HyperlinkButton_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.HyperlinkButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_HyperlinkButton_Static
-    };
+        type_slots_HyperlinkButton_Static};
 
     // ----- ListBox class --------------------
 
@@ -7955,23 +7850,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "select_all", reinterpret_cast<PyCFunction>(ListBox_SelectAll), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ListBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ListBox), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ListBox[] = {
         { "single_selection_follows_focus", reinterpret_cast<getter>(ListBox_get_SingleSelectionFollowsFocus), reinterpret_cast<setter>(ListBox_put_SingleSelectionFollowsFocus), nullptr, nullptr },
         { "selection_mode", reinterpret_cast<getter>(ListBox_get_SelectionMode), reinterpret_cast<setter>(ListBox_put_SelectionMode), nullptr, nullptr },
         { "selected_items", reinterpret_cast<getter>(ListBox_get_SelectedItems), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ListBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListBox) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ListBox = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListBox",
@@ -7983,12 +7875,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyGetSetDef getset_ListBox_Static[] = {
         { "selection_mode_property", reinterpret_cast<getter>(ListBox_get_SelectionModeProperty), nullptr, nullptr, nullptr },
         { "single_selection_follows_focus_property", reinterpret_cast<getter>(ListBox_get_SingleSelectionFollowsFocusProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ListBox_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ListBox_Static[] = 
     {
@@ -7998,14 +7888,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_ListBox_Static =
-    {
+    static PyType_Spec type_spec_ListBox_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListBox_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ListBox_Static
-    };
+        type_slots_ListBox_Static};
 
     // ----- ListBoxItem class --------------------
 
@@ -8133,20 +8021,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_ListBoxItem[] = {
         { "_assign_array_", _assign_array_ListBoxItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ListBoxItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ListBoxItem[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ListBoxItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListBoxItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListBoxItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListBoxItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListBoxItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ListBoxItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListBoxItem",
@@ -8156,12 +8041,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_ListBoxItem};
 
     static PyGetSetDef getset_ListBoxItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ListBoxItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ListBoxItem_Static[] = 
     {
@@ -8171,14 +8054,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_ListBoxItem_Static =
-    {
+    static PyType_Spec type_spec_ListBoxItem_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListBoxItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ListBoxItem_Static
-    };
+        type_slots_ListBoxItem_Static};
 
     // ----- ListPickerFlyout class --------------------
 
@@ -9178,8 +9059,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "remove_items_picked", reinterpret_cast<PyCFunction>(ListPickerFlyout_remove_ItemsPicked), METH_O, nullptr },
         { "_assign_array_", _assign_array_ListPickerFlyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ListPickerFlyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ListPickerFlyout[] = {
         { "selection_mode", reinterpret_cast<getter>(ListPickerFlyout_get_SelectionMode), reinterpret_cast<setter>(ListPickerFlyout_put_SelectionMode), nullptr, nullptr },
@@ -9191,16 +9071,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "item_template", reinterpret_cast<getter>(ListPickerFlyout_get_ItemTemplate), reinterpret_cast<setter>(ListPickerFlyout_put_ItemTemplate), nullptr, nullptr },
         { "display_member_path", reinterpret_cast<getter>(ListPickerFlyout_get_DisplayMemberPath), reinterpret_cast<setter>(ListPickerFlyout_put_DisplayMemberPath), nullptr, nullptr },
         { "selected_items", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedItems), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ListPickerFlyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListPickerFlyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListPickerFlyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListPickerFlyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListPickerFlyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ListPickerFlyout = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListPickerFlyout",
@@ -9218,12 +9096,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "selected_value_path_property", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedValuePathProperty), nullptr, nullptr, nullptr },
         { "selected_value_property", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedValueProperty), nullptr, nullptr, nullptr },
         { "selection_mode_property", reinterpret_cast<getter>(ListPickerFlyout_get_SelectionModeProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ListPickerFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ListPickerFlyout_Static[] = 
     {
@@ -9233,14 +9109,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_ListPickerFlyout_Static =
-    {
+    static PyType_Spec type_spec_ListPickerFlyout_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListPickerFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ListPickerFlyout_Static
-    };
+        type_slots_ListPickerFlyout_Static};
 
     // ----- ListView class --------------------
 
@@ -9368,20 +9242,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_ListView[] = {
         { "_assign_array_", _assign_array_ListView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ListView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ListView[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ListView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ListView = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListView",
@@ -9391,12 +9262,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_ListView};
 
     static PyGetSetDef getset_ListView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ListView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ListView_Static[] = 
     {
@@ -9406,14 +9275,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_ListView_Static =
-    {
+    static PyType_Spec type_spec_ListView_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ListView_Static
-    };
+        type_slots_ListView_Static};
 
     // ----- ListViewBase class --------------------
 
@@ -12772,8 +12639,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "remove_item_click", reinterpret_cast<PyCFunction>(ListViewBase_remove_ItemClick), METH_O, nullptr },
         { "_assign_array_", _assign_array_ListViewBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ListViewBase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ListViewBase[] = {
         { "single_selection_follows_focus", reinterpret_cast<getter>(ListViewBase_get_SingleSelectionFollowsFocus), reinterpret_cast<setter>(ListViewBase_put_SingleSelectionFollowsFocus), nullptr, nullptr },
@@ -12799,16 +12665,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "semantic_zoom_owner", reinterpret_cast<getter>(ListViewBase_get_SemanticZoomOwner), reinterpret_cast<setter>(ListViewBase_put_SemanticZoomOwner), nullptr, nullptr },
         { "is_zoomed_in_view", reinterpret_cast<getter>(ListViewBase_get_IsZoomedInView), reinterpret_cast<setter>(ListViewBase_put_IsZoomedInView), nullptr, nullptr },
         { "is_active_view", reinterpret_cast<getter>(ListViewBase_get_IsActiveView), reinterpret_cast<setter>(ListViewBase_put_IsActiveView), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ListViewBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ListViewBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListViewBase",
@@ -12839,12 +12703,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "semantic_zoom_owner_property", reinterpret_cast<getter>(ListViewBase_get_SemanticZoomOwnerProperty), nullptr, nullptr, nullptr },
         { "shows_scrolling_placeholders_property", reinterpret_cast<getter>(ListViewBase_get_ShowsScrollingPlaceholdersProperty), nullptr, nullptr, nullptr },
         { "single_selection_follows_focus_property", reinterpret_cast<getter>(ListViewBase_get_SingleSelectionFollowsFocusProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ListViewBase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ListViewBase_Static[] = 
     {
@@ -12854,14 +12716,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_ListViewBase_Static =
-    {
+    static PyType_Spec type_spec_ListViewBase_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListViewBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ListViewBase_Static
-    };
+        type_slots_ListViewBase_Static};
 
     // ----- ListViewItem class --------------------
 
@@ -13019,21 +12879,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_ListViewItem[] = {
         { "_assign_array_", _assign_array_ListViewItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ListViewItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ListViewItem[] = {
         { "template_settings", reinterpret_cast<getter>(ListViewItem_get_TemplateSettings), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ListViewItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ListViewItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListViewItem",
@@ -13043,12 +12900,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_ListViewItem};
 
     static PyGetSetDef getset_ListViewItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ListViewItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ListViewItem_Static[] = 
     {
@@ -13058,14 +12913,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_ListViewItem_Static =
-    {
+    static PyType_Spec type_spec_ListViewItem_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ListViewItem_Static
-    };
+        type_slots_ListViewItem_Static};
 
     // ----- MenuBarItemFlyout class --------------------
 
@@ -13193,20 +13046,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_MenuBarItemFlyout[] = {
         { "_assign_array_", _assign_array_MenuBarItemFlyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MenuBarItemFlyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MenuBarItemFlyout[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MenuBarItemFlyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MenuBarItemFlyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuBarItemFlyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuBarItemFlyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuBarItemFlyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MenuBarItemFlyout = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.MenuBarItemFlyout",
@@ -13216,12 +13066,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_MenuBarItemFlyout};
 
     static PyGetSetDef getset_MenuBarItemFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MenuBarItemFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MenuBarItemFlyout_Static[] = 
     {
@@ -13231,14 +13079,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_MenuBarItemFlyout_Static =
-    {
+    static PyType_Spec type_spec_MenuBarItemFlyout_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.MenuBarItemFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_MenuBarItemFlyout_Static
-    };
+        type_slots_MenuBarItemFlyout_Static};
 
     // ----- MenuFlyout class --------------------
 
@@ -13540,22 +13386,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "show_at", reinterpret_cast<PyCFunction>(MenuFlyout_ShowAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MenuFlyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MenuFlyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MenuFlyout[] = {
         { "menu_flyout_presenter_style", reinterpret_cast<getter>(MenuFlyout_get_MenuFlyoutPresenterStyle), reinterpret_cast<setter>(MenuFlyout_put_MenuFlyoutPresenterStyle), nullptr, nullptr },
         { "items", reinterpret_cast<getter>(MenuFlyout_get_Items), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MenuFlyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MenuFlyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuFlyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuFlyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuFlyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MenuFlyout = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.MenuFlyout",
@@ -13566,12 +13409,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyGetSetDef getset_MenuFlyout_Static[] = {
         { "menu_flyout_presenter_style_property", reinterpret_cast<getter>(MenuFlyout_get_MenuFlyoutPresenterStyleProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MenuFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MenuFlyout_Static[] = 
     {
@@ -13581,14 +13422,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_MenuFlyout_Static =
-    {
+    static PyType_Spec type_spec_MenuFlyout_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.MenuFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_MenuFlyout_Static
-    };
+        type_slots_MenuFlyout_Static};
 
     // ----- PickerFlyout class --------------------
 
@@ -13964,22 +13803,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "remove_confirmed", reinterpret_cast<PyCFunction>(PickerFlyout_remove_Confirmed), METH_O, nullptr },
         { "_assign_array_", _assign_array_PickerFlyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PickerFlyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PickerFlyout[] = {
         { "content", reinterpret_cast<getter>(PickerFlyout_get_Content), reinterpret_cast<setter>(PickerFlyout_put_Content), nullptr, nullptr },
         { "confirmation_buttons_visible", reinterpret_cast<getter>(PickerFlyout_get_ConfirmationButtonsVisible), reinterpret_cast<setter>(PickerFlyout_put_ConfirmationButtonsVisible), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PickerFlyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PickerFlyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PickerFlyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PickerFlyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PickerFlyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PickerFlyout = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.PickerFlyout",
@@ -13991,12 +13827,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyGetSetDef getset_PickerFlyout_Static[] = {
         { "confirmation_buttons_visible_property", reinterpret_cast<getter>(PickerFlyout_get_ConfirmationButtonsVisibleProperty), nullptr, nullptr, nullptr },
         { "content_property", reinterpret_cast<getter>(PickerFlyout_get_ContentProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PickerFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PickerFlyout_Static[] = 
     {
@@ -14006,14 +13840,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_PickerFlyout_Static =
-    {
+    static PyType_Spec type_spec_PickerFlyout_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.PickerFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PickerFlyout_Static
-    };
+        type_slots_PickerFlyout_Static};
 
     // ----- ProgressBar class --------------------
 
@@ -14468,24 +14300,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_ProgressBar[] = {
         { "_assign_array_", _assign_array_ProgressBar, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProgressBar), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProgressBar[] = {
         { "show_paused", reinterpret_cast<getter>(ProgressBar_get_ShowPaused), reinterpret_cast<setter>(ProgressBar_put_ShowPaused), nullptr, nullptr },
         { "show_error", reinterpret_cast<getter>(ProgressBar_get_ShowError), reinterpret_cast<setter>(ProgressBar_put_ShowError), nullptr, nullptr },
         { "is_indeterminate", reinterpret_cast<getter>(ProgressBar_get_IsIndeterminate), reinterpret_cast<setter>(ProgressBar_put_IsIndeterminate), nullptr, nullptr },
         { "template_settings", reinterpret_cast<getter>(ProgressBar_get_TemplateSettings), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProgressBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProgressBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProgressBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProgressBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProgressBar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProgressBar = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ProgressBar",
@@ -14498,12 +14327,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "is_indeterminate_property", reinterpret_cast<getter>(ProgressBar_get_IsIndeterminateProperty), nullptr, nullptr, nullptr },
         { "show_error_property", reinterpret_cast<getter>(ProgressBar_get_ShowErrorProperty), nullptr, nullptr, nullptr },
         { "show_paused_property", reinterpret_cast<getter>(ProgressBar_get_ShowPausedProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ProgressBar_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ProgressBar_Static[] = 
     {
@@ -14513,14 +14340,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_ProgressBar_Static =
-    {
+    static PyType_Spec type_spec_ProgressBar_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.ProgressBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ProgressBar_Static
-    };
+        type_slots_ProgressBar_Static};
 
     // ----- RadioButton class --------------------
 
@@ -14747,21 +14572,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_RadioButton[] = {
         { "_assign_array_", _assign_array_RadioButton, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RadioButton), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RadioButton[] = {
         { "group_name", reinterpret_cast<getter>(RadioButton_get_GroupName), reinterpret_cast<setter>(RadioButton_put_GroupName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RadioButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadioButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadioButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadioButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadioButton) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RadioButton = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.RadioButton",
@@ -14772,12 +14594,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyGetSetDef getset_RadioButton_Static[] = {
         { "group_name_property", reinterpret_cast<getter>(RadioButton_get_GroupNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RadioButton_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RadioButton_Static[] = 
     {
@@ -14787,14 +14607,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_RadioButton_Static =
-    {
+    static PyType_Spec type_spec_RadioButton_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.RadioButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_RadioButton_Static
-    };
+        type_slots_RadioButton_Static};
 
     // ----- RevealListViewItemPresenter class --------------------
 
@@ -14922,20 +14740,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_RevealListViewItemPresenter[] = {
         { "_assign_array_", _assign_array_RevealListViewItemPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RevealListViewItemPresenter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RevealListViewItemPresenter[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RevealListViewItemPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RevealListViewItemPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevealListViewItemPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RevealListViewItemPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RevealListViewItemPresenter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RevealListViewItemPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.RevealListViewItemPresenter",
@@ -14945,12 +14760,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_RevealListViewItemPresenter};
 
     static PyGetSetDef getset_RevealListViewItemPresenter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RevealListViewItemPresenter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RevealListViewItemPresenter_Static[] = 
     {
@@ -14960,14 +14773,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_RevealListViewItemPresenter_Static =
-    {
+    static PyType_Spec type_spec_RevealListViewItemPresenter_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.RevealListViewItemPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_RevealListViewItemPresenter_Static
-    };
+        type_slots_RevealListViewItemPresenter_Static};
 
     // ----- Slider class --------------------
 
@@ -16184,8 +15995,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_Slider[] = {
         { "_assign_array_", _assign_array_Slider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Slider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Slider[] = {
         { "tick_placement", reinterpret_cast<getter>(Slider_get_TickPlacement), reinterpret_cast<setter>(Slider_put_TickPlacement), nullptr, nullptr },
@@ -16199,16 +16009,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "intermediate_value", reinterpret_cast<getter>(Slider_get_IntermediateValue), reinterpret_cast<setter>(Slider_put_IntermediateValue), nullptr, nullptr },
         { "header_template", reinterpret_cast<getter>(Slider_get_HeaderTemplate), reinterpret_cast<setter>(Slider_put_HeaderTemplate), nullptr, nullptr },
         { "header", reinterpret_cast<getter>(Slider_get_Header), reinterpret_cast<setter>(Slider_put_Header), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Slider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Slider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Slider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Slider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Slider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Slider = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.Slider",
@@ -16229,12 +16037,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "thumb_tool_tip_value_converter_property", reinterpret_cast<getter>(Slider_get_ThumbToolTipValueConverterProperty), nullptr, nullptr, nullptr },
         { "tick_frequency_property", reinterpret_cast<getter>(Slider_get_TickFrequencyProperty), nullptr, nullptr, nullptr },
         { "tick_placement_property", reinterpret_cast<getter>(Slider_get_TickPlacementProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Slider_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Slider_Static[] = 
     {
@@ -16244,14 +16050,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_Slider_Static =
-    {
+    static PyType_Spec type_spec_Slider_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.Slider_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Slider_Static
-    };
+        type_slots_Slider_Static};
 
     // ----- TabViewItem class --------------------
 
@@ -16902,8 +16706,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "remove_close_requested", reinterpret_cast<PyCFunction>(TabViewItem_remove_CloseRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_TabViewItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TabViewItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TabViewItem[] = {
         { "is_closable", reinterpret_cast<getter>(TabViewItem_get_IsClosable), reinterpret_cast<setter>(TabViewItem_put_IsClosable), nullptr, nullptr },
@@ -16911,16 +16714,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "header_template", reinterpret_cast<getter>(TabViewItem_get_HeaderTemplate), reinterpret_cast<setter>(TabViewItem_put_HeaderTemplate), nullptr, nullptr },
         { "header", reinterpret_cast<getter>(TabViewItem_get_Header), reinterpret_cast<setter>(TabViewItem_put_Header), nullptr, nullptr },
         { "tab_view_template_settings", reinterpret_cast<getter>(TabViewItem_get_TabViewTemplateSettings), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TabViewItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TabViewItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TabViewItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TabViewItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TabViewItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TabViewItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TabViewItem",
@@ -16935,12 +16736,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "icon_source_property", reinterpret_cast<getter>(TabViewItem_get_IconSourceProperty), nullptr, nullptr, nullptr },
         { "is_closable_property", reinterpret_cast<getter>(TabViewItem_get_IsClosableProperty), nullptr, nullptr, nullptr },
         { "tab_view_template_settings_property", reinterpret_cast<getter>(TabViewItem_get_TabViewTemplateSettingsProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TabViewItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TabViewItem_Static[] = 
     {
@@ -16950,14 +16749,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_TabViewItem_Static =
-    {
+    static PyType_Spec type_spec_TabViewItem_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TabViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_TabViewItem_Static
-    };
+        type_slots_TabViewItem_Static};
 
     // ----- TextCommandBarFlyout class --------------------
 
@@ -17085,20 +16882,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_TextCommandBarFlyout[] = {
         { "_assign_array_", _assign_array_TextCommandBarFlyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TextCommandBarFlyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TextCommandBarFlyout[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TextCommandBarFlyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextCommandBarFlyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextCommandBarFlyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextCommandBarFlyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextCommandBarFlyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TextCommandBarFlyout = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TextCommandBarFlyout",
@@ -17108,12 +16902,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_TextCommandBarFlyout};
 
     static PyGetSetDef getset_TextCommandBarFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TextCommandBarFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TextCommandBarFlyout_Static[] = 
     {
@@ -17123,14 +16915,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_TextCommandBarFlyout_Static =
-    {
+    static PyType_Spec type_spec_TextCommandBarFlyout_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TextCommandBarFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_TextCommandBarFlyout_Static
-    };
+        type_slots_TextCommandBarFlyout_Static};
 
     // ----- TimePickerFlyout class --------------------
 
@@ -17605,23 +17395,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "remove_time_picked", reinterpret_cast<PyCFunction>(TimePickerFlyout_remove_TimePicked), METH_O, nullptr },
         { "_assign_array_", _assign_array_TimePickerFlyout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimePickerFlyout), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimePickerFlyout[] = {
         { "time", reinterpret_cast<getter>(TimePickerFlyout_get_Time), reinterpret_cast<setter>(TimePickerFlyout_put_Time), nullptr, nullptr },
         { "minute_increment", reinterpret_cast<getter>(TimePickerFlyout_get_MinuteIncrement), reinterpret_cast<setter>(TimePickerFlyout_put_MinuteIncrement), nullptr, nullptr },
         { "clock_identifier", reinterpret_cast<getter>(TimePickerFlyout_get_ClockIdentifier), reinterpret_cast<setter>(TimePickerFlyout_put_ClockIdentifier), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimePickerFlyout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimePickerFlyout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimePickerFlyout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimePickerFlyout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimePickerFlyout) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimePickerFlyout = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TimePickerFlyout",
@@ -17634,12 +17421,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "clock_identifier_property", reinterpret_cast<getter>(TimePickerFlyout_get_ClockIdentifierProperty), nullptr, nullptr, nullptr },
         { "minute_increment_property", reinterpret_cast<getter>(TimePickerFlyout_get_MinuteIncrementProperty), nullptr, nullptr, nullptr },
         { "time_property", reinterpret_cast<getter>(TimePickerFlyout_get_TimeProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TimePickerFlyout_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TimePickerFlyout_Static[] = 
     {
@@ -17649,14 +17434,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_TimePickerFlyout_Static =
-    {
+    static PyType_Spec type_spec_TimePickerFlyout_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TimePickerFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TimePickerFlyout_Static
-    };
+        type_slots_TimePickerFlyout_Static};
 
     // ----- TreeViewItem class --------------------
 
@@ -18636,8 +18419,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_TreeViewItem[] = {
         { "_assign_array_", _assign_array_TreeViewItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TreeViewItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TreeViewItem[] = {
         { "is_expanded", reinterpret_cast<getter>(TreeViewItem_get_IsExpanded), reinterpret_cast<setter>(TreeViewItem_put_IsExpanded), nullptr, nullptr },
@@ -18649,16 +18431,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "tree_view_item_template_settings", reinterpret_cast<getter>(TreeViewItem_get_TreeViewItemTemplateSettings), nullptr, nullptr, nullptr },
         { "items_source", reinterpret_cast<getter>(TreeViewItem_get_ItemsSource), reinterpret_cast<setter>(TreeViewItem_put_ItemsSource), nullptr, nullptr },
         { "has_unrealized_children", reinterpret_cast<getter>(TreeViewItem_get_HasUnrealizedChildren), reinterpret_cast<setter>(TreeViewItem_put_HasUnrealizedChildren), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TreeViewItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TreeViewItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TreeViewItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TreeViewItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TreeViewItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TreeViewItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TreeViewItem",
@@ -18677,12 +18457,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "tree_view_item_template_settings_property", reinterpret_cast<getter>(TreeViewItem_get_TreeViewItemTemplateSettingsProperty), nullptr, nullptr, nullptr },
         { "has_unrealized_children_property", reinterpret_cast<getter>(TreeViewItem_get_HasUnrealizedChildrenProperty), nullptr, nullptr, nullptr },
         { "items_source_property", reinterpret_cast<getter>(TreeViewItem_get_ItemsSourceProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TreeViewItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TreeViewItem_Static[] = 
     {
@@ -18692,14 +18470,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_TreeViewItem_Static =
-    {
+    static PyType_Spec type_spec_TreeViewItem_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TreeViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_TreeViewItem_Static
-    };
+        type_slots_TreeViewItem_Static};
 
     // ----- TreeViewList class --------------------
 
@@ -18827,20 +18603,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_TreeViewList[] = {
         { "_assign_array_", _assign_array_TreeViewList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TreeViewList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TreeViewList[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TreeViewList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TreeViewList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TreeViewList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TreeViewList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TreeViewList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TreeViewList = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TreeViewList",
@@ -18850,12 +18623,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         _type_slots_TreeViewList};
 
     static PyGetSetDef getset_TreeViewList_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TreeViewList_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TreeViewList_Static[] = 
     {
@@ -18865,14 +18636,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_TreeViewList_Static =
-    {
+    static PyType_Spec type_spec_TreeViewList_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.TreeViewList_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_TreeViewList_Static
-    };
+        type_slots_TreeViewList_Static};
 
     // ----- VirtualizingStackPanel class --------------------
 
@@ -19437,22 +19206,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "remove_clean_up_virtualized_item_event", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_remove_CleanUpVirtualizedItemEvent), METH_O, nullptr },
         { "_assign_array_", _assign_array_VirtualizingStackPanel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VirtualizingStackPanel), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VirtualizingStackPanel[] = {
         { "orientation", reinterpret_cast<getter>(VirtualizingStackPanel_get_Orientation), reinterpret_cast<setter>(VirtualizingStackPanel_put_Orientation), nullptr, nullptr },
         { "are_scroll_snap_points_regular", reinterpret_cast<getter>(VirtualizingStackPanel_get_AreScrollSnapPointsRegular), reinterpret_cast<setter>(VirtualizingStackPanel_put_AreScrollSnapPointsRegular), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VirtualizingStackPanel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VirtualizingStackPanel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VirtualizingStackPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VirtualizingStackPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VirtualizingStackPanel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VirtualizingStackPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.VirtualizingStackPanel",
@@ -19466,15 +19232,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "is_virtualizing_property", reinterpret_cast<getter>(VirtualizingStackPanel_get_IsVirtualizingProperty), nullptr, nullptr, nullptr },
         { "orientation_property", reinterpret_cast<getter>(VirtualizingStackPanel_get_OrientationProperty), nullptr, nullptr, nullptr },
         { "virtualization_mode_property", reinterpret_cast<getter>(VirtualizingStackPanel_get_VirtualizationModeProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_VirtualizingStackPanel_Static[] = {
         { "get_is_virtualizing", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_GetIsVirtualizing), METH_VARARGS, nullptr },
         { "get_virtualization_mode", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_GetVirtualizationMode), METH_VARARGS, nullptr },
         { "set_virtualization_mode", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_SetVirtualizationMode), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_VirtualizingStackPanel_Static[] = 
     {
@@ -19484,14 +19248,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_VirtualizingStackPanel_Static =
-    {
+    static PyType_Spec type_spec_VirtualizingStackPanel_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.VirtualizingStackPanel_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VirtualizingStackPanel_Static
-    };
+        type_slots_VirtualizingStackPanel_Static};
 
     // ----- WrapGrid class --------------------
 
@@ -20153,8 +19915,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_WrapGrid[] = {
         { "_assign_array_", _assign_array_WrapGrid, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WrapGrid), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WrapGrid[] = {
         { "vertical_children_alignment", reinterpret_cast<getter>(WrapGrid_get_VerticalChildrenAlignment), reinterpret_cast<setter>(WrapGrid_put_VerticalChildrenAlignment), nullptr, nullptr },
@@ -20163,16 +19924,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "item_width", reinterpret_cast<getter>(WrapGrid_get_ItemWidth), reinterpret_cast<setter>(WrapGrid_put_ItemWidth), nullptr, nullptr },
         { "item_height", reinterpret_cast<getter>(WrapGrid_get_ItemHeight), reinterpret_cast<setter>(WrapGrid_put_ItemHeight), nullptr, nullptr },
         { "horizontal_children_alignment", reinterpret_cast<getter>(WrapGrid_get_HorizontalChildrenAlignment), reinterpret_cast<setter>(WrapGrid_put_HorizontalChildrenAlignment), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WrapGrid[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WrapGrid) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WrapGrid) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WrapGrid) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WrapGrid) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WrapGrid = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.WrapGrid",
@@ -20188,12 +19947,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "maximum_rows_or_columns_property", reinterpret_cast<getter>(WrapGrid_get_MaximumRowsOrColumnsProperty), nullptr, nullptr, nullptr },
         { "orientation_property", reinterpret_cast<getter>(WrapGrid_get_OrientationProperty), nullptr, nullptr, nullptr },
         { "vertical_children_alignment_property", reinterpret_cast<getter>(WrapGrid_get_VerticalChildrenAlignmentProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WrapGrid_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WrapGrid_Static[] = 
     {
@@ -20203,14 +19960,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { }
     };
 
-    static PyType_Spec type_spec_WrapGrid_Static =
-    {
+    static PyType_Spec type_spec_WrapGrid_Static = {
         "winrt._winrt_microsoft_ui_xaml_controls_2.WrapGrid_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WrapGrid_Static
-    };
+        type_slots_WrapGrid_Static};
 
     // ----- Microsoft.UI.Xaml.Controls Initialization --------------------
 

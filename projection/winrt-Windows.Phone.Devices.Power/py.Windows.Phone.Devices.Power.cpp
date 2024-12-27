@@ -215,22 +215,19 @@ namespace py::cpp::Windows::Phone::Devices::Power
         { "remove_remaining_charge_percent_changed", reinterpret_cast<PyCFunction>(Battery_remove_RemainingChargePercentChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Battery, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Battery), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Battery[] = {
         { "remaining_charge_percent", reinterpret_cast<getter>(Battery_get_RemainingChargePercent), nullptr, nullptr, nullptr },
         { "remaining_discharge_time", reinterpret_cast<getter>(Battery_get_RemainingDischargeTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Battery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Battery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Battery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Battery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Battery) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Battery = {
         "winrt._winrt_windows_phone_devices_power.Battery",
@@ -240,13 +237,11 @@ namespace py::cpp::Windows::Phone::Devices::Power
         _type_slots_Battery};
 
     static PyGetSetDef getset_Battery_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Battery_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(Battery_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Battery_Static[] = 
     {
@@ -256,14 +251,12 @@ namespace py::cpp::Windows::Phone::Devices::Power
         { }
     };
 
-    static PyType_Spec type_spec_Battery_Static =
-    {
+    static PyType_Spec type_spec_Battery_Static = {
         "winrt._winrt_windows_phone_devices_power.Battery_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Battery_Static
-    };
+        type_slots_Battery_Static};
 
     // ----- Windows.Phone.Devices.Power Initialization --------------------
 

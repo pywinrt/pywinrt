@@ -280,22 +280,19 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { "report_error", reinterpret_cast<PyCFunction>(AddAppointmentOperation_ReportError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AddAppointmentOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AddAppointmentOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AddAppointmentOperation[] = {
         { "appointment_information", reinterpret_cast<getter>(AddAppointmentOperation_get_AppointmentInformation), nullptr, nullptr, nullptr },
         { "source_package_family_name", reinterpret_cast<getter>(AddAppointmentOperation_get_SourcePackageFamilyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AddAppointmentOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddAppointmentOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddAppointmentOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddAppointmentOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddAppointmentOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AddAppointmentOperation = {
         "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.AddAppointmentOperation",
@@ -464,19 +461,16 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
     }
 
     static PyMethodDef _methods_AppointmentsProviderLaunchActionVerbs[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentsProviderLaunchActionVerbs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentsProviderLaunchActionVerbs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderLaunchActionVerbs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderLaunchActionVerbs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderLaunchActionVerbs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs = {
         "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.AppointmentsProviderLaunchActionVerbs",
@@ -491,12 +485,10 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { "replace_appointment", reinterpret_cast<getter>(AppointmentsProviderLaunchActionVerbs_get_ReplaceAppointment), nullptr, nullptr, nullptr },
         { "show_time_frame", reinterpret_cast<getter>(AppointmentsProviderLaunchActionVerbs_get_ShowTimeFrame), nullptr, nullptr, nullptr },
         { "show_appointment_details", reinterpret_cast<getter>(AppointmentsProviderLaunchActionVerbs_get_ShowAppointmentDetails), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppointmentsProviderLaunchActionVerbs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppointmentsProviderLaunchActionVerbs_Static[] = 
     {
@@ -506,14 +498,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { }
     };
 
-    static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs_Static =
-    {
+    static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs_Static = {
         "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.AppointmentsProviderLaunchActionVerbs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppointmentsProviderLaunchActionVerbs_Static
-    };
+        type_slots_AppointmentsProviderLaunchActionVerbs_Static};
 
     // ----- RemoveAppointmentOperation class --------------------
 
@@ -819,23 +809,20 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { "report_error", reinterpret_cast<PyCFunction>(RemoveAppointmentOperation_ReportError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RemoveAppointmentOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoveAppointmentOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemoveAppointmentOperation[] = {
         { "appointment_id", reinterpret_cast<getter>(RemoveAppointmentOperation_get_AppointmentId), nullptr, nullptr, nullptr },
         { "instance_start_date", reinterpret_cast<getter>(RemoveAppointmentOperation_get_InstanceStartDate), nullptr, nullptr, nullptr },
         { "source_package_family_name", reinterpret_cast<getter>(RemoveAppointmentOperation_get_SourcePackageFamilyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemoveAppointmentOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoveAppointmentOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoveAppointmentOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoveAppointmentOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoveAppointmentOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemoveAppointmentOperation = {
         "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.RemoveAppointmentOperation",
@@ -1180,24 +1167,21 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { "report_error", reinterpret_cast<PyCFunction>(ReplaceAppointmentOperation_ReportError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ReplaceAppointmentOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ReplaceAppointmentOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ReplaceAppointmentOperation[] = {
         { "appointment_id", reinterpret_cast<getter>(ReplaceAppointmentOperation_get_AppointmentId), nullptr, nullptr, nullptr },
         { "appointment_information", reinterpret_cast<getter>(ReplaceAppointmentOperation_get_AppointmentInformation), nullptr, nullptr, nullptr },
         { "instance_start_date", reinterpret_cast<getter>(ReplaceAppointmentOperation_get_InstanceStartDate), nullptr, nullptr, nullptr },
         { "source_package_family_name", reinterpret_cast<getter>(ReplaceAppointmentOperation_get_SourcePackageFamilyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ReplaceAppointmentOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReplaceAppointmentOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReplaceAppointmentOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReplaceAppointmentOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReplaceAppointmentOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ReplaceAppointmentOperation = {
         "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.ReplaceAppointmentOperation",

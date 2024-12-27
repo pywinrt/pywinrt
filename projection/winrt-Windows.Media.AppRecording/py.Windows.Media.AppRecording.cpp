@@ -293,21 +293,18 @@ namespace py::cpp::Windows::Media::AppRecording
         { "start_recording_to_file_async", reinterpret_cast<PyCFunction>(AppRecordingManager_StartRecordingToFileAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppRecordingManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppRecordingManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppRecordingManager[] = {
         { "supported_screenshot_media_encoding_subtypes", reinterpret_cast<getter>(AppRecordingManager_get_SupportedScreenshotMediaEncodingSubtypes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppRecordingManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppRecordingManager = {
         "winrt._winrt_windows_media_apprecording.AppRecordingManager",
@@ -317,13 +314,11 @@ namespace py::cpp::Windows::Media::AppRecording
         _type_slots_AppRecordingManager};
 
     static PyGetSetDef getset_AppRecordingManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppRecordingManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(AppRecordingManager_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppRecordingManager_Static[] = 
     {
@@ -333,14 +328,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { }
     };
 
-    static PyType_Spec type_spec_AppRecordingManager_Static =
-    {
+    static PyType_Spec type_spec_AppRecordingManager_Static = {
         "winrt._winrt_windows_media_apprecording.AppRecordingManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppRecordingManager_Static
-    };
+        type_slots_AppRecordingManager_Static};
 
     // ----- AppRecordingResult class --------------------
 
@@ -506,24 +499,21 @@ namespace py::cpp::Windows::Media::AppRecording
     static PyMethodDef _methods_AppRecordingResult[] = {
         { "_assign_array_", _assign_array_AppRecordingResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppRecordingResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppRecordingResult[] = {
         { "duration", reinterpret_cast<getter>(AppRecordingResult_get_Duration), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(AppRecordingResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "is_file_truncated", reinterpret_cast<getter>(AppRecordingResult_get_IsFileTruncated), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(AppRecordingResult_get_Succeeded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppRecordingResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppRecordingResult = {
         "winrt._winrt_windows_media_apprecording.AppRecordingResult",
@@ -666,23 +656,20 @@ namespace py::cpp::Windows::Media::AppRecording
     static PyMethodDef _methods_AppRecordingSaveScreenshotResult[] = {
         { "_assign_array_", _assign_array_AppRecordingSaveScreenshotResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppRecordingSaveScreenshotResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppRecordingSaveScreenshotResult[] = {
         { "extended_error", reinterpret_cast<getter>(AppRecordingSaveScreenshotResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "saved_screenshot_infos", reinterpret_cast<getter>(AppRecordingSaveScreenshotResult_get_SavedScreenshotInfos), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(AppRecordingSaveScreenshotResult_get_Succeeded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppRecordingSaveScreenshotResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingSaveScreenshotResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingSaveScreenshotResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingSaveScreenshotResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingSaveScreenshotResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppRecordingSaveScreenshotResult = {
         "winrt._winrt_windows_media_apprecording.AppRecordingSaveScreenshotResult",
@@ -795,22 +782,19 @@ namespace py::cpp::Windows::Media::AppRecording
     static PyMethodDef _methods_AppRecordingSavedScreenshotInfo[] = {
         { "_assign_array_", _assign_array_AppRecordingSavedScreenshotInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppRecordingSavedScreenshotInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppRecordingSavedScreenshotInfo[] = {
         { "file", reinterpret_cast<getter>(AppRecordingSavedScreenshotInfo_get_File), nullptr, nullptr, nullptr },
         { "media_encoding_subtype", reinterpret_cast<getter>(AppRecordingSavedScreenshotInfo_get_MediaEncodingSubtype), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppRecordingSavedScreenshotInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingSavedScreenshotInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingSavedScreenshotInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingSavedScreenshotInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingSavedScreenshotInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppRecordingSavedScreenshotInfo = {
         "winrt._winrt_windows_media_apprecording.AppRecordingSavedScreenshotInfo",
@@ -983,24 +967,21 @@ namespace py::cpp::Windows::Media::AppRecording
     static PyMethodDef _methods_AppRecordingStatus[] = {
         { "_assign_array_", _assign_array_AppRecordingStatus, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppRecordingStatus), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppRecordingStatus[] = {
         { "can_record", reinterpret_cast<getter>(AppRecordingStatus_get_CanRecord), nullptr, nullptr, nullptr },
         { "can_record_time_span", reinterpret_cast<getter>(AppRecordingStatus_get_CanRecordTimeSpan), nullptr, nullptr, nullptr },
         { "details", reinterpret_cast<getter>(AppRecordingStatus_get_Details), nullptr, nullptr, nullptr },
         { "historical_buffer_duration", reinterpret_cast<getter>(AppRecordingStatus_get_HistoricalBufferDuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppRecordingStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppRecordingStatus = {
         "winrt._winrt_windows_media_apprecording.AppRecordingStatus",
@@ -1323,8 +1304,7 @@ namespace py::cpp::Windows::Media::AppRecording
     static PyMethodDef _methods_AppRecordingStatusDetails[] = {
         { "_assign_array_", _assign_array_AppRecordingStatusDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppRecordingStatusDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppRecordingStatusDetails[] = {
         { "is_any_app_broadcasting", reinterpret_cast<getter>(AppRecordingStatusDetails_get_IsAnyAppBroadcasting), nullptr, nullptr, nullptr },
@@ -1336,16 +1316,14 @@ namespace py::cpp::Windows::Media::AppRecording
         { "is_game_stream_in_progress", reinterpret_cast<getter>(AppRecordingStatusDetails_get_IsGameStreamInProgress), nullptr, nullptr, nullptr },
         { "is_gpu_constrained", reinterpret_cast<getter>(AppRecordingStatusDetails_get_IsGpuConstrained), nullptr, nullptr, nullptr },
         { "is_time_span_recording_disabled", reinterpret_cast<getter>(AppRecordingStatusDetails_get_IsTimeSpanRecordingDisabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppRecordingStatusDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingStatusDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingStatusDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingStatusDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingStatusDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppRecordingStatusDetails = {
         "winrt._winrt_windows_media_apprecording.AppRecordingStatusDetails",

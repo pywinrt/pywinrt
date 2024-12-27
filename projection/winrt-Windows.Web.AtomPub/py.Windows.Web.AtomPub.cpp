@@ -998,8 +998,7 @@ namespace py::cpp::Windows::Web::AtomPub
         { "update_resource_item_async", reinterpret_cast<PyCFunction>(AtomPubClient_UpdateResourceItemAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AtomPubClient, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AtomPubClient), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AtomPubClient[] = {
         { "timeout", reinterpret_cast<getter>(AtomPubClient_get_Timeout), reinterpret_cast<setter>(AtomPubClient_put_Timeout), nullptr, nullptr },
@@ -1007,16 +1006,14 @@ namespace py::cpp::Windows::Web::AtomPub
         { "proxy_credential", reinterpret_cast<getter>(AtomPubClient_get_ProxyCredential), reinterpret_cast<setter>(AtomPubClient_put_ProxyCredential), nullptr, nullptr },
         { "max_response_buffer_size", reinterpret_cast<getter>(AtomPubClient_get_MaxResponseBufferSize), reinterpret_cast<setter>(AtomPubClient_put_MaxResponseBufferSize), nullptr, nullptr },
         { "bypass_cache_on_retrieve", reinterpret_cast<getter>(AtomPubClient_get_BypassCacheOnRetrieve), reinterpret_cast<setter>(AtomPubClient_put_BypassCacheOnRetrieve), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AtomPubClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AtomPubClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AtomPubClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AtomPubClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AtomPubClient) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AtomPubClient = {
         "winrt._winrt_windows_web_atompub.AtomPubClient",
@@ -1637,8 +1634,7 @@ namespace py::cpp::Windows::Web::AtomPub
         { "get_xml_document", reinterpret_cast<PyCFunction>(ResourceCollection_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ResourceCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResourceCollection[] = {
         { "accepts", reinterpret_cast<getter>(ResourceCollection_get_Accepts), nullptr, nullptr, nullptr },
@@ -1652,16 +1648,14 @@ namespace py::cpp::Windows::Web::AtomPub
         { "language", reinterpret_cast<getter>(ResourceCollection_get_Language), reinterpret_cast<setter>(ResourceCollection_put_Language), nullptr, nullptr },
         { "attribute_extensions", reinterpret_cast<getter>(ResourceCollection_get_AttributeExtensions), nullptr, nullptr, nullptr },
         { "element_extensions", reinterpret_cast<getter>(ResourceCollection_get_ElementExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResourceCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResourceCollection = {
         "winrt._winrt_windows_web_atompub.ResourceCollection",
@@ -2192,8 +2186,7 @@ namespace py::cpp::Windows::Web::AtomPub
         { "get_xml_document", reinterpret_cast<PyCFunction>(ServiceDocument_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ServiceDocument, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ServiceDocument), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ServiceDocument[] = {
         { "workspaces", reinterpret_cast<getter>(ServiceDocument_get_Workspaces), nullptr, nullptr, nullptr },
@@ -2204,16 +2197,14 @@ namespace py::cpp::Windows::Web::AtomPub
         { "base_uri", reinterpret_cast<getter>(ServiceDocument_get_BaseUri), reinterpret_cast<setter>(ServiceDocument_put_BaseUri), nullptr, nullptr },
         { "attribute_extensions", reinterpret_cast<getter>(ServiceDocument_get_AttributeExtensions), nullptr, nullptr, nullptr },
         { "element_extensions", reinterpret_cast<getter>(ServiceDocument_get_ElementExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ServiceDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServiceDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ServiceDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServiceDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServiceDocument) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ServiceDocument = {
         "winrt._winrt_windows_web_atompub.ServiceDocument",
@@ -2774,8 +2765,7 @@ namespace py::cpp::Windows::Web::AtomPub
         { "get_xml_document", reinterpret_cast<PyCFunction>(Workspace_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Workspace, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Workspace), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Workspace[] = {
         { "collections", reinterpret_cast<getter>(Workspace_get_Collections), nullptr, nullptr, nullptr },
@@ -2787,16 +2777,14 @@ namespace py::cpp::Windows::Web::AtomPub
         { "base_uri", reinterpret_cast<getter>(Workspace_get_BaseUri), reinterpret_cast<setter>(Workspace_put_BaseUri), nullptr, nullptr },
         { "attribute_extensions", reinterpret_cast<getter>(Workspace_get_AttributeExtensions), nullptr, nullptr, nullptr },
         { "element_extensions", reinterpret_cast<getter>(Workspace_get_ElementExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Workspace[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Workspace) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Workspace) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Workspace) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Workspace) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Workspace = {
         "winrt._winrt_windows_web_atompub.Workspace",

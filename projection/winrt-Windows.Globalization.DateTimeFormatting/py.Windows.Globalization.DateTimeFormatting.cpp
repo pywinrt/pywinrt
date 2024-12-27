@@ -915,8 +915,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
         { "format_using_time_zone", reinterpret_cast<PyCFunction>(DateTimeFormatter_FormatUsingTimeZone), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DateTimeFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DateTimeFormatter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DateTimeFormatter[] = {
         { "numeral_system", reinterpret_cast<getter>(DateTimeFormatter_get_NumeralSystem), reinterpret_cast<setter>(DateTimeFormatter_put_NumeralSystem), nullptr, nullptr },
@@ -935,16 +934,14 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
         { "resolved_geographic_region", reinterpret_cast<getter>(DateTimeFormatter_get_ResolvedGeographicRegion), nullptr, nullptr, nullptr },
         { "resolved_language", reinterpret_cast<getter>(DateTimeFormatter_get_ResolvedLanguage), nullptr, nullptr, nullptr },
         { "template", reinterpret_cast<getter>(DateTimeFormatter_get_Template), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DateTimeFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DateTimeFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DateTimeFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DateTimeFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DateTimeFormatter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DateTimeFormatter = {
         "winrt._winrt_windows_globalization_datetimeformatting.DateTimeFormatter",
@@ -958,12 +955,10 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
         { "long_time", reinterpret_cast<getter>(DateTimeFormatter_get_LongTime), nullptr, nullptr, nullptr },
         { "short_date", reinterpret_cast<getter>(DateTimeFormatter_get_ShortDate), nullptr, nullptr, nullptr },
         { "short_time", reinterpret_cast<getter>(DateTimeFormatter_get_ShortTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DateTimeFormatter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DateTimeFormatter_Static[] = 
     {
@@ -973,14 +968,12 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
         { }
     };
 
-    static PyType_Spec type_spec_DateTimeFormatter_Static =
-    {
+    static PyType_Spec type_spec_DateTimeFormatter_Static = {
         "winrt._winrt_windows_globalization_datetimeformatting.DateTimeFormatter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DateTimeFormatter_Static
-    };
+        type_slots_DateTimeFormatter_Static};
 
     // ----- Windows.Globalization.DateTimeFormatting Initialization --------------------
 

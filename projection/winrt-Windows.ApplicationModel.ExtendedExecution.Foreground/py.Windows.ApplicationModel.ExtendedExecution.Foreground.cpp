@@ -78,21 +78,18 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
     static PyMethodDef _methods_ExtendedExecutionForegroundRevokedEventArgs[] = {
         { "_assign_array_", _assign_array_ExtendedExecutionForegroundRevokedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExtendedExecutionForegroundRevokedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExtendedExecutionForegroundRevokedEventArgs[] = {
         { "reason", reinterpret_cast<getter>(ExtendedExecutionForegroundRevokedEventArgs_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExtendedExecutionForegroundRevokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExtendedExecutionForegroundRevokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExtendedExecutionForegroundRevokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExtendedExecutionForegroundRevokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExtendedExecutionForegroundRevokedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExtendedExecutionForegroundRevokedEventArgs = {
         "winrt._winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundRevokedEventArgs",
@@ -480,22 +477,19 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
         { "_from", reinterpret_cast<PyCFunction>(_from_ExtendedExecutionForegroundSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ExtendedExecutionForegroundSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ExtendedExecutionForegroundSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExtendedExecutionForegroundSession[] = {
         { "reason", reinterpret_cast<getter>(ExtendedExecutionForegroundSession_get_Reason), reinterpret_cast<setter>(ExtendedExecutionForegroundSession_put_Reason), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(ExtendedExecutionForegroundSession_get_Description), reinterpret_cast<setter>(ExtendedExecutionForegroundSession_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExtendedExecutionForegroundSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExtendedExecutionForegroundSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExtendedExecutionForegroundSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExtendedExecutionForegroundSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExtendedExecutionForegroundSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExtendedExecutionForegroundSession = {
         "winrt._winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundSession",

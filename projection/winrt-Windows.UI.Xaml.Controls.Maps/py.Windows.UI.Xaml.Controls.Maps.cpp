@@ -197,20 +197,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "remove_bitmap_requested", reinterpret_cast<PyCFunction>(CustomMapTileDataSource_remove_BitmapRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_CustomMapTileDataSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomMapTileDataSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CustomMapTileDataSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CustomMapTileDataSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomMapTileDataSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomMapTileDataSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomMapTileDataSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomMapTileDataSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CustomMapTileDataSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.CustomMapTileDataSource",
@@ -220,12 +217,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_CustomMapTileDataSource};
 
     static PyGetSetDef getset_CustomMapTileDataSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CustomMapTileDataSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CustomMapTileDataSource_Static[] = 
     {
@@ -235,14 +230,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_CustomMapTileDataSource_Static =
-    {
+    static PyType_Spec type_spec_CustomMapTileDataSource_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.CustomMapTileDataSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CustomMapTileDataSource_Static
-    };
+        type_slots_CustomMapTileDataSource_Static};
 
     // ----- HttpMapTileDataSource class --------------------
 
@@ -644,23 +637,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "remove_uri_requested", reinterpret_cast<PyCFunction>(HttpMapTileDataSource_remove_UriRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_HttpMapTileDataSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMapTileDataSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpMapTileDataSource[] = {
         { "uri_format_string", reinterpret_cast<getter>(HttpMapTileDataSource_get_UriFormatString), reinterpret_cast<setter>(HttpMapTileDataSource_put_UriFormatString), nullptr, nullptr },
         { "allow_caching", reinterpret_cast<getter>(HttpMapTileDataSource_get_AllowCaching), reinterpret_cast<setter>(HttpMapTileDataSource_put_AllowCaching), nullptr, nullptr },
         { "additional_request_headers", reinterpret_cast<getter>(HttpMapTileDataSource_get_AdditionalRequestHeaders), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpMapTileDataSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMapTileDataSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpMapTileDataSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMapTileDataSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMapTileDataSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpMapTileDataSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.HttpMapTileDataSource",
@@ -670,12 +660,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_HttpMapTileDataSource};
 
     static PyGetSetDef getset_HttpMapTileDataSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpMapTileDataSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpMapTileDataSource_Static[] = 
     {
@@ -685,14 +673,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_HttpMapTileDataSource_Static =
-    {
+    static PyType_Spec type_spec_HttpMapTileDataSource_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.HttpMapTileDataSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_HttpMapTileDataSource_Static
-    };
+        type_slots_HttpMapTileDataSource_Static};
 
     // ----- LocalMapTileDataSource class --------------------
 
@@ -995,21 +981,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "remove_uri_requested", reinterpret_cast<PyCFunction>(LocalMapTileDataSource_remove_UriRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_LocalMapTileDataSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LocalMapTileDataSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LocalMapTileDataSource[] = {
         { "uri_format_string", reinterpret_cast<getter>(LocalMapTileDataSource_get_UriFormatString), reinterpret_cast<setter>(LocalMapTileDataSource_put_UriFormatString), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LocalMapTileDataSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalMapTileDataSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalMapTileDataSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalMapTileDataSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalMapTileDataSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LocalMapTileDataSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.LocalMapTileDataSource",
@@ -1019,12 +1002,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_LocalMapTileDataSource};
 
     static PyGetSetDef getset_LocalMapTileDataSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LocalMapTileDataSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LocalMapTileDataSource_Static[] = 
     {
@@ -1034,14 +1015,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_LocalMapTileDataSource_Static =
-    {
+    static PyType_Spec type_spec_LocalMapTileDataSource_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.LocalMapTileDataSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_LocalMapTileDataSource_Static
-    };
+        type_slots_LocalMapTileDataSource_Static};
 
     // ----- MapActualCameraChangedEventArgs class --------------------
 
@@ -1169,22 +1148,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapActualCameraChangedEventArgs[] = {
         { "_assign_array_", _assign_array_MapActualCameraChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapActualCameraChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapActualCameraChangedEventArgs[] = {
         { "camera", reinterpret_cast<getter>(MapActualCameraChangedEventArgs_get_Camera), nullptr, nullptr, nullptr },
         { "change_reason", reinterpret_cast<getter>(MapActualCameraChangedEventArgs_get_ChangeReason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapActualCameraChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapActualCameraChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapActualCameraChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapActualCameraChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapActualCameraChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapActualCameraChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapActualCameraChangedEventArgs",
@@ -1319,22 +1295,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapActualCameraChangingEventArgs[] = {
         { "_assign_array_", _assign_array_MapActualCameraChangingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapActualCameraChangingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapActualCameraChangingEventArgs[] = {
         { "camera", reinterpret_cast<getter>(MapActualCameraChangingEventArgs_get_Camera), nullptr, nullptr, nullptr },
         { "change_reason", reinterpret_cast<getter>(MapActualCameraChangingEventArgs_get_ChangeReason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapActualCameraChangingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapActualCameraChangingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapActualCameraChangingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapActualCameraChangingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapActualCameraChangingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapActualCameraChangingEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapActualCameraChangingEventArgs",
@@ -1807,8 +1780,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapBillboard[] = {
         { "_assign_array_", _assign_array_MapBillboard, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapBillboard), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapBillboard[] = {
         { "normalized_anchor_point", reinterpret_cast<getter>(MapBillboard_get_NormalizedAnchorPoint), reinterpret_cast<setter>(MapBillboard_put_NormalizedAnchorPoint), nullptr, nullptr },
@@ -1816,16 +1788,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "image", reinterpret_cast<getter>(MapBillboard_get_Image), reinterpret_cast<setter>(MapBillboard_put_Image), nullptr, nullptr },
         { "collision_behavior_desired", reinterpret_cast<getter>(MapBillboard_get_CollisionBehaviorDesired), reinterpret_cast<setter>(MapBillboard_put_CollisionBehaviorDesired), nullptr, nullptr },
         { "reference_camera", reinterpret_cast<getter>(MapBillboard_get_ReferenceCamera), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapBillboard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapBillboard) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapBillboard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapBillboard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapBillboard) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapBillboard = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapBillboard",
@@ -1838,12 +1808,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "collision_behavior_desired_property", reinterpret_cast<getter>(MapBillboard_get_CollisionBehaviorDesiredProperty), nullptr, nullptr, nullptr },
         { "location_property", reinterpret_cast<getter>(MapBillboard_get_LocationProperty), nullptr, nullptr, nullptr },
         { "normalized_anchor_point_property", reinterpret_cast<getter>(MapBillboard_get_NormalizedAnchorPointProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapBillboard_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapBillboard_Static[] = 
     {
@@ -1853,14 +1821,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapBillboard_Static =
-    {
+    static PyType_Spec type_spec_MapBillboard_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapBillboard_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapBillboard_Static
-    };
+        type_slots_MapBillboard_Static};
 
     // ----- MapCamera class --------------------
 
@@ -2327,8 +2293,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapCamera[] = {
         { "_assign_array_", _assign_array_MapCamera, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapCamera), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapCamera[] = {
         { "roll", reinterpret_cast<getter>(MapCamera_get_Roll), reinterpret_cast<setter>(MapCamera_put_Roll), nullptr, nullptr },
@@ -2336,16 +2301,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "location", reinterpret_cast<getter>(MapCamera_get_Location), reinterpret_cast<setter>(MapCamera_put_Location), nullptr, nullptr },
         { "heading", reinterpret_cast<getter>(MapCamera_get_Heading), reinterpret_cast<setter>(MapCamera_put_Heading), nullptr, nullptr },
         { "field_of_view", reinterpret_cast<getter>(MapCamera_get_FieldOfView), reinterpret_cast<setter>(MapCamera_put_FieldOfView), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapCamera[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapCamera) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapCamera) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapCamera) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapCamera) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapCamera = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapCamera",
@@ -2510,23 +2473,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapContextRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_MapContextRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapContextRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapContextRequestedEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapContextRequestedEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "map_elements", reinterpret_cast<getter>(MapContextRequestedEventArgs_get_MapElements), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapContextRequestedEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapContextRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapContextRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapContextRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapContextRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapContextRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapContextRequestedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapContextRequestedEventArgs",
@@ -9013,8 +8973,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "remove_map_context_requested", reinterpret_cast<PyCFunction>(MapControl_remove_MapContextRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_MapControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControl[] = {
         { "zoom_level", reinterpret_cast<getter>(MapControl_get_ZoomLevel), reinterpret_cast<setter>(MapControl_put_ZoomLevel), nullptr, nullptr },
@@ -9060,16 +9019,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "can_tilt_up", reinterpret_cast<getter>(MapControl_get_CanTiltUp), nullptr, nullptr, nullptr },
         { "can_zoom_in", reinterpret_cast<getter>(MapControl_get_CanZoomIn), nullptr, nullptr, nullptr },
         { "can_zoom_out", reinterpret_cast<getter>(MapControl_get_CanZoomOut), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControl = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControl",
@@ -9119,16 +9076,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "can_zoom_in_property", reinterpret_cast<getter>(MapControl_get_CanZoomInProperty), nullptr, nullptr, nullptr },
         { "can_zoom_out_property", reinterpret_cast<getter>(MapControl_get_CanZoomOutProperty), nullptr, nullptr, nullptr },
         { "can_tilt_down_property", reinterpret_cast<getter>(MapControl_get_CanTiltDownProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapControl_Static[] = {
         { "get_location", reinterpret_cast<PyCFunction>(MapControl_GetLocation), METH_VARARGS, nullptr },
         { "get_normalized_anchor_point", reinterpret_cast<PyCFunction>(MapControl_GetNormalizedAnchorPoint), METH_VARARGS, nullptr },
         { "set_location", reinterpret_cast<PyCFunction>(MapControl_SetLocation), METH_VARARGS, nullptr },
         { "set_normalized_anchor_point", reinterpret_cast<PyCFunction>(MapControl_SetNormalizedAnchorPoint), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapControl_Static[] = 
     {
@@ -9138,14 +9093,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapControl_Static =
-    {
+    static PyType_Spec type_spec_MapControl_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControl_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapControl_Static
-    };
+        type_slots_MapControl_Static};
 
     // ----- MapControlBusinessLandmarkClickEventArgs class --------------------
 
@@ -9243,21 +9196,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapControlBusinessLandmarkClickEventArgs[] = {
         { "_assign_array_", _assign_array_MapControlBusinessLandmarkClickEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControlBusinessLandmarkClickEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControlBusinessLandmarkClickEventArgs[] = {
         { "local_locations", reinterpret_cast<getter>(MapControlBusinessLandmarkClickEventArgs_get_LocalLocations), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControlBusinessLandmarkClickEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlBusinessLandmarkClickEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlBusinessLandmarkClickEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlBusinessLandmarkClickEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlBusinessLandmarkClickEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkClickEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkClickEventArgs",
@@ -9362,21 +9312,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapControlBusinessLandmarkPointerEnteredEventArgs[] = {
         { "_assign_array_", _assign_array_MapControlBusinessLandmarkPointerEnteredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControlBusinessLandmarkPointerEnteredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControlBusinessLandmarkPointerEnteredEventArgs[] = {
         { "local_locations", reinterpret_cast<getter>(MapControlBusinessLandmarkPointerEnteredEventArgs_get_LocalLocations), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControlBusinessLandmarkPointerEnteredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlBusinessLandmarkPointerEnteredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlBusinessLandmarkPointerEnteredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlBusinessLandmarkPointerEnteredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlBusinessLandmarkPointerEnteredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkPointerEnteredEventArgs",
@@ -9481,21 +9428,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapControlBusinessLandmarkPointerExitedEventArgs[] = {
         { "_assign_array_", _assign_array_MapControlBusinessLandmarkPointerExitedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControlBusinessLandmarkPointerExitedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControlBusinessLandmarkPointerExitedEventArgs[] = {
         { "local_locations", reinterpret_cast<getter>(MapControlBusinessLandmarkPointerExitedEventArgs_get_LocalLocations), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControlBusinessLandmarkPointerExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlBusinessLandmarkPointerExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlBusinessLandmarkPointerExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlBusinessLandmarkPointerExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlBusinessLandmarkPointerExitedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkPointerExitedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkPointerExitedEventArgs",
@@ -9600,21 +9544,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapControlBusinessLandmarkRightTappedEventArgs[] = {
         { "_assign_array_", _assign_array_MapControlBusinessLandmarkRightTappedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControlBusinessLandmarkRightTappedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControlBusinessLandmarkRightTappedEventArgs[] = {
         { "local_locations", reinterpret_cast<getter>(MapControlBusinessLandmarkRightTappedEventArgs_get_LocalLocations), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControlBusinessLandmarkRightTappedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlBusinessLandmarkRightTappedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlBusinessLandmarkRightTappedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlBusinessLandmarkRightTappedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlBusinessLandmarkRightTappedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkRightTappedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkRightTappedEventArgs",
@@ -10269,20 +10210,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "remove_transit_feature_pointer_exited", reinterpret_cast<PyCFunction>(MapControlDataHelper_remove_TransitFeaturePointerExited), METH_O, nullptr },
         { "_assign_array_", _assign_array_MapControlDataHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControlDataHelper), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControlDataHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControlDataHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlDataHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlDataHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlDataHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlDataHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControlDataHelper = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlDataHelper",
@@ -10292,13 +10230,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_MapControlDataHelper};
 
     static PyGetSetDef getset_MapControlDataHelper_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapControlDataHelper_Static[] = {
         { "create_map_control", reinterpret_cast<PyCFunction>(MapControlDataHelper_CreateMapControl), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapControlDataHelper_Static[] = 
     {
@@ -10308,14 +10244,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapControlDataHelper_Static =
-    {
+    static PyType_Spec type_spec_MapControlDataHelper_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlDataHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapControlDataHelper_Static
-    };
+        type_slots_MapControlDataHelper_Static};
 
     // ----- MapControlTransitFeatureClickEventArgs class --------------------
 
@@ -10473,23 +10407,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapControlTransitFeatureClickEventArgs[] = {
         { "_assign_array_", _assign_array_MapControlTransitFeatureClickEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControlTransitFeatureClickEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControlTransitFeatureClickEventArgs[] = {
         { "display_name", reinterpret_cast<getter>(MapControlTransitFeatureClickEventArgs_get_DisplayName), nullptr, nullptr, nullptr },
         { "location", reinterpret_cast<getter>(MapControlTransitFeatureClickEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "transit_properties", reinterpret_cast<getter>(MapControlTransitFeatureClickEventArgs_get_TransitProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControlTransitFeatureClickEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlTransitFeatureClickEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlTransitFeatureClickEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlTransitFeatureClickEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlTransitFeatureClickEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControlTransitFeatureClickEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlTransitFeatureClickEventArgs",
@@ -10654,23 +10585,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapControlTransitFeaturePointerEnteredEventArgs[] = {
         { "_assign_array_", _assign_array_MapControlTransitFeaturePointerEnteredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControlTransitFeaturePointerEnteredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControlTransitFeaturePointerEnteredEventArgs[] = {
         { "display_name", reinterpret_cast<getter>(MapControlTransitFeaturePointerEnteredEventArgs_get_DisplayName), nullptr, nullptr, nullptr },
         { "location", reinterpret_cast<getter>(MapControlTransitFeaturePointerEnteredEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "transit_properties", reinterpret_cast<getter>(MapControlTransitFeaturePointerEnteredEventArgs_get_TransitProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControlTransitFeaturePointerEnteredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlTransitFeaturePointerEnteredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlTransitFeaturePointerEnteredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlTransitFeaturePointerEnteredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlTransitFeaturePointerEnteredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControlTransitFeaturePointerEnteredEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlTransitFeaturePointerEnteredEventArgs",
@@ -10835,23 +10763,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapControlTransitFeaturePointerExitedEventArgs[] = {
         { "_assign_array_", _assign_array_MapControlTransitFeaturePointerExitedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControlTransitFeaturePointerExitedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControlTransitFeaturePointerExitedEventArgs[] = {
         { "display_name", reinterpret_cast<getter>(MapControlTransitFeaturePointerExitedEventArgs_get_DisplayName), nullptr, nullptr, nullptr },
         { "location", reinterpret_cast<getter>(MapControlTransitFeaturePointerExitedEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "transit_properties", reinterpret_cast<getter>(MapControlTransitFeaturePointerExitedEventArgs_get_TransitProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControlTransitFeaturePointerExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlTransitFeaturePointerExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlTransitFeaturePointerExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlTransitFeaturePointerExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlTransitFeaturePointerExitedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControlTransitFeaturePointerExitedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlTransitFeaturePointerExitedEventArgs",
@@ -11016,23 +10941,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapControlTransitFeatureRightTappedEventArgs[] = {
         { "_assign_array_", _assign_array_MapControlTransitFeatureRightTappedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapControlTransitFeatureRightTappedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapControlTransitFeatureRightTappedEventArgs[] = {
         { "display_name", reinterpret_cast<getter>(MapControlTransitFeatureRightTappedEventArgs_get_DisplayName), nullptr, nullptr, nullptr },
         { "location", reinterpret_cast<getter>(MapControlTransitFeatureRightTappedEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "transit_properties", reinterpret_cast<getter>(MapControlTransitFeatureRightTappedEventArgs_get_TransitProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapControlTransitFeatureRightTappedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlTransitFeatureRightTappedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlTransitFeatureRightTappedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlTransitFeatureRightTappedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlTransitFeatureRightTappedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapControlTransitFeatureRightTappedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapControlTransitFeatureRightTappedEventArgs",
@@ -11167,20 +11089,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapCustomExperience[] = {
         { "_assign_array_", _assign_array_MapCustomExperience, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapCustomExperience), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapCustomExperience[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapCustomExperience[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapCustomExperience) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapCustomExperience) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapCustomExperience) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapCustomExperience) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapCustomExperience = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapCustomExperience",
@@ -11190,12 +11109,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_MapCustomExperience};
 
     static PyGetSetDef getset_MapCustomExperience_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapCustomExperience_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapCustomExperience_Static[] = 
     {
@@ -11205,14 +11122,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapCustomExperience_Static =
-    {
+    static PyType_Spec type_spec_MapCustomExperience_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapCustomExperience_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_MapCustomExperience_Static
-    };
+        type_slots_MapCustomExperience_Static};
 
     // ----- MapCustomExperienceChangedEventArgs class --------------------
 
@@ -11280,20 +11195,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapCustomExperienceChangedEventArgs[] = {
         { "_assign_array_", _assign_array_MapCustomExperienceChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapCustomExperienceChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapCustomExperienceChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapCustomExperienceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapCustomExperienceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapCustomExperienceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapCustomExperienceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapCustomExperienceChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapCustomExperienceChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapCustomExperienceChangedEventArgs",
@@ -12121,8 +12033,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapElement[] = {
         { "_assign_array_", _assign_array_MapElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElement[] = {
         { "z_index", reinterpret_cast<getter>(MapElement_get_ZIndex), reinterpret_cast<setter>(MapElement_put_ZIndex), nullptr, nullptr },
@@ -12132,16 +12043,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "map_style_sheet_entry_state", reinterpret_cast<getter>(MapElement_get_MapStyleSheetEntryState), reinterpret_cast<setter>(MapElement_put_MapStyleSheetEntryState), nullptr, nullptr },
         { "map_style_sheet_entry", reinterpret_cast<getter>(MapElement_get_MapStyleSheetEntry), reinterpret_cast<setter>(MapElement_put_MapStyleSheetEntry), nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(MapElement_get_IsEnabled), reinterpret_cast<setter>(MapElement_put_IsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElement = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElement",
@@ -12158,12 +12067,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "map_style_sheet_entry_state_property", reinterpret_cast<getter>(MapElement_get_MapStyleSheetEntryStateProperty), nullptr, nullptr, nullptr },
         { "tag_property", reinterpret_cast<getter>(MapElement_get_TagProperty), nullptr, nullptr, nullptr },
         { "is_enabled_property", reinterpret_cast<getter>(MapElement_get_IsEnabledProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapElement_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapElement_Static[] = 
     {
@@ -12173,14 +12080,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapElement_Static =
-    {
+    static PyType_Spec type_spec_MapElement_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElement_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_MapElement_Static
-    };
+        type_slots_MapElement_Static};
 
     // ----- MapElement3D class --------------------
 
@@ -12812,8 +12717,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapElement3D[] = {
         { "_assign_array_", _assign_array_MapElement3D, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElement3D), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElement3D[] = {
         { "scale", reinterpret_cast<getter>(MapElement3D_get_Scale), reinterpret_cast<setter>(MapElement3D_put_Scale), nullptr, nullptr },
@@ -12822,16 +12726,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "model", reinterpret_cast<getter>(MapElement3D_get_Model), reinterpret_cast<setter>(MapElement3D_put_Model), nullptr, nullptr },
         { "location", reinterpret_cast<getter>(MapElement3D_get_Location), reinterpret_cast<setter>(MapElement3D_put_Location), nullptr, nullptr },
         { "heading", reinterpret_cast<getter>(MapElement3D_get_Heading), reinterpret_cast<setter>(MapElement3D_put_Heading), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElement3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElement3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElement3D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElement3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElement3D) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElement3D = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElement3D",
@@ -12846,12 +12748,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "pitch_property", reinterpret_cast<getter>(MapElement3D_get_PitchProperty), nullptr, nullptr, nullptr },
         { "roll_property", reinterpret_cast<getter>(MapElement3D_get_RollProperty), nullptr, nullptr, nullptr },
         { "scale_property", reinterpret_cast<getter>(MapElement3D_get_ScaleProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapElement3D_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapElement3D_Static[] = 
     {
@@ -12861,14 +12761,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapElement3D_Static =
-    {
+    static PyType_Spec type_spec_MapElement3D_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElement3D_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapElement3D_Static
-    };
+        type_slots_MapElement3D_Static};
 
     // ----- MapElementClickEventArgs class --------------------
 
@@ -13026,23 +12924,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapElementClickEventArgs[] = {
         { "_assign_array_", _assign_array_MapElementClickEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElementClickEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElementClickEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapElementClickEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "map_elements", reinterpret_cast<getter>(MapElementClickEventArgs_get_MapElements), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapElementClickEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElementClickEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementClickEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementClickEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementClickEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementClickEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElementClickEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElementClickEventArgs",
@@ -13207,23 +13102,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapElementPointerEnteredEventArgs[] = {
         { "_assign_array_", _assign_array_MapElementPointerEnteredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElementPointerEnteredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElementPointerEnteredEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapElementPointerEnteredEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "map_element", reinterpret_cast<getter>(MapElementPointerEnteredEventArgs_get_MapElement), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapElementPointerEnteredEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElementPointerEnteredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementPointerEnteredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementPointerEnteredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementPointerEnteredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementPointerEnteredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElementPointerEnteredEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElementPointerEnteredEventArgs",
@@ -13388,23 +13280,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapElementPointerExitedEventArgs[] = {
         { "_assign_array_", _assign_array_MapElementPointerExitedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElementPointerExitedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElementPointerExitedEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapElementPointerExitedEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "map_element", reinterpret_cast<getter>(MapElementPointerExitedEventArgs_get_MapElement), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapElementPointerExitedEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElementPointerExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementPointerExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementPointerExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementPointerExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementPointerExitedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElementPointerExitedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElementPointerExitedEventArgs",
@@ -13846,21 +13735,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "remove_map_element_pointer_exited", reinterpret_cast<PyCFunction>(MapElementsLayer_remove_MapElementPointerExited), METH_O, nullptr },
         { "_assign_array_", _assign_array_MapElementsLayer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElementsLayer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElementsLayer[] = {
         { "map_elements", reinterpret_cast<getter>(MapElementsLayer_get_MapElements), reinterpret_cast<setter>(MapElementsLayer_put_MapElements), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElementsLayer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElementsLayer = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElementsLayer",
@@ -13871,12 +13757,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyGetSetDef getset_MapElementsLayer_Static[] = {
         { "map_elements_property", reinterpret_cast<getter>(MapElementsLayer_get_MapElementsProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapElementsLayer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapElementsLayer_Static[] = 
     {
@@ -13886,14 +13770,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapElementsLayer_Static =
-    {
+    static PyType_Spec type_spec_MapElementsLayer_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElementsLayer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapElementsLayer_Static
-    };
+        type_slots_MapElementsLayer_Static};
 
     // ----- MapElementsLayerClickEventArgs class --------------------
 
@@ -14051,23 +13933,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapElementsLayerClickEventArgs[] = {
         { "_assign_array_", _assign_array_MapElementsLayerClickEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElementsLayerClickEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElementsLayerClickEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapElementsLayerClickEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "map_elements", reinterpret_cast<getter>(MapElementsLayerClickEventArgs_get_MapElements), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapElementsLayerClickEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElementsLayerClickEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayerClickEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayerClickEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayerClickEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayerClickEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElementsLayerClickEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElementsLayerClickEventArgs",
@@ -14232,23 +14111,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapElementsLayerContextRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_MapElementsLayerContextRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElementsLayerContextRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElementsLayerContextRequestedEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapElementsLayerContextRequestedEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "map_elements", reinterpret_cast<getter>(MapElementsLayerContextRequestedEventArgs_get_MapElements), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapElementsLayerContextRequestedEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElementsLayerContextRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayerContextRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayerContextRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayerContextRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayerContextRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElementsLayerContextRequestedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElementsLayerContextRequestedEventArgs",
@@ -14413,23 +14289,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapElementsLayerPointerEnteredEventArgs[] = {
         { "_assign_array_", _assign_array_MapElementsLayerPointerEnteredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElementsLayerPointerEnteredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElementsLayerPointerEnteredEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapElementsLayerPointerEnteredEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "map_element", reinterpret_cast<getter>(MapElementsLayerPointerEnteredEventArgs_get_MapElement), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapElementsLayerPointerEnteredEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElementsLayerPointerEnteredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayerPointerEnteredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayerPointerEnteredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayerPointerEnteredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayerPointerEnteredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElementsLayerPointerEnteredEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElementsLayerPointerEnteredEventArgs",
@@ -14594,23 +14467,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapElementsLayerPointerExitedEventArgs[] = {
         { "_assign_array_", _assign_array_MapElementsLayerPointerExitedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapElementsLayerPointerExitedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapElementsLayerPointerExitedEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapElementsLayerPointerExitedEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "map_element", reinterpret_cast<getter>(MapElementsLayerPointerExitedEventArgs_get_MapElement), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapElementsLayerPointerExitedEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapElementsLayerPointerExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayerPointerExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayerPointerExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayerPointerExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayerPointerExitedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapElementsLayerPointerExitedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElementsLayerPointerExitedEventArgs",
@@ -15150,8 +15020,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapIcon[] = {
         { "_assign_array_", _assign_array_MapIcon, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapIcon), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapIcon[] = {
         { "title", reinterpret_cast<getter>(MapIcon_get_Title), reinterpret_cast<setter>(MapIcon_put_Title), nullptr, nullptr },
@@ -15159,16 +15028,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "location", reinterpret_cast<getter>(MapIcon_get_Location), reinterpret_cast<setter>(MapIcon_put_Location), nullptr, nullptr },
         { "image", reinterpret_cast<getter>(MapIcon_get_Image), reinterpret_cast<setter>(MapIcon_put_Image), nullptr, nullptr },
         { "collision_behavior_desired", reinterpret_cast<getter>(MapIcon_get_CollisionBehaviorDesired), reinterpret_cast<setter>(MapIcon_put_CollisionBehaviorDesired), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapIcon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapIcon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapIcon) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapIcon = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapIcon",
@@ -15182,12 +15049,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "normalized_anchor_point_property", reinterpret_cast<getter>(MapIcon_get_NormalizedAnchorPointProperty), nullptr, nullptr, nullptr },
         { "title_property", reinterpret_cast<getter>(MapIcon_get_TitleProperty), nullptr, nullptr, nullptr },
         { "collision_behavior_desired_property", reinterpret_cast<getter>(MapIcon_get_CollisionBehaviorDesiredProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapIcon_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapIcon_Static[] = 
     {
@@ -15197,14 +15062,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapIcon_Static =
-    {
+    static PyType_Spec type_spec_MapIcon_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapIcon_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapIcon_Static
-    };
+        type_slots_MapIcon_Static};
 
     // ----- MapInputEventArgs class --------------------
 
@@ -15332,22 +15195,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapInputEventArgs[] = {
         { "_assign_array_", _assign_array_MapInputEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapInputEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapInputEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapInputEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapInputEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapInputEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapInputEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapInputEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapInputEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapInputEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapInputEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapInputEventArgs",
@@ -15680,23 +15540,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapItemsControl[] = {
         { "_assign_array_", _assign_array_MapItemsControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapItemsControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapItemsControl[] = {
         { "items_source", reinterpret_cast<getter>(MapItemsControl_get_ItemsSource), reinterpret_cast<setter>(MapItemsControl_put_ItemsSource), nullptr, nullptr },
         { "item_template", reinterpret_cast<getter>(MapItemsControl_get_ItemTemplate), reinterpret_cast<setter>(MapItemsControl_put_ItemTemplate), nullptr, nullptr },
         { "items", reinterpret_cast<getter>(MapItemsControl_get_Items), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapItemsControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapItemsControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapItemsControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapItemsControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapItemsControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapItemsControl = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapItemsControl",
@@ -15709,12 +15566,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "item_template_property", reinterpret_cast<getter>(MapItemsControl_get_ItemTemplateProperty), nullptr, nullptr, nullptr },
         { "items_property", reinterpret_cast<getter>(MapItemsControl_get_ItemsProperty), nullptr, nullptr, nullptr },
         { "items_source_property", reinterpret_cast<getter>(MapItemsControl_get_ItemsSourceProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapItemsControl_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapItemsControl_Static[] = 
     {
@@ -15724,14 +15579,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapItemsControl_Static =
-    {
+    static PyType_Spec type_spec_MapItemsControl_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapItemsControl_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapItemsControl_Static
-    };
+        type_slots_MapItemsControl_Static};
 
     // ----- MapLayer class --------------------
 
@@ -16156,23 +16009,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapLayer[] = {
         { "_assign_array_", _assign_array_MapLayer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapLayer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapLayer[] = {
         { "z_index", reinterpret_cast<getter>(MapLayer_get_ZIndex), reinterpret_cast<setter>(MapLayer_put_ZIndex), nullptr, nullptr },
         { "visible", reinterpret_cast<getter>(MapLayer_get_Visible), reinterpret_cast<setter>(MapLayer_put_Visible), nullptr, nullptr },
         { "map_tab_index", reinterpret_cast<getter>(MapLayer_get_MapTabIndex), reinterpret_cast<setter>(MapLayer_put_MapTabIndex), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapLayer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapLayer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapLayer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapLayer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapLayer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapLayer = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapLayer",
@@ -16185,12 +16035,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "map_tab_index_property", reinterpret_cast<getter>(MapLayer_get_MapTabIndexProperty), nullptr, nullptr, nullptr },
         { "visible_property", reinterpret_cast<getter>(MapLayer_get_VisibleProperty), nullptr, nullptr, nullptr },
         { "z_index_property", reinterpret_cast<getter>(MapLayer_get_ZIndexProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapLayer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapLayer_Static[] = 
     {
@@ -16200,14 +16048,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapLayer_Static =
-    {
+    static PyType_Spec type_spec_MapLayer_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapLayer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_MapLayer_Static
-    };
+        type_slots_MapLayer_Static};
 
     // ----- MapModel3D class --------------------
 
@@ -16420,20 +16266,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapModel3D[] = {
         { "_assign_array_", _assign_array_MapModel3D, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapModel3D), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapModel3D[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapModel3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapModel3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapModel3D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapModel3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapModel3D) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapModel3D = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapModel3D",
@@ -16443,14 +16286,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_MapModel3D};
 
     static PyGetSetDef getset_MapModel3D_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapModel3D_Static[] = {
         { "create_from_3mf_async", reinterpret_cast<PyCFunction>(MapModel3D_CreateFrom3MFAsync), METH_VARARGS, nullptr },
         { "create_from_3mf_with_shading_option_async", reinterpret_cast<PyCFunction>(MapModel3D_CreateFrom3MFWithShadingOptionAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapModel3D_Static[] = 
     {
@@ -16460,14 +16301,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapModel3D_Static =
-    {
+    static PyType_Spec type_spec_MapModel3D_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapModel3D_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_MapModel3D_Static
-    };
+        type_slots_MapModel3D_Static};
 
     // ----- MapPolygon class --------------------
 
@@ -17000,8 +16839,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapPolygon[] = {
         { "_assign_array_", _assign_array_MapPolygon, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapPolygon), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapPolygon[] = {
         { "stroke_thickness", reinterpret_cast<getter>(MapPolygon_get_StrokeThickness), reinterpret_cast<setter>(MapPolygon_put_StrokeThickness), nullptr, nullptr },
@@ -17010,16 +16848,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "path", reinterpret_cast<getter>(MapPolygon_get_Path), reinterpret_cast<setter>(MapPolygon_put_Path), nullptr, nullptr },
         { "fill_color", reinterpret_cast<getter>(MapPolygon_get_FillColor), reinterpret_cast<setter>(MapPolygon_put_FillColor), nullptr, nullptr },
         { "paths", reinterpret_cast<getter>(MapPolygon_get_Paths), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapPolygon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapPolygon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapPolygon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapPolygon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapPolygon) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapPolygon = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapPolygon",
@@ -17032,12 +16868,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "path_property", reinterpret_cast<getter>(MapPolygon_get_PathProperty), nullptr, nullptr, nullptr },
         { "stroke_dashed_property", reinterpret_cast<getter>(MapPolygon_get_StrokeDashedProperty), nullptr, nullptr, nullptr },
         { "stroke_thickness_property", reinterpret_cast<getter>(MapPolygon_get_StrokeThicknessProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapPolygon_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapPolygon_Static[] = 
     {
@@ -17047,14 +16881,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapPolygon_Static =
-    {
+    static PyType_Spec type_spec_MapPolygon_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapPolygon_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapPolygon_Static
-    };
+        type_slots_MapPolygon_Static};
 
     // ----- MapPolyline class --------------------
 
@@ -17458,24 +17290,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapPolyline[] = {
         { "_assign_array_", _assign_array_MapPolyline, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapPolyline), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapPolyline[] = {
         { "stroke_thickness", reinterpret_cast<getter>(MapPolyline_get_StrokeThickness), reinterpret_cast<setter>(MapPolyline_put_StrokeThickness), nullptr, nullptr },
         { "stroke_dashed", reinterpret_cast<getter>(MapPolyline_get_StrokeDashed), reinterpret_cast<setter>(MapPolyline_put_StrokeDashed), nullptr, nullptr },
         { "stroke_color", reinterpret_cast<getter>(MapPolyline_get_StrokeColor), reinterpret_cast<setter>(MapPolyline_put_StrokeColor), nullptr, nullptr },
         { "path", reinterpret_cast<getter>(MapPolyline_get_Path), reinterpret_cast<setter>(MapPolyline_put_Path), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapPolyline[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapPolyline) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapPolyline) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapPolyline) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapPolyline) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapPolyline = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapPolyline",
@@ -17487,12 +17316,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyGetSetDef getset_MapPolyline_Static[] = {
         { "path_property", reinterpret_cast<getter>(MapPolyline_get_PathProperty), nullptr, nullptr, nullptr },
         { "stroke_dashed_property", reinterpret_cast<getter>(MapPolyline_get_StrokeDashedProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapPolyline_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapPolyline_Static[] = 
     {
@@ -17502,14 +17329,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapPolyline_Static =
-    {
+    static PyType_Spec type_spec_MapPolyline_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapPolyline_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapPolyline_Static
-    };
+        type_slots_MapPolyline_Static};
 
     // ----- MapRightTappedEventArgs class --------------------
 
@@ -17637,22 +17462,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapRightTappedEventArgs[] = {
         { "_assign_array_", _assign_array_MapRightTappedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapRightTappedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapRightTappedEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapRightTappedEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapRightTappedEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapRightTappedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRightTappedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRightTappedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRightTappedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRightTappedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapRightTappedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapRightTappedEventArgs",
@@ -17957,23 +17779,20 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapRouteView[] = {
         { "_assign_array_", _assign_array_MapRouteView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapRouteView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapRouteView[] = {
         { "route_color", reinterpret_cast<getter>(MapRouteView_get_RouteColor), reinterpret_cast<setter>(MapRouteView_put_RouteColor), nullptr, nullptr },
         { "outline_color", reinterpret_cast<getter>(MapRouteView_get_OutlineColor), reinterpret_cast<setter>(MapRouteView_put_OutlineColor), nullptr, nullptr },
         { "route", reinterpret_cast<getter>(MapRouteView_get_Route), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapRouteView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapRouteView = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapRouteView",
@@ -17983,12 +17802,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_MapRouteView};
 
     static PyGetSetDef getset_MapRouteView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapRouteView_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapRouteView_Static[] = 
     {
@@ -17998,14 +17815,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapRouteView_Static =
-    {
+    static PyType_Spec type_spec_MapRouteView_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapRouteView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_MapRouteView_Static
-    };
+        type_slots_MapRouteView_Static};
 
     // ----- MapScene class --------------------
 
@@ -18536,21 +18351,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "remove_target_camera_changed", reinterpret_cast<PyCFunction>(MapScene_remove_TargetCameraChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_MapScene, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapScene), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapScene[] = {
         { "target_camera", reinterpret_cast<getter>(MapScene_get_TargetCamera), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapScene[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapScene) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapScene) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapScene) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapScene) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapScene = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapScene",
@@ -18560,8 +18372,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_MapScene};
 
     static PyGetSetDef getset_MapScene_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapScene_Static[] = {
         { "create_from_bounding_box", reinterpret_cast<PyCFunction>(MapScene_CreateFromBoundingBox), METH_VARARGS, nullptr },
@@ -18573,8 +18384,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "create_from_location_with_heading_and_pitch", reinterpret_cast<PyCFunction>(MapScene_CreateFromLocationWithHeadingAndPitch), METH_VARARGS, nullptr },
         { "create_from_locations", reinterpret_cast<PyCFunction>(MapScene_CreateFromLocations), METH_VARARGS, nullptr },
         { "create_from_locations_with_heading_and_pitch", reinterpret_cast<PyCFunction>(MapScene_CreateFromLocationsWithHeadingAndPitch), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapScene_Static[] = 
     {
@@ -18584,14 +18394,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapScene_Static =
-    {
+    static PyType_Spec type_spec_MapScene_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapScene_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapScene_Static
-    };
+        type_slots_MapScene_Static};
 
     // ----- MapStyleSheet class --------------------
 
@@ -19017,20 +18825,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapStyleSheet[] = {
         { "_assign_array_", _assign_array_MapStyleSheet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapStyleSheet), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapStyleSheet[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapStyleSheet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapStyleSheet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapStyleSheet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapStyleSheet) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapStyleSheet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapStyleSheet = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapStyleSheet",
@@ -19040,8 +18845,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_MapStyleSheet};
 
     static PyGetSetDef getset_MapStyleSheet_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapStyleSheet_Static[] = {
         { "aerial", reinterpret_cast<PyCFunction>(MapStyleSheet_Aerial), METH_VARARGS, nullptr },
@@ -19053,8 +18857,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "road_high_contrast_light", reinterpret_cast<PyCFunction>(MapStyleSheet_RoadHighContrastLight), METH_VARARGS, nullptr },
         { "road_light", reinterpret_cast<PyCFunction>(MapStyleSheet_RoadLight), METH_VARARGS, nullptr },
         { "try_parse_from_json", reinterpret_cast<PyCFunction>(MapStyleSheet_TryParseFromJson), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapStyleSheet_Static[] = 
     {
@@ -19064,14 +18867,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapStyleSheet_Static =
-    {
+    static PyType_Spec type_spec_MapStyleSheet_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapStyleSheet_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapStyleSheet_Static
-    };
+        type_slots_MapStyleSheet_Static};
 
     // ----- MapStyleSheetEntries class --------------------
 
@@ -21003,19 +20804,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     }
 
     static PyMethodDef _methods_MapStyleSheetEntries[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapStyleSheetEntries[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapStyleSheetEntries[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapStyleSheetEntries) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapStyleSheetEntries) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapStyleSheetEntries) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapStyleSheetEntries = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntries",
@@ -21089,12 +20887,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "water", reinterpret_cast<getter>(MapStyleSheetEntries_get_Water), nullptr, nullptr, nullptr },
         { "water_point", reinterpret_cast<getter>(MapStyleSheetEntries_get_WaterPoint), nullptr, nullptr, nullptr },
         { "water_route", reinterpret_cast<getter>(MapStyleSheetEntries_get_WaterRoute), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapStyleSheetEntries_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapStyleSheetEntries_Static[] = 
     {
@@ -21104,14 +20900,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapStyleSheetEntries_Static =
-    {
+    static PyType_Spec type_spec_MapStyleSheetEntries_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntries_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapStyleSheetEntries_Static
-    };
+        type_slots_MapStyleSheetEntries_Static};
 
     // ----- MapStyleSheetEntryStates class --------------------
 
@@ -21213,19 +21007,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     }
 
     static PyMethodDef _methods_MapStyleSheetEntryStates[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapStyleSheetEntryStates[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapStyleSheetEntryStates[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapStyleSheetEntryStates) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapStyleSheetEntryStates) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapStyleSheetEntryStates) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapStyleSheetEntryStates = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntryStates",
@@ -21238,12 +21029,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "disabled", reinterpret_cast<getter>(MapStyleSheetEntryStates_get_Disabled), nullptr, nullptr, nullptr },
         { "hover", reinterpret_cast<getter>(MapStyleSheetEntryStates_get_Hover), nullptr, nullptr, nullptr },
         { "selected", reinterpret_cast<getter>(MapStyleSheetEntryStates_get_Selected), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapStyleSheetEntryStates_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapStyleSheetEntryStates_Static[] = 
     {
@@ -21253,14 +21042,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapStyleSheetEntryStates_Static =
-    {
+    static PyType_Spec type_spec_MapStyleSheetEntryStates_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntryStates_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapStyleSheetEntryStates_Static
-    };
+        type_slots_MapStyleSheetEntryStates_Static};
 
     // ----- MapTargetCameraChangedEventArgs class --------------------
 
@@ -21388,22 +21175,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapTargetCameraChangedEventArgs[] = {
         { "_assign_array_", _assign_array_MapTargetCameraChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapTargetCameraChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapTargetCameraChangedEventArgs[] = {
         { "camera", reinterpret_cast<getter>(MapTargetCameraChangedEventArgs_get_Camera), nullptr, nullptr, nullptr },
         { "change_reason", reinterpret_cast<getter>(MapTargetCameraChangedEventArgs_get_ChangeReason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapTargetCameraChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTargetCameraChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTargetCameraChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTargetCameraChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTargetCameraChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapTargetCameraChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTargetCameraChangedEventArgs",
@@ -21588,21 +21372,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "get_deferral", reinterpret_cast<PyCFunction>(MapTileBitmapRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MapTileBitmapRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapTileBitmapRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapTileBitmapRequest[] = {
         { "pixel_data", reinterpret_cast<getter>(MapTileBitmapRequest_get_PixelData), reinterpret_cast<setter>(MapTileBitmapRequest_put_PixelData), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapTileBitmapRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileBitmapRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileBitmapRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileBitmapRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileBitmapRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapTileBitmapRequest = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileBitmapRequest",
@@ -21719,20 +21500,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "complete", reinterpret_cast<PyCFunction>(MapTileBitmapRequestDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MapTileBitmapRequestDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapTileBitmapRequestDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapTileBitmapRequestDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapTileBitmapRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileBitmapRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileBitmapRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileBitmapRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileBitmapRequestDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapTileBitmapRequestDeferral = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileBitmapRequestDeferral",
@@ -21957,8 +21735,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapTileBitmapRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_MapTileBitmapRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapTileBitmapRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapTileBitmapRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(MapTileBitmapRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
@@ -21966,16 +21743,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "y", reinterpret_cast<getter>(MapTileBitmapRequestedEventArgs_get_Y), nullptr, nullptr, nullptr },
         { "zoom_level", reinterpret_cast<getter>(MapTileBitmapRequestedEventArgs_get_ZoomLevel), nullptr, nullptr, nullptr },
         { "frame_index", reinterpret_cast<getter>(MapTileBitmapRequestedEventArgs_get_FrameIndex), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapTileBitmapRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileBitmapRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileBitmapRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileBitmapRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileBitmapRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapTileBitmapRequestedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileBitmapRequestedEventArgs",
@@ -22110,20 +21885,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapTileDataSource[] = {
         { "_assign_array_", _assign_array_MapTileDataSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapTileDataSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapTileDataSource[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapTileDataSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileDataSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileDataSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileDataSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileDataSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapTileDataSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileDataSource",
@@ -22133,12 +21905,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_MapTileDataSource};
 
     static PyGetSetDef getset_MapTileDataSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapTileDataSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapTileDataSource_Static[] = 
     {
@@ -22148,14 +21918,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapTileDataSource_Static =
-    {
+    static PyType_Spec type_spec_MapTileDataSource_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileDataSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_MapTileDataSource_Static
-    };
+        type_slots_MapTileDataSource_Static};
 
     // ----- MapTileSource class --------------------
 
@@ -24017,8 +23785,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "stop", reinterpret_cast<PyCFunction>(MapTileSource_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MapTileSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapTileSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapTileSource[] = {
         { "zoom_level_range", reinterpret_cast<getter>(MapTileSource_get_ZoomLevelRange), reinterpret_cast<setter>(MapTileSource_put_ZoomLevelRange), nullptr, nullptr },
@@ -24036,16 +23803,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "frame_count", reinterpret_cast<getter>(MapTileSource_get_FrameCount), reinterpret_cast<setter>(MapTileSource_put_FrameCount), nullptr, nullptr },
         { "auto_play", reinterpret_cast<getter>(MapTileSource_get_AutoPlay), reinterpret_cast<setter>(MapTileSource_put_AutoPlay), nullptr, nullptr },
         { "animation_state", reinterpret_cast<getter>(MapTileSource_get_AnimationState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapTileSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapTileSource = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileSource",
@@ -24070,12 +23835,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "auto_play_property", reinterpret_cast<getter>(MapTileSource_get_AutoPlayProperty), nullptr, nullptr, nullptr },
         { "frame_count_property", reinterpret_cast<getter>(MapTileSource_get_FrameCountProperty), nullptr, nullptr, nullptr },
         { "frame_duration_property", reinterpret_cast<getter>(MapTileSource_get_FrameDurationProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapTileSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapTileSource_Static[] = 
     {
@@ -24085,14 +23848,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapTileSource_Static =
-    {
+    static PyType_Spec type_spec_MapTileSource_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_MapTileSource_Static
-    };
+        type_slots_MapTileSource_Static};
 
     // ----- MapTileUriRequest class --------------------
 
@@ -24270,21 +24031,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "get_deferral", reinterpret_cast<PyCFunction>(MapTileUriRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MapTileUriRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapTileUriRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapTileUriRequest[] = {
         { "uri", reinterpret_cast<getter>(MapTileUriRequest_get_Uri), reinterpret_cast<setter>(MapTileUriRequest_put_Uri), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapTileUriRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileUriRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileUriRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileUriRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileUriRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapTileUriRequest = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileUriRequest",
@@ -24401,20 +24159,17 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "complete", reinterpret_cast<PyCFunction>(MapTileUriRequestDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MapTileUriRequestDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapTileUriRequestDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapTileUriRequestDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapTileUriRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileUriRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileUriRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileUriRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileUriRequestDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapTileUriRequestDeferral = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileUriRequestDeferral",
@@ -24639,8 +24394,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_MapTileUriRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_MapTileUriRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapTileUriRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapTileUriRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(MapTileUriRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
@@ -24648,16 +24402,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "y", reinterpret_cast<getter>(MapTileUriRequestedEventArgs_get_Y), nullptr, nullptr, nullptr },
         { "zoom_level", reinterpret_cast<getter>(MapTileUriRequestedEventArgs_get_ZoomLevel), nullptr, nullptr, nullptr },
         { "frame_index", reinterpret_cast<getter>(MapTileUriRequestedEventArgs_get_FrameIndex), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapTileUriRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileUriRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileUriRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileUriRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileUriRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapTileUriRequestedEventArgs = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileUriRequestedEventArgs",
@@ -25166,8 +24918,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_StreetsideExperience[] = {
         { "_assign_array_", _assign_array_StreetsideExperience, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StreetsideExperience), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StreetsideExperience[] = {
         { "zoom_buttons_visible", reinterpret_cast<getter>(StreetsideExperience_get_ZoomButtonsVisible), reinterpret_cast<setter>(StreetsideExperience_put_ZoomButtonsVisible), nullptr, nullptr },
@@ -25176,16 +24927,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "exit_button_visible", reinterpret_cast<getter>(StreetsideExperience_get_ExitButtonVisible), reinterpret_cast<setter>(StreetsideExperience_put_ExitButtonVisible), nullptr, nullptr },
         { "cursor_visible", reinterpret_cast<getter>(StreetsideExperience_get_CursorVisible), reinterpret_cast<setter>(StreetsideExperience_put_CursorVisible), nullptr, nullptr },
         { "address_text_visible", reinterpret_cast<getter>(StreetsideExperience_get_AddressTextVisible), reinterpret_cast<setter>(StreetsideExperience_put_AddressTextVisible), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StreetsideExperience[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreetsideExperience) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreetsideExperience) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreetsideExperience) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreetsideExperience) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StreetsideExperience = {
         "winrt._winrt_windows_ui_xaml_controls_maps.StreetsideExperience",
@@ -25353,21 +25102,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyMethodDef _methods_StreetsidePanorama[] = {
         { "_assign_array_", _assign_array_StreetsidePanorama, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StreetsidePanorama), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StreetsidePanorama[] = {
         { "location", reinterpret_cast<getter>(StreetsidePanorama_get_Location), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StreetsidePanorama[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreetsidePanorama) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreetsidePanorama) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreetsidePanorama) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreetsidePanorama) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StreetsidePanorama = {
         "winrt._winrt_windows_ui_xaml_controls_maps.StreetsidePanorama",
@@ -25377,14 +25123,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         _type_slots_StreetsidePanorama};
 
     static PyGetSetDef getset_StreetsidePanorama_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StreetsidePanorama_Static[] = {
         { "find_nearby_with_location_and_radius_async", reinterpret_cast<PyCFunction>(StreetsidePanorama_FindNearbyWithLocationAndRadiusAsync), METH_VARARGS, nullptr },
         { "find_nearby_with_location_async", reinterpret_cast<PyCFunction>(StreetsidePanorama_FindNearbyWithLocationAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StreetsidePanorama_Static[] = 
     {
@@ -25394,14 +25138,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Spec type_spec_StreetsidePanorama_Static =
-    {
+    static PyType_Spec type_spec_StreetsidePanorama_Static = {
         "winrt._winrt_windows_ui_xaml_controls_maps.StreetsidePanorama_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StreetsidePanorama_Static
-    };
+        type_slots_StreetsidePanorama_Static};
 
     // ----- MapZoomLevelRange struct --------------------
 
@@ -25472,8 +25214,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyMethodDef _methods_MapZoomLevelRange[] = {
         { "_assign_array_", _assign_array_MapZoomLevelRange, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* MapZoomLevelRange_get_Min(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, void* /*unused*/) noexcept
     {
@@ -25544,8 +25285,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyGetSetDef _getset_MapZoomLevelRange[] = {
         { "min", reinterpret_cast<getter>(MapZoomLevelRange_get_Min), reinterpret_cast<setter>(MapZoomLevelRange_set_Min), nullptr, nullptr },
         { "max", reinterpret_cast<getter>(MapZoomLevelRange_get_Max), reinterpret_cast<setter>(MapZoomLevelRange_set_Max), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_MapZoomLevelRange(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, PyObject* other, int op) noexcept
     {
@@ -25607,8 +25347,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapZoomLevelRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_MapZoomLevelRange) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_MapZoomLevelRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapZoomLevelRange = {
         "winrt._winrt_windows_ui_xaml_controls_maps.MapZoomLevelRange",

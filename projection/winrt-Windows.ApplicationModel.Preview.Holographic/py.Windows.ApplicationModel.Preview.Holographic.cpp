@@ -96,19 +96,16 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
     }
 
     static PyMethodDef _methods_HolographicApplicationPreview[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicApplicationPreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicApplicationPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicApplicationPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicApplicationPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicApplicationPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicApplicationPreview = {
         "winrt._winrt_windows_applicationmodel_preview_holographic.HolographicApplicationPreview",
@@ -118,14 +115,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         _type_slots_HolographicApplicationPreview};
 
     static PyGetSetDef getset_HolographicApplicationPreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HolographicApplicationPreview_Static[] = {
         { "is_current_view_presented_on_holographic_display", reinterpret_cast<PyCFunction>(HolographicApplicationPreview_IsCurrentViewPresentedOnHolographicDisplay), METH_VARARGS, nullptr },
         { "is_holographic_activation", reinterpret_cast<PyCFunction>(HolographicApplicationPreview_IsHolographicActivation), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HolographicApplicationPreview_Static[] = 
     {
@@ -135,14 +130,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         { }
     };
 
-    static PyType_Spec type_spec_HolographicApplicationPreview_Static =
-    {
+    static PyType_Spec type_spec_HolographicApplicationPreview_Static = {
         "winrt._winrt_windows_applicationmodel_preview_holographic.HolographicApplicationPreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HolographicApplicationPreview_Static
-    };
+        type_slots_HolographicApplicationPreview_Static};
 
     // ----- HolographicKeyboardPlacementOverridePreview class --------------------
 
@@ -363,20 +356,17 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         { "set_placement_override_with_max_size", reinterpret_cast<PyCFunction>(HolographicKeyboardPlacementOverridePreview_SetPlacementOverrideWithMaxSize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicKeyboardPlacementOverridePreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicKeyboardPlacementOverridePreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicKeyboardPlacementOverridePreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicKeyboardPlacementOverridePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicKeyboardPlacementOverridePreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicKeyboardPlacementOverridePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicKeyboardPlacementOverridePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicKeyboardPlacementOverridePreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicKeyboardPlacementOverridePreview = {
         "winrt._winrt_windows_applicationmodel_preview_holographic.HolographicKeyboardPlacementOverridePreview",
@@ -386,13 +376,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         _type_slots_HolographicKeyboardPlacementOverridePreview};
 
     static PyGetSetDef getset_HolographicKeyboardPlacementOverridePreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HolographicKeyboardPlacementOverridePreview_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(HolographicKeyboardPlacementOverridePreview_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HolographicKeyboardPlacementOverridePreview_Static[] = 
     {
@@ -402,14 +390,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         { }
     };
 
-    static PyType_Spec type_spec_HolographicKeyboardPlacementOverridePreview_Static =
-    {
+    static PyType_Spec type_spec_HolographicKeyboardPlacementOverridePreview_Static = {
         "winrt._winrt_windows_applicationmodel_preview_holographic.HolographicKeyboardPlacementOverridePreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HolographicKeyboardPlacementOverridePreview_Static
-    };
+        type_slots_HolographicKeyboardPlacementOverridePreview_Static};
 
     // ----- Windows.ApplicationModel.Preview.Holographic Initialization --------------------
 

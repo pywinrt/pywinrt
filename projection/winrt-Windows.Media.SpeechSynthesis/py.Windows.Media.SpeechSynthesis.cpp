@@ -664,8 +664,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { "_from", reinterpret_cast<PyCFunction>(_from_SpeechSynthesisStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SpeechSynthesisStream), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_SpeechSynthesisStream), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpeechSynthesisStream[] = {
         { "timed_metadata_tracks", reinterpret_cast<getter>(SpeechSynthesisStream_get_TimedMetadataTracks), nullptr, nullptr, nullptr },
@@ -675,16 +674,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { "can_read", reinterpret_cast<getter>(SpeechSynthesisStream_get_CanRead), nullptr, nullptr, nullptr },
         { "can_write", reinterpret_cast<getter>(SpeechSynthesisStream_get_CanWrite), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(SpeechSynthesisStream_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpeechSynthesisStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechSynthesisStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechSynthesisStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechSynthesisStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechSynthesisStream) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpeechSynthesisStream = {
         "winrt._winrt_windows_media_speechsynthesis.SpeechSynthesisStream",
@@ -1113,22 +1110,19 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { "_from", reinterpret_cast<PyCFunction>(_from_SpeechSynthesizer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SpeechSynthesizer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_SpeechSynthesizer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpeechSynthesizer[] = {
         { "voice", reinterpret_cast<getter>(SpeechSynthesizer_get_Voice), reinterpret_cast<setter>(SpeechSynthesizer_put_Voice), nullptr, nullptr },
         { "options", reinterpret_cast<getter>(SpeechSynthesizer_get_Options), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpeechSynthesizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechSynthesizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechSynthesizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechSynthesizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechSynthesizer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpeechSynthesizer = {
         "winrt._winrt_windows_media_speechsynthesis.SpeechSynthesizer",
@@ -1140,13 +1134,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     static PyGetSetDef getset_SpeechSynthesizer_Static[] = {
         { "all_voices", reinterpret_cast<getter>(SpeechSynthesizer_get_AllVoices), nullptr, nullptr, nullptr },
         { "default_voice", reinterpret_cast<getter>(SpeechSynthesizer_get_DefaultVoice), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SpeechSynthesizer_Static[] = {
         { "try_set_default_voice_async", reinterpret_cast<PyCFunction>(SpeechSynthesizer_TrySetDefaultVoiceAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SpeechSynthesizer_Static[] = 
     {
@@ -1156,14 +1148,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { }
     };
 
-    static PyType_Spec type_spec_SpeechSynthesizer_Static =
-    {
+    static PyType_Spec type_spec_SpeechSynthesizer_Static = {
         "winrt._winrt_windows_media_speechsynthesis.SpeechSynthesizer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpeechSynthesizer_Static
-    };
+        type_slots_SpeechSynthesizer_Static};
 
     // ----- SpeechSynthesizerOptions class --------------------
 
@@ -1692,8 +1682,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     static PyMethodDef _methods_SpeechSynthesizerOptions[] = {
         { "_assign_array_", _assign_array_SpeechSynthesizerOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpeechSynthesizerOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpeechSynthesizerOptions[] = {
         { "include_word_boundary_metadata", reinterpret_cast<getter>(SpeechSynthesizerOptions_get_IncludeWordBoundaryMetadata), reinterpret_cast<setter>(SpeechSynthesizerOptions_put_IncludeWordBoundaryMetadata), nullptr, nullptr },
@@ -1703,16 +1692,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { "audio_pitch", reinterpret_cast<getter>(SpeechSynthesizerOptions_get_AudioPitch), reinterpret_cast<setter>(SpeechSynthesizerOptions_put_AudioPitch), nullptr, nullptr },
         { "punctuation_silence", reinterpret_cast<getter>(SpeechSynthesizerOptions_get_PunctuationSilence), reinterpret_cast<setter>(SpeechSynthesizerOptions_put_PunctuationSilence), nullptr, nullptr },
         { "appended_silence", reinterpret_cast<getter>(SpeechSynthesizerOptions_get_AppendedSilence), reinterpret_cast<setter>(SpeechSynthesizerOptions_put_AppendedSilence), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpeechSynthesizerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechSynthesizerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechSynthesizerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechSynthesizerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechSynthesizerOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpeechSynthesizerOptions = {
         "winrt._winrt_windows_media_speechsynthesis.SpeechSynthesizerOptions",
@@ -1915,8 +1902,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     static PyMethodDef _methods_VoiceInformation[] = {
         { "_assign_array_", _assign_array_VoiceInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceInformation[] = {
         { "description", reinterpret_cast<getter>(VoiceInformation_get_Description), nullptr, nullptr, nullptr },
@@ -1924,16 +1910,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { "gender", reinterpret_cast<getter>(VoiceInformation_get_Gender), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(VoiceInformation_get_Id), nullptr, nullptr, nullptr },
         { "language", reinterpret_cast<getter>(VoiceInformation_get_Language), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceInformation = {
         "winrt._winrt_windows_media_speechsynthesis.VoiceInformation",

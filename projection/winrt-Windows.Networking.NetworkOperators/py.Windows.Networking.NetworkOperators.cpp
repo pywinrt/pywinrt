@@ -663,8 +663,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "remove_profile_changed", reinterpret_cast<PyCFunction>(ESim_remove_ProfileChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ESim, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESim), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESim[] = {
         { "available_memory_in_bytes", reinterpret_cast<getter>(ESim_get_AvailableMemoryInBytes), nullptr, nullptr, nullptr },
@@ -674,16 +673,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "policy", reinterpret_cast<getter>(ESim_get_Policy), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(ESim_get_State), nullptr, nullptr, nullptr },
         { "slot_index", reinterpret_cast<getter>(ESim_get_SlotIndex), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESim[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESim) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESim) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESim) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESim) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESim = {
         "winrt._winrt_windows_networking_networkoperators.ESim",
@@ -766,21 +763,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimAddedEventArgs[] = {
         { "_assign_array_", _assign_array_ESimAddedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimAddedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimAddedEventArgs[] = {
         { "e_sim", reinterpret_cast<getter>(ESimAddedEventArgs_get_ESim), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimAddedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimAddedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.ESimAddedEventArgs",
@@ -893,22 +887,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimDiscoverEvent[] = {
         { "_assign_array_", _assign_array_ESimDiscoverEvent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimDiscoverEvent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimDiscoverEvent[] = {
         { "matching_id", reinterpret_cast<getter>(ESimDiscoverEvent_get_MatchingId), nullptr, nullptr, nullptr },
         { "rsp_server_address", reinterpret_cast<getter>(ESimDiscoverEvent_get_RspServerAddress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimDiscoverEvent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimDiscoverEvent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimDiscoverEvent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimDiscoverEvent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimDiscoverEvent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimDiscoverEvent = {
         "winrt._winrt_windows_networking_networkoperators.ESimDiscoverEvent",
@@ -1081,24 +1072,21 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimDiscoverResult[] = {
         { "_assign_array_", _assign_array_ESimDiscoverResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimDiscoverResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimDiscoverResult[] = {
         { "events", reinterpret_cast<getter>(ESimDiscoverResult_get_Events), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ESimDiscoverResult_get_Kind), nullptr, nullptr, nullptr },
         { "profile_metadata", reinterpret_cast<getter>(ESimDiscoverResult_get_ProfileMetadata), nullptr, nullptr, nullptr },
         { "result", reinterpret_cast<getter>(ESimDiscoverResult_get_Result), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimDiscoverResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimDiscoverResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimDiscoverResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimDiscoverResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimDiscoverResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimDiscoverResult = {
         "winrt._winrt_windows_networking_networkoperators.ESimDiscoverResult",
@@ -1211,22 +1199,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimDownloadProfileMetadataResult[] = {
         { "_assign_array_", _assign_array_ESimDownloadProfileMetadataResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimDownloadProfileMetadataResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimDownloadProfileMetadataResult[] = {
         { "profile_metadata", reinterpret_cast<getter>(ESimDownloadProfileMetadataResult_get_ProfileMetadata), nullptr, nullptr, nullptr },
         { "result", reinterpret_cast<getter>(ESimDownloadProfileMetadataResult_get_Result), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimDownloadProfileMetadataResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimDownloadProfileMetadataResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimDownloadProfileMetadataResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimDownloadProfileMetadataResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimDownloadProfileMetadataResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimDownloadProfileMetadataResult = {
         "winrt._winrt_windows_networking_networkoperators.ESimDownloadProfileMetadataResult",
@@ -1380,19 +1365,16 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_ESimManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimManager = {
         "winrt._winrt_windows_networking_networkoperators.ESimManager",
@@ -1403,15 +1385,13 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyGetSetDef getset_ESimManager_Static[] = {
         { "service_info", reinterpret_cast<getter>(ESimManager_get_ServiceInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ESimManager_Static[] = {
         { "try_create_e_sim_watcher", reinterpret_cast<PyCFunction>(ESimManager_TryCreateESimWatcher), METH_VARARGS, nullptr },
         { "add_service_info_changed", reinterpret_cast<PyCFunction>(ESimManager_add_ServiceInfoChanged), METH_O, nullptr },
         { "remove_service_info_changed", reinterpret_cast<PyCFunction>(ESimManager_remove_ServiceInfoChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ESimManager_Static[] = 
     {
@@ -1421,14 +1401,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_ESimManager_Static =
-    {
+    static PyType_Spec type_spec_ESimManager_Static = {
         "winrt._winrt_windows_networking_networkoperators.ESimManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ESimManager_Static
-    };
+        type_slots_ESimManager_Static};
 
     // ----- ESimOperationResult class --------------------
 
@@ -1504,21 +1482,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimOperationResult[] = {
         { "_assign_array_", _assign_array_ESimOperationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimOperationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimOperationResult[] = {
         { "status", reinterpret_cast<getter>(ESimOperationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimOperationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimOperationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimOperationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimOperationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimOperationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimOperationResult = {
         "winrt._winrt_windows_networking_networkoperators.ESimOperationResult",
@@ -1601,21 +1576,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimPolicy[] = {
         { "_assign_array_", _assign_array_ESimPolicy, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimPolicy), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimPolicy[] = {
         { "should_enable_managing_ui", reinterpret_cast<getter>(ESimPolicy_get_ShouldEnableManagingUi), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimPolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimPolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimPolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimPolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimPolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimPolicy = {
         "winrt._winrt_windows_networking_networkoperators.ESimPolicy",
@@ -2033,8 +2005,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "set_nickname_async", reinterpret_cast<PyCFunction>(ESimProfile_SetNicknameAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ESimProfile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimProfile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimProfile[] = {
         { "class_", reinterpret_cast<getter>(ESimProfile_get_Class), nullptr, nullptr, nullptr },
@@ -2045,16 +2016,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "provider_id", reinterpret_cast<getter>(ESimProfile_get_ProviderId), nullptr, nullptr, nullptr },
         { "provider_name", reinterpret_cast<getter>(ESimProfile_get_ProviderName), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(ESimProfile_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimProfile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimProfile = {
         "winrt._winrt_windows_networking_networkoperators.ESimProfile",
@@ -2550,8 +2519,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "remove_state_changed", reinterpret_cast<PyCFunction>(ESimProfileMetadata_remove_StateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ESimProfileMetadata, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimProfileMetadata), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimProfileMetadata[] = {
         { "id", reinterpret_cast<getter>(ESimProfileMetadata_get_Id), nullptr, nullptr, nullptr },
@@ -2561,16 +2529,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "provider_id", reinterpret_cast<getter>(ESimProfileMetadata_get_ProviderId), nullptr, nullptr, nullptr },
         { "provider_name", reinterpret_cast<getter>(ESimProfileMetadata_get_ProviderName), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(ESimProfileMetadata_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimProfileMetadata[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimProfileMetadata) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimProfileMetadata) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimProfileMetadata) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimProfileMetadata) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimProfileMetadata = {
         "winrt._winrt_windows_networking_networkoperators.ESimProfileMetadata",
@@ -2713,23 +2679,20 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimProfilePolicy[] = {
         { "_assign_array_", _assign_array_ESimProfilePolicy, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimProfilePolicy), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimProfilePolicy[] = {
         { "can_delete", reinterpret_cast<getter>(ESimProfilePolicy_get_CanDelete), nullptr, nullptr, nullptr },
         { "can_disable", reinterpret_cast<getter>(ESimProfilePolicy_get_CanDisable), nullptr, nullptr, nullptr },
         { "is_managed_by_enterprise", reinterpret_cast<getter>(ESimProfilePolicy_get_IsManagedByEnterprise), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimProfilePolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimProfilePolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimProfilePolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimProfilePolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimProfilePolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimProfilePolicy = {
         "winrt._winrt_windows_networking_networkoperators.ESimProfilePolicy",
@@ -2812,21 +2775,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimRemovedEventArgs[] = {
         { "_assign_array_", _assign_array_ESimRemovedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimRemovedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimRemovedEventArgs[] = {
         { "e_sim", reinterpret_cast<getter>(ESimRemovedEventArgs_get_ESim), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimRemovedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimRemovedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.ESimRemovedEventArgs",
@@ -2939,22 +2899,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimServiceInfo[] = {
         { "_assign_array_", _assign_array_ESimServiceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimServiceInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimServiceInfo[] = {
         { "authentication_preference", reinterpret_cast<getter>(ESimServiceInfo_get_AuthenticationPreference), nullptr, nullptr, nullptr },
         { "is_e_sim_ui_enabled", reinterpret_cast<getter>(ESimServiceInfo_get_IsESimUiEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimServiceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimServiceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimServiceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimServiceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimServiceInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimServiceInfo = {
         "winrt._winrt_windows_networking_networkoperators.ESimServiceInfo",
@@ -3037,21 +2994,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ESimUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_ESimUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimUpdatedEventArgs[] = {
         { "e_sim", reinterpret_cast<getter>(ESimUpdatedEventArgs_get_ESim), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimUpdatedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.ESimUpdatedEventArgs",
@@ -3553,21 +3507,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "remove_updated", reinterpret_cast<PyCFunction>(ESimWatcher_remove_Updated), METH_O, nullptr },
         { "_assign_array_", _assign_array_ESimWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ESimWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ESimWatcher[] = {
         { "status", reinterpret_cast<getter>(ESimWatcher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ESimWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimWatcher = {
         "winrt._winrt_windows_networking_networkoperators.ESimWatcher",
@@ -3628,19 +3579,16 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_FdnAccessManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FdnAccessManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FdnAccessManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FdnAccessManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FdnAccessManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FdnAccessManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FdnAccessManager = {
         "winrt._winrt_windows_networking_networkoperators.FdnAccessManager",
@@ -3650,13 +3598,11 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_FdnAccessManager};
 
     static PyGetSetDef getset_FdnAccessManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FdnAccessManager_Static[] = {
         { "request_unlock_async", reinterpret_cast<PyCFunction>(FdnAccessManager_RequestUnlockAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FdnAccessManager_Static[] = 
     {
@@ -3666,14 +3612,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_FdnAccessManager_Static =
-    {
+    static PyType_Spec type_spec_FdnAccessManager_Static = {
         "winrt._winrt_windows_networking_networkoperators.FdnAccessManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FdnAccessManager_Static
-    };
+        type_slots_FdnAccessManager_Static};
 
     // ----- HotspotAuthenticationContext class --------------------
 
@@ -4149,8 +4093,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "trigger_attention_required", reinterpret_cast<PyCFunction>(HotspotAuthenticationContext_TriggerAttentionRequired), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HotspotAuthenticationContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HotspotAuthenticationContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HotspotAuthenticationContext[] = {
         { "authentication_url", reinterpret_cast<getter>(HotspotAuthenticationContext_get_AuthenticationUrl), nullptr, nullptr, nullptr },
@@ -4158,16 +4101,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "redirect_message_url", reinterpret_cast<getter>(HotspotAuthenticationContext_get_RedirectMessageUrl), nullptr, nullptr, nullptr },
         { "redirect_message_xml", reinterpret_cast<getter>(HotspotAuthenticationContext_get_RedirectMessageXml), nullptr, nullptr, nullptr },
         { "wireless_network_id", reinterpret_cast<getter>(HotspotAuthenticationContext_get_WirelessNetworkId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HotspotAuthenticationContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HotspotAuthenticationContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HotspotAuthenticationContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HotspotAuthenticationContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HotspotAuthenticationContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HotspotAuthenticationContext = {
         "winrt._winrt_windows_networking_networkoperators.HotspotAuthenticationContext",
@@ -4177,13 +4118,11 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_HotspotAuthenticationContext};
 
     static PyGetSetDef getset_HotspotAuthenticationContext_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HotspotAuthenticationContext_Static[] = {
         { "try_get_authentication_context", reinterpret_cast<PyCFunction>(HotspotAuthenticationContext_TryGetAuthenticationContext), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HotspotAuthenticationContext_Static[] = 
     {
@@ -4193,14 +4132,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_HotspotAuthenticationContext_Static =
-    {
+    static PyType_Spec type_spec_HotspotAuthenticationContext_Static = {
         "winrt._winrt_windows_networking_networkoperators.HotspotAuthenticationContext_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HotspotAuthenticationContext_Static
-    };
+        type_slots_HotspotAuthenticationContext_Static};
 
     // ----- HotspotAuthenticationEventDetails class --------------------
 
@@ -4276,21 +4213,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_HotspotAuthenticationEventDetails[] = {
         { "_assign_array_", _assign_array_HotspotAuthenticationEventDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HotspotAuthenticationEventDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HotspotAuthenticationEventDetails[] = {
         { "event_token", reinterpret_cast<getter>(HotspotAuthenticationEventDetails_get_EventToken), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HotspotAuthenticationEventDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HotspotAuthenticationEventDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HotspotAuthenticationEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HotspotAuthenticationEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HotspotAuthenticationEventDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HotspotAuthenticationEventDetails = {
         "winrt._winrt_windows_networking_networkoperators.HotspotAuthenticationEventDetails",
@@ -4463,24 +4397,21 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_HotspotCredentialsAuthenticationResult[] = {
         { "_assign_array_", _assign_array_HotspotCredentialsAuthenticationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HotspotCredentialsAuthenticationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HotspotCredentialsAuthenticationResult[] = {
         { "authentication_reply_xml", reinterpret_cast<getter>(HotspotCredentialsAuthenticationResult_get_AuthenticationReplyXml), nullptr, nullptr, nullptr },
         { "has_network_error_occurred", reinterpret_cast<getter>(HotspotCredentialsAuthenticationResult_get_HasNetworkErrorOccurred), nullptr, nullptr, nullptr },
         { "logoff_url", reinterpret_cast<getter>(HotspotCredentialsAuthenticationResult_get_LogoffUrl), nullptr, nullptr, nullptr },
         { "response_code", reinterpret_cast<getter>(HotspotCredentialsAuthenticationResult_get_ResponseCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HotspotCredentialsAuthenticationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HotspotCredentialsAuthenticationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HotspotCredentialsAuthenticationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HotspotCredentialsAuthenticationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HotspotCredentialsAuthenticationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HotspotCredentialsAuthenticationResult = {
         "winrt._winrt_windows_networking_networkoperators.HotspotCredentialsAuthenticationResult",
@@ -4589,19 +4520,16 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_KnownCSimFilePaths[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownCSimFilePaths[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownCSimFilePaths[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownCSimFilePaths) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownCSimFilePaths) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownCSimFilePaths) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownCSimFilePaths = {
         "winrt._winrt_windows_networking_networkoperators.KnownCSimFilePaths",
@@ -4614,12 +4542,10 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "e_f_spn", reinterpret_cast<getter>(KnownCSimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
         { "gid1", reinterpret_cast<getter>(KnownCSimFilePaths_get_Gid1), nullptr, nullptr, nullptr },
         { "gid2", reinterpret_cast<getter>(KnownCSimFilePaths_get_Gid2), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownCSimFilePaths_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownCSimFilePaths_Static[] = 
     {
@@ -4629,14 +4555,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_KnownCSimFilePaths_Static =
-    {
+    static PyType_Spec type_spec_KnownCSimFilePaths_Static = {
         "winrt._winrt_windows_networking_networkoperators.KnownCSimFilePaths_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownCSimFilePaths_Static
-    };
+        type_slots_KnownCSimFilePaths_Static};
 
     // ----- KnownRuimFilePaths class --------------------
 
@@ -4738,19 +4662,16 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_KnownRuimFilePaths[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownRuimFilePaths[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownRuimFilePaths[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownRuimFilePaths) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownRuimFilePaths) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownRuimFilePaths) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownRuimFilePaths = {
         "winrt._winrt_windows_networking_networkoperators.KnownRuimFilePaths",
@@ -4763,12 +4684,10 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "e_f_spn", reinterpret_cast<getter>(KnownRuimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
         { "gid1", reinterpret_cast<getter>(KnownRuimFilePaths_get_Gid1), nullptr, nullptr, nullptr },
         { "gid2", reinterpret_cast<getter>(KnownRuimFilePaths_get_Gid2), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownRuimFilePaths_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownRuimFilePaths_Static[] = 
     {
@@ -4778,14 +4697,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_KnownRuimFilePaths_Static =
-    {
+    static PyType_Spec type_spec_KnownRuimFilePaths_Static = {
         "winrt._winrt_windows_networking_networkoperators.KnownRuimFilePaths_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownRuimFilePaths_Static
-    };
+        type_slots_KnownRuimFilePaths_Static};
 
     // ----- KnownSimFilePaths class --------------------
 
@@ -4917,19 +4834,16 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_KnownSimFilePaths[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownSimFilePaths[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownSimFilePaths[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownSimFilePaths) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownSimFilePaths) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownSimFilePaths) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownSimFilePaths = {
         "winrt._winrt_windows_networking_networkoperators.KnownSimFilePaths",
@@ -4943,12 +4857,10 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "e_f_spn", reinterpret_cast<getter>(KnownSimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
         { "gid1", reinterpret_cast<getter>(KnownSimFilePaths_get_Gid1), nullptr, nullptr, nullptr },
         { "gid2", reinterpret_cast<getter>(KnownSimFilePaths_get_Gid2), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownSimFilePaths_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownSimFilePaths_Static[] = 
     {
@@ -4958,14 +4870,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_KnownSimFilePaths_Static =
-    {
+    static PyType_Spec type_spec_KnownSimFilePaths_Static = {
         "winrt._winrt_windows_networking_networkoperators.KnownSimFilePaths_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownSimFilePaths_Static
-    };
+        type_slots_KnownSimFilePaths_Static};
 
     // ----- KnownUSimFilePaths class --------------------
 
@@ -5127,19 +5037,16 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_KnownUSimFilePaths[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownUSimFilePaths[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownUSimFilePaths[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownUSimFilePaths) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownUSimFilePaths) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownUSimFilePaths) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownUSimFilePaths = {
         "winrt._winrt_windows_networking_networkoperators.KnownUSimFilePaths",
@@ -5154,12 +5061,10 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "e_f_spn", reinterpret_cast<getter>(KnownUSimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
         { "gid1", reinterpret_cast<getter>(KnownUSimFilePaths_get_Gid1), nullptr, nullptr, nullptr },
         { "gid2", reinterpret_cast<getter>(KnownUSimFilePaths_get_Gid2), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownUSimFilePaths_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownUSimFilePaths_Static[] = 
     {
@@ -5169,14 +5074,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_KnownUSimFilePaths_Static =
-    {
+    static PyType_Spec type_spec_KnownUSimFilePaths_Static = {
         "winrt._winrt_windows_networking_networkoperators.KnownUSimFilePaths_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownUSimFilePaths_Static
-    };
+        type_slots_KnownUSimFilePaths_Static};
 
     // ----- MobileBroadbandAccount class --------------------
 
@@ -5515,8 +5418,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "get_connection_profiles", reinterpret_cast<PyCFunction>(MobileBroadbandAccount_GetConnectionProfiles), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandAccount, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandAccount), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandAccount[] = {
         { "current_device_information", reinterpret_cast<getter>(MobileBroadbandAccount_get_CurrentDeviceInformation), nullptr, nullptr, nullptr },
@@ -5525,16 +5427,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "service_provider_guid", reinterpret_cast<getter>(MobileBroadbandAccount_get_ServiceProviderGuid), nullptr, nullptr, nullptr },
         { "service_provider_name", reinterpret_cast<getter>(MobileBroadbandAccount_get_ServiceProviderName), nullptr, nullptr, nullptr },
         { "account_experience_url", reinterpret_cast<getter>(MobileBroadbandAccount_get_AccountExperienceUrl), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandAccount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandAccount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandAccount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandAccount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandAccount) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandAccount = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccount",
@@ -5545,13 +5445,11 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyGetSetDef getset_MobileBroadbandAccount_Static[] = {
         { "available_network_account_ids", reinterpret_cast<getter>(MobileBroadbandAccount_get_AvailableNetworkAccountIds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MobileBroadbandAccount_Static[] = {
         { "create_from_network_account_id", reinterpret_cast<PyCFunction>(MobileBroadbandAccount_CreateFromNetworkAccountId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MobileBroadbandAccount_Static[] = 
     {
@@ -5561,14 +5459,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_MobileBroadbandAccount_Static =
-    {
+    static PyType_Spec type_spec_MobileBroadbandAccount_Static = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccount_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MobileBroadbandAccount_Static
-    };
+        type_slots_MobileBroadbandAccount_Static};
 
     // ----- MobileBroadbandAccountEventArgs class --------------------
 
@@ -5644,21 +5540,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandAccountEventArgs[] = {
         { "_assign_array_", _assign_array_MobileBroadbandAccountEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandAccountEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandAccountEventArgs[] = {
         { "network_account_id", reinterpret_cast<getter>(MobileBroadbandAccountEventArgs_get_NetworkAccountId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandAccountEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandAccountEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandAccountEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandAccountEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandAccountEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandAccountEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccountEventArgs",
@@ -5801,23 +5694,20 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandAccountUpdatedEventArgs[] = {
         { "_assign_array_", _assign_array_MobileBroadbandAccountUpdatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandAccountUpdatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandAccountUpdatedEventArgs[] = {
         { "has_device_information_changed", reinterpret_cast<getter>(MobileBroadbandAccountUpdatedEventArgs_get_HasDeviceInformationChanged), nullptr, nullptr, nullptr },
         { "has_network_changed", reinterpret_cast<getter>(MobileBroadbandAccountUpdatedEventArgs_get_HasNetworkChanged), nullptr, nullptr, nullptr },
         { "network_account_id", reinterpret_cast<getter>(MobileBroadbandAccountUpdatedEventArgs_get_NetworkAccountId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandAccountUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandAccountUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandAccountUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandAccountUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandAccountUpdatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandAccountUpdatedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccountUpdatedEventArgs",
@@ -6341,21 +6231,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "remove_stopped", reinterpret_cast<PyCFunction>(MobileBroadbandAccountWatcher_remove_Stopped), METH_O, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandAccountWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandAccountWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandAccountWatcher[] = {
         { "status", reinterpret_cast<getter>(MobileBroadbandAccountWatcher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandAccountWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandAccountWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandAccountWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandAccountWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandAccountWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandAccountWatcher = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccountWatcher",
@@ -6493,22 +6380,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandAntennaSar[] = {
         { "_assign_array_", _assign_array_MobileBroadbandAntennaSar, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandAntennaSar), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandAntennaSar[] = {
         { "antenna_index", reinterpret_cast<getter>(MobileBroadbandAntennaSar_get_AntennaIndex), nullptr, nullptr, nullptr },
         { "sar_backoff_index", reinterpret_cast<getter>(MobileBroadbandAntennaSar_get_SarBackoffIndex), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandAntennaSar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandAntennaSar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandAntennaSar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandAntennaSar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandAntennaSar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandAntennaSar = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAntennaSar",
@@ -6801,8 +6685,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandCellCdma[] = {
         { "_assign_array_", _assign_array_MobileBroadbandCellCdma, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandCellCdma), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandCellCdma[] = {
         { "base_station_id", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_BaseStationId), nullptr, nullptr, nullptr },
@@ -6813,16 +6696,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "network_id", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_NetworkId), nullptr, nullptr, nullptr },
         { "pilot_signal_strength_in_db", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_PilotSignalStrengthInDB), nullptr, nullptr, nullptr },
         { "system_id", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_SystemId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandCellCdma[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandCellCdma) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandCellCdma) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandCellCdma) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandCellCdma) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandCellCdma = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellCdma",
@@ -7085,8 +6966,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandCellGsm[] = {
         { "_assign_array_", _assign_array_MobileBroadbandCellGsm, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandCellGsm), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandCellGsm[] = {
         { "base_station_id", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_BaseStationId), nullptr, nullptr, nullptr },
@@ -7096,16 +6976,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "provider_id", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_ProviderId), nullptr, nullptr, nullptr },
         { "received_signal_strength_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_ReceivedSignalStrengthInDBm), nullptr, nullptr, nullptr },
         { "timing_advance_in_bit_periods", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_TimingAdvanceInBitPeriods), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandCellGsm[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandCellGsm) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandCellGsm) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandCellGsm) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandCellGsm) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandCellGsm = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellGsm",
@@ -7398,8 +7276,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandCellLte[] = {
         { "_assign_array_", _assign_array_MobileBroadbandCellLte, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandCellLte), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandCellLte[] = {
         { "cell_id", reinterpret_cast<getter>(MobileBroadbandCellLte_get_CellId), nullptr, nullptr, nullptr },
@@ -7410,16 +7287,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "reference_signal_received_quality_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellLte_get_ReferenceSignalReceivedQualityInDBm), nullptr, nullptr, nullptr },
         { "timing_advance_in_bit_periods", reinterpret_cast<getter>(MobileBroadbandCellLte_get_TimingAdvanceInBitPeriods), nullptr, nullptr, nullptr },
         { "tracking_area_code", reinterpret_cast<getter>(MobileBroadbandCellLte_get_TrackingAreaCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandCellLte[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandCellLte) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandCellLte) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandCellLte) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandCellLte) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandCellLte = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellLte",
@@ -7742,8 +7617,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandCellNR[] = {
         { "_assign_array_", _assign_array_MobileBroadbandCellNR, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandCellNR), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandCellNR[] = {
         { "cell_id", reinterpret_cast<getter>(MobileBroadbandCellNR_get_CellId), nullptr, nullptr, nullptr },
@@ -7755,16 +7629,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "signal_to_noise_ratio_in_db", reinterpret_cast<getter>(MobileBroadbandCellNR_get_SignalToNoiseRatioInDB), nullptr, nullptr, nullptr },
         { "timing_advance_in_nanoseconds", reinterpret_cast<getter>(MobileBroadbandCellNR_get_TimingAdvanceInNanoseconds), nullptr, nullptr, nullptr },
         { "tracking_area_code", reinterpret_cast<getter>(MobileBroadbandCellNR_get_TrackingAreaCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandCellNR[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandCellNR) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandCellNR) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandCellNR) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandCellNR) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandCellNR = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellNR",
@@ -8057,8 +7929,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandCellTdscdma[] = {
         { "_assign_array_", _assign_array_MobileBroadbandCellTdscdma, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandCellTdscdma), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandCellTdscdma[] = {
         { "cell_id", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_CellId), nullptr, nullptr, nullptr },
@@ -8069,16 +7940,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "provider_id", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_ProviderId), nullptr, nullptr, nullptr },
         { "received_signal_code_power_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_ReceivedSignalCodePowerInDBm), nullptr, nullptr, nullptr },
         { "timing_advance_in_bit_periods", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_TimingAdvanceInBitPeriods), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandCellTdscdma[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandCellTdscdma) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandCellTdscdma) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandCellTdscdma) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandCellTdscdma) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandCellTdscdma = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellTdscdma",
@@ -8371,8 +8240,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandCellUmts[] = {
         { "_assign_array_", _assign_array_MobileBroadbandCellUmts, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandCellUmts), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandCellUmts[] = {
         { "cell_id", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_CellId), nullptr, nullptr, nullptr },
@@ -8383,16 +8251,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "provider_id", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_ProviderId), nullptr, nullptr, nullptr },
         { "received_signal_code_power_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_ReceivedSignalCodePowerInDBm), nullptr, nullptr, nullptr },
         { "signal_to_noise_ratio_in_db", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_SignalToNoiseRatioInDB), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandCellUmts[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandCellUmts) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandCellUmts) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandCellUmts) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandCellUmts) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandCellUmts = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellUmts",
@@ -8805,8 +8671,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandCellsInfo[] = {
         { "_assign_array_", _assign_array_MobileBroadbandCellsInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandCellsInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandCellsInfo[] = {
         { "neighboring_cells_cdma", reinterpret_cast<getter>(MobileBroadbandCellsInfo_get_NeighboringCellsCdma), nullptr, nullptr, nullptr },
@@ -8821,16 +8686,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "serving_cells_umts", reinterpret_cast<getter>(MobileBroadbandCellsInfo_get_ServingCellsUmts), nullptr, nullptr, nullptr },
         { "neighboring_cells_n_r", reinterpret_cast<getter>(MobileBroadbandCellsInfo_get_NeighboringCellsNR), nullptr, nullptr, nullptr },
         { "serving_cells_n_r", reinterpret_cast<getter>(MobileBroadbandCellsInfo_get_ServingCellsNR), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandCellsInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandCellsInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandCellsInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandCellsInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandCellsInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandCellsInfo = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellsInfo",
@@ -8913,21 +8776,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandCurrentSlotIndexChangedEventArgs[] = {
         { "_assign_array_", _assign_array_MobileBroadbandCurrentSlotIndexChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandCurrentSlotIndexChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandCurrentSlotIndexChangedEventArgs[] = {
         { "current_slot_index", reinterpret_cast<getter>(MobileBroadbandCurrentSlotIndexChangedEventArgs_get_CurrentSlotIndex), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandCurrentSlotIndexChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandCurrentSlotIndexChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandCurrentSlotIndexChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandCurrentSlotIndexChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandCurrentSlotIndexChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCurrentSlotIndexChangedEventArgs",
@@ -9610,8 +9470,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandDeviceInformation[] = {
         { "_assign_array_", _assign_array_MobileBroadbandDeviceInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandDeviceInformation[] = {
         { "cellular_class", reinterpret_cast<getter>(MobileBroadbandDeviceInformation_get_CellularClass), nullptr, nullptr, nullptr },
@@ -9635,16 +9494,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "sim_pnn", reinterpret_cast<getter>(MobileBroadbandDeviceInformation_get_SimPnn), nullptr, nullptr, nullptr },
         { "sim_spn", reinterpret_cast<getter>(MobileBroadbandDeviceInformation_get_SimSpn), nullptr, nullptr, nullptr },
         { "slot_manager", reinterpret_cast<getter>(MobileBroadbandDeviceInformation_get_SlotManager), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandDeviceInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandDeviceInformation = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceInformation",
@@ -9839,22 +9696,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "open_data_session", reinterpret_cast<PyCFunction>(MobileBroadbandDeviceService_OpenDataSession), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandDeviceService, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceService), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandDeviceService[] = {
         { "device_service_id", reinterpret_cast<getter>(MobileBroadbandDeviceService_get_DeviceServiceId), nullptr, nullptr, nullptr },
         { "supported_commands", reinterpret_cast<getter>(MobileBroadbandDeviceService_get_SupportedCommands), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandDeviceService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceService) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceService) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandDeviceService = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceService",
@@ -10027,24 +9881,21 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandDeviceServiceCommandEventArgs[] = {
         { "_assign_array_", _assign_array_MobileBroadbandDeviceServiceCommandEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceServiceCommandEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandDeviceServiceCommandEventArgs[] = {
         { "device_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandEventArgs_get_DeviceId), nullptr, nullptr, nullptr },
         { "device_service_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandEventArgs_get_DeviceServiceId), nullptr, nullptr, nullptr },
         { "event_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandEventArgs_get_EventId), nullptr, nullptr, nullptr },
         { "received_data", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandEventArgs_get_ReceivedData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandDeviceServiceCommandEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceServiceCommandEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceServiceCommandEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceServiceCommandEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceServiceCommandEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandEventArgs",
@@ -10157,22 +10008,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandDeviceServiceCommandResult[] = {
         { "_assign_array_", _assign_array_MobileBroadbandDeviceServiceCommandResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceServiceCommandResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandDeviceServiceCommandResult[] = {
         { "response_data", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandResult_get_ResponseData), nullptr, nullptr, nullptr },
         { "status_code", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandResult_get_StatusCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandDeviceServiceCommandResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceServiceCommandResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceServiceCommandResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceServiceCommandResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceServiceCommandResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandResult",
@@ -10422,20 +10270,17 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "remove_command_received", reinterpret_cast<PyCFunction>(MobileBroadbandDeviceServiceCommandSession_remove_CommandReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandDeviceServiceCommandSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceServiceCommandSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandDeviceServiceCommandSession[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandDeviceServiceCommandSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceServiceCommandSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceServiceCommandSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceServiceCommandSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceServiceCommandSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandSession = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandSession",
@@ -10518,21 +10363,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandDeviceServiceDataReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_MobileBroadbandDeviceServiceDataReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceServiceDataReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandDeviceServiceDataReceivedEventArgs[] = {
         { "received_data", reinterpret_cast<getter>(MobileBroadbandDeviceServiceDataReceivedEventArgs_get_ReceivedData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandDeviceServiceDataReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceServiceDataReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceServiceDataReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceServiceDataReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceServiceDataReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceDataReceivedEventArgs",
@@ -10737,20 +10579,17 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "remove_data_received", reinterpret_cast<PyCFunction>(MobileBroadbandDeviceServiceDataSession_remove_DataReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandDeviceServiceDataSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceServiceDataSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandDeviceServiceDataSession[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandDeviceServiceDataSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceServiceDataSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceServiceDataSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceServiceDataSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceServiceDataSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceDataSession = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceDataSession",
@@ -10893,23 +10732,20 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandDeviceServiceInformation[] = {
         { "_assign_array_", _assign_array_MobileBroadbandDeviceServiceInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceServiceInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandDeviceServiceInformation[] = {
         { "device_service_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceInformation_get_DeviceServiceId), nullptr, nullptr, nullptr },
         { "is_data_read_supported", reinterpret_cast<getter>(MobileBroadbandDeviceServiceInformation_get_IsDataReadSupported), nullptr, nullptr, nullptr },
         { "is_data_write_supported", reinterpret_cast<getter>(MobileBroadbandDeviceServiceInformation_get_IsDataWriteSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandDeviceServiceInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceServiceInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceServiceInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceServiceInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceServiceInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceInformation = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceInformation",
@@ -11082,24 +10918,21 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandDeviceServiceTriggerDetails[] = {
         { "_assign_array_", _assign_array_MobileBroadbandDeviceServiceTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceServiceTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandDeviceServiceTriggerDetails[] = {
         { "device_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceTriggerDetails_get_DeviceId), nullptr, nullptr, nullptr },
         { "device_service_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceTriggerDetails_get_DeviceServiceId), nullptr, nullptr, nullptr },
         { "received_data", reinterpret_cast<getter>(MobileBroadbandDeviceServiceTriggerDetails_get_ReceivedData), nullptr, nullptr, nullptr },
         { "event_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceTriggerDetails_get_EventId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandDeviceServiceTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceServiceTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceServiceTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceServiceTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceServiceTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceTriggerDetails",
@@ -12005,8 +11838,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "remove_is_in_emergency_call_mode_changed", reinterpret_cast<PyCFunction>(MobileBroadbandModem_remove_IsInEmergencyCallModeChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandModem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandModem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandModem[] = {
         { "current_account", reinterpret_cast<getter>(MobileBroadbandModem_get_CurrentAccount), nullptr, nullptr, nullptr },
@@ -12017,16 +11849,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "max_device_service_command_size_in_bytes", reinterpret_cast<getter>(MobileBroadbandModem_get_MaxDeviceServiceCommandSizeInBytes), nullptr, nullptr, nullptr },
         { "max_device_service_data_size_in_bytes", reinterpret_cast<getter>(MobileBroadbandModem_get_MaxDeviceServiceDataSizeInBytes), nullptr, nullptr, nullptr },
         { "is_in_emergency_call_mode", reinterpret_cast<getter>(MobileBroadbandModem_get_IsInEmergencyCallMode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandModem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandModem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandModem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandModem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandModem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandModem = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModem",
@@ -12036,15 +11866,13 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_MobileBroadbandModem};
 
     static PyGetSetDef getset_MobileBroadbandModem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MobileBroadbandModem_Static[] = {
         { "from_id", reinterpret_cast<PyCFunction>(MobileBroadbandModem_FromId), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetDefault), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MobileBroadbandModem_Static[] = 
     {
@@ -12054,14 +11882,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_MobileBroadbandModem_Static =
-    {
+    static PyType_Spec type_spec_MobileBroadbandModem_Static = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MobileBroadbandModem_Static
-    };
+        type_slots_MobileBroadbandModem_Static};
 
     // ----- MobileBroadbandModemConfiguration class --------------------
 
@@ -12227,24 +12053,21 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandModemConfiguration[] = {
         { "_assign_array_", _assign_array_MobileBroadbandModemConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandModemConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandModemConfiguration[] = {
         { "home_provider_id", reinterpret_cast<getter>(MobileBroadbandModemConfiguration_get_HomeProviderId), nullptr, nullptr, nullptr },
         { "home_provider_name", reinterpret_cast<getter>(MobileBroadbandModemConfiguration_get_HomeProviderName), nullptr, nullptr, nullptr },
         { "uicc", reinterpret_cast<getter>(MobileBroadbandModemConfiguration_get_Uicc), nullptr, nullptr, nullptr },
         { "sar_manager", reinterpret_cast<getter>(MobileBroadbandModemConfiguration_get_SarManager), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandModemConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandModemConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandModemConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandModemConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandModemConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandModemConfiguration = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModemConfiguration",
@@ -12493,20 +12316,17 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "clear_configuration_async", reinterpret_cast<PyCFunction>(MobileBroadbandModemIsolation_ClearConfigurationAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandModemIsolation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandModemIsolation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandModemIsolation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandModemIsolation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandModemIsolation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandModemIsolation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandModemIsolation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandModemIsolation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandModemIsolation = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModemIsolation",
@@ -12983,8 +12803,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "show_connection_ui", reinterpret_cast<PyCFunction>(MobileBroadbandNetwork_ShowConnectionUI), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandNetwork, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandNetwork), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandNetwork[] = {
         { "access_point_name", reinterpret_cast<getter>(MobileBroadbandNetwork_get_AccessPointName), nullptr, nullptr, nullptr },
@@ -12997,16 +12816,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "registered_provider_name", reinterpret_cast<getter>(MobileBroadbandNetwork_get_RegisteredProviderName), nullptr, nullptr, nullptr },
         { "registration_network_error", reinterpret_cast<getter>(MobileBroadbandNetwork_get_RegistrationNetworkError), nullptr, nullptr, nullptr },
         { "registration_uicc_apps", reinterpret_cast<getter>(MobileBroadbandNetwork_get_RegistrationUiccApps), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandNetwork[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandNetwork) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandNetwork) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandNetwork) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandNetwork) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandNetwork = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandNetwork",
@@ -13119,22 +12936,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandNetworkRegistrationStateChange[] = {
         { "_assign_array_", _assign_array_MobileBroadbandNetworkRegistrationStateChange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandNetworkRegistrationStateChange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandNetworkRegistrationStateChange[] = {
         { "device_id", reinterpret_cast<getter>(MobileBroadbandNetworkRegistrationStateChange_get_DeviceId), nullptr, nullptr, nullptr },
         { "network", reinterpret_cast<getter>(MobileBroadbandNetworkRegistrationStateChange_get_Network), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandNetworkRegistrationStateChange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandNetworkRegistrationStateChange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandNetworkRegistrationStateChange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandNetworkRegistrationStateChange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandNetworkRegistrationStateChange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandNetworkRegistrationStateChange = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandNetworkRegistrationStateChange",
@@ -13217,21 +13031,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails[] = {
         { "_assign_array_", _assign_array_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails[] = {
         { "network_registration_state_changes", reinterpret_cast<getter>(MobileBroadbandNetworkRegistrationStateChangeTriggerDetails_get_NetworkRegistrationStateChanges), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails",
@@ -13374,23 +13185,20 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandPco[] = {
         { "_assign_array_", _assign_array_MobileBroadbandPco, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandPco), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandPco[] = {
         { "data", reinterpret_cast<getter>(MobileBroadbandPco_get_Data), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(MobileBroadbandPco_get_DeviceId), nullptr, nullptr, nullptr },
         { "is_complete", reinterpret_cast<getter>(MobileBroadbandPco_get_IsComplete), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandPco[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandPco) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandPco) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandPco) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandPco) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandPco = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPco",
@@ -13473,21 +13281,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandPcoDataChangeTriggerDetails[] = {
         { "_assign_array_", _assign_array_MobileBroadbandPcoDataChangeTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandPcoDataChangeTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandPcoDataChangeTriggerDetails[] = {
         { "updated_data", reinterpret_cast<getter>(MobileBroadbandPcoDataChangeTriggerDetails_get_UpdatedData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandPcoDataChangeTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandPcoDataChangeTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandPcoDataChangeTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandPcoDataChangeTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandPcoDataChangeTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandPcoDataChangeTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPcoDataChangeTriggerDetails",
@@ -13967,8 +13772,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "unblock_async", reinterpret_cast<PyCFunction>(MobileBroadbandPin_UnblockAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandPin, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandPin), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandPin[] = {
         { "attempts_remaining", reinterpret_cast<getter>(MobileBroadbandPin_get_AttemptsRemaining), nullptr, nullptr, nullptr },
@@ -13978,16 +13782,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "max_length", reinterpret_cast<getter>(MobileBroadbandPin_get_MaxLength), nullptr, nullptr, nullptr },
         { "min_length", reinterpret_cast<getter>(MobileBroadbandPin_get_MinLength), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(MobileBroadbandPin_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandPin[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandPin) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandPin) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandPin) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandPin) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandPin = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPin",
@@ -14130,23 +13932,20 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandPinLockStateChange[] = {
         { "_assign_array_", _assign_array_MobileBroadbandPinLockStateChange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandPinLockStateChange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandPinLockStateChange[] = {
         { "device_id", reinterpret_cast<getter>(MobileBroadbandPinLockStateChange_get_DeviceId), nullptr, nullptr, nullptr },
         { "pin_lock_state", reinterpret_cast<getter>(MobileBroadbandPinLockStateChange_get_PinLockState), nullptr, nullptr, nullptr },
         { "pin_type", reinterpret_cast<getter>(MobileBroadbandPinLockStateChange_get_PinType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandPinLockStateChange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandPinLockStateChange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandPinLockStateChange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandPinLockStateChange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandPinLockStateChange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandPinLockStateChange = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinLockStateChange",
@@ -14229,21 +14028,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandPinLockStateChangeTriggerDetails[] = {
         { "_assign_array_", _assign_array_MobileBroadbandPinLockStateChangeTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandPinLockStateChangeTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandPinLockStateChangeTriggerDetails[] = {
         { "pin_lock_state_changes", reinterpret_cast<getter>(MobileBroadbandPinLockStateChangeTriggerDetails_get_PinLockStateChanges), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandPinLockStateChangeTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandPinLockStateChangeTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandPinLockStateChangeTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandPinLockStateChangeTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandPinLockStateChangeTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandPinLockStateChangeTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinLockStateChangeTriggerDetails",
@@ -14369,21 +14165,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "get_pin", reinterpret_cast<PyCFunction>(MobileBroadbandPinManager_GetPin), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandPinManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandPinManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandPinManager[] = {
         { "supported_pins", reinterpret_cast<getter>(MobileBroadbandPinManager_get_SupportedPins), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandPinManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandPinManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandPinManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandPinManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandPinManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandPinManager = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinManager",
@@ -14496,22 +14289,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandPinOperationResult[] = {
         { "_assign_array_", _assign_array_MobileBroadbandPinOperationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandPinOperationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandPinOperationResult[] = {
         { "attempts_remaining", reinterpret_cast<getter>(MobileBroadbandPinOperationResult_get_AttemptsRemaining), nullptr, nullptr, nullptr },
         { "is_successful", reinterpret_cast<getter>(MobileBroadbandPinOperationResult_get_IsSuccessful), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandPinOperationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandPinOperationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandPinOperationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandPinOperationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandPinOperationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandPinOperationResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinOperationResult",
@@ -14624,22 +14414,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandRadioStateChange[] = {
         { "_assign_array_", _assign_array_MobileBroadbandRadioStateChange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandRadioStateChange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandRadioStateChange[] = {
         { "device_id", reinterpret_cast<getter>(MobileBroadbandRadioStateChange_get_DeviceId), nullptr, nullptr, nullptr },
         { "radio_state", reinterpret_cast<getter>(MobileBroadbandRadioStateChange_get_RadioState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandRadioStateChange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandRadioStateChange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandRadioStateChange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandRadioStateChange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandRadioStateChange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandRadioStateChange = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandRadioStateChange",
@@ -14722,21 +14509,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandRadioStateChangeTriggerDetails[] = {
         { "_assign_array_", _assign_array_MobileBroadbandRadioStateChangeTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandRadioStateChangeTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandRadioStateChangeTriggerDetails[] = {
         { "radio_state_changes", reinterpret_cast<getter>(MobileBroadbandRadioStateChangeTriggerDetails_get_RadioStateChanges), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandRadioStateChangeTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandRadioStateChangeTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandRadioStateChangeTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandRadioStateChangeTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandRadioStateChangeTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandRadioStateChangeTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandRadioStateChangeTriggerDetails",
@@ -15340,8 +15124,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "remove_transmission_state_changed", reinterpret_cast<PyCFunction>(MobileBroadbandSarManager_remove_TransmissionStateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandSarManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandSarManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandSarManager[] = {
         { "antennas", reinterpret_cast<getter>(MobileBroadbandSarManager_get_Antennas), nullptr, nullptr, nullptr },
@@ -15349,16 +15132,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "is_backoff_enabled", reinterpret_cast<getter>(MobileBroadbandSarManager_get_IsBackoffEnabled), nullptr, nullptr, nullptr },
         { "is_sar_controlled_by_hardware", reinterpret_cast<getter>(MobileBroadbandSarManager_get_IsSarControlledByHardware), nullptr, nullptr, nullptr },
         { "is_wi_fi_hardware_integrated", reinterpret_cast<getter>(MobileBroadbandSarManager_get_IsWiFiHardwareIntegrated), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandSarManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandSarManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandSarManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandSarManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandSarManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandSarManager = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSarManager",
@@ -15501,23 +15282,20 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandSlotInfo[] = {
         { "_assign_array_", _assign_array_MobileBroadbandSlotInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandSlotInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandSlotInfo[] = {
         { "index", reinterpret_cast<getter>(MobileBroadbandSlotInfo_get_Index), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(MobileBroadbandSlotInfo_get_State), nullptr, nullptr, nullptr },
         { "icc_id", reinterpret_cast<getter>(MobileBroadbandSlotInfo_get_IccId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandSlotInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandSlotInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandSlotInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandSlotInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandSlotInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandSlotInfo = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSlotInfo",
@@ -15600,21 +15378,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandSlotInfoChangedEventArgs[] = {
         { "_assign_array_", _assign_array_MobileBroadbandSlotInfoChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandSlotInfoChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandSlotInfoChangedEventArgs[] = {
         { "slot_info", reinterpret_cast<getter>(MobileBroadbandSlotInfoChangedEventArgs_get_SlotInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandSlotInfoChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandSlotInfoChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandSlotInfoChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandSlotInfoChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandSlotInfoChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandSlotInfoChangedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSlotInfoChangedEventArgs",
@@ -15947,22 +15722,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "remove_slot_info_changed", reinterpret_cast<PyCFunction>(MobileBroadbandSlotManager_remove_SlotInfoChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandSlotManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandSlotManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandSlotManager[] = {
         { "current_slot_index", reinterpret_cast<getter>(MobileBroadbandSlotManager_get_CurrentSlotIndex), nullptr, nullptr, nullptr },
         { "slot_infos", reinterpret_cast<getter>(MobileBroadbandSlotManager_get_SlotInfos), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandSlotManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandSlotManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandSlotManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandSlotManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandSlotManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandSlotManager = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSlotManager",
@@ -16045,21 +15817,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandTransmissionStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_MobileBroadbandTransmissionStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandTransmissionStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandTransmissionStateChangedEventArgs[] = {
         { "is_transmitting", reinterpret_cast<getter>(MobileBroadbandTransmissionStateChangedEventArgs_get_IsTransmitting), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandTransmissionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandTransmissionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandTransmissionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandTransmissionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandTransmissionStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandTransmissionStateChangedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandTransmissionStateChangedEventArgs",
@@ -16183,21 +15952,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "get_uicc_apps_async", reinterpret_cast<PyCFunction>(MobileBroadbandUicc_GetUiccAppsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandUicc, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandUicc), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandUicc[] = {
         { "sim_icc_id", reinterpret_cast<getter>(MobileBroadbandUicc_get_SimIccId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandUicc[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandUicc) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandUicc) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandUicc) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandUicc) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandUicc = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUicc",
@@ -16397,22 +16163,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "read_record_async", reinterpret_cast<PyCFunction>(MobileBroadbandUiccApp_ReadRecordAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandUiccApp, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandUiccApp), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandUiccApp[] = {
         { "id", reinterpret_cast<getter>(MobileBroadbandUiccApp_get_Id), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(MobileBroadbandUiccApp_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandUiccApp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandUiccApp) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandUiccApp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandUiccApp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandUiccApp) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandUiccApp = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccApp",
@@ -16525,22 +16288,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandUiccAppReadRecordResult[] = {
         { "_assign_array_", _assign_array_MobileBroadbandUiccAppReadRecordResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandUiccAppReadRecordResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandUiccAppReadRecordResult[] = {
         { "data", reinterpret_cast<getter>(MobileBroadbandUiccAppReadRecordResult_get_Data), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(MobileBroadbandUiccAppReadRecordResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandUiccAppReadRecordResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandUiccAppReadRecordResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandUiccAppReadRecordResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandUiccAppReadRecordResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandUiccAppReadRecordResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandUiccAppReadRecordResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccAppReadRecordResult",
@@ -16773,8 +16533,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandUiccAppRecordDetailsResult[] = {
         { "_assign_array_", _assign_array_MobileBroadbandUiccAppRecordDetailsResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandUiccAppRecordDetailsResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandUiccAppRecordDetailsResult[] = {
         { "kind", reinterpret_cast<getter>(MobileBroadbandUiccAppRecordDetailsResult_get_Kind), nullptr, nullptr, nullptr },
@@ -16783,16 +16542,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "record_size", reinterpret_cast<getter>(MobileBroadbandUiccAppRecordDetailsResult_get_RecordSize), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(MobileBroadbandUiccAppRecordDetailsResult_get_Status), nullptr, nullptr, nullptr },
         { "write_access_condition", reinterpret_cast<getter>(MobileBroadbandUiccAppRecordDetailsResult_get_WriteAccessCondition), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandUiccAppRecordDetailsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandUiccAppRecordDetailsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandUiccAppRecordDetailsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandUiccAppRecordDetailsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandUiccAppRecordDetailsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandUiccAppRecordDetailsResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccAppRecordDetailsResult",
@@ -16905,22 +16662,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandUiccAppsResult[] = {
         { "_assign_array_", _assign_array_MobileBroadbandUiccAppsResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandUiccAppsResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MobileBroadbandUiccAppsResult[] = {
         { "status", reinterpret_cast<getter>(MobileBroadbandUiccAppsResult_get_Status), nullptr, nullptr, nullptr },
         { "uicc_apps", reinterpret_cast<getter>(MobileBroadbandUiccAppsResult_get_UiccApps), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MobileBroadbandUiccAppsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandUiccAppsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandUiccAppsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandUiccAppsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandUiccAppsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MobileBroadbandUiccAppsResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccAppsResult",
@@ -17003,21 +16757,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_NetworkOperatorDataUsageTriggerDetails[] = {
         { "_assign_array_", _assign_array_NetworkOperatorDataUsageTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkOperatorDataUsageTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkOperatorDataUsageTriggerDetails[] = {
         { "notification_kind", reinterpret_cast<getter>(NetworkOperatorDataUsageTriggerDetails_get_NotificationKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkOperatorDataUsageTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorDataUsageTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorDataUsageTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorDataUsageTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorDataUsageTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkOperatorDataUsageTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorDataUsageTriggerDetails",
@@ -17295,8 +17046,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "authorize_tethering", reinterpret_cast<PyCFunction>(NetworkOperatorNotificationEventDetails_AuthorizeTethering), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NetworkOperatorNotificationEventDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkOperatorNotificationEventDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkOperatorNotificationEventDetails[] = {
         { "encoding_type", reinterpret_cast<getter>(NetworkOperatorNotificationEventDetails_get_EncodingType), nullptr, nullptr, nullptr },
@@ -17305,16 +17055,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "notification_type", reinterpret_cast<getter>(NetworkOperatorNotificationEventDetails_get_NotificationType), nullptr, nullptr, nullptr },
         { "rule_id", reinterpret_cast<getter>(NetworkOperatorNotificationEventDetails_get_RuleId), nullptr, nullptr, nullptr },
         { "sms_message", reinterpret_cast<getter>(NetworkOperatorNotificationEventDetails_get_SmsMessage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkOperatorNotificationEventDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorNotificationEventDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorNotificationEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorNotificationEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorNotificationEventDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkOperatorNotificationEventDetails = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorNotificationEventDetails",
@@ -17837,24 +17585,21 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "is_band_supported_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringAccessPointConfiguration_IsBandSupportedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NetworkOperatorTetheringAccessPointConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkOperatorTetheringAccessPointConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkOperatorTetheringAccessPointConfiguration[] = {
         { "ssid", reinterpret_cast<getter>(NetworkOperatorTetheringAccessPointConfiguration_get_Ssid), reinterpret_cast<setter>(NetworkOperatorTetheringAccessPointConfiguration_put_Ssid), nullptr, nullptr },
         { "passphrase", reinterpret_cast<getter>(NetworkOperatorTetheringAccessPointConfiguration_get_Passphrase), reinterpret_cast<setter>(NetworkOperatorTetheringAccessPointConfiguration_put_Passphrase), nullptr, nullptr },
         { "band", reinterpret_cast<getter>(NetworkOperatorTetheringAccessPointConfiguration_get_Band), reinterpret_cast<setter>(NetworkOperatorTetheringAccessPointConfiguration_put_Band), nullptr, nullptr },
         { "authentication_kind", reinterpret_cast<getter>(NetworkOperatorTetheringAccessPointConfiguration_get_AuthenticationKind), reinterpret_cast<setter>(NetworkOperatorTetheringAccessPointConfiguration_put_AuthenticationKind), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkOperatorTetheringAccessPointConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorTetheringAccessPointConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorTetheringAccessPointConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorTetheringAccessPointConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorTetheringAccessPointConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkOperatorTetheringAccessPointConfiguration = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringAccessPointConfiguration",
@@ -17967,22 +17712,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_NetworkOperatorTetheringClient[] = {
         { "_assign_array_", _assign_array_NetworkOperatorTetheringClient, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkOperatorTetheringClient), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkOperatorTetheringClient[] = {
         { "host_names", reinterpret_cast<getter>(NetworkOperatorTetheringClient_get_HostNames), nullptr, nullptr, nullptr },
         { "mac_address", reinterpret_cast<getter>(NetworkOperatorTetheringClient_get_MacAddress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkOperatorTetheringClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorTetheringClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorTetheringClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorTetheringClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorTetheringClient) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkOperatorTetheringClient = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringClient",
@@ -18776,23 +18518,20 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "stop_tethering_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_StopTetheringAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NetworkOperatorTetheringManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkOperatorTetheringManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkOperatorTetheringManager[] = {
         { "client_count", reinterpret_cast<getter>(NetworkOperatorTetheringManager_get_ClientCount), nullptr, nullptr, nullptr },
         { "max_client_count", reinterpret_cast<getter>(NetworkOperatorTetheringManager_get_MaxClientCount), nullptr, nullptr, nullptr },
         { "tethering_operational_state", reinterpret_cast<getter>(NetworkOperatorTetheringManager_get_TetheringOperationalState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkOperatorTetheringManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorTetheringManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorTetheringManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorTetheringManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorTetheringManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkOperatorTetheringManager = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringManager",
@@ -18802,8 +18541,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_NetworkOperatorTetheringManager};
 
     static PyGetSetDef getset_NetworkOperatorTetheringManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_NetworkOperatorTetheringManager_Static[] = {
         { "create_from_connection_profile", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_CreateFromConnectionProfile), METH_VARARGS, nullptr },
@@ -18816,8 +18554,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "get_tethering_capability", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_GetTetheringCapability), METH_VARARGS, nullptr },
         { "get_tethering_capability_from_connection_profile", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_GetTetheringCapabilityFromConnectionProfile), METH_VARARGS, nullptr },
         { "is_no_connections_timeout_enabled", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_IsNoConnectionsTimeoutEnabled), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_NetworkOperatorTetheringManager_Static[] = 
     {
@@ -18827,14 +18564,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_NetworkOperatorTetheringManager_Static =
-    {
+    static PyType_Spec type_spec_NetworkOperatorTetheringManager_Static = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_NetworkOperatorTetheringManager_Static
-    };
+        type_slots_NetworkOperatorTetheringManager_Static};
 
     // ----- NetworkOperatorTetheringOperationResult class --------------------
 
@@ -18940,22 +18675,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_NetworkOperatorTetheringOperationResult[] = {
         { "_assign_array_", _assign_array_NetworkOperatorTetheringOperationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkOperatorTetheringOperationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkOperatorTetheringOperationResult[] = {
         { "additional_error_message", reinterpret_cast<getter>(NetworkOperatorTetheringOperationResult_get_AdditionalErrorMessage), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(NetworkOperatorTetheringOperationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkOperatorTetheringOperationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorTetheringOperationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorTetheringOperationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorTetheringOperationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorTetheringOperationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkOperatorTetheringOperationResult = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringOperationResult",
@@ -19547,8 +19279,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "is_band_supported_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringSessionAccessPointConfiguration_IsBandSupportedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NetworkOperatorTetheringSessionAccessPointConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NetworkOperatorTetheringSessionAccessPointConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NetworkOperatorTetheringSessionAccessPointConfiguration[] = {
         { "ssid", reinterpret_cast<getter>(NetworkOperatorTetheringSessionAccessPointConfiguration_get_Ssid), reinterpret_cast<setter>(NetworkOperatorTetheringSessionAccessPointConfiguration_put_Ssid), nullptr, nullptr },
@@ -19556,16 +19287,14 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "passphrase", reinterpret_cast<getter>(NetworkOperatorTetheringSessionAccessPointConfiguration_get_Passphrase), reinterpret_cast<setter>(NetworkOperatorTetheringSessionAccessPointConfiguration_put_Passphrase), nullptr, nullptr },
         { "band", reinterpret_cast<getter>(NetworkOperatorTetheringSessionAccessPointConfiguration_get_Band), reinterpret_cast<setter>(NetworkOperatorTetheringSessionAccessPointConfiguration_put_Band), nullptr, nullptr },
         { "authentication_kind", reinterpret_cast<getter>(NetworkOperatorTetheringSessionAccessPointConfiguration_get_AuthenticationKind), reinterpret_cast<setter>(NetworkOperatorTetheringSessionAccessPointConfiguration_put_AuthenticationKind), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NetworkOperatorTetheringSessionAccessPointConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorTetheringSessionAccessPointConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorTetheringSessionAccessPointConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorTetheringSessionAccessPointConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorTetheringSessionAccessPointConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NetworkOperatorTetheringSessionAccessPointConfiguration = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringSessionAccessPointConfiguration",
@@ -19678,22 +19407,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_ProvisionFromXmlDocumentResults[] = {
         { "_assign_array_", _assign_array_ProvisionFromXmlDocumentResults, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProvisionFromXmlDocumentResults), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProvisionFromXmlDocumentResults[] = {
         { "all_elements_provisioned", reinterpret_cast<getter>(ProvisionFromXmlDocumentResults_get_AllElementsProvisioned), nullptr, nullptr, nullptr },
         { "provision_results_xml", reinterpret_cast<getter>(ProvisionFromXmlDocumentResults_get_ProvisionResultsXml), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProvisionFromXmlDocumentResults[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProvisionFromXmlDocumentResults) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProvisionFromXmlDocumentResults) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProvisionFromXmlDocumentResults) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProvisionFromXmlDocumentResults) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProvisionFromXmlDocumentResults = {
         "winrt._winrt_windows_networking_networkoperators.ProvisionFromXmlDocumentResults",
@@ -19834,20 +19560,17 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "update_usage", reinterpret_cast<PyCFunction>(ProvisionedProfile_UpdateUsage), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProvisionedProfile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProvisionedProfile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProvisionedProfile[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProvisionedProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProvisionedProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProvisionedProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProvisionedProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProvisionedProfile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProvisionedProfile = {
         "winrt._winrt_windows_networking_networkoperators.ProvisionedProfile",
@@ -20051,20 +19774,17 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "provision_from_xml_document_async", reinterpret_cast<PyCFunction>(ProvisioningAgent_ProvisionFromXmlDocumentAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProvisioningAgent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProvisioningAgent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProvisioningAgent[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProvisioningAgent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProvisioningAgent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProvisioningAgent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProvisioningAgent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProvisioningAgent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProvisioningAgent = {
         "winrt._winrt_windows_networking_networkoperators.ProvisioningAgent",
@@ -20074,13 +19794,11 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_ProvisioningAgent};
 
     static PyGetSetDef getset_ProvisioningAgent_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ProvisioningAgent_Static[] = {
         { "create_from_network_account_id", reinterpret_cast<PyCFunction>(ProvisioningAgent_CreateFromNetworkAccountId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ProvisioningAgent_Static[] = 
     {
@@ -20090,14 +19808,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_ProvisioningAgent_Static =
-    {
+    static PyType_Spec type_spec_ProvisioningAgent_Static = {
         "winrt._winrt_windows_networking_networkoperators.ProvisioningAgent_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ProvisioningAgent_Static
-    };
+        type_slots_ProvisioningAgent_Static};
 
     // ----- TetheringEntitlementCheckTriggerDetails class --------------------
 
@@ -20259,21 +19975,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "deny_tethering", reinterpret_cast<PyCFunction>(TetheringEntitlementCheckTriggerDetails_DenyTethering), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TetheringEntitlementCheckTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TetheringEntitlementCheckTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TetheringEntitlementCheckTriggerDetails[] = {
         { "network_account_id", reinterpret_cast<getter>(TetheringEntitlementCheckTriggerDetails_get_NetworkAccountId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TetheringEntitlementCheckTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TetheringEntitlementCheckTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TetheringEntitlementCheckTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TetheringEntitlementCheckTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TetheringEntitlementCheckTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TetheringEntitlementCheckTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.TetheringEntitlementCheckTriggerDetails",
@@ -20573,22 +20286,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "set_payload", reinterpret_cast<PyCFunction>(UssdMessage_SetPayload), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UssdMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UssdMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UssdMessage[] = {
         { "payload_as_text", reinterpret_cast<getter>(UssdMessage_get_PayloadAsText), reinterpret_cast<setter>(UssdMessage_put_PayloadAsText), nullptr, nullptr },
         { "data_coding_scheme", reinterpret_cast<getter>(UssdMessage_get_DataCodingScheme), reinterpret_cast<setter>(UssdMessage_put_DataCodingScheme), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UssdMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UssdMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UssdMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UssdMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UssdMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UssdMessage = {
         "winrt._winrt_windows_networking_networkoperators.UssdMessage",
@@ -20701,22 +20411,19 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_UssdReply[] = {
         { "_assign_array_", _assign_array_UssdReply, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UssdReply), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UssdReply[] = {
         { "message", reinterpret_cast<getter>(UssdReply_get_Message), nullptr, nullptr, nullptr },
         { "result_code", reinterpret_cast<getter>(UssdReply_get_ResultCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UssdReply[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UssdReply) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UssdReply) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UssdReply) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UssdReply) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UssdReply = {
         "winrt._winrt_windows_networking_networkoperators.UssdReply",
@@ -20938,20 +20645,17 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "send_message_and_get_reply_async", reinterpret_cast<PyCFunction>(UssdSession_SendMessageAndGetReplyAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UssdSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UssdSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UssdSession[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UssdSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UssdSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UssdSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UssdSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UssdSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UssdSession = {
         "winrt._winrt_windows_networking_networkoperators.UssdSession",
@@ -20961,14 +20665,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_UssdSession};
 
     static PyGetSetDef getset_UssdSession_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UssdSession_Static[] = {
         { "create_from_network_account_id", reinterpret_cast<PyCFunction>(UssdSession_CreateFromNetworkAccountId), METH_VARARGS, nullptr },
         { "create_from_network_interface_id", reinterpret_cast<PyCFunction>(UssdSession_CreateFromNetworkInterfaceId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UssdSession_Static[] = 
     {
@@ -20978,14 +20680,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Spec type_spec_UssdSession_Static =
-    {
+    static PyType_Spec type_spec_UssdSession_Static = {
         "winrt._winrt_windows_networking_networkoperators.UssdSession_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UssdSession_Static
-    };
+        type_slots_UssdSession_Static};
 
     // ----- ESimProfileInstallProgress struct --------------------
 
@@ -21056,8 +20756,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyMethodDef _methods_ESimProfileInstallProgress[] = {
         { "_assign_array_", _assign_array_ESimProfileInstallProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* ESimProfileInstallProgress_get_TotalSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, void* /*unused*/) noexcept
     {
@@ -21128,8 +20827,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyGetSetDef _getset_ESimProfileInstallProgress[] = {
         { "total_size_in_bytes", reinterpret_cast<getter>(ESimProfileInstallProgress_get_TotalSizeInBytes), reinterpret_cast<setter>(ESimProfileInstallProgress_set_TotalSizeInBytes), nullptr, nullptr },
         { "installed_size_in_bytes", reinterpret_cast<getter>(ESimProfileInstallProgress_get_InstalledSizeInBytes), reinterpret_cast<setter>(ESimProfileInstallProgress_set_InstalledSizeInBytes), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_ESimProfileInstallProgress(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, PyObject* other, int op) noexcept
     {
@@ -21191,8 +20889,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimProfileInstallProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ESimProfileInstallProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_ESimProfileInstallProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ESimProfileInstallProgress = {
         "winrt._winrt_windows_networking_networkoperators.ESimProfileInstallProgress",
@@ -21270,8 +20967,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyMethodDef _methods_ProfileUsage[] = {
         { "_assign_array_", _assign_array_ProfileUsage, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* ProfileUsage_get_UsageInMegabytes(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, void* /*unused*/) noexcept
     {
@@ -21342,8 +21038,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyGetSetDef _getset_ProfileUsage[] = {
         { "usage_in_megabytes", reinterpret_cast<getter>(ProfileUsage_get_UsageInMegabytes), reinterpret_cast<setter>(ProfileUsage_set_UsageInMegabytes), nullptr, nullptr },
         { "last_sync_time", reinterpret_cast<getter>(ProfileUsage_get_LastSyncTime), reinterpret_cast<setter>(ProfileUsage_set_LastSyncTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_ProfileUsage(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, PyObject* other, int op) noexcept
     {
@@ -21405,8 +21100,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProfileUsage) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ProfileUsage) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_ProfileUsage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProfileUsage = {
         "winrt._winrt_windows_networking_networkoperators.ProfileUsage",

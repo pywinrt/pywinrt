@@ -48,20 +48,17 @@ namespace py::cpp::Windows::Graphics
     static PyMethodDef _methods_IGeometrySource2D[] = {
         { "_assign_array_", _assign_array_IGeometrySource2D, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGeometrySource2D), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGeometrySource2D[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGeometrySource2D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGeometrySource2D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGeometrySource2D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGeometrySource2D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGeometrySource2D) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGeometrySource2D = {
         "winrt._winrt_windows_graphics.IGeometrySource2D",
@@ -117,13 +114,11 @@ namespace py::cpp::Windows::Graphics
     static PyMethodDef methods_ImplementsIGeometrySource2D[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGeometrySource2D), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGeometrySource2D), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGeometrySource2D[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGeometrySource2D) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGeometrySource2D = {
         "winrt._winrt_windows_graphics.ImplementsIGeometrySource2D",
@@ -201,8 +196,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_DisplayAdapterId[] = {
         { "_assign_array_", _assign_array_DisplayAdapterId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* DisplayAdapterId_get_LowPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, void* /*unused*/) noexcept
     {
@@ -273,8 +267,7 @@ namespace py::cpp::Windows::Graphics
     static PyGetSetDef _getset_DisplayAdapterId[] = {
         { "low_part", reinterpret_cast<getter>(DisplayAdapterId_get_LowPart), reinterpret_cast<setter>(DisplayAdapterId_set_LowPart), nullptr, nullptr },
         { "high_part", reinterpret_cast<getter>(DisplayAdapterId_get_HighPart), reinterpret_cast<setter>(DisplayAdapterId_set_HighPart), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_DisplayAdapterId(py::wrapper::Windows::Graphics::DisplayAdapterId* self, PyObject* other, int op) noexcept
     {
@@ -336,8 +329,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAdapterId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DisplayAdapterId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_DisplayAdapterId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayAdapterId = {
         "winrt._winrt_windows_graphics.DisplayAdapterId",
@@ -413,8 +405,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_DisplayId[] = {
         { "_assign_array_", _assign_array_DisplayId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* DisplayId_get_Value(py::wrapper::Windows::Graphics::DisplayId* self, void* /*unused*/) noexcept
     {
@@ -451,8 +442,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyGetSetDef _getset_DisplayId[] = {
         { "value", reinterpret_cast<getter>(DisplayId_get_Value), reinterpret_cast<setter>(DisplayId_set_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_DisplayId(py::wrapper::Windows::Graphics::DisplayId* self, PyObject* other, int op) noexcept
     {
@@ -508,8 +498,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DisplayId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_DisplayId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DisplayId = {
         "winrt._winrt_windows_graphics.DisplayId",
@@ -587,8 +576,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_PointInt32[] = {
         { "_assign_array_", _assign_array_PointInt32, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* PointInt32_get_X(py::wrapper::Windows::Graphics::PointInt32* self, void* /*unused*/) noexcept
     {
@@ -659,8 +647,7 @@ namespace py::cpp::Windows::Graphics
     static PyGetSetDef _getset_PointInt32[] = {
         { "x", reinterpret_cast<getter>(PointInt32_get_X), reinterpret_cast<setter>(PointInt32_set_X), nullptr, nullptr },
         { "y", reinterpret_cast<getter>(PointInt32_get_Y), reinterpret_cast<setter>(PointInt32_set_Y), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_PointInt32(py::wrapper::Windows::Graphics::PointInt32* self, PyObject* other, int op) noexcept
     {
@@ -722,8 +709,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointInt32) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PointInt32) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_PointInt32) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointInt32 = {
         "winrt._winrt_windows_graphics.PointInt32",
@@ -805,8 +791,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_RectInt32[] = {
         { "_assign_array_", _assign_array_RectInt32, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* RectInt32_get_X(py::wrapper::Windows::Graphics::RectInt32* self, void* /*unused*/) noexcept
     {
@@ -945,8 +930,7 @@ namespace py::cpp::Windows::Graphics
         { "y", reinterpret_cast<getter>(RectInt32_get_Y), reinterpret_cast<setter>(RectInt32_set_Y), nullptr, nullptr },
         { "width", reinterpret_cast<getter>(RectInt32_get_Width), reinterpret_cast<setter>(RectInt32_set_Width), nullptr, nullptr },
         { "height", reinterpret_cast<getter>(RectInt32_get_Height), reinterpret_cast<setter>(RectInt32_set_Height), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_RectInt32(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* other, int op) noexcept
     {
@@ -1020,8 +1004,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RectInt32) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RectInt32) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_RectInt32) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RectInt32 = {
         "winrt._winrt_windows_graphics.RectInt32",
@@ -1099,8 +1082,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_SizeInt32[] = {
         { "_assign_array_", _assign_array_SizeInt32, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* SizeInt32_get_Width(py::wrapper::Windows::Graphics::SizeInt32* self, void* /*unused*/) noexcept
     {
@@ -1171,8 +1153,7 @@ namespace py::cpp::Windows::Graphics
     static PyGetSetDef _getset_SizeInt32[] = {
         { "width", reinterpret_cast<getter>(SizeInt32_get_Width), reinterpret_cast<setter>(SizeInt32_set_Width), nullptr, nullptr },
         { "height", reinterpret_cast<getter>(SizeInt32_get_Height), reinterpret_cast<setter>(SizeInt32_set_Height), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_SizeInt32(py::wrapper::Windows::Graphics::SizeInt32* self, PyObject* other, int op) noexcept
     {
@@ -1234,8 +1215,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SizeInt32) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SizeInt32) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_SizeInt32) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SizeInt32 = {
         "winrt._winrt_windows_graphics.SizeInt32",

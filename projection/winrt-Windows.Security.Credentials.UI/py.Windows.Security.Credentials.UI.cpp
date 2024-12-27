@@ -143,19 +143,16 @@ namespace py::cpp::Windows::Security::Credentials::UI
     }
 
     static PyMethodDef _methods_CredentialPicker[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CredentialPicker[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CredentialPicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CredentialPicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CredentialPicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CredentialPicker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CredentialPicker = {
         "winrt._winrt_windows_security_credentials_ui.CredentialPicker",
@@ -165,15 +162,13 @@ namespace py::cpp::Windows::Security::Credentials::UI
         _type_slots_CredentialPicker};
 
     static PyGetSetDef getset_CredentialPicker_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CredentialPicker_Static[] = {
         { "pick_with_caption_async", reinterpret_cast<PyCFunction>(CredentialPicker_PickWithCaptionAsync), METH_VARARGS, nullptr },
         { "pick_with_message_async", reinterpret_cast<PyCFunction>(CredentialPicker_PickWithMessageAsync), METH_VARARGS, nullptr },
         { "pick_with_options_async", reinterpret_cast<PyCFunction>(CredentialPicker_PickWithOptionsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CredentialPicker_Static[] = 
     {
@@ -183,14 +178,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
         { }
     };
 
-    static PyType_Spec type_spec_CredentialPicker_Static =
-    {
+    static PyType_Spec type_spec_CredentialPicker_Static = {
         "winrt._winrt_windows_security_credentials_ui.CredentialPicker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CredentialPicker_Static
-    };
+        type_slots_CredentialPicker_Static};
 
     // ----- CredentialPickerOptions class --------------------
 
@@ -948,8 +941,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
     static PyMethodDef _methods_CredentialPickerOptions[] = {
         { "_assign_array_", _assign_array_CredentialPickerOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CredentialPickerOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CredentialPickerOptions[] = {
         { "target_name", reinterpret_cast<getter>(CredentialPickerOptions_get_TargetName), reinterpret_cast<setter>(CredentialPickerOptions_put_TargetName), nullptr, nullptr },
@@ -962,16 +954,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
         { "caller_saves_credential", reinterpret_cast<getter>(CredentialPickerOptions_get_CallerSavesCredential), reinterpret_cast<setter>(CredentialPickerOptions_put_CallerSavesCredential), nullptr, nullptr },
         { "authentication_protocol", reinterpret_cast<getter>(CredentialPickerOptions_get_AuthenticationProtocol), reinterpret_cast<setter>(CredentialPickerOptions_put_AuthenticationProtocol), nullptr, nullptr },
         { "always_display_dialog", reinterpret_cast<getter>(CredentialPickerOptions_get_AlwaysDisplayDialog), reinterpret_cast<setter>(CredentialPickerOptions_put_AlwaysDisplayDialog), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CredentialPickerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CredentialPickerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CredentialPickerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CredentialPickerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CredentialPickerOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CredentialPickerOptions = {
         "winrt._winrt_windows_security_credentials_ui.CredentialPickerOptions",
@@ -1234,8 +1224,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
     static PyMethodDef _methods_CredentialPickerResults[] = {
         { "_assign_array_", _assign_array_CredentialPickerResults, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CredentialPickerResults), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CredentialPickerResults[] = {
         { "credential", reinterpret_cast<getter>(CredentialPickerResults_get_Credential), nullptr, nullptr, nullptr },
@@ -1245,16 +1234,14 @@ namespace py::cpp::Windows::Security::Credentials::UI
         { "credential_saved", reinterpret_cast<getter>(CredentialPickerResults_get_CredentialSaved), nullptr, nullptr, nullptr },
         { "credential_user_name", reinterpret_cast<getter>(CredentialPickerResults_get_CredentialUserName), nullptr, nullptr, nullptr },
         { "error_code", reinterpret_cast<getter>(CredentialPickerResults_get_ErrorCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CredentialPickerResults[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CredentialPickerResults) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CredentialPickerResults) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CredentialPickerResults) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CredentialPickerResults) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CredentialPickerResults = {
         "winrt._winrt_windows_security_credentials_ui.CredentialPickerResults",
@@ -1355,19 +1342,16 @@ namespace py::cpp::Windows::Security::Credentials::UI
     }
 
     static PyMethodDef _methods_UserConsentVerifier[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserConsentVerifier[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserConsentVerifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserConsentVerifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserConsentVerifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserConsentVerifier) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserConsentVerifier = {
         "winrt._winrt_windows_security_credentials_ui.UserConsentVerifier",
@@ -1377,14 +1361,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
         _type_slots_UserConsentVerifier};
 
     static PyGetSetDef getset_UserConsentVerifier_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserConsentVerifier_Static[] = {
         { "check_availability_async", reinterpret_cast<PyCFunction>(UserConsentVerifier_CheckAvailabilityAsync), METH_VARARGS, nullptr },
         { "request_verification_async", reinterpret_cast<PyCFunction>(UserConsentVerifier_RequestVerificationAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserConsentVerifier_Static[] = 
     {
@@ -1394,14 +1376,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
         { }
     };
 
-    static PyType_Spec type_spec_UserConsentVerifier_Static =
-    {
+    static PyType_Spec type_spec_UserConsentVerifier_Static = {
         "winrt._winrt_windows_security_credentials_ui.UserConsentVerifier_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserConsentVerifier_Static
-    };
+        type_slots_UserConsentVerifier_Static};
 
     // ----- Windows.Security.Credentials.UI Initialization --------------------
 

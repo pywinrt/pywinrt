@@ -317,21 +317,18 @@ namespace py::cpp::Windows::UI::Composition::Core
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositorController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CompositorController), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_CompositorController), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompositorController[] = {
         { "compositor", reinterpret_cast<getter>(CompositorController_get_Compositor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompositorController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositorController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositorController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositorController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositorController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompositorController = {
         "winrt._winrt_windows_ui_composition_core.CompositorController",

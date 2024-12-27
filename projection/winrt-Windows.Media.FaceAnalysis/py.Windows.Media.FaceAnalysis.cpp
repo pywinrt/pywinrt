@@ -78,21 +78,18 @@ namespace py::cpp::Windows::Media::FaceAnalysis
     static PyMethodDef _methods_DetectedFace[] = {
         { "_assign_array_", _assign_array_DetectedFace, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DetectedFace), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DetectedFace[] = {
         { "face_box", reinterpret_cast<getter>(DetectedFace_get_FaceBox), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DetectedFace[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DetectedFace) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DetectedFace) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DetectedFace) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DetectedFace) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DetectedFace = {
         "winrt._winrt_windows_media_faceanalysis.DetectedFace",
@@ -522,22 +519,19 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         { "detect_faces_with_search_area_async", reinterpret_cast<PyCFunction>(FaceDetector_DetectFacesWithSearchAreaAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FaceDetector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceDetector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FaceDetector[] = {
         { "min_detectable_face_size", reinterpret_cast<getter>(FaceDetector_get_MinDetectableFaceSize), reinterpret_cast<setter>(FaceDetector_put_MinDetectableFaceSize), nullptr, nullptr },
         { "max_detectable_face_size", reinterpret_cast<getter>(FaceDetector_get_MaxDetectableFaceSize), reinterpret_cast<setter>(FaceDetector_put_MaxDetectableFaceSize), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FaceDetector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FaceDetector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FaceDetector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FaceDetector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FaceDetector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FaceDetector = {
         "winrt._winrt_windows_media_faceanalysis.FaceDetector",
@@ -548,15 +542,13 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyGetSetDef getset_FaceDetector_Static[] = {
         { "is_supported", reinterpret_cast<getter>(FaceDetector_get_IsSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FaceDetector_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(FaceDetector_CreateAsync), METH_VARARGS, nullptr },
         { "get_supported_bitmap_pixel_formats", reinterpret_cast<PyCFunction>(FaceDetector_GetSupportedBitmapPixelFormats), METH_VARARGS, nullptr },
         { "is_bitmap_pixel_format_supported", reinterpret_cast<PyCFunction>(FaceDetector_IsBitmapPixelFormatSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FaceDetector_Static[] = 
     {
@@ -566,14 +558,12 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         { }
     };
 
-    static PyType_Spec type_spec_FaceDetector_Static =
-    {
+    static PyType_Spec type_spec_FaceDetector_Static = {
         "winrt._winrt_windows_media_faceanalysis.FaceDetector_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FaceDetector_Static
-    };
+        type_slots_FaceDetector_Static};
 
     // ----- FaceTracker class --------------------
 
@@ -952,22 +942,19 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         { "process_next_frame_async", reinterpret_cast<PyCFunction>(FaceTracker_ProcessNextFrameAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FaceTracker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceTracker), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FaceTracker[] = {
         { "min_detectable_face_size", reinterpret_cast<getter>(FaceTracker_get_MinDetectableFaceSize), reinterpret_cast<setter>(FaceTracker_put_MinDetectableFaceSize), nullptr, nullptr },
         { "max_detectable_face_size", reinterpret_cast<getter>(FaceTracker_get_MaxDetectableFaceSize), reinterpret_cast<setter>(FaceTracker_put_MaxDetectableFaceSize), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FaceTracker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FaceTracker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FaceTracker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FaceTracker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FaceTracker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FaceTracker = {
         "winrt._winrt_windows_media_faceanalysis.FaceTracker",
@@ -978,15 +965,13 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyGetSetDef getset_FaceTracker_Static[] = {
         { "is_supported", reinterpret_cast<getter>(FaceTracker_get_IsSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FaceTracker_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(FaceTracker_CreateAsync), METH_VARARGS, nullptr },
         { "get_supported_bitmap_pixel_formats", reinterpret_cast<PyCFunction>(FaceTracker_GetSupportedBitmapPixelFormats), METH_VARARGS, nullptr },
         { "is_bitmap_pixel_format_supported", reinterpret_cast<PyCFunction>(FaceTracker_IsBitmapPixelFormatSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FaceTracker_Static[] = 
     {
@@ -996,14 +981,12 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         { }
     };
 
-    static PyType_Spec type_spec_FaceTracker_Static =
-    {
+    static PyType_Spec type_spec_FaceTracker_Static = {
         "winrt._winrt_windows_media_faceanalysis.FaceTracker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FaceTracker_Static
-    };
+        type_slots_FaceTracker_Static};
 
     // ----- Windows.Media.FaceAnalysis Initialization --------------------
 

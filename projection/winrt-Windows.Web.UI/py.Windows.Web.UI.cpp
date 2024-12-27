@@ -78,21 +78,18 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlContentLoadingEventArgs[] = {
         { "_assign_array_", _assign_array_WebViewControlContentLoadingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlContentLoadingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlContentLoadingEventArgs[] = {
         { "uri", reinterpret_cast<getter>(WebViewControlContentLoadingEventArgs_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlContentLoadingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlContentLoadingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlContentLoadingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlContentLoadingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlContentLoadingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlContentLoadingEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlContentLoadingEventArgs",
@@ -175,21 +172,18 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlDOMContentLoadedEventArgs[] = {
         { "_assign_array_", _assign_array_WebViewControlDOMContentLoadedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlDOMContentLoadedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlDOMContentLoadedEventArgs[] = {
         { "uri", reinterpret_cast<getter>(WebViewControlDOMContentLoadedEventArgs_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlDOMContentLoadedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlDOMContentLoadedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlDOMContentLoadedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlDOMContentLoadedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlDOMContentLoadedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlDOMContentLoadedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlDOMContentLoadedEventArgs",
@@ -416,23 +410,20 @@ namespace py::cpp::Windows::Web::UI
         { "deny", reinterpret_cast<PyCFunction>(WebViewControlDeferredPermissionRequest_Deny), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebViewControlDeferredPermissionRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlDeferredPermissionRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlDeferredPermissionRequest[] = {
         { "id", reinterpret_cast<getter>(WebViewControlDeferredPermissionRequest_get_Id), nullptr, nullptr, nullptr },
         { "permission_type", reinterpret_cast<getter>(WebViewControlDeferredPermissionRequest_get_PermissionType), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(WebViewControlDeferredPermissionRequest_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlDeferredPermissionRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlDeferredPermissionRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlDeferredPermissionRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlDeferredPermissionRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlDeferredPermissionRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlDeferredPermissionRequest = {
         "winrt._winrt_windows_web_ui.WebViewControlDeferredPermissionRequest",
@@ -584,22 +575,19 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlLongRunningScriptDetectedEventArgs[] = {
         { "_assign_array_", _assign_array_WebViewControlLongRunningScriptDetectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlLongRunningScriptDetectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlLongRunningScriptDetectedEventArgs[] = {
         { "stop_page_script_execution", reinterpret_cast<getter>(WebViewControlLongRunningScriptDetectedEventArgs_get_StopPageScriptExecution), reinterpret_cast<setter>(WebViewControlLongRunningScriptDetectedEventArgs_put_StopPageScriptExecution), nullptr, nullptr },
         { "execution_time", reinterpret_cast<getter>(WebViewControlLongRunningScriptDetectedEventArgs_get_ExecutionTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlLongRunningScriptDetectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlLongRunningScriptDetectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlLongRunningScriptDetectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlLongRunningScriptDetectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlLongRunningScriptDetectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlLongRunningScriptDetectedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlLongRunningScriptDetectedEventArgs",
@@ -742,23 +730,20 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlNavigationCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_WebViewControlNavigationCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlNavigationCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlNavigationCompletedEventArgs[] = {
         { "is_success", reinterpret_cast<getter>(WebViewControlNavigationCompletedEventArgs_get_IsSuccess), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(WebViewControlNavigationCompletedEventArgs_get_Uri), nullptr, nullptr, nullptr },
         { "web_error_status", reinterpret_cast<getter>(WebViewControlNavigationCompletedEventArgs_get_WebErrorStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlNavigationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlNavigationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlNavigationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlNavigationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlNavigationCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlNavigationCompletedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlNavigationCompletedEventArgs",
@@ -910,22 +895,19 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlNavigationStartingEventArgs[] = {
         { "_assign_array_", _assign_array_WebViewControlNavigationStartingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlNavigationStartingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlNavigationStartingEventArgs[] = {
         { "cancel", reinterpret_cast<getter>(WebViewControlNavigationStartingEventArgs_get_Cancel), reinterpret_cast<setter>(WebViewControlNavigationStartingEventArgs_put_Cancel), nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(WebViewControlNavigationStartingEventArgs_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlNavigationStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlNavigationStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlNavigationStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlNavigationStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlNavigationStartingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlNavigationStartingEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlNavigationStartingEventArgs",
@@ -1217,24 +1199,21 @@ namespace py::cpp::Windows::Web::UI
         { "get_deferral", reinterpret_cast<PyCFunction>(WebViewControlNewWindowRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebViewControlNewWindowRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlNewWindowRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlNewWindowRequestedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(WebViewControlNewWindowRequestedEventArgs_get_Handled), reinterpret_cast<setter>(WebViewControlNewWindowRequestedEventArgs_put_Handled), nullptr, nullptr },
         { "referrer", reinterpret_cast<getter>(WebViewControlNewWindowRequestedEventArgs_get_Referrer), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(WebViewControlNewWindowRequestedEventArgs_get_Uri), nullptr, nullptr, nullptr },
         { "new_window", reinterpret_cast<getter>(WebViewControlNewWindowRequestedEventArgs_get_NewWindow), reinterpret_cast<setter>(WebViewControlNewWindowRequestedEventArgs_put_NewWindow), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlNewWindowRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlNewWindowRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlNewWindowRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlNewWindowRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlNewWindowRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlNewWindowRequestedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlNewWindowRequestedEventArgs",
@@ -1533,24 +1512,21 @@ namespace py::cpp::Windows::Web::UI
         { "deny", reinterpret_cast<PyCFunction>(WebViewControlPermissionRequest_Deny), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebViewControlPermissionRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlPermissionRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlPermissionRequest[] = {
         { "id", reinterpret_cast<getter>(WebViewControlPermissionRequest_get_Id), nullptr, nullptr, nullptr },
         { "permission_type", reinterpret_cast<getter>(WebViewControlPermissionRequest_get_PermissionType), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(WebViewControlPermissionRequest_get_State), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(WebViewControlPermissionRequest_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlPermissionRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlPermissionRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlPermissionRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlPermissionRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlPermissionRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlPermissionRequest = {
         "winrt._winrt_windows_web_ui.WebViewControlPermissionRequest",
@@ -1633,21 +1609,18 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlPermissionRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_WebViewControlPermissionRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlPermissionRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlPermissionRequestedEventArgs[] = {
         { "permission_request", reinterpret_cast<getter>(WebViewControlPermissionRequestedEventArgs_get_PermissionRequest), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlPermissionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlPermissionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlPermissionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlPermissionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlPermissionRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlPermissionRequestedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlPermissionRequestedEventArgs",
@@ -1760,22 +1733,19 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlScriptNotifyEventArgs[] = {
         { "_assign_array_", _assign_array_WebViewControlScriptNotifyEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlScriptNotifyEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlScriptNotifyEventArgs[] = {
         { "uri", reinterpret_cast<getter>(WebViewControlScriptNotifyEventArgs_get_Uri), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(WebViewControlScriptNotifyEventArgs_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlScriptNotifyEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlScriptNotifyEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlScriptNotifyEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlScriptNotifyEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlScriptNotifyEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlScriptNotifyEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlScriptNotifyEventArgs",
@@ -2035,23 +2005,20 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlSettings[] = {
         { "_assign_array_", _assign_array_WebViewControlSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlSettings[] = {
         { "is_script_notify_allowed", reinterpret_cast<getter>(WebViewControlSettings_get_IsScriptNotifyAllowed), reinterpret_cast<setter>(WebViewControlSettings_put_IsScriptNotifyAllowed), nullptr, nullptr },
         { "is_java_script_enabled", reinterpret_cast<getter>(WebViewControlSettings_get_IsJavaScriptEnabled), reinterpret_cast<setter>(WebViewControlSettings_put_IsJavaScriptEnabled), nullptr, nullptr },
         { "is_indexed_db_enabled", reinterpret_cast<getter>(WebViewControlSettings_get_IsIndexedDBEnabled), reinterpret_cast<setter>(WebViewControlSettings_put_IsIndexedDBEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlSettings = {
         "winrt._winrt_windows_web_ui.WebViewControlSettings",
@@ -2203,22 +2170,19 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs[] = {
         { "_assign_array_", _assign_array_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(WebViewControlUnsupportedUriSchemeIdentifiedEventArgs_get_Handled), reinterpret_cast<setter>(WebViewControlUnsupportedUriSchemeIdentifiedEventArgs_put_Handled), nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(WebViewControlUnsupportedUriSchemeIdentifiedEventArgs_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs",
@@ -2361,23 +2325,20 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef _methods_WebViewControlUnviewableContentIdentifiedEventArgs[] = {
         { "_assign_array_", _assign_array_WebViewControlUnviewableContentIdentifiedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlUnviewableContentIdentifiedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlUnviewableContentIdentifiedEventArgs[] = {
         { "media_type", reinterpret_cast<getter>(WebViewControlUnviewableContentIdentifiedEventArgs_get_MediaType), nullptr, nullptr, nullptr },
         { "referrer", reinterpret_cast<getter>(WebViewControlUnviewableContentIdentifiedEventArgs_get_Referrer), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(WebViewControlUnviewableContentIdentifiedEventArgs_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlUnviewableContentIdentifiedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlUnviewableContentIdentifiedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlUnviewableContentIdentifiedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlUnviewableContentIdentifiedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlUnviewableContentIdentifiedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlUnviewableContentIdentifiedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlUnviewableContentIdentifiedEventArgs",
@@ -2570,22 +2531,19 @@ namespace py::cpp::Windows::Web::UI
         { "get_deferral", reinterpret_cast<PyCFunction>(WebViewControlWebResourceRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebViewControlWebResourceRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebViewControlWebResourceRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebViewControlWebResourceRequestedEventArgs[] = {
         { "response", reinterpret_cast<getter>(WebViewControlWebResourceRequestedEventArgs_get_Response), reinterpret_cast<setter>(WebViewControlWebResourceRequestedEventArgs_put_Response), nullptr, nullptr },
         { "request", reinterpret_cast<getter>(WebViewControlWebResourceRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebViewControlWebResourceRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlWebResourceRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlWebResourceRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlWebResourceRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlWebResourceRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebViewControlWebResourceRequestedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlWebResourceRequestedEventArgs",
@@ -4663,8 +4621,7 @@ namespace py::cpp::Windows::Web::UI
         { "remove_web_resource_requested", reinterpret_cast<PyCFunction>(IWebViewControl_remove_WebResourceRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_IWebViewControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebViewControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebViewControl[] = {
         { "can_go_back", reinterpret_cast<getter>(IWebViewControl_get_CanGoBack), nullptr, nullptr, nullptr },
@@ -4675,16 +4632,14 @@ namespace py::cpp::Windows::Web::UI
         { "document_title", reinterpret_cast<getter>(IWebViewControl_get_DocumentTitle), nullptr, nullptr, nullptr },
         { "settings", reinterpret_cast<getter>(IWebViewControl_get_Settings), nullptr, nullptr, nullptr },
         { "source", reinterpret_cast<getter>(IWebViewControl_get_Source), reinterpret_cast<setter>(IWebViewControl_put_Source), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebViewControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebViewControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebViewControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebViewControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebViewControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebViewControl = {
         "winrt._winrt_windows_web_ui.IWebViewControl",
@@ -6406,13 +6361,11 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef methods_ImplementsIWebViewControl[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebViewControl), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebViewControl), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebViewControl[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebViewControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebViewControl = {
         "winrt._winrt_windows_web_ui.ImplementsIWebViewControl",
@@ -6509,20 +6462,17 @@ namespace py::cpp::Windows::Web::UI
         { "add_initialize_script", reinterpret_cast<PyCFunction>(IWebViewControl2_AddInitializeScript), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IWebViewControl2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebViewControl2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebViewControl2[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebViewControl2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebViewControl2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebViewControl2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebViewControl2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebViewControl2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebViewControl2 = {
         "winrt._winrt_windows_web_ui.IWebViewControl2",
@@ -6608,13 +6558,11 @@ namespace py::cpp::Windows::Web::UI
     static PyMethodDef methods_ImplementsIWebViewControl2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebViewControl2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebViewControl2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebViewControl2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebViewControl2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebViewControl2 = {
         "winrt._winrt_windows_web_ui.ImplementsIWebViewControl2",

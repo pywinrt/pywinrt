@@ -889,8 +889,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_Binding[] = {
         { "_assign_array_", _assign_array_Binding, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Binding), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Binding[] = {
         { "source", reinterpret_cast<getter>(Binding_get_Source), reinterpret_cast<setter>(Binding_put_Source), nullptr, nullptr },
@@ -904,16 +903,14 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "update_source_trigger", reinterpret_cast<getter>(Binding_get_UpdateSourceTrigger), reinterpret_cast<setter>(Binding_put_UpdateSourceTrigger), nullptr, nullptr },
         { "target_null_value", reinterpret_cast<getter>(Binding_get_TargetNullValue), reinterpret_cast<setter>(Binding_put_TargetNullValue), nullptr, nullptr },
         { "fallback_value", reinterpret_cast<getter>(Binding_get_FallbackValue), reinterpret_cast<setter>(Binding_put_FallbackValue), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Binding[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Binding) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Binding) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Binding) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Binding) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Binding = {
         "winrt._winrt_windows_ui_xaml_data.Binding",
@@ -923,12 +920,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_Binding};
 
     static PyGetSetDef getset_Binding_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Binding_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Binding_Static[] = 
     {
@@ -938,14 +933,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_Binding_Static =
-    {
+    static PyType_Spec type_spec_Binding_Static = {
         "winrt._winrt_windows_ui_xaml_data.Binding_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Binding_Static
-    };
+        type_slots_Binding_Static};
 
     // ----- BindingBase class --------------------
 
@@ -1073,20 +1066,17 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_BindingBase[] = {
         { "_assign_array_", _assign_array_BindingBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BindingBase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BindingBase[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BindingBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BindingBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BindingBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BindingBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BindingBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BindingBase = {
         "winrt._winrt_windows_ui_xaml_data.BindingBase",
@@ -1096,12 +1086,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_BindingBase};
 
     static PyGetSetDef getset_BindingBase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BindingBase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BindingBase_Static[] = 
     {
@@ -1111,14 +1099,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_BindingBase_Static =
-    {
+    static PyType_Spec type_spec_BindingBase_Static = {
         "winrt._winrt_windows_ui_xaml_data.BindingBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_BindingBase_Static
-    };
+        type_slots_BindingBase_Static};
 
     // ----- BindingExpression class --------------------
 
@@ -1266,22 +1252,19 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "update_source", reinterpret_cast<PyCFunction>(BindingExpression_UpdateSource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BindingExpression, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BindingExpression), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BindingExpression[] = {
         { "data_item", reinterpret_cast<getter>(BindingExpression_get_DataItem), nullptr, nullptr, nullptr },
         { "parent_binding", reinterpret_cast<getter>(BindingExpression_get_ParentBinding), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BindingExpression[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BindingExpression) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BindingExpression) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BindingExpression) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BindingExpression) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BindingExpression = {
         "winrt._winrt_windows_ui_xaml_data.BindingExpression",
@@ -1291,12 +1274,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_BindingExpression};
 
     static PyGetSetDef getset_BindingExpression_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BindingExpression_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BindingExpression_Static[] = 
     {
@@ -1306,14 +1287,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_BindingExpression_Static =
-    {
+    static PyType_Spec type_spec_BindingExpression_Static = {
         "winrt._winrt_windows_ui_xaml_data.BindingExpression_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_BindingExpression_Static
-    };
+        type_slots_BindingExpression_Static};
 
     // ----- BindingExpressionBase class --------------------
 
@@ -1359,20 +1338,17 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_BindingExpressionBase[] = {
         { "_assign_array_", _assign_array_BindingExpressionBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BindingExpressionBase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BindingExpressionBase[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BindingExpressionBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BindingExpressionBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BindingExpressionBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BindingExpressionBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BindingExpressionBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BindingExpressionBase = {
         "winrt._winrt_windows_ui_xaml_data.BindingExpressionBase",
@@ -1382,12 +1358,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_BindingExpressionBase};
 
     static PyGetSetDef getset_BindingExpressionBase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BindingExpressionBase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BindingExpressionBase_Static[] = 
     {
@@ -1397,14 +1371,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_BindingExpressionBase_Static =
-    {
+    static PyType_Spec type_spec_BindingExpressionBase_Static = {
         "winrt._winrt_windows_ui_xaml_data.BindingExpressionBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_BindingExpressionBase_Static
-    };
+        type_slots_BindingExpressionBase_Static};
 
     // ----- BindingOperations class --------------------
 
@@ -1495,20 +1467,17 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_BindingOperations[] = {
         { "_assign_array_", _assign_array_BindingOperations, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BindingOperations), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BindingOperations[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BindingOperations[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BindingOperations) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BindingOperations) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BindingOperations) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BindingOperations) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BindingOperations = {
         "winrt._winrt_windows_ui_xaml_data.BindingOperations",
@@ -1518,13 +1487,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_BindingOperations};
 
     static PyGetSetDef getset_BindingOperations_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BindingOperations_Static[] = {
         { "set_binding", reinterpret_cast<PyCFunction>(BindingOperations_SetBinding), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BindingOperations_Static[] = 
     {
@@ -1534,14 +1501,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_BindingOperations_Static =
-    {
+    static PyType_Spec type_spec_BindingOperations_Static = {
         "winrt._winrt_windows_ui_xaml_data.BindingOperations_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BindingOperations_Static
-    };
+        type_slots_BindingOperations_Static};
 
     // ----- CollectionViewSource class --------------------
 
@@ -1966,24 +1931,21 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_CollectionViewSource[] = {
         { "_assign_array_", _assign_array_CollectionViewSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CollectionViewSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CollectionViewSource[] = {
         { "source", reinterpret_cast<getter>(CollectionViewSource_get_Source), reinterpret_cast<setter>(CollectionViewSource_put_Source), nullptr, nullptr },
         { "items_path", reinterpret_cast<getter>(CollectionViewSource_get_ItemsPath), reinterpret_cast<setter>(CollectionViewSource_put_ItemsPath), nullptr, nullptr },
         { "is_source_grouped", reinterpret_cast<getter>(CollectionViewSource_get_IsSourceGrouped), reinterpret_cast<setter>(CollectionViewSource_put_IsSourceGrouped), nullptr, nullptr },
         { "view", reinterpret_cast<getter>(CollectionViewSource_get_View), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CollectionViewSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CollectionViewSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CollectionViewSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CollectionViewSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CollectionViewSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CollectionViewSource = {
         "winrt._winrt_windows_ui_xaml_data.CollectionViewSource",
@@ -1997,12 +1959,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "items_path_property", reinterpret_cast<getter>(CollectionViewSource_get_ItemsPathProperty), nullptr, nullptr, nullptr },
         { "source_property", reinterpret_cast<getter>(CollectionViewSource_get_SourceProperty), nullptr, nullptr, nullptr },
         { "view_property", reinterpret_cast<getter>(CollectionViewSource_get_ViewProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CollectionViewSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CollectionViewSource_Static[] = 
     {
@@ -2012,14 +1972,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_CollectionViewSource_Static =
-    {
+    static PyType_Spec type_spec_CollectionViewSource_Static = {
         "winrt._winrt_windows_ui_xaml_data.CollectionViewSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CollectionViewSource_Static
-    };
+        type_slots_CollectionViewSource_Static};
 
     // ----- CurrentChangingEventArgs class --------------------
 
@@ -2285,22 +2243,19 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_CurrentChangingEventArgs[] = {
         { "_assign_array_", _assign_array_CurrentChangingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CurrentChangingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CurrentChangingEventArgs[] = {
         { "cancel", reinterpret_cast<getter>(CurrentChangingEventArgs_get_Cancel), reinterpret_cast<setter>(CurrentChangingEventArgs_put_Cancel), nullptr, nullptr },
         { "is_cancelable", reinterpret_cast<getter>(CurrentChangingEventArgs_get_IsCancelable), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CurrentChangingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrentChangingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CurrentChangingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrentChangingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrentChangingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CurrentChangingEventArgs = {
         "winrt._winrt_windows_ui_xaml_data.CurrentChangingEventArgs",
@@ -2310,12 +2265,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_CurrentChangingEventArgs};
 
     static PyGetSetDef getset_CurrentChangingEventArgs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CurrentChangingEventArgs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CurrentChangingEventArgs_Static[] = 
     {
@@ -2325,14 +2278,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_CurrentChangingEventArgs_Static =
-    {
+    static PyType_Spec type_spec_CurrentChangingEventArgs_Static = {
         "winrt._winrt_windows_ui_xaml_data.CurrentChangingEventArgs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CurrentChangingEventArgs_Static
-    };
+        type_slots_CurrentChangingEventArgs_Static};
 
     // ----- ItemIndexRange class --------------------
 
@@ -2553,23 +2504,20 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_ItemIndexRange[] = {
         { "_assign_array_", _assign_array_ItemIndexRange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ItemIndexRange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ItemIndexRange[] = {
         { "first_index", reinterpret_cast<getter>(ItemIndexRange_get_FirstIndex), nullptr, nullptr, nullptr },
         { "last_index", reinterpret_cast<getter>(ItemIndexRange_get_LastIndex), nullptr, nullptr, nullptr },
         { "length", reinterpret_cast<getter>(ItemIndexRange_get_Length), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ItemIndexRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ItemIndexRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ItemIndexRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ItemIndexRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ItemIndexRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ItemIndexRange = {
         "winrt._winrt_windows_ui_xaml_data.ItemIndexRange",
@@ -2579,12 +2527,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_ItemIndexRange};
 
     static PyGetSetDef getset_ItemIndexRange_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ItemIndexRange_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ItemIndexRange_Static[] = 
     {
@@ -2594,14 +2540,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_ItemIndexRange_Static =
-    {
+    static PyType_Spec type_spec_ItemIndexRange_Static = {
         "winrt._winrt_windows_ui_xaml_data.ItemIndexRange_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ItemIndexRange_Static
-    };
+        type_slots_ItemIndexRange_Static};
 
     // ----- PropertyChangedEventArgs class --------------------
 
@@ -2761,21 +2705,18 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_PropertyChangedEventArgs[] = {
         { "_assign_array_", _assign_array_PropertyChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PropertyChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PropertyChangedEventArgs[] = {
         { "property_name", reinterpret_cast<getter>(PropertyChangedEventArgs_get_PropertyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PropertyChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PropertyChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PropertyChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PropertyChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PropertyChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PropertyChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml_data.PropertyChangedEventArgs",
@@ -2785,12 +2726,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_PropertyChangedEventArgs};
 
     static PyGetSetDef getset_PropertyChangedEventArgs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PropertyChangedEventArgs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PropertyChangedEventArgs_Static[] = 
     {
@@ -2800,14 +2739,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_PropertyChangedEventArgs_Static =
-    {
+    static PyType_Spec type_spec_PropertyChangedEventArgs_Static = {
         "winrt._winrt_windows_ui_xaml_data.PropertyChangedEventArgs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_PropertyChangedEventArgs_Static
-    };
+        type_slots_PropertyChangedEventArgs_Static};
 
     // ----- RelativeSource class --------------------
 
@@ -3004,21 +2941,18 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_RelativeSource[] = {
         { "_assign_array_", _assign_array_RelativeSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RelativeSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RelativeSource[] = {
         { "mode", reinterpret_cast<getter>(RelativeSource_get_Mode), reinterpret_cast<setter>(RelativeSource_put_Mode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RelativeSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RelativeSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RelativeSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RelativeSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RelativeSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RelativeSource = {
         "winrt._winrt_windows_ui_xaml_data.RelativeSource",
@@ -3028,12 +2962,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_RelativeSource};
 
     static PyGetSetDef getset_RelativeSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RelativeSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RelativeSource_Static[] = 
     {
@@ -3043,14 +2975,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Spec type_spec_RelativeSource_Static =
-    {
+    static PyType_Spec type_spec_RelativeSource_Static = {
         "winrt._winrt_windows_ui_xaml_data.RelativeSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_RelativeSource_Static
-    };
+        type_slots_RelativeSource_Static};
 
     // ----- ICollectionView interface --------------------
 
@@ -4476,8 +4406,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "remove_vector_changed", reinterpret_cast<PyCFunction>(ICollectionView_remove_VectorChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICollectionView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICollectionView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICollectionView[] = {
         { "collection_groups", reinterpret_cast<getter>(ICollectionView_get_CollectionGroups), nullptr, nullptr, nullptr },
@@ -4487,8 +4416,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "is_current_after_last", reinterpret_cast<getter>(ICollectionView_get_IsCurrentAfterLast), nullptr, nullptr, nullptr },
         { "is_current_before_first", reinterpret_cast<getter>(ICollectionView_get_IsCurrentBeforeFirst), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(ICollectionView_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICollectionView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICollectionView) },
@@ -4500,8 +4428,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_ICollectionView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_ICollectionView) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_ICollectionView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICollectionView = {
         "winrt._winrt_windows_ui_xaml_data.ICollectionView",
@@ -5467,13 +5394,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsICollectionView[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICollectionView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICollectionView), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICollectionView[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICollectionView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICollectionView = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsICollectionView",
@@ -5567,20 +5492,17 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "create_view", reinterpret_cast<PyCFunction>(ICollectionViewFactory_CreateView), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICollectionViewFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICollectionViewFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICollectionViewFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICollectionViewFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICollectionViewFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICollectionViewFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICollectionViewFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICollectionViewFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICollectionViewFactory = {
         "winrt._winrt_windows_ui_xaml_data.ICollectionViewFactory",
@@ -5662,13 +5584,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsICollectionViewFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICollectionViewFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICollectionViewFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICollectionViewFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICollectionViewFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICollectionViewFactory = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsICollectionViewFactory",
@@ -5781,22 +5701,19 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_ICollectionViewGroup[] = {
         { "_assign_array_", _assign_array_ICollectionViewGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICollectionViewGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICollectionViewGroup[] = {
         { "group", reinterpret_cast<getter>(ICollectionViewGroup_get_Group), nullptr, nullptr, nullptr },
         { "group_items", reinterpret_cast<getter>(ICollectionViewGroup_get_GroupItems), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICollectionViewGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICollectionViewGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICollectionViewGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICollectionViewGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICollectionViewGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICollectionViewGroup = {
         "winrt._winrt_windows_ui_xaml_data.ICollectionViewGroup",
@@ -5892,13 +5809,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsICollectionViewGroup[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICollectionViewGroup), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICollectionViewGroup), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICollectionViewGroup[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICollectionViewGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICollectionViewGroup = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsICollectionViewGroup",
@@ -6249,24 +6164,21 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "set_value", reinterpret_cast<PyCFunction>(ICustomProperty_SetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICustomProperty, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICustomProperty), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICustomProperty[] = {
         { "can_read", reinterpret_cast<getter>(ICustomProperty_get_CanRead), nullptr, nullptr, nullptr },
         { "can_write", reinterpret_cast<getter>(ICustomProperty_get_CanWrite), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ICustomProperty_get_Name), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(ICustomProperty_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICustomProperty[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICustomProperty) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomProperty) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomProperty) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomProperty) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICustomProperty = {
         "winrt._winrt_windows_ui_xaml_data.ICustomProperty",
@@ -6568,13 +6480,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsICustomProperty[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICustomProperty), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICustomProperty), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICustomProperty[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICustomProperty) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICustomProperty = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsICustomProperty",
@@ -6785,21 +6695,18 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "get_string_representation", reinterpret_cast<PyCFunction>(ICustomPropertyProvider_GetStringRepresentation), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICustomPropertyProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICustomPropertyProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICustomPropertyProvider[] = {
         { "type", reinterpret_cast<getter>(ICustomPropertyProvider_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICustomPropertyProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICustomPropertyProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomPropertyProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomPropertyProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomPropertyProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICustomPropertyProvider = {
         "winrt._winrt_windows_ui_xaml_data.ICustomPropertyProvider",
@@ -6977,13 +6884,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsICustomPropertyProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICustomPropertyProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICustomPropertyProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICustomPropertyProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICustomPropertyProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICustomPropertyProvider = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsICustomPropertyProvider",
@@ -7148,20 +7053,17 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "_from", reinterpret_cast<PyCFunction>(_from_IItemsRangeInfo), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IItemsRangeInfo), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IItemsRangeInfo), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IItemsRangeInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IItemsRangeInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IItemsRangeInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IItemsRangeInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IItemsRangeInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IItemsRangeInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IItemsRangeInfo = {
         "winrt._winrt_windows_ui_xaml_data.IItemsRangeInfo",
@@ -7283,13 +7185,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsIItemsRangeInfo[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIItemsRangeInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIItemsRangeInfo), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIItemsRangeInfo[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIItemsRangeInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIItemsRangeInfo = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsIItemsRangeInfo",
@@ -7409,20 +7309,17 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "remove_property_changed", reinterpret_cast<PyCFunction>(INotifyPropertyChanged_remove_PropertyChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_INotifyPropertyChanged, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INotifyPropertyChanged), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INotifyPropertyChanged[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INotifyPropertyChanged[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INotifyPropertyChanged) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INotifyPropertyChanged) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INotifyPropertyChanged) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INotifyPropertyChanged) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INotifyPropertyChanged = {
         "winrt._winrt_windows_ui_xaml_data.INotifyPropertyChanged",
@@ -7540,13 +7437,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsINotifyPropertyChanged[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINotifyPropertyChanged), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINotifyPropertyChanged), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINotifyPropertyChanged[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINotifyPropertyChanged) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINotifyPropertyChanged = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsINotifyPropertyChanged",
@@ -7771,20 +7666,17 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "select_range", reinterpret_cast<PyCFunction>(ISelectionInfo_SelectRange), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISelectionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISelectionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISelectionInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISelectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISelectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISelectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISelectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISelectionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISelectionInfo = {
         "winrt._winrt_windows_ui_xaml_data.ISelectionInfo",
@@ -7958,13 +7850,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsISelectionInfo[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISelectionInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISelectionInfo), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISelectionInfo[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISelectionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISelectionInfo = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsISelectionInfo",
@@ -8090,21 +7980,18 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "load_more_items_async", reinterpret_cast<PyCFunction>(ISupportIncrementalLoading_LoadMoreItemsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISupportIncrementalLoading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISupportIncrementalLoading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISupportIncrementalLoading[] = {
         { "has_more_items", reinterpret_cast<getter>(ISupportIncrementalLoading_get_HasMoreItems), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISupportIncrementalLoading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISupportIncrementalLoading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISupportIncrementalLoading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISupportIncrementalLoading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISupportIncrementalLoading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISupportIncrementalLoading = {
         "winrt._winrt_windows_ui_xaml_data.ISupportIncrementalLoading",
@@ -8212,13 +8099,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsISupportIncrementalLoading[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISupportIncrementalLoading), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISupportIncrementalLoading), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISupportIncrementalLoading[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISupportIncrementalLoading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISupportIncrementalLoading = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsISupportIncrementalLoading",
@@ -8363,20 +8248,17 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "convert_back", reinterpret_cast<PyCFunction>(IValueConverter_ConvertBack), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IValueConverter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IValueConverter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IValueConverter[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IValueConverter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IValueConverter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IValueConverter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IValueConverter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IValueConverter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IValueConverter = {
         "winrt._winrt_windows_ui_xaml_data.IValueConverter",
@@ -8544,13 +8426,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef methods_ImplementsIValueConverter[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIValueConverter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIValueConverter), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIValueConverter[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIValueConverter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIValueConverter = {
         "winrt._winrt_windows_ui_xaml_data.ImplementsIValueConverter",
@@ -8626,8 +8506,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyMethodDef _methods_LoadMoreItemsResult[] = {
         { "_assign_array_", _assign_array_LoadMoreItemsResult, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* LoadMoreItemsResult_get_Count(py::wrapper::Windows::UI::Xaml::Data::LoadMoreItemsResult* self, void* /*unused*/) noexcept
     {
@@ -8664,8 +8543,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyGetSetDef _getset_LoadMoreItemsResult[] = {
         { "count", reinterpret_cast<getter>(LoadMoreItemsResult_get_Count), reinterpret_cast<setter>(LoadMoreItemsResult_set_Count), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_LoadMoreItemsResult(py::wrapper::Windows::UI::Xaml::Data::LoadMoreItemsResult* self, PyObject* other, int op) noexcept
     {
@@ -8721,8 +8599,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoadMoreItemsResult) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_LoadMoreItemsResult) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_LoadMoreItemsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LoadMoreItemsResult = {
         "winrt._winrt_windows_ui_xaml_data.LoadMoreItemsResult",

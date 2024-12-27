@@ -268,22 +268,19 @@ namespace py::cpp::Windows::UI::StartScreen
         { "save_async", reinterpret_cast<PyCFunction>(JumpList_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_JumpList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JumpList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JumpList[] = {
         { "system_group_kind", reinterpret_cast<getter>(JumpList_get_SystemGroupKind), reinterpret_cast<setter>(JumpList_put_SystemGroupKind), nullptr, nullptr },
         { "items", reinterpret_cast<getter>(JumpList_get_Items), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JumpList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JumpList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JumpList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JumpList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JumpList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JumpList = {
         "winrt._winrt_windows_ui_startscreen.JumpList",
@@ -293,14 +290,12 @@ namespace py::cpp::Windows::UI::StartScreen
         _type_slots_JumpList};
 
     static PyGetSetDef getset_JumpList_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_JumpList_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(JumpList_IsSupported), METH_VARARGS, nullptr },
         { "load_current_async", reinterpret_cast<PyCFunction>(JumpList_LoadCurrentAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_JumpList_Static[] = 
     {
@@ -310,14 +305,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Spec type_spec_JumpList_Static =
-    {
+    static PyType_Spec type_spec_JumpList_Static = {
         "winrt._winrt_windows_ui_startscreen.JumpList_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_JumpList_Static
-    };
+        type_slots_JumpList_Static};
 
     // ----- JumpListItem class --------------------
 
@@ -812,8 +805,7 @@ namespace py::cpp::Windows::UI::StartScreen
     static PyMethodDef _methods_JumpListItem[] = {
         { "_assign_array_", _assign_array_JumpListItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JumpListItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JumpListItem[] = {
         { "logo", reinterpret_cast<getter>(JumpListItem_get_Logo), reinterpret_cast<setter>(JumpListItem_put_Logo), nullptr, nullptr },
@@ -823,16 +815,14 @@ namespace py::cpp::Windows::UI::StartScreen
         { "arguments", reinterpret_cast<getter>(JumpListItem_get_Arguments), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(JumpListItem_get_Kind), nullptr, nullptr, nullptr },
         { "removed_by_user", reinterpret_cast<getter>(JumpListItem_get_RemovedByUser), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JumpListItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JumpListItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JumpListItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JumpListItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JumpListItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JumpListItem = {
         "winrt._winrt_windows_ui_startscreen.JumpListItem",
@@ -842,14 +832,12 @@ namespace py::cpp::Windows::UI::StartScreen
         _type_slots_JumpListItem};
 
     static PyGetSetDef getset_JumpListItem_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_JumpListItem_Static[] = {
         { "create_separator", reinterpret_cast<PyCFunction>(JumpListItem_CreateSeparator), METH_VARARGS, nullptr },
         { "create_with_arguments", reinterpret_cast<PyCFunction>(JumpListItem_CreateWithArguments), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_JumpListItem_Static[] = 
     {
@@ -859,14 +847,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Spec type_spec_JumpListItem_Static =
-    {
+    static PyType_Spec type_spec_JumpListItem_Static = {
         "winrt._winrt_windows_ui_startscreen.JumpListItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_JumpListItem_Static
-    };
+        type_slots_JumpListItem_Static};
 
     // ----- SecondaryTile class --------------------
 
@@ -2619,8 +2605,7 @@ namespace py::cpp::Windows::UI::StartScreen
         { "remove_visual_elements_requested", reinterpret_cast<PyCFunction>(SecondaryTile_remove_VisualElementsRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_SecondaryTile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryTile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecondaryTile[] = {
         { "short_name", reinterpret_cast<getter>(SecondaryTile_get_ShortName), reinterpret_cast<setter>(SecondaryTile_put_ShortName), nullptr, nullptr },
@@ -2638,16 +2623,14 @@ namespace py::cpp::Windows::UI::StartScreen
         { "roaming_enabled", reinterpret_cast<getter>(SecondaryTile_get_RoamingEnabled), reinterpret_cast<setter>(SecondaryTile_put_RoamingEnabled), nullptr, nullptr },
         { "phonetic_name", reinterpret_cast<getter>(SecondaryTile_get_PhoneticName), reinterpret_cast<setter>(SecondaryTile_put_PhoneticName), nullptr, nullptr },
         { "visual_elements", reinterpret_cast<getter>(SecondaryTile_get_VisualElements), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecondaryTile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryTile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryTile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryTile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryTile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecondaryTile = {
         "winrt._winrt_windows_ui_startscreen.SecondaryTile",
@@ -2657,16 +2640,14 @@ namespace py::cpp::Windows::UI::StartScreen
         _type_slots_SecondaryTile};
 
     static PyGetSetDef getset_SecondaryTile_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SecondaryTile_Static[] = {
         { "exists", reinterpret_cast<PyCFunction>(SecondaryTile_Exists), METH_VARARGS, nullptr },
         { "find_all_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllAsync), METH_VARARGS, nullptr },
         { "find_all_for_application_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllForApplicationAsync), METH_VARARGS, nullptr },
         { "find_all_for_package_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllForPackageAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SecondaryTile_Static[] = 
     {
@@ -2676,14 +2657,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Spec type_spec_SecondaryTile_Static =
-    {
+    static PyType_Spec type_spec_SecondaryTile_Static = {
         "winrt._winrt_windows_ui_startscreen.SecondaryTile_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SecondaryTile_Static
-    };
+        type_slots_SecondaryTile_Static};
 
     // ----- SecondaryTileVisualElements class --------------------
 
@@ -3587,8 +3566,7 @@ namespace py::cpp::Windows::UI::StartScreen
     static PyMethodDef _methods_SecondaryTileVisualElements[] = {
         { "_assign_array_", _assign_array_SecondaryTileVisualElements, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryTileVisualElements), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SecondaryTileVisualElements[] = {
         { "square150x150_logo", reinterpret_cast<getter>(SecondaryTileVisualElements_get_Square150x150Logo), reinterpret_cast<setter>(SecondaryTileVisualElements_put_Square150x150Logo), nullptr, nullptr },
@@ -3604,16 +3582,14 @@ namespace py::cpp::Windows::UI::StartScreen
         { "square71x71_logo", reinterpret_cast<getter>(SecondaryTileVisualElements_get_Square71x71Logo), reinterpret_cast<setter>(SecondaryTileVisualElements_put_Square71x71Logo), nullptr, nullptr },
         { "square44x44_logo", reinterpret_cast<getter>(SecondaryTileVisualElements_get_Square44x44Logo), reinterpret_cast<setter>(SecondaryTileVisualElements_put_Square44x44Logo), nullptr, nullptr },
         { "mixed_reality_model", reinterpret_cast<getter>(SecondaryTileVisualElements_get_MixedRealityModel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SecondaryTileVisualElements[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryTileVisualElements) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryTileVisualElements) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryTileVisualElements) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryTileVisualElements) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SecondaryTileVisualElements = {
         "winrt._winrt_windows_ui_startscreen.SecondaryTileVisualElements",
@@ -3993,21 +3969,18 @@ namespace py::cpp::Windows::UI::StartScreen
         { "try_remove_secondary_tile_async", reinterpret_cast<PyCFunction>(StartScreenManager_TryRemoveSecondaryTileAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StartScreenManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StartScreenManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StartScreenManager[] = {
         { "user", reinterpret_cast<getter>(StartScreenManager_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StartScreenManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StartScreenManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StartScreenManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StartScreenManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StartScreenManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StartScreenManager = {
         "winrt._winrt_windows_ui_startscreen.StartScreenManager",
@@ -4017,14 +3990,12 @@ namespace py::cpp::Windows::UI::StartScreen
         _type_slots_StartScreenManager};
 
     static PyGetSetDef getset_StartScreenManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StartScreenManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(StartScreenManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(StartScreenManager_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StartScreenManager_Static[] = 
     {
@@ -4034,14 +4005,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Spec type_spec_StartScreenManager_Static =
-    {
+    static PyType_Spec type_spec_StartScreenManager_Static = {
         "winrt._winrt_windows_ui_startscreen.StartScreenManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StartScreenManager_Static
-    };
+        type_slots_StartScreenManager_Static};
 
     // ----- TileMixedRealityModel class --------------------
 
@@ -4294,23 +4263,20 @@ namespace py::cpp::Windows::UI::StartScreen
     static PyMethodDef _methods_TileMixedRealityModel[] = {
         { "_assign_array_", _assign_array_TileMixedRealityModel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TileMixedRealityModel), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TileMixedRealityModel[] = {
         { "uri", reinterpret_cast<getter>(TileMixedRealityModel_get_Uri), reinterpret_cast<setter>(TileMixedRealityModel_put_Uri), nullptr, nullptr },
         { "bounding_box", reinterpret_cast<getter>(TileMixedRealityModel_get_BoundingBox), reinterpret_cast<setter>(TileMixedRealityModel_put_BoundingBox), nullptr, nullptr },
         { "activation_behavior", reinterpret_cast<getter>(TileMixedRealityModel_get_ActivationBehavior), reinterpret_cast<setter>(TileMixedRealityModel_put_ActivationBehavior), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TileMixedRealityModel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileMixedRealityModel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileMixedRealityModel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileMixedRealityModel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileMixedRealityModel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TileMixedRealityModel = {
         "winrt._winrt_windows_ui_startscreen.TileMixedRealityModel",
@@ -4494,23 +4460,20 @@ namespace py::cpp::Windows::UI::StartScreen
         { "get_deferral", reinterpret_cast<PyCFunction>(VisualElementsRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VisualElementsRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualElementsRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VisualElementsRequest[] = {
         { "alternate_visual_elements", reinterpret_cast<getter>(VisualElementsRequest_get_AlternateVisualElements), nullptr, nullptr, nullptr },
         { "deadline", reinterpret_cast<getter>(VisualElementsRequest_get_Deadline), nullptr, nullptr, nullptr },
         { "visual_elements", reinterpret_cast<getter>(VisualElementsRequest_get_VisualElements), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VisualElementsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualElementsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualElementsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualElementsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualElementsRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VisualElementsRequest = {
         "winrt._winrt_windows_ui_startscreen.VisualElementsRequest",
@@ -4605,20 +4568,17 @@ namespace py::cpp::Windows::UI::StartScreen
         { "complete", reinterpret_cast<PyCFunction>(VisualElementsRequestDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VisualElementsRequestDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualElementsRequestDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VisualElementsRequestDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VisualElementsRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualElementsRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualElementsRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualElementsRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualElementsRequestDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VisualElementsRequestDeferral = {
         "winrt._winrt_windows_ui_startscreen.VisualElementsRequestDeferral",
@@ -4701,21 +4661,18 @@ namespace py::cpp::Windows::UI::StartScreen
     static PyMethodDef _methods_VisualElementsRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_VisualElementsRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualElementsRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VisualElementsRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(VisualElementsRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VisualElementsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualElementsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualElementsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualElementsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualElementsRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VisualElementsRequestedEventArgs = {
         "winrt._winrt_windows_ui_startscreen.VisualElementsRequestedEventArgs",

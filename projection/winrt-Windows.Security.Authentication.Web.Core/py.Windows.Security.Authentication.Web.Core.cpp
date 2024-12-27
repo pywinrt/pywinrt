@@ -138,23 +138,20 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     static PyMethodDef _methods_FindAllAccountsResult[] = {
         { "_assign_array_", _assign_array_FindAllAccountsResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FindAllAccountsResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FindAllAccountsResult[] = {
         { "accounts", reinterpret_cast<getter>(FindAllAccountsResult_get_Accounts), nullptr, nullptr, nullptr },
         { "provider_error", reinterpret_cast<getter>(FindAllAccountsResult_get_ProviderError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(FindAllAccountsResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FindAllAccountsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FindAllAccountsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FindAllAccountsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FindAllAccountsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FindAllAccountsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FindAllAccountsResult = {
         "winrt._winrt_windows_security_authentication_web_core.FindAllAccountsResult",
@@ -237,21 +234,18 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     static PyMethodDef _methods_WebAccountEventArgs[] = {
         { "_assign_array_", _assign_array_WebAccountEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountEventArgs[] = {
         { "account", reinterpret_cast<getter>(WebAccountEventArgs_get_Account), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountEventArgs = {
         "winrt._winrt_windows_security_authentication_web_core.WebAccountEventArgs",
@@ -572,20 +566,17 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { "remove_account_picture_updated", reinterpret_cast<PyCFunction>(WebAccountMonitor_remove_AccountPictureUpdated), METH_O, nullptr },
         { "_assign_array_", _assign_array_WebAccountMonitor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountMonitor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountMonitor[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountMonitor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountMonitor = {
         "winrt._winrt_windows_security_authentication_web_core.WebAccountMonitor",
@@ -722,22 +713,19 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     static PyMethodDef _methods_WebAuthenticationAddAccountResponse[] = {
         { "_assign_array_", _assign_array_WebAuthenticationAddAccountResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAuthenticationAddAccountResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAuthenticationAddAccountResponse[] = {
         { "properties", reinterpret_cast<getter>(WebAuthenticationAddAccountResponse_get_Properties), nullptr, nullptr, nullptr },
         { "web_account", reinterpret_cast<getter>(WebAuthenticationAddAccountResponse_get_WebAccount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAuthenticationAddAccountResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationAddAccountResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAuthenticationAddAccountResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationAddAccountResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationAddAccountResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAuthenticationAddAccountResponse = {
         "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationAddAccountResponse",
@@ -880,23 +868,20 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     static PyMethodDef _methods_WebAuthenticationAddAccountResult[] = {
         { "_assign_array_", _assign_array_WebAuthenticationAddAccountResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAuthenticationAddAccountResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAuthenticationAddAccountResult[] = {
         { "response_data", reinterpret_cast<getter>(WebAuthenticationAddAccountResult_get_ResponseData), nullptr, nullptr, nullptr },
         { "response_error", reinterpret_cast<getter>(WebAuthenticationAddAccountResult_get_ResponseError), nullptr, nullptr, nullptr },
         { "response_status", reinterpret_cast<getter>(WebAuthenticationAddAccountResult_get_ResponseStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAuthenticationAddAccountResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationAddAccountResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAuthenticationAddAccountResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationAddAccountResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationAddAccountResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAuthenticationAddAccountResult = {
         "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationAddAccountResult",
@@ -1555,19 +1540,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     }
 
     static PyMethodDef _methods_WebAuthenticationCoreManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAuthenticationCoreManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAuthenticationCoreManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationCoreManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationCoreManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationCoreManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAuthenticationCoreManager = {
         "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationCoreManager",
@@ -1577,8 +1559,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         _type_slots_WebAuthenticationCoreManager};
 
     static PyGetSetDef getset_WebAuthenticationCoreManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WebAuthenticationCoreManager_Static[] = {
         { "add_account_with_transfer_token_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_AddAccountWithTransferTokenAsync), METH_VARARGS, nullptr },
@@ -1596,8 +1577,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { "get_token_silently_with_web_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_GetTokenSilentlyWithWebAccountAsync), METH_VARARGS, nullptr },
         { "request_token_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_RequestTokenAsync), METH_VARARGS, nullptr },
         { "request_token_with_web_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_RequestTokenWithWebAccountAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WebAuthenticationCoreManager_Static[] = 
     {
@@ -1607,14 +1587,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { }
     };
 
-    static PyType_Spec type_spec_WebAuthenticationCoreManager_Static =
-    {
+    static PyType_Spec type_spec_WebAuthenticationCoreManager_Static = {
         "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationCoreManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WebAuthenticationCoreManager_Static
-    };
+        type_slots_WebAuthenticationCoreManager_Static};
 
     // ----- WebAuthenticationTransferTokenRequest class --------------------
 
@@ -1900,24 +1878,21 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     static PyMethodDef _methods_WebAuthenticationTransferTokenRequest[] = {
         { "_assign_array_", _assign_array_WebAuthenticationTransferTokenRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAuthenticationTransferTokenRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAuthenticationTransferTokenRequest[] = {
         { "transfer_token", reinterpret_cast<getter>(WebAuthenticationTransferTokenRequest_get_TransferToken), reinterpret_cast<setter>(WebAuthenticationTransferTokenRequest_put_TransferToken), nullptr, nullptr },
         { "correlation_id", reinterpret_cast<getter>(WebAuthenticationTransferTokenRequest_get_CorrelationId), reinterpret_cast<setter>(WebAuthenticationTransferTokenRequest_put_CorrelationId), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(WebAuthenticationTransferTokenRequest_get_Properties), nullptr, nullptr, nullptr },
         { "web_account_provider", reinterpret_cast<getter>(WebAuthenticationTransferTokenRequest_get_WebAccountProvider), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAuthenticationTransferTokenRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationTransferTokenRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAuthenticationTransferTokenRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationTransferTokenRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationTransferTokenRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAuthenticationTransferTokenRequest = {
         "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationTransferTokenRequest",
@@ -2085,23 +2060,20 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     static PyMethodDef _methods_WebProviderError[] = {
         { "_assign_array_", _assign_array_WebProviderError, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebProviderError), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebProviderError[] = {
         { "error_code", reinterpret_cast<getter>(WebProviderError_get_ErrorCode), nullptr, nullptr, nullptr },
         { "error_message", reinterpret_cast<getter>(WebProviderError_get_ErrorMessage), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(WebProviderError_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebProviderError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebProviderError) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebProviderError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebProviderError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebProviderError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebProviderError = {
         "winrt._winrt_windows_security_authentication_web_core.WebProviderError",
@@ -2478,8 +2450,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     static PyMethodDef _methods_WebTokenRequest[] = {
         { "_assign_array_", _assign_array_WebTokenRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebTokenRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebTokenRequest[] = {
         { "client_id", reinterpret_cast<getter>(WebTokenRequest_get_ClientId), nullptr, nullptr, nullptr },
@@ -2489,16 +2460,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { "web_account_provider", reinterpret_cast<getter>(WebTokenRequest_get_WebAccountProvider), nullptr, nullptr, nullptr },
         { "app_properties", reinterpret_cast<getter>(WebTokenRequest_get_AppProperties), nullptr, nullptr, nullptr },
         { "correlation_id", reinterpret_cast<getter>(WebTokenRequest_get_CorrelationId), reinterpret_cast<setter>(WebTokenRequest_put_CorrelationId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebTokenRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebTokenRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebTokenRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebTokenRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebTokenRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebTokenRequest = {
         "winrt._winrt_windows_security_authentication_web_core.WebTokenRequest",
@@ -2682,23 +2651,20 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { "invalidate_cache_async", reinterpret_cast<PyCFunction>(WebTokenRequestResult_InvalidateCacheAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebTokenRequestResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebTokenRequestResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebTokenRequestResult[] = {
         { "response_data", reinterpret_cast<getter>(WebTokenRequestResult_get_ResponseData), nullptr, nullptr, nullptr },
         { "response_error", reinterpret_cast<getter>(WebTokenRequestResult_get_ResponseError), nullptr, nullptr, nullptr },
         { "response_status", reinterpret_cast<getter>(WebTokenRequestResult_get_ResponseStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebTokenRequestResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebTokenRequestResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebTokenRequestResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebTokenRequestResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebTokenRequestResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebTokenRequestResult = {
         "winrt._winrt_windows_security_authentication_web_core.WebTokenRequestResult",
@@ -2941,24 +2907,21 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     static PyMethodDef _methods_WebTokenResponse[] = {
         { "_assign_array_", _assign_array_WebTokenResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebTokenResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebTokenResponse[] = {
         { "properties", reinterpret_cast<getter>(WebTokenResponse_get_Properties), nullptr, nullptr, nullptr },
         { "provider_error", reinterpret_cast<getter>(WebTokenResponse_get_ProviderError), nullptr, nullptr, nullptr },
         { "token", reinterpret_cast<getter>(WebTokenResponse_get_Token), nullptr, nullptr, nullptr },
         { "web_account", reinterpret_cast<getter>(WebTokenResponse_get_WebAccount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebTokenResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebTokenResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebTokenResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebTokenResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebTokenResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebTokenResponse = {
         "winrt._winrt_windows_security_authentication_web_core.WebTokenResponse",

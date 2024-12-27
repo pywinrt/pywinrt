@@ -149,22 +149,19 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "get_audio_frame", reinterpret_cast<PyCFunction>(AudioMediaFrame_GetAudioFrame), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AudioMediaFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioMediaFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioMediaFrame[] = {
         { "audio_encoding_properties", reinterpret_cast<getter>(AudioMediaFrame_get_AudioEncodingProperties), nullptr, nullptr, nullptr },
         { "frame_reference", reinterpret_cast<getter>(AudioMediaFrame_get_FrameReference), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioMediaFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioMediaFrame = {
         "winrt._winrt_windows_media_capture_frames.AudioMediaFrame",
@@ -277,22 +274,19 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyMethodDef _methods_BufferMediaFrame[] = {
         { "_assign_array_", _assign_array_BufferMediaFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BufferMediaFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BufferMediaFrame[] = {
         { "buffer", reinterpret_cast<getter>(BufferMediaFrame_get_Buffer), nullptr, nullptr, nullptr },
         { "frame_reference", reinterpret_cast<getter>(BufferMediaFrame_get_FrameReference), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BufferMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BufferMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BufferMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BufferMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BufferMediaFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BufferMediaFrame = {
         "winrt._winrt_windows_media_capture_frames.BufferMediaFrame",
@@ -539,8 +533,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "try_create_coordinate_mapper", reinterpret_cast<PyCFunction>(DepthMediaFrame_TryCreateCoordinateMapper), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DepthMediaFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DepthMediaFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DepthMediaFrame[] = {
         { "depth_format", reinterpret_cast<getter>(DepthMediaFrame_get_DepthFormat), nullptr, nullptr, nullptr },
@@ -548,16 +541,14 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "video_media_frame", reinterpret_cast<getter>(DepthMediaFrame_get_VideoMediaFrame), nullptr, nullptr, nullptr },
         { "max_reliable_depth", reinterpret_cast<getter>(DepthMediaFrame_get_MaxReliableDepth), nullptr, nullptr, nullptr },
         { "min_reliable_depth", reinterpret_cast<getter>(DepthMediaFrame_get_MinReliableDepth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DepthMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DepthMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DepthMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DepthMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DepthMediaFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DepthMediaFrame = {
         "winrt._winrt_windows_media_capture_frames.DepthMediaFrame",
@@ -670,22 +661,19 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyMethodDef _methods_DepthMediaFrameFormat[] = {
         { "_assign_array_", _assign_array_DepthMediaFrameFormat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DepthMediaFrameFormat), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DepthMediaFrameFormat[] = {
         { "depth_scale_in_meters", reinterpret_cast<getter>(DepthMediaFrameFormat_get_DepthScaleInMeters), nullptr, nullptr, nullptr },
         { "video_format", reinterpret_cast<getter>(DepthMediaFrameFormat_get_VideoFormat), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DepthMediaFrameFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DepthMediaFrameFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DepthMediaFrameFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DepthMediaFrameFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DepthMediaFrameFormat) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DepthMediaFrameFormat = {
         "winrt._winrt_windows_media_capture_frames.DepthMediaFrameFormat",
@@ -828,23 +816,20 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyMethodDef _methods_InfraredMediaFrame[] = {
         { "_assign_array_", _assign_array_InfraredMediaFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InfraredMediaFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InfraredMediaFrame[] = {
         { "frame_reference", reinterpret_cast<getter>(InfraredMediaFrame_get_FrameReference), nullptr, nullptr, nullptr },
         { "is_illuminated", reinterpret_cast<getter>(InfraredMediaFrame_get_IsIlluminated), nullptr, nullptr, nullptr },
         { "video_media_frame", reinterpret_cast<getter>(InfraredMediaFrame_get_VideoMediaFrame), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InfraredMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InfraredMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InfraredMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InfraredMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InfraredMediaFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InfraredMediaFrame = {
         "winrt._winrt_windows_media_capture_frames.InfraredMediaFrame",
@@ -897,20 +882,17 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyMethodDef _methods_MediaFrameArrivedEventArgs[] = {
         { "_assign_array_", _assign_array_MediaFrameArrivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameArrivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaFrameArrivedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaFrameArrivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameArrivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameArrivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameArrivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameArrivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaFrameArrivedEventArgs = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameArrivedEventArgs",
@@ -1143,8 +1125,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyMethodDef _methods_MediaFrameFormat[] = {
         { "_assign_array_", _assign_array_MediaFrameFormat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameFormat), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaFrameFormat[] = {
         { "frame_rate", reinterpret_cast<getter>(MediaFrameFormat_get_FrameRate), nullptr, nullptr, nullptr },
@@ -1153,16 +1134,14 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "subtype", reinterpret_cast<getter>(MediaFrameFormat_get_Subtype), nullptr, nullptr, nullptr },
         { "video_format", reinterpret_cast<getter>(MediaFrameFormat_get_VideoFormat), nullptr, nullptr, nullptr },
         { "audio_encoding_properties", reinterpret_cast<getter>(MediaFrameFormat_get_AudioEncodingProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaFrameFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameFormat) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaFrameFormat = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameFormat",
@@ -1541,21 +1520,18 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaFrameReader), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaFrameReader), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaFrameReader[] = {
         { "acquisition_mode", reinterpret_cast<getter>(MediaFrameReader_get_AcquisitionMode), reinterpret_cast<setter>(MediaFrameReader_put_AcquisitionMode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaFrameReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaFrameReader = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameReader",
@@ -1945,8 +1921,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameReference), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaFrameReference), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaFrameReference), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaFrameReference[] = {
         { "buffer_media_frame", reinterpret_cast<getter>(MediaFrameReference_get_BufferMediaFrame), nullptr, nullptr, nullptr },
@@ -1958,16 +1933,14 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "system_relative_time", reinterpret_cast<getter>(MediaFrameReference_get_SystemRelativeTime), nullptr, nullptr, nullptr },
         { "video_media_frame", reinterpret_cast<getter>(MediaFrameReference_get_VideoMediaFrame), nullptr, nullptr, nullptr },
         { "audio_media_frame", reinterpret_cast<getter>(MediaFrameReference_get_AudioMediaFrame), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaFrameReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameReference) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaFrameReference = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameReference",
@@ -2293,24 +2266,21 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "remove_format_changed", reinterpret_cast<PyCFunction>(MediaFrameSource_remove_FormatChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_MediaFrameSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaFrameSource[] = {
         { "controller", reinterpret_cast<getter>(MediaFrameSource_get_Controller), nullptr, nullptr, nullptr },
         { "current_format", reinterpret_cast<getter>(MediaFrameSource_get_CurrentFormat), nullptr, nullptr, nullptr },
         { "info", reinterpret_cast<getter>(MediaFrameSource_get_Info), nullptr, nullptr, nullptr },
         { "supported_formats", reinterpret_cast<getter>(MediaFrameSource_get_SupportedFormats), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaFrameSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaFrameSource = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameSource",
@@ -2598,22 +2568,19 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "set_property_by_extended_id_async", reinterpret_cast<PyCFunction>(MediaFrameSourceController_SetPropertyByExtendedIdAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaFrameSourceController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameSourceController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaFrameSourceController[] = {
         { "video_device_controller", reinterpret_cast<getter>(MediaFrameSourceController_get_VideoDeviceController), nullptr, nullptr, nullptr },
         { "audio_device_controller", reinterpret_cast<getter>(MediaFrameSourceController_get_AudioDeviceController), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaFrameSourceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSourceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSourceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSourceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSourceController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaFrameSourceController = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameSourceController",
@@ -2726,22 +2693,19 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyMethodDef _methods_MediaFrameSourceGetPropertyResult[] = {
         { "_assign_array_", _assign_array_MediaFrameSourceGetPropertyResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameSourceGetPropertyResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaFrameSourceGetPropertyResult[] = {
         { "status", reinterpret_cast<getter>(MediaFrameSourceGetPropertyResult_get_Status), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(MediaFrameSourceGetPropertyResult_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaFrameSourceGetPropertyResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSourceGetPropertyResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSourceGetPropertyResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSourceGetPropertyResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSourceGetPropertyResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaFrameSourceGetPropertyResult = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameSourceGetPropertyResult",
@@ -3006,23 +2970,20 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyMethodDef _methods_MediaFrameSourceGroup[] = {
         { "_assign_array_", _assign_array_MediaFrameSourceGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameSourceGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaFrameSourceGroup[] = {
         { "display_name", reinterpret_cast<getter>(MediaFrameSourceGroup_get_DisplayName), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(MediaFrameSourceGroup_get_Id), nullptr, nullptr, nullptr },
         { "source_infos", reinterpret_cast<getter>(MediaFrameSourceGroup_get_SourceInfos), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaFrameSourceGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSourceGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSourceGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSourceGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSourceGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaFrameSourceGroup = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameSourceGroup",
@@ -3032,15 +2993,13 @@ namespace py::cpp::Windows::Media::Capture::Frames
         _type_slots_MediaFrameSourceGroup};
 
     static PyGetSetDef getset_MediaFrameSourceGroup_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MediaFrameSourceGroup_Static[] = {
         { "find_all_async", reinterpret_cast<PyCFunction>(MediaFrameSourceGroup_FindAllAsync), METH_VARARGS, nullptr },
         { "from_id_async", reinterpret_cast<PyCFunction>(MediaFrameSourceGroup_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(MediaFrameSourceGroup_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MediaFrameSourceGroup_Static[] = 
     {
@@ -3050,14 +3009,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Spec type_spec_MediaFrameSourceGroup_Static =
-    {
+    static PyType_Spec type_spec_MediaFrameSourceGroup_Static = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameSourceGroup_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaFrameSourceGroup_Static
-    };
+        type_slots_MediaFrameSourceGroup_Static};
 
     // ----- MediaFrameSourceInfo class --------------------
 
@@ -3446,8 +3403,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "get_relative_panel", reinterpret_cast<PyCFunction>(MediaFrameSourceInfo_GetRelativePanel), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaFrameSourceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameSourceInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaFrameSourceInfo[] = {
         { "coordinate_system", reinterpret_cast<getter>(MediaFrameSourceInfo_get_CoordinateSystem), nullptr, nullptr, nullptr },
@@ -3460,16 +3416,14 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "profile_id", reinterpret_cast<getter>(MediaFrameSourceInfo_get_ProfileId), nullptr, nullptr, nullptr },
         { "video_profile_media_description", reinterpret_cast<getter>(MediaFrameSourceInfo_get_VideoProfileMediaDescription), nullptr, nullptr, nullptr },
         { "is_shareable", reinterpret_cast<getter>(MediaFrameSourceInfo_get_IsShareable), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaFrameSourceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSourceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSourceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSourceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSourceInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaFrameSourceInfo = {
         "winrt._winrt_windows_media_capture_frames.MediaFrameSourceInfo",
@@ -3522,20 +3476,17 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyMethodDef _methods_MultiSourceMediaFrameArrivedEventArgs[] = {
         { "_assign_array_", _assign_array_MultiSourceMediaFrameArrivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MultiSourceMediaFrameArrivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MultiSourceMediaFrameArrivedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MultiSourceMediaFrameArrivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MultiSourceMediaFrameArrivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MultiSourceMediaFrameArrivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MultiSourceMediaFrameArrivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MultiSourceMediaFrameArrivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MultiSourceMediaFrameArrivedEventArgs = {
         "winrt._winrt_windows_media_capture_frames.MultiSourceMediaFrameArrivedEventArgs",
@@ -3914,21 +3865,18 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "_from", reinterpret_cast<PyCFunction>(_from_MultiSourceMediaFrameReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MultiSourceMediaFrameReader), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MultiSourceMediaFrameReader), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MultiSourceMediaFrameReader[] = {
         { "acquisition_mode", reinterpret_cast<getter>(MultiSourceMediaFrameReader_get_AcquisitionMode), reinterpret_cast<setter>(MultiSourceMediaFrameReader_put_AcquisitionMode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MultiSourceMediaFrameReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MultiSourceMediaFrameReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MultiSourceMediaFrameReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MultiSourceMediaFrameReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MultiSourceMediaFrameReader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MultiSourceMediaFrameReader = {
         "winrt._winrt_windows_media_capture_frames.MultiSourceMediaFrameReader",
@@ -4091,20 +4039,17 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "_from", reinterpret_cast<PyCFunction>(_from_MultiSourceMediaFrameReference), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MultiSourceMediaFrameReference), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MultiSourceMediaFrameReference), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MultiSourceMediaFrameReference[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MultiSourceMediaFrameReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MultiSourceMediaFrameReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MultiSourceMediaFrameReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MultiSourceMediaFrameReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MultiSourceMediaFrameReference) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MultiSourceMediaFrameReference = {
         "winrt._winrt_windows_media_capture_frames.MultiSourceMediaFrameReference",
@@ -4408,8 +4353,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "get_video_frame", reinterpret_cast<PyCFunction>(VideoMediaFrame_GetVideoFrame), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VideoMediaFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoMediaFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoMediaFrame[] = {
         { "camera_intrinsics", reinterpret_cast<getter>(VideoMediaFrame_get_CameraIntrinsics), nullptr, nullptr, nullptr },
@@ -4419,16 +4363,14 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "infrared_media_frame", reinterpret_cast<getter>(VideoMediaFrame_get_InfraredMediaFrame), nullptr, nullptr, nullptr },
         { "software_bitmap", reinterpret_cast<getter>(VideoMediaFrame_get_SoftwareBitmap), nullptr, nullptr, nullptr },
         { "video_format", reinterpret_cast<getter>(VideoMediaFrame_get_VideoFormat), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoMediaFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoMediaFrame = {
         "winrt._winrt_windows_media_capture_frames.VideoMediaFrame",
@@ -4601,24 +4543,21 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyMethodDef _methods_VideoMediaFrameFormat[] = {
         { "_assign_array_", _assign_array_VideoMediaFrameFormat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoMediaFrameFormat), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoMediaFrameFormat[] = {
         { "depth_format", reinterpret_cast<getter>(VideoMediaFrameFormat_get_DepthFormat), nullptr, nullptr, nullptr },
         { "height", reinterpret_cast<getter>(VideoMediaFrameFormat_get_Height), nullptr, nullptr, nullptr },
         { "media_frame_format", reinterpret_cast<getter>(VideoMediaFrameFormat_get_MediaFrameFormat), nullptr, nullptr, nullptr },
         { "width", reinterpret_cast<getter>(VideoMediaFrameFormat_get_Width), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoMediaFrameFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoMediaFrameFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoMediaFrameFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoMediaFrameFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoMediaFrameFormat) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoMediaFrameFormat = {
         "winrt._winrt_windows_media_capture_frames.VideoMediaFrameFormat",

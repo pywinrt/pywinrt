@@ -198,8 +198,7 @@ namespace py::cpp::Windows::Globalization::Fonts
     static PyMethodDef _methods_LanguageFont[] = {
         { "_assign_array_", _assign_array_LanguageFont, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LanguageFont), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LanguageFont[] = {
         { "font_family", reinterpret_cast<getter>(LanguageFont_get_FontFamily), nullptr, nullptr, nullptr },
@@ -207,16 +206,14 @@ namespace py::cpp::Windows::Globalization::Fonts
         { "font_style", reinterpret_cast<getter>(LanguageFont_get_FontStyle), nullptr, nullptr, nullptr },
         { "font_weight", reinterpret_cast<getter>(LanguageFont_get_FontWeight), nullptr, nullptr, nullptr },
         { "scale_factor", reinterpret_cast<getter>(LanguageFont_get_ScaleFactor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LanguageFont[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LanguageFont) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LanguageFont) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LanguageFont) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LanguageFont) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LanguageFont = {
         "winrt._winrt_windows_globalization_fonts.LanguageFont",
@@ -623,8 +620,7 @@ namespace py::cpp::Windows::Globalization::Fonts
     static PyMethodDef _methods_LanguageFontGroup[] = {
         { "_assign_array_", _assign_array_LanguageFontGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LanguageFontGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LanguageFontGroup[] = {
         { "document_alternate1_font", reinterpret_cast<getter>(LanguageFontGroup_get_DocumentAlternate1Font), nullptr, nullptr, nullptr },
@@ -638,16 +634,14 @@ namespace py::cpp::Windows::Globalization::Fonts
         { "ui_notification_heading_font", reinterpret_cast<getter>(LanguageFontGroup_get_UINotificationHeadingFont), nullptr, nullptr, nullptr },
         { "ui_text_font", reinterpret_cast<getter>(LanguageFontGroup_get_UITextFont), nullptr, nullptr, nullptr },
         { "ui_title_font", reinterpret_cast<getter>(LanguageFontGroup_get_UITitleFont), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LanguageFontGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LanguageFontGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LanguageFontGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LanguageFontGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LanguageFontGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LanguageFontGroup = {
         "winrt._winrt_windows_globalization_fonts.LanguageFontGroup",

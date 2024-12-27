@@ -746,8 +746,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_shaken", reinterpret_cast<PyCFunction>(Accelerometer_remove_Shaken), METH_O, nullptr },
         { "_assign_array_", _assign_array_Accelerometer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Accelerometer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Accelerometer[] = {
         { "report_interval", reinterpret_cast<getter>(Accelerometer_get_ReportInterval), reinterpret_cast<setter>(Accelerometer_put_ReportInterval), nullptr, nullptr },
@@ -758,16 +757,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "reading_type", reinterpret_cast<getter>(Accelerometer_get_ReadingType), nullptr, nullptr, nullptr },
         { "report_threshold", reinterpret_cast<getter>(Accelerometer_get_ReportThreshold), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(Accelerometer_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Accelerometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Accelerometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Accelerometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Accelerometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Accelerometer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Accelerometer = {
         "winrt._winrt_windows_devices_sensors.Accelerometer",
@@ -777,16 +774,14 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_Accelerometer};
 
     static PyGetSetDef getset_Accelerometer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Accelerometer_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Accelerometer_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(Accelerometer_GetDefault), METH_VARARGS, nullptr },
         { "get_default_with_accelerometer_reading_type", reinterpret_cast<PyCFunction>(Accelerometer_GetDefaultWithAccelerometerReadingType), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Accelerometer_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Accelerometer_Static[] = 
     {
@@ -796,14 +791,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_Accelerometer_Static =
-    {
+    static PyType_Spec type_spec_Accelerometer_Static = {
         "winrt._winrt_windows_devices_sensors.Accelerometer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Accelerometer_Static
-    };
+        type_slots_Accelerometer_Static};
 
     // ----- AccelerometerDataThreshold class --------------------
 
@@ -1056,23 +1049,20 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_AccelerometerDataThreshold[] = {
         { "_assign_array_", _assign_array_AccelerometerDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccelerometerDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccelerometerDataThreshold[] = {
         { "z_axis_in_g_force", reinterpret_cast<getter>(AccelerometerDataThreshold_get_ZAxisInGForce), reinterpret_cast<setter>(AccelerometerDataThreshold_put_ZAxisInGForce), nullptr, nullptr },
         { "y_axis_in_g_force", reinterpret_cast<getter>(AccelerometerDataThreshold_get_YAxisInGForce), reinterpret_cast<setter>(AccelerometerDataThreshold_put_YAxisInGForce), nullptr, nullptr },
         { "x_axis_in_g_force", reinterpret_cast<getter>(AccelerometerDataThreshold_get_XAxisInGForce), reinterpret_cast<setter>(AccelerometerDataThreshold_put_XAxisInGForce), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccelerometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccelerometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccelerometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccelerometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccelerometerDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccelerometerDataThreshold = {
         "winrt._winrt_windows_devices_sensors.AccelerometerDataThreshold",
@@ -1305,8 +1295,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_AccelerometerReading[] = {
         { "_assign_array_", _assign_array_AccelerometerReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccelerometerReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccelerometerReading[] = {
         { "acceleration_x", reinterpret_cast<getter>(AccelerometerReading_get_AccelerationX), nullptr, nullptr, nullptr },
@@ -1315,16 +1304,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "timestamp", reinterpret_cast<getter>(AccelerometerReading_get_Timestamp), nullptr, nullptr, nullptr },
         { "performance_count", reinterpret_cast<getter>(AccelerometerReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(AccelerometerReading_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccelerometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccelerometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccelerometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccelerometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccelerometerReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccelerometerReading = {
         "winrt._winrt_windows_devices_sensors.AccelerometerReading",
@@ -1407,21 +1394,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_AccelerometerReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_AccelerometerReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccelerometerReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccelerometerReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(AccelerometerReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccelerometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccelerometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccelerometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccelerometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccelerometerReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccelerometerReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.AccelerometerReadingChangedEventArgs",
@@ -1504,21 +1488,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_AccelerometerShakenEventArgs[] = {
         { "_assign_array_", _assign_array_AccelerometerShakenEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccelerometerShakenEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccelerometerShakenEventArgs[] = {
         { "timestamp", reinterpret_cast<getter>(AccelerometerShakenEventArgs_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccelerometerShakenEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccelerometerShakenEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccelerometerShakenEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccelerometerShakenEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccelerometerShakenEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccelerometerShakenEventArgs = {
         "winrt._winrt_windows_devices_sensors.AccelerometerShakenEventArgs",
@@ -2036,8 +2017,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(ActivitySensor_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ActivitySensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivitySensor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivitySensor[] = {
         { "device_id", reinterpret_cast<getter>(ActivitySensor_get_DeviceId), nullptr, nullptr, nullptr },
@@ -2045,16 +2025,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "power_in_milliwatts", reinterpret_cast<getter>(ActivitySensor_get_PowerInMilliwatts), nullptr, nullptr, nullptr },
         { "subscribed_activities", reinterpret_cast<getter>(ActivitySensor_get_SubscribedActivities), nullptr, nullptr, nullptr },
         { "supported_activities", reinterpret_cast<getter>(ActivitySensor_get_SupportedActivities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivitySensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivitySensor = {
         "winrt._winrt_windows_devices_sensors.ActivitySensor",
@@ -2064,8 +2042,7 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_ActivitySensor};
 
     static PyGetSetDef getset_ActivitySensor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ActivitySensor_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(ActivitySensor_FromIdAsync), METH_VARARGS, nullptr },
@@ -2073,8 +2050,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "get_device_selector", reinterpret_cast<PyCFunction>(ActivitySensor_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_system_history_async", reinterpret_cast<PyCFunction>(ActivitySensor_GetSystemHistoryAsync), METH_VARARGS, nullptr },
         { "get_system_history_with_duration_async", reinterpret_cast<PyCFunction>(ActivitySensor_GetSystemHistoryWithDurationAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ActivitySensor_Static[] = 
     {
@@ -2084,14 +2060,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_ActivitySensor_Static =
-    {
+    static PyType_Spec type_spec_ActivitySensor_Static = {
         "winrt._winrt_windows_devices_sensors.ActivitySensor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ActivitySensor_Static
-    };
+        type_slots_ActivitySensor_Static};
 
     // ----- ActivitySensorReading class --------------------
 
@@ -2227,23 +2201,20 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_ActivitySensorReading[] = {
         { "_assign_array_", _assign_array_ActivitySensorReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivitySensorReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivitySensorReading[] = {
         { "activity", reinterpret_cast<getter>(ActivitySensorReading_get_Activity), nullptr, nullptr, nullptr },
         { "confidence", reinterpret_cast<getter>(ActivitySensorReading_get_Confidence), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(ActivitySensorReading_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivitySensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensorReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivitySensorReading = {
         "winrt._winrt_windows_devices_sensors.ActivitySensorReading",
@@ -2326,21 +2297,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_ActivitySensorReadingChangeReport[] = {
         { "_assign_array_", _assign_array_ActivitySensorReadingChangeReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivitySensorReadingChangeReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivitySensorReadingChangeReport[] = {
         { "reading", reinterpret_cast<getter>(ActivitySensorReadingChangeReport_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivitySensorReadingChangeReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensorReadingChangeReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensorReadingChangeReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensorReadingChangeReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensorReadingChangeReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivitySensorReadingChangeReport = {
         "winrt._winrt_windows_devices_sensors.ActivitySensorReadingChangeReport",
@@ -2423,21 +2391,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_ActivitySensorReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_ActivitySensorReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivitySensorReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivitySensorReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(ActivitySensorReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivitySensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensorReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivitySensorReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.ActivitySensorReadingChangedEventArgs",
@@ -2531,20 +2496,17 @@ namespace py::cpp::Windows::Devices::Sensors
         { "read_reports", reinterpret_cast<PyCFunction>(ActivitySensorTriggerDetails_ReadReports), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ActivitySensorTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivitySensorTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivitySensorTriggerDetails[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivitySensorTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensorTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensorTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensorTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensorTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivitySensorTriggerDetails = {
         "winrt._winrt_windows_devices_sensors.ActivitySensorTriggerDetails",
@@ -2666,21 +2628,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_AdaptiveDimmingOptions[] = {
         { "_assign_array_", _assign_array_AdaptiveDimmingOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdaptiveDimmingOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdaptiveDimmingOptions[] = {
         { "allow_when_external_display_connected", reinterpret_cast<getter>(AdaptiveDimmingOptions_get_AllowWhenExternalDisplayConnected), reinterpret_cast<setter>(AdaptiveDimmingOptions_put_AllowWhenExternalDisplayConnected), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdaptiveDimmingOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveDimmingOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveDimmingOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveDimmingOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveDimmingOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdaptiveDimmingOptions = {
         "winrt._winrt_windows_devices_sensors.AdaptiveDimmingOptions",
@@ -3109,8 +3068,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(Altimeter_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Altimeter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Altimeter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Altimeter[] = {
         { "report_interval", reinterpret_cast<getter>(Altimeter_get_ReportInterval), reinterpret_cast<setter>(Altimeter_put_ReportInterval), nullptr, nullptr },
@@ -3118,16 +3076,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "minimum_report_interval", reinterpret_cast<getter>(Altimeter_get_MinimumReportInterval), nullptr, nullptr, nullptr },
         { "report_latency", reinterpret_cast<getter>(Altimeter_get_ReportLatency), reinterpret_cast<setter>(Altimeter_put_ReportLatency), nullptr, nullptr },
         { "max_batch_size", reinterpret_cast<getter>(Altimeter_get_MaxBatchSize), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Altimeter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Altimeter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Altimeter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Altimeter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Altimeter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Altimeter = {
         "winrt._winrt_windows_devices_sensors.Altimeter",
@@ -3137,13 +3093,11 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_Altimeter};
 
     static PyGetSetDef getset_Altimeter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Altimeter_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(Altimeter_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Altimeter_Static[] = 
     {
@@ -3153,14 +3107,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_Altimeter_Static =
-    {
+    static PyType_Spec type_spec_Altimeter_Static = {
         "winrt._winrt_windows_devices_sensors.Altimeter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Altimeter_Static
-    };
+        type_slots_Altimeter_Static};
 
     // ----- AltimeterReading class --------------------
 
@@ -3326,24 +3278,21 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_AltimeterReading[] = {
         { "_assign_array_", _assign_array_AltimeterReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AltimeterReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AltimeterReading[] = {
         { "altitude_change_in_meters", reinterpret_cast<getter>(AltimeterReading_get_AltitudeChangeInMeters), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(AltimeterReading_get_Timestamp), nullptr, nullptr, nullptr },
         { "performance_count", reinterpret_cast<getter>(AltimeterReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(AltimeterReading_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AltimeterReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AltimeterReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AltimeterReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AltimeterReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AltimeterReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AltimeterReading = {
         "winrt._winrt_windows_devices_sensors.AltimeterReading",
@@ -3426,21 +3375,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_AltimeterReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_AltimeterReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AltimeterReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AltimeterReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(AltimeterReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AltimeterReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AltimeterReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AltimeterReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AltimeterReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AltimeterReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AltimeterReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.AltimeterReadingChangedEventArgs",
@@ -3981,8 +3927,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(Barometer_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Barometer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Barometer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Barometer[] = {
         { "report_interval", reinterpret_cast<getter>(Barometer_get_ReportInterval), reinterpret_cast<setter>(Barometer_put_ReportInterval), nullptr, nullptr },
@@ -3991,16 +3936,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "report_latency", reinterpret_cast<getter>(Barometer_get_ReportLatency), reinterpret_cast<setter>(Barometer_put_ReportLatency), nullptr, nullptr },
         { "max_batch_size", reinterpret_cast<getter>(Barometer_get_MaxBatchSize), nullptr, nullptr, nullptr },
         { "report_threshold", reinterpret_cast<getter>(Barometer_get_ReportThreshold), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Barometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Barometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Barometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Barometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Barometer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Barometer = {
         "winrt._winrt_windows_devices_sensors.Barometer",
@@ -4010,15 +3953,13 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_Barometer};
 
     static PyGetSetDef getset_Barometer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Barometer_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Barometer_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(Barometer_GetDefault), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Barometer_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Barometer_Static[] = 
     {
@@ -4028,14 +3969,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_Barometer_Static =
-    {
+    static PyType_Spec type_spec_Barometer_Static = {
         "winrt._winrt_windows_devices_sensors.Barometer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Barometer_Static
-    };
+        type_slots_Barometer_Static};
 
     // ----- BarometerDataThreshold class --------------------
 
@@ -4150,21 +4089,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_BarometerDataThreshold[] = {
         { "_assign_array_", _assign_array_BarometerDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarometerDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarometerDataThreshold[] = {
         { "hectopascals", reinterpret_cast<getter>(BarometerDataThreshold_get_Hectopascals), reinterpret_cast<setter>(BarometerDataThreshold_put_Hectopascals), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarometerDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarometerDataThreshold = {
         "winrt._winrt_windows_devices_sensors.BarometerDataThreshold",
@@ -4337,24 +4273,21 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_BarometerReading[] = {
         { "_assign_array_", _assign_array_BarometerReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarometerReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarometerReading[] = {
         { "station_pressure_in_hectopascals", reinterpret_cast<getter>(BarometerReading_get_StationPressureInHectopascals), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(BarometerReading_get_Timestamp), nullptr, nullptr, nullptr },
         { "performance_count", reinterpret_cast<getter>(BarometerReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(BarometerReading_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarometerReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarometerReading = {
         "winrt._winrt_windows_devices_sensors.BarometerReading",
@@ -4437,21 +4370,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_BarometerReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_BarometerReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarometerReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarometerReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(BarometerReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarometerReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarometerReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.BarometerReadingChangedEventArgs",
@@ -5061,8 +4991,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(Compass_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Compass, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Compass), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Compass[] = {
         { "report_interval", reinterpret_cast<getter>(Compass_get_ReportInterval), reinterpret_cast<setter>(Compass_put_ReportInterval), nullptr, nullptr },
@@ -5072,16 +5001,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "max_batch_size", reinterpret_cast<getter>(Compass_get_MaxBatchSize), nullptr, nullptr, nullptr },
         { "report_threshold", reinterpret_cast<getter>(Compass_get_ReportThreshold), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(Compass_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Compass[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Compass) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Compass) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Compass) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Compass) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Compass = {
         "winrt._winrt_windows_devices_sensors.Compass",
@@ -5091,15 +5018,13 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_Compass};
 
     static PyGetSetDef getset_Compass_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Compass_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Compass_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(Compass_GetDefault), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Compass_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Compass_Static[] = 
     {
@@ -5109,14 +5034,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_Compass_Static =
-    {
+    static PyType_Spec type_spec_Compass_Static = {
         "winrt._winrt_windows_devices_sensors.Compass_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Compass_Static
-    };
+        type_slots_Compass_Static};
 
     // ----- CompassDataThreshold class --------------------
 
@@ -5231,21 +5154,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_CompassDataThreshold[] = {
         { "_assign_array_", _assign_array_CompassDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompassDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompassDataThreshold[] = {
         { "degrees", reinterpret_cast<getter>(CompassDataThreshold_get_Degrees), reinterpret_cast<setter>(CompassDataThreshold_put_Degrees), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompassDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompassDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompassDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompassDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompassDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompassDataThreshold = {
         "winrt._winrt_windows_devices_sensors.CompassDataThreshold",
@@ -5478,8 +5398,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_CompassReading[] = {
         { "_assign_array_", _assign_array_CompassReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompassReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompassReading[] = {
         { "heading_magnetic_north", reinterpret_cast<getter>(CompassReading_get_HeadingMagneticNorth), nullptr, nullptr, nullptr },
@@ -5488,16 +5407,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "performance_count", reinterpret_cast<getter>(CompassReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(CompassReading_get_Properties), nullptr, nullptr, nullptr },
         { "heading_accuracy", reinterpret_cast<getter>(CompassReading_get_HeadingAccuracy), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompassReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompassReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompassReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompassReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompassReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompassReading = {
         "winrt._winrt_windows_devices_sensors.CompassReading",
@@ -5580,21 +5497,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_CompassReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_CompassReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompassReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CompassReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(CompassReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CompassReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompassReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompassReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompassReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompassReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CompassReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.CompassReadingChangedEventArgs",
@@ -5797,8 +5711,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_DetectedPerson[] = {
         { "_assign_array_", _assign_array_DetectedPerson, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DetectedPerson), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DetectedPerson[] = {
         { "distance_in_millimeters", reinterpret_cast<getter>(DetectedPerson_get_DistanceInMillimeters), nullptr, nullptr, nullptr },
@@ -5806,16 +5719,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "head_orientation", reinterpret_cast<getter>(DetectedPerson_get_HeadOrientation), nullptr, nullptr, nullptr },
         { "head_position", reinterpret_cast<getter>(DetectedPerson_get_HeadPosition), nullptr, nullptr, nullptr },
         { "person_id", reinterpret_cast<getter>(DetectedPerson_get_PersonId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DetectedPerson[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DetectedPerson) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DetectedPerson) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DetectedPerson) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DetectedPerson) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DetectedPerson = {
         "winrt._winrt_windows_devices_sensors.DetectedPerson",
@@ -6425,8 +6336,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(Gyrometer_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Gyrometer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Gyrometer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Gyrometer[] = {
         { "report_interval", reinterpret_cast<getter>(Gyrometer_get_ReportInterval), reinterpret_cast<setter>(Gyrometer_put_ReportInterval), nullptr, nullptr },
@@ -6436,16 +6346,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "max_batch_size", reinterpret_cast<getter>(Gyrometer_get_MaxBatchSize), nullptr, nullptr, nullptr },
         { "report_threshold", reinterpret_cast<getter>(Gyrometer_get_ReportThreshold), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(Gyrometer_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Gyrometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Gyrometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Gyrometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Gyrometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Gyrometer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Gyrometer = {
         "winrt._winrt_windows_devices_sensors.Gyrometer",
@@ -6455,15 +6363,13 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_Gyrometer};
 
     static PyGetSetDef getset_Gyrometer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Gyrometer_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Gyrometer_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(Gyrometer_GetDefault), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Gyrometer_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Gyrometer_Static[] = 
     {
@@ -6473,14 +6379,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_Gyrometer_Static =
-    {
+    static PyType_Spec type_spec_Gyrometer_Static = {
         "winrt._winrt_windows_devices_sensors.Gyrometer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Gyrometer_Static
-    };
+        type_slots_Gyrometer_Static};
 
     // ----- GyrometerDataThreshold class --------------------
 
@@ -6733,23 +6637,20 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_GyrometerDataThreshold[] = {
         { "_assign_array_", _assign_array_GyrometerDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GyrometerDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GyrometerDataThreshold[] = {
         { "z_axis_in_degrees_per_second", reinterpret_cast<getter>(GyrometerDataThreshold_get_ZAxisInDegreesPerSecond), reinterpret_cast<setter>(GyrometerDataThreshold_put_ZAxisInDegreesPerSecond), nullptr, nullptr },
         { "y_axis_in_degrees_per_second", reinterpret_cast<getter>(GyrometerDataThreshold_get_YAxisInDegreesPerSecond), reinterpret_cast<setter>(GyrometerDataThreshold_put_YAxisInDegreesPerSecond), nullptr, nullptr },
         { "x_axis_in_degrees_per_second", reinterpret_cast<getter>(GyrometerDataThreshold_get_XAxisInDegreesPerSecond), reinterpret_cast<setter>(GyrometerDataThreshold_put_XAxisInDegreesPerSecond), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GyrometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GyrometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GyrometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GyrometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GyrometerDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GyrometerDataThreshold = {
         "winrt._winrt_windows_devices_sensors.GyrometerDataThreshold",
@@ -6982,8 +6883,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_GyrometerReading[] = {
         { "_assign_array_", _assign_array_GyrometerReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GyrometerReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GyrometerReading[] = {
         { "angular_velocity_x", reinterpret_cast<getter>(GyrometerReading_get_AngularVelocityX), nullptr, nullptr, nullptr },
@@ -6992,16 +6892,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "timestamp", reinterpret_cast<getter>(GyrometerReading_get_Timestamp), nullptr, nullptr, nullptr },
         { "performance_count", reinterpret_cast<getter>(GyrometerReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(GyrometerReading_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GyrometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GyrometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GyrometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GyrometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GyrometerReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GyrometerReading = {
         "winrt._winrt_windows_devices_sensors.GyrometerReading",
@@ -7084,21 +6982,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_GyrometerReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_GyrometerReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GyrometerReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GyrometerReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(GyrometerReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GyrometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GyrometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GyrometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GyrometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GyrometerReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GyrometerReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.GyrometerReadingChangedEventArgs",
@@ -7241,23 +7136,20 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_HeadOrientation[] = {
         { "_assign_array_", _assign_array_HeadOrientation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HeadOrientation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HeadOrientation[] = {
         { "pitch_in_degrees", reinterpret_cast<getter>(HeadOrientation_get_PitchInDegrees), nullptr, nullptr, nullptr },
         { "roll_in_degrees", reinterpret_cast<getter>(HeadOrientation_get_RollInDegrees), nullptr, nullptr, nullptr },
         { "yaw_in_degrees", reinterpret_cast<getter>(HeadOrientation_get_YawInDegrees), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HeadOrientation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HeadOrientation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HeadOrientation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HeadOrientation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HeadOrientation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HeadOrientation = {
         "winrt._winrt_windows_devices_sensors.HeadOrientation",
@@ -7370,22 +7262,19 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_HeadPosition[] = {
         { "_assign_array_", _assign_array_HeadPosition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HeadPosition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HeadPosition[] = {
         { "altitude_in_degrees", reinterpret_cast<getter>(HeadPosition_get_AltitudeInDegrees), nullptr, nullptr, nullptr },
         { "azimuth_in_degrees", reinterpret_cast<getter>(HeadPosition_get_AzimuthInDegrees), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HeadPosition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HeadPosition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HeadPosition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HeadPosition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HeadPosition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HeadPosition = {
         "winrt._winrt_windows_devices_sensors.HeadPosition",
@@ -7528,23 +7417,20 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_HingeAngleReading[] = {
         { "_assign_array_", _assign_array_HingeAngleReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HingeAngleReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HingeAngleReading[] = {
         { "angle_in_degrees", reinterpret_cast<getter>(HingeAngleReading_get_AngleInDegrees), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(HingeAngleReading_get_Properties), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(HingeAngleReading_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HingeAngleReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HingeAngleReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HingeAngleReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HingeAngleReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HingeAngleReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HingeAngleReading = {
         "winrt._winrt_windows_devices_sensors.HingeAngleReading",
@@ -7999,23 +7885,20 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(HingeAngleSensor_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_HingeAngleSensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HingeAngleSensor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HingeAngleSensor[] = {
         { "report_threshold_in_degrees", reinterpret_cast<getter>(HingeAngleSensor_get_ReportThresholdInDegrees), reinterpret_cast<setter>(HingeAngleSensor_put_ReportThresholdInDegrees), nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(HingeAngleSensor_get_DeviceId), nullptr, nullptr, nullptr },
         { "min_report_threshold_in_degrees", reinterpret_cast<getter>(HingeAngleSensor_get_MinReportThresholdInDegrees), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HingeAngleSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HingeAngleSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HingeAngleSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HingeAngleSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HingeAngleSensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HingeAngleSensor = {
         "winrt._winrt_windows_devices_sensors.HingeAngleSensor",
@@ -8025,16 +7908,14 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_HingeAngleSensor};
 
     static PyGetSetDef getset_HingeAngleSensor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HingeAngleSensor_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(HingeAngleSensor_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(HingeAngleSensor_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(HingeAngleSensor_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_related_to_adjacent_panels_async", reinterpret_cast<PyCFunction>(HingeAngleSensor_GetRelatedToAdjacentPanelsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HingeAngleSensor_Static[] = 
     {
@@ -8044,14 +7925,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_HingeAngleSensor_Static =
-    {
+    static PyType_Spec type_spec_HingeAngleSensor_Static = {
         "winrt._winrt_windows_devices_sensors.HingeAngleSensor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HingeAngleSensor_Static
-    };
+        type_slots_HingeAngleSensor_Static};
 
     // ----- HingeAngleSensorReadingChangedEventArgs class --------------------
 
@@ -8127,21 +8006,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_HingeAngleSensorReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_HingeAngleSensorReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HingeAngleSensorReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HingeAngleSensorReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(HingeAngleSensorReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HingeAngleSensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HingeAngleSensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HingeAngleSensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HingeAngleSensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HingeAngleSensorReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HingeAngleSensorReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.HingeAngleSensorReadingChangedEventArgs",
@@ -8374,8 +8250,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_HumanPresenceFeatures[] = {
         { "_assign_array_", _assign_array_HumanPresenceFeatures, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HumanPresenceFeatures), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HumanPresenceFeatures[] = {
         { "is_attention_aware_dimming_supported", reinterpret_cast<getter>(HumanPresenceFeatures_get_IsAttentionAwareDimmingSupported), nullptr, nullptr, nullptr },
@@ -8384,16 +8259,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "sensor_id", reinterpret_cast<getter>(HumanPresenceFeatures_get_SensorId), nullptr, nullptr, nullptr },
         { "supported_wake_or_lock_distances_in_millimeters", reinterpret_cast<getter>(HumanPresenceFeatures_get_SupportedWakeOrLockDistancesInMillimeters), nullptr, nullptr, nullptr },
         { "is_adaptive_dimming_supported", reinterpret_cast<getter>(HumanPresenceFeatures_get_IsAdaptiveDimmingSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HumanPresenceFeatures[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceFeatures) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceFeatures) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceFeatures) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceFeatures) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HumanPresenceFeatures = {
         "winrt._winrt_windows_devices_sensors.HumanPresenceFeatures",
@@ -9058,8 +8931,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(HumanPresenceSensor_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_HumanPresenceSensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HumanPresenceSensor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HumanPresenceSensor[] = {
         { "device_id", reinterpret_cast<getter>(HumanPresenceSensor_get_DeviceId), nullptr, nullptr, nullptr },
@@ -9072,16 +8944,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "max_detectable_persons", reinterpret_cast<getter>(HumanPresenceSensor_get_MaxDetectablePersons), nullptr, nullptr, nullptr },
         { "min_detectable_altitude_in_degrees", reinterpret_cast<getter>(HumanPresenceSensor_get_MinDetectableAltitudeInDegrees), nullptr, nullptr, nullptr },
         { "min_detectable_azimuth_in_degrees", reinterpret_cast<getter>(HumanPresenceSensor_get_MinDetectableAzimuthInDegrees), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HumanPresenceSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HumanPresenceSensor = {
         "winrt._winrt_windows_devices_sensors.HumanPresenceSensor",
@@ -9091,8 +8961,7 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_HumanPresenceSensor};
 
     static PyGetSetDef getset_HumanPresenceSensor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HumanPresenceSensor_Static[] = {
         { "from_id", reinterpret_cast<PyCFunction>(HumanPresenceSensor_FromId), METH_VARARGS, nullptr },
@@ -9100,8 +8969,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "get_default", reinterpret_cast<PyCFunction>(HumanPresenceSensor_GetDefault), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(HumanPresenceSensor_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(HumanPresenceSensor_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HumanPresenceSensor_Static[] = 
     {
@@ -9111,14 +8979,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_HumanPresenceSensor_Static =
-    {
+    static PyType_Spec type_spec_HumanPresenceSensor_Static = {
         "winrt._winrt_windows_devices_sensors.HumanPresenceSensor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HumanPresenceSensor_Static
-    };
+        type_slots_HumanPresenceSensor_Static};
 
     // ----- HumanPresenceSensorReading class --------------------
 
@@ -9374,8 +9240,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_HumanPresenceSensorReading[] = {
         { "_assign_array_", _assign_array_HumanPresenceSensorReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HumanPresenceSensorReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HumanPresenceSensorReading[] = {
         { "distance_in_millimeters", reinterpret_cast<getter>(HumanPresenceSensorReading_get_DistanceInMillimeters), nullptr, nullptr, nullptr },
@@ -9385,16 +9250,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "properties", reinterpret_cast<getter>(HumanPresenceSensorReading_get_Properties), nullptr, nullptr, nullptr },
         { "detected_persons", reinterpret_cast<getter>(HumanPresenceSensorReading_get_DetectedPersons), nullptr, nullptr, nullptr },
         { "onlooker_presence", reinterpret_cast<getter>(HumanPresenceSensorReading_get_OnlookerPresence), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HumanPresenceSensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSensorReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HumanPresenceSensorReading = {
         "winrt._winrt_windows_devices_sensors.HumanPresenceSensorReading",
@@ -9477,21 +9340,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_HumanPresenceSensorReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_HumanPresenceSensorReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HumanPresenceSensorReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HumanPresenceSensorReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(HumanPresenceSensorReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HumanPresenceSensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSensorReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HumanPresenceSensorReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.HumanPresenceSensorReadingChangedEventArgs",
@@ -9842,24 +9702,21 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_HumanPresenceSensorReadingUpdate[] = {
         { "_assign_array_", _assign_array_HumanPresenceSensorReadingUpdate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HumanPresenceSensorReadingUpdate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HumanPresenceSensorReadingUpdate[] = {
         { "timestamp", reinterpret_cast<getter>(HumanPresenceSensorReadingUpdate_get_Timestamp), reinterpret_cast<setter>(HumanPresenceSensorReadingUpdate_put_Timestamp), nullptr, nullptr },
         { "presence", reinterpret_cast<getter>(HumanPresenceSensorReadingUpdate_get_Presence), reinterpret_cast<setter>(HumanPresenceSensorReadingUpdate_put_Presence), nullptr, nullptr },
         { "engagement", reinterpret_cast<getter>(HumanPresenceSensorReadingUpdate_get_Engagement), reinterpret_cast<setter>(HumanPresenceSensorReadingUpdate_put_Engagement), nullptr, nullptr },
         { "distance_in_millimeters", reinterpret_cast<getter>(HumanPresenceSensorReadingUpdate_get_DistanceInMillimeters), reinterpret_cast<setter>(HumanPresenceSensorReadingUpdate_put_DistanceInMillimeters), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HumanPresenceSensorReadingUpdate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSensorReadingUpdate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSensorReadingUpdate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSensorReadingUpdate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSensorReadingUpdate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HumanPresenceSensorReadingUpdate = {
         "winrt._winrt_windows_devices_sensors.HumanPresenceSensorReadingUpdate",
@@ -10908,8 +10765,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_HumanPresenceSettings[] = {
         { "_assign_array_", _assign_array_HumanPresenceSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HumanPresenceSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HumanPresenceSettings[] = {
         { "wake_on_approach_distance_in_millimeters", reinterpret_cast<getter>(HumanPresenceSettings_get_WakeOnApproachDistanceInMillimeters), reinterpret_cast<setter>(HumanPresenceSettings_put_WakeOnApproachDistanceInMillimeters), nullptr, nullptr },
@@ -10923,16 +10779,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "dimming_options", reinterpret_cast<getter>(HumanPresenceSettings_get_DimmingOptions), nullptr, nullptr, nullptr },
         { "lock_options", reinterpret_cast<getter>(HumanPresenceSettings_get_LockOptions), nullptr, nullptr, nullptr },
         { "wake_options", reinterpret_cast<getter>(HumanPresenceSettings_get_WakeOptions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HumanPresenceSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HumanPresenceSettings = {
         "winrt._winrt_windows_devices_sensors.HumanPresenceSettings",
@@ -10942,8 +10796,7 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_HumanPresenceSettings};
 
     static PyGetSetDef getset_HumanPresenceSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HumanPresenceSettings_Static[] = {
         { "get_current_settings", reinterpret_cast<PyCFunction>(HumanPresenceSettings_GetCurrentSettings), METH_VARARGS, nullptr },
@@ -10955,8 +10808,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "update_settings_async", reinterpret_cast<PyCFunction>(HumanPresenceSettings_UpdateSettingsAsync), METH_VARARGS, nullptr },
         { "add_settings_changed", reinterpret_cast<PyCFunction>(HumanPresenceSettings_add_SettingsChanged), METH_O, nullptr },
         { "remove_settings_changed", reinterpret_cast<PyCFunction>(HumanPresenceSettings_remove_SettingsChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HumanPresenceSettings_Static[] = 
     {
@@ -10966,14 +10818,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_HumanPresenceSettings_Static =
-    {
+    static PyType_Spec type_spec_HumanPresenceSettings_Static = {
         "winrt._winrt_windows_devices_sensors.HumanPresenceSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HumanPresenceSettings_Static
-    };
+        type_slots_HumanPresenceSettings_Static};
 
     // ----- Inclinometer class --------------------
 
@@ -11690,8 +11540,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(Inclinometer_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Inclinometer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Inclinometer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Inclinometer[] = {
         { "report_interval", reinterpret_cast<getter>(Inclinometer_get_ReportInterval), reinterpret_cast<setter>(Inclinometer_put_ReportInterval), nullptr, nullptr },
@@ -11702,16 +11551,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "max_batch_size", reinterpret_cast<getter>(Inclinometer_get_MaxBatchSize), nullptr, nullptr, nullptr },
         { "report_threshold", reinterpret_cast<getter>(Inclinometer_get_ReportThreshold), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(Inclinometer_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Inclinometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Inclinometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Inclinometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Inclinometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Inclinometer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Inclinometer = {
         "winrt._winrt_windows_devices_sensors.Inclinometer",
@@ -11721,8 +11568,7 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_Inclinometer};
 
     static PyGetSetDef getset_Inclinometer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Inclinometer_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Inclinometer_FromIdAsync), METH_VARARGS, nullptr },
@@ -11730,8 +11576,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "get_default_for_relative_readings", reinterpret_cast<PyCFunction>(Inclinometer_GetDefaultForRelativeReadings), METH_VARARGS, nullptr },
         { "get_default_with_sensor_reading_type", reinterpret_cast<PyCFunction>(Inclinometer_GetDefaultWithSensorReadingType), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Inclinometer_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Inclinometer_Static[] = 
     {
@@ -11741,14 +11586,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_Inclinometer_Static =
-    {
+    static PyType_Spec type_spec_Inclinometer_Static = {
         "winrt._winrt_windows_devices_sensors.Inclinometer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Inclinometer_Static
-    };
+        type_slots_Inclinometer_Static};
 
     // ----- InclinometerDataThreshold class --------------------
 
@@ -12001,23 +11844,20 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_InclinometerDataThreshold[] = {
         { "_assign_array_", _assign_array_InclinometerDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InclinometerDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InclinometerDataThreshold[] = {
         { "yaw_in_degrees", reinterpret_cast<getter>(InclinometerDataThreshold_get_YawInDegrees), reinterpret_cast<setter>(InclinometerDataThreshold_put_YawInDegrees), nullptr, nullptr },
         { "roll_in_degrees", reinterpret_cast<getter>(InclinometerDataThreshold_get_RollInDegrees), reinterpret_cast<setter>(InclinometerDataThreshold_put_RollInDegrees), nullptr, nullptr },
         { "pitch_in_degrees", reinterpret_cast<getter>(InclinometerDataThreshold_get_PitchInDegrees), reinterpret_cast<setter>(InclinometerDataThreshold_put_PitchInDegrees), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InclinometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InclinometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InclinometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InclinometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InclinometerDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InclinometerDataThreshold = {
         "winrt._winrt_windows_devices_sensors.InclinometerDataThreshold",
@@ -12280,8 +12120,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_InclinometerReading[] = {
         { "_assign_array_", _assign_array_InclinometerReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InclinometerReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InclinometerReading[] = {
         { "pitch_degrees", reinterpret_cast<getter>(InclinometerReading_get_PitchDegrees), nullptr, nullptr, nullptr },
@@ -12291,16 +12130,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "performance_count", reinterpret_cast<getter>(InclinometerReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(InclinometerReading_get_Properties), nullptr, nullptr, nullptr },
         { "yaw_accuracy", reinterpret_cast<getter>(InclinometerReading_get_YawAccuracy), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InclinometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InclinometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InclinometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InclinometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InclinometerReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InclinometerReading = {
         "winrt._winrt_windows_devices_sensors.InclinometerReading",
@@ -12383,21 +12220,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_InclinometerReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_InclinometerReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InclinometerReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InclinometerReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(InclinometerReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InclinometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InclinometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InclinometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InclinometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InclinometerReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InclinometerReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.InclinometerReadingChangedEventArgs",
@@ -12938,8 +12772,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(LightSensor_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_LightSensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LightSensor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LightSensor[] = {
         { "report_interval", reinterpret_cast<getter>(LightSensor_get_ReportInterval), reinterpret_cast<setter>(LightSensor_put_ReportInterval), nullptr, nullptr },
@@ -12948,16 +12781,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "max_batch_size", reinterpret_cast<getter>(LightSensor_get_MaxBatchSize), nullptr, nullptr, nullptr },
         { "report_threshold", reinterpret_cast<getter>(LightSensor_get_ReportThreshold), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(LightSensor_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LightSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LightSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LightSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LightSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LightSensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LightSensor = {
         "winrt._winrt_windows_devices_sensors.LightSensor",
@@ -12967,15 +12798,13 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_LightSensor};
 
     static PyGetSetDef getset_LightSensor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LightSensor_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(LightSensor_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(LightSensor_GetDefault), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(LightSensor_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LightSensor_Static[] = 
     {
@@ -12985,14 +12814,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_LightSensor_Static =
-    {
+    static PyType_Spec type_spec_LightSensor_Static = {
         "winrt._winrt_windows_devices_sensors.LightSensor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LightSensor_Static
-    };
+        type_slots_LightSensor_Static};
 
     // ----- LightSensorDataThreshold class --------------------
 
@@ -13176,22 +13003,19 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_LightSensorDataThreshold[] = {
         { "_assign_array_", _assign_array_LightSensorDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LightSensorDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LightSensorDataThreshold[] = {
         { "lux_percentage", reinterpret_cast<getter>(LightSensorDataThreshold_get_LuxPercentage), reinterpret_cast<setter>(LightSensorDataThreshold_put_LuxPercentage), nullptr, nullptr },
         { "absolute_lux", reinterpret_cast<getter>(LightSensorDataThreshold_get_AbsoluteLux), reinterpret_cast<setter>(LightSensorDataThreshold_put_AbsoluteLux), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LightSensorDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LightSensorDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LightSensorDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LightSensorDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LightSensorDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LightSensorDataThreshold = {
         "winrt._winrt_windows_devices_sensors.LightSensorDataThreshold",
@@ -13364,24 +13188,21 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_LightSensorReading[] = {
         { "_assign_array_", _assign_array_LightSensorReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LightSensorReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LightSensorReading[] = {
         { "illuminance_in_lux", reinterpret_cast<getter>(LightSensorReading_get_IlluminanceInLux), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(LightSensorReading_get_Timestamp), nullptr, nullptr, nullptr },
         { "performance_count", reinterpret_cast<getter>(LightSensorReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(LightSensorReading_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LightSensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LightSensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LightSensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LightSensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LightSensorReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LightSensorReading = {
         "winrt._winrt_windows_devices_sensors.LightSensorReading",
@@ -13464,21 +13285,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_LightSensorReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_LightSensorReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LightSensorReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LightSensorReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(LightSensorReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LightSensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LightSensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LightSensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LightSensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LightSensorReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LightSensorReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.LightSensorReadingChangedEventArgs",
@@ -13600,21 +13418,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_LockOnLeaveOptions[] = {
         { "_assign_array_", _assign_array_LockOnLeaveOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LockOnLeaveOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockOnLeaveOptions[] = {
         { "allow_when_external_display_connected", reinterpret_cast<getter>(LockOnLeaveOptions_get_AllowWhenExternalDisplayConnected), reinterpret_cast<setter>(LockOnLeaveOptions_put_AllowWhenExternalDisplayConnected), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockOnLeaveOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockOnLeaveOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockOnLeaveOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockOnLeaveOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockOnLeaveOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockOnLeaveOptions = {
         "winrt._winrt_windows_devices_sensors.LockOnLeaveOptions",
@@ -14224,8 +14039,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(Magnetometer_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Magnetometer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Magnetometer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Magnetometer[] = {
         { "report_interval", reinterpret_cast<getter>(Magnetometer_get_ReportInterval), reinterpret_cast<setter>(Magnetometer_put_ReportInterval), nullptr, nullptr },
@@ -14235,16 +14049,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "max_batch_size", reinterpret_cast<getter>(Magnetometer_get_MaxBatchSize), nullptr, nullptr, nullptr },
         { "report_threshold", reinterpret_cast<getter>(Magnetometer_get_ReportThreshold), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(Magnetometer_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Magnetometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Magnetometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Magnetometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Magnetometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Magnetometer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Magnetometer = {
         "winrt._winrt_windows_devices_sensors.Magnetometer",
@@ -14254,15 +14066,13 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_Magnetometer};
 
     static PyGetSetDef getset_Magnetometer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Magnetometer_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Magnetometer_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(Magnetometer_GetDefault), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Magnetometer_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Magnetometer_Static[] = 
     {
@@ -14272,14 +14082,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_Magnetometer_Static =
-    {
+    static PyType_Spec type_spec_Magnetometer_Static = {
         "winrt._winrt_windows_devices_sensors.Magnetometer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Magnetometer_Static
-    };
+        type_slots_Magnetometer_Static};
 
     // ----- MagnetometerDataThreshold class --------------------
 
@@ -14532,23 +14340,20 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_MagnetometerDataThreshold[] = {
         { "_assign_array_", _assign_array_MagnetometerDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagnetometerDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagnetometerDataThreshold[] = {
         { "z_axis_microteslas", reinterpret_cast<getter>(MagnetometerDataThreshold_get_ZAxisMicroteslas), reinterpret_cast<setter>(MagnetometerDataThreshold_put_ZAxisMicroteslas), nullptr, nullptr },
         { "y_axis_microteslas", reinterpret_cast<getter>(MagnetometerDataThreshold_get_YAxisMicroteslas), reinterpret_cast<setter>(MagnetometerDataThreshold_put_YAxisMicroteslas), nullptr, nullptr },
         { "x_axis_microteslas", reinterpret_cast<getter>(MagnetometerDataThreshold_get_XAxisMicroteslas), reinterpret_cast<setter>(MagnetometerDataThreshold_put_XAxisMicroteslas), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagnetometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagnetometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagnetometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagnetometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagnetometerDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagnetometerDataThreshold = {
         "winrt._winrt_windows_devices_sensors.MagnetometerDataThreshold",
@@ -14811,8 +14616,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_MagnetometerReading[] = {
         { "_assign_array_", _assign_array_MagnetometerReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagnetometerReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagnetometerReading[] = {
         { "directional_accuracy", reinterpret_cast<getter>(MagnetometerReading_get_DirectionalAccuracy), nullptr, nullptr, nullptr },
@@ -14822,16 +14626,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "timestamp", reinterpret_cast<getter>(MagnetometerReading_get_Timestamp), nullptr, nullptr, nullptr },
         { "performance_count", reinterpret_cast<getter>(MagnetometerReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(MagnetometerReading_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagnetometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagnetometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagnetometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagnetometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagnetometerReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagnetometerReading = {
         "winrt._winrt_windows_devices_sensors.MagnetometerReading",
@@ -14914,21 +14716,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_MagnetometerReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_MagnetometerReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagnetometerReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MagnetometerReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(MagnetometerReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MagnetometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagnetometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagnetometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagnetometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagnetometerReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MagnetometerReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.MagnetometerReadingChangedEventArgs",
@@ -15708,8 +15507,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(OrientationSensor_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_OrientationSensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OrientationSensor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OrientationSensor[] = {
         { "report_interval", reinterpret_cast<getter>(OrientationSensor_get_ReportInterval), reinterpret_cast<setter>(OrientationSensor_put_ReportInterval), nullptr, nullptr },
@@ -15719,16 +15517,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "report_latency", reinterpret_cast<getter>(OrientationSensor_get_ReportLatency), reinterpret_cast<setter>(OrientationSensor_put_ReportLatency), nullptr, nullptr },
         { "max_batch_size", reinterpret_cast<getter>(OrientationSensor_get_MaxBatchSize), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(OrientationSensor_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OrientationSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OrientationSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OrientationSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OrientationSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OrientationSensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OrientationSensor = {
         "winrt._winrt_windows_devices_sensors.OrientationSensor",
@@ -15738,8 +15534,7 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_OrientationSensor};
 
     static PyGetSetDef getset_OrientationSensor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_OrientationSensor_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(OrientationSensor_FromIdAsync), METH_VARARGS, nullptr },
@@ -15749,8 +15544,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "get_default_with_sensor_reading_type_and_sensor_optimization_goal", reinterpret_cast<PyCFunction>(OrientationSensor_GetDefaultWithSensorReadingTypeAndSensorOptimizationGoal), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(OrientationSensor_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_with_sensor_reading_type_and_sensor_optimization_goal", reinterpret_cast<PyCFunction>(OrientationSensor_GetDeviceSelectorWithSensorReadingTypeAndSensorOptimizationGoal), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_OrientationSensor_Static[] = 
     {
@@ -15760,14 +15554,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_OrientationSensor_Static =
-    {
+    static PyType_Spec type_spec_OrientationSensor_Static = {
         "winrt._winrt_windows_devices_sensors.OrientationSensor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_OrientationSensor_Static
-    };
+        type_slots_OrientationSensor_Static};
 
     // ----- OrientationSensorReading class --------------------
 
@@ -15993,8 +15785,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_OrientationSensorReading[] = {
         { "_assign_array_", _assign_array_OrientationSensorReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OrientationSensorReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OrientationSensorReading[] = {
         { "quaternion", reinterpret_cast<getter>(OrientationSensorReading_get_Quaternion), nullptr, nullptr, nullptr },
@@ -16003,16 +15794,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "performance_count", reinterpret_cast<getter>(OrientationSensorReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(OrientationSensorReading_get_Properties), nullptr, nullptr, nullptr },
         { "yaw_accuracy", reinterpret_cast<getter>(OrientationSensorReading_get_YawAccuracy), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OrientationSensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OrientationSensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OrientationSensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OrientationSensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OrientationSensorReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OrientationSensorReading = {
         "winrt._winrt_windows_devices_sensors.OrientationSensorReading",
@@ -16095,21 +15884,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_OrientationSensorReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_OrientationSensorReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OrientationSensorReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OrientationSensorReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(OrientationSensorReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OrientationSensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OrientationSensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OrientationSensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OrientationSensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OrientationSensorReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OrientationSensorReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.OrientationSensorReadingChangedEventArgs",
@@ -16678,24 +16464,21 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(Pedometer_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Pedometer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Pedometer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Pedometer[] = {
         { "report_interval", reinterpret_cast<getter>(Pedometer_get_ReportInterval), reinterpret_cast<setter>(Pedometer_put_ReportInterval), nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(Pedometer_get_DeviceId), nullptr, nullptr, nullptr },
         { "minimum_report_interval", reinterpret_cast<getter>(Pedometer_get_MinimumReportInterval), nullptr, nullptr, nullptr },
         { "power_in_milliwatts", reinterpret_cast<getter>(Pedometer_get_PowerInMilliwatts), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Pedometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Pedometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Pedometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Pedometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Pedometer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Pedometer = {
         "winrt._winrt_windows_devices_sensors.Pedometer",
@@ -16705,8 +16488,7 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_Pedometer};
 
     static PyGetSetDef getset_Pedometer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Pedometer_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Pedometer_FromIdAsync), METH_VARARGS, nullptr },
@@ -16715,8 +16497,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "get_readings_from_trigger_details", reinterpret_cast<PyCFunction>(Pedometer_GetReadingsFromTriggerDetails), METH_VARARGS, nullptr },
         { "get_system_history_async", reinterpret_cast<PyCFunction>(Pedometer_GetSystemHistoryAsync), METH_VARARGS, nullptr },
         { "get_system_history_with_duration_async", reinterpret_cast<PyCFunction>(Pedometer_GetSystemHistoryWithDurationAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Pedometer_Static[] = 
     {
@@ -16726,14 +16507,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_Pedometer_Static =
-    {
+    static PyType_Spec type_spec_Pedometer_Static = {
         "winrt._winrt_windows_devices_sensors.Pedometer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Pedometer_Static
-    };
+        type_slots_Pedometer_Static};
 
     // ----- PedometerDataThreshold class --------------------
 
@@ -16804,20 +16583,17 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_PedometerDataThreshold[] = {
         { "_assign_array_", _assign_array_PedometerDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PedometerDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PedometerDataThreshold[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PedometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PedometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PedometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PedometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PedometerDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PedometerDataThreshold = {
         "winrt._winrt_windows_devices_sensors.PedometerDataThreshold",
@@ -16990,24 +16766,21 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_PedometerReading[] = {
         { "_assign_array_", _assign_array_PedometerReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PedometerReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PedometerReading[] = {
         { "cumulative_steps", reinterpret_cast<getter>(PedometerReading_get_CumulativeSteps), nullptr, nullptr, nullptr },
         { "cumulative_steps_duration", reinterpret_cast<getter>(PedometerReading_get_CumulativeStepsDuration), nullptr, nullptr, nullptr },
         { "step_kind", reinterpret_cast<getter>(PedometerReading_get_StepKind), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(PedometerReading_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PedometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PedometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PedometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PedometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PedometerReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PedometerReading = {
         "winrt._winrt_windows_devices_sensors.PedometerReading",
@@ -17090,21 +16863,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_PedometerReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_PedometerReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PedometerReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PedometerReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(PedometerReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PedometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PedometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PedometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PedometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PedometerReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PedometerReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.PedometerReadingChangedEventArgs",
@@ -17520,23 +17290,20 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(ProximitySensor_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ProximitySensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProximitySensor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProximitySensor[] = {
         { "device_id", reinterpret_cast<getter>(ProximitySensor_get_DeviceId), nullptr, nullptr, nullptr },
         { "max_distance_in_millimeters", reinterpret_cast<getter>(ProximitySensor_get_MaxDistanceInMillimeters), nullptr, nullptr, nullptr },
         { "min_distance_in_millimeters", reinterpret_cast<getter>(ProximitySensor_get_MinDistanceInMillimeters), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProximitySensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProximitySensor = {
         "winrt._winrt_windows_devices_sensors.ProximitySensor",
@@ -17546,15 +17313,13 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_ProximitySensor};
 
     static PyGetSetDef getset_ProximitySensor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ProximitySensor_Static[] = {
         { "from_id", reinterpret_cast<PyCFunction>(ProximitySensor_FromId), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(ProximitySensor_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_readings_from_trigger_details", reinterpret_cast<PyCFunction>(ProximitySensor_GetReadingsFromTriggerDetails), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ProximitySensor_Static[] = 
     {
@@ -17564,14 +17329,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_ProximitySensor_Static =
-    {
+    static PyType_Spec type_spec_ProximitySensor_Static = {
         "winrt._winrt_windows_devices_sensors.ProximitySensor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ProximitySensor_Static
-    };
+        type_slots_ProximitySensor_Static};
 
     // ----- ProximitySensorDataThreshold class --------------------
 
@@ -17641,20 +17404,17 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_ProximitySensorDataThreshold[] = {
         { "_assign_array_", _assign_array_ProximitySensorDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProximitySensorDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProximitySensorDataThreshold[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProximitySensorDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensorDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensorDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensorDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensorDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProximitySensorDataThreshold = {
         "winrt._winrt_windows_devices_sensors.ProximitySensorDataThreshold",
@@ -17774,20 +17534,17 @@ namespace py::cpp::Windows::Devices::Sensors
         { "_from", reinterpret_cast<PyCFunction>(_from_ProximitySensorDisplayOnOffController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ProximitySensorDisplayOnOffController), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ProximitySensorDisplayOnOffController), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProximitySensorDisplayOnOffController[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProximitySensorDisplayOnOffController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensorDisplayOnOffController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensorDisplayOnOffController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensorDisplayOnOffController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensorDisplayOnOffController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProximitySensorDisplayOnOffController = {
         "winrt._winrt_windows_devices_sensors.ProximitySensorDisplayOnOffController",
@@ -17930,23 +17687,20 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_ProximitySensorReading[] = {
         { "_assign_array_", _assign_array_ProximitySensorReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProximitySensorReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProximitySensorReading[] = {
         { "distance_in_millimeters", reinterpret_cast<getter>(ProximitySensorReading_get_DistanceInMillimeters), nullptr, nullptr, nullptr },
         { "is_detected", reinterpret_cast<getter>(ProximitySensorReading_get_IsDetected), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(ProximitySensorReading_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProximitySensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensorReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProximitySensorReading = {
         "winrt._winrt_windows_devices_sensors.ProximitySensorReading",
@@ -18029,21 +17783,18 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_ProximitySensorReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_ProximitySensorReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProximitySensorReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProximitySensorReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(ProximitySensorReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProximitySensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensorReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProximitySensorReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.ProximitySensorReadingChangedEventArgs",
@@ -18156,22 +17907,19 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_SensorDataThresholdTriggerDetails[] = {
         { "_assign_array_", _assign_array_SensorDataThresholdTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SensorDataThresholdTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SensorDataThresholdTriggerDetails[] = {
         { "device_id", reinterpret_cast<getter>(SensorDataThresholdTriggerDetails_get_DeviceId), nullptr, nullptr, nullptr },
         { "sensor_type", reinterpret_cast<getter>(SensorDataThresholdTriggerDetails_get_SensorType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SensorDataThresholdTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SensorDataThresholdTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SensorDataThresholdTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SensorDataThresholdTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SensorDataThresholdTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SensorDataThresholdTriggerDetails = {
         "winrt._winrt_windows_devices_sensors.SensorDataThresholdTriggerDetails",
@@ -18344,24 +18092,21 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_SensorQuaternion[] = {
         { "_assign_array_", _assign_array_SensorQuaternion, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SensorQuaternion), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SensorQuaternion[] = {
         { "w", reinterpret_cast<getter>(SensorQuaternion_get_W), nullptr, nullptr, nullptr },
         { "x", reinterpret_cast<getter>(SensorQuaternion_get_X), nullptr, nullptr, nullptr },
         { "y", reinterpret_cast<getter>(SensorQuaternion_get_Y), nullptr, nullptr, nullptr },
         { "z", reinterpret_cast<getter>(SensorQuaternion_get_Z), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SensorQuaternion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SensorQuaternion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SensorQuaternion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SensorQuaternion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SensorQuaternion) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SensorQuaternion = {
         "winrt._winrt_windows_devices_sensors.SensorQuaternion",
@@ -18684,8 +18429,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_SensorRotationMatrix[] = {
         { "_assign_array_", _assign_array_SensorRotationMatrix, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SensorRotationMatrix), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SensorRotationMatrix[] = {
         { "m11", reinterpret_cast<getter>(SensorRotationMatrix_get_M11), nullptr, nullptr, nullptr },
@@ -18697,16 +18441,14 @@ namespace py::cpp::Windows::Devices::Sensors
         { "m31", reinterpret_cast<getter>(SensorRotationMatrix_get_M31), nullptr, nullptr, nullptr },
         { "m32", reinterpret_cast<getter>(SensorRotationMatrix_get_M32), nullptr, nullptr, nullptr },
         { "m33", reinterpret_cast<getter>(SensorRotationMatrix_get_M33), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SensorRotationMatrix[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SensorRotationMatrix) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SensorRotationMatrix) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SensorRotationMatrix) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SensorRotationMatrix) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SensorRotationMatrix = {
         "winrt._winrt_windows_devices_sensors.SensorRotationMatrix",
@@ -19088,22 +18830,19 @@ namespace py::cpp::Windows::Devices::Sensors
         { "remove_orientation_changed", reinterpret_cast<PyCFunction>(SimpleOrientationSensor_remove_OrientationChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_SimpleOrientationSensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SimpleOrientationSensor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SimpleOrientationSensor[] = {
         { "reading_transform", reinterpret_cast<getter>(SimpleOrientationSensor_get_ReadingTransform), reinterpret_cast<setter>(SimpleOrientationSensor_put_ReadingTransform), nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(SimpleOrientationSensor_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SimpleOrientationSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SimpleOrientationSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SimpleOrientationSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SimpleOrientationSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SimpleOrientationSensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SimpleOrientationSensor = {
         "winrt._winrt_windows_devices_sensors.SimpleOrientationSensor",
@@ -19113,15 +18852,13 @@ namespace py::cpp::Windows::Devices::Sensors
         _type_slots_SimpleOrientationSensor};
 
     static PyGetSetDef getset_SimpleOrientationSensor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SimpleOrientationSensor_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(SimpleOrientationSensor_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(SimpleOrientationSensor_GetDefault), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(SimpleOrientationSensor_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SimpleOrientationSensor_Static[] = 
     {
@@ -19131,14 +18868,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Spec type_spec_SimpleOrientationSensor_Static =
-    {
+    static PyType_Spec type_spec_SimpleOrientationSensor_Static = {
         "winrt._winrt_windows_devices_sensors.SimpleOrientationSensor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SimpleOrientationSensor_Static
-    };
+        type_slots_SimpleOrientationSensor_Static};
 
     // ----- SimpleOrientationSensorOrientationChangedEventArgs class --------------------
 
@@ -19244,22 +18979,19 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_SimpleOrientationSensorOrientationChangedEventArgs[] = {
         { "_assign_array_", _assign_array_SimpleOrientationSensorOrientationChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SimpleOrientationSensorOrientationChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SimpleOrientationSensorOrientationChangedEventArgs[] = {
         { "orientation", reinterpret_cast<getter>(SimpleOrientationSensorOrientationChangedEventArgs_get_Orientation), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(SimpleOrientationSensorOrientationChangedEventArgs_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SimpleOrientationSensorOrientationChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SimpleOrientationSensorOrientationChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SimpleOrientationSensorOrientationChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SimpleOrientationSensorOrientationChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SimpleOrientationSensorOrientationChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SimpleOrientationSensorOrientationChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors.SimpleOrientationSensorOrientationChangedEventArgs",
@@ -19450,22 +19182,19 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_WakeOnApproachOptions[] = {
         { "_assign_array_", _assign_array_WakeOnApproachOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WakeOnApproachOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WakeOnApproachOptions[] = {
         { "disable_when_battery_saver_on", reinterpret_cast<getter>(WakeOnApproachOptions_get_DisableWhenBatterySaverOn), reinterpret_cast<setter>(WakeOnApproachOptions_put_DisableWhenBatterySaverOn), nullptr, nullptr },
         { "allow_when_external_display_connected", reinterpret_cast<getter>(WakeOnApproachOptions_get_AllowWhenExternalDisplayConnected), reinterpret_cast<setter>(WakeOnApproachOptions_put_AllowWhenExternalDisplayConnected), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WakeOnApproachOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WakeOnApproachOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WakeOnApproachOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WakeOnApproachOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WakeOnApproachOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WakeOnApproachOptions = {
         "winrt._winrt_windows_devices_sensors.WakeOnApproachOptions",
@@ -19817,20 +19546,17 @@ namespace py::cpp::Windows::Devices::Sensors
         { "uninitialize", reinterpret_cast<PyCFunction>(IHumanPresenceSensorExtension_Uninitialize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IHumanPresenceSensorExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IHumanPresenceSensorExtension), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IHumanPresenceSensorExtension[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IHumanPresenceSensorExtension[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IHumanPresenceSensorExtension) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHumanPresenceSensorExtension) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHumanPresenceSensorExtension) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHumanPresenceSensorExtension) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IHumanPresenceSensorExtension = {
         "winrt._winrt_windows_devices_sensors.IHumanPresenceSensorExtension",
@@ -20074,13 +19800,11 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef methods_ImplementsIHumanPresenceSensorExtension[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIHumanPresenceSensorExtension), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIHumanPresenceSensorExtension), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIHumanPresenceSensorExtension[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIHumanPresenceSensorExtension) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIHumanPresenceSensorExtension = {
         "winrt._winrt_windows_devices_sensors.ImplementsIHumanPresenceSensorExtension",
@@ -20133,20 +19857,17 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef _methods_ISensorDataThreshold[] = {
         { "_assign_array_", _assign_array_ISensorDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISensorDataThreshold), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISensorDataThreshold[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISensorDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISensorDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISensorDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISensorDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISensorDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISensorDataThreshold = {
         "winrt._winrt_windows_devices_sensors.ISensorDataThreshold",
@@ -20202,13 +19923,11 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef methods_ImplementsISensorDataThreshold[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISensorDataThreshold), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISensorDataThreshold), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISensorDataThreshold[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISensorDataThreshold) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISensorDataThreshold = {
         "winrt._winrt_windows_devices_sensors.ImplementsISensorDataThreshold",

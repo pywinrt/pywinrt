@@ -228,8 +228,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_AppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_AppointmentsProviderAddAppointmentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentsProviderAddAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(AppointmentsProviderAddAppointmentActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -238,16 +237,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "user", reinterpret_cast<getter>(AppointmentsProviderAddAppointmentActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "verb", reinterpret_cast<getter>(AppointmentsProviderAddAppointmentActivatedEventArgs_get_Verb), nullptr, nullptr, nullptr },
         { "add_appointment_operation", reinterpret_cast<getter>(AppointmentsProviderAddAppointmentActivatedEventArgs_get_AddAppointmentOperation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderAddAppointmentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderAddAppointmentActivatedEventArgs",
@@ -480,8 +477,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_AppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_AppointmentsProviderRemoveAppointmentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -490,16 +486,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "user", reinterpret_cast<getter>(AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "verb", reinterpret_cast<getter>(AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_Verb), nullptr, nullptr, nullptr },
         { "remove_appointment_operation", reinterpret_cast<getter>(AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_RemoveAppointmentOperation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderRemoveAppointmentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs",
@@ -732,8 +726,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_AppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_AppointmentsProviderReplaceAppointmentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -742,16 +735,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "user", reinterpret_cast<getter>(AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "verb", reinterpret_cast<getter>(AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_Verb), nullptr, nullptr, nullptr },
         { "replace_appointment_operation", reinterpret_cast<getter>(AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_ReplaceAppointmentOperation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderReplaceAppointmentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs",
@@ -1044,8 +1035,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -1056,16 +1046,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "instance_start_date", reinterpret_cast<getter>(AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_InstanceStartDate), nullptr, nullptr, nullptr },
         { "local_id", reinterpret_cast<getter>(AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_LocalId), nullptr, nullptr, nullptr },
         { "roaming_id", reinterpret_cast<getter>(AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_RoamingId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
@@ -1328,8 +1316,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_AppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_AppointmentsProviderShowTimeFrameActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentsProviderShowTimeFrameActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(AppointmentsProviderShowTimeFrameActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -1339,16 +1326,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "verb", reinterpret_cast<getter>(AppointmentsProviderShowTimeFrameActivatedEventArgs_get_Verb), nullptr, nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(AppointmentsProviderShowTimeFrameActivatedEventArgs_get_Duration), nullptr, nullptr, nullptr },
         { "time_to_show", reinterpret_cast<getter>(AppointmentsProviderShowTimeFrameActivatedEventArgs_get_TimeToShow), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderShowTimeFrameActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderShowTimeFrameActivatedEventArgs",
@@ -1431,21 +1416,18 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_BackgroundActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_BackgroundActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundActivatedEventArgs[] = {
         { "task_instance", reinterpret_cast<getter>(BackgroundActivatedEventArgs_get_TaskInstance), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.BackgroundActivatedEventArgs",
@@ -1648,8 +1630,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_BarcodeScannerPreviewActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_BarcodeScannerPreviewActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerPreviewActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BarcodeScannerPreviewActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(BarcodeScannerPreviewActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -1657,16 +1638,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(BarcodeScannerPreviewActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(BarcodeScannerPreviewActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "connection_id", reinterpret_cast<getter>(BarcodeScannerPreviewActivatedEventArgs_get_ConnectionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BarcodeScannerPreviewActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerPreviewActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BarcodeScannerPreviewActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.BarcodeScannerPreviewActivatedEventArgs",
@@ -1869,8 +1848,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_CachedFileUpdaterActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_CachedFileUpdaterActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CachedFileUpdaterActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CachedFileUpdaterActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(CachedFileUpdaterActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -1878,16 +1856,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(CachedFileUpdaterActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(CachedFileUpdaterActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "cached_file_updater_ui", reinterpret_cast<getter>(CachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CachedFileUpdaterActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CachedFileUpdaterActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CachedFileUpdaterActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CachedFileUpdaterActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CachedFileUpdaterActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CachedFileUpdaterActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.CachedFileUpdaterActivatedEventArgs",
@@ -2090,8 +2066,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_CameraSettingsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_CameraSettingsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CameraSettingsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CameraSettingsActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(CameraSettingsActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -2099,16 +2074,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(CameraSettingsActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "video_device_controller", reinterpret_cast<getter>(CameraSettingsActivatedEventArgs_get_VideoDeviceController), nullptr, nullptr, nullptr },
         { "video_device_extension", reinterpret_cast<getter>(CameraSettingsActivatedEventArgs_get_VideoDeviceExtension), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CameraSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraSettingsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CameraSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.CameraSettingsActivatedEventArgs",
@@ -2311,8 +2284,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_CommandLineActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_CommandLineActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CommandLineActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CommandLineActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(CommandLineActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -2320,16 +2292,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(CommandLineActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(CommandLineActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "operation", reinterpret_cast<getter>(CommandLineActivatedEventArgs_get_Operation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CommandLineActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommandLineActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommandLineActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommandLineActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommandLineActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CommandLineActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.CommandLineActivatedEventArgs",
@@ -2552,23 +2522,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "get_deferral", reinterpret_cast<PyCFunction>(CommandLineActivationOperation_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CommandLineActivationOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CommandLineActivationOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CommandLineActivationOperation[] = {
         { "exit_code", reinterpret_cast<getter>(CommandLineActivationOperation_get_ExitCode), reinterpret_cast<setter>(CommandLineActivationOperation_put_ExitCode), nullptr, nullptr },
         { "arguments", reinterpret_cast<getter>(CommandLineActivationOperation_get_Arguments), nullptr, nullptr, nullptr },
         { "current_directory_path", reinterpret_cast<getter>(CommandLineActivationOperation_get_CurrentDirectoryPath), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CommandLineActivationOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommandLineActivationOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommandLineActivationOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommandLineActivationOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommandLineActivationOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CommandLineActivationOperation = {
         "winrt._winrt_windows_applicationmodel_activation.CommandLineActivationOperation",
@@ -2831,8 +2798,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ContactCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ContactCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactCallActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ContactCallActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -2842,16 +2808,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "contact", reinterpret_cast<getter>(ContactCallActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
         { "service_id", reinterpret_cast<getter>(ContactCallActivatedEventArgs_get_ServiceId), nullptr, nullptr, nullptr },
         { "service_user_id", reinterpret_cast<getter>(ContactCallActivatedEventArgs_get_ServiceUserId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactCallActivatedEventArgs",
@@ -3084,8 +3048,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ContactMapActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ContactMapActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactMapActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactMapActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ContactMapActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -3094,16 +3057,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "verb", reinterpret_cast<getter>(ContactMapActivatedEventArgs_get_Verb), nullptr, nullptr, nullptr },
         { "address", reinterpret_cast<getter>(ContactMapActivatedEventArgs_get_Address), nullptr, nullptr, nullptr },
         { "contact", reinterpret_cast<getter>(ContactMapActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactMapActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactMapActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactMapActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactMapActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactMapActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactMapActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactMapActivatedEventArgs",
@@ -3366,8 +3327,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ContactMessageActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ContactMessageActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactMessageActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactMessageActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ContactMessageActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -3377,16 +3337,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "contact", reinterpret_cast<getter>(ContactMessageActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
         { "service_id", reinterpret_cast<getter>(ContactMessageActivatedEventArgs_get_ServiceId), nullptr, nullptr, nullptr },
         { "service_user_id", reinterpret_cast<getter>(ContactMessageActivatedEventArgs_get_ServiceUserId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactMessageActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactMessageActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactMessageActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactMessageActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactMessageActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactMessageActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactMessageActivatedEventArgs",
@@ -3619,8 +3577,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ContactPanelActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ContactPanelActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactPanelActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactPanelActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ContactPanelActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -3629,16 +3586,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "user", reinterpret_cast<getter>(ContactPanelActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "contact", reinterpret_cast<getter>(ContactPanelActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
         { "contact_panel", reinterpret_cast<getter>(ContactPanelActivatedEventArgs_get_ContactPanel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactPanelActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPanelActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPanelActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPanelActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPanelActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactPanelActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactPanelActivatedEventArgs",
@@ -3811,24 +3766,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ContactPickerActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ContactPickerActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactPickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactPickerActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ContactPickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ContactPickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ContactPickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "contact_picker_ui", reinterpret_cast<getter>(ContactPickerActivatedEventArgs_get_ContactPickerUI), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPickerActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactPickerActivatedEventArgs",
@@ -4091,8 +4043,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ContactPostActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ContactPostActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactPostActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactPostActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ContactPostActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -4102,16 +4053,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "contact", reinterpret_cast<getter>(ContactPostActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
         { "service_id", reinterpret_cast<getter>(ContactPostActivatedEventArgs_get_ServiceId), nullptr, nullptr, nullptr },
         { "service_user_id", reinterpret_cast<getter>(ContactPostActivatedEventArgs_get_ServiceUserId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactPostActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPostActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPostActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPostActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPostActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactPostActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactPostActivatedEventArgs",
@@ -4374,8 +4323,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ContactVideoCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ContactVideoCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactVideoCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContactVideoCallActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ContactVideoCallActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -4385,16 +4333,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "contact", reinterpret_cast<getter>(ContactVideoCallActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
         { "service_id", reinterpret_cast<getter>(ContactVideoCallActivatedEventArgs_get_ServiceId), nullptr, nullptr, nullptr },
         { "service_user_id", reinterpret_cast<getter>(ContactVideoCallActivatedEventArgs_get_ServiceUserId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContactVideoCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactVideoCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactVideoCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactVideoCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactVideoCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContactVideoCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactVideoCallActivatedEventArgs",
@@ -4687,8 +4633,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_DeviceActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_DeviceActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(DeviceActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -4699,16 +4644,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "device_information_id", reinterpret_cast<getter>(DeviceActivatedEventArgs_get_DeviceInformationId), nullptr, nullptr, nullptr },
         { "verb", reinterpret_cast<getter>(DeviceActivatedEventArgs_get_Verb), nullptr, nullptr, nullptr },
         { "view_switcher", reinterpret_cast<getter>(DeviceActivatedEventArgs_get_ViewSwitcher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.DeviceActivatedEventArgs",
@@ -4911,8 +4854,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_DevicePairingActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_DevicePairingActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePairingActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePairingActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(DevicePairingActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -4920,16 +4862,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(DevicePairingActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(DevicePairingActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "device_information", reinterpret_cast<getter>(DevicePairingActivatedEventArgs_get_DeviceInformation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePairingActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePairingActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePairingActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePairingActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePairingActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePairingActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.DevicePairingActivatedEventArgs",
@@ -5252,8 +5192,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_DialReceiverActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_DialReceiverActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialReceiverActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialReceiverActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(DialReceiverActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -5265,16 +5204,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "arguments", reinterpret_cast<getter>(DialReceiverActivatedEventArgs_get_Arguments), nullptr, nullptr, nullptr },
         { "tile_id", reinterpret_cast<getter>(DialReceiverActivatedEventArgs_get_TileId), nullptr, nullptr, nullptr },
         { "view_switcher", reinterpret_cast<getter>(DialReceiverActivatedEventArgs_get_ViewSwitcher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialReceiverActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialReceiverActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialReceiverActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialReceiverActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialReceiverActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialReceiverActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.DialReceiverActivatedEventArgs",
@@ -5627,8 +5564,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_FileActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_FileActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(FileActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -5641,16 +5577,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "caller_package_family_name", reinterpret_cast<getter>(FileActivatedEventArgs_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
         { "neighboring_files_query", reinterpret_cast<getter>(FileActivatedEventArgs_get_NeighboringFilesQuery), nullptr, nullptr, nullptr },
         { "view_switcher", reinterpret_cast<getter>(FileActivatedEventArgs_get_ViewSwitcher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileActivatedEventArgs",
@@ -5883,8 +5817,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_FileOpenPickerActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_FileOpenPickerActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileOpenPickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileOpenPickerActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -5893,16 +5826,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "user", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "file_open_picker_ui", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_FileOpenPickerUI), nullptr, nullptr, nullptr },
         { "caller_package_family_name", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileOpenPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileOpenPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileOpenPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileOpenPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileOpenPickerActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileOpenPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileOpenPickerActivatedEventArgs",
@@ -6135,8 +6066,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_FileOpenPickerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_FileOpenPickerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileOpenPickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileOpenPickerContinuationEventArgs[] = {
         { "kind", reinterpret_cast<getter>(FileOpenPickerContinuationEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -6145,16 +6075,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "user", reinterpret_cast<getter>(FileOpenPickerContinuationEventArgs_get_User), nullptr, nullptr, nullptr },
         { "continuation_data", reinterpret_cast<getter>(FileOpenPickerContinuationEventArgs_get_ContinuationData), nullptr, nullptr, nullptr },
         { "files", reinterpret_cast<getter>(FileOpenPickerContinuationEventArgs_get_Files), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileOpenPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileOpenPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileOpenPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileOpenPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileOpenPickerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileOpenPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileOpenPickerContinuationEventArgs",
@@ -6417,8 +6345,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_FileSavePickerActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_FileSavePickerActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileSavePickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileSavePickerActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -6428,16 +6355,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "file_save_picker_ui", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_FileSavePickerUI), nullptr, nullptr, nullptr },
         { "caller_package_family_name", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
         { "enterprise_id", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_EnterpriseId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileSavePickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileSavePickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileSavePickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileSavePickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileSavePickerActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileSavePickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileSavePickerActivatedEventArgs",
@@ -6670,8 +6595,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_FileSavePickerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_FileSavePickerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileSavePickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FileSavePickerContinuationEventArgs[] = {
         { "kind", reinterpret_cast<getter>(FileSavePickerContinuationEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -6680,16 +6604,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "user", reinterpret_cast<getter>(FileSavePickerContinuationEventArgs_get_User), nullptr, nullptr, nullptr },
         { "continuation_data", reinterpret_cast<getter>(FileSavePickerContinuationEventArgs_get_ContinuationData), nullptr, nullptr, nullptr },
         { "file", reinterpret_cast<getter>(FileSavePickerContinuationEventArgs_get_File), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FileSavePickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileSavePickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileSavePickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileSavePickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileSavePickerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FileSavePickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileSavePickerContinuationEventArgs",
@@ -6922,8 +6844,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_FolderPickerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_FolderPickerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FolderPickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FolderPickerContinuationEventArgs[] = {
         { "kind", reinterpret_cast<getter>(FolderPickerContinuationEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -6932,16 +6853,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "user", reinterpret_cast<getter>(FolderPickerContinuationEventArgs_get_User), nullptr, nullptr, nullptr },
         { "continuation_data", reinterpret_cast<getter>(FolderPickerContinuationEventArgs_get_ContinuationData), nullptr, nullptr, nullptr },
         { "folder", reinterpret_cast<getter>(FolderPickerContinuationEventArgs_get_Folder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FolderPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FolderPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FolderPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FolderPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FolderPickerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FolderPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FolderPickerContinuationEventArgs",
@@ -7294,8 +7213,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_LaunchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_LaunchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LaunchActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(LaunchActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -7308,16 +7226,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "tile_activated_info", reinterpret_cast<getter>(LaunchActivatedEventArgs_get_TileActivatedInfo), nullptr, nullptr, nullptr },
         { "prelaunch_activated", reinterpret_cast<getter>(LaunchActivatedEventArgs_get_PrelaunchActivated), nullptr, nullptr, nullptr },
         { "view_switcher", reinterpret_cast<getter>(LaunchActivatedEventArgs_get_ViewSwitcher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LaunchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.LaunchActivatedEventArgs",
@@ -7520,8 +7436,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_LockScreenActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_LockScreenActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LockScreenActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockScreenActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(LockScreenActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -7529,16 +7444,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(LockScreenActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(LockScreenActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "info", reinterpret_cast<getter>(LockScreenActivatedEventArgs_get_Info), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockScreenActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockScreenActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.LockScreenActivatedEventArgs",
@@ -7831,8 +7744,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_LockScreenCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_LockScreenCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LockScreenCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockScreenCallActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -7843,16 +7755,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "tile_id", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_TileId), nullptr, nullptr, nullptr },
         { "call_ui", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_CallUI), nullptr, nullptr, nullptr },
         { "view_switcher", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_ViewSwitcher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockScreenCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockScreenCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.LockScreenCallActivatedEventArgs",
@@ -7995,23 +7905,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_LockScreenComponentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_LockScreenComponentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LockScreenComponentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LockScreenComponentActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(LockScreenComponentActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(LockScreenComponentActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(LockScreenComponentActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LockScreenComponentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenComponentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenComponentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenComponentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenComponentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LockScreenComponentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.LockScreenComponentActivatedEventArgs",
@@ -8214,8 +8121,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_PhoneCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_PhoneCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhoneCallActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(PhoneCallActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -8223,16 +8129,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(PhoneCallActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(PhoneCallActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "line_id", reinterpret_cast<getter>(PhoneCallActivatedEventArgs_get_LineId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhoneCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhoneCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.PhoneCallActivatedEventArgs",
@@ -8405,24 +8309,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_PickerReturnedActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_PickerReturnedActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PickerReturnedActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PickerReturnedActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(PickerReturnedActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(PickerReturnedActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(PickerReturnedActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "picker_operation_id", reinterpret_cast<getter>(PickerReturnedActivatedEventArgs_get_PickerOperationId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PickerReturnedActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PickerReturnedActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PickerReturnedActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PickerReturnedActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PickerReturnedActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PickerReturnedActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.PickerReturnedActivatedEventArgs",
@@ -8595,24 +8496,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_Print3DWorkflowActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_Print3DWorkflowActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DWorkflowActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Print3DWorkflowActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(Print3DWorkflowActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(Print3DWorkflowActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(Print3DWorkflowActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "workflow", reinterpret_cast<getter>(Print3DWorkflowActivatedEventArgs_get_Workflow), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Print3DWorkflowActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DWorkflowActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DWorkflowActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DWorkflowActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DWorkflowActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Print3DWorkflowActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.Print3DWorkflowActivatedEventArgs",
@@ -8785,24 +8683,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_PrintTaskSettingsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_PrintTaskSettingsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTaskSettingsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTaskSettingsActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(PrintTaskSettingsActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(PrintTaskSettingsActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(PrintTaskSettingsActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "configuration", reinterpret_cast<getter>(PrintTaskSettingsActivatedEventArgs_get_Configuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTaskSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskSettingsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTaskSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.PrintTaskSettingsActivatedEventArgs",
@@ -9125,8 +9020,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ProtocolActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ProtocolActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtocolActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtocolActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ProtocolActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -9138,16 +9032,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "caller_package_family_name", reinterpret_cast<getter>(ProtocolActivatedEventArgs_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
         { "data", reinterpret_cast<getter>(ProtocolActivatedEventArgs_get_Data), nullptr, nullptr, nullptr },
         { "view_switcher", reinterpret_cast<getter>(ProtocolActivatedEventArgs_get_ViewSwitcher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtocolActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtocolActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtocolActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtocolActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtocolActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtocolActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ProtocolActivatedEventArgs",
@@ -9500,8 +9392,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ProtocolForResultsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ProtocolForResultsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtocolForResultsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtocolForResultsActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ProtocolForResultsActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -9514,16 +9405,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "data", reinterpret_cast<getter>(ProtocolForResultsActivatedEventArgs_get_Data), nullptr, nullptr, nullptr },
         { "protocol_for_results_operation", reinterpret_cast<getter>(ProtocolForResultsActivatedEventArgs_get_ProtocolForResultsOperation), nullptr, nullptr, nullptr },
         { "view_switcher", reinterpret_cast<getter>(ProtocolForResultsActivatedEventArgs_get_ViewSwitcher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtocolForResultsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtocolForResultsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtocolForResultsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtocolForResultsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtocolForResultsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtocolForResultsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ProtocolForResultsActivatedEventArgs",
@@ -9726,8 +9615,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_RestrictedLaunchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_RestrictedLaunchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RestrictedLaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RestrictedLaunchActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(RestrictedLaunchActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -9735,16 +9623,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(RestrictedLaunchActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(RestrictedLaunchActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "shared_context", reinterpret_cast<getter>(RestrictedLaunchActivatedEventArgs_get_SharedContext), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RestrictedLaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RestrictedLaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RestrictedLaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RestrictedLaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RestrictedLaunchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RestrictedLaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.RestrictedLaunchActivatedEventArgs",
@@ -10067,8 +9953,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_SearchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_SearchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(SearchActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -10080,16 +9965,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "query_text", reinterpret_cast<getter>(SearchActivatedEventArgs_get_QueryText), nullptr, nullptr, nullptr },
         { "linguistic_details", reinterpret_cast<getter>(SearchActivatedEventArgs_get_LinguisticDetails), nullptr, nullptr, nullptr },
         { "view_switcher", reinterpret_cast<getter>(SearchActivatedEventArgs_get_ViewSwitcher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.SearchActivatedEventArgs",
@@ -10292,8 +10175,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ShareTargetActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ShareTargetActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ShareTargetActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ShareTargetActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ShareTargetActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -10301,16 +10183,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(ShareTargetActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(ShareTargetActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "share_operation", reinterpret_cast<getter>(ShareTargetActivatedEventArgs_get_ShareOperation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ShareTargetActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareTargetActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareTargetActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareTargetActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareTargetActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ShareTargetActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ShareTargetActivatedEventArgs",
@@ -10460,21 +10340,18 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "remove_dismissed", reinterpret_cast<PyCFunction>(SplashScreen_remove_Dismissed), METH_O, nullptr },
         { "_assign_array_", _assign_array_SplashScreen, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplashScreen), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SplashScreen[] = {
         { "image_location", reinterpret_cast<getter>(SplashScreen_get_ImageLocation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SplashScreen[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplashScreen) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplashScreen) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplashScreen) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplashScreen) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SplashScreen = {
         "winrt._winrt_windows_applicationmodel_activation.SplashScreen",
@@ -10677,8 +10554,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_StartupTaskActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_StartupTaskActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StartupTaskActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StartupTaskActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(StartupTaskActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -10686,16 +10562,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(StartupTaskActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(StartupTaskActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "task_id", reinterpret_cast<getter>(StartupTaskActivatedEventArgs_get_TaskId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StartupTaskActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StartupTaskActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StartupTaskActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StartupTaskActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StartupTaskActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StartupTaskActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.StartupTaskActivatedEventArgs",
@@ -10778,21 +10652,18 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_TileActivatedInfo[] = {
         { "_assign_array_", _assign_array_TileActivatedInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TileActivatedInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TileActivatedInfo[] = {
         { "recently_shown_notifications", reinterpret_cast<getter>(TileActivatedInfo_get_RecentlyShownNotifications), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TileActivatedInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileActivatedInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileActivatedInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileActivatedInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileActivatedInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TileActivatedInfo = {
         "winrt._winrt_windows_applicationmodel_activation.TileActivatedInfo",
@@ -11055,8 +10926,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ToastNotificationActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ToastNotificationActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastNotificationActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ToastNotificationActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(ToastNotificationActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -11066,16 +10936,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "currently_shown_application_view_id", reinterpret_cast<getter>(ToastNotificationActivatedEventArgs_get_CurrentlyShownApplicationViewId), nullptr, nullptr, nullptr },
         { "argument", reinterpret_cast<getter>(ToastNotificationActivatedEventArgs_get_Argument), nullptr, nullptr, nullptr },
         { "user_input", reinterpret_cast<getter>(ToastNotificationActivatedEventArgs_get_UserInput), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ToastNotificationActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ToastNotificationActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ToastNotificationActivatedEventArgs",
@@ -11248,24 +11116,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_UserDataAccountProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_UserDataAccountProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAccountProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccountProviderActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(UserDataAccountProviderActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(UserDataAccountProviderActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(UserDataAccountProviderActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "operation", reinterpret_cast<getter>(UserDataAccountProviderActivatedEventArgs_get_Operation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.UserDataAccountProviderActivatedEventArgs",
@@ -11468,8 +11333,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_VoiceCommandActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_VoiceCommandActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommandActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(VoiceCommandActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -11477,16 +11341,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(VoiceCommandActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(VoiceCommandActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "result", reinterpret_cast<getter>(VoiceCommandActivatedEventArgs_get_Result), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.VoiceCommandActivatedEventArgs",
@@ -11719,8 +11581,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_WalletActionActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_WalletActionActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletActionActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletActionActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(WalletActionActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -11729,16 +11590,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "action_id", reinterpret_cast<getter>(WalletActionActivatedEventArgs_get_ActionId), nullptr, nullptr, nullptr },
         { "action_kind", reinterpret_cast<getter>(WalletActionActivatedEventArgs_get_ActionKind), nullptr, nullptr, nullptr },
         { "item_id", reinterpret_cast<getter>(WalletActionActivatedEventArgs_get_ItemId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletActionActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletActionActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletActionActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletActionActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletActionActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletActionActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.WalletActionActivatedEventArgs",
@@ -11941,8 +11800,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_WebAccountProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_WebAccountProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAccountProviderActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(WebAccountProviderActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -11950,16 +11808,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(WebAccountProviderActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(WebAccountProviderActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "operation", reinterpret_cast<getter>(WebAccountProviderActivatedEventArgs_get_Operation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.WebAccountProviderActivatedEventArgs",
@@ -12162,8 +12018,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_WebAuthenticationBrokerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_WebAuthenticationBrokerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAuthenticationBrokerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAuthenticationBrokerContinuationEventArgs[] = {
         { "kind", reinterpret_cast<getter>(WebAuthenticationBrokerContinuationEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -12171,16 +12026,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "splash_screen", reinterpret_cast<getter>(WebAuthenticationBrokerContinuationEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "continuation_data", reinterpret_cast<getter>(WebAuthenticationBrokerContinuationEventArgs_get_ContinuationData), nullptr, nullptr, nullptr },
         { "web_authentication_result", reinterpret_cast<getter>(WebAuthenticationBrokerContinuationEventArgs_get_WebAuthenticationResult), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAuthenticationBrokerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationBrokerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAuthenticationBrokerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.WebAuthenticationBrokerContinuationEventArgs",
@@ -12323,23 +12176,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(IActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IActivatedEventArgs",
@@ -12455,13 +12305,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIActivatedEventArgs",
@@ -12634,24 +12482,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IActivatedEventArgsWithUser[] = {
         { "_assign_array_", _assign_array_IActivatedEventArgsWithUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IActivatedEventArgsWithUser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IActivatedEventArgsWithUser[] = {
         { "user", reinterpret_cast<getter>(IActivatedEventArgsWithUser_get_User), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IActivatedEventArgsWithUser_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IActivatedEventArgsWithUser_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IActivatedEventArgsWithUser_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IActivatedEventArgsWithUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IActivatedEventArgsWithUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActivatedEventArgsWithUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActivatedEventArgsWithUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActivatedEventArgsWithUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IActivatedEventArgsWithUser = {
         "winrt._winrt_windows_applicationmodel_activation.IActivatedEventArgsWithUser",
@@ -12787,13 +12632,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIActivatedEventArgsWithUser[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActivatedEventArgsWithUser), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActivatedEventArgsWithUser), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIActivatedEventArgsWithUser[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIActivatedEventArgsWithUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIActivatedEventArgsWithUser = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser",
@@ -12966,24 +12809,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IApplicationViewActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IApplicationViewActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IApplicationViewActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IApplicationViewActivatedEventArgs[] = {
         { "currently_shown_application_view_id", reinterpret_cast<getter>(IApplicationViewActivatedEventArgs_get_CurrentlyShownApplicationViewId), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IApplicationViewActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IApplicationViewActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IApplicationViewActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IApplicationViewActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IApplicationViewActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IApplicationViewActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IApplicationViewActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IApplicationViewActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IApplicationViewActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IApplicationViewActivatedEventArgs",
@@ -13119,13 +12959,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIApplicationViewActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIApplicationViewActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIApplicationViewActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIApplicationViewActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIApplicationViewActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIApplicationViewActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs",
@@ -13298,24 +13136,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IAppointmentsProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderActivatedEventArgs[] = {
         { "verb", reinterpret_cast<getter>(IAppointmentsProviderActivatedEventArgs_get_Verb), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IAppointmentsProviderActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IAppointmentsProviderActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IAppointmentsProviderActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAppointmentsProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs",
@@ -13451,13 +13286,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIAppointmentsProviderActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAppointmentsProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderActivatedEventArgs",
@@ -13660,8 +13493,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderAddAppointmentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderAddAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { "add_appointment_operation", reinterpret_cast<getter>(IAppointmentsProviderAddAppointmentActivatedEventArgs_get_AddAppointmentOperation), nullptr, nullptr, nullptr },
@@ -13669,16 +13501,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IAppointmentsProviderAddAppointmentActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IAppointmentsProviderAddAppointmentActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IAppointmentsProviderAddAppointmentActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderAddAppointmentActivatedEventArgs",
@@ -13834,13 +13664,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs",
@@ -14043,8 +13871,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { "remove_appointment_operation", reinterpret_cast<getter>(IAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_RemoveAppointmentOperation), nullptr, nullptr, nullptr },
@@ -14052,16 +13879,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs",
@@ -14217,13 +14042,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs",
@@ -14426,8 +14249,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { "replace_appointment_operation", reinterpret_cast<getter>(IAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_ReplaceAppointmentOperation), nullptr, nullptr, nullptr },
@@ -14435,16 +14257,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs",
@@ -14600,13 +14420,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs",
@@ -14869,8 +14687,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { "instance_start_date", reinterpret_cast<getter>(IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_InstanceStartDate), nullptr, nullptr, nullptr },
@@ -14880,16 +14697,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
@@ -15085,13 +14900,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
@@ -15324,8 +15137,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderShowTimeFrameActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderShowTimeFrameActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { "duration", reinterpret_cast<getter>(IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_Duration), nullptr, nullptr, nullptr },
@@ -15334,16 +15146,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs",
@@ -15519,13 +15329,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs",
@@ -15608,21 +15416,18 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IBackgroundActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IBackgroundActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBackgroundActivatedEventArgs[] = {
         { "task_instance", reinterpret_cast<getter>(IBackgroundActivatedEventArgs_get_TaskInstance), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBackgroundActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBackgroundActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IBackgroundActivatedEventArgs",
@@ -15698,13 +15503,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIBackgroundActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBackgroundActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBackgroundActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIBackgroundActivatedEventArgs",
@@ -15877,24 +15680,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IBarcodeScannerPreviewActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IBarcodeScannerPreviewActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBarcodeScannerPreviewActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBarcodeScannerPreviewActivatedEventArgs[] = {
         { "connection_id", reinterpret_cast<getter>(IBarcodeScannerPreviewActivatedEventArgs_get_ConnectionId), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IBarcodeScannerPreviewActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IBarcodeScannerPreviewActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IBarcodeScannerPreviewActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBarcodeScannerPreviewActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBarcodeScannerPreviewActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBarcodeScannerPreviewActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IBarcodeScannerPreviewActivatedEventArgs",
@@ -16030,13 +15830,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIBarcodeScannerPreviewActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBarcodeScannerPreviewActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBarcodeScannerPreviewActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBarcodeScannerPreviewActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBarcodeScannerPreviewActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBarcodeScannerPreviewActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIBarcodeScannerPreviewActivatedEventArgs",
@@ -16209,24 +16007,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ICachedFileUpdaterActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ICachedFileUpdaterActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICachedFileUpdaterActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICachedFileUpdaterActivatedEventArgs[] = {
         { "cached_file_updater_ui", reinterpret_cast<getter>(ICachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ICachedFileUpdaterActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ICachedFileUpdaterActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ICachedFileUpdaterActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICachedFileUpdaterActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICachedFileUpdaterActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICachedFileUpdaterActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ICachedFileUpdaterActivatedEventArgs",
@@ -16362,13 +16157,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsICachedFileUpdaterActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICachedFileUpdaterActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICachedFileUpdaterActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICachedFileUpdaterActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICachedFileUpdaterActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICachedFileUpdaterActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsICachedFileUpdaterActivatedEventArgs",
@@ -16571,8 +16364,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ICameraSettingsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ICameraSettingsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICameraSettingsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICameraSettingsActivatedEventArgs[] = {
         { "video_device_controller", reinterpret_cast<getter>(ICameraSettingsActivatedEventArgs_get_VideoDeviceController), nullptr, nullptr, nullptr },
@@ -16580,16 +16372,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(ICameraSettingsActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ICameraSettingsActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ICameraSettingsActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICameraSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICameraSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICameraSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICameraSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICameraSettingsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICameraSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ICameraSettingsActivatedEventArgs",
@@ -16745,13 +16535,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsICameraSettingsActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICameraSettingsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICameraSettingsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICameraSettingsActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICameraSettingsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICameraSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsICameraSettingsActivatedEventArgs",
@@ -16924,24 +16712,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ICommandLineActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ICommandLineActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICommandLineActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICommandLineActivatedEventArgs[] = {
         { "operation", reinterpret_cast<getter>(ICommandLineActivatedEventArgs_get_Operation), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ICommandLineActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ICommandLineActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ICommandLineActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICommandLineActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICommandLineActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommandLineActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommandLineActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommandLineActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICommandLineActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ICommandLineActivatedEventArgs",
@@ -17077,13 +16862,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsICommandLineActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommandLineActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommandLineActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICommandLineActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICommandLineActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICommandLineActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsICommandLineActivatedEventArgs",
@@ -17256,24 +17039,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContactActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactActivatedEventArgs[] = {
         { "verb", reinterpret_cast<getter>(IContactActivatedEventArgs_get_Verb), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IContactActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContactActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContactActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactActivatedEventArgs",
@@ -17409,13 +17189,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContactActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactActivatedEventArgs",
@@ -17678,8 +17456,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContactCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactCallActivatedEventArgs[] = {
         { "contact", reinterpret_cast<getter>(IContactCallActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
@@ -17689,16 +17466,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IContactCallActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContactCallActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContactCallActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactCallActivatedEventArgs",
@@ -17894,13 +17669,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContactCallActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactCallActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactCallActivatedEventArgs",
@@ -18133,8 +17906,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContactMapActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactMapActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactMapActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactMapActivatedEventArgs[] = {
         { "address", reinterpret_cast<getter>(IContactMapActivatedEventArgs_get_Address), nullptr, nullptr, nullptr },
@@ -18143,16 +17915,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IContactMapActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContactMapActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContactMapActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactMapActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactMapActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactMapActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactMapActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactMapActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactMapActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactMapActivatedEventArgs",
@@ -18328,13 +18098,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContactMapActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactMapActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactMapActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactMapActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactMapActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactMapActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactMapActivatedEventArgs",
@@ -18597,8 +18365,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContactMessageActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactMessageActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactMessageActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactMessageActivatedEventArgs[] = {
         { "contact", reinterpret_cast<getter>(IContactMessageActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
@@ -18608,16 +18375,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IContactMessageActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContactMessageActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContactMessageActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactMessageActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactMessageActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactMessageActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactMessageActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactMessageActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactMessageActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactMessageActivatedEventArgs",
@@ -18813,13 +18578,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContactMessageActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactMessageActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactMessageActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactMessageActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactMessageActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactMessageActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactMessageActivatedEventArgs",
@@ -18932,22 +18695,19 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContactPanelActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactPanelActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactPanelActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactPanelActivatedEventArgs[] = {
         { "contact", reinterpret_cast<getter>(IContactPanelActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
         { "contact_panel", reinterpret_cast<getter>(IContactPanelActivatedEventArgs_get_ContactPanel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactPanelActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactPanelActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactPanelActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactPanelActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactPanelActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactPanelActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactPanelActivatedEventArgs",
@@ -19043,13 +18803,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContactPanelActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactPanelActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactPanelActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactPanelActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactPanelActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactPanelActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactPanelActivatedEventArgs",
@@ -19222,24 +18980,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContactPickerActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactPickerActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactPickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactPickerActivatedEventArgs[] = {
         { "contact_picker_ui", reinterpret_cast<getter>(IContactPickerActivatedEventArgs_get_ContactPickerUI), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IContactPickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContactPickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContactPickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactPickerActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactPickerActivatedEventArgs",
@@ -19375,13 +19130,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContactPickerActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactPickerActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactPickerActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactPickerActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactPickerActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactPickerActivatedEventArgs",
@@ -19644,8 +19397,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContactPostActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactPostActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactPostActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactPostActivatedEventArgs[] = {
         { "contact", reinterpret_cast<getter>(IContactPostActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
@@ -19655,16 +19407,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IContactPostActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContactPostActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContactPostActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactPostActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactPostActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactPostActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactPostActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactPostActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactPostActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactPostActivatedEventArgs",
@@ -19860,13 +19610,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContactPostActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactPostActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactPostActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactPostActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactPostActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactPostActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactPostActivatedEventArgs",
@@ -20129,8 +19877,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContactVideoCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactVideoCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactVideoCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactVideoCallActivatedEventArgs[] = {
         { "contact", reinterpret_cast<getter>(IContactVideoCallActivatedEventArgs_get_Contact), nullptr, nullptr, nullptr },
@@ -20140,16 +19887,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IContactVideoCallActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContactVideoCallActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContactVideoCallActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactVideoCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactVideoCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactVideoCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactVideoCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactVideoCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactVideoCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactVideoCallActivatedEventArgs",
@@ -20345,13 +20090,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContactVideoCallActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactVideoCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactVideoCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactVideoCallActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactVideoCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactVideoCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactVideoCallActivatedEventArgs",
@@ -20524,24 +20267,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContactsProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactsProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactsProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContactsProviderActivatedEventArgs[] = {
         { "verb", reinterpret_cast<getter>(IContactsProviderActivatedEventArgs_get_Verb), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IContactsProviderActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContactsProviderActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContactsProviderActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContactsProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactsProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactsProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactsProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactsProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContactsProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactsProviderActivatedEventArgs",
@@ -20677,13 +20417,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContactsProviderActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactsProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactsProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContactsProviderActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContactsProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContactsProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContactsProviderActivatedEventArgs",
@@ -20856,24 +20594,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IContinuationActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContinuationActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContinuationActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IContinuationActivatedEventArgs[] = {
         { "continuation_data", reinterpret_cast<getter>(IContinuationActivatedEventArgs_get_ContinuationData), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IContinuationActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContinuationActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContinuationActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IContinuationActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContinuationActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContinuationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContinuationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContinuationActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IContinuationActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContinuationActivatedEventArgs",
@@ -21009,13 +20744,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIContinuationActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContinuationActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContinuationActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIContinuationActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContinuationActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIContinuationActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIContinuationActivatedEventArgs",
@@ -21218,8 +20951,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IDeviceActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IDeviceActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDeviceActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDeviceActivatedEventArgs[] = {
         { "device_information_id", reinterpret_cast<getter>(IDeviceActivatedEventArgs_get_DeviceInformationId), nullptr, nullptr, nullptr },
@@ -21227,16 +20959,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IDeviceActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IDeviceActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IDeviceActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDeviceActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDeviceActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDeviceActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDeviceActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDeviceActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDeviceActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IDeviceActivatedEventArgs",
@@ -21392,13 +21122,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIDeviceActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDeviceActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDeviceActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDeviceActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDeviceActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDeviceActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIDeviceActivatedEventArgs",
@@ -21571,24 +21299,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IDevicePairingActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IDevicePairingActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDevicePairingActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDevicePairingActivatedEventArgs[] = {
         { "device_information", reinterpret_cast<getter>(IDevicePairingActivatedEventArgs_get_DeviceInformation), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IDevicePairingActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IDevicePairingActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IDevicePairingActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDevicePairingActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDevicePairingActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDevicePairingActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDevicePairingActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDevicePairingActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDevicePairingActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IDevicePairingActivatedEventArgs",
@@ -21724,13 +21449,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIDevicePairingActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDevicePairingActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDevicePairingActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDevicePairingActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDevicePairingActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDevicePairingActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIDevicePairingActivatedEventArgs",
@@ -21963,8 +21686,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IDialReceiverActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IDialReceiverActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDialReceiverActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDialReceiverActivatedEventArgs[] = {
         { "app_name", reinterpret_cast<getter>(IDialReceiverActivatedEventArgs_get_AppName), nullptr, nullptr, nullptr },
@@ -21973,16 +21695,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IDialReceiverActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IDialReceiverActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IDialReceiverActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDialReceiverActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDialReceiverActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDialReceiverActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDialReceiverActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDialReceiverActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDialReceiverActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IDialReceiverActivatedEventArgs",
@@ -22158,13 +21878,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIDialReceiverActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDialReceiverActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDialReceiverActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDialReceiverActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDialReceiverActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDialReceiverActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIDialReceiverActivatedEventArgs",
@@ -22367,8 +22085,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFileActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IFileActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileActivatedEventArgs[] = {
         { "files", reinterpret_cast<getter>(IFileActivatedEventArgs_get_Files), nullptr, nullptr, nullptr },
@@ -22376,16 +22093,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IFileActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFileActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFileActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileActivatedEventArgs",
@@ -22541,13 +22256,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFileActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileActivatedEventArgs",
@@ -22720,24 +22433,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFileActivatedEventArgsWithCallerPackageFamilyName[] = {
         { "_assign_array_", _assign_array_IFileActivatedEventArgsWithCallerPackageFamilyName, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileActivatedEventArgsWithCallerPackageFamilyName), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileActivatedEventArgsWithCallerPackageFamilyName[] = {
         { "caller_package_family_name", reinterpret_cast<getter>(IFileActivatedEventArgsWithCallerPackageFamilyName_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IFileActivatedEventArgsWithCallerPackageFamilyName_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFileActivatedEventArgsWithCallerPackageFamilyName_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFileActivatedEventArgsWithCallerPackageFamilyName_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileActivatedEventArgsWithCallerPackageFamilyName[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileActivatedEventArgsWithCallerPackageFamilyName) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileActivatedEventArgsWithCallerPackageFamilyName) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileActivatedEventArgsWithCallerPackageFamilyName) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileActivatedEventArgsWithCallerPackageFamilyName) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName = {
         "winrt._winrt_windows_applicationmodel_activation.IFileActivatedEventArgsWithCallerPackageFamilyName",
@@ -22873,13 +22583,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName",
@@ -23112,8 +22820,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFileActivatedEventArgsWithNeighboringFiles[] = {
         { "_assign_array_", _assign_array_IFileActivatedEventArgsWithNeighboringFiles, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileActivatedEventArgsWithNeighboringFiles), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileActivatedEventArgsWithNeighboringFiles[] = {
         { "neighboring_files_query", reinterpret_cast<getter>(IFileActivatedEventArgsWithNeighboringFiles_get_NeighboringFilesQuery), nullptr, nullptr, nullptr },
@@ -23122,16 +22829,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IFileActivatedEventArgsWithNeighboringFiles_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFileActivatedEventArgsWithNeighboringFiles_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFileActivatedEventArgsWithNeighboringFiles_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileActivatedEventArgsWithNeighboringFiles[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileActivatedEventArgsWithNeighboringFiles) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileActivatedEventArgsWithNeighboringFiles) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileActivatedEventArgsWithNeighboringFiles) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileActivatedEventArgsWithNeighboringFiles) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileActivatedEventArgsWithNeighboringFiles = {
         "winrt._winrt_windows_applicationmodel_activation.IFileActivatedEventArgsWithNeighboringFiles",
@@ -23307,13 +23012,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFileActivatedEventArgsWithNeighboringFiles[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileActivatedEventArgsWithNeighboringFiles), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileActivatedEventArgsWithNeighboringFiles), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileActivatedEventArgsWithNeighboringFiles[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileActivatedEventArgsWithNeighboringFiles) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileActivatedEventArgsWithNeighboringFiles = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileActivatedEventArgsWithNeighboringFiles",
@@ -23486,24 +23189,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFileOpenPickerActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IFileOpenPickerActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileOpenPickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileOpenPickerActivatedEventArgs[] = {
         { "file_open_picker_ui", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs_get_FileOpenPickerUI), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileOpenPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileOpenPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileOpenPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileOpenPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileOpenPickerActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs",
@@ -23639,13 +23339,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFileOpenPickerActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileOpenPickerActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileOpenPickerActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileOpenPickerActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileOpenPickerActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileOpenPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileOpenPickerActivatedEventArgs",
@@ -23728,21 +23426,18 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFileOpenPickerActivatedEventArgs2[] = {
         { "_assign_array_", _assign_array_IFileOpenPickerActivatedEventArgs2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileOpenPickerActivatedEventArgs2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileOpenPickerActivatedEventArgs2[] = {
         { "caller_package_family_name", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs2_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileOpenPickerActivatedEventArgs2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileOpenPickerActivatedEventArgs2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileOpenPickerActivatedEventArgs2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileOpenPickerActivatedEventArgs2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileOpenPickerActivatedEventArgs2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs2 = {
         "winrt._winrt_windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs2",
@@ -23818,13 +23513,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFileOpenPickerActivatedEventArgs2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileOpenPickerActivatedEventArgs2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileOpenPickerActivatedEventArgs2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileOpenPickerActivatedEventArgs2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileOpenPickerActivatedEventArgs2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileOpenPickerActivatedEventArgs2 = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileOpenPickerActivatedEventArgs2",
@@ -24027,8 +23720,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFileOpenPickerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_IFileOpenPickerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileOpenPickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileOpenPickerContinuationEventArgs[] = {
         { "files", reinterpret_cast<getter>(IFileOpenPickerContinuationEventArgs_get_Files), nullptr, nullptr, nullptr },
@@ -24036,16 +23728,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IFileOpenPickerContinuationEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFileOpenPickerContinuationEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFileOpenPickerContinuationEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileOpenPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileOpenPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileOpenPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileOpenPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileOpenPickerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileOpenPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileOpenPickerContinuationEventArgs",
@@ -24201,13 +23891,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFileOpenPickerContinuationEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileOpenPickerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileOpenPickerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileOpenPickerContinuationEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileOpenPickerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileOpenPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileOpenPickerContinuationEventArgs",
@@ -24380,24 +24068,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFileSavePickerActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IFileSavePickerActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileSavePickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileSavePickerActivatedEventArgs[] = {
         { "file_save_picker_ui", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs_get_FileSavePickerUI), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileSavePickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileSavePickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileSavePickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileSavePickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileSavePickerActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs",
@@ -24533,13 +24218,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFileSavePickerActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileSavePickerActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileSavePickerActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileSavePickerActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileSavePickerActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileSavePickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileSavePickerActivatedEventArgs",
@@ -24652,22 +24335,19 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFileSavePickerActivatedEventArgs2[] = {
         { "_assign_array_", _assign_array_IFileSavePickerActivatedEventArgs2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileSavePickerActivatedEventArgs2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileSavePickerActivatedEventArgs2[] = {
         { "caller_package_family_name", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs2_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
         { "enterprise_id", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs2_get_EnterpriseId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileSavePickerActivatedEventArgs2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileSavePickerActivatedEventArgs2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileSavePickerActivatedEventArgs2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileSavePickerActivatedEventArgs2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileSavePickerActivatedEventArgs2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs2 = {
         "winrt._winrt_windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs2",
@@ -24763,13 +24443,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFileSavePickerActivatedEventArgs2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileSavePickerActivatedEventArgs2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileSavePickerActivatedEventArgs2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileSavePickerActivatedEventArgs2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileSavePickerActivatedEventArgs2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileSavePickerActivatedEventArgs2 = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileSavePickerActivatedEventArgs2",
@@ -24972,8 +24650,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFileSavePickerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_IFileSavePickerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileSavePickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFileSavePickerContinuationEventArgs[] = {
         { "file", reinterpret_cast<getter>(IFileSavePickerContinuationEventArgs_get_File), nullptr, nullptr, nullptr },
@@ -24981,16 +24658,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IFileSavePickerContinuationEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFileSavePickerContinuationEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFileSavePickerContinuationEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFileSavePickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileSavePickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileSavePickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileSavePickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileSavePickerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFileSavePickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileSavePickerContinuationEventArgs",
@@ -25146,13 +24821,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFileSavePickerContinuationEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileSavePickerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileSavePickerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFileSavePickerContinuationEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFileSavePickerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFileSavePickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFileSavePickerContinuationEventArgs",
@@ -25355,8 +25028,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IFolderPickerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_IFolderPickerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFolderPickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFolderPickerContinuationEventArgs[] = {
         { "folder", reinterpret_cast<getter>(IFolderPickerContinuationEventArgs_get_Folder), nullptr, nullptr, nullptr },
@@ -25364,16 +25036,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IFolderPickerContinuationEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFolderPickerContinuationEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFolderPickerContinuationEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFolderPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFolderPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFolderPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFolderPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFolderPickerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFolderPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFolderPickerContinuationEventArgs",
@@ -25529,13 +25199,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIFolderPickerContinuationEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFolderPickerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFolderPickerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFolderPickerContinuationEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFolderPickerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFolderPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIFolderPickerContinuationEventArgs",
@@ -25738,8 +25406,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ILaunchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ILaunchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILaunchActivatedEventArgs[] = {
         { "arguments", reinterpret_cast<getter>(ILaunchActivatedEventArgs_get_Arguments), nullptr, nullptr, nullptr },
@@ -25747,16 +25414,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(ILaunchActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ILaunchActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ILaunchActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILaunchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ILaunchActivatedEventArgs",
@@ -25912,13 +25577,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsILaunchActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILaunchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILaunchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILaunchActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILaunchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsILaunchActivatedEventArgs",
@@ -26151,8 +25814,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ILaunchActivatedEventArgs2[] = {
         { "_assign_array_", _assign_array_ILaunchActivatedEventArgs2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILaunchActivatedEventArgs2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILaunchActivatedEventArgs2[] = {
         { "tile_activated_info", reinterpret_cast<getter>(ILaunchActivatedEventArgs2_get_TileActivatedInfo), nullptr, nullptr, nullptr },
@@ -26161,16 +25823,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(ILaunchActivatedEventArgs2_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ILaunchActivatedEventArgs2_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ILaunchActivatedEventArgs2_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILaunchActivatedEventArgs2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILaunchActivatedEventArgs2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILaunchActivatedEventArgs2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILaunchActivatedEventArgs2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILaunchActivatedEventArgs2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILaunchActivatedEventArgs2 = {
         "winrt._winrt_windows_applicationmodel_activation.ILaunchActivatedEventArgs2",
@@ -26346,13 +26006,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsILaunchActivatedEventArgs2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILaunchActivatedEventArgs2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILaunchActivatedEventArgs2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILaunchActivatedEventArgs2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILaunchActivatedEventArgs2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILaunchActivatedEventArgs2 = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsILaunchActivatedEventArgs2",
@@ -26525,24 +26183,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ILockScreenActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ILockScreenActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILockScreenActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILockScreenActivatedEventArgs[] = {
         { "info", reinterpret_cast<getter>(ILockScreenActivatedEventArgs_get_Info), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ILockScreenActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ILockScreenActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ILockScreenActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILockScreenActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILockScreenActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILockScreenActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILockScreenActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILockScreenActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILockScreenActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ILockScreenActivatedEventArgs",
@@ -26678,13 +26333,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsILockScreenActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILockScreenActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILockScreenActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILockScreenActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILockScreenActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILockScreenActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsILockScreenActivatedEventArgs",
@@ -26917,8 +26570,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ILockScreenCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ILockScreenCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILockScreenCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILockScreenCallActivatedEventArgs[] = {
         { "call_ui", reinterpret_cast<getter>(ILockScreenCallActivatedEventArgs_get_CallUI), nullptr, nullptr, nullptr },
@@ -26927,16 +26579,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(ILockScreenCallActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ILockScreenCallActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ILockScreenCallActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILockScreenCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILockScreenCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILockScreenCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILockScreenCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILockScreenCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILockScreenCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ILockScreenCallActivatedEventArgs",
@@ -27112,13 +26762,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsILockScreenCallActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILockScreenCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILockScreenCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILockScreenCallActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILockScreenCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILockScreenCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsILockScreenCallActivatedEventArgs",
@@ -27291,24 +26939,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IPhoneCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPhoneCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPhoneCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPhoneCallActivatedEventArgs[] = {
         { "line_id", reinterpret_cast<getter>(IPhoneCallActivatedEventArgs_get_LineId), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IPhoneCallActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IPhoneCallActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IPhoneCallActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPhoneCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPhoneCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPhoneCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPhoneCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPhoneCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPhoneCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPhoneCallActivatedEventArgs",
@@ -27444,13 +27089,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIPhoneCallActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPhoneCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPhoneCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPhoneCallActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPhoneCallActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPhoneCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIPhoneCallActivatedEventArgs",
@@ -27623,24 +27266,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IPickerReturnedActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPickerReturnedActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPickerReturnedActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPickerReturnedActivatedEventArgs[] = {
         { "picker_operation_id", reinterpret_cast<getter>(IPickerReturnedActivatedEventArgs_get_PickerOperationId), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IPickerReturnedActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IPickerReturnedActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IPickerReturnedActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPickerReturnedActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPickerReturnedActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPickerReturnedActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPickerReturnedActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPickerReturnedActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPickerReturnedActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPickerReturnedActivatedEventArgs",
@@ -27776,13 +27416,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIPickerReturnedActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPickerReturnedActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPickerReturnedActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPickerReturnedActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPickerReturnedActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPickerReturnedActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIPickerReturnedActivatedEventArgs",
@@ -27955,24 +27593,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IPrelaunchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPrelaunchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrelaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPrelaunchActivatedEventArgs[] = {
         { "prelaunch_activated", reinterpret_cast<getter>(IPrelaunchActivatedEventArgs_get_PrelaunchActivated), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IPrelaunchActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IPrelaunchActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IPrelaunchActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPrelaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrelaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrelaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrelaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrelaunchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPrelaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPrelaunchActivatedEventArgs",
@@ -28108,13 +27743,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIPrelaunchActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrelaunchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrelaunchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPrelaunchActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrelaunchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPrelaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIPrelaunchActivatedEventArgs",
@@ -28287,24 +27920,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IPrint3DWorkflowActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPrint3DWorkflowActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrint3DWorkflowActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPrint3DWorkflowActivatedEventArgs[] = {
         { "workflow", reinterpret_cast<getter>(IPrint3DWorkflowActivatedEventArgs_get_Workflow), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IPrint3DWorkflowActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IPrint3DWorkflowActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IPrint3DWorkflowActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPrint3DWorkflowActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrint3DWorkflowActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPrint3DWorkflowActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPrint3DWorkflowActivatedEventArgs",
@@ -28440,13 +28070,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIPrint3DWorkflowActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrint3DWorkflowActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrint3DWorkflowActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPrint3DWorkflowActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrint3DWorkflowActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPrint3DWorkflowActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIPrint3DWorkflowActivatedEventArgs",
@@ -28619,24 +28247,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IPrintTaskSettingsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPrintTaskSettingsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintTaskSettingsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPrintTaskSettingsActivatedEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(IPrintTaskSettingsActivatedEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IPrintTaskSettingsActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IPrintTaskSettingsActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IPrintTaskSettingsActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPrintTaskSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTaskSettingsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPrintTaskSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPrintTaskSettingsActivatedEventArgs",
@@ -28772,13 +28397,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIPrintTaskSettingsActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintTaskSettingsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintTaskSettingsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPrintTaskSettingsActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrintTaskSettingsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPrintTaskSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIPrintTaskSettingsActivatedEventArgs",
@@ -28951,24 +28574,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IProtocolActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IProtocolActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IProtocolActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IProtocolActivatedEventArgs[] = {
         { "uri", reinterpret_cast<getter>(IProtocolActivatedEventArgs_get_Uri), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IProtocolActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IProtocolActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IProtocolActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IProtocolActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IProtocolActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProtocolActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProtocolActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProtocolActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IProtocolActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IProtocolActivatedEventArgs",
@@ -29104,13 +28724,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIProtocolActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIProtocolActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIProtocolActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIProtocolActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIProtocolActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIProtocolActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIProtocolActivatedEventArgs",
@@ -29313,8 +28931,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
         { "_assign_array_", _assign_array_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
         { "caller_package_family_name", reinterpret_cast<getter>(IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
@@ -29322,16 +28939,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData = {
         "winrt._winrt_windows_applicationmodel_activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData",
@@ -29487,13 +29102,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData",
@@ -29666,24 +29279,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IProtocolForResultsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IProtocolForResultsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IProtocolForResultsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IProtocolForResultsActivatedEventArgs[] = {
         { "protocol_for_results_operation", reinterpret_cast<getter>(IProtocolForResultsActivatedEventArgs_get_ProtocolForResultsOperation), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IProtocolForResultsActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IProtocolForResultsActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IProtocolForResultsActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IProtocolForResultsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IProtocolForResultsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProtocolForResultsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProtocolForResultsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProtocolForResultsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IProtocolForResultsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IProtocolForResultsActivatedEventArgs",
@@ -29819,13 +29429,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIProtocolForResultsActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIProtocolForResultsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIProtocolForResultsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIProtocolForResultsActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIProtocolForResultsActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIProtocolForResultsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIProtocolForResultsActivatedEventArgs",
@@ -29998,24 +29606,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IRestrictedLaunchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IRestrictedLaunchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRestrictedLaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IRestrictedLaunchActivatedEventArgs[] = {
         { "shared_context", reinterpret_cast<getter>(IRestrictedLaunchActivatedEventArgs_get_SharedContext), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IRestrictedLaunchActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IRestrictedLaunchActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IRestrictedLaunchActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IRestrictedLaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRestrictedLaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRestrictedLaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRestrictedLaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRestrictedLaunchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IRestrictedLaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IRestrictedLaunchActivatedEventArgs",
@@ -30151,13 +29756,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIRestrictedLaunchActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRestrictedLaunchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRestrictedLaunchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIRestrictedLaunchActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIRestrictedLaunchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIRestrictedLaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIRestrictedLaunchActivatedEventArgs",
@@ -30360,8 +29963,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ISearchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ISearchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISearchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISearchActivatedEventArgs[] = {
         { "language", reinterpret_cast<getter>(ISearchActivatedEventArgs_get_Language), nullptr, nullptr, nullptr },
@@ -30369,16 +29971,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(ISearchActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ISearchActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ISearchActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISearchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISearchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISearchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISearchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISearchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISearchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ISearchActivatedEventArgs",
@@ -30534,13 +30134,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsISearchActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISearchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISearchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISearchActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISearchActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISearchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsISearchActivatedEventArgs",
@@ -30623,21 +30221,18 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_ISearchActivatedEventArgsWithLinguisticDetails[] = {
         { "_assign_array_", _assign_array_ISearchActivatedEventArgsWithLinguisticDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISearchActivatedEventArgsWithLinguisticDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISearchActivatedEventArgsWithLinguisticDetails[] = {
         { "linguistic_details", reinterpret_cast<getter>(ISearchActivatedEventArgsWithLinguisticDetails_get_LinguisticDetails), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISearchActivatedEventArgsWithLinguisticDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISearchActivatedEventArgsWithLinguisticDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISearchActivatedEventArgsWithLinguisticDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISearchActivatedEventArgsWithLinguisticDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISearchActivatedEventArgsWithLinguisticDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISearchActivatedEventArgsWithLinguisticDetails = {
         "winrt._winrt_windows_applicationmodel_activation.ISearchActivatedEventArgsWithLinguisticDetails",
@@ -30713,13 +30308,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsISearchActivatedEventArgsWithLinguisticDetails[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISearchActivatedEventArgsWithLinguisticDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISearchActivatedEventArgsWithLinguisticDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISearchActivatedEventArgsWithLinguisticDetails[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISearchActivatedEventArgsWithLinguisticDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISearchActivatedEventArgsWithLinguisticDetails = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsISearchActivatedEventArgsWithLinguisticDetails",
@@ -30892,24 +30485,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IShareTargetActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IShareTargetActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IShareTargetActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IShareTargetActivatedEventArgs[] = {
         { "share_operation", reinterpret_cast<getter>(IShareTargetActivatedEventArgs_get_ShareOperation), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IShareTargetActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IShareTargetActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IShareTargetActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IShareTargetActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IShareTargetActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IShareTargetActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IShareTargetActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IShareTargetActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IShareTargetActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IShareTargetActivatedEventArgs",
@@ -31045,13 +30635,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIShareTargetActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIShareTargetActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIShareTargetActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIShareTargetActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIShareTargetActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIShareTargetActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIShareTargetActivatedEventArgs",
@@ -31224,24 +30812,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IStartupTaskActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IStartupTaskActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStartupTaskActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStartupTaskActivatedEventArgs[] = {
         { "task_id", reinterpret_cast<getter>(IStartupTaskActivatedEventArgs_get_TaskId), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IStartupTaskActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IStartupTaskActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IStartupTaskActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStartupTaskActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStartupTaskActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStartupTaskActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStartupTaskActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStartupTaskActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStartupTaskActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IStartupTaskActivatedEventArgs",
@@ -31377,13 +30962,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIStartupTaskActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStartupTaskActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStartupTaskActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStartupTaskActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStartupTaskActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStartupTaskActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIStartupTaskActivatedEventArgs",
@@ -31586,8 +31169,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IToastNotificationActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IToastNotificationActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IToastNotificationActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IToastNotificationActivatedEventArgs[] = {
         { "argument", reinterpret_cast<getter>(IToastNotificationActivatedEventArgs_get_Argument), nullptr, nullptr, nullptr },
@@ -31595,16 +31177,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IToastNotificationActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IToastNotificationActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IToastNotificationActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IToastNotificationActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IToastNotificationActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IToastNotificationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IToastNotificationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IToastNotificationActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IToastNotificationActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IToastNotificationActivatedEventArgs",
@@ -31760,13 +31340,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIToastNotificationActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIToastNotificationActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIToastNotificationActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIToastNotificationActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIToastNotificationActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIToastNotificationActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIToastNotificationActivatedEventArgs",
@@ -31939,24 +31517,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IUserDataAccountProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IUserDataAccountProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IUserDataAccountProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IUserDataAccountProviderActivatedEventArgs[] = {
         { "operation", reinterpret_cast<getter>(IUserDataAccountProviderActivatedEventArgs_get_Operation), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IUserDataAccountProviderActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IUserDataAccountProviderActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IUserDataAccountProviderActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IUserDataAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUserDataAccountProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IUserDataAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IUserDataAccountProviderActivatedEventArgs",
@@ -32092,13 +31667,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIUserDataAccountProviderActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUserDataAccountProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUserDataAccountProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIUserDataAccountProviderActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIUserDataAccountProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIUserDataAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIUserDataAccountProviderActivatedEventArgs",
@@ -32271,24 +31844,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IViewSwitcherProvider[] = {
         { "_assign_array_", _assign_array_IViewSwitcherProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IViewSwitcherProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IViewSwitcherProvider[] = {
         { "view_switcher", reinterpret_cast<getter>(IViewSwitcherProvider_get_ViewSwitcher), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IViewSwitcherProvider_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IViewSwitcherProvider_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IViewSwitcherProvider_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IViewSwitcherProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IViewSwitcherProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IViewSwitcherProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IViewSwitcherProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IViewSwitcherProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IViewSwitcherProvider = {
         "winrt._winrt_windows_applicationmodel_activation.IViewSwitcherProvider",
@@ -32424,13 +31994,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIViewSwitcherProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIViewSwitcherProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIViewSwitcherProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIViewSwitcherProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIViewSwitcherProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIViewSwitcherProvider = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIViewSwitcherProvider",
@@ -32603,24 +32171,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IVoiceCommandActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IVoiceCommandActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVoiceCommandActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVoiceCommandActivatedEventArgs[] = {
         { "result", reinterpret_cast<getter>(IVoiceCommandActivatedEventArgs_get_Result), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IVoiceCommandActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IVoiceCommandActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IVoiceCommandActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVoiceCommandActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVoiceCommandActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVoiceCommandActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVoiceCommandActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVoiceCommandActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVoiceCommandActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IVoiceCommandActivatedEventArgs",
@@ -32756,13 +32321,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIVoiceCommandActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVoiceCommandActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVoiceCommandActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVoiceCommandActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVoiceCommandActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVoiceCommandActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIVoiceCommandActivatedEventArgs",
@@ -32995,8 +32558,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IWalletActionActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IWalletActionActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWalletActionActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWalletActionActivatedEventArgs[] = {
         { "action_id", reinterpret_cast<getter>(IWalletActionActivatedEventArgs_get_ActionId), nullptr, nullptr, nullptr },
@@ -33005,16 +32567,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IWalletActionActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IWalletActionActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IWalletActionActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWalletActionActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWalletActionActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWalletActionActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWalletActionActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWalletActionActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWalletActionActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IWalletActionActivatedEventArgs",
@@ -33190,13 +32750,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIWalletActionActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWalletActionActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWalletActionActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWalletActionActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWalletActionActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWalletActionActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIWalletActionActivatedEventArgs",
@@ -33369,24 +32927,21 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IWebAccountProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IWebAccountProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAccountProviderActivatedEventArgs[] = {
         { "operation", reinterpret_cast<getter>(IWebAccountProviderActivatedEventArgs_get_Operation), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IWebAccountProviderActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IWebAccountProviderActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IWebAccountProviderActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IWebAccountProviderActivatedEventArgs",
@@ -33522,13 +33077,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIWebAccountProviderActivatedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAccountProviderActivatedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAccountProviderActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIWebAccountProviderActivatedEventArgs",
@@ -33731,8 +33284,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef _methods_IWebAuthenticationBrokerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_IWebAuthenticationBrokerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAuthenticationBrokerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebAuthenticationBrokerContinuationEventArgs[] = {
         { "web_authentication_result", reinterpret_cast<getter>(IWebAuthenticationBrokerContinuationEventArgs_get_WebAuthenticationResult), nullptr, nullptr, nullptr },
@@ -33740,16 +33292,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(IWebAuthenticationBrokerContinuationEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IWebAuthenticationBrokerContinuationEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IWebAuthenticationBrokerContinuationEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebAuthenticationBrokerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAuthenticationBrokerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebAuthenticationBrokerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IWebAuthenticationBrokerContinuationEventArgs",
@@ -33905,13 +33455,11 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static PyMethodDef methods_ImplementsIWebAuthenticationBrokerContinuationEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAuthenticationBrokerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAuthenticationBrokerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebAuthenticationBrokerContinuationEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebAuthenticationBrokerContinuationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebAuthenticationBrokerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ImplementsIWebAuthenticationBrokerContinuationEventArgs",

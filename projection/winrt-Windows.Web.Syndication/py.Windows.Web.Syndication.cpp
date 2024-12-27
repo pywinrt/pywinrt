@@ -294,23 +294,20 @@ namespace py::cpp::Windows::Web::Syndication
     static PyMethodDef _methods_SyndicationAttribute[] = {
         { "_assign_array_", _assign_array_SyndicationAttribute, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationAttribute), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationAttribute[] = {
         { "value", reinterpret_cast<getter>(SyndicationAttribute_get_Value), reinterpret_cast<setter>(SyndicationAttribute_put_Value), nullptr, nullptr },
         { "namespace", reinterpret_cast<getter>(SyndicationAttribute_get_Namespace), reinterpret_cast<setter>(SyndicationAttribute_put_Namespace), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(SyndicationAttribute_get_Name), reinterpret_cast<setter>(SyndicationAttribute_put_Name), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationAttribute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationAttribute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationAttribute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationAttribute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationAttribute) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationAttribute = {
         "winrt._winrt_windows_web_syndication.SyndicationAttribute",
@@ -1072,8 +1069,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "get_xml_document", reinterpret_cast<PyCFunction>(SyndicationCategory_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationCategory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationCategory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationCategory[] = {
         { "term", reinterpret_cast<getter>(SyndicationCategory_get_Term), reinterpret_cast<setter>(SyndicationCategory_put_Term), nullptr, nullptr },
@@ -1086,16 +1082,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "base_uri", reinterpret_cast<getter>(SyndicationCategory_get_BaseUri), reinterpret_cast<setter>(SyndicationCategory_put_BaseUri), nullptr, nullptr },
         { "attribute_extensions", reinterpret_cast<getter>(SyndicationCategory_get_AttributeExtensions), nullptr, nullptr, nullptr },
         { "element_extensions", reinterpret_cast<getter>(SyndicationCategory_get_ElementExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationCategory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationCategory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationCategory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationCategory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationCategory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationCategory = {
         "winrt._winrt_windows_web_syndication.SyndicationCategory",
@@ -1618,8 +1612,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "set_request_header", reinterpret_cast<PyCFunction>(SyndicationClient_SetRequestHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationClient, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationClient), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationClient[] = {
         { "timeout", reinterpret_cast<getter>(SyndicationClient_get_Timeout), reinterpret_cast<setter>(SyndicationClient_put_Timeout), nullptr, nullptr },
@@ -1627,16 +1620,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "proxy_credential", reinterpret_cast<getter>(SyndicationClient_get_ProxyCredential), reinterpret_cast<setter>(SyndicationClient_put_ProxyCredential), nullptr, nullptr },
         { "max_response_buffer_size", reinterpret_cast<getter>(SyndicationClient_get_MaxResponseBufferSize), reinterpret_cast<setter>(SyndicationClient_put_MaxResponseBufferSize), nullptr, nullptr },
         { "bypass_cache_on_retrieve", reinterpret_cast<getter>(SyndicationClient_get_BypassCacheOnRetrieve), reinterpret_cast<setter>(SyndicationClient_put_BypassCacheOnRetrieve), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationClient) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationClient = {
         "winrt._winrt_windows_web_syndication.SyndicationClient",
@@ -2466,8 +2457,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "get_xml_document", reinterpret_cast<PyCFunction>(SyndicationContent_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationContent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationContent[] = {
         { "source_uri", reinterpret_cast<getter>(SyndicationContent_get_SourceUri), reinterpret_cast<setter>(SyndicationContent_put_SourceUri), nullptr, nullptr },
@@ -2481,16 +2471,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "text", reinterpret_cast<getter>(SyndicationContent_get_Text), reinterpret_cast<setter>(SyndicationContent_put_Text), nullptr, nullptr },
         { "type", reinterpret_cast<getter>(SyndicationContent_get_Type), reinterpret_cast<setter>(SyndicationContent_put_Type), nullptr, nullptr },
         { "xml", reinterpret_cast<getter>(SyndicationContent_get_Xml), reinterpret_cast<setter>(SyndicationContent_put_Xml), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationContent = {
         "winrt._winrt_windows_web_syndication.SyndicationContent",
@@ -2551,19 +2539,16 @@ namespace py::cpp::Windows::Web::Syndication
     }
 
     static PyMethodDef _methods_SyndicationError[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationError[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationError) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationError = {
         "winrt._winrt_windows_web_syndication.SyndicationError",
@@ -2573,13 +2558,11 @@ namespace py::cpp::Windows::Web::Syndication
         _type_slots_SyndicationError};
 
     static PyGetSetDef getset_SyndicationError_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SyndicationError_Static[] = {
         { "get_status", reinterpret_cast<PyCFunction>(SyndicationError_GetStatus), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SyndicationError_Static[] = 
     {
@@ -2589,14 +2572,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Spec type_spec_SyndicationError_Static =
-    {
+    static PyType_Spec type_spec_SyndicationError_Static = {
         "winrt._winrt_windows_web_syndication.SyndicationError_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SyndicationError_Static
-    };
+        type_slots_SyndicationError_Static};
 
     // ----- SyndicationFeed class --------------------
 
@@ -4069,8 +4050,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "load_from_xml", reinterpret_cast<PyCFunction>(SyndicationFeed_LoadFromXml), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationFeed, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationFeed), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationFeed[] = {
         { "title", reinterpret_cast<getter>(SyndicationFeed_get_Title), reinterpret_cast<setter>(SyndicationFeed_put_Title), nullptr, nullptr },
@@ -4098,16 +4078,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "base_uri", reinterpret_cast<getter>(SyndicationFeed_get_BaseUri), reinterpret_cast<setter>(SyndicationFeed_put_BaseUri), nullptr, nullptr },
         { "attribute_extensions", reinterpret_cast<getter>(SyndicationFeed_get_AttributeExtensions), nullptr, nullptr, nullptr },
         { "element_extensions", reinterpret_cast<getter>(SyndicationFeed_get_ElementExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationFeed[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationFeed) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationFeed) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationFeed) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationFeed) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationFeed = {
         "winrt._winrt_windows_web_syndication.SyndicationFeed",
@@ -4852,8 +4830,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "get_xml_document", reinterpret_cast<PyCFunction>(SyndicationGenerator_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationGenerator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationGenerator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationGenerator[] = {
         { "version", reinterpret_cast<getter>(SyndicationGenerator_get_Version), reinterpret_cast<setter>(SyndicationGenerator_put_Version), nullptr, nullptr },
@@ -4866,16 +4843,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "base_uri", reinterpret_cast<getter>(SyndicationGenerator_get_BaseUri), reinterpret_cast<setter>(SyndicationGenerator_put_BaseUri), nullptr, nullptr },
         { "attribute_extensions", reinterpret_cast<getter>(SyndicationGenerator_get_AttributeExtensions), nullptr, nullptr, nullptr },
         { "element_extensions", reinterpret_cast<getter>(SyndicationGenerator_get_ElementExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationGenerator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationGenerator = {
         "winrt._winrt_windows_web_syndication.SyndicationGenerator",
@@ -6364,8 +6339,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "load_from_xml", reinterpret_cast<PyCFunction>(SyndicationItem_LoadFromXml), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationItem[] = {
         { "title", reinterpret_cast<getter>(SyndicationItem_get_Title), reinterpret_cast<setter>(SyndicationItem_put_Title), nullptr, nullptr },
@@ -6392,16 +6366,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "base_uri", reinterpret_cast<getter>(SyndicationItem_get_BaseUri), reinterpret_cast<setter>(SyndicationItem_put_BaseUri), nullptr, nullptr },
         { "attribute_extensions", reinterpret_cast<getter>(SyndicationItem_get_AttributeExtensions), nullptr, nullptr, nullptr },
         { "element_extensions", reinterpret_cast<getter>(SyndicationItem_get_ElementExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationItem = {
         "winrt._winrt_windows_web_syndication.SyndicationItem",
@@ -7372,8 +7344,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "get_xml_document", reinterpret_cast<PyCFunction>(SyndicationLink_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationLink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationLink), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationLink[] = {
         { "uri", reinterpret_cast<getter>(SyndicationLink_get_Uri), reinterpret_cast<setter>(SyndicationLink_put_Uri), nullptr, nullptr },
@@ -7389,16 +7360,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "base_uri", reinterpret_cast<getter>(SyndicationLink_get_BaseUri), reinterpret_cast<setter>(SyndicationLink_put_BaseUri), nullptr, nullptr },
         { "attribute_extensions", reinterpret_cast<getter>(SyndicationLink_get_AttributeExtensions), nullptr, nullptr, nullptr },
         { "element_extensions", reinterpret_cast<getter>(SyndicationLink_get_ElementExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationLink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationLink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationLink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationLink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationLink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationLink = {
         "winrt._winrt_windows_web_syndication.SyndicationLink",
@@ -7938,8 +7907,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "get_xml_document", reinterpret_cast<PyCFunction>(SyndicationNode_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationNode), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationNode[] = {
         { "node_value", reinterpret_cast<getter>(SyndicationNode_get_NodeValue), reinterpret_cast<setter>(SyndicationNode_put_NodeValue), nullptr, nullptr },
@@ -7949,16 +7917,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "base_uri", reinterpret_cast<getter>(SyndicationNode_get_BaseUri), reinterpret_cast<setter>(SyndicationNode_put_BaseUri), nullptr, nullptr },
         { "attribute_extensions", reinterpret_cast<getter>(SyndicationNode_get_AttributeExtensions), nullptr, nullptr, nullptr },
         { "element_extensions", reinterpret_cast<getter>(SyndicationNode_get_ElementExtensions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationNode = {
         "winrt._winrt_windows_web_syndication.SyndicationNode",
@@ -8720,8 +8686,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "get_xml_document", reinterpret_cast<PyCFunction>(SyndicationPerson_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationPerson, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationPerson), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationPerson[] = {
         { "node_value", reinterpret_cast<getter>(SyndicationPerson_get_NodeValue), reinterpret_cast<setter>(SyndicationPerson_put_NodeValue), nullptr, nullptr },
@@ -8734,16 +8699,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "uri", reinterpret_cast<getter>(SyndicationPerson_get_Uri), reinterpret_cast<setter>(SyndicationPerson_put_Uri), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(SyndicationPerson_get_Name), reinterpret_cast<setter>(SyndicationPerson_put_Name), nullptr, nullptr },
         { "email", reinterpret_cast<getter>(SyndicationPerson_get_Email), reinterpret_cast<setter>(SyndicationPerson_put_Email), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationPerson[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationPerson) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationPerson) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationPerson) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationPerson) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationPerson = {
         "winrt._winrt_windows_web_syndication.SyndicationPerson",
@@ -9504,8 +9467,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "get_xml_document", reinterpret_cast<PyCFunction>(SyndicationText_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SyndicationText, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SyndicationText), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SyndicationText[] = {
         { "node_value", reinterpret_cast<getter>(SyndicationText_get_NodeValue), reinterpret_cast<setter>(SyndicationText_put_NodeValue), nullptr, nullptr },
@@ -9518,16 +9480,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "xml", reinterpret_cast<getter>(SyndicationText_get_Xml), reinterpret_cast<setter>(SyndicationText_put_Xml), nullptr, nullptr },
         { "type", reinterpret_cast<getter>(SyndicationText_get_Type), reinterpret_cast<setter>(SyndicationText_put_Type), nullptr, nullptr },
         { "text", reinterpret_cast<getter>(SyndicationText_get_Text), reinterpret_cast<setter>(SyndicationText_put_Text), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SyndicationText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationText) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SyndicationText = {
         "winrt._winrt_windows_web_syndication.SyndicationText",
@@ -10013,8 +9973,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "set_request_header", reinterpret_cast<PyCFunction>(ISyndicationClient_SetRequestHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISyndicationClient, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISyndicationClient), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISyndicationClient[] = {
         { "bypass_cache_on_retrieve", reinterpret_cast<getter>(ISyndicationClient_get_BypassCacheOnRetrieve), reinterpret_cast<setter>(ISyndicationClient_put_BypassCacheOnRetrieve), nullptr, nullptr },
@@ -10022,16 +9981,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "proxy_credential", reinterpret_cast<getter>(ISyndicationClient_get_ProxyCredential), reinterpret_cast<setter>(ISyndicationClient_put_ProxyCredential), nullptr, nullptr },
         { "server_credential", reinterpret_cast<getter>(ISyndicationClient_get_ServerCredential), reinterpret_cast<setter>(ISyndicationClient_put_ServerCredential), nullptr, nullptr },
         { "timeout", reinterpret_cast<getter>(ISyndicationClient_get_Timeout), reinterpret_cast<setter>(ISyndicationClient_put_Timeout), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISyndicationClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISyndicationClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISyndicationClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISyndicationClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISyndicationClient) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISyndicationClient = {
         "winrt._winrt_windows_web_syndication.ISyndicationClient",
@@ -10376,13 +10333,11 @@ namespace py::cpp::Windows::Web::Syndication
     static PyMethodDef methods_ImplementsISyndicationClient[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISyndicationClient), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISyndicationClient), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISyndicationClient[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISyndicationClient) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISyndicationClient = {
         "winrt._winrt_windows_web_syndication.ImplementsISyndicationClient",
@@ -10883,8 +10838,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "get_xml_document", reinterpret_cast<PyCFunction>(ISyndicationNode_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISyndicationNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISyndicationNode), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISyndicationNode[] = {
         { "attribute_extensions", reinterpret_cast<getter>(ISyndicationNode_get_AttributeExtensions), nullptr, nullptr, nullptr },
@@ -10894,16 +10848,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "node_name", reinterpret_cast<getter>(ISyndicationNode_get_NodeName), reinterpret_cast<setter>(ISyndicationNode_put_NodeName), nullptr, nullptr },
         { "node_namespace", reinterpret_cast<getter>(ISyndicationNode_get_NodeNamespace), reinterpret_cast<setter>(ISyndicationNode_put_NodeNamespace), nullptr, nullptr },
         { "node_value", reinterpret_cast<getter>(ISyndicationNode_get_NodeValue), reinterpret_cast<setter>(ISyndicationNode_put_NodeValue), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISyndicationNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISyndicationNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISyndicationNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISyndicationNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISyndicationNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISyndicationNode = {
         "winrt._winrt_windows_web_syndication.ISyndicationNode",
@@ -11246,13 +11198,11 @@ namespace py::cpp::Windows::Web::Syndication
     static PyMethodDef methods_ImplementsISyndicationNode[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISyndicationNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISyndicationNode), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISyndicationNode[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISyndicationNode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISyndicationNode = {
         "winrt._winrt_windows_web_syndication.ImplementsISyndicationNode",
@@ -11960,8 +11910,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "get_xml_document", reinterpret_cast<PyCFunction>(ISyndicationText_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISyndicationText, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISyndicationText), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISyndicationText[] = {
         { "text", reinterpret_cast<getter>(ISyndicationText_get_Text), reinterpret_cast<setter>(ISyndicationText_put_Text), nullptr, nullptr },
@@ -11974,16 +11923,14 @@ namespace py::cpp::Windows::Web::Syndication
         { "node_name", reinterpret_cast<getter>(ISyndicationText_get_NodeName), reinterpret_cast<setter>(ISyndicationText_put_NodeName), nullptr, nullptr },
         { "node_namespace", reinterpret_cast<getter>(ISyndicationText_get_NodeNamespace), reinterpret_cast<setter>(ISyndicationText_put_NodeNamespace), nullptr, nullptr },
         { "node_value", reinterpret_cast<getter>(ISyndicationText_get_NodeValue), reinterpret_cast<setter>(ISyndicationText_put_NodeValue), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISyndicationText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISyndicationText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISyndicationText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISyndicationText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISyndicationText) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISyndicationText = {
         "winrt._winrt_windows_web_syndication.ISyndicationText",
@@ -12455,13 +12402,11 @@ namespace py::cpp::Windows::Web::Syndication
     static PyMethodDef methods_ImplementsISyndicationText[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISyndicationText), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISyndicationText), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISyndicationText[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISyndicationText) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISyndicationText = {
         "winrt._winrt_windows_web_syndication.ImplementsISyndicationText",
@@ -12539,8 +12484,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyMethodDef _methods_RetrievalProgress[] = {
         { "_assign_array_", _assign_array_RetrievalProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* RetrievalProgress_get_BytesRetrieved(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, void* /*unused*/) noexcept
     {
@@ -12611,8 +12555,7 @@ namespace py::cpp::Windows::Web::Syndication
     static PyGetSetDef _getset_RetrievalProgress[] = {
         { "bytes_retrieved", reinterpret_cast<getter>(RetrievalProgress_get_BytesRetrieved), reinterpret_cast<setter>(RetrievalProgress_set_BytesRetrieved), nullptr, nullptr },
         { "total_bytes_to_retrieve", reinterpret_cast<getter>(RetrievalProgress_get_TotalBytesToRetrieve), reinterpret_cast<setter>(RetrievalProgress_set_TotalBytesToRetrieve), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_RetrievalProgress(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, PyObject* other, int op) noexcept
     {
@@ -12674,8 +12617,7 @@ namespace py::cpp::Windows::Web::Syndication
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RetrievalProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RetrievalProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_RetrievalProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RetrievalProgress = {
         "winrt._winrt_windows_web_syndication.RetrievalProgress",
@@ -12757,8 +12699,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyMethodDef _methods_TransferProgress[] = {
         { "_assign_array_", _assign_array_TransferProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* TransferProgress_get_BytesSent(py::wrapper::Windows::Web::Syndication::TransferProgress* self, void* /*unused*/) noexcept
     {
@@ -12897,8 +12838,7 @@ namespace py::cpp::Windows::Web::Syndication
         { "total_bytes_to_send", reinterpret_cast<getter>(TransferProgress_get_TotalBytesToSend), reinterpret_cast<setter>(TransferProgress_set_TotalBytesToSend), nullptr, nullptr },
         { "bytes_retrieved", reinterpret_cast<getter>(TransferProgress_get_BytesRetrieved), reinterpret_cast<setter>(TransferProgress_set_BytesRetrieved), nullptr, nullptr },
         { "total_bytes_to_retrieve", reinterpret_cast<getter>(TransferProgress_get_TotalBytesToRetrieve), reinterpret_cast<setter>(TransferProgress_set_TotalBytesToRetrieve), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_TransferProgress(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* other, int op) noexcept
     {
@@ -12972,8 +12912,7 @@ namespace py::cpp::Windows::Web::Syndication
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TransferProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TransferProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_TransferProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TransferProgress = {
         "winrt._winrt_windows_web_syndication.TransferProgress",

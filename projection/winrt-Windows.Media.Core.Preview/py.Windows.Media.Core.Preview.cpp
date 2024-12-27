@@ -109,19 +109,16 @@ namespace py::cpp::Windows::Media::Core::Preview
     }
 
     static PyMethodDef _methods_SoundLevelBroker[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SoundLevelBroker[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SoundLevelBroker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SoundLevelBroker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SoundLevelBroker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SoundLevelBroker) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SoundLevelBroker = {
         "winrt._winrt_windows_media_core_preview.SoundLevelBroker",
@@ -132,14 +129,12 @@ namespace py::cpp::Windows::Media::Core::Preview
 
     static PyGetSetDef getset_SoundLevelBroker_Static[] = {
         { "sound_level", reinterpret_cast<getter>(SoundLevelBroker_get_SoundLevel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SoundLevelBroker_Static[] = {
         { "add_sound_level_changed", reinterpret_cast<PyCFunction>(SoundLevelBroker_add_SoundLevelChanged), METH_O, nullptr },
         { "remove_sound_level_changed", reinterpret_cast<PyCFunction>(SoundLevelBroker_remove_SoundLevelChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SoundLevelBroker_Static[] = 
     {
@@ -149,14 +144,12 @@ namespace py::cpp::Windows::Media::Core::Preview
         { }
     };
 
-    static PyType_Spec type_spec_SoundLevelBroker_Static =
-    {
+    static PyType_Spec type_spec_SoundLevelBroker_Static = {
         "winrt._winrt_windows_media_core_preview.SoundLevelBroker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SoundLevelBroker_Static
-    };
+        type_slots_SoundLevelBroker_Static};
 
     // ----- Windows.Media.Core.Preview Initialization --------------------
 

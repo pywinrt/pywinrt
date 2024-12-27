@@ -284,22 +284,19 @@ namespace py::cpp::Windows::Devices::Custom
         { "try_send_io_control_async", reinterpret_cast<PyCFunction>(CustomDevice_TrySendIOControlAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CustomDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CustomDevice[] = {
         { "input_stream", reinterpret_cast<getter>(CustomDevice_get_InputStream), nullptr, nullptr, nullptr },
         { "output_stream", reinterpret_cast<getter>(CustomDevice_get_OutputStream), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CustomDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CustomDevice = {
         "winrt._winrt_windows_devices_custom.CustomDevice",
@@ -309,14 +306,12 @@ namespace py::cpp::Windows::Devices::Custom
         _type_slots_CustomDevice};
 
     static PyGetSetDef getset_CustomDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CustomDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(CustomDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(CustomDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CustomDevice_Static[] = 
     {
@@ -326,14 +321,12 @@ namespace py::cpp::Windows::Devices::Custom
         { }
     };
 
-    static PyType_Spec type_spec_CustomDevice_Static =
-    {
+    static PyType_Spec type_spec_CustomDevice_Static = {
         "winrt._winrt_windows_devices_custom.CustomDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CustomDevice_Static
-    };
+        type_slots_CustomDevice_Static};
 
     // ----- IOControlCode class --------------------
 
@@ -556,8 +549,7 @@ namespace py::cpp::Windows::Devices::Custom
     static PyMethodDef _methods_IOControlCode[] = {
         { "_assign_array_", _assign_array_IOControlCode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IOControlCode), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IOControlCode[] = {
         { "access_mode", reinterpret_cast<getter>(IOControlCode_get_AccessMode), nullptr, nullptr, nullptr },
@@ -565,16 +557,14 @@ namespace py::cpp::Windows::Devices::Custom
         { "control_code", reinterpret_cast<getter>(IOControlCode_get_ControlCode), nullptr, nullptr, nullptr },
         { "device_type", reinterpret_cast<getter>(IOControlCode_get_DeviceType), nullptr, nullptr, nullptr },
         { "function", reinterpret_cast<getter>(IOControlCode_get_Function), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IOControlCode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IOControlCode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IOControlCode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IOControlCode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IOControlCode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IOControlCode = {
         "winrt._winrt_windows_devices_custom.IOControlCode",
@@ -623,19 +613,16 @@ namespace py::cpp::Windows::Devices::Custom
     }
 
     static PyMethodDef _methods_KnownDeviceTypes[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownDeviceTypes[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownDeviceTypes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownDeviceTypes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownDeviceTypes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownDeviceTypes) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownDeviceTypes = {
         "winrt._winrt_windows_devices_custom.KnownDeviceTypes",
@@ -646,12 +633,10 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyGetSetDef getset_KnownDeviceTypes_Static[] = {
         { "unknown", reinterpret_cast<getter>(KnownDeviceTypes_get_Unknown), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownDeviceTypes_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownDeviceTypes_Static[] = 
     {
@@ -661,14 +646,12 @@ namespace py::cpp::Windows::Devices::Custom
         { }
     };
 
-    static PyType_Spec type_spec_KnownDeviceTypes_Static =
-    {
+    static PyType_Spec type_spec_KnownDeviceTypes_Static = {
         "winrt._winrt_windows_devices_custom.KnownDeviceTypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownDeviceTypes_Static
-    };
+        type_slots_KnownDeviceTypes_Static};
 
     // ----- IIOControlCode interface --------------------
 
@@ -864,8 +847,7 @@ namespace py::cpp::Windows::Devices::Custom
     static PyMethodDef _methods_IIOControlCode[] = {
         { "_assign_array_", _assign_array_IIOControlCode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IIOControlCode), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IIOControlCode[] = {
         { "access_mode", reinterpret_cast<getter>(IIOControlCode_get_AccessMode), nullptr, nullptr, nullptr },
@@ -873,16 +855,14 @@ namespace py::cpp::Windows::Devices::Custom
         { "control_code", reinterpret_cast<getter>(IIOControlCode_get_ControlCode), nullptr, nullptr, nullptr },
         { "device_type", reinterpret_cast<getter>(IIOControlCode_get_DeviceType), nullptr, nullptr, nullptr },
         { "function", reinterpret_cast<getter>(IIOControlCode_get_Function), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IIOControlCode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IIOControlCode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IIOControlCode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIOControlCode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIOControlCode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IIOControlCode = {
         "winrt._winrt_windows_devices_custom.IIOControlCode",
@@ -1038,13 +1018,11 @@ namespace py::cpp::Windows::Devices::Custom
     static PyMethodDef methods_ImplementsIIOControlCode[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIOControlCode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIOControlCode), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIIOControlCode[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIIOControlCode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIIOControlCode = {
         "winrt._winrt_windows_devices_custom.ImplementsIIOControlCode",

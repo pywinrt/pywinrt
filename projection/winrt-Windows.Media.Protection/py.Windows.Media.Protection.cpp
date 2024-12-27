@@ -108,22 +108,19 @@ namespace py::cpp::Windows::Media::Protection
     static PyMethodDef _methods_ComponentLoadFailedEventArgs[] = {
         { "_assign_array_", _assign_array_ComponentLoadFailedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ComponentLoadFailedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ComponentLoadFailedEventArgs[] = {
         { "completion", reinterpret_cast<getter>(ComponentLoadFailedEventArgs_get_Completion), nullptr, nullptr, nullptr },
         { "information", reinterpret_cast<getter>(ComponentLoadFailedEventArgs_get_Information), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ComponentLoadFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComponentLoadFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ComponentLoadFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComponentLoadFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComponentLoadFailedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ComponentLoadFailedEventArgs = {
         "winrt._winrt_windows_media_protection.ComponentLoadFailedEventArgs",
@@ -184,19 +181,16 @@ namespace py::cpp::Windows::Media::Protection
     }
 
     static PyMethodDef _methods_ComponentRenewal[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ComponentRenewal[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ComponentRenewal[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComponentRenewal) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComponentRenewal) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComponentRenewal) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ComponentRenewal = {
         "winrt._winrt_windows_media_protection.ComponentRenewal",
@@ -206,13 +200,11 @@ namespace py::cpp::Windows::Media::Protection
         _type_slots_ComponentRenewal};
 
     static PyGetSetDef getset_ComponentRenewal_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ComponentRenewal_Static[] = {
         { "renew_system_components_async", reinterpret_cast<PyCFunction>(ComponentRenewal_RenewSystemComponentsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ComponentRenewal_Static[] = 
     {
@@ -222,14 +214,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Spec type_spec_ComponentRenewal_Static =
-    {
+    static PyType_Spec type_spec_ComponentRenewal_Static = {
         "winrt._winrt_windows_media_protection.ComponentRenewal_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ComponentRenewal_Static
-    };
+        type_slots_ComponentRenewal_Static};
 
     // ----- HdcpSession class --------------------
 
@@ -558,20 +548,17 @@ namespace py::cpp::Windows::Media::Protection
         { "_from", reinterpret_cast<PyCFunction>(_from_HdcpSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HdcpSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HdcpSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HdcpSession[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HdcpSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdcpSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdcpSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdcpSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdcpSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HdcpSession = {
         "winrt._winrt_windows_media_protection.HdcpSession",
@@ -877,21 +864,18 @@ namespace py::cpp::Windows::Media::Protection
         { "remove_service_requested", reinterpret_cast<PyCFunction>(MediaProtectionManager_remove_ServiceRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_MediaProtectionManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaProtectionManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaProtectionManager[] = {
         { "properties", reinterpret_cast<getter>(MediaProtectionManager_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaProtectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaProtectionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaProtectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaProtectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaProtectionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaProtectionManager = {
         "winrt._winrt_windows_media_protection.MediaProtectionManager",
@@ -998,21 +982,18 @@ namespace py::cpp::Windows::Media::Protection
     static PyMethodDef _methods_MediaProtectionPMPServer[] = {
         { "_assign_array_", _assign_array_MediaProtectionPMPServer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaProtectionPMPServer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaProtectionPMPServer[] = {
         { "properties", reinterpret_cast<getter>(MediaProtectionPMPServer_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaProtectionPMPServer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaProtectionPMPServer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaProtectionPMPServer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaProtectionPMPServer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaProtectionPMPServer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaProtectionPMPServer = {
         "winrt._winrt_windows_media_protection.MediaProtectionPMPServer",
@@ -1109,20 +1090,17 @@ namespace py::cpp::Windows::Media::Protection
         { "complete", reinterpret_cast<PyCFunction>(MediaProtectionServiceCompletion_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaProtectionServiceCompletion, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaProtectionServiceCompletion), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaProtectionServiceCompletion[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaProtectionServiceCompletion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaProtectionServiceCompletion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaProtectionServiceCompletion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaProtectionServiceCompletion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaProtectionServiceCompletion) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaProtectionServiceCompletion = {
         "winrt._winrt_windows_media_protection.MediaProtectionServiceCompletion",
@@ -1241,20 +1219,17 @@ namespace py::cpp::Windows::Media::Protection
         { "is_type_supported", reinterpret_cast<PyCFunction>(ProtectionCapabilities_IsTypeSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProtectionCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectionCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProtectionCapabilities[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProtectionCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectionCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectionCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectionCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectionCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProtectionCapabilities = {
         "winrt._winrt_windows_media_protection.ProtectionCapabilities",
@@ -1337,21 +1312,18 @@ namespace py::cpp::Windows::Media::Protection
     static PyMethodDef _methods_RevocationAndRenewalInformation[] = {
         { "_assign_array_", _assign_array_RevocationAndRenewalInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RevocationAndRenewalInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RevocationAndRenewalInformation[] = {
         { "items", reinterpret_cast<getter>(RevocationAndRenewalInformation_get_Items), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RevocationAndRenewalInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RevocationAndRenewalInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevocationAndRenewalInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RevocationAndRenewalInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RevocationAndRenewalInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RevocationAndRenewalInformation = {
         "winrt._winrt_windows_media_protection.RevocationAndRenewalInformation",
@@ -1554,8 +1526,7 @@ namespace py::cpp::Windows::Media::Protection
     static PyMethodDef _methods_RevocationAndRenewalItem[] = {
         { "_assign_array_", _assign_array_RevocationAndRenewalItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RevocationAndRenewalItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RevocationAndRenewalItem[] = {
         { "header_hash", reinterpret_cast<getter>(RevocationAndRenewalItem_get_HeaderHash), nullptr, nullptr, nullptr },
@@ -1563,16 +1534,14 @@ namespace py::cpp::Windows::Media::Protection
         { "public_key_hash", reinterpret_cast<getter>(RevocationAndRenewalItem_get_PublicKeyHash), nullptr, nullptr, nullptr },
         { "reasons", reinterpret_cast<getter>(RevocationAndRenewalItem_get_Reasons), nullptr, nullptr, nullptr },
         { "renewal_id", reinterpret_cast<getter>(RevocationAndRenewalItem_get_RenewalId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RevocationAndRenewalItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RevocationAndRenewalItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevocationAndRenewalItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RevocationAndRenewalItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RevocationAndRenewalItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RevocationAndRenewalItem = {
         "winrt._winrt_windows_media_protection.RevocationAndRenewalItem",
@@ -1715,23 +1684,20 @@ namespace py::cpp::Windows::Media::Protection
     static PyMethodDef _methods_ServiceRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_ServiceRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ServiceRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ServiceRequestedEventArgs[] = {
         { "completion", reinterpret_cast<getter>(ServiceRequestedEventArgs_get_Completion), nullptr, nullptr, nullptr },
         { "request", reinterpret_cast<getter>(ServiceRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
         { "media_playback_item", reinterpret_cast<getter>(ServiceRequestedEventArgs_get_MediaPlaybackItem), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ServiceRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServiceRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ServiceRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServiceRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServiceRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ServiceRequestedEventArgs = {
         "winrt._winrt_windows_media_protection.ServiceRequestedEventArgs",
@@ -1844,22 +1810,19 @@ namespace py::cpp::Windows::Media::Protection
     static PyMethodDef _methods_IMediaProtectionServiceRequest[] = {
         { "_assign_array_", _assign_array_IMediaProtectionServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaProtectionServiceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMediaProtectionServiceRequest[] = {
         { "protection_system", reinterpret_cast<getter>(IMediaProtectionServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IMediaProtectionServiceRequest_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMediaProtectionServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaProtectionServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaProtectionServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaProtectionServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaProtectionServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMediaProtectionServiceRequest = {
         "winrt._winrt_windows_media_protection.IMediaProtectionServiceRequest",
@@ -1955,13 +1918,11 @@ namespace py::cpp::Windows::Media::Protection
     static PyMethodDef methods_ImplementsIMediaProtectionServiceRequest[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaProtectionServiceRequest), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaProtectionServiceRequest), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMediaProtectionServiceRequest[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaProtectionServiceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMediaProtectionServiceRequest = {
         "winrt._winrt_windows_media_protection.ImplementsIMediaProtectionServiceRequest",

@@ -197,22 +197,19 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "remove_high_contrast_changed", reinterpret_cast<PyCFunction>(AccessibilitySettings_remove_HighContrastChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AccessibilitySettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccessibilitySettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccessibilitySettings[] = {
         { "high_contrast", reinterpret_cast<getter>(AccessibilitySettings_get_HighContrast), nullptr, nullptr, nullptr },
         { "high_contrast_scheme", reinterpret_cast<getter>(AccessibilitySettings_get_HighContrastScheme), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccessibilitySettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessibilitySettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccessibilitySettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessibilitySettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessibilitySettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccessibilitySettings = {
         "winrt._winrt_windows_ui_viewmanagement.AccessibilitySettings",
@@ -395,20 +392,17 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "show_as_standalone_with_size_preference_async", reinterpret_cast<PyCFunction>(ActivationViewSwitcher_ShowAsStandaloneWithSizePreferenceAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ActivationViewSwitcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivationViewSwitcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivationViewSwitcher[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivationViewSwitcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivationViewSwitcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivationViewSwitcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivationViewSwitcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivationViewSwitcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivationViewSwitcher = {
         "winrt._winrt_windows_ui_viewmanagement.ActivationViewSwitcher",
@@ -2280,8 +2274,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "remove_visible_bounds_changed", reinterpret_cast<PyCFunction>(ApplicationView_remove_VisibleBoundsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ApplicationView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationView[] = {
         { "is_screen_capture_enabled", reinterpret_cast<getter>(ApplicationView_get_IsScreenCaptureEnabled), reinterpret_cast<setter>(ApplicationView_put_IsScreenCaptureEnabled), nullptr, nullptr },
@@ -2302,16 +2295,14 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "persisted_state_id", reinterpret_cast<getter>(ApplicationView_get_PersistedStateId), reinterpret_cast<setter>(ApplicationView_put_PersistedStateId), nullptr, nullptr },
         { "windowing_environment", reinterpret_cast<getter>(ApplicationView_get_WindowingEnvironment), nullptr, nullptr, nullptr },
         { "ui_context", reinterpret_cast<getter>(ApplicationView_get_UIContext), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationView = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationView",
@@ -2325,8 +2316,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "terminate_app_on_final_view_close", reinterpret_cast<getter>(ApplicationView_get_TerminateAppOnFinalViewClose), reinterpret_cast<setter>(ApplicationView_put_TerminateAppOnFinalViewClose), nullptr, nullptr },
         { "preferred_launch_windowing_mode", reinterpret_cast<getter>(ApplicationView_get_PreferredLaunchWindowingMode), reinterpret_cast<setter>(ApplicationView_put_PreferredLaunchWindowingMode), nullptr, nullptr },
         { "preferred_launch_view_size", reinterpret_cast<getter>(ApplicationView_get_PreferredLaunchViewSize), reinterpret_cast<setter>(ApplicationView_put_PreferredLaunchViewSize), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApplicationView_Static[] = {
         { "clear_all_persisted_state", reinterpret_cast<PyCFunction>(ApplicationView_ClearAllPersistedState), METH_VARARGS, nullptr },
@@ -2335,8 +2325,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "get_for_current_view", reinterpret_cast<PyCFunction>(ApplicationView_GetForCurrentView), METH_VARARGS, nullptr },
         { "try_unsnap", reinterpret_cast<PyCFunction>(ApplicationView_TryUnsnap), METH_VARARGS, nullptr },
         { "try_unsnap_to_fullscreen", reinterpret_cast<PyCFunction>(ApplicationView_TryUnsnapToFullscreen), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApplicationView_Static[] = 
     {
@@ -2346,14 +2335,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationView_Static =
-    {
+    static PyType_Spec type_spec_ApplicationView_Static = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationView_Static
-    };
+        type_slots_ApplicationView_Static};
 
     // ----- ApplicationViewConsolidatedEventArgs class --------------------
 
@@ -2459,22 +2446,19 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_ApplicationViewConsolidatedEventArgs[] = {
         { "_assign_array_", _assign_array_ApplicationViewConsolidatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationViewConsolidatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationViewConsolidatedEventArgs[] = {
         { "is_user_initiated", reinterpret_cast<getter>(ApplicationViewConsolidatedEventArgs_get_IsUserInitiated), nullptr, nullptr, nullptr },
         { "is_app_initiated", reinterpret_cast<getter>(ApplicationViewConsolidatedEventArgs_get_IsAppInitiated), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationViewConsolidatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationViewConsolidatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationViewConsolidatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationViewConsolidatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationViewConsolidatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationViewConsolidatedEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationViewConsolidatedEventArgs",
@@ -2599,20 +2583,17 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_ApplicationViewScaling[] = {
         { "_assign_array_", _assign_array_ApplicationViewScaling, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationViewScaling), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationViewScaling[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationViewScaling[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationViewScaling) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationViewScaling) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationViewScaling) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationViewScaling) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationViewScaling = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationViewScaling",
@@ -2623,13 +2604,11 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyGetSetDef getset_ApplicationViewScaling_Static[] = {
         { "disable_layout_scaling", reinterpret_cast<getter>(ApplicationViewScaling_get_DisableLayoutScaling), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApplicationViewScaling_Static[] = {
         { "try_set_disable_layout_scaling", reinterpret_cast<PyCFunction>(ApplicationViewScaling_TrySetDisableLayoutScaling), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApplicationViewScaling_Static[] = 
     {
@@ -2639,14 +2618,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationViewScaling_Static =
-    {
+    static PyType_Spec type_spec_ApplicationViewScaling_Static = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationViewScaling_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationViewScaling_Static
-    };
+        type_slots_ApplicationViewScaling_Static};
 
     // ----- ApplicationViewSwitcher class --------------------
 
@@ -3130,19 +3107,16 @@ namespace py::cpp::Windows::UI::ViewManagement
     }
 
     static PyMethodDef _methods_ApplicationViewSwitcher[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationViewSwitcher[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationViewSwitcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationViewSwitcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationViewSwitcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationViewSwitcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationViewSwitcher = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationViewSwitcher",
@@ -3152,8 +3126,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         _type_slots_ApplicationViewSwitcher};
 
     static PyGetSetDef getset_ApplicationViewSwitcher_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApplicationViewSwitcher_Static[] = {
         { "disable_showing_main_view_on_activation", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_DisableShowingMainViewOnActivation), METH_VARARGS, nullptr },
@@ -3167,8 +3140,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "try_show_as_standalone_with_size_preference_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_TryShowAsStandaloneWithSizePreferenceAsync), METH_VARARGS, nullptr },
         { "try_show_as_view_mode_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_TryShowAsViewModeAsync), METH_VARARGS, nullptr },
         { "try_show_as_view_mode_with_preferences_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_TryShowAsViewModeWithPreferencesAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApplicationViewSwitcher_Static[] = 
     {
@@ -3178,14 +3150,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationViewSwitcher_Static =
-    {
+    static PyType_Spec type_spec_ApplicationViewSwitcher_Static = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationViewSwitcher_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationViewSwitcher_Static
-    };
+        type_slots_ApplicationViewSwitcher_Static};
 
     // ----- ApplicationViewTitleBar class --------------------
 
@@ -4059,8 +4029,7 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_ApplicationViewTitleBar[] = {
         { "_assign_array_", _assign_array_ApplicationViewTitleBar, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationViewTitleBar), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationViewTitleBar[] = {
         { "inactive_foreground_color", reinterpret_cast<getter>(ApplicationViewTitleBar_get_InactiveForegroundColor), reinterpret_cast<setter>(ApplicationViewTitleBar_put_InactiveForegroundColor), nullptr, nullptr },
@@ -4075,16 +4044,14 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "button_foreground_color", reinterpret_cast<getter>(ApplicationViewTitleBar_get_ButtonForegroundColor), reinterpret_cast<setter>(ApplicationViewTitleBar_put_ButtonForegroundColor), nullptr, nullptr },
         { "button_background_color", reinterpret_cast<getter>(ApplicationViewTitleBar_get_ButtonBackgroundColor), reinterpret_cast<setter>(ApplicationViewTitleBar_put_ButtonBackgroundColor), nullptr, nullptr },
         { "background_color", reinterpret_cast<getter>(ApplicationViewTitleBar_get_BackgroundColor), reinterpret_cast<setter>(ApplicationViewTitleBar_put_BackgroundColor), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationViewTitleBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationViewTitleBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationViewTitleBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationViewTitleBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationViewTitleBar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationViewTitleBar = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationViewTitleBar",
@@ -4258,21 +4225,18 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_ApplicationViewTransferContext[] = {
         { "_assign_array_", _assign_array_ApplicationViewTransferContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationViewTransferContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationViewTransferContext[] = {
         { "view_id", reinterpret_cast<getter>(ApplicationViewTransferContext_get_ViewId), reinterpret_cast<setter>(ApplicationViewTransferContext_put_ViewId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationViewTransferContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationViewTransferContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationViewTransferContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationViewTransferContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationViewTransferContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationViewTransferContext = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationViewTransferContext",
@@ -4283,12 +4247,10 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyGetSetDef getset_ApplicationViewTransferContext_Static[] = {
         { "data_package_format_id", reinterpret_cast<getter>(ApplicationViewTransferContext_get_DataPackageFormatId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApplicationViewTransferContext_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApplicationViewTransferContext_Static[] = 
     {
@@ -4298,14 +4260,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationViewTransferContext_Static =
-    {
+    static PyType_Spec type_spec_ApplicationViewTransferContext_Static = {
         "winrt._winrt_windows_ui_viewmanagement.ApplicationViewTransferContext_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationViewTransferContext_Static
-    };
+        type_slots_ApplicationViewTransferContext_Static};
 
     // ----- InputPane class --------------------
 
@@ -4748,22 +4708,19 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "remove_showing", reinterpret_cast<PyCFunction>(InputPane_remove_Showing), METH_O, nullptr },
         { "_assign_array_", _assign_array_InputPane, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputPane), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InputPane[] = {
         { "occluded_rect", reinterpret_cast<getter>(InputPane_get_OccludedRect), nullptr, nullptr, nullptr },
         { "visible", reinterpret_cast<getter>(InputPane_get_Visible), reinterpret_cast<setter>(InputPane_put_Visible), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InputPane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputPane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputPane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputPane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputPane) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InputPane = {
         "winrt._winrt_windows_ui_viewmanagement.InputPane",
@@ -4773,14 +4730,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         _type_slots_InputPane};
 
     static PyGetSetDef getset_InputPane_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_InputPane_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(InputPane_GetForCurrentView), METH_VARARGS, nullptr },
         { "get_for_ui_context", reinterpret_cast<PyCFunction>(InputPane_GetForUIContext), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_InputPane_Static[] = 
     {
@@ -4790,14 +4745,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         { }
     };
 
-    static PyType_Spec type_spec_InputPane_Static =
-    {
+    static PyType_Spec type_spec_InputPane_Static = {
         "winrt._winrt_windows_ui_viewmanagement.InputPane_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_InputPane_Static
-    };
+        type_slots_InputPane_Static};
 
     // ----- InputPaneVisibilityEventArgs class --------------------
 
@@ -4942,22 +4895,19 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_InputPaneVisibilityEventArgs[] = {
         { "_assign_array_", _assign_array_InputPaneVisibilityEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputPaneVisibilityEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InputPaneVisibilityEventArgs[] = {
         { "ensured_focused_element_in_view", reinterpret_cast<getter>(InputPaneVisibilityEventArgs_get_EnsuredFocusedElementInView), reinterpret_cast<setter>(InputPaneVisibilityEventArgs_put_EnsuredFocusedElementInView), nullptr, nullptr },
         { "occluded_rect", reinterpret_cast<getter>(InputPaneVisibilityEventArgs_get_OccludedRect), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InputPaneVisibilityEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputPaneVisibilityEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputPaneVisibilityEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputPaneVisibilityEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputPaneVisibilityEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InputPaneVisibilityEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement.InputPaneVisibilityEventArgs",
@@ -5373,19 +5323,16 @@ namespace py::cpp::Windows::UI::ViewManagement
     }
 
     static PyMethodDef _methods_ProjectionManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProjectionManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProjectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProjectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProjectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProjectionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProjectionManager = {
         "winrt._winrt_windows_ui_viewmanagement.ProjectionManager",
@@ -5396,8 +5343,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyGetSetDef getset_ProjectionManager_Static[] = {
         { "projection_display_available", reinterpret_cast<getter>(ProjectionManager_get_ProjectionDisplayAvailable), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ProjectionManager_Static[] = {
         { "get_device_selector", reinterpret_cast<PyCFunction>(ProjectionManager_GetDeviceSelector), METH_VARARGS, nullptr },
@@ -5409,8 +5355,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "swap_displays_for_views_async", reinterpret_cast<PyCFunction>(ProjectionManager_SwapDisplaysForViewsAsync), METH_VARARGS, nullptr },
         { "add_projection_display_available_changed", reinterpret_cast<PyCFunction>(ProjectionManager_add_ProjectionDisplayAvailableChanged), METH_O, nullptr },
         { "remove_projection_display_available_changed", reinterpret_cast<PyCFunction>(ProjectionManager_remove_ProjectionDisplayAvailableChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ProjectionManager_Static[] = 
     {
@@ -5420,14 +5365,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         { }
     };
 
-    static PyType_Spec type_spec_ProjectionManager_Static =
-    {
+    static PyType_Spec type_spec_ProjectionManager_Static = {
         "winrt._winrt_windows_ui_viewmanagement.ProjectionManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ProjectionManager_Static
-    };
+        type_slots_ProjectionManager_Static};
 
     // ----- StatusBar class --------------------
 
@@ -5996,8 +5939,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "remove_showing", reinterpret_cast<PyCFunction>(StatusBar_remove_Showing), METH_O, nullptr },
         { "_assign_array_", _assign_array_StatusBar, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StatusBar), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StatusBar[] = {
         { "foreground_color", reinterpret_cast<getter>(StatusBar_get_ForegroundColor), reinterpret_cast<setter>(StatusBar_put_ForegroundColor), nullptr, nullptr },
@@ -6005,16 +5947,14 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "background_color", reinterpret_cast<getter>(StatusBar_get_BackgroundColor), reinterpret_cast<setter>(StatusBar_put_BackgroundColor), nullptr, nullptr },
         { "occluded_rect", reinterpret_cast<getter>(StatusBar_get_OccludedRect), nullptr, nullptr, nullptr },
         { "progress_indicator", reinterpret_cast<getter>(StatusBar_get_ProgressIndicator), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StatusBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StatusBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StatusBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StatusBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StatusBar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StatusBar = {
         "winrt._winrt_windows_ui_viewmanagement.StatusBar",
@@ -6024,13 +5964,11 @@ namespace py::cpp::Windows::UI::ViewManagement
         _type_slots_StatusBar};
 
     static PyGetSetDef getset_StatusBar_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StatusBar_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(StatusBar_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StatusBar_Static[] = 
     {
@@ -6040,14 +5978,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         { }
     };
 
-    static PyType_Spec type_spec_StatusBar_Static =
-    {
+    static PyType_Spec type_spec_StatusBar_Static = {
         "winrt._winrt_windows_ui_viewmanagement.StatusBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StatusBar_Static
-    };
+        type_slots_StatusBar_Static};
 
     // ----- StatusBarProgressIndicator class --------------------
 
@@ -6313,22 +6249,19 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "show_async", reinterpret_cast<PyCFunction>(StatusBarProgressIndicator_ShowAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StatusBarProgressIndicator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StatusBarProgressIndicator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StatusBarProgressIndicator[] = {
         { "text", reinterpret_cast<getter>(StatusBarProgressIndicator_get_Text), reinterpret_cast<setter>(StatusBarProgressIndicator_put_Text), nullptr, nullptr },
         { "progress_value", reinterpret_cast<getter>(StatusBarProgressIndicator_get_ProgressValue), reinterpret_cast<setter>(StatusBarProgressIndicator_put_ProgressValue), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StatusBarProgressIndicator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StatusBarProgressIndicator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StatusBarProgressIndicator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StatusBarProgressIndicator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StatusBarProgressIndicator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StatusBarProgressIndicator = {
         "winrt._winrt_windows_ui_viewmanagement.StatusBarProgressIndicator",
@@ -7341,8 +7274,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "remove_message_duration_changed", reinterpret_cast<PyCFunction>(UISettings_remove_MessageDurationChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_UISettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UISettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UISettings[] = {
         { "animations_enabled", reinterpret_cast<getter>(UISettings_get_AnimationsEnabled), nullptr, nullptr, nullptr },
@@ -7360,16 +7292,14 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "text_scale_factor", reinterpret_cast<getter>(UISettings_get_TextScaleFactor), nullptr, nullptr, nullptr },
         { "advanced_effects_enabled", reinterpret_cast<getter>(UISettings_get_AdvancedEffectsEnabled), nullptr, nullptr, nullptr },
         { "auto_hide_scroll_bars", reinterpret_cast<getter>(UISettings_get_AutoHideScrollBars), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UISettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UISettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UISettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UISettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UISettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UISettings = {
         "winrt._winrt_windows_ui_viewmanagement.UISettings",
@@ -7422,20 +7352,17 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_UISettingsAnimationsEnabledChangedEventArgs[] = {
         { "_assign_array_", _assign_array_UISettingsAnimationsEnabledChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UISettingsAnimationsEnabledChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UISettingsAnimationsEnabledChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UISettingsAnimationsEnabledChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UISettingsAnimationsEnabledChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UISettingsAnimationsEnabledChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UISettingsAnimationsEnabledChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UISettingsAnimationsEnabledChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UISettingsAnimationsEnabledChangedEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement.UISettingsAnimationsEnabledChangedEventArgs",
@@ -7488,20 +7415,17 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_UISettingsAutoHideScrollBarsChangedEventArgs[] = {
         { "_assign_array_", _assign_array_UISettingsAutoHideScrollBarsChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UISettingsAutoHideScrollBarsChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UISettingsAutoHideScrollBarsChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UISettingsAutoHideScrollBarsChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UISettingsAutoHideScrollBarsChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UISettingsAutoHideScrollBarsChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UISettingsAutoHideScrollBarsChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UISettingsAutoHideScrollBarsChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UISettingsAutoHideScrollBarsChangedEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement.UISettingsAutoHideScrollBarsChangedEventArgs",
@@ -7554,20 +7478,17 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_UISettingsMessageDurationChangedEventArgs[] = {
         { "_assign_array_", _assign_array_UISettingsMessageDurationChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UISettingsMessageDurationChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UISettingsMessageDurationChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UISettingsMessageDurationChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UISettingsMessageDurationChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UISettingsMessageDurationChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UISettingsMessageDurationChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UISettingsMessageDurationChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UISettingsMessageDurationChangedEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement.UISettingsMessageDurationChangedEventArgs",
@@ -7690,21 +7611,18 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_UIViewSettings[] = {
         { "_assign_array_", _assign_array_UIViewSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UIViewSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UIViewSettings[] = {
         { "user_interaction_mode", reinterpret_cast<getter>(UIViewSettings_get_UserInteractionMode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UIViewSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UIViewSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UIViewSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UIViewSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UIViewSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UIViewSettings = {
         "winrt._winrt_windows_ui_viewmanagement.UIViewSettings",
@@ -7714,13 +7632,11 @@ namespace py::cpp::Windows::UI::ViewManagement
         _type_slots_UIViewSettings};
 
     static PyGetSetDef getset_UIViewSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UIViewSettings_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(UIViewSettings_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UIViewSettings_Static[] = 
     {
@@ -7730,14 +7646,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         { }
     };
 
-    static PyType_Spec type_spec_UIViewSettings_Static =
-    {
+    static PyType_Spec type_spec_UIViewSettings_Static = {
         "winrt._winrt_windows_ui_viewmanagement.UIViewSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UIViewSettings_Static
-    };
+        type_slots_UIViewSettings_Static};
 
     // ----- ViewModePreferences class --------------------
 
@@ -7963,22 +7877,19 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_ViewModePreferences[] = {
         { "_assign_array_", _assign_array_ViewModePreferences, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ViewModePreferences), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ViewModePreferences[] = {
         { "view_size_preference", reinterpret_cast<getter>(ViewModePreferences_get_ViewSizePreference), reinterpret_cast<setter>(ViewModePreferences_put_ViewSizePreference), nullptr, nullptr },
         { "custom_size", reinterpret_cast<getter>(ViewModePreferences_get_CustomSize), reinterpret_cast<setter>(ViewModePreferences_put_CustomSize), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ViewModePreferences[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ViewModePreferences) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ViewModePreferences) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ViewModePreferences) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ViewModePreferences) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ViewModePreferences = {
         "winrt._winrt_windows_ui_viewmanagement.ViewModePreferences",
@@ -7988,13 +7899,11 @@ namespace py::cpp::Windows::UI::ViewManagement
         _type_slots_ViewModePreferences};
 
     static PyGetSetDef getset_ViewModePreferences_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ViewModePreferences_Static[] = {
         { "create_default", reinterpret_cast<PyCFunction>(ViewModePreferences_CreateDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ViewModePreferences_Static[] = 
     {
@@ -8004,14 +7913,12 @@ namespace py::cpp::Windows::UI::ViewManagement
         { }
     };
 
-    static PyType_Spec type_spec_ViewModePreferences_Static =
-    {
+    static PyType_Spec type_spec_ViewModePreferences_Static = {
         "winrt._winrt_windows_ui_viewmanagement.ViewModePreferences_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ViewModePreferences_Static
-    };
+        type_slots_ViewModePreferences_Static};
 
     // ----- Windows.UI.ViewManagement Initialization --------------------
 

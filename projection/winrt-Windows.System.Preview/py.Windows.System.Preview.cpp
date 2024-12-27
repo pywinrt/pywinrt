@@ -196,20 +196,17 @@ namespace py::cpp::Windows::System::Preview
         { "remove_posture_changed", reinterpret_cast<PyCFunction>(TwoPanelHingedDevicePosturePreview_remove_PostureChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_TwoPanelHingedDevicePosturePreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TwoPanelHingedDevicePosturePreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TwoPanelHingedDevicePosturePreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TwoPanelHingedDevicePosturePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TwoPanelHingedDevicePosturePreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TwoPanelHingedDevicePosturePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TwoPanelHingedDevicePosturePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TwoPanelHingedDevicePosturePreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreview = {
         "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreview",
@@ -219,13 +216,11 @@ namespace py::cpp::Windows::System::Preview
         _type_slots_TwoPanelHingedDevicePosturePreview};
 
     static PyGetSetDef getset_TwoPanelHingedDevicePosturePreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TwoPanelHingedDevicePosturePreview_Static[] = {
         { "get_default_async", reinterpret_cast<PyCFunction>(TwoPanelHingedDevicePosturePreview_GetDefaultAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TwoPanelHingedDevicePosturePreview_Static[] = 
     {
@@ -235,14 +230,12 @@ namespace py::cpp::Windows::System::Preview
         { }
     };
 
-    static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreview_Static =
-    {
+    static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreview_Static = {
         "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TwoPanelHingedDevicePosturePreview_Static
-    };
+        type_slots_TwoPanelHingedDevicePosturePreview_Static};
 
     // ----- TwoPanelHingedDevicePosturePreviewReading class --------------------
 
@@ -468,8 +461,7 @@ namespace py::cpp::Windows::System::Preview
     static PyMethodDef _methods_TwoPanelHingedDevicePosturePreviewReading[] = {
         { "_assign_array_", _assign_array_TwoPanelHingedDevicePosturePreviewReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TwoPanelHingedDevicePosturePreviewReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TwoPanelHingedDevicePosturePreviewReading[] = {
         { "hinge_state", reinterpret_cast<getter>(TwoPanelHingedDevicePosturePreviewReading_get_HingeState), nullptr, nullptr, nullptr },
@@ -478,16 +470,14 @@ namespace py::cpp::Windows::System::Preview
         { "panel2_id", reinterpret_cast<getter>(TwoPanelHingedDevicePosturePreviewReading_get_Panel2Id), nullptr, nullptr, nullptr },
         { "panel2_orientation", reinterpret_cast<getter>(TwoPanelHingedDevicePosturePreviewReading_get_Panel2Orientation), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(TwoPanelHingedDevicePosturePreviewReading_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TwoPanelHingedDevicePosturePreviewReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TwoPanelHingedDevicePosturePreviewReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TwoPanelHingedDevicePosturePreviewReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TwoPanelHingedDevicePosturePreviewReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TwoPanelHingedDevicePosturePreviewReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReading = {
         "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReading",
@@ -570,21 +560,18 @@ namespace py::cpp::Windows::System::Preview
     static PyMethodDef _methods_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = {
         "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs",

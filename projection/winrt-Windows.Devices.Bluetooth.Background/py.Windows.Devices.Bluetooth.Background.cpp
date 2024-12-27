@@ -138,23 +138,20 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static PyMethodDef _methods_BluetoothLEAdvertisementPublisherTriggerDetails[] = {
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementPublisherTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementPublisherTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementPublisherTriggerDetails[] = {
         { "error", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTriggerDetails_get_Error), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTriggerDetails_get_Status), nullptr, nullptr, nullptr },
         { "selected_transmit_power_level_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTriggerDetails_get_SelectedTransmitPowerLevelInDBm), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisherTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementPublisherTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementPublisherTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementPublisherTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementPublisherTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementPublisherTriggerDetails",
@@ -297,23 +294,20 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static PyMethodDef _methods_BluetoothLEAdvertisementWatcherTriggerDetails[] = {
         { "_assign_array_", _assign_array_BluetoothLEAdvertisementWatcherTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEAdvertisementWatcherTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BluetoothLEAdvertisementWatcherTriggerDetails[] = {
         { "advertisements", reinterpret_cast<getter>(BluetoothLEAdvertisementWatcherTriggerDetails_get_Advertisements), nullptr, nullptr, nullptr },
         { "error", reinterpret_cast<getter>(BluetoothLEAdvertisementWatcherTriggerDetails_get_Error), nullptr, nullptr, nullptr },
         { "signal_strength_filter", reinterpret_cast<getter>(BluetoothLEAdvertisementWatcherTriggerDetails_get_SignalStrengthFilter), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcherTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementWatcherTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementWatcherTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementWatcherTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementWatcherTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementWatcherTriggerDetails",
@@ -516,8 +510,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static PyMethodDef _methods_GattCharacteristicNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_GattCharacteristicNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GattCharacteristicNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GattCharacteristicNotificationTriggerDetails[] = {
         { "characteristic", reinterpret_cast<getter>(GattCharacteristicNotificationTriggerDetails_get_Characteristic), nullptr, nullptr, nullptr },
@@ -525,16 +518,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { "error", reinterpret_cast<getter>(GattCharacteristicNotificationTriggerDetails_get_Error), nullptr, nullptr, nullptr },
         { "event_triggering_mode", reinterpret_cast<getter>(GattCharacteristicNotificationTriggerDetails_get_EventTriggeringMode), nullptr, nullptr, nullptr },
         { "value_changed_events", reinterpret_cast<getter>(GattCharacteristicNotificationTriggerDetails_get_ValueChangedEvents), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GattCharacteristicNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattCharacteristicNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattCharacteristicNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattCharacteristicNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattCharacteristicNotificationTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GattCharacteristicNotificationTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.GattCharacteristicNotificationTriggerDetails",
@@ -719,22 +710,19 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { "start", reinterpret_cast<PyCFunction>(GattServiceProviderConnection_Start), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GattServiceProviderConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GattServiceProviderConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GattServiceProviderConnection[] = {
         { "service", reinterpret_cast<getter>(GattServiceProviderConnection_get_Service), nullptr, nullptr, nullptr },
         { "trigger_id", reinterpret_cast<getter>(GattServiceProviderConnection_get_TriggerId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GattServiceProviderConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProviderConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProviderConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProviderConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProviderConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GattServiceProviderConnection = {
         "winrt._winrt_windows_devices_bluetooth_background.GattServiceProviderConnection",
@@ -745,12 +733,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyGetSetDef getset_GattServiceProviderConnection_Static[] = {
         { "all_services", reinterpret_cast<getter>(GattServiceProviderConnection_get_AllServices), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GattServiceProviderConnection_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GattServiceProviderConnection_Static[] = 
     {
@@ -760,14 +746,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { }
     };
 
-    static PyType_Spec type_spec_GattServiceProviderConnection_Static =
-    {
+    static PyType_Spec type_spec_GattServiceProviderConnection_Static = {
         "winrt._winrt_windows_devices_bluetooth_background.GattServiceProviderConnection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GattServiceProviderConnection_Static
-    };
+        type_slots_GattServiceProviderConnection_Static};
 
     // ----- GattServiceProviderTriggerDetails class --------------------
 
@@ -843,21 +827,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static PyMethodDef _methods_GattServiceProviderTriggerDetails[] = {
         { "_assign_array_", _assign_array_GattServiceProviderTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GattServiceProviderTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GattServiceProviderTriggerDetails[] = {
         { "connection", reinterpret_cast<getter>(GattServiceProviderTriggerDetails_get_Connection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GattServiceProviderTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProviderTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProviderTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProviderTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProviderTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GattServiceProviderTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.GattServiceProviderTriggerDetails",
@@ -1000,23 +981,20 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static PyMethodDef _methods_RfcommConnectionTriggerDetails[] = {
         { "_assign_array_", _assign_array_RfcommConnectionTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RfcommConnectionTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RfcommConnectionTriggerDetails[] = {
         { "incoming", reinterpret_cast<getter>(RfcommConnectionTriggerDetails_get_Incoming), nullptr, nullptr, nullptr },
         { "remote_device", reinterpret_cast<getter>(RfcommConnectionTriggerDetails_get_RemoteDevice), nullptr, nullptr, nullptr },
         { "socket", reinterpret_cast<getter>(RfcommConnectionTriggerDetails_get_Socket), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RfcommConnectionTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommConnectionTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommConnectionTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommConnectionTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommConnectionTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RfcommConnectionTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.RfcommConnectionTriggerDetails",
@@ -1276,23 +1254,20 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static PyMethodDef _methods_RfcommInboundConnectionInformation[] = {
         { "_assign_array_", _assign_array_RfcommInboundConnectionInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RfcommInboundConnectionInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RfcommInboundConnectionInformation[] = {
         { "service_capabilities", reinterpret_cast<getter>(RfcommInboundConnectionInformation_get_ServiceCapabilities), reinterpret_cast<setter>(RfcommInboundConnectionInformation_put_ServiceCapabilities), nullptr, nullptr },
         { "sdp_record", reinterpret_cast<getter>(RfcommInboundConnectionInformation_get_SdpRecord), reinterpret_cast<setter>(RfcommInboundConnectionInformation_put_SdpRecord), nullptr, nullptr },
         { "local_service_id", reinterpret_cast<getter>(RfcommInboundConnectionInformation_get_LocalServiceId), reinterpret_cast<setter>(RfcommInboundConnectionInformation_put_LocalServiceId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RfcommInboundConnectionInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommInboundConnectionInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommInboundConnectionInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommInboundConnectionInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommInboundConnectionInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RfcommInboundConnectionInformation = {
         "winrt._winrt_windows_devices_bluetooth_background.RfcommInboundConnectionInformation",
@@ -1414,21 +1389,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static PyMethodDef _methods_RfcommOutboundConnectionInformation[] = {
         { "_assign_array_", _assign_array_RfcommOutboundConnectionInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RfcommOutboundConnectionInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RfcommOutboundConnectionInformation[] = {
         { "remote_service_id", reinterpret_cast<getter>(RfcommOutboundConnectionInformation_get_RemoteServiceId), reinterpret_cast<setter>(RfcommOutboundConnectionInformation_put_RemoteServiceId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RfcommOutboundConnectionInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommOutboundConnectionInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommOutboundConnectionInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommOutboundConnectionInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommOutboundConnectionInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RfcommOutboundConnectionInformation = {
         "winrt._winrt_windows_devices_bluetooth_background.RfcommOutboundConnectionInformation",

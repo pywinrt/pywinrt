@@ -282,19 +282,16 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
     }
 
     static PyMethodDef _methods_ActivationRegistrationManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ActivationRegistrationManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ActivationRegistrationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivationRegistrationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivationRegistrationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivationRegistrationManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ActivationRegistrationManager = {
         "winrt._winrt_microsoft_windows_applifecycle.ActivationRegistrationManager",
@@ -304,8 +301,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         _type_slots_ActivationRegistrationManager};
 
     static PyGetSetDef getset_ActivationRegistrationManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ActivationRegistrationManager_Static[] = {
         { "register_for_file_type_activation", reinterpret_cast<PyCFunction>(ActivationRegistrationManager_RegisterForFileTypeActivation), METH_VARARGS, nullptr },
@@ -314,8 +310,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { "unregister_for_file_type_activation", reinterpret_cast<PyCFunction>(ActivationRegistrationManager_UnregisterForFileTypeActivation), METH_VARARGS, nullptr },
         { "unregister_for_protocol_activation", reinterpret_cast<PyCFunction>(ActivationRegistrationManager_UnregisterForProtocolActivation), METH_VARARGS, nullptr },
         { "unregister_for_startup_activation", reinterpret_cast<PyCFunction>(ActivationRegistrationManager_UnregisterForStartupActivation), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ActivationRegistrationManager_Static[] = 
     {
@@ -325,14 +320,12 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { }
     };
 
-    static PyType_Spec type_spec_ActivationRegistrationManager_Static =
-    {
+    static PyType_Spec type_spec_ActivationRegistrationManager_Static = {
         "winrt._winrt_microsoft_windows_applifecycle.ActivationRegistrationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ActivationRegistrationManager_Static
-    };
+        type_slots_ActivationRegistrationManager_Static};
 
     // ----- AppActivationArguments class --------------------
 
@@ -438,22 +431,19 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
     static PyMethodDef _methods_AppActivationArguments[] = {
         { "_assign_array_", _assign_array_AppActivationArguments, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppActivationArguments), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppActivationArguments[] = {
         { "data", reinterpret_cast<getter>(AppActivationArguments_get_Data), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(AppActivationArguments_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppActivationArguments[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppActivationArguments) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppActivationArguments) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppActivationArguments) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppActivationArguments) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppActivationArguments = {
         "winrt._winrt_microsoft_windows_applifecycle.AppActivationArguments",
@@ -953,23 +943,20 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { "remove_activated", reinterpret_cast<PyCFunction>(AppInstance_remove_Activated), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppInstance, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInstance), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInstance[] = {
         { "is_current", reinterpret_cast<getter>(AppInstance_get_IsCurrent), nullptr, nullptr, nullptr },
         { "key", reinterpret_cast<getter>(AppInstance_get_Key), nullptr, nullptr, nullptr },
         { "process_id", reinterpret_cast<getter>(AppInstance_get_ProcessId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInstance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstance) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstance) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInstance = {
         "winrt._winrt_microsoft_windows_applifecycle.AppInstance",
@@ -979,16 +966,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         _type_slots_AppInstance};
 
     static PyGetSetDef getset_AppInstance_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppInstance_Static[] = {
         { "find_or_register_for_key", reinterpret_cast<PyCFunction>(AppInstance_FindOrRegisterForKey), METH_VARARGS, nullptr },
         { "get_current", reinterpret_cast<PyCFunction>(AppInstance_GetCurrent), METH_VARARGS, nullptr },
         { "get_instances", reinterpret_cast<PyCFunction>(AppInstance_GetInstances), METH_VARARGS, nullptr },
         { "restart", reinterpret_cast<PyCFunction>(AppInstance_Restart), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppInstance_Static[] = 
     {
@@ -998,14 +983,12 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { }
     };
 
-    static PyType_Spec type_spec_AppInstance_Static =
-    {
+    static PyType_Spec type_spec_AppInstance_Static = {
         "winrt._winrt_microsoft_windows_applifecycle.AppInstance_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppInstance_Static
-    };
+        type_slots_AppInstance_Static};
 
     // ----- Microsoft.Windows.AppLifecycle Initialization --------------------
 

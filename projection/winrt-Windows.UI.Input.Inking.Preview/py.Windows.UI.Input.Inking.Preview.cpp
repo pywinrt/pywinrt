@@ -203,20 +203,17 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         { "_from", reinterpret_cast<PyCFunction>(_from_PalmRejectionDelayZonePreview), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PalmRejectionDelayZonePreview), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_PalmRejectionDelayZonePreview), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PalmRejectionDelayZonePreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PalmRejectionDelayZonePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PalmRejectionDelayZonePreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PalmRejectionDelayZonePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PalmRejectionDelayZonePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PalmRejectionDelayZonePreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PalmRejectionDelayZonePreview = {
         "winrt._winrt_windows_ui_input_inking_preview.PalmRejectionDelayZonePreview",
@@ -226,14 +223,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         _type_slots_PalmRejectionDelayZonePreview};
 
     static PyGetSetDef getset_PalmRejectionDelayZonePreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PalmRejectionDelayZonePreview_Static[] = {
         { "create_for_visual", reinterpret_cast<PyCFunction>(PalmRejectionDelayZonePreview_CreateForVisual), METH_VARARGS, nullptr },
         { "create_for_visual_with_viewport_clip", reinterpret_cast<PyCFunction>(PalmRejectionDelayZonePreview_CreateForVisualWithViewportClip), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PalmRejectionDelayZonePreview_Static[] = 
     {
@@ -243,14 +238,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         { }
     };
 
-    static PyType_Spec type_spec_PalmRejectionDelayZonePreview_Static =
-    {
+    static PyType_Spec type_spec_PalmRejectionDelayZonePreview_Static = {
         "winrt._winrt_windows_ui_input_inking_preview.PalmRejectionDelayZonePreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PalmRejectionDelayZonePreview_Static
-    };
+        type_slots_PalmRejectionDelayZonePreview_Static};
 
     // ----- Windows.UI.Input.Inking.Preview Initialization --------------------
 

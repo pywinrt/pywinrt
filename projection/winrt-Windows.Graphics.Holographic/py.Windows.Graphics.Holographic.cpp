@@ -673,8 +673,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "set_near_plane_distance", reinterpret_cast<PyCFunction>(HolographicCamera_SetNearPlaneDistance), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicCamera, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicCamera), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicCamera[] = {
         { "viewport_scale_factor", reinterpret_cast<getter>(HolographicCamera_get_ViewportScaleFactor), reinterpret_cast<setter>(HolographicCamera_put_ViewportScaleFactor), nullptr, nullptr },
@@ -691,16 +690,14 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "is_hardware_content_protection_enabled", reinterpret_cast<getter>(HolographicCamera_get_IsHardwareContentProtectionEnabled), reinterpret_cast<setter>(HolographicCamera_put_IsHardwareContentProtectionEnabled), nullptr, nullptr },
         { "is_hardware_content_protection_supported", reinterpret_cast<getter>(HolographicCamera_get_IsHardwareContentProtectionSupported), nullptr, nullptr, nullptr },
         { "view_configuration", reinterpret_cast<getter>(HolographicCamera_get_ViewConfiguration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicCamera[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicCamera) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicCamera) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicCamera) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicCamera) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicCamera = {
         "winrt._winrt_windows_graphics_holographic.HolographicCamera",
@@ -1166,8 +1163,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "try_get_visible_frustum", reinterpret_cast<PyCFunction>(HolographicCameraPose_TryGetVisibleFrustum), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicCameraPose, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicCameraPose), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicCameraPose[] = {
         { "far_plane_distance", reinterpret_cast<getter>(HolographicCameraPose_get_FarPlaneDistance), nullptr, nullptr, nullptr },
@@ -1175,16 +1171,14 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "near_plane_distance", reinterpret_cast<getter>(HolographicCameraPose_get_NearPlaneDistance), nullptr, nullptr, nullptr },
         { "projection_transform", reinterpret_cast<getter>(HolographicCameraPose_get_ProjectionTransform), nullptr, nullptr, nullptr },
         { "viewport", reinterpret_cast<getter>(HolographicCameraPose_get_Viewport), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicCameraPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicCameraPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicCameraPose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicCameraPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicCameraPose) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicCameraPose = {
         "winrt._winrt_windows_graphics_holographic.HolographicCameraPose",
@@ -1686,8 +1680,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "set_focus_point_with_normal_linear_velocity", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_SetFocusPointWithNormalLinearVelocity), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicCameraRenderingParameters, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicCameraRenderingParameters), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicCameraRenderingParameters[] = {
         { "direct3d11_back_buffer", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_Direct3D11BackBuffer), nullptr, nullptr, nullptr },
@@ -1695,16 +1688,14 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "reprojection_mode", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_ReprojectionMode), reinterpret_cast<setter>(HolographicCameraRenderingParameters_put_ReprojectionMode), nullptr, nullptr },
         { "is_content_protection_enabled", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_IsContentProtectionEnabled), reinterpret_cast<setter>(HolographicCameraRenderingParameters_put_IsContentProtectionEnabled), nullptr, nullptr },
         { "depth_reprojection_method", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_DepthReprojectionMethod), reinterpret_cast<setter>(HolographicCameraRenderingParameters_put_DepthReprojectionMethod), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicCameraRenderingParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicCameraRenderingParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicCameraRenderingParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicCameraRenderingParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicCameraRenderingParameters) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicCameraRenderingParameters = {
         "winrt._winrt_windows_graphics_holographic.HolographicCameraRenderingParameters",
@@ -1817,22 +1808,19 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyMethodDef _methods_HolographicCameraViewportParameters[] = {
         { "_assign_array_", _assign_array_HolographicCameraViewportParameters, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicCameraViewportParameters), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicCameraViewportParameters[] = {
         { "hidden_area_mesh", reinterpret_cast<getter>(HolographicCameraViewportParameters_get_HiddenAreaMesh), nullptr, nullptr, nullptr },
         { "visible_area_mesh", reinterpret_cast<getter>(HolographicCameraViewportParameters_get_VisibleAreaMesh), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicCameraViewportParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicCameraViewportParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicCameraViewportParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicCameraViewportParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicCameraViewportParameters) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicCameraViewportParameters = {
         "winrt._winrt_windows_graphics_holographic.HolographicCameraViewportParameters",
@@ -2178,8 +2166,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "try_get_view_configuration", reinterpret_cast<PyCFunction>(HolographicDisplay_TryGetViewConfiguration), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicDisplay, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicDisplay), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicDisplay[] = {
         { "adapter_id", reinterpret_cast<getter>(HolographicDisplay_get_AdapterId), nullptr, nullptr, nullptr },
@@ -2189,16 +2176,14 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "max_viewport_size", reinterpret_cast<getter>(HolographicDisplay_get_MaxViewportSize), nullptr, nullptr, nullptr },
         { "spatial_locator", reinterpret_cast<getter>(HolographicDisplay_get_SpatialLocator), nullptr, nullptr, nullptr },
         { "refresh_rate", reinterpret_cast<getter>(HolographicDisplay_get_RefreshRate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicDisplay[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicDisplay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicDisplay) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicDisplay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicDisplay) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicDisplay = {
         "winrt._winrt_windows_graphics_holographic.HolographicDisplay",
@@ -2208,13 +2193,11 @@ namespace py::cpp::Windows::Graphics::Holographic
         _type_slots_HolographicDisplay};
 
     static PyGetSetDef getset_HolographicDisplay_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HolographicDisplay_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(HolographicDisplay_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HolographicDisplay_Static[] = 
     {
@@ -2224,14 +2207,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { }
     };
 
-    static PyType_Spec type_spec_HolographicDisplay_Static =
-    {
+    static PyType_Spec type_spec_HolographicDisplay_Static = {
         "winrt._winrt_windows_graphics_holographic.HolographicDisplay_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HolographicDisplay_Static
-    };
+        type_slots_HolographicDisplay_Static};
 
     // ----- HolographicFrame class --------------------
 
@@ -2681,8 +2662,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "wait_for_frame_to_finish", reinterpret_cast<PyCFunction>(HolographicFrame_WaitForFrameToFinish), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicFrame[] = {
         { "added_cameras", reinterpret_cast<getter>(HolographicFrame_get_AddedCameras), nullptr, nullptr, nullptr },
@@ -2690,16 +2670,14 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "duration", reinterpret_cast<getter>(HolographicFrame_get_Duration), nullptr, nullptr, nullptr },
         { "removed_cameras", reinterpret_cast<getter>(HolographicFrame_get_RemovedCameras), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(HolographicFrame_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicFrame = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrame",
@@ -2812,22 +2790,19 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyMethodDef _methods_HolographicFramePrediction[] = {
         { "_assign_array_", _assign_array_HolographicFramePrediction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicFramePrediction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicFramePrediction[] = {
         { "camera_poses", reinterpret_cast<getter>(HolographicFramePrediction_get_CameraPoses), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(HolographicFramePrediction_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicFramePrediction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFramePrediction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFramePrediction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFramePrediction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFramePrediction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicFramePrediction = {
         "winrt._winrt_windows_graphics_holographic.HolographicFramePrediction",
@@ -2988,20 +2963,17 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicFramePresentationMonitor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HolographicFramePresentationMonitor), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HolographicFramePresentationMonitor), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicFramePresentationMonitor[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicFramePresentationMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFramePresentationMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFramePresentationMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFramePresentationMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFramePresentationMonitor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicFramePresentationMonitor = {
         "winrt._winrt_windows_graphics_holographic.HolographicFramePresentationMonitor",
@@ -3204,8 +3176,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyMethodDef _methods_HolographicFramePresentationReport[] = {
         { "_assign_array_", _assign_array_HolographicFramePresentationReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicFramePresentationReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicFramePresentationReport[] = {
         { "app_gpu_duration", reinterpret_cast<getter>(HolographicFramePresentationReport_get_AppGpuDuration), nullptr, nullptr, nullptr },
@@ -3213,16 +3184,14 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "compositor_gpu_duration", reinterpret_cast<getter>(HolographicFramePresentationReport_get_CompositorGpuDuration), nullptr, nullptr, nullptr },
         { "missed_presentation_opportunity_count", reinterpret_cast<getter>(HolographicFramePresentationReport_get_MissedPresentationOpportunityCount), nullptr, nullptr, nullptr },
         { "presentation_count", reinterpret_cast<getter>(HolographicFramePresentationReport_get_PresentationCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicFramePresentationReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFramePresentationReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFramePresentationReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFramePresentationReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFramePresentationReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicFramePresentationReport = {
         "winrt._winrt_windows_graphics_holographic.HolographicFramePresentationReport",
@@ -3425,8 +3394,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyMethodDef _methods_HolographicFrameRenderingReport[] = {
         { "_assign_array_", _assign_array_HolographicFrameRenderingReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicFrameRenderingReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicFrameRenderingReport[] = {
         { "frame_id", reinterpret_cast<getter>(HolographicFrameRenderingReport_get_FrameId), nullptr, nullptr, nullptr },
@@ -3434,16 +3402,14 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "system_relative_actual_gpu_finish_time", reinterpret_cast<getter>(HolographicFrameRenderingReport_get_SystemRelativeActualGpuFinishTime), nullptr, nullptr, nullptr },
         { "system_relative_frame_ready_time", reinterpret_cast<getter>(HolographicFrameRenderingReport_get_SystemRelativeFrameReadyTime), nullptr, nullptr, nullptr },
         { "system_relative_target_latch_time", reinterpret_cast<getter>(HolographicFrameRenderingReport_get_SystemRelativeTargetLatchTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicFrameRenderingReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFrameRenderingReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFrameRenderingReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFrameRenderingReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFrameRenderingReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicFrameRenderingReport = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrameRenderingReport",
@@ -3604,20 +3570,17 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicFrameScanoutMonitor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HolographicFrameScanoutMonitor), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HolographicFrameScanoutMonitor), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicFrameScanoutMonitor[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicFrameScanoutMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFrameScanoutMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFrameScanoutMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFrameScanoutMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFrameScanoutMonitor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicFrameScanoutMonitor = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrameScanoutMonitor",
@@ -3820,8 +3783,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyMethodDef _methods_HolographicFrameScanoutReport[] = {
         { "_assign_array_", _assign_array_HolographicFrameScanoutReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicFrameScanoutReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicFrameScanoutReport[] = {
         { "missed_scanout_count", reinterpret_cast<getter>(HolographicFrameScanoutReport_get_MissedScanoutCount), nullptr, nullptr, nullptr },
@@ -3829,16 +3791,14 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "system_relative_latch_time", reinterpret_cast<getter>(HolographicFrameScanoutReport_get_SystemRelativeLatchTime), nullptr, nullptr, nullptr },
         { "system_relative_photon_time", reinterpret_cast<getter>(HolographicFrameScanoutReport_get_SystemRelativePhotonTime), nullptr, nullptr, nullptr },
         { "system_relative_scanout_start_time", reinterpret_cast<getter>(HolographicFrameScanoutReport_get_SystemRelativeScanoutStartTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicFrameScanoutReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFrameScanoutReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFrameScanoutReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFrameScanoutReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFrameScanoutReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicFrameScanoutReport = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrameScanoutReport",
@@ -4058,22 +4018,19 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicQuadLayer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HolographicQuadLayer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HolographicQuadLayer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicQuadLayer[] = {
         { "pixel_format", reinterpret_cast<getter>(HolographicQuadLayer_get_PixelFormat), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(HolographicQuadLayer_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicQuadLayer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicQuadLayer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicQuadLayer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicQuadLayer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicQuadLayer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicQuadLayer = {
         "winrt._winrt_windows_graphics_holographic.HolographicQuadLayer",
@@ -4461,21 +4418,18 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "update_viewport", reinterpret_cast<PyCFunction>(HolographicQuadLayerUpdateParameters_UpdateViewport), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicQuadLayerUpdateParameters, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicQuadLayerUpdateParameters), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicQuadLayerUpdateParameters[] = {
         { "can_acquire_with_hardware_protection", reinterpret_cast<getter>(HolographicQuadLayerUpdateParameters_get_CanAcquireWithHardwareProtection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicQuadLayerUpdateParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicQuadLayerUpdateParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicQuadLayerUpdateParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicQuadLayerUpdateParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicQuadLayerUpdateParameters) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicQuadLayerUpdateParameters = {
         "winrt._winrt_windows_graphics_holographic.HolographicQuadLayerUpdateParameters",
@@ -5243,22 +5197,19 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "remove_user_presence_changed", reinterpret_cast<PyCFunction>(HolographicSpace_remove_UserPresenceChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_HolographicSpace, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicSpace), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicSpace[] = {
         { "primary_adapter_id", reinterpret_cast<getter>(HolographicSpace_get_PrimaryAdapterId), nullptr, nullptr, nullptr },
         { "user_presence", reinterpret_cast<getter>(HolographicSpace_get_UserPresence), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicSpace[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicSpace) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicSpace) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicSpace) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicSpace) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicSpace = {
         "winrt._winrt_windows_graphics_holographic.HolographicSpace",
@@ -5271,15 +5222,13 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "is_available", reinterpret_cast<getter>(HolographicSpace_get_IsAvailable), nullptr, nullptr, nullptr },
         { "is_supported", reinterpret_cast<getter>(HolographicSpace_get_IsSupported), nullptr, nullptr, nullptr },
         { "is_configured", reinterpret_cast<getter>(HolographicSpace_get_IsConfigured), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HolographicSpace_Static[] = {
         { "create_for_core_window", reinterpret_cast<PyCFunction>(HolographicSpace_CreateForCoreWindow), METH_VARARGS, nullptr },
         { "add_is_available_changed", reinterpret_cast<PyCFunction>(HolographicSpace_add_IsAvailableChanged), METH_O, nullptr },
         { "remove_is_available_changed", reinterpret_cast<PyCFunction>(HolographicSpace_remove_IsAvailableChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HolographicSpace_Static[] = 
     {
@@ -5289,14 +5238,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { }
     };
 
-    static PyType_Spec type_spec_HolographicSpace_Static =
-    {
+    static PyType_Spec type_spec_HolographicSpace_Static = {
         "winrt._winrt_windows_graphics_holographic.HolographicSpace_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HolographicSpace_Static
-    };
+        type_slots_HolographicSpace_Static};
 
     // ----- HolographicSpaceCameraAddedEventArgs class --------------------
 
@@ -5413,21 +5360,18 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "get_deferral", reinterpret_cast<PyCFunction>(HolographicSpaceCameraAddedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicSpaceCameraAddedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicSpaceCameraAddedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicSpaceCameraAddedEventArgs[] = {
         { "camera", reinterpret_cast<getter>(HolographicSpaceCameraAddedEventArgs_get_Camera), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicSpaceCameraAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicSpaceCameraAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicSpaceCameraAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicSpaceCameraAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicSpaceCameraAddedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicSpaceCameraAddedEventArgs = {
         "winrt._winrt_windows_graphics_holographic.HolographicSpaceCameraAddedEventArgs",
@@ -5510,21 +5454,18 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyMethodDef _methods_HolographicSpaceCameraRemovedEventArgs[] = {
         { "_assign_array_", _assign_array_HolographicSpaceCameraRemovedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicSpaceCameraRemovedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicSpaceCameraRemovedEventArgs[] = {
         { "camera", reinterpret_cast<getter>(HolographicSpaceCameraRemovedEventArgs_get_Camera), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicSpaceCameraRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicSpaceCameraRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicSpaceCameraRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicSpaceCameraRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicSpaceCameraRemovedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicSpaceCameraRemovedEventArgs = {
         "winrt._winrt_windows_graphics_holographic.HolographicSpaceCameraRemovedEventArgs",
@@ -5998,8 +5939,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "request_render_target_size", reinterpret_cast<PyCFunction>(HolographicViewConfiguration_RequestRenderTargetSize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicViewConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicViewConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HolographicViewConfiguration[] = {
         { "pixel_format", reinterpret_cast<getter>(HolographicViewConfiguration_get_PixelFormat), reinterpret_cast<setter>(HolographicViewConfiguration_put_PixelFormat), nullptr, nullptr },
@@ -6012,16 +5952,14 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "render_target_size", reinterpret_cast<getter>(HolographicViewConfiguration_get_RenderTargetSize), nullptr, nullptr, nullptr },
         { "supported_pixel_formats", reinterpret_cast<getter>(HolographicViewConfiguration_get_SupportedPixelFormats), nullptr, nullptr, nullptr },
         { "supported_depth_reprojection_methods", reinterpret_cast<getter>(HolographicViewConfiguration_get_SupportedDepthReprojectionMethods), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HolographicViewConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicViewConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicViewConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicViewConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicViewConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicViewConfiguration = {
         "winrt._winrt_windows_graphics_holographic.HolographicViewConfiguration",
@@ -6099,8 +6037,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyMethodDef _methods_HolographicAdapterId[] = {
         { "_assign_array_", _assign_array_HolographicAdapterId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* HolographicAdapterId_get_LowPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, void* /*unused*/) noexcept
     {
@@ -6171,8 +6108,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyGetSetDef _getset_HolographicAdapterId[] = {
         { "low_part", reinterpret_cast<getter>(HolographicAdapterId_get_LowPart), reinterpret_cast<setter>(HolographicAdapterId_set_LowPart), nullptr, nullptr },
         { "high_part", reinterpret_cast<getter>(HolographicAdapterId_get_HighPart), reinterpret_cast<setter>(HolographicAdapterId_set_HighPart), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_HolographicAdapterId(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, PyObject* other, int op) noexcept
     {
@@ -6234,8 +6170,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicAdapterId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HolographicAdapterId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_HolographicAdapterId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicAdapterId = {
         "winrt._winrt_windows_graphics_holographic.HolographicAdapterId",
@@ -6311,8 +6246,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyMethodDef _methods_HolographicFrameId[] = {
         { "_assign_array_", _assign_array_HolographicFrameId, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* HolographicFrameId_get_Value(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, void* /*unused*/) noexcept
     {
@@ -6349,8 +6283,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyGetSetDef _getset_HolographicFrameId[] = {
         { "value", reinterpret_cast<getter>(HolographicFrameId_get_Value), reinterpret_cast<setter>(HolographicFrameId_set_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_HolographicFrameId(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, PyObject* other, int op) noexcept
     {
@@ -6406,8 +6339,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFrameId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HolographicFrameId) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_HolographicFrameId) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicFrameId = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrameId",
@@ -6485,8 +6417,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyMethodDef _methods_HolographicStereoTransform[] = {
         { "_assign_array_", _assign_array_HolographicStereoTransform, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* HolographicStereoTransform_get_Left(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, void* /*unused*/) noexcept
     {
@@ -6557,8 +6488,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyGetSetDef _getset_HolographicStereoTransform[] = {
         { "left", reinterpret_cast<getter>(HolographicStereoTransform_get_Left), reinterpret_cast<setter>(HolographicStereoTransform_set_Left), nullptr, nullptr },
         { "right", reinterpret_cast<getter>(HolographicStereoTransform_get_Right), reinterpret_cast<setter>(HolographicStereoTransform_set_Right), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_HolographicStereoTransform(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* other, int op) noexcept
     {
@@ -6620,8 +6550,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicStereoTransform) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HolographicStereoTransform) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_HolographicStereoTransform) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HolographicStereoTransform = {
         "winrt._winrt_windows_graphics_holographic.HolographicStereoTransform",

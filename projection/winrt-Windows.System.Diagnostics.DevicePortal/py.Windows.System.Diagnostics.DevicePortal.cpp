@@ -449,20 +449,17 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         { "remove_request_received", reinterpret_cast<PyCFunction>(DevicePortalConnection_remove_RequestReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_DevicePortalConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePortalConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePortalConnection[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePortalConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePortalConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePortalConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePortalConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePortalConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePortalConnection = {
         "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnection",
@@ -472,13 +469,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         _type_slots_DevicePortalConnection};
 
     static PyGetSetDef getset_DevicePortalConnection_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DevicePortalConnection_Static[] = {
         { "get_for_app_service_connection", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetForAppServiceConnection), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DevicePortalConnection_Static[] = 
     {
@@ -488,14 +483,12 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         { }
     };
 
-    static PyType_Spec type_spec_DevicePortalConnection_Static =
-    {
+    static PyType_Spec type_spec_DevicePortalConnection_Static = {
         "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DevicePortalConnection_Static
-    };
+        type_slots_DevicePortalConnection_Static};
 
     // ----- DevicePortalConnectionClosedEventArgs class --------------------
 
@@ -571,21 +564,18 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     static PyMethodDef _methods_DevicePortalConnectionClosedEventArgs[] = {
         { "_assign_array_", _assign_array_DevicePortalConnectionClosedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePortalConnectionClosedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePortalConnectionClosedEventArgs[] = {
         { "reason", reinterpret_cast<getter>(DevicePortalConnectionClosedEventArgs_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePortalConnectionClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePortalConnectionClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePortalConnectionClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePortalConnectionClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePortalConnectionClosedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePortalConnectionClosedEventArgs = {
         "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionClosedEventArgs",
@@ -799,24 +789,21 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         { "get_deferral", reinterpret_cast<PyCFunction>(DevicePortalConnectionRequestReceivedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DevicePortalConnectionRequestReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePortalConnectionRequestReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePortalConnectionRequestReceivedEventArgs[] = {
         { "request_message", reinterpret_cast<getter>(DevicePortalConnectionRequestReceivedEventArgs_get_RequestMessage), nullptr, nullptr, nullptr },
         { "response_message", reinterpret_cast<getter>(DevicePortalConnectionRequestReceivedEventArgs_get_ResponseMessage), nullptr, nullptr, nullptr },
         { "is_web_socket_upgrade_request", reinterpret_cast<getter>(DevicePortalConnectionRequestReceivedEventArgs_get_IsWebSocketUpgradeRequest), nullptr, nullptr, nullptr },
         { "web_socket_protocols_requested", reinterpret_cast<getter>(DevicePortalConnectionRequestReceivedEventArgs_get_WebSocketProtocolsRequested), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePortalConnectionRequestReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePortalConnectionRequestReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePortalConnectionRequestReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePortalConnectionRequestReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePortalConnectionRequestReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePortalConnectionRequestReceivedEventArgs = {
         "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionRequestReceivedEventArgs",

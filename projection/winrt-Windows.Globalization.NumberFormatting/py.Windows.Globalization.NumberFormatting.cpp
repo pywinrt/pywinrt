@@ -1201,8 +1201,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "parse_uint", reinterpret_cast<PyCFunction>(CurrencyFormatter_ParseUInt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CurrencyFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CurrencyFormatter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CurrencyFormatter[] = {
         { "currency", reinterpret_cast<getter>(CurrencyFormatter_get_Currency), reinterpret_cast<setter>(CurrencyFormatter_put_Currency), nullptr, nullptr },
@@ -1219,16 +1218,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "number_rounder", reinterpret_cast<getter>(CurrencyFormatter_get_NumberRounder), reinterpret_cast<setter>(CurrencyFormatter_put_NumberRounder), nullptr, nullptr },
         { "is_zero_signed", reinterpret_cast<getter>(CurrencyFormatter_get_IsZeroSigned), reinterpret_cast<setter>(CurrencyFormatter_put_IsZeroSigned), nullptr, nullptr },
         { "significant_digits", reinterpret_cast<getter>(CurrencyFormatter_get_SignificantDigits), reinterpret_cast<setter>(CurrencyFormatter_put_SignificantDigits), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CurrencyFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrencyFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CurrencyFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrencyFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrencyFormatter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CurrencyFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.CurrencyFormatter",
@@ -2249,8 +2246,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "parse_uint", reinterpret_cast<PyCFunction>(DecimalFormatter_ParseUInt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DecimalFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DecimalFormatter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DecimalFormatter[] = {
         { "is_decimal_point_always_displayed", reinterpret_cast<getter>(DecimalFormatter_get_IsDecimalPointAlwaysDisplayed), reinterpret_cast<setter>(DecimalFormatter_put_IsDecimalPointAlwaysDisplayed), nullptr, nullptr },
@@ -2265,16 +2261,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "number_rounder", reinterpret_cast<getter>(DecimalFormatter_get_NumberRounder), reinterpret_cast<setter>(DecimalFormatter_put_NumberRounder), nullptr, nullptr },
         { "is_zero_signed", reinterpret_cast<getter>(DecimalFormatter_get_IsZeroSigned), reinterpret_cast<setter>(DecimalFormatter_put_IsZeroSigned), nullptr, nullptr },
         { "significant_digits", reinterpret_cast<getter>(DecimalFormatter_get_SignificantDigits), reinterpret_cast<setter>(DecimalFormatter_put_SignificantDigits), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DecimalFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DecimalFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DecimalFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DecimalFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DecimalFormatter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DecimalFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.DecimalFormatter",
@@ -2745,22 +2739,19 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "round_uint64", reinterpret_cast<PyCFunction>(IncrementNumberRounder_RoundUInt64), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IncrementNumberRounder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IncrementNumberRounder), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IncrementNumberRounder[] = {
         { "rounding_algorithm", reinterpret_cast<getter>(IncrementNumberRounder_get_RoundingAlgorithm), reinterpret_cast<setter>(IncrementNumberRounder_put_RoundingAlgorithm), nullptr, nullptr },
         { "increment", reinterpret_cast<getter>(IncrementNumberRounder_get_Increment), reinterpret_cast<setter>(IncrementNumberRounder_put_Increment), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IncrementNumberRounder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IncrementNumberRounder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IncrementNumberRounder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IncrementNumberRounder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IncrementNumberRounder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IncrementNumberRounder = {
         "winrt._winrt_windows_globalization_numberformatting.IncrementNumberRounder",
@@ -3022,23 +3013,20 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "translate_numerals", reinterpret_cast<PyCFunction>(NumeralSystemTranslator_TranslateNumerals), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NumeralSystemTranslator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NumeralSystemTranslator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NumeralSystemTranslator[] = {
         { "numeral_system", reinterpret_cast<getter>(NumeralSystemTranslator_get_NumeralSystem), reinterpret_cast<setter>(NumeralSystemTranslator_put_NumeralSystem), nullptr, nullptr },
         { "languages", reinterpret_cast<getter>(NumeralSystemTranslator_get_Languages), nullptr, nullptr, nullptr },
         { "resolved_language", reinterpret_cast<getter>(NumeralSystemTranslator_get_ResolvedLanguage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NumeralSystemTranslator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NumeralSystemTranslator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NumeralSystemTranslator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NumeralSystemTranslator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NumeralSystemTranslator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NumeralSystemTranslator = {
         "winrt._winrt_windows_globalization_numberformatting.NumeralSystemTranslator",
@@ -4059,8 +4047,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "parse_uint", reinterpret_cast<PyCFunction>(PercentFormatter_ParseUInt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PercentFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PercentFormatter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PercentFormatter[] = {
         { "is_decimal_point_always_displayed", reinterpret_cast<getter>(PercentFormatter_get_IsDecimalPointAlwaysDisplayed), reinterpret_cast<setter>(PercentFormatter_put_IsDecimalPointAlwaysDisplayed), nullptr, nullptr },
@@ -4075,16 +4062,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "number_rounder", reinterpret_cast<getter>(PercentFormatter_get_NumberRounder), reinterpret_cast<setter>(PercentFormatter_put_NumberRounder), nullptr, nullptr },
         { "is_zero_signed", reinterpret_cast<getter>(PercentFormatter_get_IsZeroSigned), reinterpret_cast<setter>(PercentFormatter_put_IsZeroSigned), nullptr, nullptr },
         { "significant_digits", reinterpret_cast<getter>(PercentFormatter_get_SignificantDigits), reinterpret_cast<setter>(PercentFormatter_put_SignificantDigits), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PercentFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PercentFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PercentFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PercentFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PercentFormatter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PercentFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.PercentFormatter",
@@ -5105,8 +5090,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "parse_uint", reinterpret_cast<PyCFunction>(PermilleFormatter_ParseUInt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PermilleFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PermilleFormatter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PermilleFormatter[] = {
         { "is_decimal_point_always_displayed", reinterpret_cast<getter>(PermilleFormatter_get_IsDecimalPointAlwaysDisplayed), reinterpret_cast<setter>(PermilleFormatter_put_IsDecimalPointAlwaysDisplayed), nullptr, nullptr },
@@ -5121,16 +5105,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "number_rounder", reinterpret_cast<getter>(PermilleFormatter_get_NumberRounder), reinterpret_cast<setter>(PermilleFormatter_put_NumberRounder), nullptr, nullptr },
         { "is_zero_signed", reinterpret_cast<getter>(PermilleFormatter_get_IsZeroSigned), reinterpret_cast<setter>(PermilleFormatter_put_IsZeroSigned), nullptr, nullptr },
         { "significant_digits", reinterpret_cast<getter>(PermilleFormatter_get_SignificantDigits), reinterpret_cast<setter>(PermilleFormatter_put_SignificantDigits), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PermilleFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PermilleFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PermilleFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PermilleFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PermilleFormatter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PermilleFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.PermilleFormatter",
@@ -5601,22 +5583,19 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "round_uint64", reinterpret_cast<PyCFunction>(SignificantDigitsNumberRounder_RoundUInt64), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SignificantDigitsNumberRounder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SignificantDigitsNumberRounder), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SignificantDigitsNumberRounder[] = {
         { "significant_digits", reinterpret_cast<getter>(SignificantDigitsNumberRounder_get_SignificantDigits), reinterpret_cast<setter>(SignificantDigitsNumberRounder_put_SignificantDigits), nullptr, nullptr },
         { "rounding_algorithm", reinterpret_cast<getter>(SignificantDigitsNumberRounder_get_RoundingAlgorithm), reinterpret_cast<setter>(SignificantDigitsNumberRounder_put_RoundingAlgorithm), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SignificantDigitsNumberRounder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SignificantDigitsNumberRounder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SignificantDigitsNumberRounder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SignificantDigitsNumberRounder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SignificantDigitsNumberRounder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SignificantDigitsNumberRounder = {
         "winrt._winrt_windows_globalization_numberformatting.SignificantDigitsNumberRounder",
@@ -5798,20 +5777,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "format_uint", reinterpret_cast<PyCFunction>(INumberFormatter_FormatUInt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INumberFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberFormatter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INumberFormatter[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INumberFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberFormatter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INumberFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.INumberFormatter",
@@ -5963,13 +5939,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef methods_ImplementsINumberFormatter[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberFormatter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberFormatter), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINumberFormatter[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINumberFormatter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINumberFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberFormatter",
@@ -6151,20 +6125,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "format_uint", reinterpret_cast<PyCFunction>(INumberFormatter2_FormatUInt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INumberFormatter2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberFormatter2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INumberFormatter2[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INumberFormatter2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberFormatter2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberFormatter2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberFormatter2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberFormatter2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INumberFormatter2 = {
         "winrt._winrt_windows_globalization_numberformatting.INumberFormatter2",
@@ -6316,13 +6287,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef methods_ImplementsINumberFormatter2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberFormatter2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberFormatter2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINumberFormatter2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINumberFormatter2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINumberFormatter2 = {
         "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberFormatter2",
@@ -6840,8 +6809,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef _methods_INumberFormatterOptions[] = {
         { "_assign_array_", _assign_array_INumberFormatterOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberFormatterOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INumberFormatterOptions[] = {
         { "fraction_digits", reinterpret_cast<getter>(INumberFormatterOptions_get_FractionDigits), reinterpret_cast<setter>(INumberFormatterOptions_put_FractionDigits), nullptr, nullptr },
@@ -6853,16 +6821,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "numeral_system", reinterpret_cast<getter>(INumberFormatterOptions_get_NumeralSystem), reinterpret_cast<setter>(INumberFormatterOptions_put_NumeralSystem), nullptr, nullptr },
         { "resolved_geographic_region", reinterpret_cast<getter>(INumberFormatterOptions_get_ResolvedGeographicRegion), nullptr, nullptr, nullptr },
         { "resolved_language", reinterpret_cast<getter>(INumberFormatterOptions_get_ResolvedLanguage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INumberFormatterOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberFormatterOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberFormatterOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberFormatterOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberFormatterOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INumberFormatterOptions = {
         "winrt._winrt_windows_globalization_numberformatting.INumberFormatterOptions",
@@ -7213,13 +7179,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef methods_ImplementsINumberFormatterOptions[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberFormatterOptions), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberFormatterOptions), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINumberFormatterOptions[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINumberFormatterOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINumberFormatterOptions = {
         "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberFormatterOptions",
@@ -7401,20 +7365,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "parse_uint", reinterpret_cast<PyCFunction>(INumberParser_ParseUInt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INumberParser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberParser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INumberParser[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INumberParser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberParser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberParser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberParser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberParser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INumberParser = {
         "winrt._winrt_windows_globalization_numberformatting.INumberParser",
@@ -7566,13 +7527,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef methods_ImplementsINumberParser[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberParser), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberParser), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINumberParser[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINumberParser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINumberParser = {
         "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberParser",
@@ -7883,20 +7842,17 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "round_uint64", reinterpret_cast<PyCFunction>(INumberRounder_RoundUInt64), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INumberRounder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberRounder), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INumberRounder[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INumberRounder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberRounder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberRounder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberRounder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberRounder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INumberRounder = {
         "winrt._winrt_windows_globalization_numberformatting.INumberRounder",
@@ -8144,13 +8100,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef methods_ImplementsINumberRounder[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberRounder), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberRounder), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINumberRounder[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINumberRounder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINumberRounder = {
         "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberRounder",
@@ -8272,21 +8226,18 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef _methods_INumberRounderOption[] = {
         { "_assign_array_", _assign_array_INumberRounderOption, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberRounderOption), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_INumberRounderOption[] = {
         { "number_rounder", reinterpret_cast<getter>(INumberRounderOption_get_NumberRounder), reinterpret_cast<setter>(INumberRounderOption_put_NumberRounder), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_INumberRounderOption[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberRounderOption) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberRounderOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberRounderOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberRounderOption) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_INumberRounderOption = {
         "winrt._winrt_windows_globalization_numberformatting.INumberRounderOption",
@@ -8385,13 +8336,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef methods_ImplementsINumberRounderOption[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberRounderOption), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberRounderOption), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsINumberRounderOption[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsINumberRounderOption) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsINumberRounderOption = {
         "winrt._winrt_windows_globalization_numberformatting.ImplementsINumberRounderOption",
@@ -8513,21 +8462,18 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef _methods_ISignedZeroOption[] = {
         { "_assign_array_", _assign_array_ISignedZeroOption, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISignedZeroOption), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISignedZeroOption[] = {
         { "is_zero_signed", reinterpret_cast<getter>(ISignedZeroOption_get_IsZeroSigned), reinterpret_cast<setter>(ISignedZeroOption_put_IsZeroSigned), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISignedZeroOption[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISignedZeroOption) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISignedZeroOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISignedZeroOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISignedZeroOption) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISignedZeroOption = {
         "winrt._winrt_windows_globalization_numberformatting.ISignedZeroOption",
@@ -8626,13 +8572,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef methods_ImplementsISignedZeroOption[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISignedZeroOption), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISignedZeroOption), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISignedZeroOption[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISignedZeroOption) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISignedZeroOption = {
         "winrt._winrt_windows_globalization_numberformatting.ImplementsISignedZeroOption",
@@ -8754,21 +8698,18 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef _methods_ISignificantDigitsOption[] = {
         { "_assign_array_", _assign_array_ISignificantDigitsOption, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISignificantDigitsOption), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISignificantDigitsOption[] = {
         { "significant_digits", reinterpret_cast<getter>(ISignificantDigitsOption_get_SignificantDigits), reinterpret_cast<setter>(ISignificantDigitsOption_put_SignificantDigits), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISignificantDigitsOption[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISignificantDigitsOption) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISignificantDigitsOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISignificantDigitsOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISignificantDigitsOption) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISignificantDigitsOption = {
         "winrt._winrt_windows_globalization_numberformatting.ISignificantDigitsOption",
@@ -8867,13 +8808,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static PyMethodDef methods_ImplementsISignificantDigitsOption[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISignificantDigitsOption), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISignificantDigitsOption), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISignificantDigitsOption[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISignificantDigitsOption) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISignificantDigitsOption = {
         "winrt._winrt_windows_globalization_numberformatting.ImplementsISignificantDigitsOption",

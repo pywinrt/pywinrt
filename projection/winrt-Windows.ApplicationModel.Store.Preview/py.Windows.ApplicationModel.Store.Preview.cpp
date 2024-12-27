@@ -148,22 +148,19 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static PyMethodDef _methods_DeliveryOptimizationSettings[] = {
         { "_assign_array_", _assign_array_DeliveryOptimizationSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeliveryOptimizationSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeliveryOptimizationSettings[] = {
         { "download_mode", reinterpret_cast<getter>(DeliveryOptimizationSettings_get_DownloadMode), nullptr, nullptr, nullptr },
         { "download_mode_source", reinterpret_cast<getter>(DeliveryOptimizationSettings_get_DownloadModeSource), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeliveryOptimizationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeliveryOptimizationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeliveryOptimizationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeliveryOptimizationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeliveryOptimizationSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeliveryOptimizationSettings = {
         "winrt._winrt_windows_applicationmodel_store_preview.DeliveryOptimizationSettings",
@@ -173,13 +170,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         _type_slots_DeliveryOptimizationSettings};
 
     static PyGetSetDef getset_DeliveryOptimizationSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DeliveryOptimizationSettings_Static[] = {
         { "get_current_settings", reinterpret_cast<PyCFunction>(DeliveryOptimizationSettings_GetCurrentSettings), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DeliveryOptimizationSettings_Static[] = 
     {
@@ -189,14 +184,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Spec type_spec_DeliveryOptimizationSettings_Static =
-    {
+    static PyType_Spec type_spec_DeliveryOptimizationSettings_Static = {
         "winrt._winrt_windows_applicationmodel_store_preview.DeliveryOptimizationSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DeliveryOptimizationSettings_Static
-    };
+        type_slots_DeliveryOptimizationSettings_Static};
 
     // ----- StoreConfiguration class --------------------
 
@@ -1362,19 +1355,16 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     }
 
     static PyMethodDef _methods_StoreConfiguration[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StoreConfiguration[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StoreConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StoreConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StoreConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StoreConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StoreConfiguration = {
         "winrt._winrt_windows_applicationmodel_store_preview.StoreConfiguration",
@@ -1386,8 +1376,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static PyGetSetDef getset_StoreConfiguration_Static[] = {
         { "hardware_manufacturer_info", reinterpret_cast<getter>(StoreConfiguration_get_HardwareManufacturerInfo), nullptr, nullptr, nullptr },
         { "purchase_prompting_policy", reinterpret_cast<getter>(StoreConfiguration_get_PurchasePromptingPolicy), reinterpret_cast<setter>(StoreConfiguration_put_PurchasePromptingPolicy), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StoreConfiguration_Static[] = {
         { "filter_unsupported_system_features_async", reinterpret_cast<PyCFunction>(StoreConfiguration_FilterUnsupportedSystemFeaturesAsync), METH_VARARGS, nullptr },
@@ -1415,8 +1404,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { "set_system_configuration", reinterpret_cast<PyCFunction>(StoreConfiguration_SetSystemConfiguration), METH_VARARGS, nullptr },
         { "should_restrict_to_enterprise_store_only", reinterpret_cast<PyCFunction>(StoreConfiguration_ShouldRestrictToEnterpriseStoreOnly), METH_VARARGS, nullptr },
         { "should_restrict_to_enterprise_store_only_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_ShouldRestrictToEnterpriseStoreOnlyForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StoreConfiguration_Static[] = 
     {
@@ -1426,14 +1414,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Spec type_spec_StoreConfiguration_Static =
-    {
+    static PyType_Spec type_spec_StoreConfiguration_Static = {
         "winrt._winrt_windows_applicationmodel_store_preview.StoreConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StoreConfiguration_Static
-    };
+        type_slots_StoreConfiguration_Static};
 
     // ----- StoreHardwareManufacturerInfo class --------------------
 
@@ -1599,24 +1585,21 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static PyMethodDef _methods_StoreHardwareManufacturerInfo[] = {
         { "_assign_array_", _assign_array_StoreHardwareManufacturerInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StoreHardwareManufacturerInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StoreHardwareManufacturerInfo[] = {
         { "hardware_manufacturer_id", reinterpret_cast<getter>(StoreHardwareManufacturerInfo_get_HardwareManufacturerId), nullptr, nullptr, nullptr },
         { "manufacturer_name", reinterpret_cast<getter>(StoreHardwareManufacturerInfo_get_ManufacturerName), nullptr, nullptr, nullptr },
         { "model_name", reinterpret_cast<getter>(StoreHardwareManufacturerInfo_get_ModelName), nullptr, nullptr, nullptr },
         { "store_content_modifier_id", reinterpret_cast<getter>(StoreHardwareManufacturerInfo_get_StoreContentModifierId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StoreHardwareManufacturerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StoreHardwareManufacturerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StoreHardwareManufacturerInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StoreHardwareManufacturerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StoreHardwareManufacturerInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StoreHardwareManufacturerInfo = {
         "winrt._winrt_windows_applicationmodel_store_preview.StoreHardwareManufacturerInfo",
@@ -1718,19 +1701,16 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     }
 
     static PyMethodDef _methods_StorePreview[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorePreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorePreview = {
         "winrt._winrt_windows_applicationmodel_store_preview.StorePreview",
@@ -1740,14 +1720,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         _type_slots_StorePreview};
 
     static PyGetSetDef getset_StorePreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StorePreview_Static[] = {
         { "load_add_on_product_infos_async", reinterpret_cast<PyCFunction>(StorePreview_LoadAddOnProductInfosAsync), METH_VARARGS, nullptr },
         { "request_product_purchase_by_product_id_and_sku_id_async", reinterpret_cast<PyCFunction>(StorePreview_RequestProductPurchaseByProductIdAndSkuIdAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StorePreview_Static[] = 
     {
@@ -1757,14 +1735,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Spec type_spec_StorePreview_Static =
-    {
+    static PyType_Spec type_spec_StorePreview_Static = {
         "winrt._winrt_windows_applicationmodel_store_preview.StorePreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StorePreview_Static
-    };
+        type_slots_StorePreview_Static};
 
     // ----- StorePreviewProductInfo class --------------------
 
@@ -1960,8 +1936,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static PyMethodDef _methods_StorePreviewProductInfo[] = {
         { "_assign_array_", _assign_array_StorePreviewProductInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorePreviewProductInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorePreviewProductInfo[] = {
         { "description", reinterpret_cast<getter>(StorePreviewProductInfo_get_Description), nullptr, nullptr, nullptr },
@@ -1969,16 +1944,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { "product_type", reinterpret_cast<getter>(StorePreviewProductInfo_get_ProductType), nullptr, nullptr, nullptr },
         { "sku_info_list", reinterpret_cast<getter>(StorePreviewProductInfo_get_SkuInfoList), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(StorePreviewProductInfo_get_Title), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorePreviewProductInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePreviewProductInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorePreviewProductInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePreviewProductInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePreviewProductInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorePreviewProductInfo = {
         "winrt._winrt_windows_applicationmodel_store_preview.StorePreviewProductInfo",
@@ -2061,21 +2034,18 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static PyMethodDef _methods_StorePreviewPurchaseResults[] = {
         { "_assign_array_", _assign_array_StorePreviewPurchaseResults, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorePreviewPurchaseResults), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorePreviewPurchaseResults[] = {
         { "product_purchase_status", reinterpret_cast<getter>(StorePreviewPurchaseResults_get_ProductPurchaseStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorePreviewPurchaseResults[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePreviewPurchaseResults) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorePreviewPurchaseResults) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePreviewPurchaseResults) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePreviewPurchaseResults) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorePreviewPurchaseResults = {
         "winrt._winrt_windows_applicationmodel_store_preview.StorePreviewPurchaseResults",
@@ -2398,8 +2368,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static PyMethodDef _methods_StorePreviewSkuInfo[] = {
         { "_assign_array_", _assign_array_StorePreviewSkuInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorePreviewSkuInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorePreviewSkuInfo[] = {
         { "currency_code", reinterpret_cast<getter>(StorePreviewSkuInfo_get_CurrencyCode), nullptr, nullptr, nullptr },
@@ -2411,16 +2380,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { "sku_id", reinterpret_cast<getter>(StorePreviewSkuInfo_get_SkuId), nullptr, nullptr, nullptr },
         { "sku_type", reinterpret_cast<getter>(StorePreviewSkuInfo_get_SkuType), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(StorePreviewSkuInfo_get_Title), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorePreviewSkuInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePreviewSkuInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorePreviewSkuInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePreviewSkuInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePreviewSkuInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorePreviewSkuInfo = {
         "winrt._winrt_windows_applicationmodel_store_preview.StorePreviewSkuInfo",
@@ -2526,19 +2493,16 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     }
 
     static PyMethodDef _methods_WebAuthenticationCoreManagerHelper[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebAuthenticationCoreManagerHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebAuthenticationCoreManagerHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationCoreManagerHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationCoreManagerHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationCoreManagerHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebAuthenticationCoreManagerHelper = {
         "winrt._winrt_windows_applicationmodel_store_preview.WebAuthenticationCoreManagerHelper",
@@ -2548,14 +2512,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         _type_slots_WebAuthenticationCoreManagerHelper};
 
     static PyGetSetDef getset_WebAuthenticationCoreManagerHelper_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WebAuthenticationCoreManagerHelper_Static[] = {
         { "request_token_with_ui_element_hosting_and_web_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAndWebAccountAsync), METH_VARARGS, nullptr },
         { "request_token_with_ui_element_hosting_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WebAuthenticationCoreManagerHelper_Static[] = 
     {
@@ -2565,14 +2527,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Spec type_spec_WebAuthenticationCoreManagerHelper_Static =
-    {
+    static PyType_Spec type_spec_WebAuthenticationCoreManagerHelper_Static = {
         "winrt._winrt_windows_applicationmodel_store_preview.WebAuthenticationCoreManagerHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WebAuthenticationCoreManagerHelper_Static
-    };
+        type_slots_WebAuthenticationCoreManagerHelper_Static};
 
     // ----- Windows.ApplicationModel.Store.Preview Initialization --------------------
 

@@ -56,19 +56,16 @@ namespace py::cpp::Windows::UI::Input::Preview
     }
 
     static PyMethodDef _methods_InputActivationListenerPreview[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InputActivationListenerPreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InputActivationListenerPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputActivationListenerPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputActivationListenerPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputActivationListenerPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InputActivationListenerPreview = {
         "winrt._winrt_windows_ui_input_preview.InputActivationListenerPreview",
@@ -78,13 +75,11 @@ namespace py::cpp::Windows::UI::Input::Preview
         _type_slots_InputActivationListenerPreview};
 
     static PyGetSetDef getset_InputActivationListenerPreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_InputActivationListenerPreview_Static[] = {
         { "create_for_application_window", reinterpret_cast<PyCFunction>(InputActivationListenerPreview_CreateForApplicationWindow), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_InputActivationListenerPreview_Static[] = 
     {
@@ -94,14 +89,12 @@ namespace py::cpp::Windows::UI::Input::Preview
         { }
     };
 
-    static PyType_Spec type_spec_InputActivationListenerPreview_Static =
-    {
+    static PyType_Spec type_spec_InputActivationListenerPreview_Static = {
         "winrt._winrt_windows_ui_input_preview.InputActivationListenerPreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_InputActivationListenerPreview_Static
-    };
+        type_slots_InputActivationListenerPreview_Static};
 
     // ----- Windows.UI.Input.Preview Initialization --------------------
 

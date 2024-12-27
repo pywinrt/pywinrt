@@ -254,19 +254,16 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     }
 
     static PyMethodDef _methods_LocalCategories[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LocalCategories[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LocalCategories[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalCategories) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalCategories) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalCategories) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LocalCategories = {
         "winrt._winrt_windows_services_maps_localsearch.LocalCategories",
@@ -284,12 +281,10 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { "parking", reinterpret_cast<getter>(LocalCategories_get_Parking), nullptr, nullptr, nullptr },
         { "see_do", reinterpret_cast<getter>(LocalCategories_get_SeeDo), nullptr, nullptr, nullptr },
         { "shop", reinterpret_cast<getter>(LocalCategories_get_Shop), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LocalCategories_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LocalCategories_Static[] = 
     {
@@ -299,14 +294,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Spec type_spec_LocalCategories_Static =
-    {
+    static PyType_Spec type_spec_LocalCategories_Static = {
         "winrt._winrt_windows_services_maps_localsearch.LocalCategories_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LocalCategories_Static
-    };
+        type_slots_LocalCategories_Static};
 
     // ----- LocalLocation class --------------------
 
@@ -652,8 +645,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     static PyMethodDef _methods_LocalLocation[] = {
         { "_assign_array_", _assign_array_LocalLocation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LocalLocation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LocalLocation[] = {
         { "address", reinterpret_cast<getter>(LocalLocation_get_Address), nullptr, nullptr, nullptr },
@@ -666,16 +658,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { "category", reinterpret_cast<getter>(LocalLocation_get_Category), nullptr, nullptr, nullptr },
         { "hours_of_operation", reinterpret_cast<getter>(LocalLocation_get_HoursOfOperation), nullptr, nullptr, nullptr },
         { "rating_info", reinterpret_cast<getter>(LocalLocation_get_RatingInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LocalLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LocalLocation = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocation",
@@ -739,19 +729,16 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     }
 
     static PyMethodDef _methods_LocalLocationFinder[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LocalLocationFinder[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LocalLocationFinder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocationFinder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocationFinder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocationFinder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LocalLocationFinder = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocationFinder",
@@ -761,13 +748,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         _type_slots_LocalLocationFinder};
 
     static PyGetSetDef getset_LocalLocationFinder_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LocalLocationFinder_Static[] = {
         { "find_local_locations_async", reinterpret_cast<PyCFunction>(LocalLocationFinder_FindLocalLocationsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LocalLocationFinder_Static[] = 
     {
@@ -777,14 +762,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Spec type_spec_LocalLocationFinder_Static =
-    {
+    static PyType_Spec type_spec_LocalLocationFinder_Static = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocationFinder_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LocalLocationFinder_Static
-    };
+        type_slots_LocalLocationFinder_Static};
 
     // ----- LocalLocationFinderResult class --------------------
 
@@ -890,22 +873,19 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     static PyMethodDef _methods_LocalLocationFinderResult[] = {
         { "_assign_array_", _assign_array_LocalLocationFinderResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LocalLocationFinderResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LocalLocationFinderResult[] = {
         { "local_locations", reinterpret_cast<getter>(LocalLocationFinderResult_get_LocalLocations), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(LocalLocationFinderResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LocalLocationFinderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocationFinderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalLocationFinderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocationFinderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocationFinderResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LocalLocationFinderResult = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocationFinderResult",
@@ -1048,23 +1028,20 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     static PyMethodDef _methods_LocalLocationHoursOfOperationItem[] = {
         { "_assign_array_", _assign_array_LocalLocationHoursOfOperationItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LocalLocationHoursOfOperationItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LocalLocationHoursOfOperationItem[] = {
         { "day", reinterpret_cast<getter>(LocalLocationHoursOfOperationItem_get_Day), nullptr, nullptr, nullptr },
         { "span", reinterpret_cast<getter>(LocalLocationHoursOfOperationItem_get_Span), nullptr, nullptr, nullptr },
         { "start", reinterpret_cast<getter>(LocalLocationHoursOfOperationItem_get_Start), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LocalLocationHoursOfOperationItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocationHoursOfOperationItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalLocationHoursOfOperationItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocationHoursOfOperationItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocationHoursOfOperationItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LocalLocationHoursOfOperationItem = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocationHoursOfOperationItem",
@@ -1207,23 +1184,20 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     static PyMethodDef _methods_LocalLocationRatingInfo[] = {
         { "_assign_array_", _assign_array_LocalLocationRatingInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LocalLocationRatingInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LocalLocationRatingInfo[] = {
         { "aggregate_rating", reinterpret_cast<getter>(LocalLocationRatingInfo_get_AggregateRating), nullptr, nullptr, nullptr },
         { "provider_identifier", reinterpret_cast<getter>(LocalLocationRatingInfo_get_ProviderIdentifier), nullptr, nullptr, nullptr },
         { "rating_count", reinterpret_cast<getter>(LocalLocationRatingInfo_get_RatingCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LocalLocationRatingInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocationRatingInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalLocationRatingInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocationRatingInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocationRatingInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LocalLocationRatingInfo = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocationRatingInfo",
@@ -1284,19 +1258,16 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     }
 
     static PyMethodDef _methods_PlaceInfoHelper[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlaceInfoHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlaceInfoHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlaceInfoHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlaceInfoHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlaceInfoHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlaceInfoHelper = {
         "winrt._winrt_windows_services_maps_localsearch.PlaceInfoHelper",
@@ -1306,13 +1277,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         _type_slots_PlaceInfoHelper};
 
     static PyGetSetDef getset_PlaceInfoHelper_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlaceInfoHelper_Static[] = {
         { "create_from_local_location", reinterpret_cast<PyCFunction>(PlaceInfoHelper_CreateFromLocalLocation), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlaceInfoHelper_Static[] = 
     {
@@ -1322,14 +1291,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Spec type_spec_PlaceInfoHelper_Static =
-    {
+    static PyType_Spec type_spec_PlaceInfoHelper_Static = {
         "winrt._winrt_windows_services_maps_localsearch.PlaceInfoHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlaceInfoHelper_Static
-    };
+        type_slots_PlaceInfoHelper_Static};
 
     // ----- Windows.Services.Maps.LocalSearch Initialization --------------------
 

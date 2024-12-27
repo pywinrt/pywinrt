@@ -44,19 +44,16 @@ namespace py::cpp::Windows::Phone::ApplicationModel
     }
 
     static PyMethodDef _methods_ApplicationProfile[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationProfile[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationProfile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationProfile = {
         "winrt._winrt_windows_phone_applicationmodel.ApplicationProfile",
@@ -67,12 +64,10 @@ namespace py::cpp::Windows::Phone::ApplicationModel
 
     static PyGetSetDef getset_ApplicationProfile_Static[] = {
         { "modes", reinterpret_cast<getter>(ApplicationProfile_get_Modes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApplicationProfile_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApplicationProfile_Static[] = 
     {
@@ -82,14 +77,12 @@ namespace py::cpp::Windows::Phone::ApplicationModel
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationProfile_Static =
-    {
+    static PyType_Spec type_spec_ApplicationProfile_Static = {
         "winrt._winrt_windows_phone_applicationmodel.ApplicationProfile_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationProfile_Static
-    };
+        type_slots_ApplicationProfile_Static};
 
     // ----- Windows.Phone.ApplicationModel Initialization --------------------
 

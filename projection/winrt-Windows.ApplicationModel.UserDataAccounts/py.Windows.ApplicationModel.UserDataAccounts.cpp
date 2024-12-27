@@ -1011,8 +1011,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { "try_show_create_contact_group_async", reinterpret_cast<PyCFunction>(UserDataAccount_TryShowCreateContactGroupAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataAccount, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAccount), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccount[] = {
         { "user_display_name", reinterpret_cast<getter>(UserDataAccount_get_UserDisplayName), reinterpret_cast<setter>(UserDataAccount_put_UserDisplayName), nullptr, nullptr },
@@ -1027,16 +1026,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { "explict_read_access_package_family_names", reinterpret_cast<getter>(UserDataAccount_get_ExplictReadAccessPackageFamilyNames), nullptr, nullptr, nullptr },
         { "can_show_create_contact_group", reinterpret_cast<getter>(UserDataAccount_get_CanShowCreateContactGroup), reinterpret_cast<setter>(UserDataAccount_put_CanShowCreateContactGroup), nullptr, nullptr },
         { "provider_properties", reinterpret_cast<getter>(UserDataAccount_get_ProviderProperties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccount) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccount = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccount",
@@ -1265,19 +1262,16 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
     }
 
     static PyMethodDef _methods_UserDataAccountManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccountManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccountManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccountManager = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManager",
@@ -1287,8 +1281,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         _type_slots_UserDataAccountManager};
 
     static PyGetSetDef getset_UserDataAccountManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UserDataAccountManager_Static[] = {
         { "get_for_user", reinterpret_cast<PyCFunction>(UserDataAccountManager_GetForUser), METH_VARARGS, nullptr },
@@ -1296,8 +1289,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { "show_account_error_resolver_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_ShowAccountErrorResolverAsync), METH_VARARGS, nullptr },
         { "show_account_settings_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_ShowAccountSettingsAsync), METH_VARARGS, nullptr },
         { "show_add_account_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_ShowAddAccountAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UserDataAccountManager_Static[] = 
     {
@@ -1307,14 +1299,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { }
     };
 
-    static PyType_Spec type_spec_UserDataAccountManager_Static =
-    {
+    static PyType_Spec type_spec_UserDataAccountManager_Static = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UserDataAccountManager_Static
-    };
+        type_slots_UserDataAccountManager_Static};
 
     // ----- UserDataAccountManagerForUser class --------------------
 
@@ -1433,21 +1423,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { "request_store_async", reinterpret_cast<PyCFunction>(UserDataAccountManagerForUser_RequestStoreAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataAccountManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAccountManagerForUser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccountManagerForUser[] = {
         { "user", reinterpret_cast<getter>(UserDataAccountManagerForUser_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccountManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountManagerForUser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccountManagerForUser = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManagerForUser",
@@ -1783,20 +1770,17 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { "remove_store_changed", reinterpret_cast<PyCFunction>(UserDataAccountStore_remove_StoreChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_UserDataAccountStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAccountStore), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccountStore[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccountStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountStore) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccountStore = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStore",
@@ -1890,20 +1874,17 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { "get_deferral", reinterpret_cast<PyCFunction>(UserDataAccountStoreChangedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataAccountStoreChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAccountStoreChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccountStoreChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccountStoreChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountStoreChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountStoreChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountStoreChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountStoreChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccountStoreChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStoreChangedEventArgs",

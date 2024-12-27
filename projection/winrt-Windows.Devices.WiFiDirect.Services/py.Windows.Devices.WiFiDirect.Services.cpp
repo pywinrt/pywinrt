@@ -597,8 +597,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { "remove_session_deferred", reinterpret_cast<PyCFunction>(WiFiDirectService_remove_SessionDeferred), METH_O, nullptr },
         { "_assign_array_", _assign_array_WiFiDirectService, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectService), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectService[] = {
         { "session_info", reinterpret_cast<getter>(WiFiDirectService_get_SessionInfo), reinterpret_cast<setter>(WiFiDirectService_put_SessionInfo), nullptr, nullptr },
@@ -606,16 +605,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { "remote_service_info", reinterpret_cast<getter>(WiFiDirectService_get_RemoteServiceInfo), nullptr, nullptr, nullptr },
         { "service_error", reinterpret_cast<getter>(WiFiDirectService_get_ServiceError), nullptr, nullptr, nullptr },
         { "supported_configuration_methods", reinterpret_cast<getter>(WiFiDirectService_get_SupportedConfigurationMethods), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectService) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectService) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectService = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectService",
@@ -625,15 +622,13 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         _type_slots_WiFiDirectService};
 
     static PyGetSetDef getset_WiFiDirectService_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WiFiDirectService_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(WiFiDirectService_FromIdAsync), METH_VARARGS, nullptr },
         { "get_selector", reinterpret_cast<PyCFunction>(WiFiDirectService_GetSelector), METH_VARARGS, nullptr },
         { "get_selector_with_filter", reinterpret_cast<PyCFunction>(WiFiDirectService_GetSelectorWithFilter), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WiFiDirectService_Static[] = 
     {
@@ -643,14 +638,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Spec type_spec_WiFiDirectService_Static =
-    {
+    static PyType_Spec type_spec_WiFiDirectService_Static = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectService_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WiFiDirectService_Static
-    };
+        type_slots_WiFiDirectService_Static};
 
     // ----- WiFiDirectServiceAdvertiser class --------------------
 
@@ -1656,8 +1649,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { "remove_session_requested", reinterpret_cast<PyCFunction>(WiFiDirectServiceAdvertiser_remove_SessionRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_WiFiDirectServiceAdvertiser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectServiceAdvertiser), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectServiceAdvertiser[] = {
         { "service_status", reinterpret_cast<getter>(WiFiDirectServiceAdvertiser_get_ServiceStatus), reinterpret_cast<setter>(WiFiDirectServiceAdvertiser_put_ServiceStatus), nullptr, nullptr },
@@ -1671,16 +1663,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { "service_name", reinterpret_cast<getter>(WiFiDirectServiceAdvertiser_get_ServiceName), nullptr, nullptr, nullptr },
         { "service_name_prefixes", reinterpret_cast<getter>(WiFiDirectServiceAdvertiser_get_ServiceNamePrefixes), nullptr, nullptr, nullptr },
         { "advertisement_status", reinterpret_cast<getter>(WiFiDirectServiceAdvertiser_get_AdvertisementStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectServiceAdvertiser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceAdvertiser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceAdvertiser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceAdvertiser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceAdvertiser) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectServiceAdvertiser = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceAdvertiser",
@@ -1793,22 +1783,19 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
     static PyMethodDef _methods_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs[] = {
         { "_assign_array_", _assign_array_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs[] = {
         { "session", reinterpret_cast<getter>(WiFiDirectServiceAutoAcceptSessionConnectedEventArgs_get_Session), nullptr, nullptr, nullptr },
         { "session_info", reinterpret_cast<getter>(WiFiDirectServiceAutoAcceptSessionConnectedEventArgs_get_SessionInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs",
@@ -1921,22 +1908,19 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
     static PyMethodDef _methods_WiFiDirectServiceProvisioningInfo[] = {
         { "_assign_array_", _assign_array_WiFiDirectServiceProvisioningInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectServiceProvisioningInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectServiceProvisioningInfo[] = {
         { "is_group_formation_needed", reinterpret_cast<getter>(WiFiDirectServiceProvisioningInfo_get_IsGroupFormationNeeded), nullptr, nullptr, nullptr },
         { "selected_configuration_method", reinterpret_cast<getter>(WiFiDirectServiceProvisioningInfo_get_SelectedConfigurationMethod), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectServiceProvisioningInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceProvisioningInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceProvisioningInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceProvisioningInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceProvisioningInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectServiceProvisioningInfo = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceProvisioningInfo",
@@ -2049,22 +2033,19 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
     static PyMethodDef _methods_WiFiDirectServiceRemotePortAddedEventArgs[] = {
         { "_assign_array_", _assign_array_WiFiDirectServiceRemotePortAddedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectServiceRemotePortAddedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectServiceRemotePortAddedEventArgs[] = {
         { "endpoint_pairs", reinterpret_cast<getter>(WiFiDirectServiceRemotePortAddedEventArgs_get_EndpointPairs), nullptr, nullptr, nullptr },
         { "protocol", reinterpret_cast<getter>(WiFiDirectServiceRemotePortAddedEventArgs_get_Protocol), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectServiceRemotePortAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceRemotePortAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceRemotePortAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceRemotePortAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceRemotePortAddedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectServiceRemotePortAddedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceRemotePortAddedEventArgs",
@@ -2655,8 +2636,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectServiceSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WiFiDirectServiceSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_WiFiDirectServiceSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectServiceSession[] = {
         { "advertisement_id", reinterpret_cast<getter>(WiFiDirectServiceSession_get_AdvertisementId), nullptr, nullptr, nullptr },
@@ -2666,16 +2646,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { "session_address", reinterpret_cast<getter>(WiFiDirectServiceSession_get_SessionAddress), nullptr, nullptr, nullptr },
         { "session_id", reinterpret_cast<getter>(WiFiDirectServiceSession_get_SessionId), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(WiFiDirectServiceSession_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectServiceSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectServiceSession = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceSession",
@@ -2758,21 +2736,18 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
     static PyMethodDef _methods_WiFiDirectServiceSessionDeferredEventArgs[] = {
         { "_assign_array_", _assign_array_WiFiDirectServiceSessionDeferredEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectServiceSessionDeferredEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectServiceSessionDeferredEventArgs[] = {
         { "deferred_session_info", reinterpret_cast<getter>(WiFiDirectServiceSessionDeferredEventArgs_get_DeferredSessionInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectServiceSessionDeferredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceSessionDeferredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceSessionDeferredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceSessionDeferredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceSessionDeferredEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectServiceSessionDeferredEventArgs = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionDeferredEventArgs",
@@ -2982,23 +2957,20 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectServiceSessionRequest), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WiFiDirectServiceSessionRequest), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_WiFiDirectServiceSessionRequest), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectServiceSessionRequest[] = {
         { "device_information", reinterpret_cast<getter>(WiFiDirectServiceSessionRequest_get_DeviceInformation), nullptr, nullptr, nullptr },
         { "provisioning_info", reinterpret_cast<getter>(WiFiDirectServiceSessionRequest_get_ProvisioningInfo), nullptr, nullptr, nullptr },
         { "session_info", reinterpret_cast<getter>(WiFiDirectServiceSessionRequest_get_SessionInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectServiceSessionRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceSessionRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceSessionRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceSessionRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceSessionRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectServiceSessionRequest = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionRequest",
@@ -3092,20 +3064,17 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { "get_session_request", reinterpret_cast<PyCFunction>(WiFiDirectServiceSessionRequestedEventArgs_GetSessionRequest), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WiFiDirectServiceSessionRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectServiceSessionRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectServiceSessionRequestedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectServiceSessionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceSessionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceSessionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceSessionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceSessionRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectServiceSessionRequestedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionRequestedEventArgs",

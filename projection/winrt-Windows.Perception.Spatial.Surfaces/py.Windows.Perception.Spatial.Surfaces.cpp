@@ -238,22 +238,19 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { "try_get_bounds", reinterpret_cast<PyCFunction>(SpatialSurfaceInfo_TryGetBounds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialSurfaceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialSurfaceInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialSurfaceInfo[] = {
         { "id", reinterpret_cast<getter>(SpatialSurfaceInfo_get_Id), nullptr, nullptr, nullptr },
         { "update_time", reinterpret_cast<getter>(SpatialSurfaceInfo_get_UpdateTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialSurfaceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialSurfaceInfo = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceInfo",
@@ -486,8 +483,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     static PyMethodDef _methods_SpatialSurfaceMesh[] = {
         { "_assign_array_", _assign_array_SpatialSurfaceMesh, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialSurfaceMesh), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialSurfaceMesh[] = {
         { "coordinate_system", reinterpret_cast<getter>(SpatialSurfaceMesh_get_CoordinateSystem), nullptr, nullptr, nullptr },
@@ -496,16 +492,14 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { "vertex_normals", reinterpret_cast<getter>(SpatialSurfaceMesh_get_VertexNormals), nullptr, nullptr, nullptr },
         { "vertex_position_scale", reinterpret_cast<getter>(SpatialSurfaceMesh_get_VertexPositionScale), nullptr, nullptr, nullptr },
         { "vertex_positions", reinterpret_cast<getter>(SpatialSurfaceMesh_get_VertexPositions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialSurfaceMesh[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceMesh) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceMesh) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceMesh) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceMesh) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialSurfaceMesh = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMesh",
@@ -678,24 +672,21 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     static PyMethodDef _methods_SpatialSurfaceMeshBuffer[] = {
         { "_assign_array_", _assign_array_SpatialSurfaceMeshBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialSurfaceMeshBuffer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialSurfaceMeshBuffer[] = {
         { "data", reinterpret_cast<getter>(SpatialSurfaceMeshBuffer_get_Data), nullptr, nullptr, nullptr },
         { "element_count", reinterpret_cast<getter>(SpatialSurfaceMeshBuffer_get_ElementCount), nullptr, nullptr, nullptr },
         { "format", reinterpret_cast<getter>(SpatialSurfaceMeshBuffer_get_Format), nullptr, nullptr, nullptr },
         { "stride", reinterpret_cast<getter>(SpatialSurfaceMeshBuffer_get_Stride), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialSurfaceMeshBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceMeshBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceMeshBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceMeshBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceMeshBuffer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialSurfaceMeshBuffer = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshBuffer",
@@ -1136,24 +1127,21 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     static PyMethodDef _methods_SpatialSurfaceMeshOptions[] = {
         { "_assign_array_", _assign_array_SpatialSurfaceMeshOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialSurfaceMeshOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialSurfaceMeshOptions[] = {
         { "vertex_position_format", reinterpret_cast<getter>(SpatialSurfaceMeshOptions_get_VertexPositionFormat), reinterpret_cast<setter>(SpatialSurfaceMeshOptions_put_VertexPositionFormat), nullptr, nullptr },
         { "vertex_normal_format", reinterpret_cast<getter>(SpatialSurfaceMeshOptions_get_VertexNormalFormat), reinterpret_cast<setter>(SpatialSurfaceMeshOptions_put_VertexNormalFormat), nullptr, nullptr },
         { "triangle_index_format", reinterpret_cast<getter>(SpatialSurfaceMeshOptions_get_TriangleIndexFormat), reinterpret_cast<setter>(SpatialSurfaceMeshOptions_put_TriangleIndexFormat), nullptr, nullptr },
         { "include_vertex_normals", reinterpret_cast<getter>(SpatialSurfaceMeshOptions_get_IncludeVertexNormals), reinterpret_cast<setter>(SpatialSurfaceMeshOptions_put_IncludeVertexNormals), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialSurfaceMeshOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceMeshOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceMeshOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceMeshOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceMeshOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialSurfaceMeshOptions = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshOptions",
@@ -1166,12 +1154,10 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { "supported_triangle_index_formats", reinterpret_cast<getter>(SpatialSurfaceMeshOptions_get_SupportedTriangleIndexFormats), nullptr, nullptr, nullptr },
         { "supported_vertex_normal_formats", reinterpret_cast<getter>(SpatialSurfaceMeshOptions_get_SupportedVertexNormalFormats), nullptr, nullptr, nullptr },
         { "supported_vertex_position_formats", reinterpret_cast<getter>(SpatialSurfaceMeshOptions_get_SupportedVertexPositionFormats), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SpatialSurfaceMeshOptions_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SpatialSurfaceMeshOptions_Static[] = 
     {
@@ -1181,14 +1167,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { }
     };
 
-    static PyType_Spec type_spec_SpatialSurfaceMeshOptions_Static =
-    {
+    static PyType_Spec type_spec_SpatialSurfaceMeshOptions_Static = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshOptions_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpatialSurfaceMeshOptions_Static
-    };
+        type_slots_SpatialSurfaceMeshOptions_Static};
 
     // ----- SpatialSurfaceObserver class --------------------
 
@@ -1532,20 +1516,17 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { "remove_observed_surfaces_changed", reinterpret_cast<PyCFunction>(SpatialSurfaceObserver_remove_ObservedSurfacesChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_SpatialSurfaceObserver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialSurfaceObserver), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SpatialSurfaceObserver[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SpatialSurfaceObserver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceObserver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceObserver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceObserver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceObserver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SpatialSurfaceObserver = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceObserver",
@@ -1555,14 +1536,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         _type_slots_SpatialSurfaceObserver};
 
     static PyGetSetDef getset_SpatialSurfaceObserver_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SpatialSurfaceObserver_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(SpatialSurfaceObserver_IsSupported), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(SpatialSurfaceObserver_RequestAccessAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SpatialSurfaceObserver_Static[] = 
     {
@@ -1572,14 +1551,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { }
     };
 
-    static PyType_Spec type_spec_SpatialSurfaceObserver_Static =
-    {
+    static PyType_Spec type_spec_SpatialSurfaceObserver_Static = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceObserver_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpatialSurfaceObserver_Static
-    };
+        type_slots_SpatialSurfaceObserver_Static};
 
     // ----- Windows.Perception.Spatial.Surfaces Initialization --------------------
 

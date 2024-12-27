@@ -168,24 +168,21 @@ namespace py::cpp::Windows::Media::Capture::Core
     static PyMethodDef _methods_VariablePhotoCapturedEventArgs[] = {
         { "_assign_array_", _assign_array_VariablePhotoCapturedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VariablePhotoCapturedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VariablePhotoCapturedEventArgs[] = {
         { "capture_time_offset", reinterpret_cast<getter>(VariablePhotoCapturedEventArgs_get_CaptureTimeOffset), nullptr, nullptr, nullptr },
         { "captured_frame_control_values", reinterpret_cast<getter>(VariablePhotoCapturedEventArgs_get_CapturedFrameControlValues), nullptr, nullptr, nullptr },
         { "frame", reinterpret_cast<getter>(VariablePhotoCapturedEventArgs_get_Frame), nullptr, nullptr, nullptr },
         { "used_frame_controller_index", reinterpret_cast<getter>(VariablePhotoCapturedEventArgs_get_UsedFrameControllerIndex), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VariablePhotoCapturedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VariablePhotoCapturedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VariablePhotoCapturedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VariablePhotoCapturedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VariablePhotoCapturedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VariablePhotoCapturedEventArgs = {
         "winrt._winrt_windows_media_capture_core.VariablePhotoCapturedEventArgs",
@@ -536,20 +533,17 @@ namespace py::cpp::Windows::Media::Capture::Core
         { "remove_stopped", reinterpret_cast<PyCFunction>(VariablePhotoSequenceCapture_remove_Stopped), METH_O, nullptr },
         { "_assign_array_", _assign_array_VariablePhotoSequenceCapture, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VariablePhotoSequenceCapture), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VariablePhotoSequenceCapture[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VariablePhotoSequenceCapture[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VariablePhotoSequenceCapture) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VariablePhotoSequenceCapture) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VariablePhotoSequenceCapture) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VariablePhotoSequenceCapture) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VariablePhotoSequenceCapture = {
         "winrt._winrt_windows_media_capture_core.VariablePhotoSequenceCapture",

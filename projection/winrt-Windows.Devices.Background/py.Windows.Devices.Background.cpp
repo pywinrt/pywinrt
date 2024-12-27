@@ -138,23 +138,20 @@ namespace py::cpp::Windows::Devices::Background
     static PyMethodDef _methods_DeviceServicingDetails[] = {
         { "_assign_array_", _assign_array_DeviceServicingDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceServicingDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceServicingDetails[] = {
         { "arguments", reinterpret_cast<getter>(DeviceServicingDetails_get_Arguments), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(DeviceServicingDetails_get_DeviceId), nullptr, nullptr, nullptr },
         { "expected_duration", reinterpret_cast<getter>(DeviceServicingDetails_get_ExpectedDuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceServicingDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceServicingDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceServicingDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceServicingDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceServicingDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceServicingDetails = {
         "winrt._winrt_windows_devices_background.DeviceServicingDetails",
@@ -267,22 +264,19 @@ namespace py::cpp::Windows::Devices::Background
     static PyMethodDef _methods_DeviceUseDetails[] = {
         { "_assign_array_", _assign_array_DeviceUseDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceUseDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeviceUseDetails[] = {
         { "arguments", reinterpret_cast<getter>(DeviceUseDetails_get_Arguments), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(DeviceUseDetails_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeviceUseDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceUseDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceUseDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceUseDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceUseDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeviceUseDetails = {
         "winrt._winrt_windows_devices_background.DeviceUseDetails",

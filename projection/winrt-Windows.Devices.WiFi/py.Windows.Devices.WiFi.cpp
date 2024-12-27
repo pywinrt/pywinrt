@@ -645,22 +645,19 @@ namespace py::cpp::Windows::Devices::WiFi
         { "remove_available_networks_changed", reinterpret_cast<PyCFunction>(WiFiAdapter_remove_AvailableNetworksChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_WiFiAdapter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiAdapter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiAdapter[] = {
         { "network_adapter", reinterpret_cast<getter>(WiFiAdapter_get_NetworkAdapter), nullptr, nullptr, nullptr },
         { "network_report", reinterpret_cast<getter>(WiFiAdapter_get_NetworkReport), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiAdapter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiAdapter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiAdapter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiAdapter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiAdapter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiAdapter = {
         "winrt._winrt_windows_devices_wifi.WiFiAdapter",
@@ -670,16 +667,14 @@ namespace py::cpp::Windows::Devices::WiFi
         _type_slots_WiFiAdapter};
 
     static PyGetSetDef getset_WiFiAdapter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WiFiAdapter_Static[] = {
         { "find_all_adapters_async", reinterpret_cast<PyCFunction>(WiFiAdapter_FindAllAdaptersAsync), METH_VARARGS, nullptr },
         { "from_id_async", reinterpret_cast<PyCFunction>(WiFiAdapter_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(WiFiAdapter_GetDeviceSelector), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(WiFiAdapter_RequestAccessAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WiFiAdapter_Static[] = 
     {
@@ -689,14 +684,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { }
     };
 
-    static PyType_Spec type_spec_WiFiAdapter_Static =
-    {
+    static PyType_Spec type_spec_WiFiAdapter_Static = {
         "winrt._winrt_windows_devices_wifi.WiFiAdapter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WiFiAdapter_Static
-    };
+        type_slots_WiFiAdapter_Static};
 
     // ----- WiFiAvailableNetwork class --------------------
 
@@ -1072,8 +1065,7 @@ namespace py::cpp::Windows::Devices::WiFi
     static PyMethodDef _methods_WiFiAvailableNetwork[] = {
         { "_assign_array_", _assign_array_WiFiAvailableNetwork, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiAvailableNetwork), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiAvailableNetwork[] = {
         { "beacon_interval", reinterpret_cast<getter>(WiFiAvailableNetwork_get_BeaconInterval), nullptr, nullptr, nullptr },
@@ -1087,16 +1079,14 @@ namespace py::cpp::Windows::Devices::WiFi
         { "signal_bars", reinterpret_cast<getter>(WiFiAvailableNetwork_get_SignalBars), nullptr, nullptr, nullptr },
         { "ssid", reinterpret_cast<getter>(WiFiAvailableNetwork_get_Ssid), nullptr, nullptr, nullptr },
         { "uptime", reinterpret_cast<getter>(WiFiAvailableNetwork_get_Uptime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiAvailableNetwork[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiAvailableNetwork) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiAvailableNetwork) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiAvailableNetwork) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiAvailableNetwork) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiAvailableNetwork = {
         "winrt._winrt_windows_devices_wifi.WiFiAvailableNetwork",
@@ -1179,21 +1169,18 @@ namespace py::cpp::Windows::Devices::WiFi
     static PyMethodDef _methods_WiFiConnectionResult[] = {
         { "_assign_array_", _assign_array_WiFiConnectionResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiConnectionResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiConnectionResult[] = {
         { "connection_status", reinterpret_cast<getter>(WiFiConnectionResult_get_ConnectionStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiConnectionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiConnectionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiConnectionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiConnectionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiConnectionResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiConnectionResult = {
         "winrt._winrt_windows_devices_wifi.WiFiConnectionResult",
@@ -1306,22 +1293,19 @@ namespace py::cpp::Windows::Devices::WiFi
     static PyMethodDef _methods_WiFiNetworkReport[] = {
         { "_assign_array_", _assign_array_WiFiNetworkReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiNetworkReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiNetworkReport[] = {
         { "available_networks", reinterpret_cast<getter>(WiFiNetworkReport_get_AvailableNetworks), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(WiFiNetworkReport_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiNetworkReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiNetworkReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiNetworkReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiNetworkReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiNetworkReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiNetworkReport = {
         "winrt._winrt_windows_devices_wifi.WiFiNetworkReport",
@@ -1530,21 +1514,18 @@ namespace py::cpp::Windows::Devices::WiFi
         { "report_error", reinterpret_cast<PyCFunction>(WiFiOnDemandHotspotConnectTriggerDetails_ReportError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WiFiOnDemandHotspotConnectTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiOnDemandHotspotConnectTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiOnDemandHotspotConnectTriggerDetails[] = {
         { "requested_network", reinterpret_cast<getter>(WiFiOnDemandHotspotConnectTriggerDetails_get_RequestedNetwork), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiOnDemandHotspotConnectTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiOnDemandHotspotConnectTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiOnDemandHotspotConnectTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiOnDemandHotspotConnectTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiOnDemandHotspotConnectTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotConnectTriggerDetails = {
         "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectTriggerDetails",
@@ -1627,21 +1608,18 @@ namespace py::cpp::Windows::Devices::WiFi
     static PyMethodDef _methods_WiFiOnDemandHotspotConnectionResult[] = {
         { "_assign_array_", _assign_array_WiFiOnDemandHotspotConnectionResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiOnDemandHotspotConnectionResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiOnDemandHotspotConnectionResult[] = {
         { "status", reinterpret_cast<getter>(WiFiOnDemandHotspotConnectionResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiOnDemandHotspotConnectionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiOnDemandHotspotConnectionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiOnDemandHotspotConnectionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiOnDemandHotspotConnectionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiOnDemandHotspotConnectionResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotConnectionResult = {
         "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectionResult",
@@ -1851,21 +1829,18 @@ namespace py::cpp::Windows::Devices::WiFi
         { "update_properties", reinterpret_cast<PyCFunction>(WiFiOnDemandHotspotNetwork_UpdateProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WiFiOnDemandHotspotNetwork, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiOnDemandHotspotNetwork), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiOnDemandHotspotNetwork[] = {
         { "id", reinterpret_cast<getter>(WiFiOnDemandHotspotNetwork_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiOnDemandHotspotNetwork[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiOnDemandHotspotNetwork) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiOnDemandHotspotNetwork) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiOnDemandHotspotNetwork) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiOnDemandHotspotNetwork) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotNetwork = {
         "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotNetwork",
@@ -1875,13 +1850,11 @@ namespace py::cpp::Windows::Devices::WiFi
         _type_slots_WiFiOnDemandHotspotNetwork};
 
     static PyGetSetDef getset_WiFiOnDemandHotspotNetwork_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WiFiOnDemandHotspotNetwork_Static[] = {
         { "get_or_create_by_id", reinterpret_cast<PyCFunction>(WiFiOnDemandHotspotNetwork_GetOrCreateById), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WiFiOnDemandHotspotNetwork_Static[] = 
     {
@@ -1891,14 +1864,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { }
     };
 
-    static PyType_Spec type_spec_WiFiOnDemandHotspotNetwork_Static =
-    {
+    static PyType_Spec type_spec_WiFiOnDemandHotspotNetwork_Static = {
         "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotNetwork_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WiFiOnDemandHotspotNetwork_Static
-    };
+        type_slots_WiFiOnDemandHotspotNetwork_Static};
 
     // ----- WiFiOnDemandHotspotNetworkProperties class --------------------
 
@@ -2427,8 +2398,7 @@ namespace py::cpp::Windows::Devices::WiFi
     static PyMethodDef _methods_WiFiOnDemandHotspotNetworkProperties[] = {
         { "_assign_array_", _assign_array_WiFiOnDemandHotspotNetworkProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiOnDemandHotspotNetworkProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiOnDemandHotspotNetworkProperties[] = {
         { "ssid", reinterpret_cast<getter>(WiFiOnDemandHotspotNetworkProperties_get_Ssid), reinterpret_cast<setter>(WiFiOnDemandHotspotNetworkProperties_put_Ssid), nullptr, nullptr },
@@ -2438,16 +2408,14 @@ namespace py::cpp::Windows::Devices::WiFi
         { "display_name", reinterpret_cast<getter>(WiFiOnDemandHotspotNetworkProperties_get_DisplayName), reinterpret_cast<setter>(WiFiOnDemandHotspotNetworkProperties_put_DisplayName), nullptr, nullptr },
         { "cellular_bars", reinterpret_cast<getter>(WiFiOnDemandHotspotNetworkProperties_get_CellularBars), reinterpret_cast<setter>(WiFiOnDemandHotspotNetworkProperties_put_CellularBars), nullptr, nullptr },
         { "availability", reinterpret_cast<getter>(WiFiOnDemandHotspotNetworkProperties_get_Availability), reinterpret_cast<setter>(WiFiOnDemandHotspotNetworkProperties_put_Availability), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiOnDemandHotspotNetworkProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiOnDemandHotspotNetworkProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiOnDemandHotspotNetworkProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiOnDemandHotspotNetworkProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiOnDemandHotspotNetworkProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotNetworkProperties = {
         "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotNetworkProperties",
@@ -2560,22 +2528,19 @@ namespace py::cpp::Windows::Devices::WiFi
     static PyMethodDef _methods_WiFiWpsConfigurationResult[] = {
         { "_assign_array_", _assign_array_WiFiWpsConfigurationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiWpsConfigurationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiWpsConfigurationResult[] = {
         { "status", reinterpret_cast<getter>(WiFiWpsConfigurationResult_get_Status), nullptr, nullptr, nullptr },
         { "supported_wps_kinds", reinterpret_cast<getter>(WiFiWpsConfigurationResult_get_SupportedWpsKinds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiWpsConfigurationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiWpsConfigurationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiWpsConfigurationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiWpsConfigurationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiWpsConfigurationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiWpsConfigurationResult = {
         "winrt._winrt_windows_devices_wifi.WiFiWpsConfigurationResult",

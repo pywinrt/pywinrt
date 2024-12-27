@@ -793,8 +793,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { "remove_size_changed", reinterpret_cast<PyCFunction>(WebUICommandBar_remove_SizeChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_WebUICommandBar, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebUICommandBar), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebUICommandBar[] = {
         { "visible", reinterpret_cast<getter>(WebUICommandBar_get_Visible), reinterpret_cast<setter>(WebUICommandBar_put_Visible), nullptr, nullptr },
@@ -806,16 +805,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { "primary_commands", reinterpret_cast<getter>(WebUICommandBar_get_PrimaryCommands), nullptr, nullptr, nullptr },
         { "secondary_commands", reinterpret_cast<getter>(WebUICommandBar_get_SecondaryCommands), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(WebUICommandBar_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebUICommandBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebUICommandBar = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBar",
@@ -825,13 +822,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
         _type_slots_WebUICommandBar};
 
     static PyGetSetDef getset_WebUICommandBar_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WebUICommandBar_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(WebUICommandBar_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WebUICommandBar_Static[] = 
     {
@@ -841,14 +836,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Spec type_spec_WebUICommandBar_Static =
-    {
+    static PyType_Spec type_spec_WebUICommandBar_Static = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WebUICommandBar_Static
-    };
+        type_slots_WebUICommandBar_Static};
 
     // ----- WebUICommandBarBitmapIcon class --------------------
 
@@ -1000,21 +993,18 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static PyMethodDef _methods_WebUICommandBarBitmapIcon[] = {
         { "_assign_array_", _assign_array_WebUICommandBarBitmapIcon, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebUICommandBarBitmapIcon), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebUICommandBarBitmapIcon[] = {
         { "uri", reinterpret_cast<getter>(WebUICommandBarBitmapIcon_get_Uri), reinterpret_cast<setter>(WebUICommandBarBitmapIcon_put_Uri), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebUICommandBarBitmapIcon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarBitmapIcon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarBitmapIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarBitmapIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarBitmapIcon) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebUICommandBarBitmapIcon = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarBitmapIcon",
@@ -1225,21 +1215,18 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { "remove_item_invoked", reinterpret_cast<PyCFunction>(WebUICommandBarConfirmationButton_remove_ItemInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_WebUICommandBarConfirmationButton, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebUICommandBarConfirmationButton), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebUICommandBarConfirmationButton[] = {
         { "text", reinterpret_cast<getter>(WebUICommandBarConfirmationButton_get_Text), reinterpret_cast<setter>(WebUICommandBarConfirmationButton_put_Text), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebUICommandBarConfirmationButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarConfirmationButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarConfirmationButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarConfirmationButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarConfirmationButton) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebUICommandBarConfirmationButton = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarConfirmationButton",
@@ -1726,8 +1713,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { "remove_item_invoked", reinterpret_cast<PyCFunction>(WebUICommandBarIconButton_remove_ItemInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_WebUICommandBarIconButton, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebUICommandBarIconButton), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebUICommandBarIconButton[] = {
         { "label", reinterpret_cast<getter>(WebUICommandBarIconButton_get_Label), reinterpret_cast<setter>(WebUICommandBarIconButton_put_Label), nullptr, nullptr },
@@ -1735,16 +1721,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { "is_checked", reinterpret_cast<getter>(WebUICommandBarIconButton_get_IsChecked), reinterpret_cast<setter>(WebUICommandBarIconButton_put_IsChecked), nullptr, nullptr },
         { "icon", reinterpret_cast<getter>(WebUICommandBarIconButton_get_Icon), reinterpret_cast<setter>(WebUICommandBarIconButton_put_Icon), nullptr, nullptr },
         { "enabled", reinterpret_cast<getter>(WebUICommandBarIconButton_get_Enabled), reinterpret_cast<setter>(WebUICommandBarIconButton_put_Enabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebUICommandBarIconButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarIconButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarIconButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarIconButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarIconButton) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebUICommandBarIconButton = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarIconButton",
@@ -1827,21 +1811,18 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static PyMethodDef _methods_WebUICommandBarItemInvokedEventArgs[] = {
         { "_assign_array_", _assign_array_WebUICommandBarItemInvokedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebUICommandBarItemInvokedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebUICommandBarItemInvokedEventArgs[] = {
         { "is_primary_command", reinterpret_cast<getter>(WebUICommandBarItemInvokedEventArgs_get_IsPrimaryCommand), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebUICommandBarItemInvokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarItemInvokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarItemInvokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarItemInvokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarItemInvokedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebUICommandBarItemInvokedEventArgs = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarItemInvokedEventArgs",
@@ -1924,21 +1905,18 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static PyMethodDef _methods_WebUICommandBarSizeChangedEventArgs[] = {
         { "_assign_array_", _assign_array_WebUICommandBarSizeChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebUICommandBarSizeChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebUICommandBarSizeChangedEventArgs[] = {
         { "size", reinterpret_cast<getter>(WebUICommandBarSizeChangedEventArgs_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebUICommandBarSizeChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarSizeChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarSizeChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarSizeChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarSizeChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebUICommandBarSizeChangedEventArgs = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarSizeChangedEventArgs",
@@ -2097,21 +2075,18 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static PyMethodDef _methods_WebUICommandBarSymbolIcon[] = {
         { "_assign_array_", _assign_array_WebUICommandBarSymbolIcon, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebUICommandBarSymbolIcon), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WebUICommandBarSymbolIcon[] = {
         { "symbol", reinterpret_cast<getter>(WebUICommandBarSymbolIcon_get_Symbol), reinterpret_cast<setter>(WebUICommandBarSymbolIcon_put_Symbol), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WebUICommandBarSymbolIcon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarSymbolIcon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarSymbolIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarSymbolIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarSymbolIcon) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WebUICommandBarSymbolIcon = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarSymbolIcon",
@@ -2164,20 +2139,17 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static PyMethodDef _methods_IWebUICommandBarElement[] = {
         { "_assign_array_", _assign_array_IWebUICommandBarElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebUICommandBarElement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebUICommandBarElement[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebUICommandBarElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUICommandBarElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUICommandBarElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUICommandBarElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUICommandBarElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebUICommandBarElement = {
         "winrt._winrt_windows_ui_webui_core.IWebUICommandBarElement",
@@ -2233,13 +2205,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static PyMethodDef methods_ImplementsIWebUICommandBarElement[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUICommandBarElement), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUICommandBarElement), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebUICommandBarElement[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebUICommandBarElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebUICommandBarElement = {
         "winrt._winrt_windows_ui_webui_core.ImplementsIWebUICommandBarElement",
@@ -2292,20 +2262,17 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static PyMethodDef _methods_IWebUICommandBarIcon[] = {
         { "_assign_array_", _assign_array_IWebUICommandBarIcon, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebUICommandBarIcon), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWebUICommandBarIcon[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWebUICommandBarIcon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUICommandBarIcon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUICommandBarIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUICommandBarIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUICommandBarIcon) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWebUICommandBarIcon = {
         "winrt._winrt_windows_ui_webui_core.IWebUICommandBarIcon",
@@ -2361,13 +2328,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static PyMethodDef methods_ImplementsIWebUICommandBarIcon[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUICommandBarIcon), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUICommandBarIcon), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWebUICommandBarIcon[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWebUICommandBarIcon) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWebUICommandBarIcon = {
         "winrt._winrt_windows_ui_webui_core.ImplementsIWebUICommandBarIcon",

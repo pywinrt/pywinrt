@@ -138,23 +138,20 @@ namespace py::cpp::Windows::Data::Text
     static PyMethodDef _methods_AlternateWordForm[] = {
         { "_assign_array_", _assign_array_AlternateWordForm, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AlternateWordForm), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AlternateWordForm[] = {
         { "alternate_text", reinterpret_cast<getter>(AlternateWordForm_get_AlternateText), nullptr, nullptr, nullptr },
         { "normalization_format", reinterpret_cast<getter>(AlternateWordForm_get_NormalizationFormat), nullptr, nullptr, nullptr },
         { "source_text_segment", reinterpret_cast<getter>(AlternateWordForm_get_SourceTextSegment), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AlternateWordForm[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AlternateWordForm) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AlternateWordForm) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AlternateWordForm) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AlternateWordForm) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AlternateWordForm = {
         "winrt._winrt_windows_data_text.AlternateWordForm",
@@ -267,22 +264,19 @@ namespace py::cpp::Windows::Data::Text
     static PyMethodDef _methods_SelectableWordSegment[] = {
         { "_assign_array_", _assign_array_SelectableWordSegment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SelectableWordSegment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SelectableWordSegment[] = {
         { "source_text_segment", reinterpret_cast<getter>(SelectableWordSegment_get_SourceTextSegment), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(SelectableWordSegment_get_Text), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SelectableWordSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectableWordSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectableWordSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectableWordSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectableWordSegment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SelectableWordSegment = {
         "winrt._winrt_windows_data_text.SelectableWordSegment",
@@ -522,21 +516,18 @@ namespace py::cpp::Windows::Data::Text
         { "tokenize", reinterpret_cast<PyCFunction>(SelectableWordsSegmenter_Tokenize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SelectableWordsSegmenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SelectableWordsSegmenter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SelectableWordsSegmenter[] = {
         { "resolved_language", reinterpret_cast<getter>(SelectableWordsSegmenter_get_ResolvedLanguage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SelectableWordsSegmenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectableWordsSegmenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectableWordsSegmenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectableWordsSegmenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectableWordsSegmenter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SelectableWordsSegmenter = {
         "winrt._winrt_windows_data_text.SelectableWordsSegmenter",
@@ -716,20 +707,17 @@ namespace py::cpp::Windows::Data::Text
         { "find_in_property", reinterpret_cast<PyCFunction>(SemanticTextQuery_FindInProperty), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SemanticTextQuery, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SemanticTextQuery), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SemanticTextQuery[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SemanticTextQuery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SemanticTextQuery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SemanticTextQuery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SemanticTextQuery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SemanticTextQuery) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SemanticTextQuery = {
         "winrt._winrt_windows_data_text.SemanticTextQuery",
@@ -953,22 +941,19 @@ namespace py::cpp::Windows::Data::Text
         { "get_candidates_with_max_count_async", reinterpret_cast<PyCFunction>(TextConversionGenerator_GetCandidatesWithMaxCountAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TextConversionGenerator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TextConversionGenerator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TextConversionGenerator[] = {
         { "language_available_but_not_installed", reinterpret_cast<getter>(TextConversionGenerator_get_LanguageAvailableButNotInstalled), nullptr, nullptr, nullptr },
         { "resolved_language", reinterpret_cast<getter>(TextConversionGenerator_get_ResolvedLanguage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TextConversionGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextConversionGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextConversionGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextConversionGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextConversionGenerator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TextConversionGenerator = {
         "winrt._winrt_windows_data_text.TextConversionGenerator",
@@ -1081,22 +1066,19 @@ namespace py::cpp::Windows::Data::Text
     static PyMethodDef _methods_TextPhoneme[] = {
         { "_assign_array_", _assign_array_TextPhoneme, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TextPhoneme), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TextPhoneme[] = {
         { "display_text", reinterpret_cast<getter>(TextPhoneme_get_DisplayText), nullptr, nullptr, nullptr },
         { "reading_text", reinterpret_cast<getter>(TextPhoneme_get_ReadingText), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TextPhoneme[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextPhoneme) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextPhoneme) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextPhoneme) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextPhoneme) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TextPhoneme = {
         "winrt._winrt_windows_data_text.TextPhoneme",
@@ -1479,23 +1461,20 @@ namespace py::cpp::Windows::Data::Text
         { "get_next_word_candidates_async", reinterpret_cast<PyCFunction>(TextPredictionGenerator_GetNextWordCandidatesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TextPredictionGenerator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TextPredictionGenerator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TextPredictionGenerator[] = {
         { "language_available_but_not_installed", reinterpret_cast<getter>(TextPredictionGenerator_get_LanguageAvailableButNotInstalled), nullptr, nullptr, nullptr },
         { "resolved_language", reinterpret_cast<getter>(TextPredictionGenerator_get_ResolvedLanguage), nullptr, nullptr, nullptr },
         { "input_scope", reinterpret_cast<getter>(TextPredictionGenerator_get_InputScope), reinterpret_cast<setter>(TextPredictionGenerator_put_InputScope), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TextPredictionGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextPredictionGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextPredictionGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextPredictionGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextPredictionGenerator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TextPredictionGenerator = {
         "winrt._winrt_windows_data_text.TextPredictionGenerator",
@@ -1718,22 +1697,19 @@ namespace py::cpp::Windows::Data::Text
         { "get_phonemes_async", reinterpret_cast<PyCFunction>(TextReverseConversionGenerator_GetPhonemesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TextReverseConversionGenerator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TextReverseConversionGenerator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TextReverseConversionGenerator[] = {
         { "language_available_but_not_installed", reinterpret_cast<getter>(TextReverseConversionGenerator_get_LanguageAvailableButNotInstalled), nullptr, nullptr, nullptr },
         { "resolved_language", reinterpret_cast<getter>(TextReverseConversionGenerator_get_ResolvedLanguage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TextReverseConversionGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextReverseConversionGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextReverseConversionGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextReverseConversionGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextReverseConversionGenerator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TextReverseConversionGenerator = {
         "winrt._winrt_windows_data_text.TextReverseConversionGenerator",
@@ -2481,19 +2457,16 @@ namespace py::cpp::Windows::Data::Text
     }
 
     static PyMethodDef _methods_UnicodeCharacters[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UnicodeCharacters[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UnicodeCharacters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UnicodeCharacters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UnicodeCharacters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UnicodeCharacters) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UnicodeCharacters = {
         "winrt._winrt_windows_data_text.UnicodeCharacters",
@@ -2503,8 +2476,7 @@ namespace py::cpp::Windows::Data::Text
         _type_slots_UnicodeCharacters};
 
     static PyGetSetDef getset_UnicodeCharacters_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UnicodeCharacters_Static[] = {
         { "get_codepoint_from_surrogate_pair", reinterpret_cast<PyCFunction>(UnicodeCharacters_GetCodepointFromSurrogatePair), METH_VARARGS, nullptr },
@@ -2524,8 +2496,7 @@ namespace py::cpp::Windows::Data::Text
         { "is_supplementary", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsSupplementary), METH_VARARGS, nullptr },
         { "is_uppercase", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsUppercase), METH_VARARGS, nullptr },
         { "is_whitespace", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsWhitespace), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UnicodeCharacters_Static[] = 
     {
@@ -2535,14 +2506,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Spec type_spec_UnicodeCharacters_Static =
-    {
+    static PyType_Spec type_spec_UnicodeCharacters_Static = {
         "winrt._winrt_windows_data_text.UnicodeCharacters_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UnicodeCharacters_Static
-    };
+        type_slots_UnicodeCharacters_Static};
 
     // ----- WordSegment class --------------------
 
@@ -2678,23 +2647,20 @@ namespace py::cpp::Windows::Data::Text
     static PyMethodDef _methods_WordSegment[] = {
         { "_assign_array_", _assign_array_WordSegment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WordSegment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WordSegment[] = {
         { "alternate_forms", reinterpret_cast<getter>(WordSegment_get_AlternateForms), nullptr, nullptr, nullptr },
         { "source_text_segment", reinterpret_cast<getter>(WordSegment_get_SourceTextSegment), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(WordSegment_get_Text), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WordSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WordSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WordSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WordSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WordSegment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WordSegment = {
         "winrt._winrt_windows_data_text.WordSegment",
@@ -2934,21 +2900,18 @@ namespace py::cpp::Windows::Data::Text
         { "tokenize", reinterpret_cast<PyCFunction>(WordsSegmenter_Tokenize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WordsSegmenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WordsSegmenter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WordsSegmenter[] = {
         { "resolved_language", reinterpret_cast<getter>(WordsSegmenter_get_ResolvedLanguage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WordsSegmenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WordsSegmenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WordsSegmenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WordsSegmenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WordsSegmenter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WordsSegmenter = {
         "winrt._winrt_windows_data_text.WordsSegmenter",
@@ -3026,8 +2989,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyMethodDef _methods_TextSegment[] = {
         { "_assign_array_", _assign_array_TextSegment, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* TextSegment_get_StartPosition(py::wrapper::Windows::Data::Text::TextSegment* self, void* /*unused*/) noexcept
     {
@@ -3098,8 +3060,7 @@ namespace py::cpp::Windows::Data::Text
     static PyGetSetDef _getset_TextSegment[] = {
         { "start_position", reinterpret_cast<getter>(TextSegment_get_StartPosition), reinterpret_cast<setter>(TextSegment_set_StartPosition), nullptr, nullptr },
         { "length", reinterpret_cast<getter>(TextSegment_get_Length), reinterpret_cast<setter>(TextSegment_set_Length), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_TextSegment(py::wrapper::Windows::Data::Text::TextSegment* self, PyObject* other, int op) noexcept
     {
@@ -3161,8 +3122,7 @@ namespace py::cpp::Windows::Data::Text
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextSegment) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TextSegment) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_TextSegment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TextSegment = {
         "winrt._winrt_windows_data_text.TextSegment",

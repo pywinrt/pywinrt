@@ -375,20 +375,17 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { "remove_response_received", reinterpret_cast<PyCFunction>(HttpDiagnosticProvider_remove_ResponseReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_HttpDiagnosticProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpDiagnosticProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpDiagnosticProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpDiagnosticProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpDiagnosticProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpDiagnosticProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpDiagnosticProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpDiagnosticProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpDiagnosticProvider = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProvider",
@@ -398,13 +395,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         _type_slots_HttpDiagnosticProvider};
 
     static PyGetSetDef getset_HttpDiagnosticProvider_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpDiagnosticProvider_Static[] = {
         { "create_from_process_diagnostic_info", reinterpret_cast<PyCFunction>(HttpDiagnosticProvider_CreateFromProcessDiagnosticInfo), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpDiagnosticProvider_Static[] = 
     {
@@ -414,14 +409,12 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { }
     };
 
-    static PyType_Spec type_spec_HttpDiagnosticProvider_Static =
-    {
+    static PyType_Spec type_spec_HttpDiagnosticProvider_Static = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProvider_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpDiagnosticProvider_Static
-    };
+        type_slots_HttpDiagnosticProvider_Static};
 
     // ----- HttpDiagnosticProviderRequestResponseCompletedEventArgs class --------------------
 
@@ -677,8 +670,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static PyMethodDef _methods_HttpDiagnosticProviderRequestResponseCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_HttpDiagnosticProviderRequestResponseCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpDiagnosticProviderRequestResponseCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpDiagnosticProviderRequestResponseCompletedEventArgs[] = {
         { "activity_id", reinterpret_cast<getter>(HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_ActivityId), nullptr, nullptr, nullptr },
@@ -688,16 +680,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { "source_locations", reinterpret_cast<getter>(HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_SourceLocations), nullptr, nullptr, nullptr },
         { "thread_id", reinterpret_cast<getter>(HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_ThreadId), nullptr, nullptr, nullptr },
         { "timestamps", reinterpret_cast<getter>(HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_Timestamps), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpDiagnosticProviderRequestResponseCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpDiagnosticProviderRequestResponseCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpDiagnosticProviderRequestResponseCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpDiagnosticProviderRequestResponseCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpDiagnosticProviderRequestResponseCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs",
@@ -1020,8 +1010,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static PyMethodDef _methods_HttpDiagnosticProviderRequestResponseTimestamps[] = {
         { "_assign_array_", _assign_array_HttpDiagnosticProviderRequestResponseTimestamps, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpDiagnosticProviderRequestResponseTimestamps), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpDiagnosticProviderRequestResponseTimestamps[] = {
         { "cache_checked_timestamp", reinterpret_cast<getter>(HttpDiagnosticProviderRequestResponseTimestamps_get_CacheCheckedTimestamp), nullptr, nullptr, nullptr },
@@ -1033,16 +1022,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { "response_completed_timestamp", reinterpret_cast<getter>(HttpDiagnosticProviderRequestResponseTimestamps_get_ResponseCompletedTimestamp), nullptr, nullptr, nullptr },
         { "response_received_timestamp", reinterpret_cast<getter>(HttpDiagnosticProviderRequestResponseTimestamps_get_ResponseReceivedTimestamp), nullptr, nullptr, nullptr },
         { "ssl_negotiated_timestamp", reinterpret_cast<getter>(HttpDiagnosticProviderRequestResponseTimestamps_get_SslNegotiatedTimestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpDiagnosticProviderRequestResponseTimestamps[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpDiagnosticProviderRequestResponseTimestamps) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpDiagnosticProviderRequestResponseTimestamps) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpDiagnosticProviderRequestResponseTimestamps) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpDiagnosticProviderRequestResponseTimestamps) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpDiagnosticProviderRequestResponseTimestamps = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseTimestamps",
@@ -1305,8 +1292,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static PyMethodDef _methods_HttpDiagnosticProviderRequestSentEventArgs[] = {
         { "_assign_array_", _assign_array_HttpDiagnosticProviderRequestSentEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpDiagnosticProviderRequestSentEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpDiagnosticProviderRequestSentEventArgs[] = {
         { "activity_id", reinterpret_cast<getter>(HttpDiagnosticProviderRequestSentEventArgs_get_ActivityId), nullptr, nullptr, nullptr },
@@ -1316,16 +1302,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { "source_locations", reinterpret_cast<getter>(HttpDiagnosticProviderRequestSentEventArgs_get_SourceLocations), nullptr, nullptr, nullptr },
         { "thread_id", reinterpret_cast<getter>(HttpDiagnosticProviderRequestSentEventArgs_get_ThreadId), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(HttpDiagnosticProviderRequestSentEventArgs_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpDiagnosticProviderRequestSentEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpDiagnosticProviderRequestSentEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpDiagnosticProviderRequestSentEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpDiagnosticProviderRequestSentEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpDiagnosticProviderRequestSentEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpDiagnosticProviderRequestSentEventArgs = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestSentEventArgs",
@@ -1468,23 +1452,20 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static PyMethodDef _methods_HttpDiagnosticProviderResponseReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_HttpDiagnosticProviderResponseReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpDiagnosticProviderResponseReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpDiagnosticProviderResponseReceivedEventArgs[] = {
         { "activity_id", reinterpret_cast<getter>(HttpDiagnosticProviderResponseReceivedEventArgs_get_ActivityId), nullptr, nullptr, nullptr },
         { "message", reinterpret_cast<getter>(HttpDiagnosticProviderResponseReceivedEventArgs_get_Message), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(HttpDiagnosticProviderResponseReceivedEventArgs_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpDiagnosticProviderResponseReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpDiagnosticProviderResponseReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpDiagnosticProviderResponseReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpDiagnosticProviderResponseReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpDiagnosticProviderResponseReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpDiagnosticProviderResponseReceivedEventArgs = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs",
@@ -1627,23 +1608,20 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static PyMethodDef _methods_HttpDiagnosticSourceLocation[] = {
         { "_assign_array_", _assign_array_HttpDiagnosticSourceLocation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpDiagnosticSourceLocation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpDiagnosticSourceLocation[] = {
         { "column_number", reinterpret_cast<getter>(HttpDiagnosticSourceLocation_get_ColumnNumber), nullptr, nullptr, nullptr },
         { "line_number", reinterpret_cast<getter>(HttpDiagnosticSourceLocation_get_LineNumber), nullptr, nullptr, nullptr },
         { "source_uri", reinterpret_cast<getter>(HttpDiagnosticSourceLocation_get_SourceUri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpDiagnosticSourceLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpDiagnosticSourceLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpDiagnosticSourceLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpDiagnosticSourceLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpDiagnosticSourceLocation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpDiagnosticSourceLocation = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticSourceLocation",

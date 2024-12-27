@@ -497,23 +497,20 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
         { "remove_access_changed", reinterpret_cast<PyCFunction>(AppCapability_remove_AccessChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppCapability, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppCapability), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppCapability[] = {
         { "capability_name", reinterpret_cast<getter>(AppCapability_get_CapabilityName), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(AppCapability_get_User), nullptr, nullptr, nullptr },
         { "display_message", reinterpret_cast<getter>(AppCapability_get_DisplayMessage), reinterpret_cast<setter>(AppCapability_put_DisplayMessage), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppCapability[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppCapability) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppCapability) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppCapability) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppCapability) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppCapability = {
         "winrt._winrt_windows_security_authorization_appcapabilityaccess.AppCapability",
@@ -523,16 +520,14 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
         _type_slots_AppCapability};
 
     static PyGetSetDef getset_AppCapability_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppCapability_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(AppCapability_Create), METH_VARARGS, nullptr },
         { "create_with_process_id_for_user", reinterpret_cast<PyCFunction>(AppCapability_CreateWithProcessIdForUser), METH_VARARGS, nullptr },
         { "request_access_for_capabilities_async", reinterpret_cast<PyCFunction>(AppCapability_RequestAccessForCapabilitiesAsync), METH_VARARGS, nullptr },
         { "request_access_for_capabilities_for_user_async", reinterpret_cast<PyCFunction>(AppCapability_RequestAccessForCapabilitiesForUserAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppCapability_Static[] = 
     {
@@ -542,14 +537,12 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
         { }
     };
 
-    static PyType_Spec type_spec_AppCapability_Static =
-    {
+    static PyType_Spec type_spec_AppCapability_Static = {
         "winrt._winrt_windows_security_authorization_appcapabilityaccess.AppCapability_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppCapability_Static
-    };
+        type_slots_AppCapability_Static};
 
     // ----- AppCapabilityAccessChangedEventArgs class --------------------
 
@@ -595,20 +588,17 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
     static PyMethodDef _methods_AppCapabilityAccessChangedEventArgs[] = {
         { "_assign_array_", _assign_array_AppCapabilityAccessChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppCapabilityAccessChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppCapabilityAccessChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppCapabilityAccessChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppCapabilityAccessChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppCapabilityAccessChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppCapabilityAccessChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppCapabilityAccessChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppCapabilityAccessChangedEventArgs = {
         "winrt._winrt_windows_security_authorization_appcapabilityaccess.AppCapabilityAccessChangedEventArgs",

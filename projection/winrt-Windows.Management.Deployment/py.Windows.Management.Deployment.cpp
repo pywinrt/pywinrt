@@ -1186,8 +1186,7 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_AddPackageOptions[] = {
         { "_assign_array_", _assign_array_AddPackageOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AddPackageOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AddPackageOptions[] = {
         { "target_volume", reinterpret_cast<getter>(AddPackageOptions_get_TargetVolume), reinterpret_cast<setter>(AddPackageOptions_put_TargetVolume), nullptr, nullptr },
@@ -1209,16 +1208,14 @@ namespace py::cpp::Windows::Management::Deployment
         { "related_package_uris", reinterpret_cast<getter>(AddPackageOptions_get_RelatedPackageUris), nullptr, nullptr, nullptr },
         { "limit_to_existing_packages", reinterpret_cast<getter>(AddPackageOptions_get_LimitToExistingPackages), reinterpret_cast<setter>(AddPackageOptions_put_LimitToExistingPackages), nullptr, nullptr },
         { "expected_digests", reinterpret_cast<getter>(AddPackageOptions_get_ExpectedDigests), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AddPackageOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddPackageOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddPackageOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddPackageOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddPackageOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AddPackageOptions = {
         "winrt._winrt_windows_management_deployment.AddPackageOptions",
@@ -1485,20 +1482,17 @@ namespace py::cpp::Windows::Management::Deployment
         { "set_auto_update_settings", reinterpret_cast<PyCFunction>(AppInstallerManager_SetAutoUpdateSettings), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppInstallerManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppInstallerManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppInstallerManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppInstallerManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallerManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallerManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallerManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallerManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppInstallerManager = {
         "winrt._winrt_windows_management_deployment.AppInstallerManager",
@@ -1508,14 +1502,12 @@ namespace py::cpp::Windows::Management::Deployment
         _type_slots_AppInstallerManager};
 
     static PyGetSetDef getset_AppInstallerManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppInstallerManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(AppInstallerManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_system", reinterpret_cast<PyCFunction>(AppInstallerManager_GetForSystem), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppInstallerManager_Static[] = 
     {
@@ -1525,14 +1517,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Spec type_spec_AppInstallerManager_Static =
-    {
+    static PyType_Spec type_spec_AppInstallerManager_Static = {
         "winrt._winrt_windows_management_deployment.AppInstallerManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppInstallerManager_Static
-    };
+        type_slots_AppInstallerManager_Static};
 
     // ----- AutoUpdateSettingsOptions class --------------------
 
@@ -2383,8 +2373,7 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_AutoUpdateSettingsOptions[] = {
         { "_assign_array_", _assign_array_AutoUpdateSettingsOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AutoUpdateSettingsOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AutoUpdateSettingsOptions[] = {
         { "version", reinterpret_cast<getter>(AutoUpdateSettingsOptions_get_Version), reinterpret_cast<setter>(AutoUpdateSettingsOptions_put_Version), nullptr, nullptr },
@@ -2400,16 +2389,14 @@ namespace py::cpp::Windows::Management::Deployment
         { "optional_package_uris", reinterpret_cast<getter>(AutoUpdateSettingsOptions_get_OptionalPackageUris), nullptr, nullptr, nullptr },
         { "repair_uris", reinterpret_cast<getter>(AutoUpdateSettingsOptions_get_RepairUris), nullptr, nullptr, nullptr },
         { "update_uris", reinterpret_cast<getter>(AutoUpdateSettingsOptions_get_UpdateUris), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AutoUpdateSettingsOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutoUpdateSettingsOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutoUpdateSettingsOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutoUpdateSettingsOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutoUpdateSettingsOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AutoUpdateSettingsOptions = {
         "winrt._winrt_windows_management_deployment.AutoUpdateSettingsOptions",
@@ -2419,13 +2406,11 @@ namespace py::cpp::Windows::Management::Deployment
         _type_slots_AutoUpdateSettingsOptions};
 
     static PyGetSetDef getset_AutoUpdateSettingsOptions_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AutoUpdateSettingsOptions_Static[] = {
         { "create_from_app_installer_info", reinterpret_cast<PyCFunction>(AutoUpdateSettingsOptions_CreateFromAppInstallerInfo), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AutoUpdateSettingsOptions_Static[] = 
     {
@@ -2435,14 +2420,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Spec type_spec_AutoUpdateSettingsOptions_Static =
-    {
+    static PyType_Spec type_spec_AutoUpdateSettingsOptions_Static = {
         "winrt._winrt_windows_management_deployment.AutoUpdateSettingsOptions_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AutoUpdateSettingsOptions_Static
-    };
+        type_slots_AutoUpdateSettingsOptions_Static};
 
     // ----- CreateSharedPackageContainerOptions class --------------------
 
@@ -2678,23 +2661,20 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_CreateSharedPackageContainerOptions[] = {
         { "_assign_array_", _assign_array_CreateSharedPackageContainerOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CreateSharedPackageContainerOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CreateSharedPackageContainerOptions[] = {
         { "force_app_shutdown", reinterpret_cast<getter>(CreateSharedPackageContainerOptions_get_ForceAppShutdown), reinterpret_cast<setter>(CreateSharedPackageContainerOptions_put_ForceAppShutdown), nullptr, nullptr },
         { "create_collision_option", reinterpret_cast<getter>(CreateSharedPackageContainerOptions_get_CreateCollisionOption), reinterpret_cast<setter>(CreateSharedPackageContainerOptions_put_CreateCollisionOption), nullptr, nullptr },
         { "members", reinterpret_cast<getter>(CreateSharedPackageContainerOptions_get_Members), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CreateSharedPackageContainerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateSharedPackageContainerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateSharedPackageContainerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateSharedPackageContainerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateSharedPackageContainerOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CreateSharedPackageContainerOptions = {
         "winrt._winrt_windows_management_deployment.CreateSharedPackageContainerOptions",
@@ -2837,23 +2817,20 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_CreateSharedPackageContainerResult[] = {
         { "_assign_array_", _assign_array_CreateSharedPackageContainerResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CreateSharedPackageContainerResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CreateSharedPackageContainerResult[] = {
         { "container", reinterpret_cast<getter>(CreateSharedPackageContainerResult_get_Container), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(CreateSharedPackageContainerResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(CreateSharedPackageContainerResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CreateSharedPackageContainerResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateSharedPackageContainerResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateSharedPackageContainerResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateSharedPackageContainerResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateSharedPackageContainerResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CreateSharedPackageContainerResult = {
         "winrt._winrt_windows_management_deployment.CreateSharedPackageContainerResult",
@@ -3066,22 +3043,19 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_DeleteSharedPackageContainerOptions[] = {
         { "_assign_array_", _assign_array_DeleteSharedPackageContainerOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeleteSharedPackageContainerOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeleteSharedPackageContainerOptions[] = {
         { "force_app_shutdown", reinterpret_cast<getter>(DeleteSharedPackageContainerOptions_get_ForceAppShutdown), reinterpret_cast<setter>(DeleteSharedPackageContainerOptions_put_ForceAppShutdown), nullptr, nullptr },
         { "all_users", reinterpret_cast<getter>(DeleteSharedPackageContainerOptions_get_AllUsers), reinterpret_cast<setter>(DeleteSharedPackageContainerOptions_put_AllUsers), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeleteSharedPackageContainerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeleteSharedPackageContainerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeleteSharedPackageContainerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSharedPackageContainerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSharedPackageContainerOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeleteSharedPackageContainerOptions = {
         "winrt._winrt_windows_management_deployment.DeleteSharedPackageContainerOptions",
@@ -3194,22 +3168,19 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_DeleteSharedPackageContainerResult[] = {
         { "_assign_array_", _assign_array_DeleteSharedPackageContainerResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeleteSharedPackageContainerResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeleteSharedPackageContainerResult[] = {
         { "extended_error", reinterpret_cast<getter>(DeleteSharedPackageContainerResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(DeleteSharedPackageContainerResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeleteSharedPackageContainerResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeleteSharedPackageContainerResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeleteSharedPackageContainerResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSharedPackageContainerResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSharedPackageContainerResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeleteSharedPackageContainerResult = {
         "winrt._winrt_windows_management_deployment.DeleteSharedPackageContainerResult",
@@ -3382,24 +3353,21 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_DeploymentResult[] = {
         { "_assign_array_", _assign_array_DeploymentResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeploymentResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeploymentResult[] = {
         { "activity_id", reinterpret_cast<getter>(DeploymentResult_get_ActivityId), nullptr, nullptr, nullptr },
         { "error_text", reinterpret_cast<getter>(DeploymentResult_get_ErrorText), nullptr, nullptr, nullptr },
         { "extended_error_code", reinterpret_cast<getter>(DeploymentResult_get_ExtendedErrorCode), nullptr, nullptr, nullptr },
         { "is_registered", reinterpret_cast<getter>(DeploymentResult_get_IsRegistered), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeploymentResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentResult = {
         "winrt._winrt_windows_management_deployment.DeploymentResult",
@@ -3612,22 +3580,19 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_FindSharedPackageContainerOptions[] = {
         { "_assign_array_", _assign_array_FindSharedPackageContainerOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FindSharedPackageContainerOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FindSharedPackageContainerOptions[] = {
         { "package_family_name", reinterpret_cast<getter>(FindSharedPackageContainerOptions_get_PackageFamilyName), reinterpret_cast<setter>(FindSharedPackageContainerOptions_put_PackageFamilyName), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(FindSharedPackageContainerOptions_get_Name), reinterpret_cast<setter>(FindSharedPackageContainerOptions_put_Name), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FindSharedPackageContainerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FindSharedPackageContainerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FindSharedPackageContainerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FindSharedPackageContainerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FindSharedPackageContainerOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FindSharedPackageContainerOptions = {
         "winrt._winrt_windows_management_deployment.FindSharedPackageContainerOptions",
@@ -3831,23 +3796,20 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_PackageAllUserProvisioningOptions[] = {
         { "_assign_array_", _assign_array_PackageAllUserProvisioningOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageAllUserProvisioningOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageAllUserProvisioningOptions[] = {
         { "optional_package_family_names", reinterpret_cast<getter>(PackageAllUserProvisioningOptions_get_OptionalPackageFamilyNames), nullptr, nullptr, nullptr },
         { "projection_order_package_family_names", reinterpret_cast<getter>(PackageAllUserProvisioningOptions_get_ProjectionOrderPackageFamilyNames), nullptr, nullptr, nullptr },
         { "defer_automatic_registration", reinterpret_cast<getter>(PackageAllUserProvisioningOptions_get_DeferAutomaticRegistration), reinterpret_cast<setter>(PackageAllUserProvisioningOptions_put_DeferAutomaticRegistration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageAllUserProvisioningOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageAllUserProvisioningOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageAllUserProvisioningOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageAllUserProvisioningOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageAllUserProvisioningOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageAllUserProvisioningOptions = {
         "winrt._winrt_windows_management_deployment.PackageAllUserProvisioningOptions",
@@ -6877,21 +6839,18 @@ namespace py::cpp::Windows::Management::Deployment
         { "update_package_async", reinterpret_cast<PyCFunction>(PackageManager_UpdatePackageAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageManager[] = {
         { "debug_settings", reinterpret_cast<getter>(PackageManager_get_DebugSettings), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageManager = {
         "winrt._winrt_windows_management_deployment.PackageManager",
@@ -7035,20 +6994,17 @@ namespace py::cpp::Windows::Management::Deployment
         { "set_content_group_state_with_percentage_async", reinterpret_cast<PyCFunction>(PackageManagerDebugSettings_SetContentGroupStateWithPercentageAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageManagerDebugSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageManagerDebugSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageManagerDebugSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageManagerDebugSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageManagerDebugSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageManagerDebugSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageManagerDebugSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageManagerDebugSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageManagerDebugSettings = {
         "winrt._winrt_windows_management_deployment.PackageManagerDebugSettings",
@@ -7161,22 +7117,19 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_PackageUserInformation[] = {
         { "_assign_array_", _assign_array_PackageUserInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageUserInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageUserInformation[] = {
         { "install_state", reinterpret_cast<getter>(PackageUserInformation_get_InstallState), nullptr, nullptr, nullptr },
         { "user_security_id", reinterpret_cast<getter>(PackageUserInformation_get_UserSecurityId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageUserInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageUserInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageUserInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageUserInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageUserInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageUserInformation = {
         "winrt._winrt_windows_management_deployment.PackageUserInformation",
@@ -8124,8 +8077,7 @@ namespace py::cpp::Windows::Management::Deployment
         { "get_available_space_async", reinterpret_cast<PyCFunction>(PackageVolume_GetAvailableSpaceAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageVolume, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageVolume), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PackageVolume[] = {
         { "is_offline", reinterpret_cast<getter>(PackageVolume_get_IsOffline), nullptr, nullptr, nullptr },
@@ -8136,16 +8088,14 @@ namespace py::cpp::Windows::Management::Deployment
         { "supports_hard_links", reinterpret_cast<getter>(PackageVolume_get_SupportsHardLinks), nullptr, nullptr, nullptr },
         { "is_appx_install_supported", reinterpret_cast<getter>(PackageVolume_get_IsAppxInstallSupported), nullptr, nullptr, nullptr },
         { "is_full_trust_package_supported", reinterpret_cast<getter>(PackageVolume_get_IsFullTrustPackageSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PackageVolume[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageVolume) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageVolume) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageVolume) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageVolume) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PackageVolume = {
         "winrt._winrt_windows_management_deployment.PackageVolume",
@@ -9000,8 +8950,7 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_RegisterPackageOptions[] = {
         { "_assign_array_", _assign_array_RegisterPackageOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RegisterPackageOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RegisterPackageOptions[] = {
         { "stage_in_place", reinterpret_cast<getter>(RegisterPackageOptions_get_StageInPlace), reinterpret_cast<setter>(RegisterPackageOptions_put_StageInPlace), nullptr, nullptr },
@@ -9017,16 +8966,14 @@ namespace py::cpp::Windows::Management::Deployment
         { "dependency_package_uris", reinterpret_cast<getter>(RegisterPackageOptions_get_DependencyPackageUris), nullptr, nullptr, nullptr },
         { "optional_package_family_names", reinterpret_cast<getter>(RegisterPackageOptions_get_OptionalPackageFamilyNames), nullptr, nullptr, nullptr },
         { "expected_digests", reinterpret_cast<getter>(RegisterPackageOptions_get_ExpectedDigests), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RegisterPackageOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RegisterPackageOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RegisterPackageOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RegisterPackageOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RegisterPackageOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RegisterPackageOptions = {
         "winrt._winrt_windows_management_deployment.RegisterPackageOptions",
@@ -9377,24 +9324,21 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_RemovePackageOptions[] = {
         { "_assign_array_", _assign_array_RemovePackageOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemovePackageOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RemovePackageOptions[] = {
         { "remove_for_all_users", reinterpret_cast<getter>(RemovePackageOptions_get_RemoveForAllUsers), reinterpret_cast<setter>(RemovePackageOptions_put_RemoveForAllUsers), nullptr, nullptr },
         { "preserve_roamable_application_data", reinterpret_cast<getter>(RemovePackageOptions_get_PreserveRoamableApplicationData), reinterpret_cast<setter>(RemovePackageOptions_put_PreserveRoamableApplicationData), nullptr, nullptr },
         { "preserve_application_data", reinterpret_cast<getter>(RemovePackageOptions_get_PreserveApplicationData), reinterpret_cast<setter>(RemovePackageOptions_put_PreserveApplicationData), nullptr, nullptr },
         { "defer_removal_when_packages_are_in_use", reinterpret_cast<getter>(RemovePackageOptions_get_DeferRemovalWhenPackagesAreInUse), reinterpret_cast<setter>(RemovePackageOptions_put_DeferRemovalWhenPackagesAreInUse), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RemovePackageOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemovePackageOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemovePackageOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemovePackageOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemovePackageOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RemovePackageOptions = {
         "winrt._winrt_windows_management_deployment.RemovePackageOptions",
@@ -9633,22 +9577,19 @@ namespace py::cpp::Windows::Management::Deployment
         { "reset_data", reinterpret_cast<PyCFunction>(SharedPackageContainer_ResetData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SharedPackageContainer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SharedPackageContainer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SharedPackageContainer[] = {
         { "id", reinterpret_cast<getter>(SharedPackageContainer_get_Id), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(SharedPackageContainer_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SharedPackageContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SharedPackageContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SharedPackageContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SharedPackageContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SharedPackageContainer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SharedPackageContainer = {
         "winrt._winrt_windows_management_deployment.SharedPackageContainer",
@@ -10038,20 +9979,17 @@ namespace py::cpp::Windows::Management::Deployment
         { "get_container", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetContainer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SharedPackageContainerManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SharedPackageContainerManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SharedPackageContainerManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SharedPackageContainerManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SharedPackageContainerManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SharedPackageContainerManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SharedPackageContainerManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SharedPackageContainerManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SharedPackageContainerManager = {
         "winrt._winrt_windows_management_deployment.SharedPackageContainerManager",
@@ -10061,15 +9999,13 @@ namespace py::cpp::Windows::Management::Deployment
         _type_slots_SharedPackageContainerManager};
 
     static PyGetSetDef getset_SharedPackageContainerManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SharedPackageContainerManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_provisioning", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetForProvisioning), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SharedPackageContainerManager_Static[] = 
     {
@@ -10079,14 +10015,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Spec type_spec_SharedPackageContainerManager_Static =
-    {
+    static PyType_Spec type_spec_SharedPackageContainerManager_Static = {
         "winrt._winrt_windows_management_deployment.SharedPackageContainerManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SharedPackageContainerManager_Static
-    };
+        type_slots_SharedPackageContainerManager_Static};
 
     // ----- SharedPackageContainerMember class --------------------
 
@@ -10186,21 +10120,18 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_SharedPackageContainerMember[] = {
         { "_assign_array_", _assign_array_SharedPackageContainerMember, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SharedPackageContainerMember), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SharedPackageContainerMember[] = {
         { "package_family_name", reinterpret_cast<getter>(SharedPackageContainerMember_get_PackageFamilyName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SharedPackageContainerMember[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SharedPackageContainerMember) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SharedPackageContainerMember) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SharedPackageContainerMember) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SharedPackageContainerMember) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SharedPackageContainerMember = {
         "winrt._winrt_windows_management_deployment.SharedPackageContainerMember",
@@ -11046,8 +10977,7 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_StagePackageOptions[] = {
         { "_assign_array_", _assign_array_StagePackageOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StagePackageOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StagePackageOptions[] = {
         { "target_volume", reinterpret_cast<getter>(StagePackageOptions_get_TargetVolume), reinterpret_cast<setter>(StagePackageOptions_put_TargetVolume), nullptr, nullptr },
@@ -11064,16 +10994,14 @@ namespace py::cpp::Windows::Management::Deployment
         { "optional_package_uris", reinterpret_cast<getter>(StagePackageOptions_get_OptionalPackageUris), nullptr, nullptr, nullptr },
         { "related_package_uris", reinterpret_cast<getter>(StagePackageOptions_get_RelatedPackageUris), nullptr, nullptr, nullptr },
         { "expected_digests", reinterpret_cast<getter>(StagePackageOptions_get_ExpectedDigests), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StagePackageOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StagePackageOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StagePackageOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StagePackageOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StagePackageOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StagePackageOptions = {
         "winrt._winrt_windows_management_deployment.StagePackageOptions",
@@ -11286,22 +11214,19 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_UpdateSharedPackageContainerOptions[] = {
         { "_assign_array_", _assign_array_UpdateSharedPackageContainerOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UpdateSharedPackageContainerOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UpdateSharedPackageContainerOptions[] = {
         { "require_packages_present", reinterpret_cast<getter>(UpdateSharedPackageContainerOptions_get_RequirePackagesPresent), reinterpret_cast<setter>(UpdateSharedPackageContainerOptions_put_RequirePackagesPresent), nullptr, nullptr },
         { "force_app_shutdown", reinterpret_cast<getter>(UpdateSharedPackageContainerOptions_get_ForceAppShutdown), reinterpret_cast<setter>(UpdateSharedPackageContainerOptions_put_ForceAppShutdown), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UpdateSharedPackageContainerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UpdateSharedPackageContainerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UpdateSharedPackageContainerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UpdateSharedPackageContainerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UpdateSharedPackageContainerOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UpdateSharedPackageContainerOptions = {
         "winrt._winrt_windows_management_deployment.UpdateSharedPackageContainerOptions",
@@ -11414,22 +11339,19 @@ namespace py::cpp::Windows::Management::Deployment
     static PyMethodDef _methods_UpdateSharedPackageContainerResult[] = {
         { "_assign_array_", _assign_array_UpdateSharedPackageContainerResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UpdateSharedPackageContainerResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UpdateSharedPackageContainerResult[] = {
         { "extended_error", reinterpret_cast<getter>(UpdateSharedPackageContainerResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(UpdateSharedPackageContainerResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UpdateSharedPackageContainerResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UpdateSharedPackageContainerResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UpdateSharedPackageContainerResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UpdateSharedPackageContainerResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UpdateSharedPackageContainerResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UpdateSharedPackageContainerResult = {
         "winrt._winrt_windows_management_deployment.UpdateSharedPackageContainerResult",
@@ -11507,8 +11429,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyMethodDef _methods_DeploymentProgress[] = {
         { "_assign_array_", _assign_array_DeploymentProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* DeploymentProgress_get_state(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, void* /*unused*/) noexcept
     {
@@ -11579,8 +11500,7 @@ namespace py::cpp::Windows::Management::Deployment
     static PyGetSetDef _getset_DeploymentProgress[] = {
         { "state", reinterpret_cast<getter>(DeploymentProgress_get_state), reinterpret_cast<setter>(DeploymentProgress_set_state), nullptr, nullptr },
         { "percentage", reinterpret_cast<getter>(DeploymentProgress_get_percentage), reinterpret_cast<setter>(DeploymentProgress_set_percentage), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_DeploymentProgress(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, PyObject* other, int op) noexcept
     {
@@ -11642,8 +11562,7 @@ namespace py::cpp::Windows::Management::Deployment
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DeploymentProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_DeploymentProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentProgress = {
         "winrt._winrt_windows_management_deployment.DeploymentProgress",

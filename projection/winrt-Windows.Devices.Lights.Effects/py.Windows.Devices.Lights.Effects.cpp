@@ -446,8 +446,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "remove_bitmap_requested", reinterpret_cast<PyCFunction>(LampArrayBitmapEffect_remove_BitmapRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_LampArrayBitmapEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArrayBitmapEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampArrayBitmapEffect[] = {
         { "update_interval", reinterpret_cast<getter>(LampArrayBitmapEffect_get_UpdateInterval), reinterpret_cast<setter>(LampArrayBitmapEffect_put_UpdateInterval), nullptr, nullptr },
@@ -455,16 +454,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "duration", reinterpret_cast<getter>(LampArrayBitmapEffect_get_Duration), reinterpret_cast<setter>(LampArrayBitmapEffect_put_Duration), nullptr, nullptr },
         { "suggested_bitmap_size", reinterpret_cast<getter>(LampArrayBitmapEffect_get_SuggestedBitmapSize), nullptr, nullptr, nullptr },
         { "z_index", reinterpret_cast<getter>(LampArrayBitmapEffect_get_ZIndex), reinterpret_cast<setter>(LampArrayBitmapEffect_put_ZIndex), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampArrayBitmapEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayBitmapEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayBitmapEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayBitmapEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayBitmapEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampArrayBitmapEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayBitmapEffect",
@@ -591,21 +588,18 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "update_bitmap", reinterpret_cast<PyCFunction>(LampArrayBitmapRequestedEventArgs_UpdateBitmap), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LampArrayBitmapRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArrayBitmapRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampArrayBitmapRequestedEventArgs[] = {
         { "since_started", reinterpret_cast<getter>(LampArrayBitmapRequestedEventArgs_get_SinceStarted), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampArrayBitmapRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayBitmapRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayBitmapRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayBitmapRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayBitmapRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampArrayBitmapRequestedEventArgs = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayBitmapRequestedEventArgs",
@@ -1304,8 +1298,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static PyMethodDef _methods_LampArrayBlinkEffect[] = {
         { "_assign_array_", _assign_array_LampArrayBlinkEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArrayBlinkEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampArrayBlinkEffect[] = {
         { "sustain_duration", reinterpret_cast<getter>(LampArrayBlinkEffect_get_SustainDuration), reinterpret_cast<setter>(LampArrayBlinkEffect_put_SustainDuration), nullptr, nullptr },
@@ -1317,16 +1310,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "color", reinterpret_cast<getter>(LampArrayBlinkEffect_get_Color), reinterpret_cast<setter>(LampArrayBlinkEffect_put_Color), nullptr, nullptr },
         { "attack_duration", reinterpret_cast<getter>(LampArrayBlinkEffect_get_AttackDuration), reinterpret_cast<setter>(LampArrayBlinkEffect_put_AttackDuration), nullptr, nullptr },
         { "z_index", reinterpret_cast<getter>(LampArrayBlinkEffect_get_ZIndex), reinterpret_cast<setter>(LampArrayBlinkEffect_put_ZIndex), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampArrayBlinkEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayBlinkEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayBlinkEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayBlinkEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayBlinkEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampArrayBlinkEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayBlinkEffect",
@@ -1749,8 +1740,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static PyMethodDef _methods_LampArrayColorRampEffect[] = {
         { "_assign_array_", _assign_array_LampArrayColorRampEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArrayColorRampEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampArrayColorRampEffect[] = {
         { "start_delay", reinterpret_cast<getter>(LampArrayColorRampEffect_get_StartDelay), reinterpret_cast<setter>(LampArrayColorRampEffect_put_StartDelay), nullptr, nullptr },
@@ -1758,16 +1748,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "completion_behavior", reinterpret_cast<getter>(LampArrayColorRampEffect_get_CompletionBehavior), reinterpret_cast<setter>(LampArrayColorRampEffect_put_CompletionBehavior), nullptr, nullptr },
         { "color", reinterpret_cast<getter>(LampArrayColorRampEffect_get_Color), reinterpret_cast<setter>(LampArrayColorRampEffect_put_Color), nullptr, nullptr },
         { "z_index", reinterpret_cast<getter>(LampArrayColorRampEffect_get_ZIndex), reinterpret_cast<setter>(LampArrayColorRampEffect_put_ZIndex), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampArrayColorRampEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayColorRampEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayColorRampEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayColorRampEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayColorRampEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampArrayColorRampEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayColorRampEffect",
@@ -2119,23 +2107,20 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "remove_update_requested", reinterpret_cast<PyCFunction>(LampArrayCustomEffect_remove_UpdateRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_LampArrayCustomEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArrayCustomEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampArrayCustomEffect[] = {
         { "update_interval", reinterpret_cast<getter>(LampArrayCustomEffect_get_UpdateInterval), reinterpret_cast<setter>(LampArrayCustomEffect_put_UpdateInterval), nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(LampArrayCustomEffect_get_Duration), reinterpret_cast<setter>(LampArrayCustomEffect_put_Duration), nullptr, nullptr },
         { "z_index", reinterpret_cast<getter>(LampArrayCustomEffect_get_ZIndex), reinterpret_cast<setter>(LampArrayCustomEffect_put_ZIndex), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampArrayCustomEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayCustomEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayCustomEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayCustomEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayCustomEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampArrayCustomEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayCustomEffect",
@@ -3092,16 +3077,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "stop", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LampArrayEffectPlaylist, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArrayEffectPlaylist), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampArrayEffectPlaylist[] = {
         { "repetition_mode", reinterpret_cast<getter>(LampArrayEffectPlaylist_get_RepetitionMode), reinterpret_cast<setter>(LampArrayEffectPlaylist_put_RepetitionMode), nullptr, nullptr },
         { "occurrences", reinterpret_cast<getter>(LampArrayEffectPlaylist_get_Occurrences), reinterpret_cast<setter>(LampArrayEffectPlaylist_put_Occurrences), nullptr, nullptr },
         { "effect_start_mode", reinterpret_cast<getter>(LampArrayEffectPlaylist_get_EffectStartMode), reinterpret_cast<setter>(LampArrayEffectPlaylist_put_EffectStartMode), nullptr, nullptr },
         { "size", reinterpret_cast<getter>(LampArrayEffectPlaylist_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampArrayEffectPlaylist[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayEffectPlaylist) },
@@ -3112,8 +3095,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_LampArrayEffectPlaylist) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_LampArrayEffectPlaylist) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_LampArrayEffectPlaylist) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampArrayEffectPlaylist = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayEffectPlaylist",
@@ -3123,15 +3105,13 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         _type_slots_LampArrayEffectPlaylist};
 
     static PyGetSetDef getset_LampArrayEffectPlaylist_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LampArrayEffectPlaylist_Static[] = {
         { "pause_all", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_PauseAll), METH_VARARGS, nullptr },
         { "start_all", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_StartAll), METH_VARARGS, nullptr },
         { "stop_all", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_StopAll), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LampArrayEffectPlaylist_Static[] = 
     {
@@ -3141,14 +3121,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Spec type_spec_LampArrayEffectPlaylist_Static =
-    {
+    static PyType_Spec type_spec_LampArrayEffectPlaylist_Static = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayEffectPlaylist_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LampArrayEffectPlaylist_Static
-    };
+        type_slots_LampArrayEffectPlaylist_Static};
 
     // ----- LampArraySolidEffect class --------------------
 
@@ -3564,8 +3542,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static PyMethodDef _methods_LampArraySolidEffect[] = {
         { "_assign_array_", _assign_array_LampArraySolidEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArraySolidEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampArraySolidEffect[] = {
         { "z_index", reinterpret_cast<getter>(LampArraySolidEffect_get_ZIndex), reinterpret_cast<setter>(LampArraySolidEffect_put_ZIndex), nullptr, nullptr },
@@ -3573,16 +3550,14 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "duration", reinterpret_cast<getter>(LampArraySolidEffect_get_Duration), reinterpret_cast<setter>(LampArraySolidEffect_put_Duration), nullptr, nullptr },
         { "completion_behavior", reinterpret_cast<getter>(LampArraySolidEffect_get_CompletionBehavior), reinterpret_cast<setter>(LampArraySolidEffect_put_CompletionBehavior), nullptr, nullptr },
         { "color", reinterpret_cast<getter>(LampArraySolidEffect_get_Color), reinterpret_cast<setter>(LampArraySolidEffect_put_Color), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampArraySolidEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArraySolidEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArraySolidEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArraySolidEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArraySolidEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampArraySolidEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArraySolidEffect",
@@ -3844,21 +3819,18 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "set_single_color_for_indices", reinterpret_cast<PyCFunction>(LampArrayUpdateRequestedEventArgs_SetSingleColorForIndices), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LampArrayUpdateRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArrayUpdateRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampArrayUpdateRequestedEventArgs[] = {
         { "since_started", reinterpret_cast<getter>(LampArrayUpdateRequestedEventArgs_get_SinceStarted), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampArrayUpdateRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayUpdateRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayUpdateRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayUpdateRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayUpdateRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampArrayUpdateRequestedEventArgs = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayUpdateRequestedEventArgs",
@@ -3980,21 +3952,18 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static PyMethodDef _methods_ILampArrayEffect[] = {
         { "_assign_array_", _assign_array_ILampArrayEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILampArrayEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILampArrayEffect[] = {
         { "z_index", reinterpret_cast<getter>(ILampArrayEffect_get_ZIndex), reinterpret_cast<setter>(ILampArrayEffect_put_ZIndex), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILampArrayEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILampArrayEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILampArrayEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILampArrayEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILampArrayEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILampArrayEffect = {
         "winrt._winrt_windows_devices_lights_effects.ILampArrayEffect",
@@ -4093,13 +4062,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static PyMethodDef methods_ImplementsILampArrayEffect[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILampArrayEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILampArrayEffect), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILampArrayEffect[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILampArrayEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILampArrayEffect = {
         "winrt._winrt_windows_devices_lights_effects.ImplementsILampArrayEffect",

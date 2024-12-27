@@ -461,20 +461,17 @@ namespace py::cpp::Windows::ApplicationModel::Resources
         { "get_string_for_uri", reinterpret_cast<PyCFunction>(ResourceLoader_GetStringForUri), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ResourceLoader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceLoader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ResourceLoader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ResourceLoader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceLoader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceLoader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceLoader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceLoader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ResourceLoader = {
         "winrt._winrt_windows_applicationmodel_resources.ResourceLoader",
@@ -484,8 +481,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
         _type_slots_ResourceLoader};
 
     static PyGetSetDef getset_ResourceLoader_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ResourceLoader_Static[] = {
         { "get_default_pri_path", reinterpret_cast<PyCFunction>(ResourceLoader_GetDefaultPriPath), METH_VARARGS, nullptr },
@@ -495,8 +491,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
         { "get_for_view_independent_use", reinterpret_cast<PyCFunction>(ResourceLoader_GetForViewIndependentUse), METH_VARARGS, nullptr },
         { "get_for_view_independent_use_with_name", reinterpret_cast<PyCFunction>(ResourceLoader_GetForViewIndependentUseWithName), METH_VARARGS, nullptr },
         { "get_string_for_reference", reinterpret_cast<PyCFunction>(ResourceLoader_GetStringForReference), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ResourceLoader_Static[] = 
     {
@@ -506,14 +501,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources
         { }
     };
 
-    static PyType_Spec type_spec_ResourceLoader_Static =
-    {
+    static PyType_Spec type_spec_ResourceLoader_Static = {
         "winrt._winrt_windows_applicationmodel_resources.ResourceLoader_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ResourceLoader_Static
-    };
+        type_slots_ResourceLoader_Static};
 
     // ----- Windows.ApplicationModel.Resources Initialization --------------------
 

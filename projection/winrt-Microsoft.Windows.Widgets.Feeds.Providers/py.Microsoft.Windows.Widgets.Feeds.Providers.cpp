@@ -78,21 +78,18 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_CustomQueryParametersRequestedArgs[] = {
         { "_assign_array_", _assign_array_CustomQueryParametersRequestedArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomQueryParametersRequestedArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CustomQueryParametersRequestedArgs[] = {
         { "feed_provider_definition_id", reinterpret_cast<getter>(CustomQueryParametersRequestedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CustomQueryParametersRequestedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomQueryParametersRequestedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomQueryParametersRequestedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomQueryParametersRequestedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomQueryParametersRequestedArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CustomQueryParametersRequestedArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.CustomQueryParametersRequestedArgs",
@@ -230,22 +227,19 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_CustomQueryParametersUpdateOptions[] = {
         { "_assign_array_", _assign_array_CustomQueryParametersUpdateOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomQueryParametersUpdateOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CustomQueryParametersUpdateOptions[] = {
         { "custom_query_parameters", reinterpret_cast<getter>(CustomQueryParametersUpdateOptions_get_CustomQueryParameters), nullptr, nullptr, nullptr },
         { "feed_provider_definition_id", reinterpret_cast<getter>(CustomQueryParametersUpdateOptions_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CustomQueryParametersUpdateOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomQueryParametersUpdateOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomQueryParametersUpdateOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomQueryParametersUpdateOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomQueryParametersUpdateOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CustomQueryParametersUpdateOptions = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.CustomQueryParametersUpdateOptions",
@@ -388,23 +382,20 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedAnalyticsInfoReportedArgs[] = {
         { "_assign_array_", _assign_array_FeedAnalyticsInfoReportedArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedAnalyticsInfoReportedArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedAnalyticsInfoReportedArgs[] = {
         { "analytics_json", reinterpret_cast<getter>(FeedAnalyticsInfoReportedArgs_get_AnalyticsJson), nullptr, nullptr, nullptr },
         { "feed_definition_id", reinterpret_cast<getter>(FeedAnalyticsInfoReportedArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedAnalyticsInfoReportedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedAnalyticsInfoReportedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedAnalyticsInfoReportedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedAnalyticsInfoReportedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedAnalyticsInfoReportedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedAnalyticsInfoReportedArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedAnalyticsInfoReportedArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedAnalyticsInfoReportedArgs",
@@ -517,22 +508,19 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedDisabledArgs[] = {
         { "_assign_array_", _assign_array_FeedDisabledArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedDisabledArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedDisabledArgs[] = {
         { "feed_definition_id", reinterpret_cast<getter>(FeedDisabledArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedDisabledArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedDisabledArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedDisabledArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedDisabledArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedDisabledArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedDisabledArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedDisabledArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedDisabledArgs",
@@ -645,22 +633,19 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedEnabledArgs[] = {
         { "_assign_array_", _assign_array_FeedEnabledArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedEnabledArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedEnabledArgs[] = {
         { "feed_definition_id", reinterpret_cast<getter>(FeedEnabledArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedEnabledArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedEnabledArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedEnabledArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedEnabledArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedEnabledArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedEnabledArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedEnabledArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedEnabledArgs",
@@ -803,23 +788,20 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedErrorInfoReportedArgs[] = {
         { "_assign_array_", _assign_array_FeedErrorInfoReportedArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedErrorInfoReportedArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedErrorInfoReportedArgs[] = {
         { "error_json", reinterpret_cast<getter>(FeedErrorInfoReportedArgs_get_ErrorJson), nullptr, nullptr, nullptr },
         { "feed_definition_id", reinterpret_cast<getter>(FeedErrorInfoReportedArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedErrorInfoReportedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedErrorInfoReportedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedErrorInfoReportedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedErrorInfoReportedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedErrorInfoReportedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedErrorInfoReportedArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedErrorInfoReportedArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedErrorInfoReportedArgs",
@@ -1089,20 +1071,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "try_show_announcement", reinterpret_cast<PyCFunction>(FeedManager_TryShowAnnouncement), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FeedManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedManager = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedManager",
@@ -1112,13 +1091,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         _type_slots_FeedManager};
 
     static PyGetSetDef getset_FeedManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FeedManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(FeedManager_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FeedManager_Static[] = 
     {
@@ -1128,14 +1105,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Spec type_spec_FeedManager_Static =
-    {
+    static PyType_Spec type_spec_FeedManager_Static = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FeedManager_Static
-    };
+        type_slots_FeedManager_Static};
 
     // ----- FeedMessageReceivedArgs class --------------------
 
@@ -1271,23 +1246,20 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedMessageReceivedArgs[] = {
         { "_assign_array_", _assign_array_FeedMessageReceivedArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedMessageReceivedArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedMessageReceivedArgs[] = {
         { "feed_definition_id", reinterpret_cast<getter>(FeedMessageReceivedArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedMessageReceivedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
         { "message", reinterpret_cast<getter>(FeedMessageReceivedArgs_get_Message), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedMessageReceivedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedMessageReceivedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedMessageReceivedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedMessageReceivedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedMessageReceivedArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedMessageReceivedArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedMessageReceivedArgs",
@@ -1370,21 +1342,18 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedProviderDisabledArgs[] = {
         { "_assign_array_", _assign_array_FeedProviderDisabledArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedProviderDisabledArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedProviderDisabledArgs[] = {
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedProviderDisabledArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedProviderDisabledArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedProviderDisabledArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedProviderDisabledArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedProviderDisabledArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedProviderDisabledArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedProviderDisabledArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedProviderDisabledArgs",
@@ -1467,21 +1436,18 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedProviderEnabledArgs[] = {
         { "_assign_array_", _assign_array_FeedProviderEnabledArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedProviderEnabledArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedProviderEnabledArgs[] = {
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedProviderEnabledArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedProviderEnabledArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedProviderEnabledArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedProviderEnabledArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedProviderEnabledArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedProviderEnabledArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedProviderEnabledArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedProviderEnabledArgs",
@@ -1594,22 +1560,19 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedProviderInfo[] = {
         { "_assign_array_", _assign_array_FeedProviderInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedProviderInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedProviderInfo[] = {
         { "enabled_feed_definition_ids", reinterpret_cast<getter>(FeedProviderInfo_get_EnabledFeedDefinitionIds), nullptr, nullptr, nullptr },
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedProviderInfo_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedProviderInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedProviderInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedProviderInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedProviderInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedProviderInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedProviderInfo = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedProviderInfo",
@@ -1899,24 +1862,21 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedResourceRequest[] = {
         { "_assign_array_", _assign_array_FeedResourceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedResourceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedResourceRequest[] = {
         { "method", reinterpret_cast<getter>(FeedResourceRequest_get_Method), reinterpret_cast<setter>(FeedResourceRequest_put_Method), nullptr, nullptr },
         { "headers", reinterpret_cast<getter>(FeedResourceRequest_get_Headers), reinterpret_cast<setter>(FeedResourceRequest_put_Headers), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(FeedResourceRequest_get_Content), reinterpret_cast<setter>(FeedResourceRequest_put_Content), nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(FeedResourceRequest_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedResourceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedResourceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedResourceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedResourceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedResourceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedResourceRequest = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedResourceRequest",
@@ -2169,24 +2129,21 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "get_deferral", reinterpret_cast<PyCFunction>(FeedResourceRequestedArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FeedResourceRequestedArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedResourceRequestedArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedResourceRequestedArgs[] = {
         { "response", reinterpret_cast<getter>(FeedResourceRequestedArgs_get_Response), reinterpret_cast<setter>(FeedResourceRequestedArgs_put_Response), nullptr, nullptr },
         { "feed_definition_id", reinterpret_cast<getter>(FeedResourceRequestedArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedResourceRequestedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
         { "request", reinterpret_cast<getter>(FeedResourceRequestedArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedResourceRequestedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedResourceRequestedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedResourceRequestedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedResourceRequestedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedResourceRequestedArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedResourceRequestedArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedResourceRequestedArgs",
@@ -2424,24 +2381,21 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef _methods_FeedResourceResponse[] = {
         { "_assign_array_", _assign_array_FeedResourceResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedResourceResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedResourceResponse[] = {
         { "headers", reinterpret_cast<getter>(FeedResourceResponse_get_Headers), reinterpret_cast<setter>(FeedResourceResponse_put_Headers), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(FeedResourceResponse_get_Content), nullptr, nullptr, nullptr },
         { "reason_phrase", reinterpret_cast<getter>(FeedResourceResponse_get_ReasonPhrase), nullptr, nullptr, nullptr },
         { "status_code", reinterpret_cast<getter>(FeedResourceResponse_get_StatusCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedResourceResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedResourceResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedResourceResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedResourceResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedResourceResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedResourceResponse = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedResourceResponse",
@@ -2538,20 +2492,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "on_announcement_invoked", reinterpret_cast<PyCFunction>(IFeedAnnouncementInvokedTarget_OnAnnouncementInvoked), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFeedAnnouncementInvokedTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedAnnouncementInvokedTarget), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFeedAnnouncementInvokedTarget[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFeedAnnouncementInvokedTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedAnnouncementInvokedTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedAnnouncementInvokedTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedAnnouncementInvokedTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedAnnouncementInvokedTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFeedAnnouncementInvokedTarget = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedAnnouncementInvokedTarget",
@@ -2637,13 +2588,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef methods_ImplementsIFeedAnnouncementInvokedTarget[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedAnnouncementInvokedTarget), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedAnnouncementInvokedTarget), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFeedAnnouncementInvokedTarget[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFeedAnnouncementInvokedTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFeedAnnouncementInvokedTarget = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedAnnouncementInvokedTarget",
@@ -2781,20 +2730,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "set_custom_query_parameters", reinterpret_cast<PyCFunction>(IFeedManager_SetCustomQueryParameters), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFeedManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFeedManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFeedManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFeedManager = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedManager",
@@ -2907,13 +2853,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef methods_ImplementsIFeedManager[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedManager), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedManager), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFeedManager[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFeedManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFeedManager = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedManager",
@@ -3058,20 +3002,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "try_show_announcement", reinterpret_cast<PyCFunction>(IFeedManager2_TryShowAnnouncement), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFeedManager2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedManager2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFeedManager2[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFeedManager2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedManager2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedManager2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedManager2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedManager2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFeedManager2 = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedManager2",
@@ -3223,13 +3164,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef methods_ImplementsIFeedManager2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedManager2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedManager2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFeedManager2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFeedManager2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFeedManager2 = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedManager2",
@@ -3502,20 +3441,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "on_feed_provider_enabled", reinterpret_cast<PyCFunction>(IFeedProvider_OnFeedProviderEnabled), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFeedProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFeedProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFeedProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFeedProvider = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProvider",
@@ -3721,13 +3657,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef methods_ImplementsIFeedProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFeedProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFeedProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFeedProvider = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProvider",
@@ -3824,20 +3758,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "on_analytics_info_reported", reinterpret_cast<PyCFunction>(IFeedProviderAnalytics_OnAnalyticsInfoReported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFeedProviderAnalytics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProviderAnalytics), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFeedProviderAnalytics[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFeedProviderAnalytics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProviderAnalytics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProviderAnalytics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProviderAnalytics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProviderAnalytics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFeedProviderAnalytics = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderAnalytics",
@@ -3923,13 +3854,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef methods_ImplementsIFeedProviderAnalytics[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedProviderAnalytics), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedProviderAnalytics), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFeedProviderAnalytics[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFeedProviderAnalytics) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFeedProviderAnalytics = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProviderAnalytics",
@@ -4026,20 +3955,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "on_error_info_reported", reinterpret_cast<PyCFunction>(IFeedProviderErrors_OnErrorInfoReported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFeedProviderErrors, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProviderErrors), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFeedProviderErrors[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFeedProviderErrors[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProviderErrors) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProviderErrors) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProviderErrors) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProviderErrors) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFeedProviderErrors = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderErrors",
@@ -4125,13 +4051,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef methods_ImplementsIFeedProviderErrors[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedProviderErrors), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedProviderErrors), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFeedProviderErrors[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFeedProviderErrors) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFeedProviderErrors = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProviderErrors",
@@ -4228,20 +4152,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "on_message_received", reinterpret_cast<PyCFunction>(IFeedProviderMessage_OnMessageReceived), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFeedProviderMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProviderMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFeedProviderMessage[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFeedProviderMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProviderMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProviderMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProviderMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProviderMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFeedProviderMessage = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderMessage",
@@ -4327,13 +4248,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef methods_ImplementsIFeedProviderMessage[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedProviderMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedProviderMessage), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFeedProviderMessage[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFeedProviderMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFeedProviderMessage = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProviderMessage",
@@ -4430,20 +4349,17 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "on_resource_requested", reinterpret_cast<PyCFunction>(IFeedResourceProvider_OnResourceRequested), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFeedResourceProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedResourceProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IFeedResourceProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IFeedResourceProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedResourceProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedResourceProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedResourceProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedResourceProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IFeedResourceProvider = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedResourceProvider",
@@ -4529,13 +4445,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     static PyMethodDef methods_ImplementsIFeedResourceProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedResourceProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedResourceProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIFeedResourceProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFeedResourceProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIFeedResourceProvider = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedResourceProvider",

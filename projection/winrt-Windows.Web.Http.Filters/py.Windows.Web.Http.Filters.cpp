@@ -1141,8 +1141,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpBaseProtocolFilter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpBaseProtocolFilter), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpBaseProtocolFilter), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpBaseProtocolFilter[] = {
         { "use_proxy", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_UseProxy), reinterpret_cast<setter>(HttpBaseProtocolFilter_put_UseProxy), nullptr, nullptr },
@@ -1159,16 +1158,14 @@ namespace py::cpp::Windows::Web::Http::Filters
         { "max_version", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_MaxVersion), reinterpret_cast<setter>(HttpBaseProtocolFilter_put_MaxVersion), nullptr, nullptr },
         { "cookie_usage_behavior", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_CookieUsageBehavior), reinterpret_cast<setter>(HttpBaseProtocolFilter_put_CookieUsageBehavior), nullptr, nullptr },
         { "user", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpBaseProtocolFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpBaseProtocolFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpBaseProtocolFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpBaseProtocolFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpBaseProtocolFilter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpBaseProtocolFilter = {
         "winrt._winrt_windows_web_http_filters.HttpBaseProtocolFilter",
@@ -1178,13 +1175,11 @@ namespace py::cpp::Windows::Web::Http::Filters
         _type_slots_HttpBaseProtocolFilter};
 
     static PyGetSetDef getset_HttpBaseProtocolFilter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpBaseProtocolFilter_Static[] = {
         { "create_for_user", reinterpret_cast<PyCFunction>(HttpBaseProtocolFilter_CreateForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpBaseProtocolFilter_Static[] = 
     {
@@ -1194,14 +1189,12 @@ namespace py::cpp::Windows::Web::Http::Filters
         { }
     };
 
-    static PyType_Spec type_spec_HttpBaseProtocolFilter_Static =
-    {
+    static PyType_Spec type_spec_HttpBaseProtocolFilter_Static = {
         "winrt._winrt_windows_web_http_filters.HttpBaseProtocolFilter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpBaseProtocolFilter_Static
-    };
+        type_slots_HttpBaseProtocolFilter_Static};
 
     // ----- HttpCacheControl class --------------------
 
@@ -1385,22 +1378,19 @@ namespace py::cpp::Windows::Web::Http::Filters
     static PyMethodDef _methods_HttpCacheControl[] = {
         { "_assign_array_", _assign_array_HttpCacheControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpCacheControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpCacheControl[] = {
         { "write_behavior", reinterpret_cast<getter>(HttpCacheControl_get_WriteBehavior), reinterpret_cast<setter>(HttpCacheControl_put_WriteBehavior), nullptr, nullptr },
         { "read_behavior", reinterpret_cast<getter>(HttpCacheControl_get_ReadBehavior), reinterpret_cast<setter>(HttpCacheControl_put_ReadBehavior), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpCacheControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCacheControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCacheControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCacheControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCacheControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpCacheControl = {
         "winrt._winrt_windows_web_http_filters.HttpCacheControl",
@@ -1686,8 +1676,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         { "reject", reinterpret_cast<PyCFunction>(HttpServerCustomValidationRequestedEventArgs_Reject), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpServerCustomValidationRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpServerCustomValidationRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpServerCustomValidationRequestedEventArgs[] = {
         { "request_message", reinterpret_cast<getter>(HttpServerCustomValidationRequestedEventArgs_get_RequestMessage), nullptr, nullptr, nullptr },
@@ -1695,16 +1684,14 @@ namespace py::cpp::Windows::Web::Http::Filters
         { "server_certificate_error_severity", reinterpret_cast<getter>(HttpServerCustomValidationRequestedEventArgs_get_ServerCertificateErrorSeverity), nullptr, nullptr, nullptr },
         { "server_certificate_errors", reinterpret_cast<getter>(HttpServerCustomValidationRequestedEventArgs_get_ServerCertificateErrors), nullptr, nullptr, nullptr },
         { "server_intermediate_certificates", reinterpret_cast<getter>(HttpServerCustomValidationRequestedEventArgs_get_ServerIntermediateCertificates), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpServerCustomValidationRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpServerCustomValidationRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpServerCustomValidationRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpServerCustomValidationRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpServerCustomValidationRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpServerCustomValidationRequestedEventArgs = {
         "winrt._winrt_windows_web_http_filters.HttpServerCustomValidationRequestedEventArgs",
@@ -1867,20 +1854,17 @@ namespace py::cpp::Windows::Web::Http::Filters
         { "_from", reinterpret_cast<PyCFunction>(_from_IHttpFilter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IHttpFilter), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IHttpFilter), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IHttpFilter[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IHttpFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IHttpFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHttpFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHttpFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHttpFilter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IHttpFilter = {
         "winrt._winrt_windows_web_http_filters.IHttpFilter",
@@ -1992,13 +1976,11 @@ namespace py::cpp::Windows::Web::Http::Filters
     static PyMethodDef methods_ImplementsIHttpFilter[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIHttpFilter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIHttpFilter), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIHttpFilter[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIHttpFilter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIHttpFilter = {
         "winrt._winrt_windows_web_http_filters.ImplementsIHttpFilter",

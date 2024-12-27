@@ -268,22 +268,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
     static PyMethodDef _methods_FrameNavigationOptions[] = {
         { "_assign_array_", _assign_array_FrameNavigationOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameNavigationOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FrameNavigationOptions[] = {
         { "transition_info_override", reinterpret_cast<getter>(FrameNavigationOptions_get_TransitionInfoOverride), reinterpret_cast<setter>(FrameNavigationOptions_put_TransitionInfoOverride), nullptr, nullptr },
         { "is_navigation_stack_enabled", reinterpret_cast<getter>(FrameNavigationOptions_get_IsNavigationStackEnabled), reinterpret_cast<setter>(FrameNavigationOptions_put_IsNavigationStackEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FrameNavigationOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameNavigationOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameNavigationOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameNavigationOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameNavigationOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FrameNavigationOptions = {
         "winrt._winrt_microsoft_ui_xaml_navigation.FrameNavigationOptions",
@@ -293,12 +290,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         _type_slots_FrameNavigationOptions};
 
     static PyGetSetDef getset_FrameNavigationOptions_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FrameNavigationOptions_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FrameNavigationOptions_Static[] = 
     {
@@ -308,14 +303,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         { }
     };
 
-    static PyType_Spec type_spec_FrameNavigationOptions_Static =
-    {
+    static PyType_Spec type_spec_FrameNavigationOptions_Static = {
         "winrt._winrt_microsoft_ui_xaml_navigation.FrameNavigationOptions_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_FrameNavigationOptions_Static
-    };
+        type_slots_FrameNavigationOptions_Static};
 
     // ----- NavigatingCancelEventArgs class --------------------
 
@@ -550,8 +543,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
     static PyMethodDef _methods_NavigatingCancelEventArgs[] = {
         { "_assign_array_", _assign_array_NavigatingCancelEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigatingCancelEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NavigatingCancelEventArgs[] = {
         { "cancel", reinterpret_cast<getter>(NavigatingCancelEventArgs_get_Cancel), reinterpret_cast<setter>(NavigatingCancelEventArgs_put_Cancel), nullptr, nullptr },
@@ -559,16 +551,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         { "navigation_transition_info", reinterpret_cast<getter>(NavigatingCancelEventArgs_get_NavigationTransitionInfo), nullptr, nullptr, nullptr },
         { "parameter", reinterpret_cast<getter>(NavigatingCancelEventArgs_get_Parameter), nullptr, nullptr, nullptr },
         { "source_page_type", reinterpret_cast<getter>(NavigatingCancelEventArgs_get_SourcePageType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NavigatingCancelEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigatingCancelEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigatingCancelEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigatingCancelEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigatingCancelEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NavigatingCancelEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_navigation.NavigatingCancelEventArgs",
@@ -840,8 +830,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
     static PyMethodDef _methods_NavigationEventArgs[] = {
         { "_assign_array_", _assign_array_NavigationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NavigationEventArgs[] = {
         { "uri", reinterpret_cast<getter>(NavigationEventArgs_get_Uri), reinterpret_cast<setter>(NavigationEventArgs_put_Uri), nullptr, nullptr },
@@ -850,16 +839,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         { "navigation_transition_info", reinterpret_cast<getter>(NavigationEventArgs_get_NavigationTransitionInfo), nullptr, nullptr, nullptr },
         { "parameter", reinterpret_cast<getter>(NavigationEventArgs_get_Parameter), nullptr, nullptr, nullptr },
         { "source_page_type", reinterpret_cast<getter>(NavigationEventArgs_get_SourcePageType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NavigationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NavigationEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_navigation.NavigationEventArgs",
@@ -1041,23 +1028,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
     static PyMethodDef _methods_NavigationFailedEventArgs[] = {
         { "_assign_array_", _assign_array_NavigationFailedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigationFailedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NavigationFailedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(NavigationFailedEventArgs_get_Handled), reinterpret_cast<setter>(NavigationFailedEventArgs_put_Handled), nullptr, nullptr },
         { "exception", reinterpret_cast<getter>(NavigationFailedEventArgs_get_Exception), nullptr, nullptr, nullptr },
         { "source_page_type", reinterpret_cast<getter>(NavigationFailedEventArgs_get_SourcePageType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NavigationFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationFailedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NavigationFailedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_navigation.NavigationFailedEventArgs",
@@ -1256,23 +1240,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
     static PyMethodDef _methods_PageStackEntry[] = {
         { "_assign_array_", _assign_array_PageStackEntry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PageStackEntry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PageStackEntry[] = {
         { "navigation_transition_info", reinterpret_cast<getter>(PageStackEntry_get_NavigationTransitionInfo), nullptr, nullptr, nullptr },
         { "parameter", reinterpret_cast<getter>(PageStackEntry_get_Parameter), nullptr, nullptr, nullptr },
         { "source_page_type", reinterpret_cast<getter>(PageStackEntry_get_SourcePageType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PageStackEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PageStackEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PageStackEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PageStackEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PageStackEntry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PageStackEntry = {
         "winrt._winrt_microsoft_ui_xaml_navigation.PageStackEntry",
@@ -1283,12 +1264,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
 
     static PyGetSetDef getset_PageStackEntry_Static[] = {
         { "source_page_type_property", reinterpret_cast<getter>(PageStackEntry_get_SourcePageTypeProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PageStackEntry_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PageStackEntry_Static[] = 
     {
@@ -1298,14 +1277,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         { }
     };
 
-    static PyType_Spec type_spec_PageStackEntry_Static =
-    {
+    static PyType_Spec type_spec_PageStackEntry_Static = {
         "winrt._winrt_microsoft_ui_xaml_navigation.PageStackEntry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PageStackEntry_Static
-    };
+        type_slots_PageStackEntry_Static};
 
     // ----- Microsoft.UI.Xaml.Navigation Initialization --------------------
 

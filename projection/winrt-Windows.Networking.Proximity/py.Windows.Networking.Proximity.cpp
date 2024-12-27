@@ -78,21 +78,18 @@ namespace py::cpp::Windows::Networking::Proximity
     static PyMethodDef _methods_ConnectionRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_ConnectionRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectionRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectionRequestedEventArgs[] = {
         { "peer_information", reinterpret_cast<getter>(ConnectionRequestedEventArgs_get_PeerInformation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectionRequestedEventArgs = {
         "winrt._winrt_windows_networking_proximity.ConnectionRequestedEventArgs",
@@ -962,19 +959,16 @@ namespace py::cpp::Windows::Networking::Proximity
     }
 
     static PyMethodDef _methods_PeerFinder[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PeerFinder[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PeerFinder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PeerFinder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PeerFinder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PeerFinder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PeerFinder = {
         "winrt._winrt_windows_networking_proximity.PeerFinder",
@@ -992,8 +986,7 @@ namespace py::cpp::Windows::Networking::Proximity
         { "supported_discovery_types", reinterpret_cast<getter>(PeerFinder_get_SupportedDiscoveryTypes), nullptr, nullptr, nullptr },
         { "role", reinterpret_cast<getter>(PeerFinder_get_Role), reinterpret_cast<setter>(PeerFinder_put_Role), nullptr, nullptr },
         { "discovery_data", reinterpret_cast<getter>(PeerFinder_get_DiscoveryData), reinterpret_cast<setter>(PeerFinder_put_DiscoveryData), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PeerFinder_Static[] = {
         { "connect_async", reinterpret_cast<PyCFunction>(PeerFinder_ConnectAsync), METH_VARARGS, nullptr },
@@ -1006,8 +999,7 @@ namespace py::cpp::Windows::Networking::Proximity
         { "remove_connection_requested", reinterpret_cast<PyCFunction>(PeerFinder_remove_ConnectionRequested), METH_O, nullptr },
         { "add_triggered_connection_state_changed", reinterpret_cast<PyCFunction>(PeerFinder_add_TriggeredConnectionStateChanged), METH_O, nullptr },
         { "remove_triggered_connection_state_changed", reinterpret_cast<PyCFunction>(PeerFinder_remove_TriggeredConnectionStateChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PeerFinder_Static[] = 
     {
@@ -1017,14 +1009,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Spec type_spec_PeerFinder_Static =
-    {
+    static PyType_Spec type_spec_PeerFinder_Static = {
         "winrt._winrt_windows_networking_proximity.PeerFinder_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PeerFinder_Static
-    };
+        type_slots_PeerFinder_Static};
 
     // ----- PeerInformation class --------------------
 
@@ -1220,8 +1210,7 @@ namespace py::cpp::Windows::Networking::Proximity
     static PyMethodDef _methods_PeerInformation[] = {
         { "_assign_array_", _assign_array_PeerInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PeerInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PeerInformation[] = {
         { "display_name", reinterpret_cast<getter>(PeerInformation_get_DisplayName), nullptr, nullptr, nullptr },
@@ -1229,16 +1218,14 @@ namespace py::cpp::Windows::Networking::Proximity
         { "id", reinterpret_cast<getter>(PeerInformation_get_Id), nullptr, nullptr, nullptr },
         { "host_name", reinterpret_cast<getter>(PeerInformation_get_HostName), nullptr, nullptr, nullptr },
         { "service_name", reinterpret_cast<getter>(PeerInformation_get_ServiceName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PeerInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PeerInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PeerInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PeerInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PeerInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PeerInformation = {
         "winrt._winrt_windows_networking_proximity.PeerInformation",
@@ -1740,21 +1727,18 @@ namespace py::cpp::Windows::Networking::Proximity
         { "remove_updated", reinterpret_cast<PyCFunction>(PeerWatcher_remove_Updated), METH_O, nullptr },
         { "_assign_array_", _assign_array_PeerWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PeerWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PeerWatcher[] = {
         { "status", reinterpret_cast<getter>(PeerWatcher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PeerWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PeerWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PeerWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PeerWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PeerWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PeerWatcher = {
         "winrt._winrt_windows_networking_proximity.PeerWatcher",
@@ -2550,23 +2534,20 @@ namespace py::cpp::Windows::Networking::Proximity
         { "remove_device_departed", reinterpret_cast<PyCFunction>(ProximityDevice_remove_DeviceDeparted), METH_O, nullptr },
         { "_assign_array_", _assign_array_ProximityDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProximityDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProximityDevice[] = {
         { "bits_per_second", reinterpret_cast<getter>(ProximityDevice_get_BitsPerSecond), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(ProximityDevice_get_DeviceId), nullptr, nullptr, nullptr },
         { "max_message_bytes", reinterpret_cast<getter>(ProximityDevice_get_MaxMessageBytes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProximityDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximityDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximityDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximityDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximityDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProximityDevice = {
         "winrt._winrt_windows_networking_proximity.ProximityDevice",
@@ -2576,15 +2557,13 @@ namespace py::cpp::Windows::Networking::Proximity
         _type_slots_ProximityDevice};
 
     static PyGetSetDef getset_ProximityDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ProximityDevice_Static[] = {
         { "from_id", reinterpret_cast<PyCFunction>(ProximityDevice_FromId), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(ProximityDevice_GetDefault), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(ProximityDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ProximityDevice_Static[] = 
     {
@@ -2594,14 +2573,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Spec type_spec_ProximityDevice_Static =
-    {
+    static PyType_Spec type_spec_ProximityDevice_Static = {
         "winrt._winrt_windows_networking_proximity.ProximityDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ProximityDevice_Static
-    };
+        type_slots_ProximityDevice_Static};
 
     // ----- ProximityMessage class --------------------
 
@@ -2767,24 +2744,21 @@ namespace py::cpp::Windows::Networking::Proximity
     static PyMethodDef _methods_ProximityMessage[] = {
         { "_assign_array_", _assign_array_ProximityMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProximityMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProximityMessage[] = {
         { "data", reinterpret_cast<getter>(ProximityMessage_get_Data), nullptr, nullptr, nullptr },
         { "data_as_string", reinterpret_cast<getter>(ProximityMessage_get_DataAsString), nullptr, nullptr, nullptr },
         { "message_type", reinterpret_cast<getter>(ProximityMessage_get_MessageType), nullptr, nullptr, nullptr },
         { "subscription_id", reinterpret_cast<getter>(ProximityMessage_get_SubscriptionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProximityMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximityMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximityMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximityMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximityMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProximityMessage = {
         "winrt._winrt_windows_networking_proximity.ProximityMessage",
@@ -2927,23 +2901,20 @@ namespace py::cpp::Windows::Networking::Proximity
     static PyMethodDef _methods_TriggeredConnectionStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_TriggeredConnectionStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TriggeredConnectionStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TriggeredConnectionStateChangedEventArgs[] = {
         { "id", reinterpret_cast<getter>(TriggeredConnectionStateChangedEventArgs_get_Id), nullptr, nullptr, nullptr },
         { "socket", reinterpret_cast<getter>(TriggeredConnectionStateChangedEventArgs_get_Socket), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(TriggeredConnectionStateChangedEventArgs_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TriggeredConnectionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TriggeredConnectionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TriggeredConnectionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TriggeredConnectionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TriggeredConnectionStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TriggeredConnectionStateChangedEventArgs = {
         "winrt._winrt_windows_networking_proximity.TriggeredConnectionStateChangedEventArgs",

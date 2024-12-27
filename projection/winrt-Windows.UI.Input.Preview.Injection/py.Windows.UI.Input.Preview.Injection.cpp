@@ -568,8 +568,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static PyMethodDef _methods_InjectedInputGamepadInfo[] = {
         { "_assign_array_", _assign_array_InjectedInputGamepadInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InjectedInputGamepadInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InjectedInputGamepadInfo[] = {
         { "right_trigger", reinterpret_cast<getter>(InjectedInputGamepadInfo_get_RightTrigger), reinterpret_cast<setter>(InjectedInputGamepadInfo_put_RightTrigger), nullptr, nullptr },
@@ -579,16 +578,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { "left_thumbstick_y", reinterpret_cast<getter>(InjectedInputGamepadInfo_get_LeftThumbstickY), reinterpret_cast<setter>(InjectedInputGamepadInfo_put_LeftThumbstickY), nullptr, nullptr },
         { "left_thumbstick_x", reinterpret_cast<getter>(InjectedInputGamepadInfo_get_LeftThumbstickX), reinterpret_cast<setter>(InjectedInputGamepadInfo_put_LeftThumbstickX), nullptr, nullptr },
         { "buttons", reinterpret_cast<getter>(InjectedInputGamepadInfo_get_Buttons), reinterpret_cast<setter>(InjectedInputGamepadInfo_put_Buttons), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InjectedInputGamepadInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputGamepadInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputGamepadInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputGamepadInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputGamepadInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InjectedInputGamepadInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputGamepadInfo",
@@ -870,23 +867,20 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static PyMethodDef _methods_InjectedInputKeyboardInfo[] = {
         { "_assign_array_", _assign_array_InjectedInputKeyboardInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InjectedInputKeyboardInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InjectedInputKeyboardInfo[] = {
         { "virtual_key", reinterpret_cast<getter>(InjectedInputKeyboardInfo_get_VirtualKey), reinterpret_cast<setter>(InjectedInputKeyboardInfo_put_VirtualKey), nullptr, nullptr },
         { "scan_code", reinterpret_cast<getter>(InjectedInputKeyboardInfo_get_ScanCode), reinterpret_cast<setter>(InjectedInputKeyboardInfo_put_ScanCode), nullptr, nullptr },
         { "key_options", reinterpret_cast<getter>(InjectedInputKeyboardInfo_get_KeyOptions), reinterpret_cast<setter>(InjectedInputKeyboardInfo_put_KeyOptions), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InjectedInputKeyboardInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputKeyboardInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputKeyboardInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputKeyboardInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputKeyboardInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InjectedInputKeyboardInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputKeyboardInfo",
@@ -1306,8 +1300,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static PyMethodDef _methods_InjectedInputMouseInfo[] = {
         { "_assign_array_", _assign_array_InjectedInputMouseInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InjectedInputMouseInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InjectedInputMouseInfo[] = {
         { "time_offset_in_milliseconds", reinterpret_cast<getter>(InjectedInputMouseInfo_get_TimeOffsetInMilliseconds), reinterpret_cast<setter>(InjectedInputMouseInfo_put_TimeOffsetInMilliseconds), nullptr, nullptr },
@@ -1315,16 +1308,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { "mouse_data", reinterpret_cast<getter>(InjectedInputMouseInfo_get_MouseData), reinterpret_cast<setter>(InjectedInputMouseInfo_put_MouseData), nullptr, nullptr },
         { "delta_y", reinterpret_cast<getter>(InjectedInputMouseInfo_get_DeltaY), reinterpret_cast<setter>(InjectedInputMouseInfo_put_DeltaY), nullptr, nullptr },
         { "delta_x", reinterpret_cast<getter>(InjectedInputMouseInfo_get_DeltaX), reinterpret_cast<setter>(InjectedInputMouseInfo_put_DeltaX), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InjectedInputMouseInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputMouseInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputMouseInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputMouseInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputMouseInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InjectedInputMouseInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputMouseInfo",
@@ -1882,8 +1873,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static PyMethodDef _methods_InjectedInputPenInfo[] = {
         { "_assign_array_", _assign_array_InjectedInputPenInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InjectedInputPenInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InjectedInputPenInfo[] = {
         { "tilt_y", reinterpret_cast<getter>(InjectedInputPenInfo_get_TiltY), reinterpret_cast<setter>(InjectedInputPenInfo_put_TiltY), nullptr, nullptr },
@@ -1893,16 +1883,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { "pointer_info", reinterpret_cast<getter>(InjectedInputPenInfo_get_PointerInfo), reinterpret_cast<setter>(InjectedInputPenInfo_put_PointerInfo), nullptr, nullptr },
         { "pen_parameters", reinterpret_cast<getter>(InjectedInputPenInfo_get_PenParameters), reinterpret_cast<setter>(InjectedInputPenInfo_put_PenParameters), nullptr, nullptr },
         { "pen_buttons", reinterpret_cast<getter>(InjectedInputPenInfo_get_PenButtons), reinterpret_cast<setter>(InjectedInputPenInfo_put_PenButtons), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InjectedInputPenInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPenInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPenInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPenInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPenInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InjectedInputPenInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputPenInfo",
@@ -2322,8 +2310,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static PyMethodDef _methods_InjectedInputTouchInfo[] = {
         { "_assign_array_", _assign_array_InjectedInputTouchInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InjectedInputTouchInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InjectedInputTouchInfo[] = {
         { "touch_parameters", reinterpret_cast<getter>(InjectedInputTouchInfo_get_TouchParameters), reinterpret_cast<setter>(InjectedInputTouchInfo_put_TouchParameters), nullptr, nullptr },
@@ -2331,16 +2318,14 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { "pointer_info", reinterpret_cast<getter>(InjectedInputTouchInfo_get_PointerInfo), reinterpret_cast<setter>(InjectedInputTouchInfo_put_PointerInfo), nullptr, nullptr },
         { "orientation", reinterpret_cast<getter>(InjectedInputTouchInfo_get_Orientation), reinterpret_cast<setter>(InjectedInputTouchInfo_put_Orientation), nullptr, nullptr },
         { "contact", reinterpret_cast<getter>(InjectedInputTouchInfo_get_Contact), reinterpret_cast<setter>(InjectedInputTouchInfo_put_Contact), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InjectedInputTouchInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputTouchInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputTouchInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputTouchInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputTouchInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InjectedInputTouchInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputTouchInfo",
@@ -2993,20 +2978,17 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { "uninitialize_touch_injection", reinterpret_cast<PyCFunction>(InputInjector_UninitializeTouchInjection), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InputInjector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputInjector), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InputInjector[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InputInjector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputInjector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputInjector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputInjector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputInjector) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InputInjector = {
         "winrt._winrt_windows_ui_input_preview_injection.InputInjector",
@@ -3016,14 +2998,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         _type_slots_InputInjector};
 
     static PyGetSetDef getset_InputInjector_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_InputInjector_Static[] = {
         { "try_create", reinterpret_cast<PyCFunction>(InputInjector_TryCreate), METH_VARARGS, nullptr },
         { "try_create_for_app_broadcast_only", reinterpret_cast<PyCFunction>(InputInjector_TryCreateForAppBroadcastOnly), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_InputInjector_Static[] = 
     {
@@ -3033,14 +3013,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Spec type_spec_InputInjector_Static =
-    {
+    static PyType_Spec type_spec_InputInjector_Static = {
         "winrt._winrt_windows_ui_input_preview_injection.InputInjector_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_InputInjector_Static
-    };
+        type_slots_InputInjector_Static};
 
     // ----- InjectedInputPoint struct --------------------
 
@@ -3111,8 +3089,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyMethodDef _methods_InjectedInputPoint[] = {
         { "_assign_array_", _assign_array_InjectedInputPoint, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* InjectedInputPoint_get_PositionX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, void* /*unused*/) noexcept
     {
@@ -3183,8 +3160,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static PyGetSetDef _getset_InjectedInputPoint[] = {
         { "position_x", reinterpret_cast<getter>(InjectedInputPoint_get_PositionX), reinterpret_cast<setter>(InjectedInputPoint_set_PositionX), nullptr, nullptr },
         { "position_y", reinterpret_cast<getter>(InjectedInputPoint_get_PositionY), reinterpret_cast<setter>(InjectedInputPoint_set_PositionY), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_InjectedInputPoint(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, PyObject* other, int op) noexcept
     {
@@ -3246,8 +3222,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPoint) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InjectedInputPoint) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_InjectedInputPoint) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InjectedInputPoint = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputPoint",
@@ -3331,8 +3306,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyMethodDef _methods_InjectedInputPointerInfo[] = {
         { "_assign_array_", _assign_array_InjectedInputPointerInfo, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* InjectedInputPointerInfo_get_PointerId(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, void* /*unused*/) noexcept
     {
@@ -3505,8 +3479,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { "pixel_location", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PixelLocation), reinterpret_cast<setter>(InjectedInputPointerInfo_set_PixelLocation), nullptr, nullptr },
         { "time_offset_in_milliseconds", reinterpret_cast<getter>(InjectedInputPointerInfo_get_TimeOffsetInMilliseconds), reinterpret_cast<setter>(InjectedInputPointerInfo_set_TimeOffsetInMilliseconds), nullptr, nullptr },
         { "performance_count", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PerformanceCount), reinterpret_cast<setter>(InjectedInputPointerInfo_set_PerformanceCount), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_InjectedInputPointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* other, int op) noexcept
     {
@@ -3586,8 +3559,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPointerInfo) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InjectedInputPointerInfo) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_InjectedInputPointerInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InjectedInputPointerInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputPointerInfo",
@@ -3669,8 +3641,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyMethodDef _methods_InjectedInputRectangle[] = {
         { "_assign_array_", _assign_array_InjectedInputRectangle, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* InjectedInputRectangle_get_Left(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, void* /*unused*/) noexcept
     {
@@ -3809,8 +3780,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { "top", reinterpret_cast<getter>(InjectedInputRectangle_get_Top), reinterpret_cast<setter>(InjectedInputRectangle_set_Top), nullptr, nullptr },
         { "bottom", reinterpret_cast<getter>(InjectedInputRectangle_get_Bottom), reinterpret_cast<setter>(InjectedInputRectangle_set_Bottom), nullptr, nullptr },
         { "right", reinterpret_cast<getter>(InjectedInputRectangle_get_Right), reinterpret_cast<setter>(InjectedInputRectangle_set_Right), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_InjectedInputRectangle(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* other, int op) noexcept
     {
@@ -3884,8 +3854,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputRectangle) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InjectedInputRectangle) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_InjectedInputRectangle) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InjectedInputRectangle = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputRectangle",

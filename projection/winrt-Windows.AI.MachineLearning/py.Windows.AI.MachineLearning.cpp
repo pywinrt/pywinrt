@@ -318,8 +318,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_ImageFeatureDescriptor[] = {
         { "_assign_array_", _assign_array_ImageFeatureDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageFeatureDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageFeatureDescriptor[] = {
         { "bitmap_alpha_mode", reinterpret_cast<getter>(ImageFeatureDescriptor_get_BitmapAlphaMode), nullptr, nullptr, nullptr },
@@ -331,16 +330,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "is_required", reinterpret_cast<getter>(ImageFeatureDescriptor_get_IsRequired), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ImageFeatureDescriptor_get_Kind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ImageFeatureDescriptor_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageFeatureDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageFeatureDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageFeatureDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageFeatureDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageFeatureDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageFeatureDescriptor = {
         "winrt._winrt_windows_ai_machinelearning.ImageFeatureDescriptor",
@@ -495,22 +492,19 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_ImageFeatureValue[] = {
         { "_assign_array_", _assign_array_ImageFeatureValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageFeatureValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageFeatureValue[] = {
         { "video_frame", reinterpret_cast<getter>(ImageFeatureValue_get_VideoFrame), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ImageFeatureValue_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageFeatureValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageFeatureValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageFeatureValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageFeatureValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageFeatureValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageFeatureValue = {
         "winrt._winrt_windows_ai_machinelearning.ImageFeatureValue",
@@ -520,13 +514,11 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_ImageFeatureValue};
 
     static PyGetSetDef getset_ImageFeatureValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ImageFeatureValue_Static[] = {
         { "create_from_video_frame", reinterpret_cast<PyCFunction>(ImageFeatureValue_CreateFromVideoFrame), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImageFeatureValue_Static[] = 
     {
@@ -536,14 +528,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_ImageFeatureValue_Static =
-    {
+    static PyType_Spec type_spec_ImageFeatureValue_Static = {
         "winrt._winrt_windows_ai_machinelearning.ImageFeatureValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ImageFeatureValue_Static
-    };
+        type_slots_ImageFeatureValue_Static};
 
     // ----- LearningModel class --------------------
 
@@ -1236,8 +1226,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModel), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LearningModel), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_LearningModel), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModel[] = {
         { "author", reinterpret_cast<getter>(LearningModel_get_Author), nullptr, nullptr, nullptr },
@@ -1248,16 +1237,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "name", reinterpret_cast<getter>(LearningModel_get_Name), nullptr, nullptr, nullptr },
         { "output_features", reinterpret_cast<getter>(LearningModel_get_OutputFeatures), nullptr, nullptr, nullptr },
         { "version", reinterpret_cast<getter>(LearningModel_get_Version), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LearningModel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LearningModel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LearningModel) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModel = {
         "winrt._winrt_windows_ai_machinelearning.LearningModel",
@@ -1267,8 +1254,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_LearningModel};
 
     static PyGetSetDef getset_LearningModel_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LearningModel_Static[] = {
         { "load_from_file_path", reinterpret_cast<PyCFunction>(LearningModel_LoadFromFilePath), METH_VARARGS, nullptr },
@@ -1279,8 +1265,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "load_from_stream_async", reinterpret_cast<PyCFunction>(LearningModel_LoadFromStreamAsync), METH_VARARGS, nullptr },
         { "load_from_stream_with_operator_provider", reinterpret_cast<PyCFunction>(LearningModel_LoadFromStreamWithOperatorProvider), METH_VARARGS, nullptr },
         { "load_from_stream_with_operator_provider_async", reinterpret_cast<PyCFunction>(LearningModel_LoadFromStreamWithOperatorProviderAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LearningModel_Static[] = 
     {
@@ -1290,14 +1275,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_LearningModel_Static =
-    {
+    static PyType_Spec type_spec_LearningModel_Static = {
         "winrt._winrt_windows_ai_machinelearning.LearningModel_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LearningModel_Static
-    };
+        type_slots_LearningModel_Static};
 
     // ----- LearningModelBinding class --------------------
 
@@ -1808,13 +1791,11 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "split", reinterpret_cast<PyCFunction>(LearningModelBinding_Split), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LearningModelBinding, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelBinding), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelBinding[] = {
         { "size", reinterpret_cast<getter>(LearningModelBinding_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelBinding[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelBinding) },
@@ -1825,8 +1806,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_LearningModelBinding) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_LearningModelBinding) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_LearningModelBinding) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelBinding = {
         "winrt._winrt_windows_ai_machinelearning.LearningModelBinding",
@@ -2005,22 +1985,19 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_LearningModelDevice[] = {
         { "_assign_array_", _assign_array_LearningModelDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelDevice), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelDevice[] = {
         { "adapter_id", reinterpret_cast<getter>(LearningModelDevice_get_AdapterId), nullptr, nullptr, nullptr },
         { "direct3d11_device", reinterpret_cast<getter>(LearningModelDevice_get_Direct3D11Device), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LearningModelDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LearningModelDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LearningModelDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelDevice = {
         "winrt._winrt_windows_ai_machinelearning.LearningModelDevice",
@@ -2030,13 +2007,11 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_LearningModelDevice};
 
     static PyGetSetDef getset_LearningModelDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LearningModelDevice_Static[] = {
         { "create_from_direct3d11_device", reinterpret_cast<PyCFunction>(LearningModelDevice_CreateFromDirect3D11Device), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LearningModelDevice_Static[] = 
     {
@@ -2046,14 +2021,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_LearningModelDevice_Static =
-    {
+    static PyType_Spec type_spec_LearningModelDevice_Static = {
         "winrt._winrt_windows_ai_machinelearning.LearningModelDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LearningModelDevice_Static
-    };
+        type_slots_LearningModelDevice_Static};
 
     // ----- LearningModelEvaluationResult class --------------------
 
@@ -2219,24 +2192,21 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_LearningModelEvaluationResult[] = {
         { "_assign_array_", _assign_array_LearningModelEvaluationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelEvaluationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelEvaluationResult[] = {
         { "correlation_id", reinterpret_cast<getter>(LearningModelEvaluationResult_get_CorrelationId), nullptr, nullptr, nullptr },
         { "error_status", reinterpret_cast<getter>(LearningModelEvaluationResult_get_ErrorStatus), nullptr, nullptr, nullptr },
         { "outputs", reinterpret_cast<getter>(LearningModelEvaluationResult_get_Outputs), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(LearningModelEvaluationResult_get_Succeeded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelEvaluationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelEvaluationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LearningModelEvaluationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LearningModelEvaluationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LearningModelEvaluationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelEvaluationResult = {
         "winrt._winrt_windows_ai_machinelearning.LearningModelEvaluationResult",
@@ -2679,23 +2649,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LearningModelSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_LearningModelSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelSession[] = {
         { "device", reinterpret_cast<getter>(LearningModelSession_get_Device), nullptr, nullptr, nullptr },
         { "evaluation_properties", reinterpret_cast<getter>(LearningModelSession_get_EvaluationProperties), nullptr, nullptr, nullptr },
         { "model", reinterpret_cast<getter>(LearningModelSession_get_Model), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LearningModelSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LearningModelSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LearningModelSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelSession = {
         "winrt._winrt_windows_ai_machinelearning.LearningModelSession",
@@ -2953,22 +2920,19 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "override_named_dimension", reinterpret_cast<PyCFunction>(LearningModelSessionOptions_OverrideNamedDimension), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LearningModelSessionOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelSessionOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LearningModelSessionOptions[] = {
         { "batch_size_override", reinterpret_cast<getter>(LearningModelSessionOptions_get_BatchSizeOverride), reinterpret_cast<setter>(LearningModelSessionOptions_put_BatchSizeOverride), nullptr, nullptr },
         { "close_model_on_session_creation", reinterpret_cast<getter>(LearningModelSessionOptions_get_CloseModelOnSessionCreation), reinterpret_cast<setter>(LearningModelSessionOptions_put_CloseModelOnSessionCreation), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LearningModelSessionOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LearningModelSessionOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LearningModelSessionOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LearningModelSessionOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LearningModelSessionOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LearningModelSessionOptions = {
         "winrt._winrt_windows_ai_machinelearning.LearningModelSessionOptions",
@@ -3201,8 +3165,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_MapFeatureDescriptor[] = {
         { "_assign_array_", _assign_array_MapFeatureDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapFeatureDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapFeatureDescriptor[] = {
         { "description", reinterpret_cast<getter>(MapFeatureDescriptor_get_Description), nullptr, nullptr, nullptr },
@@ -3211,16 +3174,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "name", reinterpret_cast<getter>(MapFeatureDescriptor_get_Name), nullptr, nullptr, nullptr },
         { "key_kind", reinterpret_cast<getter>(MapFeatureDescriptor_get_KeyKind), nullptr, nullptr, nullptr },
         { "value_descriptor", reinterpret_cast<getter>(MapFeatureDescriptor_get_ValueDescriptor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapFeatureDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapFeatureDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapFeatureDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapFeatureDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapFeatureDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapFeatureDescriptor = {
         "winrt._winrt_windows_ai_machinelearning.MapFeatureDescriptor",
@@ -3423,8 +3384,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_SequenceFeatureDescriptor[] = {
         { "_assign_array_", _assign_array_SequenceFeatureDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SequenceFeatureDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SequenceFeatureDescriptor[] = {
         { "description", reinterpret_cast<getter>(SequenceFeatureDescriptor_get_Description), nullptr, nullptr, nullptr },
@@ -3432,16 +3392,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "kind", reinterpret_cast<getter>(SequenceFeatureDescriptor_get_Kind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(SequenceFeatureDescriptor_get_Name), nullptr, nullptr, nullptr },
         { "element_descriptor", reinterpret_cast<getter>(SequenceFeatureDescriptor_get_ElementDescriptor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SequenceFeatureDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SequenceFeatureDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SequenceFeatureDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SequenceFeatureDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SequenceFeatureDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SequenceFeatureDescriptor = {
         "winrt._winrt_windows_ai_machinelearning.SequenceFeatureDescriptor",
@@ -3987,23 +3945,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorBoolean), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorBoolean), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorBoolean), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorBoolean[] = {
         { "kind", reinterpret_cast<getter>(TensorBoolean_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorBoolean_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorBoolean_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorBoolean[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorBoolean) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorBoolean) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorBoolean) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorBoolean) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorBoolean = {
         "winrt._winrt_windows_ai_machinelearning.TensorBoolean",
@@ -4013,8 +3968,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorBoolean};
 
     static PyGetSetDef getset_TensorBoolean_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorBoolean_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorBoolean_Create), METH_VARARGS, nullptr },
@@ -4023,8 +3977,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorBoolean_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorBoolean_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorBoolean_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorBoolean_Static[] = 
     {
@@ -4034,14 +3987,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorBoolean_Static =
-    {
+    static PyType_Spec type_spec_TensorBoolean_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorBoolean_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorBoolean_Static
-    };
+        type_slots_TensorBoolean_Static};
 
     // ----- TensorDouble class --------------------
 
@@ -4580,23 +4531,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorDouble), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorDouble), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorDouble), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorDouble[] = {
         { "kind", reinterpret_cast<getter>(TensorDouble_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorDouble_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorDouble_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorDouble[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorDouble) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorDouble) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorDouble) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorDouble) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorDouble = {
         "winrt._winrt_windows_ai_machinelearning.TensorDouble",
@@ -4606,8 +4554,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorDouble};
 
     static PyGetSetDef getset_TensorDouble_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorDouble_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorDouble_Create), METH_VARARGS, nullptr },
@@ -4616,8 +4563,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorDouble_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorDouble_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorDouble_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorDouble_Static[] = 
     {
@@ -4627,14 +4573,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorDouble_Static =
-    {
+    static PyType_Spec type_spec_TensorDouble_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorDouble_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorDouble_Static
-    };
+        type_slots_TensorDouble_Static};
 
     // ----- TensorFeatureDescriptor class --------------------
 
@@ -4860,8 +4804,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_TensorFeatureDescriptor[] = {
         { "_assign_array_", _assign_array_TensorFeatureDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorFeatureDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorFeatureDescriptor[] = {
         { "description", reinterpret_cast<getter>(TensorFeatureDescriptor_get_Description), nullptr, nullptr, nullptr },
@@ -4870,16 +4813,14 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "name", reinterpret_cast<getter>(TensorFeatureDescriptor_get_Name), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorFeatureDescriptor_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorFeatureDescriptor_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorFeatureDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorFeatureDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorFeatureDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorFeatureDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorFeatureDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorFeatureDescriptor = {
         "winrt._winrt_windows_ai_machinelearning.TensorFeatureDescriptor",
@@ -5425,23 +5366,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorFloat), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorFloat), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorFloat), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorFloat[] = {
         { "kind", reinterpret_cast<getter>(TensorFloat_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorFloat_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorFloat_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorFloat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorFloat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorFloat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorFloat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorFloat) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorFloat = {
         "winrt._winrt_windows_ai_machinelearning.TensorFloat",
@@ -5451,8 +5389,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorFloat};
 
     static PyGetSetDef getset_TensorFloat_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorFloat_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorFloat_Create), METH_VARARGS, nullptr },
@@ -5461,8 +5398,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorFloat_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorFloat_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorFloat_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorFloat_Static[] = 
     {
@@ -5472,14 +5408,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorFloat_Static =
-    {
+    static PyType_Spec type_spec_TensorFloat_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorFloat_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorFloat_Static
-    };
+        type_slots_TensorFloat_Static};
 
     // ----- TensorFloat16Bit class --------------------
 
@@ -6018,23 +5952,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorFloat16Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorFloat16Bit), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorFloat16Bit), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorFloat16Bit[] = {
         { "kind", reinterpret_cast<getter>(TensorFloat16Bit_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorFloat16Bit_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorFloat16Bit_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorFloat16Bit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorFloat16Bit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorFloat16Bit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorFloat16Bit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorFloat16Bit) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorFloat16Bit = {
         "winrt._winrt_windows_ai_machinelearning.TensorFloat16Bit",
@@ -6044,8 +5975,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorFloat16Bit};
 
     static PyGetSetDef getset_TensorFloat16Bit_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorFloat16Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorFloat16Bit_Create), METH_VARARGS, nullptr },
@@ -6054,8 +5984,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorFloat16Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorFloat16Bit_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorFloat16Bit_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorFloat16Bit_Static[] = 
     {
@@ -6065,14 +5994,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorFloat16Bit_Static =
-    {
+    static PyType_Spec type_spec_TensorFloat16Bit_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorFloat16Bit_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorFloat16Bit_Static
-    };
+        type_slots_TensorFloat16Bit_Static};
 
     // ----- TensorInt16Bit class --------------------
 
@@ -6611,23 +6538,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorInt16Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorInt16Bit), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorInt16Bit), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorInt16Bit[] = {
         { "kind", reinterpret_cast<getter>(TensorInt16Bit_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorInt16Bit_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorInt16Bit_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorInt16Bit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorInt16Bit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorInt16Bit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorInt16Bit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorInt16Bit) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorInt16Bit = {
         "winrt._winrt_windows_ai_machinelearning.TensorInt16Bit",
@@ -6637,8 +6561,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorInt16Bit};
 
     static PyGetSetDef getset_TensorInt16Bit_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorInt16Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorInt16Bit_Create), METH_VARARGS, nullptr },
@@ -6647,8 +6570,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorInt16Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorInt16Bit_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorInt16Bit_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorInt16Bit_Static[] = 
     {
@@ -6658,14 +6580,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorInt16Bit_Static =
-    {
+    static PyType_Spec type_spec_TensorInt16Bit_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorInt16Bit_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorInt16Bit_Static
-    };
+        type_slots_TensorInt16Bit_Static};
 
     // ----- TensorInt32Bit class --------------------
 
@@ -7204,23 +7124,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorInt32Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorInt32Bit), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorInt32Bit), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorInt32Bit[] = {
         { "kind", reinterpret_cast<getter>(TensorInt32Bit_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorInt32Bit_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorInt32Bit_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorInt32Bit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorInt32Bit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorInt32Bit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorInt32Bit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorInt32Bit) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorInt32Bit = {
         "winrt._winrt_windows_ai_machinelearning.TensorInt32Bit",
@@ -7230,8 +7147,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorInt32Bit};
 
     static PyGetSetDef getset_TensorInt32Bit_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorInt32Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorInt32Bit_Create), METH_VARARGS, nullptr },
@@ -7240,8 +7156,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorInt32Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorInt32Bit_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorInt32Bit_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorInt32Bit_Static[] = 
     {
@@ -7251,14 +7166,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorInt32Bit_Static =
-    {
+    static PyType_Spec type_spec_TensorInt32Bit_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorInt32Bit_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorInt32Bit_Static
-    };
+        type_slots_TensorInt32Bit_Static};
 
     // ----- TensorInt64Bit class --------------------
 
@@ -7797,23 +7710,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorInt64Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorInt64Bit), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorInt64Bit), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorInt64Bit[] = {
         { "kind", reinterpret_cast<getter>(TensorInt64Bit_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorInt64Bit_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorInt64Bit_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorInt64Bit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorInt64Bit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorInt64Bit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorInt64Bit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorInt64Bit) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorInt64Bit = {
         "winrt._winrt_windows_ai_machinelearning.TensorInt64Bit",
@@ -7823,8 +7733,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorInt64Bit};
 
     static PyGetSetDef getset_TensorInt64Bit_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorInt64Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorInt64Bit_Create), METH_VARARGS, nullptr },
@@ -7833,8 +7742,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorInt64Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorInt64Bit_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorInt64Bit_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorInt64Bit_Static[] = 
     {
@@ -7844,14 +7752,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorInt64Bit_Static =
-    {
+    static PyType_Spec type_spec_TensorInt64Bit_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorInt64Bit_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorInt64Bit_Static
-    };
+        type_slots_TensorInt64Bit_Static};
 
     // ----- TensorInt8Bit class --------------------
 
@@ -8390,23 +8296,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorInt8Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorInt8Bit), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorInt8Bit), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorInt8Bit[] = {
         { "kind", reinterpret_cast<getter>(TensorInt8Bit_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorInt8Bit_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorInt8Bit_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorInt8Bit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorInt8Bit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorInt8Bit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorInt8Bit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorInt8Bit) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorInt8Bit = {
         "winrt._winrt_windows_ai_machinelearning.TensorInt8Bit",
@@ -8416,8 +8319,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorInt8Bit};
 
     static PyGetSetDef getset_TensorInt8Bit_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorInt8Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorInt8Bit_Create), METH_VARARGS, nullptr },
@@ -8426,8 +8328,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorInt8Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorInt8Bit_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorInt8Bit_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorInt8Bit_Static[] = 
     {
@@ -8437,14 +8338,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorInt8Bit_Static =
-    {
+    static PyType_Spec type_spec_TensorInt8Bit_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorInt8Bit_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorInt8Bit_Static
-    };
+        type_slots_TensorInt8Bit_Static};
 
     // ----- TensorString class --------------------
 
@@ -8940,23 +8839,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorString), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorString), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorString), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorString[] = {
         { "kind", reinterpret_cast<getter>(TensorString_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorString_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorString_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorString[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorString) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorString) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorString) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorString) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorString = {
         "winrt._winrt_windows_ai_machinelearning.TensorString",
@@ -8966,8 +8862,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorString};
 
     static PyGetSetDef getset_TensorString_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorString_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorString_Create), METH_VARARGS, nullptr },
@@ -8975,8 +8870,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorString_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorString_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorString_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorString_Static[] = 
     {
@@ -8986,14 +8880,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorString_Static =
-    {
+    static PyType_Spec type_spec_TensorString_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorString_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorString_Static
-    };
+        type_slots_TensorString_Static};
 
     // ----- TensorUInt16Bit class --------------------
 
@@ -9532,23 +9424,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorUInt16Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorUInt16Bit), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorUInt16Bit), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorUInt16Bit[] = {
         { "kind", reinterpret_cast<getter>(TensorUInt16Bit_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorUInt16Bit_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorUInt16Bit_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorUInt16Bit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorUInt16Bit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorUInt16Bit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorUInt16Bit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorUInt16Bit) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorUInt16Bit = {
         "winrt._winrt_windows_ai_machinelearning.TensorUInt16Bit",
@@ -9558,8 +9447,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorUInt16Bit};
 
     static PyGetSetDef getset_TensorUInt16Bit_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorUInt16Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorUInt16Bit_Create), METH_VARARGS, nullptr },
@@ -9568,8 +9456,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorUInt16Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorUInt16Bit_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorUInt16Bit_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorUInt16Bit_Static[] = 
     {
@@ -9579,14 +9466,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorUInt16Bit_Static =
-    {
+    static PyType_Spec type_spec_TensorUInt16Bit_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorUInt16Bit_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorUInt16Bit_Static
-    };
+        type_slots_TensorUInt16Bit_Static};
 
     // ----- TensorUInt32Bit class --------------------
 
@@ -10125,23 +10010,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorUInt32Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorUInt32Bit), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorUInt32Bit), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorUInt32Bit[] = {
         { "kind", reinterpret_cast<getter>(TensorUInt32Bit_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorUInt32Bit_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorUInt32Bit_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorUInt32Bit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorUInt32Bit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorUInt32Bit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorUInt32Bit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorUInt32Bit) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorUInt32Bit = {
         "winrt._winrt_windows_ai_machinelearning.TensorUInt32Bit",
@@ -10151,8 +10033,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorUInt32Bit};
 
     static PyGetSetDef getset_TensorUInt32Bit_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorUInt32Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorUInt32Bit_Create), METH_VARARGS, nullptr },
@@ -10161,8 +10042,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorUInt32Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorUInt32Bit_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorUInt32Bit_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorUInt32Bit_Static[] = 
     {
@@ -10172,14 +10052,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorUInt32Bit_Static =
-    {
+    static PyType_Spec type_spec_TensorUInt32Bit_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorUInt32Bit_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorUInt32Bit_Static
-    };
+        type_slots_TensorUInt32Bit_Static};
 
     // ----- TensorUInt64Bit class --------------------
 
@@ -10718,23 +10596,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorUInt64Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorUInt64Bit), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorUInt64Bit), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorUInt64Bit[] = {
         { "kind", reinterpret_cast<getter>(TensorUInt64Bit_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorUInt64Bit_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorUInt64Bit_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorUInt64Bit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorUInt64Bit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorUInt64Bit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorUInt64Bit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorUInt64Bit) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorUInt64Bit = {
         "winrt._winrt_windows_ai_machinelearning.TensorUInt64Bit",
@@ -10744,8 +10619,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorUInt64Bit};
 
     static PyGetSetDef getset_TensorUInt64Bit_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorUInt64Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorUInt64Bit_Create), METH_VARARGS, nullptr },
@@ -10754,8 +10628,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorUInt64Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorUInt64Bit_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorUInt64Bit_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorUInt64Bit_Static[] = 
     {
@@ -10765,14 +10638,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorUInt64Bit_Static =
-    {
+    static PyType_Spec type_spec_TensorUInt64Bit_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorUInt64Bit_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorUInt64Bit_Static
-    };
+        type_slots_TensorUInt64Bit_Static};
 
     // ----- TensorUInt8Bit class --------------------
 
@@ -11311,23 +11182,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorUInt8Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorUInt8Bit), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorUInt8Bit), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TensorUInt8Bit[] = {
         { "kind", reinterpret_cast<getter>(TensorUInt8Bit_get_Kind), nullptr, nullptr, nullptr },
         { "shape", reinterpret_cast<getter>(TensorUInt8Bit_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(TensorUInt8Bit_get_TensorKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TensorUInt8Bit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TensorUInt8Bit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TensorUInt8Bit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TensorUInt8Bit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TensorUInt8Bit) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TensorUInt8Bit = {
         "winrt._winrt_windows_ai_machinelearning.TensorUInt8Bit",
@@ -11337,8 +11205,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         _type_slots_TensorUInt8Bit};
 
     static PyGetSetDef getset_TensorUInt8Bit_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TensorUInt8Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorUInt8Bit_Create), METH_VARARGS, nullptr },
@@ -11347,8 +11214,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorUInt8Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorUInt8Bit_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorUInt8Bit_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TensorUInt8Bit_Static[] = 
     {
@@ -11358,14 +11224,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         { }
     };
 
-    static PyType_Spec type_spec_TensorUInt8Bit_Static =
-    {
+    static PyType_Spec type_spec_TensorUInt8Bit_Static = {
         "winrt._winrt_windows_ai_machinelearning.TensorUInt8Bit_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TensorUInt8Bit_Static
-    };
+        type_slots_TensorUInt8Bit_Static};
 
     // ----- ILearningModelFeatureDescriptor interface --------------------
 
@@ -11531,24 +11395,21 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_ILearningModelFeatureDescriptor[] = {
         { "_assign_array_", _assign_array_ILearningModelFeatureDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelFeatureDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILearningModelFeatureDescriptor[] = {
         { "description", reinterpret_cast<getter>(ILearningModelFeatureDescriptor_get_Description), nullptr, nullptr, nullptr },
         { "is_required", reinterpret_cast<getter>(ILearningModelFeatureDescriptor_get_IsRequired), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ILearningModelFeatureDescriptor_get_Kind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(ILearningModelFeatureDescriptor_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILearningModelFeatureDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILearningModelFeatureDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILearningModelFeatureDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILearningModelFeatureDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILearningModelFeatureDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILearningModelFeatureDescriptor = {
         "winrt._winrt_windows_ai_machinelearning.ILearningModelFeatureDescriptor",
@@ -11684,13 +11545,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef methods_ImplementsILearningModelFeatureDescriptor[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelFeatureDescriptor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelFeatureDescriptor), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILearningModelFeatureDescriptor[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILearningModelFeatureDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILearningModelFeatureDescriptor = {
         "winrt._winrt_windows_ai_machinelearning.ImplementsILearningModelFeatureDescriptor",
@@ -11773,21 +11632,18 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_ILearningModelFeatureValue[] = {
         { "_assign_array_", _assign_array_ILearningModelFeatureValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelFeatureValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILearningModelFeatureValue[] = {
         { "kind", reinterpret_cast<getter>(ILearningModelFeatureValue_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILearningModelFeatureValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILearningModelFeatureValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILearningModelFeatureValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILearningModelFeatureValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILearningModelFeatureValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILearningModelFeatureValue = {
         "winrt._winrt_windows_ai_machinelearning.ILearningModelFeatureValue",
@@ -11863,13 +11719,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef methods_ImplementsILearningModelFeatureValue[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelFeatureValue), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelFeatureValue), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILearningModelFeatureValue[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILearningModelFeatureValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILearningModelFeatureValue = {
         "winrt._winrt_windows_ai_machinelearning.ImplementsILearningModelFeatureValue",
@@ -11922,20 +11776,17 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_ILearningModelOperatorProvider[] = {
         { "_assign_array_", _assign_array_ILearningModelOperatorProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelOperatorProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ILearningModelOperatorProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ILearningModelOperatorProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILearningModelOperatorProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILearningModelOperatorProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILearningModelOperatorProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILearningModelOperatorProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ILearningModelOperatorProvider = {
         "winrt._winrt_windows_ai_machinelearning.ILearningModelOperatorProvider",
@@ -11991,13 +11842,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef methods_ImplementsILearningModelOperatorProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelOperatorProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelOperatorProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsILearningModelOperatorProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsILearningModelOperatorProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsILearningModelOperatorProvider = {
         "winrt._winrt_windows_ai_machinelearning.ImplementsILearningModelOperatorProvider",
@@ -12140,23 +11989,20 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef _methods_ITensor[] = {
         { "_assign_array_", _assign_array_ITensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITensor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITensor[] = {
         { "shape", reinterpret_cast<getter>(ITensor_get_Shape), nullptr, nullptr, nullptr },
         { "tensor_kind", reinterpret_cast<getter>(ITensor_get_TensorKind), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ITensor_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITensor = {
         "winrt._winrt_windows_ai_machinelearning.ITensor",
@@ -12272,13 +12118,11 @@ namespace py::cpp::Windows::AI::MachineLearning
     static PyMethodDef methods_ImplementsITensor[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITensor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITensor), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITensor[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITensor = {
         "winrt._winrt_windows_ai_machinelearning.ImplementsITensor",

@@ -514,8 +514,7 @@ namespace py::cpp::Windows::Management
     static PyMethodDef _methods_MdmAlert[] = {
         { "_assign_array_", _assign_array_MdmAlert, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MdmAlert), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MdmAlert[] = {
         { "type", reinterpret_cast<getter>(MdmAlert_get_Type), reinterpret_cast<setter>(MdmAlert_put_Type), nullptr, nullptr },
@@ -525,16 +524,14 @@ namespace py::cpp::Windows::Management
         { "format", reinterpret_cast<getter>(MdmAlert_get_Format), reinterpret_cast<setter>(MdmAlert_put_Format), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(MdmAlert_get_Data), reinterpret_cast<setter>(MdmAlert_put_Data), nullptr, nullptr },
         { "status", reinterpret_cast<getter>(MdmAlert_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MdmAlert[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MdmAlert) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MdmAlert) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MdmAlert) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MdmAlert) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MdmAlert = {
         "winrt._winrt_windows_management.MdmAlert",
@@ -874,24 +871,21 @@ namespace py::cpp::Windows::Management
         { "start_with_alerts_async", reinterpret_cast<PyCFunction>(MdmSession_StartWithAlertsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MdmSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MdmSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MdmSession[] = {
         { "alerts", reinterpret_cast<getter>(MdmSession_get_Alerts), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(MdmSession_get_ExtendedError), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(MdmSession_get_Id), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(MdmSession_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MdmSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MdmSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MdmSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MdmSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MdmSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MdmSession = {
         "winrt._winrt_windows_management.MdmSession",
@@ -1065,19 +1059,16 @@ namespace py::cpp::Windows::Management
     }
 
     static PyMethodDef _methods_MdmSessionManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MdmSessionManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MdmSessionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MdmSessionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MdmSessionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MdmSessionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MdmSessionManager = {
         "winrt._winrt_windows_management.MdmSessionManager",
@@ -1088,15 +1079,13 @@ namespace py::cpp::Windows::Management
 
     static PyGetSetDef getset_MdmSessionManager_Static[] = {
         { "session_ids", reinterpret_cast<getter>(MdmSessionManager_get_SessionIds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MdmSessionManager_Static[] = {
         { "delete_session_by_id", reinterpret_cast<PyCFunction>(MdmSessionManager_DeleteSessionById), METH_VARARGS, nullptr },
         { "get_session_by_id", reinterpret_cast<PyCFunction>(MdmSessionManager_GetSessionById), METH_VARARGS, nullptr },
         { "try_create_session", reinterpret_cast<PyCFunction>(MdmSessionManager_TryCreateSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MdmSessionManager_Static[] = 
     {
@@ -1106,14 +1095,12 @@ namespace py::cpp::Windows::Management
         { }
     };
 
-    static PyType_Spec type_spec_MdmSessionManager_Static =
-    {
+    static PyType_Spec type_spec_MdmSessionManager_Static = {
         "winrt._winrt_windows_management.MdmSessionManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MdmSessionManager_Static
-    };
+        type_slots_MdmSessionManager_Static};
 
     // ----- Windows.Management Initialization --------------------
 

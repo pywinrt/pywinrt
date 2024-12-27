@@ -223,8 +223,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static PyMethodDef _methods_AnimationDescription[] = {
         { "_assign_array_", _assign_array_AnimationDescription, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimationDescription), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimationDescription[] = {
         { "animations", reinterpret_cast<getter>(AnimationDescription_get_Animations), nullptr, nullptr, nullptr },
@@ -232,16 +231,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { "stagger_delay", reinterpret_cast<getter>(AnimationDescription_get_StaggerDelay), nullptr, nullptr, nullptr },
         { "stagger_delay_factor", reinterpret_cast<getter>(AnimationDescription_get_StaggerDelayFactor), nullptr, nullptr, nullptr },
         { "z_order", reinterpret_cast<getter>(AnimationDescription_get_ZOrder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimationDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimationDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimationDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimationDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimationDescription) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimationDescription = {
         "winrt._winrt_windows_ui_core_animationmetrics.AnimationDescription",
@@ -504,8 +501,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static PyMethodDef _methods_OpacityAnimation[] = {
         { "_assign_array_", _assign_array_OpacityAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OpacityAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OpacityAnimation[] = {
         { "final_opacity", reinterpret_cast<getter>(OpacityAnimation_get_FinalOpacity), nullptr, nullptr, nullptr },
@@ -515,16 +511,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { "delay", reinterpret_cast<getter>(OpacityAnimation_get_Delay), nullptr, nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(OpacityAnimation_get_Duration), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(OpacityAnimation_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OpacityAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OpacityAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OpacityAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OpacityAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OpacityAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OpacityAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.OpacityAnimation",
@@ -727,8 +721,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static PyMethodDef _methods_PropertyAnimation[] = {
         { "_assign_array_", _assign_array_PropertyAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PropertyAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PropertyAnimation[] = {
         { "control1", reinterpret_cast<getter>(PropertyAnimation_get_Control1), nullptr, nullptr, nullptr },
@@ -736,16 +729,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { "delay", reinterpret_cast<getter>(PropertyAnimation_get_Delay), nullptr, nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(PropertyAnimation_get_Duration), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(PropertyAnimation_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PropertyAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PropertyAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PropertyAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PropertyAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PropertyAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PropertyAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.PropertyAnimation",
@@ -1098,8 +1089,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static PyMethodDef _methods_ScaleAnimation[] = {
         { "_assign_array_", _assign_array_ScaleAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ScaleAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ScaleAnimation[] = {
         { "control1", reinterpret_cast<getter>(ScaleAnimation_get_Control1), nullptr, nullptr, nullptr },
@@ -1112,16 +1102,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { "initial_scale_x", reinterpret_cast<getter>(ScaleAnimation_get_InitialScaleX), nullptr, nullptr, nullptr },
         { "initial_scale_y", reinterpret_cast<getter>(ScaleAnimation_get_InitialScaleY), nullptr, nullptr, nullptr },
         { "normalized_origin", reinterpret_cast<getter>(ScaleAnimation_get_NormalizedOrigin), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ScaleAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScaleAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScaleAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScaleAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScaleAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ScaleAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.ScaleAnimation",
@@ -1324,8 +1312,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static PyMethodDef _methods_TranslationAnimation[] = {
         { "_assign_array_", _assign_array_TranslationAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TranslationAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TranslationAnimation[] = {
         { "control1", reinterpret_cast<getter>(TranslationAnimation_get_Control1), nullptr, nullptr, nullptr },
@@ -1333,16 +1320,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { "delay", reinterpret_cast<getter>(TranslationAnimation_get_Delay), nullptr, nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(TranslationAnimation_get_Duration), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(TranslationAnimation_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TranslationAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TranslationAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TranslationAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TranslationAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TranslationAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TranslationAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.TranslationAnimation",
@@ -1545,8 +1530,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static PyMethodDef _methods_IPropertyAnimation[] = {
         { "_assign_array_", _assign_array_IPropertyAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPropertyAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPropertyAnimation[] = {
         { "control1", reinterpret_cast<getter>(IPropertyAnimation_get_Control1), nullptr, nullptr, nullptr },
@@ -1554,16 +1538,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { "delay", reinterpret_cast<getter>(IPropertyAnimation_get_Delay), nullptr, nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(IPropertyAnimation_get_Duration), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IPropertyAnimation_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPropertyAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPropertyAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertyAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertyAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPropertyAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPropertyAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.IPropertyAnimation",
@@ -1719,13 +1701,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static PyMethodDef methods_ImplementsIPropertyAnimation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertyAnimation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertyAnimation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPropertyAnimation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPropertyAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPropertyAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.ImplementsIPropertyAnimation",

@@ -380,13 +380,11 @@ namespace py::cpp::Windows::Storage::AccessCache
         { "index_of", reinterpret_cast<PyCFunction>(AccessListEntryView_IndexOf), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AccessListEntryView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccessListEntryView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccessListEntryView[] = {
         { "size", reinterpret_cast<getter>(AccessListEntryView_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccessListEntryView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessListEntryView) },
@@ -397,8 +395,7 @@ namespace py::cpp::Windows::Storage::AccessCache
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_AccessListEntryView) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_AccessListEntryView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_AccessListEntryView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccessListEntryView = {
         "winrt._winrt_windows_storage_accesscache.AccessListEntryView",
@@ -481,21 +478,18 @@ namespace py::cpp::Windows::Storage::AccessCache
     static PyMethodDef _methods_ItemRemovedEventArgs[] = {
         { "_assign_array_", _assign_array_ItemRemovedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ItemRemovedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ItemRemovedEventArgs[] = {
         { "removed_entry", reinterpret_cast<getter>(ItemRemovedEventArgs_get_RemovedEntry), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ItemRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ItemRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ItemRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ItemRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ItemRemovedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ItemRemovedEventArgs = {
         "winrt._winrt_windows_storage_accesscache.ItemRemovedEventArgs",
@@ -658,19 +652,16 @@ namespace py::cpp::Windows::Storage::AccessCache
     }
 
     static PyMethodDef _methods_StorageApplicationPermissions[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageApplicationPermissions[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageApplicationPermissions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageApplicationPermissions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageApplicationPermissions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageApplicationPermissions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageApplicationPermissions = {
         "winrt._winrt_windows_storage_accesscache.StorageApplicationPermissions",
@@ -682,14 +673,12 @@ namespace py::cpp::Windows::Storage::AccessCache
     static PyGetSetDef getset_StorageApplicationPermissions_Static[] = {
         { "future_access_list", reinterpret_cast<getter>(StorageApplicationPermissions_get_FutureAccessList), nullptr, nullptr, nullptr },
         { "most_recently_used_list", reinterpret_cast<getter>(StorageApplicationPermissions_get_MostRecentlyUsedList), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StorageApplicationPermissions_Static[] = {
         { "get_future_access_list_for_user", reinterpret_cast<PyCFunction>(StorageApplicationPermissions_GetFutureAccessListForUser), METH_VARARGS, nullptr },
         { "get_most_recently_used_list_for_user", reinterpret_cast<PyCFunction>(StorageApplicationPermissions_GetMostRecentlyUsedListForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StorageApplicationPermissions_Static[] = 
     {
@@ -699,14 +688,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         { }
     };
 
-    static PyType_Spec type_spec_StorageApplicationPermissions_Static =
-    {
+    static PyType_Spec type_spec_StorageApplicationPermissions_Static = {
         "winrt._winrt_windows_storage_accesscache.StorageApplicationPermissions_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StorageApplicationPermissions_Static
-    };
+        type_slots_StorageApplicationPermissions_Static};
 
     // ----- StorageItemAccessList class --------------------
 
@@ -1423,22 +1410,19 @@ namespace py::cpp::Windows::Storage::AccessCache
         { "remove", reinterpret_cast<PyCFunction>(StorageItemAccessList_Remove), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StorageItemAccessList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageItemAccessList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageItemAccessList[] = {
         { "entries", reinterpret_cast<getter>(StorageItemAccessList_get_Entries), nullptr, nullptr, nullptr },
         { "maximum_items_allowed", reinterpret_cast<getter>(StorageItemAccessList_get_MaximumItemsAllowed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageItemAccessList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageItemAccessList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageItemAccessList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageItemAccessList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageItemAccessList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageItemAccessList = {
         "winrt._winrt_windows_storage_accesscache.StorageItemAccessList",
@@ -2321,22 +2305,19 @@ namespace py::cpp::Windows::Storage::AccessCache
         { "remove_item_removed", reinterpret_cast<PyCFunction>(StorageItemMostRecentlyUsedList_remove_ItemRemoved), METH_O, nullptr },
         { "_assign_array_", _assign_array_StorageItemMostRecentlyUsedList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageItemMostRecentlyUsedList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StorageItemMostRecentlyUsedList[] = {
         { "entries", reinterpret_cast<getter>(StorageItemMostRecentlyUsedList_get_Entries), nullptr, nullptr, nullptr },
         { "maximum_items_allowed", reinterpret_cast<getter>(StorageItemMostRecentlyUsedList_get_MaximumItemsAllowed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StorageItemMostRecentlyUsedList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageItemMostRecentlyUsedList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageItemMostRecentlyUsedList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageItemMostRecentlyUsedList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageItemMostRecentlyUsedList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StorageItemMostRecentlyUsedList = {
         "winrt._winrt_windows_storage_accesscache.StorageItemMostRecentlyUsedList",
@@ -3060,22 +3041,19 @@ namespace py::cpp::Windows::Storage::AccessCache
         { "remove", reinterpret_cast<PyCFunction>(IStorageItemAccessList_Remove), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageItemAccessList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemAccessList), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStorageItemAccessList[] = {
         { "entries", reinterpret_cast<getter>(IStorageItemAccessList_get_Entries), nullptr, nullptr, nullptr },
         { "maximum_items_allowed", reinterpret_cast<getter>(IStorageItemAccessList_get_MaximumItemsAllowed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStorageItemAccessList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemAccessList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemAccessList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemAccessList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemAccessList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStorageItemAccessList = {
         "winrt._winrt_windows_storage_accesscache.IStorageItemAccessList",
@@ -3683,13 +3661,11 @@ namespace py::cpp::Windows::Storage::AccessCache
     static PyMethodDef methods_ImplementsIStorageItemAccessList[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItemAccessList), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItemAccessList), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStorageItemAccessList[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageItemAccessList) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItemAccessList = {
         "winrt._winrt_windows_storage_accesscache.ImplementsIStorageItemAccessList",
@@ -3767,8 +3743,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyMethodDef _methods_AccessListEntry[] = {
         { "_assign_array_", _assign_array_AccessListEntry, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* AccessListEntry_get_Token(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, void* /*unused*/) noexcept
     {
@@ -3839,8 +3814,7 @@ namespace py::cpp::Windows::Storage::AccessCache
     static PyGetSetDef _getset_AccessListEntry[] = {
         { "token", reinterpret_cast<getter>(AccessListEntry_get_Token), reinterpret_cast<setter>(AccessListEntry_set_Token), nullptr, nullptr },
         { "metadata", reinterpret_cast<getter>(AccessListEntry_get_Metadata), reinterpret_cast<setter>(AccessListEntry_set_Metadata), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_AccessListEntry(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, PyObject* other, int op) noexcept
     {
@@ -3902,8 +3876,7 @@ namespace py::cpp::Windows::Storage::AccessCache
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessListEntry) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AccessListEntry) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_AccessListEntry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccessListEntry = {
         "winrt._winrt_windows_storage_accesscache.AccessListEntry",

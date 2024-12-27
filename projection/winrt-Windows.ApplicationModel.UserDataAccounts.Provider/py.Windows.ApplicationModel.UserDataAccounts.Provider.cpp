@@ -138,23 +138,20 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     static PyMethodDef _methods_UserDataAccountPartnerAccountInfo[] = {
         { "_assign_array_", _assign_array_UserDataAccountPartnerAccountInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAccountPartnerAccountInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccountPartnerAccountInfo[] = {
         { "account_kind", reinterpret_cast<getter>(UserDataAccountPartnerAccountInfo_get_AccountKind), nullptr, nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(UserDataAccountPartnerAccountInfo_get_DisplayName), nullptr, nullptr, nullptr },
         { "priority", reinterpret_cast<getter>(UserDataAccountPartnerAccountInfo_get_Priority), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccountPartnerAccountInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountPartnerAccountInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountPartnerAccountInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountPartnerAccountInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountPartnerAccountInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccountPartnerAccountInfo = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountPartnerAccountInfo",
@@ -341,23 +338,20 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { "report_completed", reinterpret_cast<PyCFunction>(UserDataAccountProviderAddAccountOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataAccountProviderAddAccountOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAccountProviderAddAccountOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccountProviderAddAccountOperation[] = {
         { "content_kinds", reinterpret_cast<getter>(UserDataAccountProviderAddAccountOperation_get_ContentKinds), nullptr, nullptr, nullptr },
         { "partner_account_infos", reinterpret_cast<getter>(UserDataAccountProviderAddAccountOperation_get_PartnerAccountInfos), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(UserDataAccountProviderAddAccountOperation_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccountProviderAddAccountOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountProviderAddAccountOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountProviderAddAccountOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountProviderAddAccountOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountProviderAddAccountOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccountProviderAddAccountOperation = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountProviderAddAccountOperation",
@@ -512,22 +506,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { "report_completed", reinterpret_cast<PyCFunction>(UserDataAccountProviderResolveErrorsOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataAccountProviderResolveErrorsOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAccountProviderResolveErrorsOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccountProviderResolveErrorsOperation[] = {
         { "kind", reinterpret_cast<getter>(UserDataAccountProviderResolveErrorsOperation_get_Kind), nullptr, nullptr, nullptr },
         { "user_data_account_id", reinterpret_cast<getter>(UserDataAccountProviderResolveErrorsOperation_get_UserDataAccountId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccountProviderResolveErrorsOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountProviderResolveErrorsOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountProviderResolveErrorsOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountProviderResolveErrorsOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountProviderResolveErrorsOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccountProviderResolveErrorsOperation = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountProviderResolveErrorsOperation",
@@ -682,22 +673,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { "report_completed", reinterpret_cast<PyCFunction>(UserDataAccountProviderSettingsOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataAccountProviderSettingsOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataAccountProviderSettingsOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UserDataAccountProviderSettingsOperation[] = {
         { "kind", reinterpret_cast<getter>(UserDataAccountProviderSettingsOperation_get_Kind), nullptr, nullptr, nullptr },
         { "user_data_account_id", reinterpret_cast<getter>(UserDataAccountProviderSettingsOperation_get_UserDataAccountId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UserDataAccountProviderSettingsOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountProviderSettingsOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountProviderSettingsOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountProviderSettingsOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountProviderSettingsOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UserDataAccountProviderSettingsOperation = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountProviderSettingsOperation",
@@ -780,21 +768,18 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     static PyMethodDef _methods_IUserDataAccountProviderOperation[] = {
         { "_assign_array_", _assign_array_IUserDataAccountProviderOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IUserDataAccountProviderOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IUserDataAccountProviderOperation[] = {
         { "kind", reinterpret_cast<getter>(IUserDataAccountProviderOperation_get_Kind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IUserDataAccountProviderOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUserDataAccountProviderOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUserDataAccountProviderOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUserDataAccountProviderOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUserDataAccountProviderOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IUserDataAccountProviderOperation = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation",
@@ -870,13 +855,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     static PyMethodDef methods_ImplementsIUserDataAccountProviderOperation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUserDataAccountProviderOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUserDataAccountProviderOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIUserDataAccountProviderOperation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIUserDataAccountProviderOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIUserDataAccountProviderOperation = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.ImplementsIUserDataAccountProviderOperation",

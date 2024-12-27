@@ -167,21 +167,18 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         { "remove_is_current_app_broadcasting_changed", reinterpret_cast<PyCFunction>(AppBroadcastingMonitor_remove_IsCurrentAppBroadcastingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppBroadcastingMonitor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppBroadcastingMonitor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppBroadcastingMonitor[] = {
         { "is_current_app_broadcasting", reinterpret_cast<getter>(AppBroadcastingMonitor_get_IsCurrentAppBroadcasting), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppBroadcastingMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBroadcastingMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBroadcastingMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBroadcastingMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBroadcastingMonitor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppBroadcastingMonitor = {
         "winrt._winrt_windows_media_appbroadcasting.AppBroadcastingMonitor",
@@ -294,22 +291,19 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     static PyMethodDef _methods_AppBroadcastingStatus[] = {
         { "_assign_array_", _assign_array_AppBroadcastingStatus, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppBroadcastingStatus), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppBroadcastingStatus[] = {
         { "can_start_broadcast", reinterpret_cast<getter>(AppBroadcastingStatus_get_CanStartBroadcast), nullptr, nullptr, nullptr },
         { "details", reinterpret_cast<getter>(AppBroadcastingStatus_get_Details), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppBroadcastingStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBroadcastingStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBroadcastingStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBroadcastingStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBroadcastingStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppBroadcastingStatus = {
         "winrt._winrt_windows_media_appbroadcasting.AppBroadcastingStatus",
@@ -602,8 +596,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     static PyMethodDef _methods_AppBroadcastingStatusDetails[] = {
         { "_assign_array_", _assign_array_AppBroadcastingStatusDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppBroadcastingStatusDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppBroadcastingStatusDetails[] = {
         { "is_any_app_broadcasting", reinterpret_cast<getter>(AppBroadcastingStatusDetails_get_IsAnyAppBroadcasting), nullptr, nullptr, nullptr },
@@ -614,16 +607,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         { "is_disabled_by_user", reinterpret_cast<getter>(AppBroadcastingStatusDetails_get_IsDisabledByUser), nullptr, nullptr, nullptr },
         { "is_game_stream_in_progress", reinterpret_cast<getter>(AppBroadcastingStatusDetails_get_IsGameStreamInProgress), nullptr, nullptr, nullptr },
         { "is_gpu_constrained", reinterpret_cast<getter>(AppBroadcastingStatusDetails_get_IsGpuConstrained), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppBroadcastingStatusDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBroadcastingStatusDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBroadcastingStatusDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBroadcastingStatusDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBroadcastingStatusDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppBroadcastingStatusDetails = {
         "winrt._winrt_windows_media_appbroadcasting.AppBroadcastingStatusDetails",
@@ -841,20 +832,17 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         { "show_broadcast_ui", reinterpret_cast<PyCFunction>(AppBroadcastingUI_ShowBroadcastUI), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppBroadcastingUI, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppBroadcastingUI), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppBroadcastingUI[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppBroadcastingUI[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBroadcastingUI) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBroadcastingUI) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBroadcastingUI) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBroadcastingUI) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppBroadcastingUI = {
         "winrt._winrt_windows_media_appbroadcasting.AppBroadcastingUI",
@@ -864,14 +852,12 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         _type_slots_AppBroadcastingUI};
 
     static PyGetSetDef getset_AppBroadcastingUI_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppBroadcastingUI_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(AppBroadcastingUI_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(AppBroadcastingUI_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppBroadcastingUI_Static[] = 
     {
@@ -881,14 +867,12 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         { }
     };
 
-    static PyType_Spec type_spec_AppBroadcastingUI_Static =
-    {
+    static PyType_Spec type_spec_AppBroadcastingUI_Static = {
         "winrt._winrt_windows_media_appbroadcasting.AppBroadcastingUI_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppBroadcastingUI_Static
-    };
+        type_slots_AppBroadcastingUI_Static};
 
     // ----- Windows.Media.AppBroadcasting Initialization --------------------
 

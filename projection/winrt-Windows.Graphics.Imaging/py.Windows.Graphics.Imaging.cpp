@@ -240,20 +240,17 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapBuffer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BitmapBuffer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_BitmapBuffer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapBuffer[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapBuffer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapBuffer = {
         "winrt._winrt_windows_graphics_imaging.BitmapBuffer",
@@ -426,24 +423,21 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyMethodDef _methods_BitmapCodecInformation[] = {
         { "_assign_array_", _assign_array_BitmapCodecInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapCodecInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapCodecInformation[] = {
         { "codec_id", reinterpret_cast<getter>(BitmapCodecInformation_get_CodecId), nullptr, nullptr, nullptr },
         { "file_extensions", reinterpret_cast<getter>(BitmapCodecInformation_get_FileExtensions), nullptr, nullptr, nullptr },
         { "friendly_name", reinterpret_cast<getter>(BitmapCodecInformation_get_FriendlyName), nullptr, nullptr, nullptr },
         { "mime_types", reinterpret_cast<getter>(BitmapCodecInformation_get_MimeTypes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapCodecInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapCodecInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapCodecInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapCodecInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapCodecInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapCodecInformation = {
         "winrt._winrt_windows_graphics_imaging.BitmapCodecInformation",
@@ -1596,8 +1590,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapDecoder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapDecoder), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapDecoder[] = {
         { "bitmap_container_properties", reinterpret_cast<getter>(BitmapDecoder_get_BitmapContainerProperties), nullptr, nullptr, nullptr },
@@ -1612,16 +1605,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "oriented_pixel_width", reinterpret_cast<getter>(BitmapDecoder_get_OrientedPixelWidth), nullptr, nullptr, nullptr },
         { "pixel_height", reinterpret_cast<getter>(BitmapDecoder_get_PixelHeight), nullptr, nullptr, nullptr },
         { "pixel_width", reinterpret_cast<getter>(BitmapDecoder_get_PixelWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapDecoder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapDecoder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapDecoder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapDecoder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapDecoder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapDecoder = {
         "winrt._winrt_windows_graphics_imaging.BitmapDecoder",
@@ -1640,15 +1631,13 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "tiff_decoder_id", reinterpret_cast<getter>(BitmapDecoder_get_TiffDecoderId), nullptr, nullptr, nullptr },
         { "heif_decoder_id", reinterpret_cast<getter>(BitmapDecoder_get_HeifDecoderId), nullptr, nullptr, nullptr },
         { "webp_decoder_id", reinterpret_cast<getter>(BitmapDecoder_get_WebpDecoderId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BitmapDecoder_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(BitmapDecoder_CreateAsync), METH_VARARGS, nullptr },
         { "create_with_id_async", reinterpret_cast<PyCFunction>(BitmapDecoder_CreateWithIdAsync), METH_VARARGS, nullptr },
         { "get_decoder_information_enumerator", reinterpret_cast<PyCFunction>(BitmapDecoder_GetDecoderInformationEnumerator), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BitmapDecoder_Static[] = 
     {
@@ -1658,14 +1647,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Spec type_spec_BitmapDecoder_Static =
-    {
+    static PyType_Spec type_spec_BitmapDecoder_Static = {
         "winrt._winrt_windows_graphics_imaging.BitmapDecoder_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BitmapDecoder_Static
-    };
+        type_slots_BitmapDecoder_Static};
 
     // ----- BitmapEncoder class --------------------
 
@@ -2679,8 +2666,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "set_software_bitmap", reinterpret_cast<PyCFunction>(BitmapEncoder_SetSoftwareBitmap), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapEncoder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapEncoder), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapEncoder[] = {
         { "is_thumbnail_generated", reinterpret_cast<getter>(BitmapEncoder_get_IsThumbnailGenerated), reinterpret_cast<setter>(BitmapEncoder_put_IsThumbnailGenerated), nullptr, nullptr },
@@ -2690,16 +2676,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "bitmap_properties", reinterpret_cast<getter>(BitmapEncoder_get_BitmapProperties), nullptr, nullptr, nullptr },
         { "bitmap_transform", reinterpret_cast<getter>(BitmapEncoder_get_BitmapTransform), nullptr, nullptr, nullptr },
         { "encoder_information", reinterpret_cast<getter>(BitmapEncoder_get_EncoderInformation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapEncoder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapEncoder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapEncoder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapEncoder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapEncoder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapEncoder = {
         "winrt._winrt_windows_graphics_imaging.BitmapEncoder",
@@ -2716,8 +2700,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "png_encoder_id", reinterpret_cast<getter>(BitmapEncoder_get_PngEncoderId), nullptr, nullptr, nullptr },
         { "tiff_encoder_id", reinterpret_cast<getter>(BitmapEncoder_get_TiffEncoderId), nullptr, nullptr, nullptr },
         { "heif_encoder_id", reinterpret_cast<getter>(BitmapEncoder_get_HeifEncoderId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BitmapEncoder_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateAsync), METH_VARARGS, nullptr },
@@ -2725,8 +2708,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "create_for_transcoding_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateForTranscodingAsync), METH_VARARGS, nullptr },
         { "create_with_encoding_options_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateWithEncodingOptionsAsync), METH_VARARGS, nullptr },
         { "get_encoder_information_enumerator", reinterpret_cast<PyCFunction>(BitmapEncoder_GetEncoderInformationEnumerator), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BitmapEncoder_Static[] = 
     {
@@ -2736,14 +2718,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Spec type_spec_BitmapEncoder_Static =
-    {
+    static PyType_Spec type_spec_BitmapEncoder_Static = {
         "winrt._winrt_windows_graphics_imaging.BitmapEncoder_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BitmapEncoder_Static
-    };
+        type_slots_BitmapEncoder_Static};
 
     // ----- BitmapFrame class --------------------
 
@@ -3320,8 +3300,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(BitmapFrame_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapFrame[] = {
         { "bitmap_alpha_mode", reinterpret_cast<getter>(BitmapFrame_get_BitmapAlphaMode), nullptr, nullptr, nullptr },
@@ -3333,16 +3312,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "oriented_pixel_width", reinterpret_cast<getter>(BitmapFrame_get_OrientedPixelWidth), nullptr, nullptr, nullptr },
         { "pixel_height", reinterpret_cast<getter>(BitmapFrame_get_PixelHeight), nullptr, nullptr, nullptr },
         { "pixel_width", reinterpret_cast<getter>(BitmapFrame_get_PixelWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapFrame = {
         "winrt._winrt_windows_graphics_imaging.BitmapFrame",
@@ -3481,20 +3458,17 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "set_properties_async", reinterpret_cast<PyCFunction>(BitmapProperties_SetPropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapProperties[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapProperties = {
         "winrt._winrt_windows_graphics_imaging.BitmapProperties",
@@ -3590,20 +3564,17 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "get_properties_async", reinterpret_cast<PyCFunction>(BitmapPropertiesView_GetPropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapPropertiesView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapPropertiesView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapPropertiesView[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapPropertiesView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapPropertiesView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapPropertiesView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapPropertiesView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapPropertiesView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapPropertiesView = {
         "winrt._winrt_windows_graphics_imaging.BitmapPropertiesView",
@@ -4138,13 +4109,11 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "remove", reinterpret_cast<PyCFunction>(BitmapPropertySet_Remove), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapPropertySet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapPropertySet), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapPropertySet[] = {
         { "size", reinterpret_cast<getter>(BitmapPropertySet_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapPropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapPropertySet) },
@@ -4156,8 +4125,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_mp_length, reinterpret_cast<void*>(_map_length_BitmapPropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_BitmapPropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_BitmapPropertySet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapPropertySet = {
         "winrt._winrt_windows_graphics_imaging.BitmapPropertySet",
@@ -4646,8 +4614,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyMethodDef _methods_BitmapTransform[] = {
         { "_assign_array_", _assign_array_BitmapTransform, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapTransform), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapTransform[] = {
         { "scaled_width", reinterpret_cast<getter>(BitmapTransform_get_ScaledWidth), reinterpret_cast<setter>(BitmapTransform_put_ScaledWidth), nullptr, nullptr },
@@ -4656,16 +4623,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "interpolation_mode", reinterpret_cast<getter>(BitmapTransform_get_InterpolationMode), reinterpret_cast<setter>(BitmapTransform_put_InterpolationMode), nullptr, nullptr },
         { "flip", reinterpret_cast<getter>(BitmapTransform_get_Flip), reinterpret_cast<setter>(BitmapTransform_put_Flip), nullptr, nullptr },
         { "bounds", reinterpret_cast<getter>(BitmapTransform_get_Bounds), reinterpret_cast<setter>(BitmapTransform_put_Bounds), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapTransform) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapTransform = {
         "winrt._winrt_windows_graphics_imaging.BitmapTransform",
@@ -4803,22 +4768,19 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyMethodDef _methods_BitmapTypedValue[] = {
         { "_assign_array_", _assign_array_BitmapTypedValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapTypedValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BitmapTypedValue[] = {
         { "type", reinterpret_cast<getter>(BitmapTypedValue_get_Type), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(BitmapTypedValue_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BitmapTypedValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapTypedValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapTypedValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapTypedValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapTypedValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapTypedValue = {
         "winrt._winrt_windows_graphics_imaging.BitmapTypedValue",
@@ -5427,8 +5389,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ImageStream), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ImageStream), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageStream[] = {
         { "content_type", reinterpret_cast<getter>(ImageStream_get_ContentType), nullptr, nullptr, nullptr },
@@ -5436,16 +5397,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "can_read", reinterpret_cast<getter>(ImageStream_get_CanRead), nullptr, nullptr, nullptr },
         { "can_write", reinterpret_cast<getter>(ImageStream_get_CanWrite), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(ImageStream_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageStream) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageStream = {
         "winrt._winrt_windows_graphics_imaging.ImageStream",
@@ -5539,20 +5498,17 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "detach_pixel_data", reinterpret_cast<PyCFunction>(PixelDataProvider_DetachPixelData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PixelDataProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PixelDataProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PixelDataProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PixelDataProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PixelDataProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PixelDataProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PixelDataProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PixelDataProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PixelDataProvider = {
         "winrt._winrt_windows_graphics_imaging.PixelDataProvider",
@@ -6525,8 +6481,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "_from", reinterpret_cast<PyCFunction>(_from_SoftwareBitmap), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SoftwareBitmap), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_SoftwareBitmap), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SoftwareBitmap[] = {
         { "dpi_y", reinterpret_cast<getter>(SoftwareBitmap_get_DpiY), reinterpret_cast<setter>(SoftwareBitmap_put_DpiY), nullptr, nullptr },
@@ -6536,16 +6491,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "is_read_only", reinterpret_cast<getter>(SoftwareBitmap_get_IsReadOnly), nullptr, nullptr, nullptr },
         { "pixel_height", reinterpret_cast<getter>(SoftwareBitmap_get_PixelHeight), nullptr, nullptr, nullptr },
         { "pixel_width", reinterpret_cast<getter>(SoftwareBitmap_get_PixelWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SoftwareBitmap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SoftwareBitmap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SoftwareBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SoftwareBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SoftwareBitmap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SoftwareBitmap = {
         "winrt._winrt_windows_graphics_imaging.SoftwareBitmap",
@@ -6555,8 +6508,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         _type_slots_SoftwareBitmap};
 
     static PyGetSetDef getset_SoftwareBitmap_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SoftwareBitmap_Static[] = {
         { "convert", reinterpret_cast<PyCFunction>(SoftwareBitmap_Convert), METH_VARARGS, nullptr },
@@ -6566,8 +6518,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "create_copy_from_surface_async", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyFromSurfaceAsync), METH_VARARGS, nullptr },
         { "create_copy_with_alpha_from_buffer", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyWithAlphaFromBuffer), METH_VARARGS, nullptr },
         { "create_copy_with_alpha_from_surface_async", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyWithAlphaFromSurfaceAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SoftwareBitmap_Static[] = 
     {
@@ -6577,14 +6528,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Spec type_spec_SoftwareBitmap_Static =
-    {
+    static PyType_Spec type_spec_SoftwareBitmap_Static = {
         "winrt._winrt_windows_graphics_imaging.SoftwareBitmap_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SoftwareBitmap_Static
-    };
+        type_slots_SoftwareBitmap_Static};
 
     // ----- IBitmapFrame interface --------------------
 
@@ -7029,8 +6978,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IBitmapFrame_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBitmapFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBitmapFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBitmapFrame[] = {
         { "bitmap_alpha_mode", reinterpret_cast<getter>(IBitmapFrame_get_BitmapAlphaMode), nullptr, nullptr, nullptr },
@@ -7042,16 +6990,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "oriented_pixel_width", reinterpret_cast<getter>(IBitmapFrame_get_OrientedPixelWidth), nullptr, nullptr, nullptr },
         { "pixel_height", reinterpret_cast<getter>(IBitmapFrame_get_PixelHeight), nullptr, nullptr, nullptr },
         { "pixel_width", reinterpret_cast<getter>(IBitmapFrame_get_PixelWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBitmapFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBitmapFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBitmapFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBitmapFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBitmapFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBitmapFrame = {
         "winrt._winrt_windows_graphics_imaging.IBitmapFrame",
@@ -7401,13 +7347,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyMethodDef methods_ImplementsIBitmapFrame[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBitmapFrame), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBitmapFrame), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBitmapFrame[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBitmapFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBitmapFrame = {
         "winrt._winrt_windows_graphics_imaging.ImplementsIBitmapFrame",
@@ -7991,8 +7935,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBitmapFrameWithSoftwareBitmap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBitmapFrameWithSoftwareBitmap), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBitmapFrameWithSoftwareBitmap[] = {
         { "bitmap_alpha_mode", reinterpret_cast<getter>(IBitmapFrameWithSoftwareBitmap_get_BitmapAlphaMode), nullptr, nullptr, nullptr },
@@ -8004,16 +7947,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "oriented_pixel_width", reinterpret_cast<getter>(IBitmapFrameWithSoftwareBitmap_get_OrientedPixelWidth), nullptr, nullptr, nullptr },
         { "pixel_height", reinterpret_cast<getter>(IBitmapFrameWithSoftwareBitmap_get_PixelHeight), nullptr, nullptr, nullptr },
         { "pixel_width", reinterpret_cast<getter>(IBitmapFrameWithSoftwareBitmap_get_PixelWidth), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBitmapFrameWithSoftwareBitmap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBitmapFrameWithSoftwareBitmap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBitmapFrameWithSoftwareBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBitmapFrameWithSoftwareBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBitmapFrameWithSoftwareBitmap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBitmapFrameWithSoftwareBitmap = {
         "winrt._winrt_windows_graphics_imaging.IBitmapFrameWithSoftwareBitmap",
@@ -8495,13 +8436,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyMethodDef methods_ImplementsIBitmapFrameWithSoftwareBitmap[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBitmapFrameWithSoftwareBitmap), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBitmapFrameWithSoftwareBitmap), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBitmapFrameWithSoftwareBitmap[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBitmapFrameWithSoftwareBitmap) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBitmapFrameWithSoftwareBitmap = {
         "winrt._winrt_windows_graphics_imaging.ImplementsIBitmapFrameWithSoftwareBitmap",
@@ -8597,20 +8536,17 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "get_properties_async", reinterpret_cast<PyCFunction>(IBitmapPropertiesView_GetPropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBitmapPropertiesView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBitmapPropertiesView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IBitmapPropertiesView[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IBitmapPropertiesView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBitmapPropertiesView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBitmapPropertiesView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBitmapPropertiesView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBitmapPropertiesView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IBitmapPropertiesView = {
         "winrt._winrt_windows_graphics_imaging.IBitmapPropertiesView",
@@ -8698,13 +8634,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyMethodDef methods_ImplementsIBitmapPropertiesView[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBitmapPropertiesView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBitmapPropertiesView), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIBitmapPropertiesView[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIBitmapPropertiesView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIBitmapPropertiesView = {
         "winrt._winrt_windows_graphics_imaging.ImplementsIBitmapPropertiesView",
@@ -8786,8 +8720,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_BitmapBounds[] = {
         { "_assign_array_", _assign_array_BitmapBounds, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* BitmapBounds_get_X(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, void* /*unused*/) noexcept
     {
@@ -8926,8 +8859,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "y", reinterpret_cast<getter>(BitmapBounds_get_Y), reinterpret_cast<setter>(BitmapBounds_set_Y), nullptr, nullptr },
         { "width", reinterpret_cast<getter>(BitmapBounds_get_Width), reinterpret_cast<setter>(BitmapBounds_set_Width), nullptr, nullptr },
         { "height", reinterpret_cast<getter>(BitmapBounds_get_Height), reinterpret_cast<setter>(BitmapBounds_set_Height), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_BitmapBounds(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* other, int op) noexcept
     {
@@ -9001,8 +8933,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapBounds) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BitmapBounds) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_BitmapBounds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapBounds = {
         "winrt._winrt_windows_graphics_imaging.BitmapBounds",
@@ -9084,8 +9015,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_BitmapPlaneDescription[] = {
         { "_assign_array_", _assign_array_BitmapPlaneDescription, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* BitmapPlaneDescription_get_StartIndex(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, void* /*unused*/) noexcept
     {
@@ -9224,8 +9154,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "width", reinterpret_cast<getter>(BitmapPlaneDescription_get_Width), reinterpret_cast<setter>(BitmapPlaneDescription_set_Width), nullptr, nullptr },
         { "height", reinterpret_cast<getter>(BitmapPlaneDescription_get_Height), reinterpret_cast<setter>(BitmapPlaneDescription_set_Height), nullptr, nullptr },
         { "stride", reinterpret_cast<getter>(BitmapPlaneDescription_get_Stride), reinterpret_cast<setter>(BitmapPlaneDescription_set_Stride), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_BitmapPlaneDescription(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* other, int op) noexcept
     {
@@ -9299,8 +9228,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapPlaneDescription) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BitmapPlaneDescription) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_BitmapPlaneDescription) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapPlaneDescription = {
         "winrt._winrt_windows_graphics_imaging.BitmapPlaneDescription",
@@ -9378,8 +9306,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_BitmapSize[] = {
         { "_assign_array_", _assign_array_BitmapSize, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* BitmapSize_get_Width(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, void* /*unused*/) noexcept
     {
@@ -9450,8 +9377,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyGetSetDef _getset_BitmapSize[] = {
         { "width", reinterpret_cast<getter>(BitmapSize_get_Width), reinterpret_cast<setter>(BitmapSize_set_Width), nullptr, nullptr },
         { "height", reinterpret_cast<getter>(BitmapSize_get_Height), reinterpret_cast<setter>(BitmapSize_set_Height), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_BitmapSize(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, PyObject* other, int op) noexcept
     {
@@ -9513,8 +9439,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapSize) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BitmapSize) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_BitmapSize) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BitmapSize = {
         "winrt._winrt_windows_graphics_imaging.BitmapSize",

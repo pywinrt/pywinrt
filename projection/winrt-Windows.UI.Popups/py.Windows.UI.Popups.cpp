@@ -504,8 +504,7 @@ namespace py::cpp::Windows::UI::Popups
         { "show_async", reinterpret_cast<PyCFunction>(MessageDialog_ShowAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MessageDialog, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MessageDialog), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MessageDialog[] = {
         { "title", reinterpret_cast<getter>(MessageDialog_get_Title), reinterpret_cast<setter>(MessageDialog_put_Title), nullptr, nullptr },
@@ -514,16 +513,14 @@ namespace py::cpp::Windows::UI::Popups
         { "content", reinterpret_cast<getter>(MessageDialog_get_Content), reinterpret_cast<setter>(MessageDialog_put_Content), nullptr, nullptr },
         { "cancel_command_index", reinterpret_cast<getter>(MessageDialog_get_CancelCommandIndex), reinterpret_cast<setter>(MessageDialog_put_CancelCommandIndex), nullptr, nullptr },
         { "commands", reinterpret_cast<getter>(MessageDialog_get_Commands), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MessageDialog[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MessageDialog) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MessageDialog) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MessageDialog) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MessageDialog) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MessageDialog = {
         "winrt._winrt_windows_ui_popups.MessageDialog",
@@ -758,21 +755,18 @@ namespace py::cpp::Windows::UI::Popups
         { "show_async_with_rect_and_placement", reinterpret_cast<PyCFunction>(PopupMenu_ShowAsyncWithRectAndPlacement), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PopupMenu, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopupMenu), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PopupMenu[] = {
         { "commands", reinterpret_cast<getter>(PopupMenu_get_Commands), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PopupMenu[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PopupMenu) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PopupMenu) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PopupMenu) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PopupMenu) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PopupMenu = {
         "winrt._winrt_windows_ui_popups.PopupMenu",
@@ -1102,23 +1096,20 @@ namespace py::cpp::Windows::UI::Popups
     static PyMethodDef _methods_UICommand[] = {
         { "_assign_array_", _assign_array_UICommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UICommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UICommand[] = {
         { "label", reinterpret_cast<getter>(UICommand_get_Label), reinterpret_cast<setter>(UICommand_put_Label), nullptr, nullptr },
         { "invoked", reinterpret_cast<getter>(UICommand_get_Invoked), reinterpret_cast<setter>(UICommand_put_Invoked), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(UICommand_get_Id), reinterpret_cast<setter>(UICommand_put_Id), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UICommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UICommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UICommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UICommand = {
         "winrt._winrt_windows_ui_popups.UICommand",
@@ -1400,23 +1391,20 @@ namespace py::cpp::Windows::UI::Popups
     static PyMethodDef _methods_UICommandSeparator[] = {
         { "_assign_array_", _assign_array_UICommandSeparator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UICommandSeparator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UICommandSeparator[] = {
         { "label", reinterpret_cast<getter>(UICommandSeparator_get_Label), reinterpret_cast<setter>(UICommandSeparator_put_Label), nullptr, nullptr },
         { "invoked", reinterpret_cast<getter>(UICommandSeparator_get_Invoked), reinterpret_cast<setter>(UICommandSeparator_put_Invoked), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(UICommandSeparator_get_Id), reinterpret_cast<setter>(UICommandSeparator_put_Id), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UICommandSeparator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UICommandSeparator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UICommandSeparator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UICommandSeparator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UICommandSeparator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UICommandSeparator = {
         "winrt._winrt_windows_ui_popups.UICommandSeparator",
@@ -1676,23 +1664,20 @@ namespace py::cpp::Windows::UI::Popups
     static PyMethodDef _methods_IUICommand[] = {
         { "_assign_array_", _assign_array_IUICommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IUICommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IUICommand[] = {
         { "id", reinterpret_cast<getter>(IUICommand_get_Id), reinterpret_cast<setter>(IUICommand_put_Id), nullptr, nullptr },
         { "invoked", reinterpret_cast<getter>(IUICommand_get_Invoked), reinterpret_cast<setter>(IUICommand_put_Invoked), nullptr, nullptr },
         { "label", reinterpret_cast<getter>(IUICommand_get_Label), reinterpret_cast<setter>(IUICommand_put_Label), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IUICommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUICommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUICommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IUICommand = {
         "winrt._winrt_windows_ui_popups.IUICommand",
@@ -1877,13 +1862,11 @@ namespace py::cpp::Windows::UI::Popups
     static PyMethodDef methods_ImplementsIUICommand[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUICommand), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUICommand), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIUICommand[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIUICommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIUICommand = {
         "winrt._winrt_windows_ui_popups.ImplementsIUICommand",

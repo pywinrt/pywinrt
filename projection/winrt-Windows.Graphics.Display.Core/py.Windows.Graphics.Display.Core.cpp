@@ -410,20 +410,17 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { "remove_display_modes_changed", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_remove_DisplayModesChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_HdmiDisplayInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HdmiDisplayInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HdmiDisplayInformation[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HdmiDisplayInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdmiDisplayInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdmiDisplayInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdmiDisplayInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdmiDisplayInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HdmiDisplayInformation = {
         "winrt._winrt_windows_graphics_display_core.HdmiDisplayInformation",
@@ -433,13 +430,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
         _type_slots_HdmiDisplayInformation};
 
     static PyGetSetDef getset_HdmiDisplayInformation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HdmiDisplayInformation_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HdmiDisplayInformation_Static[] = 
     {
@@ -449,14 +444,12 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { }
     };
 
-    static PyType_Spec type_spec_HdmiDisplayInformation_Static =
-    {
+    static PyType_Spec type_spec_HdmiDisplayInformation_Static = {
         "winrt._winrt_windows_graphics_display_core.HdmiDisplayInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HdmiDisplayInformation_Static
-    };
+        type_slots_HdmiDisplayInformation_Static};
 
     // ----- HdmiDisplayMode class --------------------
 
@@ -875,8 +868,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { "is_equal", reinterpret_cast<PyCFunction>(HdmiDisplayMode_IsEqual), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HdmiDisplayMode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HdmiDisplayMode), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HdmiDisplayMode[] = {
         { "bits_per_pixel", reinterpret_cast<getter>(HdmiDisplayMode_get_BitsPerPixel), nullptr, nullptr, nullptr },
@@ -890,16 +882,14 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { "resolution_width_in_raw_pixels", reinterpret_cast<getter>(HdmiDisplayMode_get_ResolutionWidthInRawPixels), nullptr, nullptr, nullptr },
         { "stereo_enabled", reinterpret_cast<getter>(HdmiDisplayMode_get_StereoEnabled), nullptr, nullptr, nullptr },
         { "is_dolby_vision_low_latency_supported", reinterpret_cast<getter>(HdmiDisplayMode_get_IsDolbyVisionLowLatencySupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HdmiDisplayMode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdmiDisplayMode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdmiDisplayMode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdmiDisplayMode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdmiDisplayMode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HdmiDisplayMode = {
         "winrt._winrt_windows_graphics_display_core.HdmiDisplayMode",
@@ -997,8 +987,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyMethodDef _methods_HdmiDisplayHdr2086Metadata[] = {
         { "_assign_array_", _assign_array_HdmiDisplayHdr2086Metadata, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* HdmiDisplayHdr2086Metadata_get_RedPrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept
     {
@@ -1409,8 +1398,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { "min_mastering_luminance", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MinMasteringLuminance), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_MinMasteringLuminance), nullptr, nullptr },
         { "max_content_light_level", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MaxContentLightLevel), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_MaxContentLightLevel), nullptr, nullptr },
         { "max_frame_average_light_level", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MaxFrameAverageLightLevel), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_MaxFrameAverageLightLevel), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_HdmiDisplayHdr2086Metadata(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* other, int op) noexcept
     {
@@ -1532,8 +1520,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdmiDisplayHdr2086Metadata) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HdmiDisplayHdr2086Metadata) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_HdmiDisplayHdr2086Metadata) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HdmiDisplayHdr2086Metadata = {
         "winrt._winrt_windows_graphics_display_core.HdmiDisplayHdr2086Metadata",

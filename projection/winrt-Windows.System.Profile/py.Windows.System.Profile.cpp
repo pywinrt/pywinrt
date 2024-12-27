@@ -116,19 +116,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_AnalyticsInfo[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnalyticsInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnalyticsInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnalyticsInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnalyticsInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnalyticsInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnalyticsInfo = {
         "winrt._winrt_windows_system_profile.AnalyticsInfo",
@@ -140,13 +137,11 @@ namespace py::cpp::Windows::System::Profile
     static PyGetSetDef getset_AnalyticsInfo_Static[] = {
         { "device_form", reinterpret_cast<getter>(AnalyticsInfo_get_DeviceForm), nullptr, nullptr, nullptr },
         { "version_info", reinterpret_cast<getter>(AnalyticsInfo_get_VersionInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AnalyticsInfo_Static[] = {
         { "get_system_properties_async", reinterpret_cast<PyCFunction>(AnalyticsInfo_GetSystemPropertiesAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AnalyticsInfo_Static[] = 
     {
@@ -156,14 +151,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_AnalyticsInfo_Static =
-    {
+    static PyType_Spec type_spec_AnalyticsInfo_Static = {
         "winrt._winrt_windows_system_profile.AnalyticsInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AnalyticsInfo_Static
-    };
+        type_slots_AnalyticsInfo_Static};
 
     // ----- AnalyticsVersionInfo class --------------------
 
@@ -299,23 +292,20 @@ namespace py::cpp::Windows::System::Profile
     static PyMethodDef _methods_AnalyticsVersionInfo[] = {
         { "_assign_array_", _assign_array_AnalyticsVersionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnalyticsVersionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnalyticsVersionInfo[] = {
         { "device_family", reinterpret_cast<getter>(AnalyticsVersionInfo_get_DeviceFamily), nullptr, nullptr, nullptr },
         { "device_family_version", reinterpret_cast<getter>(AnalyticsVersionInfo_get_DeviceFamilyVersion), nullptr, nullptr, nullptr },
         { "product_name", reinterpret_cast<getter>(AnalyticsVersionInfo_get_ProductName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnalyticsVersionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnalyticsVersionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnalyticsVersionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnalyticsVersionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnalyticsVersionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnalyticsVersionInfo = {
         "winrt._winrt_windows_system_profile.AnalyticsVersionInfo",
@@ -376,19 +366,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_AppApplicability[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppApplicability[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppApplicability[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppApplicability) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppApplicability) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppApplicability) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppApplicability = {
         "winrt._winrt_windows_system_profile.AppApplicability",
@@ -398,13 +385,11 @@ namespace py::cpp::Windows::System::Profile
         _type_slots_AppApplicability};
 
     static PyGetSetDef getset_AppApplicability_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AppApplicability_Static[] = {
         { "get_unsupported_app_requirements", reinterpret_cast<PyCFunction>(AppApplicability_GetUnsupportedAppRequirements), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AppApplicability_Static[] = 
     {
@@ -414,14 +399,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_AppApplicability_Static =
-    {
+    static PyType_Spec type_spec_AppApplicability_Static = {
         "winrt._winrt_windows_system_profile.AppApplicability_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppApplicability_Static
-    };
+        type_slots_AppApplicability_Static};
 
     // ----- EducationSettings class --------------------
 
@@ -463,19 +446,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_EducationSettings[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EducationSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EducationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EducationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EducationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EducationSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EducationSettings = {
         "winrt._winrt_windows_system_profile.EducationSettings",
@@ -486,12 +466,10 @@ namespace py::cpp::Windows::System::Profile
 
     static PyGetSetDef getset_EducationSettings_Static[] = {
         { "is_education_environment", reinterpret_cast<getter>(EducationSettings_get_IsEducationEnvironment), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EducationSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EducationSettings_Static[] = 
     {
@@ -501,14 +479,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_EducationSettings_Static =
-    {
+    static PyType_Spec type_spec_EducationSettings_Static = {
         "winrt._winrt_windows_system_profile.EducationSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EducationSettings_Static
-    };
+        type_slots_EducationSettings_Static};
 
     // ----- HardwareIdentification class --------------------
 
@@ -562,19 +538,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_HardwareIdentification[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HardwareIdentification[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HardwareIdentification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HardwareIdentification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HardwareIdentification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HardwareIdentification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HardwareIdentification = {
         "winrt._winrt_windows_system_profile.HardwareIdentification",
@@ -584,13 +557,11 @@ namespace py::cpp::Windows::System::Profile
         _type_slots_HardwareIdentification};
 
     static PyGetSetDef getset_HardwareIdentification_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HardwareIdentification_Static[] = {
         { "get_package_specific_token", reinterpret_cast<PyCFunction>(HardwareIdentification_GetPackageSpecificToken), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HardwareIdentification_Static[] = 
     {
@@ -600,14 +571,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_HardwareIdentification_Static =
-    {
+    static PyType_Spec type_spec_HardwareIdentification_Static = {
         "winrt._winrt_windows_system_profile.HardwareIdentification_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HardwareIdentification_Static
-    };
+        type_slots_HardwareIdentification_Static};
 
     // ----- HardwareToken class --------------------
 
@@ -743,23 +712,20 @@ namespace py::cpp::Windows::System::Profile
     static PyMethodDef _methods_HardwareToken[] = {
         { "_assign_array_", _assign_array_HardwareToken, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HardwareToken), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HardwareToken[] = {
         { "certificate", reinterpret_cast<getter>(HardwareToken_get_Certificate), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(HardwareToken_get_Id), nullptr, nullptr, nullptr },
         { "signature", reinterpret_cast<getter>(HardwareToken_get_Signature), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HardwareToken[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HardwareToken) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HardwareToken) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HardwareToken) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HardwareToken) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HardwareToken = {
         "winrt._winrt_windows_system_profile.HardwareToken",
@@ -1438,19 +1404,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_KnownRetailInfoProperties[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownRetailInfoProperties[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownRetailInfoProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownRetailInfoProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownRetailInfoProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownRetailInfoProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownRetailInfoProperties = {
         "winrt._winrt_windows_system_profile.KnownRetailInfoProperties",
@@ -1482,12 +1445,10 @@ namespace py::cpp::Windows::System::Profile
         { "storage_description", reinterpret_cast<getter>(KnownRetailInfoProperties_get_StorageDescription), nullptr, nullptr, nullptr },
         { "weight", reinterpret_cast<getter>(KnownRetailInfoProperties_get_Weight), nullptr, nullptr, nullptr },
         { "windows_edition", reinterpret_cast<getter>(KnownRetailInfoProperties_get_WindowsEdition), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownRetailInfoProperties_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownRetailInfoProperties_Static[] = 
     {
@@ -1497,14 +1458,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_KnownRetailInfoProperties_Static =
-    {
+    static PyType_Spec type_spec_KnownRetailInfoProperties_Static = {
         "winrt._winrt_windows_system_profile.KnownRetailInfoProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownRetailInfoProperties_Static
-    };
+        type_slots_KnownRetailInfoProperties_Static};
 
     // ----- PlatformAutomaticAppSignInManager class --------------------
 
@@ -1546,19 +1505,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_PlatformAutomaticAppSignInManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlatformAutomaticAppSignInManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlatformAutomaticAppSignInManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformAutomaticAppSignInManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformAutomaticAppSignInManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformAutomaticAppSignInManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlatformAutomaticAppSignInManager = {
         "winrt._winrt_windows_system_profile.PlatformAutomaticAppSignInManager",
@@ -1569,12 +1525,10 @@ namespace py::cpp::Windows::System::Profile
 
     static PyGetSetDef getset_PlatformAutomaticAppSignInManager_Static[] = {
         { "policy", reinterpret_cast<getter>(PlatformAutomaticAppSignInManager_get_Policy), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlatformAutomaticAppSignInManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlatformAutomaticAppSignInManager_Static[] = 
     {
@@ -1584,14 +1538,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_PlatformAutomaticAppSignInManager_Static =
-    {
+    static PyType_Spec type_spec_PlatformAutomaticAppSignInManager_Static = {
         "winrt._winrt_windows_system_profile.PlatformAutomaticAppSignInManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlatformAutomaticAppSignInManager_Static
-    };
+        type_slots_PlatformAutomaticAppSignInManager_Static};
 
     // ----- PlatformDiagnosticsAndUsageDataSettings class --------------------
 
@@ -1740,19 +1692,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_PlatformDiagnosticsAndUsageDataSettings[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlatformDiagnosticsAndUsageDataSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlatformDiagnosticsAndUsageDataSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformDiagnosticsAndUsageDataSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformDiagnosticsAndUsageDataSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformDiagnosticsAndUsageDataSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlatformDiagnosticsAndUsageDataSettings = {
         "winrt._winrt_windows_system_profile.PlatformDiagnosticsAndUsageDataSettings",
@@ -1763,15 +1712,13 @@ namespace py::cpp::Windows::System::Profile
 
     static PyGetSetDef getset_PlatformDiagnosticsAndUsageDataSettings_Static[] = {
         { "collection_level", reinterpret_cast<getter>(PlatformDiagnosticsAndUsageDataSettings_get_CollectionLevel), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlatformDiagnosticsAndUsageDataSettings_Static[] = {
         { "can_collect_diagnostics", reinterpret_cast<PyCFunction>(PlatformDiagnosticsAndUsageDataSettings_CanCollectDiagnostics), METH_VARARGS, nullptr },
         { "add_collection_level_changed", reinterpret_cast<PyCFunction>(PlatformDiagnosticsAndUsageDataSettings_add_CollectionLevelChanged), METH_O, nullptr },
         { "remove_collection_level_changed", reinterpret_cast<PyCFunction>(PlatformDiagnosticsAndUsageDataSettings_remove_CollectionLevelChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlatformDiagnosticsAndUsageDataSettings_Static[] = 
     {
@@ -1781,14 +1728,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_PlatformDiagnosticsAndUsageDataSettings_Static =
-    {
+    static PyType_Spec type_spec_PlatformDiagnosticsAndUsageDataSettings_Static = {
         "winrt._winrt_windows_system_profile.PlatformDiagnosticsAndUsageDataSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlatformDiagnosticsAndUsageDataSettings_Static
-    };
+        type_slots_PlatformDiagnosticsAndUsageDataSettings_Static};
 
     // ----- RetailInfo class --------------------
 
@@ -1860,19 +1805,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_RetailInfo[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RetailInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RetailInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RetailInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RetailInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RetailInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RetailInfo = {
         "winrt._winrt_windows_system_profile.RetailInfo",
@@ -1884,12 +1826,10 @@ namespace py::cpp::Windows::System::Profile
     static PyGetSetDef getset_RetailInfo_Static[] = {
         { "is_demo_mode_enabled", reinterpret_cast<getter>(RetailInfo_get_IsDemoModeEnabled), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(RetailInfo_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RetailInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RetailInfo_Static[] = 
     {
@@ -1899,14 +1839,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_RetailInfo_Static =
-    {
+    static PyType_Spec type_spec_RetailInfo_Static = {
         "winrt._winrt_windows_system_profile.RetailInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RetailInfo_Static
-    };
+        type_slots_RetailInfo_Static};
 
     // ----- SharedModeSettings class --------------------
 
@@ -1978,19 +1916,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_SharedModeSettings[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SharedModeSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SharedModeSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SharedModeSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SharedModeSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SharedModeSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SharedModeSettings = {
         "winrt._winrt_windows_system_profile.SharedModeSettings",
@@ -2002,12 +1937,10 @@ namespace py::cpp::Windows::System::Profile
     static PyGetSetDef getset_SharedModeSettings_Static[] = {
         { "is_enabled", reinterpret_cast<getter>(SharedModeSettings_get_IsEnabled), nullptr, nullptr, nullptr },
         { "should_avoid_local_storage", reinterpret_cast<getter>(SharedModeSettings_get_ShouldAvoidLocalStorage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SharedModeSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SharedModeSettings_Static[] = 
     {
@@ -2017,14 +1950,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_SharedModeSettings_Static =
-    {
+    static PyType_Spec type_spec_SharedModeSettings_Static = {
         "winrt._winrt_windows_system_profile.SharedModeSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SharedModeSettings_Static
-    };
+        type_slots_SharedModeSettings_Static};
 
     // ----- SmartAppControlPolicy class --------------------
 
@@ -2131,19 +2062,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_SmartAppControlPolicy[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SmartAppControlPolicy[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SmartAppControlPolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartAppControlPolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartAppControlPolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartAppControlPolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SmartAppControlPolicy = {
         "winrt._winrt_windows_system_profile.SmartAppControlPolicy",
@@ -2154,14 +2082,12 @@ namespace py::cpp::Windows::System::Profile
 
     static PyGetSetDef getset_SmartAppControlPolicy_Static[] = {
         { "is_enabled", reinterpret_cast<getter>(SmartAppControlPolicy_get_IsEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SmartAppControlPolicy_Static[] = {
         { "add_changed", reinterpret_cast<PyCFunction>(SmartAppControlPolicy_add_Changed), METH_O, nullptr },
         { "remove_changed", reinterpret_cast<PyCFunction>(SmartAppControlPolicy_remove_Changed), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SmartAppControlPolicy_Static[] = 
     {
@@ -2171,14 +2097,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_SmartAppControlPolicy_Static =
-    {
+    static PyType_Spec type_spec_SmartAppControlPolicy_Static = {
         "winrt._winrt_windows_system_profile.SmartAppControlPolicy_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmartAppControlPolicy_Static
-    };
+        type_slots_SmartAppControlPolicy_Static};
 
     // ----- SystemIdentification class --------------------
 
@@ -2272,19 +2196,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_SystemIdentification[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemIdentification[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemIdentification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemIdentification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemIdentification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemIdentification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemIdentification = {
         "winrt._winrt_windows_system_profile.SystemIdentification",
@@ -2294,14 +2215,12 @@ namespace py::cpp::Windows::System::Profile
         _type_slots_SystemIdentification};
 
     static PyGetSetDef getset_SystemIdentification_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SystemIdentification_Static[] = {
         { "get_system_id_for_publisher", reinterpret_cast<PyCFunction>(SystemIdentification_GetSystemIdForPublisher), METH_VARARGS, nullptr },
         { "get_system_id_for_user", reinterpret_cast<PyCFunction>(SystemIdentification_GetSystemIdForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SystemIdentification_Static[] = 
     {
@@ -2311,14 +2230,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_SystemIdentification_Static =
-    {
+    static PyType_Spec type_spec_SystemIdentification_Static = {
         "winrt._winrt_windows_system_profile.SystemIdentification_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemIdentification_Static
-    };
+        type_slots_SystemIdentification_Static};
 
     // ----- SystemIdentificationInfo class --------------------
 
@@ -2424,22 +2341,19 @@ namespace py::cpp::Windows::System::Profile
     static PyMethodDef _methods_SystemIdentificationInfo[] = {
         { "_assign_array_", _assign_array_SystemIdentificationInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemIdentificationInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemIdentificationInfo[] = {
         { "id", reinterpret_cast<getter>(SystemIdentificationInfo_get_Id), nullptr, nullptr, nullptr },
         { "source", reinterpret_cast<getter>(SystemIdentificationInfo_get_Source), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemIdentificationInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemIdentificationInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemIdentificationInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemIdentificationInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemIdentificationInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemIdentificationInfo = {
         "winrt._winrt_windows_system_profile.SystemIdentificationInfo",
@@ -2553,19 +2467,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_SystemSetupInfo[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SystemSetupInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SystemSetupInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemSetupInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemSetupInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemSetupInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SystemSetupInfo = {
         "winrt._winrt_windows_system_profile.SystemSetupInfo",
@@ -2576,14 +2487,12 @@ namespace py::cpp::Windows::System::Profile
 
     static PyGetSetDef getset_SystemSetupInfo_Static[] = {
         { "out_of_box_experience_state", reinterpret_cast<getter>(SystemSetupInfo_get_OutOfBoxExperienceState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SystemSetupInfo_Static[] = {
         { "add_out_of_box_experience_state_changed", reinterpret_cast<PyCFunction>(SystemSetupInfo_add_OutOfBoxExperienceStateChanged), METH_O, nullptr },
         { "remove_out_of_box_experience_state_changed", reinterpret_cast<PyCFunction>(SystemSetupInfo_remove_OutOfBoxExperienceStateChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SystemSetupInfo_Static[] = 
     {
@@ -2593,14 +2502,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_SystemSetupInfo_Static =
-    {
+    static PyType_Spec type_spec_SystemSetupInfo_Static = {
         "winrt._winrt_windows_system_profile.SystemSetupInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemSetupInfo_Static
-    };
+        type_slots_SystemSetupInfo_Static};
 
     // ----- UnsupportedAppRequirement class --------------------
 
@@ -2706,22 +2613,19 @@ namespace py::cpp::Windows::System::Profile
     static PyMethodDef _methods_UnsupportedAppRequirement[] = {
         { "_assign_array_", _assign_array_UnsupportedAppRequirement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UnsupportedAppRequirement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UnsupportedAppRequirement[] = {
         { "reasons", reinterpret_cast<getter>(UnsupportedAppRequirement_get_Reasons), nullptr, nullptr, nullptr },
         { "requirement", reinterpret_cast<getter>(UnsupportedAppRequirement_get_Requirement), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UnsupportedAppRequirement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UnsupportedAppRequirement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UnsupportedAppRequirement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UnsupportedAppRequirement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UnsupportedAppRequirement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UnsupportedAppRequirement = {
         "winrt._winrt_windows_system_profile.UnsupportedAppRequirement",
@@ -2925,19 +2829,16 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_WindowsIntegrityPolicy[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsIntegrityPolicy[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsIntegrityPolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsIntegrityPolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsIntegrityPolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsIntegrityPolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsIntegrityPolicy = {
         "winrt._winrt_windows_system_profile.WindowsIntegrityPolicy",
@@ -2951,14 +2852,12 @@ namespace py::cpp::Windows::System::Profile
         { "is_disable_supported", reinterpret_cast<getter>(WindowsIntegrityPolicy_get_IsDisableSupported), nullptr, nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(WindowsIntegrityPolicy_get_IsEnabled), nullptr, nullptr, nullptr },
         { "is_enabled_for_trial", reinterpret_cast<getter>(WindowsIntegrityPolicy_get_IsEnabledForTrial), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WindowsIntegrityPolicy_Static[] = {
         { "add_policy_changed", reinterpret_cast<PyCFunction>(WindowsIntegrityPolicy_add_PolicyChanged), METH_O, nullptr },
         { "remove_policy_changed", reinterpret_cast<PyCFunction>(WindowsIntegrityPolicy_remove_PolicyChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WindowsIntegrityPolicy_Static[] = 
     {
@@ -2968,14 +2867,12 @@ namespace py::cpp::Windows::System::Profile
         { }
     };
 
-    static PyType_Spec type_spec_WindowsIntegrityPolicy_Static =
-    {
+    static PyType_Spec type_spec_WindowsIntegrityPolicy_Static = {
         "winrt._winrt_windows_system_profile.WindowsIntegrityPolicy_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WindowsIntegrityPolicy_Static
-    };
+        type_slots_WindowsIntegrityPolicy_Static};
 
     // ----- Windows.System.Profile Initialization --------------------
 

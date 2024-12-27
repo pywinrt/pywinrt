@@ -468,8 +468,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(CustomSensor_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CustomSensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomSensor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CustomSensor[] = {
         { "report_interval", reinterpret_cast<getter>(CustomSensor_get_ReportInterval), reinterpret_cast<setter>(CustomSensor_put_ReportInterval), nullptr, nullptr },
@@ -477,16 +476,14 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
         { "minimum_report_interval", reinterpret_cast<getter>(CustomSensor_get_MinimumReportInterval), nullptr, nullptr, nullptr },
         { "report_latency", reinterpret_cast<getter>(CustomSensor_get_ReportLatency), reinterpret_cast<setter>(CustomSensor_put_ReportLatency), nullptr, nullptr },
         { "max_batch_size", reinterpret_cast<getter>(CustomSensor_get_MaxBatchSize), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CustomSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomSensor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CustomSensor = {
         "winrt._winrt_windows_devices_sensors_custom.CustomSensor",
@@ -496,14 +493,12 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
         _type_slots_CustomSensor};
 
     static PyGetSetDef getset_CustomSensor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CustomSensor_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(CustomSensor_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(CustomSensor_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CustomSensor_Static[] = 
     {
@@ -513,14 +508,12 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
         { }
     };
 
-    static PyType_Spec type_spec_CustomSensor_Static =
-    {
+    static PyType_Spec type_spec_CustomSensor_Static = {
         "winrt._winrt_windows_devices_sensors_custom.CustomSensor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CustomSensor_Static
-    };
+        type_slots_CustomSensor_Static};
 
     // ----- CustomSensorReading class --------------------
 
@@ -656,23 +649,20 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     static PyMethodDef _methods_CustomSensorReading[] = {
         { "_assign_array_", _assign_array_CustomSensorReading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomSensorReading), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CustomSensorReading[] = {
         { "properties", reinterpret_cast<getter>(CustomSensorReading_get_Properties), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(CustomSensorReading_get_Timestamp), nullptr, nullptr, nullptr },
         { "performance_count", reinterpret_cast<getter>(CustomSensorReading_get_PerformanceCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CustomSensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomSensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomSensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomSensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomSensorReading) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CustomSensorReading = {
         "winrt._winrt_windows_devices_sensors_custom.CustomSensorReading",
@@ -755,21 +745,18 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     static PyMethodDef _methods_CustomSensorReadingChangedEventArgs[] = {
         { "_assign_array_", _assign_array_CustomSensorReadingChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomSensorReadingChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CustomSensorReadingChangedEventArgs[] = {
         { "reading", reinterpret_cast<getter>(CustomSensorReadingChangedEventArgs_get_Reading), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CustomSensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomSensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomSensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomSensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomSensorReadingChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CustomSensorReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors_custom.CustomSensorReadingChangedEventArgs",

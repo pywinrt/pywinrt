@@ -78,21 +78,18 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static PyMethodDef _methods_DesignerAppExitedEventArgs[] = {
         { "_assign_array_", _assign_array_DesignerAppExitedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesignerAppExitedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesignerAppExitedEventArgs[] = {
         { "exit_code", reinterpret_cast<getter>(DesignerAppExitedEventArgs_get_ExitCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesignerAppExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesignerAppExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesignerAppExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesignerAppExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesignerAppExitedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesignerAppExitedEventArgs = {
         "winrt._winrt_windows_ui_xaml_hosting.DesignerAppExitedEventArgs",
@@ -422,21 +419,18 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "_from", reinterpret_cast<PyCFunction>(_from_DesignerAppManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesignerAppManager), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesignerAppManager), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesignerAppManager[] = {
         { "app_user_model_id", reinterpret_cast<getter>(DesignerAppManager_get_AppUserModelId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesignerAppManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesignerAppManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesignerAppManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesignerAppManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesignerAppManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesignerAppManager = {
         "winrt._winrt_windows_ui_xaml_hosting.DesignerAppManager",
@@ -720,24 +714,21 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "_from", reinterpret_cast<PyCFunction>(_from_DesignerAppView), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesignerAppView), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesignerAppView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesignerAppView[] = {
         { "app_user_model_id", reinterpret_cast<getter>(DesignerAppView_get_AppUserModelId), nullptr, nullptr, nullptr },
         { "application_view_id", reinterpret_cast<getter>(DesignerAppView_get_ApplicationViewId), nullptr, nullptr, nullptr },
         { "view_size", reinterpret_cast<getter>(DesignerAppView_get_ViewSize), nullptr, nullptr, nullptr },
         { "view_state", reinterpret_cast<getter>(DesignerAppView_get_ViewState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesignerAppView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesignerAppView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesignerAppView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesignerAppView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesignerAppView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesignerAppView = {
         "winrt._winrt_windows_ui_xaml_hosting.DesignerAppView",
@@ -1215,22 +1206,19 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopWindowXamlSource), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesktopWindowXamlSource), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesktopWindowXamlSource), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesktopWindowXamlSource[] = {
         { "content", reinterpret_cast<getter>(DesktopWindowXamlSource_get_Content), reinterpret_cast<setter>(DesktopWindowXamlSource_put_Content), nullptr, nullptr },
         { "has_focus", reinterpret_cast<getter>(DesktopWindowXamlSource_get_HasFocus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesktopWindowXamlSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopWindowXamlSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopWindowXamlSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopWindowXamlSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopWindowXamlSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesktopWindowXamlSource = {
         "winrt._winrt_windows_ui_xaml_hosting.DesktopWindowXamlSource",
@@ -1240,12 +1228,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         _type_slots_DesktopWindowXamlSource};
 
     static PyGetSetDef getset_DesktopWindowXamlSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DesktopWindowXamlSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DesktopWindowXamlSource_Static[] = 
     {
@@ -1255,14 +1241,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Spec type_spec_DesktopWindowXamlSource_Static =
-    {
+    static PyType_Spec type_spec_DesktopWindowXamlSource_Static = {
         "winrt._winrt_windows_ui_xaml_hosting.DesktopWindowXamlSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_DesktopWindowXamlSource_Static
-    };
+        type_slots_DesktopWindowXamlSource_Static};
 
     // ----- DesktopWindowXamlSourceGotFocusEventArgs class --------------------
 
@@ -1338,21 +1322,18 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static PyMethodDef _methods_DesktopWindowXamlSourceGotFocusEventArgs[] = {
         { "_assign_array_", _assign_array_DesktopWindowXamlSourceGotFocusEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopWindowXamlSourceGotFocusEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesktopWindowXamlSourceGotFocusEventArgs[] = {
         { "request", reinterpret_cast<getter>(DesktopWindowXamlSourceGotFocusEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesktopWindowXamlSourceGotFocusEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopWindowXamlSourceGotFocusEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopWindowXamlSourceGotFocusEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopWindowXamlSourceGotFocusEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopWindowXamlSourceGotFocusEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesktopWindowXamlSourceGotFocusEventArgs = {
         "winrt._winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceGotFocusEventArgs",
@@ -1435,21 +1416,18 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static PyMethodDef _methods_DesktopWindowXamlSourceTakeFocusRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopWindowXamlSourceTakeFocusRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DesktopWindowXamlSourceTakeFocusRequestedEventArgs[] = {
         { "request", reinterpret_cast<getter>(DesktopWindowXamlSourceTakeFocusRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DesktopWindowXamlSourceTakeFocusRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopWindowXamlSourceTakeFocusRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopWindowXamlSourceTakeFocusRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopWindowXamlSourceTakeFocusRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopWindowXamlSourceTakeFocusRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs = {
         "winrt._winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs",
@@ -1932,20 +1910,17 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static PyMethodDef _methods_ElementCompositionPreview[] = {
         { "_assign_array_", _assign_array_ElementCompositionPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ElementCompositionPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ElementCompositionPreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ElementCompositionPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ElementCompositionPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ElementCompositionPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ElementCompositionPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ElementCompositionPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ElementCompositionPreview = {
         "winrt._winrt_windows_ui_xaml_hosting.ElementCompositionPreview",
@@ -1955,8 +1930,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         _type_slots_ElementCompositionPreview};
 
     static PyGetSetDef getset_ElementCompositionPreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ElementCompositionPreview_Static[] = {
         { "get_app_window_content", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetAppWindowContent), METH_VARARGS, nullptr },
@@ -1969,8 +1943,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "set_implicit_hide_animation", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetImplicitHideAnimation), METH_VARARGS, nullptr },
         { "set_implicit_show_animation", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetImplicitShowAnimation), METH_VARARGS, nullptr },
         { "set_is_translation_enabled", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetIsTranslationEnabled), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ElementCompositionPreview_Static[] = 
     {
@@ -1980,14 +1953,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Spec type_spec_ElementCompositionPreview_Static =
-    {
+    static PyType_Spec type_spec_ElementCompositionPreview_Static = {
         "winrt._winrt_windows_ui_xaml_hosting.ElementCompositionPreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ElementCompositionPreview_Static
-    };
+        type_slots_ElementCompositionPreview_Static};
 
     // ----- WindowsXamlManager class --------------------
 
@@ -2140,20 +2111,17 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsXamlManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WindowsXamlManager), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_WindowsXamlManager), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WindowsXamlManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WindowsXamlManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsXamlManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsXamlManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsXamlManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsXamlManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WindowsXamlManager = {
         "winrt._winrt_windows_ui_xaml_hosting.WindowsXamlManager",
@@ -2163,13 +2131,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         _type_slots_WindowsXamlManager};
 
     static PyGetSetDef getset_WindowsXamlManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WindowsXamlManager_Static[] = {
         { "initialize_for_current_thread", reinterpret_cast<PyCFunction>(WindowsXamlManager_InitializeForCurrentThread), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WindowsXamlManager_Static[] = 
     {
@@ -2179,14 +2145,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Spec type_spec_WindowsXamlManager_Static =
-    {
+    static PyType_Spec type_spec_WindowsXamlManager_Static = {
         "winrt._winrt_windows_ui_xaml_hosting.WindowsXamlManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WindowsXamlManager_Static
-    };
+        type_slots_WindowsXamlManager_Static};
 
     // ----- XamlSourceFocusNavigationRequest class --------------------
 
@@ -2379,23 +2343,20 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static PyMethodDef _methods_XamlSourceFocusNavigationRequest[] = {
         { "_assign_array_", _assign_array_XamlSourceFocusNavigationRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlSourceFocusNavigationRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XamlSourceFocusNavigationRequest[] = {
         { "correlation_id", reinterpret_cast<getter>(XamlSourceFocusNavigationRequest_get_CorrelationId), nullptr, nullptr, nullptr },
         { "hint_rect", reinterpret_cast<getter>(XamlSourceFocusNavigationRequest_get_HintRect), nullptr, nullptr, nullptr },
         { "reason", reinterpret_cast<getter>(XamlSourceFocusNavigationRequest_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XamlSourceFocusNavigationRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlSourceFocusNavigationRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlSourceFocusNavigationRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlSourceFocusNavigationRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlSourceFocusNavigationRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XamlSourceFocusNavigationRequest = {
         "winrt._winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationRequest",
@@ -2502,21 +2463,18 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static PyMethodDef _methods_XamlSourceFocusNavigationResult[] = {
         { "_assign_array_", _assign_array_XamlSourceFocusNavigationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlSourceFocusNavigationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XamlSourceFocusNavigationResult[] = {
         { "was_focus_moved", reinterpret_cast<getter>(XamlSourceFocusNavigationResult_get_WasFocusMoved), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XamlSourceFocusNavigationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlSourceFocusNavigationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlSourceFocusNavigationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlSourceFocusNavigationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlSourceFocusNavigationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XamlSourceFocusNavigationResult = {
         "winrt._winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationResult",
@@ -3182,23 +3140,20 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "set_size", reinterpret_cast<PyCFunction>(XamlUIPresenter_SetSize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlUIPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlUIPresenter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XamlUIPresenter[] = {
         { "theme_resources_xaml", reinterpret_cast<getter>(XamlUIPresenter_get_ThemeResourcesXaml), reinterpret_cast<setter>(XamlUIPresenter_put_ThemeResourcesXaml), nullptr, nullptr },
         { "theme_key", reinterpret_cast<getter>(XamlUIPresenter_get_ThemeKey), reinterpret_cast<setter>(XamlUIPresenter_put_ThemeKey), nullptr, nullptr },
         { "root_element", reinterpret_cast<getter>(XamlUIPresenter_get_RootElement), reinterpret_cast<setter>(XamlUIPresenter_put_RootElement), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XamlUIPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlUIPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlUIPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlUIPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlUIPresenter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XamlUIPresenter = {
         "winrt._winrt_windows_ui_xaml_hosting.XamlUIPresenter",
@@ -3209,16 +3164,14 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyGetSetDef getset_XamlUIPresenter_Static[] = {
         { "complete_timelines_automatically", reinterpret_cast<getter>(XamlUIPresenter_get_CompleteTimelinesAutomatically), reinterpret_cast<setter>(XamlUIPresenter_put_CompleteTimelinesAutomatically), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_XamlUIPresenter_Static[] = {
         { "get_flyout_placement", reinterpret_cast<PyCFunction>(XamlUIPresenter_GetFlyoutPlacement), METH_VARARGS, nullptr },
         { "get_flyout_placement_target_info", reinterpret_cast<PyCFunction>(XamlUIPresenter_GetFlyoutPlacementTargetInfo), METH_VARARGS, nullptr },
         { "notify_window_size_changed", reinterpret_cast<PyCFunction>(XamlUIPresenter_NotifyWindowSizeChanged), METH_VARARGS, nullptr },
         { "set_host", reinterpret_cast<PyCFunction>(XamlUIPresenter_SetHost), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_XamlUIPresenter_Static[] = 
     {
@@ -3228,14 +3181,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Spec type_spec_XamlUIPresenter_Static =
-    {
+    static PyType_Spec type_spec_XamlUIPresenter_Static = {
         "winrt._winrt_windows_ui_xaml_hosting.XamlUIPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XamlUIPresenter_Static
-    };
+        type_slots_XamlUIPresenter_Static};
 
     // ----- IXamlUIPresenterHost interface --------------------
 
@@ -3324,20 +3275,17 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "resolve_file_resource", reinterpret_cast<PyCFunction>(IXamlUIPresenterHost_ResolveFileResource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXamlUIPresenterHost, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlUIPresenterHost), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXamlUIPresenterHost[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXamlUIPresenterHost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlUIPresenterHost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlUIPresenterHost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlUIPresenterHost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlUIPresenterHost) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXamlUIPresenterHost = {
         "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost",
@@ -3425,13 +3373,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static PyMethodDef methods_ImplementsIXamlUIPresenterHost[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlUIPresenterHost), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlUIPresenterHost), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXamlUIPresenterHost[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXamlUIPresenterHost) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXamlUIPresenterHost = {
         "winrt._winrt_windows_ui_xaml_hosting.ImplementsIXamlUIPresenterHost",
@@ -3525,20 +3471,17 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "get_generic_xaml_file_path", reinterpret_cast<PyCFunction>(IXamlUIPresenterHost2_GetGenericXamlFilePath), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXamlUIPresenterHost2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlUIPresenterHost2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXamlUIPresenterHost2[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXamlUIPresenterHost2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlUIPresenterHost2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlUIPresenterHost2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlUIPresenterHost2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlUIPresenterHost2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXamlUIPresenterHost2 = {
         "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost2",
@@ -3620,13 +3563,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static PyMethodDef methods_ImplementsIXamlUIPresenterHost2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlUIPresenterHost2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlUIPresenterHost2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXamlUIPresenterHost2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXamlUIPresenterHost2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXamlUIPresenterHost2 = {
         "winrt._winrt_windows_ui_xaml_hosting.ImplementsIXamlUIPresenterHost2",
@@ -3724,20 +3665,17 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "resolve_dictionary_resource", reinterpret_cast<PyCFunction>(IXamlUIPresenterHost3_ResolveDictionaryResource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXamlUIPresenterHost3, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlUIPresenterHost3), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXamlUIPresenterHost3[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXamlUIPresenterHost3[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlUIPresenterHost3) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlUIPresenterHost3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlUIPresenterHost3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlUIPresenterHost3) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXamlUIPresenterHost3 = {
         "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost3",
@@ -3843,13 +3781,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static PyMethodDef methods_ImplementsIXamlUIPresenterHost3[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlUIPresenterHost3), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlUIPresenterHost3), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXamlUIPresenterHost3[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXamlUIPresenterHost3) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXamlUIPresenterHost3 = {
         "winrt._winrt_windows_ui_xaml_hosting.ImplementsIXamlUIPresenterHost3",

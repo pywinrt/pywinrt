@@ -139,21 +139,18 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_AdvancedPhotoCaptureSettings[] = {
         { "_assign_array_", _assign_array_AdvancedPhotoCaptureSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdvancedPhotoCaptureSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdvancedPhotoCaptureSettings[] = {
         { "mode", reinterpret_cast<getter>(AdvancedPhotoCaptureSettings_get_Mode), reinterpret_cast<setter>(AdvancedPhotoCaptureSettings_put_Mode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdvancedPhotoCaptureSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvancedPhotoCaptureSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdvancedPhotoCaptureSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvancedPhotoCaptureSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvancedPhotoCaptureSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdvancedPhotoCaptureSettings = {
         "winrt._winrt_windows_media_devices.AdvancedPhotoCaptureSettings",
@@ -340,23 +337,20 @@ namespace py::cpp::Windows::Media::Devices
         { "configure", reinterpret_cast<PyCFunction>(AdvancedPhotoControl_Configure), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AdvancedPhotoControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AdvancedPhotoControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AdvancedPhotoControl[] = {
         { "mode", reinterpret_cast<getter>(AdvancedPhotoControl_get_Mode), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(AdvancedPhotoControl_get_Supported), nullptr, nullptr, nullptr },
         { "supported_modes", reinterpret_cast<getter>(AdvancedPhotoControl_get_SupportedModes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AdvancedPhotoControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvancedPhotoControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdvancedPhotoControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvancedPhotoControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvancedPhotoControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AdvancedPhotoControl = {
         "winrt._winrt_windows_media_devices.AdvancedPhotoControl",
@@ -707,23 +701,20 @@ namespace py::cpp::Windows::Media::Devices
         { "set_media_stream_properties_async", reinterpret_cast<PyCFunction>(AudioDeviceController_SetMediaStreamPropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AudioDeviceController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioDeviceController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioDeviceController[] = {
         { "volume_percent", reinterpret_cast<getter>(AudioDeviceController_get_VolumePercent), reinterpret_cast<setter>(AudioDeviceController_put_VolumePercent), nullptr, nullptr },
         { "muted", reinterpret_cast<getter>(AudioDeviceController_get_Muted), reinterpret_cast<setter>(AudioDeviceController_put_Muted), nullptr, nullptr },
         { "audio_capture_effects_manager", reinterpret_cast<getter>(AudioDeviceController_get_AudioCaptureEffectsManager), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioDeviceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioDeviceController = {
         "winrt._winrt_windows_media_devices.AudioDeviceController",
@@ -969,8 +960,7 @@ namespace py::cpp::Windows::Media::Devices
         { "send_command_async", reinterpret_cast<PyCFunction>(AudioDeviceModule_SendCommandAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AudioDeviceModule, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioDeviceModule), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioDeviceModule[] = {
         { "class_id", reinterpret_cast<getter>(AudioDeviceModule_get_ClassId), nullptr, nullptr, nullptr },
@@ -978,16 +968,14 @@ namespace py::cpp::Windows::Media::Devices
         { "instance_id", reinterpret_cast<getter>(AudioDeviceModule_get_InstanceId), nullptr, nullptr, nullptr },
         { "major_version", reinterpret_cast<getter>(AudioDeviceModule_get_MajorVersion), nullptr, nullptr, nullptr },
         { "minor_version", reinterpret_cast<getter>(AudioDeviceModule_get_MinorVersion), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioDeviceModule[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceModule) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceModule) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceModule) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceModule) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioDeviceModule = {
         "winrt._winrt_windows_media_devices.AudioDeviceModule",
@@ -1100,22 +1088,19 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_AudioDeviceModuleNotificationEventArgs[] = {
         { "_assign_array_", _assign_array_AudioDeviceModuleNotificationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioDeviceModuleNotificationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioDeviceModuleNotificationEventArgs[] = {
         { "module", reinterpret_cast<getter>(AudioDeviceModuleNotificationEventArgs_get_Module), nullptr, nullptr, nullptr },
         { "notification_data", reinterpret_cast<getter>(AudioDeviceModuleNotificationEventArgs_get_NotificationData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioDeviceModuleNotificationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceModuleNotificationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceModuleNotificationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceModuleNotificationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceModuleNotificationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioDeviceModuleNotificationEventArgs = {
         "winrt._winrt_windows_media_devices.AudioDeviceModuleNotificationEventArgs",
@@ -1343,20 +1328,17 @@ namespace py::cpp::Windows::Media::Devices
         { "remove_module_notification_received", reinterpret_cast<PyCFunction>(AudioDeviceModulesManager_remove_ModuleNotificationReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_AudioDeviceModulesManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioDeviceModulesManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioDeviceModulesManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioDeviceModulesManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceModulesManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceModulesManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceModulesManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceModulesManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioDeviceModulesManager = {
         "winrt._winrt_windows_media_devices.AudioDeviceModulesManager",
@@ -2096,21 +2078,18 @@ namespace py::cpp::Windows::Media::Devices
         { "remove_redial_requested", reinterpret_cast<PyCFunction>(CallControl_remove_RedialRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_CallControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CallControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CallControl[] = {
         { "has_ringer", reinterpret_cast<getter>(CallControl_get_HasRinger), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CallControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CallControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CallControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CallControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CallControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CallControl = {
         "winrt._winrt_windows_media_devices.CallControl",
@@ -2120,14 +2099,12 @@ namespace py::cpp::Windows::Media::Devices
         _type_slots_CallControl};
 
     static PyGetSetDef getset_CallControl_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CallControl_Static[] = {
         { "from_id", reinterpret_cast<PyCFunction>(CallControl_FromId), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(CallControl_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CallControl_Static[] = 
     {
@@ -2137,14 +2114,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Spec type_spec_CallControl_Static =
-    {
+    static PyType_Spec type_spec_CallControl_Static = {
         "winrt._winrt_windows_media_devices.CallControl_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CallControl_Static
-    };
+        type_slots_CallControl_Static};
 
     // ----- CameraOcclusionInfo class --------------------
 
@@ -2341,20 +2316,17 @@ namespace py::cpp::Windows::Media::Devices
         { "remove_state_changed", reinterpret_cast<PyCFunction>(CameraOcclusionInfo_remove_StateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CameraOcclusionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CameraOcclusionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CameraOcclusionInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CameraOcclusionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraOcclusionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraOcclusionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraOcclusionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraOcclusionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CameraOcclusionInfo = {
         "winrt._winrt_windows_media_devices.CameraOcclusionInfo",
@@ -2480,21 +2452,18 @@ namespace py::cpp::Windows::Media::Devices
         { "is_occlusion_kind", reinterpret_cast<PyCFunction>(CameraOcclusionState_IsOcclusionKind), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CameraOcclusionState, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CameraOcclusionState), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CameraOcclusionState[] = {
         { "is_occluded", reinterpret_cast<getter>(CameraOcclusionState_get_IsOccluded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CameraOcclusionState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraOcclusionState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraOcclusionState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraOcclusionState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraOcclusionState) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CameraOcclusionState = {
         "winrt._winrt_windows_media_devices.CameraOcclusionState",
@@ -2577,21 +2546,18 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_CameraOcclusionStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_CameraOcclusionStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CameraOcclusionStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CameraOcclusionStateChangedEventArgs[] = {
         { "state", reinterpret_cast<getter>(CameraOcclusionStateChangedEventArgs_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CameraOcclusionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraOcclusionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraOcclusionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraOcclusionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraOcclusionStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CameraOcclusionStateChangedEventArgs = {
         "winrt._winrt_windows_media_devices.CameraOcclusionStateChangedEventArgs",
@@ -2704,22 +2670,19 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_DefaultAudioCaptureDeviceChangedEventArgs[] = {
         { "_assign_array_", _assign_array_DefaultAudioCaptureDeviceChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DefaultAudioCaptureDeviceChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DefaultAudioCaptureDeviceChangedEventArgs[] = {
         { "id", reinterpret_cast<getter>(DefaultAudioCaptureDeviceChangedEventArgs_get_Id), nullptr, nullptr, nullptr },
         { "role", reinterpret_cast<getter>(DefaultAudioCaptureDeviceChangedEventArgs_get_Role), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DefaultAudioCaptureDeviceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DefaultAudioCaptureDeviceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DefaultAudioCaptureDeviceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DefaultAudioCaptureDeviceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DefaultAudioCaptureDeviceChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DefaultAudioCaptureDeviceChangedEventArgs = {
         "winrt._winrt_windows_media_devices.DefaultAudioCaptureDeviceChangedEventArgs",
@@ -2832,22 +2795,19 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_DefaultAudioRenderDeviceChangedEventArgs[] = {
         { "_assign_array_", _assign_array_DefaultAudioRenderDeviceChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DefaultAudioRenderDeviceChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DefaultAudioRenderDeviceChangedEventArgs[] = {
         { "id", reinterpret_cast<getter>(DefaultAudioRenderDeviceChangedEventArgs_get_Id), nullptr, nullptr, nullptr },
         { "role", reinterpret_cast<getter>(DefaultAudioRenderDeviceChangedEventArgs_get_Role), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DefaultAudioRenderDeviceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DefaultAudioRenderDeviceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DefaultAudioRenderDeviceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DefaultAudioRenderDeviceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DefaultAudioRenderDeviceChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DefaultAudioRenderDeviceChangedEventArgs = {
         "winrt._winrt_windows_media_devices.DefaultAudioRenderDeviceChangedEventArgs",
@@ -2972,21 +2932,18 @@ namespace py::cpp::Windows::Media::Devices
         { "handled", reinterpret_cast<PyCFunction>(DialRequestedEventArgs_Handled), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DialRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DialRequestedEventArgs[] = {
         { "contact", reinterpret_cast<getter>(DialRequestedEventArgs_get_Contact), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DialRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DialRequestedEventArgs = {
         "winrt._winrt_windows_media_devices.DialRequestedEventArgs",
@@ -3268,23 +3225,20 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_DigitalWindowBounds[] = {
         { "_assign_array_", _assign_array_DigitalWindowBounds, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DigitalWindowBounds), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DigitalWindowBounds[] = {
         { "scale", reinterpret_cast<getter>(DigitalWindowBounds_get_Scale), reinterpret_cast<setter>(DigitalWindowBounds_put_Scale), nullptr, nullptr },
         { "normalized_origin_top", reinterpret_cast<getter>(DigitalWindowBounds_get_NormalizedOriginTop), reinterpret_cast<setter>(DigitalWindowBounds_put_NormalizedOriginTop), nullptr, nullptr },
         { "normalized_origin_left", reinterpret_cast<getter>(DigitalWindowBounds_get_NormalizedOriginLeft), reinterpret_cast<setter>(DigitalWindowBounds_put_NormalizedOriginLeft), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DigitalWindowBounds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DigitalWindowBounds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DigitalWindowBounds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DigitalWindowBounds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DigitalWindowBounds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DigitalWindowBounds = {
         "winrt._winrt_windows_media_devices.DigitalWindowBounds",
@@ -3517,8 +3471,7 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_DigitalWindowCapability[] = {
         { "_assign_array_", _assign_array_DigitalWindowCapability, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DigitalWindowCapability), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DigitalWindowCapability[] = {
         { "height", reinterpret_cast<getter>(DigitalWindowCapability_get_Height), nullptr, nullptr, nullptr },
@@ -3527,16 +3480,14 @@ namespace py::cpp::Windows::Media::Devices
         { "min_scale_value_without_upsampling", reinterpret_cast<getter>(DigitalWindowCapability_get_MinScaleValueWithoutUpsampling), nullptr, nullptr, nullptr },
         { "normalized_field_of_view_limit", reinterpret_cast<getter>(DigitalWindowCapability_get_NormalizedFieldOfViewLimit), nullptr, nullptr, nullptr },
         { "width", reinterpret_cast<getter>(DigitalWindowCapability_get_Width), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DigitalWindowCapability[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DigitalWindowCapability) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DigitalWindowCapability) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DigitalWindowCapability) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DigitalWindowCapability) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DigitalWindowCapability = {
         "winrt._winrt_windows_media_devices.DigitalWindowCapability",
@@ -3883,24 +3834,21 @@ namespace py::cpp::Windows::Media::Devices
         { "get_capability_for_size", reinterpret_cast<PyCFunction>(DigitalWindowControl_GetCapabilityForSize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DigitalWindowControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DigitalWindowControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DigitalWindowControl[] = {
         { "current_mode", reinterpret_cast<getter>(DigitalWindowControl_get_CurrentMode), nullptr, nullptr, nullptr },
         { "is_supported", reinterpret_cast<getter>(DigitalWindowControl_get_IsSupported), nullptr, nullptr, nullptr },
         { "supported_capabilities", reinterpret_cast<getter>(DigitalWindowControl_get_SupportedCapabilities), nullptr, nullptr, nullptr },
         { "supported_modes", reinterpret_cast<getter>(DigitalWindowControl_get_SupportedModes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DigitalWindowControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DigitalWindowControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DigitalWindowControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DigitalWindowControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DigitalWindowControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DigitalWindowControl = {
         "winrt._winrt_windows_media_devices.DigitalWindowControl",
@@ -4146,8 +4094,7 @@ namespace py::cpp::Windows::Media::Devices
         { "set_value_async", reinterpret_cast<PyCFunction>(ExposureCompensationControl_SetValueAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ExposureCompensationControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExposureCompensationControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExposureCompensationControl[] = {
         { "max", reinterpret_cast<getter>(ExposureCompensationControl_get_Max), nullptr, nullptr, nullptr },
@@ -4155,16 +4102,14 @@ namespace py::cpp::Windows::Media::Devices
         { "step", reinterpret_cast<getter>(ExposureCompensationControl_get_Step), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(ExposureCompensationControl_get_Supported), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(ExposureCompensationControl_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExposureCompensationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExposureCompensationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExposureCompensationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExposureCompensationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExposureCompensationControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExposureCompensationControl = {
         "winrt._winrt_windows_media_devices.ExposureCompensationControl",
@@ -4483,8 +4428,7 @@ namespace py::cpp::Windows::Media::Devices
         { "set_value_async", reinterpret_cast<PyCFunction>(ExposureControl_SetValueAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ExposureControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExposureControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExposureControl[] = {
         { "auto", reinterpret_cast<getter>(ExposureControl_get_Auto), nullptr, nullptr, nullptr },
@@ -4493,16 +4437,14 @@ namespace py::cpp::Windows::Media::Devices
         { "step", reinterpret_cast<getter>(ExposureControl_get_Step), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(ExposureControl_get_Supported), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(ExposureControl_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExposureControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExposureControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExposureControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExposureControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExposureControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExposureControl = {
         "winrt._winrt_windows_media_devices.ExposureControl",
@@ -4654,22 +4596,19 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_ExposurePriorityVideoControl[] = {
         { "_assign_array_", _assign_array_ExposurePriorityVideoControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExposurePriorityVideoControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExposurePriorityVideoControl[] = {
         { "enabled", reinterpret_cast<getter>(ExposurePriorityVideoControl_get_Enabled), reinterpret_cast<setter>(ExposurePriorityVideoControl_put_Enabled), nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(ExposurePriorityVideoControl_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExposurePriorityVideoControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExposurePriorityVideoControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExposurePriorityVideoControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExposurePriorityVideoControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExposurePriorityVideoControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExposurePriorityVideoControl = {
         "winrt._winrt_windows_media_devices.ExposurePriorityVideoControl",
@@ -5187,8 +5126,7 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_FlashControl[] = {
         { "_assign_array_", _assign_array_FlashControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FlashControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FlashControl[] = {
         { "red_eye_reduction", reinterpret_cast<getter>(FlashControl_get_RedEyeReduction), reinterpret_cast<setter>(FlashControl_put_RedEyeReduction), nullptr, nullptr },
@@ -5200,16 +5138,14 @@ namespace py::cpp::Windows::Media::Devices
         { "supported", reinterpret_cast<getter>(FlashControl_get_Supported), nullptr, nullptr, nullptr },
         { "assistant_light_enabled", reinterpret_cast<getter>(FlashControl_get_AssistantLightEnabled), reinterpret_cast<setter>(FlashControl_put_AssistantLightEnabled), nullptr, nullptr },
         { "assistant_light_supported", reinterpret_cast<getter>(FlashControl_get_AssistantLightSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FlashControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlashControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlashControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlashControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlashControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FlashControl = {
         "winrt._winrt_windows_media_devices.FlashControl",
@@ -5979,8 +5915,7 @@ namespace py::cpp::Windows::Media::Devices
         { "unlock_async", reinterpret_cast<PyCFunction>(FocusControl_UnlockAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FocusControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FocusControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FocusControl[] = {
         { "max", reinterpret_cast<getter>(FocusControl_get_Max), nullptr, nullptr, nullptr },
@@ -5997,16 +5932,14 @@ namespace py::cpp::Windows::Media::Devices
         { "supported_focus_modes", reinterpret_cast<getter>(FocusControl_get_SupportedFocusModes), nullptr, nullptr, nullptr },
         { "supported_focus_ranges", reinterpret_cast<getter>(FocusControl_get_SupportedFocusRanges), nullptr, nullptr, nullptr },
         { "wait_for_focus_supported", reinterpret_cast<getter>(FocusControl_get_WaitForFocusSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FocusControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FocusControl = {
         "winrt._winrt_windows_media_devices.FocusControl",
@@ -6495,8 +6428,7 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_FocusSettings[] = {
         { "_assign_array_", _assign_array_FocusSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FocusSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FocusSettings[] = {
         { "wait_for_focus", reinterpret_cast<getter>(FocusSettings_get_WaitForFocus), reinterpret_cast<setter>(FocusSettings_put_WaitForFocus), nullptr, nullptr },
@@ -6505,16 +6437,14 @@ namespace py::cpp::Windows::Media::Devices
         { "distance", reinterpret_cast<getter>(FocusSettings_get_Distance), reinterpret_cast<setter>(FocusSettings_put_Distance), nullptr, nullptr },
         { "disable_driver_fallback", reinterpret_cast<getter>(FocusSettings_get_DisableDriverFallback), reinterpret_cast<setter>(FocusSettings_put_DisableDriverFallback), nullptr, nullptr },
         { "auto_focus_range", reinterpret_cast<getter>(FocusSettings_get_AutoFocusRange), reinterpret_cast<setter>(FocusSettings_put_AutoFocusRange), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FocusSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FocusSettings = {
         "winrt._winrt_windows_media_devices.FocusSettings",
@@ -6696,23 +6626,20 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_HdrVideoControl[] = {
         { "_assign_array_", _assign_array_HdrVideoControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HdrVideoControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HdrVideoControl[] = {
         { "mode", reinterpret_cast<getter>(HdrVideoControl_get_Mode), reinterpret_cast<setter>(HdrVideoControl_put_Mode), nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(HdrVideoControl_get_Supported), nullptr, nullptr, nullptr },
         { "supported_modes", reinterpret_cast<getter>(HdrVideoControl_get_SupportedModes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HdrVideoControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdrVideoControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdrVideoControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdrVideoControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdrVideoControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HdrVideoControl = {
         "winrt._winrt_windows_media_devices.HdrVideoControl",
@@ -7053,8 +6980,7 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_InfraredTorchControl[] = {
         { "_assign_array_", _assign_array_InfraredTorchControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InfraredTorchControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InfraredTorchControl[] = {
         { "power", reinterpret_cast<getter>(InfraredTorchControl_get_Power), reinterpret_cast<setter>(InfraredTorchControl_put_Power), nullptr, nullptr },
@@ -7064,16 +6990,14 @@ namespace py::cpp::Windows::Media::Devices
         { "min_power", reinterpret_cast<getter>(InfraredTorchControl_get_MinPower), nullptr, nullptr, nullptr },
         { "power_step", reinterpret_cast<getter>(InfraredTorchControl_get_PowerStep), nullptr, nullptr, nullptr },
         { "supported_modes", reinterpret_cast<getter>(InfraredTorchControl_get_SupportedModes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InfraredTorchControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InfraredTorchControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InfraredTorchControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InfraredTorchControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InfraredTorchControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InfraredTorchControl = {
         "winrt._winrt_windows_media_devices.InfraredTorchControl",
@@ -7493,8 +7417,7 @@ namespace py::cpp::Windows::Media::Devices
         { "set_value_async", reinterpret_cast<PyCFunction>(IsoSpeedControl_SetValueAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IsoSpeedControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsoSpeedControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IsoSpeedControl[] = {
         { "preset", reinterpret_cast<getter>(IsoSpeedControl_get_Preset), nullptr, nullptr, nullptr },
@@ -7505,16 +7428,14 @@ namespace py::cpp::Windows::Media::Devices
         { "min", reinterpret_cast<getter>(IsoSpeedControl_get_Min), nullptr, nullptr, nullptr },
         { "step", reinterpret_cast<getter>(IsoSpeedControl_get_Step), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IsoSpeedControl_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IsoSpeedControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsoSpeedControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsoSpeedControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsoSpeedControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsoSpeedControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IsoSpeedControl = {
         "winrt._winrt_windows_media_devices.IsoSpeedControl",
@@ -7597,21 +7518,18 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_KeypadPressedEventArgs[] = {
         { "_assign_array_", _assign_array_KeypadPressedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeypadPressedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeypadPressedEventArgs[] = {
         { "telephony_key", reinterpret_cast<getter>(KeypadPressedEventArgs_get_TelephonyKey), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeypadPressedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeypadPressedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeypadPressedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeypadPressedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeypadPressedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeypadPressedEventArgs = {
         "winrt._winrt_windows_media_devices.KeypadPressedEventArgs",
@@ -7985,24 +7903,21 @@ namespace py::cpp::Windows::Media::Devices
         { "get_highest_concurrent_frame_rate", reinterpret_cast<PyCFunction>(LowLagPhotoControl_GetHighestConcurrentFrameRate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LowLagPhotoControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LowLagPhotoControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LowLagPhotoControl[] = {
         { "thumbnail_format", reinterpret_cast<getter>(LowLagPhotoControl_get_ThumbnailFormat), reinterpret_cast<setter>(LowLagPhotoControl_put_ThumbnailFormat), nullptr, nullptr },
         { "thumbnail_enabled", reinterpret_cast<getter>(LowLagPhotoControl_get_ThumbnailEnabled), reinterpret_cast<setter>(LowLagPhotoControl_put_ThumbnailEnabled), nullptr, nullptr },
         { "desired_thumbnail_size", reinterpret_cast<getter>(LowLagPhotoControl_get_DesiredThumbnailSize), reinterpret_cast<setter>(LowLagPhotoControl_put_DesiredThumbnailSize), nullptr, nullptr },
         { "hardware_accelerated_thumbnail_supported", reinterpret_cast<getter>(LowLagPhotoControl_get_HardwareAcceleratedThumbnailSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LowLagPhotoControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLagPhotoControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LowLagPhotoControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLagPhotoControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLagPhotoControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LowLagPhotoControl = {
         "winrt._winrt_windows_media_devices.LowLagPhotoControl",
@@ -8604,8 +8519,7 @@ namespace py::cpp::Windows::Media::Devices
         { "get_highest_concurrent_frame_rate", reinterpret_cast<PyCFunction>(LowLagPhotoSequenceControl_GetHighestConcurrentFrameRate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LowLagPhotoSequenceControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LowLagPhotoSequenceControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LowLagPhotoSequenceControl[] = {
         { "thumbnail_format", reinterpret_cast<getter>(LowLagPhotoSequenceControl_get_ThumbnailFormat), reinterpret_cast<setter>(LowLagPhotoSequenceControl_put_ThumbnailFormat), nullptr, nullptr },
@@ -8617,16 +8531,14 @@ namespace py::cpp::Windows::Media::Devices
         { "max_past_photos", reinterpret_cast<getter>(LowLagPhotoSequenceControl_get_MaxPastPhotos), nullptr, nullptr, nullptr },
         { "max_photos_per_second", reinterpret_cast<getter>(LowLagPhotoSequenceControl_get_MaxPhotosPerSecond), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(LowLagPhotoSequenceControl_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LowLagPhotoSequenceControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLagPhotoSequenceControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LowLagPhotoSequenceControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLagPhotoSequenceControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLagPhotoSequenceControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LowLagPhotoSequenceControl = {
         "winrt._winrt_windows_media_devices.LowLagPhotoSequenceControl",
@@ -8979,19 +8891,16 @@ namespace py::cpp::Windows::Media::Devices
     }
 
     static PyMethodDef _methods_MediaDevice[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaDevice[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaDevice = {
         "winrt._winrt_windows_media_devices.MediaDevice",
@@ -9001,8 +8910,7 @@ namespace py::cpp::Windows::Media::Devices
         _type_slots_MediaDevice};
 
     static PyGetSetDef getset_MediaDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MediaDevice_Static[] = {
         { "get_audio_capture_selector", reinterpret_cast<PyCFunction>(MediaDevice_GetAudioCaptureSelector), METH_VARARGS, nullptr },
@@ -9014,8 +8922,7 @@ namespace py::cpp::Windows::Media::Devices
         { "remove_default_audio_capture_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_remove_DefaultAudioCaptureDeviceChanged), METH_O, nullptr },
         { "add_default_audio_render_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_add_DefaultAudioRenderDeviceChanged), METH_O, nullptr },
         { "remove_default_audio_render_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_remove_DefaultAudioRenderDeviceChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MediaDevice_Static[] = 
     {
@@ -9025,14 +8932,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Spec type_spec_MediaDevice_Static =
-    {
+    static PyType_Spec type_spec_MediaDevice_Static = {
         "winrt._winrt_windows_media_devices.MediaDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaDevice_Static
-    };
+        type_slots_MediaDevice_Static};
 
     // ----- MediaDeviceControl class --------------------
 
@@ -9306,21 +9211,18 @@ namespace py::cpp::Windows::Media::Devices
         { "try_set_value", reinterpret_cast<PyCFunction>(MediaDeviceControl_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaDeviceControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaDeviceControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaDeviceControl[] = {
         { "capabilities", reinterpret_cast<getter>(MediaDeviceControl_get_Capabilities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaDeviceControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaDeviceControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaDeviceControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaDeviceControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaDeviceControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaDeviceControl = {
         "winrt._winrt_windows_media_devices.MediaDeviceControl",
@@ -9553,8 +9455,7 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_MediaDeviceControlCapabilities[] = {
         { "_assign_array_", _assign_array_MediaDeviceControlCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaDeviceControlCapabilities), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaDeviceControlCapabilities[] = {
         { "auto_mode_supported", reinterpret_cast<getter>(MediaDeviceControlCapabilities_get_AutoModeSupported), nullptr, nullptr, nullptr },
@@ -9563,16 +9464,14 @@ namespace py::cpp::Windows::Media::Devices
         { "min", reinterpret_cast<getter>(MediaDeviceControlCapabilities_get_Min), nullptr, nullptr, nullptr },
         { "step", reinterpret_cast<getter>(MediaDeviceControlCapabilities_get_Step), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(MediaDeviceControlCapabilities_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaDeviceControlCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaDeviceControlCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaDeviceControlCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaDeviceControlCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaDeviceControlCapabilities) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaDeviceControlCapabilities = {
         "winrt._winrt_windows_media_devices.MediaDeviceControlCapabilities",
@@ -9685,22 +9584,19 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_ModuleCommandResult[] = {
         { "_assign_array_", _assign_array_ModuleCommandResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ModuleCommandResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ModuleCommandResult[] = {
         { "result", reinterpret_cast<getter>(ModuleCommandResult_get_Result), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(ModuleCommandResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ModuleCommandResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ModuleCommandResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ModuleCommandResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ModuleCommandResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ModuleCommandResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ModuleCommandResult = {
         "winrt._winrt_windows_media_devices.ModuleCommandResult",
@@ -9882,23 +9778,20 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_OpticalImageStabilizationControl[] = {
         { "_assign_array_", _assign_array_OpticalImageStabilizationControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OpticalImageStabilizationControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OpticalImageStabilizationControl[] = {
         { "mode", reinterpret_cast<getter>(OpticalImageStabilizationControl_get_Mode), reinterpret_cast<setter>(OpticalImageStabilizationControl_put_Mode), nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(OpticalImageStabilizationControl_get_Supported), nullptr, nullptr, nullptr },
         { "supported_modes", reinterpret_cast<getter>(OpticalImageStabilizationControl_get_SupportedModes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OpticalImageStabilizationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OpticalImageStabilizationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OpticalImageStabilizationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OpticalImageStabilizationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OpticalImageStabilizationControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OpticalImageStabilizationControl = {
         "winrt._winrt_windows_media_devices.OpticalImageStabilizationControl",
@@ -10050,22 +9943,19 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_PanelBasedOptimizationControl[] = {
         { "_assign_array_", _assign_array_PanelBasedOptimizationControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PanelBasedOptimizationControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PanelBasedOptimizationControl[] = {
         { "panel", reinterpret_cast<getter>(PanelBasedOptimizationControl_get_Panel), reinterpret_cast<setter>(PanelBasedOptimizationControl_put_Panel), nullptr, nullptr },
         { "is_supported", reinterpret_cast<getter>(PanelBasedOptimizationControl_get_IsSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PanelBasedOptimizationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PanelBasedOptimizationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PanelBasedOptimizationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PanelBasedOptimizationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PanelBasedOptimizationControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PanelBasedOptimizationControl = {
         "winrt._winrt_windows_media_devices.PanelBasedOptimizationControl",
@@ -10286,23 +10176,20 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_PhotoConfirmationControl[] = {
         { "_assign_array_", _assign_array_PhotoConfirmationControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoConfirmationControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoConfirmationControl[] = {
         { "pixel_format", reinterpret_cast<getter>(PhotoConfirmationControl_get_PixelFormat), reinterpret_cast<setter>(PhotoConfirmationControl_put_PixelFormat), nullptr, nullptr },
         { "enabled", reinterpret_cast<getter>(PhotoConfirmationControl_get_Enabled), reinterpret_cast<setter>(PhotoConfirmationControl_put_Enabled), nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(PhotoConfirmationControl_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoConfirmationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoConfirmationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoConfirmationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoConfirmationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoConfirmationControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoConfirmationControl = {
         "winrt._winrt_windows_media_devices.PhotoConfirmationControl",
@@ -10397,20 +10284,17 @@ namespace py::cpp::Windows::Media::Devices
         { "handled", reinterpret_cast<PyCFunction>(RedialRequestedEventArgs_Handled), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RedialRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RedialRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RedialRequestedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RedialRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RedialRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RedialRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RedialRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RedialRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RedialRequestedEventArgs = {
         "winrt._winrt_windows_media_devices.RedialRequestedEventArgs",
@@ -10968,8 +10852,7 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_RegionOfInterest[] = {
         { "_assign_array_", _assign_array_RegionOfInterest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RegionOfInterest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RegionOfInterest[] = {
         { "bounds", reinterpret_cast<getter>(RegionOfInterest_get_Bounds), reinterpret_cast<setter>(RegionOfInterest_put_Bounds), nullptr, nullptr },
@@ -10979,16 +10862,14 @@ namespace py::cpp::Windows::Media::Devices
         { "weight", reinterpret_cast<getter>(RegionOfInterest_get_Weight), reinterpret_cast<setter>(RegionOfInterest_put_Weight), nullptr, nullptr },
         { "type", reinterpret_cast<getter>(RegionOfInterest_get_Type), reinterpret_cast<setter>(RegionOfInterest_put_Type), nullptr, nullptr },
         { "bounds_normalized", reinterpret_cast<getter>(RegionOfInterest_get_BoundsNormalized), reinterpret_cast<setter>(RegionOfInterest_put_BoundsNormalized), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RegionOfInterest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RegionOfInterest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RegionOfInterest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RegionOfInterest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RegionOfInterest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RegionOfInterest = {
         "winrt._winrt_windows_media_devices.RegionOfInterest",
@@ -11289,24 +11170,21 @@ namespace py::cpp::Windows::Media::Devices
         { "set_regions_with_lock_async", reinterpret_cast<PyCFunction>(RegionsOfInterestControl_SetRegionsWithLockAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RegionsOfInterestControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RegionsOfInterestControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RegionsOfInterestControl[] = {
         { "auto_exposure_supported", reinterpret_cast<getter>(RegionsOfInterestControl_get_AutoExposureSupported), nullptr, nullptr, nullptr },
         { "auto_focus_supported", reinterpret_cast<getter>(RegionsOfInterestControl_get_AutoFocusSupported), nullptr, nullptr, nullptr },
         { "auto_white_balance_supported", reinterpret_cast<getter>(RegionsOfInterestControl_get_AutoWhiteBalanceSupported), nullptr, nullptr, nullptr },
         { "max_regions", reinterpret_cast<getter>(RegionsOfInterestControl_get_MaxRegions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RegionsOfInterestControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RegionsOfInterestControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RegionsOfInterestControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RegionsOfInterestControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RegionsOfInterestControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RegionsOfInterestControl = {
         "winrt._winrt_windows_media_devices.RegionsOfInterestControl",
@@ -11462,22 +11340,19 @@ namespace py::cpp::Windows::Media::Devices
         { "set_value_async", reinterpret_cast<PyCFunction>(SceneModeControl_SetValueAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneModeControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneModeControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SceneModeControl[] = {
         { "supported_modes", reinterpret_cast<getter>(SceneModeControl_get_SupportedModes), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(SceneModeControl_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SceneModeControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneModeControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneModeControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneModeControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneModeControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SceneModeControl = {
         "winrt._winrt_windows_media_devices.SceneModeControl",
@@ -11728,24 +11603,21 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_TorchControl[] = {
         { "_assign_array_", _assign_array_TorchControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TorchControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TorchControl[] = {
         { "power_percent", reinterpret_cast<getter>(TorchControl_get_PowerPercent), reinterpret_cast<setter>(TorchControl_put_PowerPercent), nullptr, nullptr },
         { "enabled", reinterpret_cast<getter>(TorchControl_get_Enabled), reinterpret_cast<setter>(TorchControl_put_Enabled), nullptr, nullptr },
         { "power_supported", reinterpret_cast<getter>(TorchControl_get_PowerSupported), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(TorchControl_get_Supported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TorchControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TorchControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TorchControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TorchControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TorchControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TorchControl = {
         "winrt._winrt_windows_media_devices.TorchControl",
@@ -13523,8 +13395,7 @@ namespace py::cpp::Windows::Media::Devices
         { "try_set_powerline_frequency", reinterpret_cast<PyCFunction>(VideoDeviceController_TrySetPowerlineFrequency), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VideoDeviceController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoDeviceController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoDeviceController[] = {
         { "camera_occlusion_info", reinterpret_cast<getter>(VideoDeviceController_get_CameraOcclusionInfo), nullptr, nullptr, nullptr },
@@ -13564,16 +13435,14 @@ namespace py::cpp::Windows::Media::Devices
         { "hue", reinterpret_cast<getter>(VideoDeviceController_get_Hue), nullptr, nullptr, nullptr },
         { "pan", reinterpret_cast<getter>(VideoDeviceController_get_Pan), nullptr, nullptr, nullptr },
         { "focus", reinterpret_cast<getter>(VideoDeviceController_get_Focus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoDeviceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoDeviceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoDeviceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoDeviceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoDeviceController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoDeviceController = {
         "winrt._winrt_windows_media_devices.VideoDeviceController",
@@ -13686,22 +13555,19 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_VideoDeviceControllerGetDevicePropertyResult[] = {
         { "_assign_array_", _assign_array_VideoDeviceControllerGetDevicePropertyResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoDeviceControllerGetDevicePropertyResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoDeviceControllerGetDevicePropertyResult[] = {
         { "status", reinterpret_cast<getter>(VideoDeviceControllerGetDevicePropertyResult_get_Status), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(VideoDeviceControllerGetDevicePropertyResult_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoDeviceControllerGetDevicePropertyResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoDeviceControllerGetDevicePropertyResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoDeviceControllerGetDevicePropertyResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoDeviceControllerGetDevicePropertyResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoDeviceControllerGetDevicePropertyResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoDeviceControllerGetDevicePropertyResult = {
         "winrt._winrt_windows_media_devices.VideoDeviceControllerGetDevicePropertyResult",
@@ -13883,23 +13749,20 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_VideoTemporalDenoisingControl[] = {
         { "_assign_array_", _assign_array_VideoTemporalDenoisingControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoTemporalDenoisingControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoTemporalDenoisingControl[] = {
         { "mode", reinterpret_cast<getter>(VideoTemporalDenoisingControl_get_Mode), reinterpret_cast<setter>(VideoTemporalDenoisingControl_put_Mode), nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(VideoTemporalDenoisingControl_get_Supported), nullptr, nullptr, nullptr },
         { "supported_modes", reinterpret_cast<getter>(VideoTemporalDenoisingControl_get_SupportedModes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoTemporalDenoisingControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoTemporalDenoisingControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoTemporalDenoisingControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoTemporalDenoisingControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoTemporalDenoisingControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoTemporalDenoisingControl = {
         "winrt._winrt_windows_media_devices.VideoTemporalDenoisingControl",
@@ -14218,8 +14081,7 @@ namespace py::cpp::Windows::Media::Devices
         { "set_value_async", reinterpret_cast<PyCFunction>(WhiteBalanceControl_SetValueAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WhiteBalanceControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WhiteBalanceControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WhiteBalanceControl[] = {
         { "max", reinterpret_cast<getter>(WhiteBalanceControl_get_Max), nullptr, nullptr, nullptr },
@@ -14228,16 +14090,14 @@ namespace py::cpp::Windows::Media::Devices
         { "step", reinterpret_cast<getter>(WhiteBalanceControl_get_Step), nullptr, nullptr, nullptr },
         { "supported", reinterpret_cast<getter>(WhiteBalanceControl_get_Supported), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(WhiteBalanceControl_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WhiteBalanceControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WhiteBalanceControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WhiteBalanceControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WhiteBalanceControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WhiteBalanceControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WhiteBalanceControl = {
         "winrt._winrt_windows_media_devices.WhiteBalanceControl",
@@ -14583,8 +14443,7 @@ namespace py::cpp::Windows::Media::Devices
         { "configure", reinterpret_cast<PyCFunction>(ZoomControl_Configure), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ZoomControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ZoomControl), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ZoomControl[] = {
         { "value", reinterpret_cast<getter>(ZoomControl_get_Value), reinterpret_cast<setter>(ZoomControl_put_Value), nullptr, nullptr },
@@ -14594,16 +14453,14 @@ namespace py::cpp::Windows::Media::Devices
         { "supported", reinterpret_cast<getter>(ZoomControl_get_Supported), nullptr, nullptr, nullptr },
         { "mode", reinterpret_cast<getter>(ZoomControl_get_Mode), nullptr, nullptr, nullptr },
         { "supported_modes", reinterpret_cast<getter>(ZoomControl_get_SupportedModes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ZoomControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ZoomControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ZoomControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ZoomControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ZoomControl) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ZoomControl = {
         "winrt._winrt_windows_media_devices.ZoomControl",
@@ -14816,22 +14673,19 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_ZoomSettings[] = {
         { "_assign_array_", _assign_array_ZoomSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ZoomSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ZoomSettings[] = {
         { "value", reinterpret_cast<getter>(ZoomSettings_get_Value), reinterpret_cast<setter>(ZoomSettings_put_Value), nullptr, nullptr },
         { "mode", reinterpret_cast<getter>(ZoomSettings_get_Mode), reinterpret_cast<setter>(ZoomSettings_put_Mode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ZoomSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ZoomSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ZoomSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ZoomSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ZoomSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ZoomSettings = {
         "winrt._winrt_windows_media_devices.ZoomSettings",
@@ -14944,22 +14798,19 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_IDefaultAudioDeviceChangedEventArgs[] = {
         { "_assign_array_", _assign_array_IDefaultAudioDeviceChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDefaultAudioDeviceChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDefaultAudioDeviceChangedEventArgs[] = {
         { "id", reinterpret_cast<getter>(IDefaultAudioDeviceChangedEventArgs_get_Id), nullptr, nullptr, nullptr },
         { "role", reinterpret_cast<getter>(IDefaultAudioDeviceChangedEventArgs_get_Role), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDefaultAudioDeviceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDefaultAudioDeviceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDefaultAudioDeviceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDefaultAudioDeviceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDefaultAudioDeviceChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDefaultAudioDeviceChangedEventArgs = {
         "winrt._winrt_windows_media_devices.IDefaultAudioDeviceChangedEventArgs",
@@ -15055,13 +14906,11 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef methods_ImplementsIDefaultAudioDeviceChangedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDefaultAudioDeviceChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDefaultAudioDeviceChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDefaultAudioDeviceChangedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDefaultAudioDeviceChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDefaultAudioDeviceChangedEventArgs = {
         "winrt._winrt_windows_media_devices.ImplementsIDefaultAudioDeviceChangedEventArgs",
@@ -15244,20 +15093,17 @@ namespace py::cpp::Windows::Media::Devices
         { "set_media_stream_properties_async", reinterpret_cast<PyCFunction>(IMediaDeviceController_SetMediaStreamPropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IMediaDeviceController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaDeviceController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMediaDeviceController[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMediaDeviceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaDeviceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaDeviceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaDeviceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaDeviceController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMediaDeviceController = {
         "winrt._winrt_windows_media_devices.IMediaDeviceController",
@@ -15421,13 +15267,11 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef methods_ImplementsIMediaDeviceController[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaDeviceController), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaDeviceController), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMediaDeviceController[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaDeviceController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMediaDeviceController = {
         "winrt._winrt_windows_media_devices.ImplementsIMediaDeviceController",

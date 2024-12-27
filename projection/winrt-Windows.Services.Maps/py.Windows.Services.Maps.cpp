@@ -133,22 +133,19 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_EnhancedWaypoint[] = {
         { "_assign_array_", _assign_array_EnhancedWaypoint, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EnhancedWaypoint), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EnhancedWaypoint[] = {
         { "kind", reinterpret_cast<getter>(EnhancedWaypoint_get_Kind), nullptr, nullptr, nullptr },
         { "point", reinterpret_cast<getter>(EnhancedWaypoint_get_Point), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EnhancedWaypoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnhancedWaypoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnhancedWaypoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnhancedWaypoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnhancedWaypoint) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EnhancedWaypoint = {
         "winrt._winrt_windows_services_maps.EnhancedWaypoint",
@@ -261,22 +258,19 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_ManeuverWarning[] = {
         { "_assign_array_", _assign_array_ManeuverWarning, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ManeuverWarning), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ManeuverWarning[] = {
         { "kind", reinterpret_cast<getter>(ManeuverWarning_get_Kind), nullptr, nullptr, nullptr },
         { "severity", reinterpret_cast<getter>(ManeuverWarning_get_Severity), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ManeuverWarning[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManeuverWarning) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManeuverWarning) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManeuverWarning) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManeuverWarning) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ManeuverWarning = {
         "winrt._winrt_windows_services_maps.ManeuverWarning",
@@ -809,8 +803,7 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_MapAddress[] = {
         { "_assign_array_", _assign_array_MapAddress, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapAddress), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapAddress[] = {
         { "building_floor", reinterpret_cast<getter>(MapAddress_get_BuildingFloor), nullptr, nullptr, nullptr },
@@ -829,16 +822,14 @@ namespace py::cpp::Windows::Services::Maps
         { "street_number", reinterpret_cast<getter>(MapAddress_get_StreetNumber), nullptr, nullptr, nullptr },
         { "town", reinterpret_cast<getter>(MapAddress_get_Town), nullptr, nullptr, nullptr },
         { "formatted_address", reinterpret_cast<getter>(MapAddress_get_FormattedAddress), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapAddress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapAddress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapAddress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapAddress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapAddress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapAddress = {
         "winrt._winrt_windows_services_maps.MapAddress",
@@ -1011,24 +1002,21 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_MapLocation[] = {
         { "_assign_array_", _assign_array_MapLocation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapLocation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapLocation[] = {
         { "address", reinterpret_cast<getter>(MapLocation_get_Address), nullptr, nullptr, nullptr },
         { "description", reinterpret_cast<getter>(MapLocation_get_Description), nullptr, nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(MapLocation_get_DisplayName), nullptr, nullptr, nullptr },
         { "point", reinterpret_cast<getter>(MapLocation_get_Point), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapLocation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapLocation = {
         "winrt._winrt_windows_services_maps.MapLocation",
@@ -1219,19 +1207,16 @@ namespace py::cpp::Windows::Services::Maps
     }
 
     static PyMethodDef _methods_MapLocationFinder[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapLocationFinder[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapLocationFinder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapLocationFinder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapLocationFinder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapLocationFinder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapLocationFinder = {
         "winrt._winrt_windows_services_maps.MapLocationFinder",
@@ -1241,16 +1226,14 @@ namespace py::cpp::Windows::Services::Maps
         _type_slots_MapLocationFinder};
 
     static PyGetSetDef getset_MapLocationFinder_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapLocationFinder_Static[] = {
         { "find_locations_async", reinterpret_cast<PyCFunction>(MapLocationFinder_FindLocationsAsync), METH_VARARGS, nullptr },
         { "find_locations_at_async", reinterpret_cast<PyCFunction>(MapLocationFinder_FindLocationsAtAsync), METH_VARARGS, nullptr },
         { "find_locations_at_with_accuracy_async", reinterpret_cast<PyCFunction>(MapLocationFinder_FindLocationsAtWithAccuracyAsync), METH_VARARGS, nullptr },
         { "find_locations_with_max_count_async", reinterpret_cast<PyCFunction>(MapLocationFinder_FindLocationsWithMaxCountAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapLocationFinder_Static[] = 
     {
@@ -1260,14 +1243,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapLocationFinder_Static =
-    {
+    static PyType_Spec type_spec_MapLocationFinder_Static = {
         "winrt._winrt_windows_services_maps.MapLocationFinder_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapLocationFinder_Static
-    };
+        type_slots_MapLocationFinder_Static};
 
     // ----- MapLocationFinderResult class --------------------
 
@@ -1373,22 +1354,19 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_MapLocationFinderResult[] = {
         { "_assign_array_", _assign_array_MapLocationFinderResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapLocationFinderResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapLocationFinderResult[] = {
         { "locations", reinterpret_cast<getter>(MapLocationFinderResult_get_Locations), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(MapLocationFinderResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapLocationFinderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapLocationFinderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapLocationFinderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapLocationFinderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapLocationFinderResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapLocationFinderResult = {
         "winrt._winrt_windows_services_maps.MapLocationFinderResult",
@@ -1489,19 +1467,16 @@ namespace py::cpp::Windows::Services::Maps
     }
 
     static PyMethodDef _methods_MapManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapManager = {
         "winrt._winrt_windows_services_maps.MapManager",
@@ -1511,14 +1486,12 @@ namespace py::cpp::Windows::Services::Maps
         _type_slots_MapManager};
 
     static PyGetSetDef getset_MapManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapManager_Static[] = {
         { "show_downloaded_maps_ui", reinterpret_cast<PyCFunction>(MapManager_ShowDownloadedMapsUI), METH_VARARGS, nullptr },
         { "show_maps_update_ui", reinterpret_cast<PyCFunction>(MapManager_ShowMapsUpdateUI), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapManager_Static[] = 
     {
@@ -1528,14 +1501,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapManager_Static =
-    {
+    static PyType_Spec type_spec_MapManager_Static = {
         "winrt._winrt_windows_services_maps.MapManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapManager_Static
-    };
+        type_slots_MapManager_Static};
 
     // ----- MapRoute class --------------------
 
@@ -1911,8 +1882,7 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_MapRoute[] = {
         { "_assign_array_", _assign_array_MapRoute, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapRoute), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapRoute[] = {
         { "bounding_box", reinterpret_cast<getter>(MapRoute_get_BoundingBox), nullptr, nullptr, nullptr },
@@ -1926,16 +1896,14 @@ namespace py::cpp::Windows::Services::Maps
         { "duration_without_traffic", reinterpret_cast<getter>(MapRoute_get_DurationWithoutTraffic), nullptr, nullptr, nullptr },
         { "traffic_congestion", reinterpret_cast<getter>(MapRoute_get_TrafficCongestion), nullptr, nullptr, nullptr },
         { "is_scenic", reinterpret_cast<getter>(MapRoute_get_IsScenic), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapRoute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRoute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRoute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRoute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRoute) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapRoute = {
         "winrt._winrt_windows_services_maps.MapRoute",
@@ -2355,8 +2323,7 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_MapRouteDrivingOptions[] = {
         { "_assign_array_", _assign_array_MapRouteDrivingOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapRouteDrivingOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapRouteDrivingOptions[] = {
         { "route_restrictions", reinterpret_cast<getter>(MapRouteDrivingOptions_get_RouteRestrictions), reinterpret_cast<setter>(MapRouteDrivingOptions_put_RouteRestrictions), nullptr, nullptr },
@@ -2364,16 +2331,14 @@ namespace py::cpp::Windows::Services::Maps
         { "max_alternate_route_count", reinterpret_cast<getter>(MapRouteDrivingOptions_get_MaxAlternateRouteCount), reinterpret_cast<setter>(MapRouteDrivingOptions_put_MaxAlternateRouteCount), nullptr, nullptr },
         { "initial_heading", reinterpret_cast<getter>(MapRouteDrivingOptions_get_InitialHeading), reinterpret_cast<setter>(MapRouteDrivingOptions_put_InitialHeading), nullptr, nullptr },
         { "departure_time", reinterpret_cast<getter>(MapRouteDrivingOptions_get_DepartureTime), reinterpret_cast<setter>(MapRouteDrivingOptions_put_DepartureTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapRouteDrivingOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteDrivingOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteDrivingOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteDrivingOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteDrivingOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapRouteDrivingOptions = {
         "winrt._winrt_windows_services_maps.MapRouteDrivingOptions",
@@ -2958,19 +2923,16 @@ namespace py::cpp::Windows::Services::Maps
     }
 
     static PyMethodDef _methods_MapRouteFinder[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapRouteFinder[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapRouteFinder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteFinder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteFinder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteFinder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapRouteFinder = {
         "winrt._winrt_windows_services_maps.MapRouteFinder",
@@ -2980,8 +2942,7 @@ namespace py::cpp::Windows::Services::Maps
         _type_slots_MapRouteFinder};
 
     static PyGetSetDef getset_MapRouteFinder_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapRouteFinder_Static[] = {
         { "get_driving_route_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteAsync), METH_VARARGS, nullptr },
@@ -2997,8 +2958,7 @@ namespace py::cpp::Windows::Services::Maps
         { "get_driving_route_with_options_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_walking_route_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetWalkingRouteAsync), METH_VARARGS, nullptr },
         { "get_walking_route_from_waypoints_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetWalkingRouteFromWaypointsAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapRouteFinder_Static[] = 
     {
@@ -3008,14 +2968,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapRouteFinder_Static =
-    {
+    static PyType_Spec type_spec_MapRouteFinder_Static = {
         "winrt._winrt_windows_services_maps.MapRouteFinder_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapRouteFinder_Static
-    };
+        type_slots_MapRouteFinder_Static};
 
     // ----- MapRouteFinderResult class --------------------
 
@@ -3151,23 +3109,20 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_MapRouteFinderResult[] = {
         { "_assign_array_", _assign_array_MapRouteFinderResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapRouteFinderResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapRouteFinderResult[] = {
         { "route", reinterpret_cast<getter>(MapRouteFinderResult_get_Route), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(MapRouteFinderResult_get_Status), nullptr, nullptr, nullptr },
         { "alternate_routes", reinterpret_cast<getter>(MapRouteFinderResult_get_AlternateRoutes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapRouteFinderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteFinderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteFinderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteFinderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteFinderResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapRouteFinderResult = {
         "winrt._winrt_windows_services_maps.MapRouteFinderResult",
@@ -3430,8 +3385,7 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_MapRouteLeg[] = {
         { "_assign_array_", _assign_array_MapRouteLeg, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapRouteLeg), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapRouteLeg[] = {
         { "bounding_box", reinterpret_cast<getter>(MapRouteLeg_get_BoundingBox), nullptr, nullptr, nullptr },
@@ -3441,16 +3395,14 @@ namespace py::cpp::Windows::Services::Maps
         { "path", reinterpret_cast<getter>(MapRouteLeg_get_Path), nullptr, nullptr, nullptr },
         { "duration_without_traffic", reinterpret_cast<getter>(MapRouteLeg_get_DurationWithoutTraffic), nullptr, nullptr, nullptr },
         { "traffic_congestion", reinterpret_cast<getter>(MapRouteLeg_get_TrafficCongestion), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapRouteLeg[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteLeg) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteLeg) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteLeg) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteLeg) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapRouteLeg = {
         "winrt._winrt_windows_services_maps.MapRouteLeg",
@@ -3803,8 +3755,7 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_MapRouteManeuver[] = {
         { "_assign_array_", _assign_array_MapRouteManeuver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MapRouteManeuver), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapRouteManeuver[] = {
         { "exit_number", reinterpret_cast<getter>(MapRouteManeuver_get_ExitNumber), nullptr, nullptr, nullptr },
@@ -3817,16 +3768,14 @@ namespace py::cpp::Windows::Services::Maps
         { "start_heading", reinterpret_cast<getter>(MapRouteManeuver_get_StartHeading), nullptr, nullptr, nullptr },
         { "street_name", reinterpret_cast<getter>(MapRouteManeuver_get_StreetName), nullptr, nullptr, nullptr },
         { "warnings", reinterpret_cast<getter>(MapRouteManeuver_get_Warnings), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapRouteManeuver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteManeuver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteManeuver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteManeuver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteManeuver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapRouteManeuver = {
         "winrt._winrt_windows_services_maps.MapRouteManeuver",
@@ -4043,19 +3992,16 @@ namespace py::cpp::Windows::Services::Maps
     }
 
     static PyMethodDef _methods_MapService[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MapService[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MapService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapService) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MapService = {
         "winrt._winrt_windows_services_maps.MapService",
@@ -4069,12 +4015,10 @@ namespace py::cpp::Windows::Services::Maps
         { "world_view_region_code", reinterpret_cast<getter>(MapService_get_WorldViewRegionCode), nullptr, nullptr, nullptr },
         { "data_attributions", reinterpret_cast<getter>(MapService_get_DataAttributions), nullptr, nullptr, nullptr },
         { "data_usage_preference", reinterpret_cast<getter>(MapService_get_DataUsagePreference), reinterpret_cast<setter>(MapService_put_DataUsagePreference), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MapService_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MapService_Static[] = 
     {
@@ -4084,14 +4028,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Spec type_spec_MapService_Static =
-    {
+    static PyType_Spec type_spec_MapService_Static = {
         "winrt._winrt_windows_services_maps.MapService_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MapService_Static
-    };
+        type_slots_MapService_Static};
 
     // ----- PlaceInfo class --------------------
 
@@ -4674,24 +4616,21 @@ namespace py::cpp::Windows::Services::Maps
         { "show_with_preferred_placement", reinterpret_cast<PyCFunction>(PlaceInfo_ShowWithPreferredPlacement), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlaceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlaceInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlaceInfo[] = {
         { "display_address", reinterpret_cast<getter>(PlaceInfo_get_DisplayAddress), nullptr, nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(PlaceInfo_get_DisplayName), nullptr, nullptr, nullptr },
         { "geoshape", reinterpret_cast<getter>(PlaceInfo_get_Geoshape), nullptr, nullptr, nullptr },
         { "identifier", reinterpret_cast<getter>(PlaceInfo_get_Identifier), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlaceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlaceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlaceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlaceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlaceInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlaceInfo = {
         "winrt._winrt_windows_services_maps.PlaceInfo",
@@ -4702,8 +4641,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyGetSetDef getset_PlaceInfo_Static[] = {
         { "is_show_supported", reinterpret_cast<getter>(PlaceInfo_get_IsShowSupported), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlaceInfo_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(PlaceInfo_Create), METH_VARARGS, nullptr },
@@ -4713,8 +4651,7 @@ namespace py::cpp::Windows::Services::Maps
         { "create_from_identifier_with_options", reinterpret_cast<PyCFunction>(PlaceInfo_CreateFromIdentifierWithOptions), METH_VARARGS, nullptr },
         { "create_from_map_location", reinterpret_cast<PyCFunction>(PlaceInfo_CreateFromMapLocation), METH_VARARGS, nullptr },
         { "create_with_geopoint_and_options", reinterpret_cast<PyCFunction>(PlaceInfo_CreateWithGeopointAndOptions), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlaceInfo_Static[] = 
     {
@@ -4724,14 +4661,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Spec type_spec_PlaceInfo_Static =
-    {
+    static PyType_Spec type_spec_PlaceInfo_Static = {
         "winrt._winrt_windows_services_maps.PlaceInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlaceInfo_Static
-    };
+        type_slots_PlaceInfo_Static};
 
     // ----- PlaceInfoCreateOptions class --------------------
 
@@ -4937,22 +4872,19 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef _methods_PlaceInfoCreateOptions[] = {
         { "_assign_array_", _assign_array_PlaceInfoCreateOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlaceInfoCreateOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlaceInfoCreateOptions[] = {
         { "display_name", reinterpret_cast<getter>(PlaceInfoCreateOptions_get_DisplayName), reinterpret_cast<setter>(PlaceInfoCreateOptions_put_DisplayName), nullptr, nullptr },
         { "display_address", reinterpret_cast<getter>(PlaceInfoCreateOptions_get_DisplayAddress), reinterpret_cast<setter>(PlaceInfoCreateOptions_put_DisplayAddress), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlaceInfoCreateOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlaceInfoCreateOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlaceInfoCreateOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlaceInfoCreateOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlaceInfoCreateOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlaceInfoCreateOptions = {
         "winrt._winrt_windows_services_maps.PlaceInfoCreateOptions",

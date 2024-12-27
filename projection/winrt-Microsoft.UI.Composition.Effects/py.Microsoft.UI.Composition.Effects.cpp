@@ -553,8 +553,7 @@ namespace py::cpp::Microsoft::UI::Composition::Effects
     static PyMethodDef _methods_SceneLightingEffect[] = {
         { "_assign_array_", _assign_array_SceneLightingEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneLightingEffect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SceneLightingEffect[] = {
         { "specular_shine", reinterpret_cast<getter>(SceneLightingEffect_get_SpecularShine), reinterpret_cast<setter>(SceneLightingEffect_put_SpecularShine), nullptr, nullptr },
@@ -564,16 +563,14 @@ namespace py::cpp::Microsoft::UI::Composition::Effects
         { "ambient_amount", reinterpret_cast<getter>(SceneLightingEffect_get_AmbientAmount), reinterpret_cast<setter>(SceneLightingEffect_put_AmbientAmount), nullptr, nullptr },
         { "reflectance_model", reinterpret_cast<getter>(SceneLightingEffect_get_ReflectanceModel), reinterpret_cast<setter>(SceneLightingEffect_put_ReflectanceModel), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(SceneLightingEffect_get_Name), reinterpret_cast<setter>(SceneLightingEffect_put_Name), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SceneLightingEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneLightingEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneLightingEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneLightingEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneLightingEffect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SceneLightingEffect = {
         "winrt._winrt_microsoft_ui_composition_effects.SceneLightingEffect",

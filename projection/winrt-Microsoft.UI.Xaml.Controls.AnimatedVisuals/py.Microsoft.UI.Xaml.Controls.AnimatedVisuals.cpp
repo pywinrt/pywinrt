@@ -202,21 +202,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { "try_create_animated_visual", reinterpret_cast<PyCFunction>(AnimatedAcceptVisualSource_TryCreateAnimatedVisual), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimatedAcceptVisualSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimatedAcceptVisualSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimatedAcceptVisualSource[] = {
         { "markers", reinterpret_cast<getter>(AnimatedAcceptVisualSource_get_Markers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimatedAcceptVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedAcceptVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedAcceptVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedAcceptVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedAcceptVisualSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimatedAcceptVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedAcceptVisualSource",
@@ -423,21 +420,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { "try_create_animated_visual", reinterpret_cast<PyCFunction>(AnimatedBackVisualSource_TryCreateAnimatedVisual), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimatedBackVisualSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimatedBackVisualSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimatedBackVisualSource[] = {
         { "markers", reinterpret_cast<getter>(AnimatedBackVisualSource_get_Markers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimatedBackVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedBackVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedBackVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedBackVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedBackVisualSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimatedBackVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedBackVisualSource",
@@ -644,21 +638,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { "try_create_animated_visual", reinterpret_cast<PyCFunction>(AnimatedChevronDownSmallVisualSource_TryCreateAnimatedVisual), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimatedChevronDownSmallVisualSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimatedChevronDownSmallVisualSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimatedChevronDownSmallVisualSource[] = {
         { "markers", reinterpret_cast<getter>(AnimatedChevronDownSmallVisualSource_get_Markers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimatedChevronDownSmallVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedChevronDownSmallVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedChevronDownSmallVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedChevronDownSmallVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedChevronDownSmallVisualSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimatedChevronDownSmallVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedChevronDownSmallVisualSource",
@@ -865,21 +856,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { "try_create_animated_visual", reinterpret_cast<PyCFunction>(AnimatedChevronRightDownSmallVisualSource_TryCreateAnimatedVisual), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimatedChevronRightDownSmallVisualSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimatedChevronRightDownSmallVisualSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimatedChevronRightDownSmallVisualSource[] = {
         { "markers", reinterpret_cast<getter>(AnimatedChevronRightDownSmallVisualSource_get_Markers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimatedChevronRightDownSmallVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedChevronRightDownSmallVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedChevronRightDownSmallVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedChevronRightDownSmallVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedChevronRightDownSmallVisualSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimatedChevronRightDownSmallVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedChevronRightDownSmallVisualSource",
@@ -1086,21 +1074,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { "try_create_animated_visual", reinterpret_cast<PyCFunction>(AnimatedChevronUpDownSmallVisualSource_TryCreateAnimatedVisual), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimatedChevronUpDownSmallVisualSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimatedChevronUpDownSmallVisualSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimatedChevronUpDownSmallVisualSource[] = {
         { "markers", reinterpret_cast<getter>(AnimatedChevronUpDownSmallVisualSource_get_Markers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimatedChevronUpDownSmallVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedChevronUpDownSmallVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedChevronUpDownSmallVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedChevronUpDownSmallVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedChevronUpDownSmallVisualSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimatedChevronUpDownSmallVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedChevronUpDownSmallVisualSource",
@@ -1307,21 +1292,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { "try_create_animated_visual", reinterpret_cast<PyCFunction>(AnimatedFindVisualSource_TryCreateAnimatedVisual), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimatedFindVisualSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimatedFindVisualSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimatedFindVisualSource[] = {
         { "markers", reinterpret_cast<getter>(AnimatedFindVisualSource_get_Markers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimatedFindVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedFindVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedFindVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedFindVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedFindVisualSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimatedFindVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedFindVisualSource",
@@ -1528,21 +1510,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { "try_create_animated_visual", reinterpret_cast<PyCFunction>(AnimatedGlobalNavigationButtonVisualSource_TryCreateAnimatedVisual), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimatedGlobalNavigationButtonVisualSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimatedGlobalNavigationButtonVisualSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimatedGlobalNavigationButtonVisualSource[] = {
         { "markers", reinterpret_cast<getter>(AnimatedGlobalNavigationButtonVisualSource_get_Markers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimatedGlobalNavigationButtonVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedGlobalNavigationButtonVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedGlobalNavigationButtonVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedGlobalNavigationButtonVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedGlobalNavigationButtonVisualSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimatedGlobalNavigationButtonVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedGlobalNavigationButtonVisualSource",
@@ -1749,21 +1728,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { "try_create_animated_visual", reinterpret_cast<PyCFunction>(AnimatedSettingsVisualSource_TryCreateAnimatedVisual), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AnimatedSettingsVisualSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AnimatedSettingsVisualSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AnimatedSettingsVisualSource[] = {
         { "markers", reinterpret_cast<getter>(AnimatedSettingsVisualSource_get_Markers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AnimatedSettingsVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedSettingsVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedSettingsVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedSettingsVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedSettingsVisualSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AnimatedSettingsVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedSettingsVisualSource",

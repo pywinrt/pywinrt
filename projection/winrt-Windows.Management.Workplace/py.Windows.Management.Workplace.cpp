@@ -214,19 +214,16 @@ namespace py::cpp::Windows::Management::Workplace
     }
 
     static PyMethodDef _methods_MdmPolicy[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MdmPolicy[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MdmPolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MdmPolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MdmPolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MdmPolicy) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MdmPolicy = {
         "winrt._winrt_windows_management_workplace.MdmPolicy",
@@ -236,8 +233,7 @@ namespace py::cpp::Windows::Management::Workplace
         _type_slots_MdmPolicy};
 
     static PyGetSetDef getset_MdmPolicy_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MdmPolicy_Static[] = {
         { "get_messaging_sync_policy", reinterpret_cast<PyCFunction>(MdmPolicy_GetMessagingSyncPolicy), METH_VARARGS, nullptr },
@@ -245,8 +241,7 @@ namespace py::cpp::Windows::Management::Workplace
         { "is_camera_allowed", reinterpret_cast<PyCFunction>(MdmPolicy_IsCameraAllowed), METH_VARARGS, nullptr },
         { "is_microsoft_account_allowed", reinterpret_cast<PyCFunction>(MdmPolicy_IsMicrosoftAccountAllowed), METH_VARARGS, nullptr },
         { "is_store_allowed", reinterpret_cast<PyCFunction>(MdmPolicy_IsStoreAllowed), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MdmPolicy_Static[] = 
     {
@@ -256,14 +251,12 @@ namespace py::cpp::Windows::Management::Workplace
         { }
     };
 
-    static PyType_Spec type_spec_MdmPolicy_Static =
-    {
+    static PyType_Spec type_spec_MdmPolicy_Static = {
         "winrt._winrt_windows_management_workplace.MdmPolicy_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MdmPolicy_Static
-    };
+        type_slots_MdmPolicy_Static};
 
     // ----- WorkplaceSettings class --------------------
 
@@ -305,19 +298,16 @@ namespace py::cpp::Windows::Management::Workplace
     }
 
     static PyMethodDef _methods_WorkplaceSettings[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WorkplaceSettings[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WorkplaceSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WorkplaceSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WorkplaceSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WorkplaceSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WorkplaceSettings = {
         "winrt._winrt_windows_management_workplace.WorkplaceSettings",
@@ -328,12 +318,10 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyGetSetDef getset_WorkplaceSettings_Static[] = {
         { "is_microsoft_account_optional", reinterpret_cast<getter>(WorkplaceSettings_get_IsMicrosoftAccountOptional), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WorkplaceSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WorkplaceSettings_Static[] = 
     {
@@ -343,14 +331,12 @@ namespace py::cpp::Windows::Management::Workplace
         { }
     };
 
-    static PyType_Spec type_spec_WorkplaceSettings_Static =
-    {
+    static PyType_Spec type_spec_WorkplaceSettings_Static = {
         "winrt._winrt_windows_management_workplace.WorkplaceSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WorkplaceSettings_Static
-    };
+        type_slots_WorkplaceSettings_Static};
 
     // ----- Windows.Management.Workplace Initialization --------------------
 

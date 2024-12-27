@@ -298,21 +298,18 @@ namespace py::cpp::Windows::Devices::Power
         { "remove_report_updated", reinterpret_cast<PyCFunction>(Battery_remove_ReportUpdated), METH_O, nullptr },
         { "_assign_array_", _assign_array_Battery, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Battery), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Battery[] = {
         { "device_id", reinterpret_cast<getter>(Battery_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Battery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Battery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Battery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Battery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Battery) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Battery = {
         "winrt._winrt_windows_devices_power.Battery",
@@ -323,14 +320,12 @@ namespace py::cpp::Windows::Devices::Power
 
     static PyGetSetDef getset_Battery_Static[] = {
         { "aggregate_battery", reinterpret_cast<getter>(Battery_get_AggregateBattery), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Battery_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Battery_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Battery_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Battery_Static[] = 
     {
@@ -340,14 +335,12 @@ namespace py::cpp::Windows::Devices::Power
         { }
     };
 
-    static PyType_Spec type_spec_Battery_Static =
-    {
+    static PyType_Spec type_spec_Battery_Static = {
         "winrt._winrt_windows_devices_power.Battery_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Battery_Static
-    };
+        type_slots_Battery_Static};
 
     // ----- BatteryReport class --------------------
 
@@ -543,8 +536,7 @@ namespace py::cpp::Windows::Devices::Power
     static PyMethodDef _methods_BatteryReport[] = {
         { "_assign_array_", _assign_array_BatteryReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BatteryReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BatteryReport[] = {
         { "charge_rate_in_milliwatts", reinterpret_cast<getter>(BatteryReport_get_ChargeRateInMilliwatts), nullptr, nullptr, nullptr },
@@ -552,16 +544,14 @@ namespace py::cpp::Windows::Devices::Power
         { "full_charge_capacity_in_milliwatt_hours", reinterpret_cast<getter>(BatteryReport_get_FullChargeCapacityInMilliwattHours), nullptr, nullptr, nullptr },
         { "remaining_capacity_in_milliwatt_hours", reinterpret_cast<getter>(BatteryReport_get_RemainingCapacityInMilliwattHours), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(BatteryReport_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BatteryReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BatteryReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BatteryReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BatteryReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BatteryReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BatteryReport = {
         "winrt._winrt_windows_devices_power.BatteryReport",
@@ -674,22 +664,19 @@ namespace py::cpp::Windows::Devices::Power
     static PyMethodDef _methods_PowerGridData[] = {
         { "_assign_array_", _assign_array_PowerGridData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PowerGridData), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PowerGridData[] = {
         { "is_low_user_experience_impact", reinterpret_cast<getter>(PowerGridData_get_IsLowUserExperienceImpact), nullptr, nullptr, nullptr },
         { "severity", reinterpret_cast<getter>(PowerGridData_get_Severity), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PowerGridData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerGridData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PowerGridData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerGridData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerGridData) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PowerGridData = {
         "winrt._winrt_windows_devices_power.PowerGridData",
@@ -937,23 +924,20 @@ namespace py::cpp::Windows::Devices::Power
     static PyMethodDef _methods_PowerGridForecast[] = {
         { "_assign_array_", _assign_array_PowerGridForecast, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PowerGridForecast), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PowerGridForecast[] = {
         { "block_duration", reinterpret_cast<getter>(PowerGridForecast_get_BlockDuration), nullptr, nullptr, nullptr },
         { "forecast", reinterpret_cast<getter>(PowerGridForecast_get_Forecast), nullptr, nullptr, nullptr },
         { "start_time", reinterpret_cast<getter>(PowerGridForecast_get_StartTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PowerGridForecast[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerGridForecast) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PowerGridForecast) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerGridForecast) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerGridForecast) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PowerGridForecast = {
         "winrt._winrt_windows_devices_power.PowerGridForecast",
@@ -963,15 +947,13 @@ namespace py::cpp::Windows::Devices::Power
         _type_slots_PowerGridForecast};
 
     static PyGetSetDef getset_PowerGridForecast_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PowerGridForecast_Static[] = {
         { "get_forecast", reinterpret_cast<PyCFunction>(PowerGridForecast_GetForecast), METH_VARARGS, nullptr },
         { "add_forecast_updated", reinterpret_cast<PyCFunction>(PowerGridForecast_add_ForecastUpdated), METH_O, nullptr },
         { "remove_forecast_updated", reinterpret_cast<PyCFunction>(PowerGridForecast_remove_ForecastUpdated), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PowerGridForecast_Static[] = 
     {
@@ -981,14 +963,12 @@ namespace py::cpp::Windows::Devices::Power
         { }
     };
 
-    static PyType_Spec type_spec_PowerGridForecast_Static =
-    {
+    static PyType_Spec type_spec_PowerGridForecast_Static = {
         "winrt._winrt_windows_devices_power.PowerGridForecast_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PowerGridForecast_Static
-    };
+        type_slots_PowerGridForecast_Static};
 
     // ----- Windows.Devices.Power Initialization --------------------
 

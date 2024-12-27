@@ -610,8 +610,7 @@ namespace py::cpp::Windows::Media::Editing
         { "get_audio_encoding_properties", reinterpret_cast<PyCFunction>(BackgroundAudioTrack_GetAudioEncodingProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundAudioTrack, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundAudioTrack), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackgroundAudioTrack[] = {
         { "volume", reinterpret_cast<getter>(BackgroundAudioTrack_get_Volume), reinterpret_cast<setter>(BackgroundAudioTrack_put_Volume), nullptr, nullptr },
@@ -622,16 +621,14 @@ namespace py::cpp::Windows::Media::Editing
         { "original_duration", reinterpret_cast<getter>(BackgroundAudioTrack_get_OriginalDuration), nullptr, nullptr, nullptr },
         { "trimmed_duration", reinterpret_cast<getter>(BackgroundAudioTrack_get_TrimmedDuration), nullptr, nullptr, nullptr },
         { "user_data", reinterpret_cast<getter>(BackgroundAudioTrack_get_UserData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackgroundAudioTrack[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundAudioTrack) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundAudioTrack) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundAudioTrack) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundAudioTrack) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackgroundAudioTrack = {
         "winrt._winrt_windows_media_editing.BackgroundAudioTrack",
@@ -641,14 +638,12 @@ namespace py::cpp::Windows::Media::Editing
         _type_slots_BackgroundAudioTrack};
 
     static PyGetSetDef getset_BackgroundAudioTrack_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BackgroundAudioTrack_Static[] = {
         { "create_from_embedded_audio_track", reinterpret_cast<PyCFunction>(BackgroundAudioTrack_CreateFromEmbeddedAudioTrack), METH_VARARGS, nullptr },
         { "create_from_file_async", reinterpret_cast<PyCFunction>(BackgroundAudioTrack_CreateFromFileAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BackgroundAudioTrack_Static[] = 
     {
@@ -658,14 +653,12 @@ namespace py::cpp::Windows::Media::Editing
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundAudioTrack_Static =
-    {
+    static PyType_Spec type_spec_BackgroundAudioTrack_Static = {
         "winrt._winrt_windows_media_editing.BackgroundAudioTrack_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundAudioTrack_Static
-    };
+        type_slots_BackgroundAudioTrack_Static};
 
     // ----- EmbeddedAudioTrack class --------------------
 
@@ -752,20 +745,17 @@ namespace py::cpp::Windows::Media::Editing
         { "get_audio_encoding_properties", reinterpret_cast<PyCFunction>(EmbeddedAudioTrack_GetAudioEncodingProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmbeddedAudioTrack, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmbeddedAudioTrack), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EmbeddedAudioTrack[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EmbeddedAudioTrack[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmbeddedAudioTrack) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmbeddedAudioTrack) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmbeddedAudioTrack) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmbeddedAudioTrack) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EmbeddedAudioTrack = {
         "winrt._winrt_windows_media_editing.EmbeddedAudioTrack",
@@ -1587,8 +1577,7 @@ namespace py::cpp::Windows::Media::Editing
         { "get_video_encoding_properties", reinterpret_cast<PyCFunction>(MediaClip_GetVideoEncodingProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaClip, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaClip), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaClip[] = {
         { "selected_embedded_audio_track_index", reinterpret_cast<getter>(MediaClip_get_SelectedEmbeddedAudioTrackIndex), reinterpret_cast<setter>(MediaClip_put_SelectedEmbeddedAudioTrackIndex), nullptr, nullptr },
@@ -1603,16 +1592,14 @@ namespace py::cpp::Windows::Media::Editing
         { "user_data", reinterpret_cast<getter>(MediaClip_get_UserData), nullptr, nullptr, nullptr },
         { "video_effect_definitions", reinterpret_cast<getter>(MediaClip_get_VideoEffectDefinitions), nullptr, nullptr, nullptr },
         { "audio_effect_definitions", reinterpret_cast<getter>(MediaClip_get_AudioEffectDefinitions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaClip) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaClip = {
         "winrt._winrt_windows_media_editing.MediaClip",
@@ -1622,16 +1609,14 @@ namespace py::cpp::Windows::Media::Editing
         _type_slots_MediaClip};
 
     static PyGetSetDef getset_MediaClip_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MediaClip_Static[] = {
         { "create_from_color", reinterpret_cast<PyCFunction>(MediaClip_CreateFromColor), METH_VARARGS, nullptr },
         { "create_from_file_async", reinterpret_cast<PyCFunction>(MediaClip_CreateFromFileAsync), METH_VARARGS, nullptr },
         { "create_from_image_file_async", reinterpret_cast<PyCFunction>(MediaClip_CreateFromImageFileAsync), METH_VARARGS, nullptr },
         { "create_from_surface", reinterpret_cast<PyCFunction>(MediaClip_CreateFromSurface), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MediaClip_Static[] = 
     {
@@ -1641,14 +1626,12 @@ namespace py::cpp::Windows::Media::Editing
         { }
     };
 
-    static PyType_Spec type_spec_MediaClip_Static =
-    {
+    static PyType_Spec type_spec_MediaClip_Static = {
         "winrt._winrt_windows_media_editing.MediaClip_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaClip_Static
-    };
+        type_slots_MediaClip_Static};
 
     // ----- MediaComposition class --------------------
 
@@ -2385,8 +2368,7 @@ namespace py::cpp::Windows::Media::Editing
         { "save_async", reinterpret_cast<PyCFunction>(MediaComposition_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaComposition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaComposition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaComposition[] = {
         { "background_audio_tracks", reinterpret_cast<getter>(MediaComposition_get_BackgroundAudioTracks), nullptr, nullptr, nullptr },
@@ -2394,16 +2376,14 @@ namespace py::cpp::Windows::Media::Editing
         { "duration", reinterpret_cast<getter>(MediaComposition_get_Duration), nullptr, nullptr, nullptr },
         { "user_data", reinterpret_cast<getter>(MediaComposition_get_UserData), nullptr, nullptr, nullptr },
         { "overlay_layers", reinterpret_cast<getter>(MediaComposition_get_OverlayLayers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaComposition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaComposition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaComposition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaComposition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaComposition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaComposition = {
         "winrt._winrt_windows_media_editing.MediaComposition",
@@ -2413,13 +2393,11 @@ namespace py::cpp::Windows::Media::Editing
         _type_slots_MediaComposition};
 
     static PyGetSetDef getset_MediaComposition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MediaComposition_Static[] = {
         { "load_async", reinterpret_cast<PyCFunction>(MediaComposition_LoadAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MediaComposition_Static[] = 
     {
@@ -2429,14 +2407,12 @@ namespace py::cpp::Windows::Media::Editing
         { }
     };
 
-    static PyType_Spec type_spec_MediaComposition_Static =
-    {
+    static PyType_Spec type_spec_MediaComposition_Static = {
         "winrt._winrt_windows_media_editing.MediaComposition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaComposition_Static
-    };
+        type_slots_MediaComposition_Static};
 
     // ----- MediaOverlay class --------------------
 
@@ -2870,8 +2846,7 @@ namespace py::cpp::Windows::Media::Editing
         { "clone", reinterpret_cast<PyCFunction>(MediaOverlay_Clone), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaOverlay, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaOverlay), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaOverlay[] = {
         { "position", reinterpret_cast<getter>(MediaOverlay_get_Position), reinterpret_cast<setter>(MediaOverlay_put_Position), nullptr, nullptr },
@@ -2879,16 +2854,14 @@ namespace py::cpp::Windows::Media::Editing
         { "delay", reinterpret_cast<getter>(MediaOverlay_get_Delay), reinterpret_cast<setter>(MediaOverlay_put_Delay), nullptr, nullptr },
         { "audio_enabled", reinterpret_cast<getter>(MediaOverlay_get_AudioEnabled), reinterpret_cast<setter>(MediaOverlay_put_AudioEnabled), nullptr, nullptr },
         { "clip", reinterpret_cast<getter>(MediaOverlay_get_Clip), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaOverlay[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaOverlay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaOverlay) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaOverlay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaOverlay) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaOverlay = {
         "winrt._winrt_windows_media_editing.MediaOverlay",
@@ -3079,22 +3052,19 @@ namespace py::cpp::Windows::Media::Editing
         { "clone", reinterpret_cast<PyCFunction>(MediaOverlayLayer_Clone), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaOverlayLayer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaOverlayLayer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaOverlayLayer[] = {
         { "custom_compositor_definition", reinterpret_cast<getter>(MediaOverlayLayer_get_CustomCompositorDefinition), nullptr, nullptr, nullptr },
         { "overlays", reinterpret_cast<getter>(MediaOverlayLayer_get_Overlays), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaOverlayLayer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaOverlayLayer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaOverlayLayer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaOverlayLayer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaOverlayLayer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaOverlayLayer = {
         "winrt._winrt_windows_media_editing.MediaOverlayLayer",

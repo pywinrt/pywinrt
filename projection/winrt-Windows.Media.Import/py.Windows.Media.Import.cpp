@@ -438,8 +438,7 @@ namespace py::cpp::Windows::Media::Import
     static PyMethodDef _methods_PhotoImportDeleteImportedItemsFromSourceResult[] = {
         { "_assign_array_", _assign_array_PhotoImportDeleteImportedItemsFromSourceResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportDeleteImportedItemsFromSourceResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportDeleteImportedItemsFromSourceResult[] = {
         { "deleted_items", reinterpret_cast<getter>(PhotoImportDeleteImportedItemsFromSourceResult_get_DeletedItems), nullptr, nullptr, nullptr },
@@ -455,16 +454,14 @@ namespace py::cpp::Windows::Media::Import
         { "total_size_in_bytes", reinterpret_cast<getter>(PhotoImportDeleteImportedItemsFromSourceResult_get_TotalSizeInBytes), nullptr, nullptr, nullptr },
         { "videos_count", reinterpret_cast<getter>(PhotoImportDeleteImportedItemsFromSourceResult_get_VideosCount), nullptr, nullptr, nullptr },
         { "videos_size_in_bytes", reinterpret_cast<getter>(PhotoImportDeleteImportedItemsFromSourceResult_get_VideosSizeInBytes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportDeleteImportedItemsFromSourceResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportDeleteImportedItemsFromSourceResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportDeleteImportedItemsFromSourceResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportDeleteImportedItemsFromSourceResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportDeleteImportedItemsFromSourceResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportDeleteImportedItemsFromSourceResult = {
         "winrt._winrt_windows_media_import_.PhotoImportDeleteImportedItemsFromSourceResult",
@@ -1626,8 +1623,7 @@ namespace py::cpp::Windows::Media::Import
         { "remove_selection_changed", reinterpret_cast<PyCFunction>(PhotoImportFindItemsResult_remove_SelectionChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_PhotoImportFindItemsResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportFindItemsResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportFindItemsResult[] = {
         { "found_items", reinterpret_cast<getter>(PhotoImportFindItemsResult_get_FoundItems), nullptr, nullptr, nullptr },
@@ -1654,16 +1650,14 @@ namespace py::cpp::Windows::Media::Import
         { "total_size_in_bytes", reinterpret_cast<getter>(PhotoImportFindItemsResult_get_TotalSizeInBytes), nullptr, nullptr, nullptr },
         { "videos_count", reinterpret_cast<getter>(PhotoImportFindItemsResult_get_VideosCount), nullptr, nullptr, nullptr },
         { "videos_size_in_bytes", reinterpret_cast<getter>(PhotoImportFindItemsResult_get_VideosSizeInBytes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportFindItemsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportFindItemsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportFindItemsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportFindItemsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportFindItemsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportFindItemsResult = {
         "winrt._winrt_windows_media_import_.PhotoImportFindItemsResult",
@@ -2147,8 +2141,7 @@ namespace py::cpp::Windows::Media::Import
         { "delete_imported_items_from_source_async", reinterpret_cast<PyCFunction>(PhotoImportImportItemsResult_DeleteImportedItemsFromSourceAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PhotoImportImportItemsResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportImportItemsResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportImportItemsResult[] = {
         { "has_succeeded", reinterpret_cast<getter>(PhotoImportImportItemsResult_get_HasSucceeded), nullptr, nullptr, nullptr },
@@ -2164,16 +2157,14 @@ namespace py::cpp::Windows::Media::Import
         { "total_size_in_bytes", reinterpret_cast<getter>(PhotoImportImportItemsResult_get_TotalSizeInBytes), nullptr, nullptr, nullptr },
         { "videos_count", reinterpret_cast<getter>(PhotoImportImportItemsResult_get_VideosCount), nullptr, nullptr, nullptr },
         { "videos_size_in_bytes", reinterpret_cast<getter>(PhotoImportImportItemsResult_get_VideosSizeInBytes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportImportItemsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportImportItemsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportImportItemsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportImportItemsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportImportItemsResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportImportItemsResult = {
         "winrt._winrt_windows_media_import_.PhotoImportImportItemsResult",
@@ -2655,8 +2646,7 @@ namespace py::cpp::Windows::Media::Import
     static PyMethodDef _methods_PhotoImportItem[] = {
         { "_assign_array_", _assign_array_PhotoImportItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportItem[] = {
         { "is_selected", reinterpret_cast<getter>(PhotoImportItem_get_IsSelected), reinterpret_cast<setter>(PhotoImportItem_put_IsSelected), nullptr, nullptr },
@@ -2672,16 +2662,14 @@ namespace py::cpp::Windows::Media::Import
         { "thumbnail", reinterpret_cast<getter>(PhotoImportItem_get_Thumbnail), nullptr, nullptr, nullptr },
         { "video_segments", reinterpret_cast<getter>(PhotoImportItem_get_VideoSegments), nullptr, nullptr, nullptr },
         { "path", reinterpret_cast<getter>(PhotoImportItem_get_Path), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportItem = {
         "winrt._winrt_windows_media_import_.PhotoImportItem",
@@ -2764,21 +2752,18 @@ namespace py::cpp::Windows::Media::Import
     static PyMethodDef _methods_PhotoImportItemImportedEventArgs[] = {
         { "_assign_array_", _assign_array_PhotoImportItemImportedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportItemImportedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportItemImportedEventArgs[] = {
         { "imported_item", reinterpret_cast<getter>(PhotoImportItemImportedEventArgs_get_ImportedItem), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportItemImportedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportItemImportedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportItemImportedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportItemImportedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportItemImportedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportItemImportedEventArgs = {
         "winrt._winrt_windows_media_import_.PhotoImportItemImportedEventArgs",
@@ -2917,19 +2902,16 @@ namespace py::cpp::Windows::Media::Import
     }
 
     static PyMethodDef _methods_PhotoImportManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportManager = {
         "winrt._winrt_windows_media_import_.PhotoImportManager",
@@ -2939,15 +2921,13 @@ namespace py::cpp::Windows::Media::Import
         _type_slots_PhotoImportManager};
 
     static PyGetSetDef getset_PhotoImportManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PhotoImportManager_Static[] = {
         { "find_all_sources_async", reinterpret_cast<PyCFunction>(PhotoImportManager_FindAllSourcesAsync), METH_VARARGS, nullptr },
         { "get_pending_operations", reinterpret_cast<PyCFunction>(PhotoImportManager_GetPendingOperations), METH_VARARGS, nullptr },
         { "is_supported_async", reinterpret_cast<PyCFunction>(PhotoImportManager_IsSupportedAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PhotoImportManager_Static[] = 
     {
@@ -2957,14 +2937,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Spec type_spec_PhotoImportManager_Static =
-    {
+    static PyType_Spec type_spec_PhotoImportManager_Static = {
         "winrt._winrt_windows_media_import_.PhotoImportManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PhotoImportManager_Static
-    };
+        type_slots_PhotoImportManager_Static};
 
     // ----- PhotoImportOperation class --------------------
 
@@ -3160,8 +3138,7 @@ namespace py::cpp::Windows::Media::Import
     static PyMethodDef _methods_PhotoImportOperation[] = {
         { "_assign_array_", _assign_array_PhotoImportOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportOperation[] = {
         { "continue_deleting_imported_items_from_source_async", reinterpret_cast<getter>(PhotoImportOperation_get_ContinueDeletingImportedItemsFromSourceAsync), nullptr, nullptr, nullptr },
@@ -3169,16 +3146,14 @@ namespace py::cpp::Windows::Media::Import
         { "continue_importing_items_async", reinterpret_cast<getter>(PhotoImportOperation_get_ContinueImportingItemsAsync), nullptr, nullptr, nullptr },
         { "session", reinterpret_cast<getter>(PhotoImportOperation_get_Session), nullptr, nullptr, nullptr },
         { "stage", reinterpret_cast<getter>(PhotoImportOperation_get_Stage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportOperation = {
         "winrt._winrt_windows_media_import_.PhotoImportOperation",
@@ -3261,21 +3236,18 @@ namespace py::cpp::Windows::Media::Import
     static PyMethodDef _methods_PhotoImportSelectionChangedEventArgs[] = {
         { "_assign_array_", _assign_array_PhotoImportSelectionChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportSelectionChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportSelectionChangedEventArgs[] = {
         { "is_selection_empty", reinterpret_cast<getter>(PhotoImportSelectionChangedEventArgs_get_IsSelectionEmpty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportSelectionChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportSelectionChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportSelectionChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportSelectionChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportSelectionChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportSelectionChangedEventArgs = {
         "winrt._winrt_windows_media_import_.PhotoImportSelectionChangedEventArgs",
@@ -3913,8 +3885,7 @@ namespace py::cpp::Windows::Media::Import
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PhotoImportSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_PhotoImportSession), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportSession[] = {
         { "subfolder_creation_mode", reinterpret_cast<getter>(PhotoImportSession_get_SubfolderCreationMode), reinterpret_cast<setter>(PhotoImportSession_put_SubfolderCreationMode), nullptr, nullptr },
@@ -3925,16 +3896,14 @@ namespace py::cpp::Windows::Media::Import
         { "source", reinterpret_cast<getter>(PhotoImportSession_get_Source), nullptr, nullptr, nullptr },
         { "subfolder_date_format", reinterpret_cast<getter>(PhotoImportSession_get_SubfolderDateFormat), reinterpret_cast<setter>(PhotoImportSession_put_SubfolderDateFormat), nullptr, nullptr },
         { "remember_deselected_items", reinterpret_cast<getter>(PhotoImportSession_get_RememberDeselectedItems), reinterpret_cast<setter>(PhotoImportSession_put_RememberDeselectedItems), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportSession = {
         "winrt._winrt_windows_media_import_.PhotoImportSession",
@@ -4077,23 +4046,20 @@ namespace py::cpp::Windows::Media::Import
     static PyMethodDef _methods_PhotoImportSidecar[] = {
         { "_assign_array_", _assign_array_PhotoImportSidecar, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportSidecar), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportSidecar[] = {
         { "date", reinterpret_cast<getter>(PhotoImportSidecar_get_Date), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(PhotoImportSidecar_get_Name), nullptr, nullptr, nullptr },
         { "size_in_bytes", reinterpret_cast<getter>(PhotoImportSidecar_get_SizeInBytes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportSidecar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportSidecar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportSidecar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportSidecar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportSidecar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportSidecar = {
         "winrt._winrt_windows_media_import_.PhotoImportSidecar",
@@ -4751,8 +4717,7 @@ namespace py::cpp::Windows::Media::Import
         { "create_import_session", reinterpret_cast<PyCFunction>(PhotoImportSource_CreateImportSession), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PhotoImportSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportSource), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportSource[] = {
         { "battery_level_percent", reinterpret_cast<getter>(PhotoImportSource_get_BatteryLevelPercent), nullptr, nullptr, nullptr },
@@ -4771,16 +4736,14 @@ namespace py::cpp::Windows::Media::Import
         { "storage_media", reinterpret_cast<getter>(PhotoImportSource_get_StorageMedia), nullptr, nullptr, nullptr },
         { "thumbnail", reinterpret_cast<getter>(PhotoImportSource_get_Thumbnail), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(PhotoImportSource_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportSource) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportSource = {
         "winrt._winrt_windows_media_import_.PhotoImportSource",
@@ -4790,14 +4753,12 @@ namespace py::cpp::Windows::Media::Import
         _type_slots_PhotoImportSource};
 
     static PyGetSetDef getset_PhotoImportSource_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PhotoImportSource_Static[] = {
         { "from_folder_async", reinterpret_cast<PyCFunction>(PhotoImportSource_FromFolderAsync), METH_VARARGS, nullptr },
         { "from_id_async", reinterpret_cast<PyCFunction>(PhotoImportSource_FromIdAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PhotoImportSource_Static[] = 
     {
@@ -4807,14 +4768,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Spec type_spec_PhotoImportSource_Static =
-    {
+    static PyType_Spec type_spec_PhotoImportSource_Static = {
         "winrt._winrt_windows_media_import_.PhotoImportSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PhotoImportSource_Static
-    };
+        type_slots_PhotoImportSource_Static};
 
     // ----- PhotoImportStorageMedium class --------------------
 
@@ -5112,8 +5071,7 @@ namespace py::cpp::Windows::Media::Import
         { "refresh", reinterpret_cast<PyCFunction>(PhotoImportStorageMedium_Refresh), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PhotoImportStorageMedium, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportStorageMedium), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportStorageMedium[] = {
         { "available_space_in_bytes", reinterpret_cast<getter>(PhotoImportStorageMedium_get_AvailableSpaceInBytes), nullptr, nullptr, nullptr },
@@ -5123,16 +5081,14 @@ namespace py::cpp::Windows::Media::Import
         { "serial_number", reinterpret_cast<getter>(PhotoImportStorageMedium_get_SerialNumber), nullptr, nullptr, nullptr },
         { "storage_medium_type", reinterpret_cast<getter>(PhotoImportStorageMedium_get_StorageMediumType), nullptr, nullptr, nullptr },
         { "supported_access_mode", reinterpret_cast<getter>(PhotoImportStorageMedium_get_SupportedAccessMode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportStorageMedium[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportStorageMedium) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportStorageMedium) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportStorageMedium) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportStorageMedium) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportStorageMedium = {
         "winrt._winrt_windows_media_import_.PhotoImportStorageMedium",
@@ -5335,8 +5291,7 @@ namespace py::cpp::Windows::Media::Import
     static PyMethodDef _methods_PhotoImportVideoSegment[] = {
         { "_assign_array_", _assign_array_PhotoImportVideoSegment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportVideoSegment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PhotoImportVideoSegment[] = {
         { "date", reinterpret_cast<getter>(PhotoImportVideoSegment_get_Date), nullptr, nullptr, nullptr },
@@ -5344,16 +5299,14 @@ namespace py::cpp::Windows::Media::Import
         { "sibling", reinterpret_cast<getter>(PhotoImportVideoSegment_get_Sibling), nullptr, nullptr, nullptr },
         { "sidecars", reinterpret_cast<getter>(PhotoImportVideoSegment_get_Sidecars), nullptr, nullptr, nullptr },
         { "size_in_bytes", reinterpret_cast<getter>(PhotoImportVideoSegment_get_SizeInBytes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PhotoImportVideoSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportVideoSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportVideoSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportVideoSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportVideoSegment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportVideoSegment = {
         "winrt._winrt_windows_media_import_.PhotoImportVideoSegment",
@@ -5437,8 +5390,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyMethodDef _methods_PhotoImportProgress[] = {
         { "_assign_array_", _assign_array_PhotoImportProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* PhotoImportProgress_get_ItemsImported(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, void* /*unused*/) noexcept
     {
@@ -5611,8 +5563,7 @@ namespace py::cpp::Windows::Media::Import
         { "bytes_imported", reinterpret_cast<getter>(PhotoImportProgress_get_BytesImported), reinterpret_cast<setter>(PhotoImportProgress_set_BytesImported), nullptr, nullptr },
         { "total_bytes_to_import", reinterpret_cast<getter>(PhotoImportProgress_get_TotalBytesToImport), reinterpret_cast<setter>(PhotoImportProgress_set_TotalBytesToImport), nullptr, nullptr },
         { "import_progress", reinterpret_cast<getter>(PhotoImportProgress_get_ImportProgress), reinterpret_cast<setter>(PhotoImportProgress_set_ImportProgress), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_PhotoImportProgress(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* other, int op) noexcept
     {
@@ -5692,8 +5643,7 @@ namespace py::cpp::Windows::Media::Import
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PhotoImportProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_PhotoImportProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PhotoImportProgress = {
         "winrt._winrt_windows_media_import_.PhotoImportProgress",

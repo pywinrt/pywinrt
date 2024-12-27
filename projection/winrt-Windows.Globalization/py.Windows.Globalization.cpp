@@ -185,19 +185,16 @@ namespace py::cpp::Windows::Globalization
     }
 
     static PyMethodDef _methods_ApplicationLanguages[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ApplicationLanguages[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ApplicationLanguages[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationLanguages) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationLanguages) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationLanguages) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ApplicationLanguages = {
         "winrt._winrt_windows_globalization.ApplicationLanguages",
@@ -210,13 +207,11 @@ namespace py::cpp::Windows::Globalization
         { "primary_language_override", reinterpret_cast<getter>(ApplicationLanguages_get_PrimaryLanguageOverride), reinterpret_cast<setter>(ApplicationLanguages_put_PrimaryLanguageOverride), nullptr, nullptr },
         { "languages", reinterpret_cast<getter>(ApplicationLanguages_get_Languages), nullptr, nullptr, nullptr },
         { "manifest_languages", reinterpret_cast<getter>(ApplicationLanguages_get_ManifestLanguages), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ApplicationLanguages_Static[] = {
         { "get_languages_for_user", reinterpret_cast<PyCFunction>(ApplicationLanguages_GetLanguagesForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ApplicationLanguages_Static[] = 
     {
@@ -226,14 +221,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationLanguages_Static =
-    {
+    static PyType_Spec type_spec_ApplicationLanguages_Static = {
         "winrt._winrt_windows_globalization.ApplicationLanguages_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationLanguages_Static
-    };
+        type_slots_ApplicationLanguages_Static};
 
     // ----- Calendar class --------------------
 
@@ -4177,8 +4170,7 @@ namespace py::cpp::Windows::Globalization
         { "year_as_truncated_string", reinterpret_cast<PyCFunction>(Calendar_YearAsTruncatedString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Calendar, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Calendar), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Calendar[] = {
         { "year", reinterpret_cast<getter>(Calendar_get_Year), reinterpret_cast<setter>(Calendar_put_Year), nullptr, nullptr },
@@ -4219,16 +4211,14 @@ namespace py::cpp::Windows::Globalization
         { "resolved_language", reinterpret_cast<getter>(Calendar_get_ResolvedLanguage), nullptr, nullptr, nullptr },
         { "first_month_in_this_year", reinterpret_cast<getter>(Calendar_get_FirstMonthInThisYear), nullptr, nullptr, nullptr },
         { "first_period_in_this_day", reinterpret_cast<getter>(Calendar_get_FirstPeriodInThisDay), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Calendar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Calendar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Calendar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Calendar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Calendar) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Calendar = {
         "winrt._winrt_windows_globalization.Calendar",
@@ -4697,19 +4687,16 @@ namespace py::cpp::Windows::Globalization
     }
 
     static PyMethodDef _methods_CalendarIdentifiers[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CalendarIdentifiers[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CalendarIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CalendarIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CalendarIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CalendarIdentifiers) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CalendarIdentifiers = {
         "winrt._winrt_windows_globalization.CalendarIdentifiers",
@@ -4734,12 +4721,10 @@ namespace py::cpp::Windows::Globalization
         { "taiwan_lunar", reinterpret_cast<getter>(CalendarIdentifiers_get_TaiwanLunar), nullptr, nullptr, nullptr },
         { "korean_lunar", reinterpret_cast<getter>(CalendarIdentifiers_get_KoreanLunar), nullptr, nullptr, nullptr },
         { "japanese_lunar", reinterpret_cast<getter>(CalendarIdentifiers_get_JapaneseLunar), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CalendarIdentifiers_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CalendarIdentifiers_Static[] = 
     {
@@ -4749,14 +4734,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Spec type_spec_CalendarIdentifiers_Static =
-    {
+    static PyType_Spec type_spec_CalendarIdentifiers_Static = {
         "winrt._winrt_windows_globalization.CalendarIdentifiers_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CalendarIdentifiers_Static
-    };
+        type_slots_CalendarIdentifiers_Static};
 
     // ----- ClockIdentifiers class --------------------
 
@@ -4828,19 +4811,16 @@ namespace py::cpp::Windows::Globalization
     }
 
     static PyMethodDef _methods_ClockIdentifiers[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ClockIdentifiers[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ClockIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClockIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClockIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClockIdentifiers) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ClockIdentifiers = {
         "winrt._winrt_windows_globalization.ClockIdentifiers",
@@ -4852,12 +4832,10 @@ namespace py::cpp::Windows::Globalization
     static PyGetSetDef getset_ClockIdentifiers_Static[] = {
         { "twelve_hour", reinterpret_cast<getter>(ClockIdentifiers_get_TwelveHour), nullptr, nullptr, nullptr },
         { "twenty_four_hour", reinterpret_cast<getter>(ClockIdentifiers_get_TwentyFourHour), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ClockIdentifiers_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ClockIdentifiers_Static[] = 
     {
@@ -4867,14 +4845,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Spec type_spec_ClockIdentifiers_Static =
-    {
+    static PyType_Spec type_spec_ClockIdentifiers_Static = {
         "winrt._winrt_windows_globalization.ClockIdentifiers_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ClockIdentifiers_Static
-    };
+        type_slots_ClockIdentifiers_Static};
 
     // ----- CurrencyAmount class --------------------
 
@@ -5005,22 +4981,19 @@ namespace py::cpp::Windows::Globalization
     static PyMethodDef _methods_CurrencyAmount[] = {
         { "_assign_array_", _assign_array_CurrencyAmount, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CurrencyAmount), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CurrencyAmount[] = {
         { "amount", reinterpret_cast<getter>(CurrencyAmount_get_Amount), nullptr, nullptr, nullptr },
         { "currency", reinterpret_cast<getter>(CurrencyAmount_get_Currency), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CurrencyAmount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrencyAmount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CurrencyAmount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrencyAmount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrencyAmount) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CurrencyAmount = {
         "winrt._winrt_windows_globalization.CurrencyAmount",
@@ -9899,19 +9872,16 @@ namespace py::cpp::Windows::Globalization
     }
 
     static PyMethodDef _methods_CurrencyIdentifiers[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CurrencyIdentifiers[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CurrencyIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrencyIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrencyIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrencyIdentifiers) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CurrencyIdentifiers = {
         "winrt._winrt_windows_globalization.CurrencyIdentifiers",
@@ -10083,12 +10053,10 @@ namespace py::cpp::Windows::Globalization
         { "stn", reinterpret_cast<getter>(CurrencyIdentifiers_get_STN), nullptr, nullptr, nullptr },
         { "ves", reinterpret_cast<getter>(CurrencyIdentifiers_get_VES), nullptr, nullptr, nullptr },
         { "mru", reinterpret_cast<getter>(CurrencyIdentifiers_get_MRU), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CurrencyIdentifiers_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CurrencyIdentifiers_Static[] = 
     {
@@ -10098,14 +10066,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Spec type_spec_CurrencyIdentifiers_Static =
-    {
+    static PyType_Spec type_spec_CurrencyIdentifiers_Static = {
         "winrt._winrt_windows_globalization.CurrencyIdentifiers_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CurrencyIdentifiers_Static
-    };
+        type_slots_CurrencyIdentifiers_Static};
 
     // ----- GeographicRegion class --------------------
 
@@ -10440,8 +10406,7 @@ namespace py::cpp::Windows::Globalization
     static PyMethodDef _methods_GeographicRegion[] = {
         { "_assign_array_", _assign_array_GeographicRegion, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GeographicRegion), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GeographicRegion[] = {
         { "code", reinterpret_cast<getter>(GeographicRegion_get_Code), nullptr, nullptr, nullptr },
@@ -10451,16 +10416,14 @@ namespace py::cpp::Windows::Globalization
         { "currencies_in_use", reinterpret_cast<getter>(GeographicRegion_get_CurrenciesInUse), nullptr, nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(GeographicRegion_get_DisplayName), nullptr, nullptr, nullptr },
         { "native_name", reinterpret_cast<getter>(GeographicRegion_get_NativeName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GeographicRegion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeographicRegion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeographicRegion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeographicRegion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeographicRegion) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GeographicRegion = {
         "winrt._winrt_windows_globalization.GeographicRegion",
@@ -10470,13 +10433,11 @@ namespace py::cpp::Windows::Globalization
         _type_slots_GeographicRegion};
 
     static PyGetSetDef getset_GeographicRegion_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GeographicRegion_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(GeographicRegion_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GeographicRegion_Static[] = 
     {
@@ -10486,14 +10447,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Spec type_spec_GeographicRegion_Static =
-    {
+    static PyType_Spec type_spec_GeographicRegion_Static = {
         "winrt._winrt_windows_globalization.GeographicRegion_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GeographicRegion_Static
-    };
+        type_slots_GeographicRegion_Static};
 
     // ----- JapanesePhoneme class --------------------
 
@@ -10629,23 +10588,20 @@ namespace py::cpp::Windows::Globalization
     static PyMethodDef _methods_JapanesePhoneme[] = {
         { "_assign_array_", _assign_array_JapanesePhoneme, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JapanesePhoneme), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JapanesePhoneme[] = {
         { "display_text", reinterpret_cast<getter>(JapanesePhoneme_get_DisplayText), nullptr, nullptr, nullptr },
         { "is_phrase_start", reinterpret_cast<getter>(JapanesePhoneme_get_IsPhraseStart), nullptr, nullptr, nullptr },
         { "yomi_text", reinterpret_cast<getter>(JapanesePhoneme_get_YomiText), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JapanesePhoneme[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JapanesePhoneme) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JapanesePhoneme) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JapanesePhoneme) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JapanesePhoneme) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JapanesePhoneme = {
         "winrt._winrt_windows_globalization.JapanesePhoneme",
@@ -10749,19 +10705,16 @@ namespace py::cpp::Windows::Globalization
     }
 
     static PyMethodDef _methods_JapanesePhoneticAnalyzer[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_JapanesePhoneticAnalyzer[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_JapanesePhoneticAnalyzer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JapanesePhoneticAnalyzer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JapanesePhoneticAnalyzer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JapanesePhoneticAnalyzer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JapanesePhoneticAnalyzer = {
         "winrt._winrt_windows_globalization.JapanesePhoneticAnalyzer",
@@ -10771,14 +10724,12 @@ namespace py::cpp::Windows::Globalization
         _type_slots_JapanesePhoneticAnalyzer};
 
     static PyGetSetDef getset_JapanesePhoneticAnalyzer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_JapanesePhoneticAnalyzer_Static[] = {
         { "get_words", reinterpret_cast<PyCFunction>(JapanesePhoneticAnalyzer_GetWords), METH_VARARGS, nullptr },
         { "get_words_with_mono_ruby_option", reinterpret_cast<PyCFunction>(JapanesePhoneticAnalyzer_GetWordsWithMonoRubyOption), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_JapanesePhoneticAnalyzer_Static[] = 
     {
@@ -10788,14 +10739,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Spec type_spec_JapanesePhoneticAnalyzer_Static =
-    {
+    static PyType_Spec type_spec_JapanesePhoneticAnalyzer_Static = {
         "winrt._winrt_windows_globalization.JapanesePhoneticAnalyzer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_JapanesePhoneticAnalyzer_Static
-    };
+        type_slots_JapanesePhoneticAnalyzer_Static};
 
     // ----- Language class --------------------
 
@@ -11244,8 +11193,7 @@ namespace py::cpp::Windows::Globalization
         { "get_extension_subtags", reinterpret_cast<PyCFunction>(Language_GetExtensionSubtags), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Language, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Language), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Language[] = {
         { "display_name", reinterpret_cast<getter>(Language_get_DisplayName), nullptr, nullptr, nullptr },
@@ -11254,16 +11202,14 @@ namespace py::cpp::Windows::Globalization
         { "script", reinterpret_cast<getter>(Language_get_Script), nullptr, nullptr, nullptr },
         { "layout_direction", reinterpret_cast<getter>(Language_get_LayoutDirection), nullptr, nullptr, nullptr },
         { "abbreviated_name", reinterpret_cast<getter>(Language_get_AbbreviatedName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Language[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Language) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Language) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Language) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Language) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Language = {
         "winrt._winrt_windows_globalization.Language",
@@ -11274,15 +11220,13 @@ namespace py::cpp::Windows::Globalization
 
     static PyGetSetDef getset_Language_Static[] = {
         { "current_input_method_language_tag", reinterpret_cast<getter>(Language_get_CurrentInputMethodLanguageTag), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Language_Static[] = {
         { "get_mui_compatible_language_list_from_language_tags", reinterpret_cast<PyCFunction>(Language_GetMuiCompatibleLanguageListFromLanguageTags), METH_VARARGS, nullptr },
         { "is_well_formed", reinterpret_cast<PyCFunction>(Language_IsWellFormed), METH_VARARGS, nullptr },
         { "try_set_input_method_language_tag", reinterpret_cast<PyCFunction>(Language_TrySetInputMethodLanguageTag), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Language_Static[] = 
     {
@@ -11292,14 +11236,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Spec type_spec_Language_Static =
-    {
+    static PyType_Spec type_spec_Language_Static = {
         "winrt._winrt_windows_globalization.Language_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Language_Static
-    };
+        type_slots_Language_Static};
 
     // ----- NumeralSystemIdentifiers class --------------------
 
@@ -12751,19 +12693,16 @@ namespace py::cpp::Windows::Globalization
     }
 
     static PyMethodDef _methods_NumeralSystemIdentifiers[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NumeralSystemIdentifiers[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NumeralSystemIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NumeralSystemIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NumeralSystemIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NumeralSystemIdentifiers) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NumeralSystemIdentifiers = {
         "winrt._winrt_windows_globalization.NumeralSystemIdentifiers",
@@ -12821,12 +12760,10 @@ namespace py::cpp::Windows::Globalization
         { "zmth_sanb", reinterpret_cast<getter>(NumeralSystemIdentifiers_get_ZmthSanb), nullptr, nullptr, nullptr },
         { "zmth_sans", reinterpret_cast<getter>(NumeralSystemIdentifiers_get_ZmthSans), nullptr, nullptr, nullptr },
         { "brah", reinterpret_cast<getter>(NumeralSystemIdentifiers_get_Brah), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_NumeralSystemIdentifiers_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_NumeralSystemIdentifiers_Static[] = 
     {
@@ -12836,14 +12773,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Spec type_spec_NumeralSystemIdentifiers_Static =
-    {
+    static PyType_Spec type_spec_NumeralSystemIdentifiers_Static = {
         "winrt._winrt_windows_globalization.NumeralSystemIdentifiers_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_NumeralSystemIdentifiers_Static
-    };
+        type_slots_NumeralSystemIdentifiers_Static};
 
     // ----- Windows.Globalization Initialization --------------------
 

@@ -310,8 +310,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(AppointmentCalendarCancelMeetingRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarCancelMeetingRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarCancelMeetingRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarCancelMeetingRequest[] = {
         { "appointment_calendar_local_id", reinterpret_cast<getter>(AppointmentCalendarCancelMeetingRequest_get_AppointmentCalendarLocalId), nullptr, nullptr, nullptr },
@@ -320,16 +319,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "comment", reinterpret_cast<getter>(AppointmentCalendarCancelMeetingRequest_get_Comment), nullptr, nullptr, nullptr },
         { "notify_invitees", reinterpret_cast<getter>(AppointmentCalendarCancelMeetingRequest_get_NotifyInvitees), nullptr, nullptr, nullptr },
         { "subject", reinterpret_cast<getter>(AppointmentCalendarCancelMeetingRequest_get_Subject), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarCancelMeetingRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarCancelMeetingRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarCancelMeetingRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarCancelMeetingRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarCancelMeetingRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarCancelMeetingRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCancelMeetingRequest",
@@ -453,21 +450,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(AppointmentCalendarCancelMeetingRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarCancelMeetingRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarCancelMeetingRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarCancelMeetingRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(AppointmentCalendarCancelMeetingRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarCancelMeetingRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarCancelMeetingRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarCancelMeetingRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarCancelMeetingRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarCancelMeetingRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarCancelMeetingRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCancelMeetingRequestEventArgs",
@@ -724,24 +718,21 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(AppointmentCalendarCreateOrUpdateAppointmentRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarCreateOrUpdateAppointmentRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarCreateOrUpdateAppointmentRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarCreateOrUpdateAppointmentRequest[] = {
         { "appointment", reinterpret_cast<getter>(AppointmentCalendarCreateOrUpdateAppointmentRequest_get_Appointment), nullptr, nullptr, nullptr },
         { "appointment_calendar_local_id", reinterpret_cast<getter>(AppointmentCalendarCreateOrUpdateAppointmentRequest_get_AppointmentCalendarLocalId), nullptr, nullptr, nullptr },
         { "changed_properties", reinterpret_cast<getter>(AppointmentCalendarCreateOrUpdateAppointmentRequest_get_ChangedProperties), nullptr, nullptr, nullptr },
         { "notify_invitees", reinterpret_cast<getter>(AppointmentCalendarCreateOrUpdateAppointmentRequest_get_NotifyInvitees), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarCreateOrUpdateAppointmentRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarCreateOrUpdateAppointmentRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarCreateOrUpdateAppointmentRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarCreateOrUpdateAppointmentRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCreateOrUpdateAppointmentRequest",
@@ -865,21 +856,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs",
@@ -1224,8 +1212,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(AppointmentCalendarForwardMeetingRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarForwardMeetingRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarForwardMeetingRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarForwardMeetingRequest[] = {
         { "appointment_calendar_local_id", reinterpret_cast<getter>(AppointmentCalendarForwardMeetingRequest_get_AppointmentCalendarLocalId), nullptr, nullptr, nullptr },
@@ -1235,16 +1222,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "forward_header", reinterpret_cast<getter>(AppointmentCalendarForwardMeetingRequest_get_ForwardHeader), nullptr, nullptr, nullptr },
         { "invitees", reinterpret_cast<getter>(AppointmentCalendarForwardMeetingRequest_get_Invitees), nullptr, nullptr, nullptr },
         { "subject", reinterpret_cast<getter>(AppointmentCalendarForwardMeetingRequest_get_Subject), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarForwardMeetingRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarForwardMeetingRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarForwardMeetingRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarForwardMeetingRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarForwardMeetingRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarForwardMeetingRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarForwardMeetingRequest",
@@ -1368,21 +1353,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(AppointmentCalendarForwardMeetingRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarForwardMeetingRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarForwardMeetingRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarForwardMeetingRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(AppointmentCalendarForwardMeetingRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarForwardMeetingRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarForwardMeetingRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarForwardMeetingRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarForwardMeetingRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarForwardMeetingRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarForwardMeetingRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarForwardMeetingRequestEventArgs",
@@ -1727,8 +1709,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(AppointmentCalendarProposeNewTimeForMeetingRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarProposeNewTimeForMeetingRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarProposeNewTimeForMeetingRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarProposeNewTimeForMeetingRequest[] = {
         { "appointment_calendar_local_id", reinterpret_cast<getter>(AppointmentCalendarProposeNewTimeForMeetingRequest_get_AppointmentCalendarLocalId), nullptr, nullptr, nullptr },
@@ -1738,16 +1719,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "new_duration", reinterpret_cast<getter>(AppointmentCalendarProposeNewTimeForMeetingRequest_get_NewDuration), nullptr, nullptr, nullptr },
         { "new_start_time", reinterpret_cast<getter>(AppointmentCalendarProposeNewTimeForMeetingRequest_get_NewStartTime), nullptr, nullptr, nullptr },
         { "subject", reinterpret_cast<getter>(AppointmentCalendarProposeNewTimeForMeetingRequest_get_Subject), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarProposeNewTimeForMeetingRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarProposeNewTimeForMeetingRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarProposeNewTimeForMeetingRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarProposeNewTimeForMeetingRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarProposeNewTimeForMeetingRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarProposeNewTimeForMeetingRequest",
@@ -1871,21 +1850,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs",
@@ -2050,21 +2026,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(AppointmentCalendarSyncManagerSyncRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarSyncManagerSyncRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarSyncManagerSyncRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarSyncManagerSyncRequest[] = {
         { "appointment_calendar_local_id", reinterpret_cast<getter>(AppointmentCalendarSyncManagerSyncRequest_get_AppointmentCalendarLocalId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarSyncManagerSyncRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarSyncManagerSyncRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarSyncManagerSyncRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarSyncManagerSyncRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarSyncManagerSyncRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarSyncManagerSyncRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarSyncManagerSyncRequest",
@@ -2188,21 +2161,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(AppointmentCalendarSyncManagerSyncRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarSyncManagerSyncRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarSyncManagerSyncRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarSyncManagerSyncRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(AppointmentCalendarSyncManagerSyncRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarSyncManagerSyncRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarSyncManagerSyncRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarSyncManagerSyncRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarSyncManagerSyncRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarSyncManagerSyncRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarSyncManagerSyncRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarSyncManagerSyncRequestEventArgs",
@@ -2547,8 +2517,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "report_failed_async", reinterpret_cast<PyCFunction>(AppointmentCalendarUpdateMeetingResponseRequest_ReportFailedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarUpdateMeetingResponseRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarUpdateMeetingResponseRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarUpdateMeetingResponseRequest[] = {
         { "appointment_calendar_local_id", reinterpret_cast<getter>(AppointmentCalendarUpdateMeetingResponseRequest_get_AppointmentCalendarLocalId), nullptr, nullptr, nullptr },
@@ -2558,16 +2527,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "response", reinterpret_cast<getter>(AppointmentCalendarUpdateMeetingResponseRequest_get_Response), nullptr, nullptr, nullptr },
         { "send_update", reinterpret_cast<getter>(AppointmentCalendarUpdateMeetingResponseRequest_get_SendUpdate), nullptr, nullptr, nullptr },
         { "subject", reinterpret_cast<getter>(AppointmentCalendarUpdateMeetingResponseRequest_get_Subject), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarUpdateMeetingResponseRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarUpdateMeetingResponseRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarUpdateMeetingResponseRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarUpdateMeetingResponseRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarUpdateMeetingResponseRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarUpdateMeetingResponseRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarUpdateMeetingResponseRequest",
@@ -2691,21 +2658,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "get_deferral", reinterpret_cast<PyCFunction>(AppointmentCalendarUpdateMeetingResponseRequestEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentCalendarUpdateMeetingResponseRequestEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentCalendarUpdateMeetingResponseRequestEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentCalendarUpdateMeetingResponseRequestEventArgs[] = {
         { "request", reinterpret_cast<getter>(AppointmentCalendarUpdateMeetingResponseRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentCalendarUpdateMeetingResponseRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarUpdateMeetingResponseRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarUpdateMeetingResponseRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarUpdateMeetingResponseRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarUpdateMeetingResponseRequestEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentCalendarUpdateMeetingResponseRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs",
@@ -3202,20 +3166,17 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { "remove_update_meeting_response_requested", reinterpret_cast<PyCFunction>(AppointmentDataProviderConnection_remove_UpdateMeetingResponseRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppointmentDataProviderConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentDataProviderConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentDataProviderConnection[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentDataProviderConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentDataProviderConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentDataProviderConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentDataProviderConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentDataProviderConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentDataProviderConnection = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentDataProviderConnection",
@@ -3298,21 +3259,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static PyMethodDef _methods_AppointmentDataProviderTriggerDetails[] = {
         { "_assign_array_", _assign_array_AppointmentDataProviderTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentDataProviderTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AppointmentDataProviderTriggerDetails[] = {
         { "connection", reinterpret_cast<getter>(AppointmentDataProviderTriggerDetails_get_Connection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AppointmentDataProviderTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentDataProviderTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentDataProviderTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentDataProviderTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentDataProviderTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AppointmentDataProviderTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentDataProviderTriggerDetails",

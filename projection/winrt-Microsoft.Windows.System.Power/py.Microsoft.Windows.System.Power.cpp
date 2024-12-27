@@ -1059,19 +1059,16 @@ namespace py::cpp::Microsoft::Windows::System::Power
     }
 
     static PyMethodDef _methods_PowerManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PowerManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PowerManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PowerManager = {
         "winrt._winrt_microsoft_windows_system_power.PowerManager",
@@ -1092,8 +1089,7 @@ namespace py::cpp::Microsoft::Windows::System::Power
         { "system_suspend_status", reinterpret_cast<getter>(PowerManager_get_SystemSuspendStatus), nullptr, nullptr, nullptr },
         { "user_presence_status", reinterpret_cast<getter>(PowerManager_get_UserPresenceStatus), nullptr, nullptr, nullptr },
         { "effective_power_mode2", reinterpret_cast<getter>(PowerManager_get_EffectivePowerMode2), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PowerManager_Static[] = {
         { "add_battery_status_changed", reinterpret_cast<PyCFunction>(PowerManager_add_BatteryStatusChanged), METH_O, nullptr },
@@ -1118,8 +1114,7 @@ namespace py::cpp::Microsoft::Windows::System::Power
         { "remove_system_suspend_status_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_SystemSuspendStatusChanged), METH_O, nullptr },
         { "add_user_presence_status_changed", reinterpret_cast<PyCFunction>(PowerManager_add_UserPresenceStatusChanged), METH_O, nullptr },
         { "remove_user_presence_status_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_UserPresenceStatusChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PowerManager_Static[] = 
     {
@@ -1129,14 +1124,12 @@ namespace py::cpp::Microsoft::Windows::System::Power
         { }
     };
 
-    static PyType_Spec type_spec_PowerManager_Static =
-    {
+    static PyType_Spec type_spec_PowerManager_Static = {
         "winrt._winrt_microsoft_windows_system_power.PowerManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PowerManager_Static
-    };
+        type_slots_PowerManager_Static};
 
     // ----- Microsoft.Windows.System.Power Initialization --------------------
 

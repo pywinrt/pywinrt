@@ -341,8 +341,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
     static PyMethodDef _methods_Geofence[] = {
         { "_assign_array_", _assign_array_Geofence, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Geofence), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Geofence[] = {
         { "duration", reinterpret_cast<getter>(Geofence_get_Duration), nullptr, nullptr, nullptr },
@@ -352,16 +351,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
         { "monitored_states", reinterpret_cast<getter>(Geofence_get_MonitoredStates), nullptr, nullptr, nullptr },
         { "single_use", reinterpret_cast<getter>(Geofence_get_SingleUse), nullptr, nullptr, nullptr },
         { "start_time", reinterpret_cast<getter>(Geofence_get_StartTime), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Geofence[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geofence) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geofence) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geofence) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geofence) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Geofence = {
         "winrt._winrt_windows_devices_geolocation_geofencing.Geofence",
@@ -709,23 +706,20 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
         { "remove_status_changed", reinterpret_cast<PyCFunction>(GeofenceMonitor_remove_StatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_GeofenceMonitor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GeofenceMonitor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GeofenceMonitor[] = {
         { "geofences", reinterpret_cast<getter>(GeofenceMonitor_get_Geofences), nullptr, nullptr, nullptr },
         { "last_known_geoposition", reinterpret_cast<getter>(GeofenceMonitor_get_LastKnownGeoposition), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(GeofenceMonitor_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GeofenceMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeofenceMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeofenceMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeofenceMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeofenceMonitor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GeofenceMonitor = {
         "winrt._winrt_windows_devices_geolocation_geofencing.GeofenceMonitor",
@@ -736,12 +730,10 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyGetSetDef getset_GeofenceMonitor_Static[] = {
         { "current", reinterpret_cast<getter>(GeofenceMonitor_get_Current), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GeofenceMonitor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GeofenceMonitor_Static[] = 
     {
@@ -751,14 +743,12 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
         { }
     };
 
-    static PyType_Spec type_spec_GeofenceMonitor_Static =
-    {
+    static PyType_Spec type_spec_GeofenceMonitor_Static = {
         "winrt._winrt_windows_devices_geolocation_geofencing.GeofenceMonitor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GeofenceMonitor_Static
-    };
+        type_slots_GeofenceMonitor_Static};
 
     // ----- GeofenceStateChangeReport class --------------------
 
@@ -924,24 +914,21 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
     static PyMethodDef _methods_GeofenceStateChangeReport[] = {
         { "_assign_array_", _assign_array_GeofenceStateChangeReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GeofenceStateChangeReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GeofenceStateChangeReport[] = {
         { "geofence", reinterpret_cast<getter>(GeofenceStateChangeReport_get_Geofence), nullptr, nullptr, nullptr },
         { "geoposition", reinterpret_cast<getter>(GeofenceStateChangeReport_get_Geoposition), nullptr, nullptr, nullptr },
         { "new_state", reinterpret_cast<getter>(GeofenceStateChangeReport_get_NewState), nullptr, nullptr, nullptr },
         { "removal_reason", reinterpret_cast<getter>(GeofenceStateChangeReport_get_RemovalReason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GeofenceStateChangeReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeofenceStateChangeReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeofenceStateChangeReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeofenceStateChangeReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeofenceStateChangeReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GeofenceStateChangeReport = {
         "winrt._winrt_windows_devices_geolocation_geofencing.GeofenceStateChangeReport",

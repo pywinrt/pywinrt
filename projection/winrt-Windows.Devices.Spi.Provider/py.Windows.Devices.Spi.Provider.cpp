@@ -417,8 +417,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     static PyMethodDef _methods_ProviderSpiConnectionSettings[] = {
         { "_assign_array_", _assign_array_ProviderSpiConnectionSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProviderSpiConnectionSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProviderSpiConnectionSettings[] = {
         { "sharing_mode", reinterpret_cast<getter>(ProviderSpiConnectionSettings_get_SharingMode), reinterpret_cast<setter>(ProviderSpiConnectionSettings_put_SharingMode), nullptr, nullptr },
@@ -426,16 +425,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         { "data_bit_length", reinterpret_cast<getter>(ProviderSpiConnectionSettings_get_DataBitLength), reinterpret_cast<setter>(ProviderSpiConnectionSettings_put_DataBitLength), nullptr, nullptr },
         { "clock_frequency", reinterpret_cast<getter>(ProviderSpiConnectionSettings_get_ClockFrequency), reinterpret_cast<setter>(ProviderSpiConnectionSettings_put_ClockFrequency), nullptr, nullptr },
         { "chip_select_line", reinterpret_cast<getter>(ProviderSpiConnectionSettings_get_ChipSelectLine), reinterpret_cast<setter>(ProviderSpiConnectionSettings_put_ChipSelectLine), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProviderSpiConnectionSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProviderSpiConnectionSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProviderSpiConnectionSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProviderSpiConnectionSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProviderSpiConnectionSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProviderSpiConnectionSettings = {
         "winrt._winrt_windows_devices_spi_provider.ProviderSpiConnectionSettings",
@@ -531,20 +528,17 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         { "get_device_provider", reinterpret_cast<PyCFunction>(ISpiControllerProvider_GetDeviceProvider), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISpiControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpiControllerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISpiControllerProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISpiControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpiControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpiControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpiControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpiControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISpiControllerProvider = {
         "winrt._winrt_windows_devices_spi_provider.ISpiControllerProvider",
@@ -632,13 +626,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     static PyMethodDef methods_ImplementsISpiControllerProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpiControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpiControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISpiControllerProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISpiControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISpiControllerProvider = {
         "winrt._winrt_windows_devices_spi_provider.ImplementsISpiControllerProvider",
@@ -996,22 +988,19 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpiDeviceProvider), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ISpiDeviceProvider), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ISpiDeviceProvider), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISpiDeviceProvider[] = {
         { "connection_settings", reinterpret_cast<getter>(ISpiDeviceProvider_get_ConnectionSettings), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(ISpiDeviceProvider_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISpiDeviceProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpiDeviceProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpiDeviceProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpiDeviceProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpiDeviceProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISpiDeviceProvider = {
         "winrt._winrt_windows_devices_spi_provider.ISpiDeviceProvider",
@@ -1275,13 +1264,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     static PyMethodDef methods_ImplementsISpiDeviceProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpiDeviceProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpiDeviceProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISpiDeviceProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISpiDeviceProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISpiDeviceProvider = {
         "winrt._winrt_windows_devices_spi_provider.ImplementsISpiDeviceProvider",
@@ -1375,20 +1362,17 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         { "get_controllers_async", reinterpret_cast<PyCFunction>(ISpiProvider_GetControllersAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISpiProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpiProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISpiProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISpiProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpiProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpiProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpiProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpiProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISpiProvider = {
         "winrt._winrt_windows_devices_spi_provider.ISpiProvider",
@@ -1470,13 +1454,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     static PyMethodDef methods_ImplementsISpiProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpiProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpiProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISpiProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISpiProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISpiProvider = {
         "winrt._winrt_windows_devices_spi_provider.ImplementsISpiProvider",

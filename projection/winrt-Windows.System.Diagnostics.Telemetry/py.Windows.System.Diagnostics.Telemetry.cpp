@@ -99,19 +99,16 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
     }
 
     static PyMethodDef _methods_PlatformTelemetryClient[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlatformTelemetryClient[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlatformTelemetryClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformTelemetryClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformTelemetryClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformTelemetryClient) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlatformTelemetryClient = {
         "winrt._winrt_windows_system_diagnostics_telemetry.PlatformTelemetryClient",
@@ -121,14 +118,12 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
         _type_slots_PlatformTelemetryClient};
 
     static PyGetSetDef getset_PlatformTelemetryClient_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PlatformTelemetryClient_Static[] = {
         { "register", reinterpret_cast<PyCFunction>(PlatformTelemetryClient_Register), METH_VARARGS, nullptr },
         { "register_with_settings", reinterpret_cast<PyCFunction>(PlatformTelemetryClient_RegisterWithSettings), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PlatformTelemetryClient_Static[] = 
     {
@@ -138,14 +133,12 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
         { }
     };
 
-    static PyType_Spec type_spec_PlatformTelemetryClient_Static =
-    {
+    static PyType_Spec type_spec_PlatformTelemetryClient_Static = {
         "winrt._winrt_windows_system_diagnostics_telemetry.PlatformTelemetryClient_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlatformTelemetryClient_Static
-    };
+        type_slots_PlatformTelemetryClient_Static};
 
     // ----- PlatformTelemetryRegistrationResult class --------------------
 
@@ -221,21 +214,18 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
     static PyMethodDef _methods_PlatformTelemetryRegistrationResult[] = {
         { "_assign_array_", _assign_array_PlatformTelemetryRegistrationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlatformTelemetryRegistrationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlatformTelemetryRegistrationResult[] = {
         { "status", reinterpret_cast<getter>(PlatformTelemetryRegistrationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlatformTelemetryRegistrationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformTelemetryRegistrationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlatformTelemetryRegistrationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformTelemetryRegistrationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformTelemetryRegistrationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlatformTelemetryRegistrationResult = {
         "winrt._winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationResult",
@@ -448,22 +438,19 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
     static PyMethodDef _methods_PlatformTelemetryRegistrationSettings[] = {
         { "_assign_array_", _assign_array_PlatformTelemetryRegistrationSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlatformTelemetryRegistrationSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PlatformTelemetryRegistrationSettings[] = {
         { "upload_quota_size", reinterpret_cast<getter>(PlatformTelemetryRegistrationSettings_get_UploadQuotaSize), reinterpret_cast<setter>(PlatformTelemetryRegistrationSettings_put_UploadQuotaSize), nullptr, nullptr },
         { "storage_size", reinterpret_cast<getter>(PlatformTelemetryRegistrationSettings_get_StorageSize), reinterpret_cast<setter>(PlatformTelemetryRegistrationSettings_put_StorageSize), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PlatformTelemetryRegistrationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformTelemetryRegistrationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlatformTelemetryRegistrationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformTelemetryRegistrationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformTelemetryRegistrationSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PlatformTelemetryRegistrationSettings = {
         "winrt._winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationSettings",

@@ -117,21 +117,18 @@ namespace py::cpp::Windows::Phone::UI::Input
     static PyMethodDef _methods_BackPressedEventArgs[] = {
         { "_assign_array_", _assign_array_BackPressedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackPressedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackPressedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(BackPressedEventArgs_get_Handled), reinterpret_cast<setter>(BackPressedEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackPressedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackPressedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackPressedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackPressedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackPressedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackPressedEventArgs = {
         "winrt._winrt_windows_phone_ui_input.BackPressedEventArgs",
@@ -184,20 +181,17 @@ namespace py::cpp::Windows::Phone::UI::Input
     static PyMethodDef _methods_CameraEventArgs[] = {
         { "_assign_array_", _assign_array_CameraEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CameraEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CameraEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CameraEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CameraEventArgs = {
         "winrt._winrt_windows_phone_ui_input.CameraEventArgs",
@@ -476,19 +470,16 @@ namespace py::cpp::Windows::Phone::UI::Input
     }
 
     static PyMethodDef _methods_HardwareButtons[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HardwareButtons[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HardwareButtons[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HardwareButtons) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HardwareButtons) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HardwareButtons) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HardwareButtons = {
         "winrt._winrt_windows_phone_ui_input.HardwareButtons",
@@ -498,8 +489,7 @@ namespace py::cpp::Windows::Phone::UI::Input
         _type_slots_HardwareButtons};
 
     static PyGetSetDef getset_HardwareButtons_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HardwareButtons_Static[] = {
         { "add_back_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_add_BackPressed), METH_O, nullptr },
@@ -510,8 +500,7 @@ namespace py::cpp::Windows::Phone::UI::Input
         { "remove_camera_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_remove_CameraPressed), METH_O, nullptr },
         { "add_camera_released", reinterpret_cast<PyCFunction>(HardwareButtons_add_CameraReleased), METH_O, nullptr },
         { "remove_camera_released", reinterpret_cast<PyCFunction>(HardwareButtons_remove_CameraReleased), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HardwareButtons_Static[] = 
     {
@@ -521,14 +510,12 @@ namespace py::cpp::Windows::Phone::UI::Input
         { }
     };
 
-    static PyType_Spec type_spec_HardwareButtons_Static =
-    {
+    static PyType_Spec type_spec_HardwareButtons_Static = {
         "winrt._winrt_windows_phone_ui_input.HardwareButtons_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HardwareButtons_Static
-    };
+        type_slots_HardwareButtons_Static};
 
     // ----- Windows.Phone.UI.Input Initialization --------------------
 

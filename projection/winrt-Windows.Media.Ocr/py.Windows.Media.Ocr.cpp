@@ -305,21 +305,18 @@ namespace py::cpp::Windows::Media::Ocr
         { "recognize_async", reinterpret_cast<PyCFunction>(OcrEngine_RecognizeAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_OcrEngine, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OcrEngine), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OcrEngine[] = {
         { "recognizer_language", reinterpret_cast<getter>(OcrEngine_get_RecognizerLanguage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OcrEngine[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OcrEngine) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OcrEngine) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OcrEngine) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OcrEngine) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OcrEngine = {
         "winrt._winrt_windows_media_ocr.OcrEngine",
@@ -331,15 +328,13 @@ namespace py::cpp::Windows::Media::Ocr
     static PyGetSetDef getset_OcrEngine_Static[] = {
         { "available_recognizer_languages", reinterpret_cast<getter>(OcrEngine_get_AvailableRecognizerLanguages), nullptr, nullptr, nullptr },
         { "max_image_dimension", reinterpret_cast<getter>(OcrEngine_get_MaxImageDimension), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_OcrEngine_Static[] = {
         { "is_language_supported", reinterpret_cast<PyCFunction>(OcrEngine_IsLanguageSupported), METH_VARARGS, nullptr },
         { "try_create_from_language", reinterpret_cast<PyCFunction>(OcrEngine_TryCreateFromLanguage), METH_VARARGS, nullptr },
         { "try_create_from_user_profile_languages", reinterpret_cast<PyCFunction>(OcrEngine_TryCreateFromUserProfileLanguages), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_OcrEngine_Static[] = 
     {
@@ -349,14 +344,12 @@ namespace py::cpp::Windows::Media::Ocr
         { }
     };
 
-    static PyType_Spec type_spec_OcrEngine_Static =
-    {
+    static PyType_Spec type_spec_OcrEngine_Static = {
         "winrt._winrt_windows_media_ocr.OcrEngine_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_OcrEngine_Static
-    };
+        type_slots_OcrEngine_Static};
 
     // ----- OcrLine class --------------------
 
@@ -462,22 +455,19 @@ namespace py::cpp::Windows::Media::Ocr
     static PyMethodDef _methods_OcrLine[] = {
         { "_assign_array_", _assign_array_OcrLine, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OcrLine), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OcrLine[] = {
         { "text", reinterpret_cast<getter>(OcrLine_get_Text), nullptr, nullptr, nullptr },
         { "words", reinterpret_cast<getter>(OcrLine_get_Words), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OcrLine[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OcrLine) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OcrLine) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OcrLine) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OcrLine) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OcrLine = {
         "winrt._winrt_windows_media_ocr.OcrLine",
@@ -620,23 +610,20 @@ namespace py::cpp::Windows::Media::Ocr
     static PyMethodDef _methods_OcrResult[] = {
         { "_assign_array_", _assign_array_OcrResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OcrResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OcrResult[] = {
         { "lines", reinterpret_cast<getter>(OcrResult_get_Lines), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(OcrResult_get_Text), nullptr, nullptr, nullptr },
         { "text_angle", reinterpret_cast<getter>(OcrResult_get_TextAngle), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OcrResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OcrResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OcrResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OcrResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OcrResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OcrResult = {
         "winrt._winrt_windows_media_ocr.OcrResult",
@@ -749,22 +736,19 @@ namespace py::cpp::Windows::Media::Ocr
     static PyMethodDef _methods_OcrWord[] = {
         { "_assign_array_", _assign_array_OcrWord, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OcrWord), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OcrWord[] = {
         { "bounding_rect", reinterpret_cast<getter>(OcrWord_get_BoundingRect), nullptr, nullptr, nullptr },
         { "text", reinterpret_cast<getter>(OcrWord_get_Text), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OcrWord[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OcrWord) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OcrWord) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OcrWord) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OcrWord) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OcrWord = {
         "winrt._winrt_windows_media_ocr.OcrWord",

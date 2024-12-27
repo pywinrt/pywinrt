@@ -191,19 +191,16 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     }
 
     static PyMethodDef _methods_GameControllerFactoryManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GameControllerFactoryManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GameControllerFactoryManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameControllerFactoryManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameControllerFactoryManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameControllerFactoryManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameControllerFactoryManager = {
         "winrt._winrt_windows_gaming_input_custom.GameControllerFactoryManager",
@@ -213,16 +210,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         _type_slots_GameControllerFactoryManager};
 
     static PyGetSetDef getset_GameControllerFactoryManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GameControllerFactoryManager_Static[] = {
         { "register_custom_factory_for_gip_interface", reinterpret_cast<PyCFunction>(GameControllerFactoryManager_RegisterCustomFactoryForGipInterface), METH_VARARGS, nullptr },
         { "register_custom_factory_for_hardware_id", reinterpret_cast<PyCFunction>(GameControllerFactoryManager_RegisterCustomFactoryForHardwareId), METH_VARARGS, nullptr },
         { "register_custom_factory_for_xusb_type", reinterpret_cast<PyCFunction>(GameControllerFactoryManager_RegisterCustomFactoryForXusbType), METH_VARARGS, nullptr },
         { "try_get_factory_controller_from_game_controller", reinterpret_cast<PyCFunction>(GameControllerFactoryManager_TryGetFactoryControllerFromGameController), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GameControllerFactoryManager_Static[] = 
     {
@@ -232,14 +227,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Spec type_spec_GameControllerFactoryManager_Static =
-    {
+    static PyType_Spec type_spec_GameControllerFactoryManager_Static = {
         "winrt._winrt_windows_gaming_input_custom.GameControllerFactoryManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GameControllerFactoryManager_Static
-    };
+        type_slots_GameControllerFactoryManager_Static};
 
     // ----- GipFirmwareUpdateResult class --------------------
 
@@ -375,23 +368,20 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static PyMethodDef _methods_GipFirmwareUpdateResult[] = {
         { "_assign_array_", _assign_array_GipFirmwareUpdateResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GipFirmwareUpdateResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GipFirmwareUpdateResult[] = {
         { "extended_error_code", reinterpret_cast<getter>(GipFirmwareUpdateResult_get_ExtendedErrorCode), nullptr, nullptr, nullptr },
         { "final_component_id", reinterpret_cast<getter>(GipFirmwareUpdateResult_get_FinalComponentId), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(GipFirmwareUpdateResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GipFirmwareUpdateResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GipFirmwareUpdateResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GipFirmwareUpdateResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GipFirmwareUpdateResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipFirmwareUpdateResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GipFirmwareUpdateResult = {
         "winrt._winrt_windows_gaming_input_custom.GipFirmwareUpdateResult",
@@ -730,8 +720,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "update_firmware_async", reinterpret_cast<PyCFunction>(GipGameControllerProvider_UpdateFirmwareAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GipGameControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GipGameControllerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GipGameControllerProvider[] = {
         { "firmware_version_info", reinterpret_cast<getter>(GipGameControllerProvider_get_FirmwareVersionInfo), nullptr, nullptr, nullptr },
@@ -739,16 +728,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "hardware_vendor_id", reinterpret_cast<getter>(GipGameControllerProvider_get_HardwareVendorId), nullptr, nullptr, nullptr },
         { "hardware_version_info", reinterpret_cast<getter>(GipGameControllerProvider_get_HardwareVersionInfo), nullptr, nullptr, nullptr },
         { "is_connected", reinterpret_cast<getter>(GipGameControllerProvider_get_IsConnected), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GipGameControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GipGameControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GipGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GipGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipGameControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GipGameControllerProvider = {
         "winrt._winrt_windows_gaming_input_custom.GipGameControllerProvider",
@@ -1146,8 +1133,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "send_output_report", reinterpret_cast<PyCFunction>(HidGameControllerProvider_SendOutputReport), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HidGameControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidGameControllerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HidGameControllerProvider[] = {
         { "firmware_version_info", reinterpret_cast<getter>(HidGameControllerProvider_get_FirmwareVersionInfo), nullptr, nullptr, nullptr },
@@ -1157,16 +1143,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "is_connected", reinterpret_cast<getter>(HidGameControllerProvider_get_IsConnected), nullptr, nullptr, nullptr },
         { "usage_id", reinterpret_cast<getter>(HidGameControllerProvider_get_UsageId), nullptr, nullptr, nullptr },
         { "usage_page", reinterpret_cast<getter>(HidGameControllerProvider_get_UsagePage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HidGameControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidGameControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidGameControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HidGameControllerProvider = {
         "winrt._winrt_windows_gaming_input_custom.HidGameControllerProvider",
@@ -1414,8 +1398,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "set_vibration", reinterpret_cast<PyCFunction>(XusbGameControllerProvider_SetVibration), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XusbGameControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XusbGameControllerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XusbGameControllerProvider[] = {
         { "firmware_version_info", reinterpret_cast<getter>(XusbGameControllerProvider_get_FirmwareVersionInfo), nullptr, nullptr, nullptr },
@@ -1423,16 +1406,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "hardware_vendor_id", reinterpret_cast<getter>(XusbGameControllerProvider_get_HardwareVendorId), nullptr, nullptr, nullptr },
         { "hardware_version_info", reinterpret_cast<getter>(XusbGameControllerProvider_get_HardwareVersionInfo), nullptr, nullptr, nullptr },
         { "is_connected", reinterpret_cast<getter>(XusbGameControllerProvider_get_IsConnected), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XusbGameControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XusbGameControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XusbGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XusbGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XusbGameControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XusbGameControllerProvider = {
         "winrt._winrt_windows_gaming_input_custom.XusbGameControllerProvider",
@@ -1616,20 +1597,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "on_game_controller_removed", reinterpret_cast<PyCFunction>(ICustomGameControllerFactory_OnGameControllerRemoved), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICustomGameControllerFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICustomGameControllerFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICustomGameControllerFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICustomGameControllerFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICustomGameControllerFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomGameControllerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomGameControllerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomGameControllerFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICustomGameControllerFactory = {
         "winrt._winrt_windows_gaming_input_custom.ICustomGameControllerFactory",
@@ -1777,13 +1755,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static PyMethodDef methods_ImplementsICustomGameControllerFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICustomGameControllerFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICustomGameControllerFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICustomGameControllerFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICustomGameControllerFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICustomGameControllerFactory = {
         "winrt._winrt_windows_gaming_input_custom.ImplementsICustomGameControllerFactory",
@@ -1924,20 +1900,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "on_input_suspended", reinterpret_cast<PyCFunction>(IGameControllerInputSink_OnInputSuspended), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGameControllerInputSink), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGameControllerInputSink[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGameControllerInputSink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGameControllerInputSink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameControllerInputSink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGameControllerInputSink = {
         "winrt._winrt_windows_gaming_input_custom.IGameControllerInputSink",
@@ -2053,13 +2026,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static PyMethodDef methods_ImplementsIGameControllerInputSink[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGameControllerInputSink), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGameControllerInputSink), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGameControllerInputSink[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGameControllerInputSink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGameControllerInputSink = {
         "winrt._winrt_windows_gaming_input_custom.ImplementsIGameControllerInputSink",
@@ -2262,8 +2233,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static PyMethodDef _methods_IGameControllerProvider[] = {
         { "_assign_array_", _assign_array_IGameControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGameControllerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGameControllerProvider[] = {
         { "firmware_version_info", reinterpret_cast<getter>(IGameControllerProvider_get_FirmwareVersionInfo), nullptr, nullptr, nullptr },
@@ -2271,16 +2241,14 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "hardware_vendor_id", reinterpret_cast<getter>(IGameControllerProvider_get_HardwareVendorId), nullptr, nullptr, nullptr },
         { "hardware_version_info", reinterpret_cast<getter>(IGameControllerProvider_get_HardwareVersionInfo), nullptr, nullptr, nullptr },
         { "is_connected", reinterpret_cast<getter>(IGameControllerProvider_get_IsConnected), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGameControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGameControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGameControllerProvider = {
         "winrt._winrt_windows_gaming_input_custom.IGameControllerProvider",
@@ -2436,13 +2404,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static PyMethodDef methods_ImplementsIGameControllerProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGameControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGameControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGameControllerProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGameControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGameControllerProvider = {
         "winrt._winrt_windows_gaming_input_custom.ImplementsIGameControllerProvider",
@@ -2677,20 +2643,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "on_message_received", reinterpret_cast<PyCFunction>(IGipGameControllerInputSink_OnMessageReceived), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IGipGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGipGameControllerInputSink), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGipGameControllerInputSink[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGipGameControllerInputSink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGipGameControllerInputSink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGipGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGipGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGipGameControllerInputSink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGipGameControllerInputSink = {
         "winrt._winrt_windows_gaming_input_custom.IGipGameControllerInputSink",
@@ -2914,13 +2877,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static PyMethodDef methods_ImplementsIGipGameControllerInputSink[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGipGameControllerInputSink), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGipGameControllerInputSink), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGipGameControllerInputSink[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGipGameControllerInputSink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGipGameControllerInputSink = {
         "winrt._winrt_windows_gaming_input_custom.ImplementsIGipGameControllerInputSink",
@@ -3107,20 +3068,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "on_input_suspended", reinterpret_cast<PyCFunction>(IHidGameControllerInputSink_OnInputSuspended), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IHidGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IHidGameControllerInputSink), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IHidGameControllerInputSink[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IHidGameControllerInputSink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IHidGameControllerInputSink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHidGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHidGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHidGameControllerInputSink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IHidGameControllerInputSink = {
         "winrt._winrt_windows_gaming_input_custom.IHidGameControllerInputSink",
@@ -3284,13 +3242,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static PyMethodDef methods_ImplementsIHidGameControllerInputSink[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIHidGameControllerInputSink), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIHidGameControllerInputSink), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIHidGameControllerInputSink[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIHidGameControllerInputSink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIHidGameControllerInputSink = {
         "winrt._winrt_windows_gaming_input_custom.ImplementsIHidGameControllerInputSink",
@@ -3477,20 +3433,17 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "on_input_suspended", reinterpret_cast<PyCFunction>(IXusbGameControllerInputSink_OnInputSuspended), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXusbGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXusbGameControllerInputSink), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXusbGameControllerInputSink[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXusbGameControllerInputSink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXusbGameControllerInputSink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXusbGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXusbGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXusbGameControllerInputSink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXusbGameControllerInputSink = {
         "winrt._winrt_windows_gaming_input_custom.IXusbGameControllerInputSink",
@@ -3654,13 +3607,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static PyMethodDef methods_ImplementsIXusbGameControllerInputSink[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXusbGameControllerInputSink), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXusbGameControllerInputSink), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXusbGameControllerInputSink[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXusbGameControllerInputSink) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXusbGameControllerInputSink = {
         "winrt._winrt_windows_gaming_input_custom.ImplementsIXusbGameControllerInputSink",
@@ -3742,8 +3693,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyMethodDef _methods_GameControllerVersionInfo[] = {
         { "_assign_array_", _assign_array_GameControllerVersionInfo, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* GameControllerVersionInfo_get_Major(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, void* /*unused*/) noexcept
     {
@@ -3882,8 +3832,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { "minor", reinterpret_cast<getter>(GameControllerVersionInfo_get_Minor), reinterpret_cast<setter>(GameControllerVersionInfo_set_Minor), nullptr, nullptr },
         { "build", reinterpret_cast<getter>(GameControllerVersionInfo_get_Build), reinterpret_cast<setter>(GameControllerVersionInfo_set_Build), nullptr, nullptr },
         { "revision", reinterpret_cast<getter>(GameControllerVersionInfo_get_Revision), reinterpret_cast<setter>(GameControllerVersionInfo_set_Revision), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_GameControllerVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, PyObject* other, int op) noexcept
     {
@@ -3957,8 +3906,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameControllerVersionInfo) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GameControllerVersionInfo) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_GameControllerVersionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameControllerVersionInfo = {
         "winrt._winrt_windows_gaming_input_custom.GameControllerVersionInfo",
@@ -4036,8 +3984,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyMethodDef _methods_GipFirmwareUpdateProgress[] = {
         { "_assign_array_", _assign_array_GipFirmwareUpdateProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* GipFirmwareUpdateProgress_get_PercentCompleted(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, void* /*unused*/) noexcept
     {
@@ -4108,8 +4055,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static PyGetSetDef _getset_GipFirmwareUpdateProgress[] = {
         { "percent_completed", reinterpret_cast<getter>(GipFirmwareUpdateProgress_get_PercentCompleted), reinterpret_cast<setter>(GipFirmwareUpdateProgress_set_PercentCompleted), nullptr, nullptr },
         { "current_component_id", reinterpret_cast<getter>(GipFirmwareUpdateProgress_get_CurrentComponentId), reinterpret_cast<setter>(GipFirmwareUpdateProgress_set_CurrentComponentId), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_GipFirmwareUpdateProgress(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, PyObject* other, int op) noexcept
     {
@@ -4171,8 +4117,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipFirmwareUpdateProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GipFirmwareUpdateProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_GipFirmwareUpdateProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GipFirmwareUpdateProgress = {
         "winrt._winrt_windows_gaming_input_custom.GipFirmwareUpdateProgress",

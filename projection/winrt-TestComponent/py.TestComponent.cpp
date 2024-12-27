@@ -98,20 +98,17 @@ namespace py::cpp::TestComponent
         { "one", reinterpret_cast<PyCFunction>(Class_One), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Class, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Class), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Class[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Class[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Class) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Class) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Class) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Class) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Class = {
         "winrt._winrt_testcomponent.Class",
@@ -585,21 +582,18 @@ namespace py::cpp::TestComponent
         { "two", reinterpret_cast<PyCFunction>(Composable_Two), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Composable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Composable), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Composable[] = {
         { "value", reinterpret_cast<getter>(Composable_get_Value), reinterpret_cast<setter>(Composable_put_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Composable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Composable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Composable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Composable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Composable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Composable = {
         "winrt._winrt_testcomponent.Composable",
@@ -609,8 +603,7 @@ namespace py::cpp::TestComponent
         _type_slots_Composable};
 
     static PyGetSetDef getset_Composable_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Composable_Static[] = {
         { "expect_composable", reinterpret_cast<PyCFunction>(Composable_ExpectComposable), METH_VARARGS, nullptr },
@@ -618,8 +611,7 @@ namespace py::cpp::TestComponent
         { "expect_required_one", reinterpret_cast<PyCFunction>(Composable_ExpectRequiredOne), METH_VARARGS, nullptr },
         { "expect_required_three", reinterpret_cast<PyCFunction>(Composable_ExpectRequiredThree), METH_VARARGS, nullptr },
         { "expect_required_two", reinterpret_cast<PyCFunction>(Composable_ExpectRequiredTwo), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Composable_Static[] = 
     {
@@ -629,14 +621,12 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Spec type_spec_Composable_Static =
-    {
+    static PyType_Spec type_spec_Composable_Static = {
         "winrt._winrt_testcomponent.Composable_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Composable_Static
-    };
+        type_slots_Composable_Static};
 
     // ----- Derived class --------------------
 
@@ -764,20 +754,17 @@ namespace py::cpp::TestComponent
     static PyMethodDef _methods_Derived[] = {
         { "_assign_array_", _assign_array_Derived, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Derived), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Derived[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Derived[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Derived) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Derived) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Derived) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Derived) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Derived = {
         "winrt._winrt_testcomponent.Derived",
@@ -787,12 +774,10 @@ namespace py::cpp::TestComponent
         _type_slots_Derived};
 
     static PyGetSetDef getset_Derived_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Derived_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Derived_Static[] = 
     {
@@ -802,14 +787,12 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Spec type_spec_Derived_Static =
-    {
+    static PyType_Spec type_spec_Derived_Static = {
         "winrt._winrt_testcomponent.Derived_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Derived_Static
-    };
+        type_slots_Derived_Static};
 
     // ----- OverloadClass class --------------------
 
@@ -1138,20 +1121,17 @@ namespace py::cpp::TestComponent
         { "_overload_with_two", reinterpret_cast<PyCFunction>(OverloadClass_OverloadWithTwo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_OverloadClass, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OverloadClass), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OverloadClass[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OverloadClass[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OverloadClass) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OverloadClass) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OverloadClass) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OverloadClass) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OverloadClass = {
         "winrt._winrt_testcomponent.OverloadClass",
@@ -1161,12 +1141,10 @@ namespace py::cpp::TestComponent
         _type_slots_OverloadClass};
 
     static PyGetSetDef getset_OverloadClass_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_OverloadClass_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_OverloadClass_Static[] = 
     {
@@ -1176,14 +1154,12 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Spec type_spec_OverloadClass_Static =
-    {
+    static PyType_Spec type_spec_OverloadClass_Static = {
         "winrt._winrt_testcomponent.OverloadClass_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_OverloadClass_Static
-    };
+        type_slots_OverloadClass_Static};
 
     // ----- Override class --------------------
 
@@ -1535,20 +1511,17 @@ namespace py::cpp::TestComponent
         { "remove_protected_called", reinterpret_cast<PyCFunction>(Override_remove_ProtectedCalled), METH_O, nullptr },
         { "_assign_array_", _assign_array_Override, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Override), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Override[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Override[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Override) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Override) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Override) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Override) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Override = {
         "winrt._winrt_testcomponent.Override",
@@ -1558,12 +1531,10 @@ namespace py::cpp::TestComponent
         _type_slots_Override};
 
     static PyGetSetDef getset_Override_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Override_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Override_Static[] = 
     {
@@ -1573,14 +1544,12 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Spec type_spec_Override_Static =
-    {
+    static PyType_Spec type_spec_Override_Static = {
         "winrt._winrt_testcomponent.Override_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Override_Static
-    };
+        type_slots_Override_Static};
 
     // ----- TestRunner class --------------------
 
@@ -1874,19 +1843,16 @@ namespace py::cpp::TestComponent
     }
 
     static PyMethodDef _methods_TestRunner[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TestRunner[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TestRunner[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TestRunner) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TestRunner) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TestRunner) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TestRunner = {
         "winrt._winrt_testcomponent.TestRunner",
@@ -1896,8 +1862,7 @@ namespace py::cpp::TestComponent
         _type_slots_TestRunner};
 
     static PyGetSetDef getset_TestRunner_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TestRunner_Static[] = {
         { "create_async_action", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncAction), METH_VARARGS, nullptr },
@@ -1910,8 +1875,7 @@ namespace py::cpp::TestComponent
         { "test_consumer", reinterpret_cast<PyCFunction>(TestRunner_TestConsumer), METH_VARARGS, nullptr },
         { "test_producer", reinterpret_cast<PyCFunction>(TestRunner_TestProducer), METH_VARARGS, nullptr },
         { "test_self", reinterpret_cast<PyCFunction>(TestRunner_TestSelf), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TestRunner_Static[] = 
     {
@@ -1921,14 +1885,12 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Spec type_spec_TestRunner_Static =
-    {
+    static PyType_Spec type_spec_TestRunner_Static = {
         "winrt._winrt_testcomponent.TestRunner_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TestRunner_Static
-    };
+        type_slots_TestRunner_Static};
 
     // ----- IRequiredFour interface --------------------
 
@@ -2086,20 +2048,17 @@ namespace py::cpp::TestComponent
         { "two", reinterpret_cast<PyCFunction>(IRequiredFour_Two), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IRequiredFour, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredFour), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IRequiredFour[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IRequiredFour[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredFour) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredFour) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredFour) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredFour) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IRequiredFour = {
         "winrt._winrt_testcomponent.IRequiredFour",
@@ -2259,13 +2218,11 @@ namespace py::cpp::TestComponent
     static PyMethodDef methods_ImplementsIRequiredFour[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRequiredFour), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRequiredFour), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIRequiredFour[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIRequiredFour) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIRequiredFour = {
         "winrt._winrt_testcomponent.ImplementsIRequiredFour",
@@ -2346,20 +2303,17 @@ namespace py::cpp::TestComponent
         { "one", reinterpret_cast<PyCFunction>(IRequiredOne_One), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IRequiredOne, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredOne), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IRequiredOne[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IRequiredOne[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredOne) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredOne) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredOne) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredOne) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IRequiredOne = {
         "winrt._winrt_testcomponent.IRequiredOne",
@@ -2441,13 +2395,11 @@ namespace py::cpp::TestComponent
     static PyMethodDef methods_ImplementsIRequiredOne[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRequiredOne), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRequiredOne), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIRequiredOne[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIRequiredOne) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIRequiredOne = {
         "winrt._winrt_testcomponent.ImplementsIRequiredOne",
@@ -2584,20 +2536,17 @@ namespace py::cpp::TestComponent
         { "two", reinterpret_cast<PyCFunction>(IRequiredThree_Two), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IRequiredThree, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredThree), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IRequiredThree[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IRequiredThree[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredThree) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredThree) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredThree) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredThree) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IRequiredThree = {
         "winrt._winrt_testcomponent.IRequiredThree",
@@ -2731,13 +2680,11 @@ namespace py::cpp::TestComponent
     static PyMethodDef methods_ImplementsIRequiredThree[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRequiredThree), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRequiredThree), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIRequiredThree[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIRequiredThree) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIRequiredThree = {
         "winrt._winrt_testcomponent.ImplementsIRequiredThree",
@@ -2846,20 +2793,17 @@ namespace py::cpp::TestComponent
         { "two", reinterpret_cast<PyCFunction>(IRequiredTwo_Two), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IRequiredTwo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredTwo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IRequiredTwo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IRequiredTwo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredTwo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredTwo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredTwo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredTwo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IRequiredTwo = {
         "winrt._winrt_testcomponent.IRequiredTwo",
@@ -2967,13 +2911,11 @@ namespace py::cpp::TestComponent
     static PyMethodDef methods_ImplementsIRequiredTwo[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRequiredTwo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRequiredTwo), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIRequiredTwo[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIRequiredTwo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIRequiredTwo = {
         "winrt._winrt_testcomponent.ImplementsIRequiredTwo",
@@ -7161,21 +7103,18 @@ namespace py::cpp::TestComponent
         { "remove_event2", reinterpret_cast<PyCFunction>(ITests_remove_Event2), METH_O, nullptr },
         { "_assign_array_", _assign_array_ITests, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITests), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITests[] = {
         { "percentage", reinterpret_cast<getter>(ITests_get_Percentage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITests[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITests) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITests) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITests) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITests) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITests = {
         "winrt._winrt_testcomponent.ITests",
@@ -11683,13 +11622,11 @@ namespace py::cpp::TestComponent
     static PyMethodDef methods_ImplementsITests[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITests), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITests), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITests[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITests) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITests = {
         "winrt._winrt_testcomponent.ImplementsITests",
@@ -11783,8 +11720,7 @@ namespace py::cpp::TestComponent
 
     static PyMethodDef _methods_Blittable[] = {
         { "_assign_array_", _assign_array_Blittable, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Blittable_get_A(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
     {
@@ -12127,8 +12063,7 @@ namespace py::cpp::TestComponent
         { "h", reinterpret_cast<getter>(Blittable_get_H), reinterpret_cast<setter>(Blittable_set_H), nullptr, nullptr },
         { "i", reinterpret_cast<getter>(Blittable_get_I), reinterpret_cast<setter>(Blittable_set_I), nullptr, nullptr },
         { "j", reinterpret_cast<getter>(Blittable_get_J), reinterpret_cast<setter>(Blittable_set_J), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_Blittable(py::wrapper::TestComponent::Blittable* self, PyObject* other, int op) noexcept
     {
@@ -12238,8 +12173,7 @@ namespace py::cpp::TestComponent
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Blittable) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Blittable) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Blittable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Blittable = {
         "winrt._winrt_testcomponent.Blittable",
@@ -12317,8 +12251,7 @@ namespace py::cpp::TestComponent
 
     static PyMethodDef _methods_Nested[] = {
         { "_assign_array_", _assign_array_Nested, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Nested_get_Blittable(py::wrapper::TestComponent::Nested* self, void* /*unused*/) noexcept
     {
@@ -12389,8 +12322,7 @@ namespace py::cpp::TestComponent
     static PyGetSetDef _getset_Nested[] = {
         { "blittable", reinterpret_cast<getter>(Nested_get_Blittable), reinterpret_cast<setter>(Nested_set_Blittable), nullptr, nullptr },
         { "non_blittable", reinterpret_cast<getter>(Nested_get_NonBlittable), reinterpret_cast<setter>(Nested_set_NonBlittable), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_Nested(py::wrapper::TestComponent::Nested* self, PyObject* other, int op) noexcept
     {
@@ -12452,8 +12384,7 @@ namespace py::cpp::TestComponent
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Nested) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Nested) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Nested) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Nested = {
         "winrt._winrt_testcomponent.Nested",
@@ -12535,8 +12466,7 @@ namespace py::cpp::TestComponent
 
     static PyMethodDef _methods_NonBlittable[] = {
         { "_assign_array_", _assign_array_NonBlittable, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* NonBlittable_get_A(py::wrapper::TestComponent::NonBlittable* self, void* /*unused*/) noexcept
     {
@@ -12675,8 +12605,7 @@ namespace py::cpp::TestComponent
         { "b", reinterpret_cast<getter>(NonBlittable_get_B), reinterpret_cast<setter>(NonBlittable_set_B), nullptr, nullptr },
         { "c", reinterpret_cast<getter>(NonBlittable_get_C), reinterpret_cast<setter>(NonBlittable_set_C), nullptr, nullptr },
         { "d", reinterpret_cast<getter>(NonBlittable_get_D), reinterpret_cast<setter>(NonBlittable_set_D), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_NonBlittable(py::wrapper::TestComponent::NonBlittable* self, PyObject* other, int op) noexcept
     {
@@ -12750,8 +12679,7 @@ namespace py::cpp::TestComponent
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NonBlittable) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_NonBlittable) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_NonBlittable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NonBlittable = {
         "winrt._winrt_testcomponent.NonBlittable",

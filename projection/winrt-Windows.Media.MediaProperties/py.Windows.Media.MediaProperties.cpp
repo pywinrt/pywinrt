@@ -948,8 +948,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "set_format_user_data", reinterpret_cast<PyCFunction>(AudioEncodingProperties_SetFormatUserData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AudioEncodingProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioEncodingProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AudioEncodingProperties[] = {
         { "sample_rate", reinterpret_cast<getter>(AudioEncodingProperties_get_SampleRate), reinterpret_cast<setter>(AudioEncodingProperties_put_SampleRate), nullptr, nullptr },
@@ -960,16 +959,14 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "subtype", reinterpret_cast<getter>(AudioEncodingProperties_get_Subtype), reinterpret_cast<setter>(AudioEncodingProperties_put_Subtype), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(AudioEncodingProperties_get_Properties), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(AudioEncodingProperties_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AudioEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEncodingProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AudioEncodingProperties = {
         "winrt._winrt_windows_media_mediaproperties.AudioEncodingProperties",
@@ -979,8 +976,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         _type_slots_AudioEncodingProperties};
 
     static PyGetSetDef getset_AudioEncodingProperties_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AudioEncodingProperties_Static[] = {
         { "create_aac", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateAac), METH_VARARGS, nullptr },
@@ -990,8 +986,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "create_mp3", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateMp3), METH_VARARGS, nullptr },
         { "create_pcm", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreatePcm), METH_VARARGS, nullptr },
         { "create_wma", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateWma), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AudioEncodingProperties_Static[] = 
     {
@@ -1001,14 +996,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_AudioEncodingProperties_Static =
-    {
+    static PyType_Spec type_spec_AudioEncodingProperties_Static = {
         "winrt._winrt_windows_media_mediaproperties.AudioEncodingProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AudioEncodingProperties_Static
-    };
+        type_slots_AudioEncodingProperties_Static};
 
     // ----- Av1ProfileIds class --------------------
 
@@ -1380,19 +1373,16 @@ namespace py::cpp::Windows::Media::MediaProperties
     }
 
     static PyMethodDef _methods_Av1ProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Av1ProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Av1ProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Av1ProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Av1ProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Av1ProfileIds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Av1ProfileIds = {
         "winrt._winrt_windows_media_mediaproperties.Av1ProfileIds",
@@ -1414,12 +1404,10 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "professional_chroma_subsampling422_bit_depth12", reinterpret_cast<getter>(Av1ProfileIds_get_ProfessionalChromaSubsampling422BitDepth12), nullptr, nullptr, nullptr },
         { "professional_chroma_subsampling422_bit_depth8", reinterpret_cast<getter>(Av1ProfileIds_get_ProfessionalChromaSubsampling422BitDepth8), nullptr, nullptr, nullptr },
         { "professional_chroma_subsampling444_bit_depth12", reinterpret_cast<getter>(Av1ProfileIds_get_ProfessionalChromaSubsampling444BitDepth12), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Av1ProfileIds_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Av1ProfileIds_Static[] = 
     {
@@ -1429,14 +1417,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_Av1ProfileIds_Static =
-    {
+    static PyType_Spec type_spec_Av1ProfileIds_Static = {
         "winrt._winrt_windows_media_mediaproperties.Av1ProfileIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Av1ProfileIds_Static
-    };
+        type_slots_Av1ProfileIds_Static};
 
     // ----- ContainerEncodingProperties class --------------------
 
@@ -1674,23 +1660,20 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "copy", reinterpret_cast<PyCFunction>(ContainerEncodingProperties_Copy), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContainerEncodingProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContainerEncodingProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContainerEncodingProperties[] = {
         { "subtype", reinterpret_cast<getter>(ContainerEncodingProperties_get_Subtype), reinterpret_cast<setter>(ContainerEncodingProperties_put_Subtype), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(ContainerEncodingProperties_get_Properties), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(ContainerEncodingProperties_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContainerEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContainerEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContainerEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContainerEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContainerEncodingProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContainerEncodingProperties = {
         "winrt._winrt_windows_media_mediaproperties.ContainerEncodingProperties",
@@ -2009,19 +1992,16 @@ namespace py::cpp::Windows::Media::MediaProperties
     }
 
     static PyMethodDef _methods_H264ProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_H264ProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_H264ProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_H264ProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_H264ProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_H264ProfileIds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_H264ProfileIds = {
         "winrt._winrt_windows_media_mediaproperties.H264ProfileIds",
@@ -2041,12 +2021,10 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "main", reinterpret_cast<getter>(H264ProfileIds_get_Main), nullptr, nullptr, nullptr },
         { "multiview_high", reinterpret_cast<getter>(H264ProfileIds_get_MultiviewHigh), nullptr, nullptr, nullptr },
         { "stereo_high", reinterpret_cast<getter>(H264ProfileIds_get_StereoHigh), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_H264ProfileIds_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_H264ProfileIds_Static[] = 
     {
@@ -2056,14 +2034,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_H264ProfileIds_Static =
-    {
+    static PyType_Spec type_spec_H264ProfileIds_Static = {
         "winrt._winrt_windows_media_mediaproperties.H264ProfileIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_H264ProfileIds_Static
-    };
+        type_slots_H264ProfileIds_Static};
 
     // ----- HevcProfileIds class --------------------
 
@@ -2735,19 +2711,16 @@ namespace py::cpp::Windows::Media::MediaProperties
     }
 
     static PyMethodDef _methods_HevcProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HevcProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HevcProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HevcProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HevcProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HevcProfileIds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HevcProfileIds = {
         "winrt._winrt_windows_media_mediaproperties.HevcProfileIds",
@@ -2779,12 +2752,10 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "main_still_chroma_subsampling444_bit_depth8", reinterpret_cast<getter>(HevcProfileIds_get_MainStillChromaSubsampling444BitDepth8), nullptr, nullptr, nullptr },
         { "monochrome_bit_depth12", reinterpret_cast<getter>(HevcProfileIds_get_MonochromeBitDepth12), nullptr, nullptr, nullptr },
         { "monochrome_bit_depth16", reinterpret_cast<getter>(HevcProfileIds_get_MonochromeBitDepth16), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HevcProfileIds_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HevcProfileIds_Static[] = 
     {
@@ -2794,14 +2765,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_HevcProfileIds_Static =
-    {
+    static PyType_Spec type_spec_HevcProfileIds_Static = {
         "winrt._winrt_windows_media_mediaproperties.HevcProfileIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HevcProfileIds_Static
-    };
+        type_slots_HevcProfileIds_Static};
 
     // ----- ImageEncodingProperties class --------------------
 
@@ -3419,8 +3388,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "copy", reinterpret_cast<PyCFunction>(ImageEncodingProperties_Copy), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ImageEncodingProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageEncodingProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ImageEncodingProperties[] = {
         { "width", reinterpret_cast<getter>(ImageEncodingProperties_get_Width), reinterpret_cast<setter>(ImageEncodingProperties_put_Width), nullptr, nullptr },
@@ -3428,16 +3396,14 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "subtype", reinterpret_cast<getter>(ImageEncodingProperties_get_Subtype), reinterpret_cast<setter>(ImageEncodingProperties_put_Subtype), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(ImageEncodingProperties_get_Properties), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(ImageEncodingProperties_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ImageEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageEncodingProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImageEncodingProperties = {
         "winrt._winrt_windows_media_mediaproperties.ImageEncodingProperties",
@@ -3447,8 +3413,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         _type_slots_ImageEncodingProperties};
 
     static PyGetSetDef getset_ImageEncodingProperties_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ImageEncodingProperties_Static[] = {
         { "create_bmp", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateBmp), METH_VARARGS, nullptr },
@@ -3457,8 +3422,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "create_jpeg_x_r", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateJpegXR), METH_VARARGS, nullptr },
         { "create_png", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreatePng), METH_VARARGS, nullptr },
         { "create_uncompressed", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateUncompressed), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImageEncodingProperties_Static[] = 
     {
@@ -3468,14 +3432,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_ImageEncodingProperties_Static =
-    {
+    static PyType_Spec type_spec_ImageEncodingProperties_Static = {
         "winrt._winrt_windows_media_mediaproperties.ImageEncodingProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ImageEncodingProperties_Static
-    };
+        type_slots_ImageEncodingProperties_Static};
 
     // ----- MediaEncodingProfile class --------------------
 
@@ -4593,23 +4555,20 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "set_video_tracks", reinterpret_cast<PyCFunction>(MediaEncodingProfile_SetVideoTracks), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaEncodingProfile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaEncodingProfile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaEncodingProfile[] = {
         { "video", reinterpret_cast<getter>(MediaEncodingProfile_get_Video), reinterpret_cast<setter>(MediaEncodingProfile_put_Video), nullptr, nullptr },
         { "container", reinterpret_cast<getter>(MediaEncodingProfile_get_Container), reinterpret_cast<setter>(MediaEncodingProfile_put_Container), nullptr, nullptr },
         { "audio", reinterpret_cast<getter>(MediaEncodingProfile_get_Audio), reinterpret_cast<setter>(MediaEncodingProfile_put_Audio), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaEncodingProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaEncodingProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaEncodingProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaEncodingProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaEncodingProfile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaEncodingProfile = {
         "winrt._winrt_windows_media_mediaproperties.MediaEncodingProfile",
@@ -4619,8 +4578,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         _type_slots_MediaEncodingProfile};
 
     static PyGetSetDef getset_MediaEncodingProfile_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MediaEncodingProfile_Static[] = {
         { "create_alac", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateAlac), METH_VARARGS, nullptr },
@@ -4637,8 +4595,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "create_wav", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateWav), METH_VARARGS, nullptr },
         { "create_wma", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateWma), METH_VARARGS, nullptr },
         { "create_wmv", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateWmv), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MediaEncodingProfile_Static[] = 
     {
@@ -4648,14 +4605,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_MediaEncodingProfile_Static =
-    {
+    static PyType_Spec type_spec_MediaEncodingProfile_Static = {
         "winrt._winrt_windows_media_mediaproperties.MediaEncodingProfile_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaEncodingProfile_Static
-    };
+        type_slots_MediaEncodingProfile_Static};
 
     // ----- MediaEncodingSubtypes class --------------------
 
@@ -6257,19 +6212,16 @@ namespace py::cpp::Windows::Media::MediaProperties
     }
 
     static PyMethodDef _methods_MediaEncodingSubtypes[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaEncodingSubtypes[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaEncodingSubtypes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaEncodingSubtypes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaEncodingSubtypes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaEncodingSubtypes) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaEncodingSubtypes = {
         "winrt._winrt_windows_media_mediaproperties.MediaEncodingSubtypes",
@@ -6332,12 +6284,10 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "ssa", reinterpret_cast<getter>(MediaEncodingSubtypes_get_Ssa), nullptr, nullptr, nullptr },
         { "vob_sub", reinterpret_cast<getter>(MediaEncodingSubtypes_get_VobSub), nullptr, nullptr, nullptr },
         { "av1", reinterpret_cast<getter>(MediaEncodingSubtypes_get_Av1), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MediaEncodingSubtypes_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MediaEncodingSubtypes_Static[] = 
     {
@@ -6347,14 +6297,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_MediaEncodingSubtypes_Static =
-    {
+    static PyType_Spec type_spec_MediaEncodingSubtypes_Static = {
         "winrt._winrt_windows_media_mediaproperties.MediaEncodingSubtypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaEncodingSubtypes_Static
-    };
+        type_slots_MediaEncodingSubtypes_Static};
 
     // ----- MediaPropertySet class --------------------
 
@@ -6882,13 +6830,11 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "remove", reinterpret_cast<PyCFunction>(MediaPropertySet_Remove), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaPropertySet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaPropertySet), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaPropertySet[] = {
         { "size", reinterpret_cast<getter>(MediaPropertySet_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaPropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaPropertySet) },
@@ -6900,8 +6846,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { Py_mp_length, reinterpret_cast<void*>(_map_length_MediaPropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_MediaPropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_MediaPropertySet) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaPropertySet = {
         "winrt._winrt_windows_media_mediaproperties.MediaPropertySet",
@@ -7092,22 +7037,19 @@ namespace py::cpp::Windows::Media::MediaProperties
     static PyMethodDef _methods_MediaRatio[] = {
         { "_assign_array_", _assign_array_MediaRatio, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaRatio), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaRatio[] = {
         { "numerator", reinterpret_cast<getter>(MediaRatio_get_Numerator), reinterpret_cast<setter>(MediaRatio_put_Numerator), nullptr, nullptr },
         { "denominator", reinterpret_cast<getter>(MediaRatio_get_Denominator), reinterpret_cast<setter>(MediaRatio_put_Denominator), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaRatio[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaRatio) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaRatio) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaRatio) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaRatio) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaRatio = {
         "winrt._winrt_windows_media_mediaproperties.MediaRatio",
@@ -7276,19 +7218,16 @@ namespace py::cpp::Windows::Media::MediaProperties
     }
 
     static PyMethodDef _methods_Mpeg2ProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Mpeg2ProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Mpeg2ProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Mpeg2ProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Mpeg2ProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Mpeg2ProfileIds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Mpeg2ProfileIds = {
         "winrt._winrt_windows_media_mediaproperties.Mpeg2ProfileIds",
@@ -7303,12 +7242,10 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "signal_noise_ratio_scalable", reinterpret_cast<getter>(Mpeg2ProfileIds_get_SignalNoiseRatioScalable), nullptr, nullptr, nullptr },
         { "simple", reinterpret_cast<getter>(Mpeg2ProfileIds_get_Simple), nullptr, nullptr, nullptr },
         { "spatially_scalable", reinterpret_cast<getter>(Mpeg2ProfileIds_get_SpatiallyScalable), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Mpeg2ProfileIds_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Mpeg2ProfileIds_Static[] = 
     {
@@ -7318,14 +7255,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_Mpeg2ProfileIds_Static =
-    {
+    static PyType_Spec type_spec_Mpeg2ProfileIds_Static = {
         "winrt._winrt_windows_media_mediaproperties.Mpeg2ProfileIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Mpeg2ProfileIds_Static
-    };
+        type_slots_Mpeg2ProfileIds_Static};
 
     // ----- TimedMetadataEncodingProperties class --------------------
 
@@ -7821,23 +7756,20 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "set_format_user_data", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_SetFormatUserData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TimedMetadataEncodingProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimedMetadataEncodingProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimedMetadataEncodingProperties[] = {
         { "subtype", reinterpret_cast<getter>(TimedMetadataEncodingProperties_get_Subtype), reinterpret_cast<setter>(TimedMetadataEncodingProperties_put_Subtype), nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(TimedMetadataEncodingProperties_get_Properties), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(TimedMetadataEncodingProperties_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimedMetadataEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedMetadataEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedMetadataEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedMetadataEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedMetadataEncodingProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimedMetadataEncodingProperties = {
         "winrt._winrt_windows_media_mediaproperties.TimedMetadataEncodingProperties",
@@ -7847,16 +7779,14 @@ namespace py::cpp::Windows::Media::MediaProperties
         _type_slots_TimedMetadataEncodingProperties};
 
     static PyGetSetDef getset_TimedMetadataEncodingProperties_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TimedMetadataEncodingProperties_Static[] = {
         { "create_pgs", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreatePgs), METH_VARARGS, nullptr },
         { "create_srt", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreateSrt), METH_VARARGS, nullptr },
         { "create_ssa", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreateSsa), METH_VARARGS, nullptr },
         { "create_vob_sub", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreateVobSub), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TimedMetadataEncodingProperties_Static[] = 
     {
@@ -7866,14 +7796,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_TimedMetadataEncodingProperties_Static =
-    {
+    static PyType_Spec type_spec_TimedMetadataEncodingProperties_Static = {
         "winrt._winrt_windows_media_mediaproperties.TimedMetadataEncodingProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TimedMetadataEncodingProperties_Static
-    };
+        type_slots_TimedMetadataEncodingProperties_Static};
 
     // ----- VideoEncodingProperties class --------------------
 
@@ -8845,8 +8773,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "set_format_user_data", reinterpret_cast<PyCFunction>(VideoEncodingProperties_SetFormatUserData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VideoEncodingProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoEncodingProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VideoEncodingProperties[] = {
         { "subtype", reinterpret_cast<getter>(VideoEncodingProperties_get_Subtype), reinterpret_cast<setter>(VideoEncodingProperties_put_Subtype), nullptr, nullptr },
@@ -8860,16 +8787,14 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "profile_id", reinterpret_cast<getter>(VideoEncodingProperties_get_ProfileId), reinterpret_cast<setter>(VideoEncodingProperties_put_ProfileId), nullptr, nullptr },
         { "stereoscopic_video_packing_mode", reinterpret_cast<getter>(VideoEncodingProperties_get_StereoscopicVideoPackingMode), nullptr, nullptr, nullptr },
         { "spherical_video_frame_format", reinterpret_cast<getter>(VideoEncodingProperties_get_SphericalVideoFrameFormat), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VideoEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoEncodingProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VideoEncodingProperties = {
         "winrt._winrt_windows_media_mediaproperties.VideoEncodingProperties",
@@ -8879,8 +8804,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         _type_slots_VideoEncodingProperties};
 
     static PyGetSetDef getset_VideoEncodingProperties_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_VideoEncodingProperties_Static[] = {
         { "create_av1", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateAv1), METH_VARARGS, nullptr },
@@ -8889,8 +8813,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "create_mpeg2", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateMpeg2), METH_VARARGS, nullptr },
         { "create_uncompressed", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateUncompressed), METH_VARARGS, nullptr },
         { "create_vp9", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateVp9), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_VideoEncodingProperties_Static[] = 
     {
@@ -8900,14 +8823,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_VideoEncodingProperties_Static =
-    {
+    static PyType_Spec type_spec_VideoEncodingProperties_Static = {
         "winrt._winrt_windows_media_mediaproperties.VideoEncodingProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VideoEncodingProperties_Static
-    };
+        type_slots_VideoEncodingProperties_Static};
 
     // ----- Vp9ProfileIds class --------------------
 
@@ -9009,19 +8930,16 @@ namespace py::cpp::Windows::Media::MediaProperties
     }
 
     static PyMethodDef _methods_Vp9ProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Vp9ProfileIds[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Vp9ProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vp9ProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vp9ProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vp9ProfileIds) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Vp9ProfileIds = {
         "winrt._winrt_windows_media_mediaproperties.Vp9ProfileIds",
@@ -9034,12 +8952,10 @@ namespace py::cpp::Windows::Media::MediaProperties
         { "profile0_chroma_subsampling420_bit_depth8", reinterpret_cast<getter>(Vp9ProfileIds_get_Profile0ChromaSubsampling420BitDepth8), nullptr, nullptr, nullptr },
         { "profile2_chroma_subsampling420_bit_depth10", reinterpret_cast<getter>(Vp9ProfileIds_get_Profile2ChromaSubsampling420BitDepth10), nullptr, nullptr, nullptr },
         { "profile2_chroma_subsampling420_bit_depth12", reinterpret_cast<getter>(Vp9ProfileIds_get_Profile2ChromaSubsampling420BitDepth12), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Vp9ProfileIds_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Vp9ProfileIds_Static[] = 
     {
@@ -9049,14 +8965,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Spec type_spec_Vp9ProfileIds_Static =
-    {
+    static PyType_Spec type_spec_Vp9ProfileIds_Static = {
         "winrt._winrt_windows_media_mediaproperties.Vp9ProfileIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Vp9ProfileIds_Static
-    };
+        type_slots_Vp9ProfileIds_Static};
 
     // ----- IMediaEncodingProperties interface --------------------
 
@@ -9231,23 +9145,20 @@ namespace py::cpp::Windows::Media::MediaProperties
     static PyMethodDef _methods_IMediaEncodingProperties[] = {
         { "_assign_array_", _assign_array_IMediaEncodingProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaEncodingProperties), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMediaEncodingProperties[] = {
         { "properties", reinterpret_cast<getter>(IMediaEncodingProperties_get_Properties), nullptr, nullptr, nullptr },
         { "subtype", reinterpret_cast<getter>(IMediaEncodingProperties_get_Subtype), reinterpret_cast<setter>(IMediaEncodingProperties_put_Subtype), nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IMediaEncodingProperties_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMediaEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaEncodingProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMediaEncodingProperties = {
         "winrt._winrt_windows_media_mediaproperties.IMediaEncodingProperties",
@@ -9386,13 +9297,11 @@ namespace py::cpp::Windows::Media::MediaProperties
     static PyMethodDef methods_ImplementsIMediaEncodingProperties[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaEncodingProperties), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaEncodingProperties), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMediaEncodingProperties[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMediaEncodingProperties) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMediaEncodingProperties = {
         "winrt._winrt_windows_media_mediaproperties.ImplementsIMediaEncodingProperties",

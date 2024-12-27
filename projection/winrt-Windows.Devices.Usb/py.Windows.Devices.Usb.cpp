@@ -138,23 +138,20 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbBulkInEndpointDescriptor[] = {
         { "_assign_array_", _assign_array_UsbBulkInEndpointDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbBulkInEndpointDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbBulkInEndpointDescriptor[] = {
         { "endpoint_number", reinterpret_cast<getter>(UsbBulkInEndpointDescriptor_get_EndpointNumber), nullptr, nullptr, nullptr },
         { "max_packet_size", reinterpret_cast<getter>(UsbBulkInEndpointDescriptor_get_MaxPacketSize), nullptr, nullptr, nullptr },
         { "pipe", reinterpret_cast<getter>(UsbBulkInEndpointDescriptor_get_Pipe), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbBulkInEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbBulkInEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbBulkInEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbBulkInEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbBulkInEndpointDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbBulkInEndpointDescriptor = {
         "winrt._winrt_windows_devices_usb.UsbBulkInEndpointDescriptor",
@@ -449,24 +446,21 @@ namespace py::cpp::Windows::Devices::Usb
         { "flush_buffer", reinterpret_cast<PyCFunction>(UsbBulkInPipe_FlushBuffer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UsbBulkInPipe, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbBulkInPipe), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbBulkInPipe[] = {
         { "read_options", reinterpret_cast<getter>(UsbBulkInPipe_get_ReadOptions), reinterpret_cast<setter>(UsbBulkInPipe_put_ReadOptions), nullptr, nullptr },
         { "endpoint_descriptor", reinterpret_cast<getter>(UsbBulkInPipe_get_EndpointDescriptor), nullptr, nullptr, nullptr },
         { "input_stream", reinterpret_cast<getter>(UsbBulkInPipe_get_InputStream), nullptr, nullptr, nullptr },
         { "max_transfer_size_bytes", reinterpret_cast<getter>(UsbBulkInPipe_get_MaxTransferSizeBytes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbBulkInPipe[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbBulkInPipe) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbBulkInPipe) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbBulkInPipe) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbBulkInPipe) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbBulkInPipe = {
         "winrt._winrt_windows_devices_usb.UsbBulkInPipe",
@@ -609,23 +603,20 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbBulkOutEndpointDescriptor[] = {
         { "_assign_array_", _assign_array_UsbBulkOutEndpointDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbBulkOutEndpointDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbBulkOutEndpointDescriptor[] = {
         { "endpoint_number", reinterpret_cast<getter>(UsbBulkOutEndpointDescriptor_get_EndpointNumber), nullptr, nullptr, nullptr },
         { "max_packet_size", reinterpret_cast<getter>(UsbBulkOutEndpointDescriptor_get_MaxPacketSize), nullptr, nullptr, nullptr },
         { "pipe", reinterpret_cast<getter>(UsbBulkOutEndpointDescriptor_get_Pipe), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbBulkOutEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbBulkOutEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbBulkOutEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbBulkOutEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbBulkOutEndpointDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbBulkOutEndpointDescriptor = {
         "winrt._winrt_windows_devices_usb.UsbBulkOutEndpointDescriptor",
@@ -848,23 +839,20 @@ namespace py::cpp::Windows::Devices::Usb
         { "clear_stall_async", reinterpret_cast<PyCFunction>(UsbBulkOutPipe_ClearStallAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UsbBulkOutPipe, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbBulkOutPipe), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbBulkOutPipe[] = {
         { "write_options", reinterpret_cast<getter>(UsbBulkOutPipe_get_WriteOptions), reinterpret_cast<setter>(UsbBulkOutPipe_put_WriteOptions), nullptr, nullptr },
         { "endpoint_descriptor", reinterpret_cast<getter>(UsbBulkOutPipe_get_EndpointDescriptor), nullptr, nullptr, nullptr },
         { "output_stream", reinterpret_cast<getter>(UsbBulkOutPipe_get_OutputStream), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbBulkOutPipe[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbBulkOutPipe) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbBulkOutPipe) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbBulkOutPipe) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbBulkOutPipe) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbBulkOutPipe = {
         "winrt._winrt_windows_devices_usb.UsbBulkOutPipe",
@@ -1007,23 +995,20 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbConfiguration[] = {
         { "_assign_array_", _assign_array_UsbConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbConfiguration[] = {
         { "configuration_descriptor", reinterpret_cast<getter>(UsbConfiguration_get_ConfigurationDescriptor), nullptr, nullptr, nullptr },
         { "descriptors", reinterpret_cast<getter>(UsbConfiguration_get_Descriptors), nullptr, nullptr, nullptr },
         { "usb_interfaces", reinterpret_cast<getter>(UsbConfiguration_get_UsbInterfaces), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbConfiguration = {
         "winrt._winrt_windows_devices_usb.UsbConfiguration",
@@ -1294,24 +1279,21 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbConfigurationDescriptor[] = {
         { "_assign_array_", _assign_array_UsbConfigurationDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbConfigurationDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbConfigurationDescriptor[] = {
         { "configuration_value", reinterpret_cast<getter>(UsbConfigurationDescriptor_get_ConfigurationValue), nullptr, nullptr, nullptr },
         { "max_power_milliamps", reinterpret_cast<getter>(UsbConfigurationDescriptor_get_MaxPowerMilliamps), nullptr, nullptr, nullptr },
         { "remote_wakeup", reinterpret_cast<getter>(UsbConfigurationDescriptor_get_RemoteWakeup), nullptr, nullptr, nullptr },
         { "self_powered", reinterpret_cast<getter>(UsbConfigurationDescriptor_get_SelfPowered), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbConfigurationDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbConfigurationDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbConfigurationDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbConfigurationDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbConfigurationDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbConfigurationDescriptor = {
         "winrt._winrt_windows_devices_usb.UsbConfigurationDescriptor",
@@ -1321,14 +1303,12 @@ namespace py::cpp::Windows::Devices::Usb
         _type_slots_UsbConfigurationDescriptor};
 
     static PyGetSetDef getset_UsbConfigurationDescriptor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UsbConfigurationDescriptor_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(UsbConfigurationDescriptor_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(UsbConfigurationDescriptor_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UsbConfigurationDescriptor_Static[] = 
     {
@@ -1338,14 +1318,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Spec type_spec_UsbConfigurationDescriptor_Static =
-    {
+    static PyType_Spec type_spec_UsbConfigurationDescriptor_Static = {
         "winrt._winrt_windows_devices_usb.UsbConfigurationDescriptor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UsbConfigurationDescriptor_Static
-    };
+        type_slots_UsbConfigurationDescriptor_Static};
 
     // ----- UsbControlRequestType class --------------------
 
@@ -1689,24 +1667,21 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbControlRequestType[] = {
         { "_assign_array_", _assign_array_UsbControlRequestType, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbControlRequestType), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbControlRequestType[] = {
         { "recipient", reinterpret_cast<getter>(UsbControlRequestType_get_Recipient), reinterpret_cast<setter>(UsbControlRequestType_put_Recipient), nullptr, nullptr },
         { "direction", reinterpret_cast<getter>(UsbControlRequestType_get_Direction), reinterpret_cast<setter>(UsbControlRequestType_put_Direction), nullptr, nullptr },
         { "control_transfer_type", reinterpret_cast<getter>(UsbControlRequestType_get_ControlTransferType), reinterpret_cast<setter>(UsbControlRequestType_put_ControlTransferType), nullptr, nullptr },
         { "as_byte", reinterpret_cast<getter>(UsbControlRequestType_get_AsByte), reinterpret_cast<setter>(UsbControlRequestType_put_AsByte), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbControlRequestType[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbControlRequestType) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbControlRequestType) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbControlRequestType) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbControlRequestType) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbControlRequestType = {
         "winrt._winrt_windows_devices_usb.UsbControlRequestType",
@@ -1863,22 +1838,19 @@ namespace py::cpp::Windows::Devices::Usb
         { "read_descriptor_buffer", reinterpret_cast<PyCFunction>(UsbDescriptor_ReadDescriptorBuffer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UsbDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbDescriptor[] = {
         { "descriptor_type", reinterpret_cast<getter>(UsbDescriptor_get_DescriptorType), nullptr, nullptr, nullptr },
         { "length", reinterpret_cast<getter>(UsbDescriptor_get_Length), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbDescriptor = {
         "winrt._winrt_windows_devices_usb.UsbDescriptor",
@@ -2475,23 +2447,20 @@ namespace py::cpp::Windows::Devices::Usb
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_UsbDevice), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_UsbDevice), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbDevice[] = {
         { "configuration", reinterpret_cast<getter>(UsbDevice_get_Configuration), nullptr, nullptr, nullptr },
         { "default_interface", reinterpret_cast<getter>(UsbDevice_get_DefaultInterface), nullptr, nullptr, nullptr },
         { "device_descriptor", reinterpret_cast<getter>(UsbDevice_get_DeviceDescriptor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbDevice = {
         "winrt._winrt_windows_devices_usb.UsbDevice",
@@ -2501,8 +2470,7 @@ namespace py::cpp::Windows::Devices::Usb
         _type_slots_UsbDevice};
 
     static PyGetSetDef getset_UsbDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UsbDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(UsbDevice_FromIdAsync), METH_VARARGS, nullptr },
@@ -2510,8 +2478,7 @@ namespace py::cpp::Windows::Devices::Usb
         { "get_device_selector", reinterpret_cast<PyCFunction>(UsbDevice_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_guid_only", reinterpret_cast<PyCFunction>(UsbDevice_GetDeviceSelectorGuidOnly), METH_VARARGS, nullptr },
         { "get_device_selector_vid_pid_only", reinterpret_cast<PyCFunction>(UsbDevice_GetDeviceSelectorVidPidOnly), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UsbDevice_Static[] = 
     {
@@ -2521,14 +2488,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Spec type_spec_UsbDevice_Static =
-    {
+    static PyType_Spec type_spec_UsbDevice_Static = {
         "winrt._winrt_windows_devices_usb.UsbDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UsbDevice_Static
-    };
+        type_slots_UsbDevice_Static};
 
     // ----- UsbDeviceClass class --------------------
 
@@ -2803,23 +2768,20 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbDeviceClass[] = {
         { "_assign_array_", _assign_array_UsbDeviceClass, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbDeviceClass), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbDeviceClass[] = {
         { "subclass_code", reinterpret_cast<getter>(UsbDeviceClass_get_SubclassCode), reinterpret_cast<setter>(UsbDeviceClass_put_SubclassCode), nullptr, nullptr },
         { "protocol_code", reinterpret_cast<getter>(UsbDeviceClass_get_ProtocolCode), reinterpret_cast<setter>(UsbDeviceClass_put_ProtocolCode), nullptr, nullptr },
         { "class_code", reinterpret_cast<getter>(UsbDeviceClass_get_ClassCode), reinterpret_cast<setter>(UsbDeviceClass_put_ClassCode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbDeviceClass[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDeviceClass) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDeviceClass) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDeviceClass) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDeviceClass) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbDeviceClass = {
         "winrt._winrt_windows_devices_usb.UsbDeviceClass",
@@ -3142,20 +3104,17 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbDeviceClasses[] = {
         { "_assign_array_", _assign_array_UsbDeviceClasses, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbDeviceClasses), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbDeviceClasses[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbDeviceClasses[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDeviceClasses) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDeviceClasses) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDeviceClasses) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDeviceClasses) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbDeviceClasses = {
         "winrt._winrt_windows_devices_usb.UsbDeviceClasses",
@@ -3174,12 +3133,10 @@ namespace py::cpp::Windows::Devices::Usb
         { "personal_healthcare", reinterpret_cast<getter>(UsbDeviceClasses_get_PersonalHealthcare), nullptr, nullptr, nullptr },
         { "physical", reinterpret_cast<getter>(UsbDeviceClasses_get_Physical), nullptr, nullptr, nullptr },
         { "vendor_specific", reinterpret_cast<getter>(UsbDeviceClasses_get_VendorSpecific), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UsbDeviceClasses_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UsbDeviceClasses_Static[] = 
     {
@@ -3189,14 +3146,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Spec type_spec_UsbDeviceClasses_Static =
-    {
+    static PyType_Spec type_spec_UsbDeviceClasses_Static = {
         "winrt._winrt_windows_devices_usb.UsbDeviceClasses_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UsbDeviceClasses_Static
-    };
+        type_slots_UsbDeviceClasses_Static};
 
     // ----- UsbDeviceDescriptor class --------------------
 
@@ -3422,8 +3377,7 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbDeviceDescriptor[] = {
         { "_assign_array_", _assign_array_UsbDeviceDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbDeviceDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbDeviceDescriptor[] = {
         { "bcd_device_revision", reinterpret_cast<getter>(UsbDeviceDescriptor_get_BcdDeviceRevision), nullptr, nullptr, nullptr },
@@ -3432,16 +3386,14 @@ namespace py::cpp::Windows::Devices::Usb
         { "number_of_configurations", reinterpret_cast<getter>(UsbDeviceDescriptor_get_NumberOfConfigurations), nullptr, nullptr, nullptr },
         { "product_id", reinterpret_cast<getter>(UsbDeviceDescriptor_get_ProductId), nullptr, nullptr, nullptr },
         { "vendor_id", reinterpret_cast<getter>(UsbDeviceDescriptor_get_VendorId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbDeviceDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDeviceDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDeviceDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDeviceDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDeviceDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbDeviceDescriptor = {
         "winrt._winrt_windows_devices_usb.UsbDeviceDescriptor",
@@ -3802,8 +3754,7 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbEndpointDescriptor[] = {
         { "_assign_array_", _assign_array_UsbEndpointDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbEndpointDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbEndpointDescriptor[] = {
         { "as_bulk_in_endpoint_descriptor", reinterpret_cast<getter>(UsbEndpointDescriptor_get_AsBulkInEndpointDescriptor), nullptr, nullptr, nullptr },
@@ -3813,16 +3764,14 @@ namespace py::cpp::Windows::Devices::Usb
         { "direction", reinterpret_cast<getter>(UsbEndpointDescriptor_get_Direction), nullptr, nullptr, nullptr },
         { "endpoint_number", reinterpret_cast<getter>(UsbEndpointDescriptor_get_EndpointNumber), nullptr, nullptr, nullptr },
         { "endpoint_type", reinterpret_cast<getter>(UsbEndpointDescriptor_get_EndpointType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbEndpointDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbEndpointDescriptor = {
         "winrt._winrt_windows_devices_usb.UsbEndpointDescriptor",
@@ -3832,14 +3781,12 @@ namespace py::cpp::Windows::Devices::Usb
         _type_slots_UsbEndpointDescriptor};
 
     static PyGetSetDef getset_UsbEndpointDescriptor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UsbEndpointDescriptor_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(UsbEndpointDescriptor_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(UsbEndpointDescriptor_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UsbEndpointDescriptor_Static[] = 
     {
@@ -3849,14 +3796,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Spec type_spec_UsbEndpointDescriptor_Static =
-    {
+    static PyType_Spec type_spec_UsbEndpointDescriptor_Static = {
         "winrt._winrt_windows_devices_usb.UsbEndpointDescriptor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UsbEndpointDescriptor_Static
-    };
+        type_slots_UsbEndpointDescriptor_Static};
 
     // ----- UsbInterface class --------------------
 
@@ -4112,8 +4057,7 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbInterface[] = {
         { "_assign_array_", _assign_array_UsbInterface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbInterface), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbInterface[] = {
         { "bulk_in_pipes", reinterpret_cast<getter>(UsbInterface_get_BulkInPipes), nullptr, nullptr, nullptr },
@@ -4123,16 +4067,14 @@ namespace py::cpp::Windows::Devices::Usb
         { "interface_settings", reinterpret_cast<getter>(UsbInterface_get_InterfaceSettings), nullptr, nullptr, nullptr },
         { "interrupt_in_pipes", reinterpret_cast<getter>(UsbInterface_get_InterruptInPipes), nullptr, nullptr, nullptr },
         { "interrupt_out_pipes", reinterpret_cast<getter>(UsbInterface_get_InterruptOutPipes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbInterface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterface) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbInterface = {
         "winrt._winrt_windows_devices_usb.UsbInterface",
@@ -4433,8 +4375,7 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbInterfaceDescriptor[] = {
         { "_assign_array_", _assign_array_UsbInterfaceDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbInterfaceDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbInterfaceDescriptor[] = {
         { "alternate_setting_number", reinterpret_cast<getter>(UsbInterfaceDescriptor_get_AlternateSettingNumber), nullptr, nullptr, nullptr },
@@ -4442,16 +4383,14 @@ namespace py::cpp::Windows::Devices::Usb
         { "interface_number", reinterpret_cast<getter>(UsbInterfaceDescriptor_get_InterfaceNumber), nullptr, nullptr, nullptr },
         { "protocol_code", reinterpret_cast<getter>(UsbInterfaceDescriptor_get_ProtocolCode), nullptr, nullptr, nullptr },
         { "subclass_code", reinterpret_cast<getter>(UsbInterfaceDescriptor_get_SubclassCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbInterfaceDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterfaceDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterfaceDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterfaceDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterfaceDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbInterfaceDescriptor = {
         "winrt._winrt_windows_devices_usb.UsbInterfaceDescriptor",
@@ -4461,14 +4400,12 @@ namespace py::cpp::Windows::Devices::Usb
         _type_slots_UsbInterfaceDescriptor};
 
     static PyGetSetDef getset_UsbInterfaceDescriptor_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_UsbInterfaceDescriptor_Static[] = {
         { "parse", reinterpret_cast<PyCFunction>(UsbInterfaceDescriptor_Parse), METH_VARARGS, nullptr },
         { "try_parse", reinterpret_cast<PyCFunction>(UsbInterfaceDescriptor_TryParse), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_UsbInterfaceDescriptor_Static[] = 
     {
@@ -4478,14 +4415,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Spec type_spec_UsbInterfaceDescriptor_Static =
-    {
+    static PyType_Spec type_spec_UsbInterfaceDescriptor_Static = {
         "winrt._winrt_windows_devices_usb.UsbInterfaceDescriptor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UsbInterfaceDescriptor_Static
-    };
+        type_slots_UsbInterfaceDescriptor_Static};
 
     // ----- UsbInterfaceSetting class --------------------
 
@@ -4782,8 +4717,7 @@ namespace py::cpp::Windows::Devices::Usb
         { "select_setting_async", reinterpret_cast<PyCFunction>(UsbInterfaceSetting_SelectSettingAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UsbInterfaceSetting, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbInterfaceSetting), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbInterfaceSetting[] = {
         { "bulk_in_endpoints", reinterpret_cast<getter>(UsbInterfaceSetting_get_BulkInEndpoints), nullptr, nullptr, nullptr },
@@ -4793,16 +4727,14 @@ namespace py::cpp::Windows::Devices::Usb
         { "interrupt_in_endpoints", reinterpret_cast<getter>(UsbInterfaceSetting_get_InterruptInEndpoints), nullptr, nullptr, nullptr },
         { "interrupt_out_endpoints", reinterpret_cast<getter>(UsbInterfaceSetting_get_InterruptOutEndpoints), nullptr, nullptr, nullptr },
         { "selected", reinterpret_cast<getter>(UsbInterfaceSetting_get_Selected), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbInterfaceSetting[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterfaceSetting) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterfaceSetting) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterfaceSetting) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterfaceSetting) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbInterfaceSetting = {
         "winrt._winrt_windows_devices_usb.UsbInterfaceSetting",
@@ -4975,24 +4907,21 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbInterruptInEndpointDescriptor[] = {
         { "_assign_array_", _assign_array_UsbInterruptInEndpointDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbInterruptInEndpointDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbInterruptInEndpointDescriptor[] = {
         { "endpoint_number", reinterpret_cast<getter>(UsbInterruptInEndpointDescriptor_get_EndpointNumber), nullptr, nullptr, nullptr },
         { "interval", reinterpret_cast<getter>(UsbInterruptInEndpointDescriptor_get_Interval), nullptr, nullptr, nullptr },
         { "max_packet_size", reinterpret_cast<getter>(UsbInterruptInEndpointDescriptor_get_MaxPacketSize), nullptr, nullptr, nullptr },
         { "pipe", reinterpret_cast<getter>(UsbInterruptInEndpointDescriptor_get_Pipe), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbInterruptInEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptInEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptInEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptInEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptInEndpointDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbInterruptInEndpointDescriptor = {
         "winrt._winrt_windows_devices_usb.UsbInterruptInEndpointDescriptor",
@@ -5075,21 +5004,18 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbInterruptInEventArgs[] = {
         { "_assign_array_", _assign_array_UsbInterruptInEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbInterruptInEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbInterruptInEventArgs[] = {
         { "interrupt_data", reinterpret_cast<getter>(UsbInterruptInEventArgs_get_InterruptData), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbInterruptInEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptInEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptInEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptInEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptInEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbInterruptInEventArgs = {
         "winrt._winrt_windows_devices_usb.UsbInterruptInEventArgs",
@@ -5280,21 +5206,18 @@ namespace py::cpp::Windows::Devices::Usb
         { "remove_data_received", reinterpret_cast<PyCFunction>(UsbInterruptInPipe_remove_DataReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_UsbInterruptInPipe, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbInterruptInPipe), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbInterruptInPipe[] = {
         { "endpoint_descriptor", reinterpret_cast<getter>(UsbInterruptInPipe_get_EndpointDescriptor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbInterruptInPipe[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptInPipe) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptInPipe) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptInPipe) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptInPipe) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbInterruptInPipe = {
         "winrt._winrt_windows_devices_usb.UsbInterruptInPipe",
@@ -5467,24 +5390,21 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbInterruptOutEndpointDescriptor[] = {
         { "_assign_array_", _assign_array_UsbInterruptOutEndpointDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbInterruptOutEndpointDescriptor), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbInterruptOutEndpointDescriptor[] = {
         { "endpoint_number", reinterpret_cast<getter>(UsbInterruptOutEndpointDescriptor_get_EndpointNumber), nullptr, nullptr, nullptr },
         { "interval", reinterpret_cast<getter>(UsbInterruptOutEndpointDescriptor_get_Interval), nullptr, nullptr, nullptr },
         { "max_packet_size", reinterpret_cast<getter>(UsbInterruptOutEndpointDescriptor_get_MaxPacketSize), nullptr, nullptr, nullptr },
         { "pipe", reinterpret_cast<getter>(UsbInterruptOutEndpointDescriptor_get_Pipe), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbInterruptOutEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptOutEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptOutEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptOutEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptOutEndpointDescriptor) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbInterruptOutEndpointDescriptor = {
         "winrt._winrt_windows_devices_usb.UsbInterruptOutEndpointDescriptor",
@@ -5707,23 +5627,20 @@ namespace py::cpp::Windows::Devices::Usb
         { "clear_stall_async", reinterpret_cast<PyCFunction>(UsbInterruptOutPipe_ClearStallAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UsbInterruptOutPipe, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbInterruptOutPipe), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbInterruptOutPipe[] = {
         { "write_options", reinterpret_cast<getter>(UsbInterruptOutPipe_get_WriteOptions), reinterpret_cast<setter>(UsbInterruptOutPipe_put_WriteOptions), nullptr, nullptr },
         { "endpoint_descriptor", reinterpret_cast<getter>(UsbInterruptOutPipe_get_EndpointDescriptor), nullptr, nullptr, nullptr },
         { "output_stream", reinterpret_cast<getter>(UsbInterruptOutPipe_get_OutputStream), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbInterruptOutPipe[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptOutPipe) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptOutPipe) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptOutPipe) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptOutPipe) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbInterruptOutPipe = {
         "winrt._winrt_windows_devices_usb.UsbInterruptOutPipe",
@@ -6158,8 +6075,7 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbSetupPacket[] = {
         { "_assign_array_", _assign_array_UsbSetupPacket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbSetupPacket), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_UsbSetupPacket[] = {
         { "value", reinterpret_cast<getter>(UsbSetupPacket_get_Value), reinterpret_cast<setter>(UsbSetupPacket_put_Value), nullptr, nullptr },
@@ -6167,16 +6083,14 @@ namespace py::cpp::Windows::Devices::Usb
         { "request", reinterpret_cast<getter>(UsbSetupPacket_get_Request), reinterpret_cast<setter>(UsbSetupPacket_put_Request), nullptr, nullptr },
         { "length", reinterpret_cast<getter>(UsbSetupPacket_get_Length), reinterpret_cast<setter>(UsbSetupPacket_put_Length), nullptr, nullptr },
         { "index", reinterpret_cast<getter>(UsbSetupPacket_get_Index), reinterpret_cast<setter>(UsbSetupPacket_put_Index), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_UsbSetupPacket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbSetupPacket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbSetupPacket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbSetupPacket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbSetupPacket) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_UsbSetupPacket = {
         "winrt._winrt_windows_devices_usb.UsbSetupPacket",

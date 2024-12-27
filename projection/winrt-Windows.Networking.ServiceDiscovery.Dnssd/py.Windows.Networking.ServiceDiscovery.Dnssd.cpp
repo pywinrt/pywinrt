@@ -218,15 +218,13 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { "to_string", reinterpret_cast<PyCFunction>(DnssdRegistrationResult_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DnssdRegistrationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DnssdRegistrationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DnssdRegistrationResult[] = {
         { "has_instance_name_changed", reinterpret_cast<getter>(DnssdRegistrationResult_get_HasInstanceNameChanged), nullptr, nullptr, nullptr },
         { "ip_address", reinterpret_cast<getter>(DnssdRegistrationResult_get_IPAddress), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(DnssdRegistrationResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DnssdRegistrationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DnssdRegistrationResult) },
@@ -234,8 +232,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DnssdRegistrationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DnssdRegistrationResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_DnssdRegistrationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DnssdRegistrationResult = {
         "winrt._winrt_windows_networking_servicediscovery_dnssd.DnssdRegistrationResult",
@@ -921,8 +918,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { "to_string", reinterpret_cast<PyCFunction>(DnssdServiceInstance_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DnssdServiceInstance, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DnssdServiceInstance), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DnssdServiceInstance[] = {
         { "weight", reinterpret_cast<getter>(DnssdServiceInstance_get_Weight), reinterpret_cast<setter>(DnssdServiceInstance_put_Weight), nullptr, nullptr },
@@ -931,8 +927,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { "host_name", reinterpret_cast<getter>(DnssdServiceInstance_get_HostName), reinterpret_cast<setter>(DnssdServiceInstance_put_HostName), nullptr, nullptr },
         { "dnssd_service_instance_name", reinterpret_cast<getter>(DnssdServiceInstance_get_DnssdServiceInstanceName), reinterpret_cast<setter>(DnssdServiceInstance_put_DnssdServiceInstanceName), nullptr, nullptr },
         { "text_attributes", reinterpret_cast<getter>(DnssdServiceInstance_get_TextAttributes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DnssdServiceInstance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DnssdServiceInstance) },
@@ -940,8 +935,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DnssdServiceInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DnssdServiceInstance) },
         { Py_tp_str, reinterpret_cast<void*>(_str_DnssdServiceInstance) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DnssdServiceInstance = {
         "winrt._winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstance",
@@ -1326,13 +1320,11 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { "index_of", reinterpret_cast<PyCFunction>(DnssdServiceInstanceCollection_IndexOf), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DnssdServiceInstanceCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DnssdServiceInstanceCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DnssdServiceInstanceCollection[] = {
         { "size", reinterpret_cast<getter>(DnssdServiceInstanceCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DnssdServiceInstanceCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DnssdServiceInstanceCollection) },
@@ -1343,8 +1335,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_DnssdServiceInstanceCollection) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_DnssdServiceInstanceCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_DnssdServiceInstanceCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DnssdServiceInstanceCollection = {
         "winrt._winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstanceCollection",
@@ -1712,21 +1703,18 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { "remove_stopped", reinterpret_cast<PyCFunction>(DnssdServiceWatcher_remove_Stopped), METH_O, nullptr },
         { "_assign_array_", _assign_array_DnssdServiceWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DnssdServiceWatcher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DnssdServiceWatcher[] = {
         { "status", reinterpret_cast<getter>(DnssdServiceWatcher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DnssdServiceWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DnssdServiceWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DnssdServiceWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DnssdServiceWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DnssdServiceWatcher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DnssdServiceWatcher = {
         "winrt._winrt_windows_networking_servicediscovery_dnssd.DnssdServiceWatcher",

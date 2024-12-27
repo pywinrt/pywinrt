@@ -462,21 +462,18 @@ namespace py::cpp::Windows::Services::Cortana
         { "show_insights_with_options_async", reinterpret_cast<PyCFunction>(CortanaActionableInsights_ShowInsightsWithOptionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CortanaActionableInsights, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CortanaActionableInsights), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CortanaActionableInsights[] = {
         { "user", reinterpret_cast<getter>(CortanaActionableInsights_get_User), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CortanaActionableInsights[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaActionableInsights) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaActionableInsights) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaActionableInsights) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaActionableInsights) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CortanaActionableInsights = {
         "winrt._winrt_windows_services_cortana.CortanaActionableInsights",
@@ -486,14 +483,12 @@ namespace py::cpp::Windows::Services::Cortana
         _type_slots_CortanaActionableInsights};
 
     static PyGetSetDef getset_CortanaActionableInsights_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CortanaActionableInsights_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(CortanaActionableInsights_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(CortanaActionableInsights_GetForUser), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CortanaActionableInsights_Static[] = 
     {
@@ -503,14 +498,12 @@ namespace py::cpp::Windows::Services::Cortana
         { }
     };
 
-    static PyType_Spec type_spec_CortanaActionableInsights_Static =
-    {
+    static PyType_Spec type_spec_CortanaActionableInsights_Static = {
         "winrt._winrt_windows_services_cortana.CortanaActionableInsights_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CortanaActionableInsights_Static
-    };
+        type_slots_CortanaActionableInsights_Static};
 
     // ----- CortanaActionableInsightsOptions class --------------------
 
@@ -716,22 +709,19 @@ namespace py::cpp::Windows::Services::Cortana
     static PyMethodDef _methods_CortanaActionableInsightsOptions[] = {
         { "_assign_array_", _assign_array_CortanaActionableInsightsOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CortanaActionableInsightsOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CortanaActionableInsightsOptions[] = {
         { "surrounding_text", reinterpret_cast<getter>(CortanaActionableInsightsOptions_get_SurroundingText), reinterpret_cast<setter>(CortanaActionableInsightsOptions_put_SurroundingText), nullptr, nullptr },
         { "content_source_web_link", reinterpret_cast<getter>(CortanaActionableInsightsOptions_get_ContentSourceWebLink), reinterpret_cast<setter>(CortanaActionableInsightsOptions_put_ContentSourceWebLink), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CortanaActionableInsightsOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaActionableInsightsOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaActionableInsightsOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaActionableInsightsOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaActionableInsightsOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CortanaActionableInsightsOptions = {
         "winrt._winrt_windows_services_cortana.CortanaActionableInsightsOptions",
@@ -994,20 +984,17 @@ namespace py::cpp::Windows::Services::Cortana
         { "revoke_permissions_async", reinterpret_cast<PyCFunction>(CortanaPermissionsManager_RevokePermissionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CortanaPermissionsManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CortanaPermissionsManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CortanaPermissionsManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CortanaPermissionsManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaPermissionsManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaPermissionsManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaPermissionsManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaPermissionsManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CortanaPermissionsManager = {
         "winrt._winrt_windows_services_cortana.CortanaPermissionsManager",
@@ -1017,13 +1004,11 @@ namespace py::cpp::Windows::Services::Cortana
         _type_slots_CortanaPermissionsManager};
 
     static PyGetSetDef getset_CortanaPermissionsManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CortanaPermissionsManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(CortanaPermissionsManager_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CortanaPermissionsManager_Static[] = 
     {
@@ -1033,14 +1018,12 @@ namespace py::cpp::Windows::Services::Cortana
         { }
     };
 
-    static PyType_Spec type_spec_CortanaPermissionsManager_Static =
-    {
+    static PyType_Spec type_spec_CortanaPermissionsManager_Static = {
         "winrt._winrt_windows_services_cortana.CortanaPermissionsManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CortanaPermissionsManager_Static
-    };
+        type_slots_CortanaPermissionsManager_Static};
 
     // ----- CortanaSettings class --------------------
 
@@ -1265,22 +1248,19 @@ namespace py::cpp::Windows::Services::Cortana
     static PyMethodDef _methods_CortanaSettings[] = {
         { "_assign_array_", _assign_array_CortanaSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CortanaSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CortanaSettings[] = {
         { "is_voice_activation_enabled", reinterpret_cast<getter>(CortanaSettings_get_IsVoiceActivationEnabled), reinterpret_cast<setter>(CortanaSettings_put_IsVoiceActivationEnabled), nullptr, nullptr },
         { "has_user_consent_to_voice_activation", reinterpret_cast<getter>(CortanaSettings_get_HasUserConsentToVoiceActivation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CortanaSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CortanaSettings = {
         "winrt._winrt_windows_services_cortana.CortanaSettings",
@@ -1290,14 +1270,12 @@ namespace py::cpp::Windows::Services::Cortana
         _type_slots_CortanaSettings};
 
     static PyGetSetDef getset_CortanaSettings_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CortanaSettings_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(CortanaSettings_GetDefault), METH_VARARGS, nullptr },
         { "is_supported", reinterpret_cast<PyCFunction>(CortanaSettings_IsSupported), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CortanaSettings_Static[] = 
     {
@@ -1307,14 +1285,12 @@ namespace py::cpp::Windows::Services::Cortana
         { }
     };
 
-    static PyType_Spec type_spec_CortanaSettings_Static =
-    {
+    static PyType_Spec type_spec_CortanaSettings_Static = {
         "winrt._winrt_windows_services_cortana.CortanaSettings_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CortanaSettings_Static
-    };
+        type_slots_CortanaSettings_Static};
 
     // ----- Windows.Services.Cortana Initialization --------------------
 

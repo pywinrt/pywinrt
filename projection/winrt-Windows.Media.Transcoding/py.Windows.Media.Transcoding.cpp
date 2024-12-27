@@ -772,8 +772,7 @@ namespace py::cpp::Windows::Media::Transcoding
         { "prepare_stream_transcode_async", reinterpret_cast<PyCFunction>(MediaTranscoder_PrepareStreamTranscodeAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaTranscoder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaTranscoder), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MediaTranscoder[] = {
         { "trim_stop_time", reinterpret_cast<getter>(MediaTranscoder_get_TrimStopTime), reinterpret_cast<setter>(MediaTranscoder_put_TrimStopTime), nullptr, nullptr },
@@ -781,16 +780,14 @@ namespace py::cpp::Windows::Media::Transcoding
         { "hardware_acceleration_enabled", reinterpret_cast<getter>(MediaTranscoder_get_HardwareAccelerationEnabled), reinterpret_cast<setter>(MediaTranscoder_put_HardwareAccelerationEnabled), nullptr, nullptr },
         { "always_reencode", reinterpret_cast<getter>(MediaTranscoder_get_AlwaysReencode), reinterpret_cast<setter>(MediaTranscoder_put_AlwaysReencode), nullptr, nullptr },
         { "video_processing_algorithm", reinterpret_cast<getter>(MediaTranscoder_get_VideoProcessingAlgorithm), reinterpret_cast<setter>(MediaTranscoder_put_VideoProcessingAlgorithm), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MediaTranscoder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaTranscoder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaTranscoder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaTranscoder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaTranscoder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MediaTranscoder = {
         "winrt._winrt_windows_media_transcoding.MediaTranscoder",
@@ -944,22 +941,19 @@ namespace py::cpp::Windows::Media::Transcoding
         { "transcode_async", reinterpret_cast<PyCFunction>(PrepareTranscodeResult_TranscodeAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrepareTranscodeResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrepareTranscodeResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrepareTranscodeResult[] = {
         { "can_transcode", reinterpret_cast<getter>(PrepareTranscodeResult_get_CanTranscode), nullptr, nullptr, nullptr },
         { "failure_reason", reinterpret_cast<getter>(PrepareTranscodeResult_get_FailureReason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrepareTranscodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrepareTranscodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrepareTranscodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrepareTranscodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrepareTranscodeResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrepareTranscodeResult = {
         "winrt._winrt_windows_media_transcoding.PrepareTranscodeResult",

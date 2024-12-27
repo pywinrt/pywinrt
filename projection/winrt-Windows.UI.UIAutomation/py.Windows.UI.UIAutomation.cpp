@@ -138,23 +138,20 @@ namespace py::cpp::Windows::UI::UIAutomation
     static PyMethodDef _methods_AutomationConnection[] = {
         { "_assign_array_", _assign_array_AutomationConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AutomationConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AutomationConnection[] = {
         { "app_user_model_id", reinterpret_cast<getter>(AutomationConnection_get_AppUserModelId), nullptr, nullptr, nullptr },
         { "executable_file_name", reinterpret_cast<getter>(AutomationConnection_get_ExecutableFileName), nullptr, nullptr, nullptr },
         { "is_remote_system", reinterpret_cast<getter>(AutomationConnection_get_IsRemoteSystem), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AutomationConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AutomationConnection = {
         "winrt._winrt_windows_ui_uiautomation.AutomationConnection",
@@ -237,21 +234,18 @@ namespace py::cpp::Windows::UI::UIAutomation
     static PyMethodDef _methods_AutomationConnectionBoundObject[] = {
         { "_assign_array_", _assign_array_AutomationConnectionBoundObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AutomationConnectionBoundObject), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AutomationConnectionBoundObject[] = {
         { "connection", reinterpret_cast<getter>(AutomationConnectionBoundObject_get_Connection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AutomationConnectionBoundObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationConnectionBoundObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationConnectionBoundObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationConnectionBoundObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationConnectionBoundObject) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AutomationConnectionBoundObject = {
         "winrt._winrt_windows_ui_uiautomation.AutomationConnectionBoundObject",
@@ -394,23 +388,20 @@ namespace py::cpp::Windows::UI::UIAutomation
     static PyMethodDef _methods_AutomationElement[] = {
         { "_assign_array_", _assign_array_AutomationElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AutomationElement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AutomationElement[] = {
         { "app_user_model_id", reinterpret_cast<getter>(AutomationElement_get_AppUserModelId), nullptr, nullptr, nullptr },
         { "executable_file_name", reinterpret_cast<getter>(AutomationElement_get_ExecutableFileName), nullptr, nullptr, nullptr },
         { "is_remote_system", reinterpret_cast<getter>(AutomationElement_get_IsRemoteSystem), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AutomationElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AutomationElement = {
         "winrt._winrt_windows_ui_uiautomation.AutomationElement",
@@ -463,20 +454,17 @@ namespace py::cpp::Windows::UI::UIAutomation
     static PyMethodDef _methods_AutomationTextRange[] = {
         { "_assign_array_", _assign_array_AutomationTextRange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AutomationTextRange), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AutomationTextRange[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AutomationTextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationTextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationTextRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationTextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationTextRange) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AutomationTextRange = {
         "winrt._winrt_windows_ui_uiautomation.AutomationTextRange",

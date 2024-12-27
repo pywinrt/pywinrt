@@ -104,19 +104,16 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     }
 
     static PyMethodDef _methods_KnownPerceptionFrameKind[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KnownPerceptionFrameKind[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KnownPerceptionFrameKind[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownPerceptionFrameKind) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownPerceptionFrameKind) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownPerceptionFrameKind) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KnownPerceptionFrameKind = {
         "winrt._winrt_windows_devices_perception_provider.KnownPerceptionFrameKind",
@@ -129,12 +126,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "color", reinterpret_cast<getter>(KnownPerceptionFrameKind_get_Color), nullptr, nullptr, nullptr },
         { "depth", reinterpret_cast<getter>(KnownPerceptionFrameKind_get_Depth), nullptr, nullptr, nullptr },
         { "infrared", reinterpret_cast<getter>(KnownPerceptionFrameKind_get_Infrared), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KnownPerceptionFrameKind_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KnownPerceptionFrameKind_Static[] = 
     {
@@ -144,14 +139,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Spec type_spec_KnownPerceptionFrameKind_Static =
-    {
+    static PyType_Spec type_spec_KnownPerceptionFrameKind_Static = {
         "winrt._winrt_windows_devices_perception_provider.KnownPerceptionFrameKind_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownPerceptionFrameKind_Static
-    };
+        type_slots_KnownPerceptionFrameKind_Static};
 
     // ----- PerceptionControlGroup class --------------------
 
@@ -251,21 +244,18 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     static PyMethodDef _methods_PerceptionControlGroup[] = {
         { "_assign_array_", _assign_array_PerceptionControlGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionControlGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionControlGroup[] = {
         { "frame_provider_ids", reinterpret_cast<getter>(PerceptionControlGroup_get_FrameProviderIds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionControlGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionControlGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionControlGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionControlGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionControlGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionControlGroup = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionControlGroup",
@@ -434,23 +424,20 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     static PyMethodDef _methods_PerceptionCorrelation[] = {
         { "_assign_array_", _assign_array_PerceptionCorrelation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionCorrelation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionCorrelation[] = {
         { "orientation", reinterpret_cast<getter>(PerceptionCorrelation_get_Orientation), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(PerceptionCorrelation_get_Position), nullptr, nullptr, nullptr },
         { "target_id", reinterpret_cast<getter>(PerceptionCorrelation_get_TargetId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionCorrelation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionCorrelation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionCorrelation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionCorrelation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionCorrelation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionCorrelation = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionCorrelation",
@@ -557,21 +544,18 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     static PyMethodDef _methods_PerceptionCorrelationGroup[] = {
         { "_assign_array_", _assign_array_PerceptionCorrelationGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionCorrelationGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionCorrelationGroup[] = {
         { "relative_locations", reinterpret_cast<getter>(PerceptionCorrelationGroup_get_RelativeLocations), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionCorrelationGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionCorrelationGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionCorrelationGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionCorrelationGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionCorrelationGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionCorrelationGroup = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionCorrelationGroup",
@@ -680,21 +664,18 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     static PyMethodDef _methods_PerceptionFaceAuthenticationGroup[] = {
         { "_assign_array_", _assign_array_PerceptionFaceAuthenticationGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionFaceAuthenticationGroup), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionFaceAuthenticationGroup[] = {
         { "frame_provider_ids", reinterpret_cast<getter>(PerceptionFaceAuthenticationGroup_get_FrameProviderIds), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionFaceAuthenticationGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFaceAuthenticationGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionFaceAuthenticationGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFaceAuthenticationGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFaceAuthenticationGroup) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionFaceAuthenticationGroup = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionFaceAuthenticationGroup",
@@ -876,23 +857,20 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     static PyMethodDef _methods_PerceptionFrame[] = {
         { "_assign_array_", _assign_array_PerceptionFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionFrame[] = {
         { "relative_time", reinterpret_cast<getter>(PerceptionFrame_get_RelativeTime), reinterpret_cast<setter>(PerceptionFrame_put_RelativeTime), nullptr, nullptr },
         { "frame_data", reinterpret_cast<getter>(PerceptionFrame_get_FrameData), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(PerceptionFrame_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionFrame = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionFrame",
@@ -1312,8 +1290,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     static PyMethodDef _methods_PerceptionFrameProviderInfo[] = {
         { "_assign_array_", _assign_array_PerceptionFrameProviderInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionFrameProviderInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionFrameProviderInfo[] = {
         { "id", reinterpret_cast<getter>(PerceptionFrameProviderInfo_get_Id), reinterpret_cast<setter>(PerceptionFrameProviderInfo_put_Id), nullptr, nullptr },
@@ -1321,16 +1298,14 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "frame_kind", reinterpret_cast<getter>(PerceptionFrameProviderInfo_get_FrameKind), reinterpret_cast<setter>(PerceptionFrameProviderInfo_put_FrameKind), nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(PerceptionFrameProviderInfo_get_DisplayName), reinterpret_cast<setter>(PerceptionFrameProviderInfo_put_DisplayName), nullptr, nullptr },
         { "device_kind", reinterpret_cast<getter>(PerceptionFrameProviderInfo_get_DeviceKind), reinterpret_cast<setter>(PerceptionFrameProviderInfo_put_DeviceKind), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionFrameProviderInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFrameProviderInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionFrameProviderInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFrameProviderInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFrameProviderInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionFrameProviderInfo = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionFrameProviderInfo",
@@ -1789,19 +1764,16 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     }
 
     static PyMethodDef _methods_PerceptionFrameProviderManagerService[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionFrameProviderManagerService[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionFrameProviderManagerService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFrameProviderManagerService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFrameProviderManagerService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFrameProviderManagerService) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionFrameProviderManagerService = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionFrameProviderManagerService",
@@ -1811,8 +1783,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         _type_slots_PerceptionFrameProviderManagerService};
 
     static PyGetSetDef getset_PerceptionFrameProviderManagerService_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PerceptionFrameProviderManagerService_Static[] = {
         { "publish_frame_for_provider", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_PublishFrameForProvider), METH_VARARGS, nullptr },
@@ -1825,8 +1796,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "unregister_face_authentication_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterFaceAuthenticationGroup), METH_VARARGS, nullptr },
         { "unregister_frame_provider_info", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterFrameProviderInfo), METH_VARARGS, nullptr },
         { "update_availability_for_provider", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UpdateAvailabilityForProvider), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PerceptionFrameProviderManagerService_Static[] = 
     {
@@ -1836,14 +1806,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Spec type_spec_PerceptionFrameProviderManagerService_Static =
-    {
+    static PyType_Spec type_spec_PerceptionFrameProviderManagerService_Static = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionFrameProviderManagerService_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PerceptionFrameProviderManagerService_Static
-    };
+        type_slots_PerceptionFrameProviderManagerService_Static};
 
     // ----- PerceptionPropertyChangeRequest class --------------------
 
@@ -2059,23 +2027,20 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "get_deferral", reinterpret_cast<PyCFunction>(PerceptionPropertyChangeRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PerceptionPropertyChangeRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionPropertyChangeRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionPropertyChangeRequest[] = {
         { "status", reinterpret_cast<getter>(PerceptionPropertyChangeRequest_get_Status), reinterpret_cast<setter>(PerceptionPropertyChangeRequest_put_Status), nullptr, nullptr },
         { "name", reinterpret_cast<getter>(PerceptionPropertyChangeRequest_get_Name), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PerceptionPropertyChangeRequest_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionPropertyChangeRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionPropertyChangeRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionPropertyChangeRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionPropertyChangeRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionPropertyChangeRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionPropertyChangeRequest = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionPropertyChangeRequest",
@@ -2306,20 +2271,17 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionVideoFrameAllocator), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PerceptionVideoFrameAllocator), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_PerceptionVideoFrameAllocator), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PerceptionVideoFrameAllocator[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PerceptionVideoFrameAllocator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionVideoFrameAllocator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionVideoFrameAllocator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionVideoFrameAllocator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionVideoFrameAllocator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PerceptionVideoFrameAllocator = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionVideoFrameAllocator",
@@ -2657,23 +2619,20 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "_from", reinterpret_cast<PyCFunction>(_from_IPerceptionFrameProvider), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IPerceptionFrameProvider), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IPerceptionFrameProvider), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPerceptionFrameProvider[] = {
         { "available", reinterpret_cast<getter>(IPerceptionFrameProvider_get_Available), nullptr, nullptr, nullptr },
         { "frame_provider_info", reinterpret_cast<getter>(IPerceptionFrameProvider_get_FrameProviderInfo), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(IPerceptionFrameProvider_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPerceptionFrameProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPerceptionFrameProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPerceptionFrameProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPerceptionFrameProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPerceptionFrameProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPerceptionFrameProvider = {
         "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProvider",
@@ -2891,13 +2850,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     static PyMethodDef methods_ImplementsIPerceptionFrameProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPerceptionFrameProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPerceptionFrameProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPerceptionFrameProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPerceptionFrameProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPerceptionFrameProvider = {
         "winrt._winrt_windows_devices_perception_provider.ImplementsIPerceptionFrameProvider",
@@ -3060,20 +3017,17 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "_from", reinterpret_cast<PyCFunction>(_from_IPerceptionFrameProviderManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IPerceptionFrameProviderManager), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IPerceptionFrameProviderManager), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPerceptionFrameProviderManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPerceptionFrameProviderManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPerceptionFrameProviderManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPerceptionFrameProviderManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPerceptionFrameProviderManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPerceptionFrameProviderManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPerceptionFrameProviderManager = {
         "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProviderManager",
@@ -3185,13 +3139,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     static PyMethodDef methods_ImplementsIPerceptionFrameProviderManager[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPerceptionFrameProviderManager), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPerceptionFrameProviderManager), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPerceptionFrameProviderManager[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPerceptionFrameProviderManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPerceptionFrameProviderManager = {
         "winrt._winrt_windows_devices_perception_provider.ImplementsIPerceptionFrameProviderManager",

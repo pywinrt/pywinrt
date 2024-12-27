@@ -268,24 +268,21 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef _methods_LocalContentSuggestionSettings[] = {
         { "_assign_array_", _assign_array_LocalContentSuggestionSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LocalContentSuggestionSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LocalContentSuggestionSettings[] = {
         { "enabled", reinterpret_cast<getter>(LocalContentSuggestionSettings_get_Enabled), reinterpret_cast<setter>(LocalContentSuggestionSettings_put_Enabled), nullptr, nullptr },
         { "aqs_filter", reinterpret_cast<getter>(LocalContentSuggestionSettings_get_AqsFilter), reinterpret_cast<setter>(LocalContentSuggestionSettings_put_AqsFilter), nullptr, nullptr },
         { "locations", reinterpret_cast<getter>(LocalContentSuggestionSettings_get_Locations), nullptr, nullptr, nullptr },
         { "properties_to_match", reinterpret_cast<getter>(LocalContentSuggestionSettings_get_PropertiesToMatch), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LocalContentSuggestionSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalContentSuggestionSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalContentSuggestionSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalContentSuggestionSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalContentSuggestionSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LocalContentSuggestionSettings = {
         "winrt._winrt_windows_applicationmodel_search.LocalContentSuggestionSettings",
@@ -1293,8 +1290,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { "remove_visibility_changed", reinterpret_cast<PyCFunction>(SearchPane_remove_VisibilityChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_SearchPane, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchPane), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchPane[] = {
         { "show_on_keyboard_input", reinterpret_cast<getter>(SearchPane_get_ShowOnKeyboardInput), reinterpret_cast<setter>(SearchPane_put_ShowOnKeyboardInput), nullptr, nullptr },
@@ -1304,16 +1300,14 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { "language", reinterpret_cast<getter>(SearchPane_get_Language), nullptr, nullptr, nullptr },
         { "query_text", reinterpret_cast<getter>(SearchPane_get_QueryText), nullptr, nullptr, nullptr },
         { "visible", reinterpret_cast<getter>(SearchPane_get_Visible), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchPane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPane) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchPane = {
         "winrt._winrt_windows_applicationmodel_search.SearchPane",
@@ -1323,14 +1317,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         _type_slots_SearchPane};
 
     static PyGetSetDef getset_SearchPane_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SearchPane_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(SearchPane_GetForCurrentView), METH_VARARGS, nullptr },
         { "hide_this_application", reinterpret_cast<PyCFunction>(SearchPane_HideThisApplication), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SearchPane_Static[] = 
     {
@@ -1340,14 +1332,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Spec type_spec_SearchPane_Static =
-    {
+    static PyType_Spec type_spec_SearchPane_Static = {
         "winrt._winrt_windows_applicationmodel_search.SearchPane_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SearchPane_Static
-    };
+        type_slots_SearchPane_Static};
 
     // ----- SearchPaneQueryChangedEventArgs class --------------------
 
@@ -1483,23 +1473,20 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef _methods_SearchPaneQueryChangedEventArgs[] = {
         { "_assign_array_", _assign_array_SearchPaneQueryChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchPaneQueryChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchPaneQueryChangedEventArgs[] = {
         { "language", reinterpret_cast<getter>(SearchPaneQueryChangedEventArgs_get_Language), nullptr, nullptr, nullptr },
         { "linguistic_details", reinterpret_cast<getter>(SearchPaneQueryChangedEventArgs_get_LinguisticDetails), nullptr, nullptr, nullptr },
         { "query_text", reinterpret_cast<getter>(SearchPaneQueryChangedEventArgs_get_QueryText), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchPaneQueryChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneQueryChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneQueryChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneQueryChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneQueryChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchPaneQueryChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneQueryChangedEventArgs",
@@ -1642,23 +1629,20 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef _methods_SearchPaneQueryLinguisticDetails[] = {
         { "_assign_array_", _assign_array_SearchPaneQueryLinguisticDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchPaneQueryLinguisticDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchPaneQueryLinguisticDetails[] = {
         { "query_text_alternatives", reinterpret_cast<getter>(SearchPaneQueryLinguisticDetails_get_QueryTextAlternatives), nullptr, nullptr, nullptr },
         { "query_text_composition_length", reinterpret_cast<getter>(SearchPaneQueryLinguisticDetails_get_QueryTextCompositionLength), nullptr, nullptr, nullptr },
         { "query_text_composition_start", reinterpret_cast<getter>(SearchPaneQueryLinguisticDetails_get_QueryTextCompositionStart), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchPaneQueryLinguisticDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneQueryLinguisticDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneQueryLinguisticDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneQueryLinguisticDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneQueryLinguisticDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchPaneQueryLinguisticDetails = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneQueryLinguisticDetails",
@@ -1801,23 +1785,20 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef _methods_SearchPaneQuerySubmittedEventArgs[] = {
         { "_assign_array_", _assign_array_SearchPaneQuerySubmittedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchPaneQuerySubmittedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchPaneQuerySubmittedEventArgs[] = {
         { "language", reinterpret_cast<getter>(SearchPaneQuerySubmittedEventArgs_get_Language), nullptr, nullptr, nullptr },
         { "query_text", reinterpret_cast<getter>(SearchPaneQuerySubmittedEventArgs_get_QueryText), nullptr, nullptr, nullptr },
         { "linguistic_details", reinterpret_cast<getter>(SearchPaneQuerySubmittedEventArgs_get_LinguisticDetails), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchPaneQuerySubmittedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneQuerySubmittedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneQuerySubmittedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneQuerySubmittedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneQuerySubmittedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchPaneQuerySubmittedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneQuerySubmittedEventArgs",
@@ -1900,21 +1881,18 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef _methods_SearchPaneResultSuggestionChosenEventArgs[] = {
         { "_assign_array_", _assign_array_SearchPaneResultSuggestionChosenEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchPaneResultSuggestionChosenEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchPaneResultSuggestionChosenEventArgs[] = {
         { "tag", reinterpret_cast<getter>(SearchPaneResultSuggestionChosenEventArgs_get_Tag), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchPaneResultSuggestionChosenEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneResultSuggestionChosenEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneResultSuggestionChosenEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneResultSuggestionChosenEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneResultSuggestionChosenEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchPaneResultSuggestionChosenEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneResultSuggestionChosenEventArgs",
@@ -2068,22 +2046,19 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { "get_deferral", reinterpret_cast<PyCFunction>(SearchPaneSuggestionsRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SearchPaneSuggestionsRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchPaneSuggestionsRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchPaneSuggestionsRequest[] = {
         { "is_canceled", reinterpret_cast<getter>(SearchPaneSuggestionsRequest_get_IsCanceled), nullptr, nullptr, nullptr },
         { "search_suggestion_collection", reinterpret_cast<getter>(SearchPaneSuggestionsRequest_get_SearchSuggestionCollection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchPaneSuggestionsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneSuggestionsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneSuggestionsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneSuggestionsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneSuggestionsRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchPaneSuggestionsRequest = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequest",
@@ -2178,20 +2153,17 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { "complete", reinterpret_cast<PyCFunction>(SearchPaneSuggestionsRequestDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SearchPaneSuggestionsRequestDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchPaneSuggestionsRequestDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchPaneSuggestionsRequestDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchPaneSuggestionsRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneSuggestionsRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneSuggestionsRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneSuggestionsRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneSuggestionsRequestDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchPaneSuggestionsRequestDeferral = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequestDeferral",
@@ -2364,24 +2336,21 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef _methods_SearchPaneSuggestionsRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_SearchPaneSuggestionsRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchPaneSuggestionsRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchPaneSuggestionsRequestedEventArgs[] = {
         { "language", reinterpret_cast<getter>(SearchPaneSuggestionsRequestedEventArgs_get_Language), nullptr, nullptr, nullptr },
         { "linguistic_details", reinterpret_cast<getter>(SearchPaneSuggestionsRequestedEventArgs_get_LinguisticDetails), nullptr, nullptr, nullptr },
         { "query_text", reinterpret_cast<getter>(SearchPaneSuggestionsRequestedEventArgs_get_QueryText), nullptr, nullptr, nullptr },
         { "request", reinterpret_cast<getter>(SearchPaneSuggestionsRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchPaneSuggestionsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneSuggestionsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneSuggestionsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneSuggestionsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneSuggestionsRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchPaneSuggestionsRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequestedEventArgs",
@@ -2464,21 +2433,18 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef _methods_SearchPaneVisibilityChangedEventArgs[] = {
         { "_assign_array_", _assign_array_SearchPaneVisibilityChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchPaneVisibilityChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchPaneVisibilityChangedEventArgs[] = {
         { "visible", reinterpret_cast<getter>(SearchPaneVisibilityChangedEventArgs_get_Visible), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchPaneVisibilityChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneVisibilityChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneVisibilityChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneVisibilityChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneVisibilityChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchPaneVisibilityChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneVisibilityChangedEventArgs",
@@ -2647,23 +2613,20 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef _methods_SearchQueryLinguisticDetails[] = {
         { "_assign_array_", _assign_array_SearchQueryLinguisticDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchQueryLinguisticDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchQueryLinguisticDetails[] = {
         { "query_text_alternatives", reinterpret_cast<getter>(SearchQueryLinguisticDetails_get_QueryTextAlternatives), nullptr, nullptr, nullptr },
         { "query_text_composition_length", reinterpret_cast<getter>(SearchQueryLinguisticDetails_get_QueryTextCompositionLength), nullptr, nullptr, nullptr },
         { "query_text_composition_start", reinterpret_cast<getter>(SearchQueryLinguisticDetails_get_QueryTextCompositionStart), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchQueryLinguisticDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchQueryLinguisticDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchQueryLinguisticDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchQueryLinguisticDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchQueryLinguisticDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchQueryLinguisticDetails = {
         "winrt._winrt_windows_applicationmodel_search.SearchQueryLinguisticDetails",
@@ -2926,21 +2889,18 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { "append_search_separator", reinterpret_cast<PyCFunction>(SearchSuggestionCollection_AppendSearchSeparator), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SearchSuggestionCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchSuggestionCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchSuggestionCollection[] = {
         { "size", reinterpret_cast<getter>(SearchSuggestionCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchSuggestionCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchSuggestionCollection = {
         "winrt._winrt_windows_applicationmodel_search.SearchSuggestionCollection",
@@ -3094,22 +3054,19 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { "get_deferral", reinterpret_cast<PyCFunction>(SearchSuggestionsRequest_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SearchSuggestionsRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchSuggestionsRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchSuggestionsRequest[] = {
         { "is_canceled", reinterpret_cast<getter>(SearchSuggestionsRequest_get_IsCanceled), nullptr, nullptr, nullptr },
         { "search_suggestion_collection", reinterpret_cast<getter>(SearchSuggestionsRequest_get_SearchSuggestionCollection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchSuggestionsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionsRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchSuggestionsRequest = {
         "winrt._winrt_windows_applicationmodel_search.SearchSuggestionsRequest",
@@ -3204,20 +3161,17 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { "complete", reinterpret_cast<PyCFunction>(SearchSuggestionsRequestDeferral_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SearchSuggestionsRequestDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SearchSuggestionsRequestDeferral), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SearchSuggestionsRequestDeferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SearchSuggestionsRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionsRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionsRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionsRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionsRequestDeferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SearchSuggestionsRequestDeferral = {
         "winrt._winrt_windows_applicationmodel_search.SearchSuggestionsRequestDeferral",
@@ -3360,23 +3314,20 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef _methods_ISearchPaneQueryChangedEventArgs[] = {
         { "_assign_array_", _assign_array_ISearchPaneQueryChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISearchPaneQueryChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISearchPaneQueryChangedEventArgs[] = {
         { "language", reinterpret_cast<getter>(ISearchPaneQueryChangedEventArgs_get_Language), nullptr, nullptr, nullptr },
         { "linguistic_details", reinterpret_cast<getter>(ISearchPaneQueryChangedEventArgs_get_LinguisticDetails), nullptr, nullptr, nullptr },
         { "query_text", reinterpret_cast<getter>(ISearchPaneQueryChangedEventArgs_get_QueryText), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISearchPaneQueryChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISearchPaneQueryChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISearchPaneQueryChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISearchPaneQueryChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISearchPaneQueryChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISearchPaneQueryChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.ISearchPaneQueryChangedEventArgs",
@@ -3492,13 +3443,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static PyMethodDef methods_ImplementsISearchPaneQueryChangedEventArgs[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISearchPaneQueryChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISearchPaneQueryChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISearchPaneQueryChangedEventArgs[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISearchPaneQueryChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISearchPaneQueryChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.ImplementsISearchPaneQueryChangedEventArgs",

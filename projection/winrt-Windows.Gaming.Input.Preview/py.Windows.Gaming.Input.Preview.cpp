@@ -98,19 +98,16 @@ namespace py::cpp::Windows::Gaming::Input::Preview
     }
 
     static PyMethodDef _methods_GameControllerProviderInfo[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GameControllerProviderInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GameControllerProviderInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameControllerProviderInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameControllerProviderInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameControllerProviderInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GameControllerProviderInfo = {
         "winrt._winrt_windows_gaming_input_preview.GameControllerProviderInfo",
@@ -120,14 +117,12 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         _type_slots_GameControllerProviderInfo};
 
     static PyGetSetDef getset_GameControllerProviderInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GameControllerProviderInfo_Static[] = {
         { "get_parent_provider_id", reinterpret_cast<PyCFunction>(GameControllerProviderInfo_GetParentProviderId), METH_VARARGS, nullptr },
         { "get_provider_id", reinterpret_cast<PyCFunction>(GameControllerProviderInfo_GetProviderId), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GameControllerProviderInfo_Static[] = 
     {
@@ -137,14 +132,12 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { }
     };
 
-    static PyType_Spec type_spec_GameControllerProviderInfo_Static =
-    {
+    static PyType_Spec type_spec_GameControllerProviderInfo_Static = {
         "winrt._winrt_windows_gaming_input_preview.GameControllerProviderInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GameControllerProviderInfo_Static
-    };
+        type_slots_GameControllerProviderInfo_Static};
 
     // ----- LegacyGipGameControllerProvider class --------------------
 
@@ -1050,8 +1043,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { "set_standard_controller_button_remapping", reinterpret_cast<PyCFunction>(LegacyGipGameControllerProvider_SetStandardControllerButtonRemapping), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LegacyGipGameControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LegacyGipGameControllerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LegacyGipGameControllerProvider[] = {
         { "app_compat_version", reinterpret_cast<getter>(LegacyGipGameControllerProvider_get_AppCompatVersion), nullptr, nullptr, nullptr },
@@ -1061,16 +1053,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { "is_firmware_corrupted", reinterpret_cast<getter>(LegacyGipGameControllerProvider_get_IsFirmwareCorrupted), nullptr, nullptr, nullptr },
         { "is_synthetic_device", reinterpret_cast<getter>(LegacyGipGameControllerProvider_get_IsSyntheticDevice), nullptr, nullptr, nullptr },
         { "preferred_types", reinterpret_cast<getter>(LegacyGipGameControllerProvider_get_PreferredTypes), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LegacyGipGameControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LegacyGipGameControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LegacyGipGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LegacyGipGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LegacyGipGameControllerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LegacyGipGameControllerProvider = {
         "winrt._winrt_windows_gaming_input_preview.LegacyGipGameControllerProvider",
@@ -1080,8 +1070,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         _type_slots_LegacyGipGameControllerProvider};
 
     static PyGetSetDef getset_LegacyGipGameControllerProvider_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LegacyGipGameControllerProvider_Static[] = {
         { "clear_pairing", reinterpret_cast<PyCFunction>(LegacyGipGameControllerProvider_ClearPairing), METH_VARARGS, nullptr },
@@ -1090,8 +1079,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { "is_copilot", reinterpret_cast<PyCFunction>(LegacyGipGameControllerProvider_IsCopilot), METH_VARARGS, nullptr },
         { "is_pilot", reinterpret_cast<PyCFunction>(LegacyGipGameControllerProvider_IsPilot), METH_VARARGS, nullptr },
         { "pair_pilot_to_copilot", reinterpret_cast<PyCFunction>(LegacyGipGameControllerProvider_PairPilotToCopilot), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LegacyGipGameControllerProvider_Static[] = 
     {
@@ -1101,14 +1089,12 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { }
     };
 
-    static PyType_Spec type_spec_LegacyGipGameControllerProvider_Static =
-    {
+    static PyType_Spec type_spec_LegacyGipGameControllerProvider_Static = {
         "winrt._winrt_windows_gaming_input_preview.LegacyGipGameControllerProvider_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LegacyGipGameControllerProvider_Static
-    };
+        type_slots_LegacyGipGameControllerProvider_Static};
 
     // ----- HeadsetGeqGains struct --------------------
 
@@ -1185,8 +1171,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyMethodDef _methods_HeadsetGeqGains[] = {
         { "_assign_array_", _assign_array_HeadsetGeqGains, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* HeadsetGeqGains_get_band1Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, void* /*unused*/) noexcept
     {
@@ -1359,8 +1344,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { "band3_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band3Gain), reinterpret_cast<setter>(HeadsetGeqGains_set_band3Gain), nullptr, nullptr },
         { "band4_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band4Gain), reinterpret_cast<setter>(HeadsetGeqGains_set_band4Gain), nullptr, nullptr },
         { "band5_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band5Gain), reinterpret_cast<setter>(HeadsetGeqGains_set_band5Gain), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_HeadsetGeqGains(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* other, int op) noexcept
     {
@@ -1440,8 +1424,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HeadsetGeqGains) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HeadsetGeqGains) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_HeadsetGeqGains) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HeadsetGeqGains = {
         "winrt._winrt_windows_gaming_input_preview.HeadsetGeqGains",

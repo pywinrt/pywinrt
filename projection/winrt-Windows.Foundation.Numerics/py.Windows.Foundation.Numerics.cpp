@@ -445,8 +445,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "invert", reinterpret_cast<PyCFunction>(invert_Matrix3x2), METH_NOARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix3x2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix3x2, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Matrix3x2_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, void* /*unused*/) noexcept
     {
@@ -653,8 +652,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "m22", reinterpret_cast<getter>(Matrix3x2_get_M22), reinterpret_cast<setter>(Matrix3x2_set_M22), nullptr, nullptr },
         { "m31", reinterpret_cast<getter>(Matrix3x2_get_M31), reinterpret_cast<setter>(Matrix3x2_set_M31), nullptr, nullptr },
         { "m32", reinterpret_cast<getter>(Matrix3x2_get_M32), reinterpret_cast<setter>(Matrix3x2_set_M32), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _add_Matrix3x2(PyObject* left, PyObject* right) noexcept
     {
@@ -856,8 +854,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_negative, reinterpret_cast<void*>(_neg_Matrix3x2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix3x2) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix3x2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Matrix3x2 = {
         "winrt._winrt_windows_foundation_numerics.Matrix3x2",
@@ -868,8 +865,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyGetSetDef getset_Matrix3x2_Static[] = {
         { "identity", _get_identity_Matrix3x2, nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Matrix3x2_Static[] = {
         { "make_translation", make_translation_Matrix3x2, METH_VARARGS, nullptr },
@@ -878,8 +874,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "make_scale_from_scalar", make_scale_from_scalar_Matrix3x2, METH_VARARGS, nullptr },
         { "make_skew", make_skew_Matrix3x2, METH_VARARGS, nullptr },
         { "make_rotation", make_rotation_Matrix3x2, METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Matrix3x2_Static[] = 
     {
@@ -889,14 +884,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Spec type_spec_Matrix3x2_Static =
-    {
+    static PyType_Spec type_spec_Matrix3x2_Static = {
         "winrt._winrt_windows_foundation_numerics.Matrix3x2_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Matrix3x2_Static
-    };
+        type_slots_Matrix3x2_Static};
 
     // ----- Matrix4x4 struct --------------------
 
@@ -1903,8 +1896,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transpose", reinterpret_cast<PyCFunction>(transpose_Matrix4x4), METH_NOARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Matrix4x4_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
@@ -2451,8 +2443,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "m42", reinterpret_cast<getter>(Matrix4x4_get_M42), reinterpret_cast<setter>(Matrix4x4_set_M42), nullptr, nullptr },
         { "m43", reinterpret_cast<getter>(Matrix4x4_get_M43), reinterpret_cast<setter>(Matrix4x4_set_M43), nullptr, nullptr },
         { "m44", reinterpret_cast<getter>(Matrix4x4_get_M44), reinterpret_cast<setter>(Matrix4x4_set_M44), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _add_Matrix4x4(PyObject* left, PyObject* right) noexcept
     {
@@ -2714,8 +2705,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_negative, reinterpret_cast<void*>(_neg_Matrix4x4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix4x4) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix4x4) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Matrix4x4 = {
         "winrt._winrt_windows_foundation_numerics.Matrix4x4",
@@ -2726,8 +2716,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyGetSetDef getset_Matrix4x4_Static[] = {
         { "identity", _get_identity_Matrix4x4, nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Matrix4x4_Static[] = {
         { "make_billboard", make_billboard_Matrix4x4, METH_VARARGS, nullptr },
@@ -2751,8 +2740,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "make_from_yaw_pitch_roll", make_from_yaw_pitch_roll_Matrix4x4, METH_VARARGS, nullptr },
         { "make_shadow", make_shadow_Matrix4x4, METH_VARARGS, nullptr },
         { "make_reflection", make_reflection_Matrix4x4, METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Matrix4x4_Static[] = 
     {
@@ -2762,14 +2750,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Spec type_spec_Matrix4x4_Static =
-    {
+    static PyType_Spec type_spec_Matrix4x4_Static = {
         "winrt._winrt_windows_foundation_numerics.Matrix4x4_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Matrix4x4_Static
-    };
+        type_slots_Matrix4x4_Static};
 
     // ----- Plane struct --------------------
 
@@ -2989,8 +2975,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "dot_coordinate", reinterpret_cast<PyCFunction>(dot_coordinate_Plane), METH_O, nullptr },
         { "dot_normal", reinterpret_cast<PyCFunction>(dot_normal_Plane), METH_O, nullptr },
         { "_assign_array_", _assign_array_Plane, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Plane_get_Normal(py::wrapper::Windows::Foundation::Numerics::Plane* self, void* /*unused*/) noexcept
     {
@@ -3061,8 +3046,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     static PyGetSetDef _getset_Plane[] = {
         { "normal", reinterpret_cast<getter>(Plane_get_Normal), reinterpret_cast<setter>(Plane_set_Normal), nullptr, nullptr },
         { "d", reinterpret_cast<getter>(Plane_get_D), reinterpret_cast<setter>(Plane_set_D), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_Plane(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* other, int op) noexcept
     {
@@ -3124,8 +3108,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Plane) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Plane) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Plane) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Plane = {
         "winrt._winrt_windows_foundation_numerics.Plane",
@@ -3135,13 +3118,11 @@ namespace py::cpp::Windows::Foundation::Numerics
         _type_slots_Plane};
 
     static PyGetSetDef getset_Plane_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Plane_Static[] = {
         { "make_from_vertices", make_from_vertices_Plane, METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Plane_Static[] = 
     {
@@ -3151,14 +3132,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Spec type_spec_Plane_Static =
-    {
+    static PyType_Spec type_spec_Plane_Static = {
         "winrt._winrt_windows_foundation_numerics.Plane_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Plane_Static
-    };
+        type_slots_Plane_Static};
 
     // ----- Quaternion struct --------------------
 
@@ -3466,8 +3445,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Quaternion), METH_VARARGS, nullptr },
         { "concatenate", reinterpret_cast<PyCFunction>(concatenate_Quaternion), METH_O, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Quaternion_get_X(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, void* /*unused*/) noexcept
     {
@@ -3606,8 +3584,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "y", reinterpret_cast<getter>(Quaternion_get_Y), reinterpret_cast<setter>(Quaternion_set_Y), nullptr, nullptr },
         { "z", reinterpret_cast<getter>(Quaternion_get_Z), reinterpret_cast<setter>(Quaternion_set_Z), nullptr, nullptr },
         { "w", reinterpret_cast<getter>(Quaternion_get_W), reinterpret_cast<setter>(Quaternion_set_W), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _add_Quaternion(PyObject* left, PyObject* right) noexcept
     {
@@ -3845,8 +3822,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_absolute, reinterpret_cast<void*>(_abs_Quaternion) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Quaternion) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Quaternion) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Quaternion = {
         "winrt._winrt_windows_foundation_numerics.Quaternion",
@@ -3857,15 +3833,13 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyGetSetDef getset_Quaternion_Static[] = {
         { "identity", _get_identity_Quaternion, nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Quaternion_Static[] = {
         { "make_from_axis_angle", make_from_axis_angle_Quaternion, METH_VARARGS, nullptr },
         { "make_from_yaw_pitch_roll", make_from_yaw_pitch_roll_Quaternion, METH_VARARGS, nullptr },
         { "make_from_rotation_matrix", make_from_rotation_matrix_Quaternion, METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Quaternion_Static[] = 
     {
@@ -3875,14 +3849,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Spec type_spec_Quaternion_Static =
-    {
+    static PyType_Spec type_spec_Quaternion_Static = {
         "winrt._winrt_windows_foundation_numerics.Quaternion_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Quaternion_Static
-    };
+        type_slots_Quaternion_Static};
 
     // ----- Rational struct --------------------
 
@@ -3953,8 +3925,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyMethodDef _methods_Rational[] = {
         { "_assign_array_", _assign_array_Rational, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Rational_get_Numerator(py::wrapper::Windows::Foundation::Numerics::Rational* self, void* /*unused*/) noexcept
     {
@@ -4025,8 +3996,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     static PyGetSetDef _getset_Rational[] = {
         { "numerator", reinterpret_cast<getter>(Rational_get_Numerator), reinterpret_cast<setter>(Rational_set_Numerator), nullptr, nullptr },
         { "denominator", reinterpret_cast<getter>(Rational_get_Denominator), reinterpret_cast<setter>(Rational_set_Denominator), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_Rational(py::wrapper::Windows::Foundation::Numerics::Rational* self, PyObject* other, int op) noexcept
     {
@@ -4088,8 +4058,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rational) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Rational) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Rational) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Rational = {
         "winrt._winrt_windows_foundation_numerics.Rational",
@@ -4478,8 +4447,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector2), METH_O, nullptr },
         { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector2), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Vector2_get_X(py::wrapper::Windows::Foundation::Numerics::Vector2* self, void* /*unused*/) noexcept
     {
@@ -4550,8 +4518,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     static PyGetSetDef _getset_Vector2[] = {
         { "x", reinterpret_cast<getter>(Vector2_get_X), reinterpret_cast<setter>(Vector2_set_X), nullptr, nullptr },
         { "y", reinterpret_cast<getter>(Vector2_get_Y), reinterpret_cast<setter>(Vector2_set_Y), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _add_Vector2(PyObject* left, PyObject* right) noexcept
     {
@@ -4810,8 +4777,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_absolute, reinterpret_cast<void*>(_abs_Vector2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector2) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Vector2 = {
         "winrt._winrt_windows_foundation_numerics.Vector2",
@@ -4825,12 +4791,10 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "one", _get_one_Vector2, nullptr, nullptr, nullptr },
         { "unit_x", _get_unit_x_Vector2, nullptr, nullptr, nullptr },
         { "unit_y", _get_unit_y_Vector2, nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Vector2_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Vector2_Static[] = 
     {
@@ -4840,14 +4804,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Spec type_spec_Vector2_Static =
-    {
+    static PyType_Spec type_spec_Vector2_Static = {
         "winrt._winrt_windows_foundation_numerics.Vector2_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Vector2_Static
-    };
+        type_slots_Vector2_Static};
 
     // ----- Vector3 struct --------------------
 
@@ -5229,8 +5191,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector3), METH_O, nullptr },
         { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector3), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Vector3_get_X(py::wrapper::Windows::Foundation::Numerics::Vector3* self, void* /*unused*/) noexcept
     {
@@ -5335,8 +5296,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "x", reinterpret_cast<getter>(Vector3_get_X), reinterpret_cast<setter>(Vector3_set_X), nullptr, nullptr },
         { "y", reinterpret_cast<getter>(Vector3_get_Y), reinterpret_cast<setter>(Vector3_set_Y), nullptr, nullptr },
         { "z", reinterpret_cast<getter>(Vector3_get_Z), reinterpret_cast<setter>(Vector3_set_Z), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _add_Vector3(PyObject* left, PyObject* right) noexcept
     {
@@ -5601,8 +5561,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_absolute, reinterpret_cast<void*>(_abs_Vector3) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector3) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector3) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Vector3 = {
         "winrt._winrt_windows_foundation_numerics.Vector3",
@@ -5617,12 +5576,10 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "unit_x", _get_unit_x_Vector3, nullptr, nullptr, nullptr },
         { "unit_y", _get_unit_y_Vector3, nullptr, nullptr, nullptr },
         { "unit_z", _get_unit_z_Vector3, nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Vector3_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Vector3_Static[] = 
     {
@@ -5632,14 +5589,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Spec type_spec_Vector3_Static =
-    {
+    static PyType_Spec type_spec_Vector3_Static = {
         "winrt._winrt_windows_foundation_numerics.Vector3_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Vector3_Static
-    };
+        type_slots_Vector3_Static};
 
     // ----- Vector4 struct --------------------
 
@@ -5937,8 +5892,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector4), METH_VARARGS, nullptr },
         { "transform", reinterpret_cast<PyCFunction>(transform_Vector4), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Vector4_get_X(py::wrapper::Windows::Foundation::Numerics::Vector4* self, void* /*unused*/) noexcept
     {
@@ -6077,8 +6031,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "y", reinterpret_cast<getter>(Vector4_get_Y), reinterpret_cast<setter>(Vector4_set_Y), nullptr, nullptr },
         { "z", reinterpret_cast<getter>(Vector4_get_Z), reinterpret_cast<setter>(Vector4_set_Z), nullptr, nullptr },
         { "w", reinterpret_cast<getter>(Vector4_get_W), reinterpret_cast<setter>(Vector4_set_W), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _add_Vector4(PyObject* left, PyObject* right) noexcept
     {
@@ -6349,8 +6302,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_absolute, reinterpret_cast<void*>(_abs_Vector4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector4) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector4) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Vector4 = {
         "winrt._winrt_windows_foundation_numerics.Vector4",
@@ -6366,12 +6318,10 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "unit_y", _get_unit_y_Vector4, nullptr, nullptr, nullptr },
         { "unit_z", _get_unit_z_Vector4, nullptr, nullptr, nullptr },
         { "unit_w", _get_unit_w_Vector4, nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Vector4_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Vector4_Static[] = 
     {
@@ -6381,14 +6331,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Spec type_spec_Vector4_Static =
-    {
+    static PyType_Spec type_spec_Vector4_Static = {
         "winrt._winrt_windows_foundation_numerics.Vector4_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Vector4_Static
-    };
+        type_slots_Vector4_Static};
 
     // ----- Windows.Foundation.Numerics Initialization --------------------
 

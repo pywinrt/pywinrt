@@ -315,8 +315,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static PyMethodDef _methods_WiFiDirectAdvertisement[] = {
         { "_assign_array_", _assign_array_WiFiDirectAdvertisement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectAdvertisement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectAdvertisement[] = {
         { "listen_state_discoverability", reinterpret_cast<getter>(WiFiDirectAdvertisement_get_ListenStateDiscoverability), reinterpret_cast<setter>(WiFiDirectAdvertisement_put_ListenStateDiscoverability), nullptr, nullptr },
@@ -324,16 +323,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { "information_elements", reinterpret_cast<getter>(WiFiDirectAdvertisement_get_InformationElements), reinterpret_cast<setter>(WiFiDirectAdvertisement_put_InformationElements), nullptr, nullptr },
         { "legacy_settings", reinterpret_cast<getter>(WiFiDirectAdvertisement_get_LegacySettings), nullptr, nullptr, nullptr },
         { "supported_configuration_methods", reinterpret_cast<getter>(WiFiDirectAdvertisement_get_SupportedConfigurationMethods), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectAdvertisement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectAdvertisement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectAdvertisement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectAdvertisement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectAdvertisement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectAdvertisement = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectAdvertisement",
@@ -619,22 +616,19 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { "remove_status_changed", reinterpret_cast<PyCFunction>(WiFiDirectAdvertisementPublisher_remove_StatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_WiFiDirectAdvertisementPublisher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectAdvertisementPublisher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectAdvertisementPublisher[] = {
         { "advertisement", reinterpret_cast<getter>(WiFiDirectAdvertisementPublisher_get_Advertisement), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(WiFiDirectAdvertisementPublisher_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectAdvertisementPublisher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectAdvertisementPublisher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectAdvertisementPublisher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectAdvertisementPublisher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectAdvertisementPublisher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectAdvertisementPublisher = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectAdvertisementPublisher",
@@ -747,22 +741,19 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static PyMethodDef _methods_WiFiDirectAdvertisementPublisherStatusChangedEventArgs[] = {
         { "_assign_array_", _assign_array_WiFiDirectAdvertisementPublisherStatusChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectAdvertisementPublisherStatusChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectAdvertisementPublisherStatusChangedEventArgs[] = {
         { "error", reinterpret_cast<getter>(WiFiDirectAdvertisementPublisherStatusChangedEventArgs_get_Error), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(WiFiDirectAdvertisementPublisherStatusChangedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectAdvertisementPublisherStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectAdvertisementPublisherStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectAdvertisementPublisherStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectAdvertisementPublisherStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectAdvertisementPublisherStatusChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectAdvertisementPublisherStatusChangedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs",
@@ -904,20 +895,17 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { "remove_connection_requested", reinterpret_cast<PyCFunction>(WiFiDirectConnectionListener_remove_ConnectionRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_WiFiDirectConnectionListener, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectConnectionListener), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectConnectionListener[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectConnectionListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectConnectionListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectConnectionListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectConnectionListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectConnectionListener) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectConnectionListener = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectConnectionListener",
@@ -1202,23 +1190,20 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static PyMethodDef _methods_WiFiDirectConnectionParameters[] = {
         { "_assign_array_", _assign_array_WiFiDirectConnectionParameters, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectConnectionParameters), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectConnectionParameters[] = {
         { "group_owner_intent", reinterpret_cast<getter>(WiFiDirectConnectionParameters_get_GroupOwnerIntent), reinterpret_cast<setter>(WiFiDirectConnectionParameters_put_GroupOwnerIntent), nullptr, nullptr },
         { "preferred_pairing_procedure", reinterpret_cast<getter>(WiFiDirectConnectionParameters_get_PreferredPairingProcedure), reinterpret_cast<setter>(WiFiDirectConnectionParameters_put_PreferredPairingProcedure), nullptr, nullptr },
         { "preference_ordered_configuration_methods", reinterpret_cast<getter>(WiFiDirectConnectionParameters_get_PreferenceOrderedConfigurationMethods), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectConnectionParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectConnectionParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectConnectionParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectConnectionParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectConnectionParameters) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectConnectionParameters = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectConnectionParameters",
@@ -1228,13 +1213,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         _type_slots_WiFiDirectConnectionParameters};
 
     static PyGetSetDef getset_WiFiDirectConnectionParameters_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WiFiDirectConnectionParameters_Static[] = {
         { "get_device_pairing_kinds", reinterpret_cast<PyCFunction>(WiFiDirectConnectionParameters_GetDevicePairingKinds), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WiFiDirectConnectionParameters_Static[] = 
     {
@@ -1244,14 +1227,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { }
     };
 
-    static PyType_Spec type_spec_WiFiDirectConnectionParameters_Static =
-    {
+    static PyType_Spec type_spec_WiFiDirectConnectionParameters_Static = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectConnectionParameters_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WiFiDirectConnectionParameters_Static
-    };
+        type_slots_WiFiDirectConnectionParameters_Static};
 
     // ----- WiFiDirectConnectionRequest class --------------------
 
@@ -1394,21 +1375,18 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectConnectionRequest), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WiFiDirectConnectionRequest), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_WiFiDirectConnectionRequest), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectConnectionRequest[] = {
         { "device_information", reinterpret_cast<getter>(WiFiDirectConnectionRequest_get_DeviceInformation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectConnectionRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectConnectionRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectConnectionRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectConnectionRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectConnectionRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectConnectionRequest = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectConnectionRequest",
@@ -1502,20 +1480,17 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { "get_connection_request", reinterpret_cast<PyCFunction>(WiFiDirectConnectionRequestedEventArgs_GetConnectionRequest), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WiFiDirectConnectionRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectConnectionRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectConnectionRequestedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectConnectionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectConnectionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectConnectionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectConnectionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectConnectionRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectConnectionRequestedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectConnectionRequestedEventArgs",
@@ -1948,22 +1923,19 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WiFiDirectDevice), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_WiFiDirectDevice), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectDevice[] = {
         { "connection_status", reinterpret_cast<getter>(WiFiDirectDevice_get_ConnectionStatus), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(WiFiDirectDevice_get_DeviceId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectDevice) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectDevice = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectDevice",
@@ -1973,14 +1945,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         _type_slots_WiFiDirectDevice};
 
     static PyGetSetDef getset_WiFiDirectDevice_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WiFiDirectDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(WiFiDirectDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(WiFiDirectDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WiFiDirectDevice_Static[] = 
     {
@@ -1990,14 +1960,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { }
     };
 
-    static PyType_Spec type_spec_WiFiDirectDevice_Static =
-    {
+    static PyType_Spec type_spec_WiFiDirectDevice_Static = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectDevice_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WiFiDirectDevice_Static
-    };
+        type_slots_WiFiDirectDevice_Static};
 
     // ----- WiFiDirectInformationElement class --------------------
 
@@ -2356,23 +2324,20 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static PyMethodDef _methods_WiFiDirectInformationElement[] = {
         { "_assign_array_", _assign_array_WiFiDirectInformationElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectInformationElement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectInformationElement[] = {
         { "value", reinterpret_cast<getter>(WiFiDirectInformationElement_get_Value), reinterpret_cast<setter>(WiFiDirectInformationElement_put_Value), nullptr, nullptr },
         { "oui_type", reinterpret_cast<getter>(WiFiDirectInformationElement_get_OuiType), reinterpret_cast<setter>(WiFiDirectInformationElement_put_OuiType), nullptr, nullptr },
         { "oui", reinterpret_cast<getter>(WiFiDirectInformationElement_get_Oui), reinterpret_cast<setter>(WiFiDirectInformationElement_put_Oui), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectInformationElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectInformationElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectInformationElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectInformationElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectInformationElement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectInformationElement = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectInformationElement",
@@ -2382,14 +2347,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         _type_slots_WiFiDirectInformationElement};
 
     static PyGetSetDef getset_WiFiDirectInformationElement_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WiFiDirectInformationElement_Static[] = {
         { "create_from_buffer", reinterpret_cast<PyCFunction>(WiFiDirectInformationElement_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_device_information", reinterpret_cast<PyCFunction>(WiFiDirectInformationElement_CreateFromDeviceInformation), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WiFiDirectInformationElement_Static[] = 
     {
@@ -2399,14 +2362,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { }
     };
 
-    static PyType_Spec type_spec_WiFiDirectInformationElement_Static =
-    {
+    static PyType_Spec type_spec_WiFiDirectInformationElement_Static = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectInformationElement_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WiFiDirectInformationElement_Static
-    };
+        type_slots_WiFiDirectInformationElement_Static};
 
     // ----- WiFiDirectLegacySettings class --------------------
 
@@ -2659,23 +2620,20 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static PyMethodDef _methods_WiFiDirectLegacySettings[] = {
         { "_assign_array_", _assign_array_WiFiDirectLegacySettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectLegacySettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WiFiDirectLegacySettings[] = {
         { "ssid", reinterpret_cast<getter>(WiFiDirectLegacySettings_get_Ssid), reinterpret_cast<setter>(WiFiDirectLegacySettings_put_Ssid), nullptr, nullptr },
         { "passphrase", reinterpret_cast<getter>(WiFiDirectLegacySettings_get_Passphrase), reinterpret_cast<setter>(WiFiDirectLegacySettings_put_Passphrase), nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(WiFiDirectLegacySettings_get_IsEnabled), reinterpret_cast<setter>(WiFiDirectLegacySettings_put_IsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WiFiDirectLegacySettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectLegacySettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectLegacySettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectLegacySettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectLegacySettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WiFiDirectLegacySettings = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectLegacySettings",

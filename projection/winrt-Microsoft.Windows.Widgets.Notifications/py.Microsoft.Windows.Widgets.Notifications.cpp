@@ -904,8 +904,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
     static PyMethodDef _methods_FeedAnnouncement[] = {
         { "_assign_array_", _assign_array_FeedAnnouncement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedAnnouncement), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedAnnouncement[] = {
         { "show_badge_if_user_not_engaged", reinterpret_cast<getter>(FeedAnnouncement_get_ShowBadgeIfUserNotEngaged), reinterpret_cast<setter>(FeedAnnouncement_put_ShowBadgeIfUserNotEngaged), nullptr, nullptr },
@@ -920,16 +919,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
         { "duration", reinterpret_cast<getter>(FeedAnnouncement_get_Duration), reinterpret_cast<setter>(FeedAnnouncement_put_Duration), nullptr, nullptr },
         { "dark_mode_icon_uri", reinterpret_cast<getter>(FeedAnnouncement_get_DarkModeIconUri), reinterpret_cast<setter>(FeedAnnouncement_put_DarkModeIconUri), nullptr, nullptr },
         { "custom_accessibility_text", reinterpret_cast<getter>(FeedAnnouncement_get_CustomAccessibilityText), reinterpret_cast<setter>(FeedAnnouncement_put_CustomAccessibilityText), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedAnnouncement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedAnnouncement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedAnnouncement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedAnnouncement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedAnnouncement) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedAnnouncement = {
         "winrt._winrt_microsoft_windows_widgets_notifications.FeedAnnouncement",
@@ -1102,24 +1099,21 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
     static PyMethodDef _methods_FeedAnnouncementInvokedArgs[] = {
         { "_assign_array_", _assign_array_FeedAnnouncementInvokedArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedAnnouncementInvokedArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FeedAnnouncementInvokedArgs[] = {
         { "action_kind", reinterpret_cast<getter>(FeedAnnouncementInvokedArgs_get_ActionKind), nullptr, nullptr, nullptr },
         { "announcement_id", reinterpret_cast<getter>(FeedAnnouncementInvokedArgs_get_AnnouncementId), nullptr, nullptr, nullptr },
         { "feed_definition_id", reinterpret_cast<getter>(FeedAnnouncementInvokedArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
         { "feed_provider_definition_id", reinterpret_cast<getter>(FeedAnnouncementInvokedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FeedAnnouncementInvokedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedAnnouncementInvokedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedAnnouncementInvokedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedAnnouncementInvokedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedAnnouncementInvokedArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FeedAnnouncementInvokedArgs = {
         "winrt._winrt_microsoft_windows_widgets_notifications.FeedAnnouncementInvokedArgs",

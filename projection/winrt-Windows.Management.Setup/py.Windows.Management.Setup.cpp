@@ -514,8 +514,7 @@ namespace py::cpp::Windows::Management::Setup
     static PyMethodDef _methods_AgentProvisioningProgressReport[] = {
         { "_assign_array_", _assign_array_AgentProvisioningProgressReport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AgentProvisioningProgressReport), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AgentProvisioningProgressReport[] = {
         { "state", reinterpret_cast<getter>(AgentProvisioningProgressReport_get_State), reinterpret_cast<setter>(AgentProvisioningProgressReport_put_State), nullptr, nullptr },
@@ -525,16 +524,14 @@ namespace py::cpp::Windows::Management::Setup
         { "display_progress", reinterpret_cast<getter>(AgentProvisioningProgressReport_get_DisplayProgress), reinterpret_cast<setter>(AgentProvisioningProgressReport_put_DisplayProgress), nullptr, nullptr },
         { "current_batch_index", reinterpret_cast<getter>(AgentProvisioningProgressReport_get_CurrentBatchIndex), reinterpret_cast<setter>(AgentProvisioningProgressReport_put_CurrentBatchIndex), nullptr, nullptr },
         { "batches", reinterpret_cast<getter>(AgentProvisioningProgressReport_get_Batches), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AgentProvisioningProgressReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AgentProvisioningProgressReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AgentProvisioningProgressReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AgentProvisioningProgressReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AgentProvisioningProgressReport) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AgentProvisioningProgressReport = {
         "winrt._winrt_windows_management_setup.AgentProvisioningProgressReport",
@@ -647,22 +644,19 @@ namespace py::cpp::Windows::Management::Setup
     static PyMethodDef _methods_DeploymentSessionConnectionChangedEventArgs[] = {
         { "_assign_array_", _assign_array_DeploymentSessionConnectionChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeploymentSessionConnectionChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeploymentSessionConnectionChangedEventArgs[] = {
         { "change", reinterpret_cast<getter>(DeploymentSessionConnectionChangedEventArgs_get_Change), nullptr, nullptr, nullptr },
         { "session_id", reinterpret_cast<getter>(DeploymentSessionConnectionChangedEventArgs_get_SessionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeploymentSessionConnectionChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentSessionConnectionChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentSessionConnectionChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentSessionConnectionChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentSessionConnectionChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentSessionConnectionChangedEventArgs = {
         "winrt._winrt_windows_management_setup.DeploymentSessionConnectionChangedEventArgs",
@@ -784,21 +778,18 @@ namespace py::cpp::Windows::Management::Setup
     static PyMethodDef _methods_DeploymentSessionHeartbeatRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_DeploymentSessionHeartbeatRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeploymentSessionHeartbeatRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeploymentSessionHeartbeatRequestedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(DeploymentSessionHeartbeatRequestedEventArgs_get_Handled), reinterpret_cast<setter>(DeploymentSessionHeartbeatRequestedEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeploymentSessionHeartbeatRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentSessionHeartbeatRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentSessionHeartbeatRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentSessionHeartbeatRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentSessionHeartbeatRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentSessionHeartbeatRequestedEventArgs = {
         "winrt._winrt_windows_management_setup.DeploymentSessionHeartbeatRequestedEventArgs",
@@ -911,22 +902,19 @@ namespace py::cpp::Windows::Management::Setup
     static PyMethodDef _methods_DeploymentSessionStateChangedEventArgs[] = {
         { "_assign_array_", _assign_array_DeploymentSessionStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeploymentSessionStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeploymentSessionStateChangedEventArgs[] = {
         { "change", reinterpret_cast<getter>(DeploymentSessionStateChangedEventArgs_get_Change), nullptr, nullptr, nullptr },
         { "session_id", reinterpret_cast<getter>(DeploymentSessionStateChangedEventArgs_get_SessionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeploymentSessionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentSessionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentSessionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentSessionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentSessionStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentSessionStateChangedEventArgs = {
         "winrt._winrt_windows_management_setup.DeploymentSessionStateChangedEventArgs",
@@ -1654,8 +1642,7 @@ namespace py::cpp::Windows::Management::Setup
     static PyMethodDef _methods_DeploymentWorkload[] = {
         { "_assign_array_", _assign_array_DeploymentWorkload, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeploymentWorkload), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeploymentWorkload[] = {
         { "state_details", reinterpret_cast<getter>(DeploymentWorkload_get_StateDetails), reinterpret_cast<setter>(DeploymentWorkload_put_StateDetails), nullptr, nullptr },
@@ -1668,16 +1655,14 @@ namespace py::cpp::Windows::Management::Setup
         { "end_time", reinterpret_cast<getter>(DeploymentWorkload_get_EndTime), reinterpret_cast<setter>(DeploymentWorkload_put_EndTime), nullptr, nullptr },
         { "display_friendly_name", reinterpret_cast<getter>(DeploymentWorkload_get_DisplayFriendlyName), reinterpret_cast<setter>(DeploymentWorkload_put_DisplayFriendlyName), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(DeploymentWorkload_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeploymentWorkload[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentWorkload) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentWorkload) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentWorkload) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentWorkload) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentWorkload = {
         "winrt._winrt_windows_management_setup.DeploymentWorkload",
@@ -1883,23 +1868,20 @@ namespace py::cpp::Windows::Management::Setup
     static PyMethodDef _methods_DeploymentWorkloadBatch[] = {
         { "_assign_array_", _assign_array_DeploymentWorkloadBatch, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeploymentWorkloadBatch), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DeploymentWorkloadBatch[] = {
         { "display_category_title", reinterpret_cast<getter>(DeploymentWorkloadBatch_get_DisplayCategoryTitle), reinterpret_cast<setter>(DeploymentWorkloadBatch_put_DisplayCategoryTitle), nullptr, nullptr },
         { "batch_workloads", reinterpret_cast<getter>(DeploymentWorkloadBatch_get_BatchWorkloads), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(DeploymentWorkloadBatch_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DeploymentWorkloadBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentWorkloadBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentWorkloadBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentWorkloadBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentWorkloadBatch) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DeploymentWorkloadBatch = {
         "winrt._winrt_windows_management_setup.DeploymentWorkloadBatch",
@@ -1982,21 +1964,18 @@ namespace py::cpp::Windows::Management::Setup
     static PyMethodDef _methods_DevicePreparationExecutionContext[] = {
         { "_assign_array_", _assign_array_DevicePreparationExecutionContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePreparationExecutionContext), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DevicePreparationExecutionContext[] = {
         { "context", reinterpret_cast<getter>(DevicePreparationExecutionContext_get_Context), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DevicePreparationExecutionContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePreparationExecutionContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePreparationExecutionContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePreparationExecutionContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePreparationExecutionContext) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DevicePreparationExecutionContext = {
         "winrt._winrt_windows_management_setup.DevicePreparationExecutionContext",
@@ -2401,23 +2380,20 @@ namespace py::cpp::Windows::Management::Setup
         { "remove_session_state_changed", reinterpret_cast<PyCFunction>(MachineProvisioningProgressReporter_remove_SessionStateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_MachineProvisioningProgressReporter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MachineProvisioningProgressReporter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MachineProvisioningProgressReporter[] = {
         { "session_connection", reinterpret_cast<getter>(MachineProvisioningProgressReporter_get_SessionConnection), nullptr, nullptr, nullptr },
         { "session_id", reinterpret_cast<getter>(MachineProvisioningProgressReporter_get_SessionId), nullptr, nullptr, nullptr },
         { "session_state", reinterpret_cast<getter>(MachineProvisioningProgressReporter_get_SessionState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MachineProvisioningProgressReporter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MachineProvisioningProgressReporter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MachineProvisioningProgressReporter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MachineProvisioningProgressReporter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MachineProvisioningProgressReporter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MachineProvisioningProgressReporter = {
         "winrt._winrt_windows_management_setup.MachineProvisioningProgressReporter",
@@ -2427,13 +2403,11 @@ namespace py::cpp::Windows::Management::Setup
         _type_slots_MachineProvisioningProgressReporter};
 
     static PyGetSetDef getset_MachineProvisioningProgressReporter_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_MachineProvisioningProgressReporter_Static[] = {
         { "get_for_launch_uri", reinterpret_cast<PyCFunction>(MachineProvisioningProgressReporter_GetForLaunchUri), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_MachineProvisioningProgressReporter_Static[] = 
     {
@@ -2443,14 +2417,12 @@ namespace py::cpp::Windows::Management::Setup
         { }
     };
 
-    static PyType_Spec type_spec_MachineProvisioningProgressReporter_Static =
-    {
+    static PyType_Spec type_spec_MachineProvisioningProgressReporter_Static = {
         "winrt._winrt_windows_management_setup.MachineProvisioningProgressReporter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MachineProvisioningProgressReporter_Static
-    };
+        type_slots_MachineProvisioningProgressReporter_Static};
 
     // ----- Windows.Management.Setup Initialization --------------------
 

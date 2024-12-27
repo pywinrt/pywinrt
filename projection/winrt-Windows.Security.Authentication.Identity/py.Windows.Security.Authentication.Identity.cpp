@@ -198,8 +198,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
     static PyMethodDef _methods_EnterpriseKeyCredentialRegistrationInfo[] = {
         { "_assign_array_", _assign_array_EnterpriseKeyCredentialRegistrationInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EnterpriseKeyCredentialRegistrationInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EnterpriseKeyCredentialRegistrationInfo[] = {
         { "key_id", reinterpret_cast<getter>(EnterpriseKeyCredentialRegistrationInfo_get_KeyId), nullptr, nullptr, nullptr },
@@ -207,16 +206,14 @@ namespace py::cpp::Windows::Security::Authentication::Identity
         { "subject", reinterpret_cast<getter>(EnterpriseKeyCredentialRegistrationInfo_get_Subject), nullptr, nullptr, nullptr },
         { "tenant_id", reinterpret_cast<getter>(EnterpriseKeyCredentialRegistrationInfo_get_TenantId), nullptr, nullptr, nullptr },
         { "tenant_name", reinterpret_cast<getter>(EnterpriseKeyCredentialRegistrationInfo_get_TenantName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EnterpriseKeyCredentialRegistrationInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnterpriseKeyCredentialRegistrationInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnterpriseKeyCredentialRegistrationInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnterpriseKeyCredentialRegistrationInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnterpriseKeyCredentialRegistrationInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationInfo = {
         "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationInfo",
@@ -340,20 +337,17 @@ namespace py::cpp::Windows::Security::Authentication::Identity
         { "get_registrations_async", reinterpret_cast<PyCFunction>(EnterpriseKeyCredentialRegistrationManager_GetRegistrationsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EnterpriseKeyCredentialRegistrationManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EnterpriseKeyCredentialRegistrationManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EnterpriseKeyCredentialRegistrationManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EnterpriseKeyCredentialRegistrationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnterpriseKeyCredentialRegistrationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnterpriseKeyCredentialRegistrationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnterpriseKeyCredentialRegistrationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnterpriseKeyCredentialRegistrationManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager = {
         "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager",
@@ -364,12 +358,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyGetSetDef getset_EnterpriseKeyCredentialRegistrationManager_Static[] = {
         { "current", reinterpret_cast<getter>(EnterpriseKeyCredentialRegistrationManager_get_Current), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EnterpriseKeyCredentialRegistrationManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EnterpriseKeyCredentialRegistrationManager_Static[] = 
     {
@@ -379,14 +371,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity
         { }
     };
 
-    static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager_Static =
-    {
+    static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager_Static = {
         "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EnterpriseKeyCredentialRegistrationManager_Static
-    };
+        type_slots_EnterpriseKeyCredentialRegistrationManager_Static};
 
     // ----- Windows.Security.Authentication.Identity Initialization --------------------
 

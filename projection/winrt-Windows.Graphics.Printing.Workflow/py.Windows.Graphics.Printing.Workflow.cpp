@@ -254,21 +254,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "remove_submitted", reinterpret_cast<PyCFunction>(PrintWorkflowBackgroundSession_remove_Submitted), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowBackgroundSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowBackgroundSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowBackgroundSession[] = {
         { "status", reinterpret_cast<getter>(PrintWorkflowBackgroundSession_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowBackgroundSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowBackgroundSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowBackgroundSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowBackgroundSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowBackgroundSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowBackgroundSession = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowBackgroundSession",
@@ -475,21 +472,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "set_requires_ui", reinterpret_cast<PyCFunction>(PrintWorkflowBackgroundSetupRequestedEventArgs_SetRequiresUI), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowBackgroundSetupRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowBackgroundSetupRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowBackgroundSetupRequestedEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowBackgroundSetupRequestedEventArgs_get_Configuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowBackgroundSetupRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowBackgroundSetupRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowBackgroundSetupRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowBackgroundSetupRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowBackgroundSetupRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowBackgroundSetupRequestedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowBackgroundSetupRequestedEventArgs",
@@ -676,23 +670,20 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "abort_print_flow", reinterpret_cast<PyCFunction>(PrintWorkflowConfiguration_AbortPrintFlow), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowConfiguration[] = {
         { "job_title", reinterpret_cast<getter>(PrintWorkflowConfiguration_get_JobTitle), nullptr, nullptr, nullptr },
         { "session_id", reinterpret_cast<getter>(PrintWorkflowConfiguration_get_SessionId), nullptr, nullptr, nullptr },
         { "source_app_display_name", reinterpret_cast<getter>(PrintWorkflowConfiguration_get_SourceAppDisplayName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowConfiguration = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowConfiguration",
@@ -951,21 +942,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "remove_xps_data_available", reinterpret_cast<PyCFunction>(PrintWorkflowForegroundSession_remove_XpsDataAvailable), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowForegroundSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowForegroundSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowForegroundSession[] = {
         { "status", reinterpret_cast<getter>(PrintWorkflowForegroundSession_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowForegroundSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowForegroundSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowForegroundSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowForegroundSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowForegroundSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowForegroundSession = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowForegroundSession",
@@ -1130,21 +1118,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_user_print_ticket_async", reinterpret_cast<PyCFunction>(PrintWorkflowForegroundSetupRequestedEventArgs_GetUserPrintTicketAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowForegroundSetupRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowForegroundSetupRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowForegroundSetupRequestedEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowForegroundSetupRequestedEventArgs_get_Configuration), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowForegroundSetupRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowForegroundSetupRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowForegroundSetupRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowForegroundSetupRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowForegroundSetupRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowForegroundSetupRequestedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowForegroundSetupRequestedEventArgs",
@@ -1347,8 +1332,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyMethodDef _methods_PrintWorkflowJobActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_PrintWorkflowJobActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowJobActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowJobActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(PrintWorkflowJobActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -1356,16 +1340,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "splash_screen", reinterpret_cast<getter>(PrintWorkflowJobActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(PrintWorkflowJobActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "session", reinterpret_cast<getter>(PrintWorkflowJobActivatedEventArgs_get_Session), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowJobActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowJobActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowJobActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowJobActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowJobActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowJobActivatedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobActivatedEventArgs",
@@ -1691,21 +1673,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "remove_job_issue_detected", reinterpret_cast<PyCFunction>(PrintWorkflowJobBackgroundSession_remove_JobIssueDetected), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowJobBackgroundSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowJobBackgroundSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowJobBackgroundSession[] = {
         { "status", reinterpret_cast<getter>(PrintWorkflowJobBackgroundSession_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowJobBackgroundSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowJobBackgroundSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowJobBackgroundSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowJobBackgroundSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowJobBackgroundSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowJobBackgroundSession = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobBackgroundSession",
@@ -2018,8 +1997,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_deferral", reinterpret_cast<PyCFunction>(PrintWorkflowJobIssueDetectedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowJobIssueDetectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowJobIssueDetectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowJobIssueDetectedEventArgs[] = {
         { "skip_system_error_toast", reinterpret_cast<getter>(PrintWorkflowJobIssueDetectedEventArgs_get_SkipSystemErrorToast), reinterpret_cast<setter>(PrintWorkflowJobIssueDetectedEventArgs_put_SkipSystemErrorToast), nullptr, nullptr },
@@ -2028,16 +2006,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "job_issue_kind", reinterpret_cast<getter>(PrintWorkflowJobIssueDetectedEventArgs_get_JobIssueKind), nullptr, nullptr, nullptr },
         { "printer_job", reinterpret_cast<getter>(PrintWorkflowJobIssueDetectedEventArgs_get_PrinterJob), nullptr, nullptr, nullptr },
         { "ui_launcher", reinterpret_cast<getter>(PrintWorkflowJobIssueDetectedEventArgs_get_UILauncher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowJobIssueDetectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowJobIssueDetectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowJobIssueDetectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowJobIssueDetectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowJobIssueDetectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowJobIssueDetectedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobIssueDetectedEventArgs",
@@ -2191,22 +2167,19 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_deferral", reinterpret_cast<PyCFunction>(PrintWorkflowJobNotificationEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowJobNotificationEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowJobNotificationEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowJobNotificationEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowJobNotificationEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "printer_job", reinterpret_cast<getter>(PrintWorkflowJobNotificationEventArgs_get_PrinterJob), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowJobNotificationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowJobNotificationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowJobNotificationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowJobNotificationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowJobNotificationEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowJobNotificationEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobNotificationEventArgs",
@@ -2543,24 +2516,21 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "set_skip_system_rendering", reinterpret_cast<PyCFunction>(PrintWorkflowJobStartingEventArgs_SetSkipSystemRendering), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowJobStartingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowJobStartingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowJobStartingEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowJobStartingEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "printer", reinterpret_cast<getter>(PrintWorkflowJobStartingEventArgs_get_Printer), nullptr, nullptr, nullptr },
         { "skip_system_fax_ui", reinterpret_cast<getter>(PrintWorkflowJobStartingEventArgs_get_SkipSystemFaxUI), reinterpret_cast<setter>(PrintWorkflowJobStartingEventArgs_put_SkipSystemFaxUI), nullptr, nullptr },
         { "is_ipp_compression_enabled", reinterpret_cast<getter>(PrintWorkflowJobStartingEventArgs_get_IsIppCompressionEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowJobStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowJobStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowJobStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowJobStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowJobStartingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowJobStartingEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobStartingEventArgs",
@@ -2643,21 +2613,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyMethodDef _methods_PrintWorkflowJobTriggerDetails[] = {
         { "_assign_array_", _assign_array_PrintWorkflowJobTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowJobTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowJobTriggerDetails[] = {
         { "print_workflow_job_session", reinterpret_cast<getter>(PrintWorkflowJobTriggerDetails_get_PrintWorkflowJobSession), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowJobTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowJobTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowJobTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowJobTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowJobTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowJobTriggerDetails = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobTriggerDetails",
@@ -2983,21 +2950,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "remove_virtual_printer_ui_data_available", reinterpret_cast<PyCFunction>(PrintWorkflowJobUISession_remove_VirtualPrinterUIDataAvailable), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowJobUISession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowJobUISession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowJobUISession[] = {
         { "status", reinterpret_cast<getter>(PrintWorkflowJobUISession_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowJobUISession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowJobUISession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowJobUISession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowJobUISession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowJobUISession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowJobUISession = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobUISession",
@@ -3074,20 +3038,17 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyMethodDef _methods_PrintWorkflowObjectModelSourceFileContent[] = {
         { "_assign_array_", _assign_array_PrintWorkflowObjectModelSourceFileContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowObjectModelSourceFileContent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowObjectModelSourceFileContent[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowObjectModelSourceFileContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowObjectModelSourceFileContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowObjectModelSourceFileContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowObjectModelSourceFileContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowObjectModelSourceFileContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowObjectModelSourceFileContent = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowObjectModelSourceFileContent",
@@ -3140,20 +3101,17 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyMethodDef _methods_PrintWorkflowObjectModelTargetPackage[] = {
         { "_assign_array_", _assign_array_PrintWorkflowObjectModelTargetPackage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowObjectModelTargetPackage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowObjectModelTargetPackage[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowObjectModelTargetPackage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowObjectModelTargetPackage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowObjectModelTargetPackage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowObjectModelTargetPackage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowObjectModelTargetPackage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowObjectModelTargetPackage = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowObjectModelTargetPackage",
@@ -3285,20 +3243,17 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "convert_pdl_async", reinterpret_cast<PyCFunction>(PrintWorkflowPdlConverter_ConvertPdlAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowPdlConverter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowPdlConverter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowPdlConverter[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowPdlConverter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowPdlConverter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowPdlConverter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowPdlConverter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowPdlConverter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowPdlConverter = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlConverter",
@@ -3482,23 +3437,20 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_deferral", reinterpret_cast<PyCFunction>(PrintWorkflowPdlDataAvailableEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowPdlDataAvailableEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowPdlDataAvailableEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowPdlDataAvailableEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowPdlDataAvailableEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "printer_job", reinterpret_cast<getter>(PrintWorkflowPdlDataAvailableEventArgs_get_PrinterJob), nullptr, nullptr, nullptr },
         { "source_content", reinterpret_cast<getter>(PrintWorkflowPdlDataAvailableEventArgs_get_SourceContent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowPdlDataAvailableEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowPdlDataAvailableEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowPdlDataAvailableEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowPdlDataAvailableEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowPdlDataAvailableEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowPdlDataAvailableEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlDataAvailableEventArgs",
@@ -3956,24 +3908,21 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_pdl_converter", reinterpret_cast<PyCFunction>(PrintWorkflowPdlModificationRequestedEventArgs_GetPdlConverter), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowPdlModificationRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowPdlModificationRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowPdlModificationRequestedEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowPdlModificationRequestedEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "printer_job", reinterpret_cast<getter>(PrintWorkflowPdlModificationRequestedEventArgs_get_PrinterJob), nullptr, nullptr, nullptr },
         { "source_content", reinterpret_cast<getter>(PrintWorkflowPdlModificationRequestedEventArgs_get_SourceContent), nullptr, nullptr, nullptr },
         { "ui_launcher", reinterpret_cast<getter>(PrintWorkflowPdlModificationRequestedEventArgs_get_UILauncher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowPdlModificationRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowPdlModificationRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowPdlModificationRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowPdlModificationRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowPdlModificationRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowPdlModificationRequestedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlModificationRequestedEventArgs",
@@ -4138,21 +4087,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_input_stream", reinterpret_cast<PyCFunction>(PrintWorkflowPdlSourceContent_GetInputStream), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowPdlSourceContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowPdlSourceContent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowPdlSourceContent[] = {
         { "content_type", reinterpret_cast<getter>(PrintWorkflowPdlSourceContent_get_ContentType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowPdlSourceContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowPdlSourceContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowPdlSourceContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowPdlSourceContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowPdlSourceContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowPdlSourceContent = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlSourceContent",
@@ -4290,20 +4236,17 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_output_stream", reinterpret_cast<PyCFunction>(PrintWorkflowPdlTargetStream_GetOutputStream), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowPdlTargetStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowPdlTargetStream), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowPdlTargetStream[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowPdlTargetStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowPdlTargetStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowPdlTargetStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowPdlTargetStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowPdlTargetStream) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowPdlTargetStream = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlTargetStream",
@@ -4714,22 +4657,19 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "set_job_attributes_from_buffer", reinterpret_cast<PyCFunction>(PrintWorkflowPrinterJob_SetJobAttributesFromBuffer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowPrinterJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowPrinterJob), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowPrinterJob[] = {
         { "job_id", reinterpret_cast<getter>(PrintWorkflowPrinterJob_get_JobId), nullptr, nullptr, nullptr },
         { "printer", reinterpret_cast<getter>(PrintWorkflowPrinterJob_get_Printer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowPrinterJob[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowPrinterJob) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowPrinterJob) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowPrinterJob) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowPrinterJob) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowPrinterJob = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPrinterJob",
@@ -4905,20 +4845,17 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_source_spool_data_as_xps_object_model", reinterpret_cast<PyCFunction>(PrintWorkflowSourceContent_GetSourceSpoolDataAsXpsObjectModel), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowSourceContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowSourceContent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowSourceContent[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowSourceContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowSourceContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowSourceContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowSourceContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowSourceContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowSourceContent = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowSourceContent",
@@ -5012,20 +4949,17 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_input_stream", reinterpret_cast<PyCFunction>(PrintWorkflowSpoolStreamContent_GetInputStream), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowSpoolStreamContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowSpoolStreamContent), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowSpoolStreamContent[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowSpoolStreamContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowSpoolStreamContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowSpoolStreamContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowSpoolStreamContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowSpoolStreamContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowSpoolStreamContent = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowSpoolStreamContent",
@@ -5119,20 +5053,17 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_output_stream", reinterpret_cast<PyCFunction>(PrintWorkflowStreamTarget_GetOutputStream), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowStreamTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowStreamTarget), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowStreamTarget[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowStreamTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowStreamTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowStreamTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowStreamTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowStreamTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowStreamTarget = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowStreamTarget",
@@ -5299,21 +5230,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_target", reinterpret_cast<PyCFunction>(PrintWorkflowSubmittedEventArgs_GetTarget), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowSubmittedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowSubmittedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowSubmittedEventArgs[] = {
         { "operation", reinterpret_cast<getter>(PrintWorkflowSubmittedEventArgs_get_Operation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowSubmittedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowSubmittedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowSubmittedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowSubmittedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowSubmittedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowSubmittedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowSubmittedEventArgs",
@@ -5470,22 +5398,19 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "complete", reinterpret_cast<PyCFunction>(PrintWorkflowSubmittedOperation_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowSubmittedOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowSubmittedOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowSubmittedOperation[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowSubmittedOperation_get_Configuration), nullptr, nullptr, nullptr },
         { "xps_content", reinterpret_cast<getter>(PrintWorkflowSubmittedOperation_get_XpsContent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowSubmittedOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowSubmittedOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowSubmittedOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowSubmittedOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowSubmittedOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowSubmittedOperation = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowSubmittedOperation",
@@ -5598,22 +5523,19 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyMethodDef _methods_PrintWorkflowTarget[] = {
         { "_assign_array_", _assign_array_PrintWorkflowTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowTarget), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowTarget[] = {
         { "target_as_stream", reinterpret_cast<getter>(PrintWorkflowTarget_get_TargetAsStream), nullptr, nullptr, nullptr },
         { "target_as_xps_object_model_package", reinterpret_cast<getter>(PrintWorkflowTarget_get_TargetAsXpsObjectModelPackage), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowTarget = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowTarget",
@@ -5696,21 +5618,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyMethodDef _methods_PrintWorkflowTriggerDetails[] = {
         { "_assign_array_", _assign_array_PrintWorkflowTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowTriggerDetails[] = {
         { "print_workflow_session", reinterpret_cast<getter>(PrintWorkflowTriggerDetails_get_PrintWorkflowSession), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowTriggerDetails = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowTriggerDetails",
@@ -5913,8 +5832,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyMethodDef _methods_PrintWorkflowUIActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_PrintWorkflowUIActivatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowUIActivatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowUIActivatedEventArgs[] = {
         { "kind", reinterpret_cast<getter>(PrintWorkflowUIActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
@@ -5922,16 +5840,14 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "splash_screen", reinterpret_cast<getter>(PrintWorkflowUIActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(PrintWorkflowUIActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "print_workflow_session", reinterpret_cast<getter>(PrintWorkflowUIActivatedEventArgs_get_PrintWorkflowSession), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowUIActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowUIActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowUIActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowUIActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowUIActivatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowUIActivatedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowUIActivatedEventArgs",
@@ -6066,20 +5982,17 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "launch_and_complete_ui_async", reinterpret_cast<PyCFunction>(PrintWorkflowUILauncher_LaunchAndCompleteUIAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowUILauncher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowUILauncher), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowUILauncher[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowUILauncher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowUILauncher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowUILauncher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowUILauncher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowUILauncher) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowUILauncher = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowUILauncher",
@@ -6391,23 +6304,20 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_target_file_async", reinterpret_cast<PyCFunction>(PrintWorkflowVirtualPrinterDataAvailableEventArgs_GetTargetFileAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowVirtualPrinterDataAvailableEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowVirtualPrinterDataAvailableEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowVirtualPrinterDataAvailableEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterDataAvailableEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "source_content", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterDataAvailableEventArgs_get_SourceContent), nullptr, nullptr, nullptr },
         { "ui_launcher", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterDataAvailableEventArgs_get_UILauncher), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowVirtualPrinterDataAvailableEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowVirtualPrinterDataAvailableEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowVirtualPrinterDataAvailableEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowVirtualPrinterDataAvailableEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowVirtualPrinterDataAvailableEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowVirtualPrinterDataAvailableEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs",
@@ -6629,22 +6539,19 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "remove_virtual_printer_data_available", reinterpret_cast<PyCFunction>(PrintWorkflowVirtualPrinterSession_remove_VirtualPrinterDataAvailable), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowVirtualPrinterSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowVirtualPrinterSession), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowVirtualPrinterSession[] = {
         { "printer", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterSession_get_Printer), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterSession_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowVirtualPrinterSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowVirtualPrinterSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowVirtualPrinterSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowVirtualPrinterSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowVirtualPrinterSession) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowVirtualPrinterSession = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowVirtualPrinterSession",
@@ -6727,21 +6634,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyMethodDef _methods_PrintWorkflowVirtualPrinterTriggerDetails[] = {
         { "_assign_array_", _assign_array_PrintWorkflowVirtualPrinterTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowVirtualPrinterTriggerDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowVirtualPrinterTriggerDetails[] = {
         { "virtual_printer_session", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterTriggerDetails_get_VirtualPrinterSession), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowVirtualPrinterTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowVirtualPrinterTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowVirtualPrinterTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowVirtualPrinterTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowVirtualPrinterTriggerDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowVirtualPrinterTriggerDetails = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowVirtualPrinterTriggerDetails",
@@ -6966,23 +6870,20 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_job_print_ticket", reinterpret_cast<PyCFunction>(PrintWorkflowVirtualPrinterUIEventArgs_GetJobPrintTicket), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowVirtualPrinterUIEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowVirtualPrinterUIEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowVirtualPrinterUIEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterUIEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "printer", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterUIEventArgs_get_Printer), nullptr, nullptr, nullptr },
         { "source_content", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterUIEventArgs_get_SourceContent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowVirtualPrinterUIEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowVirtualPrinterUIEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowVirtualPrinterUIEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowVirtualPrinterUIEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowVirtualPrinterUIEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowVirtualPrinterUIEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowVirtualPrinterUIEventArgs",
@@ -7106,21 +7007,18 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "get_deferral", reinterpret_cast<PyCFunction>(PrintWorkflowXpsDataAvailableEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowXpsDataAvailableEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowXpsDataAvailableEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintWorkflowXpsDataAvailableEventArgs[] = {
         { "operation", reinterpret_cast<getter>(PrintWorkflowXpsDataAvailableEventArgs_get_Operation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintWorkflowXpsDataAvailableEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintWorkflowXpsDataAvailableEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintWorkflowXpsDataAvailableEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintWorkflowXpsDataAvailableEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintWorkflowXpsDataAvailableEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintWorkflowXpsDataAvailableEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowXpsDataAvailableEventArgs",

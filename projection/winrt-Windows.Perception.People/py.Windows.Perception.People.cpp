@@ -218,23 +218,20 @@ namespace py::cpp::Windows::Perception::People
     static PyMethodDef _methods_EyesPose[] = {
         { "_assign_array_", _assign_array_EyesPose, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EyesPose), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EyesPose[] = {
         { "gaze", reinterpret_cast<getter>(EyesPose_get_Gaze), nullptr, nullptr, nullptr },
         { "is_calibration_valid", reinterpret_cast<getter>(EyesPose_get_IsCalibrationValid), nullptr, nullptr, nullptr },
         { "update_timestamp", reinterpret_cast<getter>(EyesPose_get_UpdateTimestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EyesPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EyesPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EyesPose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EyesPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EyesPose) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EyesPose = {
         "winrt._winrt_windows_perception_people.EyesPose",
@@ -244,14 +241,12 @@ namespace py::cpp::Windows::Perception::People
         _type_slots_EyesPose};
 
     static PyGetSetDef getset_EyesPose_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EyesPose_Static[] = {
         { "is_supported", reinterpret_cast<PyCFunction>(EyesPose_IsSupported), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(EyesPose_RequestAccessAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EyesPose_Static[] = 
     {
@@ -261,14 +256,12 @@ namespace py::cpp::Windows::Perception::People
         { }
     };
 
-    static PyType_Spec type_spec_EyesPose_Static =
-    {
+    static PyType_Spec type_spec_EyesPose_Static = {
         "winrt._winrt_windows_perception_people.EyesPose_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EyesPose_Static
-    };
+        type_slots_EyesPose_Static};
 
     // ----- HandMeshObserver class --------------------
 
@@ -581,8 +574,7 @@ namespace py::cpp::Windows::Perception::People
         { "get_vertex_state_for_pose", reinterpret_cast<PyCFunction>(HandMeshObserver_GetVertexStateForPose), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HandMeshObserver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HandMeshObserver), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HandMeshObserver[] = {
         { "model_id", reinterpret_cast<getter>(HandMeshObserver_get_ModelId), nullptr, nullptr, nullptr },
@@ -591,16 +583,14 @@ namespace py::cpp::Windows::Perception::People
         { "source", reinterpret_cast<getter>(HandMeshObserver_get_Source), nullptr, nullptr, nullptr },
         { "triangle_index_count", reinterpret_cast<getter>(HandMeshObserver_get_TriangleIndexCount), nullptr, nullptr, nullptr },
         { "vertex_count", reinterpret_cast<getter>(HandMeshObserver_get_VertexCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HandMeshObserver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HandMeshObserver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HandMeshObserver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HandMeshObserver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandMeshObserver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HandMeshObserver = {
         "winrt._winrt_windows_perception_people.HandMeshObserver",
@@ -757,22 +747,19 @@ namespace py::cpp::Windows::Perception::People
         { "get_vertices", reinterpret_cast<PyCFunction>(HandMeshVertexState_GetVertices), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HandMeshVertexState, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HandMeshVertexState), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HandMeshVertexState[] = {
         { "coordinate_system", reinterpret_cast<getter>(HandMeshVertexState_get_CoordinateSystem), nullptr, nullptr, nullptr },
         { "update_timestamp", reinterpret_cast<getter>(HandMeshVertexState_get_UpdateTimestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HandMeshVertexState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HandMeshVertexState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HandMeshVertexState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HandMeshVertexState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandMeshVertexState) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HandMeshVertexState = {
         "winrt._winrt_windows_perception_people.HandMeshVertexState",
@@ -1018,20 +1005,17 @@ namespace py::cpp::Windows::Perception::People
         { "try_get_joints", reinterpret_cast<PyCFunction>(HandPose_TryGetJoints), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HandPose, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HandPose), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HandPose[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HandPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HandPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HandPose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HandPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandPose) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HandPose = {
         "winrt._winrt_windows_perception_people.HandPose",
@@ -1174,23 +1158,20 @@ namespace py::cpp::Windows::Perception::People
     static PyMethodDef _methods_HeadPose[] = {
         { "_assign_array_", _assign_array_HeadPose, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HeadPose), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HeadPose[] = {
         { "forward_direction", reinterpret_cast<getter>(HeadPose_get_ForwardDirection), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(HeadPose_get_Position), nullptr, nullptr, nullptr },
         { "up_direction", reinterpret_cast<getter>(HeadPose_get_UpDirection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HeadPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HeadPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HeadPose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HeadPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HeadPose) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HeadPose = {
         "winrt._winrt_windows_perception_people.HeadPose",
@@ -1268,8 +1249,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyMethodDef _methods_HandMeshVertex[] = {
         { "_assign_array_", _assign_array_HandMeshVertex, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* HandMeshVertex_get_Position(py::wrapper::Windows::Perception::People::HandMeshVertex* self, void* /*unused*/) noexcept
     {
@@ -1340,8 +1320,7 @@ namespace py::cpp::Windows::Perception::People
     static PyGetSetDef _getset_HandMeshVertex[] = {
         { "position", reinterpret_cast<getter>(HandMeshVertex_get_Position), reinterpret_cast<setter>(HandMeshVertex_set_Position), nullptr, nullptr },
         { "normal", reinterpret_cast<getter>(HandMeshVertex_get_Normal), reinterpret_cast<setter>(HandMeshVertex_set_Normal), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_HandMeshVertex(py::wrapper::Windows::Perception::People::HandMeshVertex* self, PyObject* other, int op) noexcept
     {
@@ -1403,8 +1382,7 @@ namespace py::cpp::Windows::Perception::People
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandMeshVertex) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HandMeshVertex) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_HandMeshVertex) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HandMeshVertex = {
         "winrt._winrt_windows_perception_people.HandMeshVertex",
@@ -1486,8 +1464,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyMethodDef _methods_JointPose[] = {
         { "_assign_array_", _assign_array_JointPose, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* JointPose_get_Orientation(py::wrapper::Windows::Perception::People::JointPose* self, void* /*unused*/) noexcept
     {
@@ -1626,8 +1603,7 @@ namespace py::cpp::Windows::Perception::People
         { "position", reinterpret_cast<getter>(JointPose_get_Position), reinterpret_cast<setter>(JointPose_set_Position), nullptr, nullptr },
         { "radius", reinterpret_cast<getter>(JointPose_get_Radius), reinterpret_cast<setter>(JointPose_set_Radius), nullptr, nullptr },
         { "accuracy", reinterpret_cast<getter>(JointPose_get_Accuracy), reinterpret_cast<setter>(JointPose_set_Accuracy), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_JointPose(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* other, int op) noexcept
     {
@@ -1701,8 +1677,7 @@ namespace py::cpp::Windows::Perception::People
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JointPose) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_JointPose) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_JointPose) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_JointPose = {
         "winrt._winrt_windows_perception_people.JointPose",

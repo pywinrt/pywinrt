@@ -507,13 +507,11 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpBufferContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpBufferContent), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpBufferContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpBufferContent[] = {
         { "headers", reinterpret_cast<getter>(HttpBufferContent_get_Headers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpBufferContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpBufferContent) },
@@ -521,8 +519,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpBufferContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpBufferContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpBufferContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpBufferContent = {
         "winrt._winrt_windows_web_http.HttpBufferContent",
@@ -1704,14 +1701,12 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpClient), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpClient), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpClient), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpClient[] = {
         { "default_request_headers", reinterpret_cast<getter>(HttpClient_get_DefaultRequestHeaders), nullptr, nullptr, nullptr },
         { "default_privacy_annotation", reinterpret_cast<getter>(HttpClient_get_DefaultPrivacyAnnotation), reinterpret_cast<setter>(HttpClient_put_DefaultPrivacyAnnotation), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpClient) },
@@ -1719,8 +1714,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpClient) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpClient) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpClient = {
         "winrt._winrt_windows_web_http.HttpClient",
@@ -2223,8 +2217,7 @@ namespace py::cpp::Windows::Web::Http
         { "to_string", reinterpret_cast<PyCFunction>(HttpCookie_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpCookie, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpCookie), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpCookie[] = {
         { "value", reinterpret_cast<getter>(HttpCookie_get_Value), reinterpret_cast<setter>(HttpCookie_put_Value), nullptr, nullptr },
@@ -2234,8 +2227,7 @@ namespace py::cpp::Windows::Web::Http
         { "domain", reinterpret_cast<getter>(HttpCookie_get_Domain), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(HttpCookie_get_Name), nullptr, nullptr, nullptr },
         { "path", reinterpret_cast<getter>(HttpCookie_get_Path), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpCookie[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookie) },
@@ -2243,8 +2235,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCookie) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCookie) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpCookie) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpCookie = {
         "winrt._winrt_windows_web_http.HttpCookie",
@@ -2629,13 +2620,11 @@ namespace py::cpp::Windows::Web::Http
         { "index_of", reinterpret_cast<PyCFunction>(HttpCookieCollection_IndexOf), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpCookieCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpCookieCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpCookieCollection[] = {
         { "size", reinterpret_cast<getter>(HttpCookieCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpCookieCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookieCollection) },
@@ -2646,8 +2635,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_HttpCookieCollection) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpCookieCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpCookieCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpCookieCollection = {
         "winrt._winrt_windows_web_http.HttpCookieCollection",
@@ -2874,20 +2862,17 @@ namespace py::cpp::Windows::Web::Http
         { "set_cookie_with_third_party", reinterpret_cast<PyCFunction>(HttpCookieManager_SetCookieWithThirdParty), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpCookieManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpCookieManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpCookieManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpCookieManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookieManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCookieManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCookieManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCookieManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpCookieManager = {
         "winrt._winrt_windows_web_http.HttpCookieManager",
@@ -3382,13 +3367,11 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpFormUrlEncodedContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpFormUrlEncodedContent), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpFormUrlEncodedContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpFormUrlEncodedContent[] = {
         { "headers", reinterpret_cast<getter>(HttpFormUrlEncodedContent_get_Headers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpFormUrlEncodedContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpFormUrlEncodedContent) },
@@ -3396,8 +3379,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpFormUrlEncodedContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpFormUrlEncodedContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpFormUrlEncodedContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpFormUrlEncodedContent = {
         "winrt._winrt_windows_web_http.HttpFormUrlEncodedContent",
@@ -3725,8 +3707,7 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpGetBufferResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpGetBufferResult), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpGetBufferResult), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpGetBufferResult[] = {
         { "extended_error", reinterpret_cast<getter>(HttpGetBufferResult_get_ExtendedError), nullptr, nullptr, nullptr },
@@ -3734,8 +3715,7 @@ namespace py::cpp::Windows::Web::Http
         { "response_message", reinterpret_cast<getter>(HttpGetBufferResult_get_ResponseMessage), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(HttpGetBufferResult_get_Succeeded), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(HttpGetBufferResult_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpGetBufferResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpGetBufferResult) },
@@ -3743,8 +3723,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpGetBufferResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpGetBufferResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpGetBufferResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpGetBufferResult = {
         "winrt._winrt_windows_web_http.HttpGetBufferResult",
@@ -4072,8 +4051,7 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpGetInputStreamResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpGetInputStreamResult), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpGetInputStreamResult), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpGetInputStreamResult[] = {
         { "extended_error", reinterpret_cast<getter>(HttpGetInputStreamResult_get_ExtendedError), nullptr, nullptr, nullptr },
@@ -4081,8 +4059,7 @@ namespace py::cpp::Windows::Web::Http
         { "response_message", reinterpret_cast<getter>(HttpGetInputStreamResult_get_ResponseMessage), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(HttpGetInputStreamResult_get_Succeeded), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(HttpGetInputStreamResult_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpGetInputStreamResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpGetInputStreamResult) },
@@ -4090,8 +4067,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpGetInputStreamResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpGetInputStreamResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpGetInputStreamResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpGetInputStreamResult = {
         "winrt._winrt_windows_web_http.HttpGetInputStreamResult",
@@ -4419,8 +4395,7 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpGetStringResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpGetStringResult), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpGetStringResult), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpGetStringResult[] = {
         { "extended_error", reinterpret_cast<getter>(HttpGetStringResult_get_ExtendedError), nullptr, nullptr, nullptr },
@@ -4428,8 +4403,7 @@ namespace py::cpp::Windows::Web::Http
         { "response_message", reinterpret_cast<getter>(HttpGetStringResult_get_ResponseMessage), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(HttpGetStringResult_get_Succeeded), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(HttpGetStringResult_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpGetStringResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpGetStringResult) },
@@ -4437,8 +4411,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpGetStringResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpGetStringResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpGetStringResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpGetStringResult = {
         "winrt._winrt_windows_web_http.HttpGetStringResult",
@@ -4813,13 +4786,11 @@ namespace py::cpp::Windows::Web::Http
         { "to_string", reinterpret_cast<PyCFunction>(HttpMethod_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpMethod, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMethod), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpMethod[] = {
         { "method", reinterpret_cast<getter>(HttpMethod_get_Method), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpMethod[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMethod) },
@@ -4827,8 +4798,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMethod) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMethod) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMethod) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpMethod = {
         "winrt._winrt_windows_web_http.HttpMethod",
@@ -4845,12 +4815,10 @@ namespace py::cpp::Windows::Web::Http
         { "patch", reinterpret_cast<getter>(HttpMethod_get_Patch), nullptr, nullptr, nullptr },
         { "post", reinterpret_cast<getter>(HttpMethod_get_Post), nullptr, nullptr, nullptr },
         { "put", reinterpret_cast<getter>(HttpMethod_get_Put), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_HttpMethod_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_HttpMethod_Static[] = 
     {
@@ -4860,14 +4828,12 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Spec type_spec_HttpMethod_Static =
-    {
+    static PyType_Spec type_spec_HttpMethod_Static = {
         "winrt._winrt_windows_web_http.HttpMethod_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HttpMethod_Static
-    };
+        type_slots_HttpMethod_Static};
 
     // ----- HttpMultipartContent class --------------------
 
@@ -5486,13 +5452,11 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMultipartContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpMultipartContent), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpMultipartContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpMultipartContent[] = {
         { "headers", reinterpret_cast<getter>(HttpMultipartContent_get_Headers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpMultipartContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMultipartContent) },
@@ -5501,8 +5465,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMultipartContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMultipartContent) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_HttpMultipartContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpMultipartContent = {
         "winrt._winrt_windows_web_http.HttpMultipartContent",
@@ -6203,13 +6166,11 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMultipartFormDataContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpMultipartFormDataContent), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpMultipartFormDataContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpMultipartFormDataContent[] = {
         { "headers", reinterpret_cast<getter>(HttpMultipartFormDataContent_get_Headers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpMultipartFormDataContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMultipartFormDataContent) },
@@ -6218,8 +6179,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMultipartFormDataContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMultipartFormDataContent) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_HttpMultipartFormDataContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpMultipartFormDataContent = {
         "winrt._winrt_windows_web_http.HttpMultipartFormDataContent",
@@ -6801,8 +6761,7 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpRequestMessage), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpRequestMessage), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpRequestMessage), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpRequestMessage[] = {
         { "request_uri", reinterpret_cast<getter>(HttpRequestMessage_get_RequestUri), reinterpret_cast<setter>(HttpRequestMessage_put_RequestUri), nullptr, nullptr },
@@ -6812,8 +6771,7 @@ namespace py::cpp::Windows::Web::Http
         { "properties", reinterpret_cast<getter>(HttpRequestMessage_get_Properties), nullptr, nullptr, nullptr },
         { "transport_information", reinterpret_cast<getter>(HttpRequestMessage_get_TransportInformation), nullptr, nullptr, nullptr },
         { "privacy_annotation", reinterpret_cast<getter>(HttpRequestMessage_get_PrivacyAnnotation), reinterpret_cast<setter>(HttpRequestMessage_put_PrivacyAnnotation), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpRequestMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpRequestMessage) },
@@ -6821,8 +6779,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpRequestMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpRequestMessage) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpRequestMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpRequestMessage = {
         "winrt._winrt_windows_web_http.HttpRequestMessage",
@@ -7120,16 +7077,14 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpRequestResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpRequestResult), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpRequestResult), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpRequestResult[] = {
         { "extended_error", reinterpret_cast<getter>(HttpRequestResult_get_ExtendedError), nullptr, nullptr, nullptr },
         { "request_message", reinterpret_cast<getter>(HttpRequestResult_get_RequestMessage), nullptr, nullptr, nullptr },
         { "response_message", reinterpret_cast<getter>(HttpRequestResult_get_ResponseMessage), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(HttpRequestResult_get_Succeeded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpRequestResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpRequestResult) },
@@ -7137,8 +7092,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpRequestResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpRequestResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpRequestResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpRequestResult = {
         "winrt._winrt_windows_web_http.HttpRequestResult",
@@ -7868,8 +7822,7 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpResponseMessage), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpResponseMessage), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpResponseMessage), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpResponseMessage[] = {
         { "version", reinterpret_cast<getter>(HttpResponseMessage_get_Version), reinterpret_cast<setter>(HttpResponseMessage_put_Version), nullptr, nullptr },
@@ -7880,8 +7833,7 @@ namespace py::cpp::Windows::Web::Http
         { "content", reinterpret_cast<getter>(HttpResponseMessage_get_Content), reinterpret_cast<setter>(HttpResponseMessage_put_Content), nullptr, nullptr },
         { "headers", reinterpret_cast<getter>(HttpResponseMessage_get_Headers), nullptr, nullptr, nullptr },
         { "is_success_status_code", reinterpret_cast<getter>(HttpResponseMessage_get_IsSuccessStatusCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpResponseMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpResponseMessage) },
@@ -7889,8 +7841,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpResponseMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpResponseMessage) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpResponseMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpResponseMessage = {
         "winrt._winrt_windows_web_http.HttpResponseMessage",
@@ -8385,13 +8336,11 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpStreamContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpStreamContent), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpStreamContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpStreamContent[] = {
         { "headers", reinterpret_cast<getter>(HttpStreamContent_get_Headers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpStreamContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpStreamContent) },
@@ -8399,8 +8348,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpStreamContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpStreamContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpStreamContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpStreamContent = {
         "winrt._winrt_windows_web_http.HttpStreamContent",
@@ -8928,13 +8876,11 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpStringContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpStringContent), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpStringContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpStringContent[] = {
         { "headers", reinterpret_cast<getter>(HttpStringContent_get_Headers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpStringContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpStringContent) },
@@ -8942,8 +8888,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpStringContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpStringContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpStringContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpStringContent = {
         "winrt._winrt_windows_web_http.HttpStringContent",
@@ -9174,16 +9119,14 @@ namespace py::cpp::Windows::Web::Http
         { "to_string", reinterpret_cast<PyCFunction>(HttpTransportInformation_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpTransportInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpTransportInformation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HttpTransportInformation[] = {
         { "server_certificate", reinterpret_cast<getter>(HttpTransportInformation_get_ServerCertificate), nullptr, nullptr, nullptr },
         { "server_certificate_error_severity", reinterpret_cast<getter>(HttpTransportInformation_get_ServerCertificateErrorSeverity), nullptr, nullptr, nullptr },
         { "server_certificate_errors", reinterpret_cast<getter>(HttpTransportInformation_get_ServerCertificateErrors), nullptr, nullptr, nullptr },
         { "server_intermediate_certificates", reinterpret_cast<getter>(HttpTransportInformation_get_ServerIntermediateCertificates), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HttpTransportInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpTransportInformation) },
@@ -9191,8 +9134,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpTransportInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpTransportInformation) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpTransportInformation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpTransportInformation = {
         "winrt._winrt_windows_web_http.HttpTransportInformation",
@@ -9605,21 +9547,18 @@ namespace py::cpp::Windows::Web::Http
         { "_from", reinterpret_cast<PyCFunction>(_from_IHttpContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IHttpContent), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IHttpContent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IHttpContent[] = {
         { "headers", reinterpret_cast<getter>(IHttpContent_get_Headers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IHttpContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IHttpContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHttpContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHttpContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHttpContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IHttpContent = {
         "winrt._winrt_windows_web_http.IHttpContent",
@@ -9883,13 +9822,11 @@ namespace py::cpp::Windows::Web::Http
     static PyMethodDef methods_ImplementsIHttpContent[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIHttpContent), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIHttpContent), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIHttpContent[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIHttpContent) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIHttpContent = {
         "winrt._winrt_windows_web_http.ImplementsIHttpContent",
@@ -9975,8 +9912,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyMethodDef _methods_HttpProgress[] = {
         { "_assign_array_", _assign_array_HttpProgress, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* HttpProgress_get_Stage(py::wrapper::Windows::Web::Http::HttpProgress* self, void* /*unused*/) noexcept
     {
@@ -10183,8 +10119,7 @@ namespace py::cpp::Windows::Web::Http
         { "bytes_received", reinterpret_cast<getter>(HttpProgress_get_BytesReceived), reinterpret_cast<setter>(HttpProgress_set_BytesReceived), nullptr, nullptr },
         { "total_bytes_to_receive", reinterpret_cast<getter>(HttpProgress_get_TotalBytesToReceive), reinterpret_cast<setter>(HttpProgress_set_TotalBytesToReceive), nullptr, nullptr },
         { "retries", reinterpret_cast<getter>(HttpProgress_get_Retries), reinterpret_cast<setter>(HttpProgress_set_Retries), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_HttpProgress(py::wrapper::Windows::Web::Http::HttpProgress* self, PyObject* other, int op) noexcept
     {
@@ -10270,8 +10205,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HttpProgress) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_HttpProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HttpProgress = {
         "winrt._winrt_windows_web_http.HttpProgress",

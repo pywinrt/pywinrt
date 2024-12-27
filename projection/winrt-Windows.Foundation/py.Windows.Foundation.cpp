@@ -181,20 +181,17 @@ namespace py::cpp::Windows::Foundation
         { "_from", reinterpret_cast<PyCFunction>(_from_Deferral), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Deferral), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_Deferral), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Deferral[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Deferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Deferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Deferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Deferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Deferral) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Deferral = {
         "winrt._winrt_windows_foundation.Deferral",
@@ -326,19 +323,16 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef _methods_GuidHelper[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GuidHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GuidHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GuidHelper = {
         "winrt._winrt_windows_foundation.GuidHelper",
@@ -349,14 +343,12 @@ namespace py::cpp::Windows::Foundation
 
     static PyGetSetDef getset_GuidHelper_Static[] = {
         { "empty", reinterpret_cast<getter>(GuidHelper_get_Empty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GuidHelper_Static[] = {
         { "create_new_guid", reinterpret_cast<PyCFunction>(GuidHelper_CreateNewGuid), METH_VARARGS, nullptr },
         { "equals", reinterpret_cast<PyCFunction>(GuidHelper_Equals), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GuidHelper_Static[] = 
     {
@@ -366,14 +358,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Spec type_spec_GuidHelper_Static =
-    {
+    static PyType_Spec type_spec_GuidHelper_Static = {
         "winrt._winrt_windows_foundation.GuidHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GuidHelper_Static
-    };
+        type_slots_GuidHelper_Static};
 
     // ----- MemoryBuffer class --------------------
 
@@ -551,20 +541,17 @@ namespace py::cpp::Windows::Foundation
         { "_from", reinterpret_cast<PyCFunction>(_from_MemoryBuffer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MemoryBuffer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_MemoryBuffer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_MemoryBuffer[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_MemoryBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MemoryBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MemoryBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MemoryBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MemoryBuffer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_MemoryBuffer = {
         "winrt._winrt_windows_foundation.MemoryBuffer",
@@ -2219,19 +2206,16 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef _methods_PropertyValue[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PropertyValue[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PropertyValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PropertyValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PropertyValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PropertyValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PropertyValue = {
         "winrt._winrt_windows_foundation.PropertyValue",
@@ -2241,8 +2225,7 @@ namespace py::cpp::Windows::Foundation
         _type_slots_PropertyValue};
 
     static PyGetSetDef getset_PropertyValue_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PropertyValue_Static[] = {
         { "create_boolean", reinterpret_cast<PyCFunction>(PropertyValue_CreateBoolean), METH_VARARGS, nullptr },
@@ -2284,8 +2267,7 @@ namespace py::cpp::Windows::Foundation
         { "create_uint64_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt64Array), METH_VARARGS, nullptr },
         { "create_uint8", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt8), METH_VARARGS, nullptr },
         { "create_uint8_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt8Array), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PropertyValue_Static[] = 
     {
@@ -2295,14 +2277,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Spec type_spec_PropertyValue_Static =
-    {
+    static PyType_Spec type_spec_PropertyValue_Static = {
         "winrt._winrt_windows_foundation.PropertyValue_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PropertyValue_Static
-    };
+        type_slots_PropertyValue_Static};
 
     // ----- Uri class --------------------
 
@@ -3126,8 +3106,7 @@ namespace py::cpp::Windows::Foundation
         { "to_string", reinterpret_cast<PyCFunction>(Uri_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Uri, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Uri), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Uri[] = {
         { "absolute_uri", reinterpret_cast<getter>(Uri_get_AbsoluteUri), nullptr, nullptr, nullptr },
@@ -3147,8 +3126,7 @@ namespace py::cpp::Windows::Foundation
         { "user_name", reinterpret_cast<getter>(Uri_get_UserName), nullptr, nullptr, nullptr },
         { "absolute_canonical_uri", reinterpret_cast<getter>(Uri_get_AbsoluteCanonicalUri), nullptr, nullptr, nullptr },
         { "display_iri", reinterpret_cast<getter>(Uri_get_DisplayIri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Uri[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Uri) },
@@ -3156,8 +3134,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Uri) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Uri) },
         { Py_tp_str, reinterpret_cast<void*>(_str_Uri) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Uri = {
         "winrt._winrt_windows_foundation.Uri",
@@ -3167,14 +3144,12 @@ namespace py::cpp::Windows::Foundation
         _type_slots_Uri};
 
     static PyGetSetDef getset_Uri_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Uri_Static[] = {
         { "escape_component", reinterpret_cast<PyCFunction>(Uri_EscapeComponent), METH_VARARGS, nullptr },
         { "unescape_component", reinterpret_cast<PyCFunction>(Uri_UnescapeComponent), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Uri_Static[] = 
     {
@@ -3184,14 +3159,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Spec type_spec_Uri_Static =
-    {
+    static PyType_Spec type_spec_Uri_Static = {
         "winrt._winrt_windows_foundation.Uri_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Uri_Static
-    };
+        type_slots_Uri_Static};
 
     // ----- WwwFormUrlDecoder class --------------------
 
@@ -3636,13 +3609,11 @@ namespace py::cpp::Windows::Foundation
         { "index_of", reinterpret_cast<PyCFunction>(WwwFormUrlDecoder_IndexOf), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WwwFormUrlDecoder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WwwFormUrlDecoder), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WwwFormUrlDecoder[] = {
         { "size", reinterpret_cast<getter>(WwwFormUrlDecoder_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WwwFormUrlDecoder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WwwFormUrlDecoder) },
@@ -3653,8 +3624,7 @@ namespace py::cpp::Windows::Foundation
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_WwwFormUrlDecoder) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_WwwFormUrlDecoder) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_WwwFormUrlDecoder) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WwwFormUrlDecoder = {
         "winrt._winrt_windows_foundation.WwwFormUrlDecoder",
@@ -3767,22 +3737,19 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef _methods_WwwFormUrlDecoderEntry[] = {
         { "_assign_array_", _assign_array_WwwFormUrlDecoderEntry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WwwFormUrlDecoderEntry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WwwFormUrlDecoderEntry[] = {
         { "name", reinterpret_cast<getter>(WwwFormUrlDecoderEntry_get_Name), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(WwwFormUrlDecoderEntry_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WwwFormUrlDecoderEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WwwFormUrlDecoderEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WwwFormUrlDecoderEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WwwFormUrlDecoderEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WwwFormUrlDecoderEntry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WwwFormUrlDecoderEntry = {
         "winrt._winrt_windows_foundation.WwwFormUrlDecoderEntry",
@@ -4125,16 +4092,14 @@ namespace py::cpp::Windows::Foundation
         { "get_results", reinterpret_cast<PyCFunction>(IAsyncAction_GetResults), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAsyncAction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAsyncAction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAsyncAction[] = {
         { "completed", reinterpret_cast<getter>(IAsyncAction_get_Completed), reinterpret_cast<setter>(IAsyncAction_put_Completed), nullptr, nullptr },
         { "error_code", reinterpret_cast<getter>(IAsyncAction_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(IAsyncAction_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IAsyncAction_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAsyncAction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncAction) },
@@ -4142,8 +4107,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncAction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncAction) },
         { Py_am_await, reinterpret_cast<void*>(_await_IAsyncAction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAsyncAction = {
         "winrt._winrt_windows_foundation.IAsyncAction",
@@ -4374,13 +4338,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIAsyncAction[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncAction), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncAction), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAsyncAction[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncAction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAsyncAction = {
         "winrt._winrt_windows_foundation.ImplementsIAsyncAction",
@@ -4626,8 +4588,7 @@ namespace py::cpp::Windows::Foundation
         { "close", reinterpret_cast<PyCFunction>(IAsyncActionWithProgress_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(IAsyncActionWithProgress_GetResults), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAsyncActionWithProgress[] = {
         { "progress", reinterpret_cast<getter>(IAsyncActionWithProgress_get_Progress), reinterpret_cast<setter>(IAsyncActionWithProgress_put_Progress), nullptr, nullptr },
@@ -4635,8 +4596,7 @@ namespace py::cpp::Windows::Foundation
         { "error_code", reinterpret_cast<getter>(IAsyncActionWithProgress_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(IAsyncActionWithProgress_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IAsyncActionWithProgress_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAsyncActionWithProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncActionWithProgress) },
@@ -4644,8 +4604,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncActionWithProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncActionWithProgress) },
         { Py_am_await, reinterpret_cast<void*>(_await_IAsyncActionWithProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAsyncActionWithProgress = {
         "winrt._winrt_windows_foundation.IAsyncActionWithProgress",
@@ -4693,13 +4652,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIAsyncActionWithProgress[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncActionWithProgress), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncActionWithProgress), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAsyncActionWithProgress[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncActionWithProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAsyncActionWithProgress = {
         "winrt._winrt_windows_foundation.ImplementsIAsyncActionWithProgress",
@@ -4926,23 +4883,20 @@ namespace py::cpp::Windows::Foundation
         { "close", reinterpret_cast<PyCFunction>(IAsyncInfo_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAsyncInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAsyncInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAsyncInfo[] = {
         { "error_code", reinterpret_cast<getter>(IAsyncInfo_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(IAsyncInfo_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IAsyncInfo_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAsyncInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAsyncInfo = {
         "winrt._winrt_windows_foundation.IAsyncInfo",
@@ -5106,13 +5060,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIAsyncInfo[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncInfo), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAsyncInfo[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAsyncInfo = {
         "winrt._winrt_windows_foundation.ImplementsIAsyncInfo",
@@ -5358,8 +5310,7 @@ namespace py::cpp::Windows::Foundation
         { "close", reinterpret_cast<PyCFunction>(IAsyncOperationWithProgress_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(IAsyncOperationWithProgress_GetResults), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAsyncOperationWithProgress[] = {
         { "progress", reinterpret_cast<getter>(IAsyncOperationWithProgress_get_Progress), reinterpret_cast<setter>(IAsyncOperationWithProgress_put_Progress), nullptr, nullptr },
@@ -5367,8 +5318,7 @@ namespace py::cpp::Windows::Foundation
         { "error_code", reinterpret_cast<getter>(IAsyncOperationWithProgress_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(IAsyncOperationWithProgress_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IAsyncOperationWithProgress_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAsyncOperationWithProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncOperationWithProgress) },
@@ -5376,8 +5326,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncOperationWithProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncOperationWithProgress) },
         { Py_am_await, reinterpret_cast<void*>(_await_IAsyncOperationWithProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAsyncOperationWithProgress = {
         "winrt._winrt_windows_foundation.IAsyncOperationWithProgress",
@@ -5425,13 +5374,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIAsyncOperationWithProgress[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncOperationWithProgress), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncOperationWithProgress), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAsyncOperationWithProgress[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncOperationWithProgress) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAsyncOperationWithProgress = {
         "winrt._winrt_windows_foundation.ImplementsIAsyncOperationWithProgress",
@@ -5619,16 +5566,14 @@ namespace py::cpp::Windows::Foundation
         { "close", reinterpret_cast<PyCFunction>(IAsyncOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(IAsyncOperation_GetResults), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAsyncOperation[] = {
         { "completed", reinterpret_cast<getter>(IAsyncOperation_get_Completed), reinterpret_cast<setter>(IAsyncOperation_put_Completed), nullptr, nullptr },
         { "error_code", reinterpret_cast<getter>(IAsyncOperation_get_ErrorCode), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(IAsyncOperation_get_Id), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(IAsyncOperation_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAsyncOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncOperation) },
@@ -5636,8 +5581,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_IAsyncOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAsyncOperation = {
         "winrt._winrt_windows_foundation.IAsyncOperation",
@@ -5685,13 +5629,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIAsyncOperation[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAsyncOperation[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAsyncOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAsyncOperation = {
         "winrt._winrt_windows_foundation.ImplementsIAsyncOperation",
@@ -5811,20 +5753,17 @@ namespace py::cpp::Windows::Foundation
         { "_from", reinterpret_cast<PyCFunction>(_from_IClosable), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IClosable), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IClosable), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IClosable[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IClosable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IClosable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IClosable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IClosable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IClosable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IClosable = {
         "winrt._winrt_windows_foundation.IClosable",
@@ -5904,13 +5843,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIClosable[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIClosable), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIClosable), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIClosable[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIClosable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIClosable = {
         "winrt._winrt_windows_foundation.ImplementsIClosable",
@@ -6006,20 +5943,17 @@ namespace py::cpp::Windows::Foundation
         { "get_activation_factory", reinterpret_cast<PyCFunction>(IGetActivationFactory_GetActivationFactory), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IGetActivationFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGetActivationFactory), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGetActivationFactory[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGetActivationFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGetActivationFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGetActivationFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGetActivationFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGetActivationFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGetActivationFactory = {
         "winrt._winrt_windows_foundation.IGetActivationFactory",
@@ -6107,13 +6041,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIGetActivationFactory[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGetActivationFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGetActivationFactory), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGetActivationFactory[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGetActivationFactory) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGetActivationFactory = {
         "winrt._winrt_windows_foundation.ImplementsIGetActivationFactory",
@@ -6274,20 +6206,17 @@ namespace py::cpp::Windows::Foundation
         { "_from", reinterpret_cast<PyCFunction>(_from_IMemoryBuffer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMemoryBuffer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMemoryBuffer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMemoryBuffer[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMemoryBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMemoryBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMemoryBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMemoryBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMemoryBuffer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMemoryBuffer = {
         "winrt._winrt_windows_foundation.IMemoryBuffer",
@@ -6393,13 +6322,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIMemoryBuffer[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMemoryBuffer), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMemoryBuffer), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMemoryBuffer[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMemoryBuffer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMemoryBuffer = {
         "winrt._winrt_windows_foundation.ImplementsIMemoryBuffer",
@@ -6630,13 +6557,11 @@ namespace py::cpp::Windows::Foundation
         { "_from", reinterpret_cast<PyCFunction>(_from_IMemoryBufferReference), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMemoryBufferReference), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMemoryBufferReference), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMemoryBufferReference[] = {
         { "capacity", reinterpret_cast<getter>(IMemoryBufferReference_get_Capacity), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMemoryBufferReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMemoryBufferReference) },
@@ -6644,8 +6569,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMemoryBufferReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMemoryBufferReference) },
         { Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_IMemoryBufferReference) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMemoryBufferReference = {
         "winrt._winrt_windows_foundation.IMemoryBufferReference",
@@ -6807,13 +6731,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIMemoryBufferReference[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMemoryBufferReference), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMemoryBufferReference), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMemoryBufferReference[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMemoryBufferReference) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMemoryBufferReference = {
         "winrt._winrt_windows_foundation.ImplementsIMemoryBufferReference",
@@ -8614,22 +8536,19 @@ namespace py::cpp::Windows::Foundation
         { "get_uint8_array", reinterpret_cast<PyCFunction>(IPropertyValue_GetUInt8Array), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPropertyValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPropertyValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPropertyValue[] = {
         { "is_numeric_scalar", reinterpret_cast<getter>(IPropertyValue_get_IsNumericScalar), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IPropertyValue_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPropertyValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPropertyValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertyValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertyValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPropertyValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPropertyValue = {
         "winrt._winrt_windows_foundation.IPropertyValue",
@@ -9706,13 +9625,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIPropertyValue[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertyValue), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertyValue), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPropertyValue[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPropertyValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPropertyValue = {
         "winrt._winrt_windows_foundation.ImplementsIPropertyValue",
@@ -10041,23 +9958,20 @@ namespace py::cpp::Windows::Foundation
         { "get_uint8", reinterpret_cast<PyCFunction>(IReferenceArray_GetUInt8), METH_VARARGS, nullptr },
         { "get_uint8_array", reinterpret_cast<PyCFunction>(IReferenceArray_GetUInt8Array), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IReferenceArray[] = {
         { "value", reinterpret_cast<getter>(IReferenceArray_get_Value), nullptr, nullptr, nullptr },
         { "is_numeric_scalar", reinterpret_cast<getter>(IReferenceArray_get_IsNumericScalar), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IReferenceArray_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IReferenceArray[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IReferenceArray) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IReferenceArray) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IReferenceArray) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IReferenceArray) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IReferenceArray = {
         "winrt._winrt_windows_foundation.IReferenceArray",
@@ -10105,13 +10019,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIReferenceArray[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIReferenceArray), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIReferenceArray), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIReferenceArray[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIReferenceArray) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIReferenceArray = {
         "winrt._winrt_windows_foundation.ImplementsIReferenceArray",
@@ -10440,23 +10352,20 @@ namespace py::cpp::Windows::Foundation
         { "get_uint8", reinterpret_cast<PyCFunction>(IReference_GetUInt8), METH_VARARGS, nullptr },
         { "get_uint8_array", reinterpret_cast<PyCFunction>(IReference_GetUInt8Array), METH_VARARGS, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IReference[] = {
         { "value", reinterpret_cast<getter>(IReference_get_Value), nullptr, nullptr, nullptr },
         { "is_numeric_scalar", reinterpret_cast<getter>(IReference_get_IsNumericScalar), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(IReference_get_Type), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IReference) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IReference = {
         "winrt._winrt_windows_foundation.IReference",
@@ -10504,13 +10413,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIReference[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIReference), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIReference), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIReference[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIReference) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIReference = {
         "winrt._winrt_windows_foundation.ImplementsIReference",
@@ -10621,12 +10528,10 @@ namespace py::cpp::Windows::Foundation
         { "to_string", reinterpret_cast<PyCFunction>(IStringable_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStringable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStringable), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStringable[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStringable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStringable) },
@@ -10634,8 +10539,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStringable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStringable) },
         { Py_tp_str, reinterpret_cast<void*>(_str_IStringable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStringable = {
         "winrt._winrt_windows_foundation.IStringable",
@@ -10717,13 +10621,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIStringable[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStringable), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStringable), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStringable[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStringable) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStringable = {
         "winrt._winrt_windows_foundation.ImplementsIStringable",
@@ -10836,22 +10738,19 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef _methods_IWwwFormUrlDecoderEntry[] = {
         { "_assign_array_", _assign_array_IWwwFormUrlDecoderEntry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWwwFormUrlDecoderEntry), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWwwFormUrlDecoderEntry[] = {
         { "name", reinterpret_cast<getter>(IWwwFormUrlDecoderEntry_get_Name), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IWwwFormUrlDecoderEntry_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWwwFormUrlDecoderEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWwwFormUrlDecoderEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWwwFormUrlDecoderEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWwwFormUrlDecoderEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWwwFormUrlDecoderEntry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWwwFormUrlDecoderEntry = {
         "winrt._winrt_windows_foundation.IWwwFormUrlDecoderEntry",
@@ -10947,13 +10846,11 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef methods_ImplementsIWwwFormUrlDecoderEntry[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWwwFormUrlDecoderEntry), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWwwFormUrlDecoderEntry), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWwwFormUrlDecoderEntry[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWwwFormUrlDecoderEntry) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWwwFormUrlDecoderEntry = {
         "winrt._winrt_windows_foundation.ImplementsIWwwFormUrlDecoderEntry",
@@ -11029,8 +10926,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_EventRegistrationToken[] = {
         { "_assign_array_", _assign_array_EventRegistrationToken, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* EventRegistrationToken_get_Value(py::wrapper::Windows::Foundation::EventRegistrationToken* self, void* /*unused*/) noexcept
     {
@@ -11067,8 +10963,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyGetSetDef _getset_EventRegistrationToken[] = {
         { "value", reinterpret_cast<getter>(EventRegistrationToken_get_Value), reinterpret_cast<setter>(EventRegistrationToken_set_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_EventRegistrationToken(py::wrapper::Windows::Foundation::EventRegistrationToken* self, PyObject* other, int op) noexcept
     {
@@ -11124,8 +11019,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EventRegistrationToken) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_EventRegistrationToken) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_EventRegistrationToken) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EventRegistrationToken = {
         "winrt._winrt_windows_foundation.EventRegistrationToken",
@@ -11201,8 +11095,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_HResult[] = {
         { "_assign_array_", _assign_array_HResult, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* HResult_get_Value(py::wrapper::Windows::Foundation::HResult* self, void* /*unused*/) noexcept
     {
@@ -11239,8 +11132,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyGetSetDef _getset_HResult[] = {
         { "value", reinterpret_cast<getter>(HResult_get_Value), reinterpret_cast<setter>(HResult_set_Value), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_HResult(py::wrapper::Windows::Foundation::HResult* self, PyObject* other, int op) noexcept
     {
@@ -11296,8 +11188,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HResult) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HResult) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_HResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HResult = {
         "winrt._winrt_windows_foundation.HResult",
@@ -11375,8 +11266,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_Point[] = {
         { "_assign_array_", _assign_array_Point, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Point_get_X(py::wrapper::Windows::Foundation::Point* self, void* /*unused*/) noexcept
     {
@@ -11447,8 +11337,7 @@ namespace py::cpp::Windows::Foundation
     static PyGetSetDef _getset_Point[] = {
         { "x", reinterpret_cast<getter>(Point_get_X), reinterpret_cast<setter>(Point_set_X), nullptr, nullptr },
         { "y", reinterpret_cast<getter>(Point_get_Y), reinterpret_cast<setter>(Point_set_Y), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_Point(py::wrapper::Windows::Foundation::Point* self, PyObject* other, int op) noexcept
     {
@@ -11510,8 +11399,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Point) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Point) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Point) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Point = {
         "winrt._winrt_windows_foundation.Point",
@@ -11593,8 +11481,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_Rect[] = {
         { "_assign_array_", _assign_array_Rect, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Rect_get_X(py::wrapper::Windows::Foundation::Rect* self, void* /*unused*/) noexcept
     {
@@ -11733,8 +11620,7 @@ namespace py::cpp::Windows::Foundation
         { "y", reinterpret_cast<getter>(Rect_get_Y), reinterpret_cast<setter>(Rect_set_Y), nullptr, nullptr },
         { "width", reinterpret_cast<getter>(Rect_get_Width), reinterpret_cast<setter>(Rect_set_Width), nullptr, nullptr },
         { "height", reinterpret_cast<getter>(Rect_get_Height), reinterpret_cast<setter>(Rect_set_Height), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_Rect(py::wrapper::Windows::Foundation::Rect* self, PyObject* other, int op) noexcept
     {
@@ -11808,8 +11694,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rect) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Rect) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Rect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Rect = {
         "winrt._winrt_windows_foundation.Rect",
@@ -11887,8 +11772,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_Size[] = {
         { "_assign_array_", _assign_array_Size, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* Size_get_Width(py::wrapper::Windows::Foundation::Size* self, void* /*unused*/) noexcept
     {
@@ -11959,8 +11843,7 @@ namespace py::cpp::Windows::Foundation
     static PyGetSetDef _getset_Size[] = {
         { "width", reinterpret_cast<getter>(Size_get_Width), reinterpret_cast<setter>(Size_set_Width), nullptr, nullptr },
         { "height", reinterpret_cast<getter>(Size_get_Height), reinterpret_cast<setter>(Size_set_Height), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_Size(py::wrapper::Windows::Foundation::Size* self, PyObject* other, int op) noexcept
     {
@@ -12022,8 +11905,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Size) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Size) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Size) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Size = {
         "winrt._winrt_windows_foundation.Size",

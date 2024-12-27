@@ -70,20 +70,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_AccessKeyDisplayDismissedEventArgs[] = {
         { "_assign_array_", _assign_array_AccessKeyDisplayDismissedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccessKeyDisplayDismissedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccessKeyDisplayDismissedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccessKeyDisplayDismissedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessKeyDisplayDismissedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccessKeyDisplayDismissedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessKeyDisplayDismissedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessKeyDisplayDismissedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccessKeyDisplayDismissedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.AccessKeyDisplayDismissedEventArgs",
@@ -188,21 +185,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_AccessKeyDisplayRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_AccessKeyDisplayRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccessKeyDisplayRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccessKeyDisplayRequestedEventArgs[] = {
         { "pressed_keys", reinterpret_cast<getter>(AccessKeyDisplayRequestedEventArgs_get_PressedKeys), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccessKeyDisplayRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessKeyDisplayRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccessKeyDisplayRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessKeyDisplayRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessKeyDisplayRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccessKeyDisplayRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.AccessKeyDisplayRequestedEventArgs",
@@ -346,21 +340,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_AccessKeyInvokedEventArgs[] = {
         { "_assign_array_", _assign_array_AccessKeyInvokedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccessKeyInvokedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccessKeyInvokedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(AccessKeyInvokedEventArgs_get_Handled), reinterpret_cast<setter>(AccessKeyInvokedEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccessKeyInvokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessKeyInvokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccessKeyInvokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessKeyInvokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessKeyInvokedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccessKeyInvokedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.AccessKeyInvokedEventArgs",
@@ -661,20 +652,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_AccessKeyManager[] = {
         { "_assign_array_", _assign_array_AccessKeyManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccessKeyManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AccessKeyManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AccessKeyManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessKeyManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccessKeyManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessKeyManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessKeyManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AccessKeyManager = {
         "winrt._winrt_microsoft_ui_xaml_input.AccessKeyManager",
@@ -686,16 +674,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyGetSetDef getset_AccessKeyManager_Static[] = {
         { "are_key_tips_enabled", reinterpret_cast<getter>(AccessKeyManager_get_AreKeyTipsEnabled), reinterpret_cast<setter>(AccessKeyManager_put_AreKeyTipsEnabled), nullptr, nullptr },
         { "is_display_mode_enabled", reinterpret_cast<getter>(AccessKeyManager_get_IsDisplayModeEnabled), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_AccessKeyManager_Static[] = {
         { "enter_display_mode_for_xaml_root", reinterpret_cast<PyCFunction>(AccessKeyManager_EnterDisplayModeForXamlRoot), METH_VARARGS, nullptr },
         { "exit_display_mode", reinterpret_cast<PyCFunction>(AccessKeyManager_ExitDisplayMode), METH_VARARGS, nullptr },
         { "add_is_display_mode_enabled_changed", reinterpret_cast<PyCFunction>(AccessKeyManager_add_IsDisplayModeEnabledChanged), METH_O, nullptr },
         { "remove_is_display_mode_enabled_changed", reinterpret_cast<PyCFunction>(AccessKeyManager_remove_IsDisplayModeEnabledChanged), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_AccessKeyManager_Static[] = 
     {
@@ -705,14 +691,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { }
     };
 
-    static PyType_Spec type_spec_AccessKeyManager_Static =
-    {
+    static PyType_Spec type_spec_AccessKeyManager_Static = {
         "winrt._winrt_microsoft_ui_xaml_input.AccessKeyManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AccessKeyManager_Static
-    };
+        type_slots_AccessKeyManager_Static};
 
     // ----- CanExecuteRequestedEventArgs class --------------------
 
@@ -857,22 +841,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_CanExecuteRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_CanExecuteRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CanExecuteRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CanExecuteRequestedEventArgs[] = {
         { "can_execute", reinterpret_cast<getter>(CanExecuteRequestedEventArgs_get_CanExecute), reinterpret_cast<setter>(CanExecuteRequestedEventArgs_put_CanExecute), nullptr, nullptr },
         { "parameter", reinterpret_cast<getter>(CanExecuteRequestedEventArgs_get_Parameter), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CanExecuteRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CanExecuteRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CanExecuteRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CanExecuteRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CanExecuteRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CanExecuteRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.CanExecuteRequestedEventArgs",
@@ -1054,23 +1035,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_CharacterReceivedRoutedEventArgs[] = {
         { "_assign_array_", _assign_array_CharacterReceivedRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CharacterReceivedRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CharacterReceivedRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(CharacterReceivedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(CharacterReceivedRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "character", reinterpret_cast<getter>(CharacterReceivedRoutedEventArgs_get_Character), nullptr, nullptr, nullptr },
         { "key_status", reinterpret_cast<getter>(CharacterReceivedRoutedEventArgs_get_KeyStatus), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CharacterReceivedRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CharacterReceivedRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CharacterReceivedRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CharacterReceivedRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CharacterReceivedRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CharacterReceivedRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.CharacterReceivedRoutedEventArgs",
@@ -1271,21 +1249,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "try_get_position", reinterpret_cast<PyCFunction>(ContextRequestedEventArgs_TryGetPosition), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContextRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContextRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContextRequestedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(ContextRequestedEventArgs_get_Handled), reinterpret_cast<setter>(ContextRequestedEventArgs_put_Handled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContextRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContextRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContextRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContextRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContextRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContextRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.ContextRequestedEventArgs",
@@ -1502,22 +1477,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "get_position", reinterpret_cast<PyCFunction>(DoubleTappedRoutedEventArgs_GetPosition), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DoubleTappedRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleTappedRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DoubleTappedRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(DoubleTappedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(DoubleTappedRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(DoubleTappedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DoubleTappedRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleTappedRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DoubleTappedRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DoubleTappedRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DoubleTappedRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DoubleTappedRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.DoubleTappedRoutedEventArgs",
@@ -1600,21 +1572,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_ExecuteRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_ExecuteRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExecuteRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExecuteRequestedEventArgs[] = {
         { "parameter", reinterpret_cast<getter>(ExecuteRequestedEventArgs_get_Parameter), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExecuteRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExecuteRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExecuteRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExecuteRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExecuteRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExecuteRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.ExecuteRequestedEventArgs",
@@ -1965,24 +1934,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_FindNextElementOptions[] = {
         { "_assign_array_", _assign_array_FindNextElementOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FindNextElementOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FindNextElementOptions[] = {
         { "x_y_focus_navigation_strategy_override", reinterpret_cast<getter>(FindNextElementOptions_get_XYFocusNavigationStrategyOverride), reinterpret_cast<setter>(FindNextElementOptions_put_XYFocusNavigationStrategyOverride), nullptr, nullptr },
         { "search_root", reinterpret_cast<getter>(FindNextElementOptions_get_SearchRoot), reinterpret_cast<setter>(FindNextElementOptions_put_SearchRoot), nullptr, nullptr },
         { "hint_rect", reinterpret_cast<getter>(FindNextElementOptions_get_HintRect), reinterpret_cast<setter>(FindNextElementOptions_put_HintRect), nullptr, nullptr },
         { "exclusion_rect", reinterpret_cast<getter>(FindNextElementOptions_get_ExclusionRect), reinterpret_cast<setter>(FindNextElementOptions_put_ExclusionRect), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FindNextElementOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FindNextElementOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FindNextElementOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FindNextElementOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FindNextElementOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FindNextElementOptions = {
         "winrt._winrt_microsoft_ui_xaml_input.FindNextElementOptions",
@@ -2844,20 +2810,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_FocusManager[] = {
         { "_assign_array_", _assign_array_FocusManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FocusManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FocusManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FocusManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FocusManager = {
         "winrt._winrt_microsoft_ui_xaml_input.FocusManager",
@@ -2867,8 +2830,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         _type_slots_FocusManager};
 
     static PyGetSetDef getset_FocusManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FocusManager_Static[] = {
         { "find_first_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindFirstFocusableElement), METH_VARARGS, nullptr },
@@ -2892,8 +2854,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "remove_losing_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_LosingFocus), METH_O, nullptr },
         { "add_lost_focus", reinterpret_cast<PyCFunction>(FocusManager_add_LostFocus), METH_O, nullptr },
         { "remove_lost_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_LostFocus), METH_O, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FocusManager_Static[] = 
     {
@@ -2903,14 +2864,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { }
     };
 
-    static PyType_Spec type_spec_FocusManager_Static =
-    {
+    static PyType_Spec type_spec_FocusManager_Static = {
         "winrt._winrt_microsoft_ui_xaml_input.FocusManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FocusManager_Static
-    };
+        type_slots_FocusManager_Static};
 
     // ----- FocusManagerGotFocusEventArgs class --------------------
 
@@ -3016,22 +2975,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_FocusManagerGotFocusEventArgs[] = {
         { "_assign_array_", _assign_array_FocusManagerGotFocusEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FocusManagerGotFocusEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FocusManagerGotFocusEventArgs[] = {
         { "correlation_id", reinterpret_cast<getter>(FocusManagerGotFocusEventArgs_get_CorrelationId), nullptr, nullptr, nullptr },
         { "new_focused_element", reinterpret_cast<getter>(FocusManagerGotFocusEventArgs_get_NewFocusedElement), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FocusManagerGotFocusEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusManagerGotFocusEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusManagerGotFocusEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusManagerGotFocusEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusManagerGotFocusEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FocusManagerGotFocusEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.FocusManagerGotFocusEventArgs",
@@ -3144,22 +3100,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_FocusManagerLostFocusEventArgs[] = {
         { "_assign_array_", _assign_array_FocusManagerLostFocusEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FocusManagerLostFocusEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FocusManagerLostFocusEventArgs[] = {
         { "correlation_id", reinterpret_cast<getter>(FocusManagerLostFocusEventArgs_get_CorrelationId), nullptr, nullptr, nullptr },
         { "old_focused_element", reinterpret_cast<getter>(FocusManagerLostFocusEventArgs_get_OldFocusedElement), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FocusManagerLostFocusEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusManagerLostFocusEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusManagerLostFocusEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusManagerLostFocusEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusManagerLostFocusEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FocusManagerLostFocusEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.FocusManagerLostFocusEventArgs",
@@ -3242,21 +3195,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_FocusMovementResult[] = {
         { "_assign_array_", _assign_array_FocusMovementResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FocusMovementResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FocusMovementResult[] = {
         { "succeeded", reinterpret_cast<getter>(FocusMovementResult_get_Succeeded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FocusMovementResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusMovementResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusMovementResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusMovementResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusMovementResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FocusMovementResult = {
         "winrt._winrt_microsoft_ui_xaml_input.FocusMovementResult",
@@ -3750,8 +3700,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "try_set_new_focused_element", reinterpret_cast<PyCFunction>(GettingFocusEventArgs_TrySetNewFocusedElement), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GettingFocusEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GettingFocusEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GettingFocusEventArgs[] = {
         { "new_focused_element", reinterpret_cast<getter>(GettingFocusEventArgs_get_NewFocusedElement), reinterpret_cast<setter>(GettingFocusEventArgs_put_NewFocusedElement), nullptr, nullptr },
@@ -3762,16 +3711,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "focus_state", reinterpret_cast<getter>(GettingFocusEventArgs_get_FocusState), nullptr, nullptr, nullptr },
         { "input_device", reinterpret_cast<getter>(GettingFocusEventArgs_get_InputDevice), nullptr, nullptr, nullptr },
         { "old_focused_element", reinterpret_cast<getter>(GettingFocusEventArgs_get_OldFocusedElement), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GettingFocusEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GettingFocusEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GettingFocusEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GettingFocusEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GettingFocusEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GettingFocusEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.GettingFocusEventArgs",
@@ -4018,23 +3965,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "get_position", reinterpret_cast<PyCFunction>(HoldingRoutedEventArgs_GetPosition), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HoldingRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HoldingRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_HoldingRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(HoldingRoutedEventArgs_get_Handled), reinterpret_cast<setter>(HoldingRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "holding_state", reinterpret_cast<getter>(HoldingRoutedEventArgs_get_HoldingState), nullptr, nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(HoldingRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_HoldingRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HoldingRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HoldingRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HoldingRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HoldingRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_HoldingRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.HoldingRoutedEventArgs",
@@ -4225,22 +4169,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_InertiaExpansionBehavior[] = {
         { "_assign_array_", _assign_array_InertiaExpansionBehavior, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InertiaExpansionBehavior), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InertiaExpansionBehavior[] = {
         { "desired_expansion", reinterpret_cast<getter>(InertiaExpansionBehavior_get_DesiredExpansion), reinterpret_cast<setter>(InertiaExpansionBehavior_put_DesiredExpansion), nullptr, nullptr },
         { "desired_deceleration", reinterpret_cast<getter>(InertiaExpansionBehavior_get_DesiredDeceleration), reinterpret_cast<setter>(InertiaExpansionBehavior_put_DesiredDeceleration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InertiaExpansionBehavior[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InertiaExpansionBehavior) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InertiaExpansionBehavior) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InertiaExpansionBehavior) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InertiaExpansionBehavior) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InertiaExpansionBehavior = {
         "winrt._winrt_microsoft_ui_xaml_input.InertiaExpansionBehavior",
@@ -4431,22 +4372,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_InertiaRotationBehavior[] = {
         { "_assign_array_", _assign_array_InertiaRotationBehavior, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InertiaRotationBehavior), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InertiaRotationBehavior[] = {
         { "desired_rotation", reinterpret_cast<getter>(InertiaRotationBehavior_get_DesiredRotation), reinterpret_cast<setter>(InertiaRotationBehavior_put_DesiredRotation), nullptr, nullptr },
         { "desired_deceleration", reinterpret_cast<getter>(InertiaRotationBehavior_get_DesiredDeceleration), reinterpret_cast<setter>(InertiaRotationBehavior_put_DesiredDeceleration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InertiaRotationBehavior[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InertiaRotationBehavior) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InertiaRotationBehavior) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InertiaRotationBehavior) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InertiaRotationBehavior) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InertiaRotationBehavior = {
         "winrt._winrt_microsoft_ui_xaml_input.InertiaRotationBehavior",
@@ -4637,22 +4575,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_InertiaTranslationBehavior[] = {
         { "_assign_array_", _assign_array_InertiaTranslationBehavior, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InertiaTranslationBehavior), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InertiaTranslationBehavior[] = {
         { "desired_displacement", reinterpret_cast<getter>(InertiaTranslationBehavior_get_DesiredDisplacement), reinterpret_cast<setter>(InertiaTranslationBehavior_put_DesiredDisplacement), nullptr, nullptr },
         { "desired_deceleration", reinterpret_cast<getter>(InertiaTranslationBehavior_get_DesiredDeceleration), reinterpret_cast<setter>(InertiaTranslationBehavior_put_DesiredDeceleration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InertiaTranslationBehavior[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InertiaTranslationBehavior) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InertiaTranslationBehavior) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InertiaTranslationBehavior) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InertiaTranslationBehavior) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InertiaTranslationBehavior = {
         "winrt._winrt_microsoft_ui_xaml_input.InertiaTranslationBehavior",
@@ -4757,21 +4692,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_InputScope[] = {
         { "_assign_array_", _assign_array_InputScope, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputScope), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InputScope[] = {
         { "names", reinterpret_cast<getter>(InputScope_get_Names), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InputScope[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputScope) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputScope) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputScope) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputScope) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InputScope = {
         "winrt._winrt_microsoft_ui_xaml_input.InputScope",
@@ -4930,21 +4862,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_InputScopeName[] = {
         { "_assign_array_", _assign_array_InputScopeName, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputScopeName), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_InputScopeName[] = {
         { "name_value", reinterpret_cast<getter>(InputScopeName_get_NameValue), reinterpret_cast<setter>(InputScopeName_put_NameValue), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_InputScopeName[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputScopeName) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputScopeName) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputScopeName) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputScopeName) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_InputScopeName = {
         "winrt._winrt_microsoft_ui_xaml_input.InputScopeName",
@@ -5186,8 +5115,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_KeyRoutedEventArgs[] = {
         { "_assign_array_", _assign_array_KeyRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(KeyRoutedEventArgs_get_Handled), reinterpret_cast<setter>(KeyRoutedEventArgs_put_Handled), nullptr, nullptr },
@@ -5195,16 +5123,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "key", reinterpret_cast<getter>(KeyRoutedEventArgs_get_Key), nullptr, nullptr, nullptr },
         { "key_status", reinterpret_cast<getter>(KeyRoutedEventArgs_get_KeyStatus), nullptr, nullptr, nullptr },
         { "original_key", reinterpret_cast<getter>(KeyRoutedEventArgs_get_OriginalKey), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.KeyRoutedEventArgs",
@@ -5802,24 +5728,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "remove_invoked", reinterpret_cast<PyCFunction>(KeyboardAccelerator_remove_Invoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_KeyboardAccelerator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyboardAccelerator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyboardAccelerator[] = {
         { "scope_owner", reinterpret_cast<getter>(KeyboardAccelerator_get_ScopeOwner), reinterpret_cast<setter>(KeyboardAccelerator_put_ScopeOwner), nullptr, nullptr },
         { "modifiers", reinterpret_cast<getter>(KeyboardAccelerator_get_Modifiers), reinterpret_cast<setter>(KeyboardAccelerator_put_Modifiers), nullptr, nullptr },
         { "key", reinterpret_cast<getter>(KeyboardAccelerator_get_Key), reinterpret_cast<setter>(KeyboardAccelerator_put_Key), nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(KeyboardAccelerator_get_IsEnabled), reinterpret_cast<setter>(KeyboardAccelerator_put_IsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyboardAccelerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyboardAccelerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyboardAccelerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyboardAccelerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyboardAccelerator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyboardAccelerator = {
         "winrt._winrt_microsoft_ui_xaml_input.KeyboardAccelerator",
@@ -5833,12 +5756,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "key_property", reinterpret_cast<getter>(KeyboardAccelerator_get_KeyProperty), nullptr, nullptr, nullptr },
         { "modifiers_property", reinterpret_cast<getter>(KeyboardAccelerator_get_ModifiersProperty), nullptr, nullptr, nullptr },
         { "scope_owner_property", reinterpret_cast<getter>(KeyboardAccelerator_get_ScopeOwnerProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KeyboardAccelerator_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KeyboardAccelerator_Static[] = 
     {
@@ -5848,14 +5769,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { }
     };
 
-    static PyType_Spec type_spec_KeyboardAccelerator_Static =
-    {
+    static PyType_Spec type_spec_KeyboardAccelerator_Static = {
         "winrt._winrt_microsoft_ui_xaml_input.KeyboardAccelerator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_KeyboardAccelerator_Static
-    };
+        type_slots_KeyboardAccelerator_Static};
 
     // ----- KeyboardAcceleratorInvokedEventArgs class --------------------
 
@@ -6030,23 +5949,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_KeyboardAcceleratorInvokedEventArgs[] = {
         { "_assign_array_", _assign_array_KeyboardAcceleratorInvokedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyboardAcceleratorInvokedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyboardAcceleratorInvokedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(KeyboardAcceleratorInvokedEventArgs_get_Handled), reinterpret_cast<setter>(KeyboardAcceleratorInvokedEventArgs_put_Handled), nullptr, nullptr },
         { "element", reinterpret_cast<getter>(KeyboardAcceleratorInvokedEventArgs_get_Element), nullptr, nullptr, nullptr },
         { "keyboard_accelerator", reinterpret_cast<getter>(KeyboardAcceleratorInvokedEventArgs_get_KeyboardAccelerator), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyboardAcceleratorInvokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyboardAcceleratorInvokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyboardAcceleratorInvokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyboardAcceleratorInvokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyboardAcceleratorInvokedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyboardAcceleratorInvokedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.KeyboardAcceleratorInvokedEventArgs",
@@ -6540,8 +6456,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "try_set_new_focused_element", reinterpret_cast<PyCFunction>(LosingFocusEventArgs_TrySetNewFocusedElement), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LosingFocusEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LosingFocusEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LosingFocusEventArgs[] = {
         { "new_focused_element", reinterpret_cast<getter>(LosingFocusEventArgs_get_NewFocusedElement), reinterpret_cast<setter>(LosingFocusEventArgs_put_NewFocusedElement), nullptr, nullptr },
@@ -6552,16 +6467,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "focus_state", reinterpret_cast<getter>(LosingFocusEventArgs_get_FocusState), nullptr, nullptr, nullptr },
         { "input_device", reinterpret_cast<getter>(LosingFocusEventArgs_get_InputDevice), nullptr, nullptr, nullptr },
         { "old_focused_element", reinterpret_cast<getter>(LosingFocusEventArgs_get_OldFocusedElement), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LosingFocusEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LosingFocusEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LosingFocusEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LosingFocusEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LosingFocusEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LosingFocusEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.LosingFocusEventArgs",
@@ -6885,8 +6798,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_ManipulationCompletedRoutedEventArgs[] = {
         { "_assign_array_", _assign_array_ManipulationCompletedRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ManipulationCompletedRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ManipulationCompletedRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(ManipulationCompletedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(ManipulationCompletedRoutedEventArgs_put_Handled), nullptr, nullptr },
@@ -6896,16 +6808,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "pointer_device_type", reinterpret_cast<getter>(ManipulationCompletedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(ManipulationCompletedRoutedEventArgs_get_Position), nullptr, nullptr, nullptr },
         { "velocities", reinterpret_cast<getter>(ManipulationCompletedRoutedEventArgs_get_Velocities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ManipulationCompletedRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationCompletedRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationCompletedRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationCompletedRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationCompletedRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ManipulationCompletedRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.ManipulationCompletedRoutedEventArgs",
@@ -7301,8 +7211,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "complete", reinterpret_cast<PyCFunction>(ManipulationDeltaRoutedEventArgs_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ManipulationDeltaRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ManipulationDeltaRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ManipulationDeltaRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(ManipulationDeltaRoutedEventArgs_get_Handled), reinterpret_cast<setter>(ManipulationDeltaRoutedEventArgs_put_Handled), nullptr, nullptr },
@@ -7313,16 +7222,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "pointer_device_type", reinterpret_cast<getter>(ManipulationDeltaRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(ManipulationDeltaRoutedEventArgs_get_Position), nullptr, nullptr, nullptr },
         { "velocities", reinterpret_cast<getter>(ManipulationDeltaRoutedEventArgs_get_Velocities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ManipulationDeltaRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationDeltaRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationDeltaRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationDeltaRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationDeltaRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ManipulationDeltaRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.ManipulationDeltaRoutedEventArgs",
@@ -7823,8 +7730,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_ManipulationInertiaStartingRoutedEventArgs[] = {
         { "_assign_array_", _assign_array_ManipulationInertiaStartingRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ManipulationInertiaStartingRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ManipulationInertiaStartingRoutedEventArgs[] = {
         { "translation_behavior", reinterpret_cast<getter>(ManipulationInertiaStartingRoutedEventArgs_get_TranslationBehavior), reinterpret_cast<setter>(ManipulationInertiaStartingRoutedEventArgs_put_TranslationBehavior), nullptr, nullptr },
@@ -7836,16 +7742,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "delta", reinterpret_cast<getter>(ManipulationInertiaStartingRoutedEventArgs_get_Delta), nullptr, nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(ManipulationInertiaStartingRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
         { "velocities", reinterpret_cast<getter>(ManipulationInertiaStartingRoutedEventArgs_get_Velocities), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ManipulationInertiaStartingRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationInertiaStartingRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationInertiaStartingRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationInertiaStartingRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationInertiaStartingRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ManipulationInertiaStartingRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.ManipulationInertiaStartingRoutedEventArgs",
@@ -8074,22 +7978,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_ManipulationPivot[] = {
         { "_assign_array_", _assign_array_ManipulationPivot, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ManipulationPivot), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ManipulationPivot[] = {
         { "radius", reinterpret_cast<getter>(ManipulationPivot_get_Radius), reinterpret_cast<setter>(ManipulationPivot_put_Radius), nullptr, nullptr },
         { "center", reinterpret_cast<getter>(ManipulationPivot_get_Center), reinterpret_cast<setter>(ManipulationPivot_put_Center), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ManipulationPivot[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationPivot) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationPivot) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationPivot) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationPivot) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ManipulationPivot = {
         "winrt._winrt_microsoft_ui_xaml_input.ManipulationPivot",
@@ -8455,8 +8356,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "complete", reinterpret_cast<PyCFunction>(ManipulationStartedRoutedEventArgs_Complete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ManipulationStartedRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ManipulationStartedRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ManipulationStartedRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(ManipulationStartedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(ManipulationStartedRoutedEventArgs_put_Handled), nullptr, nullptr },
@@ -8464,16 +8364,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "cumulative", reinterpret_cast<getter>(ManipulationStartedRoutedEventArgs_get_Cumulative), nullptr, nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(ManipulationStartedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(ManipulationStartedRoutedEventArgs_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ManipulationStartedRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationStartedRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationStartedRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationStartedRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationStartedRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ManipulationStartedRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.ManipulationStartedRoutedEventArgs",
@@ -8483,12 +8381,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         _type_slots_ManipulationStartedRoutedEventArgs};
 
     static PyGetSetDef getset_ManipulationStartedRoutedEventArgs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ManipulationStartedRoutedEventArgs_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ManipulationStartedRoutedEventArgs_Static[] = 
     {
@@ -8498,14 +8394,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { }
     };
 
-    static PyType_Spec type_spec_ManipulationStartedRoutedEventArgs_Static =
-    {
+    static PyType_Spec type_spec_ManipulationStartedRoutedEventArgs_Static = {
         "winrt._winrt_microsoft_ui_xaml_input.ManipulationStartedRoutedEventArgs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ManipulationStartedRoutedEventArgs_Static
-    };
+        type_slots_ManipulationStartedRoutedEventArgs_Static};
 
     // ----- ManipulationStartingRoutedEventArgs class --------------------
 
@@ -8849,24 +8743,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_ManipulationStartingRoutedEventArgs[] = {
         { "_assign_array_", _assign_array_ManipulationStartingRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ManipulationStartingRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ManipulationStartingRoutedEventArgs[] = {
         { "pivot", reinterpret_cast<getter>(ManipulationStartingRoutedEventArgs_get_Pivot), reinterpret_cast<setter>(ManipulationStartingRoutedEventArgs_put_Pivot), nullptr, nullptr },
         { "mode", reinterpret_cast<getter>(ManipulationStartingRoutedEventArgs_get_Mode), reinterpret_cast<setter>(ManipulationStartingRoutedEventArgs_put_Mode), nullptr, nullptr },
         { "handled", reinterpret_cast<getter>(ManipulationStartingRoutedEventArgs_get_Handled), reinterpret_cast<setter>(ManipulationStartingRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "container", reinterpret_cast<getter>(ManipulationStartingRoutedEventArgs_get_Container), reinterpret_cast<setter>(ManipulationStartingRoutedEventArgs_put_Container), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ManipulationStartingRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationStartingRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationStartingRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationStartingRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationStartingRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ManipulationStartingRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.ManipulationStartingRoutedEventArgs",
@@ -9048,23 +8939,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_NoFocusCandidateFoundEventArgs[] = {
         { "_assign_array_", _assign_array_NoFocusCandidateFoundEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NoFocusCandidateFoundEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NoFocusCandidateFoundEventArgs[] = {
         { "handled", reinterpret_cast<getter>(NoFocusCandidateFoundEventArgs_get_Handled), reinterpret_cast<setter>(NoFocusCandidateFoundEventArgs_put_Handled), nullptr, nullptr },
         { "direction", reinterpret_cast<getter>(NoFocusCandidateFoundEventArgs_get_Direction), nullptr, nullptr, nullptr },
         { "input_device", reinterpret_cast<getter>(NoFocusCandidateFoundEventArgs_get_InputDevice), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NoFocusCandidateFoundEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NoFocusCandidateFoundEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NoFocusCandidateFoundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NoFocusCandidateFoundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NoFocusCandidateFoundEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NoFocusCandidateFoundEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.NoFocusCandidateFoundEventArgs",
@@ -9237,24 +9125,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_Pointer[] = {
         { "_assign_array_", _assign_array_Pointer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Pointer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Pointer[] = {
         { "is_in_contact", reinterpret_cast<getter>(Pointer_get_IsInContact), nullptr, nullptr, nullptr },
         { "is_in_range", reinterpret_cast<getter>(Pointer_get_IsInRange), nullptr, nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(Pointer_get_PointerDeviceType), nullptr, nullptr, nullptr },
         { "pointer_id", reinterpret_cast<getter>(Pointer_get_PointerId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Pointer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Pointer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Pointer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Pointer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Pointer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Pointer = {
         "winrt._winrt_microsoft_ui_xaml_input.Pointer",
@@ -9552,24 +9437,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "get_intermediate_points", reinterpret_cast<PyCFunction>(PointerRoutedEventArgs_GetIntermediatePoints), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PointerRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PointerRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(PointerRoutedEventArgs_get_Handled), reinterpret_cast<setter>(PointerRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "is_generated", reinterpret_cast<getter>(PointerRoutedEventArgs_get_IsGenerated), nullptr, nullptr, nullptr },
         { "key_modifiers", reinterpret_cast<getter>(PointerRoutedEventArgs_get_KeyModifiers), nullptr, nullptr, nullptr },
         { "pointer", reinterpret_cast<getter>(PointerRoutedEventArgs_get_Pointer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PointerRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointerRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.PointerRoutedEventArgs",
@@ -9751,23 +9633,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_ProcessKeyboardAcceleratorEventArgs[] = {
         { "_assign_array_", _assign_array_ProcessKeyboardAcceleratorEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessKeyboardAcceleratorEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ProcessKeyboardAcceleratorEventArgs[] = {
         { "handled", reinterpret_cast<getter>(ProcessKeyboardAcceleratorEventArgs_get_Handled), reinterpret_cast<setter>(ProcessKeyboardAcceleratorEventArgs_put_Handled), nullptr, nullptr },
         { "key", reinterpret_cast<getter>(ProcessKeyboardAcceleratorEventArgs_get_Key), nullptr, nullptr, nullptr },
         { "modifiers", reinterpret_cast<getter>(ProcessKeyboardAcceleratorEventArgs_get_Modifiers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ProcessKeyboardAcceleratorEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessKeyboardAcceleratorEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessKeyboardAcceleratorEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessKeyboardAcceleratorEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessKeyboardAcceleratorEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ProcessKeyboardAcceleratorEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.ProcessKeyboardAcceleratorEventArgs",
@@ -9984,22 +9863,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "get_position", reinterpret_cast<PyCFunction>(RightTappedRoutedEventArgs_GetPosition), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RightTappedRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RightTappedRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RightTappedRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(RightTappedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(RightTappedRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(RightTappedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RightTappedRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RightTappedRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RightTappedRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RightTappedRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RightTappedRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RightTappedRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.RightTappedRoutedEventArgs",
@@ -10272,21 +10148,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef _methods_StandardUICommand[] = {
         { "_assign_array_", _assign_array_StandardUICommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StandardUICommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_StandardUICommand[] = {
         { "kind", reinterpret_cast<getter>(StandardUICommand_get_Kind), reinterpret_cast<setter>(StandardUICommand_put_Kind), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_StandardUICommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StandardUICommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StandardUICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StandardUICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StandardUICommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_StandardUICommand = {
         "winrt._winrt_microsoft_ui_xaml_input.StandardUICommand",
@@ -10297,12 +10170,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyGetSetDef getset_StandardUICommand_Static[] = {
         { "kind_property", reinterpret_cast<getter>(StandardUICommand_get_KindProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_StandardUICommand_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_StandardUICommand_Static[] = 
     {
@@ -10312,14 +10183,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { }
     };
 
-    static PyType_Spec type_spec_StandardUICommand_Static =
-    {
+    static PyType_Spec type_spec_StandardUICommand_Static = {
         "winrt._winrt_microsoft_ui_xaml_input.StandardUICommand_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_StandardUICommand_Static
-    };
+        type_slots_StandardUICommand_Static};
 
     // ----- TappedRoutedEventArgs class --------------------
 
@@ -10529,22 +10398,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "get_position", reinterpret_cast<PyCFunction>(TappedRoutedEventArgs_GetPosition), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TappedRoutedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TappedRoutedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TappedRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(TappedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(TappedRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(TappedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TappedRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TappedRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TappedRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TappedRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TappedRoutedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TappedRoutedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_input.TappedRoutedEventArgs",
@@ -11564,8 +11430,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "remove_can_execute_changed", reinterpret_cast<PyCFunction>(XamlUICommand_remove_CanExecuteChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_XamlUICommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlUICommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XamlUICommand[] = {
         { "label", reinterpret_cast<getter>(XamlUICommand_get_Label), reinterpret_cast<setter>(XamlUICommand_put_Label), nullptr, nullptr },
@@ -11574,16 +11439,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "command", reinterpret_cast<getter>(XamlUICommand_get_Command), reinterpret_cast<setter>(XamlUICommand_put_Command), nullptr, nullptr },
         { "access_key", reinterpret_cast<getter>(XamlUICommand_get_AccessKey), reinterpret_cast<setter>(XamlUICommand_put_AccessKey), nullptr, nullptr },
         { "keyboard_accelerators", reinterpret_cast<getter>(XamlUICommand_get_KeyboardAccelerators), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XamlUICommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlUICommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlUICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlUICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlUICommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XamlUICommand = {
         "winrt._winrt_microsoft_ui_xaml_input.XamlUICommand",
@@ -11599,12 +11462,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "icon_source_property", reinterpret_cast<getter>(XamlUICommand_get_IconSourceProperty), nullptr, nullptr, nullptr },
         { "keyboard_accelerators_property", reinterpret_cast<getter>(XamlUICommand_get_KeyboardAcceleratorsProperty), nullptr, nullptr, nullptr },
         { "label_property", reinterpret_cast<getter>(XamlUICommand_get_LabelProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_XamlUICommand_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_XamlUICommand_Static[] = 
     {
@@ -11614,14 +11475,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { }
     };
 
-    static PyType_Spec type_spec_XamlUICommand_Static =
-    {
+    static PyType_Spec type_spec_XamlUICommand_Static = {
         "winrt._winrt_microsoft_ui_xaml_input.XamlUICommand_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_XamlUICommand_Static
-    };
+        type_slots_XamlUICommand_Static};
 
     // ----- ICommand interface --------------------
 
@@ -11821,20 +11680,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "remove_can_execute_changed", reinterpret_cast<PyCFunction>(ICommand_remove_CanExecuteChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICommand[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICommand = {
         "winrt._winrt_microsoft_ui_xaml_input.ICommand",
@@ -12014,13 +11870,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef methods_ImplementsICommand[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommand), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommand), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICommand[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICommand = {
         "winrt._winrt_microsoft_ui_xaml_input.ImplementsICommand",

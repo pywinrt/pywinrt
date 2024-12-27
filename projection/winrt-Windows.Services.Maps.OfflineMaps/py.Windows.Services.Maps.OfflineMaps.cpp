@@ -402,24 +402,21 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         { "remove_status_changed", reinterpret_cast<PyCFunction>(OfflineMapPackage_remove_StatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_OfflineMapPackage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OfflineMapPackage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OfflineMapPackage[] = {
         { "display_name", reinterpret_cast<getter>(OfflineMapPackage_get_DisplayName), nullptr, nullptr, nullptr },
         { "enclosing_region_name", reinterpret_cast<getter>(OfflineMapPackage_get_EnclosingRegionName), nullptr, nullptr, nullptr },
         { "estimated_size_in_bytes", reinterpret_cast<getter>(OfflineMapPackage_get_EstimatedSizeInBytes), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(OfflineMapPackage_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OfflineMapPackage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OfflineMapPackage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OfflineMapPackage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OfflineMapPackage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OfflineMapPackage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OfflineMapPackage = {
         "winrt._winrt_windows_services_maps_offlinemaps.OfflineMapPackage",
@@ -429,15 +426,13 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         _type_slots_OfflineMapPackage};
 
     static PyGetSetDef getset_OfflineMapPackage_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_OfflineMapPackage_Static[] = {
         { "find_packages_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_FindPackagesAsync), METH_VARARGS, nullptr },
         { "find_packages_in_bounding_box_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_FindPackagesInBoundingBoxAsync), METH_VARARGS, nullptr },
         { "find_packages_in_geocircle_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_FindPackagesInGeocircleAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_OfflineMapPackage_Static[] = 
     {
@@ -447,14 +442,12 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         { }
     };
 
-    static PyType_Spec type_spec_OfflineMapPackage_Static =
-    {
+    static PyType_Spec type_spec_OfflineMapPackage_Static = {
         "winrt._winrt_windows_services_maps_offlinemaps.OfflineMapPackage_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_OfflineMapPackage_Static
-    };
+        type_slots_OfflineMapPackage_Static};
 
     // ----- OfflineMapPackageQueryResult class --------------------
 
@@ -560,22 +553,19 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     static PyMethodDef _methods_OfflineMapPackageQueryResult[] = {
         { "_assign_array_", _assign_array_OfflineMapPackageQueryResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OfflineMapPackageQueryResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OfflineMapPackageQueryResult[] = {
         { "packages", reinterpret_cast<getter>(OfflineMapPackageQueryResult_get_Packages), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(OfflineMapPackageQueryResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OfflineMapPackageQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OfflineMapPackageQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OfflineMapPackageQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OfflineMapPackageQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OfflineMapPackageQueryResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OfflineMapPackageQueryResult = {
         "winrt._winrt_windows_services_maps_offlinemaps.OfflineMapPackageQueryResult",
@@ -658,21 +648,18 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     static PyMethodDef _methods_OfflineMapPackageStartDownloadResult[] = {
         { "_assign_array_", _assign_array_OfflineMapPackageStartDownloadResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OfflineMapPackageStartDownloadResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_OfflineMapPackageStartDownloadResult[] = {
         { "status", reinterpret_cast<getter>(OfflineMapPackageStartDownloadResult_get_Status), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_OfflineMapPackageStartDownloadResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OfflineMapPackageStartDownloadResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OfflineMapPackageStartDownloadResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OfflineMapPackageStartDownloadResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OfflineMapPackageStartDownloadResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_OfflineMapPackageStartDownloadResult = {
         "winrt._winrt_windows_services_maps_offlinemaps.OfflineMapPackageStartDownloadResult",

@@ -2987,8 +2987,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_window_close_requested", reinterpret_cast<PyCFunction>(CoreWebView2_remove_WindowCloseRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2[] = {
         { "browser_process_id", reinterpret_cast<getter>(CoreWebView2_get_BrowserProcessId), nullptr, nullptr, nullptr },
@@ -3011,16 +3010,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "default_download_dialog_margin", reinterpret_cast<getter>(CoreWebView2_get_DefaultDownloadDialogMargin), reinterpret_cast<setter>(CoreWebView2_put_DefaultDownloadDialogMargin), nullptr, nullptr },
         { "default_download_dialog_corner_alignment", reinterpret_cast<getter>(CoreWebView2_get_DefaultDownloadDialogCornerAlignment), reinterpret_cast<setter>(CoreWebView2_put_DefaultDownloadDialogCornerAlignment), nullptr, nullptr },
         { "is_default_download_dialog_open", reinterpret_cast<getter>(CoreWebView2_get_IsDefaultDownloadDialogOpen), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2 = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2",
@@ -3227,8 +3224,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2AcceleratorKeyPressedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2AcceleratorKeyPressedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2AcceleratorKeyPressedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2AcceleratorKeyPressedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(CoreWebView2AcceleratorKeyPressedEventArgs_get_Handled), reinterpret_cast<setter>(CoreWebView2AcceleratorKeyPressedEventArgs_put_Handled), nullptr, nullptr },
@@ -3237,16 +3233,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "physical_key_status", reinterpret_cast<getter>(CoreWebView2AcceleratorKeyPressedEventArgs_get_PhysicalKeyStatus), nullptr, nullptr, nullptr },
         { "virtual_key", reinterpret_cast<getter>(CoreWebView2AcceleratorKeyPressedEventArgs_get_VirtualKey), nullptr, nullptr, nullptr },
         { "is_browser_accelerator_key_enabled", reinterpret_cast<getter>(CoreWebView2AcceleratorKeyPressedEventArgs_get_IsBrowserAcceleratorKeyEnabled), reinterpret_cast<setter>(CoreWebView2AcceleratorKeyPressedEventArgs_put_IsBrowserAcceleratorKeyEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2AcceleratorKeyPressedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2AcceleratorKeyPressedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2AcceleratorKeyPressedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2AcceleratorKeyPressedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2AcceleratorKeyPressedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2AcceleratorKeyPressedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2AcceleratorKeyPressedEventArgs",
@@ -3421,24 +3415,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2BasicAuthenticationRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2BasicAuthenticationRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2BasicAuthenticationRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2BasicAuthenticationRequestedEventArgs[] = {
         { "cancel", reinterpret_cast<getter>(CoreWebView2BasicAuthenticationRequestedEventArgs_get_Cancel), reinterpret_cast<setter>(CoreWebView2BasicAuthenticationRequestedEventArgs_put_Cancel), nullptr, nullptr },
         { "challenge", reinterpret_cast<getter>(CoreWebView2BasicAuthenticationRequestedEventArgs_get_Challenge), nullptr, nullptr, nullptr },
         { "response", reinterpret_cast<getter>(CoreWebView2BasicAuthenticationRequestedEventArgs_get_Response), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(CoreWebView2BasicAuthenticationRequestedEventArgs_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2BasicAuthenticationRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2BasicAuthenticationRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2BasicAuthenticationRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2BasicAuthenticationRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2BasicAuthenticationRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2BasicAuthenticationRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2BasicAuthenticationRequestedEventArgs",
@@ -3577,22 +3568,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2BasicAuthenticationResponse[] = {
         { "_assign_array_", _assign_array_CoreWebView2BasicAuthenticationResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2BasicAuthenticationResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2BasicAuthenticationResponse[] = {
         { "user_name", reinterpret_cast<getter>(CoreWebView2BasicAuthenticationResponse_get_UserName), reinterpret_cast<setter>(CoreWebView2BasicAuthenticationResponse_put_UserName), nullptr, nullptr },
         { "password", reinterpret_cast<getter>(CoreWebView2BasicAuthenticationResponse_get_Password), reinterpret_cast<setter>(CoreWebView2BasicAuthenticationResponse_put_Password), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2BasicAuthenticationResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2BasicAuthenticationResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2BasicAuthenticationResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2BasicAuthenticationResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2BasicAuthenticationResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2BasicAuthenticationResponse = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2BasicAuthenticationResponse",
@@ -3754,23 +3742,20 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_async", reinterpret_cast<PyCFunction>(CoreWebView2BrowserExtension_RemoveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2BrowserExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2BrowserExtension), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2BrowserExtension[] = {
         { "id", reinterpret_cast<getter>(CoreWebView2BrowserExtension_get_Id), nullptr, nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(CoreWebView2BrowserExtension_get_IsEnabled), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(CoreWebView2BrowserExtension_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2BrowserExtension[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2BrowserExtension) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2BrowserExtension) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2BrowserExtension) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2BrowserExtension) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2BrowserExtension = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2BrowserExtension",
@@ -3857,22 +3842,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2BrowserProcessExitedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2BrowserProcessExitedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2BrowserProcessExitedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2BrowserProcessExitedEventArgs[] = {
         { "browser_process_exit_kind", reinterpret_cast<getter>(CoreWebView2BrowserProcessExitedEventArgs_get_BrowserProcessExitKind), nullptr, nullptr, nullptr },
         { "browser_process_id", reinterpret_cast<getter>(CoreWebView2BrowserProcessExitedEventArgs_get_BrowserProcessId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2BrowserProcessExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2BrowserProcessExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2BrowserProcessExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2BrowserProcessExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2BrowserProcessExitedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2BrowserProcessExitedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2BrowserProcessExitedEventArgs",
@@ -4100,8 +4082,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "to_pem_encoding", reinterpret_cast<PyCFunction>(CoreWebView2Certificate_ToPemEncoding), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2Certificate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2Certificate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2Certificate[] = {
         { "der_encoded_serial_number", reinterpret_cast<getter>(CoreWebView2Certificate_get_DerEncodedSerialNumber), nullptr, nullptr, nullptr },
@@ -4111,16 +4092,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "subject", reinterpret_cast<getter>(CoreWebView2Certificate_get_Subject), nullptr, nullptr, nullptr },
         { "valid_from", reinterpret_cast<getter>(CoreWebView2Certificate_get_ValidFrom), nullptr, nullptr, nullptr },
         { "valid_to", reinterpret_cast<getter>(CoreWebView2Certificate_get_ValidTo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2Certificate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2Certificate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2Certificate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2Certificate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2Certificate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2Certificate = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Certificate",
@@ -4365,8 +4344,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "to_pem_encoding", reinterpret_cast<PyCFunction>(CoreWebView2ClientCertificate_ToPemEncoding), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2ClientCertificate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ClientCertificate), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ClientCertificate[] = {
         { "der_encoded_serial_number", reinterpret_cast<getter>(CoreWebView2ClientCertificate_get_DerEncodedSerialNumber), nullptr, nullptr, nullptr },
@@ -4377,16 +4355,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "subject", reinterpret_cast<getter>(CoreWebView2ClientCertificate_get_Subject), nullptr, nullptr, nullptr },
         { "valid_from", reinterpret_cast<getter>(CoreWebView2ClientCertificate_get_ValidFrom), nullptr, nullptr, nullptr },
         { "valid_to", reinterpret_cast<getter>(CoreWebView2ClientCertificate_get_ValidTo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ClientCertificate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ClientCertificate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ClientCertificate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ClientCertificate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ClientCertificate) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ClientCertificate = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ClientCertificate",
@@ -4681,8 +4657,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2ClientCertificateRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2ClientCertificateRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ClientCertificateRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ClientCertificateRequestedEventArgs[] = {
         { "selected_certificate", reinterpret_cast<getter>(CoreWebView2ClientCertificateRequestedEventArgs_get_SelectedCertificate), reinterpret_cast<setter>(CoreWebView2ClientCertificateRequestedEventArgs_put_SelectedCertificate), nullptr, nullptr },
@@ -4693,16 +4668,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "is_proxy", reinterpret_cast<getter>(CoreWebView2ClientCertificateRequestedEventArgs_get_IsProxy), nullptr, nullptr, nullptr },
         { "mutually_trusted_certificates", reinterpret_cast<getter>(CoreWebView2ClientCertificateRequestedEventArgs_get_MutuallyTrustedCertificates), nullptr, nullptr, nullptr },
         { "port", reinterpret_cast<getter>(CoreWebView2ClientCertificateRequestedEventArgs_get_Port), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ClientCertificateRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ClientCertificateRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ClientCertificateRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ClientCertificateRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ClientCertificateRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ClientCertificateRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ClientCertificateRequestedEventArgs",
@@ -5144,22 +5117,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_cursor_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_remove_CursorChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2CompositionController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2CompositionController), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2CompositionController[] = {
         { "root_visual_target", reinterpret_cast<getter>(CoreWebView2CompositionController_get_RootVisualTarget), reinterpret_cast<setter>(CoreWebView2CompositionController_put_RootVisualTarget), nullptr, nullptr },
         { "cursor", reinterpret_cast<getter>(CoreWebView2CompositionController_get_Cursor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2CompositionController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2CompositionController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2CompositionController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2CompositionController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2CompositionController) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2CompositionController = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2CompositionController",
@@ -5246,22 +5216,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2ContentLoadingEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2ContentLoadingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ContentLoadingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ContentLoadingEventArgs[] = {
         { "is_error_page", reinterpret_cast<getter>(CoreWebView2ContentLoadingEventArgs_get_IsErrorPage), nullptr, nullptr, nullptr },
         { "navigation_id", reinterpret_cast<getter>(CoreWebView2ContentLoadingEventArgs_get_NavigationId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ContentLoadingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ContentLoadingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ContentLoadingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ContentLoadingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ContentLoadingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ContentLoadingEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ContentLoadingEventArgs",
@@ -5560,8 +5527,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_custom_item_selected", reinterpret_cast<PyCFunction>(CoreWebView2ContextMenuItem_remove_CustomItemSelected), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2ContextMenuItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ContextMenuItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ContextMenuItem[] = {
         { "is_enabled", reinterpret_cast<getter>(CoreWebView2ContextMenuItem_get_IsEnabled), reinterpret_cast<setter>(CoreWebView2ContextMenuItem_put_IsEnabled), nullptr, nullptr },
@@ -5573,16 +5539,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "label", reinterpret_cast<getter>(CoreWebView2ContextMenuItem_get_Label), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(CoreWebView2ContextMenuItem_get_Name), nullptr, nullptr, nullptr },
         { "shortcut_key_description", reinterpret_cast<getter>(CoreWebView2ContextMenuItem_get_ShortcutKeyDescription), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ContextMenuItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ContextMenuItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ContextMenuItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ContextMenuItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ContextMenuItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ContextMenuItem = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ContextMenuItem",
@@ -5800,8 +5764,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2ContextMenuRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2ContextMenuRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ContextMenuRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ContextMenuRequestedEventArgs[] = {
         { "selected_command_id", reinterpret_cast<getter>(CoreWebView2ContextMenuRequestedEventArgs_get_SelectedCommandId), reinterpret_cast<setter>(CoreWebView2ContextMenuRequestedEventArgs_put_SelectedCommandId), nullptr, nullptr },
@@ -5809,16 +5772,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "context_menu_target", reinterpret_cast<getter>(CoreWebView2ContextMenuRequestedEventArgs_get_ContextMenuTarget), nullptr, nullptr, nullptr },
         { "location", reinterpret_cast<getter>(CoreWebView2ContextMenuRequestedEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "menu_items", reinterpret_cast<getter>(CoreWebView2ContextMenuRequestedEventArgs_get_MenuItems), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ContextMenuRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ContextMenuRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ContextMenuRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ContextMenuRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ContextMenuRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ContextMenuRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ContextMenuRequestedEventArgs",
@@ -6092,8 +6053,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2ContextMenuTarget[] = {
         { "_assign_array_", _assign_array_CoreWebView2ContextMenuTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ContextMenuTarget), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ContextMenuTarget[] = {
         { "frame_uri", reinterpret_cast<getter>(CoreWebView2ContextMenuTarget_get_FrameUri), nullptr, nullptr, nullptr },
@@ -6109,16 +6069,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "page_uri", reinterpret_cast<getter>(CoreWebView2ContextMenuTarget_get_PageUri), nullptr, nullptr, nullptr },
         { "selection_text", reinterpret_cast<getter>(CoreWebView2ContextMenuTarget_get_SelectionText), nullptr, nullptr, nullptr },
         { "source_uri", reinterpret_cast<getter>(CoreWebView2ContextMenuTarget_get_SourceUri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ContextMenuTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ContextMenuTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ContextMenuTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ContextMenuTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ContextMenuTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ContextMenuTarget = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ContextMenuTarget",
@@ -6959,8 +6917,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_zoom_factor_changed", reinterpret_cast<PyCFunction>(CoreWebView2Controller_remove_ZoomFactorChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2Controller, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2Controller), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2Controller[] = {
         { "zoom_factor", reinterpret_cast<getter>(CoreWebView2Controller_get_ZoomFactor), reinterpret_cast<setter>(CoreWebView2Controller_put_ZoomFactor), nullptr, nullptr },
@@ -6974,16 +6931,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "bounds_mode", reinterpret_cast<getter>(CoreWebView2Controller_get_BoundsMode), reinterpret_cast<setter>(CoreWebView2Controller_put_BoundsMode), nullptr, nullptr },
         { "allow_external_drop", reinterpret_cast<getter>(CoreWebView2Controller_get_AllowExternalDrop), reinterpret_cast<setter>(CoreWebView2Controller_put_AllowExternalDrop), nullptr, nullptr },
         { "is_browser_hit_transparent", reinterpret_cast<getter>(CoreWebView2Controller_get_IsBrowserHitTransparent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2Controller[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2Controller) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2Controller) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2Controller) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2Controller) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2Controller = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Controller",
@@ -6993,12 +6948,10 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         _type_slots_CoreWebView2Controller};
 
     static PyGetSetDef getset_CoreWebView2Controller_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreWebView2Controller_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreWebView2Controller_Static[] = 
     {
@@ -7008,14 +6961,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreWebView2Controller_Static =
-    {
+    static PyType_Spec type_spec_CoreWebView2Controller_Static = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Controller_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CoreWebView2Controller_Static
-    };
+        type_slots_CoreWebView2Controller_Static};
 
     // ----- CoreWebView2ControllerOptions class --------------------
 
@@ -7190,23 +7141,20 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2ControllerOptions[] = {
         { "_assign_array_", _assign_array_CoreWebView2ControllerOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ControllerOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ControllerOptions[] = {
         { "profile_name", reinterpret_cast<getter>(CoreWebView2ControllerOptions_get_ProfileName), reinterpret_cast<setter>(CoreWebView2ControllerOptions_put_ProfileName), nullptr, nullptr },
         { "is_in_private_mode_enabled", reinterpret_cast<getter>(CoreWebView2ControllerOptions_get_IsInPrivateModeEnabled), reinterpret_cast<setter>(CoreWebView2ControllerOptions_put_IsInPrivateModeEnabled), nullptr, nullptr },
         { "script_locale", reinterpret_cast<getter>(CoreWebView2ControllerOptions_get_ScriptLocale), reinterpret_cast<setter>(CoreWebView2ControllerOptions_put_ScriptLocale), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ControllerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ControllerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ControllerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ControllerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ControllerOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ControllerOptions = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ControllerOptions",
@@ -7351,22 +7299,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2ControllerWindowReference[] = {
         { "_assign_array_", _assign_array_CoreWebView2ControllerWindowReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ControllerWindowReference), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ControllerWindowReference[] = {
         { "core_window", reinterpret_cast<getter>(CoreWebView2ControllerWindowReference_get_CoreWindow), nullptr, nullptr, nullptr },
         { "window_handle", reinterpret_cast<getter>(CoreWebView2ControllerWindowReference_get_WindowHandle), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ControllerWindowReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ControllerWindowReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ControllerWindowReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ControllerWindowReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ControllerWindowReference) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ControllerWindowReference = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ControllerWindowReference",
@@ -7376,14 +7321,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         _type_slots_CoreWebView2ControllerWindowReference};
 
     static PyGetSetDef getset_CoreWebView2ControllerWindowReference_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreWebView2ControllerWindowReference_Static[] = {
         { "create_from_core_window", reinterpret_cast<PyCFunction>(CoreWebView2ControllerWindowReference_CreateFromCoreWindow), METH_VARARGS, nullptr },
         { "create_from_window_handle", reinterpret_cast<PyCFunction>(CoreWebView2ControllerWindowReference_CreateFromWindowHandle), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreWebView2ControllerWindowReference_Static[] = 
     {
@@ -7393,14 +7336,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreWebView2ControllerWindowReference_Static =
-    {
+    static PyType_Spec type_spec_CoreWebView2ControllerWindowReference_Static = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ControllerWindowReference_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreWebView2ControllerWindowReference_Static
-    };
+        type_slots_CoreWebView2ControllerWindowReference_Static};
 
     // ----- CoreWebView2Cookie class --------------------
 
@@ -7729,8 +7670,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2Cookie[] = {
         { "_assign_array_", _assign_array_CoreWebView2Cookie, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2Cookie), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2Cookie[] = {
         { "value", reinterpret_cast<getter>(CoreWebView2Cookie_get_Value), reinterpret_cast<setter>(CoreWebView2Cookie_put_Value), nullptr, nullptr },
@@ -7742,16 +7682,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "is_session", reinterpret_cast<getter>(CoreWebView2Cookie_get_IsSession), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(CoreWebView2Cookie_get_Name), nullptr, nullptr, nullptr },
         { "path", reinterpret_cast<getter>(CoreWebView2Cookie_get_Path), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2Cookie[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2Cookie) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2Cookie) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2Cookie) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2Cookie) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2Cookie = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Cookie",
@@ -8053,20 +7991,17 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_cookies_async", reinterpret_cast<PyCFunction>(CoreWebView2CookieManager_GetCookiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2CookieManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2CookieManager), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2CookieManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2CookieManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2CookieManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2CookieManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2CookieManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2CookieManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2CookieManager = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2CookieManager",
@@ -8263,24 +8198,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2CustomSchemeRegistration[] = {
         { "_assign_array_", _assign_array_CoreWebView2CustomSchemeRegistration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2CustomSchemeRegistration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2CustomSchemeRegistration[] = {
         { "treat_as_secure", reinterpret_cast<getter>(CoreWebView2CustomSchemeRegistration_get_TreatAsSecure), reinterpret_cast<setter>(CoreWebView2CustomSchemeRegistration_put_TreatAsSecure), nullptr, nullptr },
         { "has_authority_component", reinterpret_cast<getter>(CoreWebView2CustomSchemeRegistration_get_HasAuthorityComponent), reinterpret_cast<setter>(CoreWebView2CustomSchemeRegistration_put_HasAuthorityComponent), nullptr, nullptr },
         { "allowed_origins", reinterpret_cast<getter>(CoreWebView2CustomSchemeRegistration_get_AllowedOrigins), nullptr, nullptr, nullptr },
         { "scheme_name", reinterpret_cast<getter>(CoreWebView2CustomSchemeRegistration_get_SchemeName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2CustomSchemeRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2CustomSchemeRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2CustomSchemeRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2CustomSchemeRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2CustomSchemeRegistration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2CustomSchemeRegistration = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2CustomSchemeRegistration",
@@ -8350,21 +8282,18 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2DOMContentLoadedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2DOMContentLoadedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2DOMContentLoadedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2DOMContentLoadedEventArgs[] = {
         { "navigation_id", reinterpret_cast<getter>(CoreWebView2DOMContentLoadedEventArgs_get_NavigationId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2DOMContentLoadedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2DOMContentLoadedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2DOMContentLoadedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2DOMContentLoadedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2DOMContentLoadedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2DOMContentLoadedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DOMContentLoadedEventArgs",
@@ -8451,22 +8380,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2DevToolsProtocolEventReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2DevToolsProtocolEventReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2DevToolsProtocolEventReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2DevToolsProtocolEventReceivedEventArgs[] = {
         { "parameter_object_as_json", reinterpret_cast<getter>(CoreWebView2DevToolsProtocolEventReceivedEventArgs_get_ParameterObjectAsJson), nullptr, nullptr, nullptr },
         { "session_id", reinterpret_cast<getter>(CoreWebView2DevToolsProtocolEventReceivedEventArgs_get_SessionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2DevToolsProtocolEventReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2DevToolsProtocolEventReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2DevToolsProtocolEventReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2DevToolsProtocolEventReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2DevToolsProtocolEventReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2DevToolsProtocolEventReceivedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DevToolsProtocolEventReceivedEventArgs",
@@ -8560,20 +8486,17 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_dev_tools_protocol_event_received", reinterpret_cast<PyCFunction>(CoreWebView2DevToolsProtocolEventReceiver_remove_DevToolsProtocolEventReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2DevToolsProtocolEventReceiver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2DevToolsProtocolEventReceiver), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2DevToolsProtocolEventReceiver[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2DevToolsProtocolEventReceiver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2DevToolsProtocolEventReceiver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2DevToolsProtocolEventReceiver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2DevToolsProtocolEventReceiver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2DevToolsProtocolEventReceiver) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2DevToolsProtocolEventReceiver = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DevToolsProtocolEventReceiver",
@@ -9006,8 +8929,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_state_changed", reinterpret_cast<PyCFunction>(CoreWebView2DownloadOperation_remove_StateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2DownloadOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2DownloadOperation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2DownloadOperation[] = {
         { "bytes_received", reinterpret_cast<getter>(CoreWebView2DownloadOperation_get_BytesReceived), nullptr, nullptr, nullptr },
@@ -9020,16 +8942,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "state", reinterpret_cast<getter>(CoreWebView2DownloadOperation_get_State), nullptr, nullptr, nullptr },
         { "total_bytes_to_receive", reinterpret_cast<getter>(CoreWebView2DownloadOperation_get_TotalBytesToReceive), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(CoreWebView2DownloadOperation_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2DownloadOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2DownloadOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2DownloadOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2DownloadOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2DownloadOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2DownloadOperation = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DownloadOperation",
@@ -9256,24 +9176,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2DownloadStartingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2DownloadStartingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2DownloadStartingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2DownloadStartingEventArgs[] = {
         { "result_file_path", reinterpret_cast<getter>(CoreWebView2DownloadStartingEventArgs_get_ResultFilePath), reinterpret_cast<setter>(CoreWebView2DownloadStartingEventArgs_put_ResultFilePath), nullptr, nullptr },
         { "handled", reinterpret_cast<getter>(CoreWebView2DownloadStartingEventArgs_get_Handled), reinterpret_cast<setter>(CoreWebView2DownloadStartingEventArgs_put_Handled), nullptr, nullptr },
         { "cancel", reinterpret_cast<getter>(CoreWebView2DownloadStartingEventArgs_get_Cancel), reinterpret_cast<setter>(CoreWebView2DownloadStartingEventArgs_put_Cancel), nullptr, nullptr },
         { "download_operation", reinterpret_cast<getter>(CoreWebView2DownloadStartingEventArgs_get_DownloadOperation), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2DownloadStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2DownloadStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2DownloadStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2DownloadStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2DownloadStartingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2DownloadStartingEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DownloadStartingEventArgs",
@@ -10102,23 +10019,20 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_new_browser_version_available", reinterpret_cast<PyCFunction>(CoreWebView2Environment_remove_NewBrowserVersionAvailable), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2Environment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2Environment), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2Environment[] = {
         { "browser_version_string", reinterpret_cast<getter>(CoreWebView2Environment_get_BrowserVersionString), nullptr, nullptr, nullptr },
         { "failure_report_folder_path", reinterpret_cast<getter>(CoreWebView2Environment_get_FailureReportFolderPath), nullptr, nullptr, nullptr },
         { "user_data_folder", reinterpret_cast<getter>(CoreWebView2Environment_get_UserDataFolder), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2Environment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2Environment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2Environment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2Environment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2Environment) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2Environment = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Environment",
@@ -10128,8 +10042,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         _type_slots_CoreWebView2Environment};
 
     static PyGetSetDef getset_CoreWebView2Environment_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CoreWebView2Environment_Static[] = {
         { "compare_browser_version_string", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CompareBrowserVersionString), METH_VARARGS, nullptr },
@@ -10138,8 +10051,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_available_browser_version_string", reinterpret_cast<PyCFunction>(CoreWebView2Environment_GetAvailableBrowserVersionString), METH_VARARGS, nullptr },
         { "get_available_browser_version_string2", reinterpret_cast<PyCFunction>(CoreWebView2Environment_GetAvailableBrowserVersionString2), METH_VARARGS, nullptr },
         { "get_available_browser_version_string_with_options", reinterpret_cast<PyCFunction>(CoreWebView2Environment_GetAvailableBrowserVersionStringWithOptions), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CoreWebView2Environment_Static[] = 
     {
@@ -10149,14 +10061,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { }
     };
 
-    static PyType_Spec type_spec_CoreWebView2Environment_Static =
-    {
+    static PyType_Spec type_spec_CoreWebView2Environment_Static = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Environment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreWebView2Environment_Static
-    };
+        type_slots_CoreWebView2Environment_Static};
 
     // ----- CoreWebView2EnvironmentOptions class --------------------
 
@@ -10740,8 +10650,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2EnvironmentOptions[] = {
         { "_assign_array_", _assign_array_CoreWebView2EnvironmentOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2EnvironmentOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2EnvironmentOptions[] = {
         { "target_compatible_browser_version", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_TargetCompatibleBrowserVersion), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_TargetCompatibleBrowserVersion), nullptr, nullptr },
@@ -10756,16 +10665,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "release_channels", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_ReleaseChannels), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_ReleaseChannels), nullptr, nullptr },
         { "channel_search_kind", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_ChannelSearchKind), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_ChannelSearchKind), nullptr, nullptr },
         { "scroll_bar_style", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_ScrollBarStyle), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_ScrollBarStyle), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2EnvironmentOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2EnvironmentOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2EnvironmentOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2EnvironmentOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2EnvironmentOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2EnvironmentOptions = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2EnvironmentOptions",
@@ -10912,23 +10819,20 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "try_get_result_as_string", reinterpret_cast<PyCFunction>(CoreWebView2ExecuteScriptResult_TryGetResultAsString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2ExecuteScriptResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ExecuteScriptResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ExecuteScriptResult[] = {
         { "exception", reinterpret_cast<getter>(CoreWebView2ExecuteScriptResult_get_Exception), nullptr, nullptr, nullptr },
         { "result_as_json", reinterpret_cast<getter>(CoreWebView2ExecuteScriptResult_get_ResultAsJson), nullptr, nullptr, nullptr },
         { "succeeded", reinterpret_cast<getter>(CoreWebView2ExecuteScriptResult_get_Succeeded), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ExecuteScriptResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ExecuteScriptResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ExecuteScriptResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ExecuteScriptResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ExecuteScriptResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ExecuteScriptResult = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ExecuteScriptResult",
@@ -10998,21 +10902,18 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2File[] = {
         { "_assign_array_", _assign_array_CoreWebView2File, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2File), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2File[] = {
         { "path", reinterpret_cast<getter>(CoreWebView2File_get_Path), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2File[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2File) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2File) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2File) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2File) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2File = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2File",
@@ -11116,23 +11017,20 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2FileSystemHandle[] = {
         { "_assign_array_", _assign_array_CoreWebView2FileSystemHandle, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2FileSystemHandle), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2FileSystemHandle[] = {
         { "kind", reinterpret_cast<getter>(CoreWebView2FileSystemHandle_get_Kind), nullptr, nullptr, nullptr },
         { "path", reinterpret_cast<getter>(CoreWebView2FileSystemHandle_get_Path), nullptr, nullptr, nullptr },
         { "permission", reinterpret_cast<getter>(CoreWebView2FileSystemHandle_get_Permission), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2FileSystemHandle[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2FileSystemHandle) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2FileSystemHandle) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2FileSystemHandle) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2FileSystemHandle) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2FileSystemHandle = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2FileSystemHandle",
@@ -11731,22 +11629,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_name_changed", reinterpret_cast<PyCFunction>(CoreWebView2Frame_remove_NameChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2Frame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2Frame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2Frame[] = {
         { "name", reinterpret_cast<getter>(CoreWebView2Frame_get_Name), nullptr, nullptr, nullptr },
         { "frame_id", reinterpret_cast<getter>(CoreWebView2Frame_get_FrameId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2Frame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2Frame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2Frame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2Frame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2Frame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2Frame = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Frame",
@@ -11816,21 +11711,18 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2FrameCreatedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2FrameCreatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2FrameCreatedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2FrameCreatedEventArgs[] = {
         { "frame", reinterpret_cast<getter>(CoreWebView2FrameCreatedEventArgs_get_Frame), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2FrameCreatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2FrameCreatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2FrameCreatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2FrameCreatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2FrameCreatedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2FrameCreatedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2FrameCreatedEventArgs",
@@ -11968,8 +11860,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2FrameInfo[] = {
         { "_assign_array_", _assign_array_CoreWebView2FrameInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2FrameInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2FrameInfo[] = {
         { "name", reinterpret_cast<getter>(CoreWebView2FrameInfo_get_Name), nullptr, nullptr, nullptr },
@@ -11977,16 +11868,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "frame_id", reinterpret_cast<getter>(CoreWebView2FrameInfo_get_FrameId), nullptr, nullptr, nullptr },
         { "frame_kind", reinterpret_cast<getter>(CoreWebView2FrameInfo_get_FrameKind), nullptr, nullptr, nullptr },
         { "parent_frame_info", reinterpret_cast<getter>(CoreWebView2FrameInfo_get_ParentFrameInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2FrameInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2FrameInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2FrameInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2FrameInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2FrameInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2FrameInfo = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2FrameInfo",
@@ -12162,14 +12051,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "move_next", reinterpret_cast<PyCFunction>(CoreWebView2HttpHeadersCollectionIterator_MoveNext), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2HttpHeadersCollectionIterator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2HttpHeadersCollectionIterator), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2HttpHeadersCollectionIterator[] = {
         { "current", reinterpret_cast<getter>(CoreWebView2HttpHeadersCollectionIterator_get_Current), nullptr, nullptr, nullptr },
         { "has_current", reinterpret_cast<getter>(CoreWebView2HttpHeadersCollectionIterator_get_HasCurrent), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2HttpHeadersCollectionIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2HttpHeadersCollectionIterator) },
@@ -12178,8 +12065,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2HttpHeadersCollectionIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CoreWebView2HttpHeadersCollectionIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_CoreWebView2HttpHeadersCollectionIterator) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2HttpHeadersCollectionIterator = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2HttpHeadersCollectionIterator",
@@ -12430,12 +12316,10 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "set_header", reinterpret_cast<PyCFunction>(CoreWebView2HttpRequestHeaders_SetHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2HttpRequestHeaders, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2HttpRequestHeaders), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2HttpRequestHeaders[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2HttpRequestHeaders[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2HttpRequestHeaders) },
@@ -12443,8 +12327,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2HttpRequestHeaders) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2HttpRequestHeaders) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CoreWebView2HttpRequestHeaders) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2HttpRequestHeaders = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2HttpRequestHeaders",
@@ -12664,12 +12547,10 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_headers", reinterpret_cast<PyCFunction>(CoreWebView2HttpResponseHeaders_GetHeaders), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2HttpResponseHeaders, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2HttpResponseHeaders), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2HttpResponseHeaders[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2HttpResponseHeaders[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2HttpResponseHeaders) },
@@ -12677,8 +12558,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2HttpResponseHeaders) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2HttpResponseHeaders) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CoreWebView2HttpResponseHeaders) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2HttpResponseHeaders = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2HttpResponseHeaders",
@@ -12853,24 +12733,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2LaunchingExternalUriSchemeEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2LaunchingExternalUriSchemeEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2LaunchingExternalUriSchemeEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2LaunchingExternalUriSchemeEventArgs[] = {
         { "cancel", reinterpret_cast<getter>(CoreWebView2LaunchingExternalUriSchemeEventArgs_get_Cancel), reinterpret_cast<setter>(CoreWebView2LaunchingExternalUriSchemeEventArgs_put_Cancel), nullptr, nullptr },
         { "initiating_origin", reinterpret_cast<getter>(CoreWebView2LaunchingExternalUriSchemeEventArgs_get_InitiatingOrigin), nullptr, nullptr, nullptr },
         { "is_user_initiated", reinterpret_cast<getter>(CoreWebView2LaunchingExternalUriSchemeEventArgs_get_IsUserInitiated), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(CoreWebView2LaunchingExternalUriSchemeEventArgs_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2LaunchingExternalUriSchemeEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2LaunchingExternalUriSchemeEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2LaunchingExternalUriSchemeEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2LaunchingExternalUriSchemeEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2LaunchingExternalUriSchemeEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2LaunchingExternalUriSchemeEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2LaunchingExternalUriSchemeEventArgs",
@@ -12983,22 +12860,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2MoveFocusRequestedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2MoveFocusRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2MoveFocusRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2MoveFocusRequestedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(CoreWebView2MoveFocusRequestedEventArgs_get_Handled), reinterpret_cast<setter>(CoreWebView2MoveFocusRequestedEventArgs_put_Handled), nullptr, nullptr },
         { "reason", reinterpret_cast<getter>(CoreWebView2MoveFocusRequestedEventArgs_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2MoveFocusRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2MoveFocusRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2MoveFocusRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2MoveFocusRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2MoveFocusRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2MoveFocusRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2MoveFocusRequestedEventArgs",
@@ -13119,24 +12993,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2NavigationCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2NavigationCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2NavigationCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2NavigationCompletedEventArgs[] = {
         { "is_success", reinterpret_cast<getter>(CoreWebView2NavigationCompletedEventArgs_get_IsSuccess), nullptr, nullptr, nullptr },
         { "navigation_id", reinterpret_cast<getter>(CoreWebView2NavigationCompletedEventArgs_get_NavigationId), nullptr, nullptr, nullptr },
         { "web_error_status", reinterpret_cast<getter>(CoreWebView2NavigationCompletedEventArgs_get_WebErrorStatus), nullptr, nullptr, nullptr },
         { "http_status_code", reinterpret_cast<getter>(CoreWebView2NavigationCompletedEventArgs_get_HttpStatusCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2NavigationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2NavigationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2NavigationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2NavigationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2NavigationCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2NavigationCompletedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2NavigationCompletedEventArgs",
@@ -13377,8 +13248,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2NavigationStartingEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2NavigationStartingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2NavigationStartingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2NavigationStartingEventArgs[] = {
         { "cancel", reinterpret_cast<getter>(CoreWebView2NavigationStartingEventArgs_get_Cancel), reinterpret_cast<setter>(CoreWebView2NavigationStartingEventArgs_put_Cancel), nullptr, nullptr },
@@ -13389,16 +13259,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "uri", reinterpret_cast<getter>(CoreWebView2NavigationStartingEventArgs_get_Uri), nullptr, nullptr, nullptr },
         { "additional_allowed_frame_ancestors", reinterpret_cast<getter>(CoreWebView2NavigationStartingEventArgs_get_AdditionalAllowedFrameAncestors), reinterpret_cast<setter>(CoreWebView2NavigationStartingEventArgs_put_AdditionalAllowedFrameAncestors), nullptr, nullptr },
         { "navigation_kind", reinterpret_cast<getter>(CoreWebView2NavigationStartingEventArgs_get_NavigationKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2NavigationStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2NavigationStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2NavigationStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2NavigationStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2NavigationStartingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2NavigationStartingEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2NavigationStartingEventArgs",
@@ -13650,8 +13518,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2NewWindowRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2NewWindowRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2NewWindowRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2NewWindowRequestedEventArgs[] = {
         { "new_window", reinterpret_cast<getter>(CoreWebView2NewWindowRequestedEventArgs_get_NewWindow), reinterpret_cast<setter>(CoreWebView2NewWindowRequestedEventArgs_put_NewWindow), nullptr, nullptr },
@@ -13661,16 +13528,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "window_features", reinterpret_cast<getter>(CoreWebView2NewWindowRequestedEventArgs_get_WindowFeatures), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(CoreWebView2NewWindowRequestedEventArgs_get_Name), nullptr, nullptr, nullptr },
         { "original_source_frame_info", reinterpret_cast<getter>(CoreWebView2NewWindowRequestedEventArgs_get_OriginalSourceFrameInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2NewWindowRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2NewWindowRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2NewWindowRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2NewWindowRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2NewWindowRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2NewWindowRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2NewWindowRequestedEventArgs",
@@ -13740,21 +13605,18 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2NonClientRegionChangedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2NonClientRegionChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2NonClientRegionChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2NonClientRegionChangedEventArgs[] = {
         { "region_kind", reinterpret_cast<getter>(CoreWebView2NonClientRegionChangedEventArgs_get_RegionKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2NonClientRegionChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2NonClientRegionChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2NonClientRegionChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2NonClientRegionChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2NonClientRegionChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2NonClientRegionChangedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2NonClientRegionChangedEventArgs",
@@ -14156,8 +14018,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_close_requested", reinterpret_cast<PyCFunction>(CoreWebView2Notification_remove_CloseRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2Notification, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2Notification), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2Notification[] = {
         { "badge_uri", reinterpret_cast<getter>(CoreWebView2Notification_get_BadgeUri), nullptr, nullptr, nullptr },
@@ -14173,16 +14034,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "timestamp", reinterpret_cast<getter>(CoreWebView2Notification_get_Timestamp), nullptr, nullptr, nullptr },
         { "title", reinterpret_cast<getter>(CoreWebView2Notification_get_Title), nullptr, nullptr, nullptr },
         { "vibration_pattern", reinterpret_cast<getter>(CoreWebView2Notification_get_VibrationPattern), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2Notification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2Notification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2Notification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2Notification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2Notification) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2Notification = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Notification",
@@ -14340,23 +14199,20 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2NotificationReceivedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2NotificationReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2NotificationReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2NotificationReceivedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(CoreWebView2NotificationReceivedEventArgs_get_Handled), reinterpret_cast<setter>(CoreWebView2NotificationReceivedEventArgs_put_Handled), nullptr, nullptr },
         { "notification", reinterpret_cast<getter>(CoreWebView2NotificationReceivedEventArgs_get_Notification), nullptr, nullptr, nullptr },
         { "sender_origin", reinterpret_cast<getter>(CoreWebView2NotificationReceivedEventArgs_get_SenderOrigin), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2NotificationReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2NotificationReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2NotificationReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2NotificationReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2NotificationReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2NotificationReceivedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2NotificationReceivedEventArgs",
@@ -14617,8 +14473,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2PermissionRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2PermissionRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2PermissionRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2PermissionRequestedEventArgs[] = {
         { "state", reinterpret_cast<getter>(CoreWebView2PermissionRequestedEventArgs_get_State), reinterpret_cast<setter>(CoreWebView2PermissionRequestedEventArgs_put_State), nullptr, nullptr },
@@ -14627,16 +14482,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "uri", reinterpret_cast<getter>(CoreWebView2PermissionRequestedEventArgs_get_Uri), nullptr, nullptr, nullptr },
         { "handled", reinterpret_cast<getter>(CoreWebView2PermissionRequestedEventArgs_get_Handled), reinterpret_cast<setter>(CoreWebView2PermissionRequestedEventArgs_put_Handled), nullptr, nullptr },
         { "saves_in_profile", reinterpret_cast<getter>(CoreWebView2PermissionRequestedEventArgs_get_SavesInProfile), reinterpret_cast<setter>(CoreWebView2PermissionRequestedEventArgs_put_SavesInProfile), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2PermissionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2PermissionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2PermissionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2PermissionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2PermissionRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2PermissionRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PermissionRequestedEventArgs",
@@ -14740,23 +14593,20 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2PermissionSetting[] = {
         { "_assign_array_", _assign_array_CoreWebView2PermissionSetting, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2PermissionSetting), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2PermissionSetting[] = {
         { "permission_kind", reinterpret_cast<getter>(CoreWebView2PermissionSetting_get_PermissionKind), nullptr, nullptr, nullptr },
         { "permission_origin", reinterpret_cast<getter>(CoreWebView2PermissionSetting_get_PermissionOrigin), nullptr, nullptr, nullptr },
         { "permission_state", reinterpret_cast<getter>(CoreWebView2PermissionSetting_get_PermissionState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2PermissionSetting[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2PermissionSetting) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2PermissionSetting) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2PermissionSetting) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2PermissionSetting) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2PermissionSetting = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PermissionSetting",
@@ -16013,8 +15863,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2PointerInfo[] = {
         { "_assign_array_", _assign_array_CoreWebView2PointerInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2PointerInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2PointerInfo[] = {
         { "touch_pressure", reinterpret_cast<getter>(CoreWebView2PointerInfo_get_TouchPressure), reinterpret_cast<setter>(CoreWebView2PointerInfo_put_TouchPressure), nullptr, nullptr },
@@ -16045,16 +15894,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "frame_id", reinterpret_cast<getter>(CoreWebView2PointerInfo_get_FrameId), reinterpret_cast<setter>(CoreWebView2PointerInfo_put_FrameId), nullptr, nullptr },
         { "display_rect", reinterpret_cast<getter>(CoreWebView2PointerInfo_get_DisplayRect), reinterpret_cast<setter>(CoreWebView2PointerInfo_put_DisplayRect), nullptr, nullptr },
         { "button_change_kind", reinterpret_cast<getter>(CoreWebView2PointerInfo_get_ButtonChangeKind), reinterpret_cast<setter>(CoreWebView2PointerInfo_put_ButtonChangeKind), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2PointerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2PointerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2PointerInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2PointerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2PointerInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2PointerInfo = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PointerInfo",
@@ -17010,8 +16857,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2PrintSettings[] = {
         { "_assign_array_", _assign_array_CoreWebView2PrintSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2PrintSettings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2PrintSettings[] = {
         { "should_print_selection_only", reinterpret_cast<getter>(CoreWebView2PrintSettings_get_ShouldPrintSelectionOnly), reinterpret_cast<setter>(CoreWebView2PrintSettings_put_ShouldPrintSelectionOnly), nullptr, nullptr },
@@ -17035,16 +16881,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "copies", reinterpret_cast<getter>(CoreWebView2PrintSettings_get_Copies), reinterpret_cast<setter>(CoreWebView2PrintSettings_put_Copies), nullptr, nullptr },
         { "color_mode", reinterpret_cast<getter>(CoreWebView2PrintSettings_get_ColorMode), reinterpret_cast<setter>(CoreWebView2PrintSettings_put_ColorMode), nullptr, nullptr },
         { "collation", reinterpret_cast<getter>(CoreWebView2PrintSettings_get_Collation), reinterpret_cast<setter>(CoreWebView2PrintSettings_put_Collation), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2PrintSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2PrintSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2PrintSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2PrintSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2PrintSettings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2PrintSettings = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PrintSettings",
@@ -17131,22 +16975,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2ProcessExtendedInfo[] = {
         { "_assign_array_", _assign_array_CoreWebView2ProcessExtendedInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ProcessExtendedInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ProcessExtendedInfo[] = {
         { "associated_frame_infos", reinterpret_cast<getter>(CoreWebView2ProcessExtendedInfo_get_AssociatedFrameInfos), nullptr, nullptr, nullptr },
         { "process_info", reinterpret_cast<getter>(CoreWebView2ProcessExtendedInfo_get_ProcessInfo), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ProcessExtendedInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ProcessExtendedInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ProcessExtendedInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ProcessExtendedInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ProcessExtendedInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ProcessExtendedInfo = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ProcessExtendedInfo",
@@ -17301,8 +17142,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2ProcessFailedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2ProcessFailedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ProcessFailedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ProcessFailedEventArgs[] = {
         { "process_failed_kind", reinterpret_cast<getter>(CoreWebView2ProcessFailedEventArgs_get_ProcessFailedKind), nullptr, nullptr, nullptr },
@@ -17311,16 +17151,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "process_description", reinterpret_cast<getter>(CoreWebView2ProcessFailedEventArgs_get_ProcessDescription), nullptr, nullptr, nullptr },
         { "reason", reinterpret_cast<getter>(CoreWebView2ProcessFailedEventArgs_get_Reason), nullptr, nullptr, nullptr },
         { "failure_source_module_path", reinterpret_cast<getter>(CoreWebView2ProcessFailedEventArgs_get_FailureSourceModulePath), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ProcessFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ProcessFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ProcessFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ProcessFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ProcessFailedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ProcessFailedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ProcessFailedEventArgs",
@@ -17407,22 +17245,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2ProcessInfo[] = {
         { "_assign_array_", _assign_array_CoreWebView2ProcessInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ProcessInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ProcessInfo[] = {
         { "kind", reinterpret_cast<getter>(CoreWebView2ProcessInfo_get_Kind), nullptr, nullptr, nullptr },
         { "process_id", reinterpret_cast<getter>(CoreWebView2ProcessInfo_get_ProcessId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ProcessInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ProcessInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ProcessInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ProcessInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ProcessInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ProcessInfo = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ProcessInfo",
@@ -18024,8 +17859,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_deleted", reinterpret_cast<PyCFunction>(CoreWebView2Profile_remove_Deleted), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2Profile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2Profile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2Profile[] = {
         { "preferred_color_scheme", reinterpret_cast<getter>(CoreWebView2Profile_get_PreferredColorScheme), reinterpret_cast<setter>(CoreWebView2Profile_put_PreferredColorScheme), nullptr, nullptr },
@@ -18037,16 +17871,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "cookie_manager", reinterpret_cast<getter>(CoreWebView2Profile_get_CookieManager), nullptr, nullptr, nullptr },
         { "is_password_autosave_enabled", reinterpret_cast<getter>(CoreWebView2Profile_get_IsPasswordAutosaveEnabled), reinterpret_cast<setter>(CoreWebView2Profile_put_IsPasswordAutosaveEnabled), nullptr, nullptr },
         { "is_general_autofill_enabled", reinterpret_cast<getter>(CoreWebView2Profile_get_IsGeneralAutofillEnabled), reinterpret_cast<setter>(CoreWebView2Profile_put_IsGeneralAutofillEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2Profile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2Profile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2Profile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2Profile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2Profile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2Profile = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Profile",
@@ -18359,8 +18191,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2SaveAsUIShowingEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2SaveAsUIShowingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2SaveAsUIShowingEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2SaveAsUIShowingEventArgs[] = {
         { "suppress_default_dialog", reinterpret_cast<getter>(CoreWebView2SaveAsUIShowingEventArgs_get_SuppressDefaultDialog), reinterpret_cast<setter>(CoreWebView2SaveAsUIShowingEventArgs_put_SuppressDefaultDialog), nullptr, nullptr },
@@ -18369,16 +18200,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "cancel", reinterpret_cast<getter>(CoreWebView2SaveAsUIShowingEventArgs_get_Cancel), reinterpret_cast<setter>(CoreWebView2SaveAsUIShowingEventArgs_put_Cancel), nullptr, nullptr },
         { "allow_replace", reinterpret_cast<getter>(CoreWebView2SaveAsUIShowingEventArgs_get_AllowReplace), reinterpret_cast<setter>(CoreWebView2SaveAsUIShowingEventArgs_put_AllowReplace), nullptr, nullptr },
         { "content_mime_type", reinterpret_cast<getter>(CoreWebView2SaveAsUIShowingEventArgs_get_ContentMimeType), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2SaveAsUIShowingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2SaveAsUIShowingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2SaveAsUIShowingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2SaveAsUIShowingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2SaveAsUIShowingEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2SaveAsUIShowingEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2SaveAsUIShowingEventArgs",
@@ -18599,8 +18428,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2ScriptDialogOpeningEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2ScriptDialogOpeningEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ScriptDialogOpeningEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ScriptDialogOpeningEventArgs[] = {
         { "result_text", reinterpret_cast<getter>(CoreWebView2ScriptDialogOpeningEventArgs_get_ResultText), reinterpret_cast<setter>(CoreWebView2ScriptDialogOpeningEventArgs_put_ResultText), nullptr, nullptr },
@@ -18608,16 +18436,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "kind", reinterpret_cast<getter>(CoreWebView2ScriptDialogOpeningEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "message", reinterpret_cast<getter>(CoreWebView2ScriptDialogOpeningEventArgs_get_Message), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(CoreWebView2ScriptDialogOpeningEventArgs_get_Uri), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ScriptDialogOpeningEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ScriptDialogOpeningEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ScriptDialogOpeningEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ScriptDialogOpeningEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ScriptDialogOpeningEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ScriptDialogOpeningEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ScriptDialogOpeningEventArgs",
@@ -18755,8 +18581,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2ScriptException[] = {
         { "_assign_array_", _assign_array_CoreWebView2ScriptException, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ScriptException), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ScriptException[] = {
         { "column_number", reinterpret_cast<getter>(CoreWebView2ScriptException_get_ColumnNumber), nullptr, nullptr, nullptr },
@@ -18764,16 +18589,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "message", reinterpret_cast<getter>(CoreWebView2ScriptException_get_Message), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(CoreWebView2ScriptException_get_Name), nullptr, nullptr, nullptr },
         { "to_json", reinterpret_cast<getter>(CoreWebView2ScriptException_get_ToJson), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ScriptException[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ScriptException) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ScriptException) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ScriptException) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ScriptException) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ScriptException = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ScriptException",
@@ -18948,24 +18771,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2ServerCertificateErrorDetectedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2ServerCertificateErrorDetectedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ServerCertificateErrorDetectedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2ServerCertificateErrorDetectedEventArgs[] = {
         { "action", reinterpret_cast<getter>(CoreWebView2ServerCertificateErrorDetectedEventArgs_get_Action), reinterpret_cast<setter>(CoreWebView2ServerCertificateErrorDetectedEventArgs_put_Action), nullptr, nullptr },
         { "error_status", reinterpret_cast<getter>(CoreWebView2ServerCertificateErrorDetectedEventArgs_get_ErrorStatus), nullptr, nullptr, nullptr },
         { "request_uri", reinterpret_cast<getter>(CoreWebView2ServerCertificateErrorDetectedEventArgs_get_RequestUri), nullptr, nullptr, nullptr },
         { "server_certificate", reinterpret_cast<getter>(CoreWebView2ServerCertificateErrorDetectedEventArgs_get_ServerCertificate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2ServerCertificateErrorDetectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ServerCertificateErrorDetectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ServerCertificateErrorDetectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ServerCertificateErrorDetectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ServerCertificateErrorDetectedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2ServerCertificateErrorDetectedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ServerCertificateErrorDetectedEventArgs",
@@ -19835,8 +19655,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2Settings[] = {
         { "_assign_array_", _assign_array_CoreWebView2Settings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2Settings), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2Settings[] = {
         { "is_zoom_control_enabled", reinterpret_cast<getter>(CoreWebView2Settings_get_IsZoomControlEnabled), reinterpret_cast<setter>(CoreWebView2Settings_put_IsZoomControlEnabled), nullptr, nullptr },
@@ -19858,16 +19677,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "hidden_pdf_toolbar_items", reinterpret_cast<getter>(CoreWebView2Settings_get_HiddenPdfToolbarItems), reinterpret_cast<setter>(CoreWebView2Settings_put_HiddenPdfToolbarItems), nullptr, nullptr },
         { "is_reputation_checking_required", reinterpret_cast<getter>(CoreWebView2Settings_get_IsReputationCheckingRequired), reinterpret_cast<setter>(CoreWebView2Settings_put_IsReputationCheckingRequired), nullptr, nullptr },
         { "is_non_client_region_support_enabled", reinterpret_cast<getter>(CoreWebView2Settings_get_IsNonClientRegionSupportEnabled), reinterpret_cast<setter>(CoreWebView2Settings_put_IsNonClientRegionSupportEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2Settings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2Settings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2Settings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2Settings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2Settings) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2Settings = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Settings",
@@ -20036,22 +19853,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2SharedBuffer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CoreWebView2SharedBuffer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_CoreWebView2SharedBuffer), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2SharedBuffer[] = {
         { "size", reinterpret_cast<getter>(CoreWebView2SharedBuffer_get_Size), nullptr, nullptr, nullptr },
         { "buffer", reinterpret_cast<getter>(CoreWebView2SharedBuffer_get_Buffer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2SharedBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2SharedBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2SharedBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2SharedBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2SharedBuffer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2SharedBuffer = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2SharedBuffer",
@@ -20121,21 +19935,18 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2SourceChangedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2SourceChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2SourceChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2SourceChangedEventArgs[] = {
         { "is_new_document", reinterpret_cast<getter>(CoreWebView2SourceChangedEventArgs_get_IsNewDocument), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2SourceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2SourceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2SourceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2SourceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2SourceChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2SourceChangedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2SourceChangedEventArgs",
@@ -20267,23 +20078,20 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "try_get_web_message_as_string", reinterpret_cast<PyCFunction>(CoreWebView2WebMessageReceivedEventArgs_TryGetWebMessageAsString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2WebMessageReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2WebMessageReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2WebMessageReceivedEventArgs[] = {
         { "source", reinterpret_cast<getter>(CoreWebView2WebMessageReceivedEventArgs_get_Source), nullptr, nullptr, nullptr },
         { "web_message_as_json", reinterpret_cast<getter>(CoreWebView2WebMessageReceivedEventArgs_get_WebMessageAsJson), nullptr, nullptr, nullptr },
         { "additional_objects", reinterpret_cast<getter>(CoreWebView2WebMessageReceivedEventArgs_get_AdditionalObjects), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2WebMessageReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2WebMessageReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2WebMessageReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2WebMessageReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2WebMessageReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2WebMessageReceivedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebMessageReceivedEventArgs",
@@ -20482,24 +20290,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2WebResourceRequest[] = {
         { "_assign_array_", _assign_array_CoreWebView2WebResourceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2WebResourceRequest), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2WebResourceRequest[] = {
         { "uri", reinterpret_cast<getter>(CoreWebView2WebResourceRequest_get_Uri), reinterpret_cast<setter>(CoreWebView2WebResourceRequest_put_Uri), nullptr, nullptr },
         { "method", reinterpret_cast<getter>(CoreWebView2WebResourceRequest_get_Method), reinterpret_cast<setter>(CoreWebView2WebResourceRequest_put_Method), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(CoreWebView2WebResourceRequest_get_Content), reinterpret_cast<setter>(CoreWebView2WebResourceRequest_put_Content), nullptr, nullptr },
         { "headers", reinterpret_cast<getter>(CoreWebView2WebResourceRequest_get_Headers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2WebResourceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2WebResourceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2WebResourceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2WebResourceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2WebResourceRequest) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2WebResourceRequest = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceRequest",
@@ -20674,24 +20479,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2WebResourceRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2WebResourceRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2WebResourceRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2WebResourceRequestedEventArgs[] = {
         { "response", reinterpret_cast<getter>(CoreWebView2WebResourceRequestedEventArgs_get_Response), reinterpret_cast<setter>(CoreWebView2WebResourceRequestedEventArgs_put_Response), nullptr, nullptr },
         { "request", reinterpret_cast<getter>(CoreWebView2WebResourceRequestedEventArgs_get_Request), nullptr, nullptr, nullptr },
         { "resource_context", reinterpret_cast<getter>(CoreWebView2WebResourceRequestedEventArgs_get_ResourceContext), nullptr, nullptr, nullptr },
         { "requested_source_kind", reinterpret_cast<getter>(CoreWebView2WebResourceRequestedEventArgs_get_RequestedSourceKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2WebResourceRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2WebResourceRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2WebResourceRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2WebResourceRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2WebResourceRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2WebResourceRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceRequestedEventArgs",
@@ -20890,24 +20692,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2WebResourceResponse[] = {
         { "_assign_array_", _assign_array_CoreWebView2WebResourceResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2WebResourceResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2WebResourceResponse[] = {
         { "status_code", reinterpret_cast<getter>(CoreWebView2WebResourceResponse_get_StatusCode), reinterpret_cast<setter>(CoreWebView2WebResourceResponse_put_StatusCode), nullptr, nullptr },
         { "reason_phrase", reinterpret_cast<getter>(CoreWebView2WebResourceResponse_get_ReasonPhrase), reinterpret_cast<setter>(CoreWebView2WebResourceResponse_put_ReasonPhrase), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(CoreWebView2WebResourceResponse_get_Content), reinterpret_cast<setter>(CoreWebView2WebResourceResponse_put_Content), nullptr, nullptr },
         { "headers", reinterpret_cast<getter>(CoreWebView2WebResourceResponse_get_Headers), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2WebResourceResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2WebResourceResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2WebResourceResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2WebResourceResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2WebResourceResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2WebResourceResponse = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceResponse",
@@ -20994,22 +20793,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2WebResourceResponseReceivedEventArgs[] = {
         { "_assign_array_", _assign_array_CoreWebView2WebResourceResponseReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2WebResourceResponseReceivedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2WebResourceResponseReceivedEventArgs[] = {
         { "request", reinterpret_cast<getter>(CoreWebView2WebResourceResponseReceivedEventArgs_get_Request), nullptr, nullptr, nullptr },
         { "response", reinterpret_cast<getter>(CoreWebView2WebResourceResponseReceivedEventArgs_get_Response), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2WebResourceResponseReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2WebResourceResponseReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2WebResourceResponseReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2WebResourceResponseReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2WebResourceResponseReceivedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2WebResourceResponseReceivedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceResponseReceivedEventArgs",
@@ -21141,23 +20937,20 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "get_content_async", reinterpret_cast<PyCFunction>(CoreWebView2WebResourceResponseView_GetContentAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2WebResourceResponseView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2WebResourceResponseView), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2WebResourceResponseView[] = {
         { "headers", reinterpret_cast<getter>(CoreWebView2WebResourceResponseView_get_Headers), nullptr, nullptr, nullptr },
         { "reason_phrase", reinterpret_cast<getter>(CoreWebView2WebResourceResponseView_get_ReasonPhrase), nullptr, nullptr, nullptr },
         { "status_code", reinterpret_cast<getter>(CoreWebView2WebResourceResponseView_get_StatusCode), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2WebResourceResponseView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2WebResourceResponseView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2WebResourceResponseView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2WebResourceResponseView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2WebResourceResponseView) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2WebResourceResponseView = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceResponseView",
@@ -21380,8 +21173,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef _methods_CoreWebView2WindowFeatures[] = {
         { "_assign_array_", _assign_array_CoreWebView2WindowFeatures, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2WindowFeatures), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CoreWebView2WindowFeatures[] = {
         { "has_position", reinterpret_cast<getter>(CoreWebView2WindowFeatures_get_HasPosition), nullptr, nullptr, nullptr },
@@ -21394,16 +21186,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "should_display_toolbar", reinterpret_cast<getter>(CoreWebView2WindowFeatures_get_ShouldDisplayToolbar), nullptr, nullptr, nullptr },
         { "top", reinterpret_cast<getter>(CoreWebView2WindowFeatures_get_Top), nullptr, nullptr, nullptr },
         { "width", reinterpret_cast<getter>(CoreWebView2WindowFeatures_get_Width), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CoreWebView2WindowFeatures[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2WindowFeatures) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2WindowFeatures) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2WindowFeatures) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2WindowFeatures) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2WindowFeatures = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WindowFeatures",
@@ -21577,20 +21367,17 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "wrap_object", reinterpret_cast<PyCFunction>(ICoreWebView2DispatchAdapter_WrapObject), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICoreWebView2DispatchAdapter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreWebView2DispatchAdapter), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICoreWebView2DispatchAdapter[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICoreWebView2DispatchAdapter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreWebView2DispatchAdapter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreWebView2DispatchAdapter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreWebView2DispatchAdapter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreWebView2DispatchAdapter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICoreWebView2DispatchAdapter = {
         "winrt._winrt_microsoft_web_webview2_core.ICoreWebView2DispatchAdapter",
@@ -21790,13 +21577,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyMethodDef methods_ImplementsICoreWebView2DispatchAdapter[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreWebView2DispatchAdapter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreWebView2DispatchAdapter), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICoreWebView2DispatchAdapter[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICoreWebView2DispatchAdapter) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICoreWebView2DispatchAdapter = {
         "winrt._winrt_microsoft_web_webview2_core.ImplementsICoreWebView2DispatchAdapter",
@@ -21882,8 +21667,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyMethodDef _methods_CoreWebView2PhysicalKeyStatus[] = {
         { "_assign_array_", _assign_array_CoreWebView2PhysicalKeyStatus, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* CoreWebView2PhysicalKeyStatus_get_RepeatCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, void* /*unused*/) noexcept
     {
@@ -22090,8 +21874,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "is_menu_key_down", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_IsMenuKeyDown), reinterpret_cast<setter>(CoreWebView2PhysicalKeyStatus_set_IsMenuKeyDown), nullptr, nullptr },
         { "was_key_down", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_WasKeyDown), reinterpret_cast<setter>(CoreWebView2PhysicalKeyStatus_set_WasKeyDown), nullptr, nullptr },
         { "is_key_released", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_IsKeyReleased), reinterpret_cast<setter>(CoreWebView2PhysicalKeyStatus_set_IsKeyReleased), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_CoreWebView2PhysicalKeyStatus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* other, int op) noexcept
     {
@@ -22177,8 +21960,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2PhysicalKeyStatus) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CoreWebView2PhysicalKeyStatus) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_CoreWebView2PhysicalKeyStatus) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CoreWebView2PhysicalKeyStatus = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PhysicalKeyStatus",

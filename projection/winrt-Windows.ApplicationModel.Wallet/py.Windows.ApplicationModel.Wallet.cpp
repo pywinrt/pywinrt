@@ -189,22 +189,19 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { "get_image_async", reinterpret_cast<PyCFunction>(WalletBarcode_GetImageAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WalletBarcode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletBarcode), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletBarcode[] = {
         { "symbology", reinterpret_cast<getter>(WalletBarcode_get_Symbology), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(WalletBarcode_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletBarcode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletBarcode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletBarcode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletBarcode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletBarcode) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletBarcode = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletBarcode",
@@ -2049,8 +2046,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static PyMethodDef _methods_WalletItem[] = {
         { "_assign_array_", _assign_array_WalletItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletItem[] = {
         { "display_name", reinterpret_cast<getter>(WalletItem_get_DisplayName), reinterpret_cast<setter>(WalletItem_put_DisplayName), nullptr, nullptr },
@@ -2082,16 +2078,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { "relevant_locations", reinterpret_cast<getter>(WalletItem_get_RelevantLocations), nullptr, nullptr, nullptr },
         { "transaction_history", reinterpret_cast<getter>(WalletItem_get_TransactionHistory), nullptr, nullptr, nullptr },
         { "verbs", reinterpret_cast<getter>(WalletItem_get_Verbs), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletItem = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletItem",
@@ -2514,8 +2508,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static PyMethodDef _methods_WalletItemCustomProperty[] = {
         { "_assign_array_", _assign_array_WalletItemCustomProperty, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletItemCustomProperty), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletItemCustomProperty[] = {
         { "value", reinterpret_cast<getter>(WalletItemCustomProperty_get_Value), reinterpret_cast<setter>(WalletItemCustomProperty_put_Value), nullptr, nullptr },
@@ -2523,16 +2516,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { "name", reinterpret_cast<getter>(WalletItemCustomProperty_get_Name), reinterpret_cast<setter>(WalletItemCustomProperty_put_Name), nullptr, nullptr },
         { "detail_view_position", reinterpret_cast<getter>(WalletItemCustomProperty_get_DetailViewPosition), reinterpret_cast<setter>(WalletItemCustomProperty_put_DetailViewPosition), nullptr, nullptr },
         { "auto_detect_links", reinterpret_cast<getter>(WalletItemCustomProperty_get_AutoDetectLinks), reinterpret_cast<setter>(WalletItemCustomProperty_put_AutoDetectLinks), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletItemCustomProperty[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletItemCustomProperty) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletItemCustomProperty) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletItemCustomProperty) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletItemCustomProperty) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletItemCustomProperty = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletItemCustomProperty",
@@ -3010,20 +3001,17 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { "update_async", reinterpret_cast<PyCFunction>(WalletItemStore_UpdateAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WalletItemStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletItemStore), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletItemStore[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletItemStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletItemStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletItemStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletItemStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletItemStore) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletItemStore = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletItemStore",
@@ -3082,19 +3070,16 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     }
 
     static PyMethodDef _methods_WalletManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletManager = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletManager",
@@ -3104,13 +3089,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         _type_slots_WalletManager};
 
     static PyGetSetDef getset_WalletManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_WalletManager_Static[] = {
         { "request_store_async", reinterpret_cast<PyCFunction>(WalletManager_RequestStoreAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_WalletManager_Static[] = 
     {
@@ -3120,14 +3103,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { }
     };
 
-    static PyType_Spec type_spec_WalletManager_Static =
-    {
+    static PyType_Spec type_spec_WalletManager_Static = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WalletManager_Static
-    };
+        type_slots_WalletManager_Static};
 
     // ----- WalletRelevantLocation class --------------------
 
@@ -3333,22 +3314,19 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static PyMethodDef _methods_WalletRelevantLocation[] = {
         { "_assign_array_", _assign_array_WalletRelevantLocation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletRelevantLocation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletRelevantLocation[] = {
         { "position", reinterpret_cast<getter>(WalletRelevantLocation_get_Position), reinterpret_cast<setter>(WalletRelevantLocation_put_Position), nullptr, nullptr },
         { "display_message", reinterpret_cast<getter>(WalletRelevantLocation_get_DisplayMessage), reinterpret_cast<setter>(WalletRelevantLocation_put_DisplayMessage), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletRelevantLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletRelevantLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletRelevantLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletRelevantLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletRelevantLocation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletRelevantLocation = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletRelevantLocation",
@@ -3837,8 +3815,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static PyMethodDef _methods_WalletTransaction[] = {
         { "_assign_array_", _assign_array_WalletTransaction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletTransaction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletTransaction[] = {
         { "transaction_date", reinterpret_cast<getter>(WalletTransaction_get_TransactionDate), reinterpret_cast<setter>(WalletTransaction_put_TransactionDate), nullptr, nullptr },
@@ -3847,16 +3824,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { "display_location", reinterpret_cast<getter>(WalletTransaction_get_DisplayLocation), reinterpret_cast<setter>(WalletTransaction_put_DisplayLocation), nullptr, nullptr },
         { "display_amount", reinterpret_cast<getter>(WalletTransaction_get_DisplayAmount), reinterpret_cast<setter>(WalletTransaction_put_DisplayAmount), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(WalletTransaction_get_Description), reinterpret_cast<setter>(WalletTransaction_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletTransaction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletTransaction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletTransaction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletTransaction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletTransaction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletTransaction = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletTransaction",
@@ -4002,21 +3977,18 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static PyMethodDef _methods_WalletVerb[] = {
         { "_assign_array_", _assign_array_WalletVerb, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletVerb), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_WalletVerb[] = {
         { "name", reinterpret_cast<getter>(WalletVerb_get_Name), reinterpret_cast<setter>(WalletVerb_put_Name), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_WalletVerb[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletVerb) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletVerb) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletVerb) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletVerb) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_WalletVerb = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletVerb",

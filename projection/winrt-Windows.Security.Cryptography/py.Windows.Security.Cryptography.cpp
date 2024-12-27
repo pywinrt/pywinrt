@@ -485,19 +485,16 @@ namespace py::cpp::Windows::Security::Cryptography
     }
 
     static PyMethodDef _methods_CryptographicBuffer[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CryptographicBuffer[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CryptographicBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CryptographicBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CryptographicBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CryptographicBuffer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CryptographicBuffer = {
         "winrt._winrt_windows_security_cryptography.CryptographicBuffer",
@@ -507,8 +504,7 @@ namespace py::cpp::Windows::Security::Cryptography
         _type_slots_CryptographicBuffer};
 
     static PyGetSetDef getset_CryptographicBuffer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CryptographicBuffer_Static[] = {
         { "compare", reinterpret_cast<PyCFunction>(CryptographicBuffer_Compare), METH_VARARGS, nullptr },
@@ -522,8 +518,7 @@ namespace py::cpp::Windows::Security::Cryptography
         { "encode_to_hex_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_EncodeToHexString), METH_VARARGS, nullptr },
         { "generate_random", reinterpret_cast<PyCFunction>(CryptographicBuffer_GenerateRandom), METH_VARARGS, nullptr },
         { "generate_random_number", reinterpret_cast<PyCFunction>(CryptographicBuffer_GenerateRandomNumber), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CryptographicBuffer_Static[] = 
     {
@@ -533,14 +528,12 @@ namespace py::cpp::Windows::Security::Cryptography
         { }
     };
 
-    static PyType_Spec type_spec_CryptographicBuffer_Static =
-    {
+    static PyType_Spec type_spec_CryptographicBuffer_Static = {
         "winrt._winrt_windows_security_cryptography.CryptographicBuffer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CryptographicBuffer_Static
-    };
+        type_slots_CryptographicBuffer_Static};
 
     // ----- Windows.Security.Cryptography Initialization --------------------
 

@@ -70,20 +70,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_AddDeleteThemeTransition[] = {
         { "_assign_array_", _assign_array_AddDeleteThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AddDeleteThemeTransition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_AddDeleteThemeTransition[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_AddDeleteThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddDeleteThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddDeleteThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddDeleteThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddDeleteThemeTransition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_AddDeleteThemeTransition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.AddDeleteThemeTransition",
@@ -257,21 +254,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_BackEase[] = {
         { "_assign_array_", _assign_array_BackEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BackEase[] = {
         { "amplitude", reinterpret_cast<getter>(BackEase_get_Amplitude), reinterpret_cast<setter>(BackEase_put_Amplitude), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BackEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BackEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.BackEase",
@@ -282,12 +276,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_BackEase_Static[] = {
         { "amplitude_property", reinterpret_cast<getter>(BackEase_get_AmplitudeProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BackEase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BackEase_Static[] = 
     {
@@ -297,14 +289,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_BackEase_Static =
-    {
+    static PyType_Spec type_spec_BackEase_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.BackEase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackEase_Static
-    };
+        type_slots_BackEase_Static};
 
     // ----- BasicConnectedAnimationConfiguration class --------------------
 
@@ -432,20 +422,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_BasicConnectedAnimationConfiguration[] = {
         { "_assign_array_", _assign_array_BasicConnectedAnimationConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BasicConnectedAnimationConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BasicConnectedAnimationConfiguration[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BasicConnectedAnimationConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BasicConnectedAnimationConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BasicConnectedAnimationConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BasicConnectedAnimationConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BasicConnectedAnimationConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BasicConnectedAnimationConfiguration = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.BasicConnectedAnimationConfiguration",
@@ -455,12 +442,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         _type_slots_BasicConnectedAnimationConfiguration};
 
     static PyGetSetDef getset_BasicConnectedAnimationConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BasicConnectedAnimationConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BasicConnectedAnimationConfiguration_Static[] = 
     {
@@ -470,14 +455,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_BasicConnectedAnimationConfiguration_Static =
-    {
+    static PyType_Spec type_spec_BasicConnectedAnimationConfiguration_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.BasicConnectedAnimationConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_BasicConnectedAnimationConfiguration_Static
-    };
+        type_slots_BasicConnectedAnimationConfiguration_Static};
 
     // ----- BeginStoryboard class --------------------
 
@@ -644,21 +627,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_BeginStoryboard[] = {
         { "_assign_array_", _assign_array_BeginStoryboard, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BeginStoryboard), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BeginStoryboard[] = {
         { "storyboard", reinterpret_cast<getter>(BeginStoryboard_get_Storyboard), reinterpret_cast<setter>(BeginStoryboard_put_Storyboard), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BeginStoryboard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BeginStoryboard) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BeginStoryboard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BeginStoryboard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BeginStoryboard) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BeginStoryboard = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.BeginStoryboard",
@@ -669,12 +649,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_BeginStoryboard_Static[] = {
         { "storyboard_property", reinterpret_cast<getter>(BeginStoryboard_get_StoryboardProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BeginStoryboard_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BeginStoryboard_Static[] = 
     {
@@ -684,14 +662,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_BeginStoryboard_Static =
-    {
+    static PyType_Spec type_spec_BeginStoryboard_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.BeginStoryboard_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BeginStoryboard_Static
-    };
+        type_slots_BeginStoryboard_Static};
 
     // ----- BounceEase class --------------------
 
@@ -957,22 +933,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_BounceEase[] = {
         { "_assign_array_", _assign_array_BounceEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BounceEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_BounceEase[] = {
         { "bounciness", reinterpret_cast<getter>(BounceEase_get_Bounciness), reinterpret_cast<setter>(BounceEase_put_Bounciness), nullptr, nullptr },
         { "bounces", reinterpret_cast<getter>(BounceEase_get_Bounces), reinterpret_cast<setter>(BounceEase_put_Bounces), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_BounceEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_BounceEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.BounceEase",
@@ -984,12 +957,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_BounceEase_Static[] = {
         { "bounces_property", reinterpret_cast<getter>(BounceEase_get_BouncesProperty), nullptr, nullptr, nullptr },
         { "bounciness_property", reinterpret_cast<getter>(BounceEase_get_BouncinessProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_BounceEase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_BounceEase_Static[] = 
     {
@@ -999,14 +970,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_BounceEase_Static =
-    {
+    static PyType_Spec type_spec_BounceEase_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.BounceEase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BounceEase_Static
-    };
+        type_slots_BounceEase_Static};
 
     // ----- CircleEase class --------------------
 
@@ -1074,20 +1043,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_CircleEase[] = {
         { "_assign_array_", _assign_array_CircleEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CircleEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CircleEase[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CircleEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CircleEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CircleEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CircleEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CircleEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CircleEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.CircleEase",
@@ -1657,8 +1623,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ColorAnimation[] = {
         { "_assign_array_", _assign_array_ColorAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ColorAnimation[] = {
         { "to", reinterpret_cast<getter>(ColorAnimation_get_To), reinterpret_cast<setter>(ColorAnimation_put_To), nullptr, nullptr },
@@ -1666,16 +1631,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "enable_dependent_animation", reinterpret_cast<getter>(ColorAnimation_get_EnableDependentAnimation), reinterpret_cast<setter>(ColorAnimation_put_EnableDependentAnimation), nullptr, nullptr },
         { "easing_function", reinterpret_cast<getter>(ColorAnimation_get_EasingFunction), reinterpret_cast<setter>(ColorAnimation_put_EasingFunction), nullptr, nullptr },
         { "by", reinterpret_cast<getter>(ColorAnimation_get_By), reinterpret_cast<setter>(ColorAnimation_put_By), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ColorAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ColorAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorAnimation",
@@ -1690,12 +1653,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "enable_dependent_animation_property", reinterpret_cast<getter>(ColorAnimation_get_EnableDependentAnimationProperty), nullptr, nullptr, nullptr },
         { "from_property", reinterpret_cast<getter>(ColorAnimation_get_FromProperty), nullptr, nullptr, nullptr },
         { "to_property", reinterpret_cast<getter>(ColorAnimation_get_ToProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ColorAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ColorAnimation_Static[] = 
     {
@@ -1705,14 +1666,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ColorAnimation_Static =
-    {
+    static PyType_Spec type_spec_ColorAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ColorAnimation_Static
-    };
+        type_slots_ColorAnimation_Static};
 
     // ----- ColorAnimationUsingKeyFrames class --------------------
 
@@ -1909,22 +1868,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ColorAnimationUsingKeyFrames[] = {
         { "_assign_array_", _assign_array_ColorAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ColorAnimationUsingKeyFrames[] = {
         { "enable_dependent_animation", reinterpret_cast<getter>(ColorAnimationUsingKeyFrames_get_EnableDependentAnimation), reinterpret_cast<setter>(ColorAnimationUsingKeyFrames_put_EnableDependentAnimation), nullptr, nullptr },
         { "key_frames", reinterpret_cast<getter>(ColorAnimationUsingKeyFrames_get_KeyFrames), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ColorAnimationUsingKeyFrames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorAnimationUsingKeyFrames) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorAnimationUsingKeyFrames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorAnimationUsingKeyFrames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorAnimationUsingKeyFrames) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ColorAnimationUsingKeyFrames = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorAnimationUsingKeyFrames",
@@ -1935,12 +1891,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_ColorAnimationUsingKeyFrames_Static[] = {
         { "enable_dependent_animation_property", reinterpret_cast<getter>(ColorAnimationUsingKeyFrames_get_EnableDependentAnimationProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ColorAnimationUsingKeyFrames_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ColorAnimationUsingKeyFrames_Static[] = 
     {
@@ -1950,14 +1904,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ColorAnimationUsingKeyFrames_Static =
-    {
+    static PyType_Spec type_spec_ColorAnimationUsingKeyFrames_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorAnimationUsingKeyFrames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ColorAnimationUsingKeyFrames_Static
-    };
+        type_slots_ColorAnimationUsingKeyFrames_Static};
 
     // ----- ColorKeyFrame class --------------------
 
@@ -2230,22 +2182,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ColorKeyFrame[] = {
         { "_assign_array_", _assign_array_ColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ColorKeyFrame[] = {
         { "value", reinterpret_cast<getter>(ColorKeyFrame_get_Value), reinterpret_cast<setter>(ColorKeyFrame_put_Value), nullptr, nullptr },
         { "key_time", reinterpret_cast<getter>(ColorKeyFrame_get_KeyTime), reinterpret_cast<setter>(ColorKeyFrame_put_KeyTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ColorKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorKeyFrame",
@@ -2257,12 +2206,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_ColorKeyFrame_Static[] = {
         { "key_time_property", reinterpret_cast<getter>(ColorKeyFrame_get_KeyTimeProperty), nullptr, nullptr, nullptr },
         { "value_property", reinterpret_cast<getter>(ColorKeyFrame_get_ValueProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ColorKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ColorKeyFrame_Static[] = 
     {
@@ -2272,14 +2219,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ColorKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_ColorKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ColorKeyFrame_Static
-    };
+        type_slots_ColorKeyFrame_Static};
 
     // ----- ColorKeyFrameCollection class --------------------
 
@@ -3053,13 +2998,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "set_at", reinterpret_cast<PyCFunction>(ColorKeyFrameCollection_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ColorKeyFrameCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorKeyFrameCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ColorKeyFrameCollection[] = {
         { "size", reinterpret_cast<getter>(ColorKeyFrameCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ColorKeyFrameCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorKeyFrameCollection) },
@@ -3071,8 +3014,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_ColorKeyFrameCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_ColorKeyFrameCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_ColorKeyFrameCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ColorKeyFrameCollection = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorKeyFrameCollection",
@@ -3362,21 +3304,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_CommonNavigationTransitionInfo[] = {
         { "_assign_array_", _assign_array_CommonNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CommonNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CommonNavigationTransitionInfo[] = {
         { "is_staggering_enabled", reinterpret_cast<getter>(CommonNavigationTransitionInfo_get_IsStaggeringEnabled), reinterpret_cast<setter>(CommonNavigationTransitionInfo_put_IsStaggeringEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CommonNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommonNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommonNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommonNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommonNavigationTransitionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CommonNavigationTransitionInfo = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.CommonNavigationTransitionInfo",
@@ -3388,14 +3327,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_CommonNavigationTransitionInfo_Static[] = {
         { "is_stagger_element_property", reinterpret_cast<getter>(CommonNavigationTransitionInfo_get_IsStaggerElementProperty), nullptr, nullptr, nullptr },
         { "is_staggering_enabled_property", reinterpret_cast<getter>(CommonNavigationTransitionInfo_get_IsStaggeringEnabledProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CommonNavigationTransitionInfo_Static[] = {
         { "get_is_stagger_element", reinterpret_cast<PyCFunction>(CommonNavigationTransitionInfo_GetIsStaggerElement), METH_VARARGS, nullptr },
         { "set_is_stagger_element", reinterpret_cast<PyCFunction>(CommonNavigationTransitionInfo_SetIsStaggerElement), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CommonNavigationTransitionInfo_Static[] = 
     {
@@ -3405,14 +3342,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_CommonNavigationTransitionInfo_Static =
-    {
+    static PyType_Spec type_spec_CommonNavigationTransitionInfo_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.CommonNavigationTransitionInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CommonNavigationTransitionInfo_Static
-    };
+        type_slots_CommonNavigationTransitionInfo_Static};
 
     // ----- ConnectedAnimation class --------------------
 
@@ -3837,22 +3772,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "remove_completed", reinterpret_cast<PyCFunction>(ConnectedAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_ConnectedAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectedAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectedAnimation[] = {
         { "is_scale_animation_enabled", reinterpret_cast<getter>(ConnectedAnimation_get_IsScaleAnimationEnabled), reinterpret_cast<setter>(ConnectedAnimation_put_IsScaleAnimationEnabled), nullptr, nullptr },
         { "configuration", reinterpret_cast<getter>(ConnectedAnimation_get_Configuration), reinterpret_cast<setter>(ConnectedAnimation_put_Configuration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectedAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectedAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectedAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectedAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectedAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectedAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ConnectedAnimation",
@@ -3905,20 +3837,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ConnectedAnimationConfiguration[] = {
         { "_assign_array_", _assign_array_ConnectedAnimationConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectedAnimationConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectedAnimationConfiguration[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectedAnimationConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectedAnimationConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectedAnimationConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectedAnimationConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectedAnimationConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectedAnimationConfiguration = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ConnectedAnimationConfiguration",
@@ -3928,12 +3857,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         _type_slots_ConnectedAnimationConfiguration};
 
     static PyGetSetDef getset_ConnectedAnimationConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ConnectedAnimationConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ConnectedAnimationConfiguration_Static[] = 
     {
@@ -3943,14 +3870,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ConnectedAnimationConfiguration_Static =
-    {
+    static PyType_Spec type_spec_ConnectedAnimationConfiguration_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ConnectedAnimationConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ConnectedAnimationConfiguration_Static
-    };
+        type_slots_ConnectedAnimationConfiguration_Static};
 
     // ----- ConnectedAnimationService class --------------------
 
@@ -4261,22 +4186,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "prepare_to_animate", reinterpret_cast<PyCFunction>(ConnectedAnimationService_PrepareToAnimate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ConnectedAnimationService, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectedAnimationService), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ConnectedAnimationService[] = {
         { "default_easing_function", reinterpret_cast<getter>(ConnectedAnimationService_get_DefaultEasingFunction), reinterpret_cast<setter>(ConnectedAnimationService_put_DefaultEasingFunction), nullptr, nullptr },
         { "default_duration", reinterpret_cast<getter>(ConnectedAnimationService_get_DefaultDuration), reinterpret_cast<setter>(ConnectedAnimationService_put_DefaultDuration), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ConnectedAnimationService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectedAnimationService) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectedAnimationService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectedAnimationService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectedAnimationService) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ConnectedAnimationService = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ConnectedAnimationService",
@@ -4286,13 +4208,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         _type_slots_ConnectedAnimationService};
 
     static PyGetSetDef getset_ConnectedAnimationService_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ConnectedAnimationService_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(ConnectedAnimationService_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ConnectedAnimationService_Static[] = 
     {
@@ -4302,14 +4222,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ConnectedAnimationService_Static =
-    {
+    static PyType_Spec type_spec_ConnectedAnimationService_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ConnectedAnimationService_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ConnectedAnimationService_Static
-    };
+        type_slots_ConnectedAnimationService_Static};
 
     // ----- ContentThemeTransition class --------------------
 
@@ -4575,22 +4493,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ContentThemeTransition[] = {
         { "_assign_array_", _assign_array_ContentThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentThemeTransition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContentThemeTransition[] = {
         { "vertical_offset", reinterpret_cast<getter>(ContentThemeTransition_get_VerticalOffset), reinterpret_cast<setter>(ContentThemeTransition_put_VerticalOffset), nullptr, nullptr },
         { "horizontal_offset", reinterpret_cast<getter>(ContentThemeTransition_get_HorizontalOffset), reinterpret_cast<setter>(ContentThemeTransition_put_HorizontalOffset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContentThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentThemeTransition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContentThemeTransition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ContentThemeTransition",
@@ -4602,12 +4517,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_ContentThemeTransition_Static[] = {
         { "horizontal_offset_property", reinterpret_cast<getter>(ContentThemeTransition_get_HorizontalOffsetProperty), nullptr, nullptr, nullptr },
         { "vertical_offset_property", reinterpret_cast<getter>(ContentThemeTransition_get_VerticalOffsetProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContentThemeTransition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContentThemeTransition_Static[] = 
     {
@@ -4617,14 +4530,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ContentThemeTransition_Static =
-    {
+    static PyType_Spec type_spec_ContentThemeTransition_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ContentThemeTransition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContentThemeTransition_Static
-    };
+        type_slots_ContentThemeTransition_Static};
 
     // ----- ContinuumNavigationTransitionInfo class --------------------
 
@@ -5139,21 +5050,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ContinuumNavigationTransitionInfo[] = {
         { "_assign_array_", _assign_array_ContinuumNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContinuumNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ContinuumNavigationTransitionInfo[] = {
         { "exit_element", reinterpret_cast<getter>(ContinuumNavigationTransitionInfo_get_ExitElement), reinterpret_cast<setter>(ContinuumNavigationTransitionInfo_put_ExitElement), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ContinuumNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContinuumNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContinuumNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContinuumNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContinuumNavigationTransitionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ContinuumNavigationTransitionInfo = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ContinuumNavigationTransitionInfo",
@@ -5167,8 +5075,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "exit_element_property", reinterpret_cast<getter>(ContinuumNavigationTransitionInfo_get_ExitElementProperty), nullptr, nullptr, nullptr },
         { "is_entrance_element_property", reinterpret_cast<getter>(ContinuumNavigationTransitionInfo_get_IsEntranceElementProperty), nullptr, nullptr, nullptr },
         { "is_exit_element_property", reinterpret_cast<getter>(ContinuumNavigationTransitionInfo_get_IsExitElementProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ContinuumNavigationTransitionInfo_Static[] = {
         { "get_exit_element_container", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_GetExitElementContainer), METH_VARARGS, nullptr },
@@ -5177,8 +5084,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "set_exit_element_container", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_SetExitElementContainer), METH_VARARGS, nullptr },
         { "set_is_entrance_element", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_SetIsEntranceElement), METH_VARARGS, nullptr },
         { "set_is_exit_element", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_SetIsExitElement), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ContinuumNavigationTransitionInfo_Static[] = 
     {
@@ -5188,14 +5094,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ContinuumNavigationTransitionInfo_Static =
-    {
+    static PyType_Spec type_spec_ContinuumNavigationTransitionInfo_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ContinuumNavigationTransitionInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContinuumNavigationTransitionInfo_Static
-    };
+        type_slots_ContinuumNavigationTransitionInfo_Static};
 
     // ----- CubicEase class --------------------
 
@@ -5263,20 +5167,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_CubicEase[] = {
         { "_assign_array_", _assign_array_CubicEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CubicEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CubicEase[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CubicEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CubicEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CubicEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CubicEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CubicEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CubicEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.CubicEase",
@@ -5411,20 +5312,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DirectConnectedAnimationConfiguration[] = {
         { "_assign_array_", _assign_array_DirectConnectedAnimationConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DirectConnectedAnimationConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DirectConnectedAnimationConfiguration[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DirectConnectedAnimationConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DirectConnectedAnimationConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DirectConnectedAnimationConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DirectConnectedAnimationConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DirectConnectedAnimationConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DirectConnectedAnimationConfiguration = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DirectConnectedAnimationConfiguration",
@@ -5434,12 +5332,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         _type_slots_DirectConnectedAnimationConfiguration};
 
     static PyGetSetDef getset_DirectConnectedAnimationConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DirectConnectedAnimationConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DirectConnectedAnimationConfiguration_Static[] = 
     {
@@ -5449,14 +5345,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_DirectConnectedAnimationConfiguration_Static =
-    {
+    static PyType_Spec type_spec_DirectConnectedAnimationConfiguration_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DirectConnectedAnimationConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_DirectConnectedAnimationConfiguration_Static
-    };
+        type_slots_DirectConnectedAnimationConfiguration_Static};
 
     // ----- DiscreteColorKeyFrame class --------------------
 
@@ -5524,20 +5418,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DiscreteColorKeyFrame[] = {
         { "_assign_array_", _assign_array_DiscreteColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiscreteColorKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DiscreteColorKeyFrame[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DiscreteColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiscreteColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiscreteColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiscreteColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiscreteColorKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DiscreteColorKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DiscreteColorKeyFrame",
@@ -5612,20 +5503,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DiscreteDoubleKeyFrame[] = {
         { "_assign_array_", _assign_array_DiscreteDoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiscreteDoubleKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DiscreteDoubleKeyFrame[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DiscreteDoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiscreteDoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiscreteDoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiscreteDoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiscreteDoubleKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DiscreteDoubleKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DiscreteDoubleKeyFrame",
@@ -5700,20 +5588,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DiscreteObjectKeyFrame[] = {
         { "_assign_array_", _assign_array_DiscreteObjectKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiscreteObjectKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DiscreteObjectKeyFrame[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DiscreteObjectKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiscreteObjectKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiscreteObjectKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiscreteObjectKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiscreteObjectKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DiscreteObjectKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DiscreteObjectKeyFrame",
@@ -5788,20 +5673,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DiscretePointKeyFrame[] = {
         { "_assign_array_", _assign_array_DiscretePointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiscretePointKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DiscretePointKeyFrame[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DiscretePointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiscretePointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiscretePointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiscretePointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiscretePointKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DiscretePointKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DiscretePointKeyFrame",
@@ -6371,8 +6253,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DoubleAnimation[] = {
         { "_assign_array_", _assign_array_DoubleAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DoubleAnimation[] = {
         { "to", reinterpret_cast<getter>(DoubleAnimation_get_To), reinterpret_cast<setter>(DoubleAnimation_put_To), nullptr, nullptr },
@@ -6380,16 +6261,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "enable_dependent_animation", reinterpret_cast<getter>(DoubleAnimation_get_EnableDependentAnimation), reinterpret_cast<setter>(DoubleAnimation_put_EnableDependentAnimation), nullptr, nullptr },
         { "easing_function", reinterpret_cast<getter>(DoubleAnimation_get_EasingFunction), reinterpret_cast<setter>(DoubleAnimation_put_EasingFunction), nullptr, nullptr },
         { "by", reinterpret_cast<getter>(DoubleAnimation_get_By), reinterpret_cast<setter>(DoubleAnimation_put_By), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DoubleAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DoubleAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DoubleAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DoubleAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DoubleAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleAnimation",
@@ -6404,12 +6283,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "enable_dependent_animation_property", reinterpret_cast<getter>(DoubleAnimation_get_EnableDependentAnimationProperty), nullptr, nullptr, nullptr },
         { "from_property", reinterpret_cast<getter>(DoubleAnimation_get_FromProperty), nullptr, nullptr, nullptr },
         { "to_property", reinterpret_cast<getter>(DoubleAnimation_get_ToProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DoubleAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DoubleAnimation_Static[] = 
     {
@@ -6419,14 +6296,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_DoubleAnimation_Static =
-    {
+    static PyType_Spec type_spec_DoubleAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DoubleAnimation_Static
-    };
+        type_slots_DoubleAnimation_Static};
 
     // ----- DoubleAnimationUsingKeyFrames class --------------------
 
@@ -6623,22 +6498,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DoubleAnimationUsingKeyFrames[] = {
         { "_assign_array_", _assign_array_DoubleAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DoubleAnimationUsingKeyFrames[] = {
         { "enable_dependent_animation", reinterpret_cast<getter>(DoubleAnimationUsingKeyFrames_get_EnableDependentAnimation), reinterpret_cast<setter>(DoubleAnimationUsingKeyFrames_put_EnableDependentAnimation), nullptr, nullptr },
         { "key_frames", reinterpret_cast<getter>(DoubleAnimationUsingKeyFrames_get_KeyFrames), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DoubleAnimationUsingKeyFrames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleAnimationUsingKeyFrames) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DoubleAnimationUsingKeyFrames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DoubleAnimationUsingKeyFrames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DoubleAnimationUsingKeyFrames) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DoubleAnimationUsingKeyFrames = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleAnimationUsingKeyFrames",
@@ -6649,12 +6521,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_DoubleAnimationUsingKeyFrames_Static[] = {
         { "enable_dependent_animation_property", reinterpret_cast<getter>(DoubleAnimationUsingKeyFrames_get_EnableDependentAnimationProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DoubleAnimationUsingKeyFrames_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DoubleAnimationUsingKeyFrames_Static[] = 
     {
@@ -6664,14 +6534,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_DoubleAnimationUsingKeyFrames_Static =
-    {
+    static PyType_Spec type_spec_DoubleAnimationUsingKeyFrames_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleAnimationUsingKeyFrames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DoubleAnimationUsingKeyFrames_Static
-    };
+        type_slots_DoubleAnimationUsingKeyFrames_Static};
 
     // ----- DoubleKeyFrame class --------------------
 
@@ -6944,22 +6812,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DoubleKeyFrame[] = {
         { "_assign_array_", _assign_array_DoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DoubleKeyFrame[] = {
         { "value", reinterpret_cast<getter>(DoubleKeyFrame_get_Value), reinterpret_cast<setter>(DoubleKeyFrame_put_Value), nullptr, nullptr },
         { "key_time", reinterpret_cast<getter>(DoubleKeyFrame_get_KeyTime), reinterpret_cast<setter>(DoubleKeyFrame_put_KeyTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DoubleKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DoubleKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleKeyFrame",
@@ -6971,12 +6836,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_DoubleKeyFrame_Static[] = {
         { "key_time_property", reinterpret_cast<getter>(DoubleKeyFrame_get_KeyTimeProperty), nullptr, nullptr, nullptr },
         { "value_property", reinterpret_cast<getter>(DoubleKeyFrame_get_ValueProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DoubleKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DoubleKeyFrame_Static[] = 
     {
@@ -6986,14 +6849,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_DoubleKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_DoubleKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_DoubleKeyFrame_Static
-    };
+        type_slots_DoubleKeyFrame_Static};
 
     // ----- DoubleKeyFrameCollection class --------------------
 
@@ -7767,13 +7628,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "set_at", reinterpret_cast<PyCFunction>(DoubleKeyFrameCollection_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DoubleKeyFrameCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleKeyFrameCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DoubleKeyFrameCollection[] = {
         { "size", reinterpret_cast<getter>(DoubleKeyFrameCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DoubleKeyFrameCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleKeyFrameCollection) },
@@ -7785,8 +7644,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_DoubleKeyFrameCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_DoubleKeyFrameCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_DoubleKeyFrameCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DoubleKeyFrameCollection = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleKeyFrameCollection",
@@ -7960,21 +7818,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DragItemThemeAnimation[] = {
         { "_assign_array_", _assign_array_DragItemThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragItemThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DragItemThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(DragItemThemeAnimation_get_TargetName), reinterpret_cast<setter>(DragItemThemeAnimation_put_TargetName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DragItemThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragItemThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragItemThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragItemThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragItemThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DragItemThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DragItemThemeAnimation",
@@ -7985,12 +7840,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_DragItemThemeAnimation_Static[] = {
         { "target_name_property", reinterpret_cast<getter>(DragItemThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DragItemThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DragItemThemeAnimation_Static[] = 
     {
@@ -8000,14 +7853,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_DragItemThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_DragItemThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DragItemThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DragItemThemeAnimation_Static
-    };
+        type_slots_DragItemThemeAnimation_Static};
 
     // ----- DragOverThemeAnimation class --------------------
 
@@ -8372,23 +8223,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DragOverThemeAnimation[] = {
         { "_assign_array_", _assign_array_DragOverThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragOverThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DragOverThemeAnimation[] = {
         { "to_offset", reinterpret_cast<getter>(DragOverThemeAnimation_get_ToOffset), reinterpret_cast<setter>(DragOverThemeAnimation_put_ToOffset), nullptr, nullptr },
         { "target_name", reinterpret_cast<getter>(DragOverThemeAnimation_get_TargetName), reinterpret_cast<setter>(DragOverThemeAnimation_put_TargetName), nullptr, nullptr },
         { "direction", reinterpret_cast<getter>(DragOverThemeAnimation_get_Direction), reinterpret_cast<setter>(DragOverThemeAnimation_put_Direction), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DragOverThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragOverThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragOverThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragOverThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragOverThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DragOverThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DragOverThemeAnimation",
@@ -8401,12 +8249,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "direction_property", reinterpret_cast<getter>(DragOverThemeAnimation_get_DirectionProperty), nullptr, nullptr, nullptr },
         { "target_name_property", reinterpret_cast<getter>(DragOverThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
         { "to_offset_property", reinterpret_cast<getter>(DragOverThemeAnimation_get_ToOffsetProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DragOverThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DragOverThemeAnimation_Static[] = 
     {
@@ -8416,14 +8262,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_DragOverThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_DragOverThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DragOverThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DragOverThemeAnimation_Static
-    };
+        type_slots_DragOverThemeAnimation_Static};
 
     // ----- DrillInNavigationTransitionInfo class --------------------
 
@@ -8491,20 +8335,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DrillInNavigationTransitionInfo[] = {
         { "_assign_array_", _assign_array_DrillInNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DrillInNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DrillInNavigationTransitionInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DrillInNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DrillInNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DrillInNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DrillInNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DrillInNavigationTransitionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DrillInNavigationTransitionInfo = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DrillInNavigationTransitionInfo",
@@ -8975,24 +8816,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DrillInThemeAnimation[] = {
         { "_assign_array_", _assign_array_DrillInThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DrillInThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DrillInThemeAnimation[] = {
         { "exit_target_name", reinterpret_cast<getter>(DrillInThemeAnimation_get_ExitTargetName), reinterpret_cast<setter>(DrillInThemeAnimation_put_ExitTargetName), nullptr, nullptr },
         { "exit_target", reinterpret_cast<getter>(DrillInThemeAnimation_get_ExitTarget), reinterpret_cast<setter>(DrillInThemeAnimation_put_ExitTarget), nullptr, nullptr },
         { "entrance_target_name", reinterpret_cast<getter>(DrillInThemeAnimation_get_EntranceTargetName), reinterpret_cast<setter>(DrillInThemeAnimation_put_EntranceTargetName), nullptr, nullptr },
         { "entrance_target", reinterpret_cast<getter>(DrillInThemeAnimation_get_EntranceTarget), reinterpret_cast<setter>(DrillInThemeAnimation_put_EntranceTarget), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DrillInThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DrillInThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DrillInThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DrillInThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DrillInThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DrillInThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DrillInThemeAnimation",
@@ -9006,12 +8844,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "entrance_target_property", reinterpret_cast<getter>(DrillInThemeAnimation_get_EntranceTargetProperty), nullptr, nullptr, nullptr },
         { "exit_target_name_property", reinterpret_cast<getter>(DrillInThemeAnimation_get_ExitTargetNameProperty), nullptr, nullptr, nullptr },
         { "exit_target_property", reinterpret_cast<getter>(DrillInThemeAnimation_get_ExitTargetProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DrillInThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DrillInThemeAnimation_Static[] = 
     {
@@ -9021,14 +8857,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_DrillInThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_DrillInThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DrillInThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DrillInThemeAnimation_Static
-    };
+        type_slots_DrillInThemeAnimation_Static};
 
     // ----- DrillOutThemeAnimation class --------------------
 
@@ -9492,24 +9326,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DrillOutThemeAnimation[] = {
         { "_assign_array_", _assign_array_DrillOutThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DrillOutThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DrillOutThemeAnimation[] = {
         { "exit_target_name", reinterpret_cast<getter>(DrillOutThemeAnimation_get_ExitTargetName), reinterpret_cast<setter>(DrillOutThemeAnimation_put_ExitTargetName), nullptr, nullptr },
         { "exit_target", reinterpret_cast<getter>(DrillOutThemeAnimation_get_ExitTarget), reinterpret_cast<setter>(DrillOutThemeAnimation_put_ExitTarget), nullptr, nullptr },
         { "entrance_target_name", reinterpret_cast<getter>(DrillOutThemeAnimation_get_EntranceTargetName), reinterpret_cast<setter>(DrillOutThemeAnimation_put_EntranceTargetName), nullptr, nullptr },
         { "entrance_target", reinterpret_cast<getter>(DrillOutThemeAnimation_get_EntranceTarget), reinterpret_cast<setter>(DrillOutThemeAnimation_put_EntranceTarget), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DrillOutThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DrillOutThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DrillOutThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DrillOutThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DrillOutThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DrillOutThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DrillOutThemeAnimation",
@@ -9523,12 +9354,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "entrance_target_property", reinterpret_cast<getter>(DrillOutThemeAnimation_get_EntranceTargetProperty), nullptr, nullptr, nullptr },
         { "exit_target_name_property", reinterpret_cast<getter>(DrillOutThemeAnimation_get_ExitTargetNameProperty), nullptr, nullptr, nullptr },
         { "exit_target_property", reinterpret_cast<getter>(DrillOutThemeAnimation_get_ExitTargetProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DrillOutThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DrillOutThemeAnimation_Static[] = 
     {
@@ -9538,14 +9367,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_DrillOutThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_DrillOutThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DrillOutThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DrillOutThemeAnimation_Static
-    };
+        type_slots_DrillOutThemeAnimation_Static};
 
     // ----- DropTargetItemThemeAnimation class --------------------
 
@@ -9712,21 +9539,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_DropTargetItemThemeAnimation[] = {
         { "_assign_array_", _assign_array_DropTargetItemThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DropTargetItemThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DropTargetItemThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(DropTargetItemThemeAnimation_get_TargetName), reinterpret_cast<setter>(DropTargetItemThemeAnimation_put_TargetName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DropTargetItemThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DropTargetItemThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DropTargetItemThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DropTargetItemThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DropTargetItemThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DropTargetItemThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DropTargetItemThemeAnimation",
@@ -9737,12 +9561,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_DropTargetItemThemeAnimation_Static[] = {
         { "target_name_property", reinterpret_cast<getter>(DropTargetItemThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DropTargetItemThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DropTargetItemThemeAnimation_Static[] = 
     {
@@ -9752,14 +9574,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_DropTargetItemThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_DropTargetItemThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.DropTargetItemThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DropTargetItemThemeAnimation_Static
-    };
+        type_slots_DropTargetItemThemeAnimation_Static};
 
     // ----- EasingColorKeyFrame class --------------------
 
@@ -9926,21 +9746,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_EasingColorKeyFrame[] = {
         { "_assign_array_", _assign_array_EasingColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasingColorKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EasingColorKeyFrame[] = {
         { "easing_function", reinterpret_cast<getter>(EasingColorKeyFrame_get_EasingFunction), reinterpret_cast<setter>(EasingColorKeyFrame_put_EasingFunction), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EasingColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasingColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasingColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasingColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasingColorKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EasingColorKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingColorKeyFrame",
@@ -9951,12 +9768,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_EasingColorKeyFrame_Static[] = {
         { "easing_function_property", reinterpret_cast<getter>(EasingColorKeyFrame_get_EasingFunctionProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EasingColorKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EasingColorKeyFrame_Static[] = 
     {
@@ -9966,14 +9781,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_EasingColorKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_EasingColorKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingColorKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EasingColorKeyFrame_Static
-    };
+        type_slots_EasingColorKeyFrame_Static};
 
     // ----- EasingDoubleKeyFrame class --------------------
 
@@ -10140,21 +9953,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_EasingDoubleKeyFrame[] = {
         { "_assign_array_", _assign_array_EasingDoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasingDoubleKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EasingDoubleKeyFrame[] = {
         { "easing_function", reinterpret_cast<getter>(EasingDoubleKeyFrame_get_EasingFunction), reinterpret_cast<setter>(EasingDoubleKeyFrame_put_EasingFunction), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EasingDoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasingDoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasingDoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasingDoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasingDoubleKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EasingDoubleKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingDoubleKeyFrame",
@@ -10165,12 +9975,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_EasingDoubleKeyFrame_Static[] = {
         { "easing_function_property", reinterpret_cast<getter>(EasingDoubleKeyFrame_get_EasingFunctionProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EasingDoubleKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EasingDoubleKeyFrame_Static[] = 
     {
@@ -10180,14 +9988,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_EasingDoubleKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_EasingDoubleKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingDoubleKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EasingDoubleKeyFrame_Static
-    };
+        type_slots_EasingDoubleKeyFrame_Static};
 
     // ----- EasingFunctionBase class --------------------
 
@@ -10375,21 +10181,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "ease", reinterpret_cast<PyCFunction>(EasingFunctionBase_Ease), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EasingFunctionBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasingFunctionBase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EasingFunctionBase[] = {
         { "easing_mode", reinterpret_cast<getter>(EasingFunctionBase_get_EasingMode), reinterpret_cast<setter>(EasingFunctionBase_put_EasingMode), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EasingFunctionBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasingFunctionBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasingFunctionBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasingFunctionBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasingFunctionBase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EasingFunctionBase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingFunctionBase",
@@ -10400,12 +10203,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_EasingFunctionBase_Static[] = {
         { "easing_mode_property", reinterpret_cast<getter>(EasingFunctionBase_get_EasingModeProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EasingFunctionBase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EasingFunctionBase_Static[] = 
     {
@@ -10415,14 +10216,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_EasingFunctionBase_Static =
-    {
+    static PyType_Spec type_spec_EasingFunctionBase_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingFunctionBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_EasingFunctionBase_Static
-    };
+        type_slots_EasingFunctionBase_Static};
 
     // ----- EasingPointKeyFrame class --------------------
 
@@ -10589,21 +10388,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_EasingPointKeyFrame[] = {
         { "_assign_array_", _assign_array_EasingPointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasingPointKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EasingPointKeyFrame[] = {
         { "easing_function", reinterpret_cast<getter>(EasingPointKeyFrame_get_EasingFunction), reinterpret_cast<setter>(EasingPointKeyFrame_put_EasingFunction), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EasingPointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasingPointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasingPointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasingPointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasingPointKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EasingPointKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingPointKeyFrame",
@@ -10614,12 +10410,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_EasingPointKeyFrame_Static[] = {
         { "easing_function_property", reinterpret_cast<getter>(EasingPointKeyFrame_get_EasingFunctionProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EasingPointKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EasingPointKeyFrame_Static[] = 
     {
@@ -10629,14 +10423,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_EasingPointKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_EasingPointKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingPointKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EasingPointKeyFrame_Static
-    };
+        type_slots_EasingPointKeyFrame_Static};
 
     // ----- EdgeUIThemeTransition class --------------------
 
@@ -10803,21 +10595,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_EdgeUIThemeTransition[] = {
         { "_assign_array_", _assign_array_EdgeUIThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EdgeUIThemeTransition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EdgeUIThemeTransition[] = {
         { "edge", reinterpret_cast<getter>(EdgeUIThemeTransition_get_Edge), reinterpret_cast<setter>(EdgeUIThemeTransition_put_Edge), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EdgeUIThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EdgeUIThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EdgeUIThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EdgeUIThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EdgeUIThemeTransition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EdgeUIThemeTransition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EdgeUIThemeTransition",
@@ -10828,12 +10617,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_EdgeUIThemeTransition_Static[] = {
         { "edge_property", reinterpret_cast<getter>(EdgeUIThemeTransition_get_EdgeProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EdgeUIThemeTransition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EdgeUIThemeTransition_Static[] = 
     {
@@ -10843,14 +10630,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_EdgeUIThemeTransition_Static =
-    {
+    static PyType_Spec type_spec_EdgeUIThemeTransition_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EdgeUIThemeTransition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EdgeUIThemeTransition_Static
-    };
+        type_slots_EdgeUIThemeTransition_Static};
 
     // ----- ElasticEase class --------------------
 
@@ -11116,22 +10901,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ElasticEase[] = {
         { "_assign_array_", _assign_array_ElasticEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ElasticEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ElasticEase[] = {
         { "springiness", reinterpret_cast<getter>(ElasticEase_get_Springiness), reinterpret_cast<setter>(ElasticEase_put_Springiness), nullptr, nullptr },
         { "oscillations", reinterpret_cast<getter>(ElasticEase_get_Oscillations), reinterpret_cast<setter>(ElasticEase_put_Oscillations), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ElasticEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ElasticEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ElasticEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ElasticEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ElasticEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ElasticEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ElasticEase",
@@ -11143,12 +10925,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_ElasticEase_Static[] = {
         { "oscillations_property", reinterpret_cast<getter>(ElasticEase_get_OscillationsProperty), nullptr, nullptr, nullptr },
         { "springiness_property", reinterpret_cast<getter>(ElasticEase_get_SpringinessProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ElasticEase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ElasticEase_Static[] = 
     {
@@ -11158,14 +10938,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ElasticEase_Static =
-    {
+    static PyType_Spec type_spec_ElasticEase_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ElasticEase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ElasticEase_Static
-    };
+        type_slots_ElasticEase_Static};
 
     // ----- EntranceNavigationTransitionInfo class --------------------
 
@@ -11349,20 +11127,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_EntranceNavigationTransitionInfo[] = {
         { "_assign_array_", _assign_array_EntranceNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EntranceNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EntranceNavigationTransitionInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EntranceNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EntranceNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EntranceNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EntranceNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EntranceNavigationTransitionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EntranceNavigationTransitionInfo = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EntranceNavigationTransitionInfo",
@@ -11373,14 +11148,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_EntranceNavigationTransitionInfo_Static[] = {
         { "is_target_element_property", reinterpret_cast<getter>(EntranceNavigationTransitionInfo_get_IsTargetElementProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EntranceNavigationTransitionInfo_Static[] = {
         { "get_is_target_element", reinterpret_cast<PyCFunction>(EntranceNavigationTransitionInfo_GetIsTargetElement), METH_VARARGS, nullptr },
         { "set_is_target_element", reinterpret_cast<PyCFunction>(EntranceNavigationTransitionInfo_SetIsTargetElement), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EntranceNavigationTransitionInfo_Static[] = 
     {
@@ -11390,14 +11163,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_EntranceNavigationTransitionInfo_Static =
-    {
+    static PyType_Spec type_spec_EntranceNavigationTransitionInfo_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EntranceNavigationTransitionInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EntranceNavigationTransitionInfo_Static
-    };
+        type_slots_EntranceNavigationTransitionInfo_Static};
 
     // ----- EntranceThemeTransition class --------------------
 
@@ -11762,23 +11533,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_EntranceThemeTransition[] = {
         { "_assign_array_", _assign_array_EntranceThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EntranceThemeTransition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_EntranceThemeTransition[] = {
         { "is_staggering_enabled", reinterpret_cast<getter>(EntranceThemeTransition_get_IsStaggeringEnabled), reinterpret_cast<setter>(EntranceThemeTransition_put_IsStaggeringEnabled), nullptr, nullptr },
         { "from_vertical_offset", reinterpret_cast<getter>(EntranceThemeTransition_get_FromVerticalOffset), reinterpret_cast<setter>(EntranceThemeTransition_put_FromVerticalOffset), nullptr, nullptr },
         { "from_horizontal_offset", reinterpret_cast<getter>(EntranceThemeTransition_get_FromHorizontalOffset), reinterpret_cast<setter>(EntranceThemeTransition_put_FromHorizontalOffset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_EntranceThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EntranceThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EntranceThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EntranceThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EntranceThemeTransition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_EntranceThemeTransition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EntranceThemeTransition",
@@ -11791,12 +11559,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "from_horizontal_offset_property", reinterpret_cast<getter>(EntranceThemeTransition_get_FromHorizontalOffsetProperty), nullptr, nullptr, nullptr },
         { "from_vertical_offset_property", reinterpret_cast<getter>(EntranceThemeTransition_get_FromVerticalOffsetProperty), nullptr, nullptr, nullptr },
         { "is_staggering_enabled_property", reinterpret_cast<getter>(EntranceThemeTransition_get_IsStaggeringEnabledProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_EntranceThemeTransition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_EntranceThemeTransition_Static[] = 
     {
@@ -11806,14 +11572,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_EntranceThemeTransition_Static =
-    {
+    static PyType_Spec type_spec_EntranceThemeTransition_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.EntranceThemeTransition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EntranceThemeTransition_Static
-    };
+        type_slots_EntranceThemeTransition_Static};
 
     // ----- ExponentialEase class --------------------
 
@@ -11980,21 +11744,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ExponentialEase[] = {
         { "_assign_array_", _assign_array_ExponentialEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExponentialEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ExponentialEase[] = {
         { "exponent", reinterpret_cast<getter>(ExponentialEase_get_Exponent), reinterpret_cast<setter>(ExponentialEase_put_Exponent), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ExponentialEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExponentialEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExponentialEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExponentialEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExponentialEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ExponentialEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ExponentialEase",
@@ -12005,12 +11766,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_ExponentialEase_Static[] = {
         { "exponent_property", reinterpret_cast<getter>(ExponentialEase_get_ExponentProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ExponentialEase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ExponentialEase_Static[] = 
     {
@@ -12020,14 +11779,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ExponentialEase_Static =
-    {
+    static PyType_Spec type_spec_ExponentialEase_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ExponentialEase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ExponentialEase_Static
-    };
+        type_slots_ExponentialEase_Static};
 
     // ----- FadeInThemeAnimation class --------------------
 
@@ -12194,21 +11951,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_FadeInThemeAnimation[] = {
         { "_assign_array_", _assign_array_FadeInThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FadeInThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FadeInThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(FadeInThemeAnimation_get_TargetName), reinterpret_cast<setter>(FadeInThemeAnimation_put_TargetName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FadeInThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FadeInThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FadeInThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FadeInThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FadeInThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FadeInThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.FadeInThemeAnimation",
@@ -12219,12 +11973,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_FadeInThemeAnimation_Static[] = {
         { "target_name_property", reinterpret_cast<getter>(FadeInThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FadeInThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FadeInThemeAnimation_Static[] = 
     {
@@ -12234,14 +11986,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_FadeInThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_FadeInThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.FadeInThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FadeInThemeAnimation_Static
-    };
+        type_slots_FadeInThemeAnimation_Static};
 
     // ----- FadeOutThemeAnimation class --------------------
 
@@ -12408,21 +12158,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_FadeOutThemeAnimation[] = {
         { "_assign_array_", _assign_array_FadeOutThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FadeOutThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_FadeOutThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(FadeOutThemeAnimation_get_TargetName), reinterpret_cast<setter>(FadeOutThemeAnimation_put_TargetName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_FadeOutThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FadeOutThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FadeOutThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FadeOutThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FadeOutThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_FadeOutThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.FadeOutThemeAnimation",
@@ -12433,12 +12180,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_FadeOutThemeAnimation_Static[] = {
         { "target_name_property", reinterpret_cast<getter>(FadeOutThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_FadeOutThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_FadeOutThemeAnimation_Static[] = 
     {
@@ -12448,14 +12193,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_FadeOutThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_FadeOutThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.FadeOutThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FadeOutThemeAnimation_Static
-    };
+        type_slots_FadeOutThemeAnimation_Static};
 
     // ----- GravityConnectedAnimationConfiguration class --------------------
 
@@ -12652,21 +12395,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_GravityConnectedAnimationConfiguration[] = {
         { "_assign_array_", _assign_array_GravityConnectedAnimationConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GravityConnectedAnimationConfiguration), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GravityConnectedAnimationConfiguration[] = {
         { "is_shadow_enabled", reinterpret_cast<getter>(GravityConnectedAnimationConfiguration_get_IsShadowEnabled), reinterpret_cast<setter>(GravityConnectedAnimationConfiguration_put_IsShadowEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GravityConnectedAnimationConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GravityConnectedAnimationConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GravityConnectedAnimationConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GravityConnectedAnimationConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GravityConnectedAnimationConfiguration) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GravityConnectedAnimationConfiguration = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.GravityConnectedAnimationConfiguration",
@@ -12676,12 +12416,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         _type_slots_GravityConnectedAnimationConfiguration};
 
     static PyGetSetDef getset_GravityConnectedAnimationConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GravityConnectedAnimationConfiguration_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GravityConnectedAnimationConfiguration_Static[] = 
     {
@@ -12691,14 +12429,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_GravityConnectedAnimationConfiguration_Static =
-    {
+    static PyType_Spec type_spec_GravityConnectedAnimationConfiguration_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.GravityConnectedAnimationConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_GravityConnectedAnimationConfiguration_Static
-    };
+        type_slots_GravityConnectedAnimationConfiguration_Static};
 
     // ----- KeySpline class --------------------
 
@@ -12904,22 +12640,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_KeySpline[] = {
         { "_assign_array_", _assign_array_KeySpline, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeySpline), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeySpline[] = {
         { "control_point2", reinterpret_cast<getter>(KeySpline_get_ControlPoint2), reinterpret_cast<setter>(KeySpline_put_ControlPoint2), nullptr, nullptr },
         { "control_point1", reinterpret_cast<getter>(KeySpline_get_ControlPoint1), reinterpret_cast<setter>(KeySpline_put_ControlPoint1), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeySpline[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeySpline) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeySpline) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeySpline) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeySpline) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeySpline = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.KeySpline",
@@ -13014,20 +12747,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_KeyTimeHelper[] = {
         { "_assign_array_", _assign_array_KeyTimeHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyTimeHelper), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_KeyTimeHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_KeyTimeHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyTimeHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyTimeHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyTimeHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyTimeHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyTimeHelper = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.KeyTimeHelper",
@@ -13037,13 +12767,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         _type_slots_KeyTimeHelper};
 
     static PyGetSetDef getset_KeyTimeHelper_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_KeyTimeHelper_Static[] = {
         { "from_time_span", reinterpret_cast<PyCFunction>(KeyTimeHelper_FromTimeSpan), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_KeyTimeHelper_Static[] = 
     {
@@ -13053,14 +12781,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_KeyTimeHelper_Static =
-    {
+    static PyType_Spec type_spec_KeyTimeHelper_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.KeyTimeHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KeyTimeHelper_Static
-    };
+        type_slots_KeyTimeHelper_Static};
 
     // ----- LinearColorKeyFrame class --------------------
 
@@ -13128,20 +12854,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_LinearColorKeyFrame[] = {
         { "_assign_array_", _assign_array_LinearColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LinearColorKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LinearColorKeyFrame[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LinearColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LinearColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LinearColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LinearColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LinearColorKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LinearColorKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.LinearColorKeyFrame",
@@ -13216,20 +12939,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_LinearDoubleKeyFrame[] = {
         { "_assign_array_", _assign_array_LinearDoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LinearDoubleKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LinearDoubleKeyFrame[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LinearDoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LinearDoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LinearDoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LinearDoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LinearDoubleKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LinearDoubleKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.LinearDoubleKeyFrame",
@@ -13304,20 +13024,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_LinearPointKeyFrame[] = {
         { "_assign_array_", _assign_array_LinearPointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LinearPointKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LinearPointKeyFrame[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LinearPointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LinearPointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LinearPointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LinearPointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LinearPointKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LinearPointKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.LinearPointKeyFrame",
@@ -13491,21 +13208,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_NavigationThemeTransition[] = {
         { "_assign_array_", _assign_array_NavigationThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigationThemeTransition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NavigationThemeTransition[] = {
         { "default_navigation_transition_info", reinterpret_cast<getter>(NavigationThemeTransition_get_DefaultNavigationTransitionInfo), reinterpret_cast<setter>(NavigationThemeTransition_put_DefaultNavigationTransitionInfo), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NavigationThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationThemeTransition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NavigationThemeTransition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.NavigationThemeTransition",
@@ -13516,12 +13230,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_NavigationThemeTransition_Static[] = {
         { "default_navigation_transition_info_property", reinterpret_cast<getter>(NavigationThemeTransition_get_DefaultNavigationTransitionInfoProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_NavigationThemeTransition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_NavigationThemeTransition_Static[] = 
     {
@@ -13531,14 +13243,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_NavigationThemeTransition_Static =
-    {
+    static PyType_Spec type_spec_NavigationThemeTransition_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.NavigationThemeTransition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_NavigationThemeTransition_Static
-    };
+        type_slots_NavigationThemeTransition_Static};
 
     // ----- NavigationTransitionInfo class --------------------
 
@@ -13758,20 +13468,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "_set_navigation_state_core", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_SetNavigationStateCore), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_NavigationTransitionInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_NavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationTransitionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_NavigationTransitionInfo = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.NavigationTransitionInfo",
@@ -13781,12 +13488,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         _type_slots_NavigationTransitionInfo};
 
     static PyGetSetDef getset_NavigationTransitionInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_NavigationTransitionInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_NavigationTransitionInfo_Static[] = 
     {
@@ -13796,14 +13501,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_NavigationTransitionInfo_Static =
-    {
+    static PyType_Spec type_spec_NavigationTransitionInfo_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.NavigationTransitionInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_NavigationTransitionInfo_Static
-    };
+        type_slots_NavigationTransitionInfo_Static};
 
     // ----- ObjectAnimationUsingKeyFrames class --------------------
 
@@ -14000,22 +13703,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ObjectAnimationUsingKeyFrames[] = {
         { "_assign_array_", _assign_array_ObjectAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ObjectAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ObjectAnimationUsingKeyFrames[] = {
         { "enable_dependent_animation", reinterpret_cast<getter>(ObjectAnimationUsingKeyFrames_get_EnableDependentAnimation), reinterpret_cast<setter>(ObjectAnimationUsingKeyFrames_put_EnableDependentAnimation), nullptr, nullptr },
         { "key_frames", reinterpret_cast<getter>(ObjectAnimationUsingKeyFrames_get_KeyFrames), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ObjectAnimationUsingKeyFrames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ObjectAnimationUsingKeyFrames) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ObjectAnimationUsingKeyFrames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ObjectAnimationUsingKeyFrames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ObjectAnimationUsingKeyFrames) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ObjectAnimationUsingKeyFrames = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ObjectAnimationUsingKeyFrames",
@@ -14026,12 +13726,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_ObjectAnimationUsingKeyFrames_Static[] = {
         { "enable_dependent_animation_property", reinterpret_cast<getter>(ObjectAnimationUsingKeyFrames_get_EnableDependentAnimationProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ObjectAnimationUsingKeyFrames_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ObjectAnimationUsingKeyFrames_Static[] = 
     {
@@ -14041,14 +13739,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ObjectAnimationUsingKeyFrames_Static =
-    {
+    static PyType_Spec type_spec_ObjectAnimationUsingKeyFrames_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ObjectAnimationUsingKeyFrames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ObjectAnimationUsingKeyFrames_Static
-    };
+        type_slots_ObjectAnimationUsingKeyFrames_Static};
 
     // ----- ObjectKeyFrame class --------------------
 
@@ -14321,22 +14017,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ObjectKeyFrame[] = {
         { "_assign_array_", _assign_array_ObjectKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ObjectKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ObjectKeyFrame[] = {
         { "value", reinterpret_cast<getter>(ObjectKeyFrame_get_Value), reinterpret_cast<setter>(ObjectKeyFrame_put_Value), nullptr, nullptr },
         { "key_time", reinterpret_cast<getter>(ObjectKeyFrame_get_KeyTime), reinterpret_cast<setter>(ObjectKeyFrame_put_KeyTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ObjectKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ObjectKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ObjectKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ObjectKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ObjectKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ObjectKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ObjectKeyFrame",
@@ -14348,12 +14041,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_ObjectKeyFrame_Static[] = {
         { "key_time_property", reinterpret_cast<getter>(ObjectKeyFrame_get_KeyTimeProperty), nullptr, nullptr, nullptr },
         { "value_property", reinterpret_cast<getter>(ObjectKeyFrame_get_ValueProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_ObjectKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ObjectKeyFrame_Static[] = 
     {
@@ -14363,14 +14054,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_ObjectKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_ObjectKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ObjectKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_ObjectKeyFrame_Static
-    };
+        type_slots_ObjectKeyFrame_Static};
 
     // ----- ObjectKeyFrameCollection class --------------------
 
@@ -15144,13 +14833,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "set_at", reinterpret_cast<PyCFunction>(ObjectKeyFrameCollection_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ObjectKeyFrameCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ObjectKeyFrameCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ObjectKeyFrameCollection[] = {
         { "size", reinterpret_cast<getter>(ObjectKeyFrameCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ObjectKeyFrameCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ObjectKeyFrameCollection) },
@@ -15162,8 +14849,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_ObjectKeyFrameCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_ObjectKeyFrameCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_ObjectKeyFrameCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ObjectKeyFrameCollection = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ObjectKeyFrameCollection",
@@ -15337,21 +15023,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PaneThemeTransition[] = {
         { "_assign_array_", _assign_array_PaneThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PaneThemeTransition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PaneThemeTransition[] = {
         { "edge", reinterpret_cast<getter>(PaneThemeTransition_get_Edge), reinterpret_cast<setter>(PaneThemeTransition_put_Edge), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PaneThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaneThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaneThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaneThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaneThemeTransition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PaneThemeTransition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PaneThemeTransition",
@@ -15362,12 +15045,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_PaneThemeTransition_Static[] = {
         { "edge_property", reinterpret_cast<getter>(PaneThemeTransition_get_EdgeProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PaneThemeTransition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PaneThemeTransition_Static[] = 
     {
@@ -15377,14 +15058,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PaneThemeTransition_Static =
-    {
+    static PyType_Spec type_spec_PaneThemeTransition_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PaneThemeTransition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PaneThemeTransition_Static
-    };
+        type_slots_PaneThemeTransition_Static};
 
     // ----- PointAnimation class --------------------
 
@@ -15947,8 +15626,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PointAnimation[] = {
         { "_assign_array_", _assign_array_PointAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PointAnimation[] = {
         { "to", reinterpret_cast<getter>(PointAnimation_get_To), reinterpret_cast<setter>(PointAnimation_put_To), nullptr, nullptr },
@@ -15956,16 +15634,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "enable_dependent_animation", reinterpret_cast<getter>(PointAnimation_get_EnableDependentAnimation), reinterpret_cast<setter>(PointAnimation_put_EnableDependentAnimation), nullptr, nullptr },
         { "easing_function", reinterpret_cast<getter>(PointAnimation_get_EasingFunction), reinterpret_cast<setter>(PointAnimation_put_EasingFunction), nullptr, nullptr },
         { "by", reinterpret_cast<getter>(PointAnimation_get_By), reinterpret_cast<setter>(PointAnimation_put_By), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PointAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointAnimation",
@@ -15980,12 +15656,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "enable_dependent_animation_property", reinterpret_cast<getter>(PointAnimation_get_EnableDependentAnimationProperty), nullptr, nullptr, nullptr },
         { "from_property", reinterpret_cast<getter>(PointAnimation_get_FromProperty), nullptr, nullptr, nullptr },
         { "to_property", reinterpret_cast<getter>(PointAnimation_get_ToProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PointAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PointAnimation_Static[] = 
     {
@@ -15995,14 +15669,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PointAnimation_Static =
-    {
+    static PyType_Spec type_spec_PointAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PointAnimation_Static
-    };
+        type_slots_PointAnimation_Static};
 
     // ----- PointAnimationUsingKeyFrames class --------------------
 
@@ -16199,22 +15871,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PointAnimationUsingKeyFrames[] = {
         { "_assign_array_", _assign_array_PointAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PointAnimationUsingKeyFrames[] = {
         { "enable_dependent_animation", reinterpret_cast<getter>(PointAnimationUsingKeyFrames_get_EnableDependentAnimation), reinterpret_cast<setter>(PointAnimationUsingKeyFrames_put_EnableDependentAnimation), nullptr, nullptr },
         { "key_frames", reinterpret_cast<getter>(PointAnimationUsingKeyFrames_get_KeyFrames), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PointAnimationUsingKeyFrames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointAnimationUsingKeyFrames) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointAnimationUsingKeyFrames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointAnimationUsingKeyFrames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointAnimationUsingKeyFrames) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointAnimationUsingKeyFrames = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointAnimationUsingKeyFrames",
@@ -16225,12 +15894,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_PointAnimationUsingKeyFrames_Static[] = {
         { "enable_dependent_animation_property", reinterpret_cast<getter>(PointAnimationUsingKeyFrames_get_EnableDependentAnimationProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PointAnimationUsingKeyFrames_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PointAnimationUsingKeyFrames_Static[] = 
     {
@@ -16240,14 +15907,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PointAnimationUsingKeyFrames_Static =
-    {
+    static PyType_Spec type_spec_PointAnimationUsingKeyFrames_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointAnimationUsingKeyFrames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PointAnimationUsingKeyFrames_Static
-    };
+        type_slots_PointAnimationUsingKeyFrames_Static};
 
     // ----- PointKeyFrame class --------------------
 
@@ -16520,22 +16185,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PointKeyFrame[] = {
         { "_assign_array_", _assign_array_PointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PointKeyFrame[] = {
         { "value", reinterpret_cast<getter>(PointKeyFrame_get_Value), reinterpret_cast<setter>(PointKeyFrame_put_Value), nullptr, nullptr },
         { "key_time", reinterpret_cast<getter>(PointKeyFrame_get_KeyTime), reinterpret_cast<setter>(PointKeyFrame_put_KeyTime), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointKeyFrame",
@@ -16547,12 +16209,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_PointKeyFrame_Static[] = {
         { "key_time_property", reinterpret_cast<getter>(PointKeyFrame_get_KeyTimeProperty), nullptr, nullptr, nullptr },
         { "value_property", reinterpret_cast<getter>(PointKeyFrame_get_ValueProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PointKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PointKeyFrame_Static[] = 
     {
@@ -16562,14 +16222,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PointKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_PointKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_PointKeyFrame_Static
-    };
+        type_slots_PointKeyFrame_Static};
 
     // ----- PointKeyFrameCollection class --------------------
 
@@ -17343,13 +17001,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "set_at", reinterpret_cast<PyCFunction>(PointKeyFrameCollection_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PointKeyFrameCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointKeyFrameCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PointKeyFrameCollection[] = {
         { "size", reinterpret_cast<getter>(PointKeyFrameCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PointKeyFrameCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointKeyFrameCollection) },
@@ -17361,8 +17017,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_PointKeyFrameCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_PointKeyFrameCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_PointKeyFrameCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointKeyFrameCollection = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointKeyFrameCollection",
@@ -17536,21 +17191,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PointerDownThemeAnimation[] = {
         { "_assign_array_", _assign_array_PointerDownThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerDownThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PointerDownThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(PointerDownThemeAnimation_get_TargetName), reinterpret_cast<setter>(PointerDownThemeAnimation_put_TargetName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PointerDownThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerDownThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerDownThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerDownThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerDownThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointerDownThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointerDownThemeAnimation",
@@ -17561,12 +17213,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_PointerDownThemeAnimation_Static[] = {
         { "target_name_property", reinterpret_cast<getter>(PointerDownThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PointerDownThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PointerDownThemeAnimation_Static[] = 
     {
@@ -17576,14 +17226,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PointerDownThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_PointerDownThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointerDownThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PointerDownThemeAnimation_Static
-    };
+        type_slots_PointerDownThemeAnimation_Static};
 
     // ----- PointerUpThemeAnimation class --------------------
 
@@ -17750,21 +17398,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PointerUpThemeAnimation[] = {
         { "_assign_array_", _assign_array_PointerUpThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerUpThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PointerUpThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(PointerUpThemeAnimation_get_TargetName), reinterpret_cast<setter>(PointerUpThemeAnimation_put_TargetName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PointerUpThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerUpThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerUpThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerUpThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerUpThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PointerUpThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointerUpThemeAnimation",
@@ -17775,12 +17420,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_PointerUpThemeAnimation_Static[] = {
         { "target_name_property", reinterpret_cast<getter>(PointerUpThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PointerUpThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PointerUpThemeAnimation_Static[] = 
     {
@@ -17790,14 +17433,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PointerUpThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_PointerUpThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointerUpThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PointerUpThemeAnimation_Static
-    };
+        type_slots_PointerUpThemeAnimation_Static};
 
     // ----- PopInThemeAnimation class --------------------
 
@@ -18162,23 +17803,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PopInThemeAnimation[] = {
         { "_assign_array_", _assign_array_PopInThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopInThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PopInThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(PopInThemeAnimation_get_TargetName), reinterpret_cast<setter>(PopInThemeAnimation_put_TargetName), nullptr, nullptr },
         { "from_vertical_offset", reinterpret_cast<getter>(PopInThemeAnimation_get_FromVerticalOffset), reinterpret_cast<setter>(PopInThemeAnimation_put_FromVerticalOffset), nullptr, nullptr },
         { "from_horizontal_offset", reinterpret_cast<getter>(PopInThemeAnimation_get_FromHorizontalOffset), reinterpret_cast<setter>(PopInThemeAnimation_put_FromHorizontalOffset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PopInThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PopInThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PopInThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PopInThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PopInThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PopInThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PopInThemeAnimation",
@@ -18191,12 +17829,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "from_horizontal_offset_property", reinterpret_cast<getter>(PopInThemeAnimation_get_FromHorizontalOffsetProperty), nullptr, nullptr, nullptr },
         { "from_vertical_offset_property", reinterpret_cast<getter>(PopInThemeAnimation_get_FromVerticalOffsetProperty), nullptr, nullptr, nullptr },
         { "target_name_property", reinterpret_cast<getter>(PopInThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PopInThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PopInThemeAnimation_Static[] = 
     {
@@ -18206,14 +17842,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PopInThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_PopInThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PopInThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PopInThemeAnimation_Static
-    };
+        type_slots_PopInThemeAnimation_Static};
 
     // ----- PopOutThemeAnimation class --------------------
 
@@ -18380,21 +18014,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PopOutThemeAnimation[] = {
         { "_assign_array_", _assign_array_PopOutThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopOutThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PopOutThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(PopOutThemeAnimation_get_TargetName), reinterpret_cast<setter>(PopOutThemeAnimation_put_TargetName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PopOutThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PopOutThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PopOutThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PopOutThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PopOutThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PopOutThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PopOutThemeAnimation",
@@ -18405,12 +18036,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_PopOutThemeAnimation_Static[] = {
         { "target_name_property", reinterpret_cast<getter>(PopOutThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PopOutThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PopOutThemeAnimation_Static[] = 
     {
@@ -18420,14 +18049,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PopOutThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_PopOutThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PopOutThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PopOutThemeAnimation_Static
-    };
+        type_slots_PopOutThemeAnimation_Static};
 
     // ----- PopupThemeTransition class --------------------
 
@@ -18693,22 +18320,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PopupThemeTransition[] = {
         { "_assign_array_", _assign_array_PopupThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopupThemeTransition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PopupThemeTransition[] = {
         { "from_vertical_offset", reinterpret_cast<getter>(PopupThemeTransition_get_FromVerticalOffset), reinterpret_cast<setter>(PopupThemeTransition_put_FromVerticalOffset), nullptr, nullptr },
         { "from_horizontal_offset", reinterpret_cast<getter>(PopupThemeTransition_get_FromHorizontalOffset), reinterpret_cast<setter>(PopupThemeTransition_put_FromHorizontalOffset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PopupThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PopupThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PopupThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PopupThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PopupThemeTransition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PopupThemeTransition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PopupThemeTransition",
@@ -18720,12 +18344,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_PopupThemeTransition_Static[] = {
         { "from_horizontal_offset_property", reinterpret_cast<getter>(PopupThemeTransition_get_FromHorizontalOffsetProperty), nullptr, nullptr, nullptr },
         { "from_vertical_offset_property", reinterpret_cast<getter>(PopupThemeTransition_get_FromVerticalOffsetProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PopupThemeTransition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PopupThemeTransition_Static[] = 
     {
@@ -18735,14 +18357,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PopupThemeTransition_Static =
-    {
+    static PyType_Spec type_spec_PopupThemeTransition_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PopupThemeTransition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PopupThemeTransition_Static
-    };
+        type_slots_PopupThemeTransition_Static};
 
     // ----- PowerEase class --------------------
 
@@ -18909,21 +18529,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_PowerEase[] = {
         { "_assign_array_", _assign_array_PowerEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PowerEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PowerEase[] = {
         { "power", reinterpret_cast<getter>(PowerEase_get_Power), reinterpret_cast<setter>(PowerEase_put_Power), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PowerEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PowerEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PowerEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PowerEase",
@@ -18934,12 +18551,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_PowerEase_Static[] = {
         { "power_property", reinterpret_cast<getter>(PowerEase_get_PowerProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PowerEase_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PowerEase_Static[] = 
     {
@@ -18949,14 +18564,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_PowerEase_Static =
-    {
+    static PyType_Spec type_spec_PowerEase_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.PowerEase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PowerEase_Static
-    };
+        type_slots_PowerEase_Static};
 
     // ----- QuadraticEase class --------------------
 
@@ -19024,20 +18637,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_QuadraticEase[] = {
         { "_assign_array_", _assign_array_QuadraticEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QuadraticEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_QuadraticEase[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_QuadraticEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuadraticEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuadraticEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuadraticEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuadraticEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_QuadraticEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.QuadraticEase",
@@ -19112,20 +18722,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_QuarticEase[] = {
         { "_assign_array_", _assign_array_QuarticEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QuarticEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_QuarticEase[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_QuarticEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuarticEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuarticEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuarticEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuarticEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_QuarticEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.QuarticEase",
@@ -19200,20 +18807,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_QuinticEase[] = {
         { "_assign_array_", _assign_array_QuinticEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QuinticEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_QuinticEase[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_QuinticEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuinticEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuinticEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuinticEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuinticEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_QuinticEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.QuinticEase",
@@ -19288,20 +18892,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_ReorderThemeTransition[] = {
         { "_assign_array_", _assign_array_ReorderThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ReorderThemeTransition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ReorderThemeTransition[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ReorderThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReorderThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReorderThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReorderThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReorderThemeTransition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ReorderThemeTransition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.ReorderThemeTransition",
@@ -19595,20 +19196,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_RepeatBehaviorHelper[] = {
         { "_assign_array_", _assign_array_RepeatBehaviorHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RepeatBehaviorHelper), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RepeatBehaviorHelper[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RepeatBehaviorHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeatBehaviorHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepeatBehaviorHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeatBehaviorHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatBehaviorHelper) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RepeatBehaviorHelper = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.RepeatBehaviorHelper",
@@ -19619,8 +19217,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_RepeatBehaviorHelper_Static[] = {
         { "forever", reinterpret_cast<getter>(RepeatBehaviorHelper_get_Forever), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RepeatBehaviorHelper_Static[] = {
         { "equals", reinterpret_cast<PyCFunction>(RepeatBehaviorHelper_Equals), METH_VARARGS, nullptr },
@@ -19628,8 +19225,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "from_duration", reinterpret_cast<PyCFunction>(RepeatBehaviorHelper_FromDuration), METH_VARARGS, nullptr },
         { "get_has_count", reinterpret_cast<PyCFunction>(RepeatBehaviorHelper_GetHasCount), METH_VARARGS, nullptr },
         { "get_has_duration", reinterpret_cast<PyCFunction>(RepeatBehaviorHelper_GetHasDuration), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RepeatBehaviorHelper_Static[] = 
     {
@@ -19639,14 +19235,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_RepeatBehaviorHelper_Static =
-    {
+    static PyType_Spec type_spec_RepeatBehaviorHelper_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.RepeatBehaviorHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RepeatBehaviorHelper_Static
-    };
+        type_slots_RepeatBehaviorHelper_Static};
 
     // ----- RepositionThemeAnimation class --------------------
 
@@ -20011,23 +19605,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_RepositionThemeAnimation[] = {
         { "_assign_array_", _assign_array_RepositionThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RepositionThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RepositionThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(RepositionThemeAnimation_get_TargetName), reinterpret_cast<setter>(RepositionThemeAnimation_put_TargetName), nullptr, nullptr },
         { "from_vertical_offset", reinterpret_cast<getter>(RepositionThemeAnimation_get_FromVerticalOffset), reinterpret_cast<setter>(RepositionThemeAnimation_put_FromVerticalOffset), nullptr, nullptr },
         { "from_horizontal_offset", reinterpret_cast<getter>(RepositionThemeAnimation_get_FromHorizontalOffset), reinterpret_cast<setter>(RepositionThemeAnimation_put_FromHorizontalOffset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RepositionThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepositionThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepositionThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepositionThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepositionThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RepositionThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.RepositionThemeAnimation",
@@ -20040,12 +19631,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "from_horizontal_offset_property", reinterpret_cast<getter>(RepositionThemeAnimation_get_FromHorizontalOffsetProperty), nullptr, nullptr, nullptr },
         { "from_vertical_offset_property", reinterpret_cast<getter>(RepositionThemeAnimation_get_FromVerticalOffsetProperty), nullptr, nullptr, nullptr },
         { "target_name_property", reinterpret_cast<getter>(RepositionThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RepositionThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RepositionThemeAnimation_Static[] = 
     {
@@ -20055,14 +19644,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_RepositionThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_RepositionThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.RepositionThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RepositionThemeAnimation_Static
-    };
+        type_slots_RepositionThemeAnimation_Static};
 
     // ----- RepositionThemeTransition class --------------------
 
@@ -20229,21 +19816,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_RepositionThemeTransition[] = {
         { "_assign_array_", _assign_array_RepositionThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RepositionThemeTransition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_RepositionThemeTransition[] = {
         { "is_staggering_enabled", reinterpret_cast<getter>(RepositionThemeTransition_get_IsStaggeringEnabled), reinterpret_cast<setter>(RepositionThemeTransition_put_IsStaggeringEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_RepositionThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepositionThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepositionThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepositionThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepositionThemeTransition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RepositionThemeTransition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.RepositionThemeTransition",
@@ -20254,12 +19838,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_RepositionThemeTransition_Static[] = {
         { "is_staggering_enabled_property", reinterpret_cast<getter>(RepositionThemeTransition_get_IsStaggeringEnabledProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_RepositionThemeTransition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_RepositionThemeTransition_Static[] = 
     {
@@ -20269,14 +19851,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_RepositionThemeTransition_Static =
-    {
+    static PyType_Spec type_spec_RepositionThemeTransition_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.RepositionThemeTransition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RepositionThemeTransition_Static
-    };
+        type_slots_RepositionThemeTransition_Static};
 
     // ----- SineEase class --------------------
 
@@ -20344,20 +19924,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SineEase[] = {
         { "_assign_array_", _assign_array_SineEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SineEase), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SineEase[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SineEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SineEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SineEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SineEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SineEase) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SineEase = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SineEase",
@@ -20531,21 +20108,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SlideNavigationTransitionInfo[] = {
         { "_assign_array_", _assign_array_SlideNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SlideNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SlideNavigationTransitionInfo[] = {
         { "effect", reinterpret_cast<getter>(SlideNavigationTransitionInfo_get_Effect), reinterpret_cast<setter>(SlideNavigationTransitionInfo_put_Effect), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SlideNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SlideNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SlideNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SlideNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SlideNavigationTransitionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SlideNavigationTransitionInfo = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SlideNavigationTransitionInfo",
@@ -20556,12 +20130,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_SlideNavigationTransitionInfo_Static[] = {
         { "effect_property", reinterpret_cast<getter>(SlideNavigationTransitionInfo_get_EffectProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SlideNavigationTransitionInfo_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SlideNavigationTransitionInfo_Static[] = 
     {
@@ -20571,14 +20143,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_SlideNavigationTransitionInfo_Static =
-    {
+    static PyType_Spec type_spec_SlideNavigationTransitionInfo_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SlideNavigationTransitionInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SlideNavigationTransitionInfo_Static
-    };
+        type_slots_SlideNavigationTransitionInfo_Static};
 
     // ----- SplineColorKeyFrame class --------------------
 
@@ -20745,21 +20315,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SplineColorKeyFrame[] = {
         { "_assign_array_", _assign_array_SplineColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplineColorKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SplineColorKeyFrame[] = {
         { "key_spline", reinterpret_cast<getter>(SplineColorKeyFrame_get_KeySpline), reinterpret_cast<setter>(SplineColorKeyFrame_put_KeySpline), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SplineColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplineColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplineColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplineColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplineColorKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SplineColorKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplineColorKeyFrame",
@@ -20770,12 +20337,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_SplineColorKeyFrame_Static[] = {
         { "key_spline_property", reinterpret_cast<getter>(SplineColorKeyFrame_get_KeySplineProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SplineColorKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SplineColorKeyFrame_Static[] = 
     {
@@ -20785,14 +20350,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_SplineColorKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_SplineColorKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplineColorKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SplineColorKeyFrame_Static
-    };
+        type_slots_SplineColorKeyFrame_Static};
 
     // ----- SplineDoubleKeyFrame class --------------------
 
@@ -20959,21 +20522,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SplineDoubleKeyFrame[] = {
         { "_assign_array_", _assign_array_SplineDoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplineDoubleKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SplineDoubleKeyFrame[] = {
         { "key_spline", reinterpret_cast<getter>(SplineDoubleKeyFrame_get_KeySpline), reinterpret_cast<setter>(SplineDoubleKeyFrame_put_KeySpline), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SplineDoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplineDoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplineDoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplineDoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplineDoubleKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SplineDoubleKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplineDoubleKeyFrame",
@@ -20984,12 +20544,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_SplineDoubleKeyFrame_Static[] = {
         { "key_spline_property", reinterpret_cast<getter>(SplineDoubleKeyFrame_get_KeySplineProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SplineDoubleKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SplineDoubleKeyFrame_Static[] = 
     {
@@ -20999,14 +20557,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_SplineDoubleKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_SplineDoubleKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplineDoubleKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SplineDoubleKeyFrame_Static
-    };
+        type_slots_SplineDoubleKeyFrame_Static};
 
     // ----- SplinePointKeyFrame class --------------------
 
@@ -21173,21 +20729,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SplinePointKeyFrame[] = {
         { "_assign_array_", _assign_array_SplinePointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplinePointKeyFrame), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SplinePointKeyFrame[] = {
         { "key_spline", reinterpret_cast<getter>(SplinePointKeyFrame_get_KeySpline), reinterpret_cast<setter>(SplinePointKeyFrame_put_KeySpline), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SplinePointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplinePointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplinePointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplinePointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplinePointKeyFrame) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SplinePointKeyFrame = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplinePointKeyFrame",
@@ -21198,12 +20751,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef getset_SplinePointKeyFrame_Static[] = {
         { "key_spline_property", reinterpret_cast<getter>(SplinePointKeyFrame_get_KeySplineProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SplinePointKeyFrame_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SplinePointKeyFrame_Static[] = 
     {
@@ -21213,14 +20764,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_SplinePointKeyFrame_Static =
-    {
+    static PyType_Spec type_spec_SplinePointKeyFrame_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplinePointKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SplinePointKeyFrame_Static
-    };
+        type_slots_SplinePointKeyFrame_Static};
 
     // ----- SplitCloseThemeAnimation class --------------------
 
@@ -22377,8 +21926,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SplitCloseThemeAnimation[] = {
         { "_assign_array_", _assign_array_SplitCloseThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplitCloseThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SplitCloseThemeAnimation[] = {
         { "opened_target_name", reinterpret_cast<getter>(SplitCloseThemeAnimation_get_OpenedTargetName), reinterpret_cast<setter>(SplitCloseThemeAnimation_put_OpenedTargetName), nullptr, nullptr },
@@ -22392,16 +21940,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "closed_target_name", reinterpret_cast<getter>(SplitCloseThemeAnimation_get_ClosedTargetName), reinterpret_cast<setter>(SplitCloseThemeAnimation_put_ClosedTargetName), nullptr, nullptr },
         { "closed_target", reinterpret_cast<getter>(SplitCloseThemeAnimation_get_ClosedTarget), reinterpret_cast<setter>(SplitCloseThemeAnimation_put_ClosedTarget), nullptr, nullptr },
         { "closed_length", reinterpret_cast<getter>(SplitCloseThemeAnimation_get_ClosedLength), reinterpret_cast<setter>(SplitCloseThemeAnimation_put_ClosedLength), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SplitCloseThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplitCloseThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplitCloseThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplitCloseThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplitCloseThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SplitCloseThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplitCloseThemeAnimation",
@@ -22422,12 +21968,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "opened_length_property", reinterpret_cast<getter>(SplitCloseThemeAnimation_get_OpenedLengthProperty), nullptr, nullptr, nullptr },
         { "opened_target_name_property", reinterpret_cast<getter>(SplitCloseThemeAnimation_get_OpenedTargetNameProperty), nullptr, nullptr, nullptr },
         { "opened_target_property", reinterpret_cast<getter>(SplitCloseThemeAnimation_get_OpenedTargetProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SplitCloseThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SplitCloseThemeAnimation_Static[] = 
     {
@@ -22437,14 +21981,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_SplitCloseThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_SplitCloseThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplitCloseThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SplitCloseThemeAnimation_Static
-    };
+        type_slots_SplitCloseThemeAnimation_Static};
 
     // ----- SplitOpenThemeAnimation class --------------------
 
@@ -23601,8 +23143,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SplitOpenThemeAnimation[] = {
         { "_assign_array_", _assign_array_SplitOpenThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplitOpenThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SplitOpenThemeAnimation[] = {
         { "opened_target_name", reinterpret_cast<getter>(SplitOpenThemeAnimation_get_OpenedTargetName), reinterpret_cast<setter>(SplitOpenThemeAnimation_put_OpenedTargetName), nullptr, nullptr },
@@ -23616,16 +23157,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "closed_target_name", reinterpret_cast<getter>(SplitOpenThemeAnimation_get_ClosedTargetName), reinterpret_cast<setter>(SplitOpenThemeAnimation_put_ClosedTargetName), nullptr, nullptr },
         { "closed_target", reinterpret_cast<getter>(SplitOpenThemeAnimation_get_ClosedTarget), reinterpret_cast<setter>(SplitOpenThemeAnimation_put_ClosedTarget), nullptr, nullptr },
         { "closed_length", reinterpret_cast<getter>(SplitOpenThemeAnimation_get_ClosedLength), reinterpret_cast<setter>(SplitOpenThemeAnimation_put_ClosedLength), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SplitOpenThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplitOpenThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplitOpenThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplitOpenThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplitOpenThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SplitOpenThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplitOpenThemeAnimation",
@@ -23646,12 +23185,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "opened_length_property", reinterpret_cast<getter>(SplitOpenThemeAnimation_get_OpenedLengthProperty), nullptr, nullptr, nullptr },
         { "opened_target_name_property", reinterpret_cast<getter>(SplitOpenThemeAnimation_get_OpenedTargetNameProperty), nullptr, nullptr, nullptr },
         { "opened_target_property", reinterpret_cast<getter>(SplitOpenThemeAnimation_get_OpenedTargetProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SplitOpenThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SplitOpenThemeAnimation_Static[] = 
     {
@@ -23661,14 +23198,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_SplitOpenThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_SplitOpenThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SplitOpenThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SplitOpenThemeAnimation_Static
-    };
+        type_slots_SplitOpenThemeAnimation_Static};
 
     // ----- Storyboard class --------------------
 
@@ -24422,21 +23957,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "stop", reinterpret_cast<PyCFunction>(Storyboard_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Storyboard, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Storyboard), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Storyboard[] = {
         { "children", reinterpret_cast<getter>(Storyboard_get_Children), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Storyboard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Storyboard) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Storyboard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Storyboard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Storyboard) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Storyboard = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.Storyboard",
@@ -24448,8 +23980,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyGetSetDef getset_Storyboard_Static[] = {
         { "target_name_property", reinterpret_cast<getter>(Storyboard_get_TargetNameProperty), nullptr, nullptr, nullptr },
         { "target_property_property", reinterpret_cast<getter>(Storyboard_get_TargetPropertyProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Storyboard_Static[] = {
         { "get_target_name", reinterpret_cast<PyCFunction>(Storyboard_GetTargetName), METH_VARARGS, nullptr },
@@ -24457,8 +23988,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "set_target", reinterpret_cast<PyCFunction>(Storyboard_SetTarget), METH_VARARGS, nullptr },
         { "set_target_name", reinterpret_cast<PyCFunction>(Storyboard_SetTargetName), METH_VARARGS, nullptr },
         { "set_target_property", reinterpret_cast<PyCFunction>(Storyboard_SetTargetProperty), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Storyboard_Static[] = 
     {
@@ -24468,14 +23998,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_Storyboard_Static =
-    {
+    static PyType_Spec type_spec_Storyboard_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.Storyboard_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Storyboard_Static
-    };
+        type_slots_Storyboard_Static};
 
     // ----- SuppressNavigationTransitionInfo class --------------------
 
@@ -24543,20 +24071,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SuppressNavigationTransitionInfo[] = {
         { "_assign_array_", _assign_array_SuppressNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SuppressNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SuppressNavigationTransitionInfo[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SuppressNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SuppressNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SuppressNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SuppressNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SuppressNavigationTransitionInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SuppressNavigationTransitionInfo = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SuppressNavigationTransitionInfo",
@@ -24928,23 +24453,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SwipeBackThemeAnimation[] = {
         { "_assign_array_", _assign_array_SwipeBackThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SwipeBackThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SwipeBackThemeAnimation[] = {
         { "target_name", reinterpret_cast<getter>(SwipeBackThemeAnimation_get_TargetName), reinterpret_cast<setter>(SwipeBackThemeAnimation_put_TargetName), nullptr, nullptr },
         { "from_vertical_offset", reinterpret_cast<getter>(SwipeBackThemeAnimation_get_FromVerticalOffset), reinterpret_cast<setter>(SwipeBackThemeAnimation_put_FromVerticalOffset), nullptr, nullptr },
         { "from_horizontal_offset", reinterpret_cast<getter>(SwipeBackThemeAnimation_get_FromHorizontalOffset), reinterpret_cast<setter>(SwipeBackThemeAnimation_put_FromHorizontalOffset), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SwipeBackThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SwipeBackThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SwipeBackThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SwipeBackThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SwipeBackThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SwipeBackThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SwipeBackThemeAnimation",
@@ -24957,12 +24479,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "from_horizontal_offset_property", reinterpret_cast<getter>(SwipeBackThemeAnimation_get_FromHorizontalOffsetProperty), nullptr, nullptr, nullptr },
         { "from_vertical_offset_property", reinterpret_cast<getter>(SwipeBackThemeAnimation_get_FromVerticalOffsetProperty), nullptr, nullptr, nullptr },
         { "target_name_property", reinterpret_cast<getter>(SwipeBackThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SwipeBackThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SwipeBackThemeAnimation_Static[] = 
     {
@@ -24972,14 +24492,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_SwipeBackThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_SwipeBackThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SwipeBackThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SwipeBackThemeAnimation_Static
-    };
+        type_slots_SwipeBackThemeAnimation_Static};
 
     // ----- SwipeHintThemeAnimation class --------------------
 
@@ -25344,23 +24862,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_SwipeHintThemeAnimation[] = {
         { "_assign_array_", _assign_array_SwipeHintThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SwipeHintThemeAnimation), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_SwipeHintThemeAnimation[] = {
         { "to_vertical_offset", reinterpret_cast<getter>(SwipeHintThemeAnimation_get_ToVerticalOffset), reinterpret_cast<setter>(SwipeHintThemeAnimation_put_ToVerticalOffset), nullptr, nullptr },
         { "to_horizontal_offset", reinterpret_cast<getter>(SwipeHintThemeAnimation_get_ToHorizontalOffset), reinterpret_cast<setter>(SwipeHintThemeAnimation_put_ToHorizontalOffset), nullptr, nullptr },
         { "target_name", reinterpret_cast<getter>(SwipeHintThemeAnimation_get_TargetName), reinterpret_cast<setter>(SwipeHintThemeAnimation_put_TargetName), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_SwipeHintThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SwipeHintThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SwipeHintThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SwipeHintThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SwipeHintThemeAnimation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_SwipeHintThemeAnimation = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SwipeHintThemeAnimation",
@@ -25373,12 +24888,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "target_name_property", reinterpret_cast<getter>(SwipeHintThemeAnimation_get_TargetNameProperty), nullptr, nullptr, nullptr },
         { "to_horizontal_offset_property", reinterpret_cast<getter>(SwipeHintThemeAnimation_get_ToHorizontalOffsetProperty), nullptr, nullptr, nullptr },
         { "to_vertical_offset_property", reinterpret_cast<getter>(SwipeHintThemeAnimation_get_ToVerticalOffsetProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_SwipeHintThemeAnimation_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_SwipeHintThemeAnimation_Static[] = 
     {
@@ -25388,14 +24901,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_SwipeHintThemeAnimation_Static =
-    {
+    static PyType_Spec type_spec_SwipeHintThemeAnimation_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.SwipeHintThemeAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SwipeHintThemeAnimation_Static
-    };
+        type_slots_SwipeHintThemeAnimation_Static};
 
     // ----- Timeline class --------------------
 
@@ -26200,8 +25711,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "remove_completed", reinterpret_cast<PyCFunction>(Timeline_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_Timeline, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Timeline), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Timeline[] = {
         { "speed_ratio", reinterpret_cast<getter>(Timeline_get_SpeedRatio), reinterpret_cast<setter>(Timeline_put_SpeedRatio), nullptr, nullptr },
@@ -26210,16 +25720,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "duration", reinterpret_cast<getter>(Timeline_get_Duration), reinterpret_cast<setter>(Timeline_put_Duration), nullptr, nullptr },
         { "begin_time", reinterpret_cast<getter>(Timeline_get_BeginTime), reinterpret_cast<setter>(Timeline_put_BeginTime), nullptr, nullptr },
         { "auto_reverse", reinterpret_cast<getter>(Timeline_get_AutoReverse), reinterpret_cast<setter>(Timeline_put_AutoReverse), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Timeline[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Timeline) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Timeline) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Timeline) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Timeline) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Timeline = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.Timeline",
@@ -26236,12 +25744,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "fill_behavior_property", reinterpret_cast<getter>(Timeline_get_FillBehaviorProperty), nullptr, nullptr, nullptr },
         { "repeat_behavior_property", reinterpret_cast<getter>(Timeline_get_RepeatBehaviorProperty), nullptr, nullptr, nullptr },
         { "speed_ratio_property", reinterpret_cast<getter>(Timeline_get_SpeedRatioProperty), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Timeline_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Timeline_Static[] = 
     {
@@ -26251,14 +25757,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_Timeline_Static =
-    {
+    static PyType_Spec type_spec_Timeline_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.Timeline_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Timeline_Static
-    };
+        type_slots_Timeline_Static};
 
     // ----- TimelineCollection class --------------------
 
@@ -27032,13 +26536,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "set_at", reinterpret_cast<PyCFunction>(TimelineCollection_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TimelineCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TimelineCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TimelineCollection[] = {
         { "size", reinterpret_cast<getter>(TimelineCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TimelineCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimelineCollection) },
@@ -27050,8 +26552,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_TimelineCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_TimelineCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_TimelineCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TimelineCollection = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.TimelineCollection",
@@ -27104,20 +26605,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
     static PyMethodDef _methods_Transition[] = {
         { "_assign_array_", _assign_array_Transition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Transition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Transition[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Transition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Transition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Transition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Transition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Transition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Transition = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.Transition",
@@ -27127,12 +26625,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         _type_slots_Transition};
 
     static PyGetSetDef getset_Transition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Transition_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Transition_Static[] = 
     {
@@ -27142,14 +26638,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Spec type_spec_Transition_Static =
-    {
+    static PyType_Spec type_spec_Transition_Static = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.Transition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_Transition_Static
-    };
+        type_slots_Transition_Static};
 
     // ----- TransitionCollection class --------------------
 
@@ -27923,13 +27417,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "set_at", reinterpret_cast<PyCFunction>(TransitionCollection_SetAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TransitionCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TransitionCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TransitionCollection[] = {
         { "size", reinterpret_cast<getter>(TransitionCollection_get_Size), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TransitionCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TransitionCollection) },
@@ -27941,8 +27433,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_TransitionCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_TransitionCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_TransitionCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TransitionCollection = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.TransitionCollection",
@@ -28018,8 +27509,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyMethodDef _methods_KeyTime[] = {
         { "_assign_array_", _assign_array_KeyTime, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* KeyTime_get_TimeSpan(py::wrapper::Microsoft::UI::Xaml::Media::Animation::KeyTime* self, void* /*unused*/) noexcept
     {
@@ -28056,8 +27546,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyGetSetDef _getset_KeyTime[] = {
         { "time_span", reinterpret_cast<getter>(KeyTime_get_TimeSpan), reinterpret_cast<setter>(KeyTime_set_TimeSpan), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_KeyTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::KeyTime* self, PyObject* other, int op) noexcept
     {
@@ -28113,8 +27602,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyTime) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_KeyTime) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_KeyTime) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_KeyTime = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.KeyTime",
@@ -28194,8 +27682,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyMethodDef _methods_RepeatBehavior[] = {
         { "_assign_array_", _assign_array_RepeatBehavior, METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* RepeatBehavior_get_Count(py::wrapper::Microsoft::UI::Xaml::Media::Animation::RepeatBehavior* self, void* /*unused*/) noexcept
     {
@@ -28300,8 +27787,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "count", reinterpret_cast<getter>(RepeatBehavior_get_Count), reinterpret_cast<setter>(RepeatBehavior_set_Count), nullptr, nullptr },
         { "duration", reinterpret_cast<getter>(RepeatBehavior_get_Duration), reinterpret_cast<setter>(RepeatBehavior_set_Duration), nullptr, nullptr },
         { "type", reinterpret_cast<getter>(RepeatBehavior_get_Type), reinterpret_cast<setter>(RepeatBehavior_set_Type), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyObject* _richcompare_RepeatBehavior(py::wrapper::Microsoft::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* other, int op) noexcept
     {
@@ -28369,8 +27855,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatBehavior) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RepeatBehavior) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_RepeatBehavior) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_RepeatBehavior = {
         "winrt._winrt_microsoft_ui_xaml_media_animation.RepeatBehavior",

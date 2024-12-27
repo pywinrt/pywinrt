@@ -293,21 +293,18 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { "_from", reinterpret_cast<PyCFunction>(_from_DragDropManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DragDropManager), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DragDropManager), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DragDropManager[] = {
         { "are_concurrent_operations_enabled", reinterpret_cast<getter>(DragDropManager_get_AreConcurrentOperationsEnabled), reinterpret_cast<setter>(DragDropManager_put_AreConcurrentOperationsEnabled), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DragDropManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragDropManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragDropManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragDropManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragDropManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DragDropManager = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DragDropManager",
@@ -317,13 +314,11 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         _type_slots_DragDropManager};
 
     static PyGetSetDef getset_DragDropManager_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_DragDropManager_Static[] = {
         { "get_for_island", reinterpret_cast<PyCFunction>(DragDropManager_GetForIsland), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_DragDropManager_Static[] = 
     {
@@ -333,14 +328,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { }
     };
 
-    static PyType_Spec type_spec_DragDropManager_Static =
-    {
+    static PyType_Spec type_spec_DragDropManager_Static = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DragDropManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DragDropManager_Static
-    };
+        type_slots_DragDropManager_Static};
 
     // ----- DragInfo class --------------------
 
@@ -506,24 +499,21 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
     static PyMethodDef _methods_DragInfo[] = {
         { "_assign_array_", _assign_array_DragInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DragInfo[] = {
         { "allowed_operations", reinterpret_cast<getter>(DragInfo_get_AllowedOperations), nullptr, nullptr, nullptr },
         { "data", reinterpret_cast<getter>(DragInfo_get_Data), nullptr, nullptr, nullptr },
         { "modifiers", reinterpret_cast<getter>(DragInfo_get_Modifiers), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(DragInfo_get_Position), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DragInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DragInfo = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DragInfo",
@@ -966,23 +956,20 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { "_from", reinterpret_cast<PyCFunction>(_from_DragOperation), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DragOperation), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_DragOperation), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DragOperation[] = {
         { "drag_ui_content_mode", reinterpret_cast<getter>(DragOperation_get_DragUIContentMode), reinterpret_cast<setter>(DragOperation_put_DragUIContentMode), nullptr, nullptr },
         { "allowed_operations", reinterpret_cast<getter>(DragOperation_get_AllowedOperations), reinterpret_cast<setter>(DragOperation_put_AllowedOperations), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(DragOperation_get_Data), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DragOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragOperation) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DragOperation = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DragOperation",
@@ -1442,24 +1429,21 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { "set_content_from_software_bitmap2", reinterpret_cast<PyCFunction>(DragUIOverride_SetContentFromSoftwareBitmap2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DragUIOverride, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragUIOverride), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DragUIOverride[] = {
         { "is_glyph_visible", reinterpret_cast<getter>(DragUIOverride_get_IsGlyphVisible), reinterpret_cast<setter>(DragUIOverride_put_IsGlyphVisible), nullptr, nullptr },
         { "is_content_visible", reinterpret_cast<getter>(DragUIOverride_get_IsContentVisible), reinterpret_cast<setter>(DragUIOverride_put_IsContentVisible), nullptr, nullptr },
         { "is_caption_visible", reinterpret_cast<getter>(DragUIOverride_get_IsCaptionVisible), reinterpret_cast<setter>(DragUIOverride_put_IsCaptionVisible), nullptr, nullptr },
         { "caption", reinterpret_cast<getter>(DragUIOverride_get_Caption), reinterpret_cast<setter>(DragUIOverride_put_Caption), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DragUIOverride[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragUIOverride) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragUIOverride) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragUIOverride) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragUIOverride) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DragUIOverride = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DragUIOverride",
@@ -1556,20 +1540,17 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { "set_target", reinterpret_cast<PyCFunction>(DropOperationTargetRequestedEventArgs_SetTarget), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DropOperationTargetRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DropOperationTargetRequestedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_DropOperationTargetRequestedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_DropOperationTargetRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DropOperationTargetRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DropOperationTargetRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DropOperationTargetRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DropOperationTargetRequestedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_DropOperationTargetRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DropOperationTargetRequestedEventArgs",
@@ -1796,20 +1777,17 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { "over_async", reinterpret_cast<PyCFunction>(IDropOperationTarget_OverAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IDropOperationTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDropOperationTarget), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDropOperationTarget[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDropOperationTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDropOperationTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDropOperationTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDropOperationTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDropOperationTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDropOperationTarget = {
         "winrt._winrt_microsoft_ui_input_dragdrop.IDropOperationTarget",
@@ -2017,13 +1995,11 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
     static PyMethodDef methods_ImplementsIDropOperationTarget[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDropOperationTarget), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDropOperationTarget), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDropOperationTarget[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDropOperationTarget) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDropOperationTarget = {
         "winrt._winrt_microsoft_ui_input_dragdrop.ImplementsIDropOperationTarget",

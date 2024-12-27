@@ -297,24 +297,21 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { "request_calibration_async", reinterpret_cast<PyCFunction>(GazeDevicePreview_RequestCalibrationAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GazeDevicePreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazeDevicePreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazeDevicePreview[] = {
         { "can_track_eyes", reinterpret_cast<getter>(GazeDevicePreview_get_CanTrackEyes), nullptr, nullptr, nullptr },
         { "can_track_head", reinterpret_cast<getter>(GazeDevicePreview_get_CanTrackHead), nullptr, nullptr, nullptr },
         { "configuration_state", reinterpret_cast<getter>(GazeDevicePreview_get_ConfigurationState), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(GazeDevicePreview_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazeDevicePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDevicePreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDevicePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDevicePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDevicePreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazeDevicePreview = {
         "winrt._winrt_windows_devices_input_preview.GazeDevicePreview",
@@ -397,21 +394,18 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static PyMethodDef _methods_GazeDeviceWatcherAddedPreviewEventArgs[] = {
         { "_assign_array_", _assign_array_GazeDeviceWatcherAddedPreviewEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazeDeviceWatcherAddedPreviewEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazeDeviceWatcherAddedPreviewEventArgs[] = {
         { "device", reinterpret_cast<getter>(GazeDeviceWatcherAddedPreviewEventArgs_get_Device), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazeDeviceWatcherAddedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDeviceWatcherAddedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDeviceWatcherAddedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDeviceWatcherAddedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDeviceWatcherAddedPreviewEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazeDeviceWatcherAddedPreviewEventArgs = {
         "winrt._winrt_windows_devices_input_preview.GazeDeviceWatcherAddedPreviewEventArgs",
@@ -816,20 +810,17 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { "remove_updated", reinterpret_cast<PyCFunction>(GazeDeviceWatcherPreview_remove_Updated), METH_O, nullptr },
         { "_assign_array_", _assign_array_GazeDeviceWatcherPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazeDeviceWatcherPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazeDeviceWatcherPreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazeDeviceWatcherPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDeviceWatcherPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDeviceWatcherPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDeviceWatcherPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDeviceWatcherPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazeDeviceWatcherPreview = {
         "winrt._winrt_windows_devices_input_preview.GazeDeviceWatcherPreview",
@@ -912,21 +903,18 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static PyMethodDef _methods_GazeDeviceWatcherRemovedPreviewEventArgs[] = {
         { "_assign_array_", _assign_array_GazeDeviceWatcherRemovedPreviewEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazeDeviceWatcherRemovedPreviewEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazeDeviceWatcherRemovedPreviewEventArgs[] = {
         { "device", reinterpret_cast<getter>(GazeDeviceWatcherRemovedPreviewEventArgs_get_Device), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazeDeviceWatcherRemovedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDeviceWatcherRemovedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDeviceWatcherRemovedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDeviceWatcherRemovedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDeviceWatcherRemovedPreviewEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazeDeviceWatcherRemovedPreviewEventArgs = {
         "winrt._winrt_windows_devices_input_preview.GazeDeviceWatcherRemovedPreviewEventArgs",
@@ -1009,21 +997,18 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static PyMethodDef _methods_GazeDeviceWatcherUpdatedPreviewEventArgs[] = {
         { "_assign_array_", _assign_array_GazeDeviceWatcherUpdatedPreviewEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazeDeviceWatcherUpdatedPreviewEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazeDeviceWatcherUpdatedPreviewEventArgs[] = {
         { "device", reinterpret_cast<getter>(GazeDeviceWatcherUpdatedPreviewEventArgs_get_Device), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazeDeviceWatcherUpdatedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDeviceWatcherUpdatedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDeviceWatcherUpdatedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDeviceWatcherUpdatedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDeviceWatcherUpdatedPreviewEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazeDeviceWatcherUpdatedPreviewEventArgs = {
         "winrt._winrt_windows_devices_input_preview.GazeDeviceWatcherUpdatedPreviewEventArgs",
@@ -1175,22 +1160,19 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static PyMethodDef _methods_GazeEnteredPreviewEventArgs[] = {
         { "_assign_array_", _assign_array_GazeEnteredPreviewEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazeEnteredPreviewEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazeEnteredPreviewEventArgs[] = {
         { "handled", reinterpret_cast<getter>(GazeEnteredPreviewEventArgs_get_Handled), reinterpret_cast<setter>(GazeEnteredPreviewEventArgs_put_Handled), nullptr, nullptr },
         { "current_point", reinterpret_cast<getter>(GazeEnteredPreviewEventArgs_get_CurrentPoint), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazeEnteredPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeEnteredPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeEnteredPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeEnteredPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeEnteredPreviewEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazeEnteredPreviewEventArgs = {
         "winrt._winrt_windows_devices_input_preview.GazeEnteredPreviewEventArgs",
@@ -1342,22 +1324,19 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static PyMethodDef _methods_GazeExitedPreviewEventArgs[] = {
         { "_assign_array_", _assign_array_GazeExitedPreviewEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazeExitedPreviewEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazeExitedPreviewEventArgs[] = {
         { "handled", reinterpret_cast<getter>(GazeExitedPreviewEventArgs_get_Handled), reinterpret_cast<setter>(GazeExitedPreviewEventArgs_put_Handled), nullptr, nullptr },
         { "current_point", reinterpret_cast<getter>(GazeExitedPreviewEventArgs_get_CurrentPoint), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazeExitedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeExitedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeExitedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeExitedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeExitedPreviewEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazeExitedPreviewEventArgs = {
         "winrt._winrt_windows_devices_input_preview.GazeExitedPreviewEventArgs",
@@ -1691,20 +1670,17 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { "remove_gaze_moved", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_remove_GazeMoved), METH_O, nullptr },
         { "_assign_array_", _assign_array_GazeInputSourcePreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazeInputSourcePreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazeInputSourcePreview[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazeInputSourcePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeInputSourcePreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeInputSourcePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeInputSourcePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeInputSourcePreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazeInputSourcePreview = {
         "winrt._winrt_windows_devices_input_preview.GazeInputSourcePreview",
@@ -1714,14 +1690,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         _type_slots_GazeInputSourcePreview};
 
     static PyGetSetDef getset_GazeInputSourcePreview_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_GazeInputSourcePreview_Static[] = {
         { "create_watcher", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_CreateWatcher), METH_VARARGS, nullptr },
         { "get_for_current_view", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_GetForCurrentView), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_GazeInputSourcePreview_Static[] = 
     {
@@ -1731,14 +1705,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Spec type_spec_GazeInputSourcePreview_Static =
-    {
+    static PyType_Spec type_spec_GazeInputSourcePreview_Static = {
         "winrt._winrt_windows_devices_input_preview.GazeInputSourcePreview_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GazeInputSourcePreview_Static
-    };
+        type_slots_GazeInputSourcePreview_Static};
 
     // ----- GazeMovedPreviewEventArgs class --------------------
 
@@ -1924,22 +1896,19 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { "get_intermediate_points", reinterpret_cast<PyCFunction>(GazeMovedPreviewEventArgs_GetIntermediatePoints), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GazeMovedPreviewEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazeMovedPreviewEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazeMovedPreviewEventArgs[] = {
         { "handled", reinterpret_cast<getter>(GazeMovedPreviewEventArgs_get_Handled), reinterpret_cast<setter>(GazeMovedPreviewEventArgs_put_Handled), nullptr, nullptr },
         { "current_point", reinterpret_cast<getter>(GazeMovedPreviewEventArgs_get_CurrentPoint), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazeMovedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeMovedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeMovedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeMovedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeMovedPreviewEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazeMovedPreviewEventArgs = {
         "winrt._winrt_windows_devices_input_preview.GazeMovedPreviewEventArgs",
@@ -2142,8 +2111,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static PyMethodDef _methods_GazePointPreview[] = {
         { "_assign_array_", _assign_array_GazePointPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GazePointPreview), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_GazePointPreview[] = {
         { "eye_gaze_position", reinterpret_cast<getter>(GazePointPreview_get_EyeGazePosition), nullptr, nullptr, nullptr },
@@ -2151,16 +2119,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { "hid_input_report", reinterpret_cast<getter>(GazePointPreview_get_HidInputReport), nullptr, nullptr, nullptr },
         { "source_device", reinterpret_cast<getter>(GazePointPreview_get_SourceDevice), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(GazePointPreview_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_GazePointPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazePointPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazePointPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazePointPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazePointPreview) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_GazePointPreview = {
         "winrt._winrt_windows_devices_input_preview.GazePointPreview",

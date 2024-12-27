@@ -138,23 +138,20 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static PyMethodDef _methods_VoiceCommand[] = {
         { "_assign_array_", _assign_array_VoiceCommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommand), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommand[] = {
         { "command_name", reinterpret_cast<getter>(VoiceCommand_get_CommandName), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(VoiceCommand_get_Properties), nullptr, nullptr, nullptr },
         { "speech_recognition_result", reinterpret_cast<getter>(VoiceCommand_get_SpeechRecognitionResult), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommand) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommand = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommand",
@@ -237,21 +234,18 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static PyMethodDef _methods_VoiceCommandCompletedEventArgs[] = {
         { "_assign_array_", _assign_array_VoiceCommandCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommandCompletedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandCompletedEventArgs[] = {
         { "reason", reinterpret_cast<getter>(VoiceCommandCompletedEventArgs_get_Reason), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandCompletedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandCompletedEventArgs = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandCompletedEventArgs",
@@ -334,21 +328,18 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static PyMethodDef _methods_VoiceCommandConfirmationResult[] = {
         { "_assign_array_", _assign_array_VoiceCommandConfirmationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommandConfirmationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandConfirmationResult[] = {
         { "confirmed", reinterpret_cast<getter>(VoiceCommandConfirmationResult_get_Confirmed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandConfirmationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandConfirmationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandConfirmationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandConfirmationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandConfirmationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandConfirmationResult = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandConfirmationResult",
@@ -975,8 +966,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static PyMethodDef _methods_VoiceCommandContentTile[] = {
         { "_assign_array_", _assign_array_VoiceCommandContentTile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommandContentTile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandContentTile[] = {
         { "title", reinterpret_cast<getter>(VoiceCommandContentTile_get_Title), reinterpret_cast<setter>(VoiceCommandContentTile_put_Title), nullptr, nullptr },
@@ -987,16 +977,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { "content_tile_type", reinterpret_cast<getter>(VoiceCommandContentTile_get_ContentTileType), reinterpret_cast<setter>(VoiceCommandContentTile_put_ContentTileType), nullptr, nullptr },
         { "app_launch_argument", reinterpret_cast<getter>(VoiceCommandContentTile_get_AppLaunchArgument), reinterpret_cast<setter>(VoiceCommandContentTile_put_AppLaunchArgument), nullptr, nullptr },
         { "app_context", reinterpret_cast<getter>(VoiceCommandContentTile_get_AppContext), reinterpret_cast<setter>(VoiceCommandContentTile_put_AppContext), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandContentTile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandContentTile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandContentTile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandContentTile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandContentTile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandContentTile = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandContentTile",
@@ -1153,22 +1141,19 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { "set_phrase_list_async", reinterpret_cast<PyCFunction>(VoiceCommandDefinition_SetPhraseListAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VoiceCommandDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommandDefinition), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandDefinition[] = {
         { "language", reinterpret_cast<getter>(VoiceCommandDefinition_get_Language), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(VoiceCommandDefinition_get_Name), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandDefinition) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandDefinition = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinition",
@@ -1259,19 +1244,16 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     }
 
     static PyMethodDef _methods_VoiceCommandDefinitionManager[] = {
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandDefinitionManager[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandDefinitionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandDefinitionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandDefinitionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandDefinitionManager) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandDefinitionManager = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinitionManager",
@@ -1282,13 +1264,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyGetSetDef getset_VoiceCommandDefinitionManager_Static[] = {
         { "installed_command_definitions", reinterpret_cast<getter>(VoiceCommandDefinitionManager_get_InstalledCommandDefinitions), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_VoiceCommandDefinitionManager_Static[] = {
         { "install_command_definitions_from_storage_file_async", reinterpret_cast<PyCFunction>(VoiceCommandDefinitionManager_InstallCommandDefinitionsFromStorageFileAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_VoiceCommandDefinitionManager_Static[] = 
     {
@@ -1298,14 +1278,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Spec type_spec_VoiceCommandDefinitionManager_Static =
-    {
+    static PyType_Spec type_spec_VoiceCommandDefinitionManager_Static = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinitionManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VoiceCommandDefinitionManager_Static
-    };
+        type_slots_VoiceCommandDefinitionManager_Static};
 
     // ----- VoiceCommandDisambiguationResult class --------------------
 
@@ -1381,21 +1359,18 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static PyMethodDef _methods_VoiceCommandDisambiguationResult[] = {
         { "_assign_array_", _assign_array_VoiceCommandDisambiguationResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommandDisambiguationResult), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandDisambiguationResult[] = {
         { "selected_item", reinterpret_cast<getter>(VoiceCommandDisambiguationResult_get_SelectedItem), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandDisambiguationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandDisambiguationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandDisambiguationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandDisambiguationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandDisambiguationResult) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandDisambiguationResult = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandDisambiguationResult",
@@ -1887,24 +1862,21 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static PyMethodDef _methods_VoiceCommandResponse[] = {
         { "_assign_array_", _assign_array_VoiceCommandResponse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommandResponse), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandResponse[] = {
         { "repeat_message", reinterpret_cast<getter>(VoiceCommandResponse_get_RepeatMessage), reinterpret_cast<setter>(VoiceCommandResponse_put_RepeatMessage), nullptr, nullptr },
         { "message", reinterpret_cast<getter>(VoiceCommandResponse_get_Message), reinterpret_cast<setter>(VoiceCommandResponse_put_Message), nullptr, nullptr },
         { "app_launch_argument", reinterpret_cast<getter>(VoiceCommandResponse_get_AppLaunchArgument), reinterpret_cast<setter>(VoiceCommandResponse_put_AppLaunchArgument), nullptr, nullptr },
         { "voice_command_content_tiles", reinterpret_cast<getter>(VoiceCommandResponse_get_VoiceCommandContentTiles), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandResponse) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandResponse = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandResponse",
@@ -1915,16 +1887,14 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyGetSetDef getset_VoiceCommandResponse_Static[] = {
         { "max_supported_voice_command_content_tiles", reinterpret_cast<getter>(VoiceCommandResponse_get_MaxSupportedVoiceCommandContentTiles), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_VoiceCommandResponse_Static[] = {
         { "create_response", reinterpret_cast<PyCFunction>(VoiceCommandResponse_CreateResponse), METH_VARARGS, nullptr },
         { "create_response_for_prompt", reinterpret_cast<PyCFunction>(VoiceCommandResponse_CreateResponseForPrompt), METH_VARARGS, nullptr },
         { "create_response_for_prompt_with_tiles", reinterpret_cast<PyCFunction>(VoiceCommandResponse_CreateResponseForPromptWithTiles), METH_VARARGS, nullptr },
         { "create_response_with_tiles", reinterpret_cast<PyCFunction>(VoiceCommandResponse_CreateResponseWithTiles), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_VoiceCommandResponse_Static[] = 
     {
@@ -1934,14 +1904,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Spec type_spec_VoiceCommandResponse_Static =
-    {
+    static PyType_Spec type_spec_VoiceCommandResponse_Static = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandResponse_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VoiceCommandResponse_Static
-    };
+        type_slots_VoiceCommandResponse_Static};
 
     // ----- VoiceCommandServiceConnection class --------------------
 
@@ -2425,21 +2393,18 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { "remove_voice_command_completed", reinterpret_cast<PyCFunction>(VoiceCommandServiceConnection_remove_VoiceCommandCompleted), METH_O, nullptr },
         { "_assign_array_", _assign_array_VoiceCommandServiceConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommandServiceConnection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandServiceConnection[] = {
         { "language", reinterpret_cast<getter>(VoiceCommandServiceConnection_get_Language), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandServiceConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandServiceConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandServiceConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandServiceConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandServiceConnection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandServiceConnection = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandServiceConnection",
@@ -2449,13 +2414,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         _type_slots_VoiceCommandServiceConnection};
 
     static PyGetSetDef getset_VoiceCommandServiceConnection_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_VoiceCommandServiceConnection_Static[] = {
         { "from_app_service_trigger_details", reinterpret_cast<PyCFunction>(VoiceCommandServiceConnection_FromAppServiceTriggerDetails), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_VoiceCommandServiceConnection_Static[] = 
     {
@@ -2465,14 +2428,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Spec type_spec_VoiceCommandServiceConnection_Static =
-    {
+    static PyType_Spec type_spec_VoiceCommandServiceConnection_Static = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandServiceConnection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VoiceCommandServiceConnection_Static
-    };
+        type_slots_VoiceCommandServiceConnection_Static};
 
     // ----- VoiceCommandUserMessage class --------------------
 
@@ -2678,22 +2639,19 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static PyMethodDef _methods_VoiceCommandUserMessage[] = {
         { "_assign_array_", _assign_array_VoiceCommandUserMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VoiceCommandUserMessage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_VoiceCommandUserMessage[] = {
         { "spoken_message", reinterpret_cast<getter>(VoiceCommandUserMessage_get_SpokenMessage), reinterpret_cast<setter>(VoiceCommandUserMessage_put_SpokenMessage), nullptr, nullptr },
         { "display_message", reinterpret_cast<getter>(VoiceCommandUserMessage_get_DisplayMessage), reinterpret_cast<setter>(VoiceCommandUserMessage_put_DisplayMessage), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_VoiceCommandUserMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandUserMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandUserMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandUserMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandUserMessage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_VoiceCommandUserMessage = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandUserMessage",

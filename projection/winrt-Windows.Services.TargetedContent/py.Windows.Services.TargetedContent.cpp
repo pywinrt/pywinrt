@@ -89,20 +89,17 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "invoke_async", reinterpret_cast<PyCFunction>(TargetedContentAction_InvokeAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentAction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentAction), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentAction[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentAction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentAction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentAction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentAction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentAction) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentAction = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentAction",
@@ -196,20 +193,17 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "get_deferral", reinterpret_cast<PyCFunction>(TargetedContentAvailabilityChangedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentAvailabilityChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentAvailabilityChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentAvailabilityChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentAvailabilityChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentAvailabilityChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentAvailabilityChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentAvailabilityChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentAvailabilityChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentAvailabilityChangedEventArgs = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentAvailabilityChangedEventArgs",
@@ -333,21 +327,18 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "get_deferral", reinterpret_cast<PyCFunction>(TargetedContentChangedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentChangedEventArgs[] = {
         { "has_previous_content_expired", reinterpret_cast<getter>(TargetedContentChangedEventArgs_get_HasPreviousContentExpired), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentChangedEventArgs = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentChangedEventArgs",
@@ -638,8 +629,7 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "report_interaction", reinterpret_cast<PyCFunction>(TargetedContentCollection_ReportInteraction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentCollection), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentCollection[] = {
         { "collections", reinterpret_cast<getter>(TargetedContentCollection_get_Collections), nullptr, nullptr, nullptr },
@@ -647,16 +637,14 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "items", reinterpret_cast<getter>(TargetedContentCollection_get_Items), nullptr, nullptr, nullptr },
         { "path", reinterpret_cast<getter>(TargetedContentCollection_get_Path), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(TargetedContentCollection_get_Properties), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentCollection) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentCollection = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentCollection",
@@ -914,24 +902,21 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "select_single_object", reinterpret_cast<PyCFunction>(TargetedContentContainer_SelectSingleObject), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentContainer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentContainer), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentContainer[] = {
         { "availability", reinterpret_cast<getter>(TargetedContentContainer_get_Availability), nullptr, nullptr, nullptr },
         { "content", reinterpret_cast<getter>(TargetedContentContainer_get_Content), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(TargetedContentContainer_get_Id), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(TargetedContentContainer_get_Timestamp), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentContainer) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentContainer = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentContainer",
@@ -941,13 +926,11 @@ namespace py::cpp::Windows::Services::TargetedContent
         _type_slots_TargetedContentContainer};
 
     static PyGetSetDef getset_TargetedContentContainer_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TargetedContentContainer_Static[] = {
         { "get_async", reinterpret_cast<PyCFunction>(TargetedContentContainer_GetAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TargetedContentContainer_Static[] = 
     {
@@ -957,14 +940,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Spec type_spec_TargetedContentContainer_Static =
-    {
+    static PyType_Spec type_spec_TargetedContentContainer_Static = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentContainer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TargetedContentContainer_Static
-    };
+        type_slots_TargetedContentContainer_Static};
 
     // ----- TargetedContentFile class --------------------
 
@@ -1051,20 +1032,17 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "open_read_async", reinterpret_cast<PyCFunction>(TargetedContentFile_OpenReadAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentFile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentFile), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentFile[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentFile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentFile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentFile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentFile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentFile) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentFile = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentFile",
@@ -1218,22 +1196,19 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "open_read_async", reinterpret_cast<PyCFunction>(TargetedContentImage_OpenReadAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentImage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentImage), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentImage[] = {
         { "height", reinterpret_cast<getter>(TargetedContentImage_get_Height), nullptr, nullptr, nullptr },
         { "width", reinterpret_cast<getter>(TargetedContentImage_get_Width), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentImage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentImage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentImage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentImage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentImage) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentImage = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentImage",
@@ -1494,24 +1469,21 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "report_interaction", reinterpret_cast<PyCFunction>(TargetedContentItem_ReportInteraction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentItem), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentItem[] = {
         { "collections", reinterpret_cast<getter>(TargetedContentItem_get_Collections), nullptr, nullptr, nullptr },
         { "path", reinterpret_cast<getter>(TargetedContentItem_get_Path), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(TargetedContentItem_get_Properties), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(TargetedContentItem_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentItem) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentItem = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentItem",
@@ -1624,22 +1596,19 @@ namespace py::cpp::Windows::Services::TargetedContent
     static PyMethodDef _methods_TargetedContentItemState[] = {
         { "_assign_array_", _assign_array_TargetedContentItemState, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentItemState), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentItemState[] = {
         { "app_installation_state", reinterpret_cast<getter>(TargetedContentItemState_get_AppInstallationState), nullptr, nullptr, nullptr },
         { "should_display", reinterpret_cast<getter>(TargetedContentItemState_get_ShouldDisplay), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentItemState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentItemState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentItemState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentItemState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentItemState) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentItemState = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentItemState",
@@ -1812,24 +1781,21 @@ namespace py::cpp::Windows::Services::TargetedContent
     static PyMethodDef _methods_TargetedContentObject[] = {
         { "_assign_array_", _assign_array_TargetedContentObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentObject), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentObject[] = {
         { "collection", reinterpret_cast<getter>(TargetedContentObject_get_Collection), nullptr, nullptr, nullptr },
         { "item", reinterpret_cast<getter>(TargetedContentObject_get_Item), nullptr, nullptr, nullptr },
         { "object_kind", reinterpret_cast<getter>(TargetedContentObject_get_ObjectKind), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(TargetedContentObject_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentObject) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentObject = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentObject",
@@ -1923,20 +1889,17 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "get_deferral", reinterpret_cast<PyCFunction>(TargetedContentStateChangedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentStateChangedEventArgs[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentStateChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentStateChangedEventArgs = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentStateChangedEventArgs",
@@ -2345,21 +2308,18 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "remove_state_changed", reinterpret_cast<PyCFunction>(TargetedContentSubscription_remove_StateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_TargetedContentSubscription, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentSubscription), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentSubscription[] = {
         { "id", reinterpret_cast<getter>(TargetedContentSubscription_get_Id), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentSubscription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentSubscription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentSubscription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentSubscription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentSubscription) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentSubscription = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentSubscription",
@@ -2369,14 +2329,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         _type_slots_TargetedContentSubscription};
 
     static PyGetSetDef getset_TargetedContentSubscription_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_TargetedContentSubscription_Static[] = {
         { "get_async", reinterpret_cast<PyCFunction>(TargetedContentSubscription_GetAsync), METH_VARARGS, nullptr },
         { "get_options", reinterpret_cast<PyCFunction>(TargetedContentSubscription_GetOptions), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_TargetedContentSubscription_Static[] = 
     {
@@ -2386,14 +2344,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Spec type_spec_TargetedContentSubscription_Static =
-    {
+    static PyType_Spec type_spec_TargetedContentSubscription_Static = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentSubscription_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TargetedContentSubscription_Static
-    };
+        type_slots_TargetedContentSubscription_Static};
 
     // ----- TargetedContentSubscriptionOptions class --------------------
 
@@ -2640,24 +2596,21 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "update", reinterpret_cast<PyCFunction>(TargetedContentSubscriptionOptions_Update), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentSubscriptionOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentSubscriptionOptions), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentSubscriptionOptions[] = {
         { "allow_partial_content_availability", reinterpret_cast<getter>(TargetedContentSubscriptionOptions_get_AllowPartialContentAvailability), reinterpret_cast<setter>(TargetedContentSubscriptionOptions_put_AllowPartialContentAvailability), nullptr, nullptr },
         { "cloud_query_parameters", reinterpret_cast<getter>(TargetedContentSubscriptionOptions_get_CloudQueryParameters), nullptr, nullptr, nullptr },
         { "local_filters", reinterpret_cast<getter>(TargetedContentSubscriptionOptions_get_LocalFilters), nullptr, nullptr, nullptr },
         { "subscription_id", reinterpret_cast<getter>(TargetedContentSubscriptionOptions_get_SubscriptionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentSubscriptionOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentSubscriptionOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentSubscriptionOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentSubscriptionOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentSubscriptionOptions) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentSubscriptionOptions = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentSubscriptionOptions",
@@ -3190,8 +3143,7 @@ namespace py::cpp::Windows::Services::TargetedContent
     static PyMethodDef _methods_TargetedContentValue[] = {
         { "_assign_array_", _assign_array_TargetedContentValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentValue), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_TargetedContentValue[] = {
         { "action", reinterpret_cast<getter>(TargetedContentValue_get_Action), nullptr, nullptr, nullptr },
@@ -3210,16 +3162,14 @@ namespace py::cpp::Windows::Services::TargetedContent
         { "uri", reinterpret_cast<getter>(TargetedContentValue_get_Uri), nullptr, nullptr, nullptr },
         { "uris", reinterpret_cast<getter>(TargetedContentValue_get_Uris), nullptr, nullptr, nullptr },
         { "value_kind", reinterpret_cast<getter>(TargetedContentValue_get_ValueKind), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_TargetedContentValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentValue) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_TargetedContentValue = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentValue",

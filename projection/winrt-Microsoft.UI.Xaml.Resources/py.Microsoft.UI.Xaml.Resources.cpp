@@ -303,20 +303,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
         { "_get_resource", reinterpret_cast<PyCFunction>(CustomXamlResourceLoader_GetResource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CustomXamlResourceLoader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomXamlResourceLoader), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_CustomXamlResourceLoader[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_CustomXamlResourceLoader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomXamlResourceLoader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomXamlResourceLoader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomXamlResourceLoader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomXamlResourceLoader) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_CustomXamlResourceLoader = {
         "winrt._winrt_microsoft_ui_xaml_resources.CustomXamlResourceLoader",
@@ -327,12 +324,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
 
     static PyGetSetDef getset_CustomXamlResourceLoader_Static[] = {
         { "current", reinterpret_cast<getter>(CustomXamlResourceLoader_get_Current), reinterpret_cast<setter>(CustomXamlResourceLoader_put_Current), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_CustomXamlResourceLoader_Static[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_CustomXamlResourceLoader_Static[] = 
     {
@@ -342,14 +337,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
         { }
     };
 
-    static PyType_Spec type_spec_CustomXamlResourceLoader_Static =
-    {
+    static PyType_Spec type_spec_CustomXamlResourceLoader_Static = {
         "winrt._winrt_microsoft_ui_xaml_resources.CustomXamlResourceLoader_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-        type_slots_CustomXamlResourceLoader_Static
-    };
+        type_slots_CustomXamlResourceLoader_Static};
 
     // ----- Microsoft.UI.Xaml.Resources Initialization --------------------
 

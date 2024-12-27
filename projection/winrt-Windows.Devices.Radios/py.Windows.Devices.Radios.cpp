@@ -410,23 +410,20 @@ namespace py::cpp::Windows::Devices::Radios
         { "remove_state_changed", reinterpret_cast<PyCFunction>(Radio_remove_StateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Radio, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Radio), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Radio[] = {
         { "kind", reinterpret_cast<getter>(Radio_get_Kind), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(Radio_get_Name), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(Radio_get_State), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Radio[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Radio) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Radio) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Radio) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Radio) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Radio = {
         "winrt._winrt_windows_devices_radios.Radio",
@@ -436,16 +433,14 @@ namespace py::cpp::Windows::Devices::Radios
         _type_slots_Radio};
 
     static PyGetSetDef getset_Radio_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Radio_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Radio_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Radio_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_radios_async", reinterpret_cast<PyCFunction>(Radio_GetRadiosAsync), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(Radio_RequestAccessAsync), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Radio_Static[] = 
     {
@@ -455,14 +450,12 @@ namespace py::cpp::Windows::Devices::Radios
         { }
     };
 
-    static PyType_Spec type_spec_Radio_Static =
-    {
+    static PyType_Spec type_spec_Radio_Static = {
         "winrt._winrt_windows_devices_radios.Radio_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Radio_Static
-    };
+        type_slots_Radio_Static};
 
     // ----- Windows.Devices.Radios Initialization --------------------
 

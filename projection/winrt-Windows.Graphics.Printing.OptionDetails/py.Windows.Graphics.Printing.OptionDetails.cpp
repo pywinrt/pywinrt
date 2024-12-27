@@ -487,8 +487,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintBindingOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintBindingOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintBindingOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintBindingOptionDetails[] = {
         { "warning_text", reinterpret_cast<getter>(PrintBindingOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintBindingOptionDetails_put_WarningText), nullptr, nullptr },
@@ -499,16 +498,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintBindingOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintBindingOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintBindingOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintBindingOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintBindingOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintBindingOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintBindingOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintBindingOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintBindingOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintBindingOptionDetails",
@@ -1000,8 +997,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintBorderingOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintBorderingOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintBorderingOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintBorderingOptionDetails[] = {
         { "warning_text", reinterpret_cast<getter>(PrintBorderingOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintBorderingOptionDetails_put_WarningText), nullptr, nullptr },
@@ -1012,16 +1008,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintBorderingOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintBorderingOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintBorderingOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintBorderingOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintBorderingOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintBorderingOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintBorderingOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintBorderingOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintBorderingOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintBorderingOptionDetails",
@@ -1513,8 +1507,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintCollationOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintCollationOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintCollationOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintCollationOptionDetails[] = {
         { "warning_text", reinterpret_cast<getter>(PrintCollationOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintCollationOptionDetails_put_WarningText), nullptr, nullptr },
@@ -1525,16 +1518,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintCollationOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintCollationOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintCollationOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintCollationOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintCollationOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintCollationOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintCollationOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintCollationOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintCollationOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCollationOptionDetails",
@@ -2026,8 +2017,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintColorModeOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintColorModeOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintColorModeOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintColorModeOptionDetails[] = {
         { "warning_text", reinterpret_cast<getter>(PrintColorModeOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintColorModeOptionDetails_put_WarningText), nullptr, nullptr },
@@ -2038,16 +2028,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintColorModeOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintColorModeOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintColorModeOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintColorModeOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintColorModeOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintColorModeOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintColorModeOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintColorModeOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintColorModeOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintColorModeOptionDetails",
@@ -2569,8 +2557,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintCopiesOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintCopiesOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintCopiesOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintCopiesOptionDetails[] = {
         { "warning_text", reinterpret_cast<getter>(PrintCopiesOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintCopiesOptionDetails_put_WarningText), nullptr, nullptr },
@@ -2582,16 +2569,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintCopiesOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintCopiesOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintCopiesOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintCopiesOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintCopiesOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintCopiesOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintCopiesOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintCopiesOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintCopiesOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCopiesOptionDetails",
@@ -2743,22 +2728,19 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     static PyMethodDef _methods_PrintCustomItemDetails[] = {
         { "_assign_array_", _assign_array_PrintCustomItemDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintCustomItemDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintCustomItemDetails[] = {
         { "item_display_name", reinterpret_cast<getter>(PrintCustomItemDetails_get_ItemDisplayName), reinterpret_cast<setter>(PrintCustomItemDetails_put_ItemDisplayName), nullptr, nullptr },
         { "item_id", reinterpret_cast<getter>(PrintCustomItemDetails_get_ItemId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintCustomItemDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintCustomItemDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintCustomItemDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintCustomItemDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintCustomItemDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintCustomItemDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCustomItemDetails",
@@ -3399,8 +3381,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintCustomItemListOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintCustomItemListOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintCustomItemListOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintCustomItemListOptionDetails[] = {
         { "warning_text", reinterpret_cast<getter>(PrintCustomItemListOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintCustomItemListOptionDetails_put_WarningText), nullptr, nullptr },
@@ -3412,16 +3393,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintCustomItemListOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintCustomItemListOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintCustomItemListOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintCustomItemListOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintCustomItemListOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintCustomItemListOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintCustomItemListOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintCustomItemListOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintCustomItemListOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCustomItemListOptionDetails",
@@ -4021,8 +4000,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintCustomTextOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintCustomTextOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintCustomTextOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintCustomTextOptionDetails[] = {
         { "display_name", reinterpret_cast<getter>(PrintCustomTextOptionDetails_get_DisplayName), reinterpret_cast<setter>(PrintCustomTextOptionDetails_put_DisplayName), nullptr, nullptr },
@@ -4034,16 +4012,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintCustomTextOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintCustomTextOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintCustomTextOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintCustomTextOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintCustomTextOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintCustomTextOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintCustomTextOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintCustomTextOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintCustomTextOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCustomTextOptionDetails",
@@ -4574,8 +4550,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintCustomToggleOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintCustomToggleOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintCustomToggleOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintCustomToggleOptionDetails[] = {
         { "display_name", reinterpret_cast<getter>(PrintCustomToggleOptionDetails_get_DisplayName), reinterpret_cast<setter>(PrintCustomToggleOptionDetails_put_DisplayName), nullptr, nullptr },
@@ -4586,16 +4561,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintCustomToggleOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintCustomToggleOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintCustomToggleOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintCustomToggleOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintCustomToggleOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintCustomToggleOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintCustomToggleOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintCustomToggleOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintCustomToggleOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCustomToggleOptionDetails",
@@ -5087,8 +5060,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintDuplexOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintDuplexOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintDuplexOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintDuplexOptionDetails[] = {
         { "warning_text", reinterpret_cast<getter>(PrintDuplexOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintDuplexOptionDetails_put_WarningText), nullptr, nullptr },
@@ -5099,16 +5071,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintDuplexOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintDuplexOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintDuplexOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintDuplexOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintDuplexOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintDuplexOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintDuplexOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintDuplexOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintDuplexOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintDuplexOptionDetails",
@@ -5600,8 +5570,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintHolePunchOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintHolePunchOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintHolePunchOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintHolePunchOptionDetails[] = {
         { "warning_text", reinterpret_cast<getter>(PrintHolePunchOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintHolePunchOptionDetails_put_WarningText), nullptr, nullptr },
@@ -5612,16 +5581,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintHolePunchOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintHolePunchOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintHolePunchOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintHolePunchOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintHolePunchOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintHolePunchOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintHolePunchOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintHolePunchOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintHolePunchOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintHolePunchOptionDetails",
@@ -6113,8 +6080,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintMediaSizeOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintMediaSizeOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintMediaSizeOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintMediaSizeOptionDetails[] = {
         { "items", reinterpret_cast<getter>(PrintMediaSizeOptionDetails_get_Items), nullptr, nullptr, nullptr },
@@ -6125,16 +6091,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintMediaSizeOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintMediaSizeOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintMediaSizeOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintMediaSizeOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintMediaSizeOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintMediaSizeOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintMediaSizeOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintMediaSizeOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintMediaSizeOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintMediaSizeOptionDetails",
@@ -6626,8 +6590,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintMediaTypeOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintMediaTypeOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintMediaTypeOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintMediaTypeOptionDetails[] = {
         { "items", reinterpret_cast<getter>(PrintMediaTypeOptionDetails_get_Items), nullptr, nullptr, nullptr },
@@ -6638,16 +6601,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_id", reinterpret_cast<getter>(PrintMediaTypeOptionDetails_get_OptionId), nullptr, nullptr, nullptr },
         { "option_type", reinterpret_cast<getter>(PrintMediaTypeOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(PrintMediaTypeOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintMediaTypeOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintMediaTypeOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintMediaTypeOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintMediaTypeOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintMediaTypeOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintMediaTypeOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintMediaTypeOptionDetails",
@@ -7139,8 +7100,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintOrientationOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintOrientationOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintOrientationOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintOrientationOptionDetails[] = {
         { "items", reinterpret_cast<getter>(PrintOrientationOptionDetails_get_Items), nullptr, nullptr, nullptr },
@@ -7151,16 +7111,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "value", reinterpret_cast<getter>(PrintOrientationOptionDetails_get_Value), nullptr, nullptr, nullptr },
         { "warning_text", reinterpret_cast<getter>(PrintOrientationOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintOrientationOptionDetails_put_WarningText), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(PrintOrientationOptionDetails_get_Description), reinterpret_cast<setter>(PrintOrientationOptionDetails_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintOrientationOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintOrientationOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintOrientationOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintOrientationOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintOrientationOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintOrientationOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintOrientationOptionDetails",
@@ -7622,8 +7580,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintPageRangeOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintPageRangeOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintPageRangeOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintPageRangeOptionDetails[] = {
         { "state", reinterpret_cast<getter>(PrintPageRangeOptionDetails_get_State), reinterpret_cast<setter>(PrintPageRangeOptionDetails_put_State), nullptr, nullptr },
@@ -7633,16 +7590,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "value", reinterpret_cast<getter>(PrintPageRangeOptionDetails_get_Value), nullptr, nullptr, nullptr },
         { "warning_text", reinterpret_cast<getter>(PrintPageRangeOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintPageRangeOptionDetails_put_WarningText), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(PrintPageRangeOptionDetails_get_Description), reinterpret_cast<setter>(PrintPageRangeOptionDetails_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintPageRangeOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintPageRangeOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintPageRangeOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintPageRangeOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintPageRangeOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintPageRangeOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintPageRangeOptionDetails",
@@ -8134,8 +8089,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintQualityOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintQualityOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintQualityOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintQualityOptionDetails[] = {
         { "items", reinterpret_cast<getter>(PrintQualityOptionDetails_get_Items), nullptr, nullptr, nullptr },
@@ -8146,16 +8100,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "value", reinterpret_cast<getter>(PrintQualityOptionDetails_get_Value), nullptr, nullptr, nullptr },
         { "warning_text", reinterpret_cast<getter>(PrintQualityOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintQualityOptionDetails_put_WarningText), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(PrintQualityOptionDetails_get_Description), reinterpret_cast<setter>(PrintQualityOptionDetails_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintQualityOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintQualityOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintQualityOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintQualityOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintQualityOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintQualityOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintQualityOptionDetails",
@@ -8647,8 +8599,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(PrintStapleOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintStapleOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintStapleOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintStapleOptionDetails[] = {
         { "items", reinterpret_cast<getter>(PrintStapleOptionDetails_get_Items), nullptr, nullptr, nullptr },
@@ -8659,16 +8610,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "value", reinterpret_cast<getter>(PrintStapleOptionDetails_get_Value), nullptr, nullptr, nullptr },
         { "warning_text", reinterpret_cast<getter>(PrintStapleOptionDetails_get_WarningText), reinterpret_cast<setter>(PrintStapleOptionDetails_put_WarningText), nullptr, nullptr },
         { "description", reinterpret_cast<getter>(PrintStapleOptionDetails_get_Description), reinterpret_cast<setter>(PrintStapleOptionDetails_put_Description), nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintStapleOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintStapleOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintStapleOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintStapleOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintStapleOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintStapleOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintStapleOptionDetails",
@@ -8751,21 +8700,18 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     static PyMethodDef _methods_PrintTaskOptionChangedEventArgs[] = {
         { "_assign_array_", _assign_array_PrintTaskOptionChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTaskOptionChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTaskOptionChangedEventArgs[] = {
         { "option_id", reinterpret_cast<getter>(PrintTaskOptionChangedEventArgs_get_OptionId), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTaskOptionChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskOptionChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskOptionChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskOptionChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskOptionChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTaskOptionChangedEventArgs = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintTaskOptionChangedEventArgs",
@@ -9229,22 +9175,19 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "remove_option_changed", reinterpret_cast<PyCFunction>(PrintTaskOptionDetails_remove_OptionChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintTaskOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintTaskOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_PrintTaskOptionDetails[] = {
         { "displayed_options", reinterpret_cast<getter>(PrintTaskOptionDetails_get_DisplayedOptions), nullptr, nullptr, nullptr },
         { "options", reinterpret_cast<getter>(PrintTaskOptionDetails_get_Options), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_PrintTaskOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_PrintTaskOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintTaskOptionDetails",
@@ -9254,13 +9197,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         _type_slots_PrintTaskOptionDetails};
 
     static PyGetSetDef getset_PrintTaskOptionDetails_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_PrintTaskOptionDetails_Static[] = {
         { "get_from_print_task_options", reinterpret_cast<PyCFunction>(PrintTaskOptionDetails_GetFromPrintTaskOptions), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_PrintTaskOptionDetails_Static[] = 
     {
@@ -9270,14 +9211,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }
     };
 
-    static PyType_Spec type_spec_PrintTaskOptionDetails_Static =
-    {
+    static PyType_Spec type_spec_PrintTaskOptionDetails_Static = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintTaskOptionDetails_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PrintTaskOptionDetails_Static
-    };
+        type_slots_PrintTaskOptionDetails_Static};
 
     // ----- IPrintCustomOptionDetails interface --------------------
 
@@ -9663,8 +9602,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintCustomOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintCustomOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintCustomOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPrintCustomOptionDetails[] = {
         { "display_name", reinterpret_cast<getter>(IPrintCustomOptionDetails_get_DisplayName), reinterpret_cast<setter>(IPrintCustomOptionDetails_put_DisplayName), nullptr, nullptr },
@@ -9673,16 +9611,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_type", reinterpret_cast<getter>(IPrintCustomOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(IPrintCustomOptionDetails_get_State), reinterpret_cast<setter>(IPrintCustomOptionDetails_put_State), nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IPrintCustomOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPrintCustomOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintCustomOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintCustomOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintCustomOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintCustomOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPrintCustomOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintCustomOptionDetails",
@@ -9959,13 +9895,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     static PyMethodDef methods_ImplementsIPrintCustomOptionDetails[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintCustomOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintCustomOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPrintCustomOptionDetails[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrintCustomOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPrintCustomOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintCustomOptionDetails",
@@ -10319,8 +10253,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintItemListOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintItemListOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintItemListOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPrintItemListOptionDetails[] = {
         { "items", reinterpret_cast<getter>(IPrintItemListOptionDetails_get_Items), nullptr, nullptr, nullptr },
@@ -10329,16 +10262,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_type", reinterpret_cast<getter>(IPrintItemListOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(IPrintItemListOptionDetails_get_State), reinterpret_cast<setter>(IPrintItemListOptionDetails_put_State), nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IPrintItemListOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPrintItemListOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintItemListOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintItemListOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintItemListOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintItemListOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPrintItemListOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintItemListOptionDetails",
@@ -10592,13 +10523,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     static PyMethodDef methods_ImplementsIPrintItemListOptionDetails[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintItemListOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintItemListOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPrintItemListOptionDetails[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrintItemListOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPrintItemListOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintItemListOptionDetails",
@@ -10982,8 +10911,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintNumberOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintNumberOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintNumberOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPrintNumberOptionDetails[] = {
         { "max_value", reinterpret_cast<getter>(IPrintNumberOptionDetails_get_MaxValue), nullptr, nullptr, nullptr },
@@ -10993,16 +10921,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_type", reinterpret_cast<getter>(IPrintNumberOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(IPrintNumberOptionDetails_get_State), reinterpret_cast<setter>(IPrintNumberOptionDetails_put_State), nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IPrintNumberOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPrintNumberOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintNumberOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintNumberOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintNumberOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintNumberOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPrintNumberOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintNumberOptionDetails",
@@ -11276,13 +11202,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     static PyMethodDef methods_ImplementsIPrintNumberOptionDetails[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintNumberOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintNumberOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPrintNumberOptionDetails[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrintNumberOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPrintNumberOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintNumberOptionDetails",
@@ -11606,8 +11530,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPrintOptionDetails[] = {
         { "error_text", reinterpret_cast<getter>(IPrintOptionDetails_get_ErrorText), reinterpret_cast<setter>(IPrintOptionDetails_put_ErrorText), nullptr, nullptr },
@@ -11615,16 +11538,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_type", reinterpret_cast<getter>(IPrintOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(IPrintOptionDetails_get_State), reinterpret_cast<setter>(IPrintOptionDetails_put_State), nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IPrintOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPrintOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPrintOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintOptionDetails",
@@ -11858,13 +11779,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     static PyMethodDef methods_ImplementsIPrintOptionDetails[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPrintOptionDetails[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrintOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPrintOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintOptionDetails",
@@ -12218,8 +12137,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintTextOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintTextOptionDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintTextOptionDetails), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IPrintTextOptionDetails[] = {
         { "max_characters", reinterpret_cast<getter>(IPrintTextOptionDetails_get_MaxCharacters), nullptr, nullptr, nullptr },
@@ -12228,16 +12146,14 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { "option_type", reinterpret_cast<getter>(IPrintTextOptionDetails_get_OptionType), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(IPrintTextOptionDetails_get_State), reinterpret_cast<setter>(IPrintTextOptionDetails_put_State), nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IPrintTextOptionDetails_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IPrintTextOptionDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTextOptionDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTextOptionDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTextOptionDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTextOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IPrintTextOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintTextOptionDetails",
@@ -12491,13 +12407,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     static PyMethodDef methods_ImplementsIPrintTextOptionDetails[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintTextOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintTextOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIPrintTextOptionDetails[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIPrintTextOptionDetails) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIPrintTextOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintTextOptionDetails",

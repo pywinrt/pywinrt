@@ -2422,20 +2422,17 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         { "set_xaml_direct_object_property", reinterpret_cast<PyCFunction>(XamlDirect_SetXamlDirectObjectProperty), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlDirect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlDirect), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XamlDirect[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XamlDirect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlDirect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlDirect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlDirect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlDirect) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XamlDirect = {
         "winrt._winrt_windows_ui_xaml_core_direct.XamlDirect",
@@ -2445,13 +2442,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         _type_slots_XamlDirect};
 
     static PyGetSetDef getset_XamlDirect_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_XamlDirect_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(XamlDirect_GetDefault), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_XamlDirect_Static[] = 
     {
@@ -2461,14 +2456,12 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         { }
     };
 
-    static PyType_Spec type_spec_XamlDirect_Static =
-    {
+    static PyType_Spec type_spec_XamlDirect_Static = {
         "winrt._winrt_windows_ui_xaml_core_direct.XamlDirect_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XamlDirect_Static
-    };
+        type_slots_XamlDirect_Static};
 
     // ----- IXamlDirectObject interface --------------------
 
@@ -2514,20 +2507,17 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
     static PyMethodDef _methods_IXamlDirectObject[] = {
         { "_assign_array_", _assign_array_IXamlDirectObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlDirectObject), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IXamlDirectObject[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IXamlDirectObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlDirectObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlDirectObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlDirectObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlDirectObject) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IXamlDirectObject = {
         "winrt._winrt_windows_ui_xaml_core_direct.IXamlDirectObject",
@@ -2583,13 +2573,11 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
     static PyMethodDef methods_ImplementsIXamlDirectObject[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlDirectObject), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlDirectObject), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIXamlDirectObject[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIXamlDirectObject) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIXamlDirectObject = {
         "winrt._winrt_windows_ui_xaml_core_direct.ImplementsIXamlDirectObject",

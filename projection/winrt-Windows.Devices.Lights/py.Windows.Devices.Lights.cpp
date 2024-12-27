@@ -571,8 +571,7 @@ namespace py::cpp::Windows::Devices::Lights
         { "_from", reinterpret_cast<PyCFunction>(_from_Lamp), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Lamp), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_Lamp), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_Lamp[] = {
         { "is_enabled", reinterpret_cast<getter>(Lamp_get_IsEnabled), reinterpret_cast<setter>(Lamp_put_IsEnabled), nullptr, nullptr },
@@ -580,16 +579,14 @@ namespace py::cpp::Windows::Devices::Lights
         { "brightness_level", reinterpret_cast<getter>(Lamp_get_BrightnessLevel), reinterpret_cast<setter>(Lamp_put_BrightnessLevel), nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(Lamp_get_DeviceId), nullptr, nullptr, nullptr },
         { "is_color_settable", reinterpret_cast<getter>(Lamp_get_IsColorSettable), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_Lamp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Lamp) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Lamp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Lamp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Lamp) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_Lamp = {
         "winrt._winrt_windows_devices_lights.Lamp",
@@ -599,15 +596,13 @@ namespace py::cpp::Windows::Devices::Lights
         _type_slots_Lamp};
 
     static PyGetSetDef getset_Lamp_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_Lamp_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Lamp_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(Lamp_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Lamp_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_Lamp_Static[] = 
     {
@@ -617,14 +612,12 @@ namespace py::cpp::Windows::Devices::Lights
         { }
     };
 
-    static PyType_Spec type_spec_Lamp_Static =
-    {
+    static PyType_Spec type_spec_Lamp_Static = {
         "winrt._winrt_windows_devices_lights.Lamp_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Lamp_Static
-    };
+        type_slots_Lamp_Static};
 
     // ----- LampArray class --------------------
 
@@ -1817,8 +1810,7 @@ namespace py::cpp::Windows::Devices::Lights
         { "remove_availability_changed", reinterpret_cast<PyCFunction>(LampArray_remove_AvailabilityChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_LampArray, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArray), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampArray[] = {
         { "is_enabled", reinterpret_cast<getter>(LampArray_get_IsEnabled), reinterpret_cast<setter>(LampArray_put_IsEnabled), nullptr, nullptr },
@@ -1834,16 +1826,14 @@ namespace py::cpp::Windows::Devices::Lights
         { "min_update_interval", reinterpret_cast<getter>(LampArray_get_MinUpdateInterval), nullptr, nullptr, nullptr },
         { "supports_virtual_keys", reinterpret_cast<getter>(LampArray_get_SupportsVirtualKeys), nullptr, nullptr, nullptr },
         { "is_available", reinterpret_cast<getter>(LampArray_get_IsAvailable), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampArray[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArray) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArray) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArray) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArray) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampArray = {
         "winrt._winrt_windows_devices_lights.LampArray",
@@ -1853,14 +1843,12 @@ namespace py::cpp::Windows::Devices::Lights
         _type_slots_LampArray};
 
     static PyGetSetDef getset_LampArray_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_LampArray_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(LampArray_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(LampArray_GetDeviceSelector), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_LampArray_Static[] = 
     {
@@ -1870,14 +1858,12 @@ namespace py::cpp::Windows::Devices::Lights
         { }
     };
 
-    static PyType_Spec type_spec_LampArray_Static =
-    {
+    static PyType_Spec type_spec_LampArray_Static = {
         "winrt._winrt_windows_devices_lights.LampArray_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LampArray_Static
-    };
+        type_slots_LampArray_Static};
 
     // ----- LampAvailabilityChangedEventArgs class --------------------
 
@@ -1953,21 +1939,18 @@ namespace py::cpp::Windows::Devices::Lights
     static PyMethodDef _methods_LampAvailabilityChangedEventArgs[] = {
         { "_assign_array_", _assign_array_LampAvailabilityChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampAvailabilityChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampAvailabilityChangedEventArgs[] = {
         { "is_available", reinterpret_cast<getter>(LampAvailabilityChangedEventArgs_get_IsAvailable), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampAvailabilityChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampAvailabilityChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampAvailabilityChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampAvailabilityChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampAvailabilityChangedEventArgs) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampAvailabilityChangedEventArgs = {
         "winrt._winrt_windows_devices_lights.LampAvailabilityChangedEventArgs",
@@ -2333,8 +2316,7 @@ namespace py::cpp::Windows::Devices::Lights
         { "get_nearest_supported_color", reinterpret_cast<PyCFunction>(LampInfo_GetNearestSupportedColor), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LampInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampInfo), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_LampInfo[] = {
         { "blue_level_count", reinterpret_cast<getter>(LampInfo_get_BlueLevelCount), nullptr, nullptr, nullptr },
@@ -2346,16 +2328,14 @@ namespace py::cpp::Windows::Devices::Lights
         { "purposes", reinterpret_cast<getter>(LampInfo_get_Purposes), nullptr, nullptr, nullptr },
         { "red_level_count", reinterpret_cast<getter>(LampInfo_get_RedLevelCount), nullptr, nullptr, nullptr },
         { "update_latency", reinterpret_cast<getter>(LampInfo_get_UpdateLatency), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_LampInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampInfo) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_LampInfo = {
         "winrt._winrt_windows_devices_lights.LampInfo",

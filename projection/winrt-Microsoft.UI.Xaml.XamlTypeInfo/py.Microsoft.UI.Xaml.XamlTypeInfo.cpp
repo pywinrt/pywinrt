@@ -238,20 +238,17 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         { "get_xmlns_definitions", reinterpret_cast<PyCFunction>(XamlControlsXamlMetaDataProvider_GetXmlnsDefinitions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlControlsXamlMetaDataProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlControlsXamlMetaDataProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_XamlControlsXamlMetaDataProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_XamlControlsXamlMetaDataProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlControlsXamlMetaDataProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlControlsXamlMetaDataProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlControlsXamlMetaDataProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlControlsXamlMetaDataProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_XamlControlsXamlMetaDataProvider = {
         "winrt._winrt_microsoft_ui_xaml_xamltypeinfo.XamlControlsXamlMetaDataProvider",
@@ -261,13 +258,11 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         _type_slots_XamlControlsXamlMetaDataProvider};
 
     static PyGetSetDef getset_XamlControlsXamlMetaDataProvider_Static[] = {
-        { }
-    };
+        { }};
 
     static PyMethodDef methods_XamlControlsXamlMetaDataProvider_Static[] = {
         { "initialize", reinterpret_cast<PyCFunction>(XamlControlsXamlMetaDataProvider_Initialize), METH_VARARGS, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_XamlControlsXamlMetaDataProvider_Static[] = 
     {
@@ -277,14 +272,12 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         { }
     };
 
-    static PyType_Spec type_spec_XamlControlsXamlMetaDataProvider_Static =
-    {
+    static PyType_Spec type_spec_XamlControlsXamlMetaDataProvider_Static = {
         "winrt._winrt_microsoft_ui_xaml_xamltypeinfo.XamlControlsXamlMetaDataProvider_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XamlControlsXamlMetaDataProvider_Static
-    };
+        type_slots_XamlControlsXamlMetaDataProvider_Static};
 
     // ----- Microsoft.UI.Xaml.XamlTypeInfo Initialization --------------------
 

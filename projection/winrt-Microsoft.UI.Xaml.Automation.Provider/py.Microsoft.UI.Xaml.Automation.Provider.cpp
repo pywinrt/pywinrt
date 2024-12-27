@@ -48,20 +48,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef _methods_IRawElementProviderSimple[] = {
         { "_assign_array_", _assign_array_IRawElementProviderSimple, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRawElementProviderSimple), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IRawElementProviderSimple[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IRawElementProviderSimple[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRawElementProviderSimple) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRawElementProviderSimple) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRawElementProviderSimple) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRawElementProviderSimple) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IRawElementProviderSimple = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IRawElementProviderSimple",
@@ -264,8 +261,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef _methods_IAnnotationProvider[] = {
         { "_assign_array_", _assign_array_IAnnotationProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAnnotationProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IAnnotationProvider[] = {
         { "annotation_type_id", reinterpret_cast<getter>(IAnnotationProvider_get_AnnotationTypeId), nullptr, nullptr, nullptr },
@@ -273,16 +269,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "author", reinterpret_cast<getter>(IAnnotationProvider_get_Author), nullptr, nullptr, nullptr },
         { "date_time", reinterpret_cast<getter>(IAnnotationProvider_get_DateTime), nullptr, nullptr, nullptr },
         { "target", reinterpret_cast<getter>(IAnnotationProvider_get_Target), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IAnnotationProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAnnotationProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnnotationProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnnotationProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnnotationProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IAnnotationProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IAnnotationProvider",
@@ -438,13 +432,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIAnnotationProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAnnotationProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAnnotationProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIAnnotationProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIAnnotationProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIAnnotationProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIAnnotationProvider",
@@ -540,20 +532,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "navigate_custom", reinterpret_cast<PyCFunction>(ICustomNavigationProvider_NavigateCustom), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICustomNavigationProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICustomNavigationProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ICustomNavigationProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ICustomNavigationProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICustomNavigationProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomNavigationProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomNavigationProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomNavigationProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ICustomNavigationProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ICustomNavigationProvider",
@@ -641,13 +630,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsICustomNavigationProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICustomNavigationProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICustomNavigationProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsICustomNavigationProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsICustomNavigationProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsICustomNavigationProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsICustomNavigationProvider",
@@ -774,21 +761,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "set_dock_position", reinterpret_cast<PyCFunction>(IDockProvider_SetDockPosition), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IDockProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDockProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDockProvider[] = {
         { "dock_position", reinterpret_cast<getter>(IDockProvider_get_DockPosition), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDockProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDockProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDockProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDockProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDockProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDockProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IDockProvider",
@@ -894,13 +878,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIDockProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDockProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDockProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDockProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDockProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDockProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIDockProvider",
@@ -1084,23 +1066,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "get_grabbed_items", reinterpret_cast<PyCFunction>(IDragProvider_GetGrabbedItems), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IDragProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDragProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDragProvider[] = {
         { "drop_effect", reinterpret_cast<getter>(IDragProvider_get_DropEffect), nullptr, nullptr, nullptr },
         { "drop_effects", reinterpret_cast<getter>(IDragProvider_get_DropEffects), nullptr, nullptr, nullptr },
         { "is_grabbed", reinterpret_cast<getter>(IDragProvider_get_IsGrabbed), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDragProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDragProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDragProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDragProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDragProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDragProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IDragProvider",
@@ -1244,13 +1223,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIDragProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDragProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDragProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDragProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDragProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDragProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIDragProvider",
@@ -1363,22 +1340,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef _methods_IDropTargetProvider[] = {
         { "_assign_array_", _assign_array_IDropTargetProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDropTargetProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IDropTargetProvider[] = {
         { "drop_effect", reinterpret_cast<getter>(IDropTargetProvider_get_DropEffect), nullptr, nullptr, nullptr },
         { "drop_effects", reinterpret_cast<getter>(IDropTargetProvider_get_DropEffects), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IDropTargetProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDropTargetProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDropTargetProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDropTargetProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDropTargetProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IDropTargetProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IDropTargetProvider",
@@ -1475,13 +1449,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIDropTargetProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDropTargetProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDropTargetProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIDropTargetProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIDropTargetProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIDropTargetProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIDropTargetProvider",
@@ -1648,21 +1620,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "expand", reinterpret_cast<PyCFunction>(IExpandCollapseProvider_Expand), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IExpandCollapseProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IExpandCollapseProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IExpandCollapseProvider[] = {
         { "expand_collapse_state", reinterpret_cast<getter>(IExpandCollapseProvider_get_ExpandCollapseState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IExpandCollapseProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IExpandCollapseProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IExpandCollapseProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IExpandCollapseProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IExpandCollapseProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IExpandCollapseProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IExpandCollapseProvider",
@@ -1786,13 +1755,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIExpandCollapseProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIExpandCollapseProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIExpandCollapseProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIExpandCollapseProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIExpandCollapseProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIExpandCollapseProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider",
@@ -1995,8 +1962,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef _methods_IGridItemProvider[] = {
         { "_assign_array_", _assign_array_IGridItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGridItemProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGridItemProvider[] = {
         { "column", reinterpret_cast<getter>(IGridItemProvider_get_Column), nullptr, nullptr, nullptr },
@@ -2004,16 +1970,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "containing_grid", reinterpret_cast<getter>(IGridItemProvider_get_ContainingGrid), nullptr, nullptr, nullptr },
         { "row", reinterpret_cast<getter>(IGridItemProvider_get_Row), nullptr, nullptr, nullptr },
         { "row_span", reinterpret_cast<getter>(IGridItemProvider_get_RowSpan), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGridItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGridItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGridItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGridItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGridItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGridItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IGridItemProvider",
@@ -2169,13 +2133,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIGridItemProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGridItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGridItemProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGridItemProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGridItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGridItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIGridItemProvider",
@@ -2332,22 +2294,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "get_item", reinterpret_cast<PyCFunction>(IGridProvider_GetItem), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IGridProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGridProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IGridProvider[] = {
         { "column_count", reinterpret_cast<getter>(IGridProvider_get_ColumnCount), nullptr, nullptr, nullptr },
         { "row_count", reinterpret_cast<getter>(IGridProvider_get_RowCount), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IGridProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGridProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGridProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGridProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGridProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IGridProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IGridProvider",
@@ -2487,13 +2446,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIGridProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGridProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGridProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIGridProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIGridProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIGridProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIGridProvider",
@@ -2588,20 +2545,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "invoke", reinterpret_cast<PyCFunction>(IInvokeProvider_Invoke), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IInvokeProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInvokeProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IInvokeProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IInvokeProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInvokeProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInvokeProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInvokeProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInvokeProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IInvokeProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IInvokeProvider",
@@ -2681,13 +2635,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIInvokeProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInvokeProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInvokeProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIInvokeProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIInvokeProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIInvokeProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider",
@@ -2785,20 +2737,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "find_item_by_property", reinterpret_cast<PyCFunction>(IItemContainerProvider_FindItemByProperty), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IItemContainerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IItemContainerProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IItemContainerProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IItemContainerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IItemContainerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IItemContainerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IItemContainerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IItemContainerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IItemContainerProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IItemContainerProvider",
@@ -2904,13 +2853,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIItemContainerProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIItemContainerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIItemContainerProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIItemContainerProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIItemContainerProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIItemContainerProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIItemContainerProvider",
@@ -3121,21 +3068,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "set_current_view", reinterpret_cast<PyCFunction>(IMultipleViewProvider_SetCurrentView), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IMultipleViewProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMultipleViewProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IMultipleViewProvider[] = {
         { "current_view", reinterpret_cast<getter>(IMultipleViewProvider_get_CurrentView), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IMultipleViewProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMultipleViewProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMultipleViewProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMultipleViewProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMultipleViewProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IMultipleViewProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IMultipleViewProvider",
@@ -3300,13 +3244,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIMultipleViewProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMultipleViewProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMultipleViewProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIMultipleViewProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIMultipleViewProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIMultipleViewProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIMultipleViewProvider",
@@ -3400,20 +3342,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "get_underlying_object_model", reinterpret_cast<PyCFunction>(IObjectModelProvider_GetUnderlyingObjectModel), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IObjectModelProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IObjectModelProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IObjectModelProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IObjectModelProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IObjectModelProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IObjectModelProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IObjectModelProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IObjectModelProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IObjectModelProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IObjectModelProvider",
@@ -3495,13 +3434,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIObjectModelProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIObjectModelProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIObjectModelProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIObjectModelProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIObjectModelProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIObjectModelProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIObjectModelProvider",
@@ -3778,8 +3715,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "set_value", reinterpret_cast<PyCFunction>(IRangeValueProvider_SetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IRangeValueProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRangeValueProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IRangeValueProvider[] = {
         { "is_read_only", reinterpret_cast<getter>(IRangeValueProvider_get_IsReadOnly), nullptr, nullptr, nullptr },
@@ -3788,16 +3724,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "minimum", reinterpret_cast<getter>(IRangeValueProvider_get_Minimum), nullptr, nullptr, nullptr },
         { "small_change", reinterpret_cast<getter>(IRangeValueProvider_get_SmallChange), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IRangeValueProvider_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IRangeValueProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRangeValueProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRangeValueProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRangeValueProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRangeValueProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IRangeValueProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IRangeValueProvider",
@@ -4003,13 +3937,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIRangeValueProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRangeValueProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRangeValueProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIRangeValueProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIRangeValueProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIRangeValueProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIRangeValueProvider",
@@ -4104,20 +4036,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "scroll_into_view", reinterpret_cast<PyCFunction>(IScrollItemProvider_ScrollIntoView), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IScrollItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IScrollItemProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IScrollItemProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IScrollItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IScrollItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IScrollItemProvider",
@@ -4197,13 +4126,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIScrollItemProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIScrollItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIScrollItemProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIScrollItemProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIScrollItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIScrollItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider",
@@ -4526,8 +4453,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "set_scroll_percent", reinterpret_cast<PyCFunction>(IScrollProvider_SetScrollPercent), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IScrollProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IScrollProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IScrollProvider[] = {
         { "horizontal_scroll_percent", reinterpret_cast<getter>(IScrollProvider_get_HorizontalScrollPercent), nullptr, nullptr, nullptr },
@@ -4536,16 +4462,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "vertical_scroll_percent", reinterpret_cast<getter>(IScrollProvider_get_VerticalScrollPercent), nullptr, nullptr, nullptr },
         { "vertical_view_size", reinterpret_cast<getter>(IScrollProvider_get_VerticalViewSize), nullptr, nullptr, nullptr },
         { "vertically_scrollable", reinterpret_cast<getter>(IScrollProvider_get_VerticallyScrollable), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IScrollProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IScrollProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IScrollProvider",
@@ -4805,13 +4729,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIScrollProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIScrollProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIScrollProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIScrollProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIScrollProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIScrollProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIScrollProvider",
@@ -5050,22 +4972,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "select", reinterpret_cast<PyCFunction>(ISelectionItemProvider_Select), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISelectionItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISelectionItemProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISelectionItemProvider[] = {
         { "is_selected", reinterpret_cast<getter>(ISelectionItemProvider_get_IsSelected), nullptr, nullptr, nullptr },
         { "selection_container", reinterpret_cast<getter>(ISelectionItemProvider_get_SelectionContainer), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISelectionItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISelectionItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISelectionItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISelectionItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISelectionItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISelectionItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ISelectionItemProvider",
@@ -5233,13 +5152,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsISelectionItemProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISelectionItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISelectionItemProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISelectionItemProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISelectionItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISelectionItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISelectionItemProvider",
@@ -5393,22 +5310,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "get_selection", reinterpret_cast<PyCFunction>(ISelectionProvider_GetSelection), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISelectionProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISelectionProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISelectionProvider[] = {
         { "can_select_multiple", reinterpret_cast<getter>(ISelectionProvider_get_CanSelectMultiple), nullptr, nullptr, nullptr },
         { "is_selection_required", reinterpret_cast<getter>(ISelectionProvider_get_IsSelectionRequired), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISelectionProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISelectionProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISelectionProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISelectionProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISelectionProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISelectionProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ISelectionProvider",
@@ -5531,13 +5445,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsISelectionProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISelectionProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISelectionProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISelectionProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISelectionProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISelectionProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISelectionProvider",
@@ -5702,21 +5614,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "get_annotation_types", reinterpret_cast<PyCFunction>(ISpreadsheetItemProvider_GetAnnotationTypes), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISpreadsheetItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpreadsheetItemProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISpreadsheetItemProvider[] = {
         { "formula", reinterpret_cast<getter>(ISpreadsheetItemProvider_get_Formula), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISpreadsheetItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpreadsheetItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpreadsheetItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpreadsheetItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpreadsheetItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISpreadsheetItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ISpreadsheetItemProvider",
@@ -5846,13 +5755,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsISpreadsheetItemProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpreadsheetItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpreadsheetItemProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISpreadsheetItemProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISpreadsheetItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISpreadsheetItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISpreadsheetItemProvider",
@@ -5948,20 +5855,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "get_item_by_name", reinterpret_cast<PyCFunction>(ISpreadsheetProvider_GetItemByName), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISpreadsheetProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpreadsheetProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISpreadsheetProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISpreadsheetProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpreadsheetProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpreadsheetProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpreadsheetProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpreadsheetProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISpreadsheetProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ISpreadsheetProvider",
@@ -6049,13 +5953,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsISpreadsheetProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpreadsheetProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpreadsheetProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISpreadsheetProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISpreadsheetProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISpreadsheetProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISpreadsheetProvider",
@@ -6318,8 +6220,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef _methods_IStylesProvider[] = {
         { "_assign_array_", _assign_array_IStylesProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStylesProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IStylesProvider[] = {
         { "extended_properties", reinterpret_cast<getter>(IStylesProvider_get_ExtendedProperties), nullptr, nullptr, nullptr },
@@ -6329,16 +6230,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "shape", reinterpret_cast<getter>(IStylesProvider_get_Shape), nullptr, nullptr, nullptr },
         { "style_id", reinterpret_cast<getter>(IStylesProvider_get_StyleId), nullptr, nullptr, nullptr },
         { "style_name", reinterpret_cast<getter>(IStylesProvider_get_StyleName), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IStylesProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStylesProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStylesProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStylesProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStylesProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IStylesProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IStylesProvider",
@@ -6534,13 +6433,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIStylesProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStylesProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStylesProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIStylesProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStylesProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIStylesProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIStylesProvider",
@@ -6679,20 +6576,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "start_listening", reinterpret_cast<PyCFunction>(ISynchronizedInputProvider_StartListening), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISynchronizedInputProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISynchronizedInputProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ISynchronizedInputProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ISynchronizedInputProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISynchronizedInputProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISynchronizedInputProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISynchronizedInputProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISynchronizedInputProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ISynchronizedInputProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ISynchronizedInputProvider",
@@ -6802,13 +6696,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsISynchronizedInputProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISynchronizedInputProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISynchronizedInputProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsISynchronizedInputProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsISynchronizedInputProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsISynchronizedInputProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsISynchronizedInputProvider",
@@ -6943,20 +6835,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "get_row_header_items", reinterpret_cast<PyCFunction>(ITableItemProvider_GetRowHeaderItems), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITableItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITableItemProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITableItemProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITableItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITableItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITableItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITableItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITableItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITableItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITableItemProvider",
@@ -7066,13 +6955,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITableItemProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITableItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITableItemProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITableItemProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITableItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITableItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITableItemProvider",
@@ -7237,21 +7124,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "get_row_headers", reinterpret_cast<PyCFunction>(ITableProvider_GetRowHeaders), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITableProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITableProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITableProvider[] = {
         { "row_or_column_major", reinterpret_cast<getter>(ITableProvider_get_RowOrColumnMajor), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITableProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITableProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITableProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITableProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITableProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITableProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITableProvider",
@@ -7381,13 +7265,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITableProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITableProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITableProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITableProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITableProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITableProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITableProvider",
@@ -7500,22 +7382,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef _methods_ITextChildProvider[] = {
         { "_assign_array_", _assign_array_ITextChildProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextChildProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextChildProvider[] = {
         { "text_container", reinterpret_cast<getter>(ITextChildProvider_get_TextContainer), nullptr, nullptr, nullptr },
         { "text_range", reinterpret_cast<getter>(ITextChildProvider_get_TextRange), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextChildProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextChildProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextChildProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextChildProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextChildProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextChildProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITextChildProvider",
@@ -7611,13 +7490,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITextChildProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextChildProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextChildProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextChildProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextChildProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextChildProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextChildProvider",
@@ -7980,22 +7857,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "range_from_point", reinterpret_cast<PyCFunction>(ITextEditProvider_RangeFromPoint), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextEditProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextEditProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextEditProvider[] = {
         { "document_range", reinterpret_cast<getter>(ITextEditProvider_get_DocumentRange), nullptr, nullptr, nullptr },
         { "supported_text_selection", reinterpret_cast<getter>(ITextEditProvider_get_SupportedTextSelection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextEditProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextEditProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextEditProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextEditProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextEditProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextEditProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITextEditProvider",
@@ -8261,13 +8135,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITextEditProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextEditProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextEditProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextEditProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextEditProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextEditProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextEditProvider",
@@ -8548,22 +8420,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "range_from_point", reinterpret_cast<PyCFunction>(ITextProvider_RangeFromPoint), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextProvider[] = {
         { "document_range", reinterpret_cast<getter>(ITextProvider_get_DocumentRange), nullptr, nullptr, nullptr },
         { "supported_text_selection", reinterpret_cast<getter>(ITextProvider_get_SupportedTextSelection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITextProvider",
@@ -8777,13 +8646,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITextProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextProvider",
@@ -9163,22 +9030,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "range_from_point", reinterpret_cast<PyCFunction>(ITextProvider2_RangeFromPoint), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextProvider2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextProvider2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextProvider2[] = {
         { "document_range", reinterpret_cast<getter>(ITextProvider2_get_DocumentRange), nullptr, nullptr, nullptr },
         { "supported_text_selection", reinterpret_cast<getter>(ITextProvider2_get_SupportedTextSelection), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextProvider2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextProvider2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextProvider2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextProvider2 = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITextProvider2",
@@ -9452,13 +9316,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITextProvider2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextProvider2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextProvider2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextProvider2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextProvider2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextProvider2 = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextProvider2",
@@ -10297,20 +10159,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "select", reinterpret_cast<PyCFunction>(ITextRangeProvider_Select), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextRangeProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextRangeProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextRangeProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextRangeProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextRangeProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextRangeProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextRangeProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextRangeProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextRangeProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITextRangeProvider",
@@ -10992,13 +10851,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITextRangeProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextRangeProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextRangeProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextRangeProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextRangeProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextRangeProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextRangeProvider",
@@ -11879,20 +11736,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "show_context_menu", reinterpret_cast<PyCFunction>(ITextRangeProvider2_ShowContextMenu), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITextRangeProvider2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextRangeProvider2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITextRangeProvider2[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITextRangeProvider2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextRangeProvider2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextRangeProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextRangeProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextRangeProvider2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITextRangeProvider2 = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITextRangeProvider2",
@@ -12598,13 +12452,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITextRangeProvider2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextRangeProvider2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextRangeProvider2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITextRangeProvider2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITextRangeProvider2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITextRangeProvider2 = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITextRangeProvider2",
@@ -12729,21 +12581,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "toggle", reinterpret_cast<PyCFunction>(IToggleProvider_Toggle), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IToggleProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IToggleProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IToggleProvider[] = {
         { "toggle_state", reinterpret_cast<getter>(IToggleProvider_get_ToggleState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IToggleProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IToggleProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IToggleProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IToggleProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IToggleProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IToggleProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IToggleProvider",
@@ -12843,13 +12692,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIToggleProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIToggleProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIToggleProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIToggleProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIToggleProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIToggleProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIToggleProvider",
@@ -13126,23 +12973,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "rotate", reinterpret_cast<PyCFunction>(ITransformProvider_Rotate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITransformProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITransformProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITransformProvider[] = {
         { "can_move", reinterpret_cast<getter>(ITransformProvider_get_CanMove), nullptr, nullptr, nullptr },
         { "can_resize", reinterpret_cast<getter>(ITransformProvider_get_CanResize), nullptr, nullptr, nullptr },
         { "can_rotate", reinterpret_cast<getter>(ITransformProvider_get_CanRotate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITransformProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITransformProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITransformProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITransformProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITransformProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITransformProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITransformProvider",
@@ -13372,13 +13216,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITransformProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITransformProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITransformProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITransformProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITransformProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITransformProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITransformProvider",
@@ -13863,8 +13705,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "zoom_by_unit", reinterpret_cast<PyCFunction>(ITransformProvider2_ZoomByUnit), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ITransformProvider2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITransformProvider2), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_ITransformProvider2[] = {
         { "can_zoom", reinterpret_cast<getter>(ITransformProvider2_get_CanZoom), nullptr, nullptr, nullptr },
@@ -13874,16 +13715,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "can_move", reinterpret_cast<getter>(ITransformProvider2_get_CanMove), nullptr, nullptr, nullptr },
         { "can_resize", reinterpret_cast<getter>(ITransformProvider2_get_CanResize), nullptr, nullptr, nullptr },
         { "can_rotate", reinterpret_cast<getter>(ITransformProvider2_get_CanRotate), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_ITransformProvider2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITransformProvider2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITransformProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITransformProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITransformProvider2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ITransformProvider2 = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ITransformProvider2",
@@ -14253,13 +14092,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsITransformProvider2[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITransformProvider2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITransformProvider2), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsITransformProvider2[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsITransformProvider2) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsITransformProvider2 = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsITransformProvider2",
@@ -14416,22 +14253,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "set_value", reinterpret_cast<PyCFunction>(IValueProvider_SetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IValueProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IValueProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IValueProvider[] = {
         { "is_read_only", reinterpret_cast<getter>(IValueProvider_get_IsReadOnly), nullptr, nullptr, nullptr },
         { "value", reinterpret_cast<getter>(IValueProvider_get_Value), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IValueProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IValueProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IValueProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IValueProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IValueProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IValueProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IValueProvider",
@@ -14557,13 +14391,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIValueProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIValueProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIValueProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIValueProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIValueProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIValueProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIValueProvider",
@@ -14658,20 +14490,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "realize", reinterpret_cast<PyCFunction>(IVirtualizedItemProvider_Realize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVirtualizedItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVirtualizedItemProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IVirtualizedItemProvider[] = {
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IVirtualizedItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVirtualizedItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVirtualizedItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVirtualizedItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVirtualizedItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IVirtualizedItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IVirtualizedItemProvider",
@@ -14751,13 +14580,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIVirtualizedItemProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVirtualizedItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVirtualizedItemProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIVirtualizedItemProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIVirtualizedItemProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIVirtualizedItemProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIVirtualizedItemProvider",
@@ -15119,8 +14946,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "wait_for_input_idle", reinterpret_cast<PyCFunction>(IWindowProvider_WaitForInputIdle), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IWindowProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWindowProvider), METH_O | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyGetSetDef _getset_IWindowProvider[] = {
         { "interaction_state", reinterpret_cast<getter>(IWindowProvider_get_InteractionState), nullptr, nullptr, nullptr },
@@ -15129,16 +14955,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { "maximizable", reinterpret_cast<getter>(IWindowProvider_get_Maximizable), nullptr, nullptr, nullptr },
         { "minimizable", reinterpret_cast<getter>(IWindowProvider_get_Minimizable), nullptr, nullptr, nullptr },
         { "visual_state", reinterpret_cast<getter>(IWindowProvider_get_VisualState), nullptr, nullptr, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot _type_slots_IWindowProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWindowProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWindowProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWindowProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWindowProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_IWindowProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.IWindowProvider",
@@ -15400,13 +15224,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
     static PyMethodDef methods_ImplementsIWindowProvider[] = {
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWindowProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWindowProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { }
-    };
+        { }};
 
     static PyType_Slot type_slots_ImplementsIWindowProvider[] = {
         { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWindowProvider) },
-        { }
-    };
+        { }};
 
     static PyType_Spec type_spec_ImplementsIWindowProvider = {
         "winrt._winrt_microsoft_ui_xaml_automation_provider.ImplementsIWindowProvider",
