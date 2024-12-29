@@ -147,7 +147,7 @@ static class ObjectWriterExtensions
             }
         }
 
-        var interfaceTypes = type.Interfaces.AsEnumerable();
+        var interfaceTypes = type.Interfaces.Where(i => !i.IsPythonCollection());
 
         if (type.Category == Category.Interface)
         {

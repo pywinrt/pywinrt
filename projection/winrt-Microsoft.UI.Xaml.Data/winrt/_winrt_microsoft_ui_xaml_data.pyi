@@ -256,7 +256,7 @@ class RelativeSource(microsoft_ui_xaml.DependencyObject, metaclass=RelativeSourc
     @typing.final
     def mode(self, value: RelativeSourceMode) -> None: ...
 
-class ImplementsICollectionView(windows_foundation_collections.ImplementsIObservableVector[winrt.system.Object]):
+class ImplementsICollectionView(windows_foundation_collections.ImplementsIObservableVector[winrt.system.Object], windows_foundation_collections.ImplementsIVector[winrt.system.Object], windows_foundation_collections.ImplementsIIterable[winrt.system.Object]):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> Microsoft.UI.Xaml.Data.ICollectionView::LoadMoreItemsAsync(System.UInt32)
     @abstractmethod
     def load_more_items_async(self, count: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[LoadMoreItemsResult]: ...
