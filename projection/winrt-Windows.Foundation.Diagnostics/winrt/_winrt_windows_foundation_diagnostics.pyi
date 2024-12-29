@@ -532,7 +532,7 @@ class IErrorReportingSettings(winrt.system.Object, ImplementsIErrorReportingSett
     # System.Void Windows.Foundation.Diagnostics.IErrorReportingSettings::SetErrorOptions(Windows.Foundation.Diagnostics.ErrorOptions)
     def set_error_options(self, value: ErrorOptions, /) -> None: ...
 
-class ImplementsIFileLoggingSession():
+class ImplementsIFileLoggingSession(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Foundation.Diagnostics.IFileLoggingSession::AddLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel)
     @abstractmethod
     def add_logging_channel(self, logging_channel: ImplementsILoggingChannel, /) -> None: ...
@@ -578,7 +578,7 @@ class IFileLoggingSession(winrt.system.Object, ImplementsIFileLoggingSession, wi
     @_property
     def name(self) -> str: ...
 
-class ImplementsILoggingChannel():
+class ImplementsILoggingChannel(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Foundation.Diagnostics.ILoggingChannel::LogMessage(System.String)
     @abstractmethod
     def log_message(self, event_string: str, /) -> None: ...
@@ -638,7 +638,7 @@ class ILoggingChannel(winrt.system.Object, ImplementsILoggingChannel, windows_fo
     @_property
     def name(self) -> str: ...
 
-class ImplementsILoggingSession():
+class ImplementsILoggingSession(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Foundation.Diagnostics.ILoggingSession::AddLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel)
     @abstractmethod
     def add_logging_channel(self, logging_channel: ImplementsILoggingChannel, /) -> None: ...

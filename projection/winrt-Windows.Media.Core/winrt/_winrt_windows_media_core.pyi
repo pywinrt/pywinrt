@@ -1922,7 +1922,7 @@ class IMediaStreamDescriptor(winrt.system.Object, ImplementsIMediaStreamDescript
     @name.setter
     def name(self, value: str) -> None: ...
 
-class ImplementsIMediaStreamDescriptor2():
+class ImplementsIMediaStreamDescriptor2(ImplementsIMediaStreamDescriptor):
     # System.String Windows.Media.Core.IMediaStreamDescriptor2::get_Label()
     @_property
     @abstractmethod

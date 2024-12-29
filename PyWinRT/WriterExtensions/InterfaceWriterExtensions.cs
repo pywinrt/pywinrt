@@ -495,45 +495,52 @@ static class InterfaceWriterExtensions
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
     )
     {
-        var hasMembers = false;
+        var methods = type.Methods.Where(m =>
+            m.Method.DeclaringType.FullName == type.Type.FullName
+        );
+        var events = type.Events.Where(e => e.Event.DeclaringType.FullName == type.Type.FullName);
+        var properties = type.Properties.Where(p =>
+            p.Property.DeclaringType.FullName == type.Type.FullName
+        );
+
+        var hasMembers = methods.Any() || events.Any() || properties.Any();
+
+        var interfaces = string.Join(
+            ", ",
+            type.Interfaces.Select(i =>
+                i.ToPyTypeName(ns, new TypeRefNullabilityInfo(i), implementsInterface: true)
+            )
+        );
+
         var generic = "";
 
         if (type.IsGeneric)
         {
             generic =
-                $"typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p))))}]";
+                $"{(interfaces.Any() ? ", " : "")}typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p))))}]";
         }
 
-        w.WriteLine($"class Implements{type.Name}({generic}):");
+        // work around https://github.com/python/mypy/issues/17091
+        // we can't use abc.ABCMeta because it will cause errors about conflicting metaclasses
+        var typeIgnore = !hasMembers && interfaces.Any() ? "  # type: ignore[misc]" : "";
+
+        w.WriteLine($"class Implements{type.Name}({interfaces}{generic}):{typeIgnore}");
         w.Indent++;
 
-        foreach (
-            var method in type.Methods.Where(m =>
-                m.Method.DeclaringType.FullName == type.Type.FullName
-            )
-        )
+        foreach (var method in methods)
         {
             w.WritePythonMethodTyping(method, ns, nullabilityMap, isAbstract: true);
-            hasMembers = true;
         }
 
-        foreach (
-            var evt in type.Events.Where(e => e.Event.DeclaringType.FullName == type.Type.FullName)
-        )
+        foreach (var evt in events)
         {
             w.WritePythonMethodTyping(evt.AddMethod, ns, nullabilityMap, isAbstract: true);
             w.WritePythonMethodTyping(evt.RemoveMethod, ns, nullabilityMap, isAbstract: true);
-            hasMembers = true;
         }
 
-        foreach (
-            var prop in type.Properties.Where(p =>
-                p.Property.DeclaringType.FullName == type.Type.FullName
-            )
-        )
+        foreach (var prop in properties)
         {
             w.WritePythonPropertyTyping(type, prop, ns, nullabilityMap, isAbstract: true);
-            hasMembers = true;
         }
 
         if (!hasMembers)

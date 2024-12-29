@@ -15442,7 +15442,7 @@ class XamlControlsResources(microsoft_ui_xaml.ResourceDictionary, metaclass=Xaml
     @use_compact_resources.setter
     def use_compact_resources(self, value: bool) -> None: ...
 
-class ImplementsIAnimatedVisual():
+class ImplementsIAnimatedVisual(windows_foundation.ImplementsIClosable):
     # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Duration()
     @_property
     @abstractmethod
@@ -15472,7 +15472,7 @@ class IAnimatedVisual(winrt.system.Object, ImplementsIAnimatedVisual, windows_fo
     @_property
     def size(self) -> windows_foundation_numerics.Vector2: ...
 
-class ImplementsIAnimatedVisual2():
+class ImplementsIAnimatedVisual2(ImplementsIAnimatedVisual, windows_foundation.ImplementsIClosable):
     # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisual2::CreateAnimations()
     @abstractmethod
     def create_animations(self) -> None: ...
@@ -15510,7 +15510,7 @@ class IAnimatedVisualSource(winrt.system.Object, ImplementsIAnimatedVisualSource
     # Microsoft.UI.Xaml.Controls.IAnimatedVisual Microsoft.UI.Xaml.Controls.IAnimatedVisualSource::TryCreateAnimatedVisual(Microsoft.UI.Composition.Compositor,System.Object&)
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, /) -> typing.Tuple[typing.Optional[IAnimatedVisual], winrt.system.Object]: ...
 
-class ImplementsIAnimatedVisualSource2():
+class ImplementsIAnimatedVisualSource2(ImplementsIAnimatedVisualSource):
     # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2::SetColorProperty(System.String,Windows.UI.Color)
     @abstractmethod
     def set_color_property(self, property_name: str, value: windows_ui.Color, /) -> None: ...
@@ -15579,7 +15579,7 @@ class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
     @_property
     def is_in_overflow(self) -> bool: ...
 
-class ImplementsIDynamicAnimatedVisualSource():
+class ImplementsIDynamicAnimatedVisualSource(ImplementsIAnimatedVisualSource):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource::add_AnimatedVisualInvalidated(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource,System.Object>)
     @abstractmethod
     def add_animated_visual_invalidated(self, handler: windows_foundation.TypedEventHandler[IDynamicAnimatedVisualSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...

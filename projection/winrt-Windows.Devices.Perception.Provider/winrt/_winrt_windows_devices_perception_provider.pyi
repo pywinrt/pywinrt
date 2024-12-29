@@ -189,7 +189,7 @@ class PerceptionVideoFrameAllocator(winrt.system.Object, windows_foundation.Impl
     # @deprecated("PerceptionVideoFrameAllocator may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def copy_from_video_frame(self, frame: windows_media.VideoFrame, /) -> PerceptionFrame: ...
 
-class ImplementsIPerceptionFrameProvider():
+class ImplementsIPerceptionFrameProvider(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Devices.Perception.Provider.IPerceptionFrameProvider::SetProperty(Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest)
     # @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod
@@ -240,7 +240,7 @@ class IPerceptionFrameProvider(winrt.system.Object, ImplementsIPerceptionFramePr
     @_property
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
-class ImplementsIPerceptionFrameProviderManager():
+class ImplementsIPerceptionFrameProviderManager(windows_foundation.ImplementsIClosable):
     # Windows.Devices.Perception.Provider.IPerceptionFrameProvider Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager::GetFrameProvider(Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo)
     # @deprecated("IPerceptionFrameProviderManager may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod

@@ -280,7 +280,7 @@ class IAudioEffectDefinition(winrt.system.Object, ImplementsIAudioEffectDefiniti
     @_property
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
-class ImplementsIBasicAudioEffect():
+class ImplementsIBasicAudioEffect(windows_media.ImplementsIMediaExtension):
     # System.Void Windows.Media.Effects.IBasicAudioEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -321,7 +321,7 @@ class IBasicAudioEffect(winrt.system.Object, ImplementsIBasicAudioEffect, window
     @_property
     def use_input_frame_for_output(self) -> bool: ...
 
-class ImplementsIBasicVideoEffect():
+class ImplementsIBasicVideoEffect(windows_media.ImplementsIMediaExtension):
     # System.Void Windows.Media.Effects.IBasicVideoEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -376,7 +376,7 @@ class IBasicVideoEffect(winrt.system.Object, ImplementsIBasicVideoEffect, window
     @_property
     def time_independent(self) -> bool: ...
 
-class ImplementsIVideoCompositor():
+class ImplementsIVideoCompositor(windows_media.ImplementsIMediaExtension):
     # System.Void Windows.Media.Effects.IVideoCompositor::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...

@@ -586,7 +586,7 @@ class DesktopSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windo
     @typing.final
     def is_closed(self) -> bool: ...
 
-class ImplementsIContentSiteBridge():
+class ImplementsIContentSiteBridge(windows_foundation.ImplementsIClosable):
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.IContentSiteBridge::get_DispatcherQueue()
     @_property
     @abstractmethod

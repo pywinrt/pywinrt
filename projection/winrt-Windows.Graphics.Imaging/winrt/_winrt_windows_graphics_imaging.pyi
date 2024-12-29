@@ -560,7 +560,7 @@ class IBitmapFrame(winrt.system.Object, ImplementsIBitmapFrame):
     @_property
     def pixel_width(self) -> winrt.system.UInt32: ...
 
-class ImplementsIBitmapFrameWithSoftwareBitmap():
+class ImplementsIBitmapFrameWithSoftwareBitmap(ImplementsIBitmapFrame):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync()
     @abstractmethod
     def get_software_bitmap_async(self) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...

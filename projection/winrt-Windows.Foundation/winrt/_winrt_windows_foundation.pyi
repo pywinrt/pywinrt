@@ -273,7 +273,7 @@ class WwwFormUrlDecoderEntry(winrt.system.Object, ImplementsIWwwFormUrlDecoderEn
     @_property
     def value(self) -> str: ...
 
-class ImplementsIAsyncAction():
+class ImplementsIAsyncAction(ImplementsIAsyncInfo):
     # System.Void Windows.Foundation.IAsyncAction::GetResults()
     @abstractmethod
     def get_results(self) -> None: ...
@@ -311,7 +311,7 @@ class IAsyncAction(winrt.system.Object, ImplementsIAsyncAction, ImplementsIAsync
     @_property
     def status(self) -> AsyncStatus: ...
 
-class ImplementsIAsyncActionWithProgress(typing.Generic[TProgress]):
+class ImplementsIAsyncActionWithProgress(ImplementsIAsyncInfo, typing.Generic[TProgress]):
     # System.Void Windows.Foundation.IAsyncActionWithProgress`1::GetResults()
     @abstractmethod
     def get_results(self) -> None: ...
@@ -400,7 +400,7 @@ class IAsyncInfo(winrt.system.Object, ImplementsIAsyncInfo):
     @_property
     def status(self) -> AsyncStatus: ...
 
-class ImplementsIAsyncOperationWithProgress(typing.Generic[TResult, TProgress]):
+class ImplementsIAsyncOperationWithProgress(ImplementsIAsyncInfo, typing.Generic[TResult, TProgress]):
     # TResult Windows.Foundation.IAsyncOperationWithProgress`2::GetResults()
     @abstractmethod
     def get_results(self) -> TResult: ...
@@ -453,7 +453,7 @@ class IAsyncOperationWithProgress(winrt.system.Object, ImplementsIAsyncOperation
     @_property
     def status(self) -> AsyncStatus: ...
 
-class ImplementsIAsyncOperation(typing.Generic[TResult]):
+class ImplementsIAsyncOperation(ImplementsIAsyncInfo, typing.Generic[TResult]):
     # TResult Windows.Foundation.IAsyncOperation`1::GetResults()
     @abstractmethod
     def get_results(self) -> TResult: ...
@@ -514,7 +514,7 @@ class IGetActivationFactory(winrt.system.Object, ImplementsIGetActivationFactory
     # System.Object Windows.Foundation.IGetActivationFactory::GetActivationFactory(System.String)
     def get_activation_factory(self, activatable_class_id: str, /) -> winrt.system.Object: ...
 
-class ImplementsIMemoryBuffer():
+class ImplementsIMemoryBuffer(ImplementsIClosable):
     # Windows.Foundation.IMemoryBufferReference Windows.Foundation.IMemoryBuffer::CreateReference()
     @abstractmethod
     def create_reference(self) -> IMemoryBufferReference: ...
@@ -528,7 +528,7 @@ class IMemoryBuffer(winrt.system.Object, ImplementsIMemoryBuffer, ImplementsIClo
     # Windows.Foundation.IMemoryBufferReference Windows.Foundation.IMemoryBuffer::CreateReference()
     def create_reference(self) -> IMemoryBufferReference: ...
 
-class ImplementsIMemoryBufferReference():
+class ImplementsIMemoryBufferReference(ImplementsIClosable):
     # Windows.Foundation.EventRegistrationToken Windows.Foundation.IMemoryBufferReference::add_Closed(Windows.Foundation.TypedEventHandler`2<Windows.Foundation.IMemoryBufferReference,System.Object>)
     @abstractmethod
     def add_closed(self, handler: TypedEventHandler[IMemoryBufferReference, winrt.system.Object], /) -> EventRegistrationToken: ...
@@ -760,7 +760,7 @@ class IPropertyValue(winrt.system.Object, ImplementsIPropertyValue):
     @_property
     def type(self) -> PropertyType: ...
 
-class ImplementsIReferenceArray(typing.Generic[T]):
+class ImplementsIReferenceArray(ImplementsIPropertyValue, typing.Generic[T]):
     # T[] Windows.Foundation.IReferenceArray`1::get_Value()
     @_property
     @abstractmethod
@@ -853,7 +853,7 @@ class IReferenceArray(winrt.system.Object, ImplementsIReferenceArray, Implements
     @_property
     def type(self) -> PropertyType: ...
 
-class ImplementsIReference(typing.Generic[T]):
+class ImplementsIReference(ImplementsIPropertyValue, typing.Generic[T]):
     # T Windows.Foundation.IReference`1::get_Value()
     @_property
     @abstractmethod

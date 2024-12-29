@@ -1299,7 +1299,7 @@ class IPlayReadyLicense(winrt.system.Object, ImplementsIPlayReadyLicense):
     @_property
     def usable_for_play(self) -> bool: ...
 
-class ImplementsIPlayReadyLicenseAcquisitionServiceRequest():
+class ImplementsIPlayReadyLicenseAcquisitionServiceRequest(ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
     # Windows.Media.Protection.PlayReady.PlayReadyContentHeader Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest::get_ContentHeader()
     @_property
     @abstractmethod
@@ -1376,7 +1376,7 @@ class IPlayReadyLicenseSession(winrt.system.Object, ImplementsIPlayReadyLicenseS
     # Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession::CreateLAServiceRequest()
     def create_l_a_service_request(self) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
 
-class ImplementsIPlayReadyLicenseSession2():
+class ImplementsIPlayReadyLicenseSession2(ImplementsIPlayReadyLicenseSession):
     # Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2::CreateLicenseIterable(Windows.Media.Protection.PlayReady.PlayReadyContentHeader,System.Boolean)
     @abstractmethod
     def create_license_iterable(self, content_header: PlayReadyContentHeader, fully_evaluated: bool, /) -> PlayReadyLicenseIterable: ...
@@ -1390,7 +1390,7 @@ class IPlayReadyLicenseSession2(winrt.system.Object, ImplementsIPlayReadyLicense
     # Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2::CreateLicenseIterable(Windows.Media.Protection.PlayReady.PlayReadyContentHeader,System.Boolean)
     def create_license_iterable(self, content_header: PlayReadyContentHeader, fully_evaluated: bool, /) -> PlayReadyLicenseIterable: ...
 
-class ImplementsIPlayReadySecureStopServiceRequest():
+class ImplementsIPlayReadySecureStopServiceRequest(ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
     # System.Byte[] Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest::get_PublisherCertificate()
     @_property
     @abstractmethod
@@ -1459,7 +1459,7 @@ class IPlayReadySecureStopServiceRequest(winrt.system.Object, ImplementsIPlayRea
     @_property
     def type(self) -> _uuid.UUID: ...
 
-class ImplementsIPlayReadyServiceRequest():
+class ImplementsIPlayReadyServiceRequest(windows_media_protection.ImplementsIMediaProtectionServiceRequest):
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::BeginServiceRequest()
     @abstractmethod
     def begin_service_request(self) -> windows_foundation.IAsyncAction: ...

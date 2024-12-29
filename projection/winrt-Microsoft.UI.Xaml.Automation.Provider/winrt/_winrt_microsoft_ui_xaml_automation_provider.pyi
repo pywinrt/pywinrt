@@ -617,7 +617,7 @@ class ITextChildProvider(winrt.system.Object, ImplementsITextChildProvider):
     @_property
     def text_range(self) -> ITextRangeProvider: ...
 
-class ImplementsITextEditProvider():
+class ImplementsITextEditProvider(ImplementsITextProvider):
     # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider::GetActiveComposition()
     @abstractmethod
     def get_active_composition(self) -> ITextRangeProvider: ...
@@ -685,7 +685,7 @@ class ITextProvider(winrt.system.Object, ImplementsITextProvider):
     @_property
     def supported_text_selection(self) -> microsoft_ui_xaml_automation.SupportedTextSelection: ...
 
-class ImplementsITextProvider2():
+class ImplementsITextProvider2(ImplementsITextProvider):
     # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider2::GetCaretRange(System.Boolean&)
     @abstractmethod
     def get_caret_range(self) -> typing.Tuple[ITextRangeProvider, bool]: ...
@@ -809,7 +809,7 @@ class ITextRangeProvider(winrt.system.Object, ImplementsITextRangeProvider):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Select()
     def select(self) -> None: ...
 
-class ImplementsITextRangeProvider2():
+class ImplementsITextRangeProvider2(ImplementsITextRangeProvider):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider2::ShowContextMenu()
     @abstractmethod
     def show_context_menu(self) -> None: ...
@@ -913,7 +913,7 @@ class ITransformProvider(winrt.system.Object, ImplementsITransformProvider):
     @_property
     def can_rotate(self) -> bool: ...
 
-class ImplementsITransformProvider2():
+class ImplementsITransformProvider2(ImplementsITransformProvider):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2::Zoom(System.Double)
     @abstractmethod
     def zoom(self, zoom: winrt.system.Double, /) -> None: ...

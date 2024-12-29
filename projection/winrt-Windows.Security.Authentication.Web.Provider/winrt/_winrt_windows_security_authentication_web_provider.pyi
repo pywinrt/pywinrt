@@ -291,7 +291,7 @@ class IWebAccountProviderOperation(winrt.system.Object, ImplementsIWebAccountPro
     @_property
     def kind(self) -> WebAccountProviderOperationKind: ...
 
-class ImplementsIWebAccountProviderSilentReportOperation():
+class ImplementsIWebAccountProviderSilentReportOperation(ImplementsIWebAccountProviderBaseReportOperation):
     # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation::ReportUserInteractionRequired()
     @abstractmethod
     def report_user_interaction_required(self) -> None: ...
@@ -322,7 +322,7 @@ class IWebAccountProviderTokenObjects(winrt.system.Object, ImplementsIWebAccount
     @_property
     def operation(self) -> IWebAccountProviderOperation: ...
 
-class ImplementsIWebAccountProviderTokenObjects2():
+class ImplementsIWebAccountProviderTokenObjects2(ImplementsIWebAccountProviderTokenObjects):
     # Windows.System.User Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects2::get_User()
     @_property
     @abstractmethod
@@ -337,7 +337,7 @@ class IWebAccountProviderTokenObjects2(winrt.system.Object, ImplementsIWebAccoun
     @_property
     def operation(self) -> IWebAccountProviderOperation: ...
 
-class ImplementsIWebAccountProviderTokenOperation():
+class ImplementsIWebAccountProviderTokenOperation(ImplementsIWebAccountProviderOperation):
     # Windows.Foundation.DateTime Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation::get_CacheExpirationTime()
     @_property
     @abstractmethod
@@ -373,7 +373,7 @@ class IWebAccountProviderTokenOperation(winrt.system.Object, ImplementsIWebAccou
     @_property
     def kind(self) -> WebAccountProviderOperationKind: ...
 
-class ImplementsIWebAccountProviderUIReportOperation():
+class ImplementsIWebAccountProviderUIReportOperation(ImplementsIWebAccountProviderBaseReportOperation):
     # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderUIReportOperation::ReportUserCanceled()
     @abstractmethod
     def report_user_canceled(self) -> None: ...

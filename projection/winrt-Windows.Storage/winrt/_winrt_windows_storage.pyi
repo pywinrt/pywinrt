@@ -1015,7 +1015,7 @@ class UserDataPaths(winrt.system.Object, metaclass=UserDataPaths_Static):
     @_property
     def videos(self) -> str: ...
 
-class ImplementsIStorageFile():
+class ImplementsIStorageFile(windows_storage_streams.ImplementsIInputStreamReference, windows_storage_streams.ImplementsIRandomAccessStreamReference, ImplementsIStorageItem):
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
     @abstractmethod
     def copy_and_replace_async(self, file_to_replace: ImplementsIStorageFile, /) -> windows_foundation.IAsyncAction: ...
@@ -1139,7 +1139,7 @@ class IStorageFilePropertiesWithAvailability(winrt.system.Object, ImplementsISto
     @_property
     def is_available(self) -> bool: ...
 
-class ImplementsIStorageFolder():
+class ImplementsIStorageFolder(ImplementsIStorageItem):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFolder::CreateFileAsync(System.String,Windows.Storage.CreationCollisionOption)
     @abstractmethod
     def create_file_async(self, desired_name: str, options: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
@@ -1291,7 +1291,7 @@ class IStorageItem(winrt.system.Object, ImplementsIStorageItem):
     @_property
     def path(self) -> str: ...
 
-class ImplementsIStorageItem2():
+class ImplementsIStorageItem2(ImplementsIStorageItem):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageItem2::GetParentAsync()
     @abstractmethod
     def get_parent_async(self) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
@@ -1378,7 +1378,7 @@ class IStorageItemProperties(winrt.system.Object, ImplementsIStorageItemProperti
     @_property
     def properties(self) -> windows_storage_fileproperties.StorageItemContentProperties: ...
 
-class ImplementsIStorageItemProperties2():
+class ImplementsIStorageItemProperties2(ImplementsIStorageItemProperties):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32,Windows.Storage.FileProperties.ThumbnailOptions)
     @abstractmethod
     def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, options: windows_storage_fileproperties.ThumbnailOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
@@ -1416,7 +1416,7 @@ class IStorageItemProperties2(winrt.system.Object, ImplementsIStorageItemPropert
     @_property
     def properties(self) -> windows_storage_fileproperties.StorageItemContentProperties: ...
 
-class ImplementsIStorageItemPropertiesWithProvider():
+class ImplementsIStorageItemPropertiesWithProvider(ImplementsIStorageItemProperties):
     # Windows.Storage.StorageProvider Windows.Storage.IStorageItemPropertiesWithProvider::get_Provider()
     @_property
     @abstractmethod

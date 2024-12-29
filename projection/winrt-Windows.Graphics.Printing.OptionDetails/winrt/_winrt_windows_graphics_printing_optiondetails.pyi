@@ -747,7 +747,7 @@ class PrintTaskOptionDetails(winrt.system.Object, windows_graphics_printing.Impl
     @_property
     def options(self) -> typing.Mapping[str, IPrintOptionDetails]: ...
 
-class ImplementsIPrintCustomOptionDetails():
+class ImplementsIPrintCustomOptionDetails(ImplementsIPrintOptionDetails):
     # System.String Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails::get_DisplayName()
     @_property
     @abstractmethod
@@ -789,7 +789,7 @@ class IPrintCustomOptionDetails(winrt.system.Object, ImplementsIPrintCustomOptio
     @_property
     def value(self) -> winrt.system.Object: ...
 
-class ImplementsIPrintItemListOptionDetails():
+class ImplementsIPrintItemListOptionDetails(ImplementsIPrintOptionDetails):
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails::get_Items()
     @_property
     @abstractmethod
@@ -824,7 +824,7 @@ class IPrintItemListOptionDetails(winrt.system.Object, ImplementsIPrintItemListO
     @_property
     def value(self) -> winrt.system.Object: ...
 
-class ImplementsIPrintNumberOptionDetails():
+class ImplementsIPrintNumberOptionDetails(ImplementsIPrintOptionDetails):
     # System.UInt32 Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails::get_MaxValue()
     @_property
     @abstractmethod
@@ -925,7 +925,7 @@ class IPrintOptionDetails(winrt.system.Object, ImplementsIPrintOptionDetails):
     @_property
     def value(self) -> winrt.system.Object: ...
 
-class ImplementsIPrintTextOptionDetails():
+class ImplementsIPrintTextOptionDetails(ImplementsIPrintOptionDetails):
     # System.UInt32 Windows.Graphics.Printing.OptionDetails.IPrintTextOptionDetails::get_MaxCharacters()
     @_property
     @abstractmethod

@@ -363,7 +363,7 @@ class IXamlType(winrt.system.Object, ImplementsIXamlType):
     @_property
     def underlying_type(self) -> windows_ui_xaml_interop.TypeName: ...
 
-class ImplementsIXamlType2():
+class ImplementsIXamlType2(ImplementsIXamlType):
     # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType2::get_BoxedType()
     @_property
     @abstractmethod

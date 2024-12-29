@@ -367,7 +367,7 @@ class IImageScannerFormatConfiguration(winrt.system.Object, ImplementsIImageScan
     @format.setter
     def format(self, value: ImageScannerFormat) -> None: ...
 
-class ImplementsIImageScannerSourceConfiguration():
+class ImplementsIImageScannerSourceConfiguration(ImplementsIImageScannerFormatConfiguration):
     # System.Boolean Windows.Devices.Scanners.IImageScannerSourceConfiguration::IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)
     @abstractmethod
     def is_auto_cropping_mode_supported(self, value: ImageScannerAutoCroppingMode, /) -> bool: ...

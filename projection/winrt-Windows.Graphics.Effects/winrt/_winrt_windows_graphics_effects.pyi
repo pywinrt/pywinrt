@@ -13,7 +13,7 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
-class ImplementsIGraphicsEffect():
+class ImplementsIGraphicsEffect(ImplementsIGraphicsEffectSource):
     # System.String Windows.Graphics.Effects.IGraphicsEffect::get_Name()
     @_property
     @abstractmethod

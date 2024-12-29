@@ -162,7 +162,7 @@ class TestRunner_Static(type):
 class TestRunner(winrt.system.Object, metaclass=TestRunner_Static):
     pass
 
-class ImplementsIRequiredFour():
+class ImplementsIRequiredFour(ImplementsIRequiredThree, ImplementsIRequiredTwo, ImplementsIRequiredOne):
     # System.Int32 TestComponent.IRequiredFour::Four()
     @abstractmethod
     def four(self) -> winrt.system.Int32: ...
@@ -188,7 +188,7 @@ class IRequiredOne(winrt.system.Object, ImplementsIRequiredOne):
     # System.Int32 TestComponent.IRequiredOne::One()
     def one(self) -> winrt.system.Int32: ...
 
-class ImplementsIRequiredThree():
+class ImplementsIRequiredThree(ImplementsIRequiredTwo, ImplementsIRequiredOne):
     # System.Int32 TestComponent.IRequiredThree::Three()
     @abstractmethod
     def three(self) -> winrt.system.Int32: ...
@@ -202,7 +202,7 @@ class IRequiredThree(winrt.system.Object, ImplementsIRequiredThree, ImplementsIR
     # System.Int32 TestComponent.IRequiredTwo::Two()
     def two(self) -> winrt.system.Int32: ...
 
-class ImplementsIRequiredTwo():
+class ImplementsIRequiredTwo(ImplementsIRequiredOne):
     # System.Int32 TestComponent.IRequiredTwo::Two()
     @abstractmethod
     def two(self) -> winrt.system.Int32: ...

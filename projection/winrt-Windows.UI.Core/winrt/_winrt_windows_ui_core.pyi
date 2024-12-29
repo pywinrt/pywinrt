@@ -955,7 +955,7 @@ class ICorePointerInputSource(winrt.system.Object, ImplementsICorePointerInputSo
     @_property
     def pointer_position(self) -> windows_foundation.Point: ...
 
-class ImplementsICorePointerInputSource2():
+class ImplementsICorePointerInputSource2(ImplementsICorePointerInputSource):
     # Windows.System.DispatcherQueue Windows.UI.Core.ICorePointerInputSource2::get_DispatcherQueue()
     @_property
     @abstractmethod

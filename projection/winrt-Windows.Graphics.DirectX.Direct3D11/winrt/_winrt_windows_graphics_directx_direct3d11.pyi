@@ -31,7 +31,7 @@ class Direct3DSurfaceDescription:
     multisample_description: Direct3DMultisampleDescription
     def __init__(self, width: winrt.system.Int32 = 0, height: winrt.system.Int32 = 0, format: windows_graphics_directx.DirectXPixelFormat = windows_graphics_directx.DirectXPixelFormat(0), multisample_description: Direct3DMultisampleDescription = Direct3DMultisampleDescription()) -> None: ...
 
-class ImplementsIDirect3DDevice():
+class ImplementsIDirect3DDevice(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice::Trim()
     @abstractmethod
     def trim(self) -> None: ...
@@ -45,7 +45,7 @@ class IDirect3DDevice(winrt.system.Object, ImplementsIDirect3DDevice, windows_fo
     # System.Void Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice::Trim()
     def trim(self) -> None: ...
 
-class ImplementsIDirect3DSurface():
+class ImplementsIDirect3DSurface(windows_foundation.ImplementsIClosable):
     # Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface::get_Description()
     @_property
     @abstractmethod

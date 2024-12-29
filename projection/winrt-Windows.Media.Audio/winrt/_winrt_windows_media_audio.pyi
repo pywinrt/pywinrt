@@ -1282,7 +1282,7 @@ class SpatialAudioFormatSubtype_Static(type):
 class SpatialAudioFormatSubtype(winrt.system.Object, metaclass=SpatialAudioFormatSubtype_Static):
     pass
 
-class ImplementsIAudioInputNode():
+class ImplementsIAudioInputNode(ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
     # System.Void Windows.Media.Audio.IAudioInputNode::AddOutgoingConnection(Windows.Media.Audio.IAudioNode)
     @abstractmethod
     def add_outgoing_connection(self, destination: ImplementsIAudioNode, /) -> None: ...
@@ -1341,7 +1341,7 @@ class IAudioInputNode(winrt.system.Object, ImplementsIAudioInputNode, Implements
     @outgoing_gain.setter
     def outgoing_gain(self, value: winrt.system.Double) -> None: ...
 
-class ImplementsIAudioInputNode2():
+class ImplementsIAudioInputNode2(ImplementsIAudioInputNode, ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
     # Windows.Media.Audio.AudioNodeEmitter Windows.Media.Audio.IAudioInputNode2::get_Emitter()
     @_property
     @abstractmethod
@@ -1394,7 +1394,7 @@ class IAudioInputNode2(winrt.system.Object, ImplementsIAudioInputNode2, Implemen
     @_property
     def outgoing_connections(self) -> typing.Sequence[AudioGraphConnection]: ...
 
-class ImplementsIAudioNode():
+class ImplementsIAudioNode(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Media.Audio.IAudioNode::DisableEffectsByDefinition(Windows.Media.Effects.IAudioEffectDefinition)
     @abstractmethod
     def disable_effects_by_definition(self, definition: windows_media_effects.ImplementsIAudioEffectDefinition, /) -> None: ...
@@ -1470,7 +1470,7 @@ class IAudioNode(winrt.system.Object, ImplementsIAudioNode, windows_foundation.I
     @outgoing_gain.setter
     def outgoing_gain(self, value: winrt.system.Double) -> None: ...
 
-class ImplementsIAudioNodeWithListener():
+class ImplementsIAudioNodeWithListener(ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
     # Windows.Media.Audio.AudioNodeListener Windows.Media.Audio.IAudioNodeWithListener::get_Listener()
     @_property
     @abstractmethod
