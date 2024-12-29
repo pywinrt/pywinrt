@@ -88,20 +88,6 @@ class ProjectedType
         );
         Interfaces = type
             .Interfaces.Select(i => i.InterfaceType)
-            // Skip types that are projected as Python protocols
-            .Where(i =>
-                !(
-                    i is GenericInstanceType gen
-                    && (
-                        gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
-                        || gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
-                        || gen.ElementType.FullName
-                            == "Windows.Foundation.Collections.IVectorView`1"
-                        || gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
-                        || gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
-                    )
-                )
-            )
             .Where(i => !i.Resolve().IsExclusiveTo())
             .OrderBy(i => sortedInterfaces.FindIndex(s => s.FullName == i.Resolve().FullName))
             .ToArray();

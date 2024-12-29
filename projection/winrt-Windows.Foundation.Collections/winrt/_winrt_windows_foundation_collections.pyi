@@ -197,7 +197,7 @@ class IMapChangedEventArgs(winrt.system.Object, ImplementsIMapChangedEventArgs, 
     @_property
     def key(self) -> K: ...
 
-class ImplementsIMapView(typing.Generic[K, V]):
+class ImplementsIMapView(ImplementsIIterable[IKeyValuePair[K, V]]):
     # System.Boolean Windows.Foundation.Collections.IMapView`2::HasKey(K)
     @abstractmethod
     def has_key(self, key: K, /) -> bool: ...
@@ -231,7 +231,7 @@ class IMapView(winrt.system.Object, ImplementsIMapView, winrt._winrt.Mapping[K, 
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class ImplementsIMap(typing.Generic[K, V]):
+class ImplementsIMap(ImplementsIIterable[IKeyValuePair[K, V]]):
     # System.Void Windows.Foundation.Collections.IMap`2::Clear()
     @abstractmethod
     def clear(self) -> None: ...
@@ -282,7 +282,7 @@ class IMap(winrt.system.Object, ImplementsIMap, winrt._winrt.MutableMapping[K, V
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class ImplementsIObservableMap(typing.Generic[K, V]):
+class ImplementsIObservableMap(ImplementsIMap[K, V]):
     # Windows.Foundation.EventRegistrationToken Windows.Foundation.Collections.IObservableMap`2::add_MapChanged(Windows.Foundation.Collections.MapChangedEventHandler`2<K,V>)
     @abstractmethod
     def add_map_changed(self, vhnd: MapChangedEventHandler[K, V], /) -> windows_foundation.EventRegistrationToken: ...
@@ -321,7 +321,7 @@ class IObservableMap(winrt.system.Object, ImplementsIObservableMap, winrt._winrt
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class ImplementsIObservableVector(typing.Generic[T]):
+class ImplementsIObservableVector(ImplementsIVector[T]):
     # Windows.Foundation.EventRegistrationToken Windows.Foundation.Collections.IObservableVector`1::add_VectorChanged(Windows.Foundation.Collections.VectorChangedEventHandler`1<T>)
     @abstractmethod
     def add_vector_changed(self, vhnd: VectorChangedEventHandler[T], /) -> windows_foundation.EventRegistrationToken: ...
@@ -378,7 +378,7 @@ class IObservableVector(winrt.system.Object, ImplementsIObservableVector, winrt.
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class ImplementsIPropertySet(ImplementsIObservableMap[str, winrt.system.Object]):  # type: ignore[misc]
+class ImplementsIPropertySet(ImplementsIObservableMap[str, winrt.system.Object], ImplementsIMap[str, winrt.system.Object], ImplementsIIterable[IKeyValuePair[str, winrt.system.Object]]):  # type: ignore[misc]
     pass
 
 @typing.final
@@ -430,7 +430,7 @@ class IVectorChangedEventArgs(winrt.system.Object, ImplementsIVectorChangedEvent
     @_property
     def index(self) -> winrt.system.UInt32: ...
 
-class ImplementsIVectorView(typing.Generic[T]):
+class ImplementsIVectorView(ImplementsIIterable[T]):
     # T Windows.Foundation.Collections.IVectorView`1::GetAt(System.UInt32)
     @abstractmethod
     def get_at(self, index: winrt.system.UInt32, /) -> T: ...
@@ -466,7 +466,7 @@ class IVectorView(winrt.system.Object, ImplementsIVectorView, winrt._winrt.Seque
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class ImplementsIVector(typing.Generic[T]):
+class ImplementsIVector(ImplementsIIterable[T]):
     # System.Void Windows.Foundation.Collections.IVector`1::Append(T)
     @abstractmethod
     def append(self, value: T, /) -> None: ...

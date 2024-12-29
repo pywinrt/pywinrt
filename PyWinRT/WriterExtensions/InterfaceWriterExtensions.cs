@@ -508,13 +508,18 @@ static class InterfaceWriterExtensions
         var interfaces = string.Join(
             ", ",
             type.Interfaces.Select(i =>
-                i.ToPyTypeName(ns, new TypeRefNullabilityInfo(i), implementsInterface: true)
+                i.ToPyTypeName(
+                    ns,
+                    new TypeRefNullabilityInfo(i),
+                    implementsInterface: true,
+                    usePythonCollectionTypes: false
+                )
             )
         );
 
         var generic = "";
 
-        if (type.IsGeneric)
+        if (type.IsGeneric && !type.Interfaces.Any(i => i.ContainsGenericParameter))
         {
             generic =
                 $"{(interfaces.Any() ? ", " : "")}typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p))))}]";

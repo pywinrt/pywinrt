@@ -331,7 +331,8 @@ static class TypeExtensions
         TypeRefNullabilityInfo nullabilityInfo,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false,
-        bool implementsInterface = false
+        bool implementsInterface = false,
+        bool usePythonCollectionTypes = true
     ) =>
         string.Format(
             (nullabilityInfo.AllowNull || nullabilityInfo.MaybeNull)
@@ -353,19 +354,25 @@ static class TypeExtensions
                     when gen.ElementType.FullName == "Windows.Foundation.IReference`1"
                     => $"typing.Optional[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], map, quoteImportedTypes)}]",
                 GenericInstanceType gen
-                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
+                    when usePythonCollectionTypes
+                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
                     => $"typing.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
                 GenericInstanceType gen
-                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
+                    when usePythonCollectionTypes
+                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
                     => $"typing.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
                 GenericInstanceType gen
-                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
+                    when usePythonCollectionTypes
+                        && gen.ElementType.FullName
+                            == "Windows.Foundation.Collections.IVectorView`1"
                     => $"typing.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
                 GenericInstanceType gen
-                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
+                    when usePythonCollectionTypes
+                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
                     => $"typing.MutableMapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))))}]",
                 GenericInstanceType gen
-                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
+                    when usePythonCollectionTypes
+                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
                     => $"typing.Mapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))))}]",
                 GenericInstanceType gen
                     => $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.Namespace.ToPyModuleAlias()}.")}{(implementsInterface ? "Implements" : "")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
@@ -790,4 +797,18 @@ static class TypeExtensions
 
         return false;
     }
+
+    /// <summary>
+    /// Tests if type is one of the special interfaces that is projected as
+    /// standard Python collection type.
+    /// </summary>
+    public static bool IsPythonCollection(this TypeReference type) =>
+        type is GenericInstanceType gen
+        && (
+            gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
+            || gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
+            || gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
+            || gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
+            || gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
+        );
 }
