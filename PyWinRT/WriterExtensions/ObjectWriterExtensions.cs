@@ -76,58 +76,7 @@ static class ObjectWriterExtensions
 
             foreach (var prop in type.Properties.Where(p => p.GetMethod.IsStatic))
             {
-                var name = prop.Name.ToPythonIdentifier(isTypeMethod: true);
-                var getterNullabilityInfo = nullabilityMap.GetValueOrDefault(
-                    prop.GetMethod.Signature,
-                    new MethodNullabilityInfo(prop.GetMethod.Method)
-                );
-                var propType = prop.Property.PropertyType.ToPyTypeName(
-                    ns,
-                    getterNullabilityInfo.Return.Type
-                );
-
-                w.WriteLine($"# {prop.GetMethod.Signature}");
-
-                // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
-                // so far, this is the only case in the entire Windows SDK where
-                // a property is entirely replaced with one of the same name
-                var typeIgnore =
-                    type.Namespace == "Windows.UI.Xaml.Controls.Maps"
-                    && type.Name == "MapControl"
-                    && prop.Name == "StyleProperty"
-                        ? "  # type: ignore[misc]"
-                        : "";
-
-                w.WriteLine($"@_property{typeIgnore}");
-
-                if (type.IsComposable && prop.SetMethod == null)
-                {
-                    w.WriteLine("@typing.final");
-                }
-
-                w.WriteLine($"def {name}(cls) -> {propType}: ...");
-
-                if (prop.SetMethod is not null)
-                {
-                    var setterNullabilityInfo = nullabilityMap.GetValueOrDefault(
-                        prop.SetMethod.Signature,
-                        new MethodNullabilityInfo(prop.SetMethod.Method)
-                    );
-                    var setType = prop
-                        .SetMethod.Method.Parameters[0]
-                        .ToPyInParamTyping(ns, setterNullabilityInfo.Parameters[0].Type);
-
-                    w.WriteLine($"# {prop.SetMethod.Signature}");
-
-                    w.WriteLine($"@{name}.setter");
-
-                    if (type.IsComposable)
-                    {
-                        w.WriteLine("@typing.final");
-                    }
-
-                    w.WriteLine($"def {name}(cls, value: {setType}) -> None: ...");
-                }
+                w.WritePythonPropertyTyping(type, prop, ns, nullabilityMap, "cls");
 
                 hasMembers = true;
             }
@@ -544,59 +493,8 @@ static class ObjectWriterExtensions
 
         foreach (var prop in type.Properties.Where(p => !p.IsStatic))
         {
-            var name = prop.Name.ToPythonIdentifier();
-            var getterNullabilityInfo = nullabilityMap.GetValueOrDefault(
-                prop.GetMethod.Signature,
-                new MethodNullabilityInfo(prop.GetMethod.Method)
-            );
-            var propType = prop.Property.PropertyType.ToPyTypeName(
-                ns,
-                getterNullabilityInfo.Return.Type,
-                prop.GenericArgMap
-            );
+            w.WritePythonPropertyTyping(type, prop, ns, nullabilityMap);
 
-            // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
-            // so far, this is the only case in the entire Windows SDK where
-            // a property is entirely replaced with one of the same name
-            var typeIgnore =
-                type.Namespace == "Windows.UI.Xaml.Controls.Maps"
-                && type.Name == "MapControl"
-                && prop.Name == "Style"
-                    ? "  # type: ignore[override]"
-                    : "";
-
-            w.WriteLine($"# {prop.GetMethod.Signature}");
-
-            w.WriteLine($"@_property{typeIgnore}");
-
-            if (type.IsComposable && prop.SetMethod == null)
-            {
-                w.WriteLine("@typing.final");
-            }
-
-            w.WriteLine($"def {name}(self) -> {propType}: ...");
-
-            if (prop.SetMethod is not null)
-            {
-                var setterNullabilityInfo = nullabilityMap.GetValueOrDefault(
-                    prop.SetMethod.Signature,
-                    new MethodNullabilityInfo(prop.SetMethod.Method)
-                );
-                var setType = prop
-                    .SetMethod.Method.Parameters[0]
-                    .ToPyInParamTyping(ns, setterNullabilityInfo.Parameters[0].Type);
-
-                w.WriteLine($"# {prop.SetMethod.Signature}");
-
-                w.WriteLine($"@{name}.setter");
-
-                if (type.IsComposable)
-                {
-                    w.WriteLine("@typing.final");
-                }
-
-                w.WriteLine($"def {name}(self, value: {setType}) -> None: ...");
-            }
             didWriteLine = true;
         }
 
