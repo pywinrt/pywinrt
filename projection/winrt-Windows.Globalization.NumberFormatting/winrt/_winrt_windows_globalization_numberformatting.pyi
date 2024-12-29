@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -424,7 +425,15 @@ class SignificantDigitsNumberRounder(winrt.system.Object, ImplementsINumberRound
     def rounding_algorithm(self, value: RoundingAlgorithm) -> None: ...
 
 class ImplementsINumberFormatter():
-    pass
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatter::Format(System.Double)
+    @abstractmethod
+    def format_double(self, value: winrt.system.Double, /) -> str: ...
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatter::Format(System.Int64)
+    @abstractmethod
+    def format_int(self, value: winrt.system.Int64, /) -> str: ...
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatter::Format(System.UInt64)
+    @abstractmethod
+    def format_uint(self, value: winrt.system.UInt64, /) -> str: ...
 
 @typing.final
 class INumberFormatter(winrt.system.Object, ImplementsINumberFormatter):
@@ -436,7 +445,15 @@ class INumberFormatter(winrt.system.Object, ImplementsINumberFormatter):
     def format_uint(self, value: winrt.system.UInt64, /) -> str: ...
 
 class ImplementsINumberFormatter2():
-    pass
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatter2::FormatDouble(System.Double)
+    @abstractmethod
+    def format_double(self, value: winrt.system.Double, /) -> str: ...
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatter2::FormatInt(System.Int64)
+    @abstractmethod
+    def format_int(self, value: winrt.system.Int64, /) -> str: ...
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatter2::FormatUInt(System.UInt64)
+    @abstractmethod
+    def format_uint(self, value: winrt.system.UInt64, /) -> str: ...
 
 @typing.final
 class INumberFormatter2(winrt.system.Object, ImplementsINumberFormatter2):
@@ -448,7 +465,62 @@ class INumberFormatter2(winrt.system.Object, ImplementsINumberFormatter2):
     def format_uint(self, value: winrt.system.UInt64, /) -> str: ...
 
 class ImplementsINumberFormatterOptions():
-    pass
+    # System.Int32 Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_FractionDigits()
+    @_property
+    @abstractmethod
+    def fraction_digits(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Globalization.NumberFormatting.INumberFormatterOptions::put_FractionDigits(System.Int32)
+    @fraction_digits.setter
+    @abstractmethod
+    def fraction_digits(self, value: winrt.system.Int32) -> None: ...
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_GeographicRegion()
+    @_property
+    @abstractmethod
+    def geographic_region(self) -> str: ...
+    # System.Int32 Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_IntegerDigits()
+    @_property
+    @abstractmethod
+    def integer_digits(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Globalization.NumberFormatting.INumberFormatterOptions::put_IntegerDigits(System.Int32)
+    @integer_digits.setter
+    @abstractmethod
+    def integer_digits(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_IsDecimalPointAlwaysDisplayed()
+    @_property
+    @abstractmethod
+    def is_decimal_point_always_displayed(self) -> bool: ...
+    # System.Void Windows.Globalization.NumberFormatting.INumberFormatterOptions::put_IsDecimalPointAlwaysDisplayed(System.Boolean)
+    @is_decimal_point_always_displayed.setter
+    @abstractmethod
+    def is_decimal_point_always_displayed(self, value: bool) -> None: ...
+    # System.Boolean Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_IsGrouped()
+    @_property
+    @abstractmethod
+    def is_grouped(self) -> bool: ...
+    # System.Void Windows.Globalization.NumberFormatting.INumberFormatterOptions::put_IsGrouped(System.Boolean)
+    @is_grouped.setter
+    @abstractmethod
+    def is_grouped(self, value: bool) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_Languages()
+    @_property
+    @abstractmethod
+    def languages(self) -> typing.Sequence[str]: ...
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_NumeralSystem()
+    @_property
+    @abstractmethod
+    def numeral_system(self) -> str: ...
+    # System.Void Windows.Globalization.NumberFormatting.INumberFormatterOptions::put_NumeralSystem(System.String)
+    @numeral_system.setter
+    @abstractmethod
+    def numeral_system(self, value: str) -> None: ...
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_ResolvedGeographicRegion()
+    @_property
+    @abstractmethod
+    def resolved_geographic_region(self) -> str: ...
+    # System.String Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_ResolvedLanguage()
+    @_property
+    @abstractmethod
+    def resolved_language(self) -> str: ...
 
 @typing.final
 class INumberFormatterOptions(winrt.system.Object, ImplementsINumberFormatterOptions):
@@ -496,7 +568,15 @@ class INumberFormatterOptions(winrt.system.Object, ImplementsINumberFormatterOpt
     def resolved_language(self) -> str: ...
 
 class ImplementsINumberParser():
-    pass
+    # Windows.Foundation.IReference`1<System.Double> Windows.Globalization.NumberFormatting.INumberParser::ParseDouble(System.String)
+    @abstractmethod
+    def parse_double(self, text: str, /) -> typing.Optional[winrt.system.Double]: ...
+    # Windows.Foundation.IReference`1<System.Int64> Windows.Globalization.NumberFormatting.INumberParser::ParseInt(System.String)
+    @abstractmethod
+    def parse_int(self, text: str, /) -> typing.Optional[winrt.system.Int64]: ...
+    # Windows.Foundation.IReference`1<System.UInt64> Windows.Globalization.NumberFormatting.INumberParser::ParseUInt(System.String)
+    @abstractmethod
+    def parse_uint(self, text: str, /) -> typing.Optional[winrt.system.UInt64]: ...
 
 @typing.final
 class INumberParser(winrt.system.Object, ImplementsINumberParser):
@@ -508,7 +588,24 @@ class INumberParser(winrt.system.Object, ImplementsINumberParser):
     def parse_uint(self, text: str, /) -> typing.Optional[winrt.system.UInt64]: ...
 
 class ImplementsINumberRounder():
-    pass
+    # System.Double Windows.Globalization.NumberFormatting.INumberRounder::RoundDouble(System.Double)
+    @abstractmethod
+    def round_double(self, value: winrt.system.Double, /) -> winrt.system.Double: ...
+    # System.Int32 Windows.Globalization.NumberFormatting.INumberRounder::RoundInt32(System.Int32)
+    @abstractmethod
+    def round_int32(self, value: winrt.system.Int32, /) -> winrt.system.Int32: ...
+    # System.Int64 Windows.Globalization.NumberFormatting.INumberRounder::RoundInt64(System.Int64)
+    @abstractmethod
+    def round_int64(self, value: winrt.system.Int64, /) -> winrt.system.Int64: ...
+    # System.Single Windows.Globalization.NumberFormatting.INumberRounder::RoundSingle(System.Single)
+    @abstractmethod
+    def round_single(self, value: winrt.system.Single, /) -> winrt.system.Single: ...
+    # System.UInt32 Windows.Globalization.NumberFormatting.INumberRounder::RoundUInt32(System.UInt32)
+    @abstractmethod
+    def round_uint32(self, value: winrt.system.UInt32, /) -> winrt.system.UInt32: ...
+    # System.UInt64 Windows.Globalization.NumberFormatting.INumberRounder::RoundUInt64(System.UInt64)
+    @abstractmethod
+    def round_uint64(self, value: winrt.system.UInt64, /) -> winrt.system.UInt64: ...
 
 @typing.final
 class INumberRounder(winrt.system.Object, ImplementsINumberRounder):
@@ -526,7 +623,14 @@ class INumberRounder(winrt.system.Object, ImplementsINumberRounder):
     def round_uint64(self, value: winrt.system.UInt64, /) -> winrt.system.UInt64: ...
 
 class ImplementsINumberRounderOption():
-    pass
+    # Windows.Globalization.NumberFormatting.INumberRounder Windows.Globalization.NumberFormatting.INumberRounderOption::get_NumberRounder()
+    @_property
+    @abstractmethod
+    def number_rounder(self) -> INumberRounder: ...
+    # System.Void Windows.Globalization.NumberFormatting.INumberRounderOption::put_NumberRounder(Windows.Globalization.NumberFormatting.INumberRounder)
+    @number_rounder.setter
+    @abstractmethod
+    def number_rounder(self, value: ImplementsINumberRounder) -> None: ...
 
 @typing.final
 class INumberRounderOption(winrt.system.Object, ImplementsINumberRounderOption):
@@ -538,7 +642,14 @@ class INumberRounderOption(winrt.system.Object, ImplementsINumberRounderOption):
     def number_rounder(self, value: ImplementsINumberRounder) -> None: ...
 
 class ImplementsISignedZeroOption():
-    pass
+    # System.Boolean Windows.Globalization.NumberFormatting.ISignedZeroOption::get_IsZeroSigned()
+    @_property
+    @abstractmethod
+    def is_zero_signed(self) -> bool: ...
+    # System.Void Windows.Globalization.NumberFormatting.ISignedZeroOption::put_IsZeroSigned(System.Boolean)
+    @is_zero_signed.setter
+    @abstractmethod
+    def is_zero_signed(self, value: bool) -> None: ...
 
 @typing.final
 class ISignedZeroOption(winrt.system.Object, ImplementsISignedZeroOption):
@@ -550,7 +661,14 @@ class ISignedZeroOption(winrt.system.Object, ImplementsISignedZeroOption):
     def is_zero_signed(self, value: bool) -> None: ...
 
 class ImplementsISignificantDigitsOption():
-    pass
+    # System.Int32 Windows.Globalization.NumberFormatting.ISignificantDigitsOption::get_SignificantDigits()
+    @_property
+    @abstractmethod
+    def significant_digits(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Globalization.NumberFormatting.ISignificantDigitsOption::put_SignificantDigits(System.Int32)
+    @significant_digits.setter
+    @abstractmethod
+    def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
 class ISignificantDigitsOption(winrt.system.Object, ImplementsISignificantDigitsOption):

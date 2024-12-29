@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -92,7 +93,15 @@ class I2cDevice(winrt.system.Object, windows_foundation.ImplementsIClosable, met
     def device_id(self) -> str: ...
 
 class ImplementsII2cDeviceStatics():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.I2c.I2cDevice> Windows.Devices.I2c.II2cDeviceStatics::FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)
+    @abstractmethod
+    def from_id_async(self, device_id: str, settings: I2cConnectionSettings, /) -> windows_foundation.IAsyncOperation[I2cDevice]: ...
+    # System.String Windows.Devices.I2c.II2cDeviceStatics::GetDeviceSelector()
+    @abstractmethod
+    def get_device_selector(self) -> str: ...
+    # System.String Windows.Devices.I2c.II2cDeviceStatics::GetDeviceSelector(System.String)
+    @abstractmethod
+    def get_device_selector_from_friendly_name(self, friendly_name: str, /) -> str: ...
 
 @typing.final
 class II2cDeviceStatics(winrt.system.Object, ImplementsII2cDeviceStatics):

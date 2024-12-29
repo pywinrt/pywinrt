@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -189,7 +190,30 @@ class PerceptionVideoFrameAllocator(winrt.system.Object, windows_foundation.Impl
     def copy_from_video_frame(self, frame: windows_media.VideoFrame, /) -> PerceptionFrame: ...
 
 class ImplementsIPerceptionFrameProvider():
-    pass
+    # System.Void Windows.Devices.Perception.Provider.IPerceptionFrameProvider::SetProperty(Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest)
+    # @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @abstractmethod
+    def set_property(self, value: PerceptionPropertyChangeRequest, /) -> None: ...
+    # System.Void Windows.Devices.Perception.Provider.IPerceptionFrameProvider::Start()
+    # @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @abstractmethod
+    def start(self) -> None: ...
+    # System.Void Windows.Devices.Perception.Provider.IPerceptionFrameProvider::Stop()
+    # @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @abstractmethod
+    def stop(self) -> None: ...
+    # System.Boolean Windows.Devices.Perception.Provider.IPerceptionFrameProvider::get_Available()
+    @_property
+    @abstractmethod
+    def available(self) -> bool: ...
+    # Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo Windows.Devices.Perception.Provider.IPerceptionFrameProvider::get_FrameProviderInfo()
+    @_property
+    @abstractmethod
+    def frame_provider_info(self) -> PerceptionFrameProviderInfo: ...
+    # Windows.Foundation.Collections.IPropertySet Windows.Devices.Perception.Provider.IPerceptionFrameProvider::get_Properties()
+    @_property
+    @abstractmethod
+    def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
 class IPerceptionFrameProvider(winrt.system.Object, ImplementsIPerceptionFrameProvider, windows_foundation.ImplementsIClosable):
@@ -217,7 +241,10 @@ class IPerceptionFrameProvider(winrt.system.Object, ImplementsIPerceptionFramePr
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 class ImplementsIPerceptionFrameProviderManager():
-    pass
+    # Windows.Devices.Perception.Provider.IPerceptionFrameProvider Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager::GetFrameProvider(Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo)
+    # @deprecated("IPerceptionFrameProviderManager may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @abstractmethod
+    def get_frame_provider(self, frame_provider_info: PerceptionFrameProviderInfo, /) -> IPerceptionFrameProvider: ...
 
 @typing.final
 class IPerceptionFrameProviderManager(winrt.system.Object, ImplementsIPerceptionFrameProviderManager, windows_foundation.ImplementsIClosable):

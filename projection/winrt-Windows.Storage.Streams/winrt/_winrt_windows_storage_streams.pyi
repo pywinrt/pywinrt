@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -428,7 +429,18 @@ class RandomAccessStreamReference(winrt.system.Object, ImplementsIRandomAccessSt
     def open_read_async(self) -> windows_foundation.IAsyncOperation[IRandomAccessStreamWithContentType]: ...
 
 class ImplementsIBuffer():
-    pass
+    # System.UInt32 Windows.Storage.Streams.IBuffer::get_Capacity()
+    @_property
+    @abstractmethod
+    def capacity(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Storage.Streams.IBuffer::get_Length()
+    @_property
+    @abstractmethod
+    def length(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.Storage.Streams.IBuffer::put_Length(System.UInt32)
+    @length.setter
+    @abstractmethod
+    def length(self, value: winrt.system.UInt32) -> None: ...
 
 @typing.final
 class IBuffer(winrt.system.Object, ImplementsIBuffer):
@@ -445,7 +457,10 @@ class IBuffer(winrt.system.Object, ImplementsIBuffer):
     def length(self, value: winrt.system.UInt32) -> None: ...
 
 class ImplementsIContentTypeProvider():
-    pass
+    # System.String Windows.Storage.Streams.IContentTypeProvider::get_ContentType()
+    @_property
+    @abstractmethod
+    def content_type(self) -> str: ...
 
 @typing.final
 class IContentTypeProvider(winrt.system.Object, ImplementsIContentTypeProvider):
@@ -454,7 +469,91 @@ class IContentTypeProvider(winrt.system.Object, ImplementsIContentTypeProvider):
     def content_type(self) -> str: ...
 
 class ImplementsIDataReader():
-    pass
+    # Windows.Storage.Streams.IBuffer Windows.Storage.Streams.IDataReader::DetachBuffer()
+    @abstractmethod
+    def detach_buffer(self) -> IBuffer: ...
+    # Windows.Storage.Streams.IInputStream Windows.Storage.Streams.IDataReader::DetachStream()
+    @abstractmethod
+    def detach_stream(self) -> IInputStream: ...
+    # Windows.Storage.Streams.DataReaderLoadOperation Windows.Storage.Streams.IDataReader::LoadAsync(System.UInt32)
+    @abstractmethod
+    def load_async(self, count: winrt.system.UInt32, /) -> DataReaderLoadOperation: ...
+    # System.Boolean Windows.Storage.Streams.IDataReader::ReadBoolean()
+    @abstractmethod
+    def read_boolean(self) -> bool: ...
+    # Windows.Storage.Streams.IBuffer Windows.Storage.Streams.IDataReader::ReadBuffer(System.UInt32)
+    @abstractmethod
+    def read_buffer(self, length: winrt.system.UInt32, /) -> IBuffer: ...
+    # System.Byte Windows.Storage.Streams.IDataReader::ReadByte()
+    @abstractmethod
+    def read_byte(self) -> winrt.system.UInt8: ...
+    # System.Void Windows.Storage.Streams.IDataReader::ReadBytes(System.Byte[])
+    @abstractmethod
+    def read_bytes(self, value: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
+    # Windows.Foundation.DateTime Windows.Storage.Streams.IDataReader::ReadDateTime()
+    @abstractmethod
+    def read_date_time(self) -> datetime.datetime: ...
+    # System.Double Windows.Storage.Streams.IDataReader::ReadDouble()
+    @abstractmethod
+    def read_double(self) -> winrt.system.Double: ...
+    # System.Guid Windows.Storage.Streams.IDataReader::ReadGuid()
+    @abstractmethod
+    def read_guid(self) -> _uuid.UUID: ...
+    # System.Int16 Windows.Storage.Streams.IDataReader::ReadInt16()
+    @abstractmethod
+    def read_int16(self) -> winrt.system.Int16: ...
+    # System.Int32 Windows.Storage.Streams.IDataReader::ReadInt32()
+    @abstractmethod
+    def read_int32(self) -> winrt.system.Int32: ...
+    # System.Int64 Windows.Storage.Streams.IDataReader::ReadInt64()
+    @abstractmethod
+    def read_int64(self) -> winrt.system.Int64: ...
+    # System.Single Windows.Storage.Streams.IDataReader::ReadSingle()
+    @abstractmethod
+    def read_single(self) -> winrt.system.Single: ...
+    # System.String Windows.Storage.Streams.IDataReader::ReadString(System.UInt32)
+    @abstractmethod
+    def read_string(self, code_unit_count: winrt.system.UInt32, /) -> str: ...
+    # Windows.Foundation.TimeSpan Windows.Storage.Streams.IDataReader::ReadTimeSpan()
+    @abstractmethod
+    def read_time_span(self) -> datetime.timedelta: ...
+    # System.UInt16 Windows.Storage.Streams.IDataReader::ReadUInt16()
+    @abstractmethod
+    def read_uint16(self) -> winrt.system.UInt16: ...
+    # System.UInt32 Windows.Storage.Streams.IDataReader::ReadUInt32()
+    @abstractmethod
+    def read_uint32(self) -> winrt.system.UInt32: ...
+    # System.UInt64 Windows.Storage.Streams.IDataReader::ReadUInt64()
+    @abstractmethod
+    def read_uint64(self) -> winrt.system.UInt64: ...
+    # Windows.Storage.Streams.ByteOrder Windows.Storage.Streams.IDataReader::get_ByteOrder()
+    @_property
+    @abstractmethod
+    def byte_order(self) -> ByteOrder: ...
+    # System.Void Windows.Storage.Streams.IDataReader::put_ByteOrder(Windows.Storage.Streams.ByteOrder)
+    @byte_order.setter
+    @abstractmethod
+    def byte_order(self, value: ByteOrder) -> None: ...
+    # Windows.Storage.Streams.InputStreamOptions Windows.Storage.Streams.IDataReader::get_InputStreamOptions()
+    @_property
+    @abstractmethod
+    def input_stream_options(self) -> InputStreamOptions: ...
+    # System.Void Windows.Storage.Streams.IDataReader::put_InputStreamOptions(Windows.Storage.Streams.InputStreamOptions)
+    @input_stream_options.setter
+    @abstractmethod
+    def input_stream_options(self, value: InputStreamOptions) -> None: ...
+    # System.UInt32 Windows.Storage.Streams.IDataReader::get_UnconsumedBufferLength()
+    @_property
+    @abstractmethod
+    def unconsumed_buffer_length(self) -> winrt.system.UInt32: ...
+    # Windows.Storage.Streams.UnicodeEncoding Windows.Storage.Streams.IDataReader::get_UnicodeEncoding()
+    @_property
+    @abstractmethod
+    def unicode_encoding(self) -> UnicodeEncoding: ...
+    # System.Void Windows.Storage.Streams.IDataReader::put_UnicodeEncoding(Windows.Storage.Streams.UnicodeEncoding)
+    @unicode_encoding.setter
+    @abstractmethod
+    def unicode_encoding(self, value: UnicodeEncoding) -> None: ...
 
 @typing.final
 class IDataReader(winrt.system.Object, ImplementsIDataReader):
@@ -519,7 +618,92 @@ class IDataReader(winrt.system.Object, ImplementsIDataReader):
     def unicode_encoding(self, value: UnicodeEncoding) -> None: ...
 
 class ImplementsIDataWriter():
-    pass
+    # Windows.Storage.Streams.IBuffer Windows.Storage.Streams.IDataWriter::DetachBuffer()
+    @abstractmethod
+    def detach_buffer(self) -> IBuffer: ...
+    # Windows.Storage.Streams.IOutputStream Windows.Storage.Streams.IDataWriter::DetachStream()
+    @abstractmethod
+    def detach_stream(self) -> IOutputStream: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Storage.Streams.IDataWriter::FlushAsync()
+    @abstractmethod
+    def flush_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    # System.UInt32 Windows.Storage.Streams.IDataWriter::MeasureString(System.String)
+    @abstractmethod
+    def measure_string(self, value: str, /) -> winrt.system.UInt32: ...
+    # Windows.Storage.Streams.DataWriterStoreOperation Windows.Storage.Streams.IDataWriter::StoreAsync()
+    @abstractmethod
+    def store_async(self) -> DataWriterStoreOperation: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteBoolean(System.Boolean)
+    @abstractmethod
+    def write_boolean(self, value: bool, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteBuffer(Windows.Storage.Streams.IBuffer)
+    @abstractmethod
+    def write_buffer(self, buffer: ImplementsIBuffer, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteBuffer(Windows.Storage.Streams.IBuffer,System.UInt32,System.UInt32)
+    @abstractmethod
+    def write_buffer_range(self, buffer: ImplementsIBuffer, start: winrt.system.UInt32, count: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteByte(System.Byte)
+    @abstractmethod
+    def write_byte(self, value: winrt.system.UInt8, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteBytes(System.Byte[])
+    @abstractmethod
+    def write_bytes(self, value: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteDateTime(Windows.Foundation.DateTime)
+    @abstractmethod
+    def write_date_time(self, value: datetime.datetime, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteDouble(System.Double)
+    @abstractmethod
+    def write_double(self, value: winrt.system.Double, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteGuid(System.Guid)
+    @abstractmethod
+    def write_guid(self, value: _uuid.UUID, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteInt16(System.Int16)
+    @abstractmethod
+    def write_int16(self, value: winrt.system.Int16, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteInt32(System.Int32)
+    @abstractmethod
+    def write_int32(self, value: winrt.system.Int32, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteInt64(System.Int64)
+    @abstractmethod
+    def write_int64(self, value: winrt.system.Int64, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteSingle(System.Single)
+    @abstractmethod
+    def write_single(self, value: winrt.system.Single, /) -> None: ...
+    # System.UInt32 Windows.Storage.Streams.IDataWriter::WriteString(System.String)
+    @abstractmethod
+    def write_string(self, value: str, /) -> winrt.system.UInt32: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteTimeSpan(Windows.Foundation.TimeSpan)
+    @abstractmethod
+    def write_time_span(self, value: datetime.timedelta, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteUInt16(System.UInt16)
+    @abstractmethod
+    def write_uint16(self, value: winrt.system.UInt16, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteUInt32(System.UInt32)
+    @abstractmethod
+    def write_uint32(self, value: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::WriteUInt64(System.UInt64)
+    @abstractmethod
+    def write_uint64(self, value: winrt.system.UInt64, /) -> None: ...
+    # Windows.Storage.Streams.ByteOrder Windows.Storage.Streams.IDataWriter::get_ByteOrder()
+    @_property
+    @abstractmethod
+    def byte_order(self) -> ByteOrder: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::put_ByteOrder(Windows.Storage.Streams.ByteOrder)
+    @byte_order.setter
+    @abstractmethod
+    def byte_order(self, value: ByteOrder) -> None: ...
+    # Windows.Storage.Streams.UnicodeEncoding Windows.Storage.Streams.IDataWriter::get_UnicodeEncoding()
+    @_property
+    @abstractmethod
+    def unicode_encoding(self) -> UnicodeEncoding: ...
+    # System.Void Windows.Storage.Streams.IDataWriter::put_UnicodeEncoding(Windows.Storage.Streams.UnicodeEncoding)
+    @unicode_encoding.setter
+    @abstractmethod
+    def unicode_encoding(self, value: UnicodeEncoding) -> None: ...
+    # System.UInt32 Windows.Storage.Streams.IDataWriter::get_UnstoredBufferLength()
+    @_property
+    @abstractmethod
+    def unstored_buffer_length(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IDataWriter(winrt.system.Object, ImplementsIDataWriter):
@@ -584,7 +768,9 @@ class IDataWriter(winrt.system.Object, ImplementsIDataWriter):
     def unstored_buffer_length(self) -> winrt.system.UInt32: ...
 
 class ImplementsIInputStream():
-    pass
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Storage.Streams.IBuffer,System.UInt32> Windows.Storage.Streams.IInputStream::ReadAsync(Windows.Storage.Streams.IBuffer,System.UInt32,Windows.Storage.Streams.InputStreamOptions)
+    @abstractmethod
+    def read_async(self, buffer: ImplementsIBuffer, count: winrt.system.UInt32, options: InputStreamOptions, /) -> windows_foundation.IAsyncOperationWithProgress[IBuffer, winrt.system.UInt32]: ...
 
 @typing.final
 class IInputStream(winrt.system.Object, ImplementsIInputStream, windows_foundation.ImplementsIClosable):
@@ -596,7 +782,9 @@ class IInputStream(winrt.system.Object, ImplementsIInputStream, windows_foundati
     def read_async(self, buffer: ImplementsIBuffer, count: winrt.system.UInt32, options: InputStreamOptions, /) -> windows_foundation.IAsyncOperationWithProgress[IBuffer, winrt.system.UInt32]: ...
 
 class ImplementsIInputStreamReference():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IInputStream> Windows.Storage.Streams.IInputStreamReference::OpenSequentialReadAsync()
+    @abstractmethod
+    def open_sequential_read_async(self) -> windows_foundation.IAsyncOperation[IInputStream]: ...
 
 @typing.final
 class IInputStreamReference(winrt.system.Object, ImplementsIInputStreamReference):
@@ -604,7 +792,12 @@ class IInputStreamReference(winrt.system.Object, ImplementsIInputStreamReference
     def open_sequential_read_async(self) -> windows_foundation.IAsyncOperation[IInputStream]: ...
 
 class ImplementsIOutputStream():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Storage.Streams.IOutputStream::FlushAsync()
+    @abstractmethod
+    def flush_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt32,System.UInt32> Windows.Storage.Streams.IOutputStream::WriteAsync(Windows.Storage.Streams.IBuffer)
+    @abstractmethod
+    def write_async(self, buffer: ImplementsIBuffer, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
 class IOutputStream(winrt.system.Object, ImplementsIOutputStream, windows_foundation.ImplementsIClosable):
@@ -618,7 +811,12 @@ class IOutputStream(winrt.system.Object, ImplementsIOutputStream, windows_founda
     def write_async(self, buffer: ImplementsIBuffer, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
 
 class ImplementsIPropertySetSerializer():
-    pass
+    # System.Void Windows.Storage.Streams.IPropertySetSerializer::Deserialize(Windows.Foundation.Collections.IPropertySet,Windows.Storage.Streams.IBuffer)
+    @abstractmethod
+    def deserialize(self, property_set: windows_foundation_collections.ImplementsIPropertySet, buffer: ImplementsIBuffer, /) -> None: ...
+    # Windows.Storage.Streams.IBuffer Windows.Storage.Streams.IPropertySetSerializer::Serialize(Windows.Foundation.Collections.IPropertySet)
+    @abstractmethod
+    def serialize(self, property_set: windows_foundation_collections.ImplementsIPropertySet, /) -> IBuffer: ...
 
 @typing.final
 class IPropertySetSerializer(winrt.system.Object, ImplementsIPropertySetSerializer):
@@ -628,7 +826,38 @@ class IPropertySetSerializer(winrt.system.Object, ImplementsIPropertySetSerializ
     def serialize(self, property_set: windows_foundation_collections.ImplementsIPropertySet, /) -> IBuffer: ...
 
 class ImplementsIRandomAccessStream():
-    pass
+    # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.Streams.IRandomAccessStream::CloneStream()
+    @abstractmethod
+    def clone_stream(self) -> IRandomAccessStream: ...
+    # Windows.Storage.Streams.IInputStream Windows.Storage.Streams.IRandomAccessStream::GetInputStreamAt(System.UInt64)
+    @abstractmethod
+    def get_input_stream_at(self, position: winrt.system.UInt64, /) -> IInputStream: ...
+    # Windows.Storage.Streams.IOutputStream Windows.Storage.Streams.IRandomAccessStream::GetOutputStreamAt(System.UInt64)
+    @abstractmethod
+    def get_output_stream_at(self, position: winrt.system.UInt64, /) -> IOutputStream: ...
+    # System.Void Windows.Storage.Streams.IRandomAccessStream::Seek(System.UInt64)
+    @abstractmethod
+    def seek(self, position: winrt.system.UInt64, /) -> None: ...
+    # System.Boolean Windows.Storage.Streams.IRandomAccessStream::get_CanRead()
+    @_property
+    @abstractmethod
+    def can_read(self) -> bool: ...
+    # System.Boolean Windows.Storage.Streams.IRandomAccessStream::get_CanWrite()
+    @_property
+    @abstractmethod
+    def can_write(self) -> bool: ...
+    # System.UInt64 Windows.Storage.Streams.IRandomAccessStream::get_Position()
+    @_property
+    @abstractmethod
+    def position(self) -> winrt.system.UInt64: ...
+    # System.UInt64 Windows.Storage.Streams.IRandomAccessStream::get_Size()
+    @_property
+    @abstractmethod
+    def size(self) -> winrt.system.UInt64: ...
+    # System.Void Windows.Storage.Streams.IRandomAccessStream::put_Size(System.UInt64)
+    @size.setter
+    @abstractmethod
+    def size(self, value: winrt.system.UInt64) -> None: ...
 
 @typing.final
 class IRandomAccessStream(winrt.system.Object, ImplementsIRandomAccessStream, ImplementsIOutputStream, ImplementsIInputStream, windows_foundation.ImplementsIClosable):
@@ -667,7 +896,9 @@ class IRandomAccessStream(winrt.system.Object, ImplementsIRandomAccessStream, Im
     def size(self, value: winrt.system.UInt64) -> None: ...
 
 class ImplementsIRandomAccessStreamReference():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Storage.Streams.IRandomAccessStreamReference::OpenReadAsync()
+    @abstractmethod
+    def open_read_async(self) -> windows_foundation.IAsyncOperation[IRandomAccessStreamWithContentType]: ...
 
 @typing.final
 class IRandomAccessStreamReference(winrt.system.Object, ImplementsIRandomAccessStreamReference):

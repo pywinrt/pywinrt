@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -489,7 +490,24 @@ class ICompositionInteractionSource(winrt.system.Object, ImplementsICompositionI
     pass
 
 class ImplementsIInteractionTrackerOwner():
-    pass
+    # System.Void Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner::CustomAnimationStateEntered(Microsoft.UI.Composition.Interactions.InteractionTracker,Microsoft.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs)
+    @abstractmethod
+    def custom_animation_state_entered(self, sender: InteractionTracker, args: InteractionTrackerCustomAnimationStateEnteredArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner::IdleStateEntered(Microsoft.UI.Composition.Interactions.InteractionTracker,Microsoft.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs)
+    @abstractmethod
+    def idle_state_entered(self, sender: InteractionTracker, args: InteractionTrackerIdleStateEnteredArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner::InertiaStateEntered(Microsoft.UI.Composition.Interactions.InteractionTracker,Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs)
+    @abstractmethod
+    def inertia_state_entered(self, sender: InteractionTracker, args: InteractionTrackerInertiaStateEnteredArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner::InteractingStateEntered(Microsoft.UI.Composition.Interactions.InteractionTracker,Microsoft.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs)
+    @abstractmethod
+    def interacting_state_entered(self, sender: InteractionTracker, args: InteractionTrackerInteractingStateEnteredArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner::RequestIgnored(Microsoft.UI.Composition.Interactions.InteractionTracker,Microsoft.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs)
+    @abstractmethod
+    def request_ignored(self, sender: InteractionTracker, args: InteractionTrackerRequestIgnoredArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner::ValuesChanged(Microsoft.UI.Composition.Interactions.InteractionTracker,Microsoft.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs)
+    @abstractmethod
+    def values_changed(self, sender: InteractionTracker, args: InteractionTrackerValuesChangedArgs, /) -> None: ...
 
 @typing.final
 class IInteractionTrackerOwner(winrt.system.Object, ImplementsIInteractionTrackerOwner):

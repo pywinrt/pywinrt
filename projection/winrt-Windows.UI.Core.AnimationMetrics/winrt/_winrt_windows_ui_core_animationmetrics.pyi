@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -129,7 +130,26 @@ class TranslationAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     def type(self) -> PropertyAnimationType: ...
 
 class ImplementsIPropertyAnimation():
-    pass
+    # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Control1()
+    @_property
+    @abstractmethod
+    def control1(self) -> windows_foundation.Point: ...
+    # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Control2()
+    @_property
+    @abstractmethod
+    def control2(self) -> windows_foundation.Point: ...
+    # Windows.Foundation.TimeSpan Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Delay()
+    @_property
+    @abstractmethod
+    def delay(self) -> datetime.timedelta: ...
+    # Windows.Foundation.TimeSpan Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Duration()
+    @_property
+    @abstractmethod
+    def duration(self) -> datetime.timedelta: ...
+    # Windows.UI.Core.AnimationMetrics.PropertyAnimationType Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> PropertyAnimationType: ...
 
 @typing.final
 class IPropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):

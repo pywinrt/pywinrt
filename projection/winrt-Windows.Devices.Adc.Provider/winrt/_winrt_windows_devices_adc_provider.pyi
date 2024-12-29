@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -16,7 +17,42 @@ from winrt.windows.devices.adc.provider import ProviderAdcChannelMode
 Self = typing.TypeVar('Self')
 
 class ImplementsIAdcControllerProvider():
-    pass
+    # System.Void Windows.Devices.Adc.Provider.IAdcControllerProvider::AcquireChannel(System.Int32)
+    @abstractmethod
+    def acquire_channel(self, channel: winrt.system.Int32, /) -> None: ...
+    # System.Boolean Windows.Devices.Adc.Provider.IAdcControllerProvider::IsChannelModeSupported(Windows.Devices.Adc.Provider.ProviderAdcChannelMode)
+    @abstractmethod
+    def is_channel_mode_supported(self, channel_mode: ProviderAdcChannelMode, /) -> bool: ...
+    # System.Int32 Windows.Devices.Adc.Provider.IAdcControllerProvider::ReadValue(System.Int32)
+    @abstractmethod
+    def read_value(self, channel_number: winrt.system.Int32, /) -> winrt.system.Int32: ...
+    # System.Void Windows.Devices.Adc.Provider.IAdcControllerProvider::ReleaseChannel(System.Int32)
+    @abstractmethod
+    def release_channel(self, channel: winrt.system.Int32, /) -> None: ...
+    # System.Int32 Windows.Devices.Adc.Provider.IAdcControllerProvider::get_ChannelCount()
+    @_property
+    @abstractmethod
+    def channel_count(self) -> winrt.system.Int32: ...
+    # Windows.Devices.Adc.Provider.ProviderAdcChannelMode Windows.Devices.Adc.Provider.IAdcControllerProvider::get_ChannelMode()
+    @_property
+    @abstractmethod
+    def channel_mode(self) -> ProviderAdcChannelMode: ...
+    # System.Void Windows.Devices.Adc.Provider.IAdcControllerProvider::put_ChannelMode(Windows.Devices.Adc.Provider.ProviderAdcChannelMode)
+    @channel_mode.setter
+    @abstractmethod
+    def channel_mode(self, value: ProviderAdcChannelMode) -> None: ...
+    # System.Int32 Windows.Devices.Adc.Provider.IAdcControllerProvider::get_MaxValue()
+    @_property
+    @abstractmethod
+    def max_value(self) -> winrt.system.Int32: ...
+    # System.Int32 Windows.Devices.Adc.Provider.IAdcControllerProvider::get_MinValue()
+    @_property
+    @abstractmethod
+    def min_value(self) -> winrt.system.Int32: ...
+    # System.Int32 Windows.Devices.Adc.Provider.IAdcControllerProvider::get_ResolutionInBits()
+    @_property
+    @abstractmethod
+    def resolution_in_bits(self) -> winrt.system.Int32: ...
 
 @typing.final
 class IAdcControllerProvider(winrt.system.Object, ImplementsIAdcControllerProvider):
@@ -48,7 +84,9 @@ class IAdcControllerProvider(winrt.system.Object, ImplementsIAdcControllerProvid
     def resolution_in_bits(self) -> winrt.system.Int32: ...
 
 class ImplementsIAdcProvider():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Adc.Provider.IAdcControllerProvider> Windows.Devices.Adc.Provider.IAdcProvider::GetControllers()
+    @abstractmethod
+    def get_controllers(self) -> typing.Sequence[IAdcControllerProvider]: ...
 
 @typing.final
 class IAdcProvider(winrt.system.Object, ImplementsIAdcProvider):

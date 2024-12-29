@@ -1528,7 +1528,8 @@ static class WriterExtensions
         ProjectedMethod method,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        string self = "self"
+        string self = "self",
+        bool isAbstract = false
     )
     {
         var nullabilityInfo = nullabilityMap.GetValueOrDefault(
@@ -1542,6 +1543,11 @@ static class WriterExtensions
         if (method.IsDeprecated)
         {
             w.WriteLine($"# @deprecated(\"{method.DeprecatedMessage}\")");
+        }
+
+        if (isAbstract)
+        {
+            w.WriteLine("@abstractmethod");
         }
 
         // HACK: There are a couple of problematic methods. Subclasses of
@@ -1568,7 +1574,8 @@ static class WriterExtensions
         ProjectedProperty prop,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        string self = "self"
+        string self = "self",
+        bool isAbstract = false
     )
     {
         var name = prop.Name.ToPythonIdentifier(isTypeMethod: true);
@@ -1605,6 +1612,11 @@ static class WriterExtensions
             w.WriteLine("@typing.final");
         }
 
+        if (isAbstract)
+        {
+            w.WriteLine("@abstractmethod");
+        }
+
         w.WriteLine($"def {name}({self}) -> {propType}: ...");
 
         if (prop.SetMethod is not null)
@@ -1624,6 +1636,11 @@ static class WriterExtensions
             if (type.IsComposable)
             {
                 w.WriteLine("@typing.final");
+            }
+
+            if (isAbstract)
+            {
+                w.WriteLine("@abstractmethod");
             }
 
             w.WriteLine($"def {name}({self}, value: {setType}) -> None: ...");

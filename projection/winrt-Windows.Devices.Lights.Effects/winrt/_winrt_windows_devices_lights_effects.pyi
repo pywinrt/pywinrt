@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -287,7 +288,14 @@ class LampArrayUpdateRequestedEventArgs(winrt.system.Object):
     def since_started(self) -> datetime.timedelta: ...
 
 class ImplementsILampArrayEffect():
-    pass
+    # System.Int32 Windows.Devices.Lights.Effects.ILampArrayEffect::get_ZIndex()
+    @_property
+    @abstractmethod
+    def z_index(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Devices.Lights.Effects.ILampArrayEffect::put_ZIndex(System.Int32)
+    @z_index.setter
+    @abstractmethod
+    def z_index(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
 class ILampArrayEffect(winrt.system.Object, ImplementsILampArrayEffect):

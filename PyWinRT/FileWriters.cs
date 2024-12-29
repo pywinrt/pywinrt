@@ -149,6 +149,12 @@ static class FileWriters
         w.WriteLine("import typing");
         w.WriteLine("import uuid as _uuid");
         w.WriteLine("from builtins import property as _property");
+
+        if (members.Interfaces.Count != 0)
+        {
+            w.WriteLine("from abc import abstractmethod");
+        }
+
         w.WriteBlankLine();
         w.WriteLine("import winrt._winrt");
         w.WriteLine("import winrt.system");

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -606,7 +607,28 @@ class HttpTransportInformation(winrt.system.Object, windows_foundation.Implement
     def server_intermediate_certificates(self) -> typing.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
 class ImplementsIHttpContent():
-    pass
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt64,System.UInt64> Windows.Web.Http.IHttpContent::BufferAllAsync()
+    @abstractmethod
+    def buffer_all_async(self) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt64, winrt.system.UInt64]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Storage.Streams.IBuffer,System.UInt64> Windows.Web.Http.IHttpContent::ReadAsBufferAsync()
+    @abstractmethod
+    def read_as_buffer_async(self) -> windows_foundation.IAsyncOperationWithProgress[windows_storage_streams.IBuffer, winrt.system.UInt64]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Storage.Streams.IInputStream,System.UInt64> Windows.Web.Http.IHttpContent::ReadAsInputStreamAsync()
+    @abstractmethod
+    def read_as_input_stream_async(self) -> windows_foundation.IAsyncOperationWithProgress[windows_storage_streams.IInputStream, winrt.system.UInt64]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.String,System.UInt64> Windows.Web.Http.IHttpContent::ReadAsStringAsync()
+    @abstractmethod
+    def read_as_string_async(self) -> windows_foundation.IAsyncOperationWithProgress[str, winrt.system.UInt64]: ...
+    # System.Boolean Windows.Web.Http.IHttpContent::TryComputeLength(System.UInt64&)
+    @abstractmethod
+    def try_compute_length(self) -> typing.Tuple[bool, winrt.system.UInt64]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt64,System.UInt64> Windows.Web.Http.IHttpContent::WriteToStreamAsync(Windows.Storage.Streams.IOutputStream)
+    @abstractmethod
+    def write_to_stream_async(self, output_stream: windows_storage_streams.ImplementsIOutputStream, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt64, winrt.system.UInt64]: ...
+    # Windows.Web.Http.Headers.HttpContentHeaderCollection Windows.Web.Http.IHttpContent::get_Headers()
+    @_property
+    @abstractmethod
+    def headers(self) -> windows_web_http_headers.HttpContentHeaderCollection: ...
 
 @typing.final
 class IHttpContent(winrt.system.Object, ImplementsIHttpContent, windows_foundation.ImplementsIClosable):

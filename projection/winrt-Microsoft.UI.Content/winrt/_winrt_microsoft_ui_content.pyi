@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -586,7 +587,26 @@ class DesktopSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windo
     def is_closed(self) -> bool: ...
 
 class ImplementsIContentSiteBridge():
-    pass
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.IContentSiteBridge::get_DispatcherQueue()
+    @_property
+    @abstractmethod
+    def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection> Microsoft.UI.Content.IContentSiteBridge::get_LayoutDirectionOverride()
+    @_property
+    @abstractmethod
+    def layout_direction_override(self) -> typing.Optional[ContentLayoutDirection]: ...
+    # System.Void Microsoft.UI.Content.IContentSiteBridge::put_LayoutDirectionOverride(Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection>)
+    @layout_direction_override.setter
+    @abstractmethod
+    def layout_direction_override(self, value: typing.Optional[ContentLayoutDirection]) -> None: ...
+    # System.Single Microsoft.UI.Content.IContentSiteBridge::get_OverrideScale()
+    @_property
+    @abstractmethod
+    def override_scale(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Content.IContentSiteBridge::put_OverrideScale(System.Single)
+    @override_scale.setter
+    @abstractmethod
+    def override_scale(self, value: winrt.system.Single) -> None: ...
 
 @typing.final
 class IContentSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windows_foundation.ImplementsIClosable):

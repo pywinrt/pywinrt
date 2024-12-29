@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -50,7 +51,26 @@ class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesCo
     pass
 
 class ImplementsILowLevelDevicesAggregateProvider():
-    pass
+    # Windows.Devices.Adc.Provider.IAdcControllerProvider Windows.Devices.ILowLevelDevicesAggregateProvider::get_AdcControllerProvider()
+    @_property
+    @abstractmethod
+    def adc_controller_provider(self) -> windows_devices_adc_provider.IAdcControllerProvider: ...
+    # Windows.Devices.Gpio.Provider.IGpioControllerProvider Windows.Devices.ILowLevelDevicesAggregateProvider::get_GpioControllerProvider()
+    @_property
+    @abstractmethod
+    def gpio_controller_provider(self) -> windows_devices_gpio_provider.IGpioControllerProvider: ...
+    # Windows.Devices.I2c.Provider.II2cControllerProvider Windows.Devices.ILowLevelDevicesAggregateProvider::get_I2cControllerProvider()
+    @_property
+    @abstractmethod
+    def i2c_controller_provider(self) -> windows_devices_i2c_provider.II2cControllerProvider: ...
+    # Windows.Devices.Pwm.Provider.IPwmControllerProvider Windows.Devices.ILowLevelDevicesAggregateProvider::get_PwmControllerProvider()
+    @_property
+    @abstractmethod
+    def pwm_controller_provider(self) -> windows_devices_pwm_provider.IPwmControllerProvider: ...
+    # Windows.Devices.Spi.Provider.ISpiControllerProvider Windows.Devices.ILowLevelDevicesAggregateProvider::get_SpiControllerProvider()
+    @_property
+    @abstractmethod
+    def spi_controller_provider(self) -> windows_devices_spi_provider.ISpiControllerProvider: ...
 
 @typing.final
 class ILowLevelDevicesAggregateProvider(winrt.system.Object, ImplementsILowLevelDevicesAggregateProvider):

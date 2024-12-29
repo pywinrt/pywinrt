@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -191,7 +192,12 @@ class UnhandledErrorDetectedEventArgs(winrt.system.Object):
     def unhandled_error(self) -> UnhandledError: ...
 
 class ImplementsICoreApplicationUnhandledError():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Core.ICoreApplicationUnhandledError::add_UnhandledErrorDetected(Windows.Foundation.EventHandler`1<Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs>)
+    @abstractmethod
+    def add_unhandled_error_detected(self, handler: windows_foundation.EventHandler[UnhandledErrorDetectedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.Core.ICoreApplicationUnhandledError::remove_UnhandledErrorDetected(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_unhandled_error_detected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class ICoreApplicationUnhandledError(winrt.system.Object, ImplementsICoreApplicationUnhandledError):
@@ -201,7 +207,21 @@ class ICoreApplicationUnhandledError(winrt.system.Object, ImplementsICoreApplica
     def remove_unhandled_error_detected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ImplementsIFrameworkView():
-    pass
+    # System.Void Windows.ApplicationModel.Core.IFrameworkView::Initialize(Windows.ApplicationModel.Core.CoreApplicationView)
+    @abstractmethod
+    def initialize(self, application_view: CoreApplicationView, /) -> None: ...
+    # System.Void Windows.ApplicationModel.Core.IFrameworkView::Load(System.String)
+    @abstractmethod
+    def load(self, entry_point: str, /) -> None: ...
+    # System.Void Windows.ApplicationModel.Core.IFrameworkView::Run()
+    @abstractmethod
+    def run(self) -> None: ...
+    # System.Void Windows.ApplicationModel.Core.IFrameworkView::SetWindow(Windows.UI.Core.CoreWindow)
+    @abstractmethod
+    def set_window(self, window: windows_ui_core.CoreWindow, /) -> None: ...
+    # System.Void Windows.ApplicationModel.Core.IFrameworkView::Uninitialize()
+    @abstractmethod
+    def uninitialize(self) -> None: ...
 
 @typing.final
 class IFrameworkView(winrt.system.Object, ImplementsIFrameworkView):
@@ -217,7 +237,9 @@ class IFrameworkView(winrt.system.Object, ImplementsIFrameworkView):
     def uninitialize(self) -> None: ...
 
 class ImplementsIFrameworkViewSource():
-    pass
+    # Windows.ApplicationModel.Core.IFrameworkView Windows.ApplicationModel.Core.IFrameworkViewSource::CreateView()
+    @abstractmethod
+    def create_view(self) -> IFrameworkView: ...
 
 @typing.final
 class IFrameworkViewSource(winrt.system.Object, ImplementsIFrameworkViewSource):

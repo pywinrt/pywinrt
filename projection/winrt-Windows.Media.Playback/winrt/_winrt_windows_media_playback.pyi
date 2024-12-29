@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1210,7 +1211,14 @@ class TimedMetadataPresentationModeChangedEventArgs(winrt.system.Object):
     def track(self) -> windows_media_core.TimedMetadataTrack: ...
 
 class ImplementsIMediaEnginePlaybackSource():
-    pass
+    # System.Void Windows.Media.Playback.IMediaEnginePlaybackSource::SetPlaybackSource(Windows.Media.Playback.IMediaPlaybackSource)
+    # @deprecated("Use MediaPlayer instead of MediaEngine. For more info, see MSDN.")
+    @abstractmethod
+    def set_playback_source(self, source: ImplementsIMediaPlaybackSource, /) -> None: ...
+    # Windows.Media.Playback.MediaPlaybackItem Windows.Media.Playback.IMediaEnginePlaybackSource::get_CurrentItem()
+    @_property
+    @abstractmethod
+    def current_item(self) -> MediaPlaybackItem: ...
 
 @typing.final
 class IMediaEnginePlaybackSource(winrt.system.Object, ImplementsIMediaEnginePlaybackSource):

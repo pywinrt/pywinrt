@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1091,7 +1092,16 @@ class TouchpadGlobalActionEventArgs(winrt.system.Object):
     def action(self) -> TouchpadGlobalAction: ...
 
 class ImplementsIPointerPointTransform():
-    pass
+    # Windows.Foundation.Rect Windows.UI.Input.IPointerPointTransform::TransformBounds(Windows.Foundation.Rect)
+    @abstractmethod
+    def transform_bounds(self, rect: windows_foundation.Rect, /) -> windows_foundation.Rect: ...
+    # System.Boolean Windows.UI.Input.IPointerPointTransform::TryTransform(Windows.Foundation.Point,Windows.Foundation.Point&)
+    @abstractmethod
+    def try_transform(self, in_point: windows_foundation.Point, /) -> typing.Tuple[bool, windows_foundation.Point]: ...
+    # Windows.UI.Input.IPointerPointTransform Windows.UI.Input.IPointerPointTransform::get_Inverse()
+    @_property
+    @abstractmethod
+    def inverse(self) -> IPointerPointTransform: ...
 
 @typing.final
 class IPointerPointTransform(winrt.system.Object, ImplementsIPointerPointTransform):

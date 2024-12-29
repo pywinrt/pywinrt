@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -359,7 +360,9 @@ class IPrintDocumentSource(winrt.system.Object, ImplementsIPrintDocumentSource):
     pass
 
 class ImplementsIPrintTaskOptionsCore():
-    pass
+    # Windows.Graphics.Printing.PrintPageDescription Windows.Graphics.Printing.IPrintTaskOptionsCore::GetPageDescription(System.UInt32)
+    @abstractmethod
+    def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
 
 @typing.final
 class IPrintTaskOptionsCore(winrt.system.Object, ImplementsIPrintTaskOptionsCore):
@@ -367,7 +370,102 @@ class IPrintTaskOptionsCore(winrt.system.Object, ImplementsIPrintTaskOptionsCore
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
 
 class ImplementsIPrintTaskOptionsCoreProperties():
-    pass
+    # Windows.Graphics.Printing.PrintBinding Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_Binding()
+    @_property
+    @abstractmethod
+    def binding(self) -> PrintBinding: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_Binding(Windows.Graphics.Printing.PrintBinding)
+    @binding.setter
+    @abstractmethod
+    def binding(self, value: PrintBinding) -> None: ...
+    # Windows.Graphics.Printing.PrintCollation Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_Collation()
+    @_property
+    @abstractmethod
+    def collation(self) -> PrintCollation: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_Collation(Windows.Graphics.Printing.PrintCollation)
+    @collation.setter
+    @abstractmethod
+    def collation(self, value: PrintCollation) -> None: ...
+    # Windows.Graphics.Printing.PrintColorMode Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_ColorMode()
+    @_property
+    @abstractmethod
+    def color_mode(self) -> PrintColorMode: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_ColorMode(Windows.Graphics.Printing.PrintColorMode)
+    @color_mode.setter
+    @abstractmethod
+    def color_mode(self, value: PrintColorMode) -> None: ...
+    # Windows.Graphics.Printing.PrintDuplex Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_Duplex()
+    @_property
+    @abstractmethod
+    def duplex(self) -> PrintDuplex: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_Duplex(Windows.Graphics.Printing.PrintDuplex)
+    @duplex.setter
+    @abstractmethod
+    def duplex(self, value: PrintDuplex) -> None: ...
+    # Windows.Graphics.Printing.PrintHolePunch Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_HolePunch()
+    @_property
+    @abstractmethod
+    def hole_punch(self) -> PrintHolePunch: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_HolePunch(Windows.Graphics.Printing.PrintHolePunch)
+    @hole_punch.setter
+    @abstractmethod
+    def hole_punch(self, value: PrintHolePunch) -> None: ...
+    # System.UInt32 Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_MaxCopies()
+    @_property
+    @abstractmethod
+    def max_copies(self) -> winrt.system.UInt32: ...
+    # Windows.Graphics.Printing.PrintMediaSize Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_MediaSize()
+    @_property
+    @abstractmethod
+    def media_size(self) -> PrintMediaSize: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_MediaSize(Windows.Graphics.Printing.PrintMediaSize)
+    @media_size.setter
+    @abstractmethod
+    def media_size(self, value: PrintMediaSize) -> None: ...
+    # Windows.Graphics.Printing.PrintMediaType Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_MediaType()
+    @_property
+    @abstractmethod
+    def media_type(self) -> PrintMediaType: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_MediaType(Windows.Graphics.Printing.PrintMediaType)
+    @media_type.setter
+    @abstractmethod
+    def media_type(self, value: PrintMediaType) -> None: ...
+    # System.UInt32 Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_MinCopies()
+    @_property
+    @abstractmethod
+    def min_copies(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_NumberOfCopies()
+    @_property
+    @abstractmethod
+    def number_of_copies(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_NumberOfCopies(System.UInt32)
+    @number_of_copies.setter
+    @abstractmethod
+    def number_of_copies(self, value: winrt.system.UInt32) -> None: ...
+    # Windows.Graphics.Printing.PrintOrientation Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_Orientation()
+    @_property
+    @abstractmethod
+    def orientation(self) -> PrintOrientation: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_Orientation(Windows.Graphics.Printing.PrintOrientation)
+    @orientation.setter
+    @abstractmethod
+    def orientation(self, value: PrintOrientation) -> None: ...
+    # Windows.Graphics.Printing.PrintQuality Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_PrintQuality()
+    @_property
+    @abstractmethod
+    def print_quality(self) -> PrintQuality: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_PrintQuality(Windows.Graphics.Printing.PrintQuality)
+    @print_quality.setter
+    @abstractmethod
+    def print_quality(self, value: PrintQuality) -> None: ...
+    # Windows.Graphics.Printing.PrintStaple Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_Staple()
+    @_property
+    @abstractmethod
+    def staple(self) -> PrintStaple: ...
+    # System.Void Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::put_Staple(Windows.Graphics.Printing.PrintStaple)
+    @staple.setter
+    @abstractmethod
+    def staple(self, value: PrintStaple) -> None: ...
 
 @typing.final
 class IPrintTaskOptionsCoreProperties(winrt.system.Object, ImplementsIPrintTaskOptionsCoreProperties):
@@ -445,7 +543,10 @@ class IPrintTaskOptionsCoreProperties(winrt.system.Object, ImplementsIPrintTaskO
     def staple(self, value: PrintStaple) -> None: ...
 
 class ImplementsIPrintTaskOptionsCoreUIConfiguration():
-    pass
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration::get_DisplayedOptions()
+    @_property
+    @abstractmethod
+    def displayed_options(self) -> typing.MutableSequence[str]: ...
 
 @typing.final
 class IPrintTaskOptionsCoreUIConfiguration(winrt.system.Object, ImplementsIPrintTaskOptionsCoreUIConfiguration):

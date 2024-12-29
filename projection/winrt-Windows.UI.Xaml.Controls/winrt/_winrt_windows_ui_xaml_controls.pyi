@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -13046,7 +13047,14 @@ class WebViewWebResourceRequestedEventArgs(winrt.system.Object):
     def request(self) -> windows_web_http.HttpRequestMessage: ...
 
 class ImplementsICommandBarElement():
-    pass
+    # System.Boolean Windows.UI.Xaml.Controls.ICommandBarElement::get_IsCompact()
+    @_property
+    @abstractmethod
+    def is_compact(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ICommandBarElement::put_IsCompact(System.Boolean)
+    @is_compact.setter
+    @abstractmethod
+    def is_compact(self, value: bool) -> None: ...
 
 @typing.final
 class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
@@ -13058,7 +13066,18 @@ class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
     def is_compact(self, value: bool) -> None: ...
 
 class ImplementsICommandBarElement2():
-    pass
+    # System.Int32 Windows.UI.Xaml.Controls.ICommandBarElement2::get_DynamicOverflowOrder()
+    @_property
+    @abstractmethod
+    def dynamic_overflow_order(self) -> winrt.system.Int32: ...
+    # System.Void Windows.UI.Xaml.Controls.ICommandBarElement2::put_DynamicOverflowOrder(System.Int32)
+    @dynamic_overflow_order.setter
+    @abstractmethod
+    def dynamic_overflow_order(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ICommandBarElement2::get_IsInOverflow()
+    @_property
+    @abstractmethod
+    def is_in_overflow(self) -> bool: ...
 
 @typing.final
 class ICommandBarElement2(winrt.system.Object, ImplementsICommandBarElement2):
@@ -13073,7 +13092,9 @@ class ICommandBarElement2(winrt.system.Object, ImplementsICommandBarElement2):
     def is_in_overflow(self) -> bool: ...
 
 class ImplementsIInsertionPanel():
-    pass
+    # System.Void Windows.UI.Xaml.Controls.IInsertionPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
+    @abstractmethod
+    def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
 
 @typing.final
 class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
@@ -13081,7 +13102,18 @@ class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
 
 class ImplementsIItemContainerMapping():
-    pass
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.IItemContainerMapping::ContainerFromIndex(System.Int32)
+    @abstractmethod
+    def container_from_index(self, index: winrt.system.Int32, /) -> windows_ui_xaml.DependencyObject: ...
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.IItemContainerMapping::ContainerFromItem(System.Object)
+    @abstractmethod
+    def container_from_item(self, item: winrt.system.Object, /) -> windows_ui_xaml.DependencyObject: ...
+    # System.Int32 Windows.UI.Xaml.Controls.IItemContainerMapping::IndexFromContainer(Windows.UI.Xaml.DependencyObject)
+    @abstractmethod
+    def index_from_container(self, container: windows_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
+    # System.Object Windows.UI.Xaml.Controls.IItemContainerMapping::ItemFromContainer(Windows.UI.Xaml.DependencyObject)
+    @abstractmethod
+    def item_from_container(self, container: windows_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
 
 @typing.final
 class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping):
@@ -13095,7 +13127,9 @@ class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping
     def item_from_container(self, container: windows_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
 
 class ImplementsINavigate():
-    pass
+    # System.Boolean Windows.UI.Xaml.Controls.INavigate::Navigate(Windows.UI.Xaml.Interop.TypeName)
+    @abstractmethod
+    def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
 
 @typing.final
 class INavigate(winrt.system.Object, ImplementsINavigate):
@@ -13103,7 +13137,16 @@ class INavigate(winrt.system.Object, ImplementsINavigate):
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
 
 class ImplementsIScrollAnchorProvider():
-    pass
+    # System.Void Windows.UI.Xaml.Controls.IScrollAnchorProvider::RegisterAnchorCandidate(Windows.UI.Xaml.UIElement)
+    @abstractmethod
+    def register_anchor_candidate(self, element: windows_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.IScrollAnchorProvider::UnregisterAnchorCandidate(Windows.UI.Xaml.UIElement)
+    @abstractmethod
+    def unregister_anchor_candidate(self, element: windows_ui_xaml.UIElement, /) -> None: ...
+    # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.IScrollAnchorProvider::get_CurrentAnchor()
+    @_property
+    @abstractmethod
+    def current_anchor(self) -> windows_ui_xaml.UIElement: ...
 
 @typing.final
 class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider):
@@ -13116,7 +13159,51 @@ class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider
     def current_anchor(self) -> windows_ui_xaml.UIElement: ...
 
 class ImplementsISemanticZoomInformation():
-    pass
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChange()
+    @abstractmethod
+    def complete_view_change(self) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChangeFrom(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def complete_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChangeTo(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def complete_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::InitializeViewChange()
+    @abstractmethod
+    def initialize_view_change(self) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::MakeVisible(Windows.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def make_visible(self, item: SemanticZoomLocation, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::StartViewChangeFrom(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def start_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::StartViewChangeTo(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def start_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ISemanticZoomInformation::get_IsActiveView()
+    @_property
+    @abstractmethod
+    def is_active_view(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::put_IsActiveView(System.Boolean)
+    @is_active_view.setter
+    @abstractmethod
+    def is_active_view(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ISemanticZoomInformation::get_IsZoomedInView()
+    @_property
+    @abstractmethod
+    def is_zoomed_in_view(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::put_IsZoomedInView(System.Boolean)
+    @is_zoomed_in_view.setter
+    @abstractmethod
+    def is_zoomed_in_view(self, value: bool) -> None: ...
+    # Windows.UI.Xaml.Controls.SemanticZoom Windows.UI.Xaml.Controls.ISemanticZoomInformation::get_SemanticZoomOwner()
+    @_property
+    @abstractmethod
+    def semantic_zoom_owner(self) -> SemanticZoom: ...
+    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::put_SemanticZoomOwner(Windows.UI.Xaml.Controls.SemanticZoom)
+    @semantic_zoom_owner.setter
+    @abstractmethod
+    def semantic_zoom_owner(self, value: SemanticZoom) -> None: ...
 
 @typing.final
 class ISemanticZoomInformation(winrt.system.Object, ImplementsISemanticZoomInformation):

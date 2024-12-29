@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -475,7 +476,49 @@ class UploadOperation(winrt.system.Object, ImplementsIBackgroundTransferOperatio
     def transfer_group(self) -> BackgroundTransferGroup: ...
 
 class ImplementsIBackgroundTransferBase():
-    pass
+    # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::SetRequestHeader(System.String,System.String)
+    @abstractmethod
+    def set_request_header(self, header_name: str, header_value: str, /) -> None: ...
+    # Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::get_CostPolicy()
+    @_property
+    @abstractmethod
+    def cost_policy(self) -> BackgroundTransferCostPolicy: ...
+    # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::put_CostPolicy(Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy)
+    @cost_policy.setter
+    @abstractmethod
+    def cost_policy(self, value: BackgroundTransferCostPolicy) -> None: ...
+    # System.String Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::get_Group()
+    @_property
+    @abstractmethod
+    def group(self) -> str: ...
+    # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::put_Group(System.String)
+    @group.setter
+    @abstractmethod
+    def group(self, value: str) -> None: ...
+    # System.String Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::get_Method()
+    @_property
+    @abstractmethod
+    def method(self) -> str: ...
+    # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::put_Method(System.String)
+    @method.setter
+    @abstractmethod
+    def method(self, value: str) -> None: ...
+    # Windows.Security.Credentials.PasswordCredential Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::get_ProxyCredential()
+    @_property
+    @abstractmethod
+    def proxy_credential(self) -> windows_security_credentials.PasswordCredential: ...
+    # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::put_ProxyCredential(Windows.Security.Credentials.PasswordCredential)
+    @proxy_credential.setter
+    @abstractmethod
+    def proxy_credential(self, value: windows_security_credentials.PasswordCredential) -> None: ...
+    # Windows.Security.Credentials.PasswordCredential Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::get_ServerCredential()
+    @_property
+    @abstractmethod
+    def server_credential(self) -> windows_security_credentials.PasswordCredential: ...
+    # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::put_ServerCredential(Windows.Security.Credentials.PasswordCredential)
+    @server_credential.setter
+    @abstractmethod
+    def server_credential(self, value: windows_security_credentials.PasswordCredential) -> None: ...
 
 @typing.final
 class IBackgroundTransferBase(winrt.system.Object, ImplementsIBackgroundTransferBase):
@@ -513,7 +556,12 @@ class IBackgroundTransferBase(winrt.system.Object, ImplementsIBackgroundTransfer
     def server_credential(self, value: windows_security_credentials.PasswordCredential) -> None: ...
 
 class ImplementsIBackgroundTransferContentPartFactory():
-    pass
+    # Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory::CreateWithName(System.String)
+    @abstractmethod
+    def create_with_name(self, name: str, /) -> BackgroundTransferContentPart: ...
+    # Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory::CreateWithNameAndFileName(System.String,System.String)
+    @abstractmethod
+    def create_with_name_and_file_name(self, name: str, file_name: str, /) -> BackgroundTransferContentPart: ...
 
 @typing.final
 class IBackgroundTransferContentPartFactory(winrt.system.Object, ImplementsIBackgroundTransferContentPartFactory):
@@ -523,7 +571,36 @@ class IBackgroundTransferContentPartFactory(winrt.system.Object, ImplementsIBack
     def create_with_name_and_file_name(self, name: str, file_name: str, /) -> BackgroundTransferContentPart: ...
 
 class ImplementsIBackgroundTransferOperation():
-    pass
+    # Windows.Networking.BackgroundTransfer.ResponseInformation Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::GetResponseInformation()
+    @abstractmethod
+    def get_response_information(self) -> ResponseInformation: ...
+    # Windows.Storage.Streams.IInputStream Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::GetResultStreamAt(System.UInt64)
+    @abstractmethod
+    def get_result_stream_at(self, position: winrt.system.UInt64, /) -> windows_storage_streams.IInputStream: ...
+    # Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::get_CostPolicy()
+    @_property
+    @abstractmethod
+    def cost_policy(self) -> BackgroundTransferCostPolicy: ...
+    # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::put_CostPolicy(Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy)
+    @cost_policy.setter
+    @abstractmethod
+    def cost_policy(self, value: BackgroundTransferCostPolicy) -> None: ...
+    # System.String Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::get_Group()
+    @_property
+    @abstractmethod
+    def group(self) -> str: ...
+    # System.Guid Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::get_Guid()
+    @_property
+    @abstractmethod
+    def guid(self) -> _uuid.UUID: ...
+    # System.String Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::get_Method()
+    @_property
+    @abstractmethod
+    def method(self) -> str: ...
+    # Windows.Foundation.Uri Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::get_RequestedUri()
+    @_property
+    @abstractmethod
+    def requested_uri(self) -> windows_foundation.Uri: ...
 
 @typing.final
 class IBackgroundTransferOperation(winrt.system.Object, ImplementsIBackgroundTransferOperation):
@@ -551,7 +628,14 @@ class IBackgroundTransferOperation(winrt.system.Object, ImplementsIBackgroundTra
     def requested_uri(self) -> windows_foundation.Uri: ...
 
 class ImplementsIBackgroundTransferOperationPriority():
-    pass
+    # Windows.Networking.BackgroundTransfer.BackgroundTransferPriority Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority::get_Priority()
+    @_property
+    @abstractmethod
+    def priority(self) -> BackgroundTransferPriority: ...
+    # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority::put_Priority(Windows.Networking.BackgroundTransfer.BackgroundTransferPriority)
+    @priority.setter
+    @abstractmethod
+    def priority(self, value: BackgroundTransferPriority) -> None: ...
 
 @typing.final
 class IBackgroundTransferOperationPriority(winrt.system.Object, ImplementsIBackgroundTransferOperationPriority):

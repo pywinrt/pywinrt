@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -658,7 +659,30 @@ class VolumeInfo(winrt.system.Object):
     def system_volume(self) -> winrt.system.UInt32: ...
 
 class ImplementsIAccessoryNotificationTriggerDetails():
-    pass
+    # Windows.Phone.Notification.Management.AccessoryNotificationType Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_AccessoryNotificationType()
+    @_property
+    @abstractmethod
+    def accessory_notification_type(self) -> AccessoryNotificationType: ...
+    # System.String Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_AppDisplayName()
+    @_property
+    @abstractmethod
+    def app_display_name(self) -> str: ...
+    # System.String Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_AppId()
+    @_property
+    @abstractmethod
+    def app_id(self) -> str: ...
+    # System.Boolean Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_StartedProcessing()
+    @_property
+    @abstractmethod
+    def started_processing(self) -> bool: ...
+    # System.Void Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::put_StartedProcessing(System.Boolean)
+    @started_processing.setter
+    @abstractmethod
+    def started_processing(self, value: bool) -> None: ...
+    # Windows.Foundation.DateTime Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_TimeCreated()
+    @_property
+    @abstractmethod
+    def time_created(self) -> datetime.datetime: ...
 
 @typing.final
 class IAccessoryNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):

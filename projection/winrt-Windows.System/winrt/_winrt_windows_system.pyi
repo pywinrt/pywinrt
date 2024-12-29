@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -902,7 +903,14 @@ class UserWatcher(winrt.system.Object):
     def status(self) -> UserWatcherStatus: ...
 
 class ImplementsILauncherViewOptions():
-    pass
+    # Windows.UI.ViewManagement.ViewSizePreference Windows.System.ILauncherViewOptions::get_DesiredRemainingView()
+    @_property
+    @abstractmethod
+    def desired_remaining_view(self) -> windows_ui_viewmanagement.ViewSizePreference: ...
+    # System.Void Windows.System.ILauncherViewOptions::put_DesiredRemainingView(Windows.UI.ViewManagement.ViewSizePreference)
+    @desired_remaining_view.setter
+    @abstractmethod
+    def desired_remaining_view(self, value: windows_ui_viewmanagement.ViewSizePreference) -> None: ...
 
 @typing.final
 class ILauncherViewOptions(winrt.system.Object, ImplementsILauncherViewOptions):

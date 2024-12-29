@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -133,7 +134,15 @@ class XusbGameControllerProvider(winrt.system.Object, ImplementsIGameControllerP
     def is_connected(self) -> bool: ...
 
 class ImplementsICustomGameControllerFactory():
-    pass
+    # System.Object Windows.Gaming.Input.Custom.ICustomGameControllerFactory::CreateGameController(Windows.Gaming.Input.Custom.IGameControllerProvider)
+    @abstractmethod
+    def create_game_controller(self, provider: ImplementsIGameControllerProvider, /) -> winrt.system.Object: ...
+    # System.Void Windows.Gaming.Input.Custom.ICustomGameControllerFactory::OnGameControllerAdded(Windows.Gaming.Input.IGameController)
+    @abstractmethod
+    def on_game_controller_added(self, value: windows_gaming_input.ImplementsIGameController, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.ICustomGameControllerFactory::OnGameControllerRemoved(Windows.Gaming.Input.IGameController)
+    @abstractmethod
+    def on_game_controller_removed(self, value: windows_gaming_input.ImplementsIGameController, /) -> None: ...
 
 @typing.final
 class ICustomGameControllerFactory(winrt.system.Object, ImplementsICustomGameControllerFactory):
@@ -145,7 +154,12 @@ class ICustomGameControllerFactory(winrt.system.Object, ImplementsICustomGameCon
     def on_game_controller_removed(self, value: windows_gaming_input.ImplementsIGameController, /) -> None: ...
 
 class ImplementsIGameControllerInputSink():
-    pass
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputResumed(System.UInt64)
+    @abstractmethod
+    def on_input_resumed(self, timestamp: winrt.system.UInt64, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputSuspended(System.UInt64)
+    @abstractmethod
+    def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
 
 @typing.final
 class IGameControllerInputSink(winrt.system.Object, ImplementsIGameControllerInputSink):
@@ -155,7 +169,26 @@ class IGameControllerInputSink(winrt.system.Object, ImplementsIGameControllerInp
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
 
 class ImplementsIGameControllerProvider():
-    pass
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.IGameControllerProvider::get_FirmwareVersionInfo()
+    @_property
+    @abstractmethod
+    def firmware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.IGameControllerProvider::get_HardwareProductId()
+    @_property
+    @abstractmethod
+    def hardware_product_id(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.IGameControllerProvider::get_HardwareVendorId()
+    @_property
+    @abstractmethod
+    def hardware_vendor_id(self) -> winrt.system.UInt16: ...
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.IGameControllerProvider::get_HardwareVersionInfo()
+    @_property
+    @abstractmethod
+    def hardware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.Boolean Windows.Gaming.Input.Custom.IGameControllerProvider::get_IsConnected()
+    @_property
+    @abstractmethod
+    def is_connected(self) -> bool: ...
 
 @typing.final
 class IGameControllerProvider(winrt.system.Object, ImplementsIGameControllerProvider):
@@ -176,7 +209,12 @@ class IGameControllerProvider(winrt.system.Object, ImplementsIGameControllerProv
     def is_connected(self) -> bool: ...
 
 class ImplementsIGipGameControllerInputSink():
-    pass
+    # System.Void Windows.Gaming.Input.Custom.IGipGameControllerInputSink::OnKeyReceived(System.UInt64,System.Byte,System.Boolean)
+    @abstractmethod
+    def on_key_received(self, timestamp: winrt.system.UInt64, key_code: winrt.system.UInt8, is_pressed: bool, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGipGameControllerInputSink::OnMessageReceived(System.UInt64,Windows.Gaming.Input.Custom.GipMessageClass,System.Byte,System.Byte,System.Byte[])
+    @abstractmethod
+    def on_message_received(self, timestamp: winrt.system.UInt64, message_class: GipMessageClass, message_id: winrt.system.UInt8, sequence_id: winrt.system.UInt8, message_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
 
 @typing.final
 class IGipGameControllerInputSink(winrt.system.Object, ImplementsIGipGameControllerInputSink, ImplementsIGameControllerInputSink):
@@ -190,7 +228,9 @@ class IGipGameControllerInputSink(winrt.system.Object, ImplementsIGipGameControl
     def on_message_received(self, timestamp: winrt.system.UInt64, message_class: GipMessageClass, message_id: winrt.system.UInt8, sequence_id: winrt.system.UInt8, message_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
 
 class ImplementsIHidGameControllerInputSink():
-    pass
+    # System.Void Windows.Gaming.Input.Custom.IHidGameControllerInputSink::OnInputReportReceived(System.UInt64,System.Byte,System.Byte[])
+    @abstractmethod
+    def on_input_report_received(self, timestamp: winrt.system.UInt64, report_id: winrt.system.UInt8, report_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
 
 @typing.final
 class IHidGameControllerInputSink(winrt.system.Object, ImplementsIHidGameControllerInputSink, ImplementsIGameControllerInputSink):
@@ -202,7 +242,9 @@ class IHidGameControllerInputSink(winrt.system.Object, ImplementsIHidGameControl
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
 
 class ImplementsIXusbGameControllerInputSink():
-    pass
+    # System.Void Windows.Gaming.Input.Custom.IXusbGameControllerInputSink::OnInputReceived(System.UInt64,System.Byte,System.Byte[])
+    @abstractmethod
+    def on_input_received(self, timestamp: winrt.system.UInt64, report_id: winrt.system.UInt8, input_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
 
 @typing.final
 class IXusbGameControllerInputSink(winrt.system.Object, ImplementsIXusbGameControllerInputSink, ImplementsIGameControllerInputSink):

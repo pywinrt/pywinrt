@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -791,7 +792,12 @@ class WindowSizeChangedEventArgs(winrt.system.Object, ImplementsICoreWindowEvent
     def size(self) -> windows_foundation.Size: ...
 
 class ImplementsICoreAcceleratorKeys():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreAcceleratorKeys::add_AcceleratorKeyActivated(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreDispatcher,Windows.UI.Core.AcceleratorKeyEventArgs>)
+    @abstractmethod
+    def add_accelerator_key_activated(self, handler: windows_foundation.TypedEventHandler[CoreDispatcher, AcceleratorKeyEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreAcceleratorKeys::remove_AcceleratorKeyActivated(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_accelerator_key_activated(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class ICoreAcceleratorKeys(winrt.system.Object, ImplementsICoreAcceleratorKeys):
@@ -801,7 +807,24 @@ class ICoreAcceleratorKeys(winrt.system.Object, ImplementsICoreAcceleratorKeys):
     def remove_accelerator_key_activated(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ImplementsICoreInputSourceBase():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreInputSourceBase::add_InputEnabled(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.InputEnabledEventArgs>)
+    @abstractmethod
+    def add_input_enabled(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, InputEnabledEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreInputSourceBase::remove_InputEnabled(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_input_enabled(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.UI.Core.CoreDispatcher Windows.UI.Core.ICoreInputSourceBase::get_Dispatcher()
+    @_property
+    @abstractmethod
+    def dispatcher(self) -> CoreDispatcher: ...
+    # System.Boolean Windows.UI.Core.ICoreInputSourceBase::get_IsInputEnabled()
+    @_property
+    @abstractmethod
+    def is_input_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Core.ICoreInputSourceBase::put_IsInputEnabled(System.Boolean)
+    @is_input_enabled.setter
+    @abstractmethod
+    def is_input_enabled(self, value: bool) -> None: ...
 
 @typing.final
 class ICoreInputSourceBase(winrt.system.Object, ImplementsICoreInputSourceBase):
@@ -820,7 +843,70 @@ class ICoreInputSourceBase(winrt.system.Object, ImplementsICoreInputSourceBase):
     def is_input_enabled(self, value: bool) -> None: ...
 
 class ImplementsICorePointerInputSource():
-    pass
+    # System.Void Windows.UI.Core.ICorePointerInputSource::ReleasePointerCapture()
+    @abstractmethod
+    def release_pointer_capture(self) -> None: ...
+    # System.Void Windows.UI.Core.ICorePointerInputSource::SetPointerCapture()
+    @abstractmethod
+    def set_pointer_capture(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerInputSource::add_PointerCaptureLost(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_capture_lost(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerInputSource::remove_PointerCaptureLost(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_capture_lost(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerInputSource::add_PointerEntered(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_entered(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerInputSource::remove_PointerEntered(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_entered(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerInputSource::add_PointerExited(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_exited(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerInputSource::remove_PointerExited(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_exited(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerInputSource::add_PointerMoved(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_moved(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerInputSource::remove_PointerMoved(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_moved(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerInputSource::add_PointerPressed(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_pressed(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerInputSource::remove_PointerPressed(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_pressed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerInputSource::add_PointerReleased(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_released(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerInputSource::remove_PointerReleased(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_released(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerInputSource::add_PointerWheelChanged(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_wheel_changed(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerInputSource::remove_PointerWheelChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_wheel_changed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.UI.Core.ICorePointerInputSource::get_HasCapture()
+    @_property
+    @abstractmethod
+    def has_capture(self) -> bool: ...
+    # Windows.UI.Core.CoreCursor Windows.UI.Core.ICorePointerInputSource::get_PointerCursor()
+    @_property
+    @abstractmethod
+    def pointer_cursor(self) -> CoreCursor: ...
+    # System.Void Windows.UI.Core.ICorePointerInputSource::put_PointerCursor(Windows.UI.Core.CoreCursor)
+    @pointer_cursor.setter
+    @abstractmethod
+    def pointer_cursor(self, value: CoreCursor) -> None: ...
+    # Windows.Foundation.Point Windows.UI.Core.ICorePointerInputSource::get_PointerPosition()
+    @_property
+    @abstractmethod
+    def pointer_position(self) -> windows_foundation.Point: ...
 
 @typing.final
 class ICorePointerInputSource(winrt.system.Object, ImplementsICorePointerInputSource):
@@ -870,7 +956,10 @@ class ICorePointerInputSource(winrt.system.Object, ImplementsICorePointerInputSo
     def pointer_position(self) -> windows_foundation.Point: ...
 
 class ImplementsICorePointerInputSource2():
-    pass
+    # Windows.System.DispatcherQueue Windows.UI.Core.ICorePointerInputSource2::get_DispatcherQueue()
+    @_property
+    @abstractmethod
+    def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
 @typing.final
 class ICorePointerInputSource2(winrt.system.Object, ImplementsICorePointerInputSource2, ImplementsICorePointerInputSource):
@@ -923,7 +1012,24 @@ class ICorePointerInputSource2(winrt.system.Object, ImplementsICorePointerInputS
     def pointer_position(self) -> windows_foundation.Point: ...
 
 class ImplementsICorePointerRedirector():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerRedirector::add_PointerRoutedAway(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.ICorePointerRedirector,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_routed_away(self, handler: windows_foundation.TypedEventHandler[ICorePointerRedirector, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerRedirector::remove_PointerRoutedAway(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_routed_away(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerRedirector::add_PointerRoutedReleased(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.ICorePointerRedirector,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_routed_released(self, handler: windows_foundation.TypedEventHandler[ICorePointerRedirector, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerRedirector::remove_PointerRoutedReleased(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_routed_released(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerRedirector::add_PointerRoutedTo(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.ICorePointerRedirector,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_routed_to(self, handler: windows_foundation.TypedEventHandler[ICorePointerRedirector, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICorePointerRedirector::remove_PointerRoutedTo(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_routed_to(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class ICorePointerRedirector(winrt.system.Object, ImplementsICorePointerRedirector):
@@ -941,7 +1047,174 @@ class ICorePointerRedirector(winrt.system.Object, ImplementsICorePointerRedirect
     def remove_pointer_routed_to(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ImplementsICoreWindow():
-    pass
+    # System.Void Windows.UI.Core.ICoreWindow::Activate()
+    @abstractmethod
+    def activate(self) -> None: ...
+    # System.Void Windows.UI.Core.ICoreWindow::Close()
+    @abstractmethod
+    def close(self) -> None: ...
+    # Windows.UI.Core.CoreVirtualKeyStates Windows.UI.Core.ICoreWindow::GetAsyncKeyState(Windows.System.VirtualKey)
+    @abstractmethod
+    def get_async_key_state(self, virtual_key: windows_system.VirtualKey, /) -> CoreVirtualKeyStates: ...
+    # Windows.UI.Core.CoreVirtualKeyStates Windows.UI.Core.ICoreWindow::GetKeyState(Windows.System.VirtualKey)
+    @abstractmethod
+    def get_key_state(self, virtual_key: windows_system.VirtualKey, /) -> CoreVirtualKeyStates: ...
+    # System.Void Windows.UI.Core.ICoreWindow::ReleasePointerCapture()
+    @abstractmethod
+    def release_pointer_capture(self) -> None: ...
+    # System.Void Windows.UI.Core.ICoreWindow::SetPointerCapture()
+    @abstractmethod
+    def set_pointer_capture(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_Activated(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.WindowActivatedEventArgs>)
+    @abstractmethod
+    def add_activated(self, handler: windows_foundation.TypedEventHandler[CoreWindow, WindowActivatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_Activated(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_activated(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_AutomationProviderRequested(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.AutomationProviderRequestedEventArgs>)
+    @abstractmethod
+    def add_automation_provider_requested(self, handler: windows_foundation.TypedEventHandler[CoreWindow, AutomationProviderRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_AutomationProviderRequested(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_automation_provider_requested(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_CharacterReceived(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.CharacterReceivedEventArgs>)
+    @abstractmethod
+    def add_character_received(self, handler: windows_foundation.TypedEventHandler[CoreWindow, CharacterReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_CharacterReceived(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_character_received(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_Closed(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.CoreWindowEventArgs>)
+    @abstractmethod
+    def add_closed(self, handler: windows_foundation.TypedEventHandler[CoreWindow, CoreWindowEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_Closed(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_closed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_InputEnabled(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.InputEnabledEventArgs>)
+    @abstractmethod
+    def add_input_enabled(self, handler: windows_foundation.TypedEventHandler[CoreWindow, InputEnabledEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_InputEnabled(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_input_enabled(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_KeyDown(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.KeyEventArgs>)
+    @abstractmethod
+    def add_key_down(self, handler: windows_foundation.TypedEventHandler[CoreWindow, KeyEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_KeyDown(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_key_down(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_KeyUp(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.KeyEventArgs>)
+    @abstractmethod
+    def add_key_up(self, handler: windows_foundation.TypedEventHandler[CoreWindow, KeyEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_KeyUp(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_key_up(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_PointerCaptureLost(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_capture_lost(self, handler: windows_foundation.TypedEventHandler[CoreWindow, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_PointerCaptureLost(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_capture_lost(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_PointerEntered(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_entered(self, handler: windows_foundation.TypedEventHandler[CoreWindow, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_PointerEntered(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_entered(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_PointerExited(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_exited(self, handler: windows_foundation.TypedEventHandler[CoreWindow, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_PointerExited(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_exited(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_PointerMoved(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_moved(self, handler: windows_foundation.TypedEventHandler[CoreWindow, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_PointerMoved(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_moved(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_PointerPressed(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_pressed(self, handler: windows_foundation.TypedEventHandler[CoreWindow, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_PointerPressed(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_pressed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_PointerReleased(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_released(self, handler: windows_foundation.TypedEventHandler[CoreWindow, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_PointerReleased(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_released(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_PointerWheelChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs>)
+    @abstractmethod
+    def add_pointer_wheel_changed(self, handler: windows_foundation.TypedEventHandler[CoreWindow, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_PointerWheelChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pointer_wheel_changed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_SizeChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.WindowSizeChangedEventArgs>)
+    @abstractmethod
+    def add_size_changed(self, handler: windows_foundation.TypedEventHandler[CoreWindow, WindowSizeChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_SizeChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_size_changed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_TouchHitTesting(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.TouchHitTestingEventArgs>)
+    @abstractmethod
+    def add_touch_hit_testing(self, handler: windows_foundation.TypedEventHandler[CoreWindow, TouchHitTestingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_TouchHitTesting(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_touch_hit_testing(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreWindow::add_VisibilityChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreWindow,Windows.UI.Core.VisibilityChangedEventArgs>)
+    @abstractmethod
+    def add_visibility_changed(self, handler: windows_foundation.TypedEventHandler[CoreWindow, VisibilityChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.ICoreWindow::remove_VisibilityChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_visibility_changed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Object Windows.UI.Core.ICoreWindow::get_AutomationHostProvider()
+    @_property
+    @abstractmethod
+    def automation_host_provider(self) -> winrt.system.Object: ...
+    # Windows.Foundation.Rect Windows.UI.Core.ICoreWindow::get_Bounds()
+    @_property
+    @abstractmethod
+    def bounds(self) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Collections.IPropertySet Windows.UI.Core.ICoreWindow::get_CustomProperties()
+    @_property
+    @abstractmethod
+    def custom_properties(self) -> windows_foundation_collections.IPropertySet: ...
+    # Windows.UI.Core.CoreDispatcher Windows.UI.Core.ICoreWindow::get_Dispatcher()
+    @_property
+    @abstractmethod
+    def dispatcher(self) -> CoreDispatcher: ...
+    # Windows.UI.Core.CoreWindowFlowDirection Windows.UI.Core.ICoreWindow::get_FlowDirection()
+    @_property
+    @abstractmethod
+    def flow_direction(self) -> CoreWindowFlowDirection: ...
+    # System.Void Windows.UI.Core.ICoreWindow::put_FlowDirection(Windows.UI.Core.CoreWindowFlowDirection)
+    @flow_direction.setter
+    @abstractmethod
+    def flow_direction(self, value: CoreWindowFlowDirection) -> None: ...
+    # System.Boolean Windows.UI.Core.ICoreWindow::get_IsInputEnabled()
+    @_property
+    @abstractmethod
+    def is_input_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Core.ICoreWindow::put_IsInputEnabled(System.Boolean)
+    @is_input_enabled.setter
+    @abstractmethod
+    def is_input_enabled(self, value: bool) -> None: ...
+    # Windows.UI.Core.CoreCursor Windows.UI.Core.ICoreWindow::get_PointerCursor()
+    @_property
+    @abstractmethod
+    def pointer_cursor(self) -> CoreCursor: ...
+    # System.Void Windows.UI.Core.ICoreWindow::put_PointerCursor(Windows.UI.Core.CoreCursor)
+    @pointer_cursor.setter
+    @abstractmethod
+    def pointer_cursor(self, value: CoreCursor) -> None: ...
+    # Windows.Foundation.Point Windows.UI.Core.ICoreWindow::get_PointerPosition()
+    @_property
+    @abstractmethod
+    def pointer_position(self) -> windows_foundation.Point: ...
+    # System.Boolean Windows.UI.Core.ICoreWindow::get_Visible()
+    @_property
+    @abstractmethod
+    def visible(self) -> bool: ...
 
 @typing.final
 class ICoreWindow(winrt.system.Object, ImplementsICoreWindow):
@@ -1063,7 +1336,14 @@ class ICoreWindow(winrt.system.Object, ImplementsICoreWindow):
     def visible(self) -> bool: ...
 
 class ImplementsICoreWindowEventArgs():
-    pass
+    # System.Boolean Windows.UI.Core.ICoreWindowEventArgs::get_Handled()
+    @_property
+    @abstractmethod
+    def handled(self) -> bool: ...
+    # System.Void Windows.UI.Core.ICoreWindowEventArgs::put_Handled(System.Boolean)
+    @handled.setter
+    @abstractmethod
+    def handled(self, value: bool) -> None: ...
 
 @typing.final
 class ICoreWindowEventArgs(winrt.system.Object, ImplementsICoreWindowEventArgs):
@@ -1075,7 +1355,9 @@ class ICoreWindowEventArgs(winrt.system.Object, ImplementsICoreWindowEventArgs):
     def handled(self, value: bool) -> None: ...
 
 class ImplementsIInitializeWithCoreWindow():
-    pass
+    # System.Void Windows.UI.Core.IInitializeWithCoreWindow::Initialize(Windows.UI.Core.CoreWindow)
+    @abstractmethod
+    def initialize(self, window: CoreWindow, /) -> None: ...
 
 @typing.final
 class IInitializeWithCoreWindow(winrt.system.Object, ImplementsIInitializeWithCoreWindow):

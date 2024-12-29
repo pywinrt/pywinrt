@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -318,7 +319,34 @@ class ValueAndLanguage(winrt.system.Object):
     def language(self, value: str) -> None: ...
 
 class ImplementsIIndexableContent():
-    pass
+    # System.String Windows.Storage.Search.IIndexableContent::get_Id()
+    @_property
+    @abstractmethod
+    def id(self) -> str: ...
+    # System.Void Windows.Storage.Search.IIndexableContent::put_Id(System.String)
+    @id.setter
+    @abstractmethod
+    def id(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IMap`2<System.String,System.Object> Windows.Storage.Search.IIndexableContent::get_Properties()
+    @_property
+    @abstractmethod
+    def properties(self) -> typing.MutableMapping[str, winrt.system.Object]: ...
+    # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.Search.IIndexableContent::get_Stream()
+    @_property
+    @abstractmethod
+    def stream(self) -> windows_storage_streams.IRandomAccessStream: ...
+    # System.Void Windows.Storage.Search.IIndexableContent::put_Stream(Windows.Storage.Streams.IRandomAccessStream)
+    @stream.setter
+    @abstractmethod
+    def stream(self, value: windows_storage_streams.ImplementsIRandomAccessStream) -> None: ...
+    # System.String Windows.Storage.Search.IIndexableContent::get_StreamContentType()
+    @_property
+    @abstractmethod
+    def stream_content_type(self) -> str: ...
+    # System.Void Windows.Storage.Search.IIndexableContent::put_StreamContentType(System.String)
+    @stream_content_type.setter
+    @abstractmethod
+    def stream_content_type(self, value: str) -> None: ...
 
 @typing.final
 class IIndexableContent(winrt.system.Object, ImplementsIIndexableContent):
@@ -345,7 +373,57 @@ class IIndexableContent(winrt.system.Object, ImplementsIIndexableContent):
     def stream_content_type(self, value: str) -> None: ...
 
 class ImplementsIStorageFolderQueryOperations():
-    pass
+    # System.Boolean Windows.Storage.Search.IStorageFolderQueryOperations::AreQueryOptionsSupported(Windows.Storage.Search.QueryOptions)
+    @abstractmethod
+    def are_query_options_supported(self, query_options: QueryOptions, /) -> bool: ...
+    # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFileQuery(Windows.Storage.Search.CommonFileQuery)
+    @abstractmethod
+    def create_file_query(self, query: CommonFileQuery, /) -> StorageFileQueryResult: ...
+    # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFileQuery()
+    @abstractmethod
+    def create_file_query_overload_default(self) -> StorageFileQueryResult: ...
+    # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFileQueryWithOptions(Windows.Storage.Search.QueryOptions)
+    @abstractmethod
+    def create_file_query_with_options(self, query_options: QueryOptions, /) -> StorageFileQueryResult: ...
+    # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFolderQuery(Windows.Storage.Search.CommonFolderQuery)
+    @abstractmethod
+    def create_folder_query(self, query: CommonFolderQuery, /) -> StorageFolderQueryResult: ...
+    # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFolderQuery()
+    @abstractmethod
+    def create_folder_query_overload_default(self) -> StorageFolderQueryResult: ...
+    # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFolderQueryWithOptions(Windows.Storage.Search.QueryOptions)
+    @abstractmethod
+    def create_folder_query_with_options(self, query_options: QueryOptions, /) -> StorageFolderQueryResult: ...
+    # Windows.Storage.Search.StorageItemQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateItemQuery()
+    @abstractmethod
+    def create_item_query(self) -> StorageItemQueryResult: ...
+    # Windows.Storage.Search.StorageItemQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateItemQueryWithOptions(Windows.Storage.Search.QueryOptions)
+    @abstractmethod
+    def create_item_query_with_options(self, query_options: QueryOptions, /) -> StorageItemQueryResult: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFilesAsync(Windows.Storage.Search.CommonFileQuery,System.UInt32,System.UInt32)
+    @abstractmethod
+    def get_files_async(self, query: CommonFileQuery, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFile]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFilesAsync(Windows.Storage.Search.CommonFileQuery)
+    @abstractmethod
+    def get_files_async_overload_default_start_and_count(self, query: CommonFileQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFile]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery,System.UInt32,System.UInt32)
+    @abstractmethod
+    def get_folders_async(self, query: CommonFolderQuery, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFolder]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery)
+    @abstractmethod
+    def get_folders_async_overload_default_start_and_count(self, query: CommonFolderQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFolder]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Search.IndexedState> Windows.Storage.Search.IStorageFolderQueryOperations::GetIndexedStateAsync()
+    @abstractmethod
+    def get_indexed_state_async(self) -> windows_foundation.IAsyncOperation[IndexedState]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.Search.IStorageFolderQueryOperations::GetItemsAsync(System.UInt32,System.UInt32)
+    @abstractmethod
+    def get_items_async(self, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.IStorageItem]]: ...
+    # System.Boolean Windows.Storage.Search.IStorageFolderQueryOperations::IsCommonFileQuerySupported(Windows.Storage.Search.CommonFileQuery)
+    @abstractmethod
+    def is_common_file_query_supported(self, query: CommonFileQuery, /) -> bool: ...
+    # System.Boolean Windows.Storage.Search.IStorageFolderQueryOperations::IsCommonFolderQuerySupported(Windows.Storage.Search.CommonFolderQuery)
+    @abstractmethod
+    def is_common_folder_query_supported(self, query: CommonFolderQuery, /) -> bool: ...
 
 @typing.final
 class IStorageFolderQueryOperations(winrt.system.Object, ImplementsIStorageFolderQueryOperations):
@@ -385,7 +463,34 @@ class IStorageFolderQueryOperations(winrt.system.Object, ImplementsIStorageFolde
     def is_common_folder_query_supported(self, query: CommonFolderQuery, /) -> bool: ...
 
 class ImplementsIStorageQueryResultBase():
-    pass
+    # System.Void Windows.Storage.Search.IStorageQueryResultBase::ApplyNewQueryOptions(Windows.Storage.Search.QueryOptions)
+    @abstractmethod
+    def apply_new_query_options(self, new_query_options: QueryOptions, /) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.IStorageQueryResultBase::FindStartIndexAsync(System.Object)
+    @abstractmethod
+    def find_start_index_async(self, value: winrt.system.Object, /) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
+    # Windows.Storage.Search.QueryOptions Windows.Storage.Search.IStorageQueryResultBase::GetCurrentQueryOptions()
+    @abstractmethod
+    def get_current_query_options(self) -> QueryOptions: ...
+    # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.IStorageQueryResultBase::GetItemCountAsync()
+    @abstractmethod
+    def get_item_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Search.IStorageQueryResultBase::add_ContentsChanged(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Search.IStorageQueryResultBase,System.Object>)
+    @abstractmethod
+    def add_contents_changed(self, handler: windows_foundation.TypedEventHandler[IStorageQueryResultBase, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Search.IStorageQueryResultBase::remove_ContentsChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_contents_changed(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Search.IStorageQueryResultBase::add_OptionsChanged(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Search.IStorageQueryResultBase,System.Object>)
+    @abstractmethod
+    def add_options_changed(self, changed_handler: windows_foundation.TypedEventHandler[IStorageQueryResultBase, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Search.IStorageQueryResultBase::remove_OptionsChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_options_changed(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Storage.StorageFolder Windows.Storage.Search.IStorageQueryResultBase::get_Folder()
+    @_property
+    @abstractmethod
+    def folder(self) -> windows_storage.StorageFolder: ...
 
 @typing.final
 class IStorageQueryResultBase(winrt.system.Object, ImplementsIStorageQueryResultBase):

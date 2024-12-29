@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -31,7 +32,9 @@ class Direct3DSurfaceDescription:
     def __init__(self, width: winrt.system.Int32 = 0, height: winrt.system.Int32 = 0, format: windows_graphics_directx.DirectXPixelFormat = windows_graphics_directx.DirectXPixelFormat(0), multisample_description: Direct3DMultisampleDescription = Direct3DMultisampleDescription()) -> None: ...
 
 class ImplementsIDirect3DDevice():
-    pass
+    # System.Void Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice::Trim()
+    @abstractmethod
+    def trim(self) -> None: ...
 
 @typing.final
 class IDirect3DDevice(winrt.system.Object, ImplementsIDirect3DDevice, windows_foundation.ImplementsIClosable):
@@ -43,7 +46,10 @@ class IDirect3DDevice(winrt.system.Object, ImplementsIDirect3DDevice, windows_fo
     def trim(self) -> None: ...
 
 class ImplementsIDirect3DSurface():
-    pass
+    # Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface::get_Description()
+    @_property
+    @abstractmethod
+    def description(self) -> Direct3DSurfaceDescription: ...
 
 @typing.final
 class IDirect3DSurface(winrt.system.Object, ImplementsIDirect3DSurface, windows_foundation.ImplementsIClosable):

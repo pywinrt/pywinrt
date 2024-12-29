@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1285,7 +1286,33 @@ class XmlText(winrt.system.Object, ImplementsIXmlText, ImplementsIXmlCharacterDa
     def inner_text(self, value: str) -> None: ...
 
 class ImplementsIXmlCharacterData():
-    pass
+    # System.Void Windows.Data.Xml.Dom.IXmlCharacterData::AppendData(System.String)
+    @abstractmethod
+    def append_data(self, data: str, /) -> None: ...
+    # System.Void Windows.Data.Xml.Dom.IXmlCharacterData::DeleteData(System.UInt32,System.UInt32)
+    @abstractmethod
+    def delete_data(self, offset: winrt.system.UInt32, count: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Data.Xml.Dom.IXmlCharacterData::InsertData(System.UInt32,System.String)
+    @abstractmethod
+    def insert_data(self, offset: winrt.system.UInt32, data: str, /) -> None: ...
+    # System.Void Windows.Data.Xml.Dom.IXmlCharacterData::ReplaceData(System.UInt32,System.UInt32,System.String)
+    @abstractmethod
+    def replace_data(self, offset: winrt.system.UInt32, count: winrt.system.UInt32, data: str, /) -> None: ...
+    # System.String Windows.Data.Xml.Dom.IXmlCharacterData::SubstringData(System.UInt32,System.UInt32)
+    @abstractmethod
+    def substring_data(self, offset: winrt.system.UInt32, count: winrt.system.UInt32, /) -> str: ...
+    # System.String Windows.Data.Xml.Dom.IXmlCharacterData::get_Data()
+    @_property
+    @abstractmethod
+    def data(self) -> str: ...
+    # System.Void Windows.Data.Xml.Dom.IXmlCharacterData::put_Data(System.String)
+    @data.setter
+    @abstractmethod
+    def data(self, value: str) -> None: ...
+    # System.UInt32 Windows.Data.Xml.Dom.IXmlCharacterData::get_Length()
+    @_property
+    @abstractmethod
+    def length(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IXmlCharacterData(winrt.system.Object, ImplementsIXmlCharacterData, ImplementsIXmlNode, ImplementsIXmlNodeSerializer, ImplementsIXmlNodeSelector):
@@ -1388,7 +1415,91 @@ class IXmlCharacterData(winrt.system.Object, ImplementsIXmlCharacterData, Implem
     def inner_text(self, value: str) -> None: ...
 
 class ImplementsIXmlNode():
-    pass
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
+    @abstractmethod
+    def append_child(self, new_child: ImplementsIXmlNode, /) -> IXmlNode: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::CloneNode(System.Boolean)
+    @abstractmethod
+    def clone_node(self, deep: bool, /) -> IXmlNode: ...
+    # System.Boolean Windows.Data.Xml.Dom.IXmlNode::HasChildNodes()
+    @abstractmethod
+    def has_child_nodes(self) -> bool: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::InsertBefore(Windows.Data.Xml.Dom.IXmlNode,Windows.Data.Xml.Dom.IXmlNode)
+    @abstractmethod
+    def insert_before(self, new_child: ImplementsIXmlNode, reference_child: ImplementsIXmlNode, /) -> IXmlNode: ...
+    # System.Void Windows.Data.Xml.Dom.IXmlNode::Normalize()
+    @abstractmethod
+    def normalize(self) -> None: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::RemoveChild(Windows.Data.Xml.Dom.IXmlNode)
+    @abstractmethod
+    def remove_child(self, child_node: ImplementsIXmlNode, /) -> IXmlNode: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::ReplaceChild(Windows.Data.Xml.Dom.IXmlNode,Windows.Data.Xml.Dom.IXmlNode)
+    @abstractmethod
+    def replace_child(self, new_child: ImplementsIXmlNode, reference_child: ImplementsIXmlNode, /) -> IXmlNode: ...
+    # Windows.Data.Xml.Dom.XmlNamedNodeMap Windows.Data.Xml.Dom.IXmlNode::get_Attributes()
+    @_property
+    @abstractmethod
+    def attributes(self) -> XmlNamedNodeMap: ...
+    # Windows.Data.Xml.Dom.XmlNodeList Windows.Data.Xml.Dom.IXmlNode::get_ChildNodes()
+    @_property
+    @abstractmethod
+    def child_nodes(self) -> XmlNodeList: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::get_FirstChild()
+    @_property
+    @abstractmethod
+    def first_child(self) -> IXmlNode: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::get_LastChild()
+    @_property
+    @abstractmethod
+    def last_child(self) -> IXmlNode: ...
+    # System.Object Windows.Data.Xml.Dom.IXmlNode::get_LocalName()
+    @_property
+    @abstractmethod
+    def local_name(self) -> winrt.system.Object: ...
+    # System.Object Windows.Data.Xml.Dom.IXmlNode::get_NamespaceUri()
+    @_property
+    @abstractmethod
+    def namespace_uri(self) -> winrt.system.Object: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::get_NextSibling()
+    @_property
+    @abstractmethod
+    def next_sibling(self) -> IXmlNode: ...
+    # System.String Windows.Data.Xml.Dom.IXmlNode::get_NodeName()
+    @_property
+    @abstractmethod
+    def node_name(self) -> str: ...
+    # Windows.Data.Xml.Dom.NodeType Windows.Data.Xml.Dom.IXmlNode::get_NodeType()
+    @_property
+    @abstractmethod
+    def node_type(self) -> NodeType: ...
+    # System.Object Windows.Data.Xml.Dom.IXmlNode::get_NodeValue()
+    @_property
+    @abstractmethod
+    def node_value(self) -> winrt.system.Object: ...
+    # System.Void Windows.Data.Xml.Dom.IXmlNode::put_NodeValue(System.Object)
+    @node_value.setter
+    @abstractmethod
+    def node_value(self, value: winrt.system.Object) -> None: ...
+    # Windows.Data.Xml.Dom.XmlDocument Windows.Data.Xml.Dom.IXmlNode::get_OwnerDocument()
+    @_property
+    @abstractmethod
+    def owner_document(self) -> XmlDocument: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::get_ParentNode()
+    @_property
+    @abstractmethod
+    def parent_node(self) -> IXmlNode: ...
+    # System.Object Windows.Data.Xml.Dom.IXmlNode::get_Prefix()
+    @_property
+    @abstractmethod
+    def prefix(self) -> winrt.system.Object: ...
+    # System.Void Windows.Data.Xml.Dom.IXmlNode::put_Prefix(System.Object)
+    @prefix.setter
+    @abstractmethod
+    def prefix(self, value: winrt.system.Object) -> None: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::get_PreviousSibling()
+    @_property
+    @abstractmethod
+    def previous_sibling(self) -> IXmlNode: ...
 
 @typing.final
 class IXmlNode(winrt.system.Object, ImplementsIXmlNode, ImplementsIXmlNodeSerializer, ImplementsIXmlNodeSelector):
@@ -1472,7 +1583,18 @@ class IXmlNode(winrt.system.Object, ImplementsIXmlNode, ImplementsIXmlNodeSerial
     def inner_text(self, value: str) -> None: ...
 
 class ImplementsIXmlNodeSelector():
-    pass
+    # Windows.Data.Xml.Dom.XmlNodeList Windows.Data.Xml.Dom.IXmlNodeSelector::SelectNodes(System.String)
+    @abstractmethod
+    def select_nodes(self, xpath: str, /) -> XmlNodeList: ...
+    # Windows.Data.Xml.Dom.XmlNodeList Windows.Data.Xml.Dom.IXmlNodeSelector::SelectNodesNS(System.String,System.Object)
+    @abstractmethod
+    def select_nodes_ns(self, xpath: str, namespaces: winrt.system.Object, /) -> XmlNodeList: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNodeSelector::SelectSingleNode(System.String)
+    @abstractmethod
+    def select_single_node(self, xpath: str, /) -> IXmlNode: ...
+    # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNodeSelector::SelectSingleNodeNS(System.String,System.Object)
+    @abstractmethod
+    def select_single_node_ns(self, xpath: str, namespaces: winrt.system.Object, /) -> IXmlNode: ...
 
 @typing.final
 class IXmlNodeSelector(winrt.system.Object, ImplementsIXmlNodeSelector):
@@ -1486,7 +1608,17 @@ class IXmlNodeSelector(winrt.system.Object, ImplementsIXmlNodeSelector):
     def select_single_node_ns(self, xpath: str, namespaces: winrt.system.Object, /) -> IXmlNode: ...
 
 class ImplementsIXmlNodeSerializer():
-    pass
+    # System.String Windows.Data.Xml.Dom.IXmlNodeSerializer::GetXml()
+    @abstractmethod
+    def get_xml(self) -> str: ...
+    # System.String Windows.Data.Xml.Dom.IXmlNodeSerializer::get_InnerText()
+    @_property
+    @abstractmethod
+    def inner_text(self) -> str: ...
+    # System.Void Windows.Data.Xml.Dom.IXmlNodeSerializer::put_InnerText(System.String)
+    @inner_text.setter
+    @abstractmethod
+    def inner_text(self, value: str) -> None: ...
 
 @typing.final
 class IXmlNodeSerializer(winrt.system.Object, ImplementsIXmlNodeSerializer):
@@ -1500,7 +1632,9 @@ class IXmlNodeSerializer(winrt.system.Object, ImplementsIXmlNodeSerializer):
     def inner_text(self, value: str) -> None: ...
 
 class ImplementsIXmlText():
-    pass
+    # Windows.Data.Xml.Dom.IXmlText Windows.Data.Xml.Dom.IXmlText::SplitText(System.UInt32)
+    @abstractmethod
+    def split_text(self, offset: winrt.system.UInt32, /) -> IXmlText: ...
 
 @typing.final
 class IXmlText(winrt.system.Object, ImplementsIXmlText, ImplementsIXmlCharacterData, ImplementsIXmlNode, ImplementsIXmlNodeSerializer, ImplementsIXmlNodeSelector):

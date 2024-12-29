@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -135,7 +136,10 @@ class RemoteAutomationWindow(winrt.system.Object):
     def automation_provider(self) -> winrt.system.Object: ...
 
 class ImplementsICoreAutomationConnectionBoundObjectProvider():
-    pass
+    # System.Boolean Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider::get_IsComThreadingRequired()
+    @_property
+    @abstractmethod
+    def is_com_threading_required(self) -> bool: ...
 
 @typing.final
 class ICoreAutomationConnectionBoundObjectProvider(winrt.system.Object, ImplementsICoreAutomationConnectionBoundObjectProvider):
@@ -144,7 +148,12 @@ class ICoreAutomationConnectionBoundObjectProvider(winrt.system.Object, Implemen
     def is_com_threading_required(self) -> bool: ...
 
 class ImplementsICoreAutomationRemoteOperationExtensionProvider():
-    pass
+    # System.Void Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider::CallExtension(System.Guid,Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext,Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId[])
+    @abstractmethod
+    def call_extension(self, extension_id: _uuid.UUID, context: CoreAutomationRemoteOperationContext, operand_ids: typing.Union[winrt.system.Array[AutomationRemoteOperationOperandId], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Boolean Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider::IsExtensionSupported(System.Guid)
+    @abstractmethod
+    def is_extension_supported(self, extension_id: _uuid.UUID, /) -> bool: ...
 
 @typing.final
 class ICoreAutomationRemoteOperationExtensionProvider(winrt.system.Object, ImplementsICoreAutomationRemoteOperationExtensionProvider):

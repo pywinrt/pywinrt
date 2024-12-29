@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -66,7 +67,26 @@ class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
     pass
 
 class ImplementsIIOControlCode():
-    pass
+    # Windows.Devices.Custom.IOControlAccessMode Windows.Devices.Custom.IIOControlCode::get_AccessMode()
+    @_property
+    @abstractmethod
+    def access_mode(self) -> IOControlAccessMode: ...
+    # Windows.Devices.Custom.IOControlBufferingMethod Windows.Devices.Custom.IIOControlCode::get_BufferingMethod()
+    @_property
+    @abstractmethod
+    def buffering_method(self) -> IOControlBufferingMethod: ...
+    # System.UInt32 Windows.Devices.Custom.IIOControlCode::get_ControlCode()
+    @_property
+    @abstractmethod
+    def control_code(self) -> winrt.system.UInt32: ...
+    # System.UInt16 Windows.Devices.Custom.IIOControlCode::get_DeviceType()
+    @_property
+    @abstractmethod
+    def device_type(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Devices.Custom.IIOControlCode::get_Function()
+    @_property
+    @abstractmethod
+    def function(self) -> winrt.system.UInt16: ...
 
 @typing.final
 class IIOControlCode(winrt.system.Object, ImplementsIIOControlCode):

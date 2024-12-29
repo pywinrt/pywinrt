@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -208,7 +209,18 @@ class WebAccountProvider(winrt.system.Object):
     def is_system_provider(self) -> bool: ...
 
 class ImplementsIWebAccount():
-    pass
+    # Windows.Security.Credentials.WebAccountState Windows.Security.Credentials.IWebAccount::get_State()
+    @_property
+    @abstractmethod
+    def state(self) -> WebAccountState: ...
+    # System.String Windows.Security.Credentials.IWebAccount::get_UserName()
+    @_property
+    @abstractmethod
+    def user_name(self) -> str: ...
+    # Windows.Security.Credentials.WebAccountProvider Windows.Security.Credentials.IWebAccount::get_WebAccountProvider()
+    @_property
+    @abstractmethod
+    def web_account_provider(self) -> WebAccountProvider: ...
 
 @typing.final
 class IWebAccount(winrt.system.Object, ImplementsIWebAccount):

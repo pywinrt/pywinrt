@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -763,7 +764,9 @@ class IBackgroundCondition(winrt.system.Object, ImplementsIBackgroundCondition):
     pass
 
 class ImplementsIBackgroundTask():
-    pass
+    # System.Void Windows.ApplicationModel.Background.IBackgroundTask::Run(Windows.ApplicationModel.Background.IBackgroundTaskInstance)
+    @abstractmethod
+    def run(self, task_instance: ImplementsIBackgroundTaskInstance, /) -> None: ...
 
 @typing.final
 class IBackgroundTask(winrt.system.Object, ImplementsIBackgroundTask):
@@ -771,7 +774,39 @@ class IBackgroundTask(winrt.system.Object, ImplementsIBackgroundTask):
     def run(self, task_instance: ImplementsIBackgroundTaskInstance, /) -> None: ...
 
 class ImplementsIBackgroundTaskInstance():
-    pass
+    # Windows.ApplicationModel.Background.BackgroundTaskDeferral Windows.ApplicationModel.Background.IBackgroundTaskInstance::GetDeferral()
+    @abstractmethod
+    def get_deferral(self) -> BackgroundTaskDeferral: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Background.IBackgroundTaskInstance::add_Canceled(Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler)
+    @abstractmethod
+    def add_canceled(self, cancel_handler: BackgroundTaskCanceledEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.Background.IBackgroundTaskInstance::remove_Canceled(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_canceled(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Guid Windows.ApplicationModel.Background.IBackgroundTaskInstance::get_InstanceId()
+    @_property
+    @abstractmethod
+    def instance_id(self) -> _uuid.UUID: ...
+    # System.UInt32 Windows.ApplicationModel.Background.IBackgroundTaskInstance::get_Progress()
+    @_property
+    @abstractmethod
+    def progress(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.ApplicationModel.Background.IBackgroundTaskInstance::put_Progress(System.UInt32)
+    @progress.setter
+    @abstractmethod
+    def progress(self, value: winrt.system.UInt32) -> None: ...
+    # System.UInt32 Windows.ApplicationModel.Background.IBackgroundTaskInstance::get_SuspendedCount()
+    @_property
+    @abstractmethod
+    def suspended_count(self) -> winrt.system.UInt32: ...
+    # Windows.ApplicationModel.Background.BackgroundTaskRegistration Windows.ApplicationModel.Background.IBackgroundTaskInstance::get_Task()
+    @_property
+    @abstractmethod
+    def task(self) -> BackgroundTaskRegistration: ...
+    # System.Object Windows.ApplicationModel.Background.IBackgroundTaskInstance::get_TriggerDetails()
+    @_property
+    @abstractmethod
+    def trigger_details(self) -> winrt.system.Object: ...
 
 @typing.final
 class IBackgroundTaskInstance(winrt.system.Object, ImplementsIBackgroundTaskInstance):
@@ -801,7 +836,9 @@ class IBackgroundTaskInstance(winrt.system.Object, ImplementsIBackgroundTaskInst
     def trigger_details(self) -> winrt.system.Object: ...
 
 class ImplementsIBackgroundTaskInstance2():
-    pass
+    # System.UInt32 Windows.ApplicationModel.Background.IBackgroundTaskInstance2::GetThrottleCount(Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter)
+    @abstractmethod
+    def get_throttle_count(self, counter: BackgroundTaskThrottleCounter, /) -> winrt.system.UInt32: ...
 
 @typing.final
 class IBackgroundTaskInstance2(winrt.system.Object, ImplementsIBackgroundTaskInstance2, ImplementsIBackgroundTaskInstance):
@@ -833,7 +870,10 @@ class IBackgroundTaskInstance2(winrt.system.Object, ImplementsIBackgroundTaskIns
     def trigger_details(self) -> winrt.system.Object: ...
 
 class ImplementsIBackgroundTaskInstance4():
-    pass
+    # Windows.System.User Windows.ApplicationModel.Background.IBackgroundTaskInstance4::get_User()
+    @_property
+    @abstractmethod
+    def user(self) -> windows_system.User: ...
 
 @typing.final
 class IBackgroundTaskInstance4(winrt.system.Object, ImplementsIBackgroundTaskInstance4, ImplementsIBackgroundTaskInstance):
@@ -866,7 +906,29 @@ class IBackgroundTaskInstance4(winrt.system.Object, ImplementsIBackgroundTaskIns
     def trigger_details(self) -> winrt.system.Object: ...
 
 class ImplementsIBackgroundTaskRegistration():
-    pass
+    # System.Void Windows.ApplicationModel.Background.IBackgroundTaskRegistration::Unregister(System.Boolean)
+    @abstractmethod
+    def unregister(self, cancel_task: bool, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Background.IBackgroundTaskRegistration::add_Completed(Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler)
+    @abstractmethod
+    def add_completed(self, handler: BackgroundTaskCompletedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.Background.IBackgroundTaskRegistration::remove_Completed(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_completed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Background.IBackgroundTaskRegistration::add_Progress(Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler)
+    @abstractmethod
+    def add_progress(self, handler: BackgroundTaskProgressEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.Background.IBackgroundTaskRegistration::remove_Progress(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_progress(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.ApplicationModel.Background.IBackgroundTaskRegistration::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
+    # System.Guid Windows.ApplicationModel.Background.IBackgroundTaskRegistration::get_TaskId()
+    @_property
+    @abstractmethod
+    def task_id(self) -> _uuid.UUID: ...
 
 @typing.final
 class IBackgroundTaskRegistration(winrt.system.Object, ImplementsIBackgroundTaskRegistration):
@@ -888,7 +950,10 @@ class IBackgroundTaskRegistration(winrt.system.Object, ImplementsIBackgroundTask
     def task_id(self) -> _uuid.UUID: ...
 
 class ImplementsIBackgroundTaskRegistration2():
-    pass
+    # Windows.ApplicationModel.Background.IBackgroundTrigger Windows.ApplicationModel.Background.IBackgroundTaskRegistration2::get_Trigger()
+    @_property
+    @abstractmethod
+    def trigger(self) -> IBackgroundTrigger: ...
 
 @typing.final
 class IBackgroundTaskRegistration2(winrt.system.Object, ImplementsIBackgroundTaskRegistration2, ImplementsIBackgroundTaskRegistration):
@@ -913,7 +978,10 @@ class IBackgroundTaskRegistration2(winrt.system.Object, ImplementsIBackgroundTas
     def task_id(self) -> _uuid.UUID: ...
 
 class ImplementsIBackgroundTaskRegistration3():
-    pass
+    # Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup Windows.ApplicationModel.Background.IBackgroundTaskRegistration3::get_TaskGroup()
+    @_property
+    @abstractmethod
+    def task_group(self) -> BackgroundTaskRegistrationGroup: ...
 
 @typing.final
 class IBackgroundTaskRegistration3(winrt.system.Object, ImplementsIBackgroundTaskRegistration3, ImplementsIBackgroundTaskRegistration):

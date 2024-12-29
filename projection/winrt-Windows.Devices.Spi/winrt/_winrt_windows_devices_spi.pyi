@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -111,7 +112,18 @@ class SpiDevice(winrt.system.Object, windows_foundation.ImplementsIClosable, met
     def device_id(self) -> str: ...
 
 class ImplementsISpiDeviceStatics():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Spi.SpiDevice> Windows.Devices.Spi.ISpiDeviceStatics::FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)
+    @abstractmethod
+    def from_id_async(self, bus_id: str, settings: SpiConnectionSettings, /) -> windows_foundation.IAsyncOperation[SpiDevice]: ...
+    # Windows.Devices.Spi.SpiBusInfo Windows.Devices.Spi.ISpiDeviceStatics::GetBusInfo(System.String)
+    @abstractmethod
+    def get_bus_info(self, bus_id: str, /) -> SpiBusInfo: ...
+    # System.String Windows.Devices.Spi.ISpiDeviceStatics::GetDeviceSelector()
+    @abstractmethod
+    def get_device_selector(self) -> str: ...
+    # System.String Windows.Devices.Spi.ISpiDeviceStatics::GetDeviceSelector(System.String)
+    @abstractmethod
+    def get_device_selector_from_friendly_name(self, friendly_name: str, /) -> str: ...
 
 @typing.final
 class ISpiDeviceStatics(winrt.system.Object, ImplementsISpiDeviceStatics):

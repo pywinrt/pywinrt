@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -422,7 +423,36 @@ class UINavigationController(winrt.system.Object, ImplementsIGameControllerBatte
     def user(self) -> windows_system.User: ...
 
 class ImplementsIGameController():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.IGameController::add_HeadsetConnected(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset>)
+    @abstractmethod
+    def add_headset_connected(self, value: windows_foundation.TypedEventHandler[IGameController, Headset], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Gaming.Input.IGameController::remove_HeadsetConnected(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_headset_connected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.IGameController::add_HeadsetDisconnected(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset>)
+    @abstractmethod
+    def add_headset_disconnected(self, value: windows_foundation.TypedEventHandler[IGameController, Headset], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Gaming.Input.IGameController::remove_HeadsetDisconnected(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_headset_disconnected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.IGameController::add_UserChanged(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs>)
+    @abstractmethod
+    def add_user_changed(self, value: windows_foundation.TypedEventHandler[IGameController, windows_system.UserChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Gaming.Input.IGameController::remove_UserChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_user_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Gaming.Input.Headset Windows.Gaming.Input.IGameController::get_Headset()
+    @_property
+    @abstractmethod
+    def headset(self) -> Headset: ...
+    # System.Boolean Windows.Gaming.Input.IGameController::get_IsWireless()
+    @_property
+    @abstractmethod
+    def is_wireless(self) -> bool: ...
+    # Windows.System.User Windows.Gaming.Input.IGameController::get_User()
+    @_property
+    @abstractmethod
+    def user(self) -> windows_system.User: ...
 
 @typing.final
 class IGameController(winrt.system.Object, ImplementsIGameController):
@@ -449,7 +479,9 @@ class IGameController(winrt.system.Object, ImplementsIGameController):
     def user(self) -> windows_system.User: ...
 
 class ImplementsIGameControllerBatteryInfo():
-    pass
+    # Windows.Devices.Power.BatteryReport Windows.Gaming.Input.IGameControllerBatteryInfo::TryGetBatteryReport()
+    @abstractmethod
+    def try_get_battery_report(self) -> typing.Optional[windows_devices_power.BatteryReport]: ...
 
 @typing.final
 class IGameControllerBatteryInfo(winrt.system.Object, ImplementsIGameControllerBatteryInfo):

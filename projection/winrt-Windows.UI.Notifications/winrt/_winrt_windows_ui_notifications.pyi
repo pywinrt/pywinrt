@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -774,7 +775,14 @@ class UserNotificationChangedEventArgs(winrt.system.Object):
     def user_notification_id(self) -> winrt.system.UInt32: ...
 
 class ImplementsIAdaptiveNotificationContent():
-    pass
+    # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.UI.Notifications.IAdaptiveNotificationContent::get_Hints()
+    @_property
+    @abstractmethod
+    def hints(self) -> typing.MutableMapping[str, str]: ...
+    # Windows.UI.Notifications.AdaptiveNotificationContentKind Windows.UI.Notifications.IAdaptiveNotificationContent::get_Kind()
+    @_property
+    @abstractmethod
+    def kind(self) -> AdaptiveNotificationContentKind: ...
 
 @typing.final
 class IAdaptiveNotificationContent(winrt.system.Object, ImplementsIAdaptiveNotificationContent):

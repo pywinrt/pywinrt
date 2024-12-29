@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -117,7 +118,18 @@ class CoreDropOperationTargetRequestedEventArgs(winrt.system.Object):
     def set_target(self, target: ImplementsICoreDropOperationTarget, /) -> None: ...
 
 class ImplementsICoreDropOperationTarget():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget::DropAsync(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo)
+    @abstractmethod
+    def drop_async(self, drag_info: CoreDragInfo, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackageOperation]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget::EnterAsync(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo,Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride)
+    @abstractmethod
+    def enter_async(self, drag_info: CoreDragInfo, drag_ui_override: CoreDragUIOverride, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackageOperation]: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget::LeaveAsync(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo)
+    @abstractmethod
+    def leave_async(self, drag_info: CoreDragInfo, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget::OverAsync(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo,Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride)
+    @abstractmethod
+    def over_async(self, drag_info: CoreDragInfo, drag_ui_override: CoreDragUIOverride, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackageOperation]: ...
 
 @typing.final
 class ICoreDropOperationTarget(winrt.system.Object, ImplementsICoreDropOperationTarget):

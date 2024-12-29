@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -3431,7 +3432,60 @@ class ZoomSnapPointBase(SnapPointBase, metaclass=ZoomSnapPointBase_Static):
     pass
 
 class ImplementsIScrollController():
-    pass
+    # Microsoft.UI.Composition.CompositionAnimation Microsoft.UI.Xaml.Controls.Primitives.IScrollController::GetScrollAnimation(System.Int32,Windows.Foundation.Numerics.Vector2,Windows.Foundation.Numerics.Vector2,Microsoft.UI.Composition.CompositionAnimation)
+    @abstractmethod
+    def get_scroll_animation(self, correlation_id: winrt.system.Int32, start_position: windows_foundation_numerics.Vector2, end_position: windows_foundation_numerics.Vector2, default_animation: microsoft_ui_composition.CompositionAnimation, /) -> microsoft_ui_composition.CompositionAnimation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollController::NotifyRequestedScrollCompleted(System.Int32)
+    @abstractmethod
+    def notify_requested_scroll_completed(self, correlation_id: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollController::SetIsScrollable(System.Boolean)
+    @abstractmethod
+    def set_is_scrollable(self, is_scrollable: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollController::SetValues(System.Double,System.Double,System.Double,System.Double)
+    @abstractmethod
+    def set_values(self, min_offset: winrt.system.Double, max_offset: winrt.system.Double, offset: winrt.system.Double, viewport_length: winrt.system.Double, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.IScrollController::add_AddScrollVelocityRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.IScrollController,Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs>)
+    @abstractmethod
+    def add_add_scroll_velocity_requested(self, handler: windows_foundation.TypedEventHandler[IScrollController, ScrollControllerAddScrollVelocityRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollController::remove_AddScrollVelocityRequested(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_add_scroll_velocity_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.IScrollController::add_CanScrollChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.IScrollController,System.Object>)
+    @abstractmethod
+    def add_can_scroll_changed(self, handler: windows_foundation.TypedEventHandler[IScrollController, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollController::remove_CanScrollChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_can_scroll_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.IScrollController::add_IsScrollingWithMouseChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.IScrollController,System.Object>)
+    @abstractmethod
+    def add_is_scrolling_with_mouse_changed(self, handler: windows_foundation.TypedEventHandler[IScrollController, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollController::remove_IsScrollingWithMouseChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_is_scrolling_with_mouse_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.IScrollController::add_ScrollByRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.IScrollController,Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs>)
+    @abstractmethod
+    def add_scroll_by_requested(self, handler: windows_foundation.TypedEventHandler[IScrollController, ScrollControllerScrollByRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollController::remove_ScrollByRequested(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_scroll_by_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.IScrollController::add_ScrollToRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.IScrollController,Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs>)
+    @abstractmethod
+    def add_scroll_to_requested(self, handler: windows_foundation.TypedEventHandler[IScrollController, ScrollControllerScrollToRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollController::remove_ScrollToRequested(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_scroll_to_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.IScrollController::get_CanScroll()
+    @_property
+    @abstractmethod
+    def can_scroll(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.IScrollController::get_IsScrollingWithMouse()
+    @_property
+    @abstractmethod
+    def is_scrolling_with_mouse(self) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo Microsoft.UI.Xaml.Controls.Primitives.IScrollController::get_PanningInfo()
+    @_property
+    @abstractmethod
+    def panning_info(self) -> IScrollControllerPanningInfo: ...
 
 @typing.final
 class IScrollController(winrt.system.Object, ImplementsIScrollController):
@@ -3474,7 +3528,33 @@ class IScrollController(winrt.system.Object, ImplementsIScrollController):
     def panning_info(self) -> IScrollControllerPanningInfo: ...
 
 class ImplementsIScrollControllerPanningInfo():
-    pass
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::SetPanningElementExpressionAnimationSources(Microsoft.UI.Composition.CompositionPropertySet,System.String,System.String,System.String,System.String)
+    @abstractmethod
+    def set_panning_element_expression_animation_sources(self, property_set: microsoft_ui_composition.CompositionPropertySet, min_offset_property_name: str, max_offset_property_name: str, offset_property_name: str, multiplier_property_name: str, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::add_Changed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo,System.Object>)
+    @abstractmethod
+    def add_changed(self, handler: windows_foundation.TypedEventHandler[IScrollControllerPanningInfo, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::remove_Changed(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::add_PanRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo,Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs>)
+    @abstractmethod
+    def add_pan_requested(self, handler: windows_foundation.TypedEventHandler[IScrollControllerPanningInfo, ScrollControllerPanRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::remove_PanRequested(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_pan_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::get_IsRailEnabled()
+    @_property
+    @abstractmethod
+    def is_rail_enabled(self) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::get_PanOrientation()
+    @_property
+    @abstractmethod
+    def pan_orientation(self) -> microsoft_ui_xaml_controls.Orientation: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::get_PanningElementAncestor()
+    @_property
+    @abstractmethod
+    def panning_element_ancestor(self) -> microsoft_ui_xaml.UIElement: ...
 
 @typing.final
 class IScrollControllerPanningInfo(winrt.system.Object, ImplementsIScrollControllerPanningInfo):
@@ -3499,7 +3579,32 @@ class IScrollControllerPanningInfo(winrt.system.Object, ImplementsIScrollControl
     def panning_element_ancestor(self) -> microsoft_ui_xaml.UIElement: ...
 
 class ImplementsIScrollSnapPointsInfo():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<System.Single> Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetIrregularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation,Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
+    @abstractmethod
+    def get_irregular_snap_points(self, orientation: microsoft_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
+    # System.Single Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetRegularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation,Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment,System.Single&)
+    @abstractmethod
+    def get_regular_snap_points(self, orientation: microsoft_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Tuple[winrt.system.Single, winrt.system.Single]: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::add_HorizontalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
+    @abstractmethod
+    def add_horizontal_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::remove_HorizontalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_horizontal_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::add_VerticalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
+    @abstractmethod
+    def add_vertical_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::remove_VerticalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_vertical_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::get_AreHorizontalSnapPointsRegular()
+    @_property
+    @abstractmethod
+    def are_horizontal_snap_points_regular(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::get_AreVerticalSnapPointsRegular()
+    @_property
+    @abstractmethod
+    def are_vertical_snap_points_regular(self) -> bool: ...
 
 @typing.final
 class IScrollSnapPointsInfo(winrt.system.Object, ImplementsIScrollSnapPointsInfo):

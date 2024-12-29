@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -43,7 +44,9 @@ class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyColl
     def old_starting_index(self) -> winrt.system.Int32: ...
 
 class ImplementsIBindableIterable():
-    pass
+    # Microsoft.UI.Xaml.Interop.IBindableIterator Microsoft.UI.Xaml.Interop.IBindableIterable::First()
+    @abstractmethod
+    def first(self) -> IBindableIterator: ...
 
 @typing.final
 class IBindableIterable(winrt.system.Object, ImplementsIBindableIterable):
@@ -51,7 +54,17 @@ class IBindableIterable(winrt.system.Object, ImplementsIBindableIterable):
     def first(self) -> IBindableIterator: ...
 
 class ImplementsIBindableIterator():
-    pass
+    # System.Boolean Microsoft.UI.Xaml.Interop.IBindableIterator::MoveNext()
+    @abstractmethod
+    def move_next(self) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Interop.IBindableIterator::get_Current()
+    @_property
+    @abstractmethod
+    def current(self) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Xaml.Interop.IBindableIterator::get_HasCurrent()
+    @_property
+    @abstractmethod
+    def has_current(self) -> bool: ...
 
 @typing.final
 class IBindableIterator(winrt.system.Object, ImplementsIBindableIterator):
@@ -65,7 +78,12 @@ class IBindableIterator(winrt.system.Object, ImplementsIBindableIterator):
     def has_current(self) -> bool: ...
 
 class ImplementsIBindableObservableVector():
-    pass
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Interop.IBindableObservableVector::add_VectorChanged(Microsoft.UI.Xaml.Interop.BindableVectorChangedEventHandler)
+    @abstractmethod
+    def add_vector_changed(self, handler: BindableVectorChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Interop.IBindableObservableVector::remove_VectorChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_vector_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class IBindableObservableVector(winrt.system.Object, ImplementsIBindableObservableVector, ImplementsIBindableVector, ImplementsIBindableIterable):
@@ -98,7 +116,37 @@ class IBindableObservableVector(winrt.system.Object, ImplementsIBindableObservab
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsIBindableVector():
-    pass
+    # System.Void Microsoft.UI.Xaml.Interop.IBindableVector::Append(System.Object)
+    @abstractmethod
+    def append(self, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Interop.IBindableVector::Clear()
+    @abstractmethod
+    def clear(self) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Interop.IBindableVector::GetAt(System.UInt32)
+    @abstractmethod
+    def get_at(self, index: winrt.system.UInt32, /) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Interop.IBindableVectorView Microsoft.UI.Xaml.Interop.IBindableVector::GetView()
+    @abstractmethod
+    def get_view(self) -> IBindableVectorView: ...
+    # System.Boolean Microsoft.UI.Xaml.Interop.IBindableVector::IndexOf(System.Object,System.UInt32&)
+    @abstractmethod
+    def index_of(self, value: winrt.system.Object, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.Void Microsoft.UI.Xaml.Interop.IBindableVector::InsertAt(System.UInt32,System.Object)
+    @abstractmethod
+    def insert_at(self, index: winrt.system.UInt32, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Interop.IBindableVector::RemoveAt(System.UInt32)
+    @abstractmethod
+    def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Interop.IBindableVector::RemoveAtEnd()
+    @abstractmethod
+    def remove_at_end(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Interop.IBindableVector::SetAt(System.UInt32,System.Object)
+    @abstractmethod
+    def set_at(self, index: winrt.system.UInt32, value: winrt.system.Object, /) -> None: ...
+    # System.UInt32 Microsoft.UI.Xaml.Interop.IBindableVector::get_Size()
+    @_property
+    @abstractmethod
+    def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IBindableVector(winrt.system.Object, ImplementsIBindableVector, ImplementsIBindableIterable):
@@ -127,7 +175,16 @@ class IBindableVector(winrt.system.Object, ImplementsIBindableVector, Implements
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsIBindableVectorView():
-    pass
+    # System.Object Microsoft.UI.Xaml.Interop.IBindableVectorView::GetAt(System.UInt32)
+    @abstractmethod
+    def get_at(self, index: winrt.system.UInt32, /) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Xaml.Interop.IBindableVectorView::IndexOf(System.Object,System.UInt32&)
+    @abstractmethod
+    def index_of(self, value: winrt.system.Object, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.UInt32 Microsoft.UI.Xaml.Interop.IBindableVectorView::get_Size()
+    @_property
+    @abstractmethod
+    def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IBindableVectorView(winrt.system.Object, ImplementsIBindableVectorView, ImplementsIBindableIterable):
@@ -142,7 +199,12 @@ class IBindableVectorView(winrt.system.Object, ImplementsIBindableVectorView, Im
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsINotifyCollectionChanged():
-    pass
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Interop.INotifyCollectionChanged::add_CollectionChanged(Microsoft.UI.Xaml.Interop.NotifyCollectionChangedEventHandler)
+    @abstractmethod
+    def add_collection_changed(self, handler: NotifyCollectionChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Interop.INotifyCollectionChanged::remove_CollectionChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_collection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class INotifyCollectionChanged(winrt.system.Object, ImplementsINotifyCollectionChanged):

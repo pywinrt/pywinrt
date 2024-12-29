@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -382,7 +383,34 @@ class VoiceCommandSet(winrt.system.Object):
     def name(self) -> str: ...
 
 class ImplementsISpeechRecognitionConstraint():
-    pass
+    # System.Boolean Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_IsEnabled()
+    @_property
+    @abstractmethod
+    def is_enabled(self) -> bool: ...
+    # System.Void Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::put_IsEnabled(System.Boolean)
+    @is_enabled.setter
+    @abstractmethod
+    def is_enabled(self, value: bool) -> None: ...
+    # Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_Probability()
+    @_property
+    @abstractmethod
+    def probability(self) -> SpeechRecognitionConstraintProbability: ...
+    # System.Void Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::put_Probability(Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability)
+    @probability.setter
+    @abstractmethod
+    def probability(self, value: SpeechRecognitionConstraintProbability) -> None: ...
+    # System.String Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_Tag()
+    @_property
+    @abstractmethod
+    def tag(self) -> str: ...
+    # System.Void Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::put_Tag(System.String)
+    @tag.setter
+    @abstractmethod
+    def tag(self, value: str) -> None: ...
+    # Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> SpeechRecognitionConstraintType: ...
 
 @typing.final
 class ISpeechRecognitionConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):

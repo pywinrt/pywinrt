@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1408,7 +1409,22 @@ class PinnedContactManager(winrt.system.Object, metaclass=PinnedContactManager_S
     def user(self) -> windows_system.User: ...
 
 class ImplementsIContactField():
-    pass
+    # Windows.ApplicationModel.Contacts.ContactFieldCategory Windows.ApplicationModel.Contacts.IContactField::get_Category()
+    @_property
+    @abstractmethod
+    def category(self) -> ContactFieldCategory: ...
+    # System.String Windows.ApplicationModel.Contacts.IContactField::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
+    # Windows.ApplicationModel.Contacts.ContactFieldType Windows.ApplicationModel.Contacts.IContactField::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> ContactFieldType: ...
+    # System.String Windows.ApplicationModel.Contacts.IContactField::get_Value()
+    @_property
+    @abstractmethod
+    def value(self) -> str: ...
 
 @typing.final
 class IContactField(winrt.system.Object, ImplementsIContactField):
@@ -1426,7 +1442,15 @@ class IContactField(winrt.system.Object, ImplementsIContactField):
     def value(self) -> str: ...
 
 class ImplementsIContactFieldFactory():
-    pass
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @abstractmethod
+    def create_field_category(self, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @abstractmethod
+    def create_field_custom(self, name: str, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType)
+    @abstractmethod
+    def create_field_default(self, value: str, type: ContactFieldType, /) -> ContactField: ...
 
 @typing.final
 class IContactFieldFactory(winrt.system.Object, ImplementsIContactFieldFactory):
@@ -1438,7 +1462,15 @@ class IContactFieldFactory(winrt.system.Object, ImplementsIContactFieldFactory):
     def create_field_default(self, value: str, type: ContactFieldType, /) -> ContactField: ...
 
 class ImplementsIContactInstantMessageFieldFactory():
-    pass
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,Windows.Foundation.Uri)
+    @abstractmethod
+    def create_instant_message_all(self, user_name: str, category: ContactFieldCategory, service: str, display_text: str, verb: windows_foundation.Uri, /) -> ContactInstantMessageField: ...
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @abstractmethod
+    def create_instant_message_category(self, user_name: str, category: ContactFieldCategory, /) -> ContactInstantMessageField: ...
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String)
+    @abstractmethod
+    def create_instant_message_default(self, user_name: str, /) -> ContactInstantMessageField: ...
 
 @typing.final
 class IContactInstantMessageFieldFactory(winrt.system.Object, ImplementsIContactInstantMessageFieldFactory):
@@ -1450,7 +1482,15 @@ class IContactInstantMessageFieldFactory(winrt.system.Object, ImplementsIContact
     def create_instant_message_default(self, user_name: str, /) -> ContactInstantMessageField: ...
 
 class ImplementsIContactLocationFieldFactory():
-    pass
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,System.String,System.String,System.String)
+    @abstractmethod
+    def create_location_all(self, unstructured_address: str, category: ContactFieldCategory, street: str, city: str, region: str, country: str, postal_code: str, /) -> ContactLocationField: ...
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @abstractmethod
+    def create_location_category(self, unstructured_address: str, category: ContactFieldCategory, /) -> ContactLocationField: ...
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String)
+    @abstractmethod
+    def create_location_default(self, unstructured_address: str, /) -> ContactLocationField: ...
 
 @typing.final
 class IContactLocationFieldFactory(winrt.system.Object, ImplementsIContactLocationFieldFactory):

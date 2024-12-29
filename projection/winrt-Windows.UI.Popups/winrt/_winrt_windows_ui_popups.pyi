@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -124,7 +125,30 @@ class UICommandSeparator(winrt.system.Object, ImplementsIUICommand):
     def id(self, value: winrt.system.Object) -> None: ...
 
 class ImplementsIUICommand():
-    pass
+    # System.Object Windows.UI.Popups.IUICommand::get_Id()
+    @_property
+    @abstractmethod
+    def id(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Popups.IUICommand::put_Id(System.Object)
+    @id.setter
+    @abstractmethod
+    def id(self, value: winrt.system.Object) -> None: ...
+    # Windows.UI.Popups.UICommandInvokedHandler Windows.UI.Popups.IUICommand::get_Invoked()
+    @_property
+    @abstractmethod
+    def invoked(self) -> UICommandInvokedHandler: ...
+    # System.Void Windows.UI.Popups.IUICommand::put_Invoked(Windows.UI.Popups.UICommandInvokedHandler)
+    @invoked.setter
+    @abstractmethod
+    def invoked(self, value: UICommandInvokedHandler) -> None: ...
+    # System.String Windows.UI.Popups.IUICommand::get_Label()
+    @_property
+    @abstractmethod
+    def label(self) -> str: ...
+    # System.Void Windows.UI.Popups.IUICommand::put_Label(System.String)
+    @label.setter
+    @abstractmethod
+    def label(self, value: str) -> None: ...
 
 @typing.final
 class IUICommand(winrt.system.Object, ImplementsIUICommand):

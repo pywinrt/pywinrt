@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -65,7 +66,10 @@ class UserDataAccountProviderSettingsOperation(winrt.system.Object, ImplementsIU
     def user_data_account_id(self) -> str: ...
 
 class ImplementsIUserDataAccountProviderOperation():
-    pass
+    # Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation::get_Kind()
+    @_property
+    @abstractmethod
+    def kind(self) -> UserDataAccountProviderOperationKind: ...
 
 @typing.final
 class IUserDataAccountProviderOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):

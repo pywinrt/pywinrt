@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -876,7 +877,18 @@ class XamlUICommand(windows_ui_xaml.DependencyObject, ImplementsICommand, metacl
     def keyboard_accelerators(self) -> typing.MutableSequence[KeyboardAccelerator]: ...
 
 class ImplementsICommand():
-    pass
+    # System.Boolean Windows.UI.Xaml.Input.ICommand::CanExecute(System.Object)
+    @abstractmethod
+    def can_execute(self, parameter: winrt.system.Object, /) -> bool: ...
+    # System.Void Windows.UI.Xaml.Input.ICommand::Execute(System.Object)
+    @abstractmethod
+    def execute(self, parameter: winrt.system.Object, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Input.ICommand::add_CanExecuteChanged(Windows.Foundation.EventHandler`1<System.Object>)
+    @abstractmethod
+    def add_can_execute_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Input.ICommand::remove_CanExecuteChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_can_execute_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class ICommand(winrt.system.Object, ImplementsICommand):

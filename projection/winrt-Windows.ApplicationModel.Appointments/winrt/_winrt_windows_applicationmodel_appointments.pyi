@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -744,7 +745,22 @@ class FindAppointmentsOptions(winrt.system.Object):
     def fetch_properties(self) -> typing.MutableSequence[str]: ...
 
 class ImplementsIAppointmentParticipant():
-    pass
+    # System.String Windows.ApplicationModel.Appointments.IAppointmentParticipant::get_Address()
+    @_property
+    @abstractmethod
+    def address(self) -> str: ...
+    # System.Void Windows.ApplicationModel.Appointments.IAppointmentParticipant::put_Address(System.String)
+    @address.setter
+    @abstractmethod
+    def address(self, value: str) -> None: ...
+    # System.String Windows.ApplicationModel.Appointments.IAppointmentParticipant::get_DisplayName()
+    @_property
+    @abstractmethod
+    def display_name(self) -> str: ...
+    # System.Void Windows.ApplicationModel.Appointments.IAppointmentParticipant::put_DisplayName(System.String)
+    @display_name.setter
+    @abstractmethod
+    def display_name(self, value: str) -> None: ...
 
 @typing.final
 class IAppointmentParticipant(winrt.system.Object, ImplementsIAppointmentParticipant):

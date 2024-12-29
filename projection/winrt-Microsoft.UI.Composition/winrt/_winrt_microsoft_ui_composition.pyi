@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -2599,7 +2600,9 @@ class VisualUnorderedCollection(CompositionObject):
     def count(self) -> winrt.system.Int32: ...
 
 class ImplementsIAnimationObject():
-    pass
+    # System.Void Microsoft.UI.Composition.IAnimationObject::PopulatePropertyInfo(System.String,Microsoft.UI.Composition.AnimationPropertyInfo)
+    @abstractmethod
+    def populate_property_info(self, property_name: str, property_info: AnimationPropertyInfo, /) -> None: ...
 
 @typing.final
 class IAnimationObject(winrt.system.Object, ImplementsIAnimationObject):
@@ -2614,7 +2617,14 @@ class ICompositionAnimationBase(winrt.system.Object, ImplementsICompositionAnima
     pass
 
 class ImplementsICompositionSupportsSystemBackdrop():
-    pass
+    # Windows.UI.Composition.CompositionBrush Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop::get_SystemBackdrop()
+    @_property
+    @abstractmethod
+    def system_backdrop(self) -> windows_ui_composition.CompositionBrush: ...
+    # System.Void Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop::put_SystemBackdrop(Windows.UI.Composition.CompositionBrush)
+    @system_backdrop.setter
+    @abstractmethod
+    def system_backdrop(self, value: windows_ui_composition.CompositionBrush) -> None: ...
 
 @typing.final
 class ICompositionSupportsSystemBackdrop(winrt.system.Object, ImplementsICompositionSupportsSystemBackdrop):
@@ -2633,7 +2643,9 @@ class ICompositionSurface(winrt.system.Object, ImplementsICompositionSurface):
     pass
 
 class ImplementsICompositionSurfaceFacade():
-    pass
+    # Microsoft.UI.Composition.ICompositionSurface Microsoft.UI.Composition.ICompositionSurfaceFacade::GetRealSurface()
+    @abstractmethod
+    def get_real_surface(self) -> ICompositionSurface: ...
 
 @typing.final
 class ICompositionSurfaceFacade(winrt.system.Object, ImplementsICompositionSurfaceFacade):
@@ -2648,7 +2660,9 @@ class IVisualElement(winrt.system.Object, ImplementsIVisualElement):
     pass
 
 class ImplementsIVisualElement2():
-    pass
+    # Microsoft.UI.Composition.Visual Microsoft.UI.Composition.IVisualElement2::GetVisualInternal()
+    @abstractmethod
+    def get_visual_internal(self) -> Visual: ...
 
 @typing.final
 class IVisualElement2(winrt.system.Object, ImplementsIVisualElement2):

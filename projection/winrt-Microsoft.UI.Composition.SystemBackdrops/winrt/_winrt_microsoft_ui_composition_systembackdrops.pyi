@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -199,7 +200,12 @@ class SystemBackdropConfiguration(winrt.system.Object):
     def high_contrast_background_color(self, value: typing.Optional[windows_ui.Color]) -> None: ...
 
 class ImplementsISystemBackdropController():
-    pass
+    # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController::SetTarget(Windows.UI.Core.CoreWindow,Windows.UI.Composition.CompositionTarget)
+    @abstractmethod
+    def set_target_with_core_window(self, core_window: windows_ui_core.CoreWindow, composition_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController::SetTarget(Microsoft.UI.WindowId,Windows.UI.Composition.CompositionTarget)
+    @abstractmethod
+    def set_target_with_window_id(self, window_id: microsoft_ui.WindowId, desktop_window_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
 
 @typing.final
 class ISystemBackdropController(winrt.system.Object, ImplementsISystemBackdropController, windows_foundation.ImplementsIClosable):
@@ -213,7 +219,28 @@ class ISystemBackdropController(winrt.system.Object, ImplementsISystemBackdropCo
     def set_target_with_window_id(self, window_id: microsoft_ui.WindowId, desktop_window_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
 
 class ImplementsISystemBackdropControllerWithTargets():
-    pass
+    # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets::AddSystemBackdropTarget(Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop)
+    @abstractmethod
+    def add_system_backdrop_target(self, system_backdrop_target: microsoft_ui_composition.ImplementsICompositionSupportsSystemBackdrop, /) -> bool: ...
+    # System.Void Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets::RemoveAllSystemBackdropTargets()
+    @abstractmethod
+    def remove_all_system_backdrop_targets(self) -> None: ...
+    # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets::RemoveSystemBackdropTarget(Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop)
+    @abstractmethod
+    def remove_system_backdrop_target(self, system_backdrop_target: microsoft_ui_composition.ImplementsICompositionSupportsSystemBackdrop, /) -> bool: ...
+    # System.Void Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets::SetSystemBackdropConfiguration(Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration)
+    @abstractmethod
+    def set_system_backdrop_configuration(self, configuration: SystemBackdropConfiguration, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets::add_StateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets,System.Object>)
+    @abstractmethod
+    def add_state_changed(self, handler: windows_foundation.TypedEventHandler[ISystemBackdropControllerWithTargets, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets::remove_StateChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_state_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Composition.SystemBackdrops.SystemBackdropState Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets::get_State()
+    @_property
+    @abstractmethod
+    def state(self) -> SystemBackdropState: ...
 
 @typing.final
 class ISystemBackdropControllerWithTargets(winrt.system.Object, ImplementsISystemBackdropControllerWithTargets, ImplementsISystemBackdropController, windows_foundation.ImplementsIClosable):

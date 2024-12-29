@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -113,7 +114,9 @@ class ValueSet(winrt.system.Object, ImplementsIPropertySet, ImplementsIObservabl
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsIIterable(typing.Generic[T]):
-    pass
+    # Windows.Foundation.Collections.IIterator`1<T> Windows.Foundation.Collections.IIterable`1::First()
+    @abstractmethod
+    def first(self) -> IIterator[T]: ...
 
 @typing.final
 class IIterable(winrt.system.Object, ImplementsIIterable, typing.Generic[T]):
@@ -123,7 +126,20 @@ class IIterable(winrt.system.Object, ImplementsIIterable, typing.Generic[T]):
     def first(self) -> IIterator[T]: ...
 
 class ImplementsIIterator(typing.Generic[T]):
-    pass
+    # System.UInt32 Windows.Foundation.Collections.IIterator`1::GetMany(T[])
+    @abstractmethod
+    def get_many(self, items: typing.Union[winrt.system.Array[T], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
+    # System.Boolean Windows.Foundation.Collections.IIterator`1::MoveNext()
+    @abstractmethod
+    def move_next(self) -> bool: ...
+    # T Windows.Foundation.Collections.IIterator`1::get_Current()
+    @_property
+    @abstractmethod
+    def current(self) -> T: ...
+    # System.Boolean Windows.Foundation.Collections.IIterator`1::get_HasCurrent()
+    @_property
+    @abstractmethod
+    def has_current(self) -> bool: ...
 
 @typing.final
 class IIterator(winrt.system.Object, ImplementsIIterator, typing.Generic[T]):
@@ -142,7 +158,14 @@ class IIterator(winrt.system.Object, ImplementsIIterator, typing.Generic[T]):
     def has_current(self) -> bool: ...
 
 class ImplementsIKeyValuePair(typing.Generic[K, V]):
-    pass
+    # K Windows.Foundation.Collections.IKeyValuePair`2::get_Key()
+    @_property
+    @abstractmethod
+    def key(self) -> K: ...
+    # V Windows.Foundation.Collections.IKeyValuePair`2::get_Value()
+    @_property
+    @abstractmethod
+    def value(self) -> V: ...
 
 @typing.final
 class IKeyValuePair(winrt.system.Object, ImplementsIKeyValuePair, typing.Generic[K, V]):
@@ -155,7 +178,14 @@ class IKeyValuePair(winrt.system.Object, ImplementsIKeyValuePair, typing.Generic
     def value(self) -> V: ...
 
 class ImplementsIMapChangedEventArgs(typing.Generic[K]):
-    pass
+    # Windows.Foundation.Collections.CollectionChange Windows.Foundation.Collections.IMapChangedEventArgs`1::get_CollectionChange()
+    @_property
+    @abstractmethod
+    def collection_change(self) -> CollectionChange: ...
+    # K Windows.Foundation.Collections.IMapChangedEventArgs`1::get_Key()
+    @_property
+    @abstractmethod
+    def key(self) -> K: ...
 
 @typing.final
 class IMapChangedEventArgs(winrt.system.Object, ImplementsIMapChangedEventArgs, typing.Generic[K]):
@@ -168,7 +198,19 @@ class IMapChangedEventArgs(winrt.system.Object, ImplementsIMapChangedEventArgs, 
     def key(self) -> K: ...
 
 class ImplementsIMapView(typing.Generic[K, V]):
-    pass
+    # System.Boolean Windows.Foundation.Collections.IMapView`2::HasKey(K)
+    @abstractmethod
+    def has_key(self, key: K, /) -> bool: ...
+    # V Windows.Foundation.Collections.IMapView`2::Lookup(K)
+    @abstractmethod
+    def lookup(self, key: K, /) -> V: ...
+    # System.Void Windows.Foundation.Collections.IMapView`2::Split(Windows.Foundation.Collections.IMapView`2<K,V>&,Windows.Foundation.Collections.IMapView`2<K,V>&)
+    @abstractmethod
+    def split(self) -> typing.Tuple[typing.Mapping[K, V], typing.Mapping[K, V]]: ...
+    # System.UInt32 Windows.Foundation.Collections.IMapView`2::get_Size()
+    @_property
+    @abstractmethod
+    def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IMapView(winrt.system.Object, ImplementsIMapView, winrt._winrt.Mapping[K, V]):
@@ -190,7 +232,28 @@ class IMapView(winrt.system.Object, ImplementsIMapView, winrt._winrt.Mapping[K, 
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsIMap(typing.Generic[K, V]):
-    pass
+    # System.Void Windows.Foundation.Collections.IMap`2::Clear()
+    @abstractmethod
+    def clear(self) -> None: ...
+    # Windows.Foundation.Collections.IMapView`2<K,V> Windows.Foundation.Collections.IMap`2::GetView()
+    @abstractmethod
+    def get_view(self) -> typing.Mapping[K, V]: ...
+    # System.Boolean Windows.Foundation.Collections.IMap`2::HasKey(K)
+    @abstractmethod
+    def has_key(self, key: K, /) -> bool: ...
+    # System.Boolean Windows.Foundation.Collections.IMap`2::Insert(K,V)
+    @abstractmethod
+    def insert(self, key: K, value: V, /) -> bool: ...
+    # V Windows.Foundation.Collections.IMap`2::Lookup(K)
+    @abstractmethod
+    def lookup(self, key: K, /) -> V: ...
+    # System.Void Windows.Foundation.Collections.IMap`2::Remove(K)
+    @abstractmethod
+    def remove(self, key: K, /) -> None: ...
+    # System.UInt32 Windows.Foundation.Collections.IMap`2::get_Size()
+    @_property
+    @abstractmethod
+    def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IMap(winrt.system.Object, ImplementsIMap, winrt._winrt.MutableMapping[K, V]):
@@ -220,7 +283,12 @@ class IMap(winrt.system.Object, ImplementsIMap, winrt._winrt.MutableMapping[K, V
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsIObservableMap(typing.Generic[K, V]):
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.Foundation.Collections.IObservableMap`2::add_MapChanged(Windows.Foundation.Collections.MapChangedEventHandler`2<K,V>)
+    @abstractmethod
+    def add_map_changed(self, vhnd: MapChangedEventHandler[K, V], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Foundation.Collections.IObservableMap`2::remove_MapChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_map_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class IObservableMap(winrt.system.Object, ImplementsIObservableMap, winrt._winrt.MutableMapping[K, V]):
@@ -254,7 +322,12 @@ class IObservableMap(winrt.system.Object, ImplementsIObservableMap, winrt._winrt
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsIObservableVector(typing.Generic[T]):
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.Foundation.Collections.IObservableVector`1::add_VectorChanged(Windows.Foundation.Collections.VectorChangedEventHandler`1<T>)
+    @abstractmethod
+    def add_vector_changed(self, vhnd: VectorChangedEventHandler[T], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Foundation.Collections.IObservableVector`1::remove_VectorChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_vector_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class IObservableVector(winrt.system.Object, ImplementsIObservableVector, winrt._winrt.MutableSequence[T]):
@@ -339,7 +412,14 @@ class IPropertySet(winrt.system.Object, ImplementsIPropertySet, ImplementsIObser
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsIVectorChangedEventArgs():
-    pass
+    # Windows.Foundation.Collections.CollectionChange Windows.Foundation.Collections.IVectorChangedEventArgs::get_CollectionChange()
+    @_property
+    @abstractmethod
+    def collection_change(self) -> CollectionChange: ...
+    # System.UInt32 Windows.Foundation.Collections.IVectorChangedEventArgs::get_Index()
+    @_property
+    @abstractmethod
+    def index(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IVectorChangedEventArgs(winrt.system.Object, ImplementsIVectorChangedEventArgs):
@@ -351,7 +431,19 @@ class IVectorChangedEventArgs(winrt.system.Object, ImplementsIVectorChangedEvent
     def index(self) -> winrt.system.UInt32: ...
 
 class ImplementsIVectorView(typing.Generic[T]):
-    pass
+    # T Windows.Foundation.Collections.IVectorView`1::GetAt(System.UInt32)
+    @abstractmethod
+    def get_at(self, index: winrt.system.UInt32, /) -> T: ...
+    # System.UInt32 Windows.Foundation.Collections.IVectorView`1::GetMany(System.UInt32,T[])
+    @abstractmethod
+    def get_many(self, start_index: winrt.system.UInt32, items: typing.Union[winrt.system.Array[T], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
+    # System.Boolean Windows.Foundation.Collections.IVectorView`1::IndexOf(T,System.UInt32&)
+    @abstractmethod
+    def index_of(self, value: T, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.UInt32 Windows.Foundation.Collections.IVectorView`1::get_Size()
+    @_property
+    @abstractmethod
+    def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IVectorView(winrt.system.Object, ImplementsIVectorView, winrt._winrt.Sequence[T]):
@@ -375,7 +467,43 @@ class IVectorView(winrt.system.Object, ImplementsIVectorView, winrt._winrt.Seque
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsIVector(typing.Generic[T]):
-    pass
+    # System.Void Windows.Foundation.Collections.IVector`1::Append(T)
+    @abstractmethod
+    def append(self, value: T, /) -> None: ...
+    # System.Void Windows.Foundation.Collections.IVector`1::Clear()
+    @abstractmethod
+    def clear(self) -> None: ...
+    # T Windows.Foundation.Collections.IVector`1::GetAt(System.UInt32)
+    @abstractmethod
+    def get_at(self, index: winrt.system.UInt32, /) -> T: ...
+    # System.UInt32 Windows.Foundation.Collections.IVector`1::GetMany(System.UInt32,T[])
+    @abstractmethod
+    def get_many(self, start_index: winrt.system.UInt32, items: typing.Union[winrt.system.Array[T], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Collections.IVectorView`1<T> Windows.Foundation.Collections.IVector`1::GetView()
+    @abstractmethod
+    def get_view(self) -> typing.Sequence[T]: ...
+    # System.Boolean Windows.Foundation.Collections.IVector`1::IndexOf(T,System.UInt32&)
+    @abstractmethod
+    def index_of(self, value: T, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.Void Windows.Foundation.Collections.IVector`1::InsertAt(System.UInt32,T)
+    @abstractmethod
+    def insert_at(self, index: winrt.system.UInt32, value: T, /) -> None: ...
+    # System.Void Windows.Foundation.Collections.IVector`1::RemoveAt(System.UInt32)
+    @abstractmethod
+    def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Foundation.Collections.IVector`1::RemoveAtEnd()
+    @abstractmethod
+    def remove_at_end(self) -> None: ...
+    # System.Void Windows.Foundation.Collections.IVector`1::ReplaceAll(T[])
+    @abstractmethod
+    def replace_all(self, items: typing.Union[winrt.system.Array[T], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Windows.Foundation.Collections.IVector`1::SetAt(System.UInt32,T)
+    @abstractmethod
+    def set_at(self, index: winrt.system.UInt32, value: T, /) -> None: ...
+    # System.UInt32 Windows.Foundation.Collections.IVector`1::get_Size()
+    @_property
+    @abstractmethod
+    def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IVector(winrt.system.Object, ImplementsIVector, winrt._winrt.MutableSequence[T]):

@@ -1,6 +1,7 @@
 import atexit
 import tempfile
 from ctypes import WinError
+from typing import override
 
 from winrt.microsoft.ui.xaml import (
     Application,
@@ -63,6 +64,7 @@ class App(Application, ImplementsIXamlMetadataProvider):
     def __init__(self) -> None:
         self._provider = XamlControlsXamlMetaDataProvider()
 
+    @override
     def _on_launched(self, args: LaunchActivatedEventArgs) -> None:
         # Have to add some default resources here, otherwise the
         # app will crash when trying to create menus
@@ -118,12 +120,15 @@ class App(Application, ImplementsIXamlMetadataProvider):
 
         env_op.completed = on_env
 
+    @override
     def get_xaml_type(self, type: TypeName) -> IXamlType:
         return self._provider.get_xaml_type(type)
 
+    @override
     def get_xaml_type_by_full_name(self, full_name: str) -> IXamlType:
         return self._provider.get_xaml_type_by_full_name(full_name)
 
+    @override
     def get_xmlns_definitions(self) -> Array[XmlnsDefinition]:
         return self._provider.get_xmlns_definitions()
 

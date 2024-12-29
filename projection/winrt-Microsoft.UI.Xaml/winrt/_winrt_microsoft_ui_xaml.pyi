@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -3337,7 +3338,15 @@ class XamlRootChangedEventArgs(winrt.system.Object):
     pass
 
 class ImplementsIDataTemplateExtension():
-    pass
+    # System.Boolean Microsoft.UI.Xaml.IDataTemplateExtension::ProcessBinding(System.UInt32)
+    @abstractmethod
+    def process_binding(self, phase: winrt.system.UInt32, /) -> bool: ...
+    # System.Int32 Microsoft.UI.Xaml.IDataTemplateExtension::ProcessBindings(Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs)
+    @abstractmethod
+    def process_bindings(self, arg: microsoft_ui_xaml_controls.ContainerContentChangingEventArgs, /) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.IDataTemplateExtension::ResetTemplate()
+    @abstractmethod
+    def reset_template(self) -> None: ...
 
 @typing.final
 class IDataTemplateExtension(winrt.system.Object, ImplementsIDataTemplateExtension):
@@ -3349,7 +3358,12 @@ class IDataTemplateExtension(winrt.system.Object, ImplementsIDataTemplateExtensi
     def reset_template(self) -> None: ...
 
 class ImplementsIElementFactory():
-    pass
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.IElementFactory::GetElement(Microsoft.UI.Xaml.ElementFactoryGetArgs)
+    @abstractmethod
+    def get_element(self, args: ElementFactoryGetArgs, /) -> UIElement: ...
+    # System.Void Microsoft.UI.Xaml.IElementFactory::RecycleElement(Microsoft.UI.Xaml.ElementFactoryRecycleArgs)
+    @abstractmethod
+    def recycle_element(self, args: ElementFactoryRecycleArgs, /) -> None: ...
 
 @typing.final
 class IElementFactory(winrt.system.Object, ImplementsIElementFactory):
@@ -3359,7 +3373,9 @@ class IElementFactory(winrt.system.Object, ImplementsIElementFactory):
     def recycle_element(self, args: ElementFactoryRecycleArgs, /) -> None: ...
 
 class ImplementsIXamlServiceProvider():
-    pass
+    # System.Object Microsoft.UI.Xaml.IXamlServiceProvider::GetService(Windows.UI.Xaml.Interop.TypeName)
+    @abstractmethod
+    def get_service(self, type: windows_ui_xaml_interop.TypeName, /) -> winrt.system.Object: ...
 
 @typing.final
 class IXamlServiceProvider(winrt.system.Object, ImplementsIXamlServiceProvider):

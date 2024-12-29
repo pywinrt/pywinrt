@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -295,7 +296,33 @@ class InkAnalyzer(winrt.system.Object):
     def is_analyzing(self) -> bool: ...
 
 class ImplementsIInkAnalysisNode():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.IInkAnalysisNode::GetStrokeIds()
+    @abstractmethod
+    def get_stroke_ids(self) -> typing.Sequence[winrt.system.UInt32]: ...
+    # Windows.Foundation.Rect Windows.UI.Input.Inking.Analysis.IInkAnalysisNode::get_BoundingRect()
+    @_property
+    @abstractmethod
+    def bounding_rect(self) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> Windows.UI.Input.Inking.Analysis.IInkAnalysisNode::get_Children()
+    @_property
+    @abstractmethod
+    def children(self) -> typing.Sequence[IInkAnalysisNode]: ...
+    # System.UInt32 Windows.UI.Input.Inking.Analysis.IInkAnalysisNode::get_Id()
+    @_property
+    @abstractmethod
+    def id(self) -> winrt.system.UInt32: ...
+    # Windows.UI.Input.Inking.Analysis.InkAnalysisNodeKind Windows.UI.Input.Inking.Analysis.IInkAnalysisNode::get_Kind()
+    @_property
+    @abstractmethod
+    def kind(self) -> InkAnalysisNodeKind: ...
+    # Windows.UI.Input.Inking.Analysis.IInkAnalysisNode Windows.UI.Input.Inking.Analysis.IInkAnalysisNode::get_Parent()
+    @_property
+    @abstractmethod
+    def parent(self) -> IInkAnalysisNode: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Point> Windows.UI.Input.Inking.Analysis.IInkAnalysisNode::get_RotatedBoundingRect()
+    @_property
+    @abstractmethod
+    def rotated_bounding_rect(self) -> typing.Sequence[windows_foundation.Point]: ...
 
 @typing.final
 class IInkAnalysisNode(winrt.system.Object, ImplementsIInkAnalysisNode):
@@ -321,7 +348,9 @@ class IInkAnalysisNode(winrt.system.Object, ImplementsIInkAnalysisNode):
     def rotated_bounding_rect(self) -> typing.Sequence[windows_foundation.Point]: ...
 
 class ImplementsIInkAnalyzerFactory():
-    pass
+    # Windows.UI.Input.Inking.Analysis.InkAnalyzer Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory::CreateAnalyzer()
+    @abstractmethod
+    def create_analyzer(self) -> InkAnalyzer: ...
 
 @typing.final
 class IInkAnalyzerFactory(winrt.system.Object, ImplementsIInkAnalyzerFactory):

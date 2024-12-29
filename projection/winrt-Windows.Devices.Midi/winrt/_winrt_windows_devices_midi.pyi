@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -398,7 +399,18 @@ class MidiTuneRequestMessage(winrt.system.Object, ImplementsIMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 class ImplementsIMidiMessage():
-    pass
+    # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.IMidiMessage::get_RawData()
+    @_property
+    @abstractmethod
+    def raw_data(self) -> windows_storage_streams.IBuffer: ...
+    # Windows.Foundation.TimeSpan Windows.Devices.Midi.IMidiMessage::get_Timestamp()
+    @_property
+    @abstractmethod
+    def timestamp(self) -> datetime.timedelta: ...
+    # Windows.Devices.Midi.MidiMessageType Windows.Devices.Midi.IMidiMessage::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> MidiMessageType: ...
 
 @typing.final
 class IMidiMessage(winrt.system.Object, ImplementsIMidiMessage):
@@ -413,7 +425,16 @@ class IMidiMessage(winrt.system.Object, ImplementsIMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 class ImplementsIMidiOutPort():
-    pass
+    # System.Void Windows.Devices.Midi.IMidiOutPort::SendBuffer(Windows.Storage.Streams.IBuffer)
+    @abstractmethod
+    def send_buffer(self, midi_data: windows_storage_streams.ImplementsIBuffer, /) -> None: ...
+    # System.Void Windows.Devices.Midi.IMidiOutPort::SendMessage(Windows.Devices.Midi.IMidiMessage)
+    @abstractmethod
+    def send_message(self, midi_message: ImplementsIMidiMessage, /) -> None: ...
+    # System.String Windows.Devices.Midi.IMidiOutPort::get_DeviceId()
+    @_property
+    @abstractmethod
+    def device_id(self) -> str: ...
 
 @typing.final
 class IMidiOutPort(winrt.system.Object, ImplementsIMidiOutPort, windows_foundation.ImplementsIClosable):

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -273,7 +274,17 @@ class WwwFormUrlDecoderEntry(winrt.system.Object, ImplementsIWwwFormUrlDecoderEn
     def value(self) -> str: ...
 
 class ImplementsIAsyncAction():
-    pass
+    # System.Void Windows.Foundation.IAsyncAction::GetResults()
+    @abstractmethod
+    def get_results(self) -> None: ...
+    # Windows.Foundation.AsyncActionCompletedHandler Windows.Foundation.IAsyncAction::get_Completed()
+    @_property
+    @abstractmethod
+    def completed(self) -> AsyncActionCompletedHandler: ...
+    # System.Void Windows.Foundation.IAsyncAction::put_Completed(Windows.Foundation.AsyncActionCompletedHandler)
+    @completed.setter
+    @abstractmethod
+    def completed(self, value: AsyncActionCompletedHandler) -> None: ...
 
 @typing.final
 class IAsyncAction(winrt.system.Object, ImplementsIAsyncAction, ImplementsIAsyncInfo):
@@ -301,7 +312,25 @@ class IAsyncAction(winrt.system.Object, ImplementsIAsyncAction, ImplementsIAsync
     def status(self) -> AsyncStatus: ...
 
 class ImplementsIAsyncActionWithProgress(typing.Generic[TProgress]):
-    pass
+    # System.Void Windows.Foundation.IAsyncActionWithProgress`1::GetResults()
+    @abstractmethod
+    def get_results(self) -> None: ...
+    # Windows.Foundation.AsyncActionProgressHandler`1<TProgress> Windows.Foundation.IAsyncActionWithProgress`1::get_Progress()
+    @_property
+    @abstractmethod
+    def progress(self) -> AsyncActionProgressHandler[TProgress]: ...
+    # System.Void Windows.Foundation.IAsyncActionWithProgress`1::put_Progress(Windows.Foundation.AsyncActionProgressHandler`1<TProgress>)
+    @progress.setter
+    @abstractmethod
+    def progress(self, value: AsyncActionProgressHandler[TProgress]) -> None: ...
+    # Windows.Foundation.AsyncActionWithProgressCompletedHandler`1<TProgress> Windows.Foundation.IAsyncActionWithProgress`1::get_Completed()
+    @_property
+    @abstractmethod
+    def completed(self) -> AsyncActionWithProgressCompletedHandler[TProgress]: ...
+    # System.Void Windows.Foundation.IAsyncActionWithProgress`1::put_Completed(Windows.Foundation.AsyncActionWithProgressCompletedHandler`1<TProgress>)
+    @completed.setter
+    @abstractmethod
+    def completed(self, value: AsyncActionWithProgressCompletedHandler[TProgress]) -> None: ...
 
 @typing.final
 class IAsyncActionWithProgress(winrt.system.Object, ImplementsIAsyncActionWithProgress, ImplementsIAsyncInfo, typing.Generic[TProgress]):
@@ -336,7 +365,24 @@ class IAsyncActionWithProgress(winrt.system.Object, ImplementsIAsyncActionWithPr
     def status(self) -> AsyncStatus: ...
 
 class ImplementsIAsyncInfo():
-    pass
+    # System.Void Windows.Foundation.IAsyncInfo::Cancel()
+    @abstractmethod
+    def cancel(self) -> None: ...
+    # System.Void Windows.Foundation.IAsyncInfo::Close()
+    @abstractmethod
+    def close(self) -> None: ...
+    # Windows.Foundation.HResult Windows.Foundation.IAsyncInfo::get_ErrorCode()
+    @_property
+    @abstractmethod
+    def error_code(self) -> HResult: ...
+    # System.UInt32 Windows.Foundation.IAsyncInfo::get_Id()
+    @_property
+    @abstractmethod
+    def id(self) -> winrt.system.UInt32: ...
+    # Windows.Foundation.AsyncStatus Windows.Foundation.IAsyncInfo::get_Status()
+    @_property
+    @abstractmethod
+    def status(self) -> AsyncStatus: ...
 
 @typing.final
 class IAsyncInfo(winrt.system.Object, ImplementsIAsyncInfo):
@@ -355,7 +401,25 @@ class IAsyncInfo(winrt.system.Object, ImplementsIAsyncInfo):
     def status(self) -> AsyncStatus: ...
 
 class ImplementsIAsyncOperationWithProgress(typing.Generic[TResult, TProgress]):
-    pass
+    # TResult Windows.Foundation.IAsyncOperationWithProgress`2::GetResults()
+    @abstractmethod
+    def get_results(self) -> TResult: ...
+    # Windows.Foundation.AsyncOperationProgressHandler`2<TResult,TProgress> Windows.Foundation.IAsyncOperationWithProgress`2::get_Progress()
+    @_property
+    @abstractmethod
+    def progress(self) -> AsyncOperationProgressHandler[TResult, TProgress]: ...
+    # System.Void Windows.Foundation.IAsyncOperationWithProgress`2::put_Progress(Windows.Foundation.AsyncOperationProgressHandler`2<TResult,TProgress>)
+    @progress.setter
+    @abstractmethod
+    def progress(self, value: AsyncOperationProgressHandler[TResult, TProgress]) -> None: ...
+    # Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<TResult,TProgress> Windows.Foundation.IAsyncOperationWithProgress`2::get_Completed()
+    @_property
+    @abstractmethod
+    def completed(self) -> AsyncOperationWithProgressCompletedHandler[TResult, TProgress]: ...
+    # System.Void Windows.Foundation.IAsyncOperationWithProgress`2::put_Completed(Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<TResult,TProgress>)
+    @completed.setter
+    @abstractmethod
+    def completed(self, value: AsyncOperationWithProgressCompletedHandler[TResult, TProgress]) -> None: ...
 
 @typing.final
 class IAsyncOperationWithProgress(winrt.system.Object, ImplementsIAsyncOperationWithProgress, ImplementsIAsyncInfo, typing.Generic[TResult, TProgress]):
@@ -390,7 +454,17 @@ class IAsyncOperationWithProgress(winrt.system.Object, ImplementsIAsyncOperation
     def status(self) -> AsyncStatus: ...
 
 class ImplementsIAsyncOperation(typing.Generic[TResult]):
-    pass
+    # TResult Windows.Foundation.IAsyncOperation`1::GetResults()
+    @abstractmethod
+    def get_results(self) -> TResult: ...
+    # Windows.Foundation.AsyncOperationCompletedHandler`1<TResult> Windows.Foundation.IAsyncOperation`1::get_Completed()
+    @_property
+    @abstractmethod
+    def completed(self) -> AsyncOperationCompletedHandler[TResult]: ...
+    # System.Void Windows.Foundation.IAsyncOperation`1::put_Completed(Windows.Foundation.AsyncOperationCompletedHandler`1<TResult>)
+    @completed.setter
+    @abstractmethod
+    def completed(self, value: AsyncOperationCompletedHandler[TResult]) -> None: ...
 
 @typing.final
 class IAsyncOperation(winrt.system.Object, ImplementsIAsyncOperation, ImplementsIAsyncInfo, typing.Generic[TResult]):
@@ -419,7 +493,9 @@ class IAsyncOperation(winrt.system.Object, ImplementsIAsyncOperation, Implements
     def status(self) -> AsyncStatus: ...
 
 class ImplementsIClosable():
-    pass
+    # System.Void Windows.Foundation.IClosable::Close()
+    @abstractmethod
+    def close(self) -> None: ...
 
 @typing.final
 class IClosable(winrt.system.Object, ImplementsIClosable):
@@ -429,7 +505,9 @@ class IClosable(winrt.system.Object, ImplementsIClosable):
     def close(self) -> None: ...
 
 class ImplementsIGetActivationFactory():
-    pass
+    # System.Object Windows.Foundation.IGetActivationFactory::GetActivationFactory(System.String)
+    @abstractmethod
+    def get_activation_factory(self, activatable_class_id: str, /) -> winrt.system.Object: ...
 
 @typing.final
 class IGetActivationFactory(winrt.system.Object, ImplementsIGetActivationFactory):
@@ -437,7 +515,9 @@ class IGetActivationFactory(winrt.system.Object, ImplementsIGetActivationFactory
     def get_activation_factory(self, activatable_class_id: str, /) -> winrt.system.Object: ...
 
 class ImplementsIMemoryBuffer():
-    pass
+    # Windows.Foundation.IMemoryBufferReference Windows.Foundation.IMemoryBuffer::CreateReference()
+    @abstractmethod
+    def create_reference(self) -> IMemoryBufferReference: ...
 
 @typing.final
 class IMemoryBuffer(winrt.system.Object, ImplementsIMemoryBuffer, ImplementsIClosable):
@@ -449,7 +529,16 @@ class IMemoryBuffer(winrt.system.Object, ImplementsIMemoryBuffer, ImplementsIClo
     def create_reference(self) -> IMemoryBufferReference: ...
 
 class ImplementsIMemoryBufferReference():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.Foundation.IMemoryBufferReference::add_Closed(Windows.Foundation.TypedEventHandler`2<Windows.Foundation.IMemoryBufferReference,System.Object>)
+    @abstractmethod
+    def add_closed(self, handler: TypedEventHandler[IMemoryBufferReference, winrt.system.Object], /) -> EventRegistrationToken: ...
+    # System.Void Windows.Foundation.IMemoryBufferReference::remove_Closed(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_closed(self, cookie: EventRegistrationToken, /) -> None: ...
+    # System.UInt32 Windows.Foundation.IMemoryBufferReference::get_Capacity()
+    @_property
+    @abstractmethod
+    def capacity(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IMemoryBufferReference(winrt.system.Object, ImplementsIMemoryBufferReference, ImplementsIClosable):
@@ -468,7 +557,125 @@ class IMemoryBufferReference(winrt.system.Object, ImplementsIMemoryBufferReferen
     def capacity(self) -> winrt.system.UInt32: ...
 
 class ImplementsIPropertyValue():
-    pass
+    # System.Boolean Windows.Foundation.IPropertyValue::GetBoolean()
+    @abstractmethod
+    def get_boolean(self) -> bool: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetBooleanArray(System.Boolean[]&)
+    @abstractmethod
+    def get_boolean_array(self) -> winrt.system.Array[bool]: ...
+    # System.Char Windows.Foundation.IPropertyValue::GetChar16()
+    @abstractmethod
+    def get_char16(self) -> winrt.system.Char16: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetChar16Array(System.Char[]&)
+    @abstractmethod
+    def get_char16_array(self) -> winrt.system.Array[winrt.system.Char16]: ...
+    # Windows.Foundation.DateTime Windows.Foundation.IPropertyValue::GetDateTime()
+    @abstractmethod
+    def get_date_time(self) -> datetime.datetime: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetDateTimeArray(Windows.Foundation.DateTime[]&)
+    @abstractmethod
+    def get_date_time_array(self) -> winrt.system.Array[datetime.datetime]: ...
+    # System.Double Windows.Foundation.IPropertyValue::GetDouble()
+    @abstractmethod
+    def get_double(self) -> winrt.system.Double: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetDoubleArray(System.Double[]&)
+    @abstractmethod
+    def get_double_array(self) -> winrt.system.Array[winrt.system.Double]: ...
+    # System.Guid Windows.Foundation.IPropertyValue::GetGuid()
+    @abstractmethod
+    def get_guid(self) -> _uuid.UUID: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetGuidArray(System.Guid[]&)
+    @abstractmethod
+    def get_guid_array(self) -> winrt.system.Array[_uuid.UUID]: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetInspectableArray(System.Object[]&)
+    @abstractmethod
+    def get_inspectable_array(self) -> winrt.system.Array[winrt.system.Object]: ...
+    # System.Int16 Windows.Foundation.IPropertyValue::GetInt16()
+    @abstractmethod
+    def get_int16(self) -> winrt.system.Int16: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetInt16Array(System.Int16[]&)
+    @abstractmethod
+    def get_int16_array(self) -> winrt.system.Array[winrt.system.Int16]: ...
+    # System.Int32 Windows.Foundation.IPropertyValue::GetInt32()
+    @abstractmethod
+    def get_int32(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetInt32Array(System.Int32[]&)
+    @abstractmethod
+    def get_int32_array(self) -> winrt.system.Array[winrt.system.Int32]: ...
+    # System.Int64 Windows.Foundation.IPropertyValue::GetInt64()
+    @abstractmethod
+    def get_int64(self) -> winrt.system.Int64: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetInt64Array(System.Int64[]&)
+    @abstractmethod
+    def get_int64_array(self) -> winrt.system.Array[winrt.system.Int64]: ...
+    # Windows.Foundation.Point Windows.Foundation.IPropertyValue::GetPoint()
+    @abstractmethod
+    def get_point(self) -> Point: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetPointArray(Windows.Foundation.Point[]&)
+    @abstractmethod
+    def get_point_array(self) -> winrt.system.Array[Point]: ...
+    # Windows.Foundation.Rect Windows.Foundation.IPropertyValue::GetRect()
+    @abstractmethod
+    def get_rect(self) -> Rect: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetRectArray(Windows.Foundation.Rect[]&)
+    @abstractmethod
+    def get_rect_array(self) -> winrt.system.Array[Rect]: ...
+    # System.Single Windows.Foundation.IPropertyValue::GetSingle()
+    @abstractmethod
+    def get_single(self) -> winrt.system.Single: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetSingleArray(System.Single[]&)
+    @abstractmethod
+    def get_single_array(self) -> winrt.system.Array[winrt.system.Single]: ...
+    # Windows.Foundation.Size Windows.Foundation.IPropertyValue::GetSize()
+    @abstractmethod
+    def get_size(self) -> Size: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetSizeArray(Windows.Foundation.Size[]&)
+    @abstractmethod
+    def get_size_array(self) -> winrt.system.Array[Size]: ...
+    # System.String Windows.Foundation.IPropertyValue::GetString()
+    @abstractmethod
+    def get_string(self) -> str: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetStringArray(System.String[]&)
+    @abstractmethod
+    def get_string_array(self) -> winrt.system.Array[str]: ...
+    # Windows.Foundation.TimeSpan Windows.Foundation.IPropertyValue::GetTimeSpan()
+    @abstractmethod
+    def get_time_span(self) -> datetime.timedelta: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetTimeSpanArray(Windows.Foundation.TimeSpan[]&)
+    @abstractmethod
+    def get_time_span_array(self) -> winrt.system.Array[datetime.timedelta]: ...
+    # System.UInt16 Windows.Foundation.IPropertyValue::GetUInt16()
+    @abstractmethod
+    def get_uint16(self) -> winrt.system.UInt16: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetUInt16Array(System.UInt16[]&)
+    @abstractmethod
+    def get_uint16_array(self) -> winrt.system.Array[winrt.system.UInt16]: ...
+    # System.UInt32 Windows.Foundation.IPropertyValue::GetUInt32()
+    @abstractmethod
+    def get_uint32(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetUInt32Array(System.UInt32[]&)
+    @abstractmethod
+    def get_uint32_array(self) -> winrt.system.Array[winrt.system.UInt32]: ...
+    # System.UInt64 Windows.Foundation.IPropertyValue::GetUInt64()
+    @abstractmethod
+    def get_uint64(self) -> winrt.system.UInt64: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetUInt64Array(System.UInt64[]&)
+    @abstractmethod
+    def get_uint64_array(self) -> winrt.system.Array[winrt.system.UInt64]: ...
+    # System.Byte Windows.Foundation.IPropertyValue::GetUInt8()
+    @abstractmethod
+    def get_uint8(self) -> winrt.system.UInt8: ...
+    # System.Void Windows.Foundation.IPropertyValue::GetUInt8Array(System.Byte[]&)
+    @abstractmethod
+    def get_uint8_array(self) -> winrt.system.Array[winrt.system.UInt8]: ...
+    # System.Boolean Windows.Foundation.IPropertyValue::get_IsNumericScalar()
+    @_property
+    @abstractmethod
+    def is_numeric_scalar(self) -> bool: ...
+    # Windows.Foundation.PropertyType Windows.Foundation.IPropertyValue::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> PropertyType: ...
 
 @typing.final
 class IPropertyValue(winrt.system.Object, ImplementsIPropertyValue):
@@ -554,7 +761,10 @@ class IPropertyValue(winrt.system.Object, ImplementsIPropertyValue):
     def type(self) -> PropertyType: ...
 
 class ImplementsIReferenceArray(typing.Generic[T]):
-    pass
+    # T[] Windows.Foundation.IReferenceArray`1::get_Value()
+    @_property
+    @abstractmethod
+    def value(self) -> T: ...
 
 @typing.final
 class IReferenceArray(winrt.system.Object, ImplementsIReferenceArray, ImplementsIPropertyValue, typing.Generic[T]):
@@ -644,7 +854,10 @@ class IReferenceArray(winrt.system.Object, ImplementsIReferenceArray, Implements
     def type(self) -> PropertyType: ...
 
 class ImplementsIReference(typing.Generic[T]):
-    pass
+    # T Windows.Foundation.IReference`1::get_Value()
+    @_property
+    @abstractmethod
+    def value(self) -> T: ...
 
 @typing.final
 class IReference(winrt.system.Object, ImplementsIReference, ImplementsIPropertyValue, typing.Generic[T]):
@@ -734,7 +947,9 @@ class IReference(winrt.system.Object, ImplementsIReference, ImplementsIPropertyV
     def type(self) -> PropertyType: ...
 
 class ImplementsIStringable():
-    pass
+    # System.String Windows.Foundation.IStringable::ToString()
+    @abstractmethod
+    def to_string(self) -> str: ...
 
 @typing.final
 class IStringable(winrt.system.Object, ImplementsIStringable):
@@ -743,7 +958,14 @@ class IStringable(winrt.system.Object, ImplementsIStringable):
     def to_string(self) -> str: ...
 
 class ImplementsIWwwFormUrlDecoderEntry():
-    pass
+    # System.String Windows.Foundation.IWwwFormUrlDecoderEntry::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
+    # System.String Windows.Foundation.IWwwFormUrlDecoderEntry::get_Value()
+    @_property
+    @abstractmethod
+    def value(self) -> str: ...
 
 @typing.final
 class IWwwFormUrlDecoderEntry(winrt.system.Object, ImplementsIWwwFormUrlDecoderEntry):

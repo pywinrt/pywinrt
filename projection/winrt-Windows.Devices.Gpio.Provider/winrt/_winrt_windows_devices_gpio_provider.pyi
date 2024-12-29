@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -24,7 +25,13 @@ class GpioPinProviderValueChangedEventArgs(winrt.system.Object):
     def edge(self) -> ProviderGpioPinEdge: ...
 
 class ImplementsIGpioControllerProvider():
-    pass
+    # Windows.Devices.Gpio.Provider.IGpioPinProvider Windows.Devices.Gpio.Provider.IGpioControllerProvider::OpenPinProvider(System.Int32,Windows.Devices.Gpio.Provider.ProviderGpioSharingMode)
+    @abstractmethod
+    def open_pin_provider(self, pin: winrt.system.Int32, sharing_mode: ProviderGpioSharingMode, /) -> IGpioPinProvider: ...
+    # System.Int32 Windows.Devices.Gpio.Provider.IGpioControllerProvider::get_PinCount()
+    @_property
+    @abstractmethod
+    def pin_count(self) -> winrt.system.Int32: ...
 
 @typing.final
 class IGpioControllerProvider(winrt.system.Object, ImplementsIGpioControllerProvider):
@@ -35,7 +42,43 @@ class IGpioControllerProvider(winrt.system.Object, ImplementsIGpioControllerProv
     def pin_count(self) -> winrt.system.Int32: ...
 
 class ImplementsIGpioPinProvider():
-    pass
+    # Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode Windows.Devices.Gpio.Provider.IGpioPinProvider::GetDriveMode()
+    @abstractmethod
+    def get_drive_mode(self) -> ProviderGpioPinDriveMode: ...
+    # System.Boolean Windows.Devices.Gpio.Provider.IGpioPinProvider::IsDriveModeSupported(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)
+    @abstractmethod
+    def is_drive_mode_supported(self, drive_mode: ProviderGpioPinDriveMode, /) -> bool: ...
+    # Windows.Devices.Gpio.Provider.ProviderGpioPinValue Windows.Devices.Gpio.Provider.IGpioPinProvider::Read()
+    @abstractmethod
+    def read(self) -> ProviderGpioPinValue: ...
+    # System.Void Windows.Devices.Gpio.Provider.IGpioPinProvider::SetDriveMode(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)
+    @abstractmethod
+    def set_drive_mode(self, value: ProviderGpioPinDriveMode, /) -> None: ...
+    # System.Void Windows.Devices.Gpio.Provider.IGpioPinProvider::Write(Windows.Devices.Gpio.Provider.ProviderGpioPinValue)
+    @abstractmethod
+    def write(self, value: ProviderGpioPinValue, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Gpio.Provider.IGpioPinProvider::add_ValueChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Gpio.Provider.IGpioPinProvider,Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs>)
+    @abstractmethod
+    def add_value_changed(self, handler: windows_foundation.TypedEventHandler[IGpioPinProvider, GpioPinProviderValueChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Gpio.Provider.IGpioPinProvider::remove_ValueChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_value_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.TimeSpan Windows.Devices.Gpio.Provider.IGpioPinProvider::get_DebounceTimeout()
+    @_property
+    @abstractmethod
+    def debounce_timeout(self) -> datetime.timedelta: ...
+    # System.Void Windows.Devices.Gpio.Provider.IGpioPinProvider::put_DebounceTimeout(Windows.Foundation.TimeSpan)
+    @debounce_timeout.setter
+    @abstractmethod
+    def debounce_timeout(self, value: datetime.timedelta) -> None: ...
+    # System.Int32 Windows.Devices.Gpio.Provider.IGpioPinProvider::get_PinNumber()
+    @_property
+    @abstractmethod
+    def pin_number(self) -> winrt.system.Int32: ...
+    # Windows.Devices.Gpio.Provider.ProviderGpioSharingMode Windows.Devices.Gpio.Provider.IGpioPinProvider::get_SharingMode()
+    @_property
+    @abstractmethod
+    def sharing_mode(self) -> ProviderGpioSharingMode: ...
 
 @typing.final
 class IGpioPinProvider(winrt.system.Object, ImplementsIGpioPinProvider):
@@ -67,7 +110,9 @@ class IGpioPinProvider(winrt.system.Object, ImplementsIGpioPinProvider):
     def sharing_mode(self) -> ProviderGpioSharingMode: ...
 
 class ImplementsIGpioProvider():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Gpio.Provider.IGpioControllerProvider> Windows.Devices.Gpio.Provider.IGpioProvider::GetControllers()
+    @abstractmethod
+    def get_controllers(self) -> typing.Sequence[IGpioControllerProvider]: ...
 
 @typing.final
 class IGpioProvider(winrt.system.Object, ImplementsIGpioProvider):

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -336,7 +337,21 @@ class ImageScannerScanResult(winrt.system.Object):
     def scanned_files(self) -> typing.Sequence[windows_storage.StorageFile]: ...
 
 class ImplementsIImageScannerFormatConfiguration():
-    pass
+    # System.Boolean Windows.Devices.Scanners.IImageScannerFormatConfiguration::IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)
+    @abstractmethod
+    def is_format_supported(self, value: ImageScannerFormat, /) -> bool: ...
+    # Windows.Devices.Scanners.ImageScannerFormat Windows.Devices.Scanners.IImageScannerFormatConfiguration::get_DefaultFormat()
+    @_property
+    @abstractmethod
+    def default_format(self) -> ImageScannerFormat: ...
+    # Windows.Devices.Scanners.ImageScannerFormat Windows.Devices.Scanners.IImageScannerFormatConfiguration::get_Format()
+    @_property
+    @abstractmethod
+    def format(self) -> ImageScannerFormat: ...
+    # System.Void Windows.Devices.Scanners.IImageScannerFormatConfiguration::put_Format(Windows.Devices.Scanners.ImageScannerFormat)
+    @format.setter
+    @abstractmethod
+    def format(self, value: ImageScannerFormat) -> None: ...
 
 @typing.final
 class IImageScannerFormatConfiguration(winrt.system.Object, ImplementsIImageScannerFormatConfiguration):
@@ -353,7 +368,120 @@ class IImageScannerFormatConfiguration(winrt.system.Object, ImplementsIImageScan
     def format(self, value: ImageScannerFormat) -> None: ...
 
 class ImplementsIImageScannerSourceConfiguration():
-    pass
+    # System.Boolean Windows.Devices.Scanners.IImageScannerSourceConfiguration::IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)
+    @abstractmethod
+    def is_auto_cropping_mode_supported(self, value: ImageScannerAutoCroppingMode, /) -> bool: ...
+    # System.Boolean Windows.Devices.Scanners.IImageScannerSourceConfiguration::IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)
+    @abstractmethod
+    def is_color_mode_supported(self, value: ImageScannerColorMode, /) -> bool: ...
+    # Windows.Devices.Scanners.ImageScannerResolution Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_ActualResolution()
+    @_property
+    @abstractmethod
+    def actual_resolution(self) -> ImageScannerResolution: ...
+    # Windows.Devices.Scanners.ImageScannerAutoCroppingMode Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_AutoCroppingMode()
+    @_property
+    @abstractmethod
+    def auto_cropping_mode(self) -> ImageScannerAutoCroppingMode: ...
+    # System.Void Windows.Devices.Scanners.IImageScannerSourceConfiguration::put_AutoCroppingMode(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)
+    @auto_cropping_mode.setter
+    @abstractmethod
+    def auto_cropping_mode(self, value: ImageScannerAutoCroppingMode) -> None: ...
+    # System.Int32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_Brightness()
+    @_property
+    @abstractmethod
+    def brightness(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Devices.Scanners.IImageScannerSourceConfiguration::put_Brightness(System.Int32)
+    @brightness.setter
+    @abstractmethod
+    def brightness(self, value: winrt.system.Int32) -> None: ...
+    # System.UInt32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_BrightnessStep()
+    @_property
+    @abstractmethod
+    def brightness_step(self) -> winrt.system.UInt32: ...
+    # Windows.Devices.Scanners.ImageScannerColorMode Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_ColorMode()
+    @_property
+    @abstractmethod
+    def color_mode(self) -> ImageScannerColorMode: ...
+    # System.Void Windows.Devices.Scanners.IImageScannerSourceConfiguration::put_ColorMode(Windows.Devices.Scanners.ImageScannerColorMode)
+    @color_mode.setter
+    @abstractmethod
+    def color_mode(self, value: ImageScannerColorMode) -> None: ...
+    # System.Int32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_Contrast()
+    @_property
+    @abstractmethod
+    def contrast(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Devices.Scanners.IImageScannerSourceConfiguration::put_Contrast(System.Int32)
+    @contrast.setter
+    @abstractmethod
+    def contrast(self, value: winrt.system.Int32) -> None: ...
+    # System.UInt32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_ContrastStep()
+    @_property
+    @abstractmethod
+    def contrast_step(self) -> winrt.system.UInt32: ...
+    # System.Int32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_DefaultBrightness()
+    @_property
+    @abstractmethod
+    def default_brightness(self) -> winrt.system.Int32: ...
+    # Windows.Devices.Scanners.ImageScannerColorMode Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_DefaultColorMode()
+    @_property
+    @abstractmethod
+    def default_color_mode(self) -> ImageScannerColorMode: ...
+    # System.Int32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_DefaultContrast()
+    @_property
+    @abstractmethod
+    def default_contrast(self) -> winrt.system.Int32: ...
+    # Windows.Devices.Scanners.ImageScannerResolution Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_DesiredResolution()
+    @_property
+    @abstractmethod
+    def desired_resolution(self) -> ImageScannerResolution: ...
+    # System.Void Windows.Devices.Scanners.IImageScannerSourceConfiguration::put_DesiredResolution(Windows.Devices.Scanners.ImageScannerResolution)
+    @desired_resolution.setter
+    @abstractmethod
+    def desired_resolution(self, value: ImageScannerResolution) -> None: ...
+    # System.Int32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_MaxBrightness()
+    @_property
+    @abstractmethod
+    def max_brightness(self) -> winrt.system.Int32: ...
+    # System.Int32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_MaxContrast()
+    @_property
+    @abstractmethod
+    def max_contrast(self) -> winrt.system.Int32: ...
+    # Windows.Devices.Scanners.ImageScannerResolution Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_MaxResolution()
+    @_property
+    @abstractmethod
+    def max_resolution(self) -> ImageScannerResolution: ...
+    # Windows.Foundation.Size Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_MaxScanArea()
+    @_property
+    @abstractmethod
+    def max_scan_area(self) -> windows_foundation.Size: ...
+    # System.Int32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_MinBrightness()
+    @_property
+    @abstractmethod
+    def min_brightness(self) -> winrt.system.Int32: ...
+    # System.Int32 Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_MinContrast()
+    @_property
+    @abstractmethod
+    def min_contrast(self) -> winrt.system.Int32: ...
+    # Windows.Devices.Scanners.ImageScannerResolution Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_MinResolution()
+    @_property
+    @abstractmethod
+    def min_resolution(self) -> ImageScannerResolution: ...
+    # Windows.Foundation.Size Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_MinScanArea()
+    @_property
+    @abstractmethod
+    def min_scan_area(self) -> windows_foundation.Size: ...
+    # Windows.Devices.Scanners.ImageScannerResolution Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_OpticalResolution()
+    @_property
+    @abstractmethod
+    def optical_resolution(self) -> ImageScannerResolution: ...
+    # Windows.Foundation.Rect Windows.Devices.Scanners.IImageScannerSourceConfiguration::get_SelectedScanRegion()
+    @_property
+    @abstractmethod
+    def selected_scan_region(self) -> windows_foundation.Rect: ...
+    # System.Void Windows.Devices.Scanners.IImageScannerSourceConfiguration::put_SelectedScanRegion(Windows.Foundation.Rect)
+    @selected_scan_region.setter
+    @abstractmethod
+    def selected_scan_region(self, value: windows_foundation.Rect) -> None: ...
 
 @typing.final
 class IImageScannerSourceConfiguration(winrt.system.Object, ImplementsIImageScannerSourceConfiguration, ImplementsIImageScannerFormatConfiguration):

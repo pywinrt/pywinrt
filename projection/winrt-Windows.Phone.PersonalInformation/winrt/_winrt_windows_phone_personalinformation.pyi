@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -362,7 +363,65 @@ class StoredContact(winrt.system.Object, ImplementsIContactInformation2, Impleme
     def store(self) -> ContactStore: ...
 
 class ImplementsIContactInformation():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Phone.PersonalInformation.IContactInformation::GetDisplayPictureAsync()
+    @abstractmethod
+    def get_display_picture_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Phone.PersonalInformation.IContactInformation::GetPropertiesAsync()
+    @abstractmethod
+    def get_properties_async(self) -> windows_foundation.IAsyncOperation[typing.MutableMapping[str, winrt.system.Object]]: ...
+    # Windows.Foundation.IAsyncAction Windows.Phone.PersonalInformation.IContactInformation::SetDisplayPictureAsync(Windows.Storage.Streams.IInputStream)
+    @abstractmethod
+    def set_display_picture_async(self, stream: windows_storage_streams.ImplementsIInputStream, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Phone.PersonalInformation.IContactInformation::ToVcardAsync()
+    @abstractmethod
+    def to_vcard_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Phone.PersonalInformation.IContactInformation::ToVcardAsync(Windows.Phone.PersonalInformation.VCardFormat)
+    @abstractmethod
+    def to_vcard_with_options_async(self, format: VCardFormat, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    # System.String Windows.Phone.PersonalInformation.IContactInformation::get_DisplayName()
+    @_property
+    @abstractmethod
+    def display_name(self) -> str: ...
+    # System.Void Windows.Phone.PersonalInformation.IContactInformation::put_DisplayName(System.String)
+    @display_name.setter
+    @abstractmethod
+    def display_name(self, value: str) -> None: ...
+    # Windows.Storage.Streams.IRandomAccessStreamReference Windows.Phone.PersonalInformation.IContactInformation::get_DisplayPicture()
+    @_property
+    @abstractmethod
+    def display_picture(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
+    # System.String Windows.Phone.PersonalInformation.IContactInformation::get_FamilyName()
+    @_property
+    @abstractmethod
+    def family_name(self) -> str: ...
+    # System.Void Windows.Phone.PersonalInformation.IContactInformation::put_FamilyName(System.String)
+    @family_name.setter
+    @abstractmethod
+    def family_name(self, value: str) -> None: ...
+    # System.String Windows.Phone.PersonalInformation.IContactInformation::get_GivenName()
+    @_property
+    @abstractmethod
+    def given_name(self) -> str: ...
+    # System.Void Windows.Phone.PersonalInformation.IContactInformation::put_GivenName(System.String)
+    @given_name.setter
+    @abstractmethod
+    def given_name(self, value: str) -> None: ...
+    # System.String Windows.Phone.PersonalInformation.IContactInformation::get_HonorificPrefix()
+    @_property
+    @abstractmethod
+    def honorific_prefix(self) -> str: ...
+    # System.Void Windows.Phone.PersonalInformation.IContactInformation::put_HonorificPrefix(System.String)
+    @honorific_prefix.setter
+    @abstractmethod
+    def honorific_prefix(self, value: str) -> None: ...
+    # System.String Windows.Phone.PersonalInformation.IContactInformation::get_HonorificSuffix()
+    @_property
+    @abstractmethod
+    def honorific_suffix(self) -> str: ...
+    # System.Void Windows.Phone.PersonalInformation.IContactInformation::put_HonorificSuffix(System.String)
+    @honorific_suffix.setter
+    @abstractmethod
+    def honorific_suffix(self, value: str) -> None: ...
 
 @typing.final
 class IContactInformation(winrt.system.Object, ImplementsIContactInformation):
@@ -411,7 +470,14 @@ class IContactInformation(winrt.system.Object, ImplementsIContactInformation):
     def honorific_suffix(self, value: str) -> None: ...
 
 class ImplementsIContactInformation2():
-    pass
+    # Windows.Foundation.DateTime Windows.Phone.PersonalInformation.IContactInformation2::get_DisplayPictureDate()
+    @_property
+    @abstractmethod
+    def display_picture_date(self) -> datetime.datetime: ...
+    # System.Void Windows.Phone.PersonalInformation.IContactInformation2::put_DisplayPictureDate(Windows.Foundation.DateTime)
+    @display_picture_date.setter
+    @abstractmethod
+    def display_picture_date(self, value: datetime.datetime) -> None: ...
 
 @typing.final
 class IContactInformation2(winrt.system.Object, ImplementsIContactInformation2):

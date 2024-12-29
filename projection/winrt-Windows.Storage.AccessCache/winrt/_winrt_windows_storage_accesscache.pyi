@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -150,7 +151,56 @@ class StorageItemMostRecentlyUsedList(winrt.system.Object, ImplementsIStorageIte
     def maximum_items_allowed(self) -> winrt.system.UInt32: ...
 
 class ImplementsIStorageItemAccessList():
-    pass
+    # System.String Windows.Storage.AccessCache.IStorageItemAccessList::Add(Windows.Storage.IStorageItem,System.String)
+    @abstractmethod
+    def add(self, file: windows_storage.ImplementsIStorageItem, metadata: str, /) -> str: ...
+    # System.Void Windows.Storage.AccessCache.IStorageItemAccessList::AddOrReplace(System.String,Windows.Storage.IStorageItem,System.String)
+    @abstractmethod
+    def add_or_replace(self, token: str, file: windows_storage.ImplementsIStorageItem, metadata: str, /) -> None: ...
+    # System.Void Windows.Storage.AccessCache.IStorageItemAccessList::AddOrReplace(System.String,Windows.Storage.IStorageItem)
+    @abstractmethod
+    def add_or_replace_overload_default_metadata(self, token: str, file: windows_storage.ImplementsIStorageItem, /) -> None: ...
+    # System.String Windows.Storage.AccessCache.IStorageItemAccessList::Add(Windows.Storage.IStorageItem)
+    @abstractmethod
+    def add_overload_default_metadata(self, file: windows_storage.ImplementsIStorageItem, /) -> str: ...
+    # System.Boolean Windows.Storage.AccessCache.IStorageItemAccessList::CheckAccess(Windows.Storage.IStorageItem)
+    @abstractmethod
+    def check_access(self, file: windows_storage.ImplementsIStorageItem, /) -> bool: ...
+    # System.Void Windows.Storage.AccessCache.IStorageItemAccessList::Clear()
+    @abstractmethod
+    def clear(self) -> None: ...
+    # System.Boolean Windows.Storage.AccessCache.IStorageItemAccessList::ContainsItem(System.String)
+    @abstractmethod
+    def contains_item(self, token: str, /) -> bool: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.IStorageItemAccessList::GetFileAsync(System.String)
+    @abstractmethod
+    def get_file_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.IStorageItemAccessList::GetFileAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @abstractmethod
+    def get_file_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.IStorageItemAccessList::GetFolderAsync(System.String)
+    @abstractmethod
+    def get_folder_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.IStorageItemAccessList::GetFolderAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @abstractmethod
+    def get_folder_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.IStorageItemAccessList::GetItemAsync(System.String)
+    @abstractmethod
+    def get_item_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.IStorageItemAccessList::GetItemAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @abstractmethod
+    def get_item_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
+    # System.Void Windows.Storage.AccessCache.IStorageItemAccessList::Remove(System.String)
+    @abstractmethod
+    def remove(self, token: str, /) -> None: ...
+    # Windows.Storage.AccessCache.AccessListEntryView Windows.Storage.AccessCache.IStorageItemAccessList::get_Entries()
+    @_property
+    @abstractmethod
+    def entries(self) -> AccessListEntryView: ...
+    # System.UInt32 Windows.Storage.AccessCache.IStorageItemAccessList::get_MaximumItemsAllowed()
+    @_property
+    @abstractmethod
+    def maximum_items_allowed(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IStorageItemAccessList(winrt.system.Object, ImplementsIStorageItemAccessList):

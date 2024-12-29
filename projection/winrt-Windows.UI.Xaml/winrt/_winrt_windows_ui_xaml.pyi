@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -3153,7 +3154,15 @@ class XamlRootChangedEventArgs(winrt.system.Object):
     pass
 
 class ImplementsIDataTemplateExtension():
-    pass
+    # System.Boolean Windows.UI.Xaml.IDataTemplateExtension::ProcessBinding(System.UInt32)
+    @abstractmethod
+    def process_binding(self, phase: winrt.system.UInt32, /) -> bool: ...
+    # System.Int32 Windows.UI.Xaml.IDataTemplateExtension::ProcessBindings(Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs)
+    @abstractmethod
+    def process_bindings(self, arg: windows_ui_xaml_controls.ContainerContentChangingEventArgs, /) -> winrt.system.Int32: ...
+    # System.Void Windows.UI.Xaml.IDataTemplateExtension::ResetTemplate()
+    @abstractmethod
+    def reset_template(self) -> None: ...
 
 @typing.final
 class IDataTemplateExtension(winrt.system.Object, ImplementsIDataTemplateExtension):
@@ -3165,7 +3174,12 @@ class IDataTemplateExtension(winrt.system.Object, ImplementsIDataTemplateExtensi
     def reset_template(self) -> None: ...
 
 class ImplementsIElementFactory():
-    pass
+    # Windows.UI.Xaml.UIElement Windows.UI.Xaml.IElementFactory::GetElement(Windows.UI.Xaml.ElementFactoryGetArgs)
+    @abstractmethod
+    def get_element(self, args: ElementFactoryGetArgs, /) -> UIElement: ...
+    # System.Void Windows.UI.Xaml.IElementFactory::RecycleElement(Windows.UI.Xaml.ElementFactoryRecycleArgs)
+    @abstractmethod
+    def recycle_element(self, args: ElementFactoryRecycleArgs, /) -> None: ...
 
 @typing.final
 class IElementFactory(winrt.system.Object, ImplementsIElementFactory):

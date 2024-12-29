@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -145,7 +146,21 @@ class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequ
     def widget_id(self) -> str: ...
 
 class ImplementsIWidgetManager():
-    pass
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager::DeleteWidget(System.String)
+    @abstractmethod
+    def delete_widget(self, widget_id: str, /) -> None: ...
+    # System.String[] Microsoft.Windows.Widgets.Providers.IWidgetManager::GetWidgetIds()
+    @abstractmethod
+    def get_widget_ids(self) -> winrt.system.Array[str]: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetInfo Microsoft.Windows.Widgets.Providers.IWidgetManager::GetWidgetInfo(System.String)
+    @abstractmethod
+    def get_widget_info(self, widget_id: str, /) -> WidgetInfo: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetInfo[] Microsoft.Windows.Widgets.Providers.IWidgetManager::GetWidgetInfos()
+    @abstractmethod
+    def get_widget_infos(self) -> winrt.system.Array[WidgetInfo]: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager::UpdateWidget(Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions)
+    @abstractmethod
+    def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
 
 @typing.final
 class IWidgetManager(winrt.system.Object, ImplementsIWidgetManager):
@@ -161,7 +176,24 @@ class IWidgetManager(winrt.system.Object, ImplementsIWidgetManager):
     def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
 
 class ImplementsIWidgetProvider():
-    pass
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::Activate(Microsoft.Windows.Widgets.Providers.WidgetContext)
+    @abstractmethod
+    def activate(self, widget_context: WidgetContext, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::CreateWidget(Microsoft.Windows.Widgets.Providers.WidgetContext)
+    @abstractmethod
+    def create_widget(self, widget_context: WidgetContext, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::Deactivate(System.String)
+    @abstractmethod
+    def deactivate(self, widget_id: str, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::DeleteWidget(System.String,System.String)
+    @abstractmethod
+    def delete_widget(self, widget_id: str, custom_state: str, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::OnActionInvoked(Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs)
+    @abstractmethod
+    def on_action_invoked(self, action_invoked_args: WidgetActionInvokedArgs, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::OnWidgetContextChanged(Microsoft.Windows.Widgets.Providers.WidgetContextChangedArgs)
+    @abstractmethod
+    def on_widget_context_changed(self, context_changed_args: WidgetContextChangedArgs, /) -> None: ...
 
 @typing.final
 class IWidgetProvider(winrt.system.Object, ImplementsIWidgetProvider):
@@ -179,7 +211,9 @@ class IWidgetProvider(winrt.system.Object, ImplementsIWidgetProvider):
     def on_widget_context_changed(self, context_changed_args: WidgetContextChangedArgs, /) -> None: ...
 
 class ImplementsIWidgetProvider2():
-    pass
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider2::OnCustomizationRequested(Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs)
+    @abstractmethod
+    def on_customization_requested(self, customization_requested_args: WidgetCustomizationRequestedArgs, /) -> None: ...
 
 @typing.final
 class IWidgetProvider2(winrt.system.Object, ImplementsIWidgetProvider2):
@@ -187,7 +221,9 @@ class IWidgetProvider2(winrt.system.Object, ImplementsIWidgetProvider2):
     def on_customization_requested(self, customization_requested_args: WidgetCustomizationRequestedArgs, /) -> None: ...
 
 class ImplementsIWidgetProviderAnalytics():
-    pass
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderAnalytics::OnAnalyticsInfoReported(Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs)
+    @abstractmethod
+    def on_analytics_info_reported(self, args: WidgetAnalyticsInfoReportedArgs, /) -> None: ...
 
 @typing.final
 class IWidgetProviderAnalytics(winrt.system.Object, ImplementsIWidgetProviderAnalytics):
@@ -195,7 +231,9 @@ class IWidgetProviderAnalytics(winrt.system.Object, ImplementsIWidgetProviderAna
     def on_analytics_info_reported(self, args: WidgetAnalyticsInfoReportedArgs, /) -> None: ...
 
 class ImplementsIWidgetProviderErrors():
-    pass
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors::OnErrorInfoReported(Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs)
+    @abstractmethod
+    def on_error_info_reported(self, args: WidgetErrorInfoReportedArgs, /) -> None: ...
 
 @typing.final
 class IWidgetProviderErrors(winrt.system.Object, ImplementsIWidgetProviderErrors):
