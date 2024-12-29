@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1828,7 +1829,30 @@ class VideoTrackSupportInfo(winrt.system.Object):
     def media_source_status(self) -> MediaSourceStatus: ...
 
 class ImplementsIMediaCue():
-    pass
+    # Windows.Foundation.TimeSpan Windows.Media.Core.IMediaCue::get_Duration()
+    @_property
+    @abstractmethod
+    def duration(self) -> datetime.timedelta: ...
+    # System.Void Windows.Media.Core.IMediaCue::put_Duration(Windows.Foundation.TimeSpan)
+    @duration.setter
+    @abstractmethod
+    def duration(self, value: datetime.timedelta) -> None: ...
+    # System.String Windows.Media.Core.IMediaCue::get_Id()
+    @_property
+    @abstractmethod
+    def id(self) -> str: ...
+    # System.Void Windows.Media.Core.IMediaCue::put_Id(System.String)
+    @id.setter
+    @abstractmethod
+    def id(self, value: str) -> None: ...
+    # Windows.Foundation.TimeSpan Windows.Media.Core.IMediaCue::get_StartTime()
+    @_property
+    @abstractmethod
+    def start_time(self) -> datetime.timedelta: ...
+    # System.Void Windows.Media.Core.IMediaCue::put_StartTime(Windows.Foundation.TimeSpan)
+    @start_time.setter
+    @abstractmethod
+    def start_time(self, value: datetime.timedelta) -> None: ...
 
 @typing.final
 class IMediaCue(winrt.system.Object, ImplementsIMediaCue):
@@ -1859,7 +1883,26 @@ class IMediaSource(winrt.system.Object, ImplementsIMediaSource):
     pass
 
 class ImplementsIMediaStreamDescriptor():
-    pass
+    # System.Boolean Windows.Media.Core.IMediaStreamDescriptor::get_IsSelected()
+    @_property
+    @abstractmethod
+    def is_selected(self) -> bool: ...
+    # System.String Windows.Media.Core.IMediaStreamDescriptor::get_Language()
+    @_property
+    @abstractmethod
+    def language(self) -> str: ...
+    # System.Void Windows.Media.Core.IMediaStreamDescriptor::put_Language(System.String)
+    @language.setter
+    @abstractmethod
+    def language(self, value: str) -> None: ...
+    # System.String Windows.Media.Core.IMediaStreamDescriptor::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
+    # System.Void Windows.Media.Core.IMediaStreamDescriptor::put_Name(System.String)
+    @name.setter
+    @abstractmethod
+    def name(self, value: str) -> None: ...
 
 @typing.final
 class IMediaStreamDescriptor(winrt.system.Object, ImplementsIMediaStreamDescriptor):
@@ -1880,7 +1923,14 @@ class IMediaStreamDescriptor(winrt.system.Object, ImplementsIMediaStreamDescript
     def name(self, value: str) -> None: ...
 
 class ImplementsIMediaStreamDescriptor2():
-    pass
+    # System.String Windows.Media.Core.IMediaStreamDescriptor2::get_Label()
+    @_property
+    @abstractmethod
+    def label(self) -> str: ...
+    # System.Void Windows.Media.Core.IMediaStreamDescriptor2::put_Label(System.String)
+    @label.setter
+    @abstractmethod
+    def label(self, value: str) -> None: ...
 
 @typing.final
 class IMediaStreamDescriptor2(winrt.system.Object, ImplementsIMediaStreamDescriptor2, ImplementsIMediaStreamDescriptor):
@@ -1907,7 +1957,26 @@ class IMediaStreamDescriptor2(winrt.system.Object, ImplementsIMediaStreamDescrip
     def name(self, value: str) -> None: ...
 
 class ImplementsIMediaTrack():
-    pass
+    # System.String Windows.Media.Core.IMediaTrack::get_Id()
+    @_property
+    @abstractmethod
+    def id(self) -> str: ...
+    # System.String Windows.Media.Core.IMediaTrack::get_Label()
+    @_property
+    @abstractmethod
+    def label(self) -> str: ...
+    # System.Void Windows.Media.Core.IMediaTrack::put_Label(System.String)
+    @label.setter
+    @abstractmethod
+    def label(self, value: str) -> None: ...
+    # System.String Windows.Media.Core.IMediaTrack::get_Language()
+    @_property
+    @abstractmethod
+    def language(self) -> str: ...
+    # Windows.Media.Core.MediaTrackKind Windows.Media.Core.IMediaTrack::get_TrackKind()
+    @_property
+    @abstractmethod
+    def track_kind(self) -> MediaTrackKind: ...
 
 @typing.final
 class IMediaTrack(winrt.system.Object, ImplementsIMediaTrack):
@@ -1928,7 +1997,20 @@ class IMediaTrack(winrt.system.Object, ImplementsIMediaTrack):
     def track_kind(self) -> MediaTrackKind: ...
 
 class ImplementsISingleSelectMediaTrackList():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.Media.Core.ISingleSelectMediaTrackList::add_SelectedIndexChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.ISingleSelectMediaTrackList,System.Object>)
+    @abstractmethod
+    def add_selected_index_changed(self, handler: windows_foundation.TypedEventHandler[ISingleSelectMediaTrackList, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Media.Core.ISingleSelectMediaTrackList::remove_SelectedIndexChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_selected_index_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Int32 Windows.Media.Core.ISingleSelectMediaTrackList::get_SelectedIndex()
+    @_property
+    @abstractmethod
+    def selected_index(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Media.Core.ISingleSelectMediaTrackList::put_SelectedIndex(System.Int32)
+    @selected_index.setter
+    @abstractmethod
+    def selected_index(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
 class ISingleSelectMediaTrackList(winrt.system.Object, ImplementsISingleSelectMediaTrackList):
@@ -1944,7 +2026,10 @@ class ISingleSelectMediaTrackList(winrt.system.Object, ImplementsISingleSelectMe
     def selected_index(self, value: winrt.system.Int32) -> None: ...
 
 class ImplementsITimedMetadataTrackProvider():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Core.TimedMetadataTrack> Windows.Media.Core.ITimedMetadataTrackProvider::get_TimedMetadataTracks()
+    @_property
+    @abstractmethod
+    def timed_metadata_tracks(self) -> typing.Sequence[TimedMetadataTrack]: ...
 
 @typing.final
 class ITimedMetadataTrackProvider(winrt.system.Object, ImplementsITimedMetadataTrackProvider):

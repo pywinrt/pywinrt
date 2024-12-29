@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -15442,7 +15443,18 @@ class XamlControlsResources(microsoft_ui_xaml.ResourceDictionary, metaclass=Xaml
     def use_compact_resources(self, value: bool) -> None: ...
 
 class ImplementsIAnimatedVisual():
-    pass
+    # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Duration()
+    @_property
+    @abstractmethod
+    def duration(self) -> datetime.timedelta: ...
+    # Microsoft.UI.Composition.Visual Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_RootVisual()
+    @_property
+    @abstractmethod
+    def root_visual(self) -> microsoft_ui_composition.Visual: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Size()
+    @_property
+    @abstractmethod
+    def size(self) -> windows_foundation_numerics.Vector2: ...
 
 @typing.final
 class IAnimatedVisual(winrt.system.Object, ImplementsIAnimatedVisual, windows_foundation.ImplementsIClosable):
@@ -15461,7 +15473,12 @@ class IAnimatedVisual(winrt.system.Object, ImplementsIAnimatedVisual, windows_fo
     def size(self) -> windows_foundation_numerics.Vector2: ...
 
 class ImplementsIAnimatedVisual2():
-    pass
+    # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisual2::CreateAnimations()
+    @abstractmethod
+    def create_animations(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisual2::DestroyAnimations()
+    @abstractmethod
+    def destroy_animations(self) -> None: ...
 
 @typing.final
 class IAnimatedVisual2(winrt.system.Object, ImplementsIAnimatedVisual2, ImplementsIAnimatedVisual, windows_foundation.ImplementsIClosable):
@@ -15484,7 +15501,9 @@ class IAnimatedVisual2(winrt.system.Object, ImplementsIAnimatedVisual2, Implemen
     def size(self) -> windows_foundation_numerics.Vector2: ...
 
 class ImplementsIAnimatedVisualSource():
-    pass
+    # Microsoft.UI.Xaml.Controls.IAnimatedVisual Microsoft.UI.Xaml.Controls.IAnimatedVisualSource::TryCreateAnimatedVisual(Microsoft.UI.Composition.Compositor,System.Object&)
+    @abstractmethod
+    def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, /) -> typing.Tuple[typing.Optional[IAnimatedVisual], winrt.system.Object]: ...
 
 @typing.final
 class IAnimatedVisualSource(winrt.system.Object, ImplementsIAnimatedVisualSource):
@@ -15492,7 +15511,13 @@ class IAnimatedVisualSource(winrt.system.Object, ImplementsIAnimatedVisualSource
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, /) -> typing.Tuple[typing.Optional[IAnimatedVisual], winrt.system.Object]: ...
 
 class ImplementsIAnimatedVisualSource2():
-    pass
+    # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2::SetColorProperty(System.String,Windows.UI.Color)
+    @abstractmethod
+    def set_color_property(self, property_name: str, value: windows_ui.Color, /) -> None: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.Double> Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2::get_Markers()
+    @_property
+    @abstractmethod
+    def markers(self) -> typing.Mapping[str, winrt.system.Double]: ...
 
 @typing.final
 class IAnimatedVisualSource2(winrt.system.Object, ImplementsIAnimatedVisualSource2, ImplementsIAnimatedVisualSource):
@@ -15505,7 +15530,9 @@ class IAnimatedVisualSource2(winrt.system.Object, ImplementsIAnimatedVisualSourc
     def markers(self) -> typing.Mapping[str, winrt.system.Double]: ...
 
 class ImplementsIAnimatedVisualSource3():
-    pass
+    # Microsoft.UI.Xaml.Controls.IAnimatedVisual2 Microsoft.UI.Xaml.Controls.IAnimatedVisualSource3::TryCreateAnimatedVisual(Microsoft.UI.Composition.Compositor,System.Object&,System.Boolean)
+    @abstractmethod
+    def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, create_animations: bool, /) -> typing.Tuple[typing.Optional[IAnimatedVisual2], winrt.system.Object]: ...
 
 @typing.final
 class IAnimatedVisualSource3(winrt.system.Object, ImplementsIAnimatedVisualSource3):
@@ -15513,7 +15540,26 @@ class IAnimatedVisualSource3(winrt.system.Object, ImplementsIAnimatedVisualSourc
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, create_animations: bool, /) -> typing.Tuple[typing.Optional[IAnimatedVisual2], winrt.system.Object]: ...
 
 class ImplementsICommandBarElement():
-    pass
+    # System.Int32 Microsoft.UI.Xaml.Controls.ICommandBarElement::get_DynamicOverflowOrder()
+    @_property
+    @abstractmethod
+    def dynamic_overflow_order(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ICommandBarElement::put_DynamicOverflowOrder(System.Int32)
+    @dynamic_overflow_order.setter
+    @abstractmethod
+    def dynamic_overflow_order(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ICommandBarElement::get_IsCompact()
+    @_property
+    @abstractmethod
+    def is_compact(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ICommandBarElement::put_IsCompact(System.Boolean)
+    @is_compact.setter
+    @abstractmethod
+    def is_compact(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ICommandBarElement::get_IsInOverflow()
+    @_property
+    @abstractmethod
+    def is_in_overflow(self) -> bool: ...
 
 @typing.final
 class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
@@ -15534,7 +15580,12 @@ class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
     def is_in_overflow(self) -> bool: ...
 
 class ImplementsIDynamicAnimatedVisualSource():
-    pass
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource::add_AnimatedVisualInvalidated(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource,System.Object>)
+    @abstractmethod
+    def add_animated_visual_invalidated(self, handler: windows_foundation.TypedEventHandler[IDynamicAnimatedVisualSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource::remove_AnimatedVisualInvalidated(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_animated_visual_invalidated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class IDynamicAnimatedVisualSource(winrt.system.Object, ImplementsIDynamicAnimatedVisualSource, ImplementsIAnimatedVisualSource):
@@ -15546,7 +15597,9 @@ class IDynamicAnimatedVisualSource(winrt.system.Object, ImplementsIDynamicAnimat
     def remove_animated_visual_invalidated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ImplementsIInsertionPanel():
-    pass
+    # System.Void Microsoft.UI.Xaml.Controls.IInsertionPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
+    @abstractmethod
+    def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
 
 @typing.final
 class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
@@ -15554,7 +15607,18 @@ class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
 
 class ImplementsIItemContainerMapping():
-    pass
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.IItemContainerMapping::ContainerFromIndex(System.Int32)
+    @abstractmethod
+    def container_from_index(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.IItemContainerMapping::ContainerFromItem(System.Object)
+    @abstractmethod
+    def container_from_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.IItemContainerMapping::IndexFromContainer(Microsoft.UI.Xaml.DependencyObject)
+    @abstractmethod
+    def index_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
+    # System.Object Microsoft.UI.Xaml.Controls.IItemContainerMapping::ItemFromContainer(Microsoft.UI.Xaml.DependencyObject)
+    @abstractmethod
+    def item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
 
 @typing.final
 class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping):
@@ -15568,7 +15632,12 @@ class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping
     def item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
 
 class ImplementsIKeyIndexMapping():
-    pass
+    # System.Int32 Microsoft.UI.Xaml.Controls.IKeyIndexMapping::IndexFromKey(System.String)
+    @abstractmethod
+    def index_from_key(self, key: str, /) -> winrt.system.Int32: ...
+    # System.String Microsoft.UI.Xaml.Controls.IKeyIndexMapping::KeyFromIndex(System.Int32)
+    @abstractmethod
+    def key_from_index(self, index: winrt.system.Int32, /) -> str: ...
 
 @typing.final
 class IKeyIndexMapping(winrt.system.Object, ImplementsIKeyIndexMapping):
@@ -15578,7 +15647,9 @@ class IKeyIndexMapping(winrt.system.Object, ImplementsIKeyIndexMapping):
     def key_from_index(self, index: winrt.system.Int32, /) -> str: ...
 
 class ImplementsINavigate():
-    pass
+    # System.Boolean Microsoft.UI.Xaml.Controls.INavigate::Navigate(Windows.UI.Xaml.Interop.TypeName)
+    @abstractmethod
+    def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
 
 @typing.final
 class INavigate(winrt.system.Object, ImplementsINavigate):
@@ -15586,7 +15657,16 @@ class INavigate(winrt.system.Object, ImplementsINavigate):
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
 
 class ImplementsIScrollAnchorProvider():
-    pass
+    # System.Void Microsoft.UI.Xaml.Controls.IScrollAnchorProvider::RegisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
+    @abstractmethod
+    def register_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IScrollAnchorProvider::UnregisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
+    @abstractmethod
+    def unregister_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.IScrollAnchorProvider::get_CurrentAnchor()
+    @_property
+    @abstractmethod
+    def current_anchor(self) -> microsoft_ui_xaml.UIElement: ...
 
 @typing.final
 class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider):
@@ -15599,7 +15679,51 @@ class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider
     def current_anchor(self) -> microsoft_ui_xaml.UIElement: ...
 
 class ImplementsISemanticZoomInformation():
-    pass
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChange()
+    @abstractmethod
+    def complete_view_change(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def complete_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChangeTo(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def complete_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::InitializeViewChange()
+    @abstractmethod
+    def initialize_view_change(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::MakeVisible(Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def make_visible(self, item: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::StartViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def start_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::StartViewChangeTo(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    @abstractmethod
+    def start_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::get_IsActiveView()
+    @_property
+    @abstractmethod
+    def is_active_view(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::put_IsActiveView(System.Boolean)
+    @is_active_view.setter
+    @abstractmethod
+    def is_active_view(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::get_IsZoomedInView()
+    @_property
+    @abstractmethod
+    def is_zoomed_in_view(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::put_IsZoomedInView(System.Boolean)
+    @is_zoomed_in_view.setter
+    @abstractmethod
+    def is_zoomed_in_view(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SemanticZoom Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::get_SemanticZoomOwner()
+    @_property
+    @abstractmethod
+    def semantic_zoom_owner(self) -> SemanticZoom: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::put_SemanticZoomOwner(Microsoft.UI.Xaml.Controls.SemanticZoom)
+    @semantic_zoom_owner.setter
+    @abstractmethod
+    def semantic_zoom_owner(self, value: SemanticZoom) -> None: ...
 
 @typing.final
 class ISemanticZoomInformation(winrt.system.Object, ImplementsISemanticZoomInformation):

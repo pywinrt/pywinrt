@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -153,7 +154,24 @@ class GameModeUserConfiguration(winrt.system.Object, metaclass=GameModeUserConfi
     def gaming_related_process_names(self) -> typing.MutableSequence[str]: ...
 
 class ImplementsIGameListEntry():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::LaunchAsync()
+    @abstractmethod
+    def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::SetCategoryAsync(Windows.Gaming.Preview.GamesEnumeration.GameListCategory)
+    @abstractmethod
+    def set_category_async(self, value: GameListCategory, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Gaming.Preview.GamesEnumeration.GameListCategory Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::get_Category()
+    @_property
+    @abstractmethod
+    def category(self) -> GameListCategory: ...
+    # Windows.ApplicationModel.AppDisplayInfo Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::get_DisplayInfo()
+    @_property
+    @abstractmethod
+    def display_info(self) -> windows_applicationmodel.AppDisplayInfo: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::get_Properties()
+    @_property
+    @abstractmethod
+    def properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
 
 @typing.final
 class IGameListEntry(winrt.system.Object, ImplementsIGameListEntry):

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -51,7 +52,9 @@ class ProviderSpiConnectionSettings(winrt.system.Object):
     def chip_select_line(self, value: winrt.system.Int32) -> None: ...
 
 class ImplementsISpiControllerProvider():
-    pass
+    # Windows.Devices.Spi.Provider.ISpiDeviceProvider Windows.Devices.Spi.Provider.ISpiControllerProvider::GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)
+    @abstractmethod
+    def get_device_provider(self, settings: ProviderSpiConnectionSettings, /) -> ISpiDeviceProvider: ...
 
 @typing.final
 class ISpiControllerProvider(winrt.system.Object, ImplementsISpiControllerProvider):
@@ -59,7 +62,26 @@ class ISpiControllerProvider(winrt.system.Object, ImplementsISpiControllerProvid
     def get_device_provider(self, settings: ProviderSpiConnectionSettings, /) -> ISpiDeviceProvider: ...
 
 class ImplementsISpiDeviceProvider():
-    pass
+    # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::Read(System.Byte[])
+    @abstractmethod
+    def read(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
+    # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::TransferFullDuplex(System.Byte[],System.Byte[])
+    @abstractmethod
+    def transfer_full_duplex(self, write_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], read_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
+    # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::TransferSequential(System.Byte[],System.Byte[])
+    @abstractmethod
+    def transfer_sequential(self, write_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], read_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
+    # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::Write(System.Byte[])
+    @abstractmethod
+    def write(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    # Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings Windows.Devices.Spi.Provider.ISpiDeviceProvider::get_ConnectionSettings()
+    @_property
+    @abstractmethod
+    def connection_settings(self) -> ProviderSpiConnectionSettings: ...
+    # System.String Windows.Devices.Spi.Provider.ISpiDeviceProvider::get_DeviceId()
+    @_property
+    @abstractmethod
+    def device_id(self) -> str: ...
 
 @typing.final
 class ISpiDeviceProvider(winrt.system.Object, ImplementsISpiDeviceProvider, windows_foundation.ImplementsIClosable):
@@ -83,7 +105,9 @@ class ISpiDeviceProvider(winrt.system.Object, ImplementsISpiDeviceProvider, wind
     def device_id(self) -> str: ...
 
 class ImplementsISpiProvider():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Spi.Provider.ISpiControllerProvider>> Windows.Devices.Spi.Provider.ISpiProvider::GetControllersAsync()
+    @abstractmethod
+    def get_controllers_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[ISpiControllerProvider]]: ...
 
 @typing.final
 class ISpiProvider(winrt.system.Object, ImplementsISpiProvider):

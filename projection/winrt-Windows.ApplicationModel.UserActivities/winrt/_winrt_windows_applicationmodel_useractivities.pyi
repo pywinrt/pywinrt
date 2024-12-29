@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -230,7 +231,9 @@ class UserActivityVisualElements(winrt.system.Object):
     def attribution_display_text(self, value: str) -> None: ...
 
 class ImplementsIUserActivityContentInfo():
-    pass
+    # System.String Windows.ApplicationModel.UserActivities.IUserActivityContentInfo::ToJson()
+    @abstractmethod
+    def to_json(self) -> str: ...
 
 @typing.final
 class IUserActivityContentInfo(winrt.system.Object, ImplementsIUserActivityContentInfo):

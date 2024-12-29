@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -477,7 +478,51 @@ class SoftwareBitmap(winrt.system.Object, windows_foundation.ImplementsIClosable
     def pixel_width(self) -> winrt.system.Int32: ...
 
 class ImplementsIBitmapFrame():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.IBitmapFrame::GetPixelDataAsync()
+    @abstractmethod
+    def get_pixel_data_async(self) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.IBitmapFrame::GetPixelDataAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    @abstractmethod
+    def get_pixel_data_transformed_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.ImageStream> Windows.Graphics.Imaging.IBitmapFrame::GetThumbnailAsync()
+    @abstractmethod
+    def get_thumbnail_async(self) -> windows_foundation.IAsyncOperation[ImageStream]: ...
+    # Windows.Graphics.Imaging.BitmapAlphaMode Windows.Graphics.Imaging.IBitmapFrame::get_BitmapAlphaMode()
+    @_property
+    @abstractmethod
+    def bitmap_alpha_mode(self) -> BitmapAlphaMode: ...
+    # Windows.Graphics.Imaging.BitmapPixelFormat Windows.Graphics.Imaging.IBitmapFrame::get_BitmapPixelFormat()
+    @_property
+    @abstractmethod
+    def bitmap_pixel_format(self) -> BitmapPixelFormat: ...
+    # Windows.Graphics.Imaging.BitmapPropertiesView Windows.Graphics.Imaging.IBitmapFrame::get_BitmapProperties()
+    @_property
+    @abstractmethod
+    def bitmap_properties(self) -> BitmapPropertiesView: ...
+    # System.Double Windows.Graphics.Imaging.IBitmapFrame::get_DpiX()
+    @_property
+    @abstractmethod
+    def dpi_x(self) -> winrt.system.Double: ...
+    # System.Double Windows.Graphics.Imaging.IBitmapFrame::get_DpiY()
+    @_property
+    @abstractmethod
+    def dpi_y(self) -> winrt.system.Double: ...
+    # System.UInt32 Windows.Graphics.Imaging.IBitmapFrame::get_OrientedPixelHeight()
+    @_property
+    @abstractmethod
+    def oriented_pixel_height(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Graphics.Imaging.IBitmapFrame::get_OrientedPixelWidth()
+    @_property
+    @abstractmethod
+    def oriented_pixel_width(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Graphics.Imaging.IBitmapFrame::get_PixelHeight()
+    @_property
+    @abstractmethod
+    def pixel_height(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Graphics.Imaging.IBitmapFrame::get_PixelWidth()
+    @_property
+    @abstractmethod
+    def pixel_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IBitmapFrame(winrt.system.Object, ImplementsIBitmapFrame):
@@ -516,7 +561,15 @@ class IBitmapFrame(winrt.system.Object, ImplementsIBitmapFrame):
     def pixel_width(self) -> winrt.system.UInt32: ...
 
 class ImplementsIBitmapFrameWithSoftwareBitmap():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync()
+    @abstractmethod
+    def get_software_bitmap_async(self) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)
+    @abstractmethod
+    def get_software_bitmap_converted_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    @abstractmethod
+    def get_software_bitmap_transformed_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
 
 @typing.final
 class IBitmapFrameWithSoftwareBitmap(winrt.system.Object, ImplementsIBitmapFrameWithSoftwareBitmap, ImplementsIBitmapFrame):
@@ -561,7 +614,9 @@ class IBitmapFrameWithSoftwareBitmap(winrt.system.Object, ImplementsIBitmapFrame
     def pixel_width(self) -> winrt.system.UInt32: ...
 
 class ImplementsIBitmapPropertiesView():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapPropertySet> Windows.Graphics.Imaging.IBitmapPropertiesView::GetPropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
+    @abstractmethod
+    def get_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[BitmapPropertySet]: ...
 
 @typing.final
 class IBitmapPropertiesView(winrt.system.Object, ImplementsIBitmapPropertiesView):

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1282,7 +1283,19 @@ class SpatialAudioFormatSubtype(winrt.system.Object, metaclass=SpatialAudioForma
     pass
 
 class ImplementsIAudioInputNode():
-    pass
+    # System.Void Windows.Media.Audio.IAudioInputNode::AddOutgoingConnection(Windows.Media.Audio.IAudioNode)
+    @abstractmethod
+    def add_outgoing_connection(self, destination: ImplementsIAudioNode, /) -> None: ...
+    # System.Void Windows.Media.Audio.IAudioInputNode::AddOutgoingConnection(Windows.Media.Audio.IAudioNode,System.Double)
+    @abstractmethod
+    def add_outgoing_connection_with_gain(self, destination: ImplementsIAudioNode, gain: winrt.system.Double, /) -> None: ...
+    # System.Void Windows.Media.Audio.IAudioInputNode::RemoveOutgoingConnection(Windows.Media.Audio.IAudioNode)
+    @abstractmethod
+    def remove_outgoing_connection(self, destination: ImplementsIAudioNode, /) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Audio.AudioGraphConnection> Windows.Media.Audio.IAudioInputNode::get_OutgoingConnections()
+    @_property
+    @abstractmethod
+    def outgoing_connections(self) -> typing.Sequence[AudioGraphConnection]: ...
 
 @typing.final
 class IAudioInputNode(winrt.system.Object, ImplementsIAudioInputNode, ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
@@ -1329,7 +1342,10 @@ class IAudioInputNode(winrt.system.Object, ImplementsIAudioInputNode, Implements
     def outgoing_gain(self, value: winrt.system.Double) -> None: ...
 
 class ImplementsIAudioInputNode2():
-    pass
+    # Windows.Media.Audio.AudioNodeEmitter Windows.Media.Audio.IAudioInputNode2::get_Emitter()
+    @_property
+    @abstractmethod
+    def emitter(self) -> AudioNodeEmitter: ...
 
 @typing.final
 class IAudioInputNode2(winrt.system.Object, ImplementsIAudioInputNode2, ImplementsIAudioInputNode, ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
@@ -1379,7 +1395,45 @@ class IAudioInputNode2(winrt.system.Object, ImplementsIAudioInputNode2, Implemen
     def outgoing_connections(self) -> typing.Sequence[AudioGraphConnection]: ...
 
 class ImplementsIAudioNode():
-    pass
+    # System.Void Windows.Media.Audio.IAudioNode::DisableEffectsByDefinition(Windows.Media.Effects.IAudioEffectDefinition)
+    @abstractmethod
+    def disable_effects_by_definition(self, definition: windows_media_effects.ImplementsIAudioEffectDefinition, /) -> None: ...
+    # System.Void Windows.Media.Audio.IAudioNode::EnableEffectsByDefinition(Windows.Media.Effects.IAudioEffectDefinition)
+    @abstractmethod
+    def enable_effects_by_definition(self, definition: windows_media_effects.ImplementsIAudioEffectDefinition, /) -> None: ...
+    # System.Void Windows.Media.Audio.IAudioNode::Reset()
+    @abstractmethod
+    def reset(self) -> None: ...
+    # System.Void Windows.Media.Audio.IAudioNode::Start()
+    @abstractmethod
+    def start(self) -> None: ...
+    # System.Void Windows.Media.Audio.IAudioNode::Stop()
+    @abstractmethod
+    def stop(self) -> None: ...
+    # System.Boolean Windows.Media.Audio.IAudioNode::get_ConsumeInput()
+    @_property
+    @abstractmethod
+    def consume_input(self) -> bool: ...
+    # System.Void Windows.Media.Audio.IAudioNode::put_ConsumeInput(System.Boolean)
+    @consume_input.setter
+    @abstractmethod
+    def consume_input(self, value: bool) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.Media.Effects.IAudioEffectDefinition> Windows.Media.Audio.IAudioNode::get_EffectDefinitions()
+    @_property
+    @abstractmethod
+    def effect_definitions(self) -> typing.MutableSequence[windows_media_effects.IAudioEffectDefinition]: ...
+    # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.Audio.IAudioNode::get_EncodingProperties()
+    @_property
+    @abstractmethod
+    def encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
+    # System.Double Windows.Media.Audio.IAudioNode::get_OutgoingGain()
+    @_property
+    @abstractmethod
+    def outgoing_gain(self) -> winrt.system.Double: ...
+    # System.Void Windows.Media.Audio.IAudioNode::put_OutgoingGain(System.Double)
+    @outgoing_gain.setter
+    @abstractmethod
+    def outgoing_gain(self, value: winrt.system.Double) -> None: ...
 
 @typing.final
 class IAudioNode(winrt.system.Object, ImplementsIAudioNode, windows_foundation.ImplementsIClosable):
@@ -1417,7 +1471,14 @@ class IAudioNode(winrt.system.Object, ImplementsIAudioNode, windows_foundation.I
     def outgoing_gain(self, value: winrt.system.Double) -> None: ...
 
 class ImplementsIAudioNodeWithListener():
-    pass
+    # Windows.Media.Audio.AudioNodeListener Windows.Media.Audio.IAudioNodeWithListener::get_Listener()
+    @_property
+    @abstractmethod
+    def listener(self) -> AudioNodeListener: ...
+    # System.Void Windows.Media.Audio.IAudioNodeWithListener::put_Listener(Windows.Media.Audio.AudioNodeListener)
+    @listener.setter
+    @abstractmethod
+    def listener(self, value: AudioNodeListener) -> None: ...
 
 @typing.final
 class IAudioNodeWithListener(winrt.system.Object, ImplementsIAudioNodeWithListener, ImplementsIAudioNode, windows_foundation.ImplementsIClosable):

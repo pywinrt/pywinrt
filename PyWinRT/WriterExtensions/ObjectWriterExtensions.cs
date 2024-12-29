@@ -94,19 +94,7 @@ static class ObjectWriterExtensions
 
         if (type.Category == Category.Interface)
         {
-            var generic2 = "";
-
-            if (type.IsGeneric)
-            {
-                generic2 =
-                    $"typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p))))}]";
-            }
-
-            w.WriteLine($"class Implements{type.Name}({generic2}):");
-            w.Indent++;
-            w.WriteLine("pass");
-            w.Indent--;
-            w.WriteBlankLine();
+            w.WritePythonImplementsInterfaceTyping(type, ns, nullabilityMap);
         }
 
         var collection = "";

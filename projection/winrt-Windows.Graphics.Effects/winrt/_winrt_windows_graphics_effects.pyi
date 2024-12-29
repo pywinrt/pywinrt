@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -13,7 +14,14 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 class ImplementsIGraphicsEffect():
-    pass
+    # System.String Windows.Graphics.Effects.IGraphicsEffect::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
+    # System.Void Windows.Graphics.Effects.IGraphicsEffect::put_Name(System.String)
+    @name.setter
+    @abstractmethod
+    def name(self, value: str) -> None: ...
 
 @typing.final
 class IGraphicsEffect(winrt.system.Object, ImplementsIGraphicsEffect, ImplementsIGraphicsEffectSource):

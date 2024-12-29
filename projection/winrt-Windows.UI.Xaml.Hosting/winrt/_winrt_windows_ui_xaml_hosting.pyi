@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -223,7 +224,9 @@ class XamlUIPresenter(winrt.system.Object, metaclass=XamlUIPresenter_Static):
     def root_element(self, value: windows_ui_xaml.UIElement) -> None: ...
 
 class ImplementsIXamlUIPresenterHost():
-    pass
+    # System.String Windows.UI.Xaml.Hosting.IXamlUIPresenterHost::ResolveFileResource(System.String)
+    @abstractmethod
+    def resolve_file_resource(self, path: str, /) -> str: ...
 
 @typing.final
 class IXamlUIPresenterHost(winrt.system.Object, ImplementsIXamlUIPresenterHost):
@@ -231,7 +234,9 @@ class IXamlUIPresenterHost(winrt.system.Object, ImplementsIXamlUIPresenterHost):
     def resolve_file_resource(self, path: str, /) -> str: ...
 
 class ImplementsIXamlUIPresenterHost2():
-    pass
+    # System.String Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2::GetGenericXamlFilePath()
+    @abstractmethod
+    def get_generic_xaml_file_path(self) -> str: ...
 
 @typing.final
 class IXamlUIPresenterHost2(winrt.system.Object, ImplementsIXamlUIPresenterHost2):
@@ -239,7 +244,9 @@ class IXamlUIPresenterHost2(winrt.system.Object, ImplementsIXamlUIPresenterHost2
     def get_generic_xaml_file_path(self) -> str: ...
 
 class ImplementsIXamlUIPresenterHost3():
-    pass
+    # System.Object Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3::ResolveDictionaryResource(Windows.UI.Xaml.ResourceDictionary,System.Object,System.Object)
+    @abstractmethod
+    def resolve_dictionary_resource(self, dictionary: windows_ui_xaml.ResourceDictionary, dictionary_key: winrt.system.Object, suggested_value: winrt.system.Object, /) -> winrt.system.Object: ...
 
 @typing.final
 class IXamlUIPresenterHost3(winrt.system.Object, ImplementsIXamlUIPresenterHost3):

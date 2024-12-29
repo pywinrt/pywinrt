@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -517,7 +518,12 @@ class TracingStatusChangedEventArgs(winrt.system.Object):
     def trace_level(self) -> CausalityTraceLevel: ...
 
 class ImplementsIErrorReportingSettings():
-    pass
+    # Windows.Foundation.Diagnostics.ErrorOptions Windows.Foundation.Diagnostics.IErrorReportingSettings::GetErrorOptions()
+    @abstractmethod
+    def get_error_options(self) -> ErrorOptions: ...
+    # System.Void Windows.Foundation.Diagnostics.IErrorReportingSettings::SetErrorOptions(Windows.Foundation.Diagnostics.ErrorOptions)
+    @abstractmethod
+    def set_error_options(self, value: ErrorOptions, /) -> None: ...
 
 @typing.final
 class IErrorReportingSettings(winrt.system.Object, ImplementsIErrorReportingSettings):
@@ -527,7 +533,28 @@ class IErrorReportingSettings(winrt.system.Object, ImplementsIErrorReportingSett
     def set_error_options(self, value: ErrorOptions, /) -> None: ...
 
 class ImplementsIFileLoggingSession():
-    pass
+    # System.Void Windows.Foundation.Diagnostics.IFileLoggingSession::AddLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel)
+    @abstractmethod
+    def add_logging_channel(self, logging_channel: ImplementsILoggingChannel, /) -> None: ...
+    # System.Void Windows.Foundation.Diagnostics.IFileLoggingSession::AddLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel,Windows.Foundation.Diagnostics.LoggingLevel)
+    @abstractmethod
+    def add_logging_channel_with_level(self, logging_channel: ImplementsILoggingChannel, max_level: LoggingLevel, /) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Foundation.Diagnostics.IFileLoggingSession::CloseAndSaveToFileAsync()
+    @abstractmethod
+    def close_and_save_to_file_async(self) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # System.Void Windows.Foundation.Diagnostics.IFileLoggingSession::RemoveLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel)
+    @abstractmethod
+    def remove_logging_channel(self, logging_channel: ImplementsILoggingChannel, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Foundation.Diagnostics.IFileLoggingSession::add_LogFileGenerated(Windows.Foundation.TypedEventHandler`2<Windows.Foundation.Diagnostics.IFileLoggingSession,Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs>)
+    @abstractmethod
+    def add_log_file_generated(self, handler: windows_foundation.TypedEventHandler[IFileLoggingSession, LogFileGeneratedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Foundation.Diagnostics.IFileLoggingSession::remove_LogFileGenerated(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_log_file_generated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.Foundation.Diagnostics.IFileLoggingSession::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
 
 @typing.final
 class IFileLoggingSession(winrt.system.Object, ImplementsIFileLoggingSession, windows_foundation.ImplementsIClosable):
@@ -552,7 +579,36 @@ class IFileLoggingSession(winrt.system.Object, ImplementsIFileLoggingSession, wi
     def name(self) -> str: ...
 
 class ImplementsILoggingChannel():
-    pass
+    # System.Void Windows.Foundation.Diagnostics.ILoggingChannel::LogMessage(System.String)
+    @abstractmethod
+    def log_message(self, event_string: str, /) -> None: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingChannel::LogMessage(System.String,Windows.Foundation.Diagnostics.LoggingLevel)
+    @abstractmethod
+    def log_message_with_level(self, event_string: str, level: LoggingLevel, /) -> None: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingChannel::LogValuePair(System.String,System.Int32)
+    @abstractmethod
+    def log_value_pair(self, value1: str, value2: winrt.system.Int32, /) -> None: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingChannel::LogValuePair(System.String,System.Int32,Windows.Foundation.Diagnostics.LoggingLevel)
+    @abstractmethod
+    def log_value_pair_with_level(self, value1: str, value2: winrt.system.Int32, level: LoggingLevel, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Foundation.Diagnostics.ILoggingChannel::add_LoggingEnabled(Windows.Foundation.TypedEventHandler`2<Windows.Foundation.Diagnostics.ILoggingChannel,System.Object>)
+    @abstractmethod
+    def add_logging_enabled(self, handler: windows_foundation.TypedEventHandler[ILoggingChannel, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingChannel::remove_LoggingEnabled(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_logging_enabled(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Foundation.Diagnostics.ILoggingChannel::get_Enabled()
+    @_property
+    @abstractmethod
+    def enabled(self) -> bool: ...
+    # Windows.Foundation.Diagnostics.LoggingLevel Windows.Foundation.Diagnostics.ILoggingChannel::get_Level()
+    @_property
+    @abstractmethod
+    def level(self) -> LoggingLevel: ...
+    # System.String Windows.Foundation.Diagnostics.ILoggingChannel::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
 
 @typing.final
 class ILoggingChannel(winrt.system.Object, ImplementsILoggingChannel, windows_foundation.ImplementsIClosable):
@@ -583,7 +639,22 @@ class ILoggingChannel(winrt.system.Object, ImplementsILoggingChannel, windows_fo
     def name(self) -> str: ...
 
 class ImplementsILoggingSession():
-    pass
+    # System.Void Windows.Foundation.Diagnostics.ILoggingSession::AddLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel)
+    @abstractmethod
+    def add_logging_channel(self, logging_channel: ImplementsILoggingChannel, /) -> None: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingSession::AddLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel,Windows.Foundation.Diagnostics.LoggingLevel)
+    @abstractmethod
+    def add_logging_channel_with_level(self, logging_channel: ImplementsILoggingChannel, max_level: LoggingLevel, /) -> None: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingSession::RemoveLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel)
+    @abstractmethod
+    def remove_logging_channel(self, logging_channel: ImplementsILoggingChannel, /) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Foundation.Diagnostics.ILoggingSession::SaveToFileAsync(Windows.Storage.IStorageFolder,System.String)
+    @abstractmethod
+    def save_to_file_async(self, folder: windows_storage.ImplementsIStorageFolder, file_name: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # System.String Windows.Foundation.Diagnostics.ILoggingSession::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
 
 @typing.final
 class ILoggingSession(winrt.system.Object, ImplementsILoggingSession, windows_foundation.ImplementsIClosable):
@@ -604,7 +675,39 @@ class ILoggingSession(winrt.system.Object, ImplementsILoggingSession, windows_fo
     def name(self) -> str: ...
 
 class ImplementsILoggingTarget():
-    pass
+    # System.Boolean Windows.Foundation.Diagnostics.ILoggingTarget::IsEnabled()
+    @abstractmethod
+    def is_enabled(self) -> bool: ...
+    # System.Boolean Windows.Foundation.Diagnostics.ILoggingTarget::IsEnabled(Windows.Foundation.Diagnostics.LoggingLevel)
+    @abstractmethod
+    def is_enabled_with_level(self, level: LoggingLevel, /) -> bool: ...
+    # System.Boolean Windows.Foundation.Diagnostics.ILoggingTarget::IsEnabled(Windows.Foundation.Diagnostics.LoggingLevel,System.Int64)
+    @abstractmethod
+    def is_enabled_with_level_and_keywords(self, level: LoggingLevel, keywords: winrt.system.Int64, /) -> bool: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingTarget::LogEvent(System.String)
+    @abstractmethod
+    def log_event(self, event_name: str, /) -> None: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingTarget::LogEvent(System.String,Windows.Foundation.Diagnostics.LoggingFields)
+    @abstractmethod
+    def log_event_with_fields(self, event_name: str, fields: LoggingFields, /) -> None: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingTarget::LogEvent(System.String,Windows.Foundation.Diagnostics.LoggingFields,Windows.Foundation.Diagnostics.LoggingLevel)
+    @abstractmethod
+    def log_event_with_fields_and_level(self, event_name: str, fields: LoggingFields, level: LoggingLevel, /) -> None: ...
+    # System.Void Windows.Foundation.Diagnostics.ILoggingTarget::LogEvent(System.String,Windows.Foundation.Diagnostics.LoggingFields,Windows.Foundation.Diagnostics.LoggingLevel,Windows.Foundation.Diagnostics.LoggingOptions)
+    @abstractmethod
+    def log_event_with_fields_and_options(self, event_name: str, fields: LoggingFields, level: LoggingLevel, options: LoggingOptions, /) -> None: ...
+    # Windows.Foundation.Diagnostics.LoggingActivity Windows.Foundation.Diagnostics.ILoggingTarget::StartActivity(System.String)
+    @abstractmethod
+    def start_activity(self, start_event_name: str, /) -> LoggingActivity: ...
+    # Windows.Foundation.Diagnostics.LoggingActivity Windows.Foundation.Diagnostics.ILoggingTarget::StartActivity(System.String,Windows.Foundation.Diagnostics.LoggingFields)
+    @abstractmethod
+    def start_activity_with_fields(self, start_event_name: str, fields: LoggingFields, /) -> LoggingActivity: ...
+    # Windows.Foundation.Diagnostics.LoggingActivity Windows.Foundation.Diagnostics.ILoggingTarget::StartActivity(System.String,Windows.Foundation.Diagnostics.LoggingFields,Windows.Foundation.Diagnostics.LoggingLevel)
+    @abstractmethod
+    def start_activity_with_fields_and_level(self, start_event_name: str, fields: LoggingFields, level: LoggingLevel, /) -> LoggingActivity: ...
+    # Windows.Foundation.Diagnostics.LoggingActivity Windows.Foundation.Diagnostics.ILoggingTarget::StartActivity(System.String,Windows.Foundation.Diagnostics.LoggingFields,Windows.Foundation.Diagnostics.LoggingLevel,Windows.Foundation.Diagnostics.LoggingOptions)
+    @abstractmethod
+    def start_activity_with_fields_and_options(self, start_event_name: str, fields: LoggingFields, level: LoggingLevel, options: LoggingOptions, /) -> LoggingActivity: ...
 
 @typing.final
 class ILoggingTarget(winrt.system.Object, ImplementsILoggingTarget):

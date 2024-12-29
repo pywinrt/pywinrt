@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -152,7 +153,9 @@ class HttpServerCustomValidationRequestedEventArgs(winrt.system.Object):
     def server_intermediate_certificates(self) -> typing.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
 class ImplementsIHttpFilter():
-    pass
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> Windows.Web.Http.Filters.IHttpFilter::SendRequestAsync(Windows.Web.Http.HttpRequestMessage)
+    @abstractmethod
+    def send_request_async(self, request: windows_web_http.HttpRequestMessage, /) -> windows_foundation.IAsyncOperationWithProgress[windows_web_http.HttpResponseMessage, windows_web_http.HttpProgress]: ...
 
 @typing.final
 class IHttpFilter(winrt.system.Object, ImplementsIHttpFilter, windows_foundation.ImplementsIClosable):

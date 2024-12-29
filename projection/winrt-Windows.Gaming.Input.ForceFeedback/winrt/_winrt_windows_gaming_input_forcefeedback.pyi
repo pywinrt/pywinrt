@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -139,7 +140,24 @@ class RampForceEffect(winrt.system.Object, ImplementsIForceFeedbackEffect):
     def state(self) -> ForceFeedbackEffectState: ...
 
 class ImplementsIForceFeedbackEffect():
-    pass
+    # System.Void Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect::Start()
+    @abstractmethod
+    def start(self) -> None: ...
+    # System.Void Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect::Stop()
+    @abstractmethod
+    def stop(self) -> None: ...
+    # System.Double Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect::get_Gain()
+    @_property
+    @abstractmethod
+    def gain(self) -> winrt.system.Double: ...
+    # System.Void Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect::put_Gain(System.Double)
+    @gain.setter
+    @abstractmethod
+    def gain(self, value: winrt.system.Double) -> None: ...
+    # Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect::get_State()
+    @_property
+    @abstractmethod
+    def state(self) -> ForceFeedbackEffectState: ...
 
 @typing.final
 class IForceFeedbackEffect(winrt.system.Object, ImplementsIForceFeedbackEffect):

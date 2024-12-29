@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -349,7 +350,18 @@ class VenueData(winrt.system.Object):
     def level(self) -> str: ...
 
 class ImplementsIGeoshape():
-    pass
+    # Windows.Devices.Geolocation.AltitudeReferenceSystem Windows.Devices.Geolocation.IGeoshape::get_AltitudeReferenceSystem()
+    @_property
+    @abstractmethod
+    def altitude_reference_system(self) -> AltitudeReferenceSystem: ...
+    # Windows.Devices.Geolocation.GeoshapeType Windows.Devices.Geolocation.IGeoshape::get_GeoshapeType()
+    @_property
+    @abstractmethod
+    def geoshape_type(self) -> GeoshapeType: ...
+    # System.UInt32 Windows.Devices.Geolocation.IGeoshape::get_SpatialReferenceId()
+    @_property
+    @abstractmethod
+    def spatial_reference_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class IGeoshape(winrt.system.Object, ImplementsIGeoshape):

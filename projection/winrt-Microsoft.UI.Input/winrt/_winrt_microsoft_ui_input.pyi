@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -999,7 +1000,16 @@ class WindowRectChangingEventArgs(winrt.system.Object):
     def pointer_screen_point(self) -> windows_graphics.PointInt32: ...
 
 class ImplementsIPointerPointTransform():
-    pass
+    # System.Boolean Microsoft.UI.Input.IPointerPointTransform::TryTransform(Windows.Foundation.Point,Windows.Foundation.Point&)
+    @abstractmethod
+    def try_transform(self, in_point: windows_foundation.Point, /) -> typing.Tuple[bool, windows_foundation.Point]: ...
+    # System.Boolean Microsoft.UI.Input.IPointerPointTransform::TryTransformBounds(Windows.Foundation.Rect,Windows.Foundation.Rect&)
+    @abstractmethod
+    def try_transform_bounds(self, in_rect: windows_foundation.Rect, /) -> typing.Tuple[bool, windows_foundation.Rect]: ...
+    # Microsoft.UI.Input.IPointerPointTransform Microsoft.UI.Input.IPointerPointTransform::get_Inverse()
+    @_property
+    @abstractmethod
+    def inverse(self) -> IPointerPointTransform: ...
 
 @typing.final
 class IPointerPointTransform(winrt.system.Object, ImplementsIPointerPointTransform):

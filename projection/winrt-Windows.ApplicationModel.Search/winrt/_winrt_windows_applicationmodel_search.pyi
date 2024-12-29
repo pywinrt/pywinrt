@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -250,7 +251,18 @@ class SearchSuggestionsRequestDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 class ImplementsISearchPaneQueryChangedEventArgs():
-    pass
+    # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_Language()
+    @_property
+    @abstractmethod
+    def language(self) -> str: ...
+    # Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_LinguisticDetails()
+    @_property
+    @abstractmethod
+    def linguistic_details(self) -> SearchPaneQueryLinguisticDetails: ...
+    # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_QueryText()
+    @_property
+    @abstractmethod
+    def query_text(self) -> str: ...
 
 @typing.final
 class ISearchPaneQueryChangedEventArgs(winrt.system.Object, ImplementsISearchPaneQueryChangedEventArgs):

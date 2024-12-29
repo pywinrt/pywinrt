@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -249,7 +250,22 @@ class TensorVariableDescriptorPreview(winrt.system.Object, ImplementsILearningMo
     def shape(self) -> typing.Iterable[winrt.system.Int64]: ...
 
 class ImplementsILearningModelVariableDescriptorPreview():
-    pass
+    # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Description()
+    @_property
+    @abstractmethod
+    def description(self) -> str: ...
+    # System.Boolean Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_IsRequired()
+    @_property
+    @abstractmethod
+    def is_required(self) -> bool: ...
+    # Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_ModelFeatureKind()
+    @_property
+    @abstractmethod
+    def model_feature_kind(self) -> LearningModelFeatureKindPreview: ...
+    # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
 
 @typing.final
 class ILearningModelVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):

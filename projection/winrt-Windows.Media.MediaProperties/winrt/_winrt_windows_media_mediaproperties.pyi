@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -719,7 +720,22 @@ class Vp9ProfileIds(winrt.system.Object, metaclass=Vp9ProfileIds_Static):
     pass
 
 class ImplementsIMediaEncodingProperties():
-    pass
+    # Windows.Media.MediaProperties.MediaPropertySet Windows.Media.MediaProperties.IMediaEncodingProperties::get_Properties()
+    @_property
+    @abstractmethod
+    def properties(self) -> MediaPropertySet: ...
+    # System.String Windows.Media.MediaProperties.IMediaEncodingProperties::get_Subtype()
+    @_property
+    @abstractmethod
+    def subtype(self) -> str: ...
+    # System.Void Windows.Media.MediaProperties.IMediaEncodingProperties::put_Subtype(System.String)
+    @subtype.setter
+    @abstractmethod
+    def subtype(self, value: str) -> None: ...
+    # System.String Windows.Media.MediaProperties.IMediaEncodingProperties::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> str: ...
 
 @typing.final
 class IMediaEncodingProperties(winrt.system.Object, ImplementsIMediaEncodingProperties):

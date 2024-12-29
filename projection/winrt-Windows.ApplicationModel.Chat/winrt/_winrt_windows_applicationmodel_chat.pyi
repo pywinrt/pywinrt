@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -788,7 +789,10 @@ class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
     def transport_id(self) -> str: ...
 
 class ImplementsIChatItem():
-    pass
+    # Windows.ApplicationModel.Chat.ChatItemKind Windows.ApplicationModel.Chat.IChatItem::get_ItemKind()
+    @_property
+    @abstractmethod
+    def item_kind(self) -> ChatItemKind: ...
 
 @typing.final
 class IChatItem(winrt.system.Object, ImplementsIChatItem):

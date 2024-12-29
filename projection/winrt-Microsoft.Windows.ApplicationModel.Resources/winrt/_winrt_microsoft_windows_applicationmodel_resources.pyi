@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -143,7 +144,10 @@ class ResourceNotFoundEventArgs(winrt.system.Object):
     def name(self) -> str: ...
 
 class ImplementsIResourceContext():
-    pass
+    # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.ApplicationModel.Resources.IResourceContext::get_QualifierValues()
+    @_property
+    @abstractmethod
+    def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
 
 @typing.final
 class IResourceContext(winrt.system.Object, ImplementsIResourceContext):
@@ -152,7 +156,19 @@ class IResourceContext(winrt.system.Object, ImplementsIResourceContext):
     def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
 
 class ImplementsIResourceManager():
-    pass
+    # Microsoft.Windows.ApplicationModel.Resources.ResourceContext Microsoft.Windows.ApplicationModel.Resources.IResourceManager::CreateResourceContext()
+    @abstractmethod
+    def create_resource_context(self) -> ResourceContext: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Windows.ApplicationModel.Resources.IResourceManager::add_ResourceNotFound(Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.ApplicationModel.Resources.ResourceManager,Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs>)
+    @abstractmethod
+    def add_resource_not_found(self, handler: windows_foundation.TypedEventHandler[ResourceManager, ResourceNotFoundEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Windows.ApplicationModel.Resources.IResourceManager::remove_ResourceNotFound(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_resource_not_found(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.Windows.ApplicationModel.Resources.ResourceMap Microsoft.Windows.ApplicationModel.Resources.IResourceManager::get_MainResourceMap()
+    @_property
+    @abstractmethod
+    def main_resource_map(self) -> ResourceMap: ...
 
 @typing.final
 class IResourceManager(winrt.system.Object, ImplementsIResourceManager):

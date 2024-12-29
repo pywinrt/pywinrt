@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -297,7 +298,42 @@ class FolderInformation(winrt.system.Object, windows_storage.ImplementsIStorageI
     def provider(self) -> windows_storage.StorageProvider: ...
 
 class ImplementsIStorageItemInformation():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.BulkAccess.IStorageItemInformation::add_PropertiesUpdated(Windows.Foundation.TypedEventHandler`2<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object>)
+    @abstractmethod
+    def add_properties_updated(self, changed_handler: windows_foundation.TypedEventHandler[IStorageItemInformation, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.BulkAccess.IStorageItemInformation::remove_PropertiesUpdated(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_properties_updated(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.BulkAccess.IStorageItemInformation::add_ThumbnailUpdated(Windows.Foundation.TypedEventHandler`2<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object>)
+    @abstractmethod
+    def add_thumbnail_updated(self, changed_handler: windows_foundation.TypedEventHandler[IStorageItemInformation, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.BulkAccess.IStorageItemInformation::remove_ThumbnailUpdated(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_thumbnail_updated(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Storage.FileProperties.BasicProperties Windows.Storage.BulkAccess.IStorageItemInformation::get_BasicProperties()
+    @_property
+    @abstractmethod
+    def basic_properties(self) -> windows_storage_fileproperties.BasicProperties: ...
+    # Windows.Storage.FileProperties.DocumentProperties Windows.Storage.BulkAccess.IStorageItemInformation::get_DocumentProperties()
+    @_property
+    @abstractmethod
+    def document_properties(self) -> windows_storage_fileproperties.DocumentProperties: ...
+    # Windows.Storage.FileProperties.ImageProperties Windows.Storage.BulkAccess.IStorageItemInformation::get_ImageProperties()
+    @_property
+    @abstractmethod
+    def image_properties(self) -> windows_storage_fileproperties.ImageProperties: ...
+    # Windows.Storage.FileProperties.MusicProperties Windows.Storage.BulkAccess.IStorageItemInformation::get_MusicProperties()
+    @_property
+    @abstractmethod
+    def music_properties(self) -> windows_storage_fileproperties.MusicProperties: ...
+    # Windows.Storage.FileProperties.StorageItemThumbnail Windows.Storage.BulkAccess.IStorageItemInformation::get_Thumbnail()
+    @_property
+    @abstractmethod
+    def thumbnail(self) -> windows_storage_fileproperties.StorageItemThumbnail: ...
+    # Windows.Storage.FileProperties.VideoProperties Windows.Storage.BulkAccess.IStorageItemInformation::get_VideoProperties()
+    @_property
+    @abstractmethod
+    def video_properties(self) -> windows_storage_fileproperties.VideoProperties: ...
 
 @typing.final
 class IStorageItemInformation(winrt.system.Object, ImplementsIStorageItemInformation):

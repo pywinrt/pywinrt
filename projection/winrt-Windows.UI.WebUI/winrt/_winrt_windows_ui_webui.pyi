@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1494,7 +1495,10 @@ class WebUIWebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, Imp
     def activated_operation(self) -> ActivatedOperation: ...
 
 class ImplementsIActivatedEventArgsDeferral():
-    pass
+    # Windows.UI.WebUI.ActivatedOperation Windows.UI.WebUI.IActivatedEventArgsDeferral::get_ActivatedOperation()
+    @_property
+    @abstractmethod
+    def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
 class IActivatedEventArgsDeferral(winrt.system.Object, ImplementsIActivatedEventArgsDeferral):
@@ -1503,7 +1507,14 @@ class IActivatedEventArgsDeferral(winrt.system.Object, ImplementsIActivatedEvent
     def activated_operation(self) -> ActivatedOperation: ...
 
 class ImplementsIWebUIBackgroundTaskInstance():
-    pass
+    # System.Boolean Windows.UI.WebUI.IWebUIBackgroundTaskInstance::get_Succeeded()
+    @_property
+    @abstractmethod
+    def succeeded(self) -> bool: ...
+    # System.Void Windows.UI.WebUI.IWebUIBackgroundTaskInstance::put_Succeeded(System.Boolean)
+    @succeeded.setter
+    @abstractmethod
+    def succeeded(self, value: bool) -> None: ...
 
 @typing.final
 class IWebUIBackgroundTaskInstance(winrt.system.Object, ImplementsIWebUIBackgroundTaskInstance):
@@ -1515,7 +1526,10 @@ class IWebUIBackgroundTaskInstance(winrt.system.Object, ImplementsIWebUIBackgrou
     def succeeded(self, value: bool) -> None: ...
 
 class ImplementsIWebUINavigatedEventArgs():
-    pass
+    # Windows.UI.WebUI.WebUINavigatedOperation Windows.UI.WebUI.IWebUINavigatedEventArgs::get_NavigatedOperation()
+    @_property
+    @abstractmethod
+    def navigated_operation(self) -> WebUINavigatedOperation: ...
 
 @typing.final
 class IWebUINavigatedEventArgs(winrt.system.Object, ImplementsIWebUINavigatedEventArgs):

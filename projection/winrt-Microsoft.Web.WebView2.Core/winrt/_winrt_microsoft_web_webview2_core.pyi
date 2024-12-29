@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -2322,7 +2323,18 @@ class CoreWebView2WindowFeatures(winrt.system.Object):
     def width(self) -> winrt.system.UInt32: ...
 
 class ImplementsICoreWebView2DispatchAdapter():
-    pass
+    # System.Void Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter::Clean()
+    @abstractmethod
+    def clean(self) -> None: ...
+    # System.Object Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter::UnwrapObject(System.Object)
+    @abstractmethod
+    def unwrap_object(self, wrapped: winrt.system.Object, /) -> winrt.system.Object: ...
+    # System.Object Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter::WrapNamedObject(System.String,Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter)
+    @abstractmethod
+    def wrap_named_object(self, name: str, adapter: ImplementsICoreWebView2DispatchAdapter, /) -> winrt.system.Object: ...
+    # System.Object Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter::WrapObject(System.Object,Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter)
+    @abstractmethod
+    def wrap_object(self, unwrapped: winrt.system.Object, adapter: ImplementsICoreWebView2DispatchAdapter, /) -> winrt.system.Object: ...
 
 @typing.final
 class ICoreWebView2DispatchAdapter(winrt.system.Object, ImplementsICoreWebView2DispatchAdapter):

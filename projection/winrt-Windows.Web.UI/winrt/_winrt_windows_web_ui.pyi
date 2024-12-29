@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -204,7 +205,187 @@ class WebViewControlWebResourceRequestedEventArgs(winrt.system.Object):
     def request(self) -> windows_web_http.HttpRequestMessage: ...
 
 class ImplementsIWebViewControl():
-    pass
+    # Windows.Foundation.Uri Windows.Web.UI.IWebViewControl::BuildLocalStreamUri(System.String,System.String)
+    @abstractmethod
+    def build_local_stream_uri(self, content_identifier: str, relative_path: str, /) -> windows_foundation.Uri: ...
+    # Windows.Foundation.IAsyncAction Windows.Web.UI.IWebViewControl::CapturePreviewToStreamAsync(Windows.Storage.Streams.IRandomAccessStream)
+    @abstractmethod
+    def capture_preview_to_stream_async(self, stream: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackage> Windows.Web.UI.IWebViewControl::CaptureSelectedContentToDataPackageAsync()
+    @abstractmethod
+    def capture_selected_content_to_data_package_async(self) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackage]: ...
+    # System.Void Windows.Web.UI.IWebViewControl::GetDeferredPermissionRequestById(System.UInt32,Windows.Web.UI.WebViewControlDeferredPermissionRequest&)
+    @abstractmethod
+    def get_deferred_permission_request_by_id(self, id: winrt.system.UInt32, /) -> WebViewControlDeferredPermissionRequest: ...
+    # System.Void Windows.Web.UI.IWebViewControl::GoBack()
+    @abstractmethod
+    def go_back(self) -> None: ...
+    # System.Void Windows.Web.UI.IWebViewControl::GoForward()
+    @abstractmethod
+    def go_forward(self) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Web.UI.IWebViewControl::InvokeScriptAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
+    @abstractmethod
+    def invoke_script_async(self, script_name: str, arguments: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[str]: ...
+    # System.Void Windows.Web.UI.IWebViewControl::Navigate(Windows.Foundation.Uri)
+    @abstractmethod
+    def navigate(self, source: windows_foundation.Uri, /) -> None: ...
+    # System.Void Windows.Web.UI.IWebViewControl::NavigateToLocalStreamUri(Windows.Foundation.Uri,Windows.Web.IUriToStreamResolver)
+    @abstractmethod
+    def navigate_to_local_stream_uri(self, source: windows_foundation.Uri, stream_resolver: windows_web.ImplementsIUriToStreamResolver, /) -> None: ...
+    # System.Void Windows.Web.UI.IWebViewControl::NavigateToString(System.String)
+    @abstractmethod
+    def navigate_to_string(self, text: str, /) -> None: ...
+    # System.Void Windows.Web.UI.IWebViewControl::NavigateWithHttpRequestMessage(Windows.Web.Http.HttpRequestMessage)
+    @abstractmethod
+    def navigate_with_http_request_message(self, request_message: windows_web_http.HttpRequestMessage, /) -> None: ...
+    # System.Void Windows.Web.UI.IWebViewControl::Refresh()
+    @abstractmethod
+    def refresh(self) -> None: ...
+    # System.Void Windows.Web.UI.IWebViewControl::Stop()
+    @abstractmethod
+    def stop(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_ContainsFullScreenElementChanged(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,System.Object>)
+    @abstractmethod
+    def add_contains_full_screen_element_changed(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_ContainsFullScreenElementChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_contains_full_screen_element_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_ContentLoading(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlContentLoadingEventArgs>)
+    @abstractmethod
+    def add_content_loading(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlContentLoadingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_ContentLoading(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_content_loading(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_DOMContentLoaded(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs>)
+    @abstractmethod
+    def add_dom_content_loaded(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlDOMContentLoadedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_DOMContentLoaded(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_dom_content_loaded(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_FrameContentLoading(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlContentLoadingEventArgs>)
+    @abstractmethod
+    def add_frame_content_loading(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlContentLoadingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_FrameContentLoading(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_frame_content_loading(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_FrameDOMContentLoaded(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs>)
+    @abstractmethod
+    def add_frame_dom_content_loaded(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlDOMContentLoadedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_FrameDOMContentLoaded(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_frame_dom_content_loaded(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_FrameNavigationCompleted(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationCompletedEventArgs>)
+    @abstractmethod
+    def add_frame_navigation_completed(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlNavigationCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_FrameNavigationCompleted(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_frame_navigation_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_FrameNavigationStarting(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationStartingEventArgs>)
+    @abstractmethod
+    def add_frame_navigation_starting(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlNavigationStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_FrameNavigationStarting(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_frame_navigation_starting(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_LongRunningScriptDetected(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs>)
+    @abstractmethod
+    def add_long_running_script_detected(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlLongRunningScriptDetectedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_LongRunningScriptDetected(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_long_running_script_detected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_NavigationCompleted(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationCompletedEventArgs>)
+    @abstractmethod
+    def add_navigation_completed(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlNavigationCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_NavigationCompleted(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_navigation_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_NavigationStarting(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationStartingEventArgs>)
+    @abstractmethod
+    def add_navigation_starting(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlNavigationStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_NavigationStarting(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_navigation_starting(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_NewWindowRequested(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs>)
+    @abstractmethod
+    def add_new_window_requested(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlNewWindowRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_NewWindowRequested(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_new_window_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_PermissionRequested(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlPermissionRequestedEventArgs>)
+    @abstractmethod
+    def add_permission_requested(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlPermissionRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_PermissionRequested(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_permission_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_ScriptNotify(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlScriptNotifyEventArgs>)
+    @abstractmethod
+    def add_script_notify(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlScriptNotifyEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_ScriptNotify(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_script_notify(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_UnsafeContentWarningDisplaying(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,System.Object>)
+    @abstractmethod
+    def add_unsafe_content_warning_displaying(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_UnsafeContentWarningDisplaying(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_unsafe_content_warning_displaying(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_UnsupportedUriSchemeIdentified(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>)
+    @abstractmethod
+    def add_unsupported_uri_scheme_identified(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlUnsupportedUriSchemeIdentifiedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_UnsupportedUriSchemeIdentified(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_unsupported_uri_scheme_identified(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_UnviewableContentIdentified(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs>)
+    @abstractmethod
+    def add_unviewable_content_identified(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlUnviewableContentIdentifiedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_UnviewableContentIdentified(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_unviewable_content_identified(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.UI.IWebViewControl::add_WebResourceRequested(Windows.Foundation.TypedEventHandler`2<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs>)
+    @abstractmethod
+    def add_web_resource_requested(self, handler: windows_foundation.TypedEventHandler[IWebViewControl, WebViewControlWebResourceRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.UI.IWebViewControl::remove_WebResourceRequested(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_web_resource_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Web.UI.IWebViewControl::get_CanGoBack()
+    @_property
+    @abstractmethod
+    def can_go_back(self) -> bool: ...
+    # System.Boolean Windows.Web.UI.IWebViewControl::get_CanGoForward()
+    @_property
+    @abstractmethod
+    def can_go_forward(self) -> bool: ...
+    # System.Boolean Windows.Web.UI.IWebViewControl::get_ContainsFullScreenElement()
+    @_property
+    @abstractmethod
+    def contains_full_screen_element(self) -> bool: ...
+    # Windows.UI.Color Windows.Web.UI.IWebViewControl::get_DefaultBackgroundColor()
+    @_property
+    @abstractmethod
+    def default_background_color(self) -> windows_ui.Color: ...
+    # System.Void Windows.Web.UI.IWebViewControl::put_DefaultBackgroundColor(Windows.UI.Color)
+    @default_background_color.setter
+    @abstractmethod
+    def default_background_color(self, value: windows_ui.Color) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Web.UI.WebViewControlDeferredPermissionRequest> Windows.Web.UI.IWebViewControl::get_DeferredPermissionRequests()
+    @_property
+    @abstractmethod
+    def deferred_permission_requests(self) -> typing.Sequence[WebViewControlDeferredPermissionRequest]: ...
+    # System.String Windows.Web.UI.IWebViewControl::get_DocumentTitle()
+    @_property
+    @abstractmethod
+    def document_title(self) -> str: ...
+    # Windows.Web.UI.WebViewControlSettings Windows.Web.UI.IWebViewControl::get_Settings()
+    @_property
+    @abstractmethod
+    def settings(self) -> WebViewControlSettings: ...
+    # Windows.Foundation.Uri Windows.Web.UI.IWebViewControl::get_Source()
+    @_property
+    @abstractmethod
+    def source(self) -> windows_foundation.Uri: ...
+    # System.Void Windows.Web.UI.IWebViewControl::put_Source(Windows.Foundation.Uri)
+    @source.setter
+    @abstractmethod
+    def source(self, value: windows_foundation.Uri) -> None: ...
 
 @typing.final
 class IWebViewControl(winrt.system.Object, ImplementsIWebViewControl):
@@ -334,7 +515,9 @@ class IWebViewControl(winrt.system.Object, ImplementsIWebViewControl):
     def source(self, value: windows_foundation.Uri) -> None: ...
 
 class ImplementsIWebViewControl2():
-    pass
+    # System.Void Windows.Web.UI.IWebViewControl2::AddInitializeScript(System.String)
+    @abstractmethod
+    def add_initialize_script(self, script: str, /) -> None: ...
 
 @typing.final
 class IWebViewControl2(winrt.system.Object, ImplementsIWebViewControl2):

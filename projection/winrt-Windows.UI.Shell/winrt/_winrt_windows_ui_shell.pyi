@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -327,7 +328,9 @@ class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
     def tab(self) -> WindowTab: ...
 
 class ImplementsIAdaptiveCard():
-    pass
+    # System.String Windows.UI.Shell.IAdaptiveCard::ToJson()
+    @abstractmethod
+    def to_json(self) -> str: ...
 
 @typing.final
 class IAdaptiveCard(winrt.system.Object, ImplementsIAdaptiveCard):
@@ -335,7 +338,9 @@ class IAdaptiveCard(winrt.system.Object, ImplementsIAdaptiveCard):
     def to_json(self) -> str: ...
 
 class ImplementsIAdaptiveCardBuilderStatics():
-    pass
+    # Windows.UI.Shell.IAdaptiveCard Windows.UI.Shell.IAdaptiveCardBuilderStatics::CreateAdaptiveCardFromJson(System.String)
+    @abstractmethod
+    def create_adaptive_card_from_json(self, value: str, /) -> IAdaptiveCard: ...
 
 @typing.final
 class IAdaptiveCardBuilderStatics(winrt.system.Object, ImplementsIAdaptiveCardBuilderStatics):

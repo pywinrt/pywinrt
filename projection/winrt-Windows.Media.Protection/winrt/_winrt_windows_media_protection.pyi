@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -128,7 +129,14 @@ class ServiceRequestedEventArgs(winrt.system.Object):
     def media_playback_item(self) -> windows_media_playback.MediaPlaybackItem: ...
 
 class ImplementsIMediaProtectionServiceRequest():
-    pass
+    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_ProtectionSystem()
+    @_property
+    @abstractmethod
+    def protection_system(self) -> _uuid.UUID: ...
+    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> _uuid.UUID: ...
 
 @typing.final
 class IMediaProtectionServiceRequest(winrt.system.Object, ImplementsIMediaProtectionServiceRequest):

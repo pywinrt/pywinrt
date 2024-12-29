@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -733,7 +734,22 @@ class TensorUInt8Bit(winrt.system.Object, windows_foundation.ImplementsIMemoryBu
     def tensor_kind(self) -> TensorKind: ...
 
 class ImplementsILearningModelFeatureDescriptor():
-    pass
+    # System.String Windows.AI.MachineLearning.ILearningModelFeatureDescriptor::get_Description()
+    @_property
+    @abstractmethod
+    def description(self) -> str: ...
+    # System.Boolean Windows.AI.MachineLearning.ILearningModelFeatureDescriptor::get_IsRequired()
+    @_property
+    @abstractmethod
+    def is_required(self) -> bool: ...
+    # Windows.AI.MachineLearning.LearningModelFeatureKind Windows.AI.MachineLearning.ILearningModelFeatureDescriptor::get_Kind()
+    @_property
+    @abstractmethod
+    def kind(self) -> LearningModelFeatureKind: ...
+    # System.String Windows.AI.MachineLearning.ILearningModelFeatureDescriptor::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
 
 @typing.final
 class ILearningModelFeatureDescriptor(winrt.system.Object, ImplementsILearningModelFeatureDescriptor):
@@ -751,7 +767,10 @@ class ILearningModelFeatureDescriptor(winrt.system.Object, ImplementsILearningMo
     def name(self) -> str: ...
 
 class ImplementsILearningModelFeatureValue():
-    pass
+    # Windows.AI.MachineLearning.LearningModelFeatureKind Windows.AI.MachineLearning.ILearningModelFeatureValue::get_Kind()
+    @_property
+    @abstractmethod
+    def kind(self) -> LearningModelFeatureKind: ...
 
 @typing.final
 class ILearningModelFeatureValue(winrt.system.Object, ImplementsILearningModelFeatureValue):
@@ -767,7 +786,14 @@ class ILearningModelOperatorProvider(winrt.system.Object, ImplementsILearningMod
     pass
 
 class ImplementsITensor():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<System.Int64> Windows.AI.MachineLearning.ITensor::get_Shape()
+    @_property
+    @abstractmethod
+    def shape(self) -> typing.Sequence[winrt.system.Int64]: ...
+    # Windows.AI.MachineLearning.TensorKind Windows.AI.MachineLearning.ITensor::get_TensorKind()
+    @_property
+    @abstractmethod
+    def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
 class ITensor(winrt.system.Object, ImplementsITensor, ImplementsILearningModelFeatureValue):

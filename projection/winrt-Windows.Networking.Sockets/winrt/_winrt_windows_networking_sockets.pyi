@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -857,7 +858,10 @@ class WebSocketServerCustomValidationRequestedEventArgs(winrt.system.Object):
     def server_intermediate_certificates(self) -> typing.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
 class ImplementsIControlChannelTriggerEventDetails():
-    pass
+    # Windows.Networking.Sockets.ControlChannelTrigger Windows.Networking.Sockets.IControlChannelTriggerEventDetails::get_ControlChannelTrigger()
+    @_property
+    @abstractmethod
+    def control_channel_trigger(self) -> ControlChannelTrigger: ...
 
 @typing.final
 class IControlChannelTriggerEventDetails(winrt.system.Object, ImplementsIControlChannelTriggerEventDetails):
@@ -866,7 +870,18 @@ class IControlChannelTriggerEventDetails(winrt.system.Object, ImplementsIControl
     def control_channel_trigger(self) -> ControlChannelTrigger: ...
 
 class ImplementsIControlChannelTriggerResetEventDetails():
-    pass
+    # System.Boolean Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails::get_HardwareSlotReset()
+    @_property
+    @abstractmethod
+    def hardware_slot_reset(self) -> bool: ...
+    # Windows.Networking.Sockets.ControlChannelTriggerResetReason Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails::get_ResetReason()
+    @_property
+    @abstractmethod
+    def reset_reason(self) -> ControlChannelTriggerResetReason: ...
+    # System.Boolean Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails::get_SoftwareSlotReset()
+    @_property
+    @abstractmethod
+    def software_slot_reset(self) -> bool: ...
 
 @typing.final
 class IControlChannelTriggerResetEventDetails(winrt.system.Object, ImplementsIControlChannelTriggerResetEventDetails):
@@ -881,7 +896,25 @@ class IControlChannelTriggerResetEventDetails(winrt.system.Object, ImplementsICo
     def software_slot_reset(self) -> bool: ...
 
 class ImplementsIWebSocket():
-    pass
+    # System.Void Windows.Networking.Sockets.IWebSocket::Close(System.UInt16,System.String)
+    @abstractmethod
+    def close_with_status(self, code: winrt.system.UInt16, reason: str, /) -> None: ...
+    # Windows.Foundation.IAsyncAction Windows.Networking.Sockets.IWebSocket::ConnectAsync(Windows.Foundation.Uri)
+    @abstractmethod
+    def connect_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncAction: ...
+    # System.Void Windows.Networking.Sockets.IWebSocket::SetRequestHeader(System.String,System.String)
+    @abstractmethod
+    def set_request_header(self, header_name: str, header_value: str, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Networking.Sockets.IWebSocket::add_Closed(Windows.Foundation.TypedEventHandler`2<Windows.Networking.Sockets.IWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs>)
+    @abstractmethod
+    def add_closed(self, event_handler: windows_foundation.TypedEventHandler[IWebSocket, WebSocketClosedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Networking.Sockets.IWebSocket::remove_Closed(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_closed(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Storage.Streams.IOutputStream Windows.Networking.Sockets.IWebSocket::get_OutputStream()
+    @_property
+    @abstractmethod
+    def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
 @typing.final
 class IWebSocket(winrt.system.Object, ImplementsIWebSocket, windows_foundation.ImplementsIClosable):
@@ -904,7 +937,34 @@ class IWebSocket(winrt.system.Object, ImplementsIWebSocket, windows_foundation.I
     def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
 class ImplementsIWebSocketControl():
-    pass
+    # System.UInt32 Windows.Networking.Sockets.IWebSocketControl::get_OutboundBufferSizeInBytes()
+    @_property
+    @abstractmethod
+    def outbound_buffer_size_in_bytes(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.Networking.Sockets.IWebSocketControl::put_OutboundBufferSizeInBytes(System.UInt32)
+    @outbound_buffer_size_in_bytes.setter
+    @abstractmethod
+    def outbound_buffer_size_in_bytes(self, value: winrt.system.UInt32) -> None: ...
+    # Windows.Security.Credentials.PasswordCredential Windows.Networking.Sockets.IWebSocketControl::get_ProxyCredential()
+    @_property
+    @abstractmethod
+    def proxy_credential(self) -> windows_security_credentials.PasswordCredential: ...
+    # System.Void Windows.Networking.Sockets.IWebSocketControl::put_ProxyCredential(Windows.Security.Credentials.PasswordCredential)
+    @proxy_credential.setter
+    @abstractmethod
+    def proxy_credential(self, value: windows_security_credentials.PasswordCredential) -> None: ...
+    # Windows.Security.Credentials.PasswordCredential Windows.Networking.Sockets.IWebSocketControl::get_ServerCredential()
+    @_property
+    @abstractmethod
+    def server_credential(self) -> windows_security_credentials.PasswordCredential: ...
+    # System.Void Windows.Networking.Sockets.IWebSocketControl::put_ServerCredential(Windows.Security.Credentials.PasswordCredential)
+    @server_credential.setter
+    @abstractmethod
+    def server_credential(self, value: windows_security_credentials.PasswordCredential) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Networking.Sockets.IWebSocketControl::get_SupportedProtocols()
+    @_property
+    @abstractmethod
+    def supported_protocols(self) -> typing.MutableSequence[str]: ...
 
 @typing.final
 class IWebSocketControl(winrt.system.Object, ImplementsIWebSocketControl):
@@ -931,7 +991,10 @@ class IWebSocketControl(winrt.system.Object, ImplementsIWebSocketControl):
     def supported_protocols(self) -> typing.MutableSequence[str]: ...
 
 class ImplementsIWebSocketControl2():
-    pass
+    # Windows.Foundation.Collections.IVector`1<Windows.Security.Cryptography.Certificates.ChainValidationResult> Windows.Networking.Sockets.IWebSocketControl2::get_IgnorableServerCertificateErrors()
+    @_property
+    @abstractmethod
+    def ignorable_server_certificate_errors(self) -> typing.MutableSequence[windows_security_cryptography_certificates.ChainValidationResult]: ...
 
 @typing.final
 class IWebSocketControl2(winrt.system.Object, ImplementsIWebSocketControl2, ImplementsIWebSocketControl):
@@ -961,7 +1024,18 @@ class IWebSocketControl2(winrt.system.Object, ImplementsIWebSocketControl2, Impl
     def supported_protocols(self) -> typing.MutableSequence[str]: ...
 
 class ImplementsIWebSocketInformation():
-    pass
+    # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.IWebSocketInformation::get_BandwidthStatistics()
+    @_property
+    @abstractmethod
+    def bandwidth_statistics(self) -> BandwidthStatistics: ...
+    # Windows.Networking.HostName Windows.Networking.Sockets.IWebSocketInformation::get_LocalAddress()
+    @_property
+    @abstractmethod
+    def local_address(self) -> windows_networking.HostName: ...
+    # System.String Windows.Networking.Sockets.IWebSocketInformation::get_Protocol()
+    @_property
+    @abstractmethod
+    def protocol(self) -> str: ...
 
 @typing.final
 class IWebSocketInformation(winrt.system.Object, ImplementsIWebSocketInformation):
@@ -976,7 +1050,22 @@ class IWebSocketInformation(winrt.system.Object, ImplementsIWebSocketInformation
     def protocol(self) -> str: ...
 
 class ImplementsIWebSocketInformation2():
-    pass
+    # Windows.Security.Cryptography.Certificates.Certificate Windows.Networking.Sockets.IWebSocketInformation2::get_ServerCertificate()
+    @_property
+    @abstractmethod
+    def server_certificate(self) -> windows_security_cryptography_certificates.Certificate: ...
+    # Windows.Networking.Sockets.SocketSslErrorSeverity Windows.Networking.Sockets.IWebSocketInformation2::get_ServerCertificateErrorSeverity()
+    @_property
+    @abstractmethod
+    def server_certificate_error_severity(self) -> SocketSslErrorSeverity: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.ChainValidationResult> Windows.Networking.Sockets.IWebSocketInformation2::get_ServerCertificateErrors()
+    @_property
+    @abstractmethod
+    def server_certificate_errors(self) -> typing.Sequence[windows_security_cryptography_certificates.ChainValidationResult]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate> Windows.Networking.Sockets.IWebSocketInformation2::get_ServerIntermediateCertificates()
+    @_property
+    @abstractmethod
+    def server_intermediate_certificates(self) -> typing.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
 @typing.final
 class IWebSocketInformation2(winrt.system.Object, ImplementsIWebSocketInformation2, ImplementsIWebSocketInformation):

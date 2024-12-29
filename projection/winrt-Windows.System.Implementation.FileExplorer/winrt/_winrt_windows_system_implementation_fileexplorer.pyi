@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -22,7 +23,12 @@ class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
     def json(self) -> str: ...
 
 class ImplementsISysStorageProviderEventSource():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource::add_EventReceived(Windows.Foundation.TypedEventHandler`2<Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource,Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs>)
+    @abstractmethod
+    def add_event_received(self, handler: windows_foundation.TypedEventHandler[ISysStorageProviderEventSource, SysStorageProviderEventReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource::remove_EventReceived(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_event_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class ISysStorageProviderEventSource(winrt.system.Object, ImplementsISysStorageProviderEventSource):
@@ -32,7 +38,12 @@ class ISysStorageProviderEventSource(winrt.system.Object, ImplementsISysStorageP
     def remove_event_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ImplementsISysStorageProviderHandlerFactory():
-    pass
+    # Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory::GetEventSource(System.String,System.String)
+    @abstractmethod
+    def get_event_source(self, sync_root_id: str, event_name: str, /) -> ISysStorageProviderEventSource: ...
+    # Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory::GetHttpRequestProvider(System.String)
+    @abstractmethod
+    def get_http_request_provider(self, sync_root_id: str, /) -> ISysStorageProviderHttpRequestProvider: ...
 
 @typing.final
 class ISysStorageProviderHandlerFactory(winrt.system.Object, ImplementsISysStorageProviderHandlerFactory):
@@ -42,7 +53,9 @@ class ISysStorageProviderHandlerFactory(winrt.system.Object, ImplementsISysStora
     def get_http_request_provider(self, sync_root_id: str, /) -> ISysStorageProviderHttpRequestProvider: ...
 
 class ImplementsISysStorageProviderHttpRequestProvider():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Web.Http.HttpResponseMessage> Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider::SendRequestAsync(Windows.Web.Http.HttpRequestMessage)
+    @abstractmethod
+    def send_request_async(self, request: windows_web_http.HttpRequestMessage, /) -> windows_foundation.IAsyncOperation[windows_web_http.HttpResponseMessage]: ...
 
 @typing.final
 class ISysStorageProviderHttpRequestProvider(winrt.system.Object, ImplementsISysStorageProviderHttpRequestProvider):

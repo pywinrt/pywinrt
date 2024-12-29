@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -53,7 +54,9 @@ class DualSimTile(winrt.system.Object, metaclass=DualSimTile_Static):
     def is_pinned_to_start(self) -> bool: ...
 
 class ImplementsIToastNotificationManagerStatics3():
-    pass
+    # Windows.UI.Notifications.ToastNotifier Windows.Phone.StartScreen.IToastNotificationManagerStatics3::CreateToastNotifierForSecondaryTile(System.String)
+    @abstractmethod
+    def create_toast_notifier_for_secondary_tile(self, tile_id: str, /) -> windows_ui_notifications.ToastNotifier: ...
 
 @typing.final
 class IToastNotificationManagerStatics3(winrt.system.Object, ImplementsIToastNotificationManagerStatics3):

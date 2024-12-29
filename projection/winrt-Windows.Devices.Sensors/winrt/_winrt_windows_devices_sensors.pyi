@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1415,7 +1416,27 @@ class WakeOnApproachOptions(winrt.system.Object):
     def allow_when_external_display_connected(self, value: bool) -> None: ...
 
 class ImplementsIHumanPresenceSensorExtension():
-    pass
+    # System.Void Windows.Devices.Sensors.IHumanPresenceSensorExtension::Initialize(System.String)
+    @abstractmethod
+    def initialize(self, device_interface: str, /) -> None: ...
+    # Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate Windows.Devices.Sensors.IHumanPresenceSensorExtension::ProcessReading(Windows.Devices.Sensors.HumanPresenceSensorReading)
+    @abstractmethod
+    def process_reading(self, reading: HumanPresenceSensorReading, /) -> HumanPresenceSensorReadingUpdate: ...
+    # System.Void Windows.Devices.Sensors.IHumanPresenceSensorExtension::ProcessReadingTimeoutExpired(Windows.Devices.Sensors.HumanPresenceSensorReading)
+    @abstractmethod
+    def process_reading_timeout_expired(self, reading: HumanPresenceSensorReading, /) -> None: ...
+    # System.Void Windows.Devices.Sensors.IHumanPresenceSensorExtension::Reset()
+    @abstractmethod
+    def reset(self) -> None: ...
+    # System.Void Windows.Devices.Sensors.IHumanPresenceSensorExtension::Start()
+    @abstractmethod
+    def start(self) -> None: ...
+    # System.Void Windows.Devices.Sensors.IHumanPresenceSensorExtension::Stop()
+    @abstractmethod
+    def stop(self) -> None: ...
+    # System.Void Windows.Devices.Sensors.IHumanPresenceSensorExtension::Uninitialize()
+    @abstractmethod
+    def uninitialize(self) -> None: ...
 
 @typing.final
 class IHumanPresenceSensorExtension(winrt.system.Object, ImplementsIHumanPresenceSensorExtension):

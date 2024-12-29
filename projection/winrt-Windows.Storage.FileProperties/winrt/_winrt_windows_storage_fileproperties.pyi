@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -362,7 +363,15 @@ class VideoProperties(winrt.system.Object, ImplementsIStorageItemExtraProperties
     def writers(self) -> typing.MutableSequence[str]: ...
 
 class ImplementsIStorageItemExtraProperties():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.IStorageItemExtraProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
+    @abstractmethod
+    def retrieve_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableMapping[str, winrt.system.Object]]: ...
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.IStorageItemExtraProperties::SavePropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>>)
+    @abstractmethod
+    def save_properties_async(self, properties_to_save: typing.Iterable[windows_foundation_collections.ImplementsIKeyValuePair[str, winrt.system.Object]], /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.IStorageItemExtraProperties::SavePropertiesAsync()
+    @abstractmethod
+    def save_properties_async_overload_default(self) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class IStorageItemExtraProperties(winrt.system.Object, ImplementsIStorageItemExtraProperties):

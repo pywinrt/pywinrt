@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -26,7 +27,9 @@ class WebError(winrt.system.Object, metaclass=WebError_Static):
     pass
 
 class ImplementsIUriToStreamResolver():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IInputStream> Windows.Web.IUriToStreamResolver::UriToStreamAsync(Windows.Foundation.Uri)
+    @abstractmethod
+    def uri_to_stream_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IInputStream]: ...
 
 @typing.final
 class IUriToStreamResolver(winrt.system.Object, ImplementsIUriToStreamResolver):

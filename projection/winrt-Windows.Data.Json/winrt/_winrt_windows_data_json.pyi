@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -220,7 +221,28 @@ class JsonValue(winrt.system.Object, windows_foundation.ImplementsIStringable, I
     def value_type(self) -> JsonValueType: ...
 
 class ImplementsIJsonValue():
-    pass
+    # Windows.Data.Json.JsonArray Windows.Data.Json.IJsonValue::GetArray()
+    @abstractmethod
+    def get_array(self) -> JsonArray: ...
+    # System.Boolean Windows.Data.Json.IJsonValue::GetBoolean()
+    @abstractmethod
+    def get_boolean(self) -> bool: ...
+    # System.Double Windows.Data.Json.IJsonValue::GetNumber()
+    @abstractmethod
+    def get_number(self) -> winrt.system.Double: ...
+    # Windows.Data.Json.JsonObject Windows.Data.Json.IJsonValue::GetObject()
+    @abstractmethod
+    def get_object(self) -> JsonObject: ...
+    # System.String Windows.Data.Json.IJsonValue::GetString()
+    @abstractmethod
+    def get_string(self) -> str: ...
+    # System.String Windows.Data.Json.IJsonValue::Stringify()
+    @abstractmethod
+    def stringify(self) -> str: ...
+    # Windows.Data.Json.JsonValueType Windows.Data.Json.IJsonValue::get_ValueType()
+    @_property
+    @abstractmethod
+    def value_type(self) -> JsonValueType: ...
 
 @typing.final
 class IJsonValue(winrt.system.Object, ImplementsIJsonValue):

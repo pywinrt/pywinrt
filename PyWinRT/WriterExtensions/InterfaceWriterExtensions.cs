@@ -1,4 +1,5 @@
 using System.CodeDom.Compiler;
+using System.Collections.ObjectModel;
 
 static class InterfaceWriterExtensions
 {
@@ -484,6 +485,63 @@ static class InterfaceWriterExtensions
             },
             ";"
         );
+        w.WriteBlankLine();
+    }
+
+    public static void WritePythonImplementsInterfaceTyping(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
+    )
+    {
+        var hasMembers = false;
+        var generic = "";
+
+        if (type.IsGeneric)
+        {
+            generic =
+                $"typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p))))}]";
+        }
+
+        w.WriteLine($"class Implements{type.Name}({generic}):");
+        w.Indent++;
+
+        foreach (
+            var method in type.Methods.Where(m =>
+                m.Method.DeclaringType.FullName == type.Type.FullName
+            )
+        )
+        {
+            w.WritePythonMethodTyping(method, ns, nullabilityMap, isAbstract: true);
+            hasMembers = true;
+        }
+
+        foreach (
+            var evt in type.Events.Where(e => e.Event.DeclaringType.FullName == type.Type.FullName)
+        )
+        {
+            w.WritePythonMethodTyping(evt.AddMethod, ns, nullabilityMap, isAbstract: true);
+            w.WritePythonMethodTyping(evt.RemoveMethod, ns, nullabilityMap, isAbstract: true);
+            hasMembers = true;
+        }
+
+        foreach (
+            var prop in type.Properties.Where(p =>
+                p.Property.DeclaringType.FullName == type.Type.FullName
+            )
+        )
+        {
+            w.WritePythonPropertyTyping(type, prop, ns, nullabilityMap, isAbstract: true);
+            hasMembers = true;
+        }
+
+        if (!hasMembers)
+        {
+            w.WriteLine("pass");
+        }
+
+        w.Indent--;
         w.WriteBlankLine();
     }
 }

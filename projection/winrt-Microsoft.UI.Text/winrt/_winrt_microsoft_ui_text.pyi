@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -295,7 +296,203 @@ class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
     pass
 
 class ImplementsITextCharacterFormat():
-    pass
+    # Microsoft.UI.Text.ITextCharacterFormat Microsoft.UI.Text.ITextCharacterFormat::GetClone()
+    @abstractmethod
+    def get_clone(self) -> ITextCharacterFormat: ...
+    # System.Boolean Microsoft.UI.Text.ITextCharacterFormat::IsEqual(Microsoft.UI.Text.ITextCharacterFormat)
+    @abstractmethod
+    def is_equal(self, format: ImplementsITextCharacterFormat, /) -> bool: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::SetClone(Microsoft.UI.Text.ITextCharacterFormat)
+    @abstractmethod
+    def set_clone(self, value: ImplementsITextCharacterFormat, /) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_AllCaps()
+    @_property
+    @abstractmethod
+    def all_caps(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_AllCaps(Microsoft.UI.Text.FormatEffect)
+    @all_caps.setter
+    @abstractmethod
+    def all_caps(self, value: FormatEffect) -> None: ...
+    # Windows.UI.Color Microsoft.UI.Text.ITextCharacterFormat::get_BackgroundColor()
+    @_property
+    @abstractmethod
+    def background_color(self) -> windows_ui.Color: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_BackgroundColor(Windows.UI.Color)
+    @background_color.setter
+    @abstractmethod
+    def background_color(self, value: windows_ui.Color) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_Bold()
+    @_property
+    @abstractmethod
+    def bold(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Bold(Microsoft.UI.Text.FormatEffect)
+    @bold.setter
+    @abstractmethod
+    def bold(self, value: FormatEffect) -> None: ...
+    # Windows.UI.Text.FontStretch Microsoft.UI.Text.ITextCharacterFormat::get_FontStretch()
+    @_property
+    @abstractmethod
+    def font_stretch(self) -> windows_ui_text.FontStretch: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_FontStretch(Windows.UI.Text.FontStretch)
+    @font_stretch.setter
+    @abstractmethod
+    def font_stretch(self, value: windows_ui_text.FontStretch) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Text.ITextCharacterFormat::get_FontStyle()
+    @_property
+    @abstractmethod
+    def font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_FontStyle(Windows.UI.Text.FontStyle)
+    @font_style.setter
+    @abstractmethod
+    def font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # Windows.UI.Color Microsoft.UI.Text.ITextCharacterFormat::get_ForegroundColor()
+    @_property
+    @abstractmethod
+    def foreground_color(self) -> windows_ui.Color: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_ForegroundColor(Windows.UI.Color)
+    @foreground_color.setter
+    @abstractmethod
+    def foreground_color(self, value: windows_ui.Color) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_Hidden()
+    @_property
+    @abstractmethod
+    def hidden(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Hidden(Microsoft.UI.Text.FormatEffect)
+    @hidden.setter
+    @abstractmethod
+    def hidden(self, value: FormatEffect) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_Italic()
+    @_property
+    @abstractmethod
+    def italic(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Italic(Microsoft.UI.Text.FormatEffect)
+    @italic.setter
+    @abstractmethod
+    def italic(self, value: FormatEffect) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextCharacterFormat::get_Kerning()
+    @_property
+    @abstractmethod
+    def kerning(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Kerning(System.Single)
+    @kerning.setter
+    @abstractmethod
+    def kerning(self, value: winrt.system.Single) -> None: ...
+    # System.String Microsoft.UI.Text.ITextCharacterFormat::get_LanguageTag()
+    @_property
+    @abstractmethod
+    def language_tag(self) -> str: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_LanguageTag(System.String)
+    @language_tag.setter
+    @abstractmethod
+    def language_tag(self, value: str) -> None: ...
+    # Microsoft.UI.Text.LinkType Microsoft.UI.Text.ITextCharacterFormat::get_LinkType()
+    @_property
+    @abstractmethod
+    def link_type(self) -> LinkType: ...
+    # System.String Microsoft.UI.Text.ITextCharacterFormat::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Name(System.String)
+    @name.setter
+    @abstractmethod
+    def name(self, value: str) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_Outline()
+    @_property
+    @abstractmethod
+    def outline(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Outline(Microsoft.UI.Text.FormatEffect)
+    @outline.setter
+    @abstractmethod
+    def outline(self, value: FormatEffect) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextCharacterFormat::get_Position()
+    @_property
+    @abstractmethod
+    def position(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Position(System.Single)
+    @position.setter
+    @abstractmethod
+    def position(self, value: winrt.system.Single) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_ProtectedText()
+    @_property
+    @abstractmethod
+    def protected_text(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_ProtectedText(Microsoft.UI.Text.FormatEffect)
+    @protected_text.setter
+    @abstractmethod
+    def protected_text(self, value: FormatEffect) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextCharacterFormat::get_Size()
+    @_property
+    @abstractmethod
+    def size(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Size(System.Single)
+    @size.setter
+    @abstractmethod
+    def size(self, value: winrt.system.Single) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_SmallCaps()
+    @_property
+    @abstractmethod
+    def small_caps(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_SmallCaps(Microsoft.UI.Text.FormatEffect)
+    @small_caps.setter
+    @abstractmethod
+    def small_caps(self, value: FormatEffect) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextCharacterFormat::get_Spacing()
+    @_property
+    @abstractmethod
+    def spacing(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Spacing(System.Single)
+    @spacing.setter
+    @abstractmethod
+    def spacing(self, value: winrt.system.Single) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_Strikethrough()
+    @_property
+    @abstractmethod
+    def strikethrough(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Strikethrough(Microsoft.UI.Text.FormatEffect)
+    @strikethrough.setter
+    @abstractmethod
+    def strikethrough(self, value: FormatEffect) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_Subscript()
+    @_property
+    @abstractmethod
+    def subscript(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Subscript(Microsoft.UI.Text.FormatEffect)
+    @subscript.setter
+    @abstractmethod
+    def subscript(self, value: FormatEffect) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextCharacterFormat::get_Superscript()
+    @_property
+    @abstractmethod
+    def superscript(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Superscript(Microsoft.UI.Text.FormatEffect)
+    @superscript.setter
+    @abstractmethod
+    def superscript(self, value: FormatEffect) -> None: ...
+    # Microsoft.UI.Text.TextScript Microsoft.UI.Text.ITextCharacterFormat::get_TextScript()
+    @_property
+    @abstractmethod
+    def text_script(self) -> TextScript: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_TextScript(Microsoft.UI.Text.TextScript)
+    @text_script.setter
+    @abstractmethod
+    def text_script(self, value: TextScript) -> None: ...
+    # Microsoft.UI.Text.UnderlineType Microsoft.UI.Text.ITextCharacterFormat::get_Underline()
+    @_property
+    @abstractmethod
+    def underline(self) -> UnderlineType: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Underline(Microsoft.UI.Text.UnderlineType)
+    @underline.setter
+    @abstractmethod
+    def underline(self, value: UnderlineType) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextCharacterFormat::get_Weight()
+    @_property
+    @abstractmethod
+    def weight(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Text.ITextCharacterFormat::put_Weight(System.Int32)
+    @weight.setter
+    @abstractmethod
+    def weight(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
 class ITextCharacterFormat(winrt.system.Object, ImplementsITextCharacterFormat):
@@ -448,7 +645,189 @@ class ITextCharacterFormat(winrt.system.Object, ImplementsITextCharacterFormat):
     def weight(self, value: winrt.system.Int32) -> None: ...
 
 class ImplementsITextParagraphFormat():
-    pass
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::AddTab(System.Single,Microsoft.UI.Text.TabAlignment,Microsoft.UI.Text.TabLeader)
+    @abstractmethod
+    def add_tab(self, position: winrt.system.Single, align: TabAlignment, leader: TabLeader, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::ClearAllTabs()
+    @abstractmethod
+    def clear_all_tabs(self) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::DeleteTab(System.Single)
+    @abstractmethod
+    def delete_tab(self, position: winrt.system.Single, /) -> None: ...
+    # Microsoft.UI.Text.ITextParagraphFormat Microsoft.UI.Text.ITextParagraphFormat::GetClone()
+    @abstractmethod
+    def get_clone(self) -> ITextParagraphFormat: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::GetTab(System.Int32,System.Single&,Microsoft.UI.Text.TabAlignment&,Microsoft.UI.Text.TabLeader&)
+    @abstractmethod
+    def get_tab(self, index: winrt.system.Int32, /) -> typing.Tuple[winrt.system.Single, TabAlignment, TabLeader]: ...
+    # System.Boolean Microsoft.UI.Text.ITextParagraphFormat::IsEqual(Microsoft.UI.Text.ITextParagraphFormat)
+    @abstractmethod
+    def is_equal(self, format: ImplementsITextParagraphFormat, /) -> bool: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::SetClone(Microsoft.UI.Text.ITextParagraphFormat)
+    @abstractmethod
+    def set_clone(self, format: ImplementsITextParagraphFormat, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::SetIndents(System.Single,System.Single,System.Single)
+    @abstractmethod
+    def set_indents(self, start: winrt.system.Single, left: winrt.system.Single, right: winrt.system.Single, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::SetLineSpacing(Microsoft.UI.Text.LineSpacingRule,System.Single)
+    @abstractmethod
+    def set_line_spacing(self, rule: LineSpacingRule, spacing: winrt.system.Single, /) -> None: ...
+    # Microsoft.UI.Text.ParagraphAlignment Microsoft.UI.Text.ITextParagraphFormat::get_Alignment()
+    @_property
+    @abstractmethod
+    def alignment(self) -> ParagraphAlignment: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_Alignment(Microsoft.UI.Text.ParagraphAlignment)
+    @alignment.setter
+    @abstractmethod
+    def alignment(self, value: ParagraphAlignment) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextParagraphFormat::get_FirstLineIndent()
+    @_property
+    @abstractmethod
+    def first_line_indent(self) -> winrt.system.Single: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextParagraphFormat::get_KeepTogether()
+    @_property
+    @abstractmethod
+    def keep_together(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_KeepTogether(Microsoft.UI.Text.FormatEffect)
+    @keep_together.setter
+    @abstractmethod
+    def keep_together(self, value: FormatEffect) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextParagraphFormat::get_KeepWithNext()
+    @_property
+    @abstractmethod
+    def keep_with_next(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_KeepWithNext(Microsoft.UI.Text.FormatEffect)
+    @keep_with_next.setter
+    @abstractmethod
+    def keep_with_next(self, value: FormatEffect) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextParagraphFormat::get_LeftIndent()
+    @_property
+    @abstractmethod
+    def left_indent(self) -> winrt.system.Single: ...
+    # System.Single Microsoft.UI.Text.ITextParagraphFormat::get_LineSpacing()
+    @_property
+    @abstractmethod
+    def line_spacing(self) -> winrt.system.Single: ...
+    # Microsoft.UI.Text.LineSpacingRule Microsoft.UI.Text.ITextParagraphFormat::get_LineSpacingRule()
+    @_property
+    @abstractmethod
+    def line_spacing_rule(self) -> LineSpacingRule: ...
+    # Microsoft.UI.Text.MarkerAlignment Microsoft.UI.Text.ITextParagraphFormat::get_ListAlignment()
+    @_property
+    @abstractmethod
+    def list_alignment(self) -> MarkerAlignment: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_ListAlignment(Microsoft.UI.Text.MarkerAlignment)
+    @list_alignment.setter
+    @abstractmethod
+    def list_alignment(self, value: MarkerAlignment) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextParagraphFormat::get_ListLevelIndex()
+    @_property
+    @abstractmethod
+    def list_level_index(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_ListLevelIndex(System.Int32)
+    @list_level_index.setter
+    @abstractmethod
+    def list_level_index(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextParagraphFormat::get_ListStart()
+    @_property
+    @abstractmethod
+    def list_start(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_ListStart(System.Int32)
+    @list_start.setter
+    @abstractmethod
+    def list_start(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Text.MarkerStyle Microsoft.UI.Text.ITextParagraphFormat::get_ListStyle()
+    @_property
+    @abstractmethod
+    def list_style(self) -> MarkerStyle: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_ListStyle(Microsoft.UI.Text.MarkerStyle)
+    @list_style.setter
+    @abstractmethod
+    def list_style(self, value: MarkerStyle) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextParagraphFormat::get_ListTab()
+    @_property
+    @abstractmethod
+    def list_tab(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_ListTab(System.Single)
+    @list_tab.setter
+    @abstractmethod
+    def list_tab(self, value: winrt.system.Single) -> None: ...
+    # Microsoft.UI.Text.MarkerType Microsoft.UI.Text.ITextParagraphFormat::get_ListType()
+    @_property
+    @abstractmethod
+    def list_type(self) -> MarkerType: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_ListType(Microsoft.UI.Text.MarkerType)
+    @list_type.setter
+    @abstractmethod
+    def list_type(self, value: MarkerType) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextParagraphFormat::get_NoLineNumber()
+    @_property
+    @abstractmethod
+    def no_line_number(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_NoLineNumber(Microsoft.UI.Text.FormatEffect)
+    @no_line_number.setter
+    @abstractmethod
+    def no_line_number(self, value: FormatEffect) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextParagraphFormat::get_PageBreakBefore()
+    @_property
+    @abstractmethod
+    def page_break_before(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_PageBreakBefore(Microsoft.UI.Text.FormatEffect)
+    @page_break_before.setter
+    @abstractmethod
+    def page_break_before(self, value: FormatEffect) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextParagraphFormat::get_RightIndent()
+    @_property
+    @abstractmethod
+    def right_indent(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_RightIndent(System.Single)
+    @right_indent.setter
+    @abstractmethod
+    def right_indent(self, value: winrt.system.Single) -> None: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextParagraphFormat::get_RightToLeft()
+    @_property
+    @abstractmethod
+    def right_to_left(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_RightToLeft(Microsoft.UI.Text.FormatEffect)
+    @right_to_left.setter
+    @abstractmethod
+    def right_to_left(self, value: FormatEffect) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextParagraphFormat::get_SpaceAfter()
+    @_property
+    @abstractmethod
+    def space_after(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_SpaceAfter(System.Single)
+    @space_after.setter
+    @abstractmethod
+    def space_after(self, value: winrt.system.Single) -> None: ...
+    # System.Single Microsoft.UI.Text.ITextParagraphFormat::get_SpaceBefore()
+    @_property
+    @abstractmethod
+    def space_before(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_SpaceBefore(System.Single)
+    @space_before.setter
+    @abstractmethod
+    def space_before(self, value: winrt.system.Single) -> None: ...
+    # Microsoft.UI.Text.ParagraphStyle Microsoft.UI.Text.ITextParagraphFormat::get_Style()
+    @_property
+    @abstractmethod
+    def style(self) -> ParagraphStyle: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_Style(Microsoft.UI.Text.ParagraphStyle)
+    @style.setter
+    @abstractmethod
+    def style(self, value: ParagraphStyle) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextParagraphFormat::get_TabCount()
+    @_property
+    @abstractmethod
+    def tab_count(self) -> winrt.system.Int32: ...
+    # Microsoft.UI.Text.FormatEffect Microsoft.UI.Text.ITextParagraphFormat::get_WidowControl()
+    @_property
+    @abstractmethod
+    def widow_control(self) -> FormatEffect: ...
+    # System.Void Microsoft.UI.Text.ITextParagraphFormat::put_WidowControl(Microsoft.UI.Text.FormatEffect)
+    @widow_control.setter
+    @abstractmethod
+    def widow_control(self, value: FormatEffect) -> None: ...
 
 @typing.final
 class ITextParagraphFormat(winrt.system.Object, ImplementsITextParagraphFormat):
@@ -589,7 +968,182 @@ class ITextParagraphFormat(winrt.system.Object, ImplementsITextParagraphFormat):
     def widow_control(self, value: FormatEffect) -> None: ...
 
 class ImplementsITextRange():
-    pass
+    # System.Boolean Microsoft.UI.Text.ITextRange::CanPaste(System.Int32)
+    @abstractmethod
+    def can_paste(self, format: winrt.system.Int32, /) -> bool: ...
+    # System.Void Microsoft.UI.Text.ITextRange::ChangeCase(Microsoft.UI.Text.LetterCase)
+    @abstractmethod
+    def change_case(self, value: LetterCase, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextRange::Collapse(System.Boolean)
+    @abstractmethod
+    def collapse(self, value: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextRange::Copy()
+    @abstractmethod
+    def copy(self) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextRange::Cut()
+    @abstractmethod
+    def cut(self) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::Delete(Microsoft.UI.Text.TextRangeUnit,System.Int32)
+    @abstractmethod
+    def delete(self, unit: TextRangeUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::EndOf(Microsoft.UI.Text.TextRangeUnit,System.Boolean)
+    @abstractmethod
+    def end_of(self, unit: TextRangeUnit, extend: bool, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::Expand(Microsoft.UI.Text.TextRangeUnit)
+    @abstractmethod
+    def expand(self, unit: TextRangeUnit, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::FindText(System.String,System.Int32,Microsoft.UI.Text.FindOptions)
+    @abstractmethod
+    def find_text(self, value: str, scan_length: winrt.system.Int32, options: FindOptions, /) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Text.ITextRange::GetCharacterUtf32(System.UInt32&,System.Int32)
+    @abstractmethod
+    def get_character_utf32(self, offset: winrt.system.Int32, /) -> winrt.system.UInt32: ...
+    # Microsoft.UI.Text.ITextRange Microsoft.UI.Text.ITextRange::GetClone()
+    @abstractmethod
+    def get_clone(self) -> ITextRange: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::GetIndex(Microsoft.UI.Text.TextRangeUnit)
+    @abstractmethod
+    def get_index(self, unit: TextRangeUnit, /) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Text.ITextRange::GetPoint(Microsoft.UI.Text.HorizontalCharacterAlignment,Microsoft.UI.Text.VerticalCharacterAlignment,Microsoft.UI.Text.PointOptions,Windows.Foundation.Point&)
+    @abstractmethod
+    def get_point(self, horizontal_align: HorizontalCharacterAlignment, vertical_align: VerticalCharacterAlignment, options: PointOptions, /) -> windows_foundation.Point: ...
+    # System.Void Microsoft.UI.Text.ITextRange::GetRect(Microsoft.UI.Text.PointOptions,Windows.Foundation.Rect&,System.Int32&)
+    @abstractmethod
+    def get_rect(self, options: PointOptions, /) -> typing.Tuple[windows_foundation.Rect, winrt.system.Int32]: ...
+    # System.Void Microsoft.UI.Text.ITextRange::GetText(Microsoft.UI.Text.TextGetOptions,System.String&)
+    @abstractmethod
+    def get_text(self, options: TextGetOptions, /) -> str: ...
+    # System.Void Microsoft.UI.Text.ITextRange::GetTextViaStream(Microsoft.UI.Text.TextGetOptions,Windows.Storage.Streams.IRandomAccessStream)
+    @abstractmethod
+    def get_text_via_stream(self, options: TextGetOptions, value: windows_storage_streams.ImplementsIRandomAccessStream, /) -> None: ...
+    # System.Boolean Microsoft.UI.Text.ITextRange::InRange(Microsoft.UI.Text.ITextRange)
+    @abstractmethod
+    def in_range(self, range: ImplementsITextRange, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Text.ITextRange::InStory(Microsoft.UI.Text.ITextRange)
+    @abstractmethod
+    def in_story(self, range: ImplementsITextRange, /) -> bool: ...
+    # System.Void Microsoft.UI.Text.ITextRange::InsertImage(System.Int32,System.Int32,System.Int32,Microsoft.UI.Text.VerticalCharacterAlignment,System.String,Windows.Storage.Streams.IRandomAccessStream)
+    @abstractmethod
+    def insert_image(self, width: winrt.system.Int32, height: winrt.system.Int32, ascent: winrt.system.Int32, vertical_align: VerticalCharacterAlignment, alternate_text: str, value: windows_storage_streams.ImplementsIRandomAccessStream, /) -> None: ...
+    # System.Boolean Microsoft.UI.Text.ITextRange::IsEqual(Microsoft.UI.Text.ITextRange)
+    @abstractmethod
+    def is_equal(self, range: ImplementsITextRange, /) -> bool: ...
+    # System.Void Microsoft.UI.Text.ITextRange::MatchSelection()
+    @abstractmethod
+    def match_selection(self) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::Move(Microsoft.UI.Text.TextRangeUnit,System.Int32)
+    @abstractmethod
+    def move(self, unit: TextRangeUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::MoveEnd(Microsoft.UI.Text.TextRangeUnit,System.Int32)
+    @abstractmethod
+    def move_end(self, unit: TextRangeUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::MoveStart(Microsoft.UI.Text.TextRangeUnit,System.Int32)
+    @abstractmethod
+    def move_start(self, unit: TextRangeUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Text.ITextRange::Paste(System.Int32)
+    @abstractmethod
+    def paste(self, format: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextRange::ScrollIntoView(Microsoft.UI.Text.PointOptions)
+    @abstractmethod
+    def scroll_into_view(self, value: PointOptions, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextRange::SetIndex(Microsoft.UI.Text.TextRangeUnit,System.Int32,System.Boolean)
+    @abstractmethod
+    def set_index(self, unit: TextRangeUnit, index: winrt.system.Int32, extend: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextRange::SetPoint(Windows.Foundation.Point,Microsoft.UI.Text.PointOptions,System.Boolean)
+    @abstractmethod
+    def set_point(self, point: windows_foundation.Point, options: PointOptions, extend: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextRange::SetRange(System.Int32,System.Int32)
+    @abstractmethod
+    def set_range(self, start_position: winrt.system.Int32, end_position: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextRange::SetText(Microsoft.UI.Text.TextSetOptions,System.String)
+    @abstractmethod
+    def set_text(self, options: TextSetOptions, value: str, /) -> None: ...
+    # System.Void Microsoft.UI.Text.ITextRange::SetTextViaStream(Microsoft.UI.Text.TextSetOptions,Windows.Storage.Streams.IRandomAccessStream)
+    @abstractmethod
+    def set_text_via_stream(self, options: TextSetOptions, value: windows_storage_streams.ImplementsIRandomAccessStream, /) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::StartOf(Microsoft.UI.Text.TextRangeUnit,System.Boolean)
+    @abstractmethod
+    def start_of(self, unit: TextRangeUnit, extend: bool, /) -> winrt.system.Int32: ...
+    # System.Char Microsoft.UI.Text.ITextRange::get_Character()
+    @_property
+    @abstractmethod
+    def character(self) -> winrt.system.Char16: ...
+    # System.Void Microsoft.UI.Text.ITextRange::put_Character(System.Char)
+    @character.setter
+    @abstractmethod
+    def character(self, value: winrt.system.Char16) -> None: ...
+    # Microsoft.UI.Text.ITextCharacterFormat Microsoft.UI.Text.ITextRange::get_CharacterFormat()
+    @_property
+    @abstractmethod
+    def character_format(self) -> ITextCharacterFormat: ...
+    # System.Void Microsoft.UI.Text.ITextRange::put_CharacterFormat(Microsoft.UI.Text.ITextCharacterFormat)
+    @character_format.setter
+    @abstractmethod
+    def character_format(self, value: ImplementsITextCharacterFormat) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::get_EndPosition()
+    @_property
+    @abstractmethod
+    def end_position(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Text.ITextRange::put_EndPosition(System.Int32)
+    @end_position.setter
+    @abstractmethod
+    def end_position(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Text.ITextRange Microsoft.UI.Text.ITextRange::get_FormattedText()
+    @_property
+    @abstractmethod
+    def formatted_text(self) -> ITextRange: ...
+    # System.Void Microsoft.UI.Text.ITextRange::put_FormattedText(Microsoft.UI.Text.ITextRange)
+    @formatted_text.setter
+    @abstractmethod
+    def formatted_text(self, value: ImplementsITextRange) -> None: ...
+    # Microsoft.UI.Text.RangeGravity Microsoft.UI.Text.ITextRange::get_Gravity()
+    @_property
+    @abstractmethod
+    def gravity(self) -> RangeGravity: ...
+    # System.Void Microsoft.UI.Text.ITextRange::put_Gravity(Microsoft.UI.Text.RangeGravity)
+    @gravity.setter
+    @abstractmethod
+    def gravity(self, value: RangeGravity) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::get_Length()
+    @_property
+    @abstractmethod
+    def length(self) -> winrt.system.Int32: ...
+    # System.String Microsoft.UI.Text.ITextRange::get_Link()
+    @_property
+    @abstractmethod
+    def link(self) -> str: ...
+    # System.Void Microsoft.UI.Text.ITextRange::put_Link(System.String)
+    @link.setter
+    @abstractmethod
+    def link(self, value: str) -> None: ...
+    # Microsoft.UI.Text.ITextParagraphFormat Microsoft.UI.Text.ITextRange::get_ParagraphFormat()
+    @_property
+    @abstractmethod
+    def paragraph_format(self) -> ITextParagraphFormat: ...
+    # System.Void Microsoft.UI.Text.ITextRange::put_ParagraphFormat(Microsoft.UI.Text.ITextParagraphFormat)
+    @paragraph_format.setter
+    @abstractmethod
+    def paragraph_format(self, value: ImplementsITextParagraphFormat) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::get_StartPosition()
+    @_property
+    @abstractmethod
+    def start_position(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Text.ITextRange::put_StartPosition(System.Int32)
+    @start_position.setter
+    @abstractmethod
+    def start_position(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Text.ITextRange::get_StoryLength()
+    @_property
+    @abstractmethod
+    def story_length(self) -> winrt.system.Int32: ...
+    # System.String Microsoft.UI.Text.ITextRange::get_Text()
+    @_property
+    @abstractmethod
+    def text(self) -> str: ...
+    # System.Void Microsoft.UI.Text.ITextRange::put_Text(System.String)
+    @text.setter
+    @abstractmethod
+    def text(self, value: str) -> None: ...
 
 @typing.final
 class ITextRange(winrt.system.Object, ImplementsITextRange):
@@ -719,7 +1273,39 @@ class ITextRange(winrt.system.Object, ImplementsITextRange):
     def text(self, value: str) -> None: ...
 
 class ImplementsITextSelection():
-    pass
+    # System.Int32 Microsoft.UI.Text.ITextSelection::EndKey(Microsoft.UI.Text.TextRangeUnit,System.Boolean)
+    @abstractmethod
+    def end_key(self, unit: TextRangeUnit, extend: bool, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextSelection::HomeKey(Microsoft.UI.Text.TextRangeUnit,System.Boolean)
+    @abstractmethod
+    def home_key(self, unit: TextRangeUnit, extend: bool, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextSelection::MoveDown(Microsoft.UI.Text.TextRangeUnit,System.Int32,System.Boolean)
+    @abstractmethod
+    def move_down(self, unit: TextRangeUnit, count: winrt.system.Int32, extend: bool, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextSelection::MoveLeft(Microsoft.UI.Text.TextRangeUnit,System.Int32,System.Boolean)
+    @abstractmethod
+    def move_left(self, unit: TextRangeUnit, count: winrt.system.Int32, extend: bool, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextSelection::MoveRight(Microsoft.UI.Text.TextRangeUnit,System.Int32,System.Boolean)
+    @abstractmethod
+    def move_right(self, unit: TextRangeUnit, count: winrt.system.Int32, extend: bool, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Text.ITextSelection::MoveUp(Microsoft.UI.Text.TextRangeUnit,System.Int32,System.Boolean)
+    @abstractmethod
+    def move_up(self, unit: TextRangeUnit, count: winrt.system.Int32, extend: bool, /) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Text.ITextSelection::TypeText(System.String)
+    @abstractmethod
+    def type_text(self, value: str, /) -> None: ...
+    # Microsoft.UI.Text.SelectionOptions Microsoft.UI.Text.ITextSelection::get_Options()
+    @_property
+    @abstractmethod
+    def options(self) -> SelectionOptions: ...
+    # System.Void Microsoft.UI.Text.ITextSelection::put_Options(Microsoft.UI.Text.SelectionOptions)
+    @options.setter
+    @abstractmethod
+    def options(self, value: SelectionOptions) -> None: ...
+    # Microsoft.UI.Text.SelectionType Microsoft.UI.Text.ITextSelection::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> SelectionType: ...
 
 @typing.final
 class ITextSelection(winrt.system.Object, ImplementsITextSelection, ImplementsITextRange):

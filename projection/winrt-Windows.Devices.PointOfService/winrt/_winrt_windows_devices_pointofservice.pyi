@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -2412,7 +2413,10 @@ class UnifiedPosErrorData(winrt.system.Object):
     def severity(self) -> UnifiedPosErrorSeverity: ...
 
 class ImplementsICashDrawerEventSourceEventArgs():
-    pass
+    # Windows.Devices.PointOfService.CashDrawer Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs::get_CashDrawer()
+    @_property
+    @abstractmethod
+    def cash_drawer(self) -> CashDrawer: ...
 
 @typing.final
 class ICashDrawerEventSourceEventArgs(winrt.system.Object, ImplementsICashDrawerEventSourceEventArgs):
@@ -2421,7 +2425,81 @@ class ICashDrawerEventSourceEventArgs(winrt.system.Object, ImplementsICashDrawer
     def cash_drawer(self) -> CashDrawer: ...
 
 class ImplementsICommonClaimedPosPrinterStation():
-    pass
+    # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::ValidateData(System.String)
+    @abstractmethod
+    def validate_data(self, data: str, /) -> bool: ...
+    # System.UInt32 Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_CharactersPerLine()
+    @_property
+    @abstractmethod
+    def characters_per_line(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::put_CharactersPerLine(System.UInt32)
+    @characters_per_line.setter
+    @abstractmethod
+    def characters_per_line(self, value: winrt.system.UInt32) -> None: ...
+    # Windows.Devices.PointOfService.PosPrinterColorCartridge Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_ColorCartridge()
+    @_property
+    @abstractmethod
+    def color_cartridge(self) -> PosPrinterColorCartridge: ...
+    # System.Void Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::put_ColorCartridge(Windows.Devices.PointOfService.PosPrinterColorCartridge)
+    @color_cartridge.setter
+    @abstractmethod
+    def color_cartridge(self, value: PosPrinterColorCartridge) -> None: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_IsCartridgeEmpty()
+    @_property
+    @abstractmethod
+    def is_cartridge_empty(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_IsCartridgeRemoved()
+    @_property
+    @abstractmethod
+    def is_cartridge_removed(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_IsCoverOpen()
+    @_property
+    @abstractmethod
+    def is_cover_open(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_IsHeadCleaning()
+    @_property
+    @abstractmethod
+    def is_head_cleaning(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_IsLetterQuality()
+    @_property
+    @abstractmethod
+    def is_letter_quality(self) -> bool: ...
+    # System.Void Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::put_IsLetterQuality(System.Boolean)
+    @is_letter_quality.setter
+    @abstractmethod
+    def is_letter_quality(self, value: bool) -> None: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_IsPaperEmpty()
+    @_property
+    @abstractmethod
+    def is_paper_empty(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_IsPaperNearEnd()
+    @_property
+    @abstractmethod
+    def is_paper_near_end(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_IsReadyToPrint()
+    @_property
+    @abstractmethod
+    def is_ready_to_print(self) -> bool: ...
+    # System.UInt32 Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_LineHeight()
+    @_property
+    @abstractmethod
+    def line_height(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::put_LineHeight(System.UInt32)
+    @line_height.setter
+    @abstractmethod
+    def line_height(self, value: winrt.system.UInt32) -> None: ...
+    # System.UInt32 Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_LineSpacing()
+    @_property
+    @abstractmethod
+    def line_spacing(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::put_LineSpacing(System.UInt32)
+    @line_spacing.setter
+    @abstractmethod
+    def line_spacing(self, value: winrt.system.UInt32) -> None: ...
+    # System.UInt32 Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::get_LineWidth()
+    @_property
+    @abstractmethod
+    def line_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class ICommonClaimedPosPrinterStation(winrt.system.Object, ImplementsICommonClaimedPosPrinterStation):
@@ -2483,7 +2561,58 @@ class ICommonClaimedPosPrinterStation(winrt.system.Object, ImplementsICommonClai
     def line_width(self) -> winrt.system.UInt32: ...
 
 class ImplementsICommonPosPrintStationCapabilities():
-    pass
+    # Windows.Devices.PointOfService.PosPrinterCartridgeSensors Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_CartridgeSensors()
+    @_property
+    @abstractmethod
+    def cartridge_sensors(self) -> PosPrinterCartridgeSensors: ...
+    # Windows.Devices.PointOfService.PosPrinterColorCapabilities Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_ColorCartridgeCapabilities()
+    @_property
+    @abstractmethod
+    def color_cartridge_capabilities(self) -> PosPrinterColorCapabilities: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsBoldSupported()
+    @_property
+    @abstractmethod
+    def is_bold_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsDoubleHighDoubleWidePrintSupported()
+    @_property
+    @abstractmethod
+    def is_double_high_double_wide_print_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsDoubleHighPrintSupported()
+    @_property
+    @abstractmethod
+    def is_double_high_print_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsDoubleWidePrintSupported()
+    @_property
+    @abstractmethod
+    def is_double_wide_print_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsDualColorSupported()
+    @_property
+    @abstractmethod
+    def is_dual_color_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsItalicSupported()
+    @_property
+    @abstractmethod
+    def is_italic_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsPaperEmptySensorSupported()
+    @_property
+    @abstractmethod
+    def is_paper_empty_sensor_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsPaperNearEndSensorSupported()
+    @_property
+    @abstractmethod
+    def is_paper_near_end_sensor_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsPrinterPresent()
+    @_property
+    @abstractmethod
+    def is_printer_present(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_IsUnderlineSupported()
+    @_property
+    @abstractmethod
+    def is_underline_supported(self) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_SupportedCharactersPerLine()
+    @_property
+    @abstractmethod
+    def supported_characters_per_line(self) -> typing.Sequence[winrt.system.UInt32]: ...
 
 @typing.final
 class ICommonPosPrintStationCapabilities(winrt.system.Object, ImplementsICommonPosPrintStationCapabilities):
@@ -2528,7 +2657,42 @@ class ICommonPosPrintStationCapabilities(winrt.system.Object, ImplementsICommonP
     def supported_characters_per_line(self) -> typing.Sequence[winrt.system.UInt32]: ...
 
 class ImplementsICommonReceiptSlipCapabilities():
-    pass
+    # System.Boolean Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_Is180RotationSupported()
+    @_property
+    @abstractmethod
+    def is180_rotation_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_IsBarcodeSupported()
+    @_property
+    @abstractmethod
+    def is_barcode_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_IsBitmapSupported()
+    @_property
+    @abstractmethod
+    def is_bitmap_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_IsLeft90RotationSupported()
+    @_property
+    @abstractmethod
+    def is_left90_rotation_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_IsPrintAreaSupported()
+    @_property
+    @abstractmethod
+    def is_print_area_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_IsRight90RotationSupported()
+    @_property
+    @abstractmethod
+    def is_right90_rotation_supported(self) -> bool: ...
+    # Windows.Devices.PointOfService.PosPrinterRuledLineCapabilities Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_RuledLineCapabilities()
+    @_property
+    @abstractmethod
+    def ruled_line_capabilities(self) -> PosPrinterRuledLineCapabilities: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.PointOfService.PosPrinterRotation> Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_SupportedBarcodeRotations()
+    @_property
+    @abstractmethod
+    def supported_barcode_rotations(self) -> typing.Sequence[PosPrinterRotation]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.PointOfService.PosPrinterRotation> Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_SupportedBitmapRotations()
+    @_property
+    @abstractmethod
+    def supported_bitmap_rotations(self) -> typing.Sequence[PosPrinterRotation]: ...
 
 @typing.final
 class ICommonReceiptSlipCapabilities(winrt.system.Object, ImplementsICommonReceiptSlipCapabilities, ImplementsICommonPosPrintStationCapabilities):
@@ -2600,7 +2764,18 @@ class ICommonReceiptSlipCapabilities(winrt.system.Object, ImplementsICommonRecei
     def supported_characters_per_line(self) -> typing.Sequence[winrt.system.UInt32]: ...
 
 class ImplementsIPosPrinterJob():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.IPosPrinterJob::ExecuteAsync()
+    @abstractmethod
+    def execute_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    # System.Void Windows.Devices.PointOfService.IPosPrinterJob::Print(System.String)
+    @abstractmethod
+    def print(self, data: str, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IPosPrinterJob::PrintLine(System.String)
+    @abstractmethod
+    def print_line(self, data: str, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IPosPrinterJob::PrintLine()
+    @abstractmethod
+    def print_newline(self) -> None: ...
 
 @typing.final
 class IPosPrinterJob(winrt.system.Object, ImplementsIPosPrinterJob):
@@ -2614,7 +2789,51 @@ class IPosPrinterJob(winrt.system.Object, ImplementsIPosPrinterJob):
     def print_newline(self) -> None: ...
 
 class ImplementsIReceiptOrSlipJob():
-    pass
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::DrawRuledLine(System.String,Windows.Devices.PointOfService.PosPrinterLineDirection,System.UInt32,Windows.Devices.PointOfService.PosPrinterLineStyle,System.UInt32)
+    @abstractmethod
+    def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::PrintBarcode(System.String,System.UInt32,System.UInt32,System.UInt32,Windows.Devices.PointOfService.PosPrinterBarcodeTextPosition,Windows.Devices.PointOfService.PosPrinterAlignment)
+    @abstractmethod
+    def print_barcode(self, data: str, symbology: winrt.system.UInt32, height: winrt.system.UInt32, width: winrt.system.UInt32, text_position: PosPrinterBarcodeTextPosition, alignment: PosPrinterAlignment, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::PrintBarcodeCustomAlign(System.String,System.UInt32,System.UInt32,System.UInt32,Windows.Devices.PointOfService.PosPrinterBarcodeTextPosition,System.UInt32)
+    @abstractmethod
+    def print_barcode_custom_align(self, data: str, symbology: winrt.system.UInt32, height: winrt.system.UInt32, width: winrt.system.UInt32, text_position: PosPrinterBarcodeTextPosition, alignment_distance: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::PrintBitmap(Windows.Graphics.Imaging.BitmapFrame,Windows.Devices.PointOfService.PosPrinterAlignment)
+    @abstractmethod
+    def print_bitmap(self, bitmap: windows_graphics_imaging.BitmapFrame, alignment: PosPrinterAlignment, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::PrintCustomAlignedBitmap(Windows.Graphics.Imaging.BitmapFrame,System.UInt32,System.UInt32)
+    @abstractmethod
+    def print_bitmap_custom_width_custom_align(self, bitmap: windows_graphics_imaging.BitmapFrame, alignment_distance: winrt.system.UInt32, width: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::PrintBitmap(Windows.Graphics.Imaging.BitmapFrame,Windows.Devices.PointOfService.PosPrinterAlignment,System.UInt32)
+    @abstractmethod
+    def print_bitmap_custom_width_standard_align(self, bitmap: windows_graphics_imaging.BitmapFrame, alignment: PosPrinterAlignment, width: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::PrintCustomAlignedBitmap(Windows.Graphics.Imaging.BitmapFrame,System.UInt32)
+    @abstractmethod
+    def print_custom_aligned_bitmap(self, bitmap: windows_graphics_imaging.BitmapFrame, alignment_distance: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::PrintSavedBitmap(System.UInt32)
+    @abstractmethod
+    def print_saved_bitmap(self, bitmap_number: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::SetBarcodeRotation(Windows.Devices.PointOfService.PosPrinterRotation)
+    @abstractmethod
+    def set_barcode_rotation(self, value: PosPrinterRotation, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::SetBitmap(System.UInt32,Windows.Graphics.Imaging.BitmapFrame,Windows.Devices.PointOfService.PosPrinterAlignment)
+    @abstractmethod
+    def set_bitmap(self, bitmap_number: winrt.system.UInt32, bitmap: windows_graphics_imaging.BitmapFrame, alignment: PosPrinterAlignment, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::SetCustomAlignedBitmap(System.UInt32,Windows.Graphics.Imaging.BitmapFrame,System.UInt32,System.UInt32)
+    @abstractmethod
+    def set_bitmap_custom_width_custom_align(self, bitmap_number: winrt.system.UInt32, bitmap: windows_graphics_imaging.BitmapFrame, alignment_distance: winrt.system.UInt32, width: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::SetBitmap(System.UInt32,Windows.Graphics.Imaging.BitmapFrame,Windows.Devices.PointOfService.PosPrinterAlignment,System.UInt32)
+    @abstractmethod
+    def set_bitmap_custom_width_standard_align(self, bitmap_number: winrt.system.UInt32, bitmap: windows_graphics_imaging.BitmapFrame, alignment: PosPrinterAlignment, width: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::SetCustomAlignedBitmap(System.UInt32,Windows.Graphics.Imaging.BitmapFrame,System.UInt32)
+    @abstractmethod
+    def set_custom_aligned_bitmap(self, bitmap_number: winrt.system.UInt32, bitmap: windows_graphics_imaging.BitmapFrame, alignment_distance: winrt.system.UInt32, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::SetPrintArea(Windows.Foundation.Rect)
+    @abstractmethod
+    def set_print_area(self, value: windows_foundation.Rect, /) -> None: ...
+    # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::SetPrintRotation(Windows.Devices.PointOfService.PosPrinterRotation,System.Boolean)
+    @abstractmethod
+    def set_print_rotation(self, value: PosPrinterRotation, include_bitmaps: bool, /) -> None: ...
 
 @typing.final
 class IReceiptOrSlipJob(winrt.system.Object, ImplementsIReceiptOrSlipJob, ImplementsIPosPrinterJob):

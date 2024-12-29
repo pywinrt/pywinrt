@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -679,7 +680,9 @@ class PenAndInkSettings(winrt.system.Object, metaclass=PenAndInkSettings_Static)
     def user_consents_to_handwriting_telemetry_collection(self) -> bool: ...
 
 class ImplementsIInkPointFactory():
-    pass
+    # Windows.UI.Input.Inking.InkPoint Windows.UI.Input.Inking.IInkPointFactory::CreateInkPoint(Windows.Foundation.Point,System.Single)
+    @abstractmethod
+    def create_ink_point(self, position: windows_foundation.Point, pressure: winrt.system.Single, /) -> InkPoint: ...
 
 @typing.final
 class IInkPointFactory(winrt.system.Object, ImplementsIInkPointFactory):
@@ -687,7 +690,9 @@ class IInkPointFactory(winrt.system.Object, ImplementsIInkPointFactory):
     def create_ink_point(self, position: windows_foundation.Point, pressure: winrt.system.Single, /) -> InkPoint: ...
 
 class ImplementsIInkPresenterRulerFactory():
-    pass
+    # Windows.UI.Input.Inking.InkPresenterRuler Windows.UI.Input.Inking.IInkPresenterRulerFactory::Create(Windows.UI.Input.Inking.InkPresenter)
+    @abstractmethod
+    def create(self, ink_presenter: InkPresenter, /) -> InkPresenterRuler: ...
 
 @typing.final
 class IInkPresenterRulerFactory(winrt.system.Object, ImplementsIInkPresenterRulerFactory):
@@ -695,7 +700,42 @@ class IInkPresenterRulerFactory(winrt.system.Object, ImplementsIInkPresenterRule
     def create(self, ink_presenter: InkPresenter, /) -> InkPresenterRuler: ...
 
 class ImplementsIInkPresenterStencil():
-    pass
+    # Windows.UI.Color Windows.UI.Input.Inking.IInkPresenterStencil::get_BackgroundColor()
+    @_property
+    @abstractmethod
+    def background_color(self) -> windows_ui.Color: ...
+    # System.Void Windows.UI.Input.Inking.IInkPresenterStencil::put_BackgroundColor(Windows.UI.Color)
+    @background_color.setter
+    @abstractmethod
+    def background_color(self, value: windows_ui.Color) -> None: ...
+    # Windows.UI.Color Windows.UI.Input.Inking.IInkPresenterStencil::get_ForegroundColor()
+    @_property
+    @abstractmethod
+    def foreground_color(self) -> windows_ui.Color: ...
+    # System.Void Windows.UI.Input.Inking.IInkPresenterStencil::put_ForegroundColor(Windows.UI.Color)
+    @foreground_color.setter
+    @abstractmethod
+    def foreground_color(self, value: windows_ui.Color) -> None: ...
+    # System.Boolean Windows.UI.Input.Inking.IInkPresenterStencil::get_IsVisible()
+    @_property
+    @abstractmethod
+    def is_visible(self) -> bool: ...
+    # System.Void Windows.UI.Input.Inking.IInkPresenterStencil::put_IsVisible(System.Boolean)
+    @is_visible.setter
+    @abstractmethod
+    def is_visible(self, value: bool) -> None: ...
+    # Windows.UI.Input.Inking.InkPresenterStencilKind Windows.UI.Input.Inking.IInkPresenterStencil::get_Kind()
+    @_property
+    @abstractmethod
+    def kind(self) -> InkPresenterStencilKind: ...
+    # Windows.Foundation.Numerics.Matrix3x2 Windows.UI.Input.Inking.IInkPresenterStencil::get_Transform()
+    @_property
+    @abstractmethod
+    def transform(self) -> windows_foundation_numerics.Matrix3x2: ...
+    # System.Void Windows.UI.Input.Inking.IInkPresenterStencil::put_Transform(Windows.Foundation.Numerics.Matrix3x2)
+    @transform.setter
+    @abstractmethod
+    def transform(self, value: windows_foundation_numerics.Matrix3x2) -> None: ...
 
 @typing.final
 class IInkPresenterStencil(winrt.system.Object, ImplementsIInkPresenterStencil):
@@ -728,7 +768,15 @@ class IInkPresenterStencil(winrt.system.Object, ImplementsIInkPresenterStencil):
     def transform(self, value: windows_foundation_numerics.Matrix3x2) -> None: ...
 
 class ImplementsIInkRecognizerContainer():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognizer> Windows.UI.Input.Inking.IInkRecognizerContainer::GetRecognizers()
+    @abstractmethod
+    def get_recognizers(self) -> typing.Sequence[InkRecognizer]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognitionResult>> Windows.UI.Input.Inking.IInkRecognizerContainer::RecognizeAsync(Windows.UI.Input.Inking.InkStrokeContainer,Windows.UI.Input.Inking.InkRecognitionTarget)
+    @abstractmethod
+    def recognize_async(self, stroke_collection: InkStrokeContainer, recognition_target: InkRecognitionTarget, /) -> windows_foundation.IAsyncOperation[typing.Sequence[InkRecognitionResult]]: ...
+    # System.Void Windows.UI.Input.Inking.IInkRecognizerContainer::SetDefaultRecognizer(Windows.UI.Input.Inking.InkRecognizer)
+    @abstractmethod
+    def set_default_recognizer(self, recognizer: InkRecognizer, /) -> None: ...
 
 @typing.final
 class IInkRecognizerContainer(winrt.system.Object, ImplementsIInkRecognizerContainer):
@@ -740,7 +788,49 @@ class IInkRecognizerContainer(winrt.system.Object, ImplementsIInkRecognizerConta
     def set_default_recognizer(self, recognizer: InkRecognizer, /) -> None: ...
 
 class ImplementsIInkStrokeContainer():
-    pass
+    # System.Void Windows.UI.Input.Inking.IInkStrokeContainer::AddStroke(Windows.UI.Input.Inking.InkStroke)
+    @abstractmethod
+    def add_stroke(self, stroke: InkStroke, /) -> None: ...
+    # System.Boolean Windows.UI.Input.Inking.IInkStrokeContainer::CanPasteFromClipboard()
+    @abstractmethod
+    def can_paste_from_clipboard(self) -> bool: ...
+    # System.Void Windows.UI.Input.Inking.IInkStrokeContainer::CopySelectedToClipboard()
+    @abstractmethod
+    def copy_selected_to_clipboard(self) -> None: ...
+    # Windows.Foundation.Rect Windows.UI.Input.Inking.IInkStrokeContainer::DeleteSelected()
+    @abstractmethod
+    def delete_selected(self) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognitionResult> Windows.UI.Input.Inking.IInkStrokeContainer::GetRecognitionResults()
+    @abstractmethod
+    def get_recognition_results(self) -> typing.Sequence[InkRecognitionResult]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkStroke> Windows.UI.Input.Inking.IInkStrokeContainer::GetStrokes()
+    @abstractmethod
+    def get_strokes(self) -> typing.Sequence[InkStroke]: ...
+    # Windows.Foundation.IAsyncActionWithProgress`1<System.UInt64> Windows.UI.Input.Inking.IInkStrokeContainer::LoadAsync(Windows.Storage.Streams.IInputStream)
+    @abstractmethod
+    def load_async(self, input_stream: windows_storage_streams.ImplementsIInputStream, /) -> windows_foundation.IAsyncActionWithProgress[winrt.system.UInt64]: ...
+    # Windows.Foundation.Rect Windows.UI.Input.Inking.IInkStrokeContainer::MoveSelected(Windows.Foundation.Point)
+    @abstractmethod
+    def move_selected(self, translation: windows_foundation.Point, /) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Rect Windows.UI.Input.Inking.IInkStrokeContainer::PasteFromClipboard(Windows.Foundation.Point)
+    @abstractmethod
+    def paste_from_clipboard(self, position: windows_foundation.Point, /) -> windows_foundation.Rect: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt32,System.UInt32> Windows.UI.Input.Inking.IInkStrokeContainer::SaveAsync(Windows.Storage.Streams.IOutputStream)
+    @abstractmethod
+    def save_async(self, output_stream: windows_storage_streams.ImplementsIOutputStream, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
+    # Windows.Foundation.Rect Windows.UI.Input.Inking.IInkStrokeContainer::SelectWithLine(Windows.Foundation.Point,Windows.Foundation.Point)
+    @abstractmethod
+    def select_with_line(self, from_: windows_foundation.Point, to: windows_foundation.Point, /) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Rect Windows.UI.Input.Inking.IInkStrokeContainer::SelectWithPolyLine(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Point>)
+    @abstractmethod
+    def select_with_poly_line(self, polyline: typing.Iterable[windows_foundation.Point], /) -> windows_foundation.Rect: ...
+    # System.Void Windows.UI.Input.Inking.IInkStrokeContainer::UpdateRecognitionResults(Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognitionResult>)
+    @abstractmethod
+    def update_recognition_results(self, recognition_results: typing.Sequence[InkRecognitionResult], /) -> None: ...
+    # Windows.Foundation.Rect Windows.UI.Input.Inking.IInkStrokeContainer::get_BoundingRect()
+    @_property
+    @abstractmethod
+    def bounding_rect(self) -> windows_foundation.Rect: ...
 
 @typing.final
 class IInkStrokeContainer(winrt.system.Object, ImplementsIInkStrokeContainer):

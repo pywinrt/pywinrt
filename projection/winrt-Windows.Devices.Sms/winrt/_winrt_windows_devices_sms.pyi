@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -833,7 +834,22 @@ class SmsWapMessage(winrt.system.Object, ImplementsISmsMessageBase):
     def to(self) -> str: ...
 
 class ImplementsISmsBinaryMessage():
-    pass
+    # System.Byte[] Windows.Devices.Sms.ISmsBinaryMessage::GetData()
+    # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
+    @abstractmethod
+    def get_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
+    # System.Void Windows.Devices.Sms.ISmsBinaryMessage::SetData(System.Byte[])
+    # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
+    @abstractmethod
+    def set_data(self, value: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    # Windows.Devices.Sms.SmsDataFormat Windows.Devices.Sms.ISmsBinaryMessage::get_Format()
+    @_property
+    @abstractmethod
+    def format(self) -> SmsDataFormat: ...
+    # System.Void Windows.Devices.Sms.ISmsBinaryMessage::put_Format(Windows.Devices.Sms.SmsDataFormat)
+    @format.setter
+    @abstractmethod
+    def format(self, value: SmsDataFormat) -> None: ...
 
 @typing.final
 class ISmsBinaryMessage(winrt.system.Object, ImplementsISmsBinaryMessage, ImplementsISmsMessage):
@@ -857,7 +873,46 @@ class ISmsBinaryMessage(winrt.system.Object, ImplementsISmsBinaryMessage, Implem
     def message_class(self) -> SmsMessageClass: ...
 
 class ImplementsISmsDevice():
-    pass
+    # Windows.Devices.Sms.SmsEncodedLength Windows.Devices.Sms.ISmsDevice::CalculateLength(Windows.Devices.Sms.SmsTextMessage)
+    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @abstractmethod
+    def calculate_length(self, message: SmsTextMessage, /) -> SmsEncodedLength: ...
+    # Windows.Devices.Sms.SendSmsMessageOperation Windows.Devices.Sms.ISmsDevice::SendMessageAsync(Windows.Devices.Sms.ISmsMessage)
+    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @abstractmethod
+    def send_message_async(self, message: ImplementsISmsMessage, /) -> SendSmsMessageOperation: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Sms.ISmsDevice::add_SmsDeviceStatusChanged(Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler)
+    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @abstractmethod
+    def add_sms_device_status_changed(self, event_handler: SmsDeviceStatusChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Sms.ISmsDevice::remove_SmsDeviceStatusChanged(Windows.Foundation.EventRegistrationToken)
+    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @abstractmethod
+    def remove_sms_device_status_changed(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Sms.ISmsDevice::add_SmsMessageReceived(Windows.Devices.Sms.SmsMessageReceivedEventHandler)
+    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @abstractmethod
+    def add_sms_message_received(self, event_handler: SmsMessageReceivedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Sms.ISmsDevice::remove_SmsMessageReceived(Windows.Foundation.EventRegistrationToken)
+    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @abstractmethod
+    def remove_sms_message_received(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.Devices.Sms.ISmsDevice::get_AccountPhoneNumber()
+    @_property
+    @abstractmethod
+    def account_phone_number(self) -> str: ...
+    # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.ISmsDevice::get_CellularClass()
+    @_property
+    @abstractmethod
+    def cellular_class(self) -> CellularClass: ...
+    # Windows.Devices.Sms.SmsDeviceStatus Windows.Devices.Sms.ISmsDevice::get_DeviceStatus()
+    @_property
+    @abstractmethod
+    def device_status(self) -> SmsDeviceStatus: ...
+    # Windows.Devices.Sms.SmsDeviceMessageStore Windows.Devices.Sms.ISmsDevice::get_MessageStore()
+    @_property
+    @abstractmethod
+    def message_store(self) -> SmsDeviceMessageStore: ...
 
 @typing.final
 class ISmsDevice(winrt.system.Object, ImplementsISmsDevice):
@@ -893,7 +948,14 @@ class ISmsDevice(winrt.system.Object, ImplementsISmsDevice):
     def message_store(self) -> SmsDeviceMessageStore: ...
 
 class ImplementsISmsMessage():
-    pass
+    # System.UInt32 Windows.Devices.Sms.ISmsMessage::get_Id()
+    @_property
+    @abstractmethod
+    def id(self) -> winrt.system.UInt32: ...
+    # Windows.Devices.Sms.SmsMessageClass Windows.Devices.Sms.ISmsMessage::get_MessageClass()
+    @_property
+    @abstractmethod
+    def message_class(self) -> SmsMessageClass: ...
 
 @typing.final
 class ISmsMessage(winrt.system.Object, ImplementsISmsMessage):
@@ -905,7 +967,26 @@ class ISmsMessage(winrt.system.Object, ImplementsISmsMessage):
     def message_class(self) -> SmsMessageClass: ...
 
 class ImplementsISmsMessageBase():
-    pass
+    # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.ISmsMessageBase::get_CellularClass()
+    @_property
+    @abstractmethod
+    def cellular_class(self) -> CellularClass: ...
+    # System.String Windows.Devices.Sms.ISmsMessageBase::get_DeviceId()
+    @_property
+    @abstractmethod
+    def device_id(self) -> str: ...
+    # Windows.Devices.Sms.SmsMessageClass Windows.Devices.Sms.ISmsMessageBase::get_MessageClass()
+    @_property
+    @abstractmethod
+    def message_class(self) -> SmsMessageClass: ...
+    # Windows.Devices.Sms.SmsMessageType Windows.Devices.Sms.ISmsMessageBase::get_MessageType()
+    @_property
+    @abstractmethod
+    def message_type(self) -> SmsMessageType: ...
+    # System.String Windows.Devices.Sms.ISmsMessageBase::get_SimIccId()
+    @_property
+    @abstractmethod
+    def sim_icc_id(self) -> str: ...
 
 @typing.final
 class ISmsMessageBase(winrt.system.Object, ImplementsISmsMessageBase):
@@ -926,7 +1007,58 @@ class ISmsMessageBase(winrt.system.Object, ImplementsISmsMessageBase):
     def sim_icc_id(self) -> str: ...
 
 class ImplementsISmsTextMessage():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.ISmsBinaryMessage> Windows.Devices.Sms.ISmsTextMessage::ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)
+    # @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
+    @abstractmethod
+    def to_binary_messages(self, format: SmsDataFormat, /) -> typing.Sequence[ISmsBinaryMessage]: ...
+    # System.String Windows.Devices.Sms.ISmsTextMessage::get_Body()
+    @_property
+    @abstractmethod
+    def body(self) -> str: ...
+    # System.Void Windows.Devices.Sms.ISmsTextMessage::put_Body(System.String)
+    @body.setter
+    @abstractmethod
+    def body(self, value: str) -> None: ...
+    # Windows.Devices.Sms.SmsEncoding Windows.Devices.Sms.ISmsTextMessage::get_Encoding()
+    @_property
+    @abstractmethod
+    def encoding(self) -> SmsEncoding: ...
+    # System.Void Windows.Devices.Sms.ISmsTextMessage::put_Encoding(Windows.Devices.Sms.SmsEncoding)
+    @encoding.setter
+    @abstractmethod
+    def encoding(self, value: SmsEncoding) -> None: ...
+    # System.String Windows.Devices.Sms.ISmsTextMessage::get_From()
+    @_property
+    @abstractmethod
+    def from_(self) -> str: ...
+    # System.Void Windows.Devices.Sms.ISmsTextMessage::put_From(System.String)
+    @from_.setter
+    @abstractmethod
+    def from_(self, value: str) -> None: ...
+    # System.UInt32 Windows.Devices.Sms.ISmsTextMessage::get_PartCount()
+    @_property
+    @abstractmethod
+    def part_count(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Devices.Sms.ISmsTextMessage::get_PartNumber()
+    @_property
+    @abstractmethod
+    def part_number(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Devices.Sms.ISmsTextMessage::get_PartReferenceId()
+    @_property
+    @abstractmethod
+    def part_reference_id(self) -> winrt.system.UInt32: ...
+    # Windows.Foundation.DateTime Windows.Devices.Sms.ISmsTextMessage::get_Timestamp()
+    @_property
+    @abstractmethod
+    def timestamp(self) -> datetime.datetime: ...
+    # System.String Windows.Devices.Sms.ISmsTextMessage::get_To()
+    @_property
+    @abstractmethod
+    def to(self) -> str: ...
+    # System.Void Windows.Devices.Sms.ISmsTextMessage::put_To(System.String)
+    @to.setter
+    @abstractmethod
+    def to(self, value: str) -> None: ...
 
 @typing.final
 class ISmsTextMessage(winrt.system.Object, ImplementsISmsTextMessage, ImplementsISmsMessage):

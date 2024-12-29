@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -2702,7 +2703,32 @@ class ToolTipTemplateSettings(windows_ui_xaml.DependencyObject):
     def from_vertical_offset(self) -> winrt.system.Double: ...
 
 class ImplementsIScrollSnapPointsInfo():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
+    @abstractmethod
+    def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
+    # System.Single Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetRegularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment,System.Single&)
+    @abstractmethod
+    def get_regular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Tuple[winrt.system.Single, winrt.system.Single]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::add_HorizontalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
+    @abstractmethod
+    def add_horizontal_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::remove_HorizontalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_horizontal_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::add_VerticalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
+    @abstractmethod
+    def add_vertical_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::remove_VerticalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_vertical_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::get_AreHorizontalSnapPointsRegular()
+    @_property
+    @abstractmethod
+    def are_horizontal_snap_points_regular(self) -> bool: ...
+    # System.Boolean Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::get_AreVerticalSnapPointsRegular()
+    @_property
+    @abstractmethod
+    def are_vertical_snap_points_regular(self) -> bool: ...
 
 @typing.final
 class IScrollSnapPointsInfo(winrt.system.Object, ImplementsIScrollSnapPointsInfo):

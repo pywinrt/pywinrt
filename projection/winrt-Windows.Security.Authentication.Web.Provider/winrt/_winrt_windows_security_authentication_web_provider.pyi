@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -264,7 +265,12 @@ class WebProviderTokenResponse(winrt.system.Object):
     def client_response(self) -> windows_security_authentication_web_core.WebTokenResponse: ...
 
 class ImplementsIWebAccountProviderBaseReportOperation():
-    pass
+    # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation::ReportCompleted()
+    @abstractmethod
+    def report_completed(self) -> None: ...
+    # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation::ReportError(Windows.Security.Authentication.Web.Core.WebProviderError)
+    @abstractmethod
+    def report_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
 
 @typing.final
 class IWebAccountProviderBaseReportOperation(winrt.system.Object, ImplementsIWebAccountProviderBaseReportOperation):
@@ -274,7 +280,10 @@ class IWebAccountProviderBaseReportOperation(winrt.system.Object, ImplementsIWeb
     def report_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
 
 class ImplementsIWebAccountProviderOperation():
-    pass
+    # Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation::get_Kind()
+    @_property
+    @abstractmethod
+    def kind(self) -> WebAccountProviderOperationKind: ...
 
 @typing.final
 class IWebAccountProviderOperation(winrt.system.Object, ImplementsIWebAccountProviderOperation):
@@ -283,7 +292,12 @@ class IWebAccountProviderOperation(winrt.system.Object, ImplementsIWebAccountPro
     def kind(self) -> WebAccountProviderOperationKind: ...
 
 class ImplementsIWebAccountProviderSilentReportOperation():
-    pass
+    # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation::ReportUserInteractionRequired()
+    @abstractmethod
+    def report_user_interaction_required(self) -> None: ...
+    # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation::ReportUserInteractionRequired(Windows.Security.Authentication.Web.Core.WebProviderError)
+    @abstractmethod
+    def report_user_interaction_required_with_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
 
 @typing.final
 class IWebAccountProviderSilentReportOperation(winrt.system.Object, ImplementsIWebAccountProviderSilentReportOperation, ImplementsIWebAccountProviderBaseReportOperation):
@@ -297,7 +311,10 @@ class IWebAccountProviderSilentReportOperation(winrt.system.Object, ImplementsIW
     def report_user_interaction_required_with_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
 
 class ImplementsIWebAccountProviderTokenObjects():
-    pass
+    # Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects::get_Operation()
+    @_property
+    @abstractmethod
+    def operation(self) -> IWebAccountProviderOperation: ...
 
 @typing.final
 class IWebAccountProviderTokenObjects(winrt.system.Object, ImplementsIWebAccountProviderTokenObjects):
@@ -306,7 +323,10 @@ class IWebAccountProviderTokenObjects(winrt.system.Object, ImplementsIWebAccount
     def operation(self) -> IWebAccountProviderOperation: ...
 
 class ImplementsIWebAccountProviderTokenObjects2():
-    pass
+    # Windows.System.User Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects2::get_User()
+    @_property
+    @abstractmethod
+    def user(self) -> windows_system.User: ...
 
 @typing.final
 class IWebAccountProviderTokenObjects2(winrt.system.Object, ImplementsIWebAccountProviderTokenObjects2, ImplementsIWebAccountProviderTokenObjects):
@@ -318,7 +338,22 @@ class IWebAccountProviderTokenObjects2(winrt.system.Object, ImplementsIWebAccoun
     def operation(self) -> IWebAccountProviderOperation: ...
 
 class ImplementsIWebAccountProviderTokenOperation():
-    pass
+    # Windows.Foundation.DateTime Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation::get_CacheExpirationTime()
+    @_property
+    @abstractmethod
+    def cache_expiration_time(self) -> datetime.datetime: ...
+    # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation::put_CacheExpirationTime(Windows.Foundation.DateTime)
+    @cache_expiration_time.setter
+    @abstractmethod
+    def cache_expiration_time(self, value: datetime.datetime) -> None: ...
+    # Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation::get_ProviderRequest()
+    @_property
+    @abstractmethod
+    def provider_request(self) -> WebProviderTokenRequest: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation::get_ProviderResponses()
+    @_property
+    @abstractmethod
+    def provider_responses(self) -> typing.MutableSequence[WebProviderTokenResponse]: ...
 
 @typing.final
 class IWebAccountProviderTokenOperation(winrt.system.Object, ImplementsIWebAccountProviderTokenOperation, ImplementsIWebAccountProviderOperation):
@@ -339,7 +374,9 @@ class IWebAccountProviderTokenOperation(winrt.system.Object, ImplementsIWebAccou
     def kind(self) -> WebAccountProviderOperationKind: ...
 
 class ImplementsIWebAccountProviderUIReportOperation():
-    pass
+    # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderUIReportOperation::ReportUserCanceled()
+    @abstractmethod
+    def report_user_canceled(self) -> None: ...
 
 @typing.final
 class IWebAccountProviderUIReportOperation(winrt.system.Object, ImplementsIWebAccountProviderUIReportOperation, ImplementsIWebAccountProviderBaseReportOperation):

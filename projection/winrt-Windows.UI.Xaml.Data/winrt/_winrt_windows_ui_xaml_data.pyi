@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -246,7 +247,63 @@ class RelativeSource(windows_ui_xaml.DependencyObject, metaclass=RelativeSource_
     def mode(self, value: RelativeSourceMode) -> None: ...
 
 class ImplementsICollectionView():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Data.LoadMoreItemsResult> Windows.UI.Xaml.Data.ICollectionView::LoadMoreItemsAsync(System.UInt32)
+    @abstractmethod
+    def load_more_items_async(self, count: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[LoadMoreItemsResult]: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICollectionView::MoveCurrentTo(System.Object)
+    @abstractmethod
+    def move_current_to(self, item: winrt.system.Object, /) -> bool: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICollectionView::MoveCurrentToFirst()
+    @abstractmethod
+    def move_current_to_first(self) -> bool: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICollectionView::MoveCurrentToLast()
+    @abstractmethod
+    def move_current_to_last(self) -> bool: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICollectionView::MoveCurrentToNext()
+    @abstractmethod
+    def move_current_to_next(self) -> bool: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICollectionView::MoveCurrentToPosition(System.Int32)
+    @abstractmethod
+    def move_current_to_position(self, index: winrt.system.Int32, /) -> bool: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICollectionView::MoveCurrentToPrevious()
+    @abstractmethod
+    def move_current_to_previous(self) -> bool: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Data.ICollectionView::add_CurrentChanged(Windows.Foundation.EventHandler`1<System.Object>)
+    @abstractmethod
+    def add_current_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Data.ICollectionView::remove_CurrentChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_current_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Data.ICollectionView::add_CurrentChanging(Windows.UI.Xaml.Data.CurrentChangingEventHandler)
+    @abstractmethod
+    def add_current_changing(self, handler: CurrentChangingEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Data.ICollectionView::remove_CurrentChanging(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_current_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.Collections.IObservableVector`1<System.Object> Windows.UI.Xaml.Data.ICollectionView::get_CollectionGroups()
+    @_property
+    @abstractmethod
+    def collection_groups(self) -> windows_foundation_collections.IObservableVector[winrt.system.Object]: ...
+    # System.Object Windows.UI.Xaml.Data.ICollectionView::get_CurrentItem()
+    @_property
+    @abstractmethod
+    def current_item(self) -> winrt.system.Object: ...
+    # System.Int32 Windows.UI.Xaml.Data.ICollectionView::get_CurrentPosition()
+    @_property
+    @abstractmethod
+    def current_position(self) -> winrt.system.Int32: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICollectionView::get_HasMoreItems()
+    @_property
+    @abstractmethod
+    def has_more_items(self) -> bool: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICollectionView::get_IsCurrentAfterLast()
+    @_property
+    @abstractmethod
+    def is_current_after_last(self) -> bool: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICollectionView::get_IsCurrentBeforeFirst()
+    @_property
+    @abstractmethod
+    def is_current_before_first(self) -> bool: ...
 
 @typing.final
 class ICollectionView(winrt.system.Object, ImplementsICollectionView, windows_foundation_collections.ImplementsIObservableVector[winrt.system.Object], winrt._winrt.MutableSequence[winrt.system.Object]):
@@ -337,7 +394,9 @@ class ICollectionView(winrt.system.Object, ImplementsICollectionView, windows_fo
     def size(self) -> winrt.system.UInt32: ...
 
 class ImplementsICollectionViewFactory():
-    pass
+    # Windows.UI.Xaml.Data.ICollectionView Windows.UI.Xaml.Data.ICollectionViewFactory::CreateView()
+    @abstractmethod
+    def create_view(self) -> ICollectionView: ...
 
 @typing.final
 class ICollectionViewFactory(winrt.system.Object, ImplementsICollectionViewFactory):
@@ -345,7 +404,14 @@ class ICollectionViewFactory(winrt.system.Object, ImplementsICollectionViewFacto
     def create_view(self) -> ICollectionView: ...
 
 class ImplementsICollectionViewGroup():
-    pass
+    # System.Object Windows.UI.Xaml.Data.ICollectionViewGroup::get_Group()
+    @_property
+    @abstractmethod
+    def group(self) -> winrt.system.Object: ...
+    # Windows.Foundation.Collections.IObservableVector`1<System.Object> Windows.UI.Xaml.Data.ICollectionViewGroup::get_GroupItems()
+    @_property
+    @abstractmethod
+    def group_items(self) -> windows_foundation_collections.IObservableVector[winrt.system.Object]: ...
 
 @typing.final
 class ICollectionViewGroup(winrt.system.Object, ImplementsICollectionViewGroup):
@@ -357,7 +423,34 @@ class ICollectionViewGroup(winrt.system.Object, ImplementsICollectionViewGroup):
     def group_items(self) -> windows_foundation_collections.IObservableVector[winrt.system.Object]: ...
 
 class ImplementsICustomProperty():
-    pass
+    # System.Object Windows.UI.Xaml.Data.ICustomProperty::GetIndexedValue(System.Object,System.Object)
+    @abstractmethod
+    def get_indexed_value(self, target: winrt.system.Object, index: winrt.system.Object, /) -> winrt.system.Object: ...
+    # System.Object Windows.UI.Xaml.Data.ICustomProperty::GetValue(System.Object)
+    @abstractmethod
+    def get_value(self, target: winrt.system.Object, /) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Data.ICustomProperty::SetIndexedValue(System.Object,System.Object,System.Object)
+    @abstractmethod
+    def set_indexed_value(self, target: winrt.system.Object, value: winrt.system.Object, index: winrt.system.Object, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Data.ICustomProperty::SetValue(System.Object,System.Object)
+    @abstractmethod
+    def set_value(self, target: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICustomProperty::get_CanRead()
+    @_property
+    @abstractmethod
+    def can_read(self) -> bool: ...
+    # System.Boolean Windows.UI.Xaml.Data.ICustomProperty::get_CanWrite()
+    @_property
+    @abstractmethod
+    def can_write(self) -> bool: ...
+    # System.String Windows.UI.Xaml.Data.ICustomProperty::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
+    # Windows.UI.Xaml.Interop.TypeName Windows.UI.Xaml.Data.ICustomProperty::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 @typing.final
 class ICustomProperty(winrt.system.Object, ImplementsICustomProperty):
@@ -383,7 +476,19 @@ class ICustomProperty(winrt.system.Object, ImplementsICustomProperty):
     def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 class ImplementsICustomPropertyProvider():
-    pass
+    # Windows.UI.Xaml.Data.ICustomProperty Windows.UI.Xaml.Data.ICustomPropertyProvider::GetCustomProperty(System.String)
+    @abstractmethod
+    def get_custom_property(self, name: str, /) -> ICustomProperty: ...
+    # Windows.UI.Xaml.Data.ICustomProperty Windows.UI.Xaml.Data.ICustomPropertyProvider::GetIndexedProperty(System.String,Windows.UI.Xaml.Interop.TypeName)
+    @abstractmethod
+    def get_indexed_property(self, name: str, type: windows_ui_xaml_interop.TypeName, /) -> ICustomProperty: ...
+    # System.String Windows.UI.Xaml.Data.ICustomPropertyProvider::GetStringRepresentation()
+    @abstractmethod
+    def get_string_representation(self) -> str: ...
+    # Windows.UI.Xaml.Interop.TypeName Windows.UI.Xaml.Data.ICustomPropertyProvider::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 @typing.final
 class ICustomPropertyProvider(winrt.system.Object, ImplementsICustomPropertyProvider):
@@ -398,7 +503,9 @@ class ICustomPropertyProvider(winrt.system.Object, ImplementsICustomPropertyProv
     def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 class ImplementsIItemsRangeInfo():
-    pass
+    # System.Void Windows.UI.Xaml.Data.IItemsRangeInfo::RangesChanged(Windows.UI.Xaml.Data.ItemIndexRange,Windows.Foundation.Collections.IVectorView`1<Windows.UI.Xaml.Data.ItemIndexRange>)
+    @abstractmethod
+    def ranges_changed(self, visible_range: ItemIndexRange, tracked_items: typing.Sequence[ItemIndexRange], /) -> None: ...
 
 @typing.final
 class IItemsRangeInfo(winrt.system.Object, ImplementsIItemsRangeInfo, windows_foundation.ImplementsIClosable):
@@ -410,7 +517,12 @@ class IItemsRangeInfo(winrt.system.Object, ImplementsIItemsRangeInfo, windows_fo
     def ranges_changed(self, visible_range: ItemIndexRange, tracked_items: typing.Sequence[ItemIndexRange], /) -> None: ...
 
 class ImplementsINotifyPropertyChanged():
-    pass
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Data.INotifyPropertyChanged::add_PropertyChanged(Windows.UI.Xaml.Data.PropertyChangedEventHandler)
+    @abstractmethod
+    def add_property_changed(self, handler: PropertyChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Data.INotifyPropertyChanged::remove_PropertyChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_property_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class INotifyPropertyChanged(winrt.system.Object, ImplementsINotifyPropertyChanged):
@@ -420,7 +532,18 @@ class INotifyPropertyChanged(winrt.system.Object, ImplementsINotifyPropertyChang
     def remove_property_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ImplementsISelectionInfo():
-    pass
+    # System.Void Windows.UI.Xaml.Data.ISelectionInfo::DeselectRange(Windows.UI.Xaml.Data.ItemIndexRange)
+    @abstractmethod
+    def deselect_range(self, item_index_range: ItemIndexRange, /) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Xaml.Data.ItemIndexRange> Windows.UI.Xaml.Data.ISelectionInfo::GetSelectedRanges()
+    @abstractmethod
+    def get_selected_ranges(self) -> typing.Sequence[ItemIndexRange]: ...
+    # System.Boolean Windows.UI.Xaml.Data.ISelectionInfo::IsSelected(System.Int32)
+    @abstractmethod
+    def is_selected(self, index: winrt.system.Int32, /) -> bool: ...
+    # System.Void Windows.UI.Xaml.Data.ISelectionInfo::SelectRange(Windows.UI.Xaml.Data.ItemIndexRange)
+    @abstractmethod
+    def select_range(self, item_index_range: ItemIndexRange, /) -> None: ...
 
 @typing.final
 class ISelectionInfo(winrt.system.Object, ImplementsISelectionInfo):
@@ -434,7 +557,13 @@ class ISelectionInfo(winrt.system.Object, ImplementsISelectionInfo):
     def select_range(self, item_index_range: ItemIndexRange, /) -> None: ...
 
 class ImplementsISupportIncrementalLoading():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Data.LoadMoreItemsResult> Windows.UI.Xaml.Data.ISupportIncrementalLoading::LoadMoreItemsAsync(System.UInt32)
+    @abstractmethod
+    def load_more_items_async(self, count: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[LoadMoreItemsResult]: ...
+    # System.Boolean Windows.UI.Xaml.Data.ISupportIncrementalLoading::get_HasMoreItems()
+    @_property
+    @abstractmethod
+    def has_more_items(self) -> bool: ...
 
 @typing.final
 class ISupportIncrementalLoading(winrt.system.Object, ImplementsISupportIncrementalLoading):
@@ -445,7 +574,12 @@ class ISupportIncrementalLoading(winrt.system.Object, ImplementsISupportIncremen
     def has_more_items(self) -> bool: ...
 
 class ImplementsIValueConverter():
-    pass
+    # System.Object Windows.UI.Xaml.Data.IValueConverter::Convert(System.Object,Windows.UI.Xaml.Interop.TypeName,System.Object,System.String)
+    @abstractmethod
+    def convert(self, value: winrt.system.Object, target_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, language: str, /) -> winrt.system.Object: ...
+    # System.Object Windows.UI.Xaml.Data.IValueConverter::ConvertBack(System.Object,Windows.UI.Xaml.Interop.TypeName,System.Object,System.String)
+    @abstractmethod
+    def convert_back(self, value: winrt.system.Object, target_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, language: str, /) -> winrt.system.Object: ...
 
 @typing.final
 class IValueConverter(winrt.system.Object, ImplementsIValueConverter):

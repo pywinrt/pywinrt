@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -473,7 +474,22 @@ class Colors(winrt.system.Object, metaclass=Colors_Static):
     pass
 
 class ImplementsIClosableNotifier():
-    pass
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.IClosableNotifier::add_Closed(Microsoft.UI.ClosableNotifierHandler)
+    @abstractmethod
+    def add_closed(self, handler: ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.IClosableNotifier::remove_Closed(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.IClosableNotifier::add_FrameworkClosed(Microsoft.UI.ClosableNotifierHandler)
+    @abstractmethod
+    def add_framework_closed(self, handler: ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.IClosableNotifier::remove_FrameworkClosed(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_framework_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.IClosableNotifier::get_IsClosed()
+    @_property
+    @abstractmethod
+    def is_closed(self) -> bool: ...
 
 @typing.final
 class IClosableNotifier(winrt.system.Object, ImplementsIClosableNotifier):

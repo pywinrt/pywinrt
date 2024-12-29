@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -687,7 +688,9 @@ class VideoFrame(winrt.system.Object, ImplementsIMediaFrame, windows_foundation.
     def software_bitmap(self) -> windows_graphics_imaging.SoftwareBitmap: ...
 
 class ImplementsIMediaExtension():
-    pass
+    # System.Void Windows.Media.IMediaExtension::SetProperties(Windows.Foundation.Collections.IPropertySet)
+    @abstractmethod
+    def set_properties(self, configuration: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
 
 @typing.final
 class IMediaExtension(winrt.system.Object, ImplementsIMediaExtension):
@@ -695,7 +698,50 @@ class IMediaExtension(winrt.system.Object, ImplementsIMediaExtension):
     def set_properties(self, configuration: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
 
 class ImplementsIMediaFrame():
-    pass
+    # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.IMediaFrame::get_Duration()
+    @_property
+    @abstractmethod
+    def duration(self) -> typing.Optional[datetime.timedelta]: ...
+    # System.Void Windows.Media.IMediaFrame::put_Duration(Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan>)
+    @duration.setter
+    @abstractmethod
+    def duration(self, value: typing.Optional[datetime.timedelta]) -> None: ...
+    # Windows.Foundation.Collections.IPropertySet Windows.Media.IMediaFrame::get_ExtendedProperties()
+    @_property
+    @abstractmethod
+    def extended_properties(self) -> windows_foundation_collections.IPropertySet: ...
+    # System.Boolean Windows.Media.IMediaFrame::get_IsDiscontinuous()
+    @_property
+    @abstractmethod
+    def is_discontinuous(self) -> bool: ...
+    # System.Void Windows.Media.IMediaFrame::put_IsDiscontinuous(System.Boolean)
+    @is_discontinuous.setter
+    @abstractmethod
+    def is_discontinuous(self, value: bool) -> None: ...
+    # System.Boolean Windows.Media.IMediaFrame::get_IsReadOnly()
+    @_property
+    @abstractmethod
+    def is_read_only(self) -> bool: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.IMediaFrame::get_RelativeTime()
+    @_property
+    @abstractmethod
+    def relative_time(self) -> typing.Optional[datetime.timedelta]: ...
+    # System.Void Windows.Media.IMediaFrame::put_RelativeTime(Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan>)
+    @relative_time.setter
+    @abstractmethod
+    def relative_time(self, value: typing.Optional[datetime.timedelta]) -> None: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.IMediaFrame::get_SystemRelativeTime()
+    @_property
+    @abstractmethod
+    def system_relative_time(self) -> typing.Optional[datetime.timedelta]: ...
+    # System.Void Windows.Media.IMediaFrame::put_SystemRelativeTime(Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan>)
+    @system_relative_time.setter
+    @abstractmethod
+    def system_relative_time(self, value: typing.Optional[datetime.timedelta]) -> None: ...
+    # System.String Windows.Media.IMediaFrame::get_Type()
+    @_property
+    @abstractmethod
+    def type(self) -> str: ...
 
 @typing.final
 class IMediaFrame(winrt.system.Object, ImplementsIMediaFrame, windows_foundation.ImplementsIClosable):
@@ -738,7 +784,18 @@ class IMediaFrame(winrt.system.Object, ImplementsIMediaFrame, windows_foundation
     def type(self) -> str: ...
 
 class ImplementsIMediaMarker():
-    pass
+    # System.String Windows.Media.IMediaMarker::get_MediaMarkerType()
+    @_property
+    @abstractmethod
+    def media_marker_type(self) -> str: ...
+    # System.String Windows.Media.IMediaMarker::get_Text()
+    @_property
+    @abstractmethod
+    def text(self) -> str: ...
+    # Windows.Foundation.TimeSpan Windows.Media.IMediaMarker::get_Time()
+    @_property
+    @abstractmethod
+    def time(self) -> datetime.timedelta: ...
 
 @typing.final
 class IMediaMarker(winrt.system.Object, ImplementsIMediaMarker):
@@ -753,7 +810,10 @@ class IMediaMarker(winrt.system.Object, ImplementsIMediaMarker):
     def time(self) -> datetime.timedelta: ...
 
 class ImplementsIMediaMarkers():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Media.IMediaMarker> Windows.Media.IMediaMarkers::get_Markers()
+    @_property
+    @abstractmethod
+    def markers(self) -> typing.Sequence[IMediaMarker]: ...
 
 @typing.final
 class IMediaMarkers(winrt.system.Object, ImplementsIMediaMarkers):

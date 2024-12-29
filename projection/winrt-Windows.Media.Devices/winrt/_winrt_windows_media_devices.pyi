@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1094,7 +1095,14 @@ class ZoomSettings(winrt.system.Object):
     def mode(self, value: ZoomTransitionMode) -> None: ...
 
 class ImplementsIDefaultAudioDeviceChangedEventArgs():
-    pass
+    # System.String Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs::get_Id()
+    @_property
+    @abstractmethod
+    def id(self) -> str: ...
+    # Windows.Media.Devices.AudioDeviceRole Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs::get_Role()
+    @_property
+    @abstractmethod
+    def role(self) -> AudioDeviceRole: ...
 
 @typing.final
 class IDefaultAudioDeviceChangedEventArgs(winrt.system.Object, ImplementsIDefaultAudioDeviceChangedEventArgs):
@@ -1106,7 +1114,15 @@ class IDefaultAudioDeviceChangedEventArgs(winrt.system.Object, ImplementsIDefaul
     def role(self) -> AudioDeviceRole: ...
 
 class ImplementsIMediaDeviceController():
-    pass
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaProperties.IMediaEncodingProperties> Windows.Media.Devices.IMediaDeviceController::GetAvailableMediaStreamProperties(Windows.Media.Capture.MediaStreamType)
+    @abstractmethod
+    def get_available_media_stream_properties(self, media_stream_type: windows_media_capture.MediaStreamType, /) -> typing.Sequence[windows_media_mediaproperties.IMediaEncodingProperties]: ...
+    # Windows.Media.MediaProperties.IMediaEncodingProperties Windows.Media.Devices.IMediaDeviceController::GetMediaStreamProperties(Windows.Media.Capture.MediaStreamType)
+    @abstractmethod
+    def get_media_stream_properties(self, media_stream_type: windows_media_capture.MediaStreamType, /) -> windows_media_mediaproperties.IMediaEncodingProperties: ...
+    # Windows.Foundation.IAsyncAction Windows.Media.Devices.IMediaDeviceController::SetMediaStreamPropertiesAsync(Windows.Media.Capture.MediaStreamType,Windows.Media.MediaProperties.IMediaEncodingProperties)
+    @abstractmethod
+    def set_media_stream_properties_async(self, media_stream_type: windows_media_capture.MediaStreamType, media_encoding_properties: windows_media_mediaproperties.ImplementsIMediaEncodingProperties, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class IMediaDeviceController(winrt.system.Object, ImplementsIMediaDeviceController):

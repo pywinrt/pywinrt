@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -124,7 +125,18 @@ class DropOperationTargetRequestedEventArgs(winrt.system.Object):
     def set_target(self, target: ImplementsIDropOperationTarget, /) -> None: ...
 
 class ImplementsIDropOperationTarget():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Microsoft.UI.Input.DragDrop.IDropOperationTarget::DropAsync(Microsoft.UI.Input.DragDrop.DragInfo)
+    @abstractmethod
+    def drop_async(self, drag_info: DragInfo, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackageOperation]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Microsoft.UI.Input.DragDrop.IDropOperationTarget::EnterAsync(Microsoft.UI.Input.DragDrop.DragInfo,Microsoft.UI.Input.DragDrop.DragUIOverride)
+    @abstractmethod
+    def enter_async(self, drag_info: DragInfo, drag_ui_override: DragUIOverride, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackageOperation]: ...
+    # Windows.Foundation.IAsyncAction Microsoft.UI.Input.DragDrop.IDropOperationTarget::LeaveAsync(Microsoft.UI.Input.DragDrop.DragInfo)
+    @abstractmethod
+    def leave_async(self, drag_info: DragInfo, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Microsoft.UI.Input.DragDrop.IDropOperationTarget::OverAsync(Microsoft.UI.Input.DragDrop.DragInfo,Microsoft.UI.Input.DragDrop.DragUIOverride)
+    @abstractmethod
+    def over_async(self, drag_info: DragInfo, drag_ui_override: DragUIOverride, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackageOperation]: ...
 
 @typing.final
 class IDropOperationTarget(winrt.system.Object, ImplementsIDropOperationTarget):

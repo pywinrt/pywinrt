@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -1015,7 +1016,44 @@ class UserDataPaths(winrt.system.Object, metaclass=UserDataPaths_Static):
     def videos(self) -> str: ...
 
 class ImplementsIStorageFile():
-    pass
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
+    @abstractmethod
+    def copy_and_replace_async(self, file_to_replace: ImplementsIStorageFile, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    @abstractmethod
+    def copy_overload(self, destination_folder: ImplementsIStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder)
+    @abstractmethod
+    def copy_overload_default_name_and_options(self, destination_folder: ImplementsIStorageFolder, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFile::CopyAsync(Windows.Storage.IStorageFolder,System.String)
+    @abstractmethod
+    def copy_overload_default_options(self, destination_folder: ImplementsIStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAndReplaceAsync(Windows.Storage.IStorageFile)
+    @abstractmethod
+    def move_and_replace_async(self, file_to_replace: ImplementsIStorageFile, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
+    @abstractmethod
+    def move_overload(self, destination_folder: ImplementsIStorageFolder, desired_new_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder)
+    @abstractmethod
+    def move_overload_default_name_and_options(self, destination_folder: ImplementsIStorageFolder, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::MoveAsync(Windows.Storage.IStorageFolder,System.String)
+    @abstractmethod
+    def move_overload_default_options(self, destination_folder: ImplementsIStorageFolder, desired_new_name: str, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.IStorageFile::OpenAsync(Windows.Storage.FileAccessMode)
+    @abstractmethod
+    def open_async(self, access_mode: FileAccessMode, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.IStorageFile::OpenTransactedWriteAsync()
+    @abstractmethod
+    def open_transacted_write_async(self) -> windows_foundation.IAsyncOperation[StorageStreamTransaction]: ...
+    # System.String Windows.Storage.IStorageFile::get_ContentType()
+    @_property
+    @abstractmethod
+    def content_type(self) -> str: ...
+    # System.String Windows.Storage.IStorageFile::get_FileType()
+    @_property
+    @abstractmethod
+    def file_type(self) -> str: ...
 
 @typing.final
 class IStorageFile(winrt.system.Object, ImplementsIStorageFile, windows_storage_streams.ImplementsIInputStreamReference, windows_storage_streams.ImplementsIRandomAccessStreamReference, ImplementsIStorageItem):
@@ -1075,7 +1113,12 @@ class IStorageFile(winrt.system.Object, ImplementsIStorageFile, windows_storage_
     def path(self) -> str: ...
 
 class ImplementsIStorageFile2():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageStreamTransaction> Windows.Storage.IStorageFile2::OpenTransactedWriteAsync(Windows.Storage.StorageOpenOptions)
+    @abstractmethod
+    def open_transacted_write_with_options_async(self, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[StorageStreamTransaction]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.IStorageFile2::OpenAsync(Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions)
+    @abstractmethod
+    def open_with_options_async(self, access_mode: FileAccessMode, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
 
 @typing.final
 class IStorageFile2(winrt.system.Object, ImplementsIStorageFile2):
@@ -1085,7 +1128,10 @@ class IStorageFile2(winrt.system.Object, ImplementsIStorageFile2):
     def open_with_options_async(self, access_mode: FileAccessMode, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
 
 class ImplementsIStorageFilePropertiesWithAvailability():
-    pass
+    # System.Boolean Windows.Storage.IStorageFilePropertiesWithAvailability::get_IsAvailable()
+    @_property
+    @abstractmethod
+    def is_available(self) -> bool: ...
 
 @typing.final
 class IStorageFilePropertiesWithAvailability(winrt.system.Object, ImplementsIStorageFilePropertiesWithAvailability):
@@ -1094,7 +1140,36 @@ class IStorageFilePropertiesWithAvailability(winrt.system.Object, ImplementsISto
     def is_available(self) -> bool: ...
 
 class ImplementsIStorageFolder():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFolder::CreateFileAsync(System.String,Windows.Storage.CreationCollisionOption)
+    @abstractmethod
+    def create_file_async(self, desired_name: str, options: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFolder::CreateFileAsync(System.String)
+    @abstractmethod
+    def create_file_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageFolder::CreateFolderAsync(System.String,Windows.Storage.CreationCollisionOption)
+    @abstractmethod
+    def create_folder_async(self, desired_name: str, options: CreationCollisionOption, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageFolder::CreateFolderAsync(System.String)
+    @abstractmethod
+    def create_folder_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFolder::GetFileAsync(System.String)
+    @abstractmethod
+    def get_file_async(self, name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.IStorageFolder::GetFilesAsync()
+    @abstractmethod
+    def get_files_async_overload_default_options_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFile]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageFolder::GetFolderAsync(System.String)
+    @abstractmethod
+    def get_folder_async(self, name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.IStorageFolder::GetFoldersAsync()
+    @abstractmethod
+    def get_folders_async_overload_default_options_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[StorageFolder]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.IStorageFolder::GetItemAsync(System.String)
+    @abstractmethod
+    def get_item_async(self, name: str, /) -> windows_foundation.IAsyncOperation[IStorageItem]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.IStorageFolder::GetItemsAsync()
+    @abstractmethod
+    def get_items_async_overload_default_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[IStorageItem]]: ...
 
 @typing.final
 class IStorageFolder(winrt.system.Object, ImplementsIStorageFolder, ImplementsIStorageItem):
@@ -1144,7 +1219,9 @@ class IStorageFolder(winrt.system.Object, ImplementsIStorageFolder, ImplementsIS
     def path(self) -> str: ...
 
 class ImplementsIStorageFolder2():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.IStorageFolder2::TryGetItemAsync(System.String)
+    @abstractmethod
+    def try_get_item_async(self, name: str, /) -> windows_foundation.IAsyncOperation[typing.Optional[IStorageItem]]: ...
 
 @typing.final
 class IStorageFolder2(winrt.system.Object, ImplementsIStorageFolder2):
@@ -1152,7 +1229,40 @@ class IStorageFolder2(winrt.system.Object, ImplementsIStorageFolder2):
     def try_get_item_async(self, name: str, /) -> windows_foundation.IAsyncOperation[typing.Optional[IStorageItem]]: ...
 
 class ImplementsIStorageItem():
-    pass
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::DeleteAsync(Windows.Storage.StorageDeleteOption)
+    @abstractmethod
+    def delete_async(self, option: StorageDeleteOption, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::DeleteAsync()
+    @abstractmethod
+    def delete_async_overload_default_options(self) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.BasicProperties> Windows.Storage.IStorageItem::GetBasicPropertiesAsync()
+    @abstractmethod
+    def get_basic_properties_async(self) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.BasicProperties]: ...
+    # System.Boolean Windows.Storage.IStorageItem::IsOfType(Windows.Storage.StorageItemTypes)
+    @abstractmethod
+    def is_of_type(self, type: StorageItemTypes, /) -> bool: ...
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::RenameAsync(System.String,Windows.Storage.NameCollisionOption)
+    @abstractmethod
+    def rename_async(self, desired_name: str, option: NameCollisionOption, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::RenameAsync(System.String)
+    @abstractmethod
+    def rename_async_overload_default_options(self, desired_name: str, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Storage.FileAttributes Windows.Storage.IStorageItem::get_Attributes()
+    @_property
+    @abstractmethod
+    def attributes(self) -> FileAttributes: ...
+    # Windows.Foundation.DateTime Windows.Storage.IStorageItem::get_DateCreated()
+    @_property
+    @abstractmethod
+    def date_created(self) -> datetime.datetime: ...
+    # System.String Windows.Storage.IStorageItem::get_Name()
+    @_property
+    @abstractmethod
+    def name(self) -> str: ...
+    # System.String Windows.Storage.IStorageItem::get_Path()
+    @_property
+    @abstractmethod
+    def path(self) -> str: ...
 
 @typing.final
 class IStorageItem(winrt.system.Object, ImplementsIStorageItem):
@@ -1182,7 +1292,12 @@ class IStorageItem(winrt.system.Object, ImplementsIStorageItem):
     def path(self) -> str: ...
 
 class ImplementsIStorageItem2():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageItem2::GetParentAsync()
+    @abstractmethod
+    def get_parent_async(self) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
+    # System.Boolean Windows.Storage.IStorageItem2::IsEqual(Windows.Storage.IStorageItem)
+    @abstractmethod
+    def is_equal(self, item: ImplementsIStorageItem, /) -> bool: ...
 
 @typing.final
 class IStorageItem2(winrt.system.Object, ImplementsIStorageItem2, ImplementsIStorageItem):
@@ -1216,7 +1331,31 @@ class IStorageItem2(winrt.system.Object, ImplementsIStorageItem2, ImplementsISto
     def path(self) -> str: ...
 
 class ImplementsIStorageItemProperties():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32,Windows.Storage.FileProperties.ThumbnailOptions)
+    @abstractmethod
+    def get_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, options: windows_storage_fileproperties.ThumbnailOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    @abstractmethod
+    def get_thumbnail_async_overload_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    @abstractmethod
+    def get_thumbnail_async_overload_default_size_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # System.String Windows.Storage.IStorageItemProperties::get_DisplayName()
+    @_property
+    @abstractmethod
+    def display_name(self) -> str: ...
+    # System.String Windows.Storage.IStorageItemProperties::get_DisplayType()
+    @_property
+    @abstractmethod
+    def display_type(self) -> str: ...
+    # System.String Windows.Storage.IStorageItemProperties::get_FolderRelativeId()
+    @_property
+    @abstractmethod
+    def folder_relative_id(self) -> str: ...
+    # Windows.Storage.FileProperties.StorageItemContentProperties Windows.Storage.IStorageItemProperties::get_Properties()
+    @_property
+    @abstractmethod
+    def properties(self) -> windows_storage_fileproperties.StorageItemContentProperties: ...
 
 @typing.final
 class IStorageItemProperties(winrt.system.Object, ImplementsIStorageItemProperties):
@@ -1240,7 +1379,15 @@ class IStorageItemProperties(winrt.system.Object, ImplementsIStorageItemProperti
     def properties(self) -> windows_storage_fileproperties.StorageItemContentProperties: ...
 
 class ImplementsIStorageItemProperties2():
-    pass
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32,Windows.Storage.FileProperties.ThumbnailOptions)
+    @abstractmethod
+    def get_scaled_image_as_thumbnail_async(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, options: windows_storage_fileproperties.ThumbnailOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode,System.UInt32)
+    @abstractmethod
+    def get_scaled_image_as_thumbnail_async_overload_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, requested_size: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    @abstractmethod
+    def get_scaled_image_as_thumbnail_async_overload_default_size_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail]: ...
 
 @typing.final
 class IStorageItemProperties2(winrt.system.Object, ImplementsIStorageItemProperties2, ImplementsIStorageItemProperties):
@@ -1270,7 +1417,10 @@ class IStorageItemProperties2(winrt.system.Object, ImplementsIStorageItemPropert
     def properties(self) -> windows_storage_fileproperties.StorageItemContentProperties: ...
 
 class ImplementsIStorageItemPropertiesWithProvider():
-    pass
+    # Windows.Storage.StorageProvider Windows.Storage.IStorageItemPropertiesWithProvider::get_Provider()
+    @_property
+    @abstractmethod
+    def provider(self) -> StorageProvider: ...
 
 @typing.final
 class IStorageItemPropertiesWithProvider(winrt.system.Object, ImplementsIStorageItemPropertiesWithProvider, ImplementsIStorageItemProperties):
@@ -1297,7 +1447,9 @@ class IStorageItemPropertiesWithProvider(winrt.system.Object, ImplementsIStorage
     def properties(self) -> windows_storage_fileproperties.StorageItemContentProperties: ...
 
 class ImplementsIStreamedFileDataRequest():
-    pass
+    # System.Void Windows.Storage.IStreamedFileDataRequest::FailAndClose(Windows.Storage.StreamedFileFailureMode)
+    @abstractmethod
+    def fail_and_close(self, failure_mode: StreamedFileFailureMode, /) -> None: ...
 
 @typing.final
 class IStreamedFileDataRequest(winrt.system.Object, ImplementsIStreamedFileDataRequest):
