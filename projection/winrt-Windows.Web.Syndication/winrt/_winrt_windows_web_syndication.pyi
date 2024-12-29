@@ -998,7 +998,7 @@ class ISyndicationNode(winrt.system.Object, ImplementsISyndicationNode):
     @node_value.setter
     def node_value(self, value: str) -> None: ...
 
-class ImplementsISyndicationText():
+class ImplementsISyndicationText(ImplementsISyndicationNode):
     # System.String Windows.Web.Syndication.ISyndicationText::get_Text()
     @_property
     @abstractmethod

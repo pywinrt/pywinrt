@@ -785,7 +785,7 @@ class ImplementsILearningModelOperatorProvider():
 class ILearningModelOperatorProvider(winrt.system.Object, ImplementsILearningModelOperatorProvider):
     pass
 
-class ImplementsITensor():
+class ImplementsITensor(ImplementsILearningModelFeatureValue):
     # Windows.Foundation.Collections.IVectorView`1<System.Int64> Windows.AI.MachineLearning.ITensor::get_Shape()
     @_property
     @abstractmethod

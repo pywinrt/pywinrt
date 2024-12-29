@@ -77,7 +77,7 @@ class IBindableIterator(winrt.system.Object, ImplementsIBindableIterator):
     @_property
     def has_current(self) -> bool: ...
 
-class ImplementsIBindableObservableVector():
+class ImplementsIBindableObservableVector(ImplementsIBindableVector, ImplementsIBindableIterable):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Interop.IBindableObservableVector::add_VectorChanged(Microsoft.UI.Xaml.Interop.BindableVectorChangedEventHandler)
     @abstractmethod
     def add_vector_changed(self, handler: BindableVectorChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
@@ -115,7 +115,7 @@ class IBindableObservableVector(winrt.system.Object, ImplementsIBindableObservab
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class ImplementsIBindableVector():
+class ImplementsIBindableVector(ImplementsIBindableIterable):
     # System.Void Microsoft.UI.Xaml.Interop.IBindableVector::Append(System.Object)
     @abstractmethod
     def append(self, value: winrt.system.Object, /) -> None: ...
@@ -174,7 +174,7 @@ class IBindableVector(winrt.system.Object, ImplementsIBindableVector, Implements
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class ImplementsIBindableVectorView():
+class ImplementsIBindableVectorView(ImplementsIBindableIterable):
     # System.Object Microsoft.UI.Xaml.Interop.IBindableVectorView::GetAt(System.UInt32)
     @abstractmethod
     def get_at(self, index: winrt.system.UInt32, /) -> winrt.system.Object: ...

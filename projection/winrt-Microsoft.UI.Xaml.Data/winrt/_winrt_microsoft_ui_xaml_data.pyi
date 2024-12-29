@@ -256,7 +256,7 @@ class RelativeSource(microsoft_ui_xaml.DependencyObject, metaclass=RelativeSourc
     @typing.final
     def mode(self, value: RelativeSourceMode) -> None: ...
 
-class ImplementsICollectionView():
+class ImplementsICollectionView(windows_foundation_collections.ImplementsIObservableVector[winrt.system.Object]):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> Microsoft.UI.Xaml.Data.ICollectionView::LoadMoreItemsAsync(System.UInt32)
     @abstractmethod
     def load_more_items_async(self, count: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[LoadMoreItemsResult]: ...
@@ -512,7 +512,7 @@ class ICustomPropertyProvider(winrt.system.Object, ImplementsICustomPropertyProv
     @_property
     def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
-class ImplementsIItemsRangeInfo():
+class ImplementsIItemsRangeInfo(windows_foundation.ImplementsIClosable):
     # System.Void Microsoft.UI.Xaml.Data.IItemsRangeInfo::RangesChanged(Microsoft.UI.Xaml.Data.ItemIndexRange,Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Xaml.Data.ItemIndexRange>)
     @abstractmethod
     def ranges_changed(self, visible_range: ItemIndexRange, tracked_items: typing.Sequence[ItemIndexRange], /) -> None: ...

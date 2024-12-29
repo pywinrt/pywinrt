@@ -61,7 +61,7 @@ class ISpiControllerProvider(winrt.system.Object, ImplementsISpiControllerProvid
     # Windows.Devices.Spi.Provider.ISpiDeviceProvider Windows.Devices.Spi.Provider.ISpiControllerProvider::GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)
     def get_device_provider(self, settings: ProviderSpiConnectionSettings, /) -> ISpiDeviceProvider: ...
 
-class ImplementsISpiDeviceProvider():
+class ImplementsISpiDeviceProvider(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::Read(System.Byte[])
     @abstractmethod
     def read(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...

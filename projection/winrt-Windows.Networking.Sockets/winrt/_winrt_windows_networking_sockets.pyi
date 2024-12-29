@@ -895,7 +895,7 @@ class IControlChannelTriggerResetEventDetails(winrt.system.Object, ImplementsICo
     @_property
     def software_slot_reset(self) -> bool: ...
 
-class ImplementsIWebSocket():
+class ImplementsIWebSocket(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Networking.Sockets.IWebSocket::Close(System.UInt16,System.String)
     @abstractmethod
     def close_with_status(self, code: winrt.system.UInt16, reason: str, /) -> None: ...
@@ -990,7 +990,7 @@ class IWebSocketControl(winrt.system.Object, ImplementsIWebSocketControl):
     @_property
     def supported_protocols(self) -> typing.MutableSequence[str]: ...
 
-class ImplementsIWebSocketControl2():
+class ImplementsIWebSocketControl2(ImplementsIWebSocketControl):
     # Windows.Foundation.Collections.IVector`1<Windows.Security.Cryptography.Certificates.ChainValidationResult> Windows.Networking.Sockets.IWebSocketControl2::get_IgnorableServerCertificateErrors()
     @_property
     @abstractmethod
@@ -1049,7 +1049,7 @@ class IWebSocketInformation(winrt.system.Object, ImplementsIWebSocketInformation
     @_property
     def protocol(self) -> str: ...
 
-class ImplementsIWebSocketInformation2():
+class ImplementsIWebSocketInformation2(ImplementsIWebSocketInformation):
     # Windows.Security.Cryptography.Certificates.Certificate Windows.Networking.Sockets.IWebSocketInformation2::get_ServerCertificate()
     @_property
     @abstractmethod

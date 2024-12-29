@@ -378,7 +378,7 @@ class IObservableVector(winrt.system.Object, ImplementsIObservableVector, winrt.
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class ImplementsIPropertySet():
+class ImplementsIPropertySet(ImplementsIObservableMap[str, winrt.system.Object]):  # type: ignore[misc]
     pass
 
 @typing.final

@@ -697,7 +697,7 @@ class IMediaExtension(winrt.system.Object, ImplementsIMediaExtension):
     # System.Void Windows.Media.IMediaExtension::SetProperties(Windows.Foundation.Collections.IPropertySet)
     def set_properties(self, configuration: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
 
-class ImplementsIMediaFrame():
+class ImplementsIMediaFrame(windows_foundation.ImplementsIClosable):
     # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.IMediaFrame::get_Duration()
     @_property
     @abstractmethod

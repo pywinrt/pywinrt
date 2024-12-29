@@ -424,7 +424,7 @@ class IMidiMessage(winrt.system.Object, ImplementsIMidiMessage):
     @_property
     def type(self) -> MidiMessageType: ...
 
-class ImplementsIMidiOutPort():
+class ImplementsIMidiOutPort(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Devices.Midi.IMidiOutPort::SendBuffer(Windows.Storage.Streams.IBuffer)
     @abstractmethod
     def send_buffer(self, midi_data: windows_storage_streams.ImplementsIBuffer, /) -> None: ...

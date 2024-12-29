@@ -2656,7 +2656,7 @@ class ICommonPosPrintStationCapabilities(winrt.system.Object, ImplementsICommonP
     @_property
     def supported_characters_per_line(self) -> typing.Sequence[winrt.system.UInt32]: ...
 
-class ImplementsICommonReceiptSlipCapabilities():
+class ImplementsICommonReceiptSlipCapabilities(ImplementsICommonPosPrintStationCapabilities):
     # System.Boolean Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_Is180RotationSupported()
     @_property
     @abstractmethod
@@ -2788,7 +2788,7 @@ class IPosPrinterJob(winrt.system.Object, ImplementsIPosPrinterJob):
     # System.Void Windows.Devices.PointOfService.IPosPrinterJob::PrintLine()
     def print_newline(self) -> None: ...
 
-class ImplementsIReceiptOrSlipJob():
+class ImplementsIReceiptOrSlipJob(ImplementsIPosPrinterJob):
     # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::DrawRuledLine(System.String,Windows.Devices.PointOfService.PosPrinterLineDirection,System.UInt32,Windows.Devices.PointOfService.PosPrinterLineStyle,System.UInt32)
     @abstractmethod
     def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...

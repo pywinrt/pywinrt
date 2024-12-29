@@ -1285,7 +1285,7 @@ class XmlText(winrt.system.Object, ImplementsIXmlText, ImplementsIXmlCharacterDa
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
-class ImplementsIXmlCharacterData():
+class ImplementsIXmlCharacterData(ImplementsIXmlNode, ImplementsIXmlNodeSerializer, ImplementsIXmlNodeSelector):
     # System.Void Windows.Data.Xml.Dom.IXmlCharacterData::AppendData(System.String)
     @abstractmethod
     def append_data(self, data: str, /) -> None: ...
@@ -1414,7 +1414,7 @@ class IXmlCharacterData(winrt.system.Object, ImplementsIXmlCharacterData, Implem
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
-class ImplementsIXmlNode():
+class ImplementsIXmlNode(ImplementsIXmlNodeSerializer, ImplementsIXmlNodeSelector):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     @abstractmethod
     def append_child(self, new_child: ImplementsIXmlNode, /) -> IXmlNode: ...
@@ -1631,7 +1631,7 @@ class IXmlNodeSerializer(winrt.system.Object, ImplementsIXmlNodeSerializer):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
-class ImplementsIXmlText():
+class ImplementsIXmlText(ImplementsIXmlCharacterData, ImplementsIXmlNode, ImplementsIXmlNodeSerializer, ImplementsIXmlNodeSelector):
     # Windows.Data.Xml.Dom.IXmlText Windows.Data.Xml.Dom.IXmlText::SplitText(System.UInt32)
     @abstractmethod
     def split_text(self, offset: winrt.system.UInt32, /) -> IXmlText: ...

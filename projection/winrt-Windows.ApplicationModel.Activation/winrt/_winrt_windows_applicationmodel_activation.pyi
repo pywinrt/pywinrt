@@ -1072,7 +1072,7 @@ class IActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgs):
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIActivatedEventArgsWithUser():
+class ImplementsIActivatedEventArgsWithUser(ImplementsIActivatedEventArgs):
     # Windows.System.User Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser::get_User()
     @_property
     @abstractmethod
@@ -1093,7 +1093,7 @@ class IActivatedEventArgsWithUser(winrt.system.Object, ImplementsIActivatedEvent
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIApplicationViewActivatedEventArgs():
+class ImplementsIApplicationViewActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.Int32 Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     @abstractmethod
@@ -1114,7 +1114,7 @@ class IApplicationViewActivatedEventArgs(winrt.system.Object, ImplementsIApplica
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIAppointmentsProviderActivatedEventArgs():
+class ImplementsIAppointmentsProviderActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs::get_Verb()
     @_property
     @abstractmethod
@@ -1135,7 +1135,7 @@ class IAppointmentsProviderActivatedEventArgs(winrt.system.Object, ImplementsIAp
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs():
+class ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs(ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs::get_AddAppointmentOperation()
     @_property
     @abstractmethod
@@ -1159,7 +1159,7 @@ class IAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object,
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs():
+class ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs(ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs::get_RemoveAppointmentOperation()
     @_property
     @abstractmethod
@@ -1183,7 +1183,7 @@ class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Obje
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs():
+class ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs(ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs::get_ReplaceAppointmentOperation()
     @_property
     @abstractmethod
@@ -1207,7 +1207,7 @@ class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Obj
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs():
+class ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_InstanceStartDate()
     @_property
     @abstractmethod
@@ -1245,7 +1245,7 @@ class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs():
+class ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs(ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.Foundation.TimeSpan Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs::get_Duration()
     @_property
     @abstractmethod
@@ -1288,7 +1288,7 @@ class IBackgroundActivatedEventArgs(winrt.system.Object, ImplementsIBackgroundAc
     @_property
     def task_instance(self) -> windows_applicationmodel_background.IBackgroundTaskInstance: ...
 
-class ImplementsIBarcodeScannerPreviewActivatedEventArgs():
+class ImplementsIBarcodeScannerPreviewActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs::get_ConnectionId()
     @_property
     @abstractmethod
@@ -1309,7 +1309,7 @@ class IBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, ImplementsIB
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsICachedFileUpdaterActivatedEventArgs():
+class ImplementsICachedFileUpdaterActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Storage.Provider.CachedFileUpdaterUI Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs::get_CachedFileUpdaterUI()
     @_property
     @abstractmethod
@@ -1330,7 +1330,7 @@ class ICachedFileUpdaterActivatedEventArgs(winrt.system.Object, ImplementsICache
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsICameraSettingsActivatedEventArgs():
+class ImplementsICameraSettingsActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.Object Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs::get_VideoDeviceController()
     @_property
     @abstractmethod
@@ -1358,7 +1358,7 @@ class ICameraSettingsActivatedEventArgs(winrt.system.Object, ImplementsICameraSe
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsICommandLineActivatedEventArgs():
+class ImplementsICommandLineActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Activation.CommandLineActivationOperation Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs::get_Operation()
     @_property
     @abstractmethod
@@ -1379,7 +1379,7 @@ class ICommandLineActivatedEventArgs(winrt.system.Object, ImplementsICommandLine
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIContactActivatedEventArgs():
+class ImplementsIContactActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IContactActivatedEventArgs::get_Verb()
     @_property
     @abstractmethod
@@ -1400,7 +1400,7 @@ class IContactActivatedEventArgs(winrt.system.Object, ImplementsIContactActivate
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIContactCallActivatedEventArgs():
+class ImplementsIContactCallActivatedEventArgs(ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs::get_Contact()
     @_property
     @abstractmethod
@@ -1438,7 +1438,7 @@ class IContactCallActivatedEventArgs(winrt.system.Object, ImplementsIContactCall
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIContactMapActivatedEventArgs():
+class ImplementsIContactMapActivatedEventArgs(ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Contacts.ContactAddress Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs::get_Address()
     @_property
     @abstractmethod
@@ -1469,7 +1469,7 @@ class IContactMapActivatedEventArgs(winrt.system.Object, ImplementsIContactMapAc
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIContactMessageActivatedEventArgs():
+class ImplementsIContactMessageActivatedEventArgs(ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs::get_Contact()
     @_property
     @abstractmethod
@@ -1526,7 +1526,7 @@ class IContactPanelActivatedEventArgs(winrt.system.Object, ImplementsIContactPan
     @_property
     def contact_panel(self) -> windows_applicationmodel_contacts.ContactPanel: ...
 
-class ImplementsIContactPickerActivatedEventArgs():
+class ImplementsIContactPickerActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Contacts.Provider.ContactPickerUI Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs::get_ContactPickerUI()
     @_property
     @abstractmethod
@@ -1547,7 +1547,7 @@ class IContactPickerActivatedEventArgs(winrt.system.Object, ImplementsIContactPi
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIContactPostActivatedEventArgs():
+class ImplementsIContactPostActivatedEventArgs(ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs::get_Contact()
     @_property
     @abstractmethod
@@ -1585,7 +1585,7 @@ class IContactPostActivatedEventArgs(winrt.system.Object, ImplementsIContactPost
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIContactVideoCallActivatedEventArgs():
+class ImplementsIContactVideoCallActivatedEventArgs(ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs::get_Contact()
     @_property
     @abstractmethod
@@ -1623,7 +1623,7 @@ class IContactVideoCallActivatedEventArgs(winrt.system.Object, ImplementsIContac
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIContactsProviderActivatedEventArgs():
+class ImplementsIContactsProviderActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs::get_Verb()
     @_property
     @abstractmethod
@@ -1644,7 +1644,7 @@ class IContactsProviderActivatedEventArgs(winrt.system.Object, ImplementsIContac
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIContinuationActivatedEventArgs():
+class ImplementsIContinuationActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs::get_ContinuationData()
     @_property
     @abstractmethod
@@ -1665,7 +1665,7 @@ class IContinuationActivatedEventArgs(winrt.system.Object, ImplementsIContinuati
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIDeviceActivatedEventArgs():
+class ImplementsIDeviceActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs::get_DeviceInformationId()
     @_property
     @abstractmethod
@@ -1693,7 +1693,7 @@ class IDeviceActivatedEventArgs(winrt.system.Object, ImplementsIDeviceActivatedE
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIDevicePairingActivatedEventArgs():
+class ImplementsIDevicePairingActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Devices.Enumeration.DeviceInformation Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs::get_DeviceInformation()
     @_property
     @abstractmethod
@@ -1714,7 +1714,7 @@ class IDevicePairingActivatedEventArgs(winrt.system.Object, ImplementsIDevicePai
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIDialReceiverActivatedEventArgs():
+class ImplementsIDialReceiverActivatedEventArgs(ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs::get_AppName()
     @_property
     @abstractmethod
@@ -1741,7 +1741,7 @@ class IDialReceiverActivatedEventArgs(winrt.system.Object, ImplementsIDialReceiv
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIFileActivatedEventArgs():
+class ImplementsIFileActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem> Windows.ApplicationModel.Activation.IFileActivatedEventArgs::get_Files()
     @_property
     @abstractmethod
@@ -1769,7 +1769,7 @@ class IFileActivatedEventArgs(winrt.system.Object, ImplementsIFileActivatedEvent
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName():
+class ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName::get_CallerPackageFamilyName()
     @_property
     @abstractmethod
@@ -1790,7 +1790,7 @@ class IFileActivatedEventArgsWithCallerPackageFamilyName(winrt.system.Object, Im
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIFileActivatedEventArgsWithNeighboringFiles():
+class ImplementsIFileActivatedEventArgsWithNeighboringFiles(ImplementsIFileActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.Storage.Search.StorageFileQueryResult Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles::get_NeighboringFilesQuery()
     @_property
     @abstractmethod
@@ -1817,7 +1817,7 @@ class IFileActivatedEventArgsWithNeighboringFiles(winrt.system.Object, Implement
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIFileOpenPickerActivatedEventArgs():
+class ImplementsIFileOpenPickerActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Storage.Pickers.Provider.FileOpenPickerUI Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs::get_FileOpenPickerUI()
     @_property
     @abstractmethod
@@ -1850,7 +1850,7 @@ class IFileOpenPickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileOpe
     @_property
     def caller_package_family_name(self) -> str: ...
 
-class ImplementsIFileOpenPickerContinuationEventArgs():
+class ImplementsIFileOpenPickerContinuationEventArgs(ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile> Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs::get_Files()
     @_property
     @abstractmethod
@@ -1874,7 +1874,7 @@ class IFileOpenPickerContinuationEventArgs(winrt.system.Object, ImplementsIFileO
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIFileSavePickerActivatedEventArgs():
+class ImplementsIFileSavePickerActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Storage.Pickers.Provider.FileSavePickerUI Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs::get_FileSavePickerUI()
     @_property
     @abstractmethod
@@ -1914,7 +1914,7 @@ class IFileSavePickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileSav
     @_property
     def enterprise_id(self) -> str: ...
 
-class ImplementsIFileSavePickerContinuationEventArgs():
+class ImplementsIFileSavePickerContinuationEventArgs(ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.Storage.StorageFile Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs::get_File()
     @_property
     @abstractmethod
@@ -1938,7 +1938,7 @@ class IFileSavePickerContinuationEventArgs(winrt.system.Object, ImplementsIFileS
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIFolderPickerContinuationEventArgs():
+class ImplementsIFolderPickerContinuationEventArgs(ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.Storage.StorageFolder Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs::get_Folder()
     @_property
     @abstractmethod
@@ -1962,7 +1962,7 @@ class IFolderPickerContinuationEventArgs(winrt.system.Object, ImplementsIFolderP
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsILaunchActivatedEventArgs():
+class ImplementsILaunchActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_Arguments()
     @_property
     @abstractmethod
@@ -1990,7 +1990,7 @@ class ILaunchActivatedEventArgs(winrt.system.Object, ImplementsILaunchActivatedE
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsILaunchActivatedEventArgs2():
+class ImplementsILaunchActivatedEventArgs2(ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Activation.TileActivatedInfo Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2::get_TileActivatedInfo()
     @_property
     @abstractmethod
@@ -2017,7 +2017,7 @@ class ILaunchActivatedEventArgs2(winrt.system.Object, ImplementsILaunchActivated
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsILockScreenActivatedEventArgs():
+class ImplementsILockScreenActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.Object Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs::get_Info()
     @_property
     @abstractmethod
@@ -2038,7 +2038,7 @@ class ILockScreenActivatedEventArgs(winrt.system.Object, ImplementsILockScreenAc
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsILockScreenCallActivatedEventArgs():
+class ImplementsILockScreenCallActivatedEventArgs(ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.Calls.LockScreenCallUI Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs::get_CallUI()
     @_property
     @abstractmethod
@@ -2065,7 +2065,7 @@ class ILockScreenCallActivatedEventArgs(winrt.system.Object, ImplementsILockScre
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIPhoneCallActivatedEventArgs():
+class ImplementsIPhoneCallActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.Guid Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs::get_LineId()
     @_property
     @abstractmethod
@@ -2086,7 +2086,7 @@ class IPhoneCallActivatedEventArgs(winrt.system.Object, ImplementsIPhoneCallActi
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIPickerReturnedActivatedEventArgs():
+class ImplementsIPickerReturnedActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs::get_PickerOperationId()
     @_property
     @abstractmethod
@@ -2107,7 +2107,7 @@ class IPickerReturnedActivatedEventArgs(winrt.system.Object, ImplementsIPickerRe
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIPrelaunchActivatedEventArgs():
+class ImplementsIPrelaunchActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.Boolean Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs::get_PrelaunchActivated()
     @_property
     @abstractmethod
@@ -2128,7 +2128,7 @@ class IPrelaunchActivatedEventArgs(winrt.system.Object, ImplementsIPrelaunchActi
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIPrint3DWorkflowActivatedEventArgs():
+class ImplementsIPrint3DWorkflowActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Devices.Printers.Extensions.Print3DWorkflow Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs::get_Workflow()
     @_property
     @abstractmethod
@@ -2149,7 +2149,7 @@ class IPrint3DWorkflowActivatedEventArgs(winrt.system.Object, ImplementsIPrint3D
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIPrintTaskSettingsActivatedEventArgs():
+class ImplementsIPrintTaskSettingsActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Devices.Printers.Extensions.PrintTaskConfiguration Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs::get_Configuration()
     @_property
     @abstractmethod
@@ -2170,7 +2170,7 @@ class IPrintTaskSettingsActivatedEventArgs(winrt.system.Object, ImplementsIPrint
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIProtocolActivatedEventArgs():
+class ImplementsIProtocolActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Foundation.Uri Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs::get_Uri()
     @_property
     @abstractmethod
@@ -2191,7 +2191,7 @@ class IProtocolActivatedEventArgs(winrt.system.Object, ImplementsIProtocolActiva
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData():
+class ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData::get_CallerPackageFamilyName()
     @_property
     @abstractmethod
@@ -2219,7 +2219,7 @@ class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(winrt.system
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIProtocolForResultsActivatedEventArgs():
+class ImplementsIProtocolForResultsActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.System.ProtocolForResultsOperation Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs::get_ProtocolForResultsOperation()
     @_property
     @abstractmethod
@@ -2240,7 +2240,7 @@ class IProtocolForResultsActivatedEventArgs(winrt.system.Object, ImplementsIProt
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIRestrictedLaunchActivatedEventArgs():
+class ImplementsIRestrictedLaunchActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.Object Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs::get_SharedContext()
     @_property
     @abstractmethod
@@ -2261,7 +2261,7 @@ class IRestrictedLaunchActivatedEventArgs(winrt.system.Object, ImplementsIRestri
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsISearchActivatedEventArgs():
+class ImplementsISearchActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.ISearchActivatedEventArgs::get_Language()
     @_property
     @abstractmethod
@@ -2301,7 +2301,7 @@ class ISearchActivatedEventArgsWithLinguisticDetails(winrt.system.Object, Implem
     @_property
     def linguistic_details(self) -> windows_applicationmodel_search.SearchPaneQueryLinguisticDetails: ...
 
-class ImplementsIShareTargetActivatedEventArgs():
+class ImplementsIShareTargetActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs::get_ShareOperation()
     @_property
     @abstractmethod
@@ -2322,7 +2322,7 @@ class IShareTargetActivatedEventArgs(winrt.system.Object, ImplementsIShareTarget
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIStartupTaskActivatedEventArgs():
+class ImplementsIStartupTaskActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs::get_TaskId()
     @_property
     @abstractmethod
@@ -2343,7 +2343,7 @@ class IStartupTaskActivatedEventArgs(winrt.system.Object, ImplementsIStartupTask
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIToastNotificationActivatedEventArgs():
+class ImplementsIToastNotificationActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs::get_Argument()
     @_property
     @abstractmethod
@@ -2371,7 +2371,7 @@ class IToastNotificationActivatedEventArgs(winrt.system.Object, ImplementsIToast
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIUserDataAccountProviderActivatedEventArgs():
+class ImplementsIUserDataAccountProviderActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs::get_Operation()
     @_property
     @abstractmethod
@@ -2392,7 +2392,7 @@ class IUserDataAccountProviderActivatedEventArgs(winrt.system.Object, Implements
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIViewSwitcherProvider():
+class ImplementsIViewSwitcherProvider(ImplementsIActivatedEventArgs):
     # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.IViewSwitcherProvider::get_ViewSwitcher()
     @_property
     @abstractmethod
@@ -2413,7 +2413,7 @@ class IViewSwitcherProvider(winrt.system.Object, ImplementsIViewSwitcherProvider
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIVoiceCommandActivatedEventArgs():
+class ImplementsIVoiceCommandActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Media.SpeechRecognition.SpeechRecognitionResult Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs::get_Result()
     @_property
     @abstractmethod
@@ -2434,7 +2434,7 @@ class IVoiceCommandActivatedEventArgs(winrt.system.Object, ImplementsIVoiceComma
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIWalletActionActivatedEventArgs():
+class ImplementsIWalletActionActivatedEventArgs(ImplementsIActivatedEventArgs):
     # System.String Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs::get_ActionId()
     @_property
     @abstractmethod
@@ -2469,7 +2469,7 @@ class IWalletActionActivatedEventArgs(winrt.system.Object, ImplementsIWalletActi
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIWebAccountProviderActivatedEventArgs():
+class ImplementsIWebAccountProviderActivatedEventArgs(ImplementsIActivatedEventArgs):
     # Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs::get_Operation()
     @_property
     @abstractmethod
@@ -2490,7 +2490,7 @@ class IWebAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIWebA
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
-class ImplementsIWebAuthenticationBrokerContinuationEventArgs():
+class ImplementsIWebAuthenticationBrokerContinuationEventArgs(ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
     # Windows.Security.Authentication.Web.WebAuthenticationResult Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs::get_WebAuthenticationResult()
     @_property
     @abstractmethod

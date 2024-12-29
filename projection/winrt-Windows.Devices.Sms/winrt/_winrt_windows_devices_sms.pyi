@@ -833,7 +833,7 @@ class SmsWapMessage(winrt.system.Object, ImplementsISmsMessageBase):
     @_property
     def to(self) -> str: ...
 
-class ImplementsISmsBinaryMessage():
+class ImplementsISmsBinaryMessage(ImplementsISmsMessage):
     # System.Byte[] Windows.Devices.Sms.ISmsBinaryMessage::GetData()
     # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     @abstractmethod
@@ -1006,7 +1006,7 @@ class ISmsMessageBase(winrt.system.Object, ImplementsISmsMessageBase):
     @_property
     def sim_icc_id(self) -> str: ...
 
-class ImplementsISmsTextMessage():
+class ImplementsISmsTextMessage(ImplementsISmsMessage):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.ISmsBinaryMessage> Windows.Devices.Sms.ISmsTextMessage::ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)
     # @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod

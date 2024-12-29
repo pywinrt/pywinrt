@@ -835,7 +835,7 @@ class IBackgroundTaskInstance(winrt.system.Object, ImplementsIBackgroundTaskInst
     @_property
     def trigger_details(self) -> winrt.system.Object: ...
 
-class ImplementsIBackgroundTaskInstance2():
+class ImplementsIBackgroundTaskInstance2(ImplementsIBackgroundTaskInstance):
     # System.UInt32 Windows.ApplicationModel.Background.IBackgroundTaskInstance2::GetThrottleCount(Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter)
     @abstractmethod
     def get_throttle_count(self, counter: BackgroundTaskThrottleCounter, /) -> winrt.system.UInt32: ...
@@ -869,7 +869,7 @@ class IBackgroundTaskInstance2(winrt.system.Object, ImplementsIBackgroundTaskIns
     @_property
     def trigger_details(self) -> winrt.system.Object: ...
 
-class ImplementsIBackgroundTaskInstance4():
+class ImplementsIBackgroundTaskInstance4(ImplementsIBackgroundTaskInstance):
     # Windows.System.User Windows.ApplicationModel.Background.IBackgroundTaskInstance4::get_User()
     @_property
     @abstractmethod
@@ -949,7 +949,7 @@ class IBackgroundTaskRegistration(winrt.system.Object, ImplementsIBackgroundTask
     @_property
     def task_id(self) -> _uuid.UUID: ...
 
-class ImplementsIBackgroundTaskRegistration2():
+class ImplementsIBackgroundTaskRegistration2(ImplementsIBackgroundTaskRegistration):
     # Windows.ApplicationModel.Background.IBackgroundTrigger Windows.ApplicationModel.Background.IBackgroundTaskRegistration2::get_Trigger()
     @_property
     @abstractmethod
@@ -977,7 +977,7 @@ class IBackgroundTaskRegistration2(winrt.system.Object, ImplementsIBackgroundTas
     @_property
     def task_id(self) -> _uuid.UUID: ...
 
-class ImplementsIBackgroundTaskRegistration3():
+class ImplementsIBackgroundTaskRegistration3(ImplementsIBackgroundTaskRegistration):
     # Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup Windows.ApplicationModel.Background.IBackgroundTaskRegistration3::get_TaskGroup()
     @_property
     @abstractmethod

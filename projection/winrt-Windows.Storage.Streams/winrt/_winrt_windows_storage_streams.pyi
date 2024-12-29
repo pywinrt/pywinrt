@@ -767,7 +767,7 @@ class IDataWriter(winrt.system.Object, ImplementsIDataWriter):
     @_property
     def unstored_buffer_length(self) -> winrt.system.UInt32: ...
 
-class ImplementsIInputStream():
+class ImplementsIInputStream(windows_foundation.ImplementsIClosable):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Storage.Streams.IBuffer,System.UInt32> Windows.Storage.Streams.IInputStream::ReadAsync(Windows.Storage.Streams.IBuffer,System.UInt32,Windows.Storage.Streams.InputStreamOptions)
     @abstractmethod
     def read_async(self, buffer: ImplementsIBuffer, count: winrt.system.UInt32, options: InputStreamOptions, /) -> windows_foundation.IAsyncOperationWithProgress[IBuffer, winrt.system.UInt32]: ...
@@ -791,7 +791,7 @@ class IInputStreamReference(winrt.system.Object, ImplementsIInputStreamReference
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IInputStream> Windows.Storage.Streams.IInputStreamReference::OpenSequentialReadAsync()
     def open_sequential_read_async(self) -> windows_foundation.IAsyncOperation[IInputStream]: ...
 
-class ImplementsIOutputStream():
+class ImplementsIOutputStream(windows_foundation.ImplementsIClosable):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Storage.Streams.IOutputStream::FlushAsync()
     @abstractmethod
     def flush_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -825,7 +825,7 @@ class IPropertySetSerializer(winrt.system.Object, ImplementsIPropertySetSerializ
     # Windows.Storage.Streams.IBuffer Windows.Storage.Streams.IPropertySetSerializer::Serialize(Windows.Foundation.Collections.IPropertySet)
     def serialize(self, property_set: windows_foundation_collections.ImplementsIPropertySet, /) -> IBuffer: ...
 
-class ImplementsIRandomAccessStream():
+class ImplementsIRandomAccessStream(ImplementsIOutputStream, ImplementsIInputStream, windows_foundation.ImplementsIClosable):
     # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.Streams.IRandomAccessStream::CloneStream()
     @abstractmethod
     def clone_stream(self) -> IRandomAccessStream: ...
@@ -905,7 +905,7 @@ class IRandomAccessStreamReference(winrt.system.Object, ImplementsIRandomAccessS
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Storage.Streams.IRandomAccessStreamReference::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[IRandomAccessStreamWithContentType]: ...
 
-class ImplementsIRandomAccessStreamWithContentType():
+class ImplementsIRandomAccessStreamWithContentType(ImplementsIContentTypeProvider, ImplementsIRandomAccessStream, ImplementsIOutputStream, ImplementsIInputStream, windows_foundation.ImplementsIClosable):  # type: ignore[misc]
     pass
 
 @typing.final

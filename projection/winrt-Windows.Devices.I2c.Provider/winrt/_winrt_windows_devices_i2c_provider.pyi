@@ -54,7 +54,7 @@ class II2cControllerProvider(winrt.system.Object, ImplementsII2cControllerProvid
     # Windows.Devices.I2c.Provider.II2cDeviceProvider Windows.Devices.I2c.Provider.II2cControllerProvider::GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)
     def get_device_provider(self, settings: ProviderI2cConnectionSettings, /) -> II2cDeviceProvider: ...
 
-class ImplementsII2cDeviceProvider():
+class ImplementsII2cDeviceProvider(windows_foundation.ImplementsIClosable):
     # System.Void Windows.Devices.I2c.Provider.II2cDeviceProvider::Read(System.Byte[])
     @abstractmethod
     def read(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...

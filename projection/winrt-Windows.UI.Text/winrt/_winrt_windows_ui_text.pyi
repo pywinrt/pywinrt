@@ -1476,7 +1476,7 @@ class ITextRange(winrt.system.Object, ImplementsITextRange):
     @text.setter
     def text(self, value: str) -> None: ...
 
-class ImplementsITextSelection():
+class ImplementsITextSelection(ImplementsITextRange):
     # System.Int32 Windows.UI.Text.ITextSelection::EndKey(Windows.UI.Text.TextRangeUnit,System.Boolean)
     @abstractmethod
     def end_key(self, unit: TextRangeUnit, extend: bool, /) -> winrt.system.Int32: ...
