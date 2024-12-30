@@ -13,7 +13,7 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
-class ImplementsIGraphicsEffect(ImplementsIGraphicsEffectSource):
+class IGraphicsEffect(IGraphicsEffectSource, winrt._winrt.IInspectable):
     # System.String Windows.Graphics.Effects.IGraphicsEffect::get_Name()
     @_property
     @abstractmethod
@@ -23,19 +23,6 @@ class ImplementsIGraphicsEffect(ImplementsIGraphicsEffectSource):
     @abstractmethod
     def name(self, value: str) -> None: ...
 
-@typing.final
-class IGraphicsEffect(winrt.system.Object, ImplementsIGraphicsEffect, ImplementsIGraphicsEffectSource):
-    # System.String Windows.Graphics.Effects.IGraphicsEffect::get_Name()
-    @_property
-    def name(self) -> str: ...
-    # System.Void Windows.Graphics.Effects.IGraphicsEffect::put_Name(System.String)
-    @name.setter
-    def name(self, value: str) -> None: ...
-
-class ImplementsIGraphicsEffectSource():
-    pass
-
-@typing.final
-class IGraphicsEffectSource(winrt.system.Object, ImplementsIGraphicsEffectSource):
+class IGraphicsEffectSource(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 

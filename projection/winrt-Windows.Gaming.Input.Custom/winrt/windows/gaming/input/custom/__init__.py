@@ -12,17 +12,11 @@ from winrt._winrt_windows_gaming_input_custom import (
     HidGameControllerProvider,
     XusbGameControllerProvider,
     ICustomGameControllerFactory,
-    ImplementsICustomGameControllerFactory,
     IGameControllerInputSink,
-    ImplementsIGameControllerInputSink,
     IGameControllerProvider,
-    ImplementsIGameControllerProvider,
     IGipGameControllerInputSink,
-    ImplementsIGipGameControllerInputSink,
     IHidGameControllerInputSink,
-    ImplementsIHidGameControllerInputSink,
     IXusbGameControllerInputSink,
-    ImplementsIXusbGameControllerInputSink,
 )
 
 __all__ = [
@@ -38,17 +32,11 @@ __all__ = [
     "HidGameControllerProvider",
     "XusbGameControllerProvider",
     "ICustomGameControllerFactory",
-    "ImplementsICustomGameControllerFactory",
     "IGameControllerInputSink",
-    "ImplementsIGameControllerInputSink",
     "IGameControllerProvider",
-    "ImplementsIGameControllerProvider",
     "IGipGameControllerInputSink",
-    "ImplementsIGipGameControllerInputSink",
     "IHidGameControllerInputSink",
-    "ImplementsIHidGameControllerInputSink",
     "IXusbGameControllerInputSink",
-    "ImplementsIXusbGameControllerInputSink",
 ]
 
 class GipFirmwareUpdateStatus(enum.IntEnum):

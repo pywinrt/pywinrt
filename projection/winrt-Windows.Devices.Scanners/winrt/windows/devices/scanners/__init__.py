@@ -12,9 +12,7 @@ from winrt._winrt_windows_devices_scanners import (
     ImageScannerPreviewResult,
     ImageScannerScanResult,
     IImageScannerFormatConfiguration,
-    ImplementsIImageScannerFormatConfiguration,
     IImageScannerSourceConfiguration,
-    ImplementsIImageScannerSourceConfiguration,
 )
 
 __all__ = [
@@ -30,9 +28,7 @@ __all__ = [
     "ImageScannerPreviewResult",
     "ImageScannerScanResult",
     "IImageScannerFormatConfiguration",
-    "ImplementsIImageScannerFormatConfiguration",
     "IImageScannerSourceConfiguration",
-    "ImplementsIImageScannerSourceConfiguration",
 ]
 
 class ImageScannerAutoCroppingMode(enum.IntEnum):

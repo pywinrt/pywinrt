@@ -23,7 +23,7 @@ Self = typing.TypeVar('Self')
 class IRawElementProviderSimple(microsoft_ui_xaml.DependencyObject):
     pass
 
-class ImplementsIAnnotationProvider():
+class IAnnotationProvider(winrt._winrt.IInspectable):
     # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider::get_AnnotationTypeId()
     @_property
     @abstractmethod
@@ -45,35 +45,12 @@ class ImplementsIAnnotationProvider():
     @abstractmethod
     def target(self) -> IRawElementProviderSimple: ...
 
-@typing.final
-class IAnnotationProvider(winrt.system.Object, ImplementsIAnnotationProvider):
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider::get_AnnotationTypeId()
-    @_property
-    def annotation_type_id(self) -> winrt.system.Int32: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider::get_AnnotationTypeName()
-    @_property
-    def annotation_type_name(self) -> str: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider::get_Author()
-    @_property
-    def author(self) -> str: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider::get_DateTime()
-    @_property
-    def date_time(self) -> str: ...
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider::get_Target()
-    @_property
-    def target(self) -> IRawElementProviderSimple: ...
-
-class ImplementsICustomNavigationProvider():
+class ICustomNavigationProvider(winrt._winrt.IInspectable):
     # System.Object Microsoft.UI.Xaml.Automation.Provider.ICustomNavigationProvider::NavigateCustom(Microsoft.UI.Xaml.Automation.Peers.AutomationNavigationDirection)
     @abstractmethod
     def navigate_custom(self, direction: microsoft_ui_xaml_automation_peers.AutomationNavigationDirection, /) -> winrt.system.Object: ...
 
-@typing.final
-class ICustomNavigationProvider(winrt.system.Object, ImplementsICustomNavigationProvider):
-    # System.Object Microsoft.UI.Xaml.Automation.Provider.ICustomNavigationProvider::NavigateCustom(Microsoft.UI.Xaml.Automation.Peers.AutomationNavigationDirection)
-    def navigate_custom(self, direction: microsoft_ui_xaml_automation_peers.AutomationNavigationDirection, /) -> winrt.system.Object: ...
-
-class ImplementsIDockProvider():
+class IDockProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IDockProvider::SetDockPosition(Microsoft.UI.Xaml.Automation.DockPosition)
     @abstractmethod
     def set_dock_position(self, dock_position: microsoft_ui_xaml_automation.DockPosition, /) -> None: ...
@@ -82,15 +59,7 @@ class ImplementsIDockProvider():
     @abstractmethod
     def dock_position(self) -> microsoft_ui_xaml_automation.DockPosition: ...
 
-@typing.final
-class IDockProvider(winrt.system.Object, ImplementsIDockProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IDockProvider::SetDockPosition(Microsoft.UI.Xaml.Automation.DockPosition)
-    def set_dock_position(self, dock_position: microsoft_ui_xaml_automation.DockPosition, /) -> None: ...
-    # Microsoft.UI.Xaml.Automation.DockPosition Microsoft.UI.Xaml.Automation.Provider.IDockProvider::get_DockPosition()
-    @_property
-    def dock_position(self) -> microsoft_ui_xaml_automation.DockPosition: ...
-
-class ImplementsIDragProvider():
+class IDragProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.IDragProvider::GetGrabbedItems()
     @abstractmethod
     def get_grabbed_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -107,21 +76,7 @@ class ImplementsIDragProvider():
     @abstractmethod
     def is_grabbed(self) -> bool: ...
 
-@typing.final
-class IDragProvider(winrt.system.Object, ImplementsIDragProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.IDragProvider::GetGrabbedItems()
-    def get_grabbed_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IDragProvider::get_DropEffect()
-    @_property
-    def drop_effect(self) -> str: ...
-    # System.String[] Microsoft.UI.Xaml.Automation.Provider.IDragProvider::get_DropEffects()
-    @_property
-    def drop_effects(self) -> str: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IDragProvider::get_IsGrabbed()
-    @_property
-    def is_grabbed(self) -> bool: ...
-
-class ImplementsIDropTargetProvider():
+class IDropTargetProvider(winrt._winrt.IInspectable):
     # System.String Microsoft.UI.Xaml.Automation.Provider.IDropTargetProvider::get_DropEffect()
     @_property
     @abstractmethod
@@ -131,16 +86,7 @@ class ImplementsIDropTargetProvider():
     @abstractmethod
     def drop_effects(self) -> str: ...
 
-@typing.final
-class IDropTargetProvider(winrt.system.Object, ImplementsIDropTargetProvider):
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IDropTargetProvider::get_DropEffect()
-    @_property
-    def drop_effect(self) -> str: ...
-    # System.String[] Microsoft.UI.Xaml.Automation.Provider.IDropTargetProvider::get_DropEffects()
-    @_property
-    def drop_effects(self) -> str: ...
-
-class ImplementsIExpandCollapseProvider():
+class IExpandCollapseProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider::Collapse()
     @abstractmethod
     def collapse(self) -> None: ...
@@ -152,17 +98,7 @@ class ImplementsIExpandCollapseProvider():
     @abstractmethod
     def expand_collapse_state(self) -> microsoft_ui_xaml_automation.ExpandCollapseState: ...
 
-@typing.final
-class IExpandCollapseProvider(winrt.system.Object, ImplementsIExpandCollapseProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider::Collapse()
-    def collapse(self) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider::Expand()
-    def expand(self) -> None: ...
-    # Microsoft.UI.Xaml.Automation.ExpandCollapseState Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider::get_ExpandCollapseState()
-    @_property
-    def expand_collapse_state(self) -> microsoft_ui_xaml_automation.ExpandCollapseState: ...
-
-class ImplementsIGridItemProvider():
+class IGridItemProvider(winrt._winrt.IInspectable):
     # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider::get_Column()
     @_property
     @abstractmethod
@@ -184,25 +120,7 @@ class ImplementsIGridItemProvider():
     @abstractmethod
     def row_span(self) -> winrt.system.Int32: ...
 
-@typing.final
-class IGridItemProvider(winrt.system.Object, ImplementsIGridItemProvider):
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider::get_Column()
-    @_property
-    def column(self) -> winrt.system.Int32: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider::get_ColumnSpan()
-    @_property
-    def column_span(self) -> winrt.system.Int32: ...
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider::get_ContainingGrid()
-    @_property
-    def containing_grid(self) -> IRawElementProviderSimple: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider::get_Row()
-    @_property
-    def row(self) -> winrt.system.Int32: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider::get_RowSpan()
-    @_property
-    def row_span(self) -> winrt.system.Int32: ...
-
-class ImplementsIGridProvider():
+class IGridProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.IGridProvider::GetItem(System.Int32,System.Int32)
     @abstractmethod
     def get_item(self, row: winrt.system.Int32, column: winrt.system.Int32, /) -> IRawElementProviderSimple: ...
@@ -215,38 +133,17 @@ class ImplementsIGridProvider():
     @abstractmethod
     def row_count(self) -> winrt.system.Int32: ...
 
-@typing.final
-class IGridProvider(winrt.system.Object, ImplementsIGridProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.IGridProvider::GetItem(System.Int32,System.Int32)
-    def get_item(self, row: winrt.system.Int32, column: winrt.system.Int32, /) -> IRawElementProviderSimple: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IGridProvider::get_ColumnCount()
-    @_property
-    def column_count(self) -> winrt.system.Int32: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IGridProvider::get_RowCount()
-    @_property
-    def row_count(self) -> winrt.system.Int32: ...
-
-class ImplementsIInvokeProvider():
+class IInvokeProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IInvokeProvider::Invoke()
     @abstractmethod
     def invoke(self) -> None: ...
 
-@typing.final
-class IInvokeProvider(winrt.system.Object, ImplementsIInvokeProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IInvokeProvider::Invoke()
-    def invoke(self) -> None: ...
-
-class ImplementsIItemContainerProvider():
+class IItemContainerProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.IItemContainerProvider::FindItemByProperty(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple,Microsoft.UI.Xaml.Automation.AutomationProperty,System.Object)
     @abstractmethod
     def find_item_by_property(self, start_after: IRawElementProviderSimple, automation_property: microsoft_ui_xaml_automation.AutomationProperty, value: winrt.system.Object, /) -> IRawElementProviderSimple: ...
 
-@typing.final
-class IItemContainerProvider(winrt.system.Object, ImplementsIItemContainerProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.IItemContainerProvider::FindItemByProperty(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple,Microsoft.UI.Xaml.Automation.AutomationProperty,System.Object)
-    def find_item_by_property(self, start_after: IRawElementProviderSimple, automation_property: microsoft_ui_xaml_automation.AutomationProperty, value: winrt.system.Object, /) -> IRawElementProviderSimple: ...
-
-class ImplementsIMultipleViewProvider():
+class IMultipleViewProvider(winrt._winrt.IInspectable):
     # System.Int32[] Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider::GetSupportedViews()
     @abstractmethod
     def get_supported_views(self) -> winrt.system.Array[winrt.system.Int32]: ...
@@ -261,29 +158,12 @@ class ImplementsIMultipleViewProvider():
     @abstractmethod
     def current_view(self) -> winrt.system.Int32: ...
 
-@typing.final
-class IMultipleViewProvider(winrt.system.Object, ImplementsIMultipleViewProvider):
-    # System.Int32[] Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider::GetSupportedViews()
-    def get_supported_views(self) -> winrt.system.Array[winrt.system.Int32]: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider::GetViewName(System.Int32)
-    def get_view_name(self, view_id: winrt.system.Int32, /) -> str: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider::SetCurrentView(System.Int32)
-    def set_current_view(self, view_id: winrt.system.Int32, /) -> None: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider::get_CurrentView()
-    @_property
-    def current_view(self) -> winrt.system.Int32: ...
-
-class ImplementsIObjectModelProvider():
+class IObjectModelProvider(winrt._winrt.IInspectable):
     # System.Object Microsoft.UI.Xaml.Automation.Provider.IObjectModelProvider::GetUnderlyingObjectModel()
     @abstractmethod
     def get_underlying_object_model(self) -> winrt.system.Object: ...
 
-@typing.final
-class IObjectModelProvider(winrt.system.Object, ImplementsIObjectModelProvider):
-    # System.Object Microsoft.UI.Xaml.Automation.Provider.IObjectModelProvider::GetUnderlyingObjectModel()
-    def get_underlying_object_model(self) -> winrt.system.Object: ...
-
-class ImplementsIRangeValueProvider():
+class IRangeValueProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider::SetValue(System.Double)
     @abstractmethod
     def set_value(self, value: winrt.system.Double, /) -> None: ...
@@ -312,40 +192,12 @@ class ImplementsIRangeValueProvider():
     @abstractmethod
     def value(self) -> winrt.system.Double: ...
 
-@typing.final
-class IRangeValueProvider(winrt.system.Object, ImplementsIRangeValueProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider::SetValue(System.Double)
-    def set_value(self, value: winrt.system.Double, /) -> None: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider::get_IsReadOnly()
-    @_property
-    def is_read_only(self) -> bool: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider::get_LargeChange()
-    @_property
-    def large_change(self) -> winrt.system.Double: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider::get_Maximum()
-    @_property
-    def maximum(self) -> winrt.system.Double: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider::get_Minimum()
-    @_property
-    def minimum(self) -> winrt.system.Double: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider::get_SmallChange()
-    @_property
-    def small_change(self) -> winrt.system.Double: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider::get_Value()
-    @_property
-    def value(self) -> winrt.system.Double: ...
-
-class ImplementsIScrollItemProvider():
+class IScrollItemProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IScrollItemProvider::ScrollIntoView()
     @abstractmethod
     def scroll_into_view(self) -> None: ...
 
-@typing.final
-class IScrollItemProvider(winrt.system.Object, ImplementsIScrollItemProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IScrollItemProvider::ScrollIntoView()
-    def scroll_into_view(self) -> None: ...
-
-class ImplementsIScrollProvider():
+class IScrollProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::Scroll(Microsoft.UI.Xaml.Automation.ScrollAmount,Microsoft.UI.Xaml.Automation.ScrollAmount)
     @abstractmethod
     def scroll(self, horizontal_amount: microsoft_ui_xaml_automation.ScrollAmount, vertical_amount: microsoft_ui_xaml_automation.ScrollAmount, /) -> None: ...
@@ -377,32 +229,7 @@ class ImplementsIScrollProvider():
     @abstractmethod
     def vertically_scrollable(self) -> bool: ...
 
-@typing.final
-class IScrollProvider(winrt.system.Object, ImplementsIScrollProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::Scroll(Microsoft.UI.Xaml.Automation.ScrollAmount,Microsoft.UI.Xaml.Automation.ScrollAmount)
-    def scroll(self, horizontal_amount: microsoft_ui_xaml_automation.ScrollAmount, vertical_amount: microsoft_ui_xaml_automation.ScrollAmount, /) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::SetScrollPercent(System.Double,System.Double)
-    def set_scroll_percent(self, horizontal_percent: winrt.system.Double, vertical_percent: winrt.system.Double, /) -> None: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::get_HorizontalScrollPercent()
-    @_property
-    def horizontal_scroll_percent(self) -> winrt.system.Double: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::get_HorizontalViewSize()
-    @_property
-    def horizontal_view_size(self) -> winrt.system.Double: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::get_HorizontallyScrollable()
-    @_property
-    def horizontally_scrollable(self) -> bool: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::get_VerticalScrollPercent()
-    @_property
-    def vertical_scroll_percent(self) -> winrt.system.Double: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::get_VerticalViewSize()
-    @_property
-    def vertical_view_size(self) -> winrt.system.Double: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::get_VerticallyScrollable()
-    @_property
-    def vertically_scrollable(self) -> bool: ...
-
-class ImplementsISelectionItemProvider():
+class ISelectionItemProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider::AddToSelection()
     @abstractmethod
     def add_to_selection(self) -> None: ...
@@ -421,22 +248,7 @@ class ImplementsISelectionItemProvider():
     @abstractmethod
     def selection_container(self) -> IRawElementProviderSimple: ...
 
-@typing.final
-class ISelectionItemProvider(winrt.system.Object, ImplementsISelectionItemProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider::AddToSelection()
-    def add_to_selection(self) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider::RemoveFromSelection()
-    def remove_from_selection(self) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider::Select()
-    def select(self) -> None: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider::get_IsSelected()
-    @_property
-    def is_selected(self) -> bool: ...
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider::get_SelectionContainer()
-    @_property
-    def selection_container(self) -> IRawElementProviderSimple: ...
-
-class ImplementsISelectionProvider():
+class ISelectionProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider::GetSelection()
     @abstractmethod
     def get_selection(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -449,18 +261,7 @@ class ImplementsISelectionProvider():
     @abstractmethod
     def is_selection_required(self) -> bool: ...
 
-@typing.final
-class ISelectionProvider(winrt.system.Object, ImplementsISelectionProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider::GetSelection()
-    def get_selection(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider::get_CanSelectMultiple()
-    @_property
-    def can_select_multiple(self) -> bool: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider::get_IsSelectionRequired()
-    @_property
-    def is_selection_required(self) -> bool: ...
-
-class ImplementsISpreadsheetItemProvider():
+class ISpreadsheetItemProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider::GetAnnotationObjects()
     @abstractmethod
     def get_annotation_objects(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -472,27 +273,12 @@ class ImplementsISpreadsheetItemProvider():
     @abstractmethod
     def formula(self) -> str: ...
 
-@typing.final
-class ISpreadsheetItemProvider(winrt.system.Object, ImplementsISpreadsheetItemProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider::GetAnnotationObjects()
-    def get_annotation_objects(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
-    # Microsoft.UI.Xaml.Automation.AnnotationType[] Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider::GetAnnotationTypes()
-    def get_annotation_types(self) -> winrt.system.Array[microsoft_ui_xaml_automation.AnnotationType]: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider::get_Formula()
-    @_property
-    def formula(self) -> str: ...
-
-class ImplementsISpreadsheetProvider():
+class ISpreadsheetProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetProvider::GetItemByName(System.String)
     @abstractmethod
     def get_item_by_name(self, name: str, /) -> IRawElementProviderSimple: ...
 
-@typing.final
-class ISpreadsheetProvider(winrt.system.Object, ImplementsISpreadsheetProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetProvider::GetItemByName(System.String)
-    def get_item_by_name(self, name: str, /) -> IRawElementProviderSimple: ...
-
-class ImplementsIStylesProvider():
+class IStylesProvider(winrt._winrt.IInspectable):
     # System.String Microsoft.UI.Xaml.Automation.Provider.IStylesProvider::get_ExtendedProperties()
     @_property
     @abstractmethod
@@ -522,31 +308,7 @@ class ImplementsIStylesProvider():
     @abstractmethod
     def style_name(self) -> str: ...
 
-@typing.final
-class IStylesProvider(winrt.system.Object, ImplementsIStylesProvider):
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IStylesProvider::get_ExtendedProperties()
-    @_property
-    def extended_properties(self) -> str: ...
-    # Windows.UI.Color Microsoft.UI.Xaml.Automation.Provider.IStylesProvider::get_FillColor()
-    @_property
-    def fill_color(self) -> windows_ui.Color: ...
-    # Windows.UI.Color Microsoft.UI.Xaml.Automation.Provider.IStylesProvider::get_FillPatternColor()
-    @_property
-    def fill_pattern_color(self) -> windows_ui.Color: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IStylesProvider::get_FillPatternStyle()
-    @_property
-    def fill_pattern_style(self) -> str: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IStylesProvider::get_Shape()
-    @_property
-    def shape(self) -> str: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IStylesProvider::get_StyleId()
-    @_property
-    def style_id(self) -> winrt.system.Int32: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IStylesProvider::get_StyleName()
-    @_property
-    def style_name(self) -> str: ...
-
-class ImplementsISynchronizedInputProvider():
+class ISynchronizedInputProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ISynchronizedInputProvider::Cancel()
     @abstractmethod
     def cancel(self) -> None: ...
@@ -554,14 +316,7 @@ class ImplementsISynchronizedInputProvider():
     @abstractmethod
     def start_listening(self, input_type: microsoft_ui_xaml_automation.SynchronizedInputType, /) -> None: ...
 
-@typing.final
-class ISynchronizedInputProvider(winrt.system.Object, ImplementsISynchronizedInputProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ISynchronizedInputProvider::Cancel()
-    def cancel(self) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ISynchronizedInputProvider::StartListening(Microsoft.UI.Xaml.Automation.SynchronizedInputType)
-    def start_listening(self, input_type: microsoft_ui_xaml_automation.SynchronizedInputType, /) -> None: ...
-
-class ImplementsITableItemProvider():
+class ITableItemProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITableItemProvider::GetColumnHeaderItems()
     @abstractmethod
     def get_column_header_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -569,14 +324,7 @@ class ImplementsITableItemProvider():
     @abstractmethod
     def get_row_header_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
 
-@typing.final
-class ITableItemProvider(winrt.system.Object, ImplementsITableItemProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITableItemProvider::GetColumnHeaderItems()
-    def get_column_header_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITableItemProvider::GetRowHeaderItems()
-    def get_row_header_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
-
-class ImplementsITableProvider():
+class ITableProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITableProvider::GetColumnHeaders()
     @abstractmethod
     def get_column_headers(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -588,17 +336,7 @@ class ImplementsITableProvider():
     @abstractmethod
     def row_or_column_major(self) -> microsoft_ui_xaml_automation.RowOrColumnMajor: ...
 
-@typing.final
-class ITableProvider(winrt.system.Object, ImplementsITableProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITableProvider::GetColumnHeaders()
-    def get_column_headers(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITableProvider::GetRowHeaders()
-    def get_row_headers(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
-    # Microsoft.UI.Xaml.Automation.RowOrColumnMajor Microsoft.UI.Xaml.Automation.Provider.ITableProvider::get_RowOrColumnMajor()
-    @_property
-    def row_or_column_major(self) -> microsoft_ui_xaml_automation.RowOrColumnMajor: ...
-
-class ImplementsITextChildProvider():
+class ITextChildProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.ITextChildProvider::get_TextContainer()
     @_property
     @abstractmethod
@@ -608,16 +346,7 @@ class ImplementsITextChildProvider():
     @abstractmethod
     def text_range(self) -> ITextRangeProvider: ...
 
-@typing.final
-class ITextChildProvider(winrt.system.Object, ImplementsITextChildProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.ITextChildProvider::get_TextContainer()
-    @_property
-    def text_container(self) -> IRawElementProviderSimple: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextChildProvider::get_TextRange()
-    @_property
-    def text_range(self) -> ITextRangeProvider: ...
-
-class ImplementsITextEditProvider(ImplementsITextProvider):
+class ITextEditProvider(ITextProvider, winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider::GetActiveComposition()
     @abstractmethod
     def get_active_composition(self) -> ITextRangeProvider: ...
@@ -625,28 +354,7 @@ class ImplementsITextEditProvider(ImplementsITextProvider):
     @abstractmethod
     def get_conversion_target(self) -> ITextRangeProvider: ...
 
-@typing.final
-class ITextEditProvider(winrt.system.Object, ImplementsITextEditProvider, ImplementsITextProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider::GetActiveComposition()
-    def get_active_composition(self) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider::GetConversionTarget()
-    def get_conversion_target(self) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider[] Microsoft.UI.Xaml.Automation.Provider.ITextProvider::GetSelection()
-    def get_selection(self) -> winrt.system.Array[ITextRangeProvider]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider[] Microsoft.UI.Xaml.Automation.Provider.ITextProvider::GetVisibleRanges()
-    def get_visible_ranges(self) -> winrt.system.Array[ITextRangeProvider]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider::RangeFromChild(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple)
-    def range_from_child(self, child_element: IRawElementProviderSimple, /) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider::RangeFromPoint(Windows.Foundation.Point)
-    def range_from_point(self, screen_location: windows_foundation.Point, /) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider::get_DocumentRange()
-    @_property
-    def document_range(self) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.SupportedTextSelection Microsoft.UI.Xaml.Automation.Provider.ITextProvider::get_SupportedTextSelection()
-    @_property
-    def supported_text_selection(self) -> microsoft_ui_xaml_automation.SupportedTextSelection: ...
-
-class ImplementsITextProvider():
+class ITextProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider[] Microsoft.UI.Xaml.Automation.Provider.ITextProvider::GetSelection()
     @abstractmethod
     def get_selection(self) -> winrt.system.Array[ITextRangeProvider]: ...
@@ -668,24 +376,7 @@ class ImplementsITextProvider():
     @abstractmethod
     def supported_text_selection(self) -> microsoft_ui_xaml_automation.SupportedTextSelection: ...
 
-@typing.final
-class ITextProvider(winrt.system.Object, ImplementsITextProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider[] Microsoft.UI.Xaml.Automation.Provider.ITextProvider::GetSelection()
-    def get_selection(self) -> winrt.system.Array[ITextRangeProvider]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider[] Microsoft.UI.Xaml.Automation.Provider.ITextProvider::GetVisibleRanges()
-    def get_visible_ranges(self) -> winrt.system.Array[ITextRangeProvider]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider::RangeFromChild(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple)
-    def range_from_child(self, child_element: IRawElementProviderSimple, /) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider::RangeFromPoint(Windows.Foundation.Point)
-    def range_from_point(self, screen_location: windows_foundation.Point, /) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider::get_DocumentRange()
-    @_property
-    def document_range(self) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.SupportedTextSelection Microsoft.UI.Xaml.Automation.Provider.ITextProvider::get_SupportedTextSelection()
-    @_property
-    def supported_text_selection(self) -> microsoft_ui_xaml_automation.SupportedTextSelection: ...
-
-class ImplementsITextProvider2(ImplementsITextProvider):
+class ITextProvider2(ITextProvider, winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider2::GetCaretRange(System.Boolean&)
     @abstractmethod
     def get_caret_range(self) -> typing.Tuple[ITextRangeProvider, bool]: ...
@@ -693,28 +384,7 @@ class ImplementsITextProvider2(ImplementsITextProvider):
     @abstractmethod
     def range_from_annotation(self, annotation_element: IRawElementProviderSimple, /) -> ITextRangeProvider: ...
 
-@typing.final
-class ITextProvider2(winrt.system.Object, ImplementsITextProvider2, ImplementsITextProvider):
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider2::GetCaretRange(System.Boolean&)
-    def get_caret_range(self) -> typing.Tuple[ITextRangeProvider, bool]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider[] Microsoft.UI.Xaml.Automation.Provider.ITextProvider::GetSelection()
-    def get_selection(self) -> winrt.system.Array[ITextRangeProvider]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider[] Microsoft.UI.Xaml.Automation.Provider.ITextProvider::GetVisibleRanges()
-    def get_visible_ranges(self) -> winrt.system.Array[ITextRangeProvider]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider2::RangeFromAnnotation(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple)
-    def range_from_annotation(self, annotation_element: IRawElementProviderSimple, /) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider::RangeFromChild(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple)
-    def range_from_child(self, child_element: IRawElementProviderSimple, /) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider::RangeFromPoint(Windows.Foundation.Point)
-    def range_from_point(self, screen_location: windows_foundation.Point, /) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider::get_DocumentRange()
-    @_property
-    def document_range(self) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.SupportedTextSelection Microsoft.UI.Xaml.Automation.Provider.ITextProvider::get_SupportedTextSelection()
-    @_property
-    def supported_text_selection(self) -> microsoft_ui_xaml_automation.SupportedTextSelection: ...
-
-class ImplementsITextRangeProvider():
+class ITextRangeProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::AddToSelection()
     @abstractmethod
     def add_to_selection(self) -> None: ...
@@ -723,10 +393,10 @@ class ImplementsITextRangeProvider():
     def clone(self) -> ITextRangeProvider: ...
     # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Compare(Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider)
     @abstractmethod
-    def compare(self, text_range_provider: ImplementsITextRangeProvider, /) -> bool: ...
+    def compare(self, text_range_provider: ITextRangeProvider, /) -> bool: ...
     # System.Int32 Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::CompareEndpoints(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint,Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider,Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint)
     @abstractmethod
-    def compare_endpoints(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> winrt.system.Int32: ...
+    def compare_endpoints(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ITextRangeProvider, target_endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> winrt.system.Int32: ...
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::ExpandToEnclosingUnit(Microsoft.UI.Xaml.Automation.Text.TextUnit)
     @abstractmethod
     def expand_to_enclosing_unit(self, unit: microsoft_ui_xaml_automation_text.TextUnit, /) -> None: ...
@@ -756,7 +426,7 @@ class ImplementsITextRangeProvider():
     def move(self, unit: microsoft_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::MoveEndpointByRange(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint,Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider,Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint)
     @abstractmethod
-    def move_endpoint_by_range(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> None: ...
+    def move_endpoint_by_range(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ITextRangeProvider, target_endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> None: ...
     # System.Int32 Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::MoveEndpointByUnit(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint,Microsoft.UI.Xaml.Automation.Text.TextUnit,System.Int32)
     @abstractmethod
     def move_endpoint_by_unit(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, unit: microsoft_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
@@ -770,92 +440,12 @@ class ImplementsITextRangeProvider():
     @abstractmethod
     def select(self) -> None: ...
 
-@typing.final
-class ITextRangeProvider(winrt.system.Object, ImplementsITextRangeProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::AddToSelection()
-    def add_to_selection(self) -> None: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Clone()
-    def clone(self) -> ITextRangeProvider: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Compare(Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider)
-    def compare(self, text_range_provider: ImplementsITextRangeProvider, /) -> bool: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::CompareEndpoints(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint,Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider,Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint)
-    def compare_endpoints(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> winrt.system.Int32: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::ExpandToEnclosingUnit(Microsoft.UI.Xaml.Automation.Text.TextUnit)
-    def expand_to_enclosing_unit(self, unit: microsoft_ui_xaml_automation_text.TextUnit, /) -> None: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::FindAttribute(System.Int32,System.Object,System.Boolean)
-    def find_attribute(self, attribute_id: winrt.system.Int32, value: winrt.system.Object, backward: bool, /) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::FindText(System.String,System.Boolean,System.Boolean)
-    def find_text(self, text: str, backward: bool, ignore_case: bool, /) -> ITextRangeProvider: ...
-    # System.Object Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetAttributeValue(System.Int32)
-    def get_attribute_value(self, attribute_id: winrt.system.Int32, /) -> winrt.system.Object: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetBoundingRectangles(System.Double[]&)
-    def get_bounding_rectangles(self) -> winrt.system.Array[winrt.system.Double]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetChildren()
-    def get_children(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetEnclosingElement()
-    def get_enclosing_element(self) -> IRawElementProviderSimple: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetText(System.Int32)
-    def get_text(self, max_length: winrt.system.Int32, /) -> str: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Move(Microsoft.UI.Xaml.Automation.Text.TextUnit,System.Int32)
-    def move(self, unit: microsoft_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::MoveEndpointByRange(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint,Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider,Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint)
-    def move_endpoint_by_range(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> None: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::MoveEndpointByUnit(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint,Microsoft.UI.Xaml.Automation.Text.TextUnit,System.Int32)
-    def move_endpoint_by_unit(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, unit: microsoft_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::RemoveFromSelection()
-    def remove_from_selection(self) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::ScrollIntoView(System.Boolean)
-    def scroll_into_view(self, align_to_top: bool, /) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Select()
-    def select(self) -> None: ...
-
-class ImplementsITextRangeProvider2(ImplementsITextRangeProvider):
+class ITextRangeProvider2(ITextRangeProvider, winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider2::ShowContextMenu()
     @abstractmethod
     def show_context_menu(self) -> None: ...
 
-@typing.final
-class ITextRangeProvider2(winrt.system.Object, ImplementsITextRangeProvider2, ImplementsITextRangeProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::AddToSelection()
-    def add_to_selection(self) -> None: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Clone()
-    def clone(self) -> ITextRangeProvider: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Compare(Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider)
-    def compare(self, text_range_provider: ImplementsITextRangeProvider, /) -> bool: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::CompareEndpoints(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint,Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider,Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint)
-    def compare_endpoints(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> winrt.system.Int32: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::ExpandToEnclosingUnit(Microsoft.UI.Xaml.Automation.Text.TextUnit)
-    def expand_to_enclosing_unit(self, unit: microsoft_ui_xaml_automation_text.TextUnit, /) -> None: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::FindAttribute(System.Int32,System.Object,System.Boolean)
-    def find_attribute(self, attribute_id: winrt.system.Int32, value: winrt.system.Object, backward: bool, /) -> ITextRangeProvider: ...
-    # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::FindText(System.String,System.Boolean,System.Boolean)
-    def find_text(self, text: str, backward: bool, ignore_case: bool, /) -> ITextRangeProvider: ...
-    # System.Object Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetAttributeValue(System.Int32)
-    def get_attribute_value(self, attribute_id: winrt.system.Int32, /) -> winrt.system.Object: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetBoundingRectangles(System.Double[]&)
-    def get_bounding_rectangles(self) -> winrt.system.Array[winrt.system.Double]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetChildren()
-    def get_children(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
-    # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetEnclosingElement()
-    def get_enclosing_element(self) -> IRawElementProviderSimple: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::GetText(System.Int32)
-    def get_text(self, max_length: winrt.system.Int32, /) -> str: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Move(Microsoft.UI.Xaml.Automation.Text.TextUnit,System.Int32)
-    def move(self, unit: microsoft_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::MoveEndpointByRange(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint,Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider,Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint)
-    def move_endpoint_by_range(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> None: ...
-    # System.Int32 Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::MoveEndpointByUnit(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint,Microsoft.UI.Xaml.Automation.Text.TextUnit,System.Int32)
-    def move_endpoint_by_unit(self, endpoint: microsoft_ui_xaml_automation_text.TextPatternRangeEndpoint, unit: microsoft_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::RemoveFromSelection()
-    def remove_from_selection(self) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::ScrollIntoView(System.Boolean)
-    def scroll_into_view(self, align_to_top: bool, /) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::Select()
-    def select(self) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider2::ShowContextMenu()
-    def show_context_menu(self) -> None: ...
-
-class ImplementsIToggleProvider():
+class IToggleProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IToggleProvider::Toggle()
     @abstractmethod
     def toggle(self) -> None: ...
@@ -864,15 +454,7 @@ class ImplementsIToggleProvider():
     @abstractmethod
     def toggle_state(self) -> microsoft_ui_xaml_automation.ToggleState: ...
 
-@typing.final
-class IToggleProvider(winrt.system.Object, ImplementsIToggleProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IToggleProvider::Toggle()
-    def toggle(self) -> None: ...
-    # Microsoft.UI.Xaml.Automation.ToggleState Microsoft.UI.Xaml.Automation.Provider.IToggleProvider::get_ToggleState()
-    @_property
-    def toggle_state(self) -> microsoft_ui_xaml_automation.ToggleState: ...
-
-class ImplementsITransformProvider():
+class ITransformProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::Move(System.Double,System.Double)
     @abstractmethod
     def move(self, x: winrt.system.Double, y: winrt.system.Double, /) -> None: ...
@@ -895,25 +477,7 @@ class ImplementsITransformProvider():
     @abstractmethod
     def can_rotate(self) -> bool: ...
 
-@typing.final
-class ITransformProvider(winrt.system.Object, ImplementsITransformProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::Move(System.Double,System.Double)
-    def move(self, x: winrt.system.Double, y: winrt.system.Double, /) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::Resize(System.Double,System.Double)
-    def resize(self, width: winrt.system.Double, height: winrt.system.Double, /) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::Rotate(System.Double)
-    def rotate(self, degrees: winrt.system.Double, /) -> None: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::get_CanMove()
-    @_property
-    def can_move(self) -> bool: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::get_CanResize()
-    @_property
-    def can_resize(self) -> bool: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::get_CanRotate()
-    @_property
-    def can_rotate(self) -> bool: ...
-
-class ImplementsITransformProvider2(ImplementsITransformProvider):
+class ITransformProvider2(ITransformProvider, winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2::Zoom(System.Double)
     @abstractmethod
     def zoom(self, zoom: winrt.system.Double, /) -> None: ...
@@ -937,41 +501,7 @@ class ImplementsITransformProvider2(ImplementsITransformProvider):
     @abstractmethod
     def zoom_level(self) -> winrt.system.Double: ...
 
-@typing.final
-class ITransformProvider2(winrt.system.Object, ImplementsITransformProvider2, ImplementsITransformProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::Move(System.Double,System.Double)
-    def move(self, x: winrt.system.Double, y: winrt.system.Double, /) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::Resize(System.Double,System.Double)
-    def resize(self, width: winrt.system.Double, height: winrt.system.Double, /) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::Rotate(System.Double)
-    def rotate(self, degrees: winrt.system.Double, /) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2::Zoom(System.Double)
-    def zoom(self, zoom: winrt.system.Double, /) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2::ZoomByUnit(Microsoft.UI.Xaml.Automation.ZoomUnit)
-    def zoom_by_unit(self, zoom_unit: microsoft_ui_xaml_automation.ZoomUnit, /) -> None: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2::get_CanZoom()
-    @_property
-    def can_zoom(self) -> bool: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2::get_MaxZoom()
-    @_property
-    def max_zoom(self) -> winrt.system.Double: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2::get_MinZoom()
-    @_property
-    def min_zoom(self) -> winrt.system.Double: ...
-    # System.Double Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2::get_ZoomLevel()
-    @_property
-    def zoom_level(self) -> winrt.system.Double: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::get_CanMove()
-    @_property
-    def can_move(self) -> bool: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::get_CanResize()
-    @_property
-    def can_resize(self) -> bool: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::get_CanRotate()
-    @_property
-    def can_rotate(self) -> bool: ...
-
-class ImplementsIValueProvider():
+class IValueProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IValueProvider::SetValue(System.String)
     @abstractmethod
     def set_value(self, value: str, /) -> None: ...
@@ -984,28 +514,12 @@ class ImplementsIValueProvider():
     @abstractmethod
     def value(self) -> str: ...
 
-@typing.final
-class IValueProvider(winrt.system.Object, ImplementsIValueProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IValueProvider::SetValue(System.String)
-    def set_value(self, value: str, /) -> None: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IValueProvider::get_IsReadOnly()
-    @_property
-    def is_read_only(self) -> bool: ...
-    # System.String Microsoft.UI.Xaml.Automation.Provider.IValueProvider::get_Value()
-    @_property
-    def value(self) -> str: ...
-
-class ImplementsIVirtualizedItemProvider():
+class IVirtualizedItemProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IVirtualizedItemProvider::Realize()
     @abstractmethod
     def realize(self) -> None: ...
 
-@typing.final
-class IVirtualizedItemProvider(winrt.system.Object, ImplementsIVirtualizedItemProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IVirtualizedItemProvider::Realize()
-    def realize(self) -> None: ...
-
-class ImplementsIWindowProvider():
+class IWindowProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::Close()
     @abstractmethod
     def close(self) -> None: ...
@@ -1038,32 +552,5 @@ class ImplementsIWindowProvider():
     # Microsoft.UI.Xaml.Automation.WindowVisualState Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::get_VisualState()
     @_property
     @abstractmethod
-    def visual_state(self) -> microsoft_ui_xaml_automation.WindowVisualState: ...
-
-@typing.final
-class IWindowProvider(winrt.system.Object, ImplementsIWindowProvider):
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::Close()
-    def close(self) -> None: ...
-    # System.Void Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::SetVisualState(Microsoft.UI.Xaml.Automation.WindowVisualState)
-    def set_visual_state(self, state: microsoft_ui_xaml_automation.WindowVisualState, /) -> None: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::WaitForInputIdle(System.Int32)
-    def wait_for_input_idle(self, milliseconds: winrt.system.Int32, /) -> bool: ...
-    # Microsoft.UI.Xaml.Automation.WindowInteractionState Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::get_InteractionState()
-    @_property
-    def interaction_state(self) -> microsoft_ui_xaml_automation.WindowInteractionState: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::get_IsModal()
-    @_property
-    def is_modal(self) -> bool: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::get_IsTopmost()
-    @_property
-    def is_topmost(self) -> bool: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::get_Maximizable()
-    @_property
-    def maximizable(self) -> bool: ...
-    # System.Boolean Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::get_Minimizable()
-    @_property
-    def minimizable(self) -> bool: ...
-    # Microsoft.UI.Xaml.Automation.WindowVisualState Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::get_VisualState()
-    @_property
     def visual_state(self) -> microsoft_ui_xaml_automation.WindowVisualState: ...
 

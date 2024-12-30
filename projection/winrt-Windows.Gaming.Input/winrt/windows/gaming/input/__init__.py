@@ -18,9 +18,7 @@ from winrt._winrt_windows_gaming_input import (
     RawGameController,
     UINavigationController,
     IGameController,
-    ImplementsIGameController,
     IGameControllerBatteryInfo,
-    ImplementsIGameControllerBatteryInfo,
 )
 
 __all__ = [
@@ -47,9 +45,7 @@ __all__ = [
     "RawGameController",
     "UINavigationController",
     "IGameController",
-    "ImplementsIGameController",
     "IGameControllerBatteryInfo",
-    "ImplementsIGameControllerBatteryInfo",
 ]
 
 class ArcadeStickButtons(enum.IntFlag):

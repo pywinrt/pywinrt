@@ -81,11 +81,8 @@ from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
     ZoomSnapPoint,
     ZoomSnapPointBase,
     IScrollController,
-    ImplementsIScrollController,
     IScrollControllerPanningInfo,
-    ImplementsIScrollControllerPanningInfo,
     IScrollSnapPointsInfo,
-    ImplementsIScrollSnapPointsInfo,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -230,11 +227,8 @@ __all__ = [
     "ZoomSnapPoint",
     "ZoomSnapPointBase",
     "IScrollController",
-    "ImplementsIScrollController",
     "IScrollControllerPanningInfo",
-    "ImplementsIScrollControllerPanningInfo",
     "IScrollSnapPointsInfo",
-    "ImplementsIScrollSnapPointsInfo",
     "DragCompletedEventHandler",
     "DragDeltaEventHandler",
     "DragStartedEventHandler",

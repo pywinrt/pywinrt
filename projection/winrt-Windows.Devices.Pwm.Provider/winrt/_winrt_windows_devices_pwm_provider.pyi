@@ -14,7 +14,7 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 
 Self = typing.TypeVar('Self')
 
-class ImplementsIPwmControllerProvider():
+class IPwmControllerProvider(winrt._winrt.IInspectable):
     # System.Void Windows.Devices.Pwm.Provider.IPwmControllerProvider::AcquirePin(System.Int32)
     @abstractmethod
     def acquire_pin(self, pin: winrt.system.Int32, /) -> None: ...
@@ -50,40 +50,8 @@ class ImplementsIPwmControllerProvider():
     @abstractmethod
     def pin_count(self) -> winrt.system.Int32: ...
 
-@typing.final
-class IPwmControllerProvider(winrt.system.Object, ImplementsIPwmControllerProvider):
-    # System.Void Windows.Devices.Pwm.Provider.IPwmControllerProvider::AcquirePin(System.Int32)
-    def acquire_pin(self, pin: winrt.system.Int32, /) -> None: ...
-    # System.Void Windows.Devices.Pwm.Provider.IPwmControllerProvider::DisablePin(System.Int32)
-    def disable_pin(self, pin: winrt.system.Int32, /) -> None: ...
-    # System.Void Windows.Devices.Pwm.Provider.IPwmControllerProvider::EnablePin(System.Int32)
-    def enable_pin(self, pin: winrt.system.Int32, /) -> None: ...
-    # System.Void Windows.Devices.Pwm.Provider.IPwmControllerProvider::ReleasePin(System.Int32)
-    def release_pin(self, pin: winrt.system.Int32, /) -> None: ...
-    # System.Double Windows.Devices.Pwm.Provider.IPwmControllerProvider::SetDesiredFrequency(System.Double)
-    def set_desired_frequency(self, frequency: winrt.system.Double, /) -> winrt.system.Double: ...
-    # System.Void Windows.Devices.Pwm.Provider.IPwmControllerProvider::SetPulseParameters(System.Int32,System.Double,System.Boolean)
-    def set_pulse_parameters(self, pin: winrt.system.Int32, duty_cycle: winrt.system.Double, invert_polarity: bool, /) -> None: ...
-    # System.Double Windows.Devices.Pwm.Provider.IPwmControllerProvider::get_ActualFrequency()
-    @_property
-    def actual_frequency(self) -> winrt.system.Double: ...
-    # System.Double Windows.Devices.Pwm.Provider.IPwmControllerProvider::get_MaxFrequency()
-    @_property
-    def max_frequency(self) -> winrt.system.Double: ...
-    # System.Double Windows.Devices.Pwm.Provider.IPwmControllerProvider::get_MinFrequency()
-    @_property
-    def min_frequency(self) -> winrt.system.Double: ...
-    # System.Int32 Windows.Devices.Pwm.Provider.IPwmControllerProvider::get_PinCount()
-    @_property
-    def pin_count(self) -> winrt.system.Int32: ...
-
-class ImplementsIPwmProvider():
+class IPwmProvider(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Pwm.Provider.IPwmControllerProvider> Windows.Devices.Pwm.Provider.IPwmProvider::GetControllers()
     @abstractmethod
-    def get_controllers(self) -> typing.Sequence[IPwmControllerProvider]: ...
-
-@typing.final
-class IPwmProvider(winrt.system.Object, ImplementsIPwmProvider):
-    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Pwm.Provider.IPwmControllerProvider> Windows.Devices.Pwm.Provider.IPwmProvider::GetControllers()
     def get_controllers(self) -> typing.Sequence[IPwmControllerProvider]: ...
 

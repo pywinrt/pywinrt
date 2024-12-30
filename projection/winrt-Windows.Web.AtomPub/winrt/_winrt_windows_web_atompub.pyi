@@ -19,7 +19,7 @@ import winrt.windows.web.syndication as windows_web_syndication
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AtomPubClient(winrt.system.Object, windows_web_syndication.ImplementsISyndicationClient):
+class AtomPubClient(winrt.system.Object, windows_web_syndication.ISyndicationClient):
     @typing.overload
     def __new__(cls: typing.Type[Self], server_credential: windows_security_credentials.PasswordCredential) -> Self: ...
     @typing.overload
@@ -27,7 +27,7 @@ class AtomPubClient(winrt.system.Object, windows_web_syndication.ImplementsISynd
     # System.Void Windows.Web.AtomPub.AtomPubClient::CancelAsyncOperations()
     def cancel_async_operations(self) -> None: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.TransferProgress> Windows.Web.AtomPub.AtomPubClient::CreateMediaResourceAsync(Windows.Foundation.Uri,System.String,System.String,Windows.Storage.Streams.IInputStream)
-    def create_media_resource_async(self, uri: windows_foundation.Uri, media_type: str, description: str, media_stream: windows_storage_streams.ImplementsIInputStream, /) -> windows_foundation.IAsyncOperationWithProgress[windows_web_syndication.SyndicationItem, windows_web_syndication.TransferProgress]: ...
+    def create_media_resource_async(self, uri: windows_foundation.Uri, media_type: str, description: str, media_stream: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncOperationWithProgress[windows_web_syndication.SyndicationItem, windows_web_syndication.TransferProgress]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.TransferProgress> Windows.Web.AtomPub.AtomPubClient::CreateResourceAsync(Windows.Foundation.Uri,System.String,Windows.Web.Syndication.SyndicationItem)
     def create_resource_async(self, uri: windows_foundation.Uri, description: str, item: windows_web_syndication.SyndicationItem, /) -> windows_foundation.IAsyncOperationWithProgress[windows_web_syndication.SyndicationItem, windows_web_syndication.TransferProgress]: ...
     # Windows.Foundation.IAsyncActionWithProgress`1<Windows.Web.Syndication.TransferProgress> Windows.Web.AtomPub.AtomPubClient::DeleteResourceAsync(Windows.Foundation.Uri)
@@ -45,7 +45,7 @@ class AtomPubClient(winrt.system.Object, windows_web_syndication.ImplementsISynd
     # System.Void Windows.Web.AtomPub.AtomPubClient::SetRequestHeader(System.String,System.String)
     def set_request_header(self, name: str, value: str, /) -> None: ...
     # Windows.Foundation.IAsyncActionWithProgress`1<Windows.Web.Syndication.TransferProgress> Windows.Web.AtomPub.AtomPubClient::UpdateMediaResourceAsync(Windows.Foundation.Uri,System.String,Windows.Storage.Streams.IInputStream)
-    def update_media_resource_async(self, uri: windows_foundation.Uri, media_type: str, media_stream: windows_storage_streams.ImplementsIInputStream, /) -> windows_foundation.IAsyncActionWithProgress[windows_web_syndication.TransferProgress]: ...
+    def update_media_resource_async(self, uri: windows_foundation.Uri, media_type: str, media_stream: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncActionWithProgress[windows_web_syndication.TransferProgress]: ...
     # Windows.Foundation.IAsyncActionWithProgress`1<Windows.Web.Syndication.TransferProgress> Windows.Web.AtomPub.AtomPubClient::UpdateResourceAsync(Windows.Foundation.Uri,Windows.Web.Syndication.SyndicationItem)
     def update_resource_async(self, uri: windows_foundation.Uri, item: windows_web_syndication.SyndicationItem, /) -> windows_foundation.IAsyncActionWithProgress[windows_web_syndication.TransferProgress]: ...
     # Windows.Foundation.IAsyncActionWithProgress`1<Windows.Web.Syndication.TransferProgress> Windows.Web.AtomPub.AtomPubClient::UpdateResourceItemAsync(Windows.Web.Syndication.SyndicationItem)
@@ -82,7 +82,7 @@ class AtomPubClient(winrt.system.Object, windows_web_syndication.ImplementsISynd
     def bypass_cache_on_retrieve(self, value: bool) -> None: ...
 
 @typing.final
-class ResourceCollection(winrt.system.Object, windows_web_syndication.ImplementsISyndicationNode):
+class ResourceCollection(winrt.system.Object, windows_web_syndication.ISyndicationNode):
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.AtomPub.ResourceCollection::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Web.AtomPub.ResourceCollection::get_Accepts()
@@ -135,7 +135,7 @@ class ResourceCollection(winrt.system.Object, windows_web_syndication.Implements
     def element_extensions(self) -> typing.MutableSequence[windows_web_syndication.ISyndicationNode]: ...
 
 @typing.final
-class ServiceDocument(winrt.system.Object, windows_web_syndication.ImplementsISyndicationNode):
+class ServiceDocument(winrt.system.Object, windows_web_syndication.ISyndicationNode):
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.AtomPub.ServiceDocument::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Web.AtomPub.Workspace> Windows.Web.AtomPub.ServiceDocument::get_Workspaces()
@@ -179,7 +179,7 @@ class ServiceDocument(winrt.system.Object, windows_web_syndication.ImplementsISy
     def element_extensions(self) -> typing.MutableSequence[windows_web_syndication.ISyndicationNode]: ...
 
 @typing.final
-class Workspace(winrt.system.Object, windows_web_syndication.ImplementsISyndicationNode):
+class Workspace(winrt.system.Object, windows_web_syndication.ISyndicationNode):
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.AtomPub.Workspace::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Web.AtomPub.ResourceCollection> Windows.Web.AtomPub.Workspace::get_Collections()

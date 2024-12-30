@@ -69,11 +69,8 @@ from winrt._winrt_windows_ui_webui import (
     WebUIWebAccountProviderActivatedEventArgs,
     WebUIWebAuthenticationBrokerContinuationEventArgs,
     IActivatedEventArgsDeferral,
-    ImplementsIActivatedEventArgsDeferral,
     IWebUIBackgroundTaskInstance,
-    ImplementsIWebUIBackgroundTaskInstance,
     IWebUINavigatedEventArgs,
-    ImplementsIWebUINavigatedEventArgs,
 )
 
 if typing.TYPE_CHECKING:
@@ -145,11 +142,8 @@ __all__ = [
     "WebUIWebAccountProviderActivatedEventArgs",
     "WebUIWebAuthenticationBrokerContinuationEventArgs",
     "IActivatedEventArgsDeferral",
-    "ImplementsIActivatedEventArgsDeferral",
     "IWebUIBackgroundTaskInstance",
-    "ImplementsIWebUIBackgroundTaskInstance",
     "IWebUINavigatedEventArgs",
-    "ImplementsIWebUINavigatedEventArgs",
     "ActivatedEventHandler",
     "BackgroundActivatedEventHandler",
     "EnteredBackgroundEventHandler",

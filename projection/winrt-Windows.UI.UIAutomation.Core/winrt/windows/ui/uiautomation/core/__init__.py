@@ -16,9 +16,7 @@ from winrt._winrt_windows_ui_uiautomation_core import (
     RemoteAutomationServer,
     RemoteAutomationWindow,
     ICoreAutomationConnectionBoundObjectProvider,
-    ImplementsICoreAutomationConnectionBoundObjectProvider,
     ICoreAutomationRemoteOperationExtensionProvider,
-    ImplementsICoreAutomationRemoteOperationExtensionProvider,
 )
 
 __all__ = [
@@ -35,9 +33,7 @@ __all__ = [
     "RemoteAutomationServer",
     "RemoteAutomationWindow",
     "ICoreAutomationConnectionBoundObjectProvider",
-    "ImplementsICoreAutomationConnectionBoundObjectProvider",
     "ICoreAutomationRemoteOperationExtensionProvider",
-    "ImplementsICoreAutomationRemoteOperationExtensionProvider",
 ]
 
 class AutomationRemoteOperationStatus(enum.IntEnum):

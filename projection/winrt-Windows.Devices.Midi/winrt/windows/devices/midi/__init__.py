@@ -27,9 +27,7 @@ from winrt._winrt_windows_devices_midi import (
     MidiTimingClockMessage,
     MidiTuneRequestMessage,
     IMidiMessage,
-    ImplementsIMidiMessage,
     IMidiOutPort,
-    ImplementsIMidiOutPort,
 )
 
 __all__ = [
@@ -57,9 +55,7 @@ __all__ = [
     "MidiTimingClockMessage",
     "MidiTuneRequestMessage",
     "IMidiMessage",
-    "ImplementsIMidiMessage",
     "IMidiOutPort",
-    "ImplementsIMidiOutPort",
 ]
 
 class MidiMessageType(enum.IntEnum):

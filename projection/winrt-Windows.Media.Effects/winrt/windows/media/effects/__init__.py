@@ -19,17 +19,11 @@ from winrt._winrt_windows_media_effects import (
     VideoTransformEffectDefinition,
     VideoTransformSphericalProjection,
     IAudioEffectDefinition,
-    ImplementsIAudioEffectDefinition,
     IBasicAudioEffect,
-    ImplementsIBasicAudioEffect,
     IBasicVideoEffect,
-    ImplementsIBasicVideoEffect,
     IVideoCompositor,
-    ImplementsIVideoCompositor,
     IVideoCompositorDefinition,
-    ImplementsIVideoCompositorDefinition,
     IVideoEffectDefinition,
-    ImplementsIVideoEffectDefinition,
 )
 
 __all__ = [
@@ -52,17 +46,11 @@ __all__ = [
     "VideoTransformEffectDefinition",
     "VideoTransformSphericalProjection",
     "IAudioEffectDefinition",
-    "ImplementsIAudioEffectDefinition",
     "IBasicAudioEffect",
-    "ImplementsIBasicAudioEffect",
     "IBasicVideoEffect",
-    "ImplementsIBasicVideoEffect",
     "IVideoCompositor",
-    "ImplementsIVideoCompositor",
     "IVideoCompositorDefinition",
-    "ImplementsIVideoCompositorDefinition",
     "IVideoEffectDefinition",
-    "ImplementsIVideoEffectDefinition",
 ]
 
 class AudioEffectState(enum.IntEnum):

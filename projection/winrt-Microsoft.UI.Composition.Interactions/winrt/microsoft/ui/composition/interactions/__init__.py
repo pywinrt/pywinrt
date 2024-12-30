@@ -22,9 +22,7 @@ from winrt._winrt_microsoft_ui_composition_interactions import (
     InteractionTrackerVector2InertiaNaturalMotion,
     VisualInteractionSource,
     ICompositionInteractionSource,
-    ImplementsICompositionInteractionSource,
     IInteractionTrackerOwner,
-    ImplementsIInteractionTrackerOwner,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -60,9 +58,7 @@ __all__ = [
     "InteractionTrackerVector2InertiaNaturalMotion",
     "VisualInteractionSource",
     "ICompositionInteractionSource",
-    "ImplementsICompositionInteractionSource",
     "IInteractionTrackerOwner",
-    "ImplementsIInteractionTrackerOwner",
 ]
 
 class InteractionBindingAxisModes(enum.IntFlag):

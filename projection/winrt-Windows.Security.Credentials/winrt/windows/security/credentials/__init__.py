@@ -15,7 +15,6 @@ from winrt._winrt_windows_security_credentials import (
     WebAccount,
     WebAccountProvider,
     IWebAccount,
-    ImplementsIWebAccount,
 )
 
 __all__ = [
@@ -35,7 +34,6 @@ __all__ = [
     "WebAccount",
     "WebAccountProvider",
     "IWebAccount",
-    "ImplementsIWebAccount",
 ]
 
 class KeyCredentialAttestationStatus(enum.IntEnum):

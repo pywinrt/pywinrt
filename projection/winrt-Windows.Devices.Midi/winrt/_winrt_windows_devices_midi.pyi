@@ -19,7 +19,7 @@ from winrt.windows.devices.midi import MidiMessageType
 Self = typing.TypeVar('Self')
 
 @typing.final
-class MidiActiveSensingMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiActiveSensingMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiActiveSensingMessage::get_RawData()
     @_property
@@ -32,7 +32,7 @@ class MidiActiveSensingMessage(winrt.system.Object, ImplementsIMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiChannelPressureMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiChannelPressureMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], channel: winrt.system.UInt8, pressure: winrt.system.UInt8) -> Self: ...
     # System.Byte Windows.Devices.Midi.MidiChannelPressureMessage::get_Channel()
     @_property
@@ -51,7 +51,7 @@ class MidiChannelPressureMessage(winrt.system.Object, ImplementsIMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiContinueMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiContinueMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiContinueMessage::get_RawData()
     @_property
@@ -64,7 +64,7 @@ class MidiContinueMessage(winrt.system.Object, ImplementsIMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiControlChangeMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiControlChangeMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], channel: winrt.system.UInt8, controller: winrt.system.UInt8, control_value: winrt.system.UInt8) -> Self: ...
     # System.Byte Windows.Devices.Midi.MidiControlChangeMessage::get_Channel()
     @_property
@@ -93,7 +93,7 @@ class MidiInPort_Static(type):
     def get_device_selector(cls) -> str: ...
 
 @typing.final
-class MidiInPort(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=MidiInPort_Static):
+class MidiInPort(winrt.system.Object, windows_foundation.IClosable, metaclass=MidiInPort_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.Midi.MidiInPort::Close()
@@ -113,7 +113,7 @@ class MidiMessageReceivedEventArgs(winrt.system.Object):
     def message(self) -> IMidiMessage: ...
 
 @typing.final
-class MidiNoteOffMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiNoteOffMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], channel: winrt.system.UInt8, note: winrt.system.UInt8, velocity: winrt.system.UInt8) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiNoteOffMessage::get_RawData()
     @_property
@@ -135,7 +135,7 @@ class MidiNoteOffMessage(winrt.system.Object, ImplementsIMidiMessage):
     def velocity(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class MidiNoteOnMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiNoteOnMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], channel: winrt.system.UInt8, note: winrt.system.UInt8, velocity: winrt.system.UInt8) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiNoteOnMessage::get_RawData()
     @_property
@@ -164,21 +164,21 @@ class MidiOutPort_Static(type):
     def get_device_selector(cls) -> str: ...
 
 @typing.final
-class MidiOutPort(winrt.system.Object, ImplementsIMidiOutPort, windows_foundation.ImplementsIClosable, metaclass=MidiOutPort_Static):
+class MidiOutPort(winrt.system.Object, IMidiOutPort, windows_foundation.IClosable, metaclass=MidiOutPort_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.Midi.MidiOutPort::Close()
     def close(self) -> None: ...
     # System.Void Windows.Devices.Midi.MidiOutPort::SendBuffer(Windows.Storage.Streams.IBuffer)
-    def send_buffer(self, midi_data: windows_storage_streams.ImplementsIBuffer, /) -> None: ...
+    def send_buffer(self, midi_data: windows_storage_streams.IBuffer, /) -> None: ...
     # System.Void Windows.Devices.Midi.MidiOutPort::SendMessage(Windows.Devices.Midi.IMidiMessage)
-    def send_message(self, midi_message: ImplementsIMidiMessage, /) -> None: ...
+    def send_message(self, midi_message: IMidiMessage, /) -> None: ...
     # System.String Windows.Devices.Midi.MidiOutPort::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
 
 @typing.final
-class MidiPitchBendChangeMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiPitchBendChangeMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], channel: winrt.system.UInt8, bend: winrt.system.UInt16) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiPitchBendChangeMessage::get_RawData()
     @_property
@@ -197,7 +197,7 @@ class MidiPitchBendChangeMessage(winrt.system.Object, ImplementsIMidiMessage):
     def channel(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class MidiPolyphonicKeyPressureMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiPolyphonicKeyPressureMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], channel: winrt.system.UInt8, note: winrt.system.UInt8, pressure: winrt.system.UInt8) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage::get_RawData()
     @_property
@@ -219,7 +219,7 @@ class MidiPolyphonicKeyPressureMessage(winrt.system.Object, ImplementsIMidiMessa
     def pressure(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class MidiProgramChangeMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiProgramChangeMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], channel: winrt.system.UInt8, program: winrt.system.UInt8) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiProgramChangeMessage::get_RawData()
     @_property
@@ -238,7 +238,7 @@ class MidiProgramChangeMessage(winrt.system.Object, ImplementsIMidiMessage):
     def program(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class MidiSongPositionPointerMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiSongPositionPointerMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], beats: winrt.system.UInt16) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiSongPositionPointerMessage::get_RawData()
     @_property
@@ -254,7 +254,7 @@ class MidiSongPositionPointerMessage(winrt.system.Object, ImplementsIMidiMessage
     def beats(self) -> winrt.system.UInt16: ...
 
 @typing.final
-class MidiSongSelectMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiSongSelectMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], song: winrt.system.UInt8) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiSongSelectMessage::get_RawData()
     @_property
@@ -270,7 +270,7 @@ class MidiSongSelectMessage(winrt.system.Object, ImplementsIMidiMessage):
     def song(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class MidiStartMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiStartMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiStartMessage::get_RawData()
     @_property
@@ -283,7 +283,7 @@ class MidiStartMessage(winrt.system.Object, ImplementsIMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiStopMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiStopMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiStopMessage::get_RawData()
     @_property
@@ -305,15 +305,15 @@ class MidiSynthesizer_Static(type):
     def is_synthesizer(cls, midi_device: windows_devices_enumeration.DeviceInformation, /) -> bool: ...
 
 @typing.final
-class MidiSynthesizer(winrt.system.Object, ImplementsIMidiOutPort, windows_foundation.ImplementsIClosable, metaclass=MidiSynthesizer_Static):
+class MidiSynthesizer(winrt.system.Object, IMidiOutPort, windows_foundation.IClosable, metaclass=MidiSynthesizer_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.Midi.MidiSynthesizer::Close()
     def close(self) -> None: ...
     # System.Void Windows.Devices.Midi.MidiSynthesizer::SendBuffer(Windows.Storage.Streams.IBuffer)
-    def send_buffer(self, midi_data: windows_storage_streams.ImplementsIBuffer, /) -> None: ...
+    def send_buffer(self, midi_data: windows_storage_streams.IBuffer, /) -> None: ...
     # System.Void Windows.Devices.Midi.MidiSynthesizer::SendMessage(Windows.Devices.Midi.IMidiMessage)
-    def send_message(self, midi_message: ImplementsIMidiMessage, /) -> None: ...
+    def send_message(self, midi_message: IMidiMessage, /) -> None: ...
     # System.String Windows.Devices.Midi.MidiSynthesizer::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
@@ -328,8 +328,8 @@ class MidiSynthesizer(winrt.system.Object, ImplementsIMidiOutPort, windows_found
     def audio_device(self) -> windows_devices_enumeration.DeviceInformation: ...
 
 @typing.final
-class MidiSystemExclusiveMessage(winrt.system.Object, ImplementsIMidiMessage):
-    def __new__(cls: typing.Type[Self], raw_data: windows_storage_streams.ImplementsIBuffer) -> Self: ...
+class MidiSystemExclusiveMessage(winrt.system.Object, IMidiMessage):
+    def __new__(cls: typing.Type[Self], raw_data: windows_storage_streams.IBuffer) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiSystemExclusiveMessage::get_RawData()
     @_property
     def raw_data(self) -> windows_storage_streams.IBuffer: ...
@@ -341,7 +341,7 @@ class MidiSystemExclusiveMessage(winrt.system.Object, ImplementsIMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiSystemResetMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiSystemResetMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiSystemResetMessage::get_RawData()
     @_property
@@ -354,7 +354,7 @@ class MidiSystemResetMessage(winrt.system.Object, ImplementsIMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiTimeCodeMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiTimeCodeMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self], frame_type: winrt.system.UInt8, values: winrt.system.UInt8) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiTimeCodeMessage::get_RawData()
     @_property
@@ -373,7 +373,7 @@ class MidiTimeCodeMessage(winrt.system.Object, ImplementsIMidiMessage):
     def values(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class MidiTimingClockMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiTimingClockMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiTimingClockMessage::get_RawData()
     @_property
@@ -386,7 +386,7 @@ class MidiTimingClockMessage(winrt.system.Object, ImplementsIMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiTuneRequestMessage(winrt.system.Object, ImplementsIMidiMessage):
+class MidiTuneRequestMessage(winrt.system.Object, IMidiMessage):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.MidiTuneRequestMessage::get_RawData()
     @_property
@@ -398,7 +398,7 @@ class MidiTuneRequestMessage(winrt.system.Object, ImplementsIMidiMessage):
     @_property
     def type(self) -> MidiMessageType: ...
 
-class ImplementsIMidiMessage():
+class IMidiMessage(winrt._winrt.IInspectable):
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.IMidiMessage::get_RawData()
     @_property
     @abstractmethod
@@ -412,41 +412,15 @@ class ImplementsIMidiMessage():
     @abstractmethod
     def type(self) -> MidiMessageType: ...
 
-@typing.final
-class IMidiMessage(winrt.system.Object, ImplementsIMidiMessage):
-    # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.IMidiMessage::get_RawData()
-    @_property
-    def raw_data(self) -> windows_storage_streams.IBuffer: ...
-    # Windows.Foundation.TimeSpan Windows.Devices.Midi.IMidiMessage::get_Timestamp()
-    @_property
-    def timestamp(self) -> datetime.timedelta: ...
-    # Windows.Devices.Midi.MidiMessageType Windows.Devices.Midi.IMidiMessage::get_Type()
-    @_property
-    def type(self) -> MidiMessageType: ...
-
-class ImplementsIMidiOutPort(windows_foundation.ImplementsIClosable):
+class IMidiOutPort(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # System.Void Windows.Devices.Midi.IMidiOutPort::SendBuffer(Windows.Storage.Streams.IBuffer)
     @abstractmethod
-    def send_buffer(self, midi_data: windows_storage_streams.ImplementsIBuffer, /) -> None: ...
+    def send_buffer(self, midi_data: windows_storage_streams.IBuffer, /) -> None: ...
     # System.Void Windows.Devices.Midi.IMidiOutPort::SendMessage(Windows.Devices.Midi.IMidiMessage)
     @abstractmethod
-    def send_message(self, midi_message: ImplementsIMidiMessage, /) -> None: ...
+    def send_message(self, midi_message: IMidiMessage, /) -> None: ...
     # System.String Windows.Devices.Midi.IMidiOutPort::get_DeviceId()
     @_property
     @abstractmethod
-    def device_id(self) -> str: ...
-
-@typing.final
-class IMidiOutPort(winrt.system.Object, ImplementsIMidiOutPort, windows_foundation.ImplementsIClosable):
-    def __enter__(self: Self) -> Self: ...
-    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
-    # System.Void Windows.Foundation.IClosable::Close()
-    def close(self) -> None: ...
-    # System.Void Windows.Devices.Midi.IMidiOutPort::SendBuffer(Windows.Storage.Streams.IBuffer)
-    def send_buffer(self, midi_data: windows_storage_streams.ImplementsIBuffer, /) -> None: ...
-    # System.Void Windows.Devices.Midi.IMidiOutPort::SendMessage(Windows.Devices.Midi.IMidiMessage)
-    def send_message(self, midi_message: ImplementsIMidiMessage, /) -> None: ...
-    # System.String Windows.Devices.Midi.IMidiOutPort::get_DeviceId()
-    @_property
     def device_id(self) -> str: ...
 

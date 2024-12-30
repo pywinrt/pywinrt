@@ -21,7 +21,7 @@ from winrt.windows.devices.lights.effects import LampArrayEffectCompletionBehavi
 Self = typing.TypeVar('Self')
 
 @typing.final
-class LampArrayBitmapEffect(winrt.system.Object, ImplementsILampArrayEffect):
+class LampArrayBitmapEffect(winrt.system.Object, ILampArrayEffect):
     def __new__(cls: typing.Type[Self], lamp_array: windows_devices_lights.LampArray, lamp_indexes: typing.Union[winrt.system.Array[winrt.system.Int32], winrt.system.ReadableBuffer]) -> Self: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Lights.Effects.LampArrayBitmapEffect::add_BitmapRequested(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Lights.Effects.LampArrayBitmapEffect,Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs>)
     def add_bitmap_requested(self, handler: windows_foundation.TypedEventHandler[LampArrayBitmapEffect, LampArrayBitmapRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -64,7 +64,7 @@ class LampArrayBitmapRequestedEventArgs(winrt.system.Object):
     def since_started(self) -> datetime.timedelta: ...
 
 @typing.final
-class LampArrayBlinkEffect(winrt.system.Object, ImplementsILampArrayEffect):
+class LampArrayBlinkEffect(winrt.system.Object, ILampArrayEffect):
     def __new__(cls: typing.Type[Self], lamp_array: windows_devices_lights.LampArray, lamp_indexes: typing.Union[winrt.system.Array[winrt.system.Int32], winrt.system.ReadableBuffer]) -> Self: ...
     # Windows.Foundation.TimeSpan Windows.Devices.Lights.Effects.LampArrayBlinkEffect::get_SustainDuration()
     @_property
@@ -122,7 +122,7 @@ class LampArrayBlinkEffect(winrt.system.Object, ImplementsILampArrayEffect):
     def z_index(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class LampArrayColorRampEffect(winrt.system.Object, ImplementsILampArrayEffect):
+class LampArrayColorRampEffect(winrt.system.Object, ILampArrayEffect):
     def __new__(cls: typing.Type[Self], lamp_array: windows_devices_lights.LampArray, lamp_indexes: typing.Union[winrt.system.Array[winrt.system.Int32], winrt.system.ReadableBuffer]) -> Self: ...
     # Windows.Foundation.TimeSpan Windows.Devices.Lights.Effects.LampArrayColorRampEffect::get_StartDelay()
     @_property
@@ -156,7 +156,7 @@ class LampArrayColorRampEffect(winrt.system.Object, ImplementsILampArrayEffect):
     def z_index(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class LampArrayCustomEffect(winrt.system.Object, ImplementsILampArrayEffect):
+class LampArrayCustomEffect(winrt.system.Object, ILampArrayEffect):
     def __new__(cls: typing.Type[Self], lamp_array: windows_devices_lights.LampArray, lamp_indexes: typing.Union[winrt.system.Array[winrt.system.Int32], winrt.system.ReadableBuffer]) -> Self: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Lights.Effects.LampArrayCustomEffect::add_UpdateRequested(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Lights.Effects.LampArrayCustomEffect,Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs>)
     def add_update_requested(self, handler: windows_foundation.TypedEventHandler[LampArrayCustomEffect, LampArrayUpdateRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -200,7 +200,7 @@ class LampArrayEffectPlaylist(winrt.system.Object, winrt._winrt.Sequence[ILampAr
     def __getitem__(self, index: slice) -> winrt.system.Array[ILampArrayEffect]: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::Append(Windows.Devices.Lights.Effects.ILampArrayEffect)
-    def append(self, effect: ImplementsILampArrayEffect, /) -> None: ...
+    def append(self, effect: ILampArrayEffect, /) -> None: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Devices.Lights.Effects.ILampArrayEffect> Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::First()
     def first(self) -> windows_foundation_collections.IIterator[ILampArrayEffect]: ...
     # Windows.Devices.Lights.Effects.ILampArrayEffect Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::GetAt(System.UInt32)
@@ -208,7 +208,7 @@ class LampArrayEffectPlaylist(winrt.system.Object, winrt._winrt.Sequence[ILampAr
     # System.UInt32 Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::GetMany(System.UInt32,Windows.Devices.Lights.Effects.ILampArrayEffect[])
     def get_many(self, start_index: winrt.system.UInt32, items: typing.Union[winrt.system.Array[ILampArrayEffect], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
     # System.Boolean Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::IndexOf(Windows.Devices.Lights.Effects.ILampArrayEffect,System.UInt32&)
-    def index_of(self, value: ImplementsILampArrayEffect, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    def index_of(self, value: ILampArrayEffect, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     # System.Void Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::OverrideZIndex(System.Int32)
     def override_z_index(self, z_index: winrt.system.Int32, /) -> None: ...
     # System.Void Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::Pause()
@@ -240,7 +240,7 @@ class LampArrayEffectPlaylist(winrt.system.Object, winrt._winrt.Sequence[ILampAr
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class LampArraySolidEffect(winrt.system.Object, ImplementsILampArrayEffect):
+class LampArraySolidEffect(winrt.system.Object, ILampArrayEffect):
     def __new__(cls: typing.Type[Self], lamp_array: windows_devices_lights.LampArray, lamp_indexes: typing.Union[winrt.system.Array[winrt.system.Int32], winrt.system.ReadableBuffer]) -> Self: ...
     # System.Int32 Windows.Devices.Lights.Effects.LampArraySolidEffect::get_ZIndex()
     @_property
@@ -287,7 +287,7 @@ class LampArrayUpdateRequestedEventArgs(winrt.system.Object):
     @_property
     def since_started(self) -> datetime.timedelta: ...
 
-class ImplementsILampArrayEffect():
+class ILampArrayEffect(winrt._winrt.IInspectable):
     # System.Int32 Windows.Devices.Lights.Effects.ILampArrayEffect::get_ZIndex()
     @_property
     @abstractmethod
@@ -295,14 +295,5 @@ class ImplementsILampArrayEffect():
     # System.Void Windows.Devices.Lights.Effects.ILampArrayEffect::put_ZIndex(System.Int32)
     @z_index.setter
     @abstractmethod
-    def z_index(self, value: winrt.system.Int32) -> None: ...
-
-@typing.final
-class ILampArrayEffect(winrt.system.Object, ImplementsILampArrayEffect):
-    # System.Int32 Windows.Devices.Lights.Effects.ILampArrayEffect::get_ZIndex()
-    @_property
-    def z_index(self) -> winrt.system.Int32: ...
-    # System.Void Windows.Devices.Lights.Effects.ILampArrayEffect::put_ZIndex(System.Int32)
-    @z_index.setter
     def z_index(self, value: winrt.system.Int32) -> None: ...
 

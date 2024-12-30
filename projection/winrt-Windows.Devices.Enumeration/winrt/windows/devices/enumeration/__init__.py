@@ -27,9 +27,7 @@ from winrt._winrt_windows_devices_enumeration import (
     DeviceWatcherTriggerDetails,
     EnclosureLocation,
     IDeviceEnumerationSettings,
-    ImplementsIDeviceEnumerationSettings,
     IDevicePairingSettings,
-    ImplementsIDevicePairingSettings,
 )
 
 __all__ = [
@@ -68,9 +66,7 @@ __all__ = [
     "DeviceWatcherTriggerDetails",
     "EnclosureLocation",
     "IDeviceEnumerationSettings",
-    "ImplementsIDeviceEnumerationSettings",
     "IDevicePairingSettings",
-    "ImplementsIDevicePairingSettings",
 ]
 
 class DeviceAccessStatus(enum.IntEnum):

@@ -17,15 +17,10 @@ from winrt._winrt_windows_foundation_diagnostics import (
     RuntimeBrokerErrorSettings,
     TracingStatusChangedEventArgs,
     IErrorReportingSettings,
-    ImplementsIErrorReportingSettings,
     IFileLoggingSession,
-    ImplementsIFileLoggingSession,
     ILoggingChannel,
-    ImplementsILoggingChannel,
     ILoggingSession,
-    ImplementsILoggingSession,
     ILoggingTarget,
-    ImplementsILoggingTarget,
 )
 
 __all__ = [
@@ -50,15 +45,10 @@ __all__ = [
     "RuntimeBrokerErrorSettings",
     "TracingStatusChangedEventArgs",
     "IErrorReportingSettings",
-    "ImplementsIErrorReportingSettings",
     "IFileLoggingSession",
-    "ImplementsIFileLoggingSession",
     "ILoggingChannel",
-    "ImplementsILoggingChannel",
     "ILoggingSession",
-    "ImplementsILoggingSession",
     "ILoggingTarget",
-    "ImplementsILoggingTarget",
 ]
 
 class CausalityRelation(enum.IntEnum):

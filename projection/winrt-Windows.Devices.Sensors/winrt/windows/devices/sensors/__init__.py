@@ -74,9 +74,7 @@ from winrt._winrt_windows_devices_sensors import (
     SimpleOrientationSensorOrientationChangedEventArgs,
     WakeOnApproachOptions,
     IHumanPresenceSensorExtension,
-    ImplementsIHumanPresenceSensorExtension,
     ISensorDataThreshold,
-    ImplementsISensorDataThreshold,
 )
 
 __all__ = [
@@ -161,9 +159,7 @@ __all__ = [
     "SimpleOrientationSensorOrientationChangedEventArgs",
     "WakeOnApproachOptions",
     "IHumanPresenceSensorExtension",
-    "ImplementsIHumanPresenceSensorExtension",
     "ISensorDataThreshold",
-    "ImplementsISensorDataThreshold",
 ]
 
 class AccelerometerReadingType(enum.IntEnum):

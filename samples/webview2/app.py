@@ -16,7 +16,7 @@ from winrt.microsoft.ui.xaml.controls import (
     XamlControlsResources,
 )
 from winrt.microsoft.ui.xaml.markup import (
-    ImplementsIXamlMetadataProvider,
+    IXamlMetadataProvider,
     IXamlType,
     XamlReader,
     XmlnsDefinition,
@@ -60,7 +60,7 @@ _XAML = """
 """
 
 
-class App(Application, ImplementsIXamlMetadataProvider):
+class App(Application, IXamlMetadataProvider):
     def __init__(self) -> None:
         self._provider = XamlControlsXamlMetaDataProvider()
 

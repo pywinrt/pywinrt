@@ -6,11 +6,8 @@ import winrt.system
 from winrt._winrt_windows_devices_spi_provider import (
     ProviderSpiConnectionSettings,
     ISpiControllerProvider,
-    ImplementsISpiControllerProvider,
     ISpiDeviceProvider,
-    ImplementsISpiDeviceProvider,
     ISpiProvider,
-    ImplementsISpiProvider,
 )
 
 __all__ = [
@@ -18,11 +15,8 @@ __all__ = [
     "ProviderSpiSharingMode",
     "ProviderSpiConnectionSettings",
     "ISpiControllerProvider",
-    "ImplementsISpiControllerProvider",
     "ISpiDeviceProvider",
-    "ImplementsISpiDeviceProvider",
     "ISpiProvider",
-    "ImplementsISpiProvider",
 ]
 
 class ProviderSpiMode(enum.IntEnum):

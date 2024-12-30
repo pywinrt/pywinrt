@@ -362,7 +362,7 @@ class AppointmentException(winrt.system.Object):
     def is_deleted(self) -> bool: ...
 
 @typing.final
-class AppointmentInvitee(winrt.system.Object, ImplementsIAppointmentParticipant):
+class AppointmentInvitee(winrt.system.Object, IAppointmentParticipant):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.ApplicationModel.Appointments.AppointmentParticipantRole Windows.ApplicationModel.Appointments.AppointmentInvitee::get_Role()
     @_property
@@ -457,7 +457,7 @@ class AppointmentManagerForUser(winrt.system.Object):
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class AppointmentOrganizer(winrt.system.Object, ImplementsIAppointmentParticipant):
+class AppointmentOrganizer(winrt.system.Object, IAppointmentParticipant):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.String Windows.ApplicationModel.Appointments.AppointmentOrganizer::get_DisplayName()
     @_property
@@ -744,7 +744,7 @@ class FindAppointmentsOptions(winrt.system.Object):
     @_property
     def fetch_properties(self) -> typing.MutableSequence[str]: ...
 
-class ImplementsIAppointmentParticipant():
+class IAppointmentParticipant(winrt._winrt.IInspectable):
     # System.String Windows.ApplicationModel.Appointments.IAppointmentParticipant::get_Address()
     @_property
     @abstractmethod
@@ -760,20 +760,5 @@ class ImplementsIAppointmentParticipant():
     # System.Void Windows.ApplicationModel.Appointments.IAppointmentParticipant::put_DisplayName(System.String)
     @display_name.setter
     @abstractmethod
-    def display_name(self, value: str) -> None: ...
-
-@typing.final
-class IAppointmentParticipant(winrt.system.Object, ImplementsIAppointmentParticipant):
-    # System.String Windows.ApplicationModel.Appointments.IAppointmentParticipant::get_Address()
-    @_property
-    def address(self) -> str: ...
-    # System.Void Windows.ApplicationModel.Appointments.IAppointmentParticipant::put_Address(System.String)
-    @address.setter
-    def address(self, value: str) -> None: ...
-    # System.String Windows.ApplicationModel.Appointments.IAppointmentParticipant::get_DisplayName()
-    @_property
-    def display_name(self) -> str: ...
-    # System.Void Windows.ApplicationModel.Appointments.IAppointmentParticipant::put_DisplayName(System.String)
-    @display_name.setter
     def display_name(self, value: str) -> None: ...
 

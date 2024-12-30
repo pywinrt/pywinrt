@@ -93,7 +93,7 @@ class AccessoryManager_Static(type):
     # System.Void Windows.Phone.Notification.Management.AccessoryManager::PerformMediaPlaybackCommand(Windows.Phone.Notification.Management.PlaybackCommand)
     def perform_media_playback_command(cls, command: PlaybackCommand, /) -> None: ...
     # System.Void Windows.Phone.Notification.Management.AccessoryManager::ProcessTriggerDetails(Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails)
-    def process_trigger_details(cls, p_details: ImplementsIAccessoryNotificationTriggerDetails, /) -> None: ...
+    def process_trigger_details(cls, p_details: IAccessoryNotificationTriggerDetails, /) -> None: ...
     # System.String Windows.Phone.Notification.Management.AccessoryManager::RegisterAccessoryApp()
     def register_accessory_app(cls) -> str: ...
     # System.Void Windows.Phone.Notification.Management.AccessoryManager::RejectPhoneCall(System.UInt32)
@@ -167,7 +167,7 @@ class AccessoryManager(winrt.system.Object, metaclass=AccessoryManager_Static):
     pass
 
 @typing.final
-class AlarmNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
+class AlarmNotificationTriggerDetails(winrt.system.Object, IAccessoryNotificationTriggerDetails):
     # System.Boolean Windows.Phone.Notification.Management.AlarmNotificationTriggerDetails::get_StartedProcessing()
     @_property
     def started_processing(self) -> bool: ...
@@ -221,7 +221,7 @@ class BinaryId(winrt.system.Object):
     def length(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class CalendarChangedNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
+class CalendarChangedNotificationTriggerDetails(winrt.system.Object, IAccessoryNotificationTriggerDetails):
     # System.Boolean Windows.Phone.Notification.Management.CalendarChangedNotificationTriggerDetails::get_StartedProcessing()
     @_property
     def started_processing(self) -> bool: ...
@@ -248,7 +248,7 @@ class CalendarChangedNotificationTriggerDetails(winrt.system.Object, ImplementsI
     def item_id(self) -> str: ...
 
 @typing.final
-class CortanaTileNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
+class CortanaTileNotificationTriggerDetails(winrt.system.Object, IAccessoryNotificationTriggerDetails):
     # System.Boolean Windows.Phone.Notification.Management.CortanaTileNotificationTriggerDetails::get_StartedProcessing()
     @_property
     def started_processing(self) -> bool: ...
@@ -317,7 +317,7 @@ class EmailFolderInfo(winrt.system.Object):
     def is_notification_enabled(self) -> bool: ...
 
 @typing.final
-class EmailNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
+class EmailNotificationTriggerDetails(winrt.system.Object, IAccessoryNotificationTriggerDetails):
     # System.Boolean Windows.Phone.Notification.Management.EmailNotificationTriggerDetails::get_StartedProcessing()
     @_property
     def started_processing(self) -> bool: ...
@@ -359,7 +359,7 @@ class EmailNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryN
     def message_entry_id(self) -> BinaryId: ...
 
 @typing.final
-class EmailReadNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
+class EmailReadNotificationTriggerDetails(winrt.system.Object, IAccessoryNotificationTriggerDetails):
     # System.Boolean Windows.Phone.Notification.Management.EmailReadNotificationTriggerDetails::get_StartedProcessing()
     @_property
     def started_processing(self) -> bool: ...
@@ -392,7 +392,7 @@ class EmailReadNotificationTriggerDetails(winrt.system.Object, ImplementsIAccess
     def parent_folder_name(self) -> str: ...
 
 @typing.final
-class MediaControlsTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
+class MediaControlsTriggerDetails(winrt.system.Object, IAccessoryNotificationTriggerDetails):
     # System.Boolean Windows.Phone.Notification.Management.MediaControlsTriggerDetails::get_StartedProcessing()
     @_property
     def started_processing(self) -> bool: ...
@@ -506,7 +506,7 @@ class PhoneLineDetails(winrt.system.Object):
     def missed_call_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class PhoneNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
+class PhoneNotificationTriggerDetails(winrt.system.Object, IAccessoryNotificationTriggerDetails):
     # System.Boolean Windows.Phone.Notification.Management.PhoneNotificationTriggerDetails::get_StartedProcessing()
     @_property
     def started_processing(self) -> bool: ...
@@ -536,7 +536,7 @@ class PhoneNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryN
     def phone_notification_type(self) -> PhoneNotificationType: ...
 
 @typing.final
-class ReminderNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
+class ReminderNotificationTriggerDetails(winrt.system.Object, IAccessoryNotificationTriggerDetails):
     # System.Boolean Windows.Phone.Notification.Management.ReminderNotificationTriggerDetails::get_StartedProcessing()
     @_property
     def started_processing(self) -> bool: ...
@@ -602,7 +602,7 @@ class TextResponse(winrt.system.Object):
     def id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ToastNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
+class ToastNotificationTriggerDetails(winrt.system.Object, IAccessoryNotificationTriggerDetails):
     # System.Boolean Windows.Phone.Notification.Management.ToastNotificationTriggerDetails::get_StartedProcessing()
     @_property
     def started_processing(self) -> bool: ...
@@ -658,7 +658,7 @@ class VolumeInfo(winrt.system.Object):
     @_property
     def system_volume(self) -> winrt.system.UInt32: ...
 
-class ImplementsIAccessoryNotificationTriggerDetails():
+class IAccessoryNotificationTriggerDetails(winrt._winrt.IInspectable):
     # Windows.Phone.Notification.Management.AccessoryNotificationType Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_AccessoryNotificationType()
     @_property
     @abstractmethod
@@ -682,26 +682,5 @@ class ImplementsIAccessoryNotificationTriggerDetails():
     # Windows.Foundation.DateTime Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_TimeCreated()
     @_property
     @abstractmethod
-    def time_created(self) -> datetime.datetime: ...
-
-@typing.final
-class IAccessoryNotificationTriggerDetails(winrt.system.Object, ImplementsIAccessoryNotificationTriggerDetails):
-    # Windows.Phone.Notification.Management.AccessoryNotificationType Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_AccessoryNotificationType()
-    @_property
-    def accessory_notification_type(self) -> AccessoryNotificationType: ...
-    # System.String Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_AppDisplayName()
-    @_property
-    def app_display_name(self) -> str: ...
-    # System.String Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_AppId()
-    @_property
-    def app_id(self) -> str: ...
-    # System.Boolean Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_StartedProcessing()
-    @_property
-    def started_processing(self) -> bool: ...
-    # System.Void Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::put_StartedProcessing(System.Boolean)
-    @started_processing.setter
-    def started_processing(self, value: bool) -> None: ...
-    # Windows.Foundation.DateTime Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_TimeCreated()
-    @_property
     def time_created(self) -> datetime.datetime: ...
 

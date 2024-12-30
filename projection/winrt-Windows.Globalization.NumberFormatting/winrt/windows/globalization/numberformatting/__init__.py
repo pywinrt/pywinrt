@@ -12,21 +12,13 @@ from winrt._winrt_windows_globalization_numberformatting import (
     PermilleFormatter,
     SignificantDigitsNumberRounder,
     INumberFormatter,
-    ImplementsINumberFormatter,
     INumberFormatter2,
-    ImplementsINumberFormatter2,
     INumberFormatterOptions,
-    ImplementsINumberFormatterOptions,
     INumberParser,
-    ImplementsINumberParser,
     INumberRounder,
-    ImplementsINumberRounder,
     INumberRounderOption,
-    ImplementsINumberRounderOption,
     ISignedZeroOption,
-    ImplementsISignedZeroOption,
     ISignificantDigitsOption,
-    ImplementsISignificantDigitsOption,
 )
 
 __all__ = [
@@ -40,21 +32,13 @@ __all__ = [
     "PermilleFormatter",
     "SignificantDigitsNumberRounder",
     "INumberFormatter",
-    "ImplementsINumberFormatter",
     "INumberFormatter2",
-    "ImplementsINumberFormatter2",
     "INumberFormatterOptions",
-    "ImplementsINumberFormatterOptions",
     "INumberParser",
-    "ImplementsINumberParser",
     "INumberRounder",
-    "ImplementsINumberRounder",
     "INumberRounderOption",
-    "ImplementsINumberRounderOption",
     "ISignedZeroOption",
-    "ImplementsISignedZeroOption",
     "ISignificantDigitsOption",
-    "ImplementsISignificantDigitsOption",
 ]
 
 class CurrencyFormatterMode(enum.IntEnum):

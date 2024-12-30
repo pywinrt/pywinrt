@@ -28,15 +28,10 @@ from winrt._winrt_windows_ui_input_inking import (
     InkUnprocessedInput,
     PenAndInkSettings,
     IInkPointFactory,
-    ImplementsIInkPointFactory,
     IInkPresenterRulerFactory,
-    ImplementsIInkPresenterRulerFactory,
     IInkPresenterStencil,
-    ImplementsIInkPresenterStencil,
     IInkRecognizerContainer,
-    ImplementsIInkRecognizerContainer,
     IInkStrokeContainer,
-    ImplementsIInkStrokeContainer,
 )
 
 __all__ = [
@@ -76,15 +71,10 @@ __all__ = [
     "InkUnprocessedInput",
     "PenAndInkSettings",
     "IInkPointFactory",
-    "ImplementsIInkPointFactory",
     "IInkPresenterRulerFactory",
-    "ImplementsIInkPresenterRulerFactory",
     "IInkPresenterStencil",
-    "ImplementsIInkPresenterStencil",
     "IInkRecognizerContainer",
-    "ImplementsIInkRecognizerContainer",
     "IInkStrokeContainer",
-    "ImplementsIInkStrokeContainer",
 ]
 
 class HandwritingLineHeight(enum.IntEnum):

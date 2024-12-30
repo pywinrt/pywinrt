@@ -98,7 +98,7 @@ class DisplayManager_Static(type):
     def create(cls, options: DisplayManagerOptions, /) -> DisplayManager: ...
 
 @typing.final
-class DisplayManager(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=DisplayManager_Static):
+class DisplayManager(winrt.system.Object, windows_foundation.IClosable, metaclass=DisplayManager_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.Display.Core.DisplayManager::Close()
@@ -241,7 +241,7 @@ class DisplayMuxDevice_Static(type):
     def get_device_selector(cls) -> str: ...
 
 @typing.final
-class DisplayMuxDevice(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=DisplayMuxDevice_Static):
+class DisplayMuxDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=DisplayMuxDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.Display.Core.DisplayMuxDevice::Close()
@@ -354,7 +354,7 @@ class DisplayPath(winrt.system.Object):
 @typing.final
 class DisplayPrimaryDescription_Static(type):
     # Windows.Devices.Display.Core.DisplayPrimaryDescription Windows.Devices.Display.Core.DisplayPrimaryDescription::CreateWithProperties(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.Guid,System.Object>>,System.UInt32,System.UInt32,Windows.Graphics.DirectX.DirectXPixelFormat,Windows.Graphics.DirectX.DirectXColorSpace,System.Boolean,Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription)
-    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.ImplementsIKeyValuePair[_uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: windows_graphics_directx.DirectXPixelFormat, color_space: windows_graphics_directx.DirectXColorSpace, is_stereo: bool, multisample_description: windows_graphics_directx_direct3d11.Direct3DMultisampleDescription, /) -> DisplayPrimaryDescription: ...
+    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: windows_graphics_directx.DirectXPixelFormat, color_space: windows_graphics_directx.DirectXColorSpace, is_stereo: bool, multisample_description: windows_graphics_directx_direct3d11.Direct3DMultisampleDescription, /) -> DisplayPrimaryDescription: ...
 
 @typing.final
 class DisplayPrimaryDescription(winrt.system.Object, metaclass=DisplayPrimaryDescription_Static):
@@ -545,7 +545,7 @@ class DisplayView(winrt.system.Object):
 @typing.final
 class DisplayWireFormat_Static(type):
     # Windows.Devices.Display.Core.DisplayWireFormat Windows.Devices.Display.Core.DisplayWireFormat::CreateWithProperties(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.Guid,System.Object>>,Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding,System.Int32,Windows.Devices.Display.Core.DisplayWireFormatColorSpace,Windows.Devices.Display.Core.DisplayWireFormatEotf,Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata)
-    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.ImplementsIKeyValuePair[_uuid.UUID, winrt.system.Object]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> DisplayWireFormat: ...
+    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> DisplayWireFormat: ...
 
 @typing.final
 class DisplayWireFormat(winrt.system.Object, metaclass=DisplayWireFormat_Static):

@@ -281,19 +281,12 @@ from ._winrt_windows_ui_xaml_controls import (
     WebViewUnsupportedUriSchemeIdentifiedEventArgs,
     WebViewUnviewableContentIdentifiedEventArgs,
     WebViewWebResourceRequestedEventArgs,
-    ImplementsICommandBarElement,
     ICommandBarElement,
-    ImplementsICommandBarElement2,
     ICommandBarElement2,
-    ImplementsIInsertionPanel,
     IInsertionPanel,
-    ImplementsIItemContainerMapping,
     IItemContainerMapping,
-    ImplementsINavigate,
     INavigate,
-    ImplementsIScrollAnchorProvider,
     IScrollAnchorProvider,
-    ImplementsISemanticZoomInformation,
     ISemanticZoomInformation,
 )
 
@@ -332,7 +325,7 @@ class AppBarButton_Static(Button_Static):
     @typing.final
     def keyboard_accelerator_text_override_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class AppBarButton(Button, ImplementsICommandBarElement2, ImplementsICommandBarElement, metaclass=AppBarButton_Static):
+class AppBarButton(Button, ICommandBarElement2, ICommandBarElement, metaclass=AppBarButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.String Windows.UI.Xaml.Controls.AppBarButton::get_Label()
     @_property
@@ -415,7 +408,7 @@ class AppBarToggleButton_Static(windows_ui_xaml_controls_primitives.ToggleButton
     @typing.final
     def keyboard_accelerator_text_override_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class AppBarToggleButton(windows_ui_xaml_controls_primitives.ToggleButton, ImplementsICommandBarElement2, ImplementsICommandBarElement, metaclass=AppBarToggleButton_Static):
+class AppBarToggleButton(windows_ui_xaml_controls_primitives.ToggleButton, ICommandBarElement2, ICommandBarElement, metaclass=AppBarToggleButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.String Windows.UI.Xaml.Controls.AppBarToggleButton::get_Label()
     @_property
@@ -1412,7 +1405,7 @@ class ListViewBase_Static(windows_ui_xaml_controls_primitives.Selector_Static):
     @typing.final
     def single_selection_follows_focus_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class ListViewBase(windows_ui_xaml_controls_primitives.Selector, ImplementsISemanticZoomInformation, metaclass=ListViewBase_Static):
+class ListViewBase(windows_ui_xaml_controls_primitives.Selector, ISemanticZoomInformation, metaclass=ListViewBase_Static):
     # System.Void Windows.UI.Xaml.Controls.ListViewBase::CompleteViewChange()
     def complete_view_change(self) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.ListViewBase::CompleteViewChangeFrom(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
@@ -1904,7 +1897,7 @@ class Slider(windows_ui_xaml_controls_primitives.RangeBase, metaclass=Slider_Sta
     # System.Void Windows.UI.Xaml.Controls.Slider::put_ThumbToolTipValueConverter(Windows.UI.Xaml.Data.IValueConverter)
     @thumb_tool_tip_value_converter.setter
     @typing.final
-    def thumb_tool_tip_value_converter(self, value: windows_ui_xaml_data.ImplementsIValueConverter) -> None: ...
+    def thumb_tool_tip_value_converter(self, value: windows_ui_xaml_data.IValueConverter) -> None: ...
     # System.Double Windows.UI.Xaml.Controls.Slider::get_StepFrequency()
     @_property
     def step_frequency(self) -> winrt.system.Double: ...

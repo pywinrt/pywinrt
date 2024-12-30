@@ -8,7 +8,7 @@ from winrt.microsoft.ui.xaml import (
 )
 from winrt.microsoft.ui.xaml.controls import Button, XamlControlsResources
 from winrt.microsoft.ui.xaml.markup import (
-    ImplementsIXamlMetadataProvider,
+    IXamlMetadataProvider,
     IXamlType,
     XamlReader,
     XmlnsDefinition,
@@ -33,9 +33,9 @@ XAML = """
 """
 
 
-# The Windows App Runtime depends on ImplementsIXamlMetadataProvider being
+# The Windows App Runtime depends on IXamlMetadataProvider being
 # implemented on the Application class, so always include this.
-class App(Application, ImplementsIXamlMetadataProvider):
+class App(Application, IXamlMetadataProvider):
     def __init__(self) -> None:
         self._provider = XamlControlsXamlMetaDataProvider()
 

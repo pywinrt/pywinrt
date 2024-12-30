@@ -53,9 +53,7 @@ from winrt._winrt_windows_media_devices import (
     ZoomControl,
     ZoomSettings,
     IDefaultAudioDeviceChangedEventArgs,
-    ImplementsIDefaultAudioDeviceChangedEventArgs,
     IMediaDeviceController,
-    ImplementsIMediaDeviceController,
 )
 
 __all__ = [
@@ -132,9 +130,7 @@ __all__ = [
     "ZoomControl",
     "ZoomSettings",
     "IDefaultAudioDeviceChangedEventArgs",
-    "ImplementsIDefaultAudioDeviceChangedEventArgs",
     "IMediaDeviceController",
-    "ImplementsIMediaDeviceController",
     "CallControlEventHandler",
     "DialRequestedEventHandler",
     "KeypadPressedEventHandler",

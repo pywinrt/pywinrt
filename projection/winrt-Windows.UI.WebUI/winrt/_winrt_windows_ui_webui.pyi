@@ -58,18 +58,18 @@ class ActivatedOperation(winrt.system.Object):
     def get_deferral(self) -> ActivatedDeferral: ...
 
 @typing.final
-class BackgroundActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIBackgroundActivatedEventArgs):
+class BackgroundActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IBackgroundActivatedEventArgs):
     # Windows.ApplicationModel.Background.IBackgroundTaskInstance Windows.UI.WebUI.BackgroundActivatedEventArgs::get_TaskInstance()
     @_property
     def task_instance(self) -> windows_applicationmodel_background.IBackgroundTaskInstance: ...
 
 @typing.final
-class EnteredBackgroundEventArgs(winrt.system.Object, windows_applicationmodel.ImplementsIEnteredBackgroundEventArgs):
+class EnteredBackgroundEventArgs(winrt.system.Object, windows_applicationmodel.IEnteredBackgroundEventArgs):
     # Windows.Foundation.Deferral Windows.UI.WebUI.EnteredBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
-class HtmlPrintDocumentSource(winrt.system.Object, windows_foundation.ImplementsIClosable, windows_graphics_printing.ImplementsIPrintDocumentSource):
+class HtmlPrintDocumentSource(winrt.system.Object, windows_foundation.IClosable, windows_graphics_printing.IPrintDocumentSource):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.UI.WebUI.HtmlPrintDocumentSource::Close()
@@ -129,7 +129,7 @@ class HtmlPrintDocumentSource(winrt.system.Object, windows_foundation.Implements
     def page_range(self) -> str: ...
 
 @typing.final
-class LeavingBackgroundEventArgs(winrt.system.Object, windows_applicationmodel.ImplementsILeavingBackgroundEventArgs):
+class LeavingBackgroundEventArgs(winrt.system.Object, windows_applicationmodel.ILeavingBackgroundEventArgs):
     # Windows.Foundation.Deferral Windows.UI.WebUI.LeavingBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
@@ -148,18 +148,18 @@ class NewWebUIViewCreatedEventArgs(winrt.system.Object):
     def web_ui_view(self) -> WebUIView: ...
 
 @typing.final
-class SuspendingDeferral(winrt.system.Object, windows_applicationmodel.ImplementsISuspendingDeferral):
+class SuspendingDeferral(winrt.system.Object, windows_applicationmodel.ISuspendingDeferral):
     # System.Void Windows.UI.WebUI.SuspendingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
-class SuspendingEventArgs(winrt.system.Object, windows_applicationmodel.ImplementsISuspendingEventArgs):
+class SuspendingEventArgs(winrt.system.Object, windows_applicationmodel.ISuspendingEventArgs):
     # Windows.ApplicationModel.SuspendingOperation Windows.UI.WebUI.SuspendingEventArgs::get_SuspendingOperation()
     @_property
     def suspending_operation(self) -> windows_applicationmodel.SuspendingOperation: ...
 
 @typing.final
-class SuspendingOperation(winrt.system.Object, windows_applicationmodel.ImplementsISuspendingOperation):
+class SuspendingOperation(winrt.system.Object, windows_applicationmodel.ISuspendingOperation):
     # Windows.ApplicationModel.SuspendingDeferral Windows.UI.WebUI.SuspendingOperation::GetDeferral()
     def get_deferral(self) -> windows_applicationmodel.SuspendingDeferral: ...
     # Windows.Foundation.DateTime Windows.UI.WebUI.SuspendingOperation::get_Deadline()
@@ -212,7 +212,7 @@ class WebUIApplication(winrt.system.Object, metaclass=WebUIApplication_Static):
     pass
 
 @typing.final
-class WebUIAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, windows_applicationmodel_activation.ImplementsIAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderAddAppointmentActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -236,7 +236,7 @@ class WebUIAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Obj
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, windows_applicationmodel_activation.ImplementsIAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -260,7 +260,7 @@ class WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, windows_applicationmodel_activation.ImplementsIAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -284,7 +284,7 @@ class WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, windows_applicationmodel_activation.ImplementsIAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -314,7 +314,7 @@ class WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.sy
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, windows_applicationmodel_activation.ImplementsIAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -351,7 +351,7 @@ class WebUIBackgroundTaskInstance(winrt.system.Object, metaclass=WebUIBackground
     pass
 
 @typing.final
-class WebUIBackgroundTaskInstanceRuntimeClass(winrt.system.Object, windows_applicationmodel_background.ImplementsIBackgroundTaskInstance, ImplementsIWebUIBackgroundTaskInstance):
+class WebUIBackgroundTaskInstanceRuntimeClass(winrt.system.Object, windows_applicationmodel_background.IBackgroundTaskInstance, IWebUIBackgroundTaskInstance):
     # Windows.ApplicationModel.Background.BackgroundTaskDeferral Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass::GetDeferral()
     def get_deferral(self) -> windows_applicationmodel_background.BackgroundTaskDeferral: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass::add_Canceled(Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler)
@@ -384,7 +384,7 @@ class WebUIBackgroundTaskInstanceRuntimeClass(winrt.system.Object, windows_appli
     def succeeded(self, value: bool) -> None: ...
 
 @typing.final
-class WebUIBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, windows_applicationmodel_activation.ImplementsIBarcodeScannerPreviewActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IBarcodeScannerPreviewActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -405,7 +405,7 @@ class WebUIBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, Implemen
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUICachedFileUpdaterActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsICachedFileUpdaterActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUICachedFileUpdaterActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.ICachedFileUpdaterActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -426,7 +426,7 @@ class WebUICachedFileUpdaterActivatedEventArgs(winrt.system.Object, windows_appl
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUICameraSettingsActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsICameraSettingsActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUICameraSettingsActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.ICameraSettingsActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -447,7 +447,7 @@ class WebUICameraSettingsActivatedEventArgs(winrt.system.Object, ImplementsIActi
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUICommandLineActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, windows_applicationmodel_activation.ImplementsICommandLineActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUICommandLineActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.ICommandLineActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUICommandLineActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -468,7 +468,7 @@ class WebUICommandLineActivatedEventArgs(winrt.system.Object, ImplementsIActivat
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIContactCallActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIContactCallActivatedEventArgs, windows_applicationmodel_activation.ImplementsIContactActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIContactCallActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactCallActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -495,7 +495,7 @@ class WebUIContactCallActivatedEventArgs(winrt.system.Object, ImplementsIActivat
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIContactMapActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIContactMapActivatedEventArgs, windows_applicationmodel_activation.ImplementsIContactActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIContactMapActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactMapActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactMapActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -519,7 +519,7 @@ class WebUIContactMapActivatedEventArgs(winrt.system.Object, ImplementsIActivate
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIContactMessageActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIContactMessageActivatedEventArgs, windows_applicationmodel_activation.ImplementsIContactActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIContactMessageActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactMessageActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -546,7 +546,7 @@ class WebUIContactMessageActivatedEventArgs(winrt.system.Object, ImplementsIActi
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIContactPanelActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIActivatedEventArgs, windows_applicationmodel_activation.ImplementsIContactPanelActivatedEventArgs):
+class WebUIContactPanelActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgs, windows_applicationmodel_activation.IContactPanelActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -570,7 +570,7 @@ class WebUIContactPanelActivatedEventArgs(winrt.system.Object, windows_applicati
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIContactPickerActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIContactPickerActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIContactPickerActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactPickerActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -588,7 +588,7 @@ class WebUIContactPickerActivatedEventArgs(winrt.system.Object, ImplementsIActiv
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIContactPostActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIContactPostActivatedEventArgs, windows_applicationmodel_activation.ImplementsIContactActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIContactPostActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactPostActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactPostActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -615,7 +615,7 @@ class WebUIContactPostActivatedEventArgs(winrt.system.Object, ImplementsIActivat
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIContactVideoCallActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIContactVideoCallActivatedEventArgs, windows_applicationmodel_activation.ImplementsIContactActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIContactVideoCallActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactVideoCallActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -642,7 +642,7 @@ class WebUIContactVideoCallActivatedEventArgs(winrt.system.Object, ImplementsIAc
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIDeviceActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ImplementsIDeviceActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIDeviceActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IDeviceActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIDeviceActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -669,7 +669,7 @@ class WebUIDeviceActivatedEventArgs(winrt.system.Object, windows_applicationmode
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIDevicePairingActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIDevicePairingActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIDevicePairingActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IDevicePairingActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -690,7 +690,7 @@ class WebUIDevicePairingActivatedEventArgs(winrt.system.Object, windows_applicat
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIDialReceiverActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ImplementsIDialReceiverActivatedEventArgs, windows_applicationmodel_activation.ImplementsILaunchActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIDialReceiverActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IDialReceiverActivatedEventArgs, windows_applicationmodel_activation.ILaunchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -720,7 +720,7 @@ class WebUIDialReceiverActivatedEventArgs(winrt.system.Object, windows_applicati
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIFileActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, windows_applicationmodel_activation.ImplementsIFileActivatedEventArgsWithNeighboringFiles, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ImplementsIFileActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIFileActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IFileActivatedEventArgsWithNeighboringFiles, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IFileActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -750,7 +750,7 @@ class WebUIFileActivatedEventArgs(winrt.system.Object, windows_applicationmodel_
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIFileOpenPickerActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIFileOpenPickerActivatedEventArgs2, windows_applicationmodel_activation.ImplementsIFileOpenPickerActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIFileOpenPickerActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs2, windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -774,7 +774,7 @@ class WebUIFileOpenPickerActivatedEventArgs(winrt.system.Object, windows_applica
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIFileOpenPickerContinuationEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIFileOpenPickerContinuationEventArgs, windows_applicationmodel_activation.ImplementsIContinuationActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIFileOpenPickerContinuationEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileOpenPickerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -798,7 +798,7 @@ class WebUIFileOpenPickerContinuationEventArgs(winrt.system.Object, windows_appl
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIFileSavePickerActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIFileSavePickerActivatedEventArgs2, windows_applicationmodel_activation.ImplementsIFileSavePickerActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIFileSavePickerActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs2, windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -825,7 +825,7 @@ class WebUIFileSavePickerActivatedEventArgs(winrt.system.Object, windows_applica
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIFileSavePickerContinuationEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIFileSavePickerContinuationEventArgs, windows_applicationmodel_activation.ImplementsIContinuationActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIFileSavePickerContinuationEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileSavePickerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -849,7 +849,7 @@ class WebUIFileSavePickerContinuationEventArgs(winrt.system.Object, windows_appl
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIFolderPickerContinuationEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIFolderPickerContinuationEventArgs, windows_applicationmodel_activation.ImplementsIContinuationActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIFolderPickerContinuationEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFolderPickerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -873,7 +873,7 @@ class WebUIFolderPickerContinuationEventArgs(winrt.system.Object, windows_applic
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUILaunchActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsILaunchActivatedEventArgs2, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ImplementsIPrelaunchActivatedEventArgs, windows_applicationmodel_activation.ImplementsILaunchActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUILaunchActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ILaunchActivatedEventArgs2, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IPrelaunchActivatedEventArgs, windows_applicationmodel_activation.ILaunchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUILaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -906,7 +906,7 @@ class WebUILaunchActivatedEventArgs(winrt.system.Object, windows_applicationmode
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUILockScreenActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ImplementsILockScreenActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUILockScreenActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ILockScreenActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUILockScreenActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -930,7 +930,7 @@ class WebUILockScreenActivatedEventArgs(winrt.system.Object, windows_application
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUILockScreenCallActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ImplementsILockScreenCallActivatedEventArgs, windows_applicationmodel_activation.ImplementsILaunchActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUILockScreenCallActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ILockScreenCallActivatedEventArgs, windows_applicationmodel_activation.ILaunchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -957,7 +957,7 @@ class WebUILockScreenCallActivatedEventArgs(winrt.system.Object, ImplementsIActi
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUILockScreenComponentActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUILockScreenComponentActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -977,7 +977,7 @@ class WebUINavigatedDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 @typing.final
-class WebUINavigatedEventArgs(winrt.system.Object, ImplementsIWebUINavigatedEventArgs):
+class WebUINavigatedEventArgs(winrt.system.Object, IWebUINavigatedEventArgs):
     # Windows.UI.WebUI.WebUINavigatedOperation Windows.UI.WebUI.WebUINavigatedEventArgs::get_NavigatedOperation()
     @_property
     def navigated_operation(self) -> WebUINavigatedOperation: ...
@@ -988,7 +988,7 @@ class WebUINavigatedOperation(winrt.system.Object):
     def get_deferral(self) -> WebUINavigatedDeferral: ...
 
 @typing.final
-class WebUIPhoneCallActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, windows_applicationmodel_activation.ImplementsIPhoneCallActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIPhoneCallActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IPhoneCallActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1009,7 +1009,7 @@ class WebUIPhoneCallActivatedEventArgs(winrt.system.Object, ImplementsIActivated
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIPrint3DWorkflowActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIPrint3DWorkflowActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIPrint3DWorkflowActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IPrint3DWorkflowActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1027,7 +1027,7 @@ class WebUIPrint3DWorkflowActivatedEventArgs(winrt.system.Object, ImplementsIAct
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIPrintTaskSettingsActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIPrintTaskSettingsActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIPrintTaskSettingsActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IPrintTaskSettingsActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1045,7 +1045,7 @@ class WebUIPrintTaskSettingsActivatedEventArgs(winrt.system.Object, ImplementsIA
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIPrintWorkflowForegroundTaskActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIPrintWorkflowForegroundTaskActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1060,7 +1060,7 @@ class WebUIPrintWorkflowForegroundTaskActivatedEventArgs(winrt.system.Object, Im
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIProtocolActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, windows_applicationmodel_activation.ImplementsIProtocolActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIProtocolActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, windows_applicationmodel_activation.IProtocolActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIProtocolActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1090,7 +1090,7 @@ class WebUIProtocolActivatedEventArgs(winrt.system.Object, windows_applicationmo
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIProtocolForResultsActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, windows_applicationmodel_activation.ImplementsIProtocolActivatedEventArgs, windows_applicationmodel_activation.ImplementsIProtocolForResultsActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIProtocolForResultsActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, windows_applicationmodel_activation.IProtocolActivatedEventArgs, windows_applicationmodel_activation.IProtocolForResultsActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1123,7 +1123,7 @@ class WebUIProtocolForResultsActivatedEventArgs(winrt.system.Object, windows_app
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIRestrictedLaunchActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIRestrictedLaunchActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIRestrictedLaunchActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IRestrictedLaunchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1144,7 +1144,7 @@ class WebUIRestrictedLaunchActivatedEventArgs(winrt.system.Object, windows_appli
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUISearchActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ImplementsISearchActivatedEventArgsWithLinguisticDetails, windows_applicationmodel_activation.ImplementsISearchActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUISearchActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ISearchActivatedEventArgsWithLinguisticDetails, windows_applicationmodel_activation.ISearchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUISearchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1171,7 +1171,7 @@ class WebUISearchActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEve
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIShareTargetActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIShareTargetActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIShareTargetActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IShareTargetActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1192,7 +1192,7 @@ class WebUIShareTargetActivatedEventArgs(winrt.system.Object, windows_applicatio
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIStartupTaskActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, windows_applicationmodel_activation.ImplementsIStartupTaskActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIStartupTaskActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IStartupTaskActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1213,7 +1213,7 @@ class WebUIStartupTaskActivatedEventArgs(winrt.system.Object, ImplementsIActivat
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIToastNotificationActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIToastNotificationActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIToastNotificationActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IToastNotificationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1237,7 +1237,7 @@ class WebUIToastNotificationActivatedEventArgs(winrt.system.Object, windows_appl
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIUserDataAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIUserDataAccountProviderActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIUserDataAccountProviderActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IUserDataAccountProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1262,13 +1262,13 @@ class WebUIView_Static(type):
     def create_with_uri_async(cls, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[WebUIView]: ...
 
 @typing.final
-class WebUIView(winrt.system.Object, windows_web_ui.ImplementsIWebViewControl2, windows_web_ui.ImplementsIWebViewControl, metaclass=WebUIView_Static):
+class WebUIView(winrt.system.Object, windows_web_ui.IWebViewControl2, windows_web_ui.IWebViewControl, metaclass=WebUIView_Static):
     # System.Void Windows.UI.WebUI.WebUIView::AddInitializeScript(System.String)
     def add_initialize_script(self, script: str, /) -> None: ...
     # Windows.Foundation.Uri Windows.UI.WebUI.WebUIView::BuildLocalStreamUri(System.String,System.String)
     def build_local_stream_uri(self, content_identifier: str, relative_path: str, /) -> windows_foundation.Uri: ...
     # Windows.Foundation.IAsyncAction Windows.UI.WebUI.WebUIView::CapturePreviewToStreamAsync(Windows.Storage.Streams.IRandomAccessStream)
-    def capture_preview_to_stream_async(self, stream: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
+    def capture_preview_to_stream_async(self, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackage> Windows.UI.WebUI.WebUIView::CaptureSelectedContentToDataPackageAsync()
     def capture_selected_content_to_data_package_async(self) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackage]: ...
     # System.Void Windows.UI.WebUI.WebUIView::GetDeferredPermissionRequestById(System.UInt32,Windows.Web.UI.WebViewControlDeferredPermissionRequest&)
@@ -1282,7 +1282,7 @@ class WebUIView(winrt.system.Object, windows_web_ui.ImplementsIWebViewControl2, 
     # System.Void Windows.UI.WebUI.WebUIView::Navigate(Windows.Foundation.Uri)
     def navigate(self, source: windows_foundation.Uri, /) -> None: ...
     # System.Void Windows.UI.WebUI.WebUIView::NavigateToLocalStreamUri(Windows.Foundation.Uri,Windows.Web.IUriToStreamResolver)
-    def navigate_to_local_stream_uri(self, source: windows_foundation.Uri, stream_resolver: windows_web.ImplementsIUriToStreamResolver, /) -> None: ...
+    def navigate_to_local_stream_uri(self, source: windows_foundation.Uri, stream_resolver: windows_web.IUriToStreamResolver, /) -> None: ...
     # System.Void Windows.UI.WebUI.WebUIView::NavigateToString(System.String)
     def navigate_to_string(self, text: str, /) -> None: ...
     # System.Void Windows.UI.WebUI.WebUIView::NavigateWithHttpRequestMessage(Windows.Web.Http.HttpRequestMessage)
@@ -1408,7 +1408,7 @@ class WebUIView(winrt.system.Object, windows_web_ui.ImplementsIWebViewControl2, 
     def settings(self) -> windows_web_ui.WebViewControlSettings: ...
 
 @typing.final
-class WebUIVoiceCommandActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIVoiceCommandActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIVoiceCommandActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IVoiceCommandActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1429,7 +1429,7 @@ class WebUIVoiceCommandActivatedEventArgs(winrt.system.Object, windows_applicati
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIWalletActionActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIWalletActionActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIWalletActionActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IWalletActionActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1453,7 +1453,7 @@ class WebUIWalletActionActivatedEventArgs(winrt.system.Object, ImplementsIActiva
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIWebAccountProviderActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIWebAccountProviderActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIWebAccountProviderActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IWebAccountProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1474,7 +1474,7 @@ class WebUIWebAccountProviderActivatedEventArgs(winrt.system.Object, windows_app
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIWebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsDeferral, windows_applicationmodel_activation.ImplementsIWebAuthenticationBrokerContinuationEventArgs, windows_applicationmodel_activation.ImplementsIContinuationActivatedEventArgs, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+class WebUIWebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IWebAuthenticationBrokerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1494,19 +1494,13 @@ class WebUIWebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, Imp
     @_property
     def activated_operation(self) -> ActivatedOperation: ...
 
-class ImplementsIActivatedEventArgsDeferral():
+class IActivatedEventArgsDeferral(winrt._winrt.IInspectable):
     # Windows.UI.WebUI.ActivatedOperation Windows.UI.WebUI.IActivatedEventArgsDeferral::get_ActivatedOperation()
     @_property
     @abstractmethod
     def activated_operation(self) -> ActivatedOperation: ...
 
-@typing.final
-class IActivatedEventArgsDeferral(winrt.system.Object, ImplementsIActivatedEventArgsDeferral):
-    # Windows.UI.WebUI.ActivatedOperation Windows.UI.WebUI.IActivatedEventArgsDeferral::get_ActivatedOperation()
-    @_property
-    def activated_operation(self) -> ActivatedOperation: ...
-
-class ImplementsIWebUIBackgroundTaskInstance():
+class IWebUIBackgroundTaskInstance(winrt._winrt.IInspectable):
     # System.Boolean Windows.UI.WebUI.IWebUIBackgroundTaskInstance::get_Succeeded()
     @_property
     @abstractmethod
@@ -1516,24 +1510,9 @@ class ImplementsIWebUIBackgroundTaskInstance():
     @abstractmethod
     def succeeded(self, value: bool) -> None: ...
 
-@typing.final
-class IWebUIBackgroundTaskInstance(winrt.system.Object, ImplementsIWebUIBackgroundTaskInstance):
-    # System.Boolean Windows.UI.WebUI.IWebUIBackgroundTaskInstance::get_Succeeded()
-    @_property
-    def succeeded(self) -> bool: ...
-    # System.Void Windows.UI.WebUI.IWebUIBackgroundTaskInstance::put_Succeeded(System.Boolean)
-    @succeeded.setter
-    def succeeded(self, value: bool) -> None: ...
-
-class ImplementsIWebUINavigatedEventArgs():
+class IWebUINavigatedEventArgs(winrt._winrt.IInspectable):
     # Windows.UI.WebUI.WebUINavigatedOperation Windows.UI.WebUI.IWebUINavigatedEventArgs::get_NavigatedOperation()
     @_property
     @abstractmethod
-    def navigated_operation(self) -> WebUINavigatedOperation: ...
-
-@typing.final
-class IWebUINavigatedEventArgs(winrt.system.Object, ImplementsIWebUINavigatedEventArgs):
-    # Windows.UI.WebUI.WebUINavigatedOperation Windows.UI.WebUI.IWebUINavigatedEventArgs::get_NavigatedOperation()
-    @_property
     def navigated_operation(self) -> WebUINavigatedOperation: ...
 

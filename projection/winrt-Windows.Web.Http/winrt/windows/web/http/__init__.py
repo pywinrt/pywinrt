@@ -24,7 +24,6 @@ from winrt._winrt_windows_web_http import (
     HttpStringContent,
     HttpTransportInformation,
     IHttpContent,
-    ImplementsIHttpContent,
 )
 
 __all__ = [
@@ -53,7 +52,6 @@ __all__ = [
     "HttpStringContent",
     "HttpTransportInformation",
     "IHttpContent",
-    "ImplementsIHttpContent",
 ]
 
 class HttpCompletionOption(enum.IntEnum):

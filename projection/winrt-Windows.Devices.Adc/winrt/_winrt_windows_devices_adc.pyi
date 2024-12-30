@@ -18,7 +18,7 @@ from winrt.windows.devices.adc import AdcChannelMode
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AdcChannel(winrt.system.Object, windows_foundation.ImplementsIClosable):
+class AdcChannel(winrt.system.Object, windows_foundation.IClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.Adc.AdcChannel::Close()
@@ -34,7 +34,7 @@ class AdcChannel(winrt.system.Object, windows_foundation.ImplementsIClosable):
 @typing.final
 class AdcController_Static(type):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Adc.AdcController>> Windows.Devices.Adc.AdcController::GetControllersAsync(Windows.Devices.Adc.Provider.IAdcProvider)
-    def get_controllers_async(cls, provider: windows_devices_adc_provider.ImplementsIAdcProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[AdcController]]: ...
+    def get_controllers_async(cls, provider: windows_devices_adc_provider.IAdcProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[AdcController]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Adc.AdcController> Windows.Devices.Adc.AdcController::GetDefaultAsync()
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[AdcController]: ...
 

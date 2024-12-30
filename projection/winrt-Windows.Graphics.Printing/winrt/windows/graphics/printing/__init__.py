@@ -22,13 +22,9 @@ from winrt._winrt_windows_graphics_printing import (
     PrintTaskSourceRequestedDeferral,
     StandardPrintTaskOptions,
     IPrintDocumentSource,
-    ImplementsIPrintDocumentSource,
     IPrintTaskOptionsCore,
-    ImplementsIPrintTaskOptionsCore,
     IPrintTaskOptionsCoreProperties,
-    ImplementsIPrintTaskOptionsCoreProperties,
     IPrintTaskOptionsCoreUIConfiguration,
-    ImplementsIPrintTaskOptionsCoreUIConfiguration,
 )
 
 __all__ = [
@@ -60,13 +56,9 @@ __all__ = [
     "PrintTaskSourceRequestedDeferral",
     "StandardPrintTaskOptions",
     "IPrintDocumentSource",
-    "ImplementsIPrintDocumentSource",
     "IPrintTaskOptionsCore",
-    "ImplementsIPrintTaskOptionsCore",
     "IPrintTaskOptionsCoreProperties",
-    "ImplementsIPrintTaskOptionsCoreProperties",
     "IPrintTaskOptionsCoreUIConfiguration",
-    "ImplementsIPrintTaskOptionsCoreUIConfiguration",
     "PrintTaskSourceRequestedHandler",
 ]
 

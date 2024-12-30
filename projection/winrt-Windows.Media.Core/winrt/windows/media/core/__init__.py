@@ -81,19 +81,12 @@ from winrt._winrt_windows_media_core import (
     VideoTrackOpenFailedEventArgs,
     VideoTrackSupportInfo,
     IMediaCue,
-    ImplementsIMediaCue,
     IMediaSource,
-    ImplementsIMediaSource,
     IMediaStreamDescriptor,
-    ImplementsIMediaStreamDescriptor,
     IMediaStreamDescriptor2,
-    ImplementsIMediaStreamDescriptor2,
     IMediaTrack,
-    ImplementsIMediaTrack,
     ISingleSelectMediaTrackList,
-    ImplementsISingleSelectMediaTrackList,
     ITimedMetadataTrackProvider,
-    ImplementsITimedMetadataTrackProvider,
 )
 
 __all__ = [
@@ -206,19 +199,12 @@ __all__ = [
     "VideoTrackOpenFailedEventArgs",
     "VideoTrackSupportInfo",
     "IMediaCue",
-    "ImplementsIMediaCue",
     "IMediaSource",
-    "ImplementsIMediaSource",
     "IMediaStreamDescriptor",
-    "ImplementsIMediaStreamDescriptor",
     "IMediaStreamDescriptor2",
-    "ImplementsIMediaStreamDescriptor2",
     "IMediaTrack",
-    "ImplementsIMediaTrack",
     "ISingleSelectMediaTrackList",
-    "ImplementsISingleSelectMediaTrackList",
     "ITimedMetadataTrackProvider",
-    "ImplementsITimedMetadataTrackProvider",
 ]
 
 class AudioDecoderDegradation(enum.IntEnum):

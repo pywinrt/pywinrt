@@ -54,7 +54,7 @@ class ChatCapabilitiesManager(winrt.system.Object, metaclass=ChatCapabilitiesMan
     pass
 
 @typing.final
-class ChatConversation(winrt.system.Object, ImplementsIChatItem):
+class ChatConversation(winrt.system.Object, IChatItem):
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatConversation::DeleteAsync()
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.ApplicationModel.Chat.ChatMessageReader Windows.ApplicationModel.Chat.ChatConversation::GetMessageReader()
@@ -149,7 +149,7 @@ class ChatConversationThreadingInfo(winrt.system.Object):
     def participants(self) -> typing.MutableSequence[str]: ...
 
 @typing.final
-class ChatMessage(winrt.system.Object, ImplementsIChatItem):
+class ChatMessage(winrt.system.Object, IChatItem):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.ApplicationModel.Chat.ChatItemKind Windows.ApplicationModel.Chat.ChatMessage::get_ItemKind()
     @_property
@@ -301,7 +301,7 @@ class ChatMessage(winrt.system.Object, ImplementsIChatItem):
 
 @typing.final
 class ChatMessageAttachment(winrt.system.Object):
-    def __new__(cls: typing.Type[Self], mime_type: str, data_stream_reference: windows_storage_streams.ImplementsIRandomAccessStreamReference) -> Self: ...
+    def __new__(cls: typing.Type[Self], mime_type: str, data_stream_reference: windows_storage_streams.IRandomAccessStreamReference) -> Self: ...
     # System.String Windows.ApplicationModel.Chat.ChatMessageAttachment::get_Text()
     @_property
     def text(self) -> str: ...
@@ -325,7 +325,7 @@ class ChatMessageAttachment(winrt.system.Object):
     def data_stream_reference(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.ApplicationModel.Chat.ChatMessageAttachment::put_DataStreamReference(Windows.Storage.Streams.IRandomAccessStreamReference)
     @data_stream_reference.setter
-    def data_stream_reference(self, value: windows_storage_streams.ImplementsIRandomAccessStreamReference) -> None: ...
+    def data_stream_reference(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # System.Double Windows.ApplicationModel.Chat.ChatMessageAttachment::get_TransferProgress()
     @_property
     def transfer_progress(self) -> winrt.system.Double: ...
@@ -337,7 +337,7 @@ class ChatMessageAttachment(winrt.system.Object):
     def thumbnail(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.ApplicationModel.Chat.ChatMessageAttachment::put_Thumbnail(Windows.Storage.Streams.IRandomAccessStreamReference)
     @thumbnail.setter
-    def thumbnail(self, value: windows_storage_streams.ImplementsIRandomAccessStreamReference) -> None: ...
+    def thumbnail(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # System.String Windows.ApplicationModel.Chat.ChatMessageAttachment::get_OriginalFileName()
     @_property
     def original_file_name(self) -> str: ...
@@ -788,15 +788,9 @@ class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
     @_property
     def transport_id(self) -> str: ...
 
-class ImplementsIChatItem():
+class IChatItem(winrt._winrt.IInspectable):
     # Windows.ApplicationModel.Chat.ChatItemKind Windows.ApplicationModel.Chat.IChatItem::get_ItemKind()
     @_property
     @abstractmethod
-    def item_kind(self) -> ChatItemKind: ...
-
-@typing.final
-class IChatItem(winrt.system.Object, ImplementsIChatItem):
-    # Windows.ApplicationModel.Chat.ChatItemKind Windows.ApplicationModel.Chat.IChatItem::get_ItemKind()
-    @_property
     def item_kind(self) -> ChatItemKind: ...
 

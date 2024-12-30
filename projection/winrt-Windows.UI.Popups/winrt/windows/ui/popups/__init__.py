@@ -11,7 +11,6 @@ from winrt._winrt_windows_ui_popups import (
     UICommand,
     UICommandSeparator,
     IUICommand,
-    ImplementsIUICommand,
 )
 
 __all__ = [
@@ -22,7 +21,6 @@ __all__ = [
     "UICommand",
     "UICommandSeparator",
     "IUICommand",
-    "ImplementsIUICommand",
     "UICommandInvokedHandler",
 ]
 

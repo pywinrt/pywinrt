@@ -16,9 +16,7 @@ from winrt._winrt_windows_ui_input_inking_analysis import (
     InkAnalysisWritingRegion,
     InkAnalyzer,
     IInkAnalysisNode,
-    ImplementsIInkAnalysisNode,
     IInkAnalyzerFactory,
-    ImplementsIInkAnalyzerFactory,
 )
 
 __all__ = [
@@ -38,9 +36,7 @@ __all__ = [
     "InkAnalysisWritingRegion",
     "InkAnalyzer",
     "IInkAnalysisNode",
-    "ImplementsIInkAnalysisNode",
     "IInkAnalyzerFactory",
-    "ImplementsIInkAnalyzerFactory",
 ]
 
 class InkAnalysisDrawingKind(enum.IntEnum):

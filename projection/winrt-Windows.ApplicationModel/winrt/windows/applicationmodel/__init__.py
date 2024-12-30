@@ -40,17 +40,11 @@ from winrt._winrt_windows_applicationmodel import (
     SuspendingEventArgs,
     SuspendingOperation,
     IEnteredBackgroundEventArgs,
-    ImplementsIEnteredBackgroundEventArgs,
     ILeavingBackgroundEventArgs,
-    ImplementsILeavingBackgroundEventArgs,
     IPackageCatalogStatics2,
-    ImplementsIPackageCatalogStatics2,
     ISuspendingDeferral,
-    ImplementsISuspendingDeferral,
     ISuspendingEventArgs,
-    ImplementsISuspendingEventArgs,
     ISuspendingOperation,
-    ImplementsISuspendingOperation,
 )
 
 __all__ = [
@@ -100,17 +94,11 @@ __all__ = [
     "SuspendingEventArgs",
     "SuspendingOperation",
     "IEnteredBackgroundEventArgs",
-    "ImplementsIEnteredBackgroundEventArgs",
     "ILeavingBackgroundEventArgs",
-    "ImplementsILeavingBackgroundEventArgs",
     "IPackageCatalogStatics2",
-    "ImplementsIPackageCatalogStatics2",
     "ISuspendingDeferral",
-    "ImplementsISuspendingDeferral",
     "ISuspendingEventArgs",
-    "ImplementsISuspendingEventArgs",
     "ISuspendingOperation",
-    "ImplementsISuspendingOperation",
 ]
 
 class AddResourcePackageOptions(enum.IntFlag):

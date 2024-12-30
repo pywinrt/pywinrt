@@ -67,7 +67,7 @@ class SpeechRecognitionCompilationResult(winrt.system.Object):
     def status(self) -> SpeechRecognitionResultStatus: ...
 
 @typing.final
-class SpeechRecognitionGrammarFileConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
+class SpeechRecognitionGrammarFileConstraint(winrt.system.Object, ISpeechRecognitionConstraint):
     @typing.overload
     def __new__(cls: typing.Type[Self], file: windows_storage.StorageFile) -> Self: ...
     @typing.overload
@@ -110,7 +110,7 @@ class SpeechRecognitionHypothesisGeneratedEventArgs(winrt.system.Object):
     def hypothesis(self) -> SpeechRecognitionHypothesis: ...
 
 @typing.final
-class SpeechRecognitionListConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
+class SpeechRecognitionListConstraint(winrt.system.Object, ISpeechRecognitionConstraint):
     @typing.overload
     def __new__(cls: typing.Type[Self], commands: typing.Iterable[str]) -> Self: ...
     @typing.overload
@@ -185,7 +185,7 @@ class SpeechRecognitionSemanticInterpretation(winrt.system.Object):
     def properties(self) -> typing.Mapping[str, typing.Sequence[str]]: ...
 
 @typing.final
-class SpeechRecognitionTopicConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
+class SpeechRecognitionTopicConstraint(winrt.system.Object, ISpeechRecognitionConstraint):
     @typing.overload
     def __new__(cls: typing.Type[Self], scenario: SpeechRecognitionScenario, topic_hint: str) -> Self: ...
     @typing.overload
@@ -219,7 +219,7 @@ class SpeechRecognitionTopicConstraint(winrt.system.Object, ImplementsISpeechRec
     def topic_hint(self) -> str: ...
 
 @typing.final
-class SpeechRecognitionVoiceCommandDefinitionConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
+class SpeechRecognitionVoiceCommandDefinitionConstraint(winrt.system.Object, ISpeechRecognitionConstraint):
     # System.String Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint::get_Tag()
     @_property
     def tag(self) -> str: ...
@@ -257,7 +257,7 @@ class SpeechRecognizer_Static(type):
     def system_speech_language(cls) -> windows_globalization.Language: ...
 
 @typing.final
-class SpeechRecognizer(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=SpeechRecognizer_Static):
+class SpeechRecognizer(winrt.system.Object, windows_foundation.IClosable, metaclass=SpeechRecognizer_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     @typing.overload
@@ -382,7 +382,7 @@ class VoiceCommandSet(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
-class ImplementsISpeechRecognitionConstraint():
+class ISpeechRecognitionConstraint(winrt._winrt.IInspectable):
     # System.Boolean Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_IsEnabled()
     @_property
     @abstractmethod
@@ -410,29 +410,5 @@ class ImplementsISpeechRecognitionConstraint():
     # Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_Type()
     @_property
     @abstractmethod
-    def type(self) -> SpeechRecognitionConstraintType: ...
-
-@typing.final
-class ISpeechRecognitionConstraint(winrt.system.Object, ImplementsISpeechRecognitionConstraint):
-    # System.Boolean Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_IsEnabled()
-    @_property
-    def is_enabled(self) -> bool: ...
-    # System.Void Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::put_IsEnabled(System.Boolean)
-    @is_enabled.setter
-    def is_enabled(self, value: bool) -> None: ...
-    # Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_Probability()
-    @_property
-    def probability(self) -> SpeechRecognitionConstraintProbability: ...
-    # System.Void Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::put_Probability(Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability)
-    @probability.setter
-    def probability(self, value: SpeechRecognitionConstraintProbability) -> None: ...
-    # System.String Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_Tag()
-    @_property
-    def tag(self) -> str: ...
-    # System.Void Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::put_Tag(System.String)
-    @tag.setter
-    def tag(self, value: str) -> None: ...
-    # Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_Type()
-    @_property
     def type(self) -> SpeechRecognitionConstraintType: ...
 

@@ -9,7 +9,6 @@ from winrt._winrt_windows_applicationmodel_userdataaccounts_provider import (
     UserDataAccountProviderResolveErrorsOperation,
     UserDataAccountProviderSettingsOperation,
     IUserDataAccountProviderOperation,
-    ImplementsIUserDataAccountProviderOperation,
 )
 
 __all__ = [
@@ -20,7 +19,6 @@ __all__ = [
     "UserDataAccountProviderResolveErrorsOperation",
     "UserDataAccountProviderSettingsOperation",
     "IUserDataAccountProviderOperation",
-    "ImplementsIUserDataAccountProviderOperation",
 ]
 
 class UserDataAccountProviderOperationKind(enum.IntEnum):

@@ -51,17 +51,12 @@ class ProviderSpiConnectionSettings(winrt.system.Object):
     @chip_select_line.setter
     def chip_select_line(self, value: winrt.system.Int32) -> None: ...
 
-class ImplementsISpiControllerProvider():
+class ISpiControllerProvider(winrt._winrt.IInspectable):
     # Windows.Devices.Spi.Provider.ISpiDeviceProvider Windows.Devices.Spi.Provider.ISpiControllerProvider::GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)
     @abstractmethod
     def get_device_provider(self, settings: ProviderSpiConnectionSettings, /) -> ISpiDeviceProvider: ...
 
-@typing.final
-class ISpiControllerProvider(winrt.system.Object, ImplementsISpiControllerProvider):
-    # Windows.Devices.Spi.Provider.ISpiDeviceProvider Windows.Devices.Spi.Provider.ISpiControllerProvider::GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)
-    def get_device_provider(self, settings: ProviderSpiConnectionSettings, /) -> ISpiDeviceProvider: ...
-
-class ImplementsISpiDeviceProvider(windows_foundation.ImplementsIClosable):
+class ISpiDeviceProvider(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::Read(System.Byte[])
     @abstractmethod
     def read(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
@@ -83,34 +78,8 @@ class ImplementsISpiDeviceProvider(windows_foundation.ImplementsIClosable):
     @abstractmethod
     def device_id(self) -> str: ...
 
-@typing.final
-class ISpiDeviceProvider(winrt.system.Object, ImplementsISpiDeviceProvider, windows_foundation.ImplementsIClosable):
-    def __enter__(self: Self) -> Self: ...
-    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
-    # System.Void Windows.Foundation.IClosable::Close()
-    def close(self) -> None: ...
-    # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::Read(System.Byte[])
-    def read(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
-    # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::TransferFullDuplex(System.Byte[],System.Byte[])
-    def transfer_full_duplex(self, write_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], read_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
-    # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::TransferSequential(System.Byte[],System.Byte[])
-    def transfer_sequential(self, write_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], read_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
-    # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::Write(System.Byte[])
-    def write(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
-    # Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings Windows.Devices.Spi.Provider.ISpiDeviceProvider::get_ConnectionSettings()
-    @_property
-    def connection_settings(self) -> ProviderSpiConnectionSettings: ...
-    # System.String Windows.Devices.Spi.Provider.ISpiDeviceProvider::get_DeviceId()
-    @_property
-    def device_id(self) -> str: ...
-
-class ImplementsISpiProvider():
+class ISpiProvider(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Spi.Provider.ISpiControllerProvider>> Windows.Devices.Spi.Provider.ISpiProvider::GetControllersAsync()
     @abstractmethod
-    def get_controllers_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[ISpiControllerProvider]]: ...
-
-@typing.final
-class ISpiProvider(winrt.system.Object, ImplementsISpiProvider):
-    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Spi.Provider.ISpiControllerProvider>> Windows.Devices.Spi.Provider.ISpiProvider::GetControllersAsync()
     def get_controllers_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[ISpiControllerProvider]]: ...
 

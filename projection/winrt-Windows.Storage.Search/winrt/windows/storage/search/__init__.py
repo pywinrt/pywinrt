@@ -17,11 +17,8 @@ from winrt._winrt_windows_storage_search import (
     StorageLibraryContentChangedTriggerDetails,
     ValueAndLanguage,
     IIndexableContent,
-    ImplementsIIndexableContent,
     IStorageFolderQueryOperations,
-    ImplementsIStorageFolderQueryOperations,
     IStorageQueryResultBase,
-    ImplementsIStorageQueryResultBase,
 )
 
 __all__ = [
@@ -44,11 +41,8 @@ __all__ = [
     "StorageLibraryContentChangedTriggerDetails",
     "ValueAndLanguage",
     "IIndexableContent",
-    "ImplementsIIndexableContent",
     "IStorageFolderQueryOperations",
-    "ImplementsIStorageFolderQueryOperations",
     "IStorageQueryResultBase",
-    "ImplementsIStorageQueryResultBase",
 ]
 
 class CommonFileQuery(enum.IntEnum):

@@ -36,7 +36,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.one(), 1)
 
     def test_composable_subclass_with_interface(self):
-        class C(tc.Override, tc.ImplementsIRequiredOne):
+        class C(tc.Override, tc.IRequiredOne):
             def one(self) -> int:
                 return 1
 
@@ -96,9 +96,10 @@ class TestTestComponent(unittest.TestCase):
 
         c = C()
 
-        with self.assertRaisesRegex(
-            OSError, "Unraisable Python exception"
-        ), catch_unraisable() as exceptions:
+        with (
+            self.assertRaisesRegex(OSError, "Unraisable Python exception"),
+            catch_unraisable() as exceptions,
+        ):
             c.call_overridable()
 
         self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
@@ -481,9 +482,10 @@ class TestTestComponent(unittest.TestCase):
         self.assertListEqual(list(result[0]), arg)
         self.assertListEqual(list(result[1]), arg)
 
-        with self.assertRaisesRegex(
-            OSError, "Unraisable Python exception"
-        ), catch_unraisable() as exceptions:
+        with (
+            self.assertRaisesRegex(OSError, "Unraisable Python exception"),
+            catch_unraisable() as exceptions,
+        ):
             # requires list[str] so results in an unraisable TypeError
             tests.collection6([1])  # type: ignore
 

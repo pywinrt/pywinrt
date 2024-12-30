@@ -54,7 +54,6 @@ from winrt._winrt_microsoft_ui_input import (
     WindowRectChangedEventArgs,
     WindowRectChangingEventArgs,
     IPointerPointTransform,
-    ImplementsIPointerPointTransform,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -129,7 +128,6 @@ __all__ = [
     "WindowRectChangedEventArgs",
     "WindowRectChangingEventArgs",
     "IPointerPointTransform",
-    "ImplementsIPointerPointTransform",
 ]
 
 class CrossSlidingState(enum.IntEnum):

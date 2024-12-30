@@ -6,7 +6,6 @@ from winrt._winrt_windows_storage_bulkaccess import (
     FileInformationFactory,
     FolderInformation,
     IStorageItemInformation,
-    ImplementsIStorageItemInformation,
 )
 
 __all__ = [
@@ -14,6 +13,5 @@ __all__ = [
     "FileInformationFactory",
     "FolderInformation",
     "IStorageItemInformation",
-    "ImplementsIStorageItemInformation",
 ]
 

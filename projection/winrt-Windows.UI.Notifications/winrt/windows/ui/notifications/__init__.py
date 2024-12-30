@@ -42,7 +42,6 @@ from winrt._winrt_windows_ui_notifications import (
     UserNotification,
     UserNotificationChangedEventArgs,
     IAdaptiveNotificationContent,
-    ImplementsIAdaptiveNotificationContent,
 )
 
 __all__ = [
@@ -99,7 +98,6 @@ __all__ = [
     "UserNotification",
     "UserNotificationChangedEventArgs",
     "IAdaptiveNotificationContent",
-    "ImplementsIAdaptiveNotificationContent",
 ]
 
 class AdaptiveNotificationContentKind(enum.IntEnum):

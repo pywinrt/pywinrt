@@ -10,7 +10,6 @@ from winrt._winrt_windows_ui_core_animationmetrics import (
     ScaleAnimation,
     TranslationAnimation,
     IPropertyAnimation,
-    ImplementsIPropertyAnimation,
 )
 
 __all__ = [
@@ -23,7 +22,6 @@ __all__ = [
     "ScaleAnimation",
     "TranslationAnimation",
     "IPropertyAnimation",
-    "ImplementsIPropertyAnimation",
 ]
 
 class AnimationEffect(enum.IntEnum):

@@ -60,11 +60,11 @@ class AudioEffect(winrt.system.Object):
     def state(self) -> AudioEffectState: ...
 
 @typing.final
-class AudioEffectDefinition(winrt.system.Object, ImplementsIAudioEffectDefinition):
+class AudioEffectDefinition(winrt.system.Object, IAudioEffectDefinition):
     @typing.overload
     def __new__(cls: typing.Type[Self], activatable_class_id: str) -> Self: ...
     @typing.overload
-    def __new__(cls: typing.Type[Self], activatable_class_id: str, props: windows_foundation_collections.ImplementsIPropertySet) -> Self: ...
+    def __new__(cls: typing.Type[Self], activatable_class_id: str, props: windows_foundation_collections.IPropertySet) -> Self: ...
     # System.String Windows.Media.Effects.AudioEffectDefinition::get_ActivatableClassId()
     @_property
     def activatable_class_id(self) -> str: ...
@@ -108,7 +108,7 @@ class AudioRenderEffectsManager(winrt.system.Object):
 @typing.final
 class CompositeVideoFrameContext(winrt.system.Object):
     # Windows.Media.Editing.MediaOverlay Windows.Media.Effects.CompositeVideoFrameContext::GetOverlayForSurface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)
-    def get_overlay_for_surface(self, surface_to_overlay: windows_graphics_directx_direct3d11.ImplementsIDirect3DSurface, /) -> windows_media_editing.MediaOverlay: ...
+    def get_overlay_for_surface(self, surface_to_overlay: windows_graphics_directx_direct3d11.IDirect3DSurface, /) -> windows_media_editing.MediaOverlay: ...
     # Windows.Media.VideoFrame Windows.Media.Effects.CompositeVideoFrameContext::get_BackgroundFrame()
     @_property
     def background_frame(self) -> windows_media.VideoFrame: ...
@@ -138,7 +138,7 @@ class ProcessVideoFrameContext(winrt.system.Object):
     def output_frame(self) -> windows_media.VideoFrame: ...
 
 @typing.final
-class SlowMotionEffectDefinition(winrt.system.Object, ImplementsIVideoEffectDefinition):
+class SlowMotionEffectDefinition(winrt.system.Object, IVideoEffectDefinition):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Double Windows.Media.Effects.SlowMotionEffectDefinition::get_TimeStretchRate()
     @_property
@@ -154,11 +154,11 @@ class SlowMotionEffectDefinition(winrt.system.Object, ImplementsIVideoEffectDefi
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class VideoCompositorDefinition(winrt.system.Object, ImplementsIVideoCompositorDefinition):
+class VideoCompositorDefinition(winrt.system.Object, IVideoCompositorDefinition):
     @typing.overload
     def __new__(cls: typing.Type[Self], activatable_class_id: str) -> Self: ...
     @typing.overload
-    def __new__(cls: typing.Type[Self], activatable_class_id: str, props: windows_foundation_collections.ImplementsIPropertySet) -> Self: ...
+    def __new__(cls: typing.Type[Self], activatable_class_id: str, props: windows_foundation_collections.IPropertySet) -> Self: ...
     # System.String Windows.Media.Effects.VideoCompositorDefinition::get_ActivatableClassId()
     @_property
     def activatable_class_id(self) -> str: ...
@@ -167,11 +167,11 @@ class VideoCompositorDefinition(winrt.system.Object, ImplementsIVideoCompositorD
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class VideoEffectDefinition(winrt.system.Object, ImplementsIVideoEffectDefinition):
+class VideoEffectDefinition(winrt.system.Object, IVideoEffectDefinition):
     @typing.overload
     def __new__(cls: typing.Type[Self], activatable_class_id: str) -> Self: ...
     @typing.overload
-    def __new__(cls: typing.Type[Self], activatable_class_id: str, props: windows_foundation_collections.ImplementsIPropertySet) -> Self: ...
+    def __new__(cls: typing.Type[Self], activatable_class_id: str, props: windows_foundation_collections.IPropertySet) -> Self: ...
     # System.String Windows.Media.Effects.VideoEffectDefinition::get_ActivatableClassId()
     @_property
     def activatable_class_id(self) -> str: ...
@@ -180,7 +180,7 @@ class VideoEffectDefinition(winrt.system.Object, ImplementsIVideoEffectDefinitio
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class VideoTransformEffectDefinition(winrt.system.Object, ImplementsIVideoEffectDefinition):
+class VideoTransformEffectDefinition(winrt.system.Object, IVideoEffectDefinition):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.String Windows.Media.Effects.VideoTransformEffectDefinition::get_ActivatableClassId()
     @_property
@@ -261,7 +261,7 @@ class VideoTransformSphericalProjection(winrt.system.Object):
     @frame_format.setter
     def frame_format(self, value: windows_media_mediaproperties.SphericalVideoFrameFormat) -> None: ...
 
-class ImplementsIAudioEffectDefinition():
+class IAudioEffectDefinition(winrt._winrt.IInspectable):
     # System.String Windows.Media.Effects.IAudioEffectDefinition::get_ActivatableClassId()
     @_property
     @abstractmethod
@@ -271,16 +271,7 @@ class ImplementsIAudioEffectDefinition():
     @abstractmethod
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
-@typing.final
-class IAudioEffectDefinition(winrt.system.Object, ImplementsIAudioEffectDefinition):
-    # System.String Windows.Media.Effects.IAudioEffectDefinition::get_ActivatableClassId()
-    @_property
-    def activatable_class_id(self) -> str: ...
-    # Windows.Foundation.Collections.IPropertySet Windows.Media.Effects.IAudioEffectDefinition::get_Properties()
-    @_property
-    def properties(self) -> windows_foundation_collections.IPropertySet: ...
-
-class ImplementsIBasicAudioEffect(windows_media.ImplementsIMediaExtension):
+class IBasicAudioEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable):
     # System.Void Windows.Media.Effects.IBasicAudioEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -302,26 +293,7 @@ class ImplementsIBasicAudioEffect(windows_media.ImplementsIMediaExtension):
     @abstractmethod
     def use_input_frame_for_output(self) -> bool: ...
 
-@typing.final
-class IBasicAudioEffect(winrt.system.Object, ImplementsIBasicAudioEffect, windows_media.ImplementsIMediaExtension):
-    # System.Void Windows.Media.Effects.IBasicAudioEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
-    def close(self, reason: MediaEffectClosedReason, /) -> None: ...
-    # System.Void Windows.Media.Effects.IBasicAudioEffect::DiscardQueuedFrames()
-    def discard_queued_frames(self) -> None: ...
-    # System.Void Windows.Media.Effects.IBasicAudioEffect::ProcessFrame(Windows.Media.Effects.ProcessAudioFrameContext)
-    def process_frame(self, context: ProcessAudioFrameContext, /) -> None: ...
-    # System.Void Windows.Media.Effects.IBasicAudioEffect::SetEncodingProperties(Windows.Media.MediaProperties.AudioEncodingProperties)
-    def set_encoding_properties(self, encoding_properties: windows_media_mediaproperties.AudioEncodingProperties, /) -> None: ...
-    # System.Void Windows.Media.IMediaExtension::SetProperties(Windows.Foundation.Collections.IPropertySet)
-    def set_properties(self, configuration: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
-    # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaProperties.AudioEncodingProperties> Windows.Media.Effects.IBasicAudioEffect::get_SupportedEncodingProperties()
-    @_property
-    def supported_encoding_properties(self) -> typing.Sequence[windows_media_mediaproperties.AudioEncodingProperties]: ...
-    # System.Boolean Windows.Media.Effects.IBasicAudioEffect::get_UseInputFrameForOutput()
-    @_property
-    def use_input_frame_for_output(self) -> bool: ...
-
-class ImplementsIBasicVideoEffect(windows_media.ImplementsIMediaExtension):
+class IBasicVideoEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable):
     # System.Void Windows.Media.Effects.IBasicVideoEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -333,7 +305,7 @@ class ImplementsIBasicVideoEffect(windows_media.ImplementsIMediaExtension):
     def process_frame(self, context: ProcessVideoFrameContext, /) -> None: ...
     # System.Void Windows.Media.Effects.IBasicVideoEffect::SetEncodingProperties(Windows.Media.MediaProperties.VideoEncodingProperties,Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)
     @abstractmethod
-    def set_encoding_properties(self, encoding_properties: windows_media_mediaproperties.VideoEncodingProperties, device: windows_graphics_directx_direct3d11.ImplementsIDirect3DDevice, /) -> None: ...
+    def set_encoding_properties(self, encoding_properties: windows_media_mediaproperties.VideoEncodingProperties, device: windows_graphics_directx_direct3d11.IDirect3DDevice, /) -> None: ...
     # System.Boolean Windows.Media.Effects.IBasicVideoEffect::get_IsReadOnly()
     @_property
     @abstractmethod
@@ -351,32 +323,7 @@ class ImplementsIBasicVideoEffect(windows_media.ImplementsIMediaExtension):
     @abstractmethod
     def time_independent(self) -> bool: ...
 
-@typing.final
-class IBasicVideoEffect(winrt.system.Object, ImplementsIBasicVideoEffect, windows_media.ImplementsIMediaExtension):
-    # System.Void Windows.Media.Effects.IBasicVideoEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
-    def close(self, reason: MediaEffectClosedReason, /) -> None: ...
-    # System.Void Windows.Media.Effects.IBasicVideoEffect::DiscardQueuedFrames()
-    def discard_queued_frames(self) -> None: ...
-    # System.Void Windows.Media.Effects.IBasicVideoEffect::ProcessFrame(Windows.Media.Effects.ProcessVideoFrameContext)
-    def process_frame(self, context: ProcessVideoFrameContext, /) -> None: ...
-    # System.Void Windows.Media.Effects.IBasicVideoEffect::SetEncodingProperties(Windows.Media.MediaProperties.VideoEncodingProperties,Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)
-    def set_encoding_properties(self, encoding_properties: windows_media_mediaproperties.VideoEncodingProperties, device: windows_graphics_directx_direct3d11.ImplementsIDirect3DDevice, /) -> None: ...
-    # System.Void Windows.Media.IMediaExtension::SetProperties(Windows.Foundation.Collections.IPropertySet)
-    def set_properties(self, configuration: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
-    # System.Boolean Windows.Media.Effects.IBasicVideoEffect::get_IsReadOnly()
-    @_property
-    def is_read_only(self) -> bool: ...
-    # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaProperties.VideoEncodingProperties> Windows.Media.Effects.IBasicVideoEffect::get_SupportedEncodingProperties()
-    @_property
-    def supported_encoding_properties(self) -> typing.Sequence[windows_media_mediaproperties.VideoEncodingProperties]: ...
-    # Windows.Media.Effects.MediaMemoryTypes Windows.Media.Effects.IBasicVideoEffect::get_SupportedMemoryTypes()
-    @_property
-    def supported_memory_types(self) -> MediaMemoryTypes: ...
-    # System.Boolean Windows.Media.Effects.IBasicVideoEffect::get_TimeIndependent()
-    @_property
-    def time_independent(self) -> bool: ...
-
-class ImplementsIVideoCompositor(windows_media.ImplementsIMediaExtension):
+class IVideoCompositor(windows_media.IMediaExtension, winrt._winrt.IInspectable):
     # System.Void Windows.Media.Effects.IVideoCompositor::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -388,29 +335,13 @@ class ImplementsIVideoCompositor(windows_media.ImplementsIMediaExtension):
     def discard_queued_frames(self) -> None: ...
     # System.Void Windows.Media.Effects.IVideoCompositor::SetEncodingProperties(Windows.Media.MediaProperties.VideoEncodingProperties,Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)
     @abstractmethod
-    def set_encoding_properties(self, background_properties: windows_media_mediaproperties.VideoEncodingProperties, device: windows_graphics_directx_direct3d11.ImplementsIDirect3DDevice, /) -> None: ...
+    def set_encoding_properties(self, background_properties: windows_media_mediaproperties.VideoEncodingProperties, device: windows_graphics_directx_direct3d11.IDirect3DDevice, /) -> None: ...
     # System.Boolean Windows.Media.Effects.IVideoCompositor::get_TimeIndependent()
     @_property
     @abstractmethod
     def time_independent(self) -> bool: ...
 
-@typing.final
-class IVideoCompositor(winrt.system.Object, ImplementsIVideoCompositor, windows_media.ImplementsIMediaExtension):
-    # System.Void Windows.Media.Effects.IVideoCompositor::Close(Windows.Media.Effects.MediaEffectClosedReason)
-    def close(self, reason: MediaEffectClosedReason, /) -> None: ...
-    # System.Void Windows.Media.Effects.IVideoCompositor::CompositeFrame(Windows.Media.Effects.CompositeVideoFrameContext)
-    def composite_frame(self, context: CompositeVideoFrameContext, /) -> None: ...
-    # System.Void Windows.Media.Effects.IVideoCompositor::DiscardQueuedFrames()
-    def discard_queued_frames(self) -> None: ...
-    # System.Void Windows.Media.Effects.IVideoCompositor::SetEncodingProperties(Windows.Media.MediaProperties.VideoEncodingProperties,Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)
-    def set_encoding_properties(self, background_properties: windows_media_mediaproperties.VideoEncodingProperties, device: windows_graphics_directx_direct3d11.ImplementsIDirect3DDevice, /) -> None: ...
-    # System.Void Windows.Media.IMediaExtension::SetProperties(Windows.Foundation.Collections.IPropertySet)
-    def set_properties(self, configuration: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
-    # System.Boolean Windows.Media.Effects.IVideoCompositor::get_TimeIndependent()
-    @_property
-    def time_independent(self) -> bool: ...
-
-class ImplementsIVideoCompositorDefinition():
+class IVideoCompositorDefinition(winrt._winrt.IInspectable):
     # System.String Windows.Media.Effects.IVideoCompositorDefinition::get_ActivatableClassId()
     @_property
     @abstractmethod
@@ -420,16 +351,7 @@ class ImplementsIVideoCompositorDefinition():
     @abstractmethod
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
-@typing.final
-class IVideoCompositorDefinition(winrt.system.Object, ImplementsIVideoCompositorDefinition):
-    # System.String Windows.Media.Effects.IVideoCompositorDefinition::get_ActivatableClassId()
-    @_property
-    def activatable_class_id(self) -> str: ...
-    # Windows.Foundation.Collections.IPropertySet Windows.Media.Effects.IVideoCompositorDefinition::get_Properties()
-    @_property
-    def properties(self) -> windows_foundation_collections.IPropertySet: ...
-
-class ImplementsIVideoEffectDefinition():
+class IVideoEffectDefinition(winrt._winrt.IInspectable):
     # System.String Windows.Media.Effects.IVideoEffectDefinition::get_ActivatableClassId()
     @_property
     @abstractmethod
@@ -437,14 +359,5 @@ class ImplementsIVideoEffectDefinition():
     # Windows.Foundation.Collections.IPropertySet Windows.Media.Effects.IVideoEffectDefinition::get_Properties()
     @_property
     @abstractmethod
-    def properties(self) -> windows_foundation_collections.IPropertySet: ...
-
-@typing.final
-class IVideoEffectDefinition(winrt.system.Object, ImplementsIVideoEffectDefinition):
-    # System.String Windows.Media.Effects.IVideoEffectDefinition::get_ActivatableClassId()
-    @_property
-    def activatable_class_id(self) -> str: ...
-    # Windows.Foundation.Collections.IPropertySet Windows.Media.Effects.IVideoEffectDefinition::get_Properties()
-    @_property
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 

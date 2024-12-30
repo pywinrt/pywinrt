@@ -135,30 +135,17 @@ class RemoteAutomationWindow(winrt.system.Object):
     @_property
     def automation_provider(self) -> winrt.system.Object: ...
 
-class ImplementsICoreAutomationConnectionBoundObjectProvider():
+class ICoreAutomationConnectionBoundObjectProvider(winrt._winrt.IInspectable):
     # System.Boolean Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider::get_IsComThreadingRequired()
     @_property
     @abstractmethod
     def is_com_threading_required(self) -> bool: ...
 
-@typing.final
-class ICoreAutomationConnectionBoundObjectProvider(winrt.system.Object, ImplementsICoreAutomationConnectionBoundObjectProvider):
-    # System.Boolean Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider::get_IsComThreadingRequired()
-    @_property
-    def is_com_threading_required(self) -> bool: ...
-
-class ImplementsICoreAutomationRemoteOperationExtensionProvider():
+class ICoreAutomationRemoteOperationExtensionProvider(winrt._winrt.IInspectable):
     # System.Void Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider::CallExtension(System.Guid,Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext,Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId[])
     @abstractmethod
     def call_extension(self, extension_id: _uuid.UUID, context: CoreAutomationRemoteOperationContext, operand_ids: typing.Union[winrt.system.Array[AutomationRemoteOperationOperandId], winrt.system.ReadableBuffer], /) -> None: ...
     # System.Boolean Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider::IsExtensionSupported(System.Guid)
     @abstractmethod
-    def is_extension_supported(self, extension_id: _uuid.UUID, /) -> bool: ...
-
-@typing.final
-class ICoreAutomationRemoteOperationExtensionProvider(winrt.system.Object, ImplementsICoreAutomationRemoteOperationExtensionProvider):
-    # System.Void Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider::CallExtension(System.Guid,Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext,Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId[])
-    def call_extension(self, extension_id: _uuid.UUID, context: CoreAutomationRemoteOperationContext, operand_ids: typing.Union[winrt.system.Array[AutomationRemoteOperationOperandId], winrt.system.ReadableBuffer], /) -> None: ...
-    # System.Boolean Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider::IsExtensionSupported(System.Guid)
     def is_extension_supported(self, extension_id: _uuid.UUID, /) -> bool: ...
 

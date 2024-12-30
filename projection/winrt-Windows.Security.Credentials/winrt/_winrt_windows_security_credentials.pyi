@@ -25,7 +25,7 @@ class KeyCredential(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.KeyCredentialAttestationResult> Windows.Security.Credentials.KeyCredential::GetAttestationAsync()
     def get_attestation_async(self) -> windows_foundation.IAsyncOperation[KeyCredentialAttestationResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.KeyCredentialOperationResult> Windows.Security.Credentials.KeyCredential::RequestSignAsync(Windows.Storage.Streams.IBuffer)
-    def request_sign_async(self, data: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[KeyCredentialOperationResult]: ...
+    def request_sign_async(self, data: windows_storage_streams.IBuffer, /) -> windows_foundation.IAsyncOperation[KeyCredentialOperationResult]: ...
     # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredential::RetrievePublicKey(Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType)
     def retrieve_public_key_with_blob_type(self, blob_type: windows_security_cryptography_core.CryptographicPublicKeyBlobType, /) -> windows_storage_streams.IBuffer: ...
     # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredential::RetrievePublicKey()
@@ -112,7 +112,7 @@ class PasswordCredential(winrt.system.Object):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class PasswordCredentialPropertyStore(winrt.system.Object, windows_foundation_collections.ImplementsIPropertySet, windows_foundation_collections.ImplementsIObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object]):
+class PasswordCredentialPropertyStore(winrt.system.Object, windows_foundation_collections.IPropertySet, windows_foundation_collections.IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -159,7 +159,7 @@ class PasswordVault(winrt.system.Object):
     def retrieve_all(self) -> typing.Sequence[PasswordCredential]: ...
 
 @typing.final
-class WebAccount(winrt.system.Object, ImplementsIWebAccount):
+class WebAccount(winrt.system.Object, IWebAccount):
     def __new__(cls: typing.Type[Self], web_account_provider: WebAccountProvider, user_name: str, state: WebAccountState) -> Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Security.Credentials.WebAccount::GetPictureAsync(Windows.Security.Credentials.WebAccountPictureSize)
     def get_picture_async(self, desized_size: WebAccountPictureSize, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
@@ -208,7 +208,7 @@ class WebAccountProvider(winrt.system.Object):
     @_property
     def is_system_provider(self) -> bool: ...
 
-class ImplementsIWebAccount():
+class IWebAccount(winrt._winrt.IInspectable):
     # Windows.Security.Credentials.WebAccountState Windows.Security.Credentials.IWebAccount::get_State()
     @_property
     @abstractmethod
@@ -220,17 +220,5 @@ class ImplementsIWebAccount():
     # Windows.Security.Credentials.WebAccountProvider Windows.Security.Credentials.IWebAccount::get_WebAccountProvider()
     @_property
     @abstractmethod
-    def web_account_provider(self) -> WebAccountProvider: ...
-
-@typing.final
-class IWebAccount(winrt.system.Object, ImplementsIWebAccount):
-    # Windows.Security.Credentials.WebAccountState Windows.Security.Credentials.IWebAccount::get_State()
-    @_property
-    def state(self) -> WebAccountState: ...
-    # System.String Windows.Security.Credentials.IWebAccount::get_UserName()
-    @_property
-    def user_name(self) -> str: ...
-    # Windows.Security.Credentials.WebAccountProvider Windows.Security.Credentials.IWebAccount::get_WebAccountProvider()
-    @_property
     def web_account_provider(self) -> WebAccountProvider: ...
 

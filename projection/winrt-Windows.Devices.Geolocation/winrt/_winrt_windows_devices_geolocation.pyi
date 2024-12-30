@@ -52,7 +52,7 @@ class GeoboundingBox_Static(type):
     def try_compute_with_altitude_reference_and_spatial_reference(cls, positions: typing.Iterable[BasicGeoposition], altitude_ref_system: AltitudeReferenceSystem, spatial_reference_id: winrt.system.UInt32, /) -> GeoboundingBox: ...
 
 @typing.final
-class GeoboundingBox(winrt.system.Object, ImplementsIGeoshape, metaclass=GeoboundingBox_Static):
+class GeoboundingBox(winrt.system.Object, IGeoshape, metaclass=GeoboundingBox_Static):
     @typing.overload
     def __new__(cls: typing.Type[Self], northwest_corner: BasicGeoposition, southeast_corner: BasicGeoposition) -> Self: ...
     @typing.overload
@@ -85,7 +85,7 @@ class GeoboundingBox(winrt.system.Object, ImplementsIGeoshape, metaclass=Geoboun
     def spatial_reference_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class Geocircle(winrt.system.Object, ImplementsIGeoshape):
+class Geocircle(winrt.system.Object, IGeoshape):
     @typing.overload
     def __new__(cls: typing.Type[Self], position: BasicGeoposition, radius: winrt.system.Double) -> Self: ...
     @typing.overload
@@ -232,7 +232,7 @@ class Geolocator(winrt.system.Object, metaclass=Geolocator_Static):
     def desired_accuracy_in_meters(self, value: typing.Optional[winrt.system.UInt32]) -> None: ...
 
 @typing.final
-class Geopath(winrt.system.Object, ImplementsIGeoshape):
+class Geopath(winrt.system.Object, IGeoshape):
     @typing.overload
     def __new__(cls: typing.Type[Self], positions: typing.Iterable[BasicGeoposition]) -> Self: ...
     @typing.overload
@@ -253,7 +253,7 @@ class Geopath(winrt.system.Object, ImplementsIGeoshape):
     def spatial_reference_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class Geopoint(winrt.system.Object, ImplementsIGeoshape):
+class Geopoint(winrt.system.Object, IGeoshape):
     @typing.overload
     def __new__(cls: typing.Type[Self], position: BasicGeoposition) -> Self: ...
     @typing.overload
@@ -349,7 +349,7 @@ class VenueData(winrt.system.Object):
     @_property
     def level(self) -> str: ...
 
-class ImplementsIGeoshape():
+class IGeoshape(winrt._winrt.IInspectable):
     # Windows.Devices.Geolocation.AltitudeReferenceSystem Windows.Devices.Geolocation.IGeoshape::get_AltitudeReferenceSystem()
     @_property
     @abstractmethod
@@ -361,17 +361,5 @@ class ImplementsIGeoshape():
     # System.UInt32 Windows.Devices.Geolocation.IGeoshape::get_SpatialReferenceId()
     @_property
     @abstractmethod
-    def spatial_reference_id(self) -> winrt.system.UInt32: ...
-
-@typing.final
-class IGeoshape(winrt.system.Object, ImplementsIGeoshape):
-    # Windows.Devices.Geolocation.AltitudeReferenceSystem Windows.Devices.Geolocation.IGeoshape::get_AltitudeReferenceSystem()
-    @_property
-    def altitude_reference_system(self) -> AltitudeReferenceSystem: ...
-    # Windows.Devices.Geolocation.GeoshapeType Windows.Devices.Geolocation.IGeoshape::get_GeoshapeType()
-    @_property
-    def geoshape_type(self) -> GeoshapeType: ...
-    # System.UInt32 Windows.Devices.Geolocation.IGeoshape::get_SpatialReferenceId()
-    @_property
     def spatial_reference_id(self) -> winrt.system.UInt32: ...
 

@@ -48,9 +48,7 @@ from winrt._winrt_windows_media_playback import (
     PlaybackMediaMarkerSequence,
     TimedMetadataPresentationModeChangedEventArgs,
     IMediaEnginePlaybackSource,
-    ImplementsIMediaEnginePlaybackSource,
     IMediaPlaybackSource,
-    ImplementsIMediaPlaybackSource,
 )
 
 __all__ = [
@@ -113,9 +111,7 @@ __all__ = [
     "PlaybackMediaMarkerSequence",
     "TimedMetadataPresentationModeChangedEventArgs",
     "IMediaEnginePlaybackSource",
-    "ImplementsIMediaEnginePlaybackSource",
     "IMediaPlaybackSource",
-    "ImplementsIMediaPlaybackSource",
 ]
 
 class AutoLoadedDisplayPropertyKind(enum.IntEnum):

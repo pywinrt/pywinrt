@@ -215,7 +215,7 @@ class AppBarElementContainer_Static(ContentControl_Static):
     @typing.final
     def is_in_overflow_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class AppBarElementContainer(ContentControl, ImplementsICommandBarElement2, ImplementsICommandBarElement, metaclass=AppBarElementContainer_Static):
+class AppBarElementContainer(ContentControl, ICommandBarElement2, ICommandBarElement, metaclass=AppBarElementContainer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Boolean Windows.UI.Xaml.Controls.AppBarElementContainer::get_IsCompact()
     @_property
@@ -250,7 +250,7 @@ class AppBarSeparator_Static(Control_Static):
     @typing.final
     def is_in_overflow_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class AppBarSeparator(Control, ImplementsICommandBarElement2, ImplementsICommandBarElement, metaclass=AppBarSeparator_Static):
+class AppBarSeparator(Control, ICommandBarElement2, ICommandBarElement, metaclass=AppBarSeparator_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Boolean Windows.UI.Xaml.Controls.AppBarSeparator::get_IsCompact()
     @_property
@@ -2474,7 +2474,7 @@ class ContentDialog(ContentControl, metaclass=ContentDialog_Static):
     # System.Void Windows.UI.Xaml.Controls.ContentDialog::put_SecondaryButtonCommand(Windows.UI.Xaml.Input.ICommand)
     @secondary_button_command.setter
     @typing.final
-    def secondary_button_command(self, value: windows_ui_xaml_input.ImplementsICommand) -> None: ...
+    def secondary_button_command(self, value: windows_ui_xaml_input.ICommand) -> None: ...
     # System.String Windows.UI.Xaml.Controls.ContentDialog::get_PrimaryButtonText()
     @_property
     def primary_button_text(self) -> str: ...
@@ -2495,7 +2495,7 @@ class ContentDialog(ContentControl, metaclass=ContentDialog_Static):
     # System.Void Windows.UI.Xaml.Controls.ContentDialog::put_PrimaryButtonCommand(Windows.UI.Xaml.Input.ICommand)
     @primary_button_command.setter
     @typing.final
-    def primary_button_command(self, value: windows_ui_xaml_input.ImplementsICommand) -> None: ...
+    def primary_button_command(self, value: windows_ui_xaml_input.ICommand) -> None: ...
     # System.Boolean Windows.UI.Xaml.Controls.ContentDialog::get_IsSecondaryButtonEnabled()
     @_property
     def is_secondary_button_enabled(self) -> bool: ...
@@ -2565,7 +2565,7 @@ class ContentDialog(ContentControl, metaclass=ContentDialog_Static):
     # System.Void Windows.UI.Xaml.Controls.ContentDialog::put_CloseButtonCommand(Windows.UI.Xaml.Input.ICommand)
     @close_button_command.setter
     @typing.final
-    def close_button_command(self, value: windows_ui_xaml_input.ImplementsICommand) -> None: ...
+    def close_button_command(self, value: windows_ui_xaml_input.ICommand) -> None: ...
 
 @typing.final
 class ContentDialogButtonClickDeferral(winrt.system.Object):
@@ -3413,7 +3413,7 @@ class ControlTemplate(windows_ui_xaml.FrameworkTemplate):
 class DataTemplateSelector_Static(type):
     pass
 
-class DataTemplateSelector(winrt.system.Object, windows_ui_xaml.ImplementsIElementFactory, metaclass=DataTemplateSelector_Static):
+class DataTemplateSelector(winrt.system.Object, windows_ui_xaml.IElementFactory, metaclass=DataTemplateSelector_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.DataTemplateSelector::GetElement(Windows.UI.Xaml.ElementFactoryGetArgs)
     def get_element(self, args: windows_ui_xaml.ElementFactoryGetArgs, /) -> windows_ui_xaml.UIElement: ...
@@ -3632,7 +3632,7 @@ class DatePickerFlyoutItem_Static(windows_ui_xaml.DependencyObject_Static):
     def secondary_text_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class DatePickerFlyoutItem(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.ImplementsICustomPropertyProvider, metaclass=DatePickerFlyoutItem_Static):
+class DatePickerFlyoutItem(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.ICustomPropertyProvider, metaclass=DatePickerFlyoutItem_Static):
     # Windows.UI.Xaml.Data.ICustomProperty Windows.UI.Xaml.Controls.DatePickerFlyoutItem::GetCustomProperty(System.String)
     def get_custom_property(self, name: str, /) -> windows_ui_xaml_data.ICustomProperty: ...
     # Windows.UI.Xaml.Data.ICustomProperty Windows.UI.Xaml.Controls.DatePickerFlyoutItem::GetIndexedProperty(System.String,Windows.UI.Xaml.Interop.TypeName)
@@ -3716,7 +3716,7 @@ class DragItemsStartingEventArgs(winrt.system.Object):
 class DropDownButtonAutomationPeer_Static(windows_ui_xaml_automation_peers.ButtonAutomationPeer_Static):
     pass
 
-class DropDownButtonAutomationPeer(windows_ui_xaml_automation_peers.ButtonAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=DropDownButtonAutomationPeer_Static):
+class DropDownButtonAutomationPeer(windows_ui_xaml_automation_peers.ButtonAutomationPeer, windows_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=DropDownButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: DropDownButton) -> Self: ...
     # System.Void Windows.UI.Xaml.Controls.DropDownButtonAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -3965,7 +3965,7 @@ class Frame_Static(ContentControl_Static):
     @typing.final
     def is_navigation_stack_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class Frame(ContentControl, ImplementsINavigate, metaclass=Frame_Static):
+class Frame(ContentControl, INavigate, metaclass=Frame_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
     # System.String Windows.UI.Xaml.Controls.Frame::GetNavigationState()
@@ -4205,7 +4205,7 @@ class GroupItem(ContentControl, metaclass=GroupItem_Static):
 class GroupStyle_Static(type):
     pass
 
-class GroupStyle(winrt.system.Object, windows_ui_xaml_data.ImplementsINotifyPropertyChanged, metaclass=GroupStyle_Static):
+class GroupStyle(winrt.system.Object, windows_ui_xaml_data.INotifyPropertyChanged, metaclass=GroupStyle_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.GroupStyle::add_PropertyChanged(Windows.UI.Xaml.Data.PropertyChangedEventHandler)
@@ -4433,7 +4433,7 @@ class Hub_Static(Control_Static):
     @typing.final
     def semantic_zoom_owner_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class Hub(Control, ImplementsISemanticZoomInformation, metaclass=Hub_Static):
+class Hub(Control, ISemanticZoomInformation, metaclass=Hub_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.UI.Xaml.Controls.Hub::CompleteViewChange()
     def complete_view_change(self) -> None: ...
@@ -4929,7 +4929,7 @@ class ItemClickEventArgs(windows_ui_xaml.RoutedEventArgs):
     def clicked_item(self) -> winrt.system.Object: ...
 
 @typing.final
-class ItemCollection(winrt.system.Object, windows_foundation_collections.ImplementsIObservableVector[winrt.system.Object], winrt._winrt.MutableSequence[winrt.system.Object]):
+class ItemCollection(winrt.system.Object, windows_foundation_collections.IObservableVector[winrt.system.Object], winrt._winrt.MutableSequence[winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[winrt.system.Object]: ...
     @typing.overload
@@ -5061,7 +5061,7 @@ class ItemsControl_Static(Control_Static):
     @typing.final
     def items_source_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class ItemsControl(Control, ImplementsIItemContainerMapping, metaclass=ItemsControl_Static):
+class ItemsControl(Control, IItemContainerMapping, metaclass=ItemsControl_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.UI.Xaml.Controls.ItemsControl::ClearContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)
     def _clear_container_for_item_override(self, element: windows_ui_xaml.DependencyObject, item: winrt.system.Object, /) -> None: ...
@@ -5217,7 +5217,7 @@ class ItemsPresenter_Static(windows_ui_xaml.FrameworkElement_Static):
     def footer_transitions_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ItemsPresenter(windows_ui_xaml.FrameworkElement, windows_ui_xaml_controls_primitives.ImplementsIScrollSnapPointsInfo, metaclass=ItemsPresenter_Static):
+class ItemsPresenter(windows_ui_xaml.FrameworkElement, windows_ui_xaml_controls_primitives.IScrollSnapPointsInfo, metaclass=ItemsPresenter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.ItemsPresenter::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     def get_irregular_snap_points(self, orientation: Orientation, alignment: windows_ui_xaml_controls_primitives.SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
@@ -5592,9 +5592,9 @@ class MediaElement_Static(windows_ui_xaml.FrameworkElement_Static):
 class MediaElement(windows_ui_xaml.FrameworkElement, metaclass=MediaElement_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.UI.Xaml.Controls.MediaElement::AddAudioEffect(System.String,System.Boolean,Windows.Foundation.Collections.IPropertySet)
-    def add_audio_effect(self, effect_id: str, effect_optional: bool, effect_configuration: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
+    def add_audio_effect(self, effect_id: str, effect_optional: bool, effect_configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.MediaElement::AddVideoEffect(System.String,System.Boolean,Windows.Foundation.Collections.IPropertySet)
-    def add_video_effect(self, effect_id: str, effect_optional: bool, effect_configuration: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
+    def add_video_effect(self, effect_id: str, effect_optional: bool, effect_configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
     # Windows.UI.Xaml.Media.MediaCanPlayResponse Windows.UI.Xaml.Controls.MediaElement::CanPlayType(System.String)
     def can_play_type(self, type: str, /) -> windows_ui_xaml_media.MediaCanPlayResponse: ...
     # Windows.Media.Casting.CastingSource Windows.UI.Xaml.Controls.MediaElement::GetAsCastingSource()
@@ -5608,11 +5608,11 @@ class MediaElement(windows_ui_xaml.FrameworkElement, metaclass=MediaElement_Stat
     # System.Void Windows.UI.Xaml.Controls.MediaElement::RemoveAllEffects()
     def remove_all_effects(self) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.MediaElement::SetMediaStreamSource(Windows.Media.Core.IMediaSource)
-    def set_media_stream_source(self, source: windows_media_core.ImplementsIMediaSource, /) -> None: ...
+    def set_media_stream_source(self, source: windows_media_core.IMediaSource, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.MediaElement::SetPlaybackSource(Windows.Media.Playback.IMediaPlaybackSource)
-    def set_playback_source(self, source: windows_media_playback.ImplementsIMediaPlaybackSource, /) -> None: ...
+    def set_playback_source(self, source: windows_media_playback.IMediaPlaybackSource, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.MediaElement::SetSource(Windows.Storage.Streams.IRandomAccessStream,System.String)
-    def set_source(self, stream: windows_storage_streams.ImplementsIRandomAccessStream, mime_type: str, /) -> None: ...
+    def set_source(self, stream: windows_storage_streams.IRandomAccessStream, mime_type: str, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.MediaElement::Stop()
     def stop(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.MediaElement::add_BufferingProgressChanged(Windows.UI.Xaml.RoutedEventHandler)
@@ -5898,7 +5898,7 @@ class MediaPlayerElement(Control, metaclass=MediaPlayerElement_Static):
     # System.Void Windows.UI.Xaml.Controls.MediaPlayerElement::put_Source(Windows.Media.Playback.IMediaPlaybackSource)
     @source.setter
     @typing.final
-    def source(self, value: windows_media_playback.ImplementsIMediaPlaybackSource) -> None: ...
+    def source(self, value: windows_media_playback.IMediaPlaybackSource) -> None: ...
     # Windows.UI.Xaml.Media.ImageSource Windows.UI.Xaml.Controls.MediaPlayerElement::get_PosterSource()
     @_property
     def poster_source(self) -> windows_ui_xaml_media.ImageSource: ...
@@ -6407,7 +6407,7 @@ class MenuFlyoutItem(MenuFlyoutItemBase, metaclass=MenuFlyoutItem_Static):
     # System.Void Windows.UI.Xaml.Controls.MenuFlyoutItem::put_Command(Windows.UI.Xaml.Input.ICommand)
     @command.setter
     @typing.final
-    def command(self, value: windows_ui_xaml_input.ImplementsICommand) -> None: ...
+    def command(self, value: windows_ui_xaml_input.ICommand) -> None: ...
     # Windows.UI.Xaml.Controls.IconElement Windows.UI.Xaml.Controls.MenuFlyoutItem::get_Icon()
     @_property
     def icon(self) -> IconElement: ...
@@ -9532,7 +9532,7 @@ class ScrollViewer_Static(ContentControl_Static):
     def can_content_render_outside_bounds_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ScrollViewer(ContentControl, ImplementsIScrollAnchorProvider, metaclass=ScrollViewer_Static):
+class ScrollViewer(ContentControl, IScrollAnchorProvider, metaclass=ScrollViewer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Boolean Windows.UI.Xaml.Controls.ScrollViewer::ChangeView(Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Single>)
     def change_view(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], /) -> bool: ...
@@ -10031,13 +10031,13 @@ class SemanticZoom(Control, metaclass=SemanticZoom_Static):
     def zoomed_out_view(self) -> ISemanticZoomInformation: ...
     # System.Void Windows.UI.Xaml.Controls.SemanticZoom::put_ZoomedOutView(Windows.UI.Xaml.Controls.ISemanticZoomInformation)
     @zoomed_out_view.setter
-    def zoomed_out_view(self, value: ImplementsISemanticZoomInformation) -> None: ...
+    def zoomed_out_view(self, value: ISemanticZoomInformation) -> None: ...
     # Windows.UI.Xaml.Controls.ISemanticZoomInformation Windows.UI.Xaml.Controls.SemanticZoom::get_ZoomedInView()
     @_property
     def zoomed_in_view(self) -> ISemanticZoomInformation: ...
     # System.Void Windows.UI.Xaml.Controls.SemanticZoom::put_ZoomedInView(Windows.UI.Xaml.Controls.ISemanticZoomInformation)
     @zoomed_in_view.setter
-    def zoomed_in_view(self, value: ImplementsISemanticZoomInformation) -> None: ...
+    def zoomed_in_view(self, value: ISemanticZoomInformation) -> None: ...
     # System.Boolean Windows.UI.Xaml.Controls.SemanticZoom::get_IsZoomedInViewActive()
     @_property
     def is_zoomed_in_view_active(self) -> bool: ...
@@ -10205,12 +10205,12 @@ class SplitButton(ContentControl, metaclass=SplitButton_Static):
     # System.Void Windows.UI.Xaml.Controls.SplitButton::put_Command(Windows.UI.Xaml.Input.ICommand)
     @command.setter
     @typing.final
-    def command(self, value: windows_ui_xaml_input.ImplementsICommand) -> None: ...
+    def command(self, value: windows_ui_xaml_input.ICommand) -> None: ...
 
 class SplitButtonAutomationPeer_Static(windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer_Static):
     pass
 
-class SplitButtonAutomationPeer(windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIInvokeProvider, windows_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=SplitButtonAutomationPeer_Static):
+class SplitButtonAutomationPeer(windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.IInvokeProvider, windows_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=SplitButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: SplitButton) -> Self: ...
     # System.Void Windows.UI.Xaml.Controls.SplitButtonAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -10406,7 +10406,7 @@ class StackPanel_Static(Panel_Static):
     @typing.final
     def background_sizing_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class StackPanel(Panel, ImplementsIInsertionPanel, windows_ui_xaml_controls_primitives.ImplementsIScrollSnapPointsInfo, metaclass=StackPanel_Static):
+class StackPanel(Panel, IInsertionPanel, windows_ui_xaml_controls_primitives.IScrollSnapPointsInfo, metaclass=StackPanel_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.UI.Xaml.Controls.StackPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
@@ -10665,7 +10665,7 @@ class SwipeItem(windows_ui_xaml.DependencyObject, metaclass=SwipeItem_Static):
     # System.Void Windows.UI.Xaml.Controls.SwipeItem::put_Command(Windows.UI.Xaml.Input.ICommand)
     @command.setter
     @typing.final
-    def command(self, value: windows_ui_xaml_input.ImplementsICommand) -> None: ...
+    def command(self, value: windows_ui_xaml_input.ICommand) -> None: ...
     # Windows.UI.Xaml.Controls.SwipeBehaviorOnInvoked Windows.UI.Xaml.Controls.SwipeItem::get_BehaviorOnInvoked()
     @_property
     def behavior_on_invoked(self) -> SwipeBehaviorOnInvoked: ...
@@ -11774,7 +11774,7 @@ class ToggleSplitButton(SplitButton, metaclass=ToggleSplitButton_Static):
 class ToggleSplitButtonAutomationPeer_Static(windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer_Static):
     pass
 
-class ToggleSplitButtonAutomationPeer(windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIToggleProvider, windows_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=ToggleSplitButtonAutomationPeer_Static):
+class ToggleSplitButtonAutomationPeer(windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.IToggleProvider, windows_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=ToggleSplitButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: ToggleSplitButton) -> Self: ...
     # System.Void Windows.UI.Xaml.Controls.ToggleSplitButtonAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -12675,7 +12675,7 @@ class WebView(windows_ui_xaml.FrameworkElement, metaclass=WebView_Static):
     # Windows.Foundation.Uri Windows.UI.Xaml.Controls.WebView::BuildLocalStreamUri(System.String,System.String)
     def build_local_stream_uri(self, content_identifier: str, relative_path: str, /) -> windows_foundation.Uri: ...
     # Windows.Foundation.IAsyncAction Windows.UI.Xaml.Controls.WebView::CapturePreviewToStreamAsync(Windows.Storage.Streams.IRandomAccessStream)
-    def capture_preview_to_stream_async(self, stream: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
+    def capture_preview_to_stream_async(self, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackage> Windows.UI.Xaml.Controls.WebView::CaptureSelectedContentToDataPackageAsync()
     def capture_selected_content_to_data_package_async(self) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackage]: ...
     # Windows.UI.Xaml.Controls.WebViewDeferredPermissionRequest Windows.UI.Xaml.Controls.WebView::DeferredPermissionRequestById(System.UInt32)
@@ -12694,7 +12694,7 @@ class WebView(windows_ui_xaml.FrameworkElement, metaclass=WebView_Static):
     # System.Void Windows.UI.Xaml.Controls.WebView::Navigate(Windows.Foundation.Uri)
     def navigate(self, source: windows_foundation.Uri, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::NavigateToLocalStreamUri(Windows.Foundation.Uri,Windows.Web.IUriToStreamResolver)
-    def navigate_to_local_stream_uri(self, source: windows_foundation.Uri, stream_resolver: windows_web.ImplementsIUriToStreamResolver, /) -> None: ...
+    def navigate_to_local_stream_uri(self, source: windows_foundation.Uri, stream_resolver: windows_web.IUriToStreamResolver, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::NavigateToString(System.String)
     def navigate_to_string(self, text: str, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::NavigateWithHttpRequestMessage(Windows.Web.Http.HttpRequestMessage)
@@ -13046,7 +13046,7 @@ class WebViewWebResourceRequestedEventArgs(winrt.system.Object):
     @_property
     def request(self) -> windows_web_http.HttpRequestMessage: ...
 
-class ImplementsICommandBarElement():
+class ICommandBarElement(winrt._winrt.IInspectable):
     # System.Boolean Windows.UI.Xaml.Controls.ICommandBarElement::get_IsCompact()
     @_property
     @abstractmethod
@@ -13056,16 +13056,7 @@ class ImplementsICommandBarElement():
     @abstractmethod
     def is_compact(self, value: bool) -> None: ...
 
-@typing.final
-class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
-    # System.Boolean Windows.UI.Xaml.Controls.ICommandBarElement::get_IsCompact()
-    @_property
-    def is_compact(self) -> bool: ...
-    # System.Void Windows.UI.Xaml.Controls.ICommandBarElement::put_IsCompact(System.Boolean)
-    @is_compact.setter
-    def is_compact(self, value: bool) -> None: ...
-
-class ImplementsICommandBarElement2():
+class ICommandBarElement2(winrt._winrt.IInspectable):
     # System.Int32 Windows.UI.Xaml.Controls.ICommandBarElement2::get_DynamicOverflowOrder()
     @_property
     @abstractmethod
@@ -13079,29 +13070,12 @@ class ImplementsICommandBarElement2():
     @abstractmethod
     def is_in_overflow(self) -> bool: ...
 
-@typing.final
-class ICommandBarElement2(winrt.system.Object, ImplementsICommandBarElement2):
-    # System.Int32 Windows.UI.Xaml.Controls.ICommandBarElement2::get_DynamicOverflowOrder()
-    @_property
-    def dynamic_overflow_order(self) -> winrt.system.Int32: ...
-    # System.Void Windows.UI.Xaml.Controls.ICommandBarElement2::put_DynamicOverflowOrder(System.Int32)
-    @dynamic_overflow_order.setter
-    def dynamic_overflow_order(self, value: winrt.system.Int32) -> None: ...
-    # System.Boolean Windows.UI.Xaml.Controls.ICommandBarElement2::get_IsInOverflow()
-    @_property
-    def is_in_overflow(self) -> bool: ...
-
-class ImplementsIInsertionPanel():
+class IInsertionPanel(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Controls.IInsertionPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
     @abstractmethod
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
 
-@typing.final
-class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
-    # System.Void Windows.UI.Xaml.Controls.IInsertionPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
-    def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
-
-class ImplementsIItemContainerMapping():
+class IItemContainerMapping(winrt._winrt.IInspectable):
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.IItemContainerMapping::ContainerFromIndex(System.Int32)
     @abstractmethod
     def container_from_index(self, index: winrt.system.Int32, /) -> windows_ui_xaml.DependencyObject: ...
@@ -13115,28 +13089,12 @@ class ImplementsIItemContainerMapping():
     @abstractmethod
     def item_from_container(self, container: windows_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
 
-@typing.final
-class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping):
-    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.IItemContainerMapping::ContainerFromIndex(System.Int32)
-    def container_from_index(self, index: winrt.system.Int32, /) -> windows_ui_xaml.DependencyObject: ...
-    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.IItemContainerMapping::ContainerFromItem(System.Object)
-    def container_from_item(self, item: winrt.system.Object, /) -> windows_ui_xaml.DependencyObject: ...
-    # System.Int32 Windows.UI.Xaml.Controls.IItemContainerMapping::IndexFromContainer(Windows.UI.Xaml.DependencyObject)
-    def index_from_container(self, container: windows_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
-    # System.Object Windows.UI.Xaml.Controls.IItemContainerMapping::ItemFromContainer(Windows.UI.Xaml.DependencyObject)
-    def item_from_container(self, container: windows_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
-
-class ImplementsINavigate():
+class INavigate(winrt._winrt.IInspectable):
     # System.Boolean Windows.UI.Xaml.Controls.INavigate::Navigate(Windows.UI.Xaml.Interop.TypeName)
     @abstractmethod
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
 
-@typing.final
-class INavigate(winrt.system.Object, ImplementsINavigate):
-    # System.Boolean Windows.UI.Xaml.Controls.INavigate::Navigate(Windows.UI.Xaml.Interop.TypeName)
-    def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
-
-class ImplementsIScrollAnchorProvider():
+class IScrollAnchorProvider(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Controls.IScrollAnchorProvider::RegisterAnchorCandidate(Windows.UI.Xaml.UIElement)
     @abstractmethod
     def register_anchor_candidate(self, element: windows_ui_xaml.UIElement, /) -> None: ...
@@ -13148,17 +13106,7 @@ class ImplementsIScrollAnchorProvider():
     @abstractmethod
     def current_anchor(self) -> windows_ui_xaml.UIElement: ...
 
-@typing.final
-class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider):
-    # System.Void Windows.UI.Xaml.Controls.IScrollAnchorProvider::RegisterAnchorCandidate(Windows.UI.Xaml.UIElement)
-    def register_anchor_candidate(self, element: windows_ui_xaml.UIElement, /) -> None: ...
-    # System.Void Windows.UI.Xaml.Controls.IScrollAnchorProvider::UnregisterAnchorCandidate(Windows.UI.Xaml.UIElement)
-    def unregister_anchor_candidate(self, element: windows_ui_xaml.UIElement, /) -> None: ...
-    # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.IScrollAnchorProvider::get_CurrentAnchor()
-    @_property
-    def current_anchor(self) -> windows_ui_xaml.UIElement: ...
-
-class ImplementsISemanticZoomInformation():
+class ISemanticZoomInformation(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChange()
     @abstractmethod
     def complete_view_change(self) -> None: ...
@@ -13203,40 +13151,5 @@ class ImplementsISemanticZoomInformation():
     # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::put_SemanticZoomOwner(Windows.UI.Xaml.Controls.SemanticZoom)
     @semantic_zoom_owner.setter
     @abstractmethod
-    def semantic_zoom_owner(self, value: SemanticZoom) -> None: ...
-
-@typing.final
-class ISemanticZoomInformation(winrt.system.Object, ImplementsISemanticZoomInformation):
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChange()
-    def complete_view_change(self) -> None: ...
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChangeFrom(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
-    def complete_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChangeTo(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
-    def complete_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::InitializeViewChange()
-    def initialize_view_change(self) -> None: ...
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::MakeVisible(Windows.UI.Xaml.Controls.SemanticZoomLocation)
-    def make_visible(self, item: SemanticZoomLocation, /) -> None: ...
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::StartViewChangeFrom(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
-    def start_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::StartViewChangeTo(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
-    def start_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
-    # System.Boolean Windows.UI.Xaml.Controls.ISemanticZoomInformation::get_IsActiveView()
-    @_property
-    def is_active_view(self) -> bool: ...
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::put_IsActiveView(System.Boolean)
-    @is_active_view.setter
-    def is_active_view(self, value: bool) -> None: ...
-    # System.Boolean Windows.UI.Xaml.Controls.ISemanticZoomInformation::get_IsZoomedInView()
-    @_property
-    def is_zoomed_in_view(self) -> bool: ...
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::put_IsZoomedInView(System.Boolean)
-    @is_zoomed_in_view.setter
-    def is_zoomed_in_view(self, value: bool) -> None: ...
-    # Windows.UI.Xaml.Controls.SemanticZoom Windows.UI.Xaml.Controls.ISemanticZoomInformation::get_SemanticZoomOwner()
-    @_property
-    def semantic_zoom_owner(self) -> SemanticZoom: ...
-    # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::put_SemanticZoomOwner(Windows.UI.Xaml.Controls.SemanticZoom)
-    @semantic_zoom_owner.setter
     def semantic_zoom_owner(self, value: SemanticZoom) -> None: ...
 

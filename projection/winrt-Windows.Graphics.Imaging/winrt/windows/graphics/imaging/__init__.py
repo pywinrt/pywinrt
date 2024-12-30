@@ -21,11 +21,8 @@ from winrt._winrt_windows_graphics_imaging import (
     PixelDataProvider,
     SoftwareBitmap,
     IBitmapFrame,
-    ImplementsIBitmapFrame,
     IBitmapFrameWithSoftwareBitmap,
-    ImplementsIBitmapFrameWithSoftwareBitmap,
     IBitmapPropertiesView,
-    ImplementsIBitmapPropertiesView,
 )
 
 __all__ = [
@@ -57,11 +54,8 @@ __all__ = [
     "PixelDataProvider",
     "SoftwareBitmap",
     "IBitmapFrame",
-    "ImplementsIBitmapFrame",
     "IBitmapFrameWithSoftwareBitmap",
-    "ImplementsIBitmapFrameWithSoftwareBitmap",
     "IBitmapPropertiesView",
-    "ImplementsIBitmapPropertiesView",
 ]
 
 class BitmapAlphaMode(enum.IntEnum):

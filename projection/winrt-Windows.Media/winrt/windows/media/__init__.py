@@ -28,13 +28,9 @@ from winrt._winrt_windows_media import (
     VideoEffects,
     VideoFrame,
     IMediaExtension,
-    ImplementsIMediaExtension,
     IMediaFrame,
-    ImplementsIMediaFrame,
     IMediaMarker,
-    ImplementsIMediaMarker,
     IMediaMarkers,
-    ImplementsIMediaMarkers,
 )
 
 __all__ = [
@@ -71,13 +67,9 @@ __all__ = [
     "VideoEffects",
     "VideoFrame",
     "IMediaExtension",
-    "ImplementsIMediaExtension",
     "IMediaFrame",
-    "ImplementsIMediaFrame",
     "IMediaMarker",
-    "ImplementsIMediaMarker",
     "IMediaMarkers",
-    "ImplementsIMediaMarkers",
 ]
 
 class AudioBufferAccessMode(enum.IntEnum):

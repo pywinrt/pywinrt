@@ -45,7 +45,6 @@ from winrt._winrt_windows_system_remotesystems import (
     RemoteSystemWatcherErrorOccurredEventArgs,
     RemoteSystemWebAccountFilter,
     IRemoteSystemFilter,
-    ImplementsIRemoteSystemFilter,
 )
 
 __all__ = [
@@ -103,7 +102,6 @@ __all__ = [
     "RemoteSystemWatcherErrorOccurredEventArgs",
     "RemoteSystemWebAccountFilter",
     "IRemoteSystemFilter",
-    "ImplementsIRemoteSystemFilter",
 ]
 
 class RemoteSystemAccessStatus(enum.IntEnum):

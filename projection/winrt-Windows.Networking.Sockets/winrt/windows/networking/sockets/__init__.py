@@ -39,19 +39,12 @@ from winrt._winrt_windows_networking_sockets import (
     WebSocketKeepAlive,
     WebSocketServerCustomValidationRequestedEventArgs,
     IControlChannelTriggerEventDetails,
-    ImplementsIControlChannelTriggerEventDetails,
     IControlChannelTriggerResetEventDetails,
-    ImplementsIControlChannelTriggerResetEventDetails,
     IWebSocket,
-    ImplementsIWebSocket,
     IWebSocketControl,
-    ImplementsIWebSocketControl,
     IWebSocketControl2,
-    ImplementsIWebSocketControl2,
     IWebSocketInformation,
-    ImplementsIWebSocketInformation,
     IWebSocketInformation2,
-    ImplementsIWebSocketInformation2,
 )
 
 __all__ = [
@@ -102,19 +95,12 @@ __all__ = [
     "WebSocketKeepAlive",
     "WebSocketServerCustomValidationRequestedEventArgs",
     "IControlChannelTriggerEventDetails",
-    "ImplementsIControlChannelTriggerEventDetails",
     "IControlChannelTriggerResetEventDetails",
-    "ImplementsIControlChannelTriggerResetEventDetails",
     "IWebSocket",
-    "ImplementsIWebSocket",
     "IWebSocketControl",
-    "ImplementsIWebSocketControl",
     "IWebSocketControl2",
-    "ImplementsIWebSocketControl2",
     "IWebSocketInformation",
-    "ImplementsIWebSocketInformation",
     "IWebSocketInformation2",
-    "ImplementsIWebSocketInformation2",
 ]
 
 class ControlChannelTriggerResetReason(enum.IntEnum):

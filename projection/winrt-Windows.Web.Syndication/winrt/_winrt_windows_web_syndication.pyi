@@ -59,7 +59,7 @@ class SyndicationAttribute(winrt.system.Object):
     def name(self, value: str) -> None: ...
 
 @typing.final
-class SyndicationCategory(winrt.system.Object, ImplementsISyndicationNode):
+class SyndicationCategory(winrt.system.Object, ISyndicationNode):
     @typing.overload
     def __new__(cls: typing.Type[Self], term: str) -> Self: ...
     @typing.overload
@@ -124,7 +124,7 @@ class SyndicationCategory(winrt.system.Object, ImplementsISyndicationNode):
     def element_extensions(self) -> typing.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationClient(winrt.system.Object, ImplementsISyndicationClient):
+class SyndicationClient(winrt.system.Object, ISyndicationClient):
     @typing.overload
     def __new__(cls: typing.Type[Self], server_credential: windows_security_credentials.PasswordCredential) -> Self: ...
     @typing.overload
@@ -165,7 +165,7 @@ class SyndicationClient(winrt.system.Object, ImplementsISyndicationClient):
     def bypass_cache_on_retrieve(self, value: bool) -> None: ...
 
 @typing.final
-class SyndicationContent(winrt.system.Object, ImplementsISyndicationText, ImplementsISyndicationNode):
+class SyndicationContent(winrt.system.Object, ISyndicationText, ISyndicationNode):
     @typing.overload
     def __new__(cls: typing.Type[Self], text: str, type: SyndicationTextType) -> Self: ...
     @typing.overload
@@ -245,7 +245,7 @@ class SyndicationError(winrt.system.Object, metaclass=SyndicationError_Static):
     pass
 
 @typing.final
-class SyndicationFeed(winrt.system.Object, ImplementsISyndicationNode):
+class SyndicationFeed(winrt.system.Object, ISyndicationNode):
     @typing.overload
     def __new__(cls: typing.Type[Self], title: str, subtitle: str, uri: windows_foundation.Uri) -> Self: ...
     @typing.overload
@@ -261,19 +261,19 @@ class SyndicationFeed(winrt.system.Object, ImplementsISyndicationNode):
     def title(self) -> ISyndicationText: ...
     # System.Void Windows.Web.Syndication.SyndicationFeed::put_Title(Windows.Web.Syndication.ISyndicationText)
     @title.setter
-    def title(self, value: ImplementsISyndicationText) -> None: ...
+    def title(self, value: ISyndicationText) -> None: ...
     # Windows.Web.Syndication.ISyndicationText Windows.Web.Syndication.SyndicationFeed::get_Subtitle()
     @_property
     def subtitle(self) -> ISyndicationText: ...
     # System.Void Windows.Web.Syndication.SyndicationFeed::put_Subtitle(Windows.Web.Syndication.ISyndicationText)
     @subtitle.setter
-    def subtitle(self, value: ImplementsISyndicationText) -> None: ...
+    def subtitle(self, value: ISyndicationText) -> None: ...
     # Windows.Web.Syndication.ISyndicationText Windows.Web.Syndication.SyndicationFeed::get_Rights()
     @_property
     def rights(self) -> ISyndicationText: ...
     # System.Void Windows.Web.Syndication.SyndicationFeed::put_Rights(Windows.Web.Syndication.ISyndicationText)
     @rights.setter
-    def rights(self, value: ImplementsISyndicationText) -> None: ...
+    def rights(self, value: ISyndicationText) -> None: ...
     # Windows.Web.Syndication.SyndicationGenerator Windows.Web.Syndication.SyndicationFeed::get_Generator()
     @_property
     def generator(self) -> SyndicationGenerator: ...
@@ -372,7 +372,7 @@ class SyndicationFeed(winrt.system.Object, ImplementsISyndicationNode):
     def element_extensions(self) -> typing.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationGenerator(winrt.system.Object, ImplementsISyndicationNode):
+class SyndicationGenerator(winrt.system.Object, ISyndicationNode):
     @typing.overload
     def __new__(cls: typing.Type[Self], text: str) -> Self: ...
     @typing.overload
@@ -435,7 +435,7 @@ class SyndicationGenerator(winrt.system.Object, ImplementsISyndicationNode):
     def element_extensions(self) -> typing.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationItem(winrt.system.Object, ImplementsISyndicationNode):
+class SyndicationItem(winrt.system.Object, ISyndicationNode):
     @typing.overload
     def __new__(cls: typing.Type[Self], title: str, content: SyndicationContent, uri: windows_foundation.Uri) -> Self: ...
     @typing.overload
@@ -451,7 +451,7 @@ class SyndicationItem(winrt.system.Object, ImplementsISyndicationNode):
     def title(self) -> ISyndicationText: ...
     # System.Void Windows.Web.Syndication.SyndicationItem::put_Title(Windows.Web.Syndication.ISyndicationText)
     @title.setter
-    def title(self, value: ImplementsISyndicationText) -> None: ...
+    def title(self, value: ISyndicationText) -> None: ...
     # Windows.Web.Syndication.SyndicationFeed Windows.Web.Syndication.SyndicationItem::get_Source()
     @_property
     def source(self) -> SyndicationFeed: ...
@@ -463,13 +463,13 @@ class SyndicationItem(winrt.system.Object, ImplementsISyndicationNode):
     def rights(self) -> ISyndicationText: ...
     # System.Void Windows.Web.Syndication.SyndicationItem::put_Rights(Windows.Web.Syndication.ISyndicationText)
     @rights.setter
-    def rights(self, value: ImplementsISyndicationText) -> None: ...
+    def rights(self, value: ISyndicationText) -> None: ...
     # Windows.Web.Syndication.ISyndicationText Windows.Web.Syndication.SyndicationItem::get_Summary()
     @_property
     def summary(self) -> ISyndicationText: ...
     # System.Void Windows.Web.Syndication.SyndicationItem::put_Summary(Windows.Web.Syndication.ISyndicationText)
     @summary.setter
-    def summary(self, value: ImplementsISyndicationText) -> None: ...
+    def summary(self, value: ISyndicationText) -> None: ...
     # Windows.Foundation.DateTime Windows.Web.Syndication.SyndicationItem::get_PublishedDate()
     @_property
     def published_date(self) -> datetime.datetime: ...
@@ -562,7 +562,7 @@ class SyndicationItem(winrt.system.Object, ImplementsISyndicationNode):
     def element_extensions(self) -> typing.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationLink(winrt.system.Object, ImplementsISyndicationNode):
+class SyndicationLink(winrt.system.Object, ISyndicationNode):
     @typing.overload
     def __new__(cls: typing.Type[Self], uri: windows_foundation.Uri) -> Self: ...
     @typing.overload
@@ -645,7 +645,7 @@ class SyndicationLink(winrt.system.Object, ImplementsISyndicationNode):
     def element_extensions(self) -> typing.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationNode(winrt.system.Object, ImplementsISyndicationNode):
+class SyndicationNode(winrt.system.Object, ISyndicationNode):
     @typing.overload
     def __new__(cls: typing.Type[Self], node_name: str, node_namespace: str, node_value: str) -> Self: ...
     @typing.overload
@@ -690,7 +690,7 @@ class SyndicationNode(winrt.system.Object, ImplementsISyndicationNode):
     def element_extensions(self) -> typing.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationPerson(winrt.system.Object, ImplementsISyndicationNode):
+class SyndicationPerson(winrt.system.Object, ISyndicationNode):
     @typing.overload
     def __new__(cls: typing.Type[Self], name: str) -> Self: ...
     @typing.overload
@@ -755,7 +755,7 @@ class SyndicationPerson(winrt.system.Object, ImplementsISyndicationNode):
     def email(self, value: str) -> None: ...
 
 @typing.final
-class SyndicationText(winrt.system.Object, ImplementsISyndicationText, ImplementsISyndicationNode):
+class SyndicationText(winrt.system.Object, ISyndicationText, ISyndicationNode):
     @typing.overload
     def __new__(cls: typing.Type[Self], text: str) -> Self: ...
     @typing.overload
@@ -819,7 +819,7 @@ class SyndicationText(winrt.system.Object, ImplementsISyndicationText, Implement
     @text.setter
     def text(self, value: str) -> None: ...
 
-class ImplementsISyndicationClient():
+class ISyndicationClient(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> Windows.Web.Syndication.ISyndicationClient::RetrieveFeedAsync(Windows.Foundation.Uri)
     @abstractmethod
     def retrieve_feed_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperationWithProgress[SyndicationFeed, RetrievalProgress]: ...
@@ -867,44 +867,7 @@ class ImplementsISyndicationClient():
     @abstractmethod
     def timeout(self, value: winrt.system.UInt32) -> None: ...
 
-@typing.final
-class ISyndicationClient(winrt.system.Object, ImplementsISyndicationClient):
-    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> Windows.Web.Syndication.ISyndicationClient::RetrieveFeedAsync(Windows.Foundation.Uri)
-    def retrieve_feed_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperationWithProgress[SyndicationFeed, RetrievalProgress]: ...
-    # System.Void Windows.Web.Syndication.ISyndicationClient::SetRequestHeader(System.String,System.String)
-    def set_request_header(self, name: str, value: str, /) -> None: ...
-    # System.Boolean Windows.Web.Syndication.ISyndicationClient::get_BypassCacheOnRetrieve()
-    @_property
-    def bypass_cache_on_retrieve(self) -> bool: ...
-    # System.Void Windows.Web.Syndication.ISyndicationClient::put_BypassCacheOnRetrieve(System.Boolean)
-    @bypass_cache_on_retrieve.setter
-    def bypass_cache_on_retrieve(self, value: bool) -> None: ...
-    # System.UInt32 Windows.Web.Syndication.ISyndicationClient::get_MaxResponseBufferSize()
-    @_property
-    def max_response_buffer_size(self) -> winrt.system.UInt32: ...
-    # System.Void Windows.Web.Syndication.ISyndicationClient::put_MaxResponseBufferSize(System.UInt32)
-    @max_response_buffer_size.setter
-    def max_response_buffer_size(self, value: winrt.system.UInt32) -> None: ...
-    # Windows.Security.Credentials.PasswordCredential Windows.Web.Syndication.ISyndicationClient::get_ProxyCredential()
-    @_property
-    def proxy_credential(self) -> windows_security_credentials.PasswordCredential: ...
-    # System.Void Windows.Web.Syndication.ISyndicationClient::put_ProxyCredential(Windows.Security.Credentials.PasswordCredential)
-    @proxy_credential.setter
-    def proxy_credential(self, value: windows_security_credentials.PasswordCredential) -> None: ...
-    # Windows.Security.Credentials.PasswordCredential Windows.Web.Syndication.ISyndicationClient::get_ServerCredential()
-    @_property
-    def server_credential(self) -> windows_security_credentials.PasswordCredential: ...
-    # System.Void Windows.Web.Syndication.ISyndicationClient::put_ServerCredential(Windows.Security.Credentials.PasswordCredential)
-    @server_credential.setter
-    def server_credential(self, value: windows_security_credentials.PasswordCredential) -> None: ...
-    # System.UInt32 Windows.Web.Syndication.ISyndicationClient::get_Timeout()
-    @_property
-    def timeout(self) -> winrt.system.UInt32: ...
-    # System.Void Windows.Web.Syndication.ISyndicationClient::put_Timeout(System.UInt32)
-    @timeout.setter
-    def timeout(self, value: winrt.system.UInt32) -> None: ...
-
-class ImplementsISyndicationNode():
+class ISyndicationNode(winrt._winrt.IInspectable):
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.Syndication.ISyndicationNode::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     @abstractmethod
     def get_xml_document(self, format: SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
@@ -957,48 +920,7 @@ class ImplementsISyndicationNode():
     @abstractmethod
     def node_value(self, value: str) -> None: ...
 
-@typing.final
-class ISyndicationNode(winrt.system.Object, ImplementsISyndicationNode):
-    # Windows.Data.Xml.Dom.XmlDocument Windows.Web.Syndication.ISyndicationNode::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
-    def get_xml_document(self, format: SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
-    # Windows.Foundation.Collections.IVector`1<Windows.Web.Syndication.SyndicationAttribute> Windows.Web.Syndication.ISyndicationNode::get_AttributeExtensions()
-    @_property
-    def attribute_extensions(self) -> typing.MutableSequence[SyndicationAttribute]: ...
-    # Windows.Foundation.Uri Windows.Web.Syndication.ISyndicationNode::get_BaseUri()
-    @_property
-    def base_uri(self) -> windows_foundation.Uri: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_BaseUri(Windows.Foundation.Uri)
-    @base_uri.setter
-    def base_uri(self, value: windows_foundation.Uri) -> None: ...
-    # Windows.Foundation.Collections.IVector`1<Windows.Web.Syndication.ISyndicationNode> Windows.Web.Syndication.ISyndicationNode::get_ElementExtensions()
-    @_property
-    def element_extensions(self) -> typing.MutableSequence[ISyndicationNode]: ...
-    # System.String Windows.Web.Syndication.ISyndicationNode::get_Language()
-    @_property
-    def language(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_Language(System.String)
-    @language.setter
-    def language(self, value: str) -> None: ...
-    # System.String Windows.Web.Syndication.ISyndicationNode::get_NodeName()
-    @_property
-    def node_name(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_NodeName(System.String)
-    @node_name.setter
-    def node_name(self, value: str) -> None: ...
-    # System.String Windows.Web.Syndication.ISyndicationNode::get_NodeNamespace()
-    @_property
-    def node_namespace(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_NodeNamespace(System.String)
-    @node_namespace.setter
-    def node_namespace(self, value: str) -> None: ...
-    # System.String Windows.Web.Syndication.ISyndicationNode::get_NodeValue()
-    @_property
-    def node_value(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_NodeValue(System.String)
-    @node_value.setter
-    def node_value(self, value: str) -> None: ...
-
-class ImplementsISyndicationText(ImplementsISyndicationNode):
+class ISyndicationText(ISyndicationNode, winrt._winrt.IInspectable):
     # System.String Windows.Web.Syndication.ISyndicationText::get_Text()
     @_property
     @abstractmethod
@@ -1023,63 +945,4 @@ class ImplementsISyndicationText(ImplementsISyndicationNode):
     @xml.setter
     @abstractmethod
     def xml(self, value: windows_data_xml_dom.XmlDocument) -> None: ...
-
-@typing.final
-class ISyndicationText(winrt.system.Object, ImplementsISyndicationText, ImplementsISyndicationNode):
-    # Windows.Data.Xml.Dom.XmlDocument Windows.Web.Syndication.ISyndicationNode::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
-    def get_xml_document(self, format: SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
-    # System.String Windows.Web.Syndication.ISyndicationText::get_Text()
-    @_property
-    def text(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationText::put_Text(System.String)
-    @text.setter
-    def text(self, value: str) -> None: ...
-    # System.String Windows.Web.Syndication.ISyndicationText::get_Type()
-    @_property
-    def type(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationText::put_Type(System.String)
-    @type.setter
-    def type(self, value: str) -> None: ...
-    # Windows.Data.Xml.Dom.XmlDocument Windows.Web.Syndication.ISyndicationText::get_Xml()
-    @_property
-    def xml(self) -> windows_data_xml_dom.XmlDocument: ...
-    # System.Void Windows.Web.Syndication.ISyndicationText::put_Xml(Windows.Data.Xml.Dom.XmlDocument)
-    @xml.setter
-    def xml(self, value: windows_data_xml_dom.XmlDocument) -> None: ...
-    # Windows.Foundation.Collections.IVector`1<Windows.Web.Syndication.SyndicationAttribute> Windows.Web.Syndication.ISyndicationNode::get_AttributeExtensions()
-    @_property
-    def attribute_extensions(self) -> typing.MutableSequence[SyndicationAttribute]: ...
-    # Windows.Foundation.Uri Windows.Web.Syndication.ISyndicationNode::get_BaseUri()
-    @_property
-    def base_uri(self) -> windows_foundation.Uri: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_BaseUri(Windows.Foundation.Uri)
-    @base_uri.setter
-    def base_uri(self, value: windows_foundation.Uri) -> None: ...
-    # Windows.Foundation.Collections.IVector`1<Windows.Web.Syndication.ISyndicationNode> Windows.Web.Syndication.ISyndicationNode::get_ElementExtensions()
-    @_property
-    def element_extensions(self) -> typing.MutableSequence[ISyndicationNode]: ...
-    # System.String Windows.Web.Syndication.ISyndicationNode::get_Language()
-    @_property
-    def language(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_Language(System.String)
-    @language.setter
-    def language(self, value: str) -> None: ...
-    # System.String Windows.Web.Syndication.ISyndicationNode::get_NodeName()
-    @_property
-    def node_name(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_NodeName(System.String)
-    @node_name.setter
-    def node_name(self, value: str) -> None: ...
-    # System.String Windows.Web.Syndication.ISyndicationNode::get_NodeNamespace()
-    @_property
-    def node_namespace(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_NodeNamespace(System.String)
-    @node_namespace.setter
-    def node_namespace(self, value: str) -> None: ...
-    # System.String Windows.Web.Syndication.ISyndicationNode::get_NodeValue()
-    @_property
-    def node_value(self) -> str: ...
-    # System.Void Windows.Web.Syndication.ISyndicationNode::put_NodeValue(System.String)
-    @node_value.setter
-    def node_value(self, value: str) -> None: ...
 

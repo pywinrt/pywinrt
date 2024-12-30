@@ -8,7 +8,6 @@ from winrt._winrt_windows_graphics import (
     RectInt32,
     SizeInt32,
     IGeometrySource2D,
-    ImplementsIGeometrySource2D,
 )
 
 __all__ = [
@@ -18,6 +17,5 @@ __all__ = [
     "RectInt32",
     "SizeInt32",
     "IGeometrySource2D",
-    "ImplementsIGeometrySource2D",
 ]
 

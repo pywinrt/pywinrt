@@ -53,7 +53,6 @@ from winrt._winrt_windows_system import (
     UserPicker,
     UserWatcher,
     ILauncherViewOptions,
-    ImplementsILauncherViewOptions,
 )
 
 __all__ = [
@@ -129,7 +128,6 @@ __all__ = [
     "UserPicker",
     "UserWatcher",
     "ILauncherViewOptions",
-    "ImplementsILauncherViewOptions",
     "DispatcherQueueHandler",
 ]
 

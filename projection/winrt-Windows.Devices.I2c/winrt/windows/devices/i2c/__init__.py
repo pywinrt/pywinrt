@@ -9,7 +9,6 @@ from winrt._winrt_windows_devices_i2c import (
     I2cController,
     I2cDevice,
     II2cDeviceStatics,
-    ImplementsII2cDeviceStatics,
 )
 
 __all__ = [
@@ -21,7 +20,6 @@ __all__ = [
     "I2cController",
     "I2cDevice",
     "II2cDeviceStatics",
-    "ImplementsII2cDeviceStatics",
 ]
 
 class I2cBusSpeed(enum.IntEnum):

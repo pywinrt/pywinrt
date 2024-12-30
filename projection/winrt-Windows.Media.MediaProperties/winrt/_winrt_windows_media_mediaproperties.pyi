@@ -38,7 +38,7 @@ class AudioEncodingProperties_Static(type):
     def create_wma(cls, sample_rate: winrt.system.UInt32, channel_count: winrt.system.UInt32, bitrate: winrt.system.UInt32, /) -> AudioEncodingProperties: ...
 
 @typing.final
-class AudioEncodingProperties(winrt.system.Object, ImplementsIMediaEncodingProperties, metaclass=AudioEncodingProperties_Static):
+class AudioEncodingProperties(winrt.system.Object, IMediaEncodingProperties, metaclass=AudioEncodingProperties_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.MediaProperties.AudioEncodingProperties::Copy()
     def copy(self) -> AudioEncodingProperties: ...
@@ -130,7 +130,7 @@ class Av1ProfileIds(winrt.system.Object, metaclass=Av1ProfileIds_Static):
     pass
 
 @typing.final
-class ContainerEncodingProperties(winrt.system.Object, ImplementsIMediaEncodingProperties):
+class ContainerEncodingProperties(winrt.system.Object, IMediaEncodingProperties):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Media.MediaProperties.ContainerEncodingProperties Windows.Media.MediaProperties.ContainerEncodingProperties::Copy()
     def copy(self) -> ContainerEncodingProperties: ...
@@ -273,7 +273,7 @@ class ImageEncodingProperties_Static(type):
     def create_uncompressed(cls, format: MediaPixelFormat, /) -> ImageEncodingProperties: ...
 
 @typing.final
-class ImageEncodingProperties(winrt.system.Object, ImplementsIMediaEncodingProperties, metaclass=ImageEncodingProperties_Static):
+class ImageEncodingProperties(winrt.system.Object, IMediaEncodingProperties, metaclass=ImageEncodingProperties_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Media.MediaProperties.ImageEncodingProperties Windows.Media.MediaProperties.ImageEncodingProperties::Copy()
     def copy(self) -> ImageEncodingProperties: ...
@@ -313,9 +313,9 @@ class MediaEncodingProfile_Static(type):
     # Windows.Media.MediaProperties.MediaEncodingProfile Windows.Media.MediaProperties.MediaEncodingProfile::CreateFlac(Windows.Media.MediaProperties.AudioEncodingQuality)
     def create_flac(cls, quality: AudioEncodingQuality, /) -> MediaEncodingProfile: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.MediaProperties.MediaEncodingProfile> Windows.Media.MediaProperties.MediaEncodingProfile::CreateFromFileAsync(Windows.Storage.IStorageFile)
-    def create_from_file_async(cls, file: windows_storage.ImplementsIStorageFile, /) -> windows_foundation.IAsyncOperation[MediaEncodingProfile]: ...
+    def create_from_file_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[MediaEncodingProfile]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.MediaProperties.MediaEncodingProfile> Windows.Media.MediaProperties.MediaEncodingProfile::CreateFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream)
-    def create_from_stream_async(cls, stream: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncOperation[MediaEncodingProfile]: ...
+    def create_from_stream_async(cls, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[MediaEncodingProfile]: ...
     # Windows.Media.MediaProperties.MediaEncodingProfile Windows.Media.MediaProperties.MediaEncodingProfile::CreateHevc(Windows.Media.MediaProperties.VideoEncodingQuality)
     def create_hevc(cls, quality: VideoEncodingQuality, /) -> MediaEncodingProfile: ...
     # Windows.Media.MediaProperties.MediaEncodingProfile Windows.Media.MediaProperties.MediaEncodingProfile::CreateM4a(Windows.Media.MediaProperties.AudioEncodingQuality)
@@ -609,7 +609,7 @@ class TimedMetadataEncodingProperties_Static(type):
     def create_vob_sub(cls, format_user_data: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> TimedMetadataEncodingProperties: ...
 
 @typing.final
-class TimedMetadataEncodingProperties(winrt.system.Object, ImplementsIMediaEncodingProperties, metaclass=TimedMetadataEncodingProperties_Static):
+class TimedMetadataEncodingProperties(winrt.system.Object, IMediaEncodingProperties, metaclass=TimedMetadataEncodingProperties_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Media.MediaProperties.TimedMetadataEncodingProperties Windows.Media.MediaProperties.TimedMetadataEncodingProperties::Copy()
     def copy(self) -> TimedMetadataEncodingProperties: ...
@@ -646,7 +646,7 @@ class VideoEncodingProperties_Static(type):
     def create_vp9(cls) -> VideoEncodingProperties: ...
 
 @typing.final
-class VideoEncodingProperties(winrt.system.Object, ImplementsIMediaEncodingProperties, metaclass=VideoEncodingProperties_Static):
+class VideoEncodingProperties(winrt.system.Object, IMediaEncodingProperties, metaclass=VideoEncodingProperties_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Media.MediaProperties.VideoEncodingProperties Windows.Media.MediaProperties.VideoEncodingProperties::Copy()
     def copy(self) -> VideoEncodingProperties: ...
@@ -719,7 +719,7 @@ class Vp9ProfileIds_Static(type):
 class Vp9ProfileIds(winrt.system.Object, metaclass=Vp9ProfileIds_Static):
     pass
 
-class ImplementsIMediaEncodingProperties():
+class IMediaEncodingProperties(winrt._winrt.IInspectable):
     # Windows.Media.MediaProperties.MediaPropertySet Windows.Media.MediaProperties.IMediaEncodingProperties::get_Properties()
     @_property
     @abstractmethod
@@ -735,20 +735,5 @@ class ImplementsIMediaEncodingProperties():
     # System.String Windows.Media.MediaProperties.IMediaEncodingProperties::get_Type()
     @_property
     @abstractmethod
-    def type(self) -> str: ...
-
-@typing.final
-class IMediaEncodingProperties(winrt.system.Object, ImplementsIMediaEncodingProperties):
-    # Windows.Media.MediaProperties.MediaPropertySet Windows.Media.MediaProperties.IMediaEncodingProperties::get_Properties()
-    @_property
-    def properties(self) -> MediaPropertySet: ...
-    # System.String Windows.Media.MediaProperties.IMediaEncodingProperties::get_Subtype()
-    @_property
-    def subtype(self) -> str: ...
-    # System.Void Windows.Media.MediaProperties.IMediaEncodingProperties::put_Subtype(System.String)
-    @subtype.setter
-    def subtype(self, value: str) -> None: ...
-    # System.String Windows.Media.MediaProperties.IMediaEncodingProperties::get_Type()
-    @_property
     def type(self) -> str: ...
 

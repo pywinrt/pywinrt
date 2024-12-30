@@ -473,7 +473,7 @@ class Colors_Static(type):
 class Colors(winrt.system.Object, metaclass=Colors_Static):
     pass
 
-class ImplementsIClosableNotifier():
+class IClosableNotifier(winrt._winrt.IInspectable):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.IClosableNotifier::add_Closed(Microsoft.UI.ClosableNotifierHandler)
     @abstractmethod
     def add_closed(self, handler: ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
@@ -489,19 +489,5 @@ class ImplementsIClosableNotifier():
     # System.Boolean Microsoft.UI.IClosableNotifier::get_IsClosed()
     @_property
     @abstractmethod
-    def is_closed(self) -> bool: ...
-
-@typing.final
-class IClosableNotifier(winrt.system.Object, ImplementsIClosableNotifier):
-    # Windows.Foundation.EventRegistrationToken Microsoft.UI.IClosableNotifier::add_Closed(Microsoft.UI.ClosableNotifierHandler)
-    def add_closed(self, handler: ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
-    # System.Void Microsoft.UI.IClosableNotifier::remove_Closed(Windows.Foundation.EventRegistrationToken)
-    def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-    # Windows.Foundation.EventRegistrationToken Microsoft.UI.IClosableNotifier::add_FrameworkClosed(Microsoft.UI.ClosableNotifierHandler)
-    def add_framework_closed(self, handler: ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
-    # System.Void Microsoft.UI.IClosableNotifier::remove_FrameworkClosed(Windows.Foundation.EventRegistrationToken)
-    def remove_framework_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-    # System.Boolean Microsoft.UI.IClosableNotifier::get_IsClosed()
-    @_property
     def is_closed(self) -> bool: ...
 

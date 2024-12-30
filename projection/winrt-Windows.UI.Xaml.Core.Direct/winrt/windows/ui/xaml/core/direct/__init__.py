@@ -6,7 +6,6 @@ import winrt.system
 from winrt._winrt_windows_ui_xaml_core_direct import (
     XamlDirect,
     IXamlDirectObject,
-    ImplementsIXamlDirectObject,
 )
 
 __all__ = [
@@ -15,7 +14,6 @@ __all__ = [
     "XamlTypeIndex",
     "XamlDirect",
     "IXamlDirectObject",
-    "ImplementsIXamlDirectObject",
 ]
 
 class XamlEventIndex(enum.IntEnum):

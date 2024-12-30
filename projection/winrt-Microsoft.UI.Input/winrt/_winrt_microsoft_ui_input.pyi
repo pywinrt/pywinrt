@@ -369,7 +369,7 @@ class InputCursor_Static(type):
     # Microsoft.UI.Input.InputCursor Microsoft.UI.Input.InputCursor::CreateFromCoreCursor(Windows.UI.Core.CoreCursor)
     def create_from_core_cursor(cls, cursor: windows_ui_core.CoreCursor, /) -> InputCursor: ...
 
-class InputCursor(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=InputCursor_Static):
+class InputCursor(winrt.system.Object, windows_foundation.IClosable, metaclass=InputCursor_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Microsoft.UI.Input.InputCursor::Close()
@@ -443,7 +443,7 @@ class InputFocusController(InputObject, metaclass=InputFocusController_Static):
 @typing.final
 class InputFocusNavigationHost_Static(InputObject_Static):
     # Microsoft.UI.Input.InputFocusNavigationHost Microsoft.UI.Input.InputFocusNavigationHost::GetForSiteBridge(Microsoft.UI.Content.IContentSiteBridge)
-    def get_for_site_bridge(cls, site: microsoft_ui_content.ImplementsIContentSiteBridge, /) -> InputFocusNavigationHost: ...
+    def get_for_site_bridge(cls, site: microsoft_ui_content.IContentSiteBridge, /) -> InputFocusNavigationHost: ...
 
 @typing.final
 class InputFocusNavigationHost(InputObject, metaclass=InputFocusNavigationHost_Static):
@@ -807,7 +807,7 @@ class PointerEventArgs(winrt.system.Object):
     # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Input.PointerPoint> Microsoft.UI.Input.PointerEventArgs::GetIntermediatePoints()
     def get_intermediate_points(self) -> typing.MutableSequence[PointerPoint]: ...
     # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Input.PointerPoint> Microsoft.UI.Input.PointerEventArgs::GetIntermediateTransformedPoints(Microsoft.UI.Input.IPointerPointTransform)
-    def get_intermediate_transformed_points(self, transform: ImplementsIPointerPointTransform, /) -> typing.MutableSequence[PointerPoint]: ...
+    def get_intermediate_transformed_points(self, transform: IPointerPointTransform, /) -> typing.MutableSequence[PointerPoint]: ...
     # System.Boolean Microsoft.UI.Input.PointerEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -824,7 +824,7 @@ class PointerEventArgs(winrt.system.Object):
 @typing.final
 class PointerPoint(winrt.system.Object):
     # Microsoft.UI.Input.PointerPoint Microsoft.UI.Input.PointerPoint::GetTransformedPoint(Microsoft.UI.Input.IPointerPointTransform)
-    def get_transformed_point(self, transform: ImplementsIPointerPointTransform, /) -> PointerPoint: ...
+    def get_transformed_point(self, transform: IPointerPointTransform, /) -> PointerPoint: ...
     # System.UInt32 Microsoft.UI.Input.PointerPoint::get_FrameId()
     @_property
     def frame_id(self) -> winrt.system.UInt32: ...
@@ -919,7 +919,7 @@ class PointerPredictor_Static(type):
     def create_for_input_pointer_source(cls, input_pointer_source: InputPointerSource, /) -> PointerPredictor: ...
 
 @typing.final
-class PointerPredictor(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=PointerPredictor_Static):
+class PointerPredictor(winrt.system.Object, windows_foundation.IClosable, metaclass=PointerPredictor_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Microsoft.UI.Input.PointerPredictor::Close()
@@ -999,7 +999,7 @@ class WindowRectChangingEventArgs(winrt.system.Object):
     @_property
     def pointer_screen_point(self) -> windows_graphics.PointInt32: ...
 
-class ImplementsIPointerPointTransform():
+class IPointerPointTransform(winrt._winrt.IInspectable):
     # System.Boolean Microsoft.UI.Input.IPointerPointTransform::TryTransform(Windows.Foundation.Point,Windows.Foundation.Point&)
     @abstractmethod
     def try_transform(self, in_point: windows_foundation.Point, /) -> typing.Tuple[bool, windows_foundation.Point]: ...
@@ -1009,15 +1009,5 @@ class ImplementsIPointerPointTransform():
     # Microsoft.UI.Input.IPointerPointTransform Microsoft.UI.Input.IPointerPointTransform::get_Inverse()
     @_property
     @abstractmethod
-    def inverse(self) -> IPointerPointTransform: ...
-
-@typing.final
-class IPointerPointTransform(winrt.system.Object, ImplementsIPointerPointTransform):
-    # System.Boolean Microsoft.UI.Input.IPointerPointTransform::TryTransform(Windows.Foundation.Point,Windows.Foundation.Point&)
-    def try_transform(self, in_point: windows_foundation.Point, /) -> typing.Tuple[bool, windows_foundation.Point]: ...
-    # System.Boolean Microsoft.UI.Input.IPointerPointTransform::TryTransformBounds(Windows.Foundation.Rect,Windows.Foundation.Rect&)
-    def try_transform_bounds(self, in_rect: windows_foundation.Rect, /) -> typing.Tuple[bool, windows_foundation.Rect]: ...
-    # Microsoft.UI.Input.IPointerPointTransform Microsoft.UI.Input.IPointerPointTransform::get_Inverse()
-    @_property
     def inverse(self) -> IPointerPointTransform: ...
 

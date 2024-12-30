@@ -3,15 +3,11 @@
 import winrt.system
 from winrt._winrt_windows_graphics_effects import (
     IGraphicsEffect,
-    ImplementsIGraphicsEffect,
     IGraphicsEffectSource,
-    ImplementsIGraphicsEffectSource,
 )
 
 __all__ = [
     "IGraphicsEffect",
-    "ImplementsIGraphicsEffect",
     "IGraphicsEffectSource",
-    "ImplementsIGraphicsEffectSource",
 ]
 
