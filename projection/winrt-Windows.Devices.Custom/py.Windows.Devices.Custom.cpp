@@ -830,23 +830,8 @@ namespace py::cpp::Windows::Devices::Custom
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IIOControlCode(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::Custom::IIOControlCode>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IIOControlCode[] = {
         { "_assign_array_", _assign_array_IIOControlCode, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IIOControlCode), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IIOControlCode[] = {
@@ -979,6 +964,20 @@ namespace py::cpp::Windows::Devices::Custom
         }
     };
 
+    static PyObject* _from_IIOControlCode(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Custom::IIOControlCode>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIIOControlCode(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -1016,6 +1015,7 @@ namespace py::cpp::Windows::Devices::Custom
     }
 
     static PyMethodDef methods_ImplementsIIOControlCode[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IIOControlCode), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIOControlCode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIOControlCode), METH_VARARGS | METH_STATIC, nullptr },
         { }};

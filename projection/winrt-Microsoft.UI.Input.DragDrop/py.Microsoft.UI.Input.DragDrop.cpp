@@ -1756,27 +1756,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IDropOperationTarget(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Microsoft::UI::Input::DragDrop::IDropOperationTarget>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IDropOperationTarget[] = {
         { "drop_async", reinterpret_cast<PyCFunction>(IDropOperationTarget_DropAsync), METH_VARARGS, nullptr },
         { "enter_async", reinterpret_cast<PyCFunction>(IDropOperationTarget_EnterAsync), METH_VARARGS, nullptr },
         { "leave_async", reinterpret_cast<PyCFunction>(IDropOperationTarget_LeaveAsync), METH_VARARGS, nullptr },
         { "over_async", reinterpret_cast<PyCFunction>(IDropOperationTarget_OverAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IDropOperationTarget, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IDropOperationTarget), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDropOperationTarget[] = {
@@ -1956,6 +1941,20 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         }
     };
 
+    static PyObject* _from_IDropOperationTarget(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::DragDrop::IDropOperationTarget>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIDropOperationTarget(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -1993,6 +1992,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
     }
 
     static PyMethodDef methods_ImplementsIDropOperationTarget[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IDropOperationTarget), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDropOperationTarget), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDropOperationTarget), METH_VARARGS | METH_STATIC, nullptr },
         { }};

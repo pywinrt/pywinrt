@@ -1810,20 +1810,6 @@ namespace py::cpp::Windows::Web::Http::Filters
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IHttpFilter(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Web::Http::Filters::IHttpFilter>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IHttpFilter(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -1851,7 +1837,6 @@ namespace py::cpp::Windows::Web::Http::Filters
         { "close", reinterpret_cast<PyCFunction>(IHttpFilter_Close), METH_VARARGS, nullptr },
         { "send_request_async", reinterpret_cast<PyCFunction>(IHttpFilter_SendRequestAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IHttpFilter, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IHttpFilter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IHttpFilter), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IHttpFilter), METH_VARARGS, nullptr },
         { }};
@@ -1937,6 +1922,20 @@ namespace py::cpp::Windows::Web::Http::Filters
         }
     };
 
+    static PyObject* _from_IHttpFilter(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Web::Http::Filters::IHttpFilter>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIHttpFilter(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -1974,6 +1973,7 @@ namespace py::cpp::Windows::Web::Http::Filters
     }
 
     static PyMethodDef methods_ImplementsIHttpFilter[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IHttpFilter), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIHttpFilter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIHttpFilter), METH_VARARGS | METH_STATIC, nullptr },
         { }};

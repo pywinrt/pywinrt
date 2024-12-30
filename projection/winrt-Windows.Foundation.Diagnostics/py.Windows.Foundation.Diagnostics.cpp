@@ -9851,25 +9851,10 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IErrorReportingSettings(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IErrorReportingSettings[] = {
         { "get_error_options", reinterpret_cast<PyCFunction>(IErrorReportingSettings_GetErrorOptions), METH_VARARGS, nullptr },
         { "set_error_options", reinterpret_cast<PyCFunction>(IErrorReportingSettings_SetErrorOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IErrorReportingSettings, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IErrorReportingSettings), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IErrorReportingSettings[] = {
@@ -9953,6 +9938,20 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
     };
 
+    static PyObject* _from_IErrorReportingSettings(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIErrorReportingSettings(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -9990,6 +9989,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     }
 
     static PyMethodDef methods_ImplementsIErrorReportingSettings[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IErrorReportingSettings), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIErrorReportingSettings), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIErrorReportingSettings), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -10338,20 +10338,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileLoggingSession(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IFileLoggingSession(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -10384,7 +10370,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "add_log_file_generated", reinterpret_cast<PyCFunction>(IFileLoggingSession_add_LogFileGenerated), METH_O, nullptr },
         { "remove_log_file_generated", reinterpret_cast<PyCFunction>(IFileLoggingSession_remove_LogFileGenerated), METH_O, nullptr },
         { "_assign_array_", _assign_array_IFileLoggingSession, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileLoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IFileLoggingSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IFileLoggingSession), METH_VARARGS, nullptr },
         { }};
@@ -10649,6 +10634,20 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
     };
 
+    static PyObject* _from_IFileLoggingSession(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileLoggingSession(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -10686,6 +10685,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     }
 
     static PyMethodDef methods_ImplementsIFileLoggingSession[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileLoggingSession), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileLoggingSession), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileLoggingSession), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -11100,20 +11100,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILoggingChannel(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_ILoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -11146,7 +11132,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "add_logging_enabled", reinterpret_cast<PyCFunction>(ILoggingChannel_add_LoggingEnabled), METH_O, nullptr },
         { "remove_logging_enabled", reinterpret_cast<PyCFunction>(ILoggingChannel_remove_LoggingEnabled), METH_O, nullptr },
         { "_assign_array_", _assign_array_ILoggingChannel, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingChannel), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ILoggingChannel), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ILoggingChannel), METH_VARARGS, nullptr },
         { }};
@@ -11487,6 +11472,20 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
     };
 
+    static PyObject* _from_ILoggingChannel(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILoggingChannel(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -11524,6 +11523,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     }
 
     static PyMethodDef methods_ImplementsILoggingChannel[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingChannel), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILoggingChannel), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILoggingChannel), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -11810,20 +11810,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILoggingSession(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::ILoggingSession>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_ILoggingSession(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -11854,7 +11840,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "remove_logging_channel", reinterpret_cast<PyCFunction>(ILoggingSession_RemoveLoggingChannel), METH_VARARGS, nullptr },
         { "save_to_file_async", reinterpret_cast<PyCFunction>(ILoggingSession_SaveToFileAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ILoggingSession, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ILoggingSession), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ILoggingSession), METH_VARARGS, nullptr },
         { }};
@@ -12075,6 +12060,20 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
     };
 
+    static PyObject* _from_ILoggingSession(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::ILoggingSession>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILoggingSession(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -12112,6 +12111,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     }
 
     static PyMethodDef methods_ImplementsILoggingSession[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingSession), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILoggingSession), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILoggingSession), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -12631,20 +12631,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILoggingTarget(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILoggingTarget[] = {
         { "is_enabled", reinterpret_cast<PyCFunction>(ILoggingTarget_IsEnabled), METH_VARARGS, nullptr },
         { "is_enabled_with_level", reinterpret_cast<PyCFunction>(ILoggingTarget_IsEnabledWithLevel), METH_VARARGS, nullptr },
@@ -12658,7 +12644,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "start_activity_with_fields_and_level", reinterpret_cast<PyCFunction>(ILoggingTarget_StartActivityWithFieldsAndLevel), METH_VARARGS, nullptr },
         { "start_activity_with_fields_and_options", reinterpret_cast<PyCFunction>(ILoggingTarget_StartActivityWithFieldsAndOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ILoggingTarget, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingTarget), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILoggingTarget[] = {
@@ -13144,6 +13129,20 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
     };
 
+    static PyObject* _from_ILoggingTarget(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILoggingTarget(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -13181,6 +13180,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     }
 
     static PyMethodDef methods_ImplementsILoggingTarget[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingTarget), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILoggingTarget), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILoggingTarget), METH_VARARGS | METH_STATIC, nullptr },
         { }};

@@ -165,24 +165,9 @@ namespace py::cpp::Windows::Web
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IUriToStreamResolver(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Web::IUriToStreamResolver>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IUriToStreamResolver[] = {
         { "uri_to_stream_async", reinterpret_cast<PyCFunction>(IUriToStreamResolver_UriToStreamAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IUriToStreamResolver, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IUriToStreamResolver), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IUriToStreamResolver[] = {
@@ -242,6 +227,20 @@ namespace py::cpp::Windows::Web
         }
     };
 
+    static PyObject* _from_IUriToStreamResolver(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Web::IUriToStreamResolver>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIUriToStreamResolver(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -279,6 +278,7 @@ namespace py::cpp::Windows::Web
     }
 
     static PyMethodDef methods_ImplementsIUriToStreamResolver[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IUriToStreamResolver), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUriToStreamResolver), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUriToStreamResolver), METH_VARARGS | METH_STATIC, nullptr },
         { }};

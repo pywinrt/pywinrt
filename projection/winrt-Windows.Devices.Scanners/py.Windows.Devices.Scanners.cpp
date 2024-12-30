@@ -4039,24 +4039,9 @@ namespace py::cpp::Windows::Devices::Scanners
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IImageScannerFormatConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IImageScannerFormatConfiguration[] = {
         { "is_format_supported", reinterpret_cast<PyCFunction>(IImageScannerFormatConfiguration_IsFormatSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IImageScannerFormatConfiguration, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IImageScannerFormatConfiguration), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IImageScannerFormatConfiguration[] = {
@@ -4181,6 +4166,20 @@ namespace py::cpp::Windows::Devices::Scanners
         }
     };
 
+    static PyObject* _from_IImageScannerFormatConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIImageScannerFormatConfiguration(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -4218,6 +4217,7 @@ namespace py::cpp::Windows::Devices::Scanners
     }
 
     static PyMethodDef methods_ImplementsIImageScannerFormatConfiguration[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IImageScannerFormatConfiguration), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIImageScannerFormatConfiguration), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIImageScannerFormatConfiguration), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -5349,26 +5349,11 @@ namespace py::cpp::Windows::Devices::Scanners
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IImageScannerSourceConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IImageScannerSourceConfiguration[] = {
         { "is_auto_cropping_mode_supported", reinterpret_cast<PyCFunction>(IImageScannerSourceConfiguration_IsAutoCroppingModeSupported), METH_VARARGS, nullptr },
         { "is_color_mode_supported", reinterpret_cast<PyCFunction>(IImageScannerSourceConfiguration_IsColorModeSupported), METH_VARARGS, nullptr },
         { "is_format_supported", reinterpret_cast<PyCFunction>(IImageScannerSourceConfiguration_IsFormatSupported), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IImageScannerSourceConfiguration, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IImageScannerSourceConfiguration), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IImageScannerSourceConfiguration[] = {
@@ -6136,6 +6121,20 @@ namespace py::cpp::Windows::Devices::Scanners
         }
     };
 
+    static PyObject* _from_IImageScannerSourceConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIImageScannerSourceConfiguration(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -6173,6 +6172,7 @@ namespace py::cpp::Windows::Devices::Scanners
     }
 
     static PyMethodDef methods_ImplementsIImageScannerSourceConfiguration[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IImageScannerSourceConfiguration), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIImageScannerSourceConfiguration), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIImageScannerSourceConfiguration), METH_VARARGS | METH_STATIC, nullptr },
         { }};

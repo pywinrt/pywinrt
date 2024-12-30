@@ -19369,23 +19369,8 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactField(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Contacts::IContactField>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactField[] = {
         { "_assign_array_", _assign_array_IContactField, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactField), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactField[] = {
@@ -19497,6 +19482,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     };
 
+    static PyObject* _from_IContactField(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Contacts::IContactField>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactField(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -19534,6 +19533,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef methods_ImplementsIContactField[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactField), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactField), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactField), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -19708,26 +19708,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactFieldFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactFieldFactory[] = {
         { "create_field_category", reinterpret_cast<PyCFunction>(IContactFieldFactory_CreateField_Category), METH_VARARGS, nullptr },
         { "create_field_custom", reinterpret_cast<PyCFunction>(IContactFieldFactory_CreateField_Custom), METH_VARARGS, nullptr },
         { "create_field_default", reinterpret_cast<PyCFunction>(IContactFieldFactory_CreateField_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactFieldFactory, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactFieldFactory), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactFieldFactory[] = {
@@ -19905,6 +19890,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     };
 
+    static PyObject* _from_IContactFieldFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactFieldFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -19942,6 +19941,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef methods_ImplementsIContactFieldFactory[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactFieldFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactFieldFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactFieldFactory), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -20115,26 +20115,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactInstantMessageFieldFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactInstantMessageFieldFactory[] = {
         { "create_instant_message_all", reinterpret_cast<PyCFunction>(IContactInstantMessageFieldFactory_CreateInstantMessage_All), METH_VARARGS, nullptr },
         { "create_instant_message_category", reinterpret_cast<PyCFunction>(IContactInstantMessageFieldFactory_CreateInstantMessage_Category), METH_VARARGS, nullptr },
         { "create_instant_message_default", reinterpret_cast<PyCFunction>(IContactInstantMessageFieldFactory_CreateInstantMessage_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactInstantMessageFieldFactory, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactInstantMessageFieldFactory), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactInstantMessageFieldFactory[] = {
@@ -20300,6 +20285,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     };
 
+    static PyObject* _from_IContactInstantMessageFieldFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactInstantMessageFieldFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -20337,6 +20336,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef methods_ImplementsIContactInstantMessageFieldFactory[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactInstantMessageFieldFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactInstantMessageFieldFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactInstantMessageFieldFactory), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -20512,26 +20512,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactLocationFieldFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactLocationFieldFactory[] = {
         { "create_location_all", reinterpret_cast<PyCFunction>(IContactLocationFieldFactory_CreateLocation_All), METH_VARARGS, nullptr },
         { "create_location_category", reinterpret_cast<PyCFunction>(IContactLocationFieldFactory_CreateLocation_Category), METH_VARARGS, nullptr },
         { "create_location_default", reinterpret_cast<PyCFunction>(IContactLocationFieldFactory_CreateLocation_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactLocationFieldFactory, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactLocationFieldFactory), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactLocationFieldFactory[] = {
@@ -20709,6 +20694,20 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     };
 
+    static PyObject* _from_IContactLocationFieldFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactLocationFieldFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -20746,6 +20745,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef methods_ImplementsIContactLocationFieldFactory[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactLocationFieldFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactLocationFieldFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactLocationFieldFactory), METH_VARARGS | METH_STATIC, nullptr },
         { }};

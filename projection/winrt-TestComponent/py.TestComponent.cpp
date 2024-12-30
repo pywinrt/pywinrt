@@ -2027,27 +2027,12 @@ namespace py::cpp::TestComponent
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IRequiredFour(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::TestComponent::IRequiredFour>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IRequiredFour[] = {
         { "four", reinterpret_cast<PyCFunction>(IRequiredFour_Four), METH_VARARGS, nullptr },
         { "one", reinterpret_cast<PyCFunction>(IRequiredFour_One), METH_VARARGS, nullptr },
         { "three", reinterpret_cast<PyCFunction>(IRequiredFour_Three), METH_VARARGS, nullptr },
         { "two", reinterpret_cast<PyCFunction>(IRequiredFour_Two), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IRequiredFour, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredFour), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IRequiredFour[] = {
@@ -2179,6 +2164,20 @@ namespace py::cpp::TestComponent
         }
     };
 
+    static PyObject* _from_IRequiredFour(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::IRequiredFour>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIRequiredFour(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -2216,6 +2215,7 @@ namespace py::cpp::TestComponent
     }
 
     static PyMethodDef methods_ImplementsIRequiredFour[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredFour), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRequiredFour), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRequiredFour), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -2285,24 +2285,9 @@ namespace py::cpp::TestComponent
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IRequiredOne(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::TestComponent::IRequiredOne>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IRequiredOne[] = {
         { "one", reinterpret_cast<PyCFunction>(IRequiredOne_One), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IRequiredOne, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredOne), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IRequiredOne[] = {
@@ -2356,6 +2341,20 @@ namespace py::cpp::TestComponent
         }
     };
 
+    static PyObject* _from_IRequiredOne(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::IRequiredOne>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIRequiredOne(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -2393,6 +2392,7 @@ namespace py::cpp::TestComponent
     }
 
     static PyMethodDef methods_ImplementsIRequiredOne[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredOne), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRequiredOne), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRequiredOne), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -2516,26 +2516,11 @@ namespace py::cpp::TestComponent
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IRequiredThree(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::TestComponent::IRequiredThree>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IRequiredThree[] = {
         { "one", reinterpret_cast<PyCFunction>(IRequiredThree_One), METH_VARARGS, nullptr },
         { "three", reinterpret_cast<PyCFunction>(IRequiredThree_Three), METH_VARARGS, nullptr },
         { "two", reinterpret_cast<PyCFunction>(IRequiredThree_Two), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IRequiredThree, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredThree), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IRequiredThree[] = {
@@ -2641,6 +2626,20 @@ namespace py::cpp::TestComponent
         }
     };
 
+    static PyObject* _from_IRequiredThree(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::IRequiredThree>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIRequiredThree(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -2678,6 +2677,7 @@ namespace py::cpp::TestComponent
     }
 
     static PyMethodDef methods_ImplementsIRequiredThree[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredThree), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRequiredThree), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRequiredThree), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -2774,25 +2774,10 @@ namespace py::cpp::TestComponent
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IRequiredTwo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::TestComponent::IRequiredTwo>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IRequiredTwo[] = {
         { "one", reinterpret_cast<PyCFunction>(IRequiredTwo_One), METH_VARARGS, nullptr },
         { "two", reinterpret_cast<PyCFunction>(IRequiredTwo_Two), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IRequiredTwo, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredTwo), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IRequiredTwo[] = {
@@ -2872,6 +2857,20 @@ namespace py::cpp::TestComponent
         }
     };
 
+    static PyObject* _from_IRequiredTwo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::IRequiredTwo>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIRequiredTwo(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -2909,6 +2908,7 @@ namespace py::cpp::TestComponent
     }
 
     static PyMethodDef methods_ImplementsIRequiredTwo[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredTwo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRequiredTwo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRequiredTwo), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -6968,20 +6968,6 @@ namespace py::cpp::TestComponent
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ITests(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::TestComponent::ITests>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ITests[] = {
         { "array1", reinterpret_cast<PyCFunction>(ITests_Array1), METH_VARARGS, nullptr },
         { "array10", reinterpret_cast<PyCFunction>(ITests_Array10), METH_VARARGS, nullptr },
@@ -7102,7 +7088,6 @@ namespace py::cpp::TestComponent
         { "add_event2", reinterpret_cast<PyCFunction>(ITests_add_Event2), METH_O, nullptr },
         { "remove_event2", reinterpret_cast<PyCFunction>(ITests_remove_Event2), METH_O, nullptr },
         { "_assign_array_", _assign_array_ITests, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ITests), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITests[] = {
@@ -11583,6 +11568,20 @@ namespace py::cpp::TestComponent
         }
     };
 
+    static PyObject* _from_ITests(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::ITests>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsITests(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -11620,6 +11619,7 @@ namespace py::cpp::TestComponent
     }
 
     static PyMethodDef methods_ImplementsITests[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ITests), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITests), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITests), METH_VARARGS | METH_STATIC, nullptr },
         { }};

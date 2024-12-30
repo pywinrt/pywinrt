@@ -3123,24 +3123,9 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IUserActivityContentInfo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IUserActivityContentInfo[] = {
         { "to_json", reinterpret_cast<PyCFunction>(IUserActivityContentInfo_ToJson), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IUserActivityContentInfo, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IUserActivityContentInfo), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IUserActivityContentInfo[] = {
@@ -3194,6 +3179,20 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         }
     };
 
+    static PyObject* _from_IUserActivityContentInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIUserActivityContentInfo(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3231,6 +3230,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     }
 
     static PyMethodDef methods_ImplementsIUserActivityContentInfo[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IUserActivityContentInfo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUserActivityContentInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUserActivityContentInfo), METH_VARARGS | METH_STATIC, nullptr },
         { }};

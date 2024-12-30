@@ -8639,23 +8639,8 @@ namespace py::cpp::Windows::Phone::Notification::Management
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAccessoryNotificationTriggerDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAccessoryNotificationTriggerDetails[] = {
         { "_assign_array_", _assign_array_IAccessoryNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAccessoryNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAccessoryNotificationTriggerDetails[] = {
@@ -8811,6 +8796,20 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
     };
 
+    static PyObject* _from_IAccessoryNotificationTriggerDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAccessoryNotificationTriggerDetails(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -8848,6 +8847,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     }
 
     static PyMethodDef methods_ImplementsIAccessoryNotificationTriggerDetails[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAccessoryNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAccessoryNotificationTriggerDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAccessoryNotificationTriggerDetails), METH_VARARGS | METH_STATIC, nullptr },
         { }};

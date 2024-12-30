@@ -4557,20 +4557,6 @@ namespace py::cpp::Windows::Web::UI
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IWebViewControl(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Web::UI::IWebViewControl>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IWebViewControl[] = {
         { "build_local_stream_uri", reinterpret_cast<PyCFunction>(IWebViewControl_BuildLocalStreamUri), METH_VARARGS, nullptr },
         { "capture_preview_to_stream_async", reinterpret_cast<PyCFunction>(IWebViewControl_CapturePreviewToStreamAsync), METH_VARARGS, nullptr },
@@ -4620,7 +4606,6 @@ namespace py::cpp::Windows::Web::UI
         { "add_web_resource_requested", reinterpret_cast<PyCFunction>(IWebViewControl_add_WebResourceRequested), METH_O, nullptr },
         { "remove_web_resource_requested", reinterpret_cast<PyCFunction>(IWebViewControl_remove_WebResourceRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_IWebViewControl, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IWebViewControl), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebViewControl[] = {
@@ -6322,6 +6307,20 @@ namespace py::cpp::Windows::Web::UI
         }
     };
 
+    static PyObject* _from_IWebViewControl(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Web::UI::IWebViewControl>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIWebViewControl(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -6359,6 +6358,7 @@ namespace py::cpp::Windows::Web::UI
     }
 
     static PyMethodDef methods_ImplementsIWebViewControl[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWebViewControl), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebViewControl), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebViewControl), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -6444,24 +6444,9 @@ namespace py::cpp::Windows::Web::UI
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IWebViewControl2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Web::UI::IWebViewControl2>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IWebViewControl2[] = {
         { "add_initialize_script", reinterpret_cast<PyCFunction>(IWebViewControl2_AddInitializeScript), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IWebViewControl2, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IWebViewControl2), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebViewControl2[] = {
@@ -6519,6 +6504,20 @@ namespace py::cpp::Windows::Web::UI
         }
     };
 
+    static PyObject* _from_IWebViewControl2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Web::UI::IWebViewControl2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIWebViewControl2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -6556,6 +6555,7 @@ namespace py::cpp::Windows::Web::UI
     }
 
     static PyMethodDef methods_ImplementsIWebViewControl2[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWebViewControl2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebViewControl2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebViewControl2), METH_VARARGS | METH_STATIC, nullptr },
         { }};

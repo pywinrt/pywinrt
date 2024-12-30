@@ -10501,23 +10501,8 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAppointmentParticipant(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAppointmentParticipant[] = {
         { "_assign_array_", _assign_array_IAppointmentParticipant, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentParticipant), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAppointmentParticipant[] = {
@@ -10633,6 +10618,20 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         }
     };
 
+    static PyObject* _from_IAppointmentParticipant(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAppointmentParticipant(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -10670,6 +10669,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     }
 
     static PyMethodDef methods_ImplementsIAppointmentParticipant[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentParticipant), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentParticipant), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentParticipant), METH_VARARGS | METH_STATIC, nullptr },
         { }};

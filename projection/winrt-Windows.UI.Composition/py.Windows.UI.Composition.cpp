@@ -37487,24 +37487,9 @@ namespace py::cpp::Windows::UI::Composition
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAnimationObject(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Composition::IAnimationObject>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAnimationObject[] = {
         { "populate_property_info", reinterpret_cast<PyCFunction>(IAnimationObject_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAnimationObject, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAnimationObject), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAnimationObject[] = {
@@ -37574,6 +37559,20 @@ namespace py::cpp::Windows::UI::Composition
         }
     };
 
+    static PyObject* _from_IAnimationObject(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Composition::IAnimationObject>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAnimationObject(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -37611,6 +37610,7 @@ namespace py::cpp::Windows::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsIAnimationObject[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAnimationObject), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAnimationObject), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAnimationObject), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -37653,23 +37653,8 @@ namespace py::cpp::Windows::UI::Composition
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ICompositionAnimationBase(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Composition::ICompositionAnimationBase>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ICompositionAnimationBase[] = {
         { "_assign_array_", _assign_array_ICompositionAnimationBase, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionAnimationBase), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICompositionAnimationBase[] = {
@@ -37696,6 +37681,20 @@ namespace py::cpp::Windows::UI::Composition
         {
         }
     };
+
+    static PyObject* _from_ICompositionAnimationBase(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Composition::ICompositionAnimationBase>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsICompositionAnimationBase(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -37734,6 +37733,7 @@ namespace py::cpp::Windows::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsICompositionAnimationBase[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionAnimationBase), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionAnimationBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionAnimationBase), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -37845,23 +37845,8 @@ namespace py::cpp::Windows::UI::Composition
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ICompositionSupportsSystemBackdrop(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ICompositionSupportsSystemBackdrop[] = {
         { "_assign_array_", _assign_array_ICompositionSupportsSystemBackdrop, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSupportsSystemBackdrop), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICompositionSupportsSystemBackdrop[] = {
@@ -37933,6 +37918,20 @@ namespace py::cpp::Windows::UI::Composition
         }
     };
 
+    static PyObject* _from_ICompositionSupportsSystemBackdrop(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsICompositionSupportsSystemBackdrop(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -37970,6 +37969,7 @@ namespace py::cpp::Windows::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsICompositionSupportsSystemBackdrop[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSupportsSystemBackdrop), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSupportsSystemBackdrop), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSupportsSystemBackdrop), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -38012,23 +38012,8 @@ namespace py::cpp::Windows::UI::Composition
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ICompositionSurface(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Composition::ICompositionSurface>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ICompositionSurface[] = {
         { "_assign_array_", _assign_array_ICompositionSurface, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSurface), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICompositionSurface[] = {
@@ -38055,6 +38040,20 @@ namespace py::cpp::Windows::UI::Composition
         {
         }
     };
+
+    static PyObject* _from_ICompositionSurface(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Composition::ICompositionSurface>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsICompositionSurface(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -38093,6 +38092,7 @@ namespace py::cpp::Windows::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsICompositionSurface[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSurface), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSurface), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSurface), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -38175,24 +38175,9 @@ namespace py::cpp::Windows::UI::Composition
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ICompositionSurfaceFacade(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ICompositionSurfaceFacade[] = {
         { "get_real_surface", reinterpret_cast<PyCFunction>(ICompositionSurfaceFacade_GetRealSurface), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ICompositionSurfaceFacade, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSurfaceFacade), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICompositionSurfaceFacade[] = {
@@ -38246,6 +38231,20 @@ namespace py::cpp::Windows::UI::Composition
         }
     };
 
+    static PyObject* _from_ICompositionSurfaceFacade(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsICompositionSurfaceFacade(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -38283,6 +38282,7 @@ namespace py::cpp::Windows::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsICompositionSurfaceFacade[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSurfaceFacade), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSurfaceFacade), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSurfaceFacade), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -38325,23 +38325,8 @@ namespace py::cpp::Windows::UI::Composition
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IVisualElement(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Composition::IVisualElement>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IVisualElement[] = {
         { "_assign_array_", _assign_array_IVisualElement, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IVisualElement), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVisualElement[] = {
@@ -38368,6 +38353,20 @@ namespace py::cpp::Windows::UI::Composition
         {
         }
     };
+
+    static PyObject* _from_IVisualElement(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Composition::IVisualElement>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsIVisualElement(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -38406,6 +38405,7 @@ namespace py::cpp::Windows::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsIVisualElement[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IVisualElement), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVisualElement), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVisualElement), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -38488,24 +38488,9 @@ namespace py::cpp::Windows::UI::Composition
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IVisualElement2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Composition::IVisualElement2>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IVisualElement2[] = {
         { "get_visual_internal", reinterpret_cast<PyCFunction>(IVisualElement2_GetVisualInternal), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVisualElement2, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IVisualElement2), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVisualElement2[] = {
@@ -38559,6 +38544,20 @@ namespace py::cpp::Windows::UI::Composition
         }
     };
 
+    static PyObject* _from_IVisualElement2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Composition::IVisualElement2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIVisualElement2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -38596,6 +38595,7 @@ namespace py::cpp::Windows::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsIVisualElement2[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IVisualElement2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVisualElement2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVisualElement2), METH_VARARGS | METH_STATIC, nullptr },
         { }};

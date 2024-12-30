@@ -12159,23 +12159,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IActivatedEventArgs[] = {
@@ -12266,6 +12251,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -12303,6 +12302,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -12465,23 +12465,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IActivatedEventArgsWithUser(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IActivatedEventArgsWithUser[] = {
         { "_assign_array_", _assign_array_IActivatedEventArgsWithUser, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IActivatedEventArgsWithUser), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IActivatedEventArgsWithUser[] = {
@@ -12593,6 +12578,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IActivatedEventArgsWithUser(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIActivatedEventArgsWithUser(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -12630,6 +12629,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIActivatedEventArgsWithUser[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IActivatedEventArgsWithUser), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActivatedEventArgsWithUser), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActivatedEventArgsWithUser), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -12792,23 +12792,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IApplicationViewActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IApplicationViewActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IApplicationViewActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IApplicationViewActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IApplicationViewActivatedEventArgs[] = {
@@ -12920,6 +12905,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IApplicationViewActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIApplicationViewActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -12957,6 +12956,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIApplicationViewActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IApplicationViewActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIApplicationViewActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIApplicationViewActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -13119,23 +13119,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAppointmentsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAppointmentsProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderActivatedEventArgs[] = {
@@ -13247,6 +13232,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IAppointmentsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAppointmentsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -13284,6 +13283,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIAppointmentsProviderActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -13476,23 +13476,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAppointmentsProviderAddAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderAddAppointmentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderAddAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
@@ -13625,6 +13610,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IAppointmentsProviderAddAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -13662,6 +13661,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderAddAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -13854,23 +13854,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAppointmentsProviderRemoveAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
@@ -14003,6 +13988,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IAppointmentsProviderRemoveAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -14040,6 +14039,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -14232,23 +14232,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAppointmentsProviderReplaceAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
@@ -14381,6 +14366,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IAppointmentsProviderReplaceAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -14418,6 +14417,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -14670,23 +14670,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
@@ -14861,6 +14846,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -14898,6 +14897,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -15120,23 +15120,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAppointmentsProviderShowTimeFrameActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IAppointmentsProviderShowTimeFrameActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderShowTimeFrameActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
@@ -15290,6 +15275,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IAppointmentsProviderShowTimeFrameActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -15327,6 +15326,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAppointmentsProviderShowTimeFrameActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -15399,23 +15399,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBackgroundActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBackgroundActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IBackgroundActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundActivatedEventArgs[] = {
@@ -15464,6 +15449,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IBackgroundActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBackgroundActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -15501,6 +15500,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIBackgroundActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -15663,23 +15663,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBarcodeScannerPreviewActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBarcodeScannerPreviewActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IBarcodeScannerPreviewActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBarcodeScannerPreviewActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBarcodeScannerPreviewActivatedEventArgs[] = {
@@ -15791,6 +15776,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IBarcodeScannerPreviewActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBarcodeScannerPreviewActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -15828,6 +15827,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIBarcodeScannerPreviewActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBarcodeScannerPreviewActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBarcodeScannerPreviewActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBarcodeScannerPreviewActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -15990,23 +15990,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ICachedFileUpdaterActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ICachedFileUpdaterActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ICachedFileUpdaterActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ICachedFileUpdaterActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICachedFileUpdaterActivatedEventArgs[] = {
@@ -16118,6 +16103,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_ICachedFileUpdaterActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsICachedFileUpdaterActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -16155,6 +16154,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsICachedFileUpdaterActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ICachedFileUpdaterActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICachedFileUpdaterActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICachedFileUpdaterActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -16347,23 +16347,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ICameraSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ICameraSettingsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ICameraSettingsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ICameraSettingsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICameraSettingsActivatedEventArgs[] = {
@@ -16496,6 +16481,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_ICameraSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsICameraSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -16533,6 +16532,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsICameraSettingsActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ICameraSettingsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICameraSettingsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICameraSettingsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -16695,23 +16695,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ICommandLineActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ICommandLineActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ICommandLineActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ICommandLineActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICommandLineActivatedEventArgs[] = {
@@ -16823,6 +16808,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_ICommandLineActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsICommandLineActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -16860,6 +16859,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsICommandLineActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ICommandLineActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommandLineActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommandLineActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -17022,23 +17022,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactActivatedEventArgs[] = {
@@ -17150,6 +17135,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContactActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -17187,6 +17186,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContactActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -17439,23 +17439,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactCallActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactCallActivatedEventArgs[] = {
@@ -17630,6 +17615,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContactCallActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactCallActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -17667,6 +17666,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContactCallActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -17889,23 +17889,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactMapActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactMapActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactMapActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactMapActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactMapActivatedEventArgs[] = {
@@ -18059,6 +18044,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContactMapActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactMapActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -18096,6 +18095,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContactMapActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactMapActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactMapActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactMapActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -18348,23 +18348,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactMessageActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactMessageActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactMessageActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactMessageActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactMessageActivatedEventArgs[] = {
@@ -18539,6 +18524,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContactMessageActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactMessageActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -18576,6 +18575,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContactMessageActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactMessageActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactMessageActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactMessageActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -18678,23 +18678,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactPanelActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactPanelActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactPanelActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactPanelActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactPanelActivatedEventArgs[] = {
@@ -18764,6 +18749,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContactPanelActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactPanelActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -18801,6 +18800,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContactPanelActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactPanelActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactPanelActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactPanelActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -18963,23 +18963,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactPickerActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactPickerActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactPickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactPickerActivatedEventArgs[] = {
@@ -19091,6 +19076,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContactPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -19128,6 +19127,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContactPickerActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactPickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactPickerActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactPickerActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -19380,23 +19380,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactPostActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactPostActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactPostActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactPostActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactPostActivatedEventArgs[] = {
@@ -19571,6 +19556,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContactPostActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactPostActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -19608,6 +19607,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContactPostActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactPostActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactPostActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactPostActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -19860,23 +19860,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactVideoCallActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactVideoCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactVideoCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactVideoCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactVideoCallActivatedEventArgs[] = {
@@ -20051,6 +20036,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContactVideoCallActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactVideoCallActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -20088,6 +20087,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContactVideoCallActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactVideoCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactVideoCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactVideoCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -20250,23 +20250,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactsProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContactsProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactsProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactsProviderActivatedEventArgs[] = {
@@ -20378,6 +20363,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContactsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactsProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -20415,6 +20414,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContactsProviderActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactsProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactsProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactsProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -20577,23 +20577,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContinuationActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContinuationActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IContinuationActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContinuationActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContinuationActivatedEventArgs[] = {
@@ -20705,6 +20690,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IContinuationActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContinuationActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -20742,6 +20741,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIContinuationActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContinuationActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContinuationActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContinuationActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -20934,23 +20934,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IDeviceActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IDeviceActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IDeviceActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IDeviceActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDeviceActivatedEventArgs[] = {
@@ -21083,6 +21068,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IDeviceActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIDeviceActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -21120,6 +21119,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIDeviceActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IDeviceActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDeviceActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDeviceActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -21282,23 +21282,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IDevicePairingActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IDevicePairingActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IDevicePairingActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IDevicePairingActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDevicePairingActivatedEventArgs[] = {
@@ -21410,6 +21395,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IDevicePairingActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIDevicePairingActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -21447,6 +21446,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIDevicePairingActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IDevicePairingActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDevicePairingActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDevicePairingActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -21669,23 +21669,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IDialReceiverActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IDialReceiverActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IDialReceiverActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IDialReceiverActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDialReceiverActivatedEventArgs[] = {
@@ -21839,6 +21824,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IDialReceiverActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIDialReceiverActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -21876,6 +21875,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIDialReceiverActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IDialReceiverActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDialReceiverActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDialReceiverActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -22068,23 +22068,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFileActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IFileActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFileActivatedEventArgs[] = {
@@ -22217,6 +22202,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFileActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -22254,6 +22253,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFileActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -22416,23 +22416,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileActivatedEventArgsWithCallerPackageFamilyName(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFileActivatedEventArgsWithCallerPackageFamilyName[] = {
         { "_assign_array_", _assign_array_IFileActivatedEventArgsWithCallerPackageFamilyName, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileActivatedEventArgsWithCallerPackageFamilyName), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFileActivatedEventArgsWithCallerPackageFamilyName[] = {
@@ -22544,6 +22529,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFileActivatedEventArgsWithCallerPackageFamilyName(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -22581,6 +22580,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileActivatedEventArgsWithCallerPackageFamilyName), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -22803,23 +22803,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileActivatedEventArgsWithNeighboringFiles(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFileActivatedEventArgsWithNeighboringFiles[] = {
         { "_assign_array_", _assign_array_IFileActivatedEventArgsWithNeighboringFiles, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileActivatedEventArgsWithNeighboringFiles), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFileActivatedEventArgsWithNeighboringFiles[] = {
@@ -22973,6 +22958,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFileActivatedEventArgsWithNeighboringFiles(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileActivatedEventArgsWithNeighboringFiles(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -23010,6 +23009,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFileActivatedEventArgsWithNeighboringFiles[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileActivatedEventArgsWithNeighboringFiles), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileActivatedEventArgsWithNeighboringFiles), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileActivatedEventArgsWithNeighboringFiles), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -23172,23 +23172,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileOpenPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFileOpenPickerActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IFileOpenPickerActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileOpenPickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFileOpenPickerActivatedEventArgs[] = {
@@ -23300,6 +23285,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFileOpenPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileOpenPickerActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -23337,6 +23336,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFileOpenPickerActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileOpenPickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileOpenPickerActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileOpenPickerActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -23409,23 +23409,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileOpenPickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFileOpenPickerActivatedEventArgs2[] = {
         { "_assign_array_", _assign_array_IFileOpenPickerActivatedEventArgs2, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileOpenPickerActivatedEventArgs2), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFileOpenPickerActivatedEventArgs2[] = {
@@ -23474,6 +23459,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFileOpenPickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileOpenPickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -23511,6 +23510,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFileOpenPickerActivatedEventArgs2[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileOpenPickerActivatedEventArgs2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileOpenPickerActivatedEventArgs2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileOpenPickerActivatedEventArgs2), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -23703,23 +23703,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileOpenPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFileOpenPickerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_IFileOpenPickerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileOpenPickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFileOpenPickerContinuationEventArgs[] = {
@@ -23852,6 +23837,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFileOpenPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileOpenPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -23889,6 +23888,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFileOpenPickerContinuationEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileOpenPickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileOpenPickerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileOpenPickerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -24051,23 +24051,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileSavePickerActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFileSavePickerActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IFileSavePickerActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileSavePickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFileSavePickerActivatedEventArgs[] = {
@@ -24179,6 +24164,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFileSavePickerActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileSavePickerActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -24216,6 +24215,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFileSavePickerActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileSavePickerActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileSavePickerActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileSavePickerActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -24318,23 +24318,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileSavePickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFileSavePickerActivatedEventArgs2[] = {
         { "_assign_array_", _assign_array_IFileSavePickerActivatedEventArgs2, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileSavePickerActivatedEventArgs2), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFileSavePickerActivatedEventArgs2[] = {
@@ -24404,6 +24389,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFileSavePickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileSavePickerActivatedEventArgs2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -24441,6 +24440,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFileSavePickerActivatedEventArgs2[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileSavePickerActivatedEventArgs2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileSavePickerActivatedEventArgs2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileSavePickerActivatedEventArgs2), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -24633,23 +24633,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFileSavePickerContinuationEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFileSavePickerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_IFileSavePickerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFileSavePickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFileSavePickerContinuationEventArgs[] = {
@@ -24782,6 +24767,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFileSavePickerContinuationEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFileSavePickerContinuationEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -24819,6 +24818,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFileSavePickerContinuationEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFileSavePickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFileSavePickerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFileSavePickerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -25011,23 +25011,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFolderPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFolderPickerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_IFolderPickerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFolderPickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFolderPickerContinuationEventArgs[] = {
@@ -25160,6 +25145,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IFolderPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFolderPickerContinuationEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -25197,6 +25196,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIFolderPickerContinuationEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFolderPickerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFolderPickerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFolderPickerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -25389,23 +25389,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILaunchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ILaunchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILaunchActivatedEventArgs[] = {
@@ -25538,6 +25523,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_ILaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -25575,6 +25574,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsILaunchActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILaunchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILaunchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -25797,23 +25797,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILaunchActivatedEventArgs2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILaunchActivatedEventArgs2[] = {
         { "_assign_array_", _assign_array_ILaunchActivatedEventArgs2, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILaunchActivatedEventArgs2), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILaunchActivatedEventArgs2[] = {
@@ -25967,6 +25952,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_ILaunchActivatedEventArgs2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILaunchActivatedEventArgs2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -26004,6 +26003,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsILaunchActivatedEventArgs2[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILaunchActivatedEventArgs2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILaunchActivatedEventArgs2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILaunchActivatedEventArgs2), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -26166,23 +26166,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILockScreenActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILockScreenActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ILockScreenActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILockScreenActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILockScreenActivatedEventArgs[] = {
@@ -26294,6 +26279,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_ILockScreenActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILockScreenActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -26331,6 +26330,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsILockScreenActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILockScreenActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILockScreenActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILockScreenActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -26553,23 +26553,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILockScreenCallActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILockScreenCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ILockScreenCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILockScreenCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILockScreenCallActivatedEventArgs[] = {
@@ -26723,6 +26708,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_ILockScreenCallActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILockScreenCallActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -26760,6 +26759,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsILockScreenCallActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILockScreenCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILockScreenCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILockScreenCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -26922,23 +26922,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPhoneCallActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPhoneCallActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPhoneCallActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPhoneCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPhoneCallActivatedEventArgs[] = {
@@ -27050,6 +27035,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IPhoneCallActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPhoneCallActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -27087,6 +27086,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIPhoneCallActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPhoneCallActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPhoneCallActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPhoneCallActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -27249,23 +27249,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPickerReturnedActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPickerReturnedActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPickerReturnedActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPickerReturnedActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPickerReturnedActivatedEventArgs[] = {
@@ -27377,6 +27362,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IPickerReturnedActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPickerReturnedActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -27414,6 +27413,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIPickerReturnedActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPickerReturnedActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPickerReturnedActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPickerReturnedActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -27576,23 +27576,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPrelaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPrelaunchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPrelaunchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPrelaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrelaunchActivatedEventArgs[] = {
@@ -27704,6 +27689,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IPrelaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPrelaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -27741,6 +27740,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIPrelaunchActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPrelaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrelaunchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrelaunchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -27903,23 +27903,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPrint3DWorkflowActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPrint3DWorkflowActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPrint3DWorkflowActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPrint3DWorkflowActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrint3DWorkflowActivatedEventArgs[] = {
@@ -28031,6 +28016,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IPrint3DWorkflowActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPrint3DWorkflowActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -28068,6 +28067,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIPrint3DWorkflowActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPrint3DWorkflowActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrint3DWorkflowActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrint3DWorkflowActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -28230,23 +28230,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPrintTaskSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPrintTaskSettingsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IPrintTaskSettingsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintTaskSettingsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintTaskSettingsActivatedEventArgs[] = {
@@ -28358,6 +28343,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IPrintTaskSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPrintTaskSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -28395,6 +28394,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIPrintTaskSettingsActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintTaskSettingsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintTaskSettingsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintTaskSettingsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -28557,23 +28557,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IProtocolActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IProtocolActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IProtocolActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IProtocolActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IProtocolActivatedEventArgs[] = {
@@ -28685,6 +28670,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IProtocolActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIProtocolActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -28722,6 +28721,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIProtocolActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IProtocolActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIProtocolActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIProtocolActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -28914,23 +28914,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
         { "_assign_array_", _assign_array_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
@@ -29063,6 +29048,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -29100,6 +29099,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -29262,23 +29262,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IProtocolForResultsActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IProtocolForResultsActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IProtocolForResultsActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IProtocolForResultsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IProtocolForResultsActivatedEventArgs[] = {
@@ -29390,6 +29375,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IProtocolForResultsActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIProtocolForResultsActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -29427,6 +29426,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIProtocolForResultsActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IProtocolForResultsActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIProtocolForResultsActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIProtocolForResultsActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -29589,23 +29589,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IRestrictedLaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IRestrictedLaunchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IRestrictedLaunchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IRestrictedLaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IRestrictedLaunchActivatedEventArgs[] = {
@@ -29717,6 +29702,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IRestrictedLaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIRestrictedLaunchActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -29754,6 +29753,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIRestrictedLaunchActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IRestrictedLaunchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRestrictedLaunchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRestrictedLaunchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -29946,23 +29946,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ISearchActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ISearchActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_ISearchActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ISearchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISearchActivatedEventArgs[] = {
@@ -30095,6 +30080,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_ISearchActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsISearchActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -30132,6 +30131,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsISearchActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ISearchActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISearchActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISearchActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -30204,23 +30204,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ISearchActivatedEventArgsWithLinguisticDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ISearchActivatedEventArgsWithLinguisticDetails[] = {
         { "_assign_array_", _assign_array_ISearchActivatedEventArgsWithLinguisticDetails, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ISearchActivatedEventArgsWithLinguisticDetails), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISearchActivatedEventArgsWithLinguisticDetails[] = {
@@ -30269,6 +30254,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_ISearchActivatedEventArgsWithLinguisticDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsISearchActivatedEventArgsWithLinguisticDetails(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -30306,6 +30305,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsISearchActivatedEventArgsWithLinguisticDetails[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ISearchActivatedEventArgsWithLinguisticDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISearchActivatedEventArgsWithLinguisticDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISearchActivatedEventArgsWithLinguisticDetails), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -30468,23 +30468,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IShareTargetActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IShareTargetActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IShareTargetActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IShareTargetActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IShareTargetActivatedEventArgs[] = {
@@ -30596,6 +30581,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IShareTargetActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIShareTargetActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -30633,6 +30632,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIShareTargetActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IShareTargetActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIShareTargetActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIShareTargetActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -30795,23 +30795,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IStartupTaskActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IStartupTaskActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IStartupTaskActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IStartupTaskActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStartupTaskActivatedEventArgs[] = {
@@ -30923,6 +30908,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IStartupTaskActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIStartupTaskActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -30960,6 +30959,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIStartupTaskActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IStartupTaskActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStartupTaskActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStartupTaskActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -31152,23 +31152,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IToastNotificationActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IToastNotificationActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IToastNotificationActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IToastNotificationActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IToastNotificationActivatedEventArgs[] = {
@@ -31301,6 +31286,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IToastNotificationActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIToastNotificationActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -31338,6 +31337,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIToastNotificationActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IToastNotificationActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIToastNotificationActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIToastNotificationActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -31500,23 +31500,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IUserDataAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IUserDataAccountProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IUserDataAccountProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IUserDataAccountProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IUserDataAccountProviderActivatedEventArgs[] = {
@@ -31628,6 +31613,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IUserDataAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIUserDataAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -31665,6 +31664,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIUserDataAccountProviderActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IUserDataAccountProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUserDataAccountProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUserDataAccountProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -31827,23 +31827,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IViewSwitcherProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IViewSwitcherProvider[] = {
         { "_assign_array_", _assign_array_IViewSwitcherProvider, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IViewSwitcherProvider), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IViewSwitcherProvider[] = {
@@ -31955,6 +31940,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IViewSwitcherProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIViewSwitcherProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -31992,6 +31991,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIViewSwitcherProvider[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IViewSwitcherProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIViewSwitcherProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIViewSwitcherProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -32154,23 +32154,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IVoiceCommandActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IVoiceCommandActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IVoiceCommandActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IVoiceCommandActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVoiceCommandActivatedEventArgs[] = {
@@ -32282,6 +32267,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IVoiceCommandActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIVoiceCommandActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -32319,6 +32318,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIVoiceCommandActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IVoiceCommandActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVoiceCommandActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVoiceCommandActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -32541,23 +32541,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IWalletActionActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IWalletActionActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IWalletActionActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IWalletActionActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWalletActionActivatedEventArgs[] = {
@@ -32711,6 +32696,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IWalletActionActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIWalletActionActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -32748,6 +32747,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIWalletActionActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWalletActionActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWalletActionActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWalletActionActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -32910,23 +32910,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IWebAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IWebAccountProviderActivatedEventArgs[] = {
         { "_assign_array_", _assign_array_IWebAccountProviderActivatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAccountProviderActivatedEventArgs[] = {
@@ -33038,6 +33023,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IWebAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIWebAccountProviderActivatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -33075,6 +33074,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIWebAccountProviderActivatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderActivatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderActivatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderActivatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -33267,23 +33267,8 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IWebAuthenticationBrokerContinuationEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IWebAuthenticationBrokerContinuationEventArgs[] = {
         { "_assign_array_", _assign_array_IWebAuthenticationBrokerContinuationEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IWebAuthenticationBrokerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAuthenticationBrokerContinuationEventArgs[] = {
@@ -33416,6 +33401,20 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         }
     };
 
+    static PyObject* _from_IWebAuthenticationBrokerContinuationEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIWebAuthenticationBrokerContinuationEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -33453,6 +33452,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     }
 
     static PyMethodDef methods_ImplementsIWebAuthenticationBrokerContinuationEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWebAuthenticationBrokerContinuationEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAuthenticationBrokerContinuationEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAuthenticationBrokerContinuationEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};

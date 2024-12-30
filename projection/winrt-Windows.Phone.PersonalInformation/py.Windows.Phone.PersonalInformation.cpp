@@ -5165,20 +5165,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactInformation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Phone::PersonalInformation::IContactInformation>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactInformation[] = {
         { "get_display_picture_async", reinterpret_cast<PyCFunction>(IContactInformation_GetDisplayPictureAsync), METH_VARARGS, nullptr },
         { "get_properties_async", reinterpret_cast<PyCFunction>(IContactInformation_GetPropertiesAsync), METH_VARARGS, nullptr },
@@ -5186,7 +5172,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { "to_vcard_async", reinterpret_cast<PyCFunction>(IContactInformation_ToVcardAsync), METH_VARARGS, nullptr },
         { "to_vcard_with_options_async", reinterpret_cast<PyCFunction>(IContactInformation_ToVcardWithOptionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactInformation, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactInformation), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactInformation[] = {
@@ -5597,6 +5582,20 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         }
     };
 
+    static PyObject* _from_IContactInformation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Phone::PersonalInformation::IContactInformation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactInformation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -5634,6 +5633,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     }
 
     static PyMethodDef methods_ImplementsIContactInformation[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactInformation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactInformation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactInformation), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -5745,23 +5745,8 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContactInformation2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Phone::PersonalInformation::IContactInformation2>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IContactInformation2[] = {
         { "_assign_array_", _assign_array_IContactInformation2, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContactInformation2), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContactInformation2[] = {
@@ -5833,6 +5818,20 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         }
     };
 
+    static PyObject* _from_IContactInformation2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Phone::PersonalInformation::IContactInformation2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContactInformation2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -5870,6 +5869,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     }
 
     static PyMethodDef methods_ImplementsIContactInformation2[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContactInformation2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContactInformation2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContactInformation2), METH_VARARGS | METH_STATIC, nullptr },
         { }};

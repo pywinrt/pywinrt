@@ -31,23 +31,8 @@ namespace py::cpp::Windows::Graphics
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IGeometrySource2D(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::IGeometrySource2D>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IGeometrySource2D[] = {
         { "_assign_array_", _assign_array_IGeometrySource2D, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IGeometrySource2D), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGeometrySource2D[] = {
@@ -74,6 +59,20 @@ namespace py::cpp::Windows::Graphics
         {
         }
     };
+
+    static PyObject* _from_IGeometrySource2D(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::IGeometrySource2D>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsIGeometrySource2D(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -112,6 +111,7 @@ namespace py::cpp::Windows::Graphics
     }
 
     static PyMethodDef methods_ImplementsIGeometrySource2D[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IGeometrySource2D), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGeometrySource2D), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGeometrySource2D), METH_VARARGS | METH_STATIC, nullptr },
         { }};

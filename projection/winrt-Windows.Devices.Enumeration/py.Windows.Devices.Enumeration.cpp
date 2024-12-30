@@ -7091,23 +7091,8 @@ namespace py::cpp::Windows::Devices::Enumeration
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IDeviceEnumerationSettings(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IDeviceEnumerationSettings[] = {
         { "_assign_array_", _assign_array_IDeviceEnumerationSettings, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IDeviceEnumerationSettings), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDeviceEnumerationSettings[] = {
@@ -7134,6 +7119,20 @@ namespace py::cpp::Windows::Devices::Enumeration
         {
         }
     };
+
+    static PyObject* _from_IDeviceEnumerationSettings(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsIDeviceEnumerationSettings(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -7172,6 +7171,7 @@ namespace py::cpp::Windows::Devices::Enumeration
     }
 
     static PyMethodDef methods_ImplementsIDeviceEnumerationSettings[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IDeviceEnumerationSettings), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDeviceEnumerationSettings), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDeviceEnumerationSettings), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -7214,23 +7214,8 @@ namespace py::cpp::Windows::Devices::Enumeration
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IDevicePairingSettings(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IDevicePairingSettings[] = {
         { "_assign_array_", _assign_array_IDevicePairingSettings, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IDevicePairingSettings), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDevicePairingSettings[] = {
@@ -7257,6 +7242,20 @@ namespace py::cpp::Windows::Devices::Enumeration
         {
         }
     };
+
+    static PyObject* _from_IDevicePairingSettings(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsIDevicePairingSettings(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -7295,6 +7294,7 @@ namespace py::cpp::Windows::Devices::Enumeration
     }
 
     static PyMethodDef methods_ImplementsIDevicePairingSettings[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IDevicePairingSettings), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDevicePairingSettings), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDevicePairingSettings), METH_VARARGS | METH_STATIC, nullptr },
         { }};

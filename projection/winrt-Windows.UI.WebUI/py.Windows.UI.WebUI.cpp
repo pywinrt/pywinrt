@@ -18388,23 +18388,8 @@ namespace py::cpp::Windows::UI::WebUI
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IActivatedEventArgsDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IActivatedEventArgsDeferral[] = {
         { "_assign_array_", _assign_array_IActivatedEventArgsDeferral, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IActivatedEventArgsDeferral), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IActivatedEventArgsDeferral[] = {
@@ -18453,6 +18438,20 @@ namespace py::cpp::Windows::UI::WebUI
         }
     };
 
+    static PyObject* _from_IActivatedEventArgsDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIActivatedEventArgsDeferral(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -18490,6 +18489,7 @@ namespace py::cpp::Windows::UI::WebUI
     }
 
     static PyMethodDef methods_ImplementsIActivatedEventArgsDeferral[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IActivatedEventArgsDeferral), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActivatedEventArgsDeferral), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActivatedEventArgsDeferral), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -18601,23 +18601,8 @@ namespace py::cpp::Windows::UI::WebUI
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IWebUIBackgroundTaskInstance(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IWebUIBackgroundTaskInstance[] = {
         { "_assign_array_", _assign_array_IWebUIBackgroundTaskInstance, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IWebUIBackgroundTaskInstance), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebUIBackgroundTaskInstance[] = {
@@ -18689,6 +18674,20 @@ namespace py::cpp::Windows::UI::WebUI
         }
     };
 
+    static PyObject* _from_IWebUIBackgroundTaskInstance(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIWebUIBackgroundTaskInstance(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -18726,6 +18725,7 @@ namespace py::cpp::Windows::UI::WebUI
     }
 
     static PyMethodDef methods_ImplementsIWebUIBackgroundTaskInstance[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWebUIBackgroundTaskInstance), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUIBackgroundTaskInstance), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUIBackgroundTaskInstance), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -18798,23 +18798,8 @@ namespace py::cpp::Windows::UI::WebUI
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IWebUINavigatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IWebUINavigatedEventArgs[] = {
         { "_assign_array_", _assign_array_IWebUINavigatedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IWebUINavigatedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebUINavigatedEventArgs[] = {
@@ -18863,6 +18848,20 @@ namespace py::cpp::Windows::UI::WebUI
         }
     };
 
+    static PyObject* _from_IWebUINavigatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIWebUINavigatedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -18900,6 +18899,7 @@ namespace py::cpp::Windows::UI::WebUI
     }
 
     static PyMethodDef methods_ImplementsIWebUINavigatedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWebUINavigatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUINavigatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUINavigatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};

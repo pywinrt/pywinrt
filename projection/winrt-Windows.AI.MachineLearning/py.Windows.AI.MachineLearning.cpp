@@ -11378,23 +11378,8 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILearningModelFeatureDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILearningModelFeatureDescriptor[] = {
         { "_assign_array_", _assign_array_ILearningModelFeatureDescriptor, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelFeatureDescriptor), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILearningModelFeatureDescriptor[] = {
@@ -11506,6 +11491,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     };
 
+    static PyObject* _from_ILearningModelFeatureDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILearningModelFeatureDescriptor(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -11543,6 +11542,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     }
 
     static PyMethodDef methods_ImplementsILearningModelFeatureDescriptor[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelFeatureDescriptor), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelFeatureDescriptor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelFeatureDescriptor), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -11615,23 +11615,8 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILearningModelFeatureValue(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILearningModelFeatureValue[] = {
         { "_assign_array_", _assign_array_ILearningModelFeatureValue, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelFeatureValue), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILearningModelFeatureValue[] = {
@@ -11680,6 +11665,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     };
 
+    static PyObject* _from_ILearningModelFeatureValue(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILearningModelFeatureValue(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -11717,6 +11716,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     }
 
     static PyMethodDef methods_ImplementsILearningModelFeatureValue[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelFeatureValue), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelFeatureValue), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelFeatureValue), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -11759,23 +11759,8 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILearningModelOperatorProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILearningModelOperatorProvider[] = {
         { "_assign_array_", _assign_array_ILearningModelOperatorProvider, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelOperatorProvider), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILearningModelOperatorProvider[] = {
@@ -11802,6 +11787,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
         }
     };
+
+    static PyObject* _from_ILearningModelOperatorProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsILearningModelOperatorProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -11840,6 +11839,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     }
 
     static PyMethodDef methods_ImplementsILearningModelOperatorProvider[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelOperatorProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelOperatorProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelOperatorProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -11972,23 +11972,8 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ITensor(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::ITensor>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ITensor[] = {
         { "_assign_array_", _assign_array_ITensor, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ITensor), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITensor[] = {
@@ -12079,6 +12064,20 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     };
 
+    static PyObject* _from_ITensor(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::ITensor>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsITensor(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -12116,6 +12115,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     }
 
     static PyMethodDef methods_ImplementsITensor[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ITensor), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITensor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITensor), METH_VARARGS | METH_STATIC, nullptr },
         { }};

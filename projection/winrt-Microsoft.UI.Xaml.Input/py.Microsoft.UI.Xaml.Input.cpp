@@ -11659,27 +11659,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ICommand(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Input::ICommand>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ICommand[] = {
         { "can_execute", reinterpret_cast<PyCFunction>(ICommand_CanExecute), METH_VARARGS, nullptr },
         { "execute", reinterpret_cast<PyCFunction>(ICommand_Execute), METH_VARARGS, nullptr },
         { "add_can_execute_changed", reinterpret_cast<PyCFunction>(ICommand_add_CanExecuteChanged), METH_O, nullptr },
         { "remove_can_execute_changed", reinterpret_cast<PyCFunction>(ICommand_remove_CanExecuteChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICommand, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ICommand), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICommand[] = {
@@ -11831,6 +11816,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         }
     };
 
+    static PyObject* _from_ICommand(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Input::ICommand>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsICommand(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -11868,6 +11867,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     }
 
     static PyMethodDef methods_ImplementsICommand[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ICommand), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommand), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommand), METH_VARARGS | METH_STATIC, nullptr },
         { }};

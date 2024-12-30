@@ -2490,23 +2490,8 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IXamlDirectObject(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IXamlDirectObject[] = {
         { "_assign_array_", _assign_array_IXamlDirectObject, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IXamlDirectObject), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlDirectObject[] = {
@@ -2533,6 +2518,20 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
         }
     };
+
+    static PyObject* _from_IXamlDirectObject(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsIXamlDirectObject(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -2571,6 +2570,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
     }
 
     static PyMethodDef methods_ImplementsIXamlDirectObject[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IXamlDirectObject), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlDirectObject), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlDirectObject), METH_VARARGS | METH_STATIC, nullptr },
         { }};

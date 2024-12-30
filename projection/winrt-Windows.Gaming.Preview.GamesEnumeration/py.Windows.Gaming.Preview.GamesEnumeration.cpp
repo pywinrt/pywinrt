@@ -2041,25 +2041,10 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IGameListEntry(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IGameListEntry[] = {
         { "launch_async", reinterpret_cast<PyCFunction>(IGameListEntry_LaunchAsync), METH_VARARGS, nullptr },
         { "set_category_async", reinterpret_cast<PyCFunction>(IGameListEntry_SetCategoryAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IGameListEntry, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IGameListEntry), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGameListEntry[] = {
@@ -2208,6 +2193,20 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         }
     };
 
+    static PyObject* _from_IGameListEntry(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIGameListEntry(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -2245,6 +2244,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     }
 
     static PyMethodDef methods_ImplementsIGameListEntry[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IGameListEntry), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGameListEntry), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGameListEntry), METH_VARARGS | METH_STATIC, nullptr },
         { }};

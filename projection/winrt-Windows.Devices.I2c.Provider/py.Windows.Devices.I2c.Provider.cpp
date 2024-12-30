@@ -346,24 +346,9 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_II2cControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_II2cControllerProvider[] = {
         { "get_device_provider", reinterpret_cast<PyCFunction>(II2cControllerProvider_GetDeviceProvider), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_II2cControllerProvider, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_II2cControllerProvider), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_II2cControllerProvider[] = {
@@ -423,6 +408,20 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         }
     };
 
+    static PyObject* _from_II2cControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsII2cControllerProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -460,6 +459,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     }
 
     static PyMethodDef methods_ImplementsII2cControllerProvider[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_II2cControllerProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsII2cControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsII2cControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -830,20 +830,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_II2cDeviceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_II2cDeviceProvider(py::wrapper::Windows::Devices::I2c::Provider::II2cDeviceProvider* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -876,7 +862,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { "write_read", reinterpret_cast<PyCFunction>(II2cDeviceProvider_WriteRead), METH_VARARGS, nullptr },
         { "write_read_partial", reinterpret_cast<PyCFunction>(II2cDeviceProvider_WriteReadPartial), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_II2cDeviceProvider, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_II2cDeviceProvider), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_II2cDeviceProvider), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_II2cDeviceProvider), METH_VARARGS, nullptr },
         { }};
@@ -1161,6 +1146,20 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         }
     };
 
+    static PyObject* _from_II2cDeviceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsII2cDeviceProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -1198,6 +1197,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     }
 
     static PyMethodDef methods_ImplementsII2cDeviceProvider[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_II2cDeviceProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsII2cDeviceProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsII2cDeviceProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -1280,24 +1280,9 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_II2cProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::I2c::Provider::II2cProvider>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_II2cProvider[] = {
         { "get_controllers_async", reinterpret_cast<PyCFunction>(II2cProvider_GetControllersAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_II2cProvider, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_II2cProvider), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_II2cProvider[] = {
@@ -1351,6 +1336,20 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         }
     };
 
+    static PyObject* _from_II2cProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::I2c::Provider::II2cProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsII2cProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -1388,6 +1387,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     }
 
     static PyMethodDef methods_ImplementsII2cProvider[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_II2cProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsII2cProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsII2cProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }};
