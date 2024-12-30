@@ -1,4 +1,5 @@
 using System.CodeDom.Compiler;
+using System.Collections.ObjectModel;
 
 static class SeqWriterExtensions
 {
@@ -209,6 +210,60 @@ static class SeqWriterExtensions
                 w.WriteLine("return 0;");
             },
             catchReturn: "-1"
+        );
+    }
+
+    public static void WriteSeqPythonSpecialMethods(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
+    )
+    {
+        var method = type.Methods.Single(m => m.Name == "GetAt");
+        var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+            method.Signature,
+            new MethodNullabilityInfo(method.Method)
+        );
+        var elementType = method.Method.ToPyReturnTyping(ns, nullabilityInfo, method.GenericArgMap);
+
+        w.WriteLine("def __len__(self) -> int: ...");
+        w.WriteLine($"def __iter__(self) -> typing.Iterator[{elementType}]: ...");
+        w.WriteLine("@typing.overload");
+        w.WriteLine($"def __getitem__(self, index: typing.SupportsIndex) -> {elementType}: ...");
+        w.WriteLine("@typing.overload");
+        w.WriteLine(
+            $"def __getitem__(self, index: slice) -> winrt.system.Array[{elementType}]: ..."
+        );
+    }
+
+    public static void WriteMutableSeqPythonSpecialMethods(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
+    )
+    {
+        var setMethod = type.Methods.Single(m => m.Name == "SetAt");
+        var setNullabilityInfo = nullabilityMap.GetValueOrDefault(
+            setMethod.Signature,
+            new MethodNullabilityInfo(setMethod.Method)
+        );
+        var valParamType = setMethod
+            .Method.Parameters[1]
+            .ToPyInParamTyping(ns, setNullabilityInfo.Parameters[1].Type, setMethod.GenericArgMap);
+
+        w.WriteLine("@typing.overload");
+        w.WriteLine($"def __delitem__(self, index: typing.SupportsIndex) -> None: ...");
+        w.WriteLine("@typing.overload");
+        w.WriteLine($"def __delitem__(self, index: slice) -> None: ...");
+        w.WriteLine("@typing.overload");
+        w.WriteLine(
+            $"def __setitem__(self, index: typing.SupportsIndex, value: {valParamType}) -> None: ..."
+        );
+        w.WriteLine("@typing.overload");
+        w.WriteLine(
+            $"def __setitem__(self, index: slice, value: typing.Iterable[{valParamType}]) -> None: ..."
         );
     }
 }
