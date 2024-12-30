@@ -4650,6 +4650,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIAsyncActionWithProgress[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncActionWithProgress), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncActionWithProgress), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -5372,6 +5373,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIAsyncOperationWithProgress[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncOperationWithProgress), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncOperationWithProgress), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -5627,6 +5629,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIAsyncOperation[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncOperation), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -10017,6 +10020,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIReferenceArray[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIReferenceArray), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIReferenceArray), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -10411,6 +10415,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIReference[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIReference), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIReference), METH_VARARGS | METH_STATIC, nullptr },
         { }};

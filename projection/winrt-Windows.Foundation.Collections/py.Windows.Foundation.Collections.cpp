@@ -1946,6 +1946,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIIterable[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIterable), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIterable), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -2115,6 +2116,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIIterator[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIterator), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIterator), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -2260,6 +2262,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIKeyValuePair[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIKeyValuePair), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIKeyValuePair), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -2405,6 +2408,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIMapChangedEventArgs[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMapChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMapChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -2571,6 +2575,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIMapView[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMapView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMapView), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -2761,6 +2766,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIMap[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMap), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMap), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -3005,6 +3011,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIObservableMap[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIObservableMap), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIObservableMap), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -3279,6 +3286,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIObservableVector[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIObservableVector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIObservableVector), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -4622,6 +4630,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIVectorView[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVectorView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVectorView), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -4842,6 +4851,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIVector[] = {
+        { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVector), METH_VARARGS | METH_STATIC, nullptr },
         { }};
