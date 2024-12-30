@@ -198,11 +198,6 @@ static class FileWriters
             w.Indent++;
             foreach (var type in dependencyTypes)
             {
-                if (type.Category == Category.Interface)
-                {
-                    w.WriteLine($"Implements{type.Name},");
-                }
-
                 w.WriteLine($"{type.Name},");
             }
             w.Indent--;
@@ -325,11 +320,6 @@ static class FileWriters
                 foreach (var type in dependencyModuleTypes)
                 {
                     w.WriteLine($"{type.Name},");
-
-                    if (type.Category == Category.Interface)
-                    {
-                        w.WriteLine($"Implements{type.Name},");
-                    }
                 }
 
                 w.Indent--;
@@ -415,11 +405,6 @@ static class FileWriters
         foreach (var type in members.Enums.Concat(allExtensionTypes).Concat(members.Delegates))
         {
             w.WriteLine($"\"{type.Name}\",");
-
-            if (type.Category == Category.Interface)
-            {
-                w.WriteLine($"\"Implements{type.Name}\",");
-            }
         }
 
         w.Indent--;

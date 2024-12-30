@@ -22,19 +22,19 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class NDClient(winrt.system.Object):
-    def __new__(cls: typing.Type[Self], download_engine: ImplementsINDDownloadEngine, stream_parser: ImplementsINDStreamParser, p_messenger: ImplementsINDMessenger) -> Self: ...
+    def __new__(cls: typing.Type[Self], download_engine: INDDownloadEngine, stream_parser: INDStreamParser, p_messenger: INDMessenger) -> Self: ...
     # System.Void Windows.Media.Protection.PlayReady.NDClient::Close()
     # @deprecated("INDClient is deprecated and might not work on all platforms. For more info, see MSDN.")
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.PlayReady.INDLicenseFetchResult> Windows.Media.Protection.PlayReady.NDClient::LicenseFetchAsync(Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor)
     # @deprecated("INDClient is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def license_fetch_async(self, license_fetch_descriptor: ImplementsINDLicenseFetchDescriptor, /) -> windows_foundation.IAsyncOperation[INDLicenseFetchResult]: ...
+    def license_fetch_async(self, license_fetch_descriptor: INDLicenseFetchDescriptor, /) -> windows_foundation.IAsyncOperation[INDLicenseFetchResult]: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.NDClient::ReRegistrationAsync(Windows.Media.Protection.PlayReady.INDCustomData)
     # @deprecated("INDClient is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def re_registration_async(self, registration_custom_data: ImplementsINDCustomData, /) -> windows_foundation.IAsyncAction: ...
+    def re_registration_async(self, registration_custom_data: INDCustomData, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.PlayReady.INDStartResult> Windows.Media.Protection.PlayReady.NDClient::StartAsync(Windows.Foundation.Uri,System.UInt32,Windows.Media.Protection.PlayReady.INDCustomData,Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor)
     # @deprecated("INDClient is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def start_async(self, content_url: windows_foundation.Uri, start_async_options: winrt.system.UInt32, registration_custom_data: ImplementsINDCustomData, license_fetch_descriptor: ImplementsINDLicenseFetchDescriptor, /) -> windows_foundation.IAsyncOperation[INDStartResult]: ...
+    def start_async(self, content_url: windows_foundation.Uri, start_async_options: winrt.system.UInt32, registration_custom_data: INDCustomData, license_fetch_descriptor: INDLicenseFetchDescriptor, /) -> windows_foundation.IAsyncOperation[INDStartResult]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Protection.PlayReady.NDClient::add_ClosedCaptionDataReceived(Windows.Foundation.TypedEventHandler`2<Windows.Media.Protection.PlayReady.NDClient,Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs>)
     # @deprecated("INDClient is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_closed_caption_data_received(self, handler: windows_foundation.TypedEventHandler[NDClient, INDClosedCaptionDataReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -67,7 +67,7 @@ class NDClient(winrt.system.Object):
     def remove_registration_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class NDCustomData(winrt.system.Object, ImplementsINDCustomData):
+class NDCustomData(winrt.system.Object, INDCustomData):
     def __new__(cls: typing.Type[Self], custom_data_type_id_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], custom_data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer]) -> Self: ...
     # System.Byte[] Windows.Media.Protection.PlayReady.NDCustomData::get_CustomData()
     @_property
@@ -77,11 +77,11 @@ class NDCustomData(winrt.system.Object, ImplementsINDCustomData):
     def custom_data_type_id(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class NDDownloadEngineNotifier(winrt.system.Object, ImplementsINDDownloadEngineNotifier):
+class NDDownloadEngineNotifier(winrt.system.Object, INDDownloadEngineNotifier):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier::OnContentIDReceived(Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor)
     # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_content_id_received(self, license_fetch_descriptor: ImplementsINDLicenseFetchDescriptor, /) -> None: ...
+    def on_content_id_received(self, license_fetch_descriptor: INDLicenseFetchDescriptor, /) -> None: ...
     # System.Void Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier::OnDataReceived(System.Byte[],System.UInt32)
     # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
     def on_data_received(self, data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], bytes_received: winrt.system.UInt32, /) -> None: ...
@@ -99,14 +99,14 @@ class NDDownloadEngineNotifier(winrt.system.Object, ImplementsINDDownloadEngineN
     def on_stream_opened(self) -> None: ...
 
 @typing.final
-class NDLicenseFetchDescriptor(winrt.system.Object, ImplementsINDLicenseFetchDescriptor):
-    def __new__(cls: typing.Type[Self], content_id_type: NDContentIDType, content_id_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], license_fetch_challenge_custom_data: ImplementsINDCustomData) -> Self: ...
+class NDLicenseFetchDescriptor(winrt.system.Object, INDLicenseFetchDescriptor):
+    def __new__(cls: typing.Type[Self], content_id_type: NDContentIDType, content_id_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], license_fetch_challenge_custom_data: INDCustomData) -> Self: ...
     # Windows.Media.Protection.PlayReady.INDCustomData Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor::get_LicenseFetchChallengeCustomData()
     @_property
     def license_fetch_challenge_custom_data(self) -> INDCustomData: ...
     # System.Void Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor::put_LicenseFetchChallengeCustomData(Windows.Media.Protection.PlayReady.INDCustomData)
     @license_fetch_challenge_custom_data.setter
-    def license_fetch_challenge_custom_data(self, value: ImplementsINDCustomData) -> None: ...
+    def license_fetch_challenge_custom_data(self, value: INDCustomData) -> None: ...
     # System.Byte[] Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor::get_ContentID()
     @_property
     def content_id(self) -> winrt.system.UInt8: ...
@@ -115,21 +115,21 @@ class NDLicenseFetchDescriptor(winrt.system.Object, ImplementsINDLicenseFetchDes
     def content_id_type(self) -> NDContentIDType: ...
 
 @typing.final
-class NDStorageFileHelper(winrt.system.Object, ImplementsINDStorageFileHelper):
+class NDStorageFileHelper(winrt.system.Object, INDStorageFileHelper):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Media.Protection.PlayReady.NDStorageFileHelper::GetFileURLs(Windows.Storage.IStorageFile)
     # @deprecated("INDStorageFileHelper is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def get_file_u_r_ls(self, file: windows_storage.ImplementsIStorageFile, /) -> typing.MutableSequence[str]: ...
+    def get_file_u_r_ls(self, file: windows_storage.IStorageFile, /) -> typing.MutableSequence[str]: ...
 
 @typing.final
-class NDStreamParserNotifier(winrt.system.Object, ImplementsINDStreamParserNotifier):
+class NDStreamParserNotifier(winrt.system.Object, INDStreamParserNotifier):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Windows.Media.Protection.PlayReady.NDStreamParserNotifier::OnBeginSetupDecryptor(Windows.Media.Core.IMediaStreamDescriptor,System.Guid,System.Byte[])
     # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_begin_setup_decryptor(self, descriptor: windows_media_core.ImplementsIMediaStreamDescriptor, key_id: _uuid.UUID, pro_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    def on_begin_setup_decryptor(self, descriptor: windows_media_core.IMediaStreamDescriptor, key_id: _uuid.UUID, pro_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
     # System.Void Windows.Media.Protection.PlayReady.NDStreamParserNotifier::OnContentIDReceived(Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor)
     # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_content_id_received(self, license_fetch_descriptor: ImplementsINDLicenseFetchDescriptor, /) -> None: ...
+    def on_content_id_received(self, license_fetch_descriptor: INDLicenseFetchDescriptor, /) -> None: ...
     # System.Void Windows.Media.Protection.PlayReady.NDStreamParserNotifier::OnMediaStreamDescriptorCreated(Windows.Foundation.Collections.IVector`1<Windows.Media.Core.AudioStreamDescriptor>,Windows.Foundation.Collections.IVector`1<Windows.Media.Core.VideoStreamDescriptor>)
     # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
     def on_media_stream_descriptor_created(self, audio_stream_descriptors: typing.MutableSequence[windows_media_core.AudioStreamDescriptor], video_stream_descriptors: typing.MutableSequence[windows_media_core.VideoStreamDescriptor], /) -> None: ...
@@ -138,7 +138,7 @@ class NDStreamParserNotifier(winrt.system.Object, ImplementsINDStreamParserNotif
     def on_sample_parsed(self, stream_id: winrt.system.UInt32, stream_type: NDMediaStreamType, stream_sample: windows_media_core.MediaStreamSample, pts: winrt.system.Int64, cc_format: NDClosedCaptionFormat, cc_data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
 
 @typing.final
-class NDTCPMessenger(winrt.system.Object, ImplementsINDMessenger):
+class NDTCPMessenger(winrt.system.Object, INDMessenger):
     def __new__(cls: typing.Type[Self], remote_host_name: str, remote_host_port: winrt.system.UInt32) -> Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.PlayReady.INDSendResult> Windows.Media.Protection.PlayReady.NDTCPMessenger::SendLicenseFetchRequestAsync(System.Byte[],System.Byte[])
     # @deprecated("INDMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -209,7 +209,7 @@ class PlayReadyContentResolver(winrt.system.Object, metaclass=PlayReadyContentRe
     pass
 
 @typing.final
-class PlayReadyDomain(winrt.system.Object, ImplementsIPlayReadyDomain):
+class PlayReadyDomain(winrt.system.Object, IPlayReadyDomain):
     # System.Guid Windows.Media.Protection.PlayReady.PlayReadyDomain::get_AccountId()
     @_property
     def account_id(self) -> _uuid.UUID: ...
@@ -234,7 +234,7 @@ class PlayReadyDomainIterable(winrt.system.Object):
     def first(self) -> windows_foundation_collections.IIterator[IPlayReadyDomain]: ...
 
 @typing.final
-class PlayReadyDomainIterator(winrt.system.Object, windows_foundation_collections.ImplementsIIterator[IPlayReadyDomain]):
+class PlayReadyDomainIterator(winrt.system.Object, windows_foundation_collections.IIterator[IPlayReadyDomain]):
     def __iter__(self: Self) -> Self: ...
     def __next__(self) -> IPlayReadyDomain: ...
     # System.UInt32 Windows.Media.Protection.PlayReady.PlayReadyDomainIterator::GetMany(Windows.Media.Protection.PlayReady.IPlayReadyDomain[])
@@ -249,7 +249,7 @@ class PlayReadyDomainIterator(winrt.system.Object, windows_foundation_collection
     def has_current(self) -> bool: ...
 
 @typing.final
-class PlayReadyDomainJoinServiceRequest(winrt.system.Object, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class PlayReadyDomainJoinServiceRequest(winrt.system.Object, IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest::BeginServiceRequest()
     def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
@@ -300,7 +300,7 @@ class PlayReadyDomainJoinServiceRequest(winrt.system.Object, ImplementsIPlayRead
     def response_custom_data(self) -> str: ...
 
 @typing.final
-class PlayReadyDomainLeaveServiceRequest(winrt.system.Object, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class PlayReadyDomainLeaveServiceRequest(winrt.system.Object, IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest::BeginServiceRequest()
     def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
@@ -348,10 +348,10 @@ class PlayReadyDomainLeaveServiceRequest(winrt.system.Object, ImplementsIPlayRea
 class PlayReadyITADataGenerator(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Byte[] Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator::GenerateData(System.Guid,System.UInt32,Windows.Foundation.Collections.IPropertySet,Windows.Media.Protection.PlayReady.PlayReadyITADataFormat)
-    def generate_data(self, guid_c_p_system_id: _uuid.UUID, count_of_streams: winrt.system.UInt32, configuration: windows_foundation_collections.ImplementsIPropertySet, format: PlayReadyITADataFormat, /) -> winrt.system.Array[winrt.system.UInt8]: ...
+    def generate_data(self, guid_c_p_system_id: _uuid.UUID, count_of_streams: winrt.system.UInt32, configuration: windows_foundation_collections.IPropertySet, format: PlayReadyITADataFormat, /) -> winrt.system.Array[winrt.system.UInt8]: ...
 
 @typing.final
-class PlayReadyIndividualizationServiceRequest(winrt.system.Object, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class PlayReadyIndividualizationServiceRequest(winrt.system.Object, IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceRequest::BeginServiceRequest()
     def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
@@ -384,7 +384,7 @@ class PlayReadyIndividualizationServiceRequest(winrt.system.Object, ImplementsIP
     def response_custom_data(self) -> str: ...
 
 @typing.final
-class PlayReadyLicense(winrt.system.Object, ImplementsIPlayReadyLicense):
+class PlayReadyLicense(winrt.system.Object, IPlayReadyLicense):
     # System.Guid Windows.Media.Protection.PlayReady.PlayReadyLicense::GetKIDAtChainDepth(System.UInt32)
     def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32, /) -> _uuid.UUID: ...
     # System.UInt32 Windows.Media.Protection.PlayReady.PlayReadyLicense::get_ChainDepth()
@@ -419,7 +419,7 @@ class PlayReadyLicense(winrt.system.Object, ImplementsIPlayReadyLicense):
     def security_level(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class PlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object, ImplementsIPlayReadyLicenseAcquisitionServiceRequest, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class PlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object, IPlayReadyLicenseAcquisitionServiceRequest, IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest::BeginServiceRequest()
     def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
@@ -479,7 +479,7 @@ class PlayReadyLicenseIterable(winrt.system.Object):
     def first(self) -> windows_foundation_collections.IIterator[IPlayReadyLicense]: ...
 
 @typing.final
-class PlayReadyLicenseIterator(winrt.system.Object, windows_foundation_collections.ImplementsIIterator[IPlayReadyLicense]):
+class PlayReadyLicenseIterator(winrt.system.Object, windows_foundation_collections.IIterator[IPlayReadyLicense]):
     def __iter__(self: Self) -> Self: ...
     def __next__(self) -> IPlayReadyLicense: ...
     # System.UInt32 Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator::GetMany(Windows.Media.Protection.PlayReady.IPlayReadyLicense[])
@@ -503,8 +503,8 @@ class PlayReadyLicenseManagement(winrt.system.Object, metaclass=PlayReadyLicense
     pass
 
 @typing.final
-class PlayReadyLicenseSession(winrt.system.Object, ImplementsIPlayReadyLicenseSession2, ImplementsIPlayReadyLicenseSession):
-    def __new__(cls: typing.Type[Self], configuration: windows_foundation_collections.ImplementsIPropertySet) -> Self: ...
+class PlayReadyLicenseSession(winrt.system.Object, IPlayReadyLicenseSession2, IPlayReadyLicenseSession):
+    def __new__(cls: typing.Type[Self], configuration: windows_foundation_collections.IPropertySet) -> Self: ...
     # System.Void Windows.Media.Protection.PlayReady.PlayReadyLicenseSession::ConfigureMediaProtectionManager(Windows.Media.Protection.MediaProtectionManager)
     def configure_media_protection_manager(self, mpm: windows_media_protection.MediaProtectionManager, /) -> None: ...
     # Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest Windows.Media.Protection.PlayReady.PlayReadyLicenseSession::CreateLAServiceRequest()
@@ -513,7 +513,7 @@ class PlayReadyLicenseSession(winrt.system.Object, ImplementsIPlayReadyLicenseSe
     def create_license_iterable(self, content_header: PlayReadyContentHeader, fully_evaluated: bool, /) -> PlayReadyLicenseIterable: ...
 
 @typing.final
-class PlayReadyMeteringReportServiceRequest(winrt.system.Object, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class PlayReadyMeteringReportServiceRequest(winrt.system.Object, IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest::BeginServiceRequest()
     def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
@@ -552,7 +552,7 @@ class PlayReadyMeteringReportServiceRequest(winrt.system.Object, ImplementsIPlay
     def response_custom_data(self) -> str: ...
 
 @typing.final
-class PlayReadyRevocationServiceRequest(winrt.system.Object, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class PlayReadyRevocationServiceRequest(winrt.system.Object, IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest::BeginServiceRequest()
     def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
@@ -592,7 +592,7 @@ class PlayReadySecureStopIterable(winrt.system.Object):
     def first(self) -> windows_foundation_collections.IIterator[IPlayReadySecureStopServiceRequest]: ...
 
 @typing.final
-class PlayReadySecureStopIterator(winrt.system.Object, windows_foundation_collections.ImplementsIIterator[IPlayReadySecureStopServiceRequest]):
+class PlayReadySecureStopIterator(winrt.system.Object, windows_foundation_collections.IIterator[IPlayReadySecureStopServiceRequest]):
     def __iter__(self: Self) -> Self: ...
     def __next__(self) -> IPlayReadySecureStopServiceRequest: ...
     # System.UInt32 Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator::GetMany(Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest[])
@@ -607,7 +607,7 @@ class PlayReadySecureStopIterator(winrt.system.Object, windows_foundation_collec
     def has_current(self) -> bool: ...
 
 @typing.final
-class PlayReadySecureStopServiceRequest(winrt.system.Object, ImplementsIPlayReadySecureStopServiceRequest, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class PlayReadySecureStopServiceRequest(winrt.system.Object, IPlayReadySecureStopServiceRequest, IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest):
     @typing.overload
     def __new__(cls: typing.Type[Self], publisher_cert_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer]) -> Self: ...
     @typing.overload
@@ -721,7 +721,7 @@ class PlayReadyStatics_Static(type):
 class PlayReadyStatics(winrt.system.Object, metaclass=PlayReadyStatics_Static):
     pass
 
-class ImplementsINDClosedCaptionDataReceivedEventArgs():
+class INDClosedCaptionDataReceivedEventArgs(winrt._winrt.IInspectable):
     # System.Byte[] Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs::get_ClosedCaptionData()
     @_property
     @abstractmethod
@@ -735,19 +735,7 @@ class ImplementsINDClosedCaptionDataReceivedEventArgs():
     @abstractmethod
     def presentation_timestamp(self) -> winrt.system.Int64: ...
 
-@typing.final
-class INDClosedCaptionDataReceivedEventArgs(winrt.system.Object, ImplementsINDClosedCaptionDataReceivedEventArgs):
-    # System.Byte[] Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs::get_ClosedCaptionData()
-    @_property
-    def closed_caption_data(self) -> winrt.system.UInt8: ...
-    # Windows.Media.Protection.PlayReady.NDClosedCaptionFormat Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs::get_ClosedCaptionDataFormat()
-    @_property
-    def closed_caption_data_format(self) -> NDClosedCaptionFormat: ...
-    # System.Int64 Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs::get_PresentationTimestamp()
-    @_property
-    def presentation_timestamp(self) -> winrt.system.Int64: ...
-
-class ImplementsINDCustomData():
+class INDCustomData(winrt._winrt.IInspectable):
     # System.Byte[] Windows.Media.Protection.PlayReady.INDCustomData::get_CustomData()
     @_property
     @abstractmethod
@@ -757,16 +745,7 @@ class ImplementsINDCustomData():
     @abstractmethod
     def custom_data_type_id(self) -> winrt.system.UInt8: ...
 
-@typing.final
-class INDCustomData(winrt.system.Object, ImplementsINDCustomData):
-    # System.Byte[] Windows.Media.Protection.PlayReady.INDCustomData::get_CustomData()
-    @_property
-    def custom_data(self) -> winrt.system.UInt8: ...
-    # System.Byte[] Windows.Media.Protection.PlayReady.INDCustomData::get_CustomDataTypeID()
-    @_property
-    def custom_data_type_id(self) -> winrt.system.UInt8: ...
-
-class ImplementsINDDownloadEngine():
+class INDDownloadEngine(winrt._winrt.IInspectable):
     # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngine::Close()
     # @deprecated("INDDownloadEngine is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
@@ -804,41 +783,11 @@ class ImplementsINDDownloadEngine():
     @abstractmethod
     def notifier(self) -> NDDownloadEngineNotifier: ...
 
-@typing.final
-class INDDownloadEngine(winrt.system.Object, ImplementsINDDownloadEngine):
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngine::Close()
-    # @deprecated("INDDownloadEngine is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def close(self) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngine::Open(Windows.Foundation.Uri,System.Byte[])
-    # @deprecated("INDDownloadEngine is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def open(self, uri: windows_foundation.Uri, session_id_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngine::Pause()
-    # @deprecated("INDDownloadEngine is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def pause(self) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngine::Resume()
-    # @deprecated("INDDownloadEngine is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def resume(self) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngine::Seek(Windows.Foundation.TimeSpan)
-    # @deprecated("INDDownloadEngine is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def seek(self, start_position: datetime.timedelta, /) -> None: ...
-    # System.UInt32 Windows.Media.Protection.PlayReady.INDDownloadEngine::get_BufferFullMaxThresholdInSamples()
-    @_property
-    def buffer_full_max_threshold_in_samples(self) -> winrt.system.UInt32: ...
-    # System.UInt32 Windows.Media.Protection.PlayReady.INDDownloadEngine::get_BufferFullMinThresholdInSamples()
-    @_property
-    def buffer_full_min_threshold_in_samples(self) -> winrt.system.UInt32: ...
-    # System.Boolean Windows.Media.Protection.PlayReady.INDDownloadEngine::get_CanSeek()
-    @_property
-    def can_seek(self) -> bool: ...
-    # Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier Windows.Media.Protection.PlayReady.INDDownloadEngine::get_Notifier()
-    @_property
-    def notifier(self) -> NDDownloadEngineNotifier: ...
-
-class ImplementsINDDownloadEngineNotifier():
+class INDDownloadEngineNotifier(winrt._winrt.IInspectable):
     # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier::OnContentIDReceived(Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor)
     # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def on_content_id_received(self, license_fetch_descriptor: ImplementsINDLicenseFetchDescriptor, /) -> None: ...
+    def on_content_id_received(self, license_fetch_descriptor: INDLicenseFetchDescriptor, /) -> None: ...
     # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier::OnDataReceived(System.Byte[],System.UInt32)
     # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
@@ -860,40 +809,13 @@ class ImplementsINDDownloadEngineNotifier():
     @abstractmethod
     def on_stream_opened(self) -> None: ...
 
-@typing.final
-class INDDownloadEngineNotifier(winrt.system.Object, ImplementsINDDownloadEngineNotifier):
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier::OnContentIDReceived(Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor)
-    # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_content_id_received(self, license_fetch_descriptor: ImplementsINDLicenseFetchDescriptor, /) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier::OnDataReceived(System.Byte[],System.UInt32)
-    # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_data_received(self, data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], bytes_received: winrt.system.UInt32, /) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier::OnEndOfStream()
-    # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_end_of_stream(self) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier::OnNetworkError()
-    # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_network_error(self) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier::OnPlayReadyObjectReceived(System.Byte[])
-    # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_play_ready_object_received(self, data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier::OnStreamOpened()
-    # @deprecated("INDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_stream_opened(self) -> None: ...
-
-class ImplementsINDLicenseFetchCompletedEventArgs():
+class INDLicenseFetchCompletedEventArgs(winrt._winrt.IInspectable):
     # Windows.Media.Protection.PlayReady.INDCustomData Windows.Media.Protection.PlayReady.INDLicenseFetchCompletedEventArgs::get_ResponseCustomData()
     @_property
     @abstractmethod
     def response_custom_data(self) -> INDCustomData: ...
 
-@typing.final
-class INDLicenseFetchCompletedEventArgs(winrt.system.Object, ImplementsINDLicenseFetchCompletedEventArgs):
-    # Windows.Media.Protection.PlayReady.INDCustomData Windows.Media.Protection.PlayReady.INDLicenseFetchCompletedEventArgs::get_ResponseCustomData()
-    @_property
-    def response_custom_data(self) -> INDCustomData: ...
-
-class ImplementsINDLicenseFetchDescriptor():
+class INDLicenseFetchDescriptor(winrt._winrt.IInspectable):
     # System.Byte[] Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor::get_ContentID()
     @_property
     @abstractmethod
@@ -909,36 +831,15 @@ class ImplementsINDLicenseFetchDescriptor():
     # System.Void Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor::put_LicenseFetchChallengeCustomData(Windows.Media.Protection.PlayReady.INDCustomData)
     @license_fetch_challenge_custom_data.setter
     @abstractmethod
-    def license_fetch_challenge_custom_data(self, value: ImplementsINDCustomData) -> None: ...
+    def license_fetch_challenge_custom_data(self, value: INDCustomData) -> None: ...
 
-@typing.final
-class INDLicenseFetchDescriptor(winrt.system.Object, ImplementsINDLicenseFetchDescriptor):
-    # System.Byte[] Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor::get_ContentID()
-    @_property
-    def content_id(self) -> winrt.system.UInt8: ...
-    # Windows.Media.Protection.PlayReady.NDContentIDType Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor::get_ContentIDType()
-    @_property
-    def content_id_type(self) -> NDContentIDType: ...
-    # Windows.Media.Protection.PlayReady.INDCustomData Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor::get_LicenseFetchChallengeCustomData()
-    @_property
-    def license_fetch_challenge_custom_data(self) -> INDCustomData: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor::put_LicenseFetchChallengeCustomData(Windows.Media.Protection.PlayReady.INDCustomData)
-    @license_fetch_challenge_custom_data.setter
-    def license_fetch_challenge_custom_data(self, value: ImplementsINDCustomData) -> None: ...
-
-class ImplementsINDLicenseFetchResult():
+class INDLicenseFetchResult(winrt._winrt.IInspectable):
     # Windows.Media.Protection.PlayReady.INDCustomData Windows.Media.Protection.PlayReady.INDLicenseFetchResult::get_ResponseCustomData()
     @_property
     @abstractmethod
     def response_custom_data(self) -> INDCustomData: ...
 
-@typing.final
-class INDLicenseFetchResult(winrt.system.Object, ImplementsINDLicenseFetchResult):
-    # Windows.Media.Protection.PlayReady.INDCustomData Windows.Media.Protection.PlayReady.INDLicenseFetchResult::get_ResponseCustomData()
-    @_property
-    def response_custom_data(self) -> INDCustomData: ...
-
-class ImplementsINDMessenger():
+class INDMessenger(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.PlayReady.INDSendResult> Windows.Media.Protection.PlayReady.INDMessenger::SendLicenseFetchRequestAsync(System.Byte[],System.Byte[])
     # @deprecated("INDMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
@@ -956,34 +857,13 @@ class ImplementsINDMessenger():
     @abstractmethod
     def send_registration_request_async(self, session_id_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], challenge_data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.IAsyncOperation[INDSendResult]: ...
 
-@typing.final
-class INDMessenger(winrt.system.Object, ImplementsINDMessenger):
-    # Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.PlayReady.INDSendResult> Windows.Media.Protection.PlayReady.INDMessenger::SendLicenseFetchRequestAsync(System.Byte[],System.Byte[])
-    # @deprecated("INDMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def send_license_fetch_request_async(self, session_id_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], challenge_data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.IAsyncOperation[INDSendResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.PlayReady.INDSendResult> Windows.Media.Protection.PlayReady.INDMessenger::SendProximityDetectionResponseAsync(Windows.Media.Protection.PlayReady.NDProximityDetectionType,System.Byte[],System.Byte[],System.Byte[])
-    # @deprecated("INDMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def send_proximity_detection_response_async(self, pd_type: NDProximityDetectionType, transmitter_channel_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], session_id_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], response_data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.IAsyncOperation[INDSendResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.PlayReady.INDSendResult> Windows.Media.Protection.PlayReady.INDMessenger::SendProximityDetectionStartAsync(Windows.Media.Protection.PlayReady.NDProximityDetectionType,System.Byte[],System.Byte[],System.Byte[])
-    # @deprecated("INDMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def send_proximity_detection_start_async(self, pd_type: NDProximityDetectionType, transmitter_channel_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], session_id_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], challenge_data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.IAsyncOperation[INDSendResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.PlayReady.INDSendResult> Windows.Media.Protection.PlayReady.INDMessenger::SendRegistrationRequestAsync(System.Byte[],System.Byte[])
-    # @deprecated("INDMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def send_registration_request_async(self, session_id_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], challenge_data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.IAsyncOperation[INDSendResult]: ...
-
-class ImplementsINDProximityDetectionCompletedEventArgs():
+class INDProximityDetectionCompletedEventArgs(winrt._winrt.IInspectable):
     # System.UInt32 Windows.Media.Protection.PlayReady.INDProximityDetectionCompletedEventArgs::get_ProximityDetectionRetryCount()
     @_property
     @abstractmethod
     def proximity_detection_retry_count(self) -> winrt.system.UInt32: ...
 
-@typing.final
-class INDProximityDetectionCompletedEventArgs(winrt.system.Object, ImplementsINDProximityDetectionCompletedEventArgs):
-    # System.UInt32 Windows.Media.Protection.PlayReady.INDProximityDetectionCompletedEventArgs::get_ProximityDetectionRetryCount()
-    @_property
-    def proximity_detection_retry_count(self) -> winrt.system.UInt32: ...
-
-class ImplementsINDRegistrationCompletedEventArgs():
+class INDRegistrationCompletedEventArgs(winrt._winrt.IInspectable):
     # Windows.Media.Protection.PlayReady.INDCustomData Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs::get_ResponseCustomData()
     @_property
     @abstractmethod
@@ -1001,58 +881,25 @@ class ImplementsINDRegistrationCompletedEventArgs():
     @abstractmethod
     def transmitter_properties(self) -> INDTransmitterProperties: ...
 
-@typing.final
-class INDRegistrationCompletedEventArgs(winrt.system.Object, ImplementsINDRegistrationCompletedEventArgs):
-    # Windows.Media.Protection.PlayReady.INDCustomData Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs::get_ResponseCustomData()
-    @_property
-    def response_custom_data(self) -> INDCustomData: ...
-    # System.Boolean Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs::get_TransmitterCertificateAccepted()
-    @_property
-    def transmitter_certificate_accepted(self) -> bool: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs::put_TransmitterCertificateAccepted(System.Boolean)
-    @transmitter_certificate_accepted.setter
-    def transmitter_certificate_accepted(self, value: bool) -> None: ...
-    # Windows.Media.Protection.PlayReady.INDTransmitterProperties Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs::get_TransmitterProperties()
-    @_property
-    def transmitter_properties(self) -> INDTransmitterProperties: ...
-
-class ImplementsINDSendResult():
+class INDSendResult(winrt._winrt.IInspectable):
     # System.Byte[] Windows.Media.Protection.PlayReady.INDSendResult::get_Response()
     @_property
     @abstractmethod
     def response(self) -> winrt.system.UInt8: ...
 
-@typing.final
-class INDSendResult(winrt.system.Object, ImplementsINDSendResult):
-    # System.Byte[] Windows.Media.Protection.PlayReady.INDSendResult::get_Response()
-    @_property
-    def response(self) -> winrt.system.UInt8: ...
-
-class ImplementsINDStartResult():
+class INDStartResult(winrt._winrt.IInspectable):
     # Windows.Media.Core.MediaStreamSource Windows.Media.Protection.PlayReady.INDStartResult::get_MediaStreamSource()
     @_property
     @abstractmethod
     def media_stream_source(self) -> windows_media_core.MediaStreamSource: ...
 
-@typing.final
-class INDStartResult(winrt.system.Object, ImplementsINDStartResult):
-    # Windows.Media.Core.MediaStreamSource Windows.Media.Protection.PlayReady.INDStartResult::get_MediaStreamSource()
-    @_property
-    def media_stream_source(self) -> windows_media_core.MediaStreamSource: ...
-
-class ImplementsINDStorageFileHelper():
+class INDStorageFileHelper(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Media.Protection.PlayReady.INDStorageFileHelper::GetFileURLs(Windows.Storage.IStorageFile)
     # @deprecated("INDStorageFileHelper is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def get_file_u_r_ls(self, file: windows_storage.ImplementsIStorageFile, /) -> typing.MutableSequence[str]: ...
+    def get_file_u_r_ls(self, file: windows_storage.IStorageFile, /) -> typing.MutableSequence[str]: ...
 
-@typing.final
-class INDStorageFileHelper(winrt.system.Object, ImplementsINDStorageFileHelper):
-    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Media.Protection.PlayReady.INDStorageFileHelper::GetFileURLs(Windows.Storage.IStorageFile)
-    # @deprecated("INDStorageFileHelper is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def get_file_u_r_ls(self, file: windows_storage.ImplementsIStorageFile, /) -> typing.MutableSequence[str]: ...
-
-class ImplementsINDStreamParser():
+class INDStreamParser(winrt._winrt.IInspectable):
     # System.Void Windows.Media.Protection.PlayReady.INDStreamParser::BeginOfStream()
     # @deprecated("INDStreamParser is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
@@ -1064,7 +911,7 @@ class ImplementsINDStreamParser():
     # System.UInt32 Windows.Media.Protection.PlayReady.INDStreamParser::GetStreamInformation(Windows.Media.Core.IMediaStreamDescriptor,Windows.Media.Protection.PlayReady.NDMediaStreamType&)
     # @deprecated("INDStreamParser is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def get_stream_information(self, descriptor: windows_media_core.ImplementsIMediaStreamDescriptor, /) -> typing.Tuple[winrt.system.UInt32, NDMediaStreamType]: ...
+    def get_stream_information(self, descriptor: windows_media_core.IMediaStreamDescriptor, /) -> typing.Tuple[winrt.system.UInt32, NDMediaStreamType]: ...
     # System.Void Windows.Media.Protection.PlayReady.INDStreamParser::ParseData(System.Byte[])
     # @deprecated("INDStreamParser is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
@@ -1074,33 +921,15 @@ class ImplementsINDStreamParser():
     @abstractmethod
     def notifier(self) -> NDStreamParserNotifier: ...
 
-@typing.final
-class INDStreamParser(winrt.system.Object, ImplementsINDStreamParser):
-    # System.Void Windows.Media.Protection.PlayReady.INDStreamParser::BeginOfStream()
-    # @deprecated("INDStreamParser is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def begin_of_stream(self) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDStreamParser::EndOfStream()
-    # @deprecated("INDStreamParser is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def end_of_stream(self) -> None: ...
-    # System.UInt32 Windows.Media.Protection.PlayReady.INDStreamParser::GetStreamInformation(Windows.Media.Core.IMediaStreamDescriptor,Windows.Media.Protection.PlayReady.NDMediaStreamType&)
-    # @deprecated("INDStreamParser is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def get_stream_information(self, descriptor: windows_media_core.ImplementsIMediaStreamDescriptor, /) -> typing.Tuple[winrt.system.UInt32, NDMediaStreamType]: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDStreamParser::ParseData(System.Byte[])
-    # @deprecated("INDStreamParser is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def parse_data(self, data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
-    # Windows.Media.Protection.PlayReady.NDStreamParserNotifier Windows.Media.Protection.PlayReady.INDStreamParser::get_Notifier()
-    @_property
-    def notifier(self) -> NDStreamParserNotifier: ...
-
-class ImplementsINDStreamParserNotifier():
+class INDStreamParserNotifier(winrt._winrt.IInspectable):
     # System.Void Windows.Media.Protection.PlayReady.INDStreamParserNotifier::OnBeginSetupDecryptor(Windows.Media.Core.IMediaStreamDescriptor,System.Guid,System.Byte[])
     # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def on_begin_setup_decryptor(self, descriptor: windows_media_core.ImplementsIMediaStreamDescriptor, key_id: _uuid.UUID, pro_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    def on_begin_setup_decryptor(self, descriptor: windows_media_core.IMediaStreamDescriptor, key_id: _uuid.UUID, pro_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
     # System.Void Windows.Media.Protection.PlayReady.INDStreamParserNotifier::OnContentIDReceived(Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor)
     # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def on_content_id_received(self, license_fetch_descriptor: ImplementsINDLicenseFetchDescriptor, /) -> None: ...
+    def on_content_id_received(self, license_fetch_descriptor: INDLicenseFetchDescriptor, /) -> None: ...
     # System.Void Windows.Media.Protection.PlayReady.INDStreamParserNotifier::OnMediaStreamDescriptorCreated(Windows.Foundation.Collections.IVector`1<Windows.Media.Core.AudioStreamDescriptor>,Windows.Foundation.Collections.IVector`1<Windows.Media.Core.VideoStreamDescriptor>)
     # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
@@ -1110,22 +939,7 @@ class ImplementsINDStreamParserNotifier():
     @abstractmethod
     def on_sample_parsed(self, stream_id: winrt.system.UInt32, stream_type: NDMediaStreamType, stream_sample: windows_media_core.MediaStreamSample, pts: winrt.system.Int64, cc_format: NDClosedCaptionFormat, cc_data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
 
-@typing.final
-class INDStreamParserNotifier(winrt.system.Object, ImplementsINDStreamParserNotifier):
-    # System.Void Windows.Media.Protection.PlayReady.INDStreamParserNotifier::OnBeginSetupDecryptor(Windows.Media.Core.IMediaStreamDescriptor,System.Guid,System.Byte[])
-    # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_begin_setup_decryptor(self, descriptor: windows_media_core.ImplementsIMediaStreamDescriptor, key_id: _uuid.UUID, pro_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDStreamParserNotifier::OnContentIDReceived(Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor)
-    # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_content_id_received(self, license_fetch_descriptor: ImplementsINDLicenseFetchDescriptor, /) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDStreamParserNotifier::OnMediaStreamDescriptorCreated(Windows.Foundation.Collections.IVector`1<Windows.Media.Core.AudioStreamDescriptor>,Windows.Foundation.Collections.IVector`1<Windows.Media.Core.VideoStreamDescriptor>)
-    # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_media_stream_descriptor_created(self, audio_stream_descriptors: typing.MutableSequence[windows_media_core.AudioStreamDescriptor], video_stream_descriptors: typing.MutableSequence[windows_media_core.VideoStreamDescriptor], /) -> None: ...
-    # System.Void Windows.Media.Protection.PlayReady.INDStreamParserNotifier::OnSampleParsed(System.UInt32,Windows.Media.Protection.PlayReady.NDMediaStreamType,Windows.Media.Core.MediaStreamSample,System.Int64,Windows.Media.Protection.PlayReady.NDClosedCaptionFormat,System.Byte[])
-    # @deprecated("INDStreamParserNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def on_sample_parsed(self, stream_id: winrt.system.UInt32, stream_type: NDMediaStreamType, stream_sample: windows_media_core.MediaStreamSample, pts: winrt.system.Int64, cc_format: NDClosedCaptionFormat, cc_data_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
-
-class ImplementsINDTransmitterProperties():
+class INDTransmitterProperties(winrt._winrt.IInspectable):
     # Windows.Media.Protection.PlayReady.NDCertificateType Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_CertificateType()
     @_property
     @abstractmethod
@@ -1171,43 +985,7 @@ class ImplementsINDTransmitterProperties():
     @abstractmethod
     def supported_features(self) -> NDCertificateFeature: ...
 
-@typing.final
-class INDTransmitterProperties(winrt.system.Object, ImplementsINDTransmitterProperties):
-    # Windows.Media.Protection.PlayReady.NDCertificateType Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_CertificateType()
-    @_property
-    def certificate_type(self) -> NDCertificateType: ...
-    # System.Byte[] Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_ClientID()
-    @_property
-    def client_id(self) -> winrt.system.UInt8: ...
-    # Windows.Foundation.DateTime Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_ExpirationDate()
-    @_property
-    def expiration_date(self) -> datetime.datetime: ...
-    # System.Byte[] Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_ModelDigest()
-    @_property
-    def model_digest(self) -> winrt.system.UInt8: ...
-    # System.String Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_ModelManufacturerName()
-    @_property
-    def model_manufacturer_name(self) -> str: ...
-    # System.String Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_ModelName()
-    @_property
-    def model_name(self) -> str: ...
-    # System.String Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_ModelNumber()
-    @_property
-    def model_number(self) -> str: ...
-    # Windows.Media.Protection.PlayReady.NDCertificatePlatformID Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_PlatformIdentifier()
-    @_property
-    def platform_identifier(self) -> NDCertificatePlatformID: ...
-    # System.UInt32 Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_SecurityLevel()
-    @_property
-    def security_level(self) -> winrt.system.UInt32: ...
-    # System.UInt32 Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_SecurityVersion()
-    @_property
-    def security_version(self) -> winrt.system.UInt32: ...
-    # Windows.Media.Protection.PlayReady.NDCertificateFeature[] Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_SupportedFeatures()
-    @_property
-    def supported_features(self) -> NDCertificateFeature: ...
-
-class ImplementsIPlayReadyDomain():
+class IPlayReadyDomain(winrt._winrt.IInspectable):
     # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyDomain::get_AccountId()
     @_property
     @abstractmethod
@@ -1229,25 +1007,7 @@ class ImplementsIPlayReadyDomain():
     @abstractmethod
     def service_id(self) -> _uuid.UUID: ...
 
-@typing.final
-class IPlayReadyDomain(winrt.system.Object, ImplementsIPlayReadyDomain):
-    # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyDomain::get_AccountId()
-    @_property
-    def account_id(self) -> _uuid.UUID: ...
-    # Windows.Foundation.Uri Windows.Media.Protection.PlayReady.IPlayReadyDomain::get_DomainJoinUrl()
-    @_property
-    def domain_join_url(self) -> windows_foundation.Uri: ...
-    # System.String Windows.Media.Protection.PlayReady.IPlayReadyDomain::get_FriendlyName()
-    @_property
-    def friendly_name(self) -> str: ...
-    # System.UInt32 Windows.Media.Protection.PlayReady.IPlayReadyDomain::get_Revision()
-    @_property
-    def revision(self) -> winrt.system.UInt32: ...
-    # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyDomain::get_ServiceId()
-    @_property
-    def service_id(self) -> _uuid.UUID: ...
-
-class ImplementsIPlayReadyLicense():
+class IPlayReadyLicense(winrt._winrt.IInspectable):
     # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyLicense::GetKIDAtChainDepth(System.UInt32)
     @abstractmethod
     def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32, /) -> _uuid.UUID: ...
@@ -1276,30 +1036,7 @@ class ImplementsIPlayReadyLicense():
     @abstractmethod
     def usable_for_play(self) -> bool: ...
 
-@typing.final
-class IPlayReadyLicense(winrt.system.Object, ImplementsIPlayReadyLicense):
-    # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyLicense::GetKIDAtChainDepth(System.UInt32)
-    def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32, /) -> _uuid.UUID: ...
-    # System.UInt32 Windows.Media.Protection.PlayReady.IPlayReadyLicense::get_ChainDepth()
-    @_property
-    def chain_depth(self) -> winrt.system.UInt32: ...
-    # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyLicense::get_DomainAccountID()
-    @_property
-    def domain_account_id(self) -> _uuid.UUID: ...
-    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Media.Protection.PlayReady.IPlayReadyLicense::get_ExpirationDate()
-    @_property
-    def expiration_date(self) -> typing.Optional[datetime.datetime]: ...
-    # System.UInt32 Windows.Media.Protection.PlayReady.IPlayReadyLicense::get_ExpireAfterFirstPlay()
-    @_property
-    def expire_after_first_play(self) -> winrt.system.UInt32: ...
-    # System.Boolean Windows.Media.Protection.PlayReady.IPlayReadyLicense::get_FullyEvaluated()
-    @_property
-    def fully_evaluated(self) -> bool: ...
-    # System.Boolean Windows.Media.Protection.PlayReady.IPlayReadyLicense::get_UsableForPlay()
-    @_property
-    def usable_for_play(self) -> bool: ...
-
-class ImplementsIPlayReadyLicenseAcquisitionServiceRequest(ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class IPlayReadyLicenseAcquisitionServiceRequest(IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest, winrt._winrt.IInspectable):
     # Windows.Media.Protection.PlayReady.PlayReadyContentHeader Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest::get_ContentHeader()
     @_property
     @abstractmethod
@@ -1317,51 +1054,7 @@ class ImplementsIPlayReadyLicenseAcquisitionServiceRequest(ImplementsIPlayReadyS
     @abstractmethod
     def domain_service_id(self, value: _uuid.UUID) -> None: ...
 
-@typing.final
-class IPlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object, ImplementsIPlayReadyLicenseAcquisitionServiceRequest, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
-    # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::BeginServiceRequest()
-    def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Media.Protection.PlayReady.PlayReadySoapMessage Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::GenerateManualEnablingChallenge()
-    def generate_manual_enabling_challenge(self) -> PlayReadySoapMessage: ...
-    # Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::NextServiceRequest()
-    def next_service_request(self) -> IPlayReadyServiceRequest: ...
-    # Windows.Foundation.HResult Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::ProcessManualEnablingResponse(System.Byte[])
-    def process_manual_enabling_response(self, response_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.HResult: ...
-    # Windows.Media.Protection.PlayReady.PlayReadyContentHeader Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest::get_ContentHeader()
-    @_property
-    def content_header(self) -> PlayReadyContentHeader: ...
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest::put_ContentHeader(Windows.Media.Protection.PlayReady.PlayReadyContentHeader)
-    @content_header.setter
-    def content_header(self, value: PlayReadyContentHeader) -> None: ...
-    # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest::get_DomainServiceId()
-    @_property
-    def domain_service_id(self) -> _uuid.UUID: ...
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest::put_DomainServiceId(System.Guid)
-    @domain_service_id.setter
-    def domain_service_id(self, value: _uuid.UUID) -> None: ...
-    # System.String Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::get_ChallengeCustomData()
-    @_property
-    def challenge_custom_data(self) -> str: ...
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::put_ChallengeCustomData(System.String)
-    @challenge_custom_data.setter
-    def challenge_custom_data(self, value: str) -> None: ...
-    # System.String Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::get_ResponseCustomData()
-    @_property
-    def response_custom_data(self) -> str: ...
-    # Windows.Foundation.Uri Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::get_Uri()
-    @_property
-    def uri(self) -> windows_foundation.Uri: ...
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::put_Uri(Windows.Foundation.Uri)
-    @uri.setter
-    def uri(self, value: windows_foundation.Uri) -> None: ...
-    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_ProtectionSystem()
-    @_property
-    def protection_system(self) -> _uuid.UUID: ...
-    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_Type()
-    @_property
-    def type(self) -> _uuid.UUID: ...
-
-class ImplementsIPlayReadyLicenseSession():
+class IPlayReadyLicenseSession(winrt._winrt.IInspectable):
     # System.Void Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession::ConfigureMediaProtectionManager(Windows.Media.Protection.MediaProtectionManager)
     @abstractmethod
     def configure_media_protection_manager(self, mpm: windows_media_protection.MediaProtectionManager, /) -> None: ...
@@ -1369,28 +1062,12 @@ class ImplementsIPlayReadyLicenseSession():
     @abstractmethod
     def create_l_a_service_request(self) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
 
-@typing.final
-class IPlayReadyLicenseSession(winrt.system.Object, ImplementsIPlayReadyLicenseSession):
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession::ConfigureMediaProtectionManager(Windows.Media.Protection.MediaProtectionManager)
-    def configure_media_protection_manager(self, mpm: windows_media_protection.MediaProtectionManager, /) -> None: ...
-    # Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession::CreateLAServiceRequest()
-    def create_l_a_service_request(self) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
-
-class ImplementsIPlayReadyLicenseSession2(ImplementsIPlayReadyLicenseSession):
+class IPlayReadyLicenseSession2(IPlayReadyLicenseSession, winrt._winrt.IInspectable):
     # Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2::CreateLicenseIterable(Windows.Media.Protection.PlayReady.PlayReadyContentHeader,System.Boolean)
     @abstractmethod
     def create_license_iterable(self, content_header: PlayReadyContentHeader, fully_evaluated: bool, /) -> PlayReadyLicenseIterable: ...
 
-@typing.final
-class IPlayReadyLicenseSession2(winrt.system.Object, ImplementsIPlayReadyLicenseSession2, ImplementsIPlayReadyLicenseSession):
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession::ConfigureMediaProtectionManager(Windows.Media.Protection.MediaProtectionManager)
-    def configure_media_protection_manager(self, mpm: windows_media_protection.MediaProtectionManager, /) -> None: ...
-    # Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession::CreateLAServiceRequest()
-    def create_l_a_service_request(self) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
-    # Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2::CreateLicenseIterable(Windows.Media.Protection.PlayReady.PlayReadyContentHeader,System.Boolean)
-    def create_license_iterable(self, content_header: PlayReadyContentHeader, fully_evaluated: bool, /) -> PlayReadyLicenseIterable: ...
-
-class ImplementsIPlayReadySecureStopServiceRequest(ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class IPlayReadySecureStopServiceRequest(IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest, winrt._winrt.IInspectable):
     # System.Byte[] Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest::get_PublisherCertificate()
     @_property
     @abstractmethod
@@ -1412,54 +1089,7 @@ class ImplementsIPlayReadySecureStopServiceRequest(ImplementsIPlayReadyServiceRe
     @abstractmethod
     def update_time(self) -> datetime.datetime: ...
 
-@typing.final
-class IPlayReadySecureStopServiceRequest(winrt.system.Object, ImplementsIPlayReadySecureStopServiceRequest, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
-    # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::BeginServiceRequest()
-    def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Media.Protection.PlayReady.PlayReadySoapMessage Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::GenerateManualEnablingChallenge()
-    def generate_manual_enabling_challenge(self) -> PlayReadySoapMessage: ...
-    # Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::NextServiceRequest()
-    def next_service_request(self) -> IPlayReadyServiceRequest: ...
-    # Windows.Foundation.HResult Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::ProcessManualEnablingResponse(System.Byte[])
-    def process_manual_enabling_response(self, response_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.HResult: ...
-    # System.Byte[] Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest::get_PublisherCertificate()
-    @_property
-    def publisher_certificate(self) -> winrt.system.UInt8: ...
-    # System.Guid Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest::get_SessionID()
-    @_property
-    def session_id(self) -> _uuid.UUID: ...
-    # Windows.Foundation.DateTime Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest::get_StartTime()
-    @_property
-    def start_time(self) -> datetime.datetime: ...
-    # System.Boolean Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest::get_Stopped()
-    @_property
-    def stopped(self) -> bool: ...
-    # Windows.Foundation.DateTime Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest::get_UpdateTime()
-    @_property
-    def update_time(self) -> datetime.datetime: ...
-    # System.String Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::get_ChallengeCustomData()
-    @_property
-    def challenge_custom_data(self) -> str: ...
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::put_ChallengeCustomData(System.String)
-    @challenge_custom_data.setter
-    def challenge_custom_data(self, value: str) -> None: ...
-    # System.String Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::get_ResponseCustomData()
-    @_property
-    def response_custom_data(self) -> str: ...
-    # Windows.Foundation.Uri Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::get_Uri()
-    @_property
-    def uri(self) -> windows_foundation.Uri: ...
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::put_Uri(Windows.Foundation.Uri)
-    @uri.setter
-    def uri(self, value: windows_foundation.Uri) -> None: ...
-    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_ProtectionSystem()
-    @_property
-    def protection_system(self) -> _uuid.UUID: ...
-    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_Type()
-    @_property
-    def type(self) -> _uuid.UUID: ...
-
-class ImplementsIPlayReadyServiceRequest(windows_media_protection.ImplementsIMediaProtectionServiceRequest):
+class IPlayReadyServiceRequest(windows_media_protection.IMediaProtectionServiceRequest, winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::BeginServiceRequest()
     @abstractmethod
     def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
@@ -1492,36 +1122,4 @@ class ImplementsIPlayReadyServiceRequest(windows_media_protection.ImplementsIMed
     @uri.setter
     @abstractmethod
     def uri(self, value: windows_foundation.Uri) -> None: ...
-
-@typing.final
-class IPlayReadyServiceRequest(winrt.system.Object, ImplementsIPlayReadyServiceRequest, windows_media_protection.ImplementsIMediaProtectionServiceRequest):
-    # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::BeginServiceRequest()
-    def begin_service_request(self) -> windows_foundation.IAsyncAction: ...
-    # Windows.Media.Protection.PlayReady.PlayReadySoapMessage Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::GenerateManualEnablingChallenge()
-    def generate_manual_enabling_challenge(self) -> PlayReadySoapMessage: ...
-    # Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::NextServiceRequest()
-    def next_service_request(self) -> IPlayReadyServiceRequest: ...
-    # Windows.Foundation.HResult Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::ProcessManualEnablingResponse(System.Byte[])
-    def process_manual_enabling_response(self, response_bytes: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> windows_foundation.HResult: ...
-    # System.String Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::get_ChallengeCustomData()
-    @_property
-    def challenge_custom_data(self) -> str: ...
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::put_ChallengeCustomData(System.String)
-    @challenge_custom_data.setter
-    def challenge_custom_data(self, value: str) -> None: ...
-    # System.String Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::get_ResponseCustomData()
-    @_property
-    def response_custom_data(self) -> str: ...
-    # Windows.Foundation.Uri Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::get_Uri()
-    @_property
-    def uri(self) -> windows_foundation.Uri: ...
-    # System.Void Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest::put_Uri(Windows.Foundation.Uri)
-    @uri.setter
-    def uri(self, value: windows_foundation.Uri) -> None: ...
-    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_ProtectionSystem()
-    @_property
-    def protection_system(self) -> _uuid.UUID: ...
-    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_Type()
-    @_property
-    def type(self) -> _uuid.UUID: ...
 

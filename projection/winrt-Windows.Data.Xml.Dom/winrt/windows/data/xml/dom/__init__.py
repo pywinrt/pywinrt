@@ -21,15 +21,10 @@ from winrt._winrt_windows_data_xml_dom import (
     XmlProcessingInstruction,
     XmlText,
     IXmlCharacterData,
-    ImplementsIXmlCharacterData,
     IXmlNode,
-    ImplementsIXmlNode,
     IXmlNodeSelector,
-    ImplementsIXmlNodeSelector,
     IXmlNodeSerializer,
-    ImplementsIXmlNodeSerializer,
     IXmlText,
-    ImplementsIXmlText,
 )
 
 __all__ = [
@@ -51,15 +46,10 @@ __all__ = [
     "XmlProcessingInstruction",
     "XmlText",
     "IXmlCharacterData",
-    "ImplementsIXmlCharacterData",
     "IXmlNode",
-    "ImplementsIXmlNode",
     "IXmlNodeSelector",
-    "ImplementsIXmlNodeSelector",
     "IXmlNodeSerializer",
-    "ImplementsIXmlNodeSerializer",
     "IXmlText",
-    "ImplementsIXmlText",
 ]
 
 class NodeType(enum.IntEnum):

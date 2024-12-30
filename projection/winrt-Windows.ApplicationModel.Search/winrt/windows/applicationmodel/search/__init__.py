@@ -17,7 +17,6 @@ from winrt._winrt_windows_applicationmodel_search import (
     SearchSuggestionsRequest,
     SearchSuggestionsRequestDeferral,
     ISearchPaneQueryChangedEventArgs,
-    ImplementsISearchPaneQueryChangedEventArgs,
 )
 
 __all__ = [
@@ -36,6 +35,5 @@ __all__ = [
     "SearchSuggestionsRequest",
     "SearchSuggestionsRequestDeferral",
     "ISearchPaneQueryChangedEventArgs",
-    "ImplementsISearchPaneQueryChangedEventArgs",
 ]
 

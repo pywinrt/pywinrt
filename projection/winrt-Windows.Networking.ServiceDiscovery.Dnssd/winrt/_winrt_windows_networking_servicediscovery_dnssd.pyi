@@ -20,7 +20,7 @@ from winrt.windows.networking.servicediscovery.dnssd import DnssdRegistrationSta
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DnssdRegistrationResult(winrt.system.Object, windows_foundation.ImplementsIStringable):
+class DnssdRegistrationResult(winrt.system.Object, windows_foundation.IStringable):
     def __str__(self) -> str: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.String Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult::ToString()
@@ -36,7 +36,7 @@ class DnssdRegistrationResult(winrt.system.Object, windows_foundation.Implements
     def status(self) -> DnssdRegistrationStatus: ...
 
 @typing.final
-class DnssdServiceInstance(winrt.system.Object, windows_foundation.ImplementsIStringable):
+class DnssdServiceInstance(winrt.system.Object, windows_foundation.IStringable):
     def __str__(self) -> str: ...
     def __new__(cls: typing.Type[Self], dnssd_service_instance_name: str, host_name: windows_networking.HostName, port: winrt.system.UInt16) -> Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterDatagramSocketAsync(Windows.Networking.Sockets.DatagramSocket)

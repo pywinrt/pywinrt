@@ -11,15 +11,10 @@ from winrt._winrt_windows_ui_text import (
     RichEditTextRange,
     TextConstants,
     ITextCharacterFormat,
-    ImplementsITextCharacterFormat,
     ITextDocument,
-    ImplementsITextDocument,
     ITextParagraphFormat,
-    ImplementsITextParagraphFormat,
     ITextRange,
-    ImplementsITextRange,
     ITextSelection,
-    ImplementsITextSelection,
 )
 
 __all__ = [
@@ -58,15 +53,10 @@ __all__ = [
     "RichEditTextRange",
     "TextConstants",
     "ITextCharacterFormat",
-    "ImplementsITextCharacterFormat",
     "ITextDocument",
-    "ImplementsITextDocument",
     "ITextParagraphFormat",
-    "ImplementsITextParagraphFormat",
     "ITextRange",
-    "ImplementsITextRange",
     "ITextSelection",
-    "ImplementsITextSelection",
 ]
 
 class CaretType(enum.IntEnum):

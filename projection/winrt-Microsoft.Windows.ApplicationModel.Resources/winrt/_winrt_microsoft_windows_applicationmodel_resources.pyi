@@ -71,7 +71,7 @@ class ResourceCandidate(winrt.system.Object):
     def value_as_string(self) -> str: ...
 
 @typing.final
-class ResourceContext(winrt.system.Object, ImplementsIResourceContext):
+class ResourceContext(winrt.system.Object, IResourceContext):
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.ApplicationModel.Resources.ResourceContext::get_QualifierValues()
     @_property
     def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
@@ -95,7 +95,7 @@ class ResourceLoader(winrt.system.Object, metaclass=ResourceLoader_Static):
     def get_string_for_uri(self, resource_uri: windows_foundation.Uri, /) -> str: ...
 
 @typing.final
-class ResourceManager(winrt.system.Object, ImplementsIResourceManager):
+class ResourceManager(winrt.system.Object, IResourceManager):
     @typing.overload
     def __new__(cls: typing.Type[Self], file_name: str) -> Self: ...
     @typing.overload
@@ -143,19 +143,13 @@ class ResourceNotFoundEventArgs(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
-class ImplementsIResourceContext():
+class IResourceContext(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.ApplicationModel.Resources.IResourceContext::get_QualifierValues()
     @_property
     @abstractmethod
     def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
 
-@typing.final
-class IResourceContext(winrt.system.Object, ImplementsIResourceContext):
-    # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.ApplicationModel.Resources.IResourceContext::get_QualifierValues()
-    @_property
-    def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
-
-class ImplementsIResourceManager():
+class IResourceManager(winrt._winrt.IInspectable):
     # Microsoft.Windows.ApplicationModel.Resources.ResourceContext Microsoft.Windows.ApplicationModel.Resources.IResourceManager::CreateResourceContext()
     @abstractmethod
     def create_resource_context(self) -> ResourceContext: ...
@@ -168,17 +162,5 @@ class ImplementsIResourceManager():
     # Microsoft.Windows.ApplicationModel.Resources.ResourceMap Microsoft.Windows.ApplicationModel.Resources.IResourceManager::get_MainResourceMap()
     @_property
     @abstractmethod
-    def main_resource_map(self) -> ResourceMap: ...
-
-@typing.final
-class IResourceManager(winrt.system.Object, ImplementsIResourceManager):
-    # Microsoft.Windows.ApplicationModel.Resources.ResourceContext Microsoft.Windows.ApplicationModel.Resources.IResourceManager::CreateResourceContext()
-    def create_resource_context(self) -> ResourceContext: ...
-    # Windows.Foundation.EventRegistrationToken Microsoft.Windows.ApplicationModel.Resources.IResourceManager::add_ResourceNotFound(Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.ApplicationModel.Resources.ResourceManager,Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs>)
-    def add_resource_not_found(self, handler: windows_foundation.TypedEventHandler[ResourceManager, ResourceNotFoundEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
-    # System.Void Microsoft.Windows.ApplicationModel.Resources.IResourceManager::remove_ResourceNotFound(Windows.Foundation.EventRegistrationToken)
-    def remove_resource_not_found(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-    # Microsoft.Windows.ApplicationModel.Resources.ResourceMap Microsoft.Windows.ApplicationModel.Resources.IResourceManager::get_MainResourceMap()
-    @_property
     def main_resource_map(self) -> ResourceMap: ...
 

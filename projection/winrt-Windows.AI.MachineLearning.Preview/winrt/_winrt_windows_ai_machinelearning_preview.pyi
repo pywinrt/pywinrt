@@ -21,7 +21,7 @@ from winrt.windows.ai.machinelearning.preview import FeatureElementKindPreview, 
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ImageVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
+class ImageVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # Windows.Graphics.Imaging.BitmapPixelFormat Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_BitmapPixelFormat()
     @_property
     def bitmap_pixel_format(self) -> windows_graphics_imaging.BitmapPixelFormat: ...
@@ -89,7 +89,7 @@ class LearningModelBindingPreview(winrt.system.Object, winrt._winrt.Mapping[str,
     def bind(self, name: str, value: winrt.system.Object, /) -> None: ...
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Bind(System.String,System.Object,Windows.Foundation.Collections.IPropertySet)
     # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
-    def bind_with_properties(self, name: str, value: winrt.system.Object, metadata: windows_foundation_collections.ImplementsIPropertySet, /) -> None: ...
+    def bind_with_properties(self, name: str, value: winrt.system.Object, metadata: windows_foundation_collections.IPropertySet, /) -> None: ...
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Clear()
     # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
     def clear(self) -> None: ...
@@ -145,10 +145,10 @@ class LearningModelEvaluationResultPreview(winrt.system.Object):
 class LearningModelPreview_Static(type):
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.Preview.LearningModelPreview> Windows.AI.MachineLearning.Preview.LearningModelPreview::LoadModelFromStorageFileAsync(Windows.Storage.IStorageFile)
     # @deprecated("Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.")
-    def load_model_from_storage_file_async(cls, model_file: windows_storage.ImplementsIStorageFile, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
+    def load_model_from_storage_file_async(cls, model_file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.Preview.LearningModelPreview> Windows.AI.MachineLearning.Preview.LearningModelPreview::LoadModelFromStreamAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
     # @deprecated("Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.")
-    def load_model_from_stream_async(cls, model_stream: windows_storage_streams.ImplementsIRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
+    def load_model_from_stream_async(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
 
 @typing.final
 class LearningModelPreview(winrt.system.Object, metaclass=LearningModelPreview_Static):
@@ -169,7 +169,7 @@ class LearningModelPreview(winrt.system.Object, metaclass=LearningModelPreview_S
     def description(self) -> LearningModelDescriptionPreview: ...
 
 @typing.final
-class LearningModelVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
+class LearningModelVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # System.String Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview::get_Description()
     @_property
     def description(self) -> str: ...
@@ -184,7 +184,7 @@ class LearningModelVariableDescriptorPreview(winrt.system.Object, ImplementsILea
     def name(self) -> str: ...
 
 @typing.final
-class MapVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
+class MapVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # System.String Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_Description()
     @_property
     def description(self) -> str: ...
@@ -211,7 +211,7 @@ class MapVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModel
     def valid_string_keys(self) -> typing.Iterable[str]: ...
 
 @typing.final
-class SequenceVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
+class SequenceVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # System.String Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview::get_Description()
     @_property
     def description(self) -> str: ...
@@ -229,7 +229,7 @@ class SequenceVariableDescriptorPreview(winrt.system.Object, ImplementsILearning
     def element_type(self) -> ILearningModelVariableDescriptorPreview: ...
 
 @typing.final
-class TensorVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
+class TensorVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # System.String Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview::get_Description()
     @_property
     def description(self) -> str: ...
@@ -249,7 +249,7 @@ class TensorVariableDescriptorPreview(winrt.system.Object, ImplementsILearningMo
     @_property
     def shape(self) -> typing.Iterable[winrt.system.Int64]: ...
 
-class ImplementsILearningModelVariableDescriptorPreview():
+class ILearningModelVariableDescriptorPreview(winrt._winrt.IInspectable):
     # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Description()
     @_property
     @abstractmethod
@@ -265,20 +265,5 @@ class ImplementsILearningModelVariableDescriptorPreview():
     # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Name()
     @_property
     @abstractmethod
-    def name(self) -> str: ...
-
-@typing.final
-class ILearningModelVariableDescriptorPreview(winrt.system.Object, ImplementsILearningModelVariableDescriptorPreview):
-    # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Description()
-    @_property
-    def description(self) -> str: ...
-    # System.Boolean Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_IsRequired()
-    @_property
-    def is_required(self) -> bool: ...
-    # Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_ModelFeatureKind()
-    @_property
-    def model_feature_kind(self) -> LearningModelFeatureKindPreview: ...
-    # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Name()
-    @_property
     def name(self) -> str: ...
 

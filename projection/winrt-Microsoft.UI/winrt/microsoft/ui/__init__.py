@@ -11,7 +11,6 @@ from winrt._winrt_microsoft_ui import (
     ColorHelper,
     Colors,
     IClosableNotifier,
-    ImplementsIClosableNotifier,
 )
 
 __all__ = [
@@ -21,7 +20,6 @@ __all__ = [
     "ColorHelper",
     "Colors",
     "IClosableNotifier",
-    "ImplementsIClosableNotifier",
     "ClosableNotifierHandler",
 ]
 

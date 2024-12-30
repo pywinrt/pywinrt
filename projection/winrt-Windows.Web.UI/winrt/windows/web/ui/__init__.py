@@ -19,9 +19,7 @@ from winrt._winrt_windows_web_ui import (
     WebViewControlUnviewableContentIdentifiedEventArgs,
     WebViewControlWebResourceRequestedEventArgs,
     IWebViewControl,
-    ImplementsIWebViewControl,
     IWebViewControl2,
-    ImplementsIWebViewControl2,
 )
 
 __all__ = [
@@ -42,9 +40,7 @@ __all__ = [
     "WebViewControlUnviewableContentIdentifiedEventArgs",
     "WebViewControlWebResourceRequestedEventArgs",
     "IWebViewControl",
-    "ImplementsIWebViewControl",
     "IWebViewControl2",
-    "ImplementsIWebViewControl2",
 ]
 
 class WebViewControlPermissionState(enum.IntEnum):

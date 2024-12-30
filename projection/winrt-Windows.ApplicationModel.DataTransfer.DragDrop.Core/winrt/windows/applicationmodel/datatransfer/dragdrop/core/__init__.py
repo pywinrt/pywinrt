@@ -10,7 +10,6 @@ from winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core import (
     CoreDragUIOverride,
     CoreDropOperationTargetRequestedEventArgs,
     ICoreDropOperationTarget,
-    ImplementsICoreDropOperationTarget,
 )
 
 __all__ = [
@@ -21,7 +20,6 @@ __all__ = [
     "CoreDragUIOverride",
     "CoreDropOperationTargetRequestedEventArgs",
     "ICoreDropOperationTarget",
-    "ImplementsICoreDropOperationTarget",
 ]
 
 class CoreDragUIContentMode(enum.IntFlag):

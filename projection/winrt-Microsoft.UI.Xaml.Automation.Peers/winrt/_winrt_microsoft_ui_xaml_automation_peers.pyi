@@ -36,7 +36,7 @@ class AnimatedVisualPlayerAutomationPeer(FrameworkElementAutomationPeer, metacla
 class AppBarAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class AppBarAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIWindowProvider, microsoft_ui_xaml_automation_provider.ImplementsIToggleProvider, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=AppBarAutomationPeer_Static):
+class AppBarAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IWindowProvider, microsoft_ui_xaml_automation_provider.IToggleProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=AppBarAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.AppBar) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.AppBarAutomationPeer::Close()
     def close(self) -> None: ...
@@ -86,7 +86,7 @@ class AppBarAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_aut
 class AppBarButtonAutomationPeer_Static(ButtonAutomationPeer_Static):
     pass
 
-class AppBarButtonAutomationPeer(ButtonAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=AppBarButtonAutomationPeer_Static):
+class AppBarButtonAutomationPeer(ButtonAutomationPeer, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=AppBarButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.AppBarButton) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -104,7 +104,7 @@ class AppBarToggleButtonAutomationPeer(ToggleButtonAutomationPeer, metaclass=App
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.AppBarToggleButton) -> Self: ...
 
 @typing.final
-class AutoSuggestBoxAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider):
+class AutoSuggestBoxAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IInvokeProvider):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.AutoSuggestBox) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer::Invoke()
     def invoke(self) -> None: ...
@@ -415,7 +415,7 @@ class AutomationPeerAnnotation(microsoft_ui_xaml.DependencyObject, metaclass=Aut
 class BreadcrumbBarItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class BreadcrumbBarItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=BreadcrumbBarItemAutomationPeer_Static):
+class BreadcrumbBarItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IInvokeProvider, metaclass=BreadcrumbBarItemAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.BreadcrumbBarItem) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.BreadcrumbBarItemAutomationPeer::Invoke()
     def invoke(self) -> None: ...
@@ -423,7 +423,7 @@ class BreadcrumbBarItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_
 class ButtonAutomationPeer_Static(ButtonBaseAutomationPeer_Static):
     pass
 
-class ButtonAutomationPeer(ButtonBaseAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=ButtonAutomationPeer_Static):
+class ButtonAutomationPeer(ButtonBaseAutomationPeer, microsoft_ui_xaml_automation_provider.IInvokeProvider, metaclass=ButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.Button) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ButtonAutomationPeer::Invoke()
     def invoke(self) -> None: ...
@@ -437,7 +437,7 @@ class ButtonBaseAutomationPeer(FrameworkElementAutomationPeer, metaclass=ButtonB
 class CalendarDatePickerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class CalendarDatePickerAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIValueProvider, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=CalendarDatePickerAutomationPeer_Static):
+class CalendarDatePickerAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IValueProvider, microsoft_ui_xaml_automation_provider.IInvokeProvider, metaclass=CalendarDatePickerAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.CalendarDatePicker) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer::Invoke()
     def invoke(self) -> None: ...
@@ -473,7 +473,7 @@ class ColorSpectrumAutomationPeer(FrameworkElementAutomationPeer, metaclass=Colo
 class ComboBoxAutomationPeer_Static(SelectorAutomationPeer_Static):
     pass
 
-class ComboBoxAutomationPeer(SelectorAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIWindowProvider, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, microsoft_ui_xaml_automation_provider.ImplementsIValueProvider, metaclass=ComboBoxAutomationPeer_Static):
+class ComboBoxAutomationPeer(SelectorAutomationPeer, microsoft_ui_xaml_automation_provider.IWindowProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, microsoft_ui_xaml_automation_provider.IValueProvider, metaclass=ComboBoxAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ComboBox) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer::Close()
     def close(self) -> None: ...
@@ -533,7 +533,7 @@ class ComboBoxItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=Combo
 class ComboBoxItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
-class ComboBoxItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=ComboBoxItemDataAutomationPeer_Static):
+class ComboBoxItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollItemProvider, metaclass=ComboBoxItemDataAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: ComboBoxAutomationPeer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ComboBoxItemDataAutomationPeer::ScrollIntoView()
     def scroll_into_view(self) -> None: ...
@@ -551,7 +551,7 @@ class DatePickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
 class DropDownButtonAutomationPeer_Static(ButtonAutomationPeer_Static):
     pass
 
-class DropDownButtonAutomationPeer(ButtonAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=DropDownButtonAutomationPeer_Static):
+class DropDownButtonAutomationPeer(ButtonAutomationPeer, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=DropDownButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.DropDownButton) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.DropDownButtonAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -565,7 +565,7 @@ class DropDownButtonAutomationPeer(ButtonAutomationPeer, microsoft_ui_xaml_autom
 class ExpanderAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class ExpanderAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=ExpanderAutomationPeer_Static):
+class ExpanderAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=ExpanderAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.Expander) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ExpanderAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -591,7 +591,7 @@ class FlipViewItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=FlipV
 class FlipViewItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
-class FlipViewItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=FlipViewItemDataAutomationPeer_Static):
+class FlipViewItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollItemProvider, metaclass=FlipViewItemDataAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: FlipViewAutomationPeer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.FlipViewItemDataAutomationPeer::ScrollIntoView()
     def scroll_into_view(self) -> None: ...
@@ -636,7 +636,7 @@ class GridViewItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=GridV
 class GridViewItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
-class GridViewItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=GridViewItemDataAutomationPeer_Static):
+class GridViewItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollItemProvider, metaclass=GridViewItemDataAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: GridViewAutomationPeer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.GridViewItemDataAutomationPeer::ScrollIntoView()
     def scroll_into_view(self) -> None: ...
@@ -656,7 +656,7 @@ class HubAutomationPeer(FrameworkElementAutomationPeer, metaclass=HubAutomationP
 class HubSectionAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class HubSectionAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=HubSectionAutomationPeer_Static):
+class HubSectionAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollItemProvider, metaclass=HubSectionAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.HubSection) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.HubSectionAutomationPeer::ScrollIntoView()
     def scroll_into_view(self) -> None: ...
@@ -664,7 +664,7 @@ class HubSectionAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml
 class HyperlinkButtonAutomationPeer_Static(ButtonBaseAutomationPeer_Static):
     pass
 
-class HyperlinkButtonAutomationPeer(ButtonBaseAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=HyperlinkButtonAutomationPeer_Static):
+class HyperlinkButtonAutomationPeer(ButtonBaseAutomationPeer, microsoft_ui_xaml_automation_provider.IInvokeProvider, metaclass=HyperlinkButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.HyperlinkButton) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.HyperlinkButtonAutomationPeer::Invoke()
     def invoke(self) -> None: ...
@@ -684,7 +684,7 @@ class InfoBarAutomationPeer(FrameworkElementAutomationPeer, metaclass=InfoBarAut
 class ItemAutomationPeer_Static(AutomationPeer_Static):
     pass
 
-class ItemAutomationPeer(AutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIVirtualizedItemProvider, metaclass=ItemAutomationPeer_Static):
+class ItemAutomationPeer(AutomationPeer, microsoft_ui_xaml_automation_provider.IVirtualizedItemProvider, metaclass=ItemAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: ItemsControlAutomationPeer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ItemAutomationPeer::Realize()
     def realize(self) -> None: ...
@@ -700,7 +700,7 @@ class ItemAutomationPeer(AutomationPeer, microsoft_ui_xaml_automation_provider.I
 class ItemContainerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class ItemContainerAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider, microsoft_ui_xaml_automation_provider.ImplementsISelectionItemProvider, metaclass=ItemContainerAutomationPeer_Static):
+class ItemContainerAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IInvokeProvider, microsoft_ui_xaml_automation_provider.ISelectionItemProvider, metaclass=ItemContainerAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ItemContainer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ItemContainerAutomationPeer::AddToSelection()
     def add_to_selection(self) -> None: ...
@@ -722,7 +722,7 @@ class ItemContainerAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_x
 class ItemsControlAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class ItemsControlAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIItemContainerProvider, metaclass=ItemsControlAutomationPeer_Static):
+class ItemsControlAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IItemContainerProvider, metaclass=ItemsControlAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ItemsControl) -> Self: ...
     @typing.final
     # Microsoft.UI.Xaml.Automation.Peers.ItemAutomationPeer Microsoft.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer::CreateItemAutomationPeer(System.Object)
@@ -735,7 +735,7 @@ class ItemsControlAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xa
 class ItemsViewAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class ItemsViewAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsISelectionProvider, metaclass=ItemsViewAutomationPeer_Static):
+class ItemsViewAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ISelectionProvider, metaclass=ItemsViewAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ItemsView) -> Self: ...
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Peers.ItemsViewAutomationPeer::GetSelection()
     def get_selection(self) -> winrt.system.Array[microsoft_ui_xaml_automation_provider.IRawElementProviderSimple]: ...
@@ -763,7 +763,7 @@ class ListBoxItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=ListBo
 class ListBoxItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
-class ListBoxItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=ListBoxItemDataAutomationPeer_Static):
+class ListBoxItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollItemProvider, metaclass=ListBoxItemDataAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: ListBoxAutomationPeer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ListBoxItemDataAutomationPeer::ScrollIntoView()
     def scroll_into_view(self) -> None: ...
@@ -781,7 +781,7 @@ class ListViewAutomationPeer(ListViewBaseAutomationPeer, metaclass=ListViewAutom
 class ListViewBaseAutomationPeer_Static(SelectorAutomationPeer_Static):
     pass
 
-class ListViewBaseAutomationPeer(SelectorAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIDropTargetProvider, metaclass=ListViewBaseAutomationPeer_Static):
+class ListViewBaseAutomationPeer(SelectorAutomationPeer, microsoft_ui_xaml_automation_provider.IDropTargetProvider, metaclass=ListViewBaseAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ListViewBase) -> Self: ...
     # System.String Microsoft.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer::get_DropEffect()
     @_property
@@ -813,13 +813,13 @@ class ListViewItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=ListV
 class ListViewItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
-class ListViewItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=ListViewItemDataAutomationPeer_Static):
+class ListViewItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollItemProvider, metaclass=ListViewItemDataAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: ListViewBaseAutomationPeer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ListViewItemDataAutomationPeer::ScrollIntoView()
     def scroll_into_view(self) -> None: ...
 
 @typing.final
-class LoopingSelectorAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIScrollProvider, microsoft_ui_xaml_automation_provider.ImplementsIItemContainerProvider, microsoft_ui_xaml_automation_provider.ImplementsISelectionProvider):
+class LoopingSelectorAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollProvider, microsoft_ui_xaml_automation_provider.IItemContainerProvider, microsoft_ui_xaml_automation_provider.ISelectionProvider):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer::FindItemByProperty(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple,Microsoft.UI.Xaml.Automation.AutomationProperty,System.Object)
     def find_item_by_property(self, start_after: microsoft_ui_xaml_automation_provider.IRawElementProviderSimple, automation_property: microsoft_ui_xaml_automation.AutomationProperty, value: winrt.system.Object, /) -> microsoft_ui_xaml_automation_provider.IRawElementProviderSimple: ...
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer::GetSelection()
@@ -854,7 +854,7 @@ class LoopingSelectorAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui
     def is_selection_required(self) -> bool: ...
 
 @typing.final
-class LoopingSelectorItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsISelectionItemProvider, microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider):
+class LoopingSelectorItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ISelectionItemProvider, microsoft_ui_xaml_automation_provider.IScrollItemProvider):
     # System.Void Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer::AddToSelection()
     def add_to_selection(self) -> None: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer::RemoveFromSelection()
@@ -871,7 +871,7 @@ class LoopingSelectorItemAutomationPeer(FrameworkElementAutomationPeer, microsof
     def selection_container(self) -> microsoft_ui_xaml_automation_provider.IRawElementProviderSimple: ...
 
 @typing.final
-class LoopingSelectorItemDataAutomationPeer(AutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIVirtualizedItemProvider):
+class LoopingSelectorItemDataAutomationPeer(AutomationPeer, microsoft_ui_xaml_automation_provider.IVirtualizedItemProvider):
     # System.Void Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorItemDataAutomationPeer::Realize()
     def realize(self) -> None: ...
 
@@ -896,7 +896,7 @@ class MenuBarAutomationPeer(FrameworkElementAutomationPeer, metaclass=MenuBarAut
 class MenuBarItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class MenuBarItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=MenuBarItemAutomationPeer_Static):
+class MenuBarItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IInvokeProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=MenuBarItemAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.MenuBarItem) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -912,7 +912,7 @@ class MenuBarItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xam
 class MenuFlyoutItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class MenuFlyoutItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=MenuFlyoutItemAutomationPeer_Static):
+class MenuFlyoutItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IInvokeProvider, metaclass=MenuFlyoutItemAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.MenuFlyoutItem) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.MenuFlyoutItemAutomationPeer::Invoke()
     def invoke(self) -> None: ...
@@ -932,7 +932,7 @@ class NavigationViewAutomationPeer(FrameworkElementAutomationPeer, metaclass=Nav
 class NavigationViewItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class NavigationViewItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=NavigationViewItemAutomationPeer_Static):
+class NavigationViewItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=NavigationViewItemAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.NavigationViewItem) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.NavigationViewItemAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -972,7 +972,7 @@ class PipsPagerAutomationPeer(FrameworkElementAutomationPeer, metaclass=PipsPage
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.PipsPager) -> Self: ...
 
 @typing.final
-class PivotAutomationPeer(ItemsControlAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIScrollProvider, microsoft_ui_xaml_automation_provider.ImplementsISelectionProvider):
+class PivotAutomationPeer(ItemsControlAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollProvider, microsoft_ui_xaml_automation_provider.ISelectionProvider):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.Pivot) -> Self: ...
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Peers.PivotAutomationPeer::GetSelection()
     def get_selection(self) -> winrt.system.Array[microsoft_ui_xaml_automation_provider.IRawElementProviderSimple]: ...
@@ -1010,7 +1010,7 @@ class PivotItemAutomationPeer(FrameworkElementAutomationPeer):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.PivotItem) -> Self: ...
 
 @typing.final
-class PivotItemDataAutomationPeer(ItemAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIVirtualizedItemProvider, microsoft_ui_xaml_automation_provider.ImplementsISelectionItemProvider, microsoft_ui_xaml_automation_provider.ImplementsIScrollItemProvider):
+class PivotItemDataAutomationPeer(ItemAutomationPeer, microsoft_ui_xaml_automation_provider.IVirtualizedItemProvider, microsoft_ui_xaml_automation_provider.ISelectionItemProvider, microsoft_ui_xaml_automation_provider.IScrollItemProvider):
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: PivotAutomationPeer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer::AddToSelection()
     def add_to_selection(self) -> None: ...
@@ -1038,7 +1038,7 @@ class ProgressBarAutomationPeer(RangeBaseAutomationPeer, metaclass=ProgressBarAu
 class ProgressRingAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class ProgressRingAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIRangeValueProvider, metaclass=ProgressRingAutomationPeer_Static):
+class ProgressRingAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IRangeValueProvider, metaclass=ProgressRingAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ProgressRing) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ProgressRingAutomationPeer::SetValue(System.Double)
     def set_value(self, value: winrt.system.Double, /) -> None: ...  # type: ignore[misc,override]
@@ -1070,7 +1070,7 @@ class ProgressRingAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xa
 class RadioButtonAutomationPeer_Static(ToggleButtonAutomationPeer_Static):
     pass
 
-class RadioButtonAutomationPeer(ToggleButtonAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsISelectionItemProvider, metaclass=RadioButtonAutomationPeer_Static):
+class RadioButtonAutomationPeer(ToggleButtonAutomationPeer, microsoft_ui_xaml_automation_provider.ISelectionItemProvider, metaclass=RadioButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.RadioButton) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer::AddToSelection()
     def add_to_selection(self) -> None: ...
@@ -1096,7 +1096,7 @@ class RadioButtonsAutomationPeer(FrameworkElementAutomationPeer, metaclass=Radio
 class RangeBaseAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class RangeBaseAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIRangeValueProvider, metaclass=RangeBaseAutomationPeer_Static):
+class RangeBaseAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IRangeValueProvider, metaclass=RangeBaseAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls_primitives.RangeBase) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer::SetValue(System.Double)
     def set_value(self, value: winrt.system.Double, /) -> None: ...  # type: ignore[misc,override]
@@ -1134,7 +1134,7 @@ class RatingControlAutomationPeer(FrameworkElementAutomationPeer, metaclass=Rati
 class RepeatButtonAutomationPeer_Static(ButtonBaseAutomationPeer_Static):
     pass
 
-class RepeatButtonAutomationPeer(ButtonBaseAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=RepeatButtonAutomationPeer_Static):
+class RepeatButtonAutomationPeer(ButtonBaseAutomationPeer, microsoft_ui_xaml_automation_provider.IInvokeProvider, metaclass=RepeatButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls_primitives.RepeatButton) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.RepeatButtonAutomationPeer::Invoke()
     def invoke(self) -> None: ...
@@ -1178,7 +1178,7 @@ class ScrollPresenterAutomationPeer(FrameworkElementAutomationPeer, metaclass=Sc
 class ScrollViewerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class ScrollViewerAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIScrollProvider, metaclass=ScrollViewerAutomationPeer_Static):
+class ScrollViewerAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollProvider, metaclass=ScrollViewerAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ScrollViewer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer::Scroll(Microsoft.UI.Xaml.Automation.ScrollAmount,Microsoft.UI.Xaml.Automation.ScrollAmount)
     def scroll(self, horizontal_amount: microsoft_ui_xaml_automation.ScrollAmount, vertical_amount: microsoft_ui_xaml_automation.ScrollAmount, /) -> None: ...
@@ -1212,7 +1212,7 @@ class ScrollViewerAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xa
 class SelectorAutomationPeer_Static(ItemsControlAutomationPeer_Static):
     pass
 
-class SelectorAutomationPeer(ItemsControlAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsISelectionProvider, metaclass=SelectorAutomationPeer_Static):
+class SelectorAutomationPeer(ItemsControlAutomationPeer, microsoft_ui_xaml_automation_provider.ISelectionProvider, metaclass=SelectorAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls_primitives.Selector) -> Self: ...
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Peers.SelectorAutomationPeer::GetSelection()
     def get_selection(self) -> winrt.system.Array[microsoft_ui_xaml_automation_provider.IRawElementProviderSimple]: ...
@@ -1234,7 +1234,7 @@ class SelectorBarItemAutomationPeer(ItemContainerAutomationPeer, metaclass=Selec
 class SelectorItemAutomationPeer_Static(ItemAutomationPeer_Static):
     pass
 
-class SelectorItemAutomationPeer(ItemAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsISelectionItemProvider, metaclass=SelectorItemAutomationPeer_Static):
+class SelectorItemAutomationPeer(ItemAutomationPeer, microsoft_ui_xaml_automation_provider.ISelectionItemProvider, metaclass=SelectorItemAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: SelectorAutomationPeer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer::AddToSelection()
     def add_to_selection(self) -> None: ...
@@ -1254,7 +1254,7 @@ class SelectorItemAutomationPeer(ItemAutomationPeer, microsoft_ui_xaml_automatio
 class SemanticZoomAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class SemanticZoomAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIToggleProvider, metaclass=SemanticZoomAutomationPeer_Static):
+class SemanticZoomAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IToggleProvider, metaclass=SemanticZoomAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.SemanticZoom) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer::Toggle()
     def toggle(self) -> None: ...
@@ -1272,7 +1272,7 @@ class SliderAutomationPeer(RangeBaseAutomationPeer, metaclass=SliderAutomationPe
 class SplitButtonAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class SplitButtonAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIInvokeProvider, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=SplitButtonAutomationPeer_Static):
+class SplitButtonAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IInvokeProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=SplitButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.SplitButton) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.SplitButtonAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -1334,7 +1334,7 @@ class TimePickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
 class ToggleButtonAutomationPeer_Static(ButtonBaseAutomationPeer_Static):
     pass
 
-class ToggleButtonAutomationPeer(ButtonBaseAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIToggleProvider, metaclass=ToggleButtonAutomationPeer_Static):
+class ToggleButtonAutomationPeer(ButtonBaseAutomationPeer, microsoft_ui_xaml_automation_provider.IToggleProvider, metaclass=ToggleButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls_primitives.ToggleButton) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer::Toggle()
     def toggle(self) -> None: ...
@@ -1346,7 +1346,7 @@ class ToggleButtonAutomationPeer(ButtonBaseAutomationPeer, microsoft_ui_xaml_aut
 class ToggleMenuFlyoutItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class ToggleMenuFlyoutItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIToggleProvider, metaclass=ToggleMenuFlyoutItemAutomationPeer_Static):
+class ToggleMenuFlyoutItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IToggleProvider, metaclass=ToggleMenuFlyoutItemAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ToggleMenuFlyoutItem) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer::Toggle()
     def toggle(self) -> None: ...
@@ -1358,7 +1358,7 @@ class ToggleMenuFlyoutItemAutomationPeer(FrameworkElementAutomationPeer, microso
 class ToggleSplitButtonAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class ToggleSplitButtonAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIToggleProvider, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=ToggleSplitButtonAutomationPeer_Static):
+class ToggleSplitButtonAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IToggleProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=ToggleSplitButtonAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ToggleSplitButton) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ToggleSplitButtonAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -1378,7 +1378,7 @@ class ToggleSplitButtonAutomationPeer(FrameworkElementAutomationPeer, microsoft_
 class ToggleSwitchAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
-class ToggleSwitchAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIToggleProvider, metaclass=ToggleSwitchAutomationPeer_Static):
+class ToggleSwitchAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IToggleProvider, metaclass=ToggleSwitchAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.ToggleSwitch) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer::Toggle()
     def toggle(self) -> None: ...
@@ -1390,7 +1390,7 @@ class ToggleSwitchAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xa
 class TreeViewItemAutomationPeer_Static(ListViewItemAutomationPeer_Static):
     pass
 
-class TreeViewItemAutomationPeer(ListViewItemAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=TreeViewItemAutomationPeer_Static):
+class TreeViewItemAutomationPeer(ListViewItemAutomationPeer, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=TreeViewItemAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.TreeViewItem) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer::Collapse()
     def collapse(self) -> None: ...
@@ -1404,7 +1404,7 @@ class TreeViewItemAutomationPeer(ListViewItemAutomationPeer, microsoft_ui_xaml_a
 class TreeViewItemDataAutomationPeer_Static(ItemAutomationPeer_Static):
     pass
 
-class TreeViewItemDataAutomationPeer(ItemAutomationPeer, microsoft_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=TreeViewItemDataAutomationPeer_Static):
+class TreeViewItemDataAutomationPeer(ItemAutomationPeer, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, metaclass=TreeViewItemDataAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: TreeViewListAutomationPeer) -> Self: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.TreeViewItemDataAutomationPeer::Collapse()
     def collapse(self) -> None: ...

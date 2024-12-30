@@ -48,7 +48,7 @@ class ManipulationVelocities:
 class AttachableInputObject_Static(type):
     pass
 
-class AttachableInputObject(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=AttachableInputObject_Static):
+class AttachableInputObject(winrt.system.Object, windows_foundation.IClosable, metaclass=AttachableInputObject_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.UI.Input.AttachableInputObject::Close()
@@ -566,11 +566,11 @@ class PointerPoint_Static(type):
     # Windows.UI.Input.PointerPoint Windows.UI.Input.PointerPoint::GetCurrentPoint(System.UInt32)
     def get_current_point(cls, pointer_id: winrt.system.UInt32, /) -> PointerPoint: ...
     # Windows.UI.Input.PointerPoint Windows.UI.Input.PointerPoint::GetCurrentPoint(System.UInt32,Windows.UI.Input.IPointerPointTransform)
-    def get_current_point_transformed(cls, pointer_id: winrt.system.UInt32, transform: ImplementsIPointerPointTransform, /) -> PointerPoint: ...
+    def get_current_point_transformed(cls, pointer_id: winrt.system.UInt32, transform: IPointerPointTransform, /) -> PointerPoint: ...
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Input.PointerPoint> Windows.UI.Input.PointerPoint::GetIntermediatePoints(System.UInt32)
     def get_intermediate_points(cls, pointer_id: winrt.system.UInt32, /) -> typing.MutableSequence[PointerPoint]: ...
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Input.PointerPoint> Windows.UI.Input.PointerPoint::GetIntermediatePoints(System.UInt32,Windows.UI.Input.IPointerPointTransform)
-    def get_intermediate_points_transformed(cls, pointer_id: winrt.system.UInt32, transform: ImplementsIPointerPointTransform, /) -> typing.MutableSequence[PointerPoint]: ...
+    def get_intermediate_points_transformed(cls, pointer_id: winrt.system.UInt32, transform: IPointerPointTransform, /) -> typing.MutableSequence[PointerPoint]: ...
 
 @typing.final
 class PointerPoint(winrt.system.Object, metaclass=PointerPoint_Static):
@@ -1091,7 +1091,7 @@ class TouchpadGlobalActionEventArgs(winrt.system.Object):
     @_property
     def action(self) -> TouchpadGlobalAction: ...
 
-class ImplementsIPointerPointTransform():
+class IPointerPointTransform(winrt._winrt.IInspectable):
     # Windows.Foundation.Rect Windows.UI.Input.IPointerPointTransform::TransformBounds(Windows.Foundation.Rect)
     @abstractmethod
     def transform_bounds(self, rect: windows_foundation.Rect, /) -> windows_foundation.Rect: ...
@@ -1101,15 +1101,5 @@ class ImplementsIPointerPointTransform():
     # Windows.UI.Input.IPointerPointTransform Windows.UI.Input.IPointerPointTransform::get_Inverse()
     @_property
     @abstractmethod
-    def inverse(self) -> IPointerPointTransform: ...
-
-@typing.final
-class IPointerPointTransform(winrt.system.Object, ImplementsIPointerPointTransform):
-    # Windows.Foundation.Rect Windows.UI.Input.IPointerPointTransform::TransformBounds(Windows.Foundation.Rect)
-    def transform_bounds(self, rect: windows_foundation.Rect, /) -> windows_foundation.Rect: ...
-    # System.Boolean Windows.UI.Input.IPointerPointTransform::TryTransform(Windows.Foundation.Point,Windows.Foundation.Point&)
-    def try_transform(self, in_point: windows_foundation.Point, /) -> typing.Tuple[bool, windows_foundation.Point]: ...
-    # Windows.UI.Input.IPointerPointTransform Windows.UI.Input.IPointerPointTransform::get_Inverse()
-    @_property
     def inverse(self) -> IPointerPointTransform: ...
 

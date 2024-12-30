@@ -5,13 +5,11 @@ from winrt._winrt_windows_devices import (
     LowLevelDevicesAggregateProvider,
     LowLevelDevicesController,
     ILowLevelDevicesAggregateProvider,
-    ImplementsILowLevelDevicesAggregateProvider,
 )
 
 __all__ = [
     "LowLevelDevicesAggregateProvider",
     "LowLevelDevicesController",
     "ILowLevelDevicesAggregateProvider",
-    "ImplementsILowLevelDevicesAggregateProvider",
 ]
 

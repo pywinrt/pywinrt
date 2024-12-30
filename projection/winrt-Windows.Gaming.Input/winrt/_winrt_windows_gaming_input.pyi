@@ -80,7 +80,7 @@ class UINavigationReading:
 @typing.final
 class ArcadeStick_Static(type):
     # Windows.Gaming.Input.ArcadeStick Windows.Gaming.Input.ArcadeStick::FromGameController(Windows.Gaming.Input.IGameController)
-    def from_game_controller(cls, game_controller: ImplementsIGameController, /) -> ArcadeStick: ...
+    def from_game_controller(cls, game_controller: IGameController, /) -> ArcadeStick: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.ArcadeStick::add_ArcadeStickAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.ArcadeStick>)
     def add_arcade_stick_added(cls, value: windows_foundation.EventHandler[ArcadeStick], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Gaming.Input.ArcadeStick::remove_ArcadeStickAdded(Windows.Foundation.EventRegistrationToken)
@@ -94,7 +94,7 @@ class ArcadeStick_Static(type):
     def arcade_sticks(cls) -> typing.Sequence[ArcadeStick]: ...
 
 @typing.final
-class ArcadeStick(winrt.system.Object, ImplementsIGameControllerBatteryInfo, ImplementsIGameController, metaclass=ArcadeStick_Static):
+class ArcadeStick(winrt.system.Object, IGameControllerBatteryInfo, IGameController, metaclass=ArcadeStick_Static):
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.ArcadeStick::GetButtonLabel(Windows.Gaming.Input.ArcadeStickButtons)
     def get_button_label(self, button: ArcadeStickButtons, /) -> GameControllerButtonLabel: ...
     # Windows.Gaming.Input.ArcadeStickReading Windows.Gaming.Input.ArcadeStick::GetCurrentReading()
@@ -126,7 +126,7 @@ class ArcadeStick(winrt.system.Object, ImplementsIGameControllerBatteryInfo, Imp
 @typing.final
 class FlightStick_Static(type):
     # Windows.Gaming.Input.FlightStick Windows.Gaming.Input.FlightStick::FromGameController(Windows.Gaming.Input.IGameController)
-    def from_game_controller(cls, game_controller: ImplementsIGameController, /) -> FlightStick: ...
+    def from_game_controller(cls, game_controller: IGameController, /) -> FlightStick: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.FlightStick::add_FlightStickAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.FlightStick>)
     def add_flight_stick_added(cls, value: windows_foundation.EventHandler[FlightStick], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Gaming.Input.FlightStick::remove_FlightStickAdded(Windows.Foundation.EventRegistrationToken)
@@ -140,7 +140,7 @@ class FlightStick_Static(type):
     def flight_sticks(cls) -> typing.Sequence[FlightStick]: ...
 
 @typing.final
-class FlightStick(winrt.system.Object, ImplementsIGameControllerBatteryInfo, ImplementsIGameController, metaclass=FlightStick_Static):
+class FlightStick(winrt.system.Object, IGameControllerBatteryInfo, IGameController, metaclass=FlightStick_Static):
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.FlightStick::GetButtonLabel(Windows.Gaming.Input.FlightStickButtons)
     def get_button_label(self, button: FlightStickButtons, /) -> GameControllerButtonLabel: ...
     # Windows.Gaming.Input.FlightStickReading Windows.Gaming.Input.FlightStick::GetCurrentReading()
@@ -175,7 +175,7 @@ class FlightStick(winrt.system.Object, ImplementsIGameControllerBatteryInfo, Imp
 @typing.final
 class Gamepad_Static(type):
     # Windows.Gaming.Input.Gamepad Windows.Gaming.Input.Gamepad::FromGameController(Windows.Gaming.Input.IGameController)
-    def from_game_controller(cls, game_controller: ImplementsIGameController, /) -> Gamepad: ...
+    def from_game_controller(cls, game_controller: IGameController, /) -> Gamepad: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.Gamepad::add_GamepadAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.Gamepad>)
     def add_gamepad_added(cls, value: windows_foundation.EventHandler[Gamepad], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Gaming.Input.Gamepad::remove_GamepadAdded(Windows.Foundation.EventRegistrationToken)
@@ -189,7 +189,7 @@ class Gamepad_Static(type):
     def gamepads(cls) -> typing.Sequence[Gamepad]: ...
 
 @typing.final
-class Gamepad(winrt.system.Object, ImplementsIGameControllerBatteryInfo, ImplementsIGameController, metaclass=Gamepad_Static):
+class Gamepad(winrt.system.Object, IGameControllerBatteryInfo, IGameController, metaclass=Gamepad_Static):
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.Gamepad::GetButtonLabel(Windows.Gaming.Input.GamepadButtons)
     def get_button_label(self, button: GamepadButtons, /) -> GameControllerButtonLabel: ...
     # Windows.Gaming.Input.GamepadReading Windows.Gaming.Input.Gamepad::GetCurrentReading()
@@ -225,7 +225,7 @@ class Gamepad(winrt.system.Object, ImplementsIGameControllerBatteryInfo, Impleme
     def vibration(self, value: GamepadVibration) -> None: ...
 
 @typing.final
-class Headset(winrt.system.Object, ImplementsIGameControllerBatteryInfo):
+class Headset(winrt.system.Object, IGameControllerBatteryInfo):
     # Windows.Devices.Power.BatteryReport Windows.Gaming.Input.Headset::TryGetBatteryReport()
     def try_get_battery_report(self) -> typing.Optional[windows_devices_power.BatteryReport]: ...
     # System.String Windows.Gaming.Input.Headset::get_CaptureDeviceId()
@@ -238,7 +238,7 @@ class Headset(winrt.system.Object, ImplementsIGameControllerBatteryInfo):
 @typing.final
 class RacingWheel_Static(type):
     # Windows.Gaming.Input.RacingWheel Windows.Gaming.Input.RacingWheel::FromGameController(Windows.Gaming.Input.IGameController)
-    def from_game_controller(cls, game_controller: ImplementsIGameController, /) -> RacingWheel: ...
+    def from_game_controller(cls, game_controller: IGameController, /) -> RacingWheel: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.RacingWheel::add_RacingWheelAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.RacingWheel>)
     def add_racing_wheel_added(cls, value: windows_foundation.EventHandler[RacingWheel], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Gaming.Input.RacingWheel::remove_RacingWheelAdded(Windows.Foundation.EventRegistrationToken)
@@ -252,7 +252,7 @@ class RacingWheel_Static(type):
     def racing_wheels(cls) -> typing.Sequence[RacingWheel]: ...
 
 @typing.final
-class RacingWheel(winrt.system.Object, ImplementsIGameControllerBatteryInfo, ImplementsIGameController, metaclass=RacingWheel_Static):
+class RacingWheel(winrt.system.Object, IGameControllerBatteryInfo, IGameController, metaclass=RacingWheel_Static):
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.RacingWheel::GetButtonLabel(Windows.Gaming.Input.RacingWheelButtons)
     def get_button_label(self, button: RacingWheelButtons, /) -> GameControllerButtonLabel: ...
     # Windows.Gaming.Input.RacingWheelReading Windows.Gaming.Input.RacingWheel::GetCurrentReading()
@@ -302,7 +302,7 @@ class RacingWheel(winrt.system.Object, ImplementsIGameControllerBatteryInfo, Imp
 @typing.final
 class RawGameController_Static(type):
     # Windows.Gaming.Input.RawGameController Windows.Gaming.Input.RawGameController::FromGameController(Windows.Gaming.Input.IGameController)
-    def from_game_controller(cls, game_controller: ImplementsIGameController, /) -> RawGameController: ...
+    def from_game_controller(cls, game_controller: IGameController, /) -> RawGameController: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.RawGameController::add_RawGameControllerAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.RawGameController>)
     def add_raw_game_controller_added(cls, value: windows_foundation.EventHandler[RawGameController], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Gaming.Input.RawGameController::remove_RawGameControllerAdded(Windows.Foundation.EventRegistrationToken)
@@ -316,7 +316,7 @@ class RawGameController_Static(type):
     def raw_game_controllers(cls) -> typing.Sequence[RawGameController]: ...
 
 @typing.final
-class RawGameController(winrt.system.Object, ImplementsIGameControllerBatteryInfo, ImplementsIGameController, metaclass=RawGameController_Static):
+class RawGameController(winrt.system.Object, IGameControllerBatteryInfo, IGameController, metaclass=RawGameController_Static):
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.RawGameController::GetButtonLabel(System.Int32)
     def get_button_label(self, button_index: winrt.system.Int32, /) -> GameControllerButtonLabel: ...
     # System.UInt64 Windows.Gaming.Input.RawGameController::GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])
@@ -377,7 +377,7 @@ class RawGameController(winrt.system.Object, ImplementsIGameControllerBatteryInf
 @typing.final
 class UINavigationController_Static(type):
     # Windows.Gaming.Input.UINavigationController Windows.Gaming.Input.UINavigationController::FromGameController(Windows.Gaming.Input.IGameController)
-    def from_game_controller(cls, game_controller: ImplementsIGameController, /) -> UINavigationController: ...
+    def from_game_controller(cls, game_controller: IGameController, /) -> UINavigationController: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.UINavigationController::add_UINavigationControllerAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.UINavigationController>)
     def add_ui_navigation_controller_added(cls, value: windows_foundation.EventHandler[UINavigationController], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Gaming.Input.UINavigationController::remove_UINavigationControllerAdded(Windows.Foundation.EventRegistrationToken)
@@ -391,7 +391,7 @@ class UINavigationController_Static(type):
     def ui_navigation_controllers(cls) -> typing.Sequence[UINavigationController]: ...
 
 @typing.final
-class UINavigationController(winrt.system.Object, ImplementsIGameControllerBatteryInfo, ImplementsIGameController, metaclass=UINavigationController_Static):
+class UINavigationController(winrt.system.Object, IGameControllerBatteryInfo, IGameController, metaclass=UINavigationController_Static):
     # Windows.Gaming.Input.UINavigationReading Windows.Gaming.Input.UINavigationController::GetCurrentReading()
     def get_current_reading(self) -> UINavigationReading: ...
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.UINavigationController::GetOptionalButtonLabel(Windows.Gaming.Input.OptionalUINavigationButtons)
@@ -422,7 +422,7 @@ class UINavigationController(winrt.system.Object, ImplementsIGameControllerBatte
     @_property
     def user(self) -> windows_system.User: ...
 
-class ImplementsIGameController():
+class IGameController(winrt._winrt.IInspectable):
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.IGameController::add_HeadsetConnected(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset>)
     @abstractmethod
     def add_headset_connected(self, value: windows_foundation.TypedEventHandler[IGameController, Headset], /) -> windows_foundation.EventRegistrationToken: ...
@@ -454,37 +454,8 @@ class ImplementsIGameController():
     @abstractmethod
     def user(self) -> windows_system.User: ...
 
-@typing.final
-class IGameController(winrt.system.Object, ImplementsIGameController):
-    # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.IGameController::add_HeadsetConnected(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset>)
-    def add_headset_connected(self, value: windows_foundation.TypedEventHandler[IGameController, Headset], /) -> windows_foundation.EventRegistrationToken: ...
-    # System.Void Windows.Gaming.Input.IGameController::remove_HeadsetConnected(Windows.Foundation.EventRegistrationToken)
-    def remove_headset_connected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-    # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.IGameController::add_HeadsetDisconnected(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset>)
-    def add_headset_disconnected(self, value: windows_foundation.TypedEventHandler[IGameController, Headset], /) -> windows_foundation.EventRegistrationToken: ...
-    # System.Void Windows.Gaming.Input.IGameController::remove_HeadsetDisconnected(Windows.Foundation.EventRegistrationToken)
-    def remove_headset_disconnected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-    # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.IGameController::add_UserChanged(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs>)
-    def add_user_changed(self, value: windows_foundation.TypedEventHandler[IGameController, windows_system.UserChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
-    # System.Void Windows.Gaming.Input.IGameController::remove_UserChanged(Windows.Foundation.EventRegistrationToken)
-    def remove_user_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-    # Windows.Gaming.Input.Headset Windows.Gaming.Input.IGameController::get_Headset()
-    @_property
-    def headset(self) -> Headset: ...
-    # System.Boolean Windows.Gaming.Input.IGameController::get_IsWireless()
-    @_property
-    def is_wireless(self) -> bool: ...
-    # Windows.System.User Windows.Gaming.Input.IGameController::get_User()
-    @_property
-    def user(self) -> windows_system.User: ...
-
-class ImplementsIGameControllerBatteryInfo():
+class IGameControllerBatteryInfo(winrt._winrt.IInspectable):
     # Windows.Devices.Power.BatteryReport Windows.Gaming.Input.IGameControllerBatteryInfo::TryGetBatteryReport()
     @abstractmethod
-    def try_get_battery_report(self) -> typing.Optional[windows_devices_power.BatteryReport]: ...
-
-@typing.final
-class IGameControllerBatteryInfo(winrt.system.Object, ImplementsIGameControllerBatteryInfo):
-    # Windows.Devices.Power.BatteryReport Windows.Gaming.Input.IGameControllerBatteryInfo::TryGetBatteryReport()
     def try_get_battery_report(self) -> typing.Optional[windows_devices_power.BatteryReport]: ...
 

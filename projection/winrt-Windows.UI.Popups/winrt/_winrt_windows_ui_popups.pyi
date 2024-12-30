@@ -74,7 +74,7 @@ class PopupMenu(winrt.system.Object):
     def commands(self) -> typing.MutableSequence[IUICommand]: ...
 
 @typing.final
-class UICommand(winrt.system.Object, ImplementsIUICommand):
+class UICommand(winrt.system.Object, IUICommand):
     @typing.overload
     def __new__(cls: typing.Type[Self], label: str) -> Self: ...
     @typing.overload
@@ -103,7 +103,7 @@ class UICommand(winrt.system.Object, ImplementsIUICommand):
     def id(self, value: winrt.system.Object) -> None: ...
 
 @typing.final
-class UICommandSeparator(winrt.system.Object, ImplementsIUICommand):
+class UICommandSeparator(winrt.system.Object, IUICommand):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.String Windows.UI.Popups.UICommandSeparator::get_Label()
     @_property
@@ -124,7 +124,7 @@ class UICommandSeparator(winrt.system.Object, ImplementsIUICommand):
     @id.setter
     def id(self, value: winrt.system.Object) -> None: ...
 
-class ImplementsIUICommand():
+class IUICommand(winrt._winrt.IInspectable):
     # System.Object Windows.UI.Popups.IUICommand::get_Id()
     @_property
     @abstractmethod
@@ -148,26 +148,5 @@ class ImplementsIUICommand():
     # System.Void Windows.UI.Popups.IUICommand::put_Label(System.String)
     @label.setter
     @abstractmethod
-    def label(self, value: str) -> None: ...
-
-@typing.final
-class IUICommand(winrt.system.Object, ImplementsIUICommand):
-    # System.Object Windows.UI.Popups.IUICommand::get_Id()
-    @_property
-    def id(self) -> winrt.system.Object: ...
-    # System.Void Windows.UI.Popups.IUICommand::put_Id(System.Object)
-    @id.setter
-    def id(self, value: winrt.system.Object) -> None: ...
-    # Windows.UI.Popups.UICommandInvokedHandler Windows.UI.Popups.IUICommand::get_Invoked()
-    @_property
-    def invoked(self) -> UICommandInvokedHandler: ...
-    # System.Void Windows.UI.Popups.IUICommand::put_Invoked(Windows.UI.Popups.UICommandInvokedHandler)
-    @invoked.setter
-    def invoked(self, value: UICommandInvokedHandler) -> None: ...
-    # System.String Windows.UI.Popups.IUICommand::get_Label()
-    @_property
-    def label(self) -> str: ...
-    # System.Void Windows.UI.Popups.IUICommand::put_Label(System.String)
-    @label.setter
     def label(self, value: str) -> None: ...
 

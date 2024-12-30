@@ -13,9 +13,7 @@ from winrt._winrt_windows_phone_personalinformation import (
     KnownContactProperties,
     StoredContact,
     IContactInformation,
-    ImplementsIContactInformation,
     IContactInformation2,
-    ImplementsIContactInformation2,
 )
 
 __all__ = [
@@ -33,9 +31,7 @@ __all__ = [
     "KnownContactProperties",
     "StoredContact",
     "IContactInformation",
-    "ImplementsIContactInformation",
     "IContactInformation2",
-    "ImplementsIContactInformation2",
 ]
 
 class ContactChangeType(enum.IntEnum):

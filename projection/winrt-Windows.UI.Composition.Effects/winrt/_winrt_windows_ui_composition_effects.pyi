@@ -16,7 +16,7 @@ from winrt.windows.ui.composition.effects import SceneLightingEffectReflectanceM
 Self = typing.TypeVar('Self')
 
 @typing.final
-class SceneLightingEffect(winrt.system.Object, windows_graphics_effects.ImplementsIGraphicsEffect, windows_graphics_effects.ImplementsIGraphicsEffectSource):
+class SceneLightingEffect(winrt.system.Object, windows_graphics_effects.IGraphicsEffect, windows_graphics_effects.IGraphicsEffectSource):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.String Windows.UI.Composition.Effects.SceneLightingEffect::get_Name()
     @_property
@@ -41,7 +41,7 @@ class SceneLightingEffect(winrt.system.Object, windows_graphics_effects.Implemen
     def normal_map_source(self) -> windows_graphics_effects.IGraphicsEffectSource: ...
     # System.Void Windows.UI.Composition.Effects.SceneLightingEffect::put_NormalMapSource(Windows.Graphics.Effects.IGraphicsEffectSource)
     @normal_map_source.setter
-    def normal_map_source(self, value: windows_graphics_effects.ImplementsIGraphicsEffectSource) -> None: ...
+    def normal_map_source(self, value: windows_graphics_effects.IGraphicsEffectSource) -> None: ...
     # System.Single Windows.UI.Composition.Effects.SceneLightingEffect::get_DiffuseAmount()
     @_property
     def diffuse_amount(self) -> winrt.system.Single: ...

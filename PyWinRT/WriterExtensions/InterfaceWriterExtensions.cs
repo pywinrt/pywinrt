@@ -1,5 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.ObjectModel;
+using Mono.Cecil;
 
 static class InterfaceWriterExtensions
 {
@@ -508,12 +509,7 @@ static class InterfaceWriterExtensions
         var interfaces = string.Join(
             ", ",
             type.Interfaces.Select(i =>
-                i.ToPyTypeName(
-                    ns,
-                    new TypeRefNullabilityInfo(i),
-                    implementsInterface: true,
-                    usePythonCollectionTypes: false
-                )
+                i.ToPyTypeName(ns, new TypeRefNullabilityInfo(i), usePythonCollectionTypes: false)
             )
         );
 
@@ -525,12 +521,190 @@ static class InterfaceWriterExtensions
                 $"{(interfaces.Any() ? ", " : "")}typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p))))}]";
         }
 
+        var mixin = type switch
+        {
+            { Namespace: "Windows.Foundation.Collections", Name: "IMap" }
+                => ", winrt._winrt.MutableMapping[K, V]",
+            { Namespace: "Windows.Foundation.Collections", Name: "IMapView" }
+                => ", winrt._winrt.Mapping[K, V]",
+            { Namespace: "Windows.Foundation.Collections", Name: "IVector" }
+                => ", winrt._winrt.MutableSequence[T]",
+            { Namespace: "Windows.Foundation.Collections", Name: "IVectorView" }
+                => ", winrt._winrt.Sequence[T]",
+            _ => ""
+        };
+
+        var inspectable =
+            $"{(type.IsGeneric || type.Interfaces.Any() ? ", " : "")}winrt._winrt.IInspectable";
+
         // work around https://github.com/python/mypy/issues/17091
         // we can't use abc.ABCMeta because it will cause errors about conflicting metaclasses
-        var typeIgnore = !hasMembers && interfaces.Any() ? "  # type: ignore[misc]" : "";
+        var typeIgnore = hasMembers ? "" : "  # type: ignore[misc]";
 
-        w.WriteLine($"class Implements{type.Name}({interfaces}{generic}):{typeIgnore}");
+        w.WriteLine($"class {type.Name}({interfaces}{generic}{mixin}{inspectable}):{typeIgnore}");
         w.Indent++;
+
+        if (type.Namespace == "Windows.Foundation" && type.Name == "IClosable")
+        {
+            w.WriteLine("def __enter__(self: Self) -> Self: ...");
+            w.WriteLine(
+                "def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ..."
+            );
+        }
+
+        if (type.Namespace == "Windows.Foundation" && type.Name == "IStringable")
+        {
+            w.WriteLine("def __str__(self) -> str: ...");
+        }
+
+        if (
+            (type.Namespace == "Windows.Foundation" && type.Name == "IMemoryBufferReference")
+            || (type.Namespace == "Windows.Storage.Streams" && type.Name == "IBuffer")
+        )
+        {
+            w.WriteLine("def __buffer__(self, flags: int, /) -> memoryview: ...");
+            w.WriteLine("def __release_buffer__(self, view: memoryview, /) -> None: ...");
+        }
+
+        if (
+            type.Namespace == "Windows.Foundation.Collections"
+            && (type.Name == "IMap" || type.Name == "IMapView")
+        )
+        {
+            var method = type.Methods.Single(m => m.Name == "Lookup");
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                method.Signature,
+                new MethodNullabilityInfo(method.Method)
+            );
+            var keyParamType = method
+                .Method.Parameters[0]
+                .ToPyInParamTyping(ns, nullabilityInfo.Parameters[0].Type, method.GenericArgMap);
+            var valueReturnType = method.Method.ToPyReturnTyping(
+                ns,
+                nullabilityInfo,
+                method.GenericArgMap
+            );
+
+            w.WriteLine("def __len__(self) -> int: ...");
+            w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyParamType}]: ...");
+            w.WriteLine("def __contains__(self, key: object) -> bool: ...");
+            w.WriteLine($"def __getitem__(self, key: {keyParamType}) -> {valueReturnType}: ...");
+
+            if (type.Name == "IMap")
+            {
+                var setMethod = type.Methods.Single(m => m.Name == "Insert");
+                var setNullabilityInfo = nullabilityMap.GetValueOrDefault(
+                    setMethod.Signature,
+                    new MethodNullabilityInfo(setMethod.Method)
+                );
+                var valParamType = setMethod
+                    .Method.Parameters[1]
+                    .ToPyInParamTyping(
+                        ns,
+                        setNullabilityInfo.Parameters[1].Type,
+                        setMethod.GenericArgMap
+                    );
+
+                w.WriteLine(
+                    $"def __setitem__(self, key: {keyParamType}, value: {valParamType}) -> None: ..."
+                );
+                w.WriteLine($"def __delitem__(self, key: {keyParamType}) -> None: ...");
+            }
+        }
+
+        if (
+            type.Namespace == "Windows.Foundation.Collections"
+            && (type.Name == "IVector" || type.Name == "IVectorView")
+        )
+        {
+            var method = type.Methods.Single(m => m.Name == "First");
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                method.Signature,
+                new MethodNullabilityInfo(method.Method)
+            );
+            var iterType = method.Method.ToPyReturnTyping(
+                ns,
+                nullabilityInfo,
+                method.GenericArgMap
+            );
+            method = type.Methods.Single(m => m.Name == "GetAt");
+            nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                method.Signature,
+                new MethodNullabilityInfo(method.Method)
+            );
+            var elementType = method.Method.ToPyReturnTyping(
+                ns,
+                nullabilityInfo,
+                method.GenericArgMap
+            );
+
+            w.WriteLine("def __len__(self) -> int: ...");
+            w.WriteLine($"def __iter__(self) -> {iterType}: ...");
+            w.WriteLine("@typing.overload");
+            w.WriteLine(
+                $"def __getitem__(self, index: typing.SupportsIndex) -> {elementType}: ..."
+            );
+            w.WriteLine("@typing.overload");
+            w.WriteLine(
+                $"def __getitem__(self, index: slice) -> winrt.system.Array[{elementType}]: ..."
+            );
+
+            if (type.Name == "IVector")
+            {
+                var setMethod = type.Methods.Single(m => m.Name == "SetAt");
+                var setNullabilityInfo = nullabilityMap.GetValueOrDefault(
+                    setMethod.Signature,
+                    new MethodNullabilityInfo(setMethod.Method)
+                );
+                var valParamType = setMethod
+                    .Method.Parameters[1]
+                    .ToPyInParamTyping(
+                        ns,
+                        setNullabilityInfo.Parameters[1].Type,
+                        setMethod.GenericArgMap
+                    );
+
+                w.WriteLine("@typing.overload");
+                w.WriteLine($"def __delitem__(self, index: typing.SupportsIndex) -> None: ...");
+                w.WriteLine("@typing.overload");
+                w.WriteLine($"def __delitem__(self, index: slice) -> None: ...");
+                w.WriteLine("@typing.overload");
+                w.WriteLine(
+                    $"def __setitem__(self, index: typing.SupportsIndex, value: {valParamType}) -> None: ..."
+                );
+                w.WriteLine("@typing.overload");
+                w.WriteLine(
+                    $"def __setitem__(self, index: slice, value: typing.Iterable[{valParamType}]) -> None: ..."
+                );
+            }
+        }
+
+        if (
+            type.Namespace == "Windows.Foundation"
+            && (
+                type.Name == "IAsyncAction"
+                || type.Name == "IAsyncActionWithProgress"
+                || type.Name == "IAsyncOperation"
+                || type.Name == "IAsyncOperationWithProgress"
+            )
+        )
+        {
+            var returnType = "None";
+
+            if (
+                type.Namespace == "Windows.Foundation"
+                && (type.Name == "IAsyncOperation" || type.Name == "IAsyncOperationWithProgress")
+            )
+            {
+                returnType = type
+                    .Type.GenericParameters[0]
+                    .ToPyTypeName(ns, new TypeRefNullabilityInfo(type.Type.GenericParameters[0]));
+            }
+
+            w.WriteLine(
+                $"def __await__(self) -> typing.Generator[typing.Any, None, {returnType}]: ..."
+            );
+        }
 
         foreach (var method in methods)
         {

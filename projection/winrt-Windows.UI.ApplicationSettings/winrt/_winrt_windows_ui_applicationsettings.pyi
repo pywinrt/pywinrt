@@ -93,7 +93,7 @@ class SettingsCommand_Static(type):
     def accounts_command(cls) -> SettingsCommand: ...
 
 @typing.final
-class SettingsCommand(winrt.system.Object, windows_ui_popups.ImplementsIUICommand, metaclass=SettingsCommand_Static):
+class SettingsCommand(winrt.system.Object, windows_ui_popups.IUICommand, metaclass=SettingsCommand_Static):
     def __new__(cls: typing.Type[Self], settings_command_id: winrt.system.Object, label: str, handler: windows_ui_popups.UICommandInvokedHandler) -> Self: ...
     # System.String Windows.UI.ApplicationSettings.SettingsCommand::get_Label()
     @_property

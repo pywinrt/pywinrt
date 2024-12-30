@@ -127,7 +127,7 @@ class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
     def visible(self) -> bool: ...
 
 @typing.final
-class SearchPaneQueryChangedEventArgs(winrt.system.Object, ImplementsISearchPaneQueryChangedEventArgs):
+class SearchPaneQueryChangedEventArgs(winrt.system.Object, ISearchPaneQueryChangedEventArgs):
     # System.String Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs::get_Language()
     @_property
     def language(self) -> str: ...
@@ -187,7 +187,7 @@ class SearchPaneSuggestionsRequestDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 @typing.final
-class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object, ImplementsISearchPaneQueryChangedEventArgs):
+class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object, ISearchPaneQueryChangedEventArgs):
     # System.String Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs::get_Language()
     @_property
     def language(self) -> str: ...
@@ -227,7 +227,7 @@ class SearchSuggestionCollection(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Search.SearchSuggestionCollection::AppendQuerySuggestions(Windows.Foundation.Collections.IIterable`1<System.String>)
     def append_query_suggestions(self, suggestions: typing.Iterable[str], /) -> None: ...
     # System.Void Windows.ApplicationModel.Search.SearchSuggestionCollection::AppendResultSuggestion(System.String,System.String,System.String,Windows.Storage.Streams.IRandomAccessStreamReference,System.String)
-    def append_result_suggestion(self, text: str, detail_text: str, tag: str, image: windows_storage_streams.ImplementsIRandomAccessStreamReference, image_alternate_text: str, /) -> None: ...
+    def append_result_suggestion(self, text: str, detail_text: str, tag: str, image: windows_storage_streams.IRandomAccessStreamReference, image_alternate_text: str, /) -> None: ...
     # System.Void Windows.ApplicationModel.Search.SearchSuggestionCollection::AppendSearchSeparator(System.String)
     def append_search_separator(self, label: str, /) -> None: ...
     # System.UInt32 Windows.ApplicationModel.Search.SearchSuggestionCollection::get_Size()
@@ -250,7 +250,7 @@ class SearchSuggestionsRequestDeferral(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral::Complete()
     def complete(self) -> None: ...
 
-class ImplementsISearchPaneQueryChangedEventArgs():
+class ISearchPaneQueryChangedEventArgs(winrt._winrt.IInspectable):
     # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_Language()
     @_property
     @abstractmethod
@@ -262,17 +262,5 @@ class ImplementsISearchPaneQueryChangedEventArgs():
     # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_QueryText()
     @_property
     @abstractmethod
-    def query_text(self) -> str: ...
-
-@typing.final
-class ISearchPaneQueryChangedEventArgs(winrt.system.Object, ImplementsISearchPaneQueryChangedEventArgs):
-    # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_Language()
-    @_property
-    def language(self) -> str: ...
-    # Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_LinguisticDetails()
-    @_property
-    def linguistic_details(self) -> SearchPaneQueryLinguisticDetails: ...
-    # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_QueryText()
-    @_property
     def query_text(self) -> str: ...
 

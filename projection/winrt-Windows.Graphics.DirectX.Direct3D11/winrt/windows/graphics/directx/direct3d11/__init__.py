@@ -7,9 +7,7 @@ from winrt._winrt_windows_graphics_directx_direct3d11 import (
     Direct3DMultisampleDescription,
     Direct3DSurfaceDescription,
     IDirect3DDevice,
-    ImplementsIDirect3DDevice,
     IDirect3DSurface,
-    ImplementsIDirect3DSurface,
 )
 
 __all__ = [
@@ -18,9 +16,7 @@ __all__ = [
     "Direct3DMultisampleDescription",
     "Direct3DSurfaceDescription",
     "IDirect3DDevice",
-    "ImplementsIDirect3DDevice",
     "IDirect3DSurface",
-    "ImplementsIDirect3DSurface",
 ]
 
 class Direct3DBindings(enum.IntFlag):

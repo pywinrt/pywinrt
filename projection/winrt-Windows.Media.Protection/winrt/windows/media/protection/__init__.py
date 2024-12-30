@@ -17,7 +17,6 @@ from winrt._winrt_windows_media_protection import (
     RevocationAndRenewalItem,
     ServiceRequestedEventArgs,
     IMediaProtectionServiceRequest,
-    ImplementsIMediaProtectionServiceRequest,
 )
 
 __all__ = [
@@ -38,7 +37,6 @@ __all__ = [
     "RevocationAndRenewalItem",
     "ServiceRequestedEventArgs",
     "IMediaProtectionServiceRequest",
-    "ImplementsIMediaProtectionServiceRequest",
     "ComponentLoadFailedEventHandler",
     "RebootNeededEventHandler",
     "ServiceRequestedEventHandler",

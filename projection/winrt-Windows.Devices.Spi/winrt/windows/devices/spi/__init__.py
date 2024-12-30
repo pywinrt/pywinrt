@@ -9,7 +9,6 @@ from winrt._winrt_windows_devices_spi import (
     SpiController,
     SpiDevice,
     ISpiDeviceStatics,
-    ImplementsISpiDeviceStatics,
 )
 
 __all__ = [
@@ -20,7 +19,6 @@ __all__ = [
     "SpiController",
     "SpiDevice",
     "ISpiDeviceStatics",
-    "ImplementsISpiDeviceStatics",
 ]
 
 class SpiMode(enum.IntEnum):

@@ -20,7 +20,7 @@ from winrt.windows.graphics.printing.optiondetails import PrintOptionStates, Pri
 Self = typing.TypeVar('Self')
 
 @typing.final
-class PrintBindingOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintBindingOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintBindingOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintBindingOptionDetails::get_WarningText()
@@ -61,7 +61,7 @@ class PrintBindingOptionDetails(winrt.system.Object, ImplementsIPrintItemListOpt
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintBorderingOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintBorderingOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails::get_WarningText()
@@ -102,7 +102,7 @@ class PrintBorderingOptionDetails(winrt.system.Object, ImplementsIPrintItemListO
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintCollationOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintCollationOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintCollationOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCollationOptionDetails::get_WarningText()
@@ -143,7 +143,7 @@ class PrintCollationOptionDetails(winrt.system.Object, ImplementsIPrintItemListO
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintColorModeOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintColorModeOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintColorModeOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintColorModeOptionDetails::get_WarningText()
@@ -184,7 +184,7 @@ class PrintColorModeOptionDetails(winrt.system.Object, ImplementsIPrintItemListO
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintCopiesOptionDetails(winrt.system.Object, ImplementsIPrintNumberOptionDetails, ImplementsIPrintOptionDetails):
+class PrintCopiesOptionDetails(winrt.system.Object, IPrintNumberOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintCopiesOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCopiesOptionDetails::get_WarningText()
@@ -240,13 +240,13 @@ class PrintCustomItemDetails(winrt.system.Object):
     def item_id(self) -> str: ...
 
 @typing.final
-class PrintCustomItemListOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintCustomOptionDetails, ImplementsIPrintOptionDetails):
+class PrintCustomItemListOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintCustomOptionDetails, IPrintOptionDetails):
     @typing.overload
     # System.Void Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails::AddItem(System.String,System.String)
     def add_item(self, item_id: str, display_name: str, /) -> None: ...
     @typing.overload
     # System.Void Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails::AddItem(System.String,System.String,System.String,Windows.Storage.Streams.IRandomAccessStreamWithContentType)
-    def add_item(self, item_id: str, display_name: str, description: str, icon: windows_storage_streams.ImplementsIRandomAccessStreamWithContentType, /) -> None: ...
+    def add_item(self, item_id: str, display_name: str, description: str, icon: windows_storage_streams.IRandomAccessStreamWithContentType, /) -> None: ...
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails::get_WarningText()
@@ -293,7 +293,7 @@ class PrintCustomItemListOptionDetails(winrt.system.Object, ImplementsIPrintItem
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintCustomTextOptionDetails(winrt.system.Object, ImplementsIPrintCustomOptionDetails, ImplementsIPrintOptionDetails):
+class PrintCustomTextOptionDetails(winrt.system.Object, IPrintCustomOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails::get_DisplayName()
@@ -343,7 +343,7 @@ class PrintCustomTextOptionDetails(winrt.system.Object, ImplementsIPrintCustomOp
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintCustomToggleOptionDetails(winrt.system.Object, ImplementsIPrintCustomOptionDetails, ImplementsIPrintOptionDetails):
+class PrintCustomToggleOptionDetails(winrt.system.Object, IPrintCustomOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintCustomToggleOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCustomToggleOptionDetails::get_DisplayName()
@@ -387,7 +387,7 @@ class PrintCustomToggleOptionDetails(winrt.system.Object, ImplementsIPrintCustom
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintDuplexOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintDuplexOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintDuplexOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintDuplexOptionDetails::get_WarningText()
@@ -428,7 +428,7 @@ class PrintDuplexOptionDetails(winrt.system.Object, ImplementsIPrintItemListOpti
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintHolePunchOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintHolePunchOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintHolePunchOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintHolePunchOptionDetails::get_WarningText()
@@ -469,7 +469,7 @@ class PrintHolePunchOptionDetails(winrt.system.Object, ImplementsIPrintItemListO
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintMediaSizeOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintMediaSizeOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintMediaSizeOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintMediaSizeOptionDetails::get_Items()
@@ -510,7 +510,7 @@ class PrintMediaSizeOptionDetails(winrt.system.Object, ImplementsIPrintItemListO
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintMediaTypeOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintMediaTypeOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails::get_Items()
@@ -551,7 +551,7 @@ class PrintMediaTypeOptionDetails(winrt.system.Object, ImplementsIPrintItemListO
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintOrientationOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintOrientationOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintOrientationOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintOrientationOptionDetails::get_Items()
@@ -592,7 +592,7 @@ class PrintOrientationOptionDetails(winrt.system.Object, ImplementsIPrintItemLis
     def description(self, value: str) -> None: ...
 
 @typing.final
-class PrintPageRangeOptionDetails(winrt.system.Object, ImplementsIPrintOptionDetails):
+class PrintPageRangeOptionDetails(winrt.system.Object, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintPageRangeOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Graphics.Printing.OptionDetails.PrintOptionStates Windows.Graphics.Printing.OptionDetails.PrintPageRangeOptionDetails::get_State()
@@ -630,7 +630,7 @@ class PrintPageRangeOptionDetails(winrt.system.Object, ImplementsIPrintOptionDet
     def description(self, value: str) -> None: ...
 
 @typing.final
-class PrintQualityOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintQualityOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintQualityOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintQualityOptionDetails::get_Items()
@@ -671,7 +671,7 @@ class PrintQualityOptionDetails(winrt.system.Object, ImplementsIPrintItemListOpt
     def description(self, value: str) -> None: ...
 
 @typing.final
-class PrintStapleOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
+class PrintStapleOptionDetails(winrt.system.Object, IPrintItemListOptionDetails, IPrintOptionDetails):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintStapleOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintStapleOptionDetails::get_Items()
@@ -723,7 +723,7 @@ class PrintTaskOptionDetails_Static(type):
     def get_from_print_task_options(cls, print_task_options: windows_graphics_printing.PrintTaskOptions, /) -> PrintTaskOptionDetails: ...
 
 @typing.final
-class PrintTaskOptionDetails(winrt.system.Object, windows_graphics_printing.ImplementsIPrintTaskOptionsCoreUIConfiguration, windows_graphics_printing.ImplementsIPrintTaskOptionsCore, metaclass=PrintTaskOptionDetails_Static):
+class PrintTaskOptionDetails(winrt.system.Object, windows_graphics_printing.IPrintTaskOptionsCoreUIConfiguration, windows_graphics_printing.IPrintTaskOptionsCore, metaclass=PrintTaskOptionDetails_Static):
     # Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails::CreateItemListOption(System.String,System.String)
     def create_item_list_option(self, option_id: str, display_name: str, /) -> PrintCustomItemListOptionDetails: ...
     # Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails::CreateTextOption(System.String,System.String)
@@ -747,7 +747,7 @@ class PrintTaskOptionDetails(winrt.system.Object, windows_graphics_printing.Impl
     @_property
     def options(self) -> typing.Mapping[str, IPrintOptionDetails]: ...
 
-class ImplementsIPrintCustomOptionDetails(ImplementsIPrintOptionDetails):
+class IPrintCustomOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     # System.String Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails::get_DisplayName()
     @_property
     @abstractmethod
@@ -757,74 +757,13 @@ class ImplementsIPrintCustomOptionDetails(ImplementsIPrintOptionDetails):
     @abstractmethod
     def display_name(self, value: str) -> None: ...
 
-@typing.final
-class IPrintCustomOptionDetails(winrt.system.Object, ImplementsIPrintCustomOptionDetails, ImplementsIPrintOptionDetails):
-    # System.Boolean Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::TrySetValue(System.Object)
-    def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails::get_DisplayName()
-    @_property
-    def display_name(self) -> str: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails::put_DisplayName(System.String)
-    @display_name.setter
-    def display_name(self, value: str) -> None: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_ErrorText()
-    @_property
-    def error_text(self) -> str: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_ErrorText(System.String)
-    @error_text.setter
-    def error_text(self, value: str) -> None: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionId()
-    @_property
-    def option_id(self) -> str: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionType Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionType()
-    @_property
-    def option_type(self) -> PrintOptionType: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionStates Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_State()
-    @_property
-    def state(self) -> PrintOptionStates: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_State(Windows.Graphics.Printing.OptionDetails.PrintOptionStates)
-    @state.setter
-    def state(self, value: PrintOptionStates) -> None: ...
-    # System.Object Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_Value()
-    @_property
-    def value(self) -> winrt.system.Object: ...
-
-class ImplementsIPrintItemListOptionDetails(ImplementsIPrintOptionDetails):
+class IPrintItemListOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails::get_Items()
     @_property
     @abstractmethod
     def items(self) -> typing.Sequence[winrt.system.Object]: ...
 
-@typing.final
-class IPrintItemListOptionDetails(winrt.system.Object, ImplementsIPrintItemListOptionDetails, ImplementsIPrintOptionDetails):
-    # System.Boolean Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::TrySetValue(System.Object)
-    def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
-    # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails::get_Items()
-    @_property
-    def items(self) -> typing.Sequence[winrt.system.Object]: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_ErrorText()
-    @_property
-    def error_text(self) -> str: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_ErrorText(System.String)
-    @error_text.setter
-    def error_text(self, value: str) -> None: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionId()
-    @_property
-    def option_id(self) -> str: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionType Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionType()
-    @_property
-    def option_type(self) -> PrintOptionType: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionStates Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_State()
-    @_property
-    def state(self) -> PrintOptionStates: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_State(Windows.Graphics.Printing.OptionDetails.PrintOptionStates)
-    @state.setter
-    def state(self, value: PrintOptionStates) -> None: ...
-    # System.Object Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_Value()
-    @_property
-    def value(self) -> winrt.system.Object: ...
-
-class ImplementsIPrintNumberOptionDetails(ImplementsIPrintOptionDetails):
+class IPrintNumberOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     # System.UInt32 Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails::get_MaxValue()
     @_property
     @abstractmethod
@@ -834,39 +773,7 @@ class ImplementsIPrintNumberOptionDetails(ImplementsIPrintOptionDetails):
     @abstractmethod
     def min_value(self) -> winrt.system.UInt32: ...
 
-@typing.final
-class IPrintNumberOptionDetails(winrt.system.Object, ImplementsIPrintNumberOptionDetails, ImplementsIPrintOptionDetails):
-    # System.Boolean Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::TrySetValue(System.Object)
-    def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
-    # System.UInt32 Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails::get_MaxValue()
-    @_property
-    def max_value(self) -> winrt.system.UInt32: ...
-    # System.UInt32 Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails::get_MinValue()
-    @_property
-    def min_value(self) -> winrt.system.UInt32: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_ErrorText()
-    @_property
-    def error_text(self) -> str: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_ErrorText(System.String)
-    @error_text.setter
-    def error_text(self, value: str) -> None: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionId()
-    @_property
-    def option_id(self) -> str: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionType Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionType()
-    @_property
-    def option_type(self) -> PrintOptionType: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionStates Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_State()
-    @_property
-    def state(self) -> PrintOptionStates: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_State(Windows.Graphics.Printing.OptionDetails.PrintOptionStates)
-    @state.setter
-    def state(self, value: PrintOptionStates) -> None: ...
-    # System.Object Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_Value()
-    @_property
-    def value(self) -> winrt.system.Object: ...
-
-class ImplementsIPrintOptionDetails():
+class IPrintOptionDetails(winrt._winrt.IInspectable):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::TrySetValue(System.Object)
     @abstractmethod
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
@@ -899,64 +806,9 @@ class ImplementsIPrintOptionDetails():
     @abstractmethod
     def value(self) -> winrt.system.Object: ...
 
-@typing.final
-class IPrintOptionDetails(winrt.system.Object, ImplementsIPrintOptionDetails):
-    # System.Boolean Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::TrySetValue(System.Object)
-    def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_ErrorText()
-    @_property
-    def error_text(self) -> str: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_ErrorText(System.String)
-    @error_text.setter
-    def error_text(self, value: str) -> None: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionId()
-    @_property
-    def option_id(self) -> str: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionType Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionType()
-    @_property
-    def option_type(self) -> PrintOptionType: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionStates Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_State()
-    @_property
-    def state(self) -> PrintOptionStates: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_State(Windows.Graphics.Printing.OptionDetails.PrintOptionStates)
-    @state.setter
-    def state(self, value: PrintOptionStates) -> None: ...
-    # System.Object Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_Value()
-    @_property
-    def value(self) -> winrt.system.Object: ...
-
-class ImplementsIPrintTextOptionDetails(ImplementsIPrintOptionDetails):
+class IPrintTextOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     # System.UInt32 Windows.Graphics.Printing.OptionDetails.IPrintTextOptionDetails::get_MaxCharacters()
     @_property
     @abstractmethod
     def max_characters(self) -> winrt.system.UInt32: ...
-
-@typing.final
-class IPrintTextOptionDetails(winrt.system.Object, ImplementsIPrintTextOptionDetails, ImplementsIPrintOptionDetails):
-    # System.Boolean Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::TrySetValue(System.Object)
-    def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
-    # System.UInt32 Windows.Graphics.Printing.OptionDetails.IPrintTextOptionDetails::get_MaxCharacters()
-    @_property
-    def max_characters(self) -> winrt.system.UInt32: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_ErrorText()
-    @_property
-    def error_text(self) -> str: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_ErrorText(System.String)
-    @error_text.setter
-    def error_text(self, value: str) -> None: ...
-    # System.String Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionId()
-    @_property
-    def option_id(self) -> str: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionType Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_OptionType()
-    @_property
-    def option_type(self) -> PrintOptionType: ...
-    # Windows.Graphics.Printing.OptionDetails.PrintOptionStates Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_State()
-    @_property
-    def state(self) -> PrintOptionStates: ...
-    # System.Void Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::put_State(Windows.Graphics.Printing.OptionDetails.PrintOptionStates)
-    @state.setter
-    def state(self, value: PrintOptionStates) -> None: ...
-    # System.Object Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::get_Value()
-    @_property
-    def value(self) -> winrt.system.Object: ...
 

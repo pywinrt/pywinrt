@@ -17,19 +17,12 @@ from winrt._winrt_windows_security_authentication_web_provider import (
     WebProviderTokenRequest,
     WebProviderTokenResponse,
     IWebAccountProviderBaseReportOperation,
-    ImplementsIWebAccountProviderBaseReportOperation,
     IWebAccountProviderOperation,
-    ImplementsIWebAccountProviderOperation,
     IWebAccountProviderSilentReportOperation,
-    ImplementsIWebAccountProviderSilentReportOperation,
     IWebAccountProviderTokenObjects,
-    ImplementsIWebAccountProviderTokenObjects,
     IWebAccountProviderTokenObjects2,
-    ImplementsIWebAccountProviderTokenObjects2,
     IWebAccountProviderTokenOperation,
-    ImplementsIWebAccountProviderTokenOperation,
     IWebAccountProviderUIReportOperation,
-    ImplementsIWebAccountProviderUIReportOperation,
 )
 
 __all__ = [
@@ -50,19 +43,12 @@ __all__ = [
     "WebProviderTokenRequest",
     "WebProviderTokenResponse",
     "IWebAccountProviderBaseReportOperation",
-    "ImplementsIWebAccountProviderBaseReportOperation",
     "IWebAccountProviderOperation",
-    "ImplementsIWebAccountProviderOperation",
     "IWebAccountProviderSilentReportOperation",
-    "ImplementsIWebAccountProviderSilentReportOperation",
     "IWebAccountProviderTokenObjects",
-    "ImplementsIWebAccountProviderTokenObjects",
     "IWebAccountProviderTokenObjects2",
-    "ImplementsIWebAccountProviderTokenObjects2",
     "IWebAccountProviderTokenOperation",
-    "ImplementsIWebAccountProviderTokenOperation",
     "IWebAccountProviderUIReportOperation",
-    "ImplementsIWebAccountProviderUIReportOperation",
 ]
 
 class WebAccountClientViewType(enum.IntEnum):

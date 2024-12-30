@@ -82,7 +82,7 @@ class ContentIsland_Static(type):
     # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::GetFromId(System.UInt64)
     def get_from_id(cls, id: winrt.system.UInt64, /) -> ContentIsland: ...
 
-class ContentIsland(winrt.system.Object, microsoft_ui_composition.ImplementsICompositionSupportsSystemBackdrop, microsoft_ui.ImplementsIClosableNotifier, windows_foundation.ImplementsIClosable, metaclass=ContentIsland_Static):
+class ContentIsland(winrt.system.Object, microsoft_ui_composition.ICompositionSupportsSystemBackdrop, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=ContentIsland_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Microsoft.UI.Content.ContentIsland::Close()
@@ -265,7 +265,7 @@ class ContentIslandStateChangedEventArgs(winrt.system.Object):
 class ContentSite_Static(type):
     pass
 
-class ContentSite(winrt.system.Object, microsoft_ui.ImplementsIClosableNotifier, windows_foundation.ImplementsIClosable, metaclass=ContentSite_Static):
+class ContentSite(winrt.system.Object, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=ContentSite_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Microsoft.UI.Content.ContentSite::Close()
@@ -507,7 +507,7 @@ class DesktopSiteBridge_Static(type):
     # System.Boolean Microsoft.UI.Content.DesktopSiteBridge::IsSupported()
     def is_supported(cls) -> bool: ...
 
-class DesktopSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windows_foundation.ImplementsIClosable, microsoft_ui.ImplementsIClosableNotifier, metaclass=DesktopSiteBridge_Static):
+class DesktopSiteBridge(winrt.system.Object, IContentSiteBridge, windows_foundation.IClosable, microsoft_ui.IClosableNotifier, metaclass=DesktopSiteBridge_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Microsoft.UI.Content.DesktopSiteBridge::Close()
@@ -586,7 +586,7 @@ class DesktopSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windo
     @typing.final
     def is_closed(self) -> bool: ...
 
-class ImplementsIContentSiteBridge(windows_foundation.ImplementsIClosable):
+class IContentSiteBridge(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.IContentSiteBridge::get_DispatcherQueue()
     @_property
     @abstractmethod
@@ -606,27 +606,5 @@ class ImplementsIContentSiteBridge(windows_foundation.ImplementsIClosable):
     # System.Void Microsoft.UI.Content.IContentSiteBridge::put_OverrideScale(System.Single)
     @override_scale.setter
     @abstractmethod
-    def override_scale(self, value: winrt.system.Single) -> None: ...
-
-@typing.final
-class IContentSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windows_foundation.ImplementsIClosable):
-    def __enter__(self: Self) -> Self: ...
-    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
-    # System.Void Windows.Foundation.IClosable::Close()
-    def close(self) -> None: ...
-    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.IContentSiteBridge::get_DispatcherQueue()
-    @_property
-    def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
-    # Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection> Microsoft.UI.Content.IContentSiteBridge::get_LayoutDirectionOverride()
-    @_property
-    def layout_direction_override(self) -> typing.Optional[ContentLayoutDirection]: ...
-    # System.Void Microsoft.UI.Content.IContentSiteBridge::put_LayoutDirectionOverride(Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection>)
-    @layout_direction_override.setter
-    def layout_direction_override(self, value: typing.Optional[ContentLayoutDirection]) -> None: ...
-    # System.Single Microsoft.UI.Content.IContentSiteBridge::get_OverrideScale()
-    @_property
-    def override_scale(self) -> winrt.system.Single: ...
-    # System.Void Microsoft.UI.Content.IContentSiteBridge::put_OverrideScale(System.Single)
-    @override_scale.setter
     def override_scale(self, value: winrt.system.Single) -> None: ...
 

@@ -38,7 +38,7 @@ class ComponentRenewal(winrt.system.Object, metaclass=ComponentRenewal_Static):
     pass
 
 @typing.final
-class HdcpSession(winrt.system.Object, windows_foundation.ImplementsIClosable):
+class HdcpSession(winrt.system.Object, windows_foundation.IClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
@@ -76,7 +76,7 @@ class MediaProtectionManager(winrt.system.Object):
 
 @typing.final
 class MediaProtectionPMPServer(winrt.system.Object):
-    def __new__(cls: typing.Type[Self], p_properties: windows_foundation_collections.ImplementsIPropertySet) -> Self: ...
+    def __new__(cls: typing.Type[Self], p_properties: windows_foundation_collections.IPropertySet) -> Self: ...
     # Windows.Foundation.Collections.IPropertySet Windows.Media.Protection.MediaProtectionPMPServer::get_Properties()
     @_property
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
@@ -128,7 +128,7 @@ class ServiceRequestedEventArgs(winrt.system.Object):
     @_property
     def media_playback_item(self) -> windows_media_playback.MediaPlaybackItem: ...
 
-class ImplementsIMediaProtectionServiceRequest():
+class IMediaProtectionServiceRequest(winrt._winrt.IInspectable):
     # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_ProtectionSystem()
     @_property
     @abstractmethod
@@ -136,14 +136,5 @@ class ImplementsIMediaProtectionServiceRequest():
     # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_Type()
     @_property
     @abstractmethod
-    def type(self) -> _uuid.UUID: ...
-
-@typing.final
-class IMediaProtectionServiceRequest(winrt.system.Object, ImplementsIMediaProtectionServiceRequest):
-    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_ProtectionSystem()
-    @_property
-    def protection_system(self) -> _uuid.UUID: ...
-    # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_Type()
-    @_property
     def type(self) -> _uuid.UUID: ...
 

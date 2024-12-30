@@ -29,13 +29,9 @@ from winrt._winrt_windows_ai_machinelearning import (
     TensorUInt64Bit,
     TensorUInt8Bit,
     ILearningModelFeatureDescriptor,
-    ImplementsILearningModelFeatureDescriptor,
     ILearningModelFeatureValue,
-    ImplementsILearningModelFeatureValue,
     ILearningModelOperatorProvider,
-    ImplementsILearningModelOperatorProvider,
     ITensor,
-    ImplementsITensor,
 )
 
 __all__ = [
@@ -68,13 +64,9 @@ __all__ = [
     "TensorUInt64Bit",
     "TensorUInt8Bit",
     "ILearningModelFeatureDescriptor",
-    "ImplementsILearningModelFeatureDescriptor",
     "ILearningModelFeatureValue",
-    "ImplementsILearningModelFeatureValue",
     "ILearningModelOperatorProvider",
-    "ImplementsILearningModelOperatorProvider",
     "ITensor",
-    "ImplementsITensor",
 ]
 
 class LearningModelDeviceKind(enum.IntEnum):

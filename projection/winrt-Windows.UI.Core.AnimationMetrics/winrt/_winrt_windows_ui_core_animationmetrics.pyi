@@ -37,7 +37,7 @@ class AnimationDescription(winrt.system.Object):
     def z_order(self) -> winrt.system.Int32: ...
 
 @typing.final
-class OpacityAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
+class OpacityAnimation(winrt.system.Object, IPropertyAnimation):
     # System.Single Windows.UI.Core.AnimationMetrics.OpacityAnimation::get_FinalOpacity()
     @_property
     def final_opacity(self) -> winrt.system.Single: ...
@@ -61,7 +61,7 @@ class OpacityAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     def type(self) -> PropertyAnimationType: ...
 
 @typing.final
-class PropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
+class PropertyAnimation(winrt.system.Object, IPropertyAnimation):
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.PropertyAnimation::get_Control1()
     @_property
     def control1(self) -> windows_foundation.Point: ...
@@ -79,7 +79,7 @@ class PropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     def type(self) -> PropertyAnimationType: ...
 
 @typing.final
-class ScaleAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
+class ScaleAnimation(winrt.system.Object, IPropertyAnimation):
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.ScaleAnimation::get_Control1()
     @_property
     def control1(self) -> windows_foundation.Point: ...
@@ -112,7 +112,7 @@ class ScaleAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     def normalized_origin(self) -> windows_foundation.Point: ...
 
 @typing.final
-class TranslationAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
+class TranslationAnimation(winrt.system.Object, IPropertyAnimation):
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.TranslationAnimation::get_Control1()
     @_property
     def control1(self) -> windows_foundation.Point: ...
@@ -129,7 +129,7 @@ class TranslationAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     @_property
     def type(self) -> PropertyAnimationType: ...
 
-class ImplementsIPropertyAnimation():
+class IPropertyAnimation(winrt._winrt.IInspectable):
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Control1()
     @_property
     @abstractmethod
@@ -149,23 +149,5 @@ class ImplementsIPropertyAnimation():
     # Windows.UI.Core.AnimationMetrics.PropertyAnimationType Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Type()
     @_property
     @abstractmethod
-    def type(self) -> PropertyAnimationType: ...
-
-@typing.final
-class IPropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
-    # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Control1()
-    @_property
-    def control1(self) -> windows_foundation.Point: ...
-    # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Control2()
-    @_property
-    def control2(self) -> windows_foundation.Point: ...
-    # Windows.Foundation.TimeSpan Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Delay()
-    @_property
-    def delay(self) -> datetime.timedelta: ...
-    # Windows.Foundation.TimeSpan Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Duration()
-    @_property
-    def duration(self) -> datetime.timedelta: ...
-    # Windows.UI.Core.AnimationMetrics.PropertyAnimationType Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Type()
-    @_property
     def type(self) -> PropertyAnimationType: ...
 

@@ -248,7 +248,7 @@ class WindowTabIcon_Static(type):
     # Windows.UI.Shell.WindowTabIcon Windows.UI.Shell.WindowTabIcon::CreateFromFontGlyph(System.String,System.String,Windows.Foundation.Uri)
     def create_from_font_glyph_with_uri(cls, glyph: str, font_family: str, font_uri: windows_foundation.Uri, /) -> WindowTabIcon: ...
     # Windows.UI.Shell.WindowTabIcon Windows.UI.Shell.WindowTabIcon::CreateFromImage(Windows.Storage.Streams.IRandomAccessStreamReference)
-    def create_from_image(cls, image: windows_storage_streams.ImplementsIRandomAccessStreamReference, /) -> WindowTabIcon: ...
+    def create_from_image(cls, image: windows_storage_streams.IRandomAccessStreamReference, /) -> WindowTabIcon: ...
 
 @typing.final
 class WindowTabIcon(winrt.system.Object, metaclass=WindowTabIcon_Static):
@@ -316,7 +316,7 @@ class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
     def image(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs::put_Image(Windows.Storage.Streams.IRandomAccessStreamReference)
     @image.setter
-    def image(self, value: windows_storage_streams.ImplementsIRandomAccessStreamReference) -> None: ...
+    def image(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # System.Boolean Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs::get_IsCompositedOnWindow()
     @_property
     def is_composited_on_window(self) -> bool: ...
@@ -327,23 +327,13 @@ class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
     @_property
     def tab(self) -> WindowTab: ...
 
-class ImplementsIAdaptiveCard():
+class IAdaptiveCard(winrt._winrt.IInspectable):
     # System.String Windows.UI.Shell.IAdaptiveCard::ToJson()
     @abstractmethod
     def to_json(self) -> str: ...
 
-@typing.final
-class IAdaptiveCard(winrt.system.Object, ImplementsIAdaptiveCard):
-    # System.String Windows.UI.Shell.IAdaptiveCard::ToJson()
-    def to_json(self) -> str: ...
-
-class ImplementsIAdaptiveCardBuilderStatics():
+class IAdaptiveCardBuilderStatics(winrt._winrt.IInspectable):
     # Windows.UI.Shell.IAdaptiveCard Windows.UI.Shell.IAdaptiveCardBuilderStatics::CreateAdaptiveCardFromJson(System.String)
     @abstractmethod
-    def create_adaptive_card_from_json(self, value: str, /) -> IAdaptiveCard: ...
-
-@typing.final
-class IAdaptiveCardBuilderStatics(winrt.system.Object, ImplementsIAdaptiveCardBuilderStatics):
-    # Windows.UI.Shell.IAdaptiveCard Windows.UI.Shell.IAdaptiveCardBuilderStatics::CreateAdaptiveCardFromJson(System.String)
     def create_adaptive_card_from_json(self, value: str, /) -> IAdaptiveCard: ...
 

@@ -53,13 +53,8 @@ class DualSimTile(winrt.system.Object, metaclass=DualSimTile_Static):
     @_property
     def is_pinned_to_start(self) -> bool: ...
 
-class ImplementsIToastNotificationManagerStatics3():
+class IToastNotificationManagerStatics3(winrt._winrt.IInspectable):
     # Windows.UI.Notifications.ToastNotifier Windows.Phone.StartScreen.IToastNotificationManagerStatics3::CreateToastNotifierForSecondaryTile(System.String)
     @abstractmethod
-    def create_toast_notifier_for_secondary_tile(self, tile_id: str, /) -> windows_ui_notifications.ToastNotifier: ...
-
-@typing.final
-class IToastNotificationManagerStatics3(winrt.system.Object, ImplementsIToastNotificationManagerStatics3):
-    # Windows.UI.Notifications.ToastNotifier Windows.Phone.StartScreen.IToastNotificationManagerStatics3::CreateToastNotifierForSecondaryTile(System.String)
     def create_toast_notifier_for_secondary_tile(self, tile_id: str, /) -> windows_ui_notifications.ToastNotifier: ...
 

@@ -22,7 +22,6 @@ from winrt._winrt_windows_devices_geolocation import (
     StatusChangedEventArgs,
     VenueData,
     IGeoshape,
-    ImplementsIGeoshape,
 )
 
 __all__ = [
@@ -52,7 +51,6 @@ __all__ = [
     "StatusChangedEventArgs",
     "VenueData",
     "IGeoshape",
-    "ImplementsIGeoshape",
 ]
 
 class AltitudeReferenceSystem(enum.IntEnum):

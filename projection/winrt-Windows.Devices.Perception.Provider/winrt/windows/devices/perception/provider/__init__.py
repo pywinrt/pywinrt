@@ -16,9 +16,7 @@ from winrt._winrt_windows_devices_perception_provider import (
     PerceptionPropertyChangeRequest,
     PerceptionVideoFrameAllocator,
     IPerceptionFrameProvider,
-    ImplementsIPerceptionFrameProvider,
     IPerceptionFrameProviderManager,
-    ImplementsIPerceptionFrameProviderManager,
 )
 
 __all__ = [
@@ -33,9 +31,7 @@ __all__ = [
     "PerceptionPropertyChangeRequest",
     "PerceptionVideoFrameAllocator",
     "IPerceptionFrameProvider",
-    "ImplementsIPerceptionFrameProvider",
     "IPerceptionFrameProviderManager",
-    "ImplementsIPerceptionFrameProviderManager",
     "PerceptionStartFaceAuthenticationHandler",
     "PerceptionStopFaceAuthenticationHandler",
 ]

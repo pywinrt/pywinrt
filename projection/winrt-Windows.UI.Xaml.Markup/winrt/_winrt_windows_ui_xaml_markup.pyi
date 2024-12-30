@@ -42,7 +42,7 @@ class MarkupExtension(winrt.system.Object, metaclass=MarkupExtension_Static):
 @typing.final
 class XamlBinaryWriter_Static(type):
     # Windows.UI.Xaml.Markup.XamlBinaryWriterErrorInformation Windows.UI.Xaml.Markup.XamlBinaryWriter::Write(Windows.Foundation.Collections.IVector`1<Windows.Storage.Streams.IRandomAccessStream>,Windows.Foundation.Collections.IVector`1<Windows.Storage.Streams.IRandomAccessStream>,Windows.UI.Xaml.Markup.IXamlMetadataProvider)
-    def write(cls, input_streams: typing.MutableSequence[windows_storage_streams.ImplementsIRandomAccessStream], output_streams: typing.MutableSequence[windows_storage_streams.ImplementsIRandomAccessStream], xaml_metadata_provider: ImplementsIXamlMetadataProvider, /) -> XamlBinaryWriterErrorInformation: ...
+    def write(cls, input_streams: typing.MutableSequence[windows_storage_streams.IRandomAccessStream], output_streams: typing.MutableSequence[windows_storage_streams.IRandomAccessStream], xaml_metadata_provider: IXamlMetadataProvider, /) -> XamlBinaryWriterErrorInformation: ...
 
 @typing.final
 class XamlBinaryWriter(winrt.system.Object, metaclass=XamlBinaryWriter_Static):
@@ -57,7 +57,7 @@ class XamlBindingHelper_Static(type):
     # System.Void Windows.UI.Xaml.Markup.XamlBindingHelper::ResumeRendering(Windows.UI.Xaml.UIElement)
     def resume_rendering(cls, target: windows_ui_xaml.UIElement, /) -> None: ...
     # System.Void Windows.UI.Xaml.Markup.XamlBindingHelper::SetDataTemplateComponent(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.Markup.IDataTemplateComponent)
-    def set_data_template_component(cls, element: windows_ui_xaml.DependencyObject, value: ImplementsIDataTemplateComponent, /) -> None: ...
+    def set_data_template_component(cls, element: windows_ui_xaml.DependencyObject, value: IDataTemplateComponent, /) -> None: ...
     # System.Void Windows.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromBoolean(System.Object,Windows.UI.Xaml.DependencyProperty,System.Boolean)
     def set_property_from_boolean(cls, dependency_object: winrt.system.Object, property_to_set: windows_ui_xaml.DependencyProperty, value: bool, /) -> None: ...
     # System.Void Windows.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromByte(System.Object,Windows.UI.Xaml.DependencyProperty,System.Byte)
@@ -122,27 +122,17 @@ class XamlReader_Static(type):
 class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
     pass
 
-class ImplementsIComponentConnector():
+class IComponentConnector(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Markup.IComponentConnector::Connect(System.Int32,System.Object)
     @abstractmethod
     def connect(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> None: ...
 
-@typing.final
-class IComponentConnector(winrt.system.Object, ImplementsIComponentConnector):
-    # System.Void Windows.UI.Xaml.Markup.IComponentConnector::Connect(System.Int32,System.Object)
-    def connect(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> None: ...
-
-class ImplementsIComponentConnector2():
+class IComponentConnector2(winrt._winrt.IInspectable):
     # Windows.UI.Xaml.Markup.IComponentConnector Windows.UI.Xaml.Markup.IComponentConnector2::GetBindingConnector(System.Int32,System.Object)
     @abstractmethod
     def get_binding_connector(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> IComponentConnector: ...
 
-@typing.final
-class IComponentConnector2(winrt.system.Object, ImplementsIComponentConnector2):
-    # Windows.UI.Xaml.Markup.IComponentConnector Windows.UI.Xaml.Markup.IComponentConnector2::GetBindingConnector(System.Int32,System.Object)
-    def get_binding_connector(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> IComponentConnector: ...
-
-class ImplementsIDataTemplateComponent():
+class IDataTemplateComponent(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Markup.IDataTemplateComponent::ProcessBindings(System.Object,System.Int32,System.Int32,System.Int32&)
     @abstractmethod
     def process_bindings(self, item: winrt.system.Object, item_index: winrt.system.Int32, phase: winrt.system.Int32, /) -> winrt.system.Int32: ...
@@ -150,24 +140,12 @@ class ImplementsIDataTemplateComponent():
     @abstractmethod
     def recycle(self) -> None: ...
 
-@typing.final
-class IDataTemplateComponent(winrt.system.Object, ImplementsIDataTemplateComponent):
-    # System.Void Windows.UI.Xaml.Markup.IDataTemplateComponent::ProcessBindings(System.Object,System.Int32,System.Int32,System.Int32&)
-    def process_bindings(self, item: winrt.system.Object, item_index: winrt.system.Int32, phase: winrt.system.Int32, /) -> winrt.system.Int32: ...
-    # System.Void Windows.UI.Xaml.Markup.IDataTemplateComponent::Recycle()
-    def recycle(self) -> None: ...
-
-class ImplementsIXamlBindScopeDiagnostics():
+class IXamlBindScopeDiagnostics(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics::Disable(System.Int32,System.Int32)
     @abstractmethod
     def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
 
-@typing.final
-class IXamlBindScopeDiagnostics(winrt.system.Object, ImplementsIXamlBindScopeDiagnostics):
-    # System.Void Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics::Disable(System.Int32,System.Int32)
-    def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
-
-class ImplementsIXamlMember():
+class IXamlMember(winrt._winrt.IInspectable):
     # System.Object Windows.UI.Xaml.Markup.IXamlMember::GetValue(System.Object)
     @abstractmethod
     def get_value(self, instance: winrt.system.Object, /) -> winrt.system.Object: ...
@@ -199,32 +177,7 @@ class ImplementsIXamlMember():
     @abstractmethod
     def type(self) -> IXamlType: ...
 
-@typing.final
-class IXamlMember(winrt.system.Object, ImplementsIXamlMember):
-    # System.Object Windows.UI.Xaml.Markup.IXamlMember::GetValue(System.Object)
-    def get_value(self, instance: winrt.system.Object, /) -> winrt.system.Object: ...
-    # System.Void Windows.UI.Xaml.Markup.IXamlMember::SetValue(System.Object,System.Object)
-    def set_value(self, instance: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlMember::get_IsAttachable()
-    @_property
-    def is_attachable(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlMember::get_IsDependencyProperty()
-    @_property
-    def is_dependency_property(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlMember::get_IsReadOnly()
-    @_property
-    def is_read_only(self) -> bool: ...
-    # System.String Windows.UI.Xaml.Markup.IXamlMember::get_Name()
-    @_property
-    def name(self) -> str: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlMember::get_TargetType()
-    @_property
-    def target_type(self) -> IXamlType: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlMember::get_Type()
-    @_property
-    def type(self) -> IXamlType: ...
-
-class ImplementsIXamlMetadataProvider():
+class IXamlMetadataProvider(winrt._winrt.IInspectable):
     # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlMetadataProvider::GetXamlType(Windows.UI.Xaml.Interop.TypeName)
     @abstractmethod
     def get_xaml_type(self, type: windows_ui_xaml_interop.TypeName, /) -> IXamlType: ...
@@ -235,16 +188,7 @@ class ImplementsIXamlMetadataProvider():
     @abstractmethod
     def get_xmlns_definitions(self) -> winrt.system.Array[XmlnsDefinition]: ...
 
-@typing.final
-class IXamlMetadataProvider(winrt.system.Object, ImplementsIXamlMetadataProvider):
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlMetadataProvider::GetXamlType(Windows.UI.Xaml.Interop.TypeName)
-    def get_xaml_type(self, type: windows_ui_xaml_interop.TypeName, /) -> IXamlType: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlMetadataProvider::GetXamlType(System.String)
-    def get_xaml_type_by_full_name(self, full_name: str, /) -> IXamlType: ...
-    # Windows.UI.Xaml.Markup.XmlnsDefinition[] Windows.UI.Xaml.Markup.IXamlMetadataProvider::GetXmlnsDefinitions()
-    def get_xmlns_definitions(self) -> winrt.system.Array[XmlnsDefinition]: ...
-
-class ImplementsIXamlType():
+class IXamlType(winrt._winrt.IInspectable):
     # System.Object Windows.UI.Xaml.Markup.IXamlType::ActivateInstance()
     @abstractmethod
     def activate_instance(self) -> winrt.system.Object: ...
@@ -312,114 +256,9 @@ class ImplementsIXamlType():
     @abstractmethod
     def underlying_type(self) -> windows_ui_xaml_interop.TypeName: ...
 
-@typing.final
-class IXamlType(winrt.system.Object, ImplementsIXamlType):
-    # System.Object Windows.UI.Xaml.Markup.IXamlType::ActivateInstance()
-    def activate_instance(self) -> winrt.system.Object: ...
-    # System.Void Windows.UI.Xaml.Markup.IXamlType::AddToMap(System.Object,System.Object,System.Object)
-    def add_to_map(self, instance: winrt.system.Object, key: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
-    # System.Void Windows.UI.Xaml.Markup.IXamlType::AddToVector(System.Object,System.Object)
-    def add_to_vector(self, instance: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
-    # System.Object Windows.UI.Xaml.Markup.IXamlType::CreateFromString(System.String)
-    def create_from_string(self, value: str, /) -> winrt.system.Object: ...
-    # Windows.UI.Xaml.Markup.IXamlMember Windows.UI.Xaml.Markup.IXamlType::GetMember(System.String)
-    def get_member(self, name: str, /) -> IXamlMember: ...
-    # System.Void Windows.UI.Xaml.Markup.IXamlType::RunInitializer()
-    def run_initializer(self) -> None: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType::get_BaseType()
-    @_property
-    def base_type(self) -> IXamlType: ...
-    # Windows.UI.Xaml.Markup.IXamlMember Windows.UI.Xaml.Markup.IXamlType::get_ContentProperty()
-    @_property
-    def content_property(self) -> IXamlMember: ...
-    # System.String Windows.UI.Xaml.Markup.IXamlType::get_FullName()
-    @_property
-    def full_name(self) -> str: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsArray()
-    @_property
-    def is_array(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsBindable()
-    @_property
-    def is_bindable(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsCollection()
-    @_property
-    def is_collection(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsConstructible()
-    @_property
-    def is_constructible(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsDictionary()
-    @_property
-    def is_dictionary(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsMarkupExtension()
-    @_property
-    def is_markup_extension(self) -> bool: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType::get_ItemType()
-    @_property
-    def item_type(self) -> IXamlType: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType::get_KeyType()
-    @_property
-    def key_type(self) -> IXamlType: ...
-    # Windows.UI.Xaml.Interop.TypeName Windows.UI.Xaml.Markup.IXamlType::get_UnderlyingType()
-    @_property
-    def underlying_type(self) -> windows_ui_xaml_interop.TypeName: ...
-
-class ImplementsIXamlType2(ImplementsIXamlType):
+class IXamlType2(IXamlType, winrt._winrt.IInspectable):
     # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType2::get_BoxedType()
     @_property
     @abstractmethod
     def boxed_type(self) -> IXamlType: ...
-
-@typing.final
-class IXamlType2(winrt.system.Object, ImplementsIXamlType2, ImplementsIXamlType):
-    # System.Object Windows.UI.Xaml.Markup.IXamlType::ActivateInstance()
-    def activate_instance(self) -> winrt.system.Object: ...
-    # System.Void Windows.UI.Xaml.Markup.IXamlType::AddToMap(System.Object,System.Object,System.Object)
-    def add_to_map(self, instance: winrt.system.Object, key: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
-    # System.Void Windows.UI.Xaml.Markup.IXamlType::AddToVector(System.Object,System.Object)
-    def add_to_vector(self, instance: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
-    # System.Object Windows.UI.Xaml.Markup.IXamlType::CreateFromString(System.String)
-    def create_from_string(self, value: str, /) -> winrt.system.Object: ...
-    # Windows.UI.Xaml.Markup.IXamlMember Windows.UI.Xaml.Markup.IXamlType::GetMember(System.String)
-    def get_member(self, name: str, /) -> IXamlMember: ...
-    # System.Void Windows.UI.Xaml.Markup.IXamlType::RunInitializer()
-    def run_initializer(self) -> None: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType2::get_BoxedType()
-    @_property
-    def boxed_type(self) -> IXamlType: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType::get_BaseType()
-    @_property
-    def base_type(self) -> IXamlType: ...
-    # Windows.UI.Xaml.Markup.IXamlMember Windows.UI.Xaml.Markup.IXamlType::get_ContentProperty()
-    @_property
-    def content_property(self) -> IXamlMember: ...
-    # System.String Windows.UI.Xaml.Markup.IXamlType::get_FullName()
-    @_property
-    def full_name(self) -> str: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsArray()
-    @_property
-    def is_array(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsBindable()
-    @_property
-    def is_bindable(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsCollection()
-    @_property
-    def is_collection(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsConstructible()
-    @_property
-    def is_constructible(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsDictionary()
-    @_property
-    def is_dictionary(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Markup.IXamlType::get_IsMarkupExtension()
-    @_property
-    def is_markup_extension(self) -> bool: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType::get_ItemType()
-    @_property
-    def item_type(self) -> IXamlType: ...
-    # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType::get_KeyType()
-    @_property
-    def key_type(self) -> IXamlType: ...
-    # Windows.UI.Xaml.Interop.TypeName Windows.UI.Xaml.Markup.IXamlType::get_UnderlyingType()
-    @_property
-    def underlying_type(self) -> windows_ui_xaml_interop.TypeName: ...
 

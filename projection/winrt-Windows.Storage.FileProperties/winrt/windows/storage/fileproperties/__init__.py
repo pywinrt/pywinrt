@@ -13,7 +13,6 @@ from winrt._winrt_windows_storage_fileproperties import (
     StorageItemThumbnail,
     VideoProperties,
     IStorageItemExtraProperties,
-    ImplementsIStorageItemExtraProperties,
 )
 
 __all__ = [
@@ -32,7 +31,6 @@ __all__ = [
     "StorageItemThumbnail",
     "VideoProperties",
     "IStorageItemExtraProperties",
-    "ImplementsIStorageItemExtraProperties",
 ]
 
 class PhotoOrientation(enum.IntEnum):

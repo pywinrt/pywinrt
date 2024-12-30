@@ -89,11 +89,8 @@ from winrt._winrt_microsoft_ui_xaml import (
     XamlRoot,
     XamlRootChangedEventArgs,
     IDataTemplateExtension,
-    ImplementsIDataTemplateExtension,
     IElementFactory,
-    ImplementsIElementFactory,
     IXamlServiceProvider,
-    ImplementsIXamlServiceProvider,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -252,11 +249,8 @@ __all__ = [
     "XamlRoot",
     "XamlRootChangedEventArgs",
     "IDataTemplateExtension",
-    "ImplementsIDataTemplateExtension",
     "IElementFactory",
-    "ImplementsIElementFactory",
     "IXamlServiceProvider",
-    "ImplementsIXamlServiceProvider",
     "ApplicationInitializationCallback",
     "BindingFailedEventHandler",
     "CreateDefaultValueCallback",

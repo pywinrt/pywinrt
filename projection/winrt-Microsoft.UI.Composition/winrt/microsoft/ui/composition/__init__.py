@@ -108,19 +108,12 @@ from winrt._winrt_microsoft_ui_composition import (
     VisualCollection,
     VisualUnorderedCollection,
     IAnimationObject,
-    ImplementsIAnimationObject,
     ICompositionAnimationBase,
-    ImplementsICompositionAnimationBase,
     ICompositionSupportsSystemBackdrop,
-    ImplementsICompositionSupportsSystemBackdrop,
     ICompositionSurface,
-    ImplementsICompositionSurface,
     ICompositionSurfaceFacade,
-    ImplementsICompositionSurfaceFacade,
     IVisualElement,
-    ImplementsIVisualElement,
     IVisualElement2,
-    ImplementsIVisualElement2,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -273,19 +266,12 @@ __all__ = [
     "VisualCollection",
     "VisualUnorderedCollection",
     "IAnimationObject",
-    "ImplementsIAnimationObject",
     "ICompositionAnimationBase",
-    "ImplementsICompositionAnimationBase",
     "ICompositionSupportsSystemBackdrop",
-    "ImplementsICompositionSupportsSystemBackdrop",
     "ICompositionSurface",
-    "ImplementsICompositionSurface",
     "ICompositionSurfaceFacade",
-    "ImplementsICompositionSurfaceFacade",
     "IVisualElement",
-    "ImplementsIVisualElement",
     "IVisualElement2",
-    "ImplementsIVisualElement2",
 ]
 
 class AnimationControllerProgressBehavior(enum.IntEnum):

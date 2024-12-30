@@ -8,9 +8,7 @@ from winrt._winrt_microsoft_ui_composition_systembackdrops import (
     MicaController,
     SystemBackdropConfiguration,
     ISystemBackdropController,
-    ImplementsISystemBackdropController,
     ISystemBackdropControllerWithTargets,
-    ImplementsISystemBackdropControllerWithTargets,
 )
 
 __all__ = [
@@ -22,9 +20,7 @@ __all__ = [
     "MicaController",
     "SystemBackdropConfiguration",
     "ISystemBackdropController",
-    "ImplementsISystemBackdropController",
     "ISystemBackdropControllerWithTargets",
-    "ImplementsISystemBackdropControllerWithTargets",
 ]
 
 class DesktopAcrylicKind(enum.IntEnum):

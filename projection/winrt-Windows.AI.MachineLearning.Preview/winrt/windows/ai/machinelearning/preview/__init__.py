@@ -15,7 +15,6 @@ from winrt._winrt_windows_ai_machinelearning_preview import (
     SequenceVariableDescriptorPreview,
     TensorVariableDescriptorPreview,
     ILearningModelVariableDescriptorPreview,
-    ImplementsILearningModelVariableDescriptorPreview,
 )
 
 __all__ = [
@@ -33,7 +32,6 @@ __all__ = [
     "SequenceVariableDescriptorPreview",
     "TensorVariableDescriptorPreview",
     "ILearningModelVariableDescriptorPreview",
-    "ImplementsILearningModelVariableDescriptorPreview",
 ]
 
 class FeatureElementKindPreview(enum.IntEnum):

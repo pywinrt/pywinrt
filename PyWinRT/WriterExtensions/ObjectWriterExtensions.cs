@@ -95,6 +95,7 @@ static class ObjectWriterExtensions
         if (type.Category == Category.Interface)
         {
             w.WritePythonImplementsInterfaceTyping(type, ns, nullabilityMap);
+            return;
         }
 
         var collection = "";
@@ -156,9 +157,7 @@ static class ObjectWriterExtensions
 
         var interfaces = string.Join(
             "",
-            interfaceTypes.Select(i =>
-                $", {i.ToPyTypeName(ns, new TypeRefNullabilityInfo(i), implementsInterface: true)}"
-            )
+            interfaceTypes.Select(i => $", {i.ToPyTypeName(ns, new TypeRefNullabilityInfo(i))}")
         );
 
         var generic = "";

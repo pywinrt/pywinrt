@@ -124,7 +124,7 @@ class ButtonBase(windows_ui_xaml_controls.ContentControl, metaclass=ButtonBase_S
     # System.Void Windows.UI.Xaml.Controls.Primitives.ButtonBase::put_Command(Windows.UI.Xaml.Input.ICommand)
     @command.setter
     @typing.final
-    def command(self, value: windows_ui_xaml_input.ImplementsICommand) -> None: ...
+    def command(self, value: windows_ui_xaml_input.ICommand) -> None: ...
     # Windows.UI.Xaml.Controls.ClickMode Windows.UI.Xaml.Controls.Primitives.ButtonBase::get_ClickMode()
     @_property
     def click_mode(self) -> windows_ui_xaml_controls.ClickMode: ...
@@ -196,7 +196,7 @@ class CalendarViewTemplateSettings(windows_ui_xaml.DependencyObject):
 class CarouselPanel_Static(windows_ui_xaml_controls.VirtualizingPanel_Static):
     pass
 
-class CarouselPanel(windows_ui_xaml_controls.VirtualizingPanel, ImplementsIScrollSnapPointsInfo, metaclass=CarouselPanel_Static):
+class CarouselPanel(windows_ui_xaml_controls.VirtualizingPanel, IScrollSnapPointsInfo, metaclass=CarouselPanel_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.CarouselPanel::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
@@ -1132,7 +1132,7 @@ class JumpListItemBackgroundConverter_Static(windows_ui_xaml.DependencyObject_St
     def enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class JumpListItemBackgroundConverter(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.ImplementsIValueConverter, metaclass=JumpListItemBackgroundConverter_Static):
+class JumpListItemBackgroundConverter(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.IValueConverter, metaclass=JumpListItemBackgroundConverter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Object Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter::Convert(System.Object,Windows.UI.Xaml.Interop.TypeName,System.Object,System.String)
     def convert(self, value: winrt.system.Object, target_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, language: str, /) -> winrt.system.Object: ...
@@ -1161,7 +1161,7 @@ class JumpListItemForegroundConverter_Static(windows_ui_xaml.DependencyObject_St
     def enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class JumpListItemForegroundConverter(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.ImplementsIValueConverter, metaclass=JumpListItemForegroundConverter_Static):
+class JumpListItemForegroundConverter(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.IValueConverter, metaclass=JumpListItemForegroundConverter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Object Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter::Convert(System.Object,Windows.UI.Xaml.Interop.TypeName,System.Object,System.String)
     def convert(self, value: winrt.system.Object, target_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, language: str, /) -> winrt.system.Object: ...
@@ -1931,7 +1931,7 @@ class LoopingSelectorItem(windows_ui_xaml_controls.ContentControl):
     pass
 
 @typing.final
-class LoopingSelectorPanel(windows_ui_xaml_controls.Canvas, ImplementsIScrollSnapPointsInfo):
+class LoopingSelectorPanel(windows_ui_xaml_controls.Canvas, IScrollSnapPointsInfo):
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
     # System.Single Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel::GetRegularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment,System.Single&)
@@ -1982,7 +1982,7 @@ class NavigationViewItemPresenter(windows_ui_xaml_controls.ContentControl, metac
 class OrientedVirtualizingPanel_Static(windows_ui_xaml_controls.VirtualizingPanel_Static):
     pass
 
-class OrientedVirtualizingPanel(windows_ui_xaml_controls.VirtualizingPanel, windows_ui_xaml_controls.ImplementsIInsertionPanel, ImplementsIScrollSnapPointsInfo, metaclass=OrientedVirtualizingPanel_Static):
+class OrientedVirtualizingPanel(windows_ui_xaml_controls.VirtualizingPanel, windows_ui_xaml_controls.IInsertionPanel, IScrollSnapPointsInfo, metaclass=OrientedVirtualizingPanel_Static):
     # System.Void Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
@@ -2127,7 +2127,7 @@ class PivotHeaderPanel(windows_ui_xaml_controls.Canvas):
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 @typing.final
-class PivotPanel(windows_ui_xaml_controls.Panel, ImplementsIScrollSnapPointsInfo):
+class PivotPanel(windows_ui_xaml_controls.Panel, IScrollSnapPointsInfo):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.PivotPanel::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
@@ -2702,7 +2702,7 @@ class ToolTipTemplateSettings(windows_ui_xaml.DependencyObject):
     @_property
     def from_vertical_offset(self) -> winrt.system.Double: ...
 
-class ImplementsIScrollSnapPointsInfo():
+class IScrollSnapPointsInfo(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     @abstractmethod
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
@@ -2728,26 +2728,5 @@ class ImplementsIScrollSnapPointsInfo():
     # System.Boolean Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::get_AreVerticalSnapPointsRegular()
     @_property
     @abstractmethod
-    def are_vertical_snap_points_regular(self) -> bool: ...
-
-@typing.final
-class IScrollSnapPointsInfo(winrt.system.Object, ImplementsIScrollSnapPointsInfo):
-    # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
-    def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
-    # System.Single Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetRegularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment,System.Single&)
-    def get_regular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Tuple[winrt.system.Single, winrt.system.Single]: ...
-    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::add_HorizontalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
-    def add_horizontal_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
-    # System.Void Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::remove_HorizontalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
-    def remove_horizontal_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::add_VerticalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
-    def add_vertical_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
-    # System.Void Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::remove_VerticalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
-    def remove_vertical_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-    # System.Boolean Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::get_AreHorizontalSnapPointsRegular()
-    @_property
-    def are_horizontal_snap_points_regular(self) -> bool: ...
-    # System.Boolean Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::get_AreVerticalSnapPointsRegular()
-    @_property
     def are_vertical_snap_points_regular(self) -> bool: ...
 

@@ -26,13 +26,8 @@ class WebError_Static(type):
 class WebError(winrt.system.Object, metaclass=WebError_Static):
     pass
 
-class ImplementsIUriToStreamResolver():
+class IUriToStreamResolver(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IInputStream> Windows.Web.IUriToStreamResolver::UriToStreamAsync(Windows.Foundation.Uri)
     @abstractmethod
-    def uri_to_stream_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IInputStream]: ...
-
-@typing.final
-class IUriToStreamResolver(winrt.system.Object, ImplementsIUriToStreamResolver):
-    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IInputStream> Windows.Web.IUriToStreamResolver::UriToStreamAsync(Windows.Foundation.Uri)
     def uri_to_stream_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IInputStream]: ...
 

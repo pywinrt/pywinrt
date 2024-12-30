@@ -80,12 +80,12 @@ class TargetedContentContainer(winrt.system.Object, metaclass=TargetedContentCon
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class TargetedContentFile(winrt.system.Object, windows_storage_streams.ImplementsIRandomAccessStreamReference):
+class TargetedContentFile(winrt.system.Object, windows_storage_streams.IRandomAccessStreamReference):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Services.TargetedContent.TargetedContentFile::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
 
 @typing.final
-class TargetedContentImage(winrt.system.Object, windows_storage_streams.ImplementsIRandomAccessStreamReference):
+class TargetedContentImage(winrt.system.Object, windows_storage_streams.IRandomAccessStreamReference):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Services.TargetedContent.TargetedContentImage::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
     # System.UInt32 Windows.Services.TargetedContent.TargetedContentImage::get_Height()

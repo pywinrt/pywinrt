@@ -185,7 +185,7 @@ class ColorKeyFrameAnimation(KeyFrameAnimation):
 class CompositionAnimation_Static(CompositionObject_Static):
     pass
 
-class CompositionAnimation(CompositionObject, ImplementsICompositionAnimationBase, metaclass=CompositionAnimation_Static):
+class CompositionAnimation(CompositionObject, ICompositionAnimationBase, metaclass=CompositionAnimation_Static):
     @typing.final
     # System.Void Windows.UI.Composition.CompositionAnimation::ClearAllParameters()
     def clear_all_parameters(self) -> None: ...
@@ -200,7 +200,7 @@ class CompositionAnimation(CompositionObject, ImplementsICompositionAnimationBas
     def set_color_parameter(self, key: str, value: windows_ui.Color, /) -> None: ...
     @typing.final
     # System.Void Windows.UI.Composition.CompositionAnimation::SetExpressionReferenceParameter(System.String,Windows.UI.Composition.IAnimationObject)
-    def set_expression_reference_parameter(self, parameter_name: str, source: ImplementsIAnimationObject, /) -> None: ...
+    def set_expression_reference_parameter(self, parameter_name: str, source: IAnimationObject, /) -> None: ...
     @typing.final
     # System.Void Windows.UI.Composition.CompositionAnimation::SetMatrix3x2Parameter(System.String,Windows.Foundation.Numerics.Matrix3x2)
     def set_matrix3x2_parameter(self, key: str, value: windows_foundation_numerics.Matrix3x2, /) -> None: ...
@@ -238,7 +238,7 @@ class CompositionAnimation(CompositionObject, ImplementsICompositionAnimationBas
     def initial_value_expressions(self) -> InitialValueExpressionCollection: ...
 
 @typing.final
-class CompositionAnimationGroup(CompositionObject, ImplementsICompositionAnimationBase):
+class CompositionAnimationGroup(CompositionObject, ICompositionAnimationBase):
     def __iter__(self) -> windows_foundation_collections.IIterator[CompositionAnimation]: ...
     # System.Void Windows.UI.Composition.CompositionAnimationGroup::Add(Windows.UI.Composition.CompositionAnimation)
     def add(self, value: CompositionAnimation, /) -> None: ...
@@ -426,7 +426,7 @@ class CompositionContainerShape(CompositionShape):
 class CompositionDrawingSurface_Static(CompositionObject_Static):
     pass
 
-class CompositionDrawingSurface(CompositionObject, ImplementsICompositionSurface, metaclass=CompositionDrawingSurface_Static):
+class CompositionDrawingSurface(CompositionObject, ICompositionSurface, metaclass=CompositionDrawingSurface_Static):
     @typing.final
     # System.Void Windows.UI.Composition.CompositionDrawingSurface::Resize(Windows.Graphics.SizeInt32)
     def resize(self, size_pixels: windows_graphics.SizeInt32, /) -> None: ...
@@ -505,7 +505,7 @@ class CompositionEffectFactory(CompositionObject):
     def load_status(self) -> CompositionEffectFactoryLoadStatus: ...
 
 @typing.final
-class CompositionEffectSourceParameter(winrt.system.Object, windows_graphics_effects.ImplementsIGraphicsEffectSource):
+class CompositionEffectSourceParameter(winrt.system.Object, windows_graphics_effects.IGraphicsEffectSource):
     def __new__(cls: typing.Type[Self], name: str) -> Self: ...
     # System.String Windows.UI.Composition.CompositionEffectSourceParameter::get_Name()
     @_property
@@ -731,7 +731,7 @@ class CompositionMaskBrush(CompositionBrush):
     def mask(self, value: CompositionBrush) -> None: ...
 
 @typing.final
-class CompositionMipmapSurface(CompositionObject, ImplementsICompositionSurface):
+class CompositionMipmapSurface(CompositionObject, ICompositionSurface):
     # Windows.UI.Composition.CompositionDrawingSurface Windows.UI.Composition.CompositionMipmapSurface::GetDrawingSurfaceForLevel(System.UInt32)
     def get_drawing_surface_for_level(self, level: winrt.system.UInt32, /) -> CompositionDrawingSurface: ...
     # Windows.Graphics.DirectX.DirectXAlphaMode Windows.UI.Composition.CompositionMipmapSurface::get_AlphaMode()
@@ -820,11 +820,11 @@ class CompositionNineGridBrush(CompositionBrush):
 
 class CompositionObject_Static(type):
     # System.Void Windows.UI.Composition.CompositionObject::StartAnimationGroupWithIAnimationObject(Windows.UI.Composition.IAnimationObject,Windows.UI.Composition.ICompositionAnimationBase)
-    def start_animation_group_with_ianimation_object(cls, target: ImplementsIAnimationObject, animation: ImplementsICompositionAnimationBase, /) -> None: ...
+    def start_animation_group_with_ianimation_object(cls, target: IAnimationObject, animation: ICompositionAnimationBase, /) -> None: ...
     # System.Void Windows.UI.Composition.CompositionObject::StartAnimationWithIAnimationObject(Windows.UI.Composition.IAnimationObject,System.String,Windows.UI.Composition.CompositionAnimation)
-    def start_animation_with_ianimation_object(cls, target: ImplementsIAnimationObject, property_name: str, animation: CompositionAnimation, /) -> None: ...
+    def start_animation_with_ianimation_object(cls, target: IAnimationObject, property_name: str, animation: CompositionAnimation, /) -> None: ...
 
-class CompositionObject(winrt.system.Object, ImplementsIAnimationObject, windows_foundation.ImplementsIClosable, metaclass=CompositionObject_Static):
+class CompositionObject(winrt.system.Object, IAnimationObject, windows_foundation.IClosable, metaclass=CompositionObject_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.UI.Composition.CompositionObject::Close()
@@ -836,7 +836,7 @@ class CompositionObject(winrt.system.Object, ImplementsIAnimationObject, windows
     def start_animation(self, property_name: str, animation: CompositionAnimation, /) -> None: ...
     @typing.final
     # System.Void Windows.UI.Composition.CompositionObject::StartAnimationGroup(Windows.UI.Composition.ICompositionAnimationBase)
-    def start_animation_group(self, value: ImplementsICompositionAnimationBase, /) -> None: ...
+    def start_animation_group(self, value: ICompositionAnimationBase, /) -> None: ...
     @typing.final
     # System.Void Windows.UI.Composition.CompositionObject::StartAnimation(System.String,Windows.UI.Composition.CompositionAnimation,Windows.UI.Composition.AnimationController)
     def start_animation_with_controller(self, property_name: str, animation: CompositionAnimation, animation_controller: AnimationController, /) -> None: ...
@@ -845,7 +845,7 @@ class CompositionObject(winrt.system.Object, ImplementsIAnimationObject, windows
     def stop_animation(self, property_name: str, /) -> None: ...
     @typing.final
     # System.Void Windows.UI.Composition.CompositionObject::StopAnimationGroup(Windows.UI.Composition.ICompositionAnimationBase)
-    def stop_animation_group(self, value: ImplementsICompositionAnimationBase, /) -> None: ...
+    def stop_animation_group(self, value: ICompositionAnimationBase, /) -> None: ...
     @typing.final
     # Windows.UI.Composition.AnimationController Windows.UI.Composition.CompositionObject::TryGetAnimationController(System.String)
     def try_get_animation_controller(self, property_name: str, /) -> typing.Optional[AnimationController]: ...
@@ -881,8 +881,8 @@ class CompositionObject(winrt.system.Object, ImplementsIAnimationObject, windows
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
 @typing.final
-class CompositionPath(winrt.system.Object, windows_graphics.ImplementsIGeometrySource2D):
-    def __new__(cls: typing.Type[Self], source: windows_graphics.ImplementsIGeometrySource2D) -> Self: ...
+class CompositionPath(winrt.system.Object, windows_graphics.IGeometrySource2D):
+    def __new__(cls: typing.Type[Self], source: windows_graphics.IGeometrySource2D) -> Self: ...
 
 @typing.final
 class CompositionPathGeometry(CompositionGeometry):
@@ -1333,7 +1333,7 @@ class CompositionSurfaceBrush(CompositionBrush):
     def surface(self) -> ICompositionSurface: ...
     # System.Void Windows.UI.Composition.CompositionSurfaceBrush::put_Surface(Windows.UI.Composition.ICompositionSurface)
     @surface.setter
-    def surface(self, value: ImplementsICompositionSurface) -> None: ...
+    def surface(self, value: ICompositionSurface) -> None: ...
     # Windows.UI.Composition.CompositionStretch Windows.UI.Composition.CompositionSurfaceBrush::get_Stretch()
     @_property
     def stretch(self) -> CompositionStretch: ...
@@ -1416,7 +1416,7 @@ class CompositionTarget(CompositionObject, metaclass=CompositionTarget_Static):
 class CompositionTexture_Static(CompositionObject_Static):
     pass
 
-class CompositionTexture(CompositionObject, ImplementsICompositionSurface, metaclass=CompositionTexture_Static):
+class CompositionTexture(CompositionObject, ICompositionSurface, metaclass=CompositionTexture_Static):
     # Windows.Graphics.RectInt32 Windows.UI.Composition.CompositionTexture::get_SourceRect()
     @_property
     def source_rect(self) -> windows_graphics.RectInt32: ...
@@ -1487,7 +1487,7 @@ class CompositionVirtualDrawingSurface(CompositionDrawingSurface, metaclass=Comp
     def trim(self, rects: typing.Union[winrt.system.Array[windows_graphics.RectInt32], winrt.system.ReadableBuffer], /) -> None: ...
 
 @typing.final
-class CompositionVisualSurface(CompositionObject, ImplementsICompositionSurface):
+class CompositionVisualSurface(CompositionObject, ICompositionSurface):
     # Windows.UI.Composition.Visual Windows.UI.Composition.CompositionVisualSurface::get_SourceVisual()
     @_property
     def source_visual(self) -> Visual: ...
@@ -1517,7 +1517,7 @@ class Compositor_Static(type):
     def min_global_playback_rate(cls) -> winrt.system.Single: ...
 
 @typing.final
-class Compositor(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=Compositor_Static):
+class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Compositor_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
@@ -1562,9 +1562,9 @@ class Compositor(winrt.system.Object, windows_foundation.ImplementsIClosable, me
     # Windows.UI.Composition.DropShadow Windows.UI.Composition.Compositor::CreateDropShadow()
     def create_drop_shadow(self) -> DropShadow: ...
     # Windows.UI.Composition.CompositionEffectFactory Windows.UI.Composition.Compositor::CreateEffectFactory(Windows.Graphics.Effects.IGraphicsEffect)
-    def create_effect_factory(self, graphics_effect: windows_graphics_effects.ImplementsIGraphicsEffect, /) -> CompositionEffectFactory: ...
+    def create_effect_factory(self, graphics_effect: windows_graphics_effects.IGraphicsEffect, /) -> CompositionEffectFactory: ...
     # Windows.UI.Composition.CompositionEffectFactory Windows.UI.Composition.Compositor::CreateEffectFactory(Windows.Graphics.Effects.IGraphicsEffect,Windows.Foundation.Collections.IIterable`1<System.String>)
-    def create_effect_factory_with_properties(self, graphics_effect: windows_graphics_effects.ImplementsIGraphicsEffect, animatable_properties: typing.Iterable[str], /) -> CompositionEffectFactory: ...
+    def create_effect_factory_with_properties(self, graphics_effect: windows_graphics_effects.IGraphicsEffect, animatable_properties: typing.Iterable[str], /) -> CompositionEffectFactory: ...
     # Windows.UI.Composition.CompositionEllipseGeometry Windows.UI.Composition.Compositor::CreateEllipseGeometry()
     def create_ellipse_geometry(self) -> CompositionEllipseGeometry: ...
     # Windows.UI.Composition.ExpressionAnimation Windows.UI.Composition.Compositor::CreateExpressionAnimation()
@@ -1656,7 +1656,7 @@ class Compositor(winrt.system.Object, windows_foundation.ImplementsIClosable, me
     # Windows.UI.Composition.CompositionSurfaceBrush Windows.UI.Composition.Compositor::CreateSurfaceBrush()
     def create_surface_brush(self) -> CompositionSurfaceBrush: ...
     # Windows.UI.Composition.CompositionSurfaceBrush Windows.UI.Composition.Compositor::CreateSurfaceBrush(Windows.UI.Composition.ICompositionSurface)
-    def create_surface_brush_with_surface(self, surface: ImplementsICompositionSurface, /) -> CompositionSurfaceBrush: ...
+    def create_surface_brush_with_surface(self, surface: ICompositionSurface, /) -> CompositionSurfaceBrush: ...
     # Windows.UI.Composition.CompositionTarget Windows.UI.Composition.Compositor::CreateTargetForCurrentView()
     def create_target_for_current_view(self) -> CompositionTarget: ...
     # Windows.UI.Composition.Vector2KeyFrameAnimation Windows.UI.Composition.Compositor::CreateVector2KeyFrameAnimation()
@@ -1714,7 +1714,7 @@ class DelegatedInkTrailVisual_Static(Visual_Static):
     # Windows.UI.Composition.DelegatedInkTrailVisual Windows.UI.Composition.DelegatedInkTrailVisual::Create(Windows.UI.Composition.Compositor)
     def create(cls, compositor: Compositor, /) -> DelegatedInkTrailVisual: ...
     # Windows.UI.Composition.DelegatedInkTrailVisual Windows.UI.Composition.DelegatedInkTrailVisual::CreateForSwapChain(Windows.UI.Composition.Compositor,Windows.UI.Composition.ICompositionSurface)
-    def create_for_swap_chain(cls, compositor: Compositor, swap_chain: ImplementsICompositionSurface, /) -> DelegatedInkTrailVisual: ...
+    def create_for_swap_chain(cls, compositor: Compositor, swap_chain: ICompositionSurface, /) -> DelegatedInkTrailVisual: ...
 
 @typing.final
 class DelegatedInkTrailVisual(Visual, metaclass=DelegatedInkTrailVisual_Static):
@@ -1829,7 +1829,7 @@ class ImplicitAnimationCollection(CompositionObject, winrt._winrt.MutableMapping
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> ICompositionAnimationBase: ...
-    def __setitem__(self, key: str, value: ImplementsICompositionAnimationBase) -> None: ...
+    def __setitem__(self, key: str, value: ICompositionAnimationBase) -> None: ...
     def __delitem__(self, key: str) -> None: ...
     # System.Void Windows.UI.Composition.ImplicitAnimationCollection::Clear()
     def clear(self) -> None: ...
@@ -1840,7 +1840,7 @@ class ImplicitAnimationCollection(CompositionObject, winrt._winrt.MutableMapping
     # System.Boolean Windows.UI.Composition.ImplicitAnimationCollection::HasKey(System.String)
     def has_key(self, key: str, /) -> bool: ...
     # System.Boolean Windows.UI.Composition.ImplicitAnimationCollection::Insert(System.String,Windows.UI.Composition.ICompositionAnimationBase)
-    def insert(self, key: str, value: ImplementsICompositionAnimationBase, /) -> bool: ...
+    def insert(self, key: str, value: ICompositionAnimationBase, /) -> bool: ...
     # Windows.UI.Composition.ICompositionAnimationBase Windows.UI.Composition.ImplicitAnimationCollection::Lookup(System.String)
     def lookup(self, key: str, /) -> ICompositionAnimationBase: ...
     # System.Void Windows.UI.Composition.ImplicitAnimationCollection::Remove(System.String)
@@ -2665,24 +2665,15 @@ class VisualUnorderedCollection(CompositionObject):
     @_property
     def count(self) -> winrt.system.Int32: ...
 
-class ImplementsIAnimationObject():
+class IAnimationObject(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Composition.IAnimationObject::PopulatePropertyInfo(System.String,Windows.UI.Composition.AnimationPropertyInfo)
     @abstractmethod
     def populate_property_info(self, property_name: str, property_info: AnimationPropertyInfo, /) -> None: ...
 
-@typing.final
-class IAnimationObject(winrt.system.Object, ImplementsIAnimationObject):
-    # System.Void Windows.UI.Composition.IAnimationObject::PopulatePropertyInfo(System.String,Windows.UI.Composition.AnimationPropertyInfo)
-    def populate_property_info(self, property_name: str, property_info: AnimationPropertyInfo, /) -> None: ...
-
-class ImplementsICompositionAnimationBase():
+class ICompositionAnimationBase(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 
-@typing.final
-class ICompositionAnimationBase(winrt.system.Object, ImplementsICompositionAnimationBase):
-    pass
-
-class ImplementsICompositionSupportsSystemBackdrop():
+class ICompositionSupportsSystemBackdrop(winrt._winrt.IInspectable):
     # Windows.UI.Composition.CompositionBrush Windows.UI.Composition.ICompositionSupportsSystemBackdrop::get_SystemBackdrop()
     @_property
     @abstractmethod
@@ -2692,46 +2683,19 @@ class ImplementsICompositionSupportsSystemBackdrop():
     @abstractmethod
     def system_backdrop(self, value: CompositionBrush) -> None: ...
 
-@typing.final
-class ICompositionSupportsSystemBackdrop(winrt.system.Object, ImplementsICompositionSupportsSystemBackdrop):
-    # Windows.UI.Composition.CompositionBrush Windows.UI.Composition.ICompositionSupportsSystemBackdrop::get_SystemBackdrop()
-    @_property
-    def system_backdrop(self) -> CompositionBrush: ...
-    # System.Void Windows.UI.Composition.ICompositionSupportsSystemBackdrop::put_SystemBackdrop(Windows.UI.Composition.CompositionBrush)
-    @system_backdrop.setter
-    def system_backdrop(self, value: CompositionBrush) -> None: ...
-
-class ImplementsICompositionSurface():
+class ICompositionSurface(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 
-@typing.final
-class ICompositionSurface(winrt.system.Object, ImplementsICompositionSurface):
-    pass
-
-class ImplementsICompositionSurfaceFacade():
+class ICompositionSurfaceFacade(winrt._winrt.IInspectable):
     # Windows.UI.Composition.ICompositionSurface Windows.UI.Composition.ICompositionSurfaceFacade::GetRealSurface()
     @abstractmethod
     def get_real_surface(self) -> ICompositionSurface: ...
 
-@typing.final
-class ICompositionSurfaceFacade(winrt.system.Object, ImplementsICompositionSurfaceFacade):
-    # Windows.UI.Composition.ICompositionSurface Windows.UI.Composition.ICompositionSurfaceFacade::GetRealSurface()
-    def get_real_surface(self) -> ICompositionSurface: ...
-
-class ImplementsIVisualElement():
+class IVisualElement(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 
-@typing.final
-class IVisualElement(winrt.system.Object, ImplementsIVisualElement):
-    pass
-
-class ImplementsIVisualElement2():
+class IVisualElement2(winrt._winrt.IInspectable):
     # Windows.UI.Composition.Visual Windows.UI.Composition.IVisualElement2::GetVisualInternal()
     @abstractmethod
-    def get_visual_internal(self) -> Visual: ...
-
-@typing.final
-class IVisualElement2(winrt.system.Object, ImplementsIVisualElement2):
-    # Windows.UI.Composition.Visual Windows.UI.Composition.IVisualElement2::GetVisualInternal()
     def get_visual_internal(self) -> Visual: ...
 

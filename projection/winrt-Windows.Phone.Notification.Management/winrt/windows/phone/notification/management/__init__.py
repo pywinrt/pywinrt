@@ -25,7 +25,6 @@ from winrt._winrt_windows_phone_notification_management import (
     ToastNotificationTriggerDetails,
     VolumeInfo,
     IAccessoryNotificationTriggerDetails,
-    ImplementsIAccessoryNotificationTriggerDetails,
 )
 
 __all__ = [
@@ -64,7 +63,6 @@ __all__ = [
     "ToastNotificationTriggerDetails",
     "VolumeInfo",
     "IAccessoryNotificationTriggerDetails",
-    "ImplementsIAccessoryNotificationTriggerDetails",
 ]
 
 class AccessoryNotificationType(enum.IntFlag):

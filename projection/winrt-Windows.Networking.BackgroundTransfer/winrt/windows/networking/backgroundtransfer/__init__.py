@@ -21,13 +21,9 @@ from winrt._winrt_windows_networking_backgroundtransfer import (
     UnconstrainedTransferRequestResult,
     UploadOperation,
     IBackgroundTransferBase,
-    ImplementsIBackgroundTransferBase,
     IBackgroundTransferContentPartFactory,
-    ImplementsIBackgroundTransferContentPartFactory,
     IBackgroundTransferOperation,
-    ImplementsIBackgroundTransferOperation,
     IBackgroundTransferOperationPriority,
-    ImplementsIBackgroundTransferOperationPriority,
 )
 
 __all__ = [
@@ -52,13 +48,9 @@ __all__ = [
     "UnconstrainedTransferRequestResult",
     "UploadOperation",
     "IBackgroundTransferBase",
-    "ImplementsIBackgroundTransferBase",
     "IBackgroundTransferContentPartFactory",
-    "ImplementsIBackgroundTransferContentPartFactory",
     "IBackgroundTransferOperation",
-    "ImplementsIBackgroundTransferOperation",
     "IBackgroundTransferOperationPriority",
-    "ImplementsIBackgroundTransferOperationPriority",
 ]
 
 class BackgroundTransferBehavior(enum.IntEnum):

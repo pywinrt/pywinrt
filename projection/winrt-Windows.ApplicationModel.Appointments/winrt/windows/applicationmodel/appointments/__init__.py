@@ -24,7 +24,6 @@ from winrt._winrt_windows_applicationmodel_appointments import (
     AppointmentStoreNotificationTriggerDetails,
     FindAppointmentsOptions,
     IAppointmentParticipant,
-    ImplementsIAppointmentParticipant,
 )
 
 __all__ = [
@@ -65,7 +64,6 @@ __all__ = [
     "AppointmentStoreNotificationTriggerDetails",
     "FindAppointmentsOptions",
     "IAppointmentParticipant",
-    "ImplementsIAppointmentParticipant",
 ]
 
 class AppointmentBusyStatus(enum.IntEnum):

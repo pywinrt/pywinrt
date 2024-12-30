@@ -63,7 +63,6 @@ from winrt._winrt_windows_ui_xaml_controls_primitives import (
     ToggleSwitchTemplateSettings,
     ToolTipTemplateSettings,
     IScrollSnapPointsInfo,
-    ImplementsIScrollSnapPointsInfo,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -172,7 +171,6 @@ __all__ = [
     "ToggleSwitchTemplateSettings",
     "ToolTipTemplateSettings",
     "IScrollSnapPointsInfo",
-    "ImplementsIScrollSnapPointsInfo",
     "DragCompletedEventHandler",
     "DragDeltaEventHandler",
     "DragStartedEventHandler",

@@ -6,14 +6,12 @@ import winrt.system
 from winrt._winrt_windows_web import (
     WebError,
     IUriToStreamResolver,
-    ImplementsIUriToStreamResolver,
 )
 
 __all__ = [
     "WebErrorStatus",
     "WebError",
     "IUriToStreamResolver",
-    "ImplementsIUriToStreamResolver",
 ]
 
 class WebErrorStatus(enum.IntEnum):

@@ -12,15 +12,10 @@ from winrt._winrt_microsoft_windows_widgets_providers import (
     WidgetManager,
     WidgetUpdateRequestOptions,
     IWidgetManager,
-    ImplementsIWidgetManager,
     IWidgetProvider,
-    ImplementsIWidgetProvider,
     IWidgetProvider2,
-    ImplementsIWidgetProvider2,
     IWidgetProviderAnalytics,
-    ImplementsIWidgetProviderAnalytics,
     IWidgetProviderErrors,
-    ImplementsIWidgetProviderErrors,
 )
 
 __all__ = [
@@ -34,14 +29,9 @@ __all__ = [
     "WidgetManager",
     "WidgetUpdateRequestOptions",
     "IWidgetManager",
-    "ImplementsIWidgetManager",
     "IWidgetProvider",
-    "ImplementsIWidgetProvider",
     "IWidgetProvider2",
-    "ImplementsIWidgetProvider2",
     "IWidgetProviderAnalytics",
-    "ImplementsIWidgetProviderAnalytics",
     "IWidgetProviderErrors",
-    "ImplementsIWidgetProviderErrors",
 ]
 

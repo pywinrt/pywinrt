@@ -15,7 +15,6 @@ from winrt._winrt_windows_applicationmodel_useractivities import (
     UserActivitySessionHistoryItem,
     UserActivityVisualElements,
     IUserActivityContentInfo,
-    ImplementsIUserActivityContentInfo,
 )
 
 __all__ = [
@@ -31,7 +30,6 @@ __all__ = [
     "UserActivitySessionHistoryItem",
     "UserActivityVisualElements",
     "IUserActivityContentInfo",
-    "ImplementsIUserActivityContentInfo",
 ]
 
 class UserActivityState(enum.IntEnum):

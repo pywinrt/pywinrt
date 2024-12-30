@@ -12,11 +12,8 @@ from winrt._winrt_windows_applicationmodel_core import (
     UnhandledError,
     UnhandledErrorDetectedEventArgs,
     ICoreApplicationUnhandledError,
-    ImplementsICoreApplicationUnhandledError,
     IFrameworkView,
-    ImplementsIFrameworkView,
     IFrameworkViewSource,
-    ImplementsIFrameworkViewSource,
 )
 
 __all__ = [
@@ -29,11 +26,8 @@ __all__ = [
     "UnhandledError",
     "UnhandledErrorDetectedEventArgs",
     "ICoreApplicationUnhandledError",
-    "ImplementsICoreApplicationUnhandledError",
     "IFrameworkView",
-    "ImplementsIFrameworkView",
     "IFrameworkViewSource",
-    "ImplementsIFrameworkViewSource",
 ]
 
 class AppRestartFailureReason(enum.IntEnum):

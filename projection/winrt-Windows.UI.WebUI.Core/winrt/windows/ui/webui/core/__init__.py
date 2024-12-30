@@ -14,9 +14,7 @@ from winrt._winrt_windows_ui_webui_core import (
     WebUICommandBarSizeChangedEventArgs,
     WebUICommandBarSymbolIcon,
     IWebUICommandBarElement,
-    ImplementsIWebUICommandBarElement,
     IWebUICommandBarIcon,
-    ImplementsIWebUICommandBarIcon,
 )
 
 __all__ = [
@@ -29,9 +27,7 @@ __all__ = [
     "WebUICommandBarSizeChangedEventArgs",
     "WebUICommandBarSymbolIcon",
     "IWebUICommandBarElement",
-    "ImplementsIWebUICommandBarElement",
     "IWebUICommandBarIcon",
-    "ImplementsIWebUICommandBarIcon",
     "MenuClosedEventHandler",
     "MenuOpenedEventHandler",
     "SizeChangedEventHandler",

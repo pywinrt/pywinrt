@@ -498,13 +498,13 @@ class DataTemplate_Static(FrameworkTemplate_Static):
     # Microsoft.UI.Xaml.IDataTemplateExtension Microsoft.UI.Xaml.DataTemplate::GetExtensionInstance(Microsoft.UI.Xaml.FrameworkElement)
     def get_extension_instance(cls, element: FrameworkElement, /) -> IDataTemplateExtension: ...
     # System.Void Microsoft.UI.Xaml.DataTemplate::SetExtensionInstance(Microsoft.UI.Xaml.FrameworkElement,Microsoft.UI.Xaml.IDataTemplateExtension)
-    def set_extension_instance(cls, element: FrameworkElement, value: ImplementsIDataTemplateExtension, /) -> None: ...
+    def set_extension_instance(cls, element: FrameworkElement, value: IDataTemplateExtension, /) -> None: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.DataTemplate::get_ExtensionInstanceProperty()
     @_property
     @typing.final
     def extension_instance_property(cls) -> DependencyProperty: ...
 
-class DataTemplate(FrameworkTemplate, ImplementsIElementFactory, metaclass=DataTemplate_Static):
+class DataTemplate(FrameworkTemplate, IElementFactory, metaclass=DataTemplate_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.DataTemplate::GetElement(Microsoft.UI.Xaml.ElementFactoryGetArgs)
     def get_element(self, args: ElementFactoryGetArgs, /) -> UIElement: ...
@@ -620,7 +620,7 @@ class DependencyObject(winrt.system.Object, metaclass=DependencyObject_Static):
 class DependencyObjectCollection_Static(DependencyObject_Static):
     pass
 
-class DependencyObjectCollection(DependencyObject, windows_foundation_collections.ImplementsIObservableVector[DependencyObject], winrt._winrt.MutableSequence[DependencyObject], metaclass=DependencyObjectCollection_Static):
+class DependencyObjectCollection(DependencyObject, windows_foundation_collections.IObservableVector[DependencyObject], winrt._winrt.MutableSequence[DependencyObject], metaclass=DependencyObjectCollection_Static):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[DependencyObject]: ...
     @typing.overload
@@ -1360,7 +1360,7 @@ class FrameworkTemplate(DependencyObject, metaclass=FrameworkTemplate_Static):
     pass
 
 @typing.final
-class FrameworkView(winrt.system.Object, windows_applicationmodel_core.ImplementsIFrameworkView):
+class FrameworkView(winrt.system.Object, windows_applicationmodel_core.IFrameworkView):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Microsoft.UI.Xaml.FrameworkView::Initialize(Windows.ApplicationModel.Core.CoreApplicationView)
     def initialize(self, application_view: windows_applicationmodel_core.CoreApplicationView, /) -> None: ...
@@ -1374,7 +1374,7 @@ class FrameworkView(winrt.system.Object, windows_applicationmodel_core.Implement
     def uninitialize(self) -> None: ...
 
 @typing.final
-class FrameworkViewSource(winrt.system.Object, windows_applicationmodel_core.ImplementsIFrameworkViewSource):
+class FrameworkViewSource(winrt.system.Object, windows_applicationmodel_core.IFrameworkViewSource):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.ApplicationModel.Core.IFrameworkView Microsoft.UI.Xaml.FrameworkViewSource::CreateView()
     def create_view(self) -> windows_applicationmodel_core.IFrameworkView: ...
@@ -1544,7 +1544,7 @@ class ResourceManagerRequestedEventArgs(winrt.system.Object):
     def custom_resource_manager(self) -> microsoft_windows_applicationmodel_resources.IResourceManager: ...
     # System.Void Microsoft.UI.Xaml.ResourceManagerRequestedEventArgs::put_CustomResourceManager(Microsoft.Windows.ApplicationModel.Resources.IResourceManager)
     @custom_resource_manager.setter
-    def custom_resource_manager(self, value: microsoft_windows_applicationmodel_resources.ImplementsIResourceManager) -> None: ...
+    def custom_resource_manager(self, value: microsoft_windows_applicationmodel_resources.IResourceManager) -> None: ...
 
 @typing.final
 class RoutedEvent(winrt.system.Object):
@@ -2188,7 +2188,7 @@ class UIElement_Static(DependencyObject_Static):
     @typing.final
     def x_y_focus_up_property(cls) -> DependencyProperty: ...
 
-class UIElement(DependencyObject, microsoft_ui_composition.ImplementsIVisualElement2, microsoft_ui_composition.ImplementsIVisualElement, microsoft_ui_composition.ImplementsIAnimationObject, metaclass=UIElement_Static):
+class UIElement(DependencyObject, microsoft_ui_composition.IVisualElement2, microsoft_ui_composition.IVisualElement, microsoft_ui_composition.IAnimationObject, metaclass=UIElement_Static):
     @typing.final
     # System.Void Microsoft.UI.Xaml.UIElement::AddHandler(Microsoft.UI.Xaml.RoutedEvent,System.Object,System.Boolean)
     def add_handler(self, routed_event: RoutedEvent, handler: winrt.system.Object, handled_events_too: bool, /) -> None: ...
@@ -2244,7 +2244,7 @@ class UIElement(DependencyObject, microsoft_ui_composition.ImplementsIVisualElem
     def remove_handler(self, routed_event: RoutedEvent, handler: winrt.system.Object, /) -> None: ...
     @typing.final
     # System.Void Microsoft.UI.Xaml.UIElement::StartAnimation(Microsoft.UI.Composition.ICompositionAnimationBase)
-    def start_animation(self, animation: microsoft_ui_composition.ImplementsICompositionAnimationBase, /) -> None: ...
+    def start_animation(self, animation: microsoft_ui_composition.ICompositionAnimationBase, /) -> None: ...
     @typing.final
     # System.Void Microsoft.UI.Xaml.UIElement::StartBringIntoView()
     def start_bring_into_view(self) -> None: ...
@@ -2256,7 +2256,7 @@ class UIElement(DependencyObject, microsoft_ui_composition.ImplementsIVisualElem
     def start_drag_async(self, pointer_point: microsoft_ui_input.PointerPoint, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackageOperation]: ...
     @typing.final
     # System.Void Microsoft.UI.Xaml.UIElement::StopAnimation(Microsoft.UI.Composition.ICompositionAnimationBase)
-    def stop_animation(self, animation: microsoft_ui_composition.ImplementsICompositionAnimationBase, /) -> None: ...
+    def stop_animation(self, animation: microsoft_ui_composition.ICompositionAnimationBase, /) -> None: ...
     @typing.final
     # Microsoft.UI.Xaml.Media.GeneralTransform Microsoft.UI.Xaml.UIElement::TransformToVisual(Microsoft.UI.Xaml.UIElement)
     def transform_to_visual(self, visual: UIElement, /) -> microsoft_ui_xaml_media.GeneralTransform: ...
@@ -3337,7 +3337,7 @@ class XamlRoot(winrt.system.Object):
 class XamlRootChangedEventArgs(winrt.system.Object):
     pass
 
-class ImplementsIDataTemplateExtension():
+class IDataTemplateExtension(winrt._winrt.IInspectable):
     # System.Boolean Microsoft.UI.Xaml.IDataTemplateExtension::ProcessBinding(System.UInt32)
     @abstractmethod
     def process_binding(self, phase: winrt.system.UInt32, /) -> bool: ...
@@ -3348,16 +3348,7 @@ class ImplementsIDataTemplateExtension():
     @abstractmethod
     def reset_template(self) -> None: ...
 
-@typing.final
-class IDataTemplateExtension(winrt.system.Object, ImplementsIDataTemplateExtension):
-    # System.Boolean Microsoft.UI.Xaml.IDataTemplateExtension::ProcessBinding(System.UInt32)
-    def process_binding(self, phase: winrt.system.UInt32, /) -> bool: ...
-    # System.Int32 Microsoft.UI.Xaml.IDataTemplateExtension::ProcessBindings(Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs)
-    def process_bindings(self, arg: microsoft_ui_xaml_controls.ContainerContentChangingEventArgs, /) -> winrt.system.Int32: ...
-    # System.Void Microsoft.UI.Xaml.IDataTemplateExtension::ResetTemplate()
-    def reset_template(self) -> None: ...
-
-class ImplementsIElementFactory():
+class IElementFactory(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.IElementFactory::GetElement(Microsoft.UI.Xaml.ElementFactoryGetArgs)
     @abstractmethod
     def get_element(self, args: ElementFactoryGetArgs, /) -> UIElement: ...
@@ -3365,20 +3356,8 @@ class ImplementsIElementFactory():
     @abstractmethod
     def recycle_element(self, args: ElementFactoryRecycleArgs, /) -> None: ...
 
-@typing.final
-class IElementFactory(winrt.system.Object, ImplementsIElementFactory):
-    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.IElementFactory::GetElement(Microsoft.UI.Xaml.ElementFactoryGetArgs)
-    def get_element(self, args: ElementFactoryGetArgs, /) -> UIElement: ...
-    # System.Void Microsoft.UI.Xaml.IElementFactory::RecycleElement(Microsoft.UI.Xaml.ElementFactoryRecycleArgs)
-    def recycle_element(self, args: ElementFactoryRecycleArgs, /) -> None: ...
-
-class ImplementsIXamlServiceProvider():
+class IXamlServiceProvider(winrt._winrt.IInspectable):
     # System.Object Microsoft.UI.Xaml.IXamlServiceProvider::GetService(Windows.UI.Xaml.Interop.TypeName)
     @abstractmethod
-    def get_service(self, type: windows_ui_xaml_interop.TypeName, /) -> winrt.system.Object: ...
-
-@typing.final
-class IXamlServiceProvider(winrt.system.Object, ImplementsIXamlServiceProvider):
-    # System.Object Microsoft.UI.Xaml.IXamlServiceProvider::GetService(Windows.UI.Xaml.Interop.TypeName)
     def get_service(self, type: windows_ui_xaml_interop.TypeName, /) -> winrt.system.Object: ...
 

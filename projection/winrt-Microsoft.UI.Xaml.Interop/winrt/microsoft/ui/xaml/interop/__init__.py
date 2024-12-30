@@ -8,17 +8,11 @@ import winrt.system
 from winrt._winrt_microsoft_ui_xaml_interop import (
     NotifyCollectionChangedEventArgs,
     IBindableIterable,
-    ImplementsIBindableIterable,
     IBindableIterator,
-    ImplementsIBindableIterator,
     IBindableObservableVector,
-    ImplementsIBindableObservableVector,
     IBindableVector,
-    ImplementsIBindableVector,
     IBindableVectorView,
-    ImplementsIBindableVectorView,
     INotifyCollectionChanged,
-    ImplementsINotifyCollectionChanged,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -30,17 +24,11 @@ __all__ = [
     "NotifyCollectionChangedAction",
     "NotifyCollectionChangedEventArgs",
     "IBindableIterable",
-    "ImplementsIBindableIterable",
     "IBindableIterator",
-    "ImplementsIBindableIterator",
     "IBindableObservableVector",
-    "ImplementsIBindableObservableVector",
     "IBindableVector",
-    "ImplementsIBindableVector",
     "IBindableVectorView",
-    "ImplementsIBindableVectorView",
     "INotifyCollectionChanged",
-    "ImplementsINotifyCollectionChanged",
     "BindableVectorChangedEventHandler",
     "NotifyCollectionChangedEventHandler",
 ]

@@ -47,9 +47,9 @@ class RemoteSystem_Static(type):
     # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcherForUser(Windows.System.User)
     def create_watcher_for_user(cls, user: windows_system.User, /) -> RemoteSystemWatcher: ...
     # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcher(Windows.Foundation.Collections.IIterable`1<Windows.System.RemoteSystems.IRemoteSystemFilter>)
-    def create_watcher_with_filters(cls, filters: typing.Iterable[ImplementsIRemoteSystemFilter], /) -> RemoteSystemWatcher: ...
+    def create_watcher_with_filters(cls, filters: typing.Iterable[IRemoteSystemFilter], /) -> RemoteSystemWatcher: ...
     # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcherForUser(Windows.System.User,Windows.Foundation.Collections.IIterable`1<Windows.System.RemoteSystems.IRemoteSystemFilter>)
-    def create_watcher_with_filters_for_user(cls, user: windows_system.User, filters: typing.Iterable[ImplementsIRemoteSystemFilter], /) -> RemoteSystemWatcher: ...
+    def create_watcher_with_filters_for_user(cls, user: windows_system.User, filters: typing.Iterable[IRemoteSystemFilter], /) -> RemoteSystemWatcher: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteSystems.RemoteSystem> Windows.System.RemoteSystems.RemoteSystem::FindByHostNameAsync(Windows.Networking.HostName)
     def find_by_host_name_async(cls, host_name: windows_networking.HostName, /) -> windows_foundation.IAsyncOperation[RemoteSystem]: ...
     # System.Boolean Windows.System.RemoteSystems.RemoteSystem::IsAuthorizationKindEnabled(Windows.System.RemoteSystems.RemoteSystemAuthorizationKind)
@@ -144,7 +144,7 @@ class RemoteSystemAppRegistration(winrt.system.Object, metaclass=RemoteSystemApp
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class RemoteSystemAuthorizationKindFilter(winrt.system.Object, ImplementsIRemoteSystemFilter):
+class RemoteSystemAuthorizationKindFilter(winrt.system.Object, IRemoteSystemFilter):
     def __new__(cls: typing.Type[Self], remote_system_authorization_kind: RemoteSystemAuthorizationKind) -> Self: ...
     # Windows.System.RemoteSystems.RemoteSystemAuthorizationKind Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter::get_RemoteSystemAuthorizationKind()
     @_property
@@ -184,7 +184,7 @@ class RemoteSystemConnectionRequest(winrt.system.Object, metaclass=RemoteSystemC
     def connection_token(self) -> str: ...
 
 @typing.final
-class RemoteSystemDiscoveryTypeFilter(winrt.system.Object, ImplementsIRemoteSystemFilter):
+class RemoteSystemDiscoveryTypeFilter(winrt.system.Object, IRemoteSystemFilter):
     def __new__(cls: typing.Type[Self], discovery_type: RemoteSystemDiscoveryType) -> Self: ...
     # Windows.System.RemoteSystems.RemoteSystemDiscoveryType Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter::get_RemoteSystemDiscoveryType()
     @_property
@@ -195,7 +195,7 @@ class RemoteSystemEnumerationCompletedEventArgs(winrt.system.Object):
     pass
 
 @typing.final
-class RemoteSystemKindFilter(winrt.system.Object, ImplementsIRemoteSystemFilter):
+class RemoteSystemKindFilter(winrt.system.Object, IRemoteSystemFilter):
     def __new__(cls: typing.Type[Self], remote_system_kinds: typing.Iterable[str]) -> Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.RemoteSystems.RemoteSystemKindFilter::get_RemoteSystemKinds()
     @_property
@@ -244,7 +244,7 @@ class RemoteSystemSession_Static(type):
     def create_watcher(cls) -> RemoteSystemSessionWatcher: ...
 
 @typing.final
-class RemoteSystemSession(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=RemoteSystemSession_Static):
+class RemoteSystemSession(winrt.system.Object, windows_foundation.IClosable, metaclass=RemoteSystemSession_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.System.RemoteSystems.RemoteSystemSession::Close()
@@ -478,7 +478,7 @@ class RemoteSystemSessionWatcher(winrt.system.Object):
     def status(self) -> RemoteSystemSessionWatcherStatus: ...
 
 @typing.final
-class RemoteSystemStatusTypeFilter(winrt.system.Object, ImplementsIRemoteSystemFilter):
+class RemoteSystemStatusTypeFilter(winrt.system.Object, IRemoteSystemFilter):
     def __new__(cls: typing.Type[Self], remote_system_status_type: RemoteSystemStatusType) -> Self: ...
     # Windows.System.RemoteSystems.RemoteSystemStatusType Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter::get_RemoteSystemStatusType()
     @_property
@@ -527,16 +527,12 @@ class RemoteSystemWatcherErrorOccurredEventArgs(winrt.system.Object):
     def error(self) -> RemoteSystemWatcherError: ...
 
 @typing.final
-class RemoteSystemWebAccountFilter(winrt.system.Object, ImplementsIRemoteSystemFilter):
+class RemoteSystemWebAccountFilter(winrt.system.Object, IRemoteSystemFilter):
     def __new__(cls: typing.Type[Self], account: windows_security_credentials.WebAccount) -> Self: ...
     # Windows.Security.Credentials.WebAccount Windows.System.RemoteSystems.RemoteSystemWebAccountFilter::get_Account()
     @_property
     def account(self) -> windows_security_credentials.WebAccount: ...
 
-class ImplementsIRemoteSystemFilter():
-    pass
-
-@typing.final
-class IRemoteSystemFilter(winrt.system.Object, ImplementsIRemoteSystemFilter):
+class IRemoteSystemFilter(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 

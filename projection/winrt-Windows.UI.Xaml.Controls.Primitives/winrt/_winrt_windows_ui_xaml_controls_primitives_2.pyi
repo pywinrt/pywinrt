@@ -79,7 +79,6 @@ from ._winrt_windows_ui_xaml_controls_primitives import (
     ToggleButton,
     ToggleSwitchTemplateSettings,
     ToolTipTemplateSettings,
-    ImplementsIScrollSnapPointsInfo,
     IScrollSnapPointsInfo,
 )
 

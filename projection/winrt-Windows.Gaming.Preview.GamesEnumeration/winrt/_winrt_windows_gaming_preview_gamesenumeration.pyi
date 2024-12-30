@@ -48,15 +48,15 @@ class GameList(winrt.system.Object, metaclass=GameList_Static):
     pass
 
 @typing.final
-class GameListEntry(winrt.system.Object, ImplementsIGameListEntry):
+class GameListEntry(winrt.system.Object, IGameListEntry):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Gaming.Preview.GamesEnumeration.GameListEntry::LaunchAsync()
     def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetCategoryAsync(Windows.Gaming.Preview.GamesEnumeration.GameListCategory)
     def set_category_async(self, value: GameListCategory, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetLauncherExecutableFileAsync(Windows.Storage.IStorageFile)
-    def set_launcher_executable_file_async(self, executable_file: windows_storage.ImplementsIStorageFile, /) -> windows_foundation.IAsyncAction: ...
+    def set_launcher_executable_file_async(self, executable_file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetLauncherExecutableFileAsync(Windows.Storage.IStorageFile,System.String)
-    def set_launcher_executable_file_with_params_async(self, executable_file: windows_storage.ImplementsIStorageFile, launch_params: str, /) -> windows_foundation.IAsyncAction: ...
+    def set_launcher_executable_file_with_params_async(self, executable_file: windows_storage.IStorageFile, launch_params: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetTitleIdAsync(System.String)
     def set_title_id_async(self, id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Gaming.Preview.GamesEnumeration.GameListCategory Windows.Gaming.Preview.GamesEnumeration.GameListEntry::get_Category()
@@ -153,7 +153,7 @@ class GameModeUserConfiguration(winrt.system.Object, metaclass=GameModeUserConfi
     @_property
     def gaming_related_process_names(self) -> typing.MutableSequence[str]: ...
 
-class ImplementsIGameListEntry():
+class IGameListEntry(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::LaunchAsync()
     @abstractmethod
     def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -171,21 +171,5 @@ class ImplementsIGameListEntry():
     # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::get_Properties()
     @_property
     @abstractmethod
-    def properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
-
-@typing.final
-class IGameListEntry(winrt.system.Object, ImplementsIGameListEntry):
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::LaunchAsync()
-    def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::SetCategoryAsync(Windows.Gaming.Preview.GamesEnumeration.GameListCategory)
-    def set_category_async(self, value: GameListCategory, /) -> windows_foundation.IAsyncAction: ...
-    # Windows.Gaming.Preview.GamesEnumeration.GameListCategory Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::get_Category()
-    @_property
-    def category(self) -> GameListCategory: ...
-    # Windows.ApplicationModel.AppDisplayInfo Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::get_DisplayInfo()
-    @_property
-    def display_info(self) -> windows_applicationmodel.AppDisplayInfo: ...
-    # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::get_Properties()
-    @_property
     def properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
 

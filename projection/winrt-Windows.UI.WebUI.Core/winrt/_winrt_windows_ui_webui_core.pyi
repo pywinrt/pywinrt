@@ -85,7 +85,7 @@ class WebUICommandBar(winrt.system.Object, metaclass=WebUICommandBar_Static):
     def size(self) -> windows_foundation.Size: ...
 
 @typing.final
-class WebUICommandBarBitmapIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
+class WebUICommandBarBitmapIcon(winrt.system.Object, IWebUICommandBarIcon):
     @typing.overload
     def __new__(cls: typing.Type[Self], uri: windows_foundation.Uri) -> Self: ...
     @typing.overload
@@ -98,7 +98,7 @@ class WebUICommandBarBitmapIcon(winrt.system.Object, ImplementsIWebUICommandBarI
     def uri(self, value: windows_foundation.Uri) -> None: ...
 
 @typing.final
-class WebUICommandBarConfirmationButton(winrt.system.Object, ImplementsIWebUICommandBarElement):
+class WebUICommandBarConfirmationButton(winrt.system.Object, IWebUICommandBarElement):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton::add_ItemInvoked(Windows.Foundation.TypedEventHandler`2<Windows.UI.WebUI.Core.WebUICommandBarConfirmationButton,Windows.UI.WebUI.Core.WebUICommandBarItemInvokedEventArgs>)
     def add_item_invoked(self, handler: windows_foundation.TypedEventHandler[WebUICommandBarConfirmationButton, WebUICommandBarItemInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -112,7 +112,7 @@ class WebUICommandBarConfirmationButton(winrt.system.Object, ImplementsIWebUICom
     def text(self, value: str) -> None: ...
 
 @typing.final
-class WebUICommandBarIconButton(winrt.system.Object, ImplementsIWebUICommandBarElement):
+class WebUICommandBarIconButton(winrt.system.Object, IWebUICommandBarElement):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.WebUI.Core.WebUICommandBarIconButton::add_ItemInvoked(Windows.Foundation.TypedEventHandler`2<Windows.UI.WebUI.Core.WebUICommandBarIconButton,Windows.UI.WebUI.Core.WebUICommandBarItemInvokedEventArgs>)
     def add_item_invoked(self, handler: windows_foundation.TypedEventHandler[WebUICommandBarIconButton, WebUICommandBarItemInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -141,7 +141,7 @@ class WebUICommandBarIconButton(winrt.system.Object, ImplementsIWebUICommandBarE
     def icon(self) -> IWebUICommandBarIcon: ...
     # System.Void Windows.UI.WebUI.Core.WebUICommandBarIconButton::put_Icon(Windows.UI.WebUI.Core.IWebUICommandBarIcon)
     @icon.setter
-    def icon(self, value: ImplementsIWebUICommandBarIcon) -> None: ...
+    def icon(self, value: IWebUICommandBarIcon) -> None: ...
     # System.Boolean Windows.UI.WebUI.Core.WebUICommandBarIconButton::get_Enabled()
     @_property
     def enabled(self) -> bool: ...
@@ -162,7 +162,7 @@ class WebUICommandBarSizeChangedEventArgs(winrt.system.Object):
     def size(self) -> windows_foundation.Size: ...
 
 @typing.final
-class WebUICommandBarSymbolIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
+class WebUICommandBarSymbolIcon(winrt.system.Object, IWebUICommandBarIcon):
     @typing.overload
     def __new__(cls: typing.Type[Self], symbol: str) -> Self: ...
     @typing.overload
@@ -174,17 +174,9 @@ class WebUICommandBarSymbolIcon(winrt.system.Object, ImplementsIWebUICommandBarI
     @symbol.setter
     def symbol(self, value: str) -> None: ...
 
-class ImplementsIWebUICommandBarElement():
+class IWebUICommandBarElement(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 
-@typing.final
-class IWebUICommandBarElement(winrt.system.Object, ImplementsIWebUICommandBarElement):
-    pass
-
-class ImplementsIWebUICommandBarIcon():
-    pass
-
-@typing.final
-class IWebUICommandBarIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
+class IWebUICommandBarIcon(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 

@@ -8,7 +8,6 @@ from winrt._winrt_windows_devices_custom import (
     IOControlCode,
     KnownDeviceTypes,
     IIOControlCode,
-    ImplementsIIOControlCode,
 )
 
 __all__ = [
@@ -20,7 +19,6 @@ __all__ = [
     "IOControlCode",
     "KnownDeviceTypes",
     "IIOControlCode",
-    "ImplementsIIOControlCode",
 ]
 
 class DeviceAccessMode(enum.IntEnum):

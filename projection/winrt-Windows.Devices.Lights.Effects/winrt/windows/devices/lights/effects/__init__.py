@@ -13,7 +13,6 @@ from winrt._winrt_windows_devices_lights_effects import (
     LampArraySolidEffect,
     LampArrayUpdateRequestedEventArgs,
     ILampArrayEffect,
-    ImplementsILampArrayEffect,
 )
 
 __all__ = [
@@ -29,7 +28,6 @@ __all__ = [
     "LampArraySolidEffect",
     "LampArrayUpdateRequestedEventArgs",
     "ILampArrayEffect",
-    "ImplementsILampArrayEffect",
 ]
 
 class LampArrayEffectCompletionBehavior(enum.IntEnum):

@@ -12,9 +12,7 @@ from winrt._winrt_microsoft_windows_applicationmodel_resources import (
     ResourceMap,
     ResourceNotFoundEventArgs,
     IResourceContext,
-    ImplementsIResourceContext,
     IResourceManager,
-    ImplementsIResourceManager,
 )
 
 __all__ = [
@@ -27,9 +25,7 @@ __all__ = [
     "ResourceMap",
     "ResourceNotFoundEventArgs",
     "IResourceContext",
-    "ImplementsIResourceContext",
     "IResourceManager",
-    "ImplementsIResourceManager",
 ]
 
 class ResourceCandidateKind(enum.IntEnum):

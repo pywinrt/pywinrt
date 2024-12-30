@@ -19,7 +19,6 @@ from winrt._winrt_windows_media_mediaproperties import (
     VideoEncodingProperties,
     Vp9ProfileIds,
     IMediaEncodingProperties,
-    ImplementsIMediaEncodingProperties,
 )
 
 __all__ = [
@@ -46,7 +45,6 @@ __all__ = [
     "VideoEncodingProperties",
     "Vp9ProfileIds",
     "IMediaEncodingProperties",
-    "ImplementsIMediaEncodingProperties",
 ]
 
 class AudioEncodingQuality(enum.IntEnum):

@@ -21,7 +21,7 @@ from winrt.windows.ui.notifications import AdaptiveNotificationContentKind, Badg
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AdaptiveNotificationText(winrt.system.Object, ImplementsIAdaptiveNotificationContent):
+class AdaptiveNotificationText(winrt.system.Object, IAdaptiveNotificationContent):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.UI.Notifications.AdaptiveNotificationText::get_Hints()
     @_property
@@ -235,9 +235,9 @@ class NotificationBinding(winrt.system.Object):
 @typing.final
 class NotificationData(winrt.system.Object):
     @typing.overload
-    def __new__(cls: typing.Type[Self], initial_values: typing.Iterable[windows_foundation_collections.ImplementsIKeyValuePair[str, str]], sequence_number: winrt.system.UInt32) -> Self: ...
+    def __new__(cls: typing.Type[Self], initial_values: typing.Iterable[windows_foundation_collections.IKeyValuePair[str, str]], sequence_number: winrt.system.UInt32) -> Self: ...
     @typing.overload
-    def __new__(cls: typing.Type[Self], initial_values: typing.Iterable[windows_foundation_collections.ImplementsIKeyValuePair[str, str]]) -> Self: ...
+    def __new__(cls: typing.Type[Self], initial_values: typing.Iterable[windows_foundation_collections.IKeyValuePair[str, str]]) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.UInt32 Windows.UI.Notifications.NotificationData::get_SequenceNumber()
@@ -774,7 +774,7 @@ class UserNotificationChangedEventArgs(winrt.system.Object):
     @_property
     def user_notification_id(self) -> winrt.system.UInt32: ...
 
-class ImplementsIAdaptiveNotificationContent():
+class IAdaptiveNotificationContent(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.UI.Notifications.IAdaptiveNotificationContent::get_Hints()
     @_property
     @abstractmethod
@@ -782,14 +782,5 @@ class ImplementsIAdaptiveNotificationContent():
     # Windows.UI.Notifications.AdaptiveNotificationContentKind Windows.UI.Notifications.IAdaptiveNotificationContent::get_Kind()
     @_property
     @abstractmethod
-    def kind(self) -> AdaptiveNotificationContentKind: ...
-
-@typing.final
-class IAdaptiveNotificationContent(winrt.system.Object, ImplementsIAdaptiveNotificationContent):
-    # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.UI.Notifications.IAdaptiveNotificationContent::get_Hints()
-    @_property
-    def hints(self) -> typing.MutableMapping[str, str]: ...
-    # Windows.UI.Notifications.AdaptiveNotificationContentKind Windows.UI.Notifications.IAdaptiveNotificationContent::get_Kind()
-    @_property
     def kind(self) -> AdaptiveNotificationContentKind: ...
 

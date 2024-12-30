@@ -11,7 +11,6 @@ from winrt._winrt_windows_storage_accesscache import (
     StorageItemAccessList,
     StorageItemMostRecentlyUsedList,
     IStorageItemAccessList,
-    ImplementsIStorageItemAccessList,
 )
 
 __all__ = [
@@ -24,7 +23,6 @@ __all__ = [
     "StorageItemAccessList",
     "StorageItemMostRecentlyUsedList",
     "IStorageItemAccessList",
-    "ImplementsIStorageItemAccessList",
 ]
 
 class AccessCacheOptions(enum.IntFlag):

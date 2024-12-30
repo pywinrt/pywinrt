@@ -10,7 +10,6 @@ from winrt._winrt_windows_gaming_input_forcefeedback import (
     PeriodicForceEffect,
     RampForceEffect,
     IForceFeedbackEffect,
-    ImplementsIForceFeedbackEffect,
 )
 
 __all__ = [
@@ -25,7 +24,6 @@ __all__ = [
     "PeriodicForceEffect",
     "RampForceEffect",
     "IForceFeedbackEffect",
-    "ImplementsIForceFeedbackEffect",
 ]
 
 class ConditionForceEffectKind(enum.IntEnum):

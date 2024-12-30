@@ -41,7 +41,6 @@ from winrt._winrt_windows_applicationmodel_chat import (
     RcsTransportConfiguration,
     RemoteParticipantComposingChangedEventArgs,
     IChatItem,
-    ImplementsIChatItem,
 )
 
 __all__ = [
@@ -95,7 +94,6 @@ __all__ = [
     "RcsTransportConfiguration",
     "RemoteParticipantComposingChangedEventArgs",
     "IChatItem",
-    "ImplementsIChatItem",
 ]
 
 class ChatConversationThreadingKind(enum.IntEnum):

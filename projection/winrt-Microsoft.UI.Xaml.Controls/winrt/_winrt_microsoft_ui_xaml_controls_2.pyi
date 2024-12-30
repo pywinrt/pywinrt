@@ -335,31 +335,18 @@ from ._winrt_microsoft_ui_xaml_controls import (
     VirtualizingPanel,
     WebView2,
     XamlControlsResources,
-    ImplementsIAnimatedVisual,
     IAnimatedVisual,
-    ImplementsIAnimatedVisual2,
     IAnimatedVisual2,
-    ImplementsIAnimatedVisualSource,
     IAnimatedVisualSource,
-    ImplementsIAnimatedVisualSource2,
     IAnimatedVisualSource2,
-    ImplementsIAnimatedVisualSource3,
     IAnimatedVisualSource3,
-    ImplementsICommandBarElement,
     ICommandBarElement,
-    ImplementsIDynamicAnimatedVisualSource,
     IDynamicAnimatedVisualSource,
-    ImplementsIInsertionPanel,
     IInsertionPanel,
-    ImplementsIItemContainerMapping,
     IItemContainerMapping,
-    ImplementsIKeyIndexMapping,
     IKeyIndexMapping,
-    ImplementsINavigate,
     INavigate,
-    ImplementsIScrollAnchorProvider,
     IScrollAnchorProvider,
-    ImplementsISemanticZoomInformation,
     ISemanticZoomInformation,
 )
 
@@ -398,7 +385,7 @@ class AppBarButton_Static(Button_Static):
     @typing.final
     def label_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarButton(Button, ImplementsICommandBarElement, metaclass=AppBarButton_Static):
+class AppBarButton(Button, ICommandBarElement, metaclass=AppBarButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Microsoft.UI.Xaml.Controls.CommandBarLabelPosition Microsoft.UI.Xaml.Controls.AppBarButton::get_LabelPosition()
     @_property
@@ -481,7 +468,7 @@ class AppBarToggleButton_Static(microsoft_ui_xaml_controls_primitives.ToggleButt
     @typing.final
     def label_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarToggleButton(microsoft_ui_xaml_controls_primitives.ToggleButton, ImplementsICommandBarElement, metaclass=AppBarToggleButton_Static):
+class AppBarToggleButton(microsoft_ui_xaml_controls_primitives.ToggleButton, ICommandBarElement, metaclass=AppBarToggleButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Microsoft.UI.Xaml.Controls.CommandBarLabelPosition Microsoft.UI.Xaml.Controls.AppBarToggleButton::get_LabelPosition()
     @_property
@@ -1182,7 +1169,7 @@ class ListViewBase_Static(microsoft_ui_xaml_controls_primitives.Selector_Static)
     @typing.final
     def single_selection_follows_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ListViewBase(microsoft_ui_xaml_controls_primitives.Selector, ImplementsISemanticZoomInformation, metaclass=ListViewBase_Static):
+class ListViewBase(microsoft_ui_xaml_controls_primitives.Selector, ISemanticZoomInformation, metaclass=ListViewBase_Static):
     # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::CompleteViewChange()
     def complete_view_change(self) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::CompleteViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
@@ -1621,7 +1608,7 @@ class Slider(microsoft_ui_xaml_controls_primitives.RangeBase, metaclass=Slider_S
     # System.Void Microsoft.UI.Xaml.Controls.Slider::put_ThumbToolTipValueConverter(Microsoft.UI.Xaml.Data.IValueConverter)
     @thumb_tool_tip_value_converter.setter
     @typing.final
-    def thumb_tool_tip_value_converter(self, value: microsoft_ui_xaml_data.ImplementsIValueConverter) -> None: ...
+    def thumb_tool_tip_value_converter(self, value: microsoft_ui_xaml_data.IValueConverter) -> None: ...
     # System.Double Microsoft.UI.Xaml.Controls.Slider::get_StepFrequency()
     @_property
     def step_frequency(self) -> winrt.system.Double: ...

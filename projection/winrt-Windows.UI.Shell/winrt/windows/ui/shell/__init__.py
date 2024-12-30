@@ -21,9 +21,7 @@ from winrt._winrt_windows_ui_shell import (
     WindowTabTearOutRequestedEventArgs,
     WindowTabThumbnailRequestedEventArgs,
     IAdaptiveCard,
-    ImplementsIAdaptiveCard,
     IAdaptiveCardBuilderStatics,
-    ImplementsIAdaptiveCardBuilderStatics,
 )
 
 __all__ = [
@@ -48,9 +46,7 @@ __all__ = [
     "WindowTabTearOutRequestedEventArgs",
     "WindowTabThumbnailRequestedEventArgs",
     "IAdaptiveCard",
-    "ImplementsIAdaptiveCard",
     "IAdaptiveCardBuilderStatics",
-    "ImplementsIAdaptiveCardBuilderStatics",
 ]
 
 class SecurityAppKind(enum.IntEnum):

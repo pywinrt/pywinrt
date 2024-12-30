@@ -19,11 +19,8 @@ from winrt._winrt_windows_web_syndication import (
     SyndicationPerson,
     SyndicationText,
     ISyndicationClient,
-    ImplementsISyndicationClient,
     ISyndicationNode,
-    ImplementsISyndicationNode,
     ISyndicationText,
-    ImplementsISyndicationText,
 )
 
 __all__ = [
@@ -45,11 +42,8 @@ __all__ = [
     "SyndicationPerson",
     "SyndicationText",
     "ISyndicationClient",
-    "ImplementsISyndicationClient",
     "ISyndicationNode",
-    "ImplementsISyndicationNode",
     "ISyndicationText",
-    "ImplementsISyndicationText",
 ]
 
 class SyndicationErrorStatus(enum.IntEnum):

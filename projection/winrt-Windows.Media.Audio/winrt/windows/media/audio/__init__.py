@@ -45,13 +45,9 @@ from winrt._winrt_windows_media_audio import (
     SpatialAudioFormatConfiguration,
     SpatialAudioFormatSubtype,
     IAudioInputNode,
-    ImplementsIAudioInputNode,
     IAudioInputNode2,
-    ImplementsIAudioInputNode2,
     IAudioNode,
-    ImplementsIAudioNode,
     IAudioNodeWithListener,
-    ImplementsIAudioNodeWithListener,
 )
 
 __all__ = [
@@ -111,13 +107,9 @@ __all__ = [
     "SpatialAudioFormatConfiguration",
     "SpatialAudioFormatSubtype",
     "IAudioInputNode",
-    "ImplementsIAudioInputNode",
     "IAudioInputNode2",
-    "ImplementsIAudioInputNode2",
     "IAudioNode",
-    "ImplementsIAudioNode",
     "IAudioNodeWithListener",
-    "ImplementsIAudioNodeWithListener",
 ]
 
 class AudioDeviceNodeCreationStatus(enum.IntEnum):

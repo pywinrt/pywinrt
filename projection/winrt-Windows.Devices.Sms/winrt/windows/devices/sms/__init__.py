@@ -32,15 +32,10 @@ from winrt._winrt_windows_devices_sms import (
     SmsVoicemailMessage,
     SmsWapMessage,
     ISmsBinaryMessage,
-    ImplementsISmsBinaryMessage,
     ISmsDevice,
-    ImplementsISmsDevice,
     ISmsMessage,
-    ImplementsISmsMessage,
     ISmsMessageBase,
-    ImplementsISmsMessageBase,
     ISmsTextMessage,
-    ImplementsISmsTextMessage,
 )
 
 __all__ = [
@@ -81,15 +76,10 @@ __all__ = [
     "SmsVoicemailMessage",
     "SmsWapMessage",
     "ISmsBinaryMessage",
-    "ImplementsISmsBinaryMessage",
     "ISmsDevice",
-    "ImplementsISmsDevice",
     "ISmsMessage",
-    "ImplementsISmsMessage",
     "ISmsMessageBase",
-    "ImplementsISmsMessageBase",
     "ISmsTextMessage",
-    "ImplementsISmsTextMessage",
     "SmsDeviceStatusChangedEventHandler",
     "SmsMessageReceivedEventHandler",
 ]
