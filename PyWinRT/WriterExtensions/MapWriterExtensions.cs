@@ -1,4 +1,5 @@
 using System.CodeDom.Compiler;
+using System.Collections.ObjectModel;
 
 static class MapWriterExtensions
 {
@@ -233,5 +234,57 @@ static class MapWriterExtensions
             },
             catchReturn: "-1"
         );
+    }
+
+    public static string WriteMapPythonSpecialMethods(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        out string keyParamType
+    )
+    {
+        var method = type.Methods.Single(m => m.Name == "Lookup");
+        var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+            method.Signature,
+            new MethodNullabilityInfo(method.Method)
+        );
+        keyParamType = method
+            .Method.Parameters[0]
+            .ToPyInParamTyping(ns, nullabilityInfo.Parameters[0].Type, method.GenericArgMap);
+        var valueReturnType = method.Method.ToPyReturnTyping(
+            ns,
+            nullabilityInfo,
+            method.GenericArgMap
+        );
+
+        w.WriteLine("def __len__(self) -> int: ...");
+        w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyParamType}]: ...");
+        w.WriteLine("def __contains__(self, key: object) -> bool: ...");
+        w.WriteLine($"def __getitem__(self, key: {keyParamType}) -> {valueReturnType}: ...");
+        return keyParamType;
+    }
+
+    public static void WriteMutableMapPythonSpecialMethods(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        string keyParamType
+    )
+    {
+        var setMethod = type.Methods.Single(m => m.Name == "Insert");
+        var setNullabilityInfo = nullabilityMap.GetValueOrDefault(
+            setMethod.Signature,
+            new MethodNullabilityInfo(setMethod.Method)
+        );
+        var valParamType = setMethod
+            .Method.Parameters[1]
+            .ToPyInParamTyping(ns, setNullabilityInfo.Parameters[1].Type, setMethod.GenericArgMap);
+
+        w.WriteLine(
+            $"def __setitem__(self, key: {keyParamType}, value: {valParamType}) -> None: ..."
+        );
+        w.WriteLine($"def __delitem__(self, key: {keyParamType}) -> None: ...");
     }
 }
