@@ -1813,18 +1813,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         }
     }
 
-    static PyObject* _assign_array_IResourceContext(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IResourceContext[] = {
-        { "_assign_array_", _assign_array_IResourceContext, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IResourceContext[] = {
@@ -1872,6 +1861,16 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
             }
         }
     };
+
+    static PyObject* _assign_array_IResourceContext(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IResourceContext(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -1924,6 +1923,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
     }
 
     static PyMethodDef methods_ImplementsIResourceContext[] = {
+        { "_assign_array_", _assign_array_IResourceContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IResourceContext), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIResourceContext), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIResourceContext), METH_VARARGS | METH_STATIC, nullptr },
@@ -2092,21 +2092,10 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         }
     }
 
-    static PyObject* _assign_array_IResourceManager(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IResourceManager[] = {
         { "create_resource_context", reinterpret_cast<PyCFunction>(IResourceManager_CreateResourceContext), METH_VARARGS, nullptr },
         { "add_resource_not_found", reinterpret_cast<PyCFunction>(IResourceManager_add_ResourceNotFound), METH_O, nullptr },
         { "remove_resource_not_found", reinterpret_cast<PyCFunction>(IResourceManager_remove_ResourceNotFound), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IResourceManager, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IResourceManager[] = {
@@ -2243,6 +2232,16 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         }
     };
 
+    static PyObject* _assign_array_IResourceManager(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IResourceManager(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2294,6 +2293,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
     }
 
     static PyMethodDef methods_ImplementsIResourceManager[] = {
+        { "_assign_array_", _assign_array_IResourceManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IResourceManager), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIResourceManager), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIResourceManager), METH_VARARGS | METH_STATIC, nullptr },

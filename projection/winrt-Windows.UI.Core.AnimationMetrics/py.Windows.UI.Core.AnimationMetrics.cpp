@@ -1503,18 +1503,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         }
     }
 
-    static PyObject* _assign_array_IPropertyAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPropertyAnimation[] = {
-        { "_assign_array_", _assign_array_IPropertyAnimation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPropertyAnimation[] = {
@@ -1647,6 +1636,16 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         }
     };
 
+    static PyObject* _assign_array_IPropertyAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPropertyAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1698,6 +1697,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     }
 
     static PyMethodDef methods_ImplementsIPropertyAnimation[] = {
+        { "_assign_array_", _assign_array_IPropertyAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPropertyAnimation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertyAnimation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertyAnimation), METH_VARARGS | METH_STATIC, nullptr },

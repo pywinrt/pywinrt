@@ -2464,19 +2464,8 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
-    static PyObject* _assign_array_IFeedAnnouncementInvokedTarget(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFeedAnnouncementInvokedTarget[] = {
         { "on_announcement_invoked", reinterpret_cast<PyCFunction>(IFeedAnnouncementInvokedTarget_OnAnnouncementInvoked), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFeedAnnouncementInvokedTarget, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFeedAnnouncementInvokedTarget[] = {
@@ -2534,6 +2523,16 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     };
 
+    static PyObject* _assign_array_IFeedAnnouncementInvokedTarget(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFeedAnnouncementInvokedTarget(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2585,6 +2584,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     }
 
     static PyMethodDef methods_ImplementsIFeedAnnouncementInvokedTarget[] = {
+        { "_assign_array_", _assign_array_IFeedAnnouncementInvokedTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedAnnouncementInvokedTarget), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedAnnouncementInvokedTarget), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedAnnouncementInvokedTarget), METH_VARARGS | METH_STATIC, nullptr },
@@ -2701,20 +2701,9 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
-    static PyObject* _assign_array_IFeedManager(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFeedManager[] = {
         { "get_enabled_feed_providers", reinterpret_cast<PyCFunction>(IFeedManager_GetEnabledFeedProviders), METH_VARARGS, nullptr },
         { "set_custom_query_parameters", reinterpret_cast<PyCFunction>(IFeedManager_SetCustomQueryParameters), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFeedManager, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFeedManager[] = {
@@ -2799,6 +2788,16 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     };
 
+    static PyObject* _assign_array_IFeedManager(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFeedManager(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2850,6 +2849,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     }
 
     static PyMethodDef methods_ImplementsIFeedManager[] = {
+        { "_assign_array_", _assign_array_IFeedManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedManager), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedManager), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedManager), METH_VARARGS | METH_STATIC, nullptr },
@@ -2973,20 +2973,9 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
-    static PyObject* _assign_array_IFeedManager2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFeedManager2[] = {
         { "send_message_to_content", reinterpret_cast<PyCFunction>(IFeedManager2_SendMessageToContent), METH_VARARGS, nullptr },
         { "try_show_announcement", reinterpret_cast<PyCFunction>(IFeedManager2_TryShowAnnouncement), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFeedManager2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFeedManager2[] = {
@@ -3110,6 +3099,16 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     };
 
+    static PyObject* _assign_array_IFeedManager2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFeedManager2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3161,6 +3160,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     }
 
     static PyMethodDef methods_ImplementsIFeedManager2[] = {
+        { "_assign_array_", _assign_array_IFeedManager2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedManager2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedManager2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedManager2), METH_VARARGS | METH_STATIC, nullptr },
@@ -3409,23 +3409,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
-    static PyObject* _assign_array_IFeedProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFeedProvider[] = {
         { "on_custom_query_parameters_requested", reinterpret_cast<PyCFunction>(IFeedProvider_OnCustomQueryParametersRequested), METH_VARARGS, nullptr },
         { "on_feed_disabled", reinterpret_cast<PyCFunction>(IFeedProvider_OnFeedDisabled), METH_VARARGS, nullptr },
         { "on_feed_enabled", reinterpret_cast<PyCFunction>(IFeedProvider_OnFeedEnabled), METH_VARARGS, nullptr },
         { "on_feed_provider_disabled", reinterpret_cast<PyCFunction>(IFeedProvider_OnFeedProviderDisabled), METH_VARARGS, nullptr },
         { "on_feed_provider_enabled", reinterpret_cast<PyCFunction>(IFeedProvider_OnFeedProviderEnabled), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFeedProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFeedProvider[] = {
@@ -3603,6 +3592,16 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     };
 
+    static PyObject* _assign_array_IFeedProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFeedProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3654,6 +3653,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     }
 
     static PyMethodDef methods_ImplementsIFeedProvider[] = {
+        { "_assign_array_", _assign_array_IFeedProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -3730,19 +3730,8 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
-    static PyObject* _assign_array_IFeedProviderAnalytics(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFeedProviderAnalytics[] = {
         { "on_analytics_info_reported", reinterpret_cast<PyCFunction>(IFeedProviderAnalytics_OnAnalyticsInfoReported), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFeedProviderAnalytics, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFeedProviderAnalytics[] = {
@@ -3800,6 +3789,16 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     };
 
+    static PyObject* _assign_array_IFeedProviderAnalytics(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFeedProviderAnalytics(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3851,6 +3850,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     }
 
     static PyMethodDef methods_ImplementsIFeedProviderAnalytics[] = {
+        { "_assign_array_", _assign_array_IFeedProviderAnalytics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProviderAnalytics), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedProviderAnalytics), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedProviderAnalytics), METH_VARARGS | METH_STATIC, nullptr },
@@ -3927,19 +3927,8 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
-    static PyObject* _assign_array_IFeedProviderErrors(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFeedProviderErrors[] = {
         { "on_error_info_reported", reinterpret_cast<PyCFunction>(IFeedProviderErrors_OnErrorInfoReported), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFeedProviderErrors, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFeedProviderErrors[] = {
@@ -3997,6 +3986,16 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     };
 
+    static PyObject* _assign_array_IFeedProviderErrors(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFeedProviderErrors(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4048,6 +4047,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     }
 
     static PyMethodDef methods_ImplementsIFeedProviderErrors[] = {
+        { "_assign_array_", _assign_array_IFeedProviderErrors, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProviderErrors), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedProviderErrors), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedProviderErrors), METH_VARARGS | METH_STATIC, nullptr },
@@ -4124,19 +4124,8 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
-    static PyObject* _assign_array_IFeedProviderMessage(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFeedProviderMessage[] = {
         { "on_message_received", reinterpret_cast<PyCFunction>(IFeedProviderMessage_OnMessageReceived), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFeedProviderMessage, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFeedProviderMessage[] = {
@@ -4194,6 +4183,16 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     };
 
+    static PyObject* _assign_array_IFeedProviderMessage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFeedProviderMessage(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4245,6 +4244,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     }
 
     static PyMethodDef methods_ImplementsIFeedProviderMessage[] = {
+        { "_assign_array_", _assign_array_IFeedProviderMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProviderMessage), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedProviderMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedProviderMessage), METH_VARARGS | METH_STATIC, nullptr },
@@ -4321,19 +4321,8 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
-    static PyObject* _assign_array_IFeedResourceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFeedResourceProvider[] = {
         { "on_resource_requested", reinterpret_cast<PyCFunction>(IFeedResourceProvider_OnResourceRequested), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFeedResourceProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFeedResourceProvider[] = {
@@ -4391,6 +4380,16 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     };
 
+    static PyObject* _assign_array_IFeedResourceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFeedResourceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4442,6 +4441,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     }
 
     static PyMethodDef methods_ImplementsIFeedResourceProvider[] = {
+        { "_assign_array_", _assign_array_IFeedResourceProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFeedResourceProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedResourceProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedResourceProvider), METH_VARARGS | METH_STATIC, nullptr },

@@ -31886,18 +31886,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static PyObject* _assign_array_ICashDrawerEventSourceEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICashDrawerEventSourceEventArgs[] = {
-        { "_assign_array_", _assign_array_ICashDrawerEventSourceEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICashDrawerEventSourceEventArgs[] = {
@@ -31945,6 +31934,16 @@ namespace py::cpp::Windows::Devices::PointOfService
             }
         }
     };
+
+    static PyObject* _assign_array_ICashDrawerEventSourceEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ICashDrawerEventSourceEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -31997,6 +31996,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef methods_ImplementsICashDrawerEventSourceEventArgs[] = {
+        { "_assign_array_", _assign_array_ICashDrawerEventSourceEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICashDrawerEventSourceEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICashDrawerEventSourceEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICashDrawerEventSourceEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -32657,19 +32657,8 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static PyObject* _assign_array_ICommonClaimedPosPrinterStation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICommonClaimedPosPrinterStation[] = {
         { "validate_data", reinterpret_cast<PyCFunction>(ICommonClaimedPosPrinterStation_ValidateData), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ICommonClaimedPosPrinterStation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICommonClaimedPosPrinterStation[] = {
@@ -33117,6 +33106,16 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     };
 
+    static PyObject* _assign_array_ICommonClaimedPosPrinterStation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICommonClaimedPosPrinterStation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -33168,6 +33167,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef methods_ImplementsICommonClaimedPosPrinterStation[] = {
+        { "_assign_array_", _assign_array_ICommonClaimedPosPrinterStation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICommonClaimedPosPrinterStation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommonClaimedPosPrinterStation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommonClaimedPosPrinterStation), METH_VARARGS | METH_STATIC, nullptr },
@@ -33591,18 +33591,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static PyObject* _assign_array_ICommonPosPrintStationCapabilities(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICommonPosPrintStationCapabilities[] = {
-        { "_assign_array_", _assign_array_ICommonPosPrintStationCapabilities, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICommonPosPrintStationCapabilities[] = {
@@ -33903,6 +33892,16 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     };
 
+    static PyObject* _assign_array_ICommonPosPrintStationCapabilities(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICommonPosPrintStationCapabilities(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -33954,6 +33953,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef methods_ImplementsICommonPosPrintStationCapabilities[] = {
+        { "_assign_array_", _assign_array_ICommonPosPrintStationCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICommonPosPrintStationCapabilities), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommonPosPrintStationCapabilities), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommonPosPrintStationCapabilities), METH_VARARGS | METH_STATIC, nullptr },
@@ -34647,18 +34647,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static PyObject* _assign_array_ICommonReceiptSlipCapabilities(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICommonReceiptSlipCapabilities[] = {
-        { "_assign_array_", _assign_array_ICommonReceiptSlipCapabilities, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICommonReceiptSlipCapabilities[] = {
@@ -35148,6 +35137,16 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     };
 
+    static PyObject* _assign_array_ICommonReceiptSlipCapabilities(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICommonReceiptSlipCapabilities(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -35199,6 +35198,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef methods_ImplementsICommonReceiptSlipCapabilities[] = {
+        { "_assign_array_", _assign_array_ICommonReceiptSlipCapabilities, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICommonReceiptSlipCapabilities), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICommonReceiptSlipCapabilities), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICommonReceiptSlipCapabilities), METH_VARARGS | METH_STATIC, nullptr },
@@ -35399,22 +35399,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static PyObject* _assign_array_IPosPrinterJob(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::IPosPrinterJob>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPosPrinterJob[] = {
         { "execute_async", reinterpret_cast<PyCFunction>(IPosPrinterJob_ExecuteAsync), METH_VARARGS, nullptr },
         { "print", reinterpret_cast<PyCFunction>(IPosPrinterJob_Print), METH_VARARGS, nullptr },
         { "print_line", reinterpret_cast<PyCFunction>(IPosPrinterJob_PrintLine), METH_VARARGS, nullptr },
         { "print_newline", reinterpret_cast<PyCFunction>(IPosPrinterJob_PrintNewline), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPosPrinterJob, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPosPrinterJob[] = {
@@ -35552,6 +35541,16 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     };
 
+    static PyObject* _assign_array_IPosPrinterJob(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::IPosPrinterJob>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPosPrinterJob(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -35603,6 +35602,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef methods_ImplementsIPosPrinterJob[] = {
+        { "_assign_array_", _assign_array_IPosPrinterJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPosPrinterJob), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPosPrinterJob), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPosPrinterJob), METH_VARARGS | METH_STATIC, nullptr },
@@ -36479,16 +36479,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static PyObject* _assign_array_IReceiptOrSlipJob(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IReceiptOrSlipJob[] = {
         { "draw_ruled_line", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_DrawRuledLine), METH_VARARGS, nullptr },
         { "execute_async", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_ExecuteAsync), METH_VARARGS, nullptr },
@@ -36509,7 +36499,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "set_custom_aligned_bitmap", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetCustomAlignedBitmap), METH_VARARGS, nullptr },
         { "set_print_area", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetPrintArea), METH_VARARGS, nullptr },
         { "set_print_rotation", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetPrintRotation), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IReceiptOrSlipJob, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IReceiptOrSlipJob[] = {
@@ -37355,6 +37344,16 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     };
 
+    static PyObject* _assign_array_IReceiptOrSlipJob(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IReceiptOrSlipJob(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -37406,6 +37405,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef methods_ImplementsIReceiptOrSlipJob[] = {
+        { "_assign_array_", _assign_array_IReceiptOrSlipJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IReceiptOrSlipJob), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIReceiptOrSlipJob), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIReceiptOrSlipJob), METH_VARARGS | METH_STATIC, nullptr },

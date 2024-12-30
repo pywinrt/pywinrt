@@ -571,18 +571,7 @@ namespace py::cpp::Windows::Devices
         }
     }
 
-    static PyObject* _assign_array_ILowLevelDevicesAggregateProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ILowLevelDevicesAggregateProvider[] = {
-        { "_assign_array_", _assign_array_ILowLevelDevicesAggregateProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILowLevelDevicesAggregateProvider[] = {
@@ -715,6 +704,16 @@ namespace py::cpp::Windows::Devices
         }
     };
 
+    static PyObject* _assign_array_ILowLevelDevicesAggregateProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ILowLevelDevicesAggregateProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -766,6 +765,7 @@ namespace py::cpp::Windows::Devices
     }
 
     static PyMethodDef methods_ImplementsILowLevelDevicesAggregateProvider[] = {
+        { "_assign_array_", _assign_array_ILowLevelDevicesAggregateProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILowLevelDevicesAggregateProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILowLevelDevicesAggregateProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILowLevelDevicesAggregateProvider), METH_VARARGS | METH_STATIC, nullptr },

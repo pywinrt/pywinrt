@@ -5156,18 +5156,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         }
     }
 
-    static PyObject* _assign_array_ISpeechRecognitionConstraint(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISpeechRecognitionConstraint[] = {
-        { "_assign_array_", _assign_array_ISpeechRecognitionConstraint, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISpeechRecognitionConstraint[] = {
@@ -5348,6 +5337,16 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         }
     };
 
+    static PyObject* _assign_array_ISpeechRecognitionConstraint(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISpeechRecognitionConstraint(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5399,6 +5398,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     }
 
     static PyMethodDef methods_ImplementsISpeechRecognitionConstraint[] = {
+        { "_assign_array_", _assign_array_ISpeechRecognitionConstraint, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpeechRecognitionConstraint), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpeechRecognitionConstraint), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpeechRecognitionConstraint), METH_VARARGS | METH_STATIC, nullptr },

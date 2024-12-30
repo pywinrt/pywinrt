@@ -13101,18 +13101,7 @@ namespace py::cpp::Windows::System
         }
     }
 
-    static PyObject* _assign_array_ILauncherViewOptions(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::System::ILauncherViewOptions>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ILauncherViewOptions[] = {
-        { "_assign_array_", _assign_array_ILauncherViewOptions, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILauncherViewOptions[] = {
@@ -13184,6 +13173,16 @@ namespace py::cpp::Windows::System
         }
     };
 
+    static PyObject* _assign_array_ILauncherViewOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::System::ILauncherViewOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ILauncherViewOptions(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13235,6 +13234,7 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef methods_ImplementsILauncherViewOptions[] = {
+        { "_assign_array_", _assign_array_ILauncherViewOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILauncherViewOptions), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILauncherViewOptions), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILauncherViewOptions), METH_VARARGS | METH_STATIC, nullptr },

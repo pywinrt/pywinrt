@@ -9488,16 +9488,6 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _assign_array_IHttpContent(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Web::Http::IHttpContent>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IHttpContent(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -9529,7 +9519,6 @@ namespace py::cpp::Windows::Web::Http
         { "read_as_string_async", reinterpret_cast<PyCFunction>(IHttpContent_ReadAsStringAsync), METH_VARARGS, nullptr },
         { "try_compute_length", reinterpret_cast<PyCFunction>(IHttpContent_TryComputeLength), METH_VARARGS, nullptr },
         { "write_to_stream_async", reinterpret_cast<PyCFunction>(IHttpContent_WriteToStreamAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IHttpContent, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IHttpContent), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IHttpContent), METH_VARARGS, nullptr },
         { }};
@@ -9768,6 +9757,16 @@ namespace py::cpp::Windows::Web::Http
         }
     };
 
+    static PyObject* _assign_array_IHttpContent(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Web::Http::IHttpContent>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IHttpContent(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9819,6 +9818,7 @@ namespace py::cpp::Windows::Web::Http
     }
 
     static PyMethodDef methods_ImplementsIHttpContent[] = {
+        { "_assign_array_", _assign_array_IHttpContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IHttpContent), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIHttpContent), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIHttpContent), METH_VARARGS | METH_STATIC, nullptr },

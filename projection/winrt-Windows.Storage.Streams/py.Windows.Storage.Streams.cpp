@@ -7081,16 +7081,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IBuffer(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IBuffer>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static int _get_buffer_IBuffer(py::wrapper::Windows::Storage::Streams::IBuffer* self, Py_buffer* view, int flags) noexcept
     {
         try
@@ -7106,7 +7096,6 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef _methods_IBuffer[] = {
-        { "_assign_array_", _assign_array_IBuffer, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBuffer[] = {
@@ -7200,6 +7189,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IBuffer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IBuffer>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBuffer(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7251,6 +7250,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIBuffer[] = {
+        { "_assign_array_", _assign_array_IBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBuffer), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBuffer), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBuffer), METH_VARARGS | METH_STATIC, nullptr },
@@ -7314,18 +7314,7 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IContentTypeProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IContentTypeProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IContentTypeProvider[] = {
-        { "_assign_array_", _assign_array_IContentTypeProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IContentTypeProvider[] = {
@@ -7373,6 +7362,16 @@ namespace py::cpp::Windows::Storage::Streams
             }
         }
     };
+
+    static PyObject* _assign_array_IContentTypeProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IContentTypeProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IContentTypeProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -7425,6 +7424,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIContentTypeProvider[] = {
+        { "_assign_array_", _assign_array_IContentTypeProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContentTypeProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContentTypeProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContentTypeProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -8464,16 +8464,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IDataReader(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IDataReader>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDataReader[] = {
         { "detach_buffer", reinterpret_cast<PyCFunction>(IDataReader_DetachBuffer), METH_VARARGS, nullptr },
         { "detach_stream", reinterpret_cast<PyCFunction>(IDataReader_DetachStream), METH_VARARGS, nullptr },
@@ -8494,7 +8484,6 @@ namespace py::cpp::Windows::Storage::Streams
         { "read_uint16", reinterpret_cast<PyCFunction>(IDataReader_ReadUInt16), METH_VARARGS, nullptr },
         { "read_uint32", reinterpret_cast<PyCFunction>(IDataReader_ReadUInt32), METH_VARARGS, nullptr },
         { "read_uint64", reinterpret_cast<PyCFunction>(IDataReader_ReadUInt64), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IDataReader, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDataReader[] = {
@@ -9191,6 +9180,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IDataReader(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IDataReader>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IDataReader(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9242,6 +9241,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIDataReader[] = {
+        { "_assign_array_", _assign_array_IDataReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDataReader), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDataReader), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDataReader), METH_VARARGS | METH_STATIC, nullptr },
@@ -10377,16 +10377,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IDataWriter(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IDataWriter>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDataWriter[] = {
         { "detach_buffer", reinterpret_cast<PyCFunction>(IDataWriter_DetachBuffer), METH_VARARGS, nullptr },
         { "detach_stream", reinterpret_cast<PyCFunction>(IDataWriter_DetachStream), METH_VARARGS, nullptr },
@@ -10410,7 +10400,6 @@ namespace py::cpp::Windows::Storage::Streams
         { "write_uint16", reinterpret_cast<PyCFunction>(IDataWriter_WriteUInt16), METH_VARARGS, nullptr },
         { "write_uint32", reinterpret_cast<PyCFunction>(IDataWriter_WriteUInt32), METH_VARARGS, nullptr },
         { "write_uint64", reinterpret_cast<PyCFunction>(IDataWriter_WriteUInt64), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IDataWriter, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDataWriter[] = {
@@ -11213,6 +11202,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IDataWriter(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IDataWriter>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IDataWriter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11264,6 +11263,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIDataWriter[] = {
+        { "_assign_array_", _assign_array_IDataWriter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDataWriter), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDataWriter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDataWriter), METH_VARARGS | METH_STATIC, nullptr },
@@ -11382,16 +11382,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IInputStream(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IInputStream>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IInputStream(py::wrapper::Windows::Storage::Streams::IInputStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -11418,7 +11408,6 @@ namespace py::cpp::Windows::Storage::Streams
     static PyMethodDef _methods_IInputStream[] = {
         { "close", reinterpret_cast<PyCFunction>(IInputStream_Close), METH_VARARGS, nullptr },
         { "read_async", reinterpret_cast<PyCFunction>(IInputStream_ReadAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IInputStream, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IInputStream), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IInputStream), METH_VARARGS, nullptr },
         { }};
@@ -11522,6 +11511,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IInputStream(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IInputStream>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IInputStream(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11573,6 +11572,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIInputStream[] = {
+        { "_assign_array_", _assign_array_IInputStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInputStream), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInputStream), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInputStream), METH_VARARGS | METH_STATIC, nullptr },
@@ -11646,19 +11646,8 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IInputStreamReference(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IInputStreamReference>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IInputStreamReference[] = {
         { "open_sequential_read_async", reinterpret_cast<PyCFunction>(IInputStreamReference_OpenSequentialReadAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IInputStreamReference, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInputStreamReference[] = {
@@ -11712,6 +11701,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IInputStreamReference(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IInputStreamReference>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IInputStreamReference(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11763,6 +11762,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIInputStreamReference[] = {
+        { "_assign_array_", _assign_array_IInputStreamReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInputStreamReference), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInputStreamReference), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInputStreamReference), METH_VARARGS | METH_STATIC, nullptr },
@@ -11919,16 +11919,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IOutputStream(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IOutputStream>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IOutputStream(py::wrapper::Windows::Storage::Streams::IOutputStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -11956,7 +11946,6 @@ namespace py::cpp::Windows::Storage::Streams
         { "close", reinterpret_cast<PyCFunction>(IOutputStream_Close), METH_VARARGS, nullptr },
         { "flush_async", reinterpret_cast<PyCFunction>(IOutputStream_FlushAsync), METH_VARARGS, nullptr },
         { "write_async", reinterpret_cast<PyCFunction>(IOutputStream_WriteAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IOutputStream, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IOutputStream), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IOutputStream), METH_VARARGS, nullptr },
         { }};
@@ -12068,6 +12057,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IOutputStream(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IOutputStream>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IOutputStream(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12119,6 +12118,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIOutputStream[] = {
+        { "_assign_array_", _assign_array_IOutputStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IOutputStream), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIOutputStream), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIOutputStream), METH_VARARGS | METH_STATIC, nullptr },
@@ -12238,20 +12238,9 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IPropertySetSerializer(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IPropertySetSerializer>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPropertySetSerializer[] = {
         { "deserialize", reinterpret_cast<PyCFunction>(IPropertySetSerializer_Deserialize), METH_VARARGS, nullptr },
         { "serialize", reinterpret_cast<PyCFunction>(IPropertySetSerializer_Serialize), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPropertySetSerializer, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPropertySetSerializer[] = {
@@ -12353,6 +12342,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IPropertySetSerializer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IPropertySetSerializer>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPropertySetSerializer(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12404,6 +12403,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIPropertySetSerializer[] = {
+        { "_assign_array_", _assign_array_IPropertySetSerializer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPropertySetSerializer), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertySetSerializer), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertySetSerializer), METH_VARARGS | METH_STATIC, nullptr },
@@ -12930,16 +12930,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IRandomAccessStream(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IRandomAccessStream>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IRandomAccessStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -12972,7 +12962,6 @@ namespace py::cpp::Windows::Storage::Streams
         { "read_async", reinterpret_cast<PyCFunction>(IRandomAccessStream_ReadAsync), METH_VARARGS, nullptr },
         { "seek", reinterpret_cast<PyCFunction>(IRandomAccessStream_Seek), METH_VARARGS, nullptr },
         { "write_async", reinterpret_cast<PyCFunction>(IRandomAccessStream_WriteAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IRandomAccessStream, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IRandomAccessStream), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IRandomAccessStream), METH_VARARGS, nullptr },
         { }};
@@ -13361,6 +13350,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IRandomAccessStream(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IRandomAccessStream>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IRandomAccessStream(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13412,6 +13411,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIRandomAccessStream[] = {
+        { "_assign_array_", _assign_array_IRandomAccessStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRandomAccessStream), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRandomAccessStream), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRandomAccessStream), METH_VARARGS | METH_STATIC, nullptr },
@@ -13485,19 +13485,8 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IRandomAccessStreamReference(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IRandomAccessStreamReference[] = {
         { "open_read_async", reinterpret_cast<PyCFunction>(IRandomAccessStreamReference_OpenReadAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IRandomAccessStreamReference, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IRandomAccessStreamReference[] = {
@@ -13551,6 +13540,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IRandomAccessStreamReference(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IRandomAccessStreamReference(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13602,6 +13601,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIRandomAccessStreamReference[] = {
+        { "_assign_array_", _assign_array_IRandomAccessStreamReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRandomAccessStreamReference), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRandomAccessStreamReference), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRandomAccessStreamReference), METH_VARARGS | METH_STATIC, nullptr },
@@ -14158,16 +14158,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _assign_array_IRandomAccessStreamWithContentType(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IRandomAccessStreamWithContentType(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -14200,7 +14190,6 @@ namespace py::cpp::Windows::Storage::Streams
         { "read_async", reinterpret_cast<PyCFunction>(IRandomAccessStreamWithContentType_ReadAsync), METH_VARARGS, nullptr },
         { "seek", reinterpret_cast<PyCFunction>(IRandomAccessStreamWithContentType_Seek), METH_VARARGS, nullptr },
         { "write_async", reinterpret_cast<PyCFunction>(IRandomAccessStreamWithContentType_WriteAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IRandomAccessStreamWithContentType, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IRandomAccessStreamWithContentType), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IRandomAccessStreamWithContentType), METH_VARARGS, nullptr },
         { }};
@@ -14610,6 +14599,16 @@ namespace py::cpp::Windows::Storage::Streams
         }
     };
 
+    static PyObject* _assign_array_IRandomAccessStreamWithContentType(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IRandomAccessStreamWithContentType(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14661,6 +14660,7 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef methods_ImplementsIRandomAccessStreamWithContentType[] = {
+        { "_assign_array_", _assign_array_IRandomAccessStreamWithContentType, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRandomAccessStreamWithContentType), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRandomAccessStreamWithContentType), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRandomAccessStreamWithContentType), METH_VARARGS | METH_STATIC, nullptr },

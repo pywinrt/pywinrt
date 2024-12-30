@@ -3925,18 +3925,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         }
     }
 
-    static PyObject* _assign_array_ILampArrayEffect(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ILampArrayEffect[] = {
-        { "_assign_array_", _assign_array_ILampArrayEffect, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILampArrayEffect[] = {
@@ -4008,6 +3997,16 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         }
     };
 
+    static PyObject* _assign_array_ILampArrayEffect(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ILampArrayEffect(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4059,6 +4058,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     }
 
     static PyMethodDef methods_ImplementsILampArrayEffect[] = {
+        { "_assign_array_", _assign_array_ILampArrayEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILampArrayEffect), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILampArrayEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILampArrayEffect), METH_VARARGS | METH_STATIC, nullptr },

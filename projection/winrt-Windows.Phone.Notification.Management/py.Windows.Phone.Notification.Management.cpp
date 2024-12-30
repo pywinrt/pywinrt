@@ -8629,18 +8629,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
     }
 
-    static PyObject* _assign_array_IAccessoryNotificationTriggerDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IAccessoryNotificationTriggerDetails[] = {
-        { "_assign_array_", _assign_array_IAccessoryNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAccessoryNotificationTriggerDetails[] = {
@@ -8796,6 +8785,16 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
     };
 
+    static PyObject* _assign_array_IAccessoryNotificationTriggerDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAccessoryNotificationTriggerDetails(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -8847,6 +8846,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
     }
 
     static PyMethodDef methods_ImplementsIAccessoryNotificationTriggerDetails[] = {
+        { "_assign_array_", _assign_array_IAccessoryNotificationTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAccessoryNotificationTriggerDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAccessoryNotificationTriggerDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAccessoryNotificationTriggerDetails), METH_VARARGS | METH_STATIC, nullptr },

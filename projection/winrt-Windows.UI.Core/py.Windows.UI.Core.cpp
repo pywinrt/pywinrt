@@ -11127,20 +11127,9 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
-    static PyObject* _assign_array_ICoreAcceleratorKeys(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICoreAcceleratorKeys>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICoreAcceleratorKeys[] = {
         { "add_accelerator_key_activated", reinterpret_cast<PyCFunction>(ICoreAcceleratorKeys_add_AcceleratorKeyActivated), METH_O, nullptr },
         { "remove_accelerator_key_activated", reinterpret_cast<PyCFunction>(ICoreAcceleratorKeys_remove_AcceleratorKeyActivated), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ICoreAcceleratorKeys, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICoreAcceleratorKeys[] = {
@@ -11230,6 +11219,16 @@ namespace py::cpp::Windows::UI::Core
         }
     };
 
+    static PyObject* _assign_array_ICoreAcceleratorKeys(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICoreAcceleratorKeys>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICoreAcceleratorKeys(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11281,6 +11280,7 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef methods_ImplementsICoreAcceleratorKeys[] = {
+        { "_assign_array_", _assign_array_ICoreAcceleratorKeys, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreAcceleratorKeys), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreAcceleratorKeys), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreAcceleratorKeys), METH_VARARGS | METH_STATIC, nullptr },
@@ -11478,20 +11478,9 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
-    static PyObject* _assign_array_ICoreInputSourceBase(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICoreInputSourceBase>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICoreInputSourceBase[] = {
         { "add_input_enabled", reinterpret_cast<PyCFunction>(ICoreInputSourceBase_add_InputEnabled), METH_O, nullptr },
         { "remove_input_enabled", reinterpret_cast<PyCFunction>(ICoreInputSourceBase_remove_InputEnabled), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ICoreInputSourceBase, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICoreInputSourceBase[] = {
@@ -11646,6 +11635,16 @@ namespace py::cpp::Windows::UI::Core
         }
     };
 
+    static PyObject* _assign_array_ICoreInputSourceBase(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICoreInputSourceBase>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICoreInputSourceBase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11697,6 +11696,7 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef methods_ImplementsICoreInputSourceBase[] = {
+        { "_assign_array_", _assign_array_ICoreInputSourceBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreInputSourceBase), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreInputSourceBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreInputSourceBase), METH_VARARGS | METH_STATIC, nullptr },
@@ -12396,16 +12396,6 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
-    static PyObject* _assign_array_ICorePointerInputSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICorePointerInputSource>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICorePointerInputSource[] = {
         { "release_pointer_capture", reinterpret_cast<PyCFunction>(ICorePointerInputSource_ReleasePointerCapture), METH_VARARGS, nullptr },
         { "set_pointer_capture", reinterpret_cast<PyCFunction>(ICorePointerInputSource_SetPointerCapture), METH_VARARGS, nullptr },
@@ -12423,7 +12413,6 @@ namespace py::cpp::Windows::UI::Core
         { "remove_pointer_released", reinterpret_cast<PyCFunction>(ICorePointerInputSource_remove_PointerReleased), METH_O, nullptr },
         { "add_pointer_wheel_changed", reinterpret_cast<PyCFunction>(ICorePointerInputSource_add_PointerWheelChanged), METH_O, nullptr },
         { "remove_pointer_wheel_changed", reinterpret_cast<PyCFunction>(ICorePointerInputSource_remove_PointerWheelChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ICorePointerInputSource, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICorePointerInputSource[] = {
@@ -13019,6 +13008,16 @@ namespace py::cpp::Windows::UI::Core
         }
     };
 
+    static PyObject* _assign_array_ICorePointerInputSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICorePointerInputSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICorePointerInputSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13070,6 +13069,7 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef methods_ImplementsICorePointerInputSource[] = {
+        { "_assign_array_", _assign_array_ICorePointerInputSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICorePointerInputSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICorePointerInputSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICorePointerInputSource), METH_VARARGS | METH_STATIC, nullptr },
@@ -13799,16 +13799,6 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
-    static PyObject* _assign_array_ICorePointerInputSource2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICorePointerInputSource2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICorePointerInputSource2[] = {
         { "release_pointer_capture", reinterpret_cast<PyCFunction>(ICorePointerInputSource2_ReleasePointerCapture), METH_VARARGS, nullptr },
         { "set_pointer_capture", reinterpret_cast<PyCFunction>(ICorePointerInputSource2_SetPointerCapture), METH_VARARGS, nullptr },
@@ -13826,7 +13816,6 @@ namespace py::cpp::Windows::UI::Core
         { "remove_pointer_released", reinterpret_cast<PyCFunction>(ICorePointerInputSource2_remove_PointerReleased), METH_O, nullptr },
         { "add_pointer_wheel_changed", reinterpret_cast<PyCFunction>(ICorePointerInputSource2_add_PointerWheelChanged), METH_O, nullptr },
         { "remove_pointer_wheel_changed", reinterpret_cast<PyCFunction>(ICorePointerInputSource2_remove_PointerWheelChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ICorePointerInputSource2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICorePointerInputSource2[] = {
@@ -14443,6 +14432,16 @@ namespace py::cpp::Windows::UI::Core
         }
     };
 
+    static PyObject* _assign_array_ICorePointerInputSource2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICorePointerInputSource2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICorePointerInputSource2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14494,6 +14493,7 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef methods_ImplementsICorePointerInputSource2[] = {
+        { "_assign_array_", _assign_array_ICorePointerInputSource2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICorePointerInputSource2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICorePointerInputSource2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICorePointerInputSource2), METH_VARARGS | METH_STATIC, nullptr },
@@ -14722,16 +14722,6 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
-    static PyObject* _assign_array_ICorePointerRedirector(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICorePointerRedirector>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICorePointerRedirector[] = {
         { "add_pointer_routed_away", reinterpret_cast<PyCFunction>(ICorePointerRedirector_add_PointerRoutedAway), METH_O, nullptr },
         { "remove_pointer_routed_away", reinterpret_cast<PyCFunction>(ICorePointerRedirector_remove_PointerRoutedAway), METH_O, nullptr },
@@ -14739,7 +14729,6 @@ namespace py::cpp::Windows::UI::Core
         { "remove_pointer_routed_released", reinterpret_cast<PyCFunction>(ICorePointerRedirector_remove_PointerRoutedReleased), METH_O, nullptr },
         { "add_pointer_routed_to", reinterpret_cast<PyCFunction>(ICorePointerRedirector_add_PointerRoutedTo), METH_O, nullptr },
         { "remove_pointer_routed_to", reinterpret_cast<PyCFunction>(ICorePointerRedirector_remove_PointerRoutedTo), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ICorePointerRedirector, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICorePointerRedirector[] = {
@@ -14953,6 +14942,16 @@ namespace py::cpp::Windows::UI::Core
         }
     };
 
+    static PyObject* _assign_array_ICorePointerRedirector(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICorePointerRedirector>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICorePointerRedirector(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -15004,6 +15003,7 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef methods_ImplementsICorePointerRedirector[] = {
+        { "_assign_array_", _assign_array_ICorePointerRedirector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICorePointerRedirector), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICorePointerRedirector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICorePointerRedirector), METH_VARARGS | METH_STATIC, nullptr },
@@ -16777,16 +16777,6 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
-    static PyObject* _assign_array_ICoreWindow(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICoreWindow>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICoreWindow[] = {
         { "activate", reinterpret_cast<PyCFunction>(ICoreWindow_Activate), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(ICoreWindow_Close), METH_VARARGS, nullptr },
@@ -16828,7 +16818,6 @@ namespace py::cpp::Windows::UI::Core
         { "remove_touch_hit_testing", reinterpret_cast<PyCFunction>(ICoreWindow_remove_TouchHitTesting), METH_O, nullptr },
         { "add_visibility_changed", reinterpret_cast<PyCFunction>(ICoreWindow_add_VisibilityChanged), METH_O, nullptr },
         { "remove_visibility_changed", reinterpret_cast<PyCFunction>(ICoreWindow_remove_VisibilityChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ICoreWindow, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICoreWindow[] = {
@@ -18328,6 +18317,16 @@ namespace py::cpp::Windows::UI::Core
         }
     };
 
+    static PyObject* _assign_array_ICoreWindow(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICoreWindow>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICoreWindow(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -18379,6 +18378,7 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef methods_ImplementsICoreWindow[] = {
+        { "_assign_array_", _assign_array_ICoreWindow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreWindow), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreWindow), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreWindow), METH_VARARGS | METH_STATIC, nullptr },
@@ -18481,18 +18481,7 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
-    static PyObject* _assign_array_ICoreWindowEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICoreWindowEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICoreWindowEventArgs[] = {
-        { "_assign_array_", _assign_array_ICoreWindowEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICoreWindowEventArgs[] = {
@@ -18564,6 +18553,16 @@ namespace py::cpp::Windows::UI::Core
         }
     };
 
+    static PyObject* _assign_array_ICoreWindowEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::ICoreWindowEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICoreWindowEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -18615,6 +18614,7 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef methods_ImplementsICoreWindowEventArgs[] = {
+        { "_assign_array_", _assign_array_ICoreWindowEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreWindowEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreWindowEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreWindowEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -18691,19 +18691,8 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
-    static PyObject* _assign_array_IInitializeWithCoreWindow(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::IInitializeWithCoreWindow>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IInitializeWithCoreWindow[] = {
         { "initialize", reinterpret_cast<PyCFunction>(IInitializeWithCoreWindow_Initialize), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IInitializeWithCoreWindow, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInitializeWithCoreWindow[] = {
@@ -18761,6 +18750,16 @@ namespace py::cpp::Windows::UI::Core
         }
     };
 
+    static PyObject* _assign_array_IInitializeWithCoreWindow(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::IInitializeWithCoreWindow>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IInitializeWithCoreWindow(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -18812,6 +18811,7 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef methods_ImplementsIInitializeWithCoreWindow[] = {
+        { "_assign_array_", _assign_array_IInitializeWithCoreWindow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInitializeWithCoreWindow), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInitializeWithCoreWindow), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInitializeWithCoreWindow), METH_VARARGS | METH_STATIC, nullptr },

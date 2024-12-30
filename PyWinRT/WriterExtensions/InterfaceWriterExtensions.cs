@@ -208,6 +208,8 @@ static class InterfaceWriterExtensions
         {
             w.WriteImplementsInterfaceCppType(type);
 
+            w.WriteAssignArrayMethod(type);
+            w.WriteBlankLine();
             w.WriteLine(
                 $"static PyObject* _from_{type.Name}(PyObject* /*unused*/, PyObject* arg) noexcept"
             );
@@ -285,6 +287,9 @@ static class InterfaceWriterExtensions
 
         if (!type.IsGeneric)
         {
+            w.WriteLine(
+                $"{{ \"_assign_array_\", _assign_array_{type.Name}, METH_O | METH_STATIC, nullptr }},"
+            );
             w.WriteLine(
                 $"{{ \"_from\", reinterpret_cast<PyCFunction>(_from_{type.Name}), METH_O | METH_STATIC, nullptr }},"
             );

@@ -82,6 +82,7 @@ static class StructWriterExtensions
             w.WriteNumberMethods(type);
         }
 
+        w.WriteBlankLine();
         w.WriteAssignArrayMethod(type);
         w.WriteMethodTable(type);
 

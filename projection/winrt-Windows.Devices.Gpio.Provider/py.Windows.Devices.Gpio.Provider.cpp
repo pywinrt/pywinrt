@@ -212,19 +212,8 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         }
     }
 
-    static PyObject* _assign_array_IGpioControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGpioControllerProvider[] = {
         { "open_pin_provider", reinterpret_cast<PyCFunction>(IGpioControllerProvider_OpenPinProvider), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IGpioControllerProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGpioControllerProvider[] = {
@@ -317,6 +306,16 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         }
     };
 
+    static PyObject* _assign_array_IGpioControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGpioControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -368,6 +367,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     }
 
     static PyMethodDef methods_ImplementsIGpioControllerProvider[] = {
+        { "_assign_array_", _assign_array_IGpioControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGpioControllerProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGpioControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGpioControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -803,16 +803,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         }
     }
 
-    static PyObject* _assign_array_IGpioPinProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGpioPinProvider[] = {
         { "get_drive_mode", reinterpret_cast<PyCFunction>(IGpioPinProvider_GetDriveMode), METH_VARARGS, nullptr },
         { "is_drive_mode_supported", reinterpret_cast<PyCFunction>(IGpioPinProvider_IsDriveModeSupported), METH_VARARGS, nullptr },
@@ -821,7 +811,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { "write", reinterpret_cast<PyCFunction>(IGpioPinProvider_Write), METH_VARARGS, nullptr },
         { "add_value_changed", reinterpret_cast<PyCFunction>(IGpioPinProvider_add_ValueChanged), METH_O, nullptr },
         { "remove_value_changed", reinterpret_cast<PyCFunction>(IGpioPinProvider_remove_ValueChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IGpioPinProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGpioPinProvider[] = {
@@ -1141,6 +1130,16 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         }
     };
 
+    static PyObject* _assign_array_IGpioPinProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGpioPinProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1192,6 +1191,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     }
 
     static PyMethodDef methods_ImplementsIGpioPinProvider[] = {
+        { "_assign_array_", _assign_array_IGpioPinProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGpioPinProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGpioPinProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGpioPinProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -1265,19 +1265,8 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         }
     }
 
-    static PyObject* _assign_array_IGpioProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGpioProvider[] = {
         { "get_controllers", reinterpret_cast<PyCFunction>(IGpioProvider_GetControllers), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IGpioProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGpioProvider[] = {
@@ -1331,6 +1320,16 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         }
     };
 
+    static PyObject* _assign_array_IGpioProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGpioProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1382,6 +1381,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     }
 
     static PyMethodDef methods_ImplementsIGpioProvider[] = {
+        { "_assign_array_", _assign_array_IGpioProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGpioProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGpioProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGpioProvider), METH_VARARGS | METH_STATIC, nullptr },

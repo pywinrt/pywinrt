@@ -400,16 +400,6 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         }
     }
 
-    static PyObject* _assign_array_IPwmControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPwmControllerProvider[] = {
         { "acquire_pin", reinterpret_cast<PyCFunction>(IPwmControllerProvider_AcquirePin), METH_VARARGS, nullptr },
         { "disable_pin", reinterpret_cast<PyCFunction>(IPwmControllerProvider_DisablePin), METH_VARARGS, nullptr },
@@ -417,7 +407,6 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         { "release_pin", reinterpret_cast<PyCFunction>(IPwmControllerProvider_ReleasePin), METH_VARARGS, nullptr },
         { "set_desired_frequency", reinterpret_cast<PyCFunction>(IPwmControllerProvider_SetDesiredFrequency), METH_VARARGS, nullptr },
         { "set_pulse_parameters", reinterpret_cast<PyCFunction>(IPwmControllerProvider_SetPulseParameters), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPwmControllerProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPwmControllerProvider[] = {
@@ -729,6 +718,16 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         }
     };
 
+    static PyObject* _assign_array_IPwmControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPwmControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -780,6 +779,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
     }
 
     static PyMethodDef methods_ImplementsIPwmControllerProvider[] = {
+        { "_assign_array_", _assign_array_IPwmControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPwmControllerProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPwmControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPwmControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -853,19 +853,8 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         }
     }
 
-    static PyObject* _assign_array_IPwmProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPwmProvider[] = {
         { "get_controllers", reinterpret_cast<PyCFunction>(IPwmProvider_GetControllers), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPwmProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPwmProvider[] = {
@@ -919,6 +908,16 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         }
     };
 
+    static PyObject* _assign_array_IPwmProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPwmProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -970,6 +969,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
     }
 
     static PyMethodDef methods_ImplementsIPwmProvider[] = {
+        { "_assign_array_", _assign_array_IPwmProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPwmProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPwmProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPwmProvider), METH_VARARGS | METH_STATIC, nullptr },

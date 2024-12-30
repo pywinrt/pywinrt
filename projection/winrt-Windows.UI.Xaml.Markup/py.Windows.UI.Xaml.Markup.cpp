@@ -1844,19 +1844,8 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
-    static PyObject* _assign_array_IComponentConnector(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IComponentConnector>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IComponentConnector[] = {
         { "connect", reinterpret_cast<PyCFunction>(IComponentConnector_Connect), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IComponentConnector, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IComponentConnector[] = {
@@ -1926,6 +1915,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     };
 
+    static PyObject* _assign_array_IComponentConnector(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IComponentConnector>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IComponentConnector(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1977,6 +1976,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef methods_ImplementsIComponentConnector[] = {
+        { "_assign_array_", _assign_array_IComponentConnector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IComponentConnector), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIComponentConnector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIComponentConnector), METH_VARARGS | METH_STATIC, nullptr },
@@ -2053,19 +2053,8 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
-    static PyObject* _assign_array_IComponentConnector2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IComponentConnector2[] = {
         { "get_binding_connector", reinterpret_cast<PyCFunction>(IComponentConnector2_GetBindingConnector), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IComponentConnector2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IComponentConnector2[] = {
@@ -2137,6 +2126,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     };
 
+    static PyObject* _assign_array_IComponentConnector2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IComponentConnector2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2188,6 +2187,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef methods_ImplementsIComponentConnector2[] = {
+        { "_assign_array_", _assign_array_IComponentConnector2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IComponentConnector2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIComponentConnector2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIComponentConnector2), METH_VARARGS | METH_STATIC, nullptr },
@@ -2314,20 +2314,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
-    static PyObject* _assign_array_IDataTemplateComponent(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDataTemplateComponent[] = {
         { "process_bindings", reinterpret_cast<PyCFunction>(IDataTemplateComponent_ProcessBindings), METH_VARARGS, nullptr },
         { "recycle", reinterpret_cast<PyCFunction>(IDataTemplateComponent_Recycle), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IDataTemplateComponent, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDataTemplateComponent[] = {
@@ -2429,6 +2418,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     };
 
+    static PyObject* _assign_array_IDataTemplateComponent(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IDataTemplateComponent(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2480,6 +2479,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef methods_ImplementsIDataTemplateComponent[] = {
+        { "_assign_array_", _assign_array_IDataTemplateComponent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDataTemplateComponent), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDataTemplateComponent), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDataTemplateComponent), METH_VARARGS | METH_STATIC, nullptr },
@@ -2557,19 +2557,8 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
-    static PyObject* _assign_array_IXamlBindScopeDiagnostics(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IXamlBindScopeDiagnostics[] = {
         { "disable", reinterpret_cast<PyCFunction>(IXamlBindScopeDiagnostics_Disable), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IXamlBindScopeDiagnostics, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlBindScopeDiagnostics[] = {
@@ -2639,6 +2628,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     };
 
+    static PyObject* _assign_array_IXamlBindScopeDiagnostics(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IXamlBindScopeDiagnostics(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2690,6 +2689,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef methods_ImplementsIXamlBindScopeDiagnostics[] = {
+        { "_assign_array_", _assign_array_IXamlBindScopeDiagnostics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlBindScopeDiagnostics), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlBindScopeDiagnostics), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlBindScopeDiagnostics), METH_VARARGS | METH_STATIC, nullptr },
@@ -2989,20 +2989,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
-    static PyObject* _assign_array_IXamlMember(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlMember>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IXamlMember[] = {
         { "get_value", reinterpret_cast<PyCFunction>(IXamlMember_GetValue), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(IXamlMember_SetValue), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IXamlMember, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlMember[] = {
@@ -3230,6 +3219,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     };
 
+    static PyObject* _assign_array_IXamlMember(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlMember>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IXamlMember(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3281,6 +3280,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef methods_ImplementsIXamlMember[] = {
+        { "_assign_array_", _assign_array_IXamlMember, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlMember), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlMember), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlMember), METH_VARARGS | METH_STATIC, nullptr },
@@ -3438,21 +3438,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
-    static PyObject* _assign_array_IXamlMetadataProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IXamlMetadataProvider[] = {
         { "get_xaml_type", reinterpret_cast<PyCFunction>(IXamlMetadataProvider_GetXamlType), METH_VARARGS, nullptr },
         { "get_xaml_type_by_full_name", reinterpret_cast<PyCFunction>(IXamlMetadataProvider_GetXamlTypeByFullName), METH_VARARGS, nullptr },
         { "get_xmlns_definitions", reinterpret_cast<PyCFunction>(IXamlMetadataProvider_GetXmlnsDefinitions), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IXamlMetadataProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlMetadataProvider[] = {
@@ -3571,6 +3560,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     };
 
+    static PyObject* _assign_array_IXamlMetadataProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IXamlMetadataProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3622,6 +3621,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef methods_ImplementsIXamlMetadataProvider[] = {
+        { "_assign_array_", _assign_array_IXamlMetadataProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlMetadataProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlMetadataProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlMetadataProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -4269,16 +4269,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
-    static PyObject* _assign_array_IXamlType(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlType>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IXamlType[] = {
         { "activate_instance", reinterpret_cast<PyCFunction>(IXamlType_ActivateInstance), METH_VARARGS, nullptr },
         { "add_to_map", reinterpret_cast<PyCFunction>(IXamlType_AddToMap), METH_VARARGS, nullptr },
@@ -4286,7 +4276,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { "create_from_string", reinterpret_cast<PyCFunction>(IXamlType_CreateFromString), METH_VARARGS, nullptr },
         { "get_member", reinterpret_cast<PyCFunction>(IXamlType_GetMember), METH_VARARGS, nullptr },
         { "run_initializer", reinterpret_cast<PyCFunction>(IXamlType_RunInitializer), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IXamlType, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlType[] = {
@@ -4770,6 +4759,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     };
 
+    static PyObject* _assign_array_IXamlType(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlType>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IXamlType(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4821,6 +4820,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef methods_ImplementsIXamlType[] = {
+        { "_assign_array_", _assign_array_IXamlType, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlType), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlType), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlType), METH_VARARGS | METH_STATIC, nullptr },
@@ -5498,16 +5498,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
-    static PyObject* _assign_array_IXamlType2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlType2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IXamlType2[] = {
         { "activate_instance", reinterpret_cast<PyCFunction>(IXamlType2_ActivateInstance), METH_VARARGS, nullptr },
         { "add_to_map", reinterpret_cast<PyCFunction>(IXamlType2_AddToMap), METH_VARARGS, nullptr },
@@ -5515,7 +5505,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { "create_from_string", reinterpret_cast<PyCFunction>(IXamlType2_CreateFromString), METH_VARARGS, nullptr },
         { "get_member", reinterpret_cast<PyCFunction>(IXamlType2_GetMember), METH_VARARGS, nullptr },
         { "run_initializer", reinterpret_cast<PyCFunction>(IXamlType2_RunInitializer), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IXamlType2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlType2[] = {
@@ -6020,6 +6009,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     };
 
+    static PyObject* _assign_array_IXamlType2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::IXamlType2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IXamlType2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6071,6 +6070,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef methods_ImplementsIXamlType2[] = {
+        { "_assign_array_", _assign_array_IXamlType2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlType2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlType2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlType2), METH_VARARGS | METH_STATIC, nullptr },

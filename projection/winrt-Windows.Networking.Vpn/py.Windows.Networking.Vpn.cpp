@@ -12170,19 +12170,8 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnChannelStatics(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnChannelStatics>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnChannelStatics[] = {
         { "process_event_async", reinterpret_cast<PyCFunction>(IVpnChannelStatics_ProcessEventAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVpnChannelStatics, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnChannelStatics[] = {
@@ -12252,6 +12241,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnChannelStatics(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnChannelStatics>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnChannelStatics(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12303,6 +12302,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnChannelStatics[] = {
+        { "_assign_array_", _assign_array_IVpnChannelStatics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnChannelStatics), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnChannelStatics), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnChannelStatics), METH_VARARGS | METH_STATIC, nullptr },
@@ -12456,18 +12456,7 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnCredential(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnCredential>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnCredential[] = {
-        { "_assign_array_", _assign_array_IVpnCredential, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnCredential[] = {
@@ -12579,6 +12568,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnCredential(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnCredential>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnCredential(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12630,6 +12629,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnCredential[] = {
+        { "_assign_array_", _assign_array_IVpnCredential, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnCredential), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnCredential), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnCredential), METH_VARARGS | METH_STATIC, nullptr },
@@ -12870,18 +12870,7 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnCustomPrompt(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnCustomPrompt[] = {
-        { "_assign_array_", _assign_array_IVpnCustomPrompt, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnCustomPrompt[] = {
@@ -13041,6 +13030,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnCustomPrompt(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnCustomPrompt(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13092,6 +13091,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnCustomPrompt[] = {
+        { "_assign_array_", _assign_array_IVpnCustomPrompt, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnCustomPrompt), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnCustomPrompt), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnCustomPrompt), METH_VARARGS | METH_STATIC, nullptr },
@@ -13332,18 +13332,7 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnCustomPromptElement(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnCustomPromptElement[] = {
-        { "_assign_array_", _assign_array_IVpnCustomPromptElement, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnCustomPromptElement[] = {
@@ -13503,6 +13492,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnCustomPromptElement(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnCustomPromptElement(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13554,6 +13553,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnCustomPromptElement[] = {
+        { "_assign_array_", _assign_array_IVpnCustomPromptElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnCustomPromptElement), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnCustomPromptElement), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnCustomPromptElement), METH_VARARGS | METH_STATIC, nullptr },
@@ -13632,19 +13632,8 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnDomainNameInfoFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnDomainNameInfoFactory[] = {
         { "create_vpn_domain_name_info", reinterpret_cast<PyCFunction>(IVpnDomainNameInfoFactory_CreateVpnDomainNameInfo), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVpnDomainNameInfoFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnDomainNameInfoFactory[] = {
@@ -13728,6 +13717,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnDomainNameInfoFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnDomainNameInfoFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13779,6 +13778,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnDomainNameInfoFactory[] = {
+        { "_assign_array_", _assign_array_IVpnDomainNameInfoFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnDomainNameInfoFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnDomainNameInfoFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnDomainNameInfoFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -13854,19 +13854,8 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnInterfaceIdFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnInterfaceIdFactory[] = {
         { "create_vpn_interface_id", reinterpret_cast<PyCFunction>(IVpnInterfaceIdFactory_CreateVpnInterfaceId), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVpnInterfaceIdFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnInterfaceIdFactory[] = {
@@ -13926,6 +13915,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnInterfaceIdFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnInterfaceIdFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13977,6 +13976,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnInterfaceIdFactory[] = {
+        { "_assign_array_", _assign_array_IVpnInterfaceIdFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnInterfaceIdFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnInterfaceIdFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnInterfaceIdFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -14054,19 +14054,8 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnNamespaceInfoFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnNamespaceInfoFactory[] = {
         { "create_vpn_namespace_info", reinterpret_cast<PyCFunction>(IVpnNamespaceInfoFactory_CreateVpnNamespaceInfo), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVpnNamespaceInfoFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnNamespaceInfoFactory[] = {
@@ -14144,6 +14133,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnNamespaceInfoFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnNamespaceInfoFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14195,6 +14194,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnNamespaceInfoFactory[] = {
+        { "_assign_array_", _assign_array_IVpnNamespaceInfoFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnNamespaceInfoFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnNamespaceInfoFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnNamespaceInfoFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -14272,19 +14272,8 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnPacketBufferFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnPacketBufferFactory[] = {
         { "create_vpn_packet_buffer", reinterpret_cast<PyCFunction>(IVpnPacketBufferFactory_CreateVpnPacketBuffer), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVpnPacketBufferFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnPacketBufferFactory[] = {
@@ -14362,6 +14351,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnPacketBufferFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnPacketBufferFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14413,6 +14412,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnPacketBufferFactory[] = {
+        { "_assign_array_", _assign_array_IVpnPacketBufferFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnPacketBufferFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnPacketBufferFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnPacketBufferFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -14673,23 +14673,12 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnPlugIn(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnPlugIn>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnPlugIn[] = {
         { "connect", reinterpret_cast<PyCFunction>(IVpnPlugIn_Connect), METH_VARARGS, nullptr },
         { "decapsulate", reinterpret_cast<PyCFunction>(IVpnPlugIn_Decapsulate), METH_VARARGS, nullptr },
         { "disconnect", reinterpret_cast<PyCFunction>(IVpnPlugIn_Disconnect), METH_VARARGS, nullptr },
         { "encapsulate", reinterpret_cast<PyCFunction>(IVpnPlugIn_Encapsulate), METH_VARARGS, nullptr },
         { "get_keep_alive_payload", reinterpret_cast<PyCFunction>(IVpnPlugIn_GetKeepAlivePayload), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVpnPlugIn, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnPlugIn[] = {
@@ -14911,6 +14900,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnPlugIn(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnPlugIn>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnPlugIn(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14962,6 +14961,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnPlugIn[] = {
+        { "_assign_array_", _assign_array_IVpnPlugIn, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnPlugIn), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnPlugIn), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnPlugIn), METH_VARARGS | METH_STATIC, nullptr },
@@ -15039,19 +15039,8 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnPlugInReconnectTransport(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnPlugInReconnectTransport[] = {
         { "reconnect_transport", reinterpret_cast<PyCFunction>(IVpnPlugInReconnectTransport_ReconnectTransport), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVpnPlugInReconnectTransport, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnPlugInReconnectTransport[] = {
@@ -15121,6 +15110,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnPlugInReconnectTransport(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnPlugInReconnectTransport(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -15172,6 +15171,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnPlugInReconnectTransport[] = {
+        { "_assign_array_", _assign_array_IVpnPlugInReconnectTransport, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnPlugInReconnectTransport), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnPlugInReconnectTransport), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnPlugInReconnectTransport), METH_VARARGS | METH_STATIC, nullptr },
@@ -15532,18 +15532,7 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnProfile(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnProfile>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnProfile[] = {
-        { "_assign_array_", _assign_array_IVpnProfile, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnProfile[] = {
@@ -15787,6 +15776,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnProfile(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnProfile>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnProfile(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -15838,6 +15837,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnProfile[] = {
+        { "_assign_array_", _assign_array_IVpnProfile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnProfile), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnProfile), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnProfile), METH_VARARGS | METH_STATIC, nullptr },
@@ -15914,19 +15914,8 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* _assign_array_IVpnRouteFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnRouteFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVpnRouteFactory[] = {
         { "create_vpn_route", reinterpret_cast<PyCFunction>(IVpnRouteFactory_CreateVpnRoute), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVpnRouteFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVpnRouteFactory[] = {
@@ -15998,6 +15987,16 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     };
 
+    static PyObject* _assign_array_IVpnRouteFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnRouteFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVpnRouteFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -16049,6 +16048,7 @@ namespace py::cpp::Windows::Networking::Vpn
     }
 
     static PyMethodDef methods_ImplementsIVpnRouteFactory[] = {
+        { "_assign_array_", _assign_array_IVpnRouteFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVpnRouteFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVpnRouteFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVpnRouteFactory), METH_VARARGS | METH_STATIC, nullptr },

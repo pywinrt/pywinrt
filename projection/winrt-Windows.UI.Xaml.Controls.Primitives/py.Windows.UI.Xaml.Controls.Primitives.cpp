@@ -30912,16 +30912,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* _assign_array_IScrollSnapPointsInfo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IScrollSnapPointsInfo[] = {
         { "get_irregular_snap_points", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_GetIrregularSnapPoints), METH_VARARGS, nullptr },
         { "get_regular_snap_points", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_GetRegularSnapPoints), METH_VARARGS, nullptr },
@@ -30929,7 +30919,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { "remove_horizontal_snap_points_changed", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_remove_HorizontalSnapPointsChanged), METH_O, nullptr },
         { "add_vertical_snap_points_changed", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_add_VerticalSnapPointsChanged), METH_O, nullptr },
         { "remove_vertical_snap_points_changed", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_remove_VerticalSnapPointsChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IScrollSnapPointsInfo, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IScrollSnapPointsInfo[] = {
@@ -31213,6 +31202,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     };
 
+    static PyObject* _assign_array_IScrollSnapPointsInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IScrollSnapPointsInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -31264,6 +31263,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef methods_ImplementsIScrollSnapPointsInfo[] = {
+        { "_assign_array_", _assign_array_IScrollSnapPointsInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IScrollSnapPointsInfo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIScrollSnapPointsInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIScrollSnapPointsInfo), METH_VARARGS | METH_STATIC, nullptr },

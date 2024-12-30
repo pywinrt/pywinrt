@@ -1820,18 +1820,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         }
     }
 
-    static PyObject* _assign_array_ICoreAutomationConnectionBoundObjectProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICoreAutomationConnectionBoundObjectProvider[] = {
-        { "_assign_array_", _assign_array_ICoreAutomationConnectionBoundObjectProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICoreAutomationConnectionBoundObjectProvider[] = {
@@ -1879,6 +1868,16 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
             }
         }
     };
+
+    static PyObject* _assign_array_ICoreAutomationConnectionBoundObjectProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ICoreAutomationConnectionBoundObjectProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -1931,6 +1930,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     }
 
     static PyMethodDef methods_ImplementsICoreAutomationConnectionBoundObjectProvider[] = {
+        { "_assign_array_", _assign_array_ICoreAutomationConnectionBoundObjectProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreAutomationConnectionBoundObjectProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreAutomationConnectionBoundObjectProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreAutomationConnectionBoundObjectProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -2051,20 +2051,9 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         }
     }
 
-    static PyObject* _assign_array_ICoreAutomationRemoteOperationExtensionProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICoreAutomationRemoteOperationExtensionProvider[] = {
         { "call_extension", reinterpret_cast<PyCFunction>(ICoreAutomationRemoteOperationExtensionProvider_CallExtension), METH_VARARGS, nullptr },
         { "is_extension_supported", reinterpret_cast<PyCFunction>(ICoreAutomationRemoteOperationExtensionProvider_IsExtensionSupported), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ICoreAutomationRemoteOperationExtensionProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICoreAutomationRemoteOperationExtensionProvider[] = {
@@ -2172,6 +2161,16 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         }
     };
 
+    static PyObject* _assign_array_ICoreAutomationRemoteOperationExtensionProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICoreAutomationRemoteOperationExtensionProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2223,6 +2222,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     }
 
     static PyMethodDef methods_ImplementsICoreAutomationRemoteOperationExtensionProvider[] = {
+        { "_assign_array_", _assign_array_ICoreAutomationRemoteOperationExtensionProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreAutomationRemoteOperationExtensionProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreAutomationRemoteOperationExtensionProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreAutomationRemoteOperationExtensionProvider), METH_VARARGS | METH_STATIC, nullptr },

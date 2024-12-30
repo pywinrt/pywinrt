@@ -18378,18 +18378,7 @@ namespace py::cpp::Windows::UI::WebUI
         }
     }
 
-    static PyObject* _assign_array_IActivatedEventArgsDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IActivatedEventArgsDeferral[] = {
-        { "_assign_array_", _assign_array_IActivatedEventArgsDeferral, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IActivatedEventArgsDeferral[] = {
@@ -18437,6 +18426,16 @@ namespace py::cpp::Windows::UI::WebUI
             }
         }
     };
+
+    static PyObject* _assign_array_IActivatedEventArgsDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IActivatedEventArgsDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -18489,6 +18488,7 @@ namespace py::cpp::Windows::UI::WebUI
     }
 
     static PyMethodDef methods_ImplementsIActivatedEventArgsDeferral[] = {
+        { "_assign_array_", _assign_array_IActivatedEventArgsDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IActivatedEventArgsDeferral), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActivatedEventArgsDeferral), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActivatedEventArgsDeferral), METH_VARARGS | METH_STATIC, nullptr },
@@ -18591,18 +18591,7 @@ namespace py::cpp::Windows::UI::WebUI
         }
     }
 
-    static PyObject* _assign_array_IWebUIBackgroundTaskInstance(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebUIBackgroundTaskInstance[] = {
-        { "_assign_array_", _assign_array_IWebUIBackgroundTaskInstance, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebUIBackgroundTaskInstance[] = {
@@ -18674,6 +18663,16 @@ namespace py::cpp::Windows::UI::WebUI
         }
     };
 
+    static PyObject* _assign_array_IWebUIBackgroundTaskInstance(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebUIBackgroundTaskInstance(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -18725,6 +18724,7 @@ namespace py::cpp::Windows::UI::WebUI
     }
 
     static PyMethodDef methods_ImplementsIWebUIBackgroundTaskInstance[] = {
+        { "_assign_array_", _assign_array_IWebUIBackgroundTaskInstance, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebUIBackgroundTaskInstance), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUIBackgroundTaskInstance), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUIBackgroundTaskInstance), METH_VARARGS | METH_STATIC, nullptr },
@@ -18788,18 +18788,7 @@ namespace py::cpp::Windows::UI::WebUI
         }
     }
 
-    static PyObject* _assign_array_IWebUINavigatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebUINavigatedEventArgs[] = {
-        { "_assign_array_", _assign_array_IWebUINavigatedEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebUINavigatedEventArgs[] = {
@@ -18847,6 +18836,16 @@ namespace py::cpp::Windows::UI::WebUI
             }
         }
     };
+
+    static PyObject* _assign_array_IWebUINavigatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IWebUINavigatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -18899,6 +18898,7 @@ namespace py::cpp::Windows::UI::WebUI
     }
 
     static PyMethodDef methods_ImplementsIWebUINavigatedEventArgs[] = {
+        { "_assign_array_", _assign_array_IWebUINavigatedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebUINavigatedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUINavigatedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUINavigatedEventArgs), METH_VARARGS | METH_STATIC, nullptr },

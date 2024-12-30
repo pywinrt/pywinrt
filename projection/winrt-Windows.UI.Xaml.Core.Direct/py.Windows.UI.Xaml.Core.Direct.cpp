@@ -2480,18 +2480,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IXamlDirectObject(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IXamlDirectObject[] = {
-        { "_assign_array_", _assign_array_IXamlDirectObject, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlDirectObject[] = {
@@ -2518,6 +2507,16 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         {
         }
     };
+
+    static PyObject* _assign_array_IXamlDirectObject(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IXamlDirectObject(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -2570,6 +2569,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
     }
 
     static PyMethodDef methods_ImplementsIXamlDirectObject[] = {
+        { "_assign_array_", _assign_array_IXamlDirectObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlDirectObject), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlDirectObject), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlDirectObject), METH_VARARGS | METH_STATIC, nullptr },

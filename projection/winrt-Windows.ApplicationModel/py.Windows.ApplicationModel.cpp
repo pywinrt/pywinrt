@@ -9179,19 +9179,8 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static PyObject* _assign_array_IEnteredBackgroundEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IEnteredBackgroundEventArgs[] = {
         { "get_deferral", reinterpret_cast<PyCFunction>(IEnteredBackgroundEventArgs_GetDeferral), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IEnteredBackgroundEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IEnteredBackgroundEventArgs[] = {
@@ -9245,6 +9234,16 @@ namespace py::cpp::Windows::ApplicationModel
         }
     };
 
+    static PyObject* _assign_array_IEnteredBackgroundEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IEnteredBackgroundEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9296,6 +9295,7 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef methods_ImplementsIEnteredBackgroundEventArgs[] = {
+        { "_assign_array_", _assign_array_IEnteredBackgroundEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IEnteredBackgroundEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIEnteredBackgroundEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIEnteredBackgroundEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -9369,19 +9369,8 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static PyObject* _assign_array_ILeavingBackgroundEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ILeavingBackgroundEventArgs[] = {
         { "get_deferral", reinterpret_cast<PyCFunction>(ILeavingBackgroundEventArgs_GetDeferral), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ILeavingBackgroundEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILeavingBackgroundEventArgs[] = {
@@ -9435,6 +9424,16 @@ namespace py::cpp::Windows::ApplicationModel
         }
     };
 
+    static PyObject* _assign_array_ILeavingBackgroundEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ILeavingBackgroundEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9486,6 +9485,7 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef methods_ImplementsILeavingBackgroundEventArgs[] = {
+        { "_assign_array_", _assign_array_ILeavingBackgroundEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILeavingBackgroundEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILeavingBackgroundEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILeavingBackgroundEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -9561,19 +9561,8 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static PyObject* _assign_array_IPackageCatalogStatics2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPackageCatalogStatics2[] = {
         { "open_for_package", reinterpret_cast<PyCFunction>(IPackageCatalogStatics2_OpenForPackage), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPackageCatalogStatics2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPackageCatalogStatics2[] = {
@@ -9633,6 +9622,16 @@ namespace py::cpp::Windows::ApplicationModel
         }
     };
 
+    static PyObject* _assign_array_IPackageCatalogStatics2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPackageCatalogStatics2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9684,6 +9683,7 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef methods_ImplementsIPackageCatalogStatics2[] = {
+        { "_assign_array_", _assign_array_IPackageCatalogStatics2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPackageCatalogStatics2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPackageCatalogStatics2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPackageCatalogStatics2), METH_VARARGS | METH_STATIC, nullptr },
@@ -9758,19 +9758,8 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static PyObject* _assign_array_ISuspendingDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::ISuspendingDeferral>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISuspendingDeferral[] = {
         { "complete", reinterpret_cast<PyCFunction>(ISuspendingDeferral_Complete), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISuspendingDeferral, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISuspendingDeferral[] = {
@@ -9821,6 +9810,16 @@ namespace py::cpp::Windows::ApplicationModel
             }
         }
     };
+
+    static PyObject* _assign_array_ISuspendingDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::ISuspendingDeferral>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ISuspendingDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -9873,6 +9872,7 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef methods_ImplementsISuspendingDeferral[] = {
+        { "_assign_array_", _assign_array_ISuspendingDeferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISuspendingDeferral), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISuspendingDeferral), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISuspendingDeferral), METH_VARARGS | METH_STATIC, nullptr },
@@ -9936,18 +9936,7 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static PyObject* _assign_array_ISuspendingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::ISuspendingEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISuspendingEventArgs[] = {
-        { "_assign_array_", _assign_array_ISuspendingEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISuspendingEventArgs[] = {
@@ -9995,6 +9984,16 @@ namespace py::cpp::Windows::ApplicationModel
             }
         }
     };
+
+    static PyObject* _assign_array_ISuspendingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::ISuspendingEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ISuspendingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -10047,6 +10046,7 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef methods_ImplementsISuspendingEventArgs[] = {
+        { "_assign_array_", _assign_array_ISuspendingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISuspendingEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISuspendingEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISuspendingEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -10150,19 +10150,8 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static PyObject* _assign_array_ISuspendingOperation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::ISuspendingOperation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISuspendingOperation[] = {
         { "get_deferral", reinterpret_cast<PyCFunction>(ISuspendingOperation_GetDeferral), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISuspendingOperation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISuspendingOperation[] = {
@@ -10237,6 +10226,16 @@ namespace py::cpp::Windows::ApplicationModel
         }
     };
 
+    static PyObject* _assign_array_ISuspendingOperation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::ISuspendingOperation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISuspendingOperation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10288,6 +10287,7 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef methods_ImplementsISuspendingOperation[] = {
+        { "_assign_array_", _assign_array_ISuspendingOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISuspendingOperation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISuspendingOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISuspendingOperation), METH_VARARGS | METH_STATIC, nullptr },

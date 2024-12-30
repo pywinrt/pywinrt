@@ -11599,18 +11599,7 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static PyObject* _assign_array_IControlChannelTriggerEventDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IControlChannelTriggerEventDetails[] = {
-        { "_assign_array_", _assign_array_IControlChannelTriggerEventDetails, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IControlChannelTriggerEventDetails[] = {
@@ -11658,6 +11647,16 @@ namespace py::cpp::Windows::Networking::Sockets
             }
         }
     };
+
+    static PyObject* _assign_array_IControlChannelTriggerEventDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IControlChannelTriggerEventDetails(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -11710,6 +11709,7 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef methods_ImplementsIControlChannelTriggerEventDetails[] = {
+        { "_assign_array_", _assign_array_IControlChannelTriggerEventDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IControlChannelTriggerEventDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIControlChannelTriggerEventDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIControlChannelTriggerEventDetails), METH_VARARGS | METH_STATIC, nullptr },
@@ -11833,18 +11833,7 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static PyObject* _assign_array_IControlChannelTriggerResetEventDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IControlChannelTriggerResetEventDetails[] = {
-        { "_assign_array_", _assign_array_IControlChannelTriggerResetEventDetails, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IControlChannelTriggerResetEventDetails[] = {
@@ -11935,6 +11924,16 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     };
 
+    static PyObject* _assign_array_IControlChannelTriggerResetEventDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IControlChannelTriggerResetEventDetails(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11986,6 +11985,7 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef methods_ImplementsIControlChannelTriggerResetEventDetails[] = {
+        { "_assign_array_", _assign_array_IControlChannelTriggerResetEventDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IControlChannelTriggerResetEventDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIControlChannelTriggerResetEventDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIControlChannelTriggerResetEventDetails), METH_VARARGS | METH_STATIC, nullptr },
@@ -12285,16 +12285,6 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static PyObject* _assign_array_IWebSocket(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocket>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IWebSocket(py::wrapper::Windows::Networking::Sockets::IWebSocket* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -12325,7 +12315,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { "set_request_header", reinterpret_cast<PyCFunction>(IWebSocket_SetRequestHeader), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(IWebSocket_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(IWebSocket_remove_Closed), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IWebSocket, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IWebSocket), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IWebSocket), METH_VARARGS, nullptr },
         { }};
@@ -12578,6 +12567,16 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     };
 
+    static PyObject* _assign_array_IWebSocket(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocket>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebSocket(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12629,6 +12628,7 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef methods_ImplementsIWebSocket[] = {
+        { "_assign_array_", _assign_array_IWebSocket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebSocket), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebSocket), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebSocket), METH_VARARGS | METH_STATIC, nullptr },
@@ -12899,18 +12899,7 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static PyObject* _assign_array_IWebSocketControl(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocketControl>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebSocketControl[] = {
-        { "_assign_array_", _assign_array_IWebSocketControl, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebSocketControl[] = {
@@ -13091,6 +13080,16 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     };
 
+    static PyObject* _assign_array_IWebSocketControl(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocketControl>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebSocketControl(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13142,6 +13141,7 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef methods_ImplementsIWebSocketControl[] = {
+        { "_assign_array_", _assign_array_IWebSocketControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebSocketControl), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebSocketControl), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebSocketControl), METH_VARARGS | METH_STATIC, nullptr },
@@ -13442,18 +13442,7 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static PyObject* _assign_array_IWebSocketControl2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocketControl2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebSocketControl2[] = {
-        { "_assign_array_", _assign_array_IWebSocketControl2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebSocketControl2[] = {
@@ -13655,6 +13644,16 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     };
 
+    static PyObject* _assign_array_IWebSocketControl2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocketControl2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebSocketControl2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13706,6 +13705,7 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef methods_ImplementsIWebSocketControl2[] = {
+        { "_assign_array_", _assign_array_IWebSocketControl2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebSocketControl2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebSocketControl2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebSocketControl2), METH_VARARGS | METH_STATIC, nullptr },
@@ -13829,18 +13829,7 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static PyObject* _assign_array_IWebSocketInformation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocketInformation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebSocketInformation[] = {
-        { "_assign_array_", _assign_array_IWebSocketInformation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebSocketInformation[] = {
@@ -13931,6 +13920,16 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     };
 
+    static PyObject* _assign_array_IWebSocketInformation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocketInformation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebSocketInformation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13982,6 +13981,7 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef methods_ImplementsIWebSocketInformation[] = {
+        { "_assign_array_", _assign_array_IWebSocketInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebSocketInformation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebSocketInformation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebSocketInformation), METH_VARARGS | METH_STATIC, nullptr },
@@ -14225,18 +14225,7 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static PyObject* _assign_array_IWebSocketInformation2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocketInformation2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebSocketInformation2[] = {
-        { "_assign_array_", _assign_array_IWebSocketInformation2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebSocketInformation2[] = {
@@ -14411,6 +14400,16 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     };
 
+    static PyObject* _assign_array_IWebSocketInformation2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::IWebSocketInformation2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebSocketInformation2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14462,6 +14461,7 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef methods_ImplementsIWebSocketInformation2[] = {
+        { "_assign_array_", _assign_array_IWebSocketInformation2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebSocketInformation2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebSocketInformation2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebSocketInformation2), METH_VARARGS | METH_STATIC, nullptr },

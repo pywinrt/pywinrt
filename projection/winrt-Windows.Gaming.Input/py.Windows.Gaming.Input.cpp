@@ -5394,16 +5394,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static PyObject* _assign_array_IGameController(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::IGameController>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGameController[] = {
         { "add_headset_connected", reinterpret_cast<PyCFunction>(IGameController_add_HeadsetConnected), METH_O, nullptr },
         { "remove_headset_connected", reinterpret_cast<PyCFunction>(IGameController_remove_HeadsetConnected), METH_O, nullptr },
@@ -5411,7 +5401,6 @@ namespace py::cpp::Windows::Gaming::Input
         { "remove_headset_disconnected", reinterpret_cast<PyCFunction>(IGameController_remove_HeadsetDisconnected), METH_O, nullptr },
         { "add_user_changed", reinterpret_cast<PyCFunction>(IGameController_add_UserChanged), METH_O, nullptr },
         { "remove_user_changed", reinterpret_cast<PyCFunction>(IGameController_remove_UserChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IGameController, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGameController[] = {
@@ -5688,6 +5677,16 @@ namespace py::cpp::Windows::Gaming::Input
         }
     };
 
+    static PyObject* _assign_array_IGameController(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::IGameController>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGameController(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5739,6 +5738,7 @@ namespace py::cpp::Windows::Gaming::Input
     }
 
     static PyMethodDef methods_ImplementsIGameController[] = {
+        { "_assign_array_", _assign_array_IGameController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGameController), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGameController), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGameController), METH_VARARGS | METH_STATIC, nullptr },
@@ -5812,19 +5812,8 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static PyObject* _assign_array_IGameControllerBatteryInfo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGameControllerBatteryInfo[] = {
         { "try_get_battery_report", reinterpret_cast<PyCFunction>(IGameControllerBatteryInfo_TryGetBatteryReport), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IGameControllerBatteryInfo, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGameControllerBatteryInfo[] = {
@@ -5878,6 +5867,16 @@ namespace py::cpp::Windows::Gaming::Input
         }
     };
 
+    static PyObject* _assign_array_IGameControllerBatteryInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGameControllerBatteryInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5929,6 +5928,7 @@ namespace py::cpp::Windows::Gaming::Input
     }
 
     static PyMethodDef methods_ImplementsIGameControllerBatteryInfo[] = {
+        { "_assign_array_", _assign_array_IGameControllerBatteryInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGameControllerBatteryInfo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGameControllerBatteryInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGameControllerBatteryInfo), METH_VARARGS | METH_STATIC, nullptr },

@@ -1567,21 +1567,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static PyObject* _assign_array_ICustomGameControllerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICustomGameControllerFactory[] = {
         { "create_game_controller", reinterpret_cast<PyCFunction>(ICustomGameControllerFactory_CreateGameController), METH_VARARGS, nullptr },
         { "on_game_controller_added", reinterpret_cast<PyCFunction>(ICustomGameControllerFactory_OnGameControllerAdded), METH_VARARGS, nullptr },
         { "on_game_controller_removed", reinterpret_cast<PyCFunction>(ICustomGameControllerFactory_OnGameControllerRemoved), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ICustomGameControllerFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICustomGameControllerFactory[] = {
@@ -1701,6 +1690,16 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     };
 
+    static PyObject* _assign_array_ICustomGameControllerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICustomGameControllerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1752,6 +1751,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     }
 
     static PyMethodDef methods_ImplementsICustomGameControllerFactory[] = {
+        { "_assign_array_", _assign_array_ICustomGameControllerFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICustomGameControllerFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICustomGameControllerFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICustomGameControllerFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -1871,20 +1871,9 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static PyObject* _assign_array_IGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGameControllerInputSink[] = {
         { "on_input_resumed", reinterpret_cast<PyCFunction>(IGameControllerInputSink_OnInputResumed), METH_VARARGS, nullptr },
         { "on_input_suspended", reinterpret_cast<PyCFunction>(IGameControllerInputSink_OnInputSuspended), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGameControllerInputSink[] = {
@@ -1972,6 +1961,16 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     };
 
+    static PyObject* _assign_array_IGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2023,6 +2022,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     }
 
     static PyMethodDef methods_ImplementsIGameControllerInputSink[] = {
+        { "_assign_array_", _assign_array_IGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGameControllerInputSink), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGameControllerInputSink), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGameControllerInputSink), METH_VARARGS | METH_STATIC, nullptr },
@@ -2206,18 +2206,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static PyObject* _assign_array_IGameControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGameControllerProvider[] = {
-        { "_assign_array_", _assign_array_IGameControllerProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGameControllerProvider[] = {
@@ -2350,6 +2339,16 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     };
 
+    static PyObject* _assign_array_IGameControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGameControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2401,6 +2400,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     }
 
     static PyMethodDef methods_ImplementsIGameControllerProvider[] = {
+        { "_assign_array_", _assign_array_IGameControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGameControllerProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGameControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGameControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -2612,22 +2612,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static PyObject* _assign_array_IGipGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGipGameControllerInputSink[] = {
         { "on_input_resumed", reinterpret_cast<PyCFunction>(IGipGameControllerInputSink_OnInputResumed), METH_VARARGS, nullptr },
         { "on_input_suspended", reinterpret_cast<PyCFunction>(IGipGameControllerInputSink_OnInputSuspended), METH_VARARGS, nullptr },
         { "on_key_received", reinterpret_cast<PyCFunction>(IGipGameControllerInputSink_OnKeyReceived), METH_VARARGS, nullptr },
         { "on_message_received", reinterpret_cast<PyCFunction>(IGipGameControllerInputSink_OnMessageReceived), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IGipGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGipGameControllerInputSink[] = {
@@ -2823,6 +2812,16 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     };
 
+    static PyObject* _assign_array_IGipGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGipGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2874,6 +2873,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     }
 
     static PyMethodDef methods_ImplementsIGipGameControllerInputSink[] = {
+        { "_assign_array_", _assign_array_IGipGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGipGameControllerInputSink), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGipGameControllerInputSink), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGipGameControllerInputSink), METH_VARARGS | METH_STATIC, nullptr },
@@ -3038,21 +3038,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static PyObject* _assign_array_IHidGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IHidGameControllerInputSink[] = {
         { "on_input_report_received", reinterpret_cast<PyCFunction>(IHidGameControllerInputSink_OnInputReportReceived), METH_VARARGS, nullptr },
         { "on_input_resumed", reinterpret_cast<PyCFunction>(IHidGameControllerInputSink_OnInputResumed), METH_VARARGS, nullptr },
         { "on_input_suspended", reinterpret_cast<PyCFunction>(IHidGameControllerInputSink_OnInputSuspended), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IHidGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IHidGameControllerInputSink[] = {
@@ -3188,6 +3177,16 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     };
 
+    static PyObject* _assign_array_IHidGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IHidGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3239,6 +3238,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     }
 
     static PyMethodDef methods_ImplementsIHidGameControllerInputSink[] = {
+        { "_assign_array_", _assign_array_IHidGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IHidGameControllerInputSink), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIHidGameControllerInputSink), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIHidGameControllerInputSink), METH_VARARGS | METH_STATIC, nullptr },
@@ -3403,21 +3403,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static PyObject* _assign_array_IXusbGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IXusbGameControllerInputSink[] = {
         { "on_input_received", reinterpret_cast<PyCFunction>(IXusbGameControllerInputSink_OnInputReceived), METH_VARARGS, nullptr },
         { "on_input_resumed", reinterpret_cast<PyCFunction>(IXusbGameControllerInputSink_OnInputResumed), METH_VARARGS, nullptr },
         { "on_input_suspended", reinterpret_cast<PyCFunction>(IXusbGameControllerInputSink_OnInputSuspended), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IXusbGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXusbGameControllerInputSink[] = {
@@ -3553,6 +3542,16 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     };
 
+    static PyObject* _assign_array_IXusbGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IXusbGameControllerInputSink(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3604,6 +3603,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     }
 
     static PyMethodDef methods_ImplementsIXusbGameControllerInputSink[] = {
+        { "_assign_array_", _assign_array_IXusbGameControllerInputSink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXusbGameControllerInputSink), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXusbGameControllerInputSink), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXusbGameControllerInputSink), METH_VARARGS | METH_STATIC, nullptr },

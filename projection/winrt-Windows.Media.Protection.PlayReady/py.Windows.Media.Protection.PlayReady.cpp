@@ -9893,18 +9893,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDClosedCaptionDataReceivedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDClosedCaptionDataReceivedEventArgs[] = {
-        { "_assign_array_", _assign_array_INDClosedCaptionDataReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDClosedCaptionDataReceivedEventArgs[] = {
@@ -9996,6 +9985,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDClosedCaptionDataReceivedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDClosedCaptionDataReceivedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10047,6 +10046,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDClosedCaptionDataReceivedEventArgs[] = {
+        { "_assign_array_", _assign_array_INDClosedCaptionDataReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDClosedCaptionDataReceivedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDClosedCaptionDataReceivedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDClosedCaptionDataReceivedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -10140,18 +10140,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDCustomData(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDCustomData>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDCustomData[] = {
-        { "_assign_array_", _assign_array_INDCustomData, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDCustomData[] = {
@@ -10223,6 +10212,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDCustomData(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDCustomData>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDCustomData(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10274,6 +10273,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDCustomData[] = {
+        { "_assign_array_", _assign_array_INDCustomData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDCustomData), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDCustomData), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDCustomData), METH_VARARGS | METH_STATIC, nullptr },
@@ -10637,23 +10637,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDDownloadEngine(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDDownloadEngine[] = {
         { "close", reinterpret_cast<PyCFunction>(INDDownloadEngine_Close), METH_VARARGS, nullptr },
         { "open", reinterpret_cast<PyCFunction>(INDDownloadEngine_Open), METH_VARARGS, nullptr },
         { "pause", reinterpret_cast<PyCFunction>(INDDownloadEngine_Pause), METH_VARARGS, nullptr },
         { "resume", reinterpret_cast<PyCFunction>(INDDownloadEngine_Resume), METH_VARARGS, nullptr },
         { "seek", reinterpret_cast<PyCFunction>(INDDownloadEngine_Seek), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INDDownloadEngine, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDDownloadEngine[] = {
@@ -10909,6 +10898,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDDownloadEngine(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDDownloadEngine(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10960,6 +10959,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDDownloadEngine[] = {
+        { "_assign_array_", _assign_array_INDDownloadEngine, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDDownloadEngine), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDDownloadEngine), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDDownloadEngine), METH_VARARGS | METH_STATIC, nullptr },
@@ -11246,16 +11246,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDDownloadEngineNotifier(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDDownloadEngineNotifier[] = {
         { "on_content_id_received", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
         { "on_data_received", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnDataReceived), METH_VARARGS, nullptr },
@@ -11263,7 +11253,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "on_network_error", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnNetworkError), METH_VARARGS, nullptr },
         { "on_play_ready_object_received", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnPlayReadyObjectReceived), METH_VARARGS, nullptr },
         { "on_stream_opened", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnStreamOpened), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INDDownloadEngineNotifier, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDDownloadEngineNotifier[] = {
@@ -11465,6 +11454,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDDownloadEngineNotifier(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDDownloadEngineNotifier(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11516,6 +11515,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDDownloadEngineNotifier[] = {
+        { "_assign_array_", _assign_array_INDDownloadEngineNotifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDDownloadEngineNotifier), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDDownloadEngineNotifier), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDDownloadEngineNotifier), METH_VARARGS | METH_STATIC, nullptr },
@@ -11579,18 +11579,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDLicenseFetchCompletedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDLicenseFetchCompletedEventArgs[] = {
-        { "_assign_array_", _assign_array_INDLicenseFetchCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDLicenseFetchCompletedEventArgs[] = {
@@ -11638,6 +11627,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             }
         }
     };
+
+    static PyObject* _assign_array_INDLicenseFetchCompletedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_INDLicenseFetchCompletedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -11690,6 +11689,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDLicenseFetchCompletedEventArgs[] = {
+        { "_assign_array_", _assign_array_INDLicenseFetchCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDLicenseFetchCompletedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDLicenseFetchCompletedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDLicenseFetchCompletedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -11852,18 +11852,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDLicenseFetchDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDLicenseFetchDescriptor[] = {
-        { "_assign_array_", _assign_array_INDLicenseFetchDescriptor, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDLicenseFetchDescriptor[] = {
@@ -11978,6 +11967,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDLicenseFetchDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDLicenseFetchDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12029,6 +12028,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDLicenseFetchDescriptor[] = {
+        { "_assign_array_", _assign_array_INDLicenseFetchDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDLicenseFetchDescriptor), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDLicenseFetchDescriptor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDLicenseFetchDescriptor), METH_VARARGS | METH_STATIC, nullptr },
@@ -12092,18 +12092,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDLicenseFetchResult(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDLicenseFetchResult[] = {
-        { "_assign_array_", _assign_array_INDLicenseFetchResult, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDLicenseFetchResult[] = {
@@ -12151,6 +12140,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             }
         }
     };
+
+    static PyObject* _assign_array_INDLicenseFetchResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_INDLicenseFetchResult(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -12203,6 +12202,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDLicenseFetchResult[] = {
+        { "_assign_array_", _assign_array_INDLicenseFetchResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDLicenseFetchResult), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDLicenseFetchResult), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDLicenseFetchResult), METH_VARARGS | METH_STATIC, nullptr },
@@ -12412,22 +12412,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDMessenger(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDMessenger>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDMessenger[] = {
         { "send_license_fetch_request_async", reinterpret_cast<PyCFunction>(INDMessenger_SendLicenseFetchRequestAsync), METH_VARARGS, nullptr },
         { "send_proximity_detection_response_async", reinterpret_cast<PyCFunction>(INDMessenger_SendProximityDetectionResponseAsync), METH_VARARGS, nullptr },
         { "send_proximity_detection_start_async", reinterpret_cast<PyCFunction>(INDMessenger_SendProximityDetectionStartAsync), METH_VARARGS, nullptr },
         { "send_registration_request_async", reinterpret_cast<PyCFunction>(INDMessenger_SendRegistrationRequestAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INDMessenger, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDMessenger[] = {
@@ -12655,6 +12644,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDMessenger(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDMessenger>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDMessenger(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12706,6 +12705,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDMessenger[] = {
+        { "_assign_array_", _assign_array_INDMessenger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDMessenger), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDMessenger), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDMessenger), METH_VARARGS | METH_STATIC, nullptr },
@@ -12769,18 +12769,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDProximityDetectionCompletedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDProximityDetectionCompletedEventArgs[] = {
-        { "_assign_array_", _assign_array_INDProximityDetectionCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDProximityDetectionCompletedEventArgs[] = {
@@ -12828,6 +12817,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             }
         }
     };
+
+    static PyObject* _assign_array_INDProximityDetectionCompletedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_INDProximityDetectionCompletedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -12880,6 +12879,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDProximityDetectionCompletedEventArgs[] = {
+        { "_assign_array_", _assign_array_INDProximityDetectionCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDProximityDetectionCompletedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDProximityDetectionCompletedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDProximityDetectionCompletedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -13042,18 +13042,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDRegistrationCompletedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDRegistrationCompletedEventArgs[] = {
-        { "_assign_array_", _assign_array_INDRegistrationCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDRegistrationCompletedEventArgs[] = {
@@ -13167,6 +13156,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDRegistrationCompletedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDRegistrationCompletedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13218,6 +13217,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDRegistrationCompletedEventArgs[] = {
+        { "_assign_array_", _assign_array_INDRegistrationCompletedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDRegistrationCompletedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDRegistrationCompletedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDRegistrationCompletedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -13281,18 +13281,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDSendResult(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDSendResult>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDSendResult[] = {
-        { "_assign_array_", _assign_array_INDSendResult, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDSendResult[] = {
@@ -13341,6 +13330,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             }
         }
     };
+
+    static PyObject* _assign_array_INDSendResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDSendResult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_INDSendResult(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -13393,6 +13392,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDSendResult[] = {
+        { "_assign_array_", _assign_array_INDSendResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDSendResult), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDSendResult), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDSendResult), METH_VARARGS | METH_STATIC, nullptr },
@@ -13456,18 +13456,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDStartResult(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDStartResult>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDStartResult[] = {
-        { "_assign_array_", _assign_array_INDStartResult, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDStartResult[] = {
@@ -13515,6 +13504,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             }
         }
     };
+
+    static PyObject* _assign_array_INDStartResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDStartResult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_INDStartResult(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -13567,6 +13566,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDStartResult[] = {
+        { "_assign_array_", _assign_array_INDStartResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDStartResult), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDStartResult), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDStartResult), METH_VARARGS | METH_STATIC, nullptr },
@@ -13642,19 +13642,8 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDStorageFileHelper(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDStorageFileHelper[] = {
         { "get_file_u_r_ls", reinterpret_cast<PyCFunction>(INDStorageFileHelper_GetFileURLs), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INDStorageFileHelper, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDStorageFileHelper[] = {
@@ -13714,6 +13703,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDStorageFileHelper(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDStorageFileHelper(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13765,6 +13764,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDStorageFileHelper[] = {
+        { "_assign_array_", _assign_array_INDStorageFileHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDStorageFileHelper), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDStorageFileHelper), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDStorageFileHelper), METH_VARARGS | METH_STATIC, nullptr },
@@ -14009,22 +14009,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDStreamParser(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDStreamParser[] = {
         { "begin_of_stream", reinterpret_cast<PyCFunction>(INDStreamParser_BeginOfStream), METH_VARARGS, nullptr },
         { "end_of_stream", reinterpret_cast<PyCFunction>(INDStreamParser_EndOfStream), METH_VARARGS, nullptr },
         { "get_stream_information", reinterpret_cast<PyCFunction>(INDStreamParser_GetStreamInformation), METH_VARARGS, nullptr },
         { "parse_data", reinterpret_cast<PyCFunction>(INDStreamParser_ParseData), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INDStreamParser, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDStreamParser[] = {
@@ -14185,6 +14174,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDStreamParser(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDStreamParser(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14236,6 +14235,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDStreamParser[] = {
+        { "_assign_array_", _assign_array_INDStreamParser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDStreamParser), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDStreamParser), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDStreamParser), METH_VARARGS | METH_STATIC, nullptr },
@@ -14449,22 +14449,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDStreamParserNotifier(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDStreamParserNotifier[] = {
         { "on_begin_setup_decryptor", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnBeginSetupDecryptor), METH_VARARGS, nullptr },
         { "on_content_id_received", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
         { "on_media_stream_descriptor_created", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnMediaStreamDescriptorCreated), METH_VARARGS, nullptr },
         { "on_sample_parsed", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnSampleParsed), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INDStreamParserNotifier, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDStreamParserNotifier[] = {
@@ -14678,6 +14667,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDStreamParserNotifier(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDStreamParserNotifier(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14729,6 +14728,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDStreamParserNotifier[] = {
+        { "_assign_array_", _assign_array_INDStreamParserNotifier, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDStreamParserNotifier), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDStreamParserNotifier), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDStreamParserNotifier), METH_VARARGS | METH_STATIC, nullptr },
@@ -15092,18 +15092,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_INDTransmitterProperties(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INDTransmitterProperties[] = {
-        { "_assign_array_", _assign_array_INDTransmitterProperties, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INDTransmitterProperties[] = {
@@ -15365,6 +15354,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_INDTransmitterProperties(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INDTransmitterProperties(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -15416,6 +15415,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsINDTransmitterProperties[] = {
+        { "_assign_array_", _assign_array_INDTransmitterProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INDTransmitterProperties), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINDTransmitterProperties), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINDTransmitterProperties), METH_VARARGS | METH_STATIC, nullptr },
@@ -15599,18 +15599,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_IPlayReadyDomain(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPlayReadyDomain[] = {
-        { "_assign_array_", _assign_array_IPlayReadyDomain, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPlayReadyDomain[] = {
@@ -15743,6 +15732,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_IPlayReadyDomain(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPlayReadyDomain(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -15794,6 +15793,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsIPlayReadyDomain[] = {
+        { "_assign_array_", _assign_array_IPlayReadyDomain, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyDomain), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyDomain), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyDomain), METH_VARARGS | METH_STATIC, nullptr },
@@ -16049,19 +16049,8 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_IPlayReadyLicense(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPlayReadyLicense[] = {
         { "get_k_i_d_at_chain_depth", reinterpret_cast<PyCFunction>(IPlayReadyLicense_GetKIDAtChainDepth), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPlayReadyLicense, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPlayReadyLicense[] = {
@@ -16247,6 +16236,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_IPlayReadyLicense(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPlayReadyLicense(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -16298,6 +16297,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsIPlayReadyLicense[] = {
+        { "_assign_array_", _assign_array_IPlayReadyLicense, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyLicense), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyLicense), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyLicense), METH_VARARGS | METH_STATIC, nullptr },
@@ -16859,22 +16859,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_IPlayReadyLicenseAcquisitionServiceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPlayReadyLicenseAcquisitionServiceRequest[] = {
         { "begin_service_request", reinterpret_cast<PyCFunction>(IPlayReadyLicenseAcquisitionServiceRequest_BeginServiceRequest), METH_VARARGS, nullptr },
         { "generate_manual_enabling_challenge", reinterpret_cast<PyCFunction>(IPlayReadyLicenseAcquisitionServiceRequest_GenerateManualEnablingChallenge), METH_VARARGS, nullptr },
         { "next_service_request", reinterpret_cast<PyCFunction>(IPlayReadyLicenseAcquisitionServiceRequest_NextServiceRequest), METH_VARARGS, nullptr },
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(IPlayReadyLicenseAcquisitionServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPlayReadyLicenseAcquisitionServiceRequest, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPlayReadyLicenseAcquisitionServiceRequest[] = {
@@ -17251,6 +17240,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_IPlayReadyLicenseAcquisitionServiceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPlayReadyLicenseAcquisitionServiceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -17302,6 +17301,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsIPlayReadyLicenseAcquisitionServiceRequest[] = {
+        { "_assign_array_", _assign_array_IPlayReadyLicenseAcquisitionServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyLicenseAcquisitionServiceRequest), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyLicenseAcquisitionServiceRequest), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyLicenseAcquisitionServiceRequest), METH_VARARGS | METH_STATIC, nullptr },
@@ -17418,20 +17418,9 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_IPlayReadyLicenseSession(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPlayReadyLicenseSession[] = {
         { "configure_media_protection_manager", reinterpret_cast<PyCFunction>(IPlayReadyLicenseSession_ConfigureMediaProtectionManager), METH_VARARGS, nullptr },
         { "create_l_a_service_request", reinterpret_cast<PyCFunction>(IPlayReadyLicenseSession_CreateLAServiceRequest), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPlayReadyLicenseSession, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPlayReadyLicenseSession[] = {
@@ -17515,6 +17504,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_IPlayReadyLicenseSession(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPlayReadyLicenseSession(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -17566,6 +17565,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsIPlayReadyLicenseSession[] = {
+        { "_assign_array_", _assign_array_IPlayReadyLicenseSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyLicenseSession), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyLicenseSession), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyLicenseSession), METH_VARARGS | METH_STATIC, nullptr },
@@ -17725,21 +17725,10 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_IPlayReadyLicenseSession2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPlayReadyLicenseSession2[] = {
         { "configure_media_protection_manager", reinterpret_cast<PyCFunction>(IPlayReadyLicenseSession2_ConfigureMediaProtectionManager), METH_VARARGS, nullptr },
         { "create_l_a_service_request", reinterpret_cast<PyCFunction>(IPlayReadyLicenseSession2_CreateLAServiceRequest), METH_VARARGS, nullptr },
         { "create_license_iterable", reinterpret_cast<PyCFunction>(IPlayReadyLicenseSession2_CreateLicenseIterable), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPlayReadyLicenseSession2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPlayReadyLicenseSession2[] = {
@@ -17867,6 +17856,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_IPlayReadyLicenseSession2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPlayReadyLicenseSession2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -17918,6 +17917,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsIPlayReadyLicenseSession2[] = {
+        { "_assign_array_", _assign_array_IPlayReadyLicenseSession2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyLicenseSession2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyLicenseSession2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyLicenseSession2), METH_VARARGS | METH_STATIC, nullptr },
@@ -18491,22 +18491,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_IPlayReadySecureStopServiceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPlayReadySecureStopServiceRequest[] = {
         { "begin_service_request", reinterpret_cast<PyCFunction>(IPlayReadySecureStopServiceRequest_BeginServiceRequest), METH_VARARGS, nullptr },
         { "generate_manual_enabling_challenge", reinterpret_cast<PyCFunction>(IPlayReadySecureStopServiceRequest_GenerateManualEnablingChallenge), METH_VARARGS, nullptr },
         { "next_service_request", reinterpret_cast<PyCFunction>(IPlayReadySecureStopServiceRequest_NextServiceRequest), METH_VARARGS, nullptr },
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(IPlayReadySecureStopServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPlayReadySecureStopServiceRequest, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPlayReadySecureStopServiceRequest[] = {
@@ -18901,6 +18890,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_IPlayReadySecureStopServiceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPlayReadySecureStopServiceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -18952,6 +18951,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsIPlayReadySecureStopServiceRequest[] = {
+        { "_assign_array_", _assign_array_IPlayReadySecureStopServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadySecureStopServiceRequest), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadySecureStopServiceRequest), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadySecureStopServiceRequest), METH_VARARGS | METH_STATIC, nullptr },
@@ -19375,22 +19375,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     }
 
-    static PyObject* _assign_array_IPlayReadyServiceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPlayReadyServiceRequest[] = {
         { "begin_service_request", reinterpret_cast<PyCFunction>(IPlayReadyServiceRequest_BeginServiceRequest), METH_VARARGS, nullptr },
         { "generate_manual_enabling_challenge", reinterpret_cast<PyCFunction>(IPlayReadyServiceRequest_GenerateManualEnablingChallenge), METH_VARARGS, nullptr },
         { "next_service_request", reinterpret_cast<PyCFunction>(IPlayReadyServiceRequest_NextServiceRequest), METH_VARARGS, nullptr },
         { "process_manual_enabling_response", reinterpret_cast<PyCFunction>(IPlayReadyServiceRequest_ProcessManualEnablingResponse), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPlayReadyServiceRequest, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPlayReadyServiceRequest[] = {
@@ -19679,6 +19668,16 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         }
     };
 
+    static PyObject* _assign_array_IPlayReadyServiceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPlayReadyServiceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -19730,6 +19729,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef methods_ImplementsIPlayReadyServiceRequest[] = {
+        { "_assign_array_", _assign_array_IPlayReadyServiceRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPlayReadyServiceRequest), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPlayReadyServiceRequest), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPlayReadyServiceRequest), METH_VARARGS | METH_STATIC, nullptr },

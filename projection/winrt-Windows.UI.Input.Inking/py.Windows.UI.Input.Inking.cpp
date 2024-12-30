@@ -9690,19 +9690,8 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     }
 
-    static PyObject* _assign_array_IInkPointFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkPointFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IInkPointFactory[] = {
         { "create_ink_point", reinterpret_cast<PyCFunction>(IInkPointFactory_CreateInkPoint), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IInkPointFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInkPointFactory[] = {
@@ -9774,6 +9763,16 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     };
 
+    static PyObject* _assign_array_IInkPointFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkPointFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IInkPointFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9825,6 +9824,7 @@ namespace py::cpp::Windows::UI::Input::Inking
     }
 
     static PyMethodDef methods_ImplementsIInkPointFactory[] = {
+        { "_assign_array_", _assign_array_IInkPointFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInkPointFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInkPointFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInkPointFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -9900,19 +9900,8 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     }
 
-    static PyObject* _assign_array_IInkPresenterRulerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IInkPresenterRulerFactory[] = {
         { "create", reinterpret_cast<PyCFunction>(IInkPresenterRulerFactory_Create), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IInkPresenterRulerFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInkPresenterRulerFactory[] = {
@@ -9972,6 +9961,16 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     };
 
+    static PyObject* _assign_array_IInkPresenterRulerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IInkPresenterRulerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10023,6 +10022,7 @@ namespace py::cpp::Windows::UI::Input::Inking
     }
 
     static PyMethodDef methods_ImplementsIInkPresenterRulerFactory[] = {
+        { "_assign_array_", _assign_array_IInkPresenterRulerFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInkPresenterRulerFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInkPresenterRulerFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInkPresenterRulerFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -10362,18 +10362,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     }
 
-    static PyObject* _assign_array_IInkPresenterStencil(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IInkPresenterStencil[] = {
-        { "_assign_array_", _assign_array_IInkPresenterStencil, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInkPresenterStencil[] = {
@@ -10598,6 +10587,16 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     };
 
+    static PyObject* _assign_array_IInkPresenterStencil(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IInkPresenterStencil(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10649,6 +10648,7 @@ namespace py::cpp::Windows::UI::Input::Inking
     }
 
     static PyMethodDef methods_ImplementsIInkPresenterStencil[] = {
+        { "_assign_array_", _assign_array_IInkPresenterStencil, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInkPresenterStencil), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInkPresenterStencil), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInkPresenterStencil), METH_VARARGS | METH_STATIC, nullptr },
@@ -10808,21 +10808,10 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     }
 
-    static PyObject* _assign_array_IInkRecognizerContainer(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IInkRecognizerContainer[] = {
         { "get_recognizers", reinterpret_cast<PyCFunction>(IInkRecognizerContainer_GetRecognizers), METH_VARARGS, nullptr },
         { "recognize_async", reinterpret_cast<PyCFunction>(IInkRecognizerContainer_RecognizeAsync), METH_VARARGS, nullptr },
         { "set_default_recognizer", reinterpret_cast<PyCFunction>(IInkRecognizerContainer_SetDefaultRecognizer), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IInkRecognizerContainer, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInkRecognizerContainer[] = {
@@ -10950,6 +10939,16 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     };
 
+    static PyObject* _assign_array_IInkRecognizerContainer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IInkRecognizerContainer(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11001,6 +11000,7 @@ namespace py::cpp::Windows::UI::Input::Inking
     }
 
     static PyMethodDef methods_ImplementsIInkRecognizerContainer[] = {
+        { "_assign_array_", _assign_array_IInkRecognizerContainer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInkRecognizerContainer), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInkRecognizerContainer), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInkRecognizerContainer), METH_VARARGS | METH_STATIC, nullptr },
@@ -11604,16 +11604,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     }
 
-    static PyObject* _assign_array_IInkStrokeContainer(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IInkStrokeContainer[] = {
         { "add_stroke", reinterpret_cast<PyCFunction>(IInkStrokeContainer_AddStroke), METH_VARARGS, nullptr },
         { "can_paste_from_clipboard", reinterpret_cast<PyCFunction>(IInkStrokeContainer_CanPasteFromClipboard), METH_VARARGS, nullptr },
@@ -11628,7 +11618,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         { "select_with_line", reinterpret_cast<PyCFunction>(IInkStrokeContainer_SelectWithLine), METH_VARARGS, nullptr },
         { "select_with_poly_line", reinterpret_cast<PyCFunction>(IInkStrokeContainer_SelectWithPolyLine), METH_VARARGS, nullptr },
         { "update_recognition_results", reinterpret_cast<PyCFunction>(IInkStrokeContainer_UpdateRecognitionResults), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IInkStrokeContainer, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInkStrokeContainer[] = {
@@ -12069,6 +12058,16 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
     };
 
+    static PyObject* _assign_array_IInkStrokeContainer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IInkStrokeContainer(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12120,6 +12119,7 @@ namespace py::cpp::Windows::UI::Input::Inking
     }
 
     static PyMethodDef methods_ImplementsIInkStrokeContainer[] = {
+        { "_assign_array_", _assign_array_IInkStrokeContainer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInkStrokeContainer), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInkStrokeContainer), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInkStrokeContainer), METH_VARARGS | METH_STATIC, nullptr },

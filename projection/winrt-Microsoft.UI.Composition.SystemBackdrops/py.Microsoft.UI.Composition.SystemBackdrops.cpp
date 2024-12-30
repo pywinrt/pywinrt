@@ -2771,16 +2771,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         }
     }
 
-    static PyObject* _assign_array_ISystemBackdropController(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_ISystemBackdropController(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -2808,7 +2798,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "close", reinterpret_cast<PyCFunction>(ISystemBackdropController_Close), METH_VARARGS, nullptr },
         { "set_target_with_core_window", reinterpret_cast<PyCFunction>(ISystemBackdropController_SetTargetWithCoreWindow), METH_VARARGS, nullptr },
         { "set_target_with_window_id", reinterpret_cast<PyCFunction>(ISystemBackdropController_SetTargetWithWindowId), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISystemBackdropController, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ISystemBackdropController), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ISystemBackdropController), METH_VARARGS, nullptr },
         { }};
@@ -2950,6 +2939,16 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         }
     };
 
+    static PyObject* _assign_array_ISystemBackdropController(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISystemBackdropController(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3001,6 +3000,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     }
 
     static PyMethodDef methods_ImplementsISystemBackdropController[] = {
+        { "_assign_array_", _assign_array_ISystemBackdropController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISystemBackdropController), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISystemBackdropController), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISystemBackdropController), METH_VARARGS | METH_STATIC, nullptr },
@@ -3424,16 +3424,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         }
     }
 
-    static PyObject* _assign_array_ISystemBackdropControllerWithTargets(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_ISystemBackdropControllerWithTargets(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -3467,7 +3457,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "set_target_with_window_id", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_SetTargetWithWindowId), METH_VARARGS, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_add_StateChanged), METH_O, nullptr },
         { "remove_state_changed", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_remove_StateChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ISystemBackdropControllerWithTargets, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ISystemBackdropControllerWithTargets), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ISystemBackdropControllerWithTargets), METH_VARARGS, nullptr },
         { }};
@@ -3810,6 +3799,16 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         }
     };
 
+    static PyObject* _assign_array_ISystemBackdropControllerWithTargets(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISystemBackdropControllerWithTargets(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3861,6 +3860,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     }
 
     static PyMethodDef methods_ImplementsISystemBackdropControllerWithTargets[] = {
+        { "_assign_array_", _assign_array_ISystemBackdropControllerWithTargets, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISystemBackdropControllerWithTargets), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISystemBackdropControllerWithTargets), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISystemBackdropControllerWithTargets), METH_VARARGS | METH_STATIC, nullptr },

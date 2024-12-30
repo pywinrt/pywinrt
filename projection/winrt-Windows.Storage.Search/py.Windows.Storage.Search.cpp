@@ -5028,18 +5028,7 @@ namespace py::cpp::Windows::Storage::Search
         }
     }
 
-    static PyObject* _assign_array_IIndexableContent(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Search::IIndexableContent>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IIndexableContent[] = {
-        { "_assign_array_", _assign_array_IIndexableContent, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IIndexableContent[] = {
@@ -5220,6 +5209,16 @@ namespace py::cpp::Windows::Storage::Search
         }
     };
 
+    static PyObject* _assign_array_IIndexableContent(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Search::IIndexableContent>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IIndexableContent(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5271,6 +5270,7 @@ namespace py::cpp::Windows::Storage::Search
     }
 
     static PyMethodDef methods_ImplementsIIndexableContent[] = {
+        { "_assign_array_", _assign_array_IIndexableContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IIndexableContent), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIndexableContent), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIndexableContent), METH_VARARGS | METH_STATIC, nullptr },
@@ -6015,16 +6015,6 @@ namespace py::cpp::Windows::Storage::Search
         }
     }
 
-    static PyObject* _assign_array_IStorageFolderQueryOperations(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageFolderQueryOperations[] = {
         { "are_query_options_supported", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_AreQueryOptionsSupported), METH_VARARGS, nullptr },
         { "create_file_query", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_CreateFileQuery), METH_VARARGS, nullptr },
@@ -6043,7 +6033,6 @@ namespace py::cpp::Windows::Storage::Search
         { "get_items_async", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_GetItemsAsync), METH_VARARGS, nullptr },
         { "is_common_file_query_supported", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_IsCommonFileQuerySupported), METH_VARARGS, nullptr },
         { "is_common_folder_query_supported", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_IsCommonFolderQuerySupported), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageFolderQueryOperations, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageFolderQueryOperations[] = {
@@ -6639,6 +6628,16 @@ namespace py::cpp::Windows::Storage::Search
         }
     };
 
+    static PyObject* _assign_array_IStorageFolderQueryOperations(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageFolderQueryOperations(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6690,6 +6689,7 @@ namespace py::cpp::Windows::Storage::Search
     }
 
     static PyMethodDef methods_ImplementsIStorageFolderQueryOperations[] = {
+        { "_assign_array_", _assign_array_IStorageFolderQueryOperations, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFolderQueryOperations), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageFolderQueryOperations), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageFolderQueryOperations), METH_VARARGS | METH_STATIC, nullptr },
@@ -7048,16 +7048,6 @@ namespace py::cpp::Windows::Storage::Search
         }
     }
 
-    static PyObject* _assign_array_IStorageQueryResultBase(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Search::IStorageQueryResultBase>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageQueryResultBase[] = {
         { "apply_new_query_options", reinterpret_cast<PyCFunction>(IStorageQueryResultBase_ApplyNewQueryOptions), METH_VARARGS, nullptr },
         { "find_start_index_async", reinterpret_cast<PyCFunction>(IStorageQueryResultBase_FindStartIndexAsync), METH_VARARGS, nullptr },
@@ -7067,7 +7057,6 @@ namespace py::cpp::Windows::Storage::Search
         { "remove_contents_changed", reinterpret_cast<PyCFunction>(IStorageQueryResultBase_remove_ContentsChanged), METH_O, nullptr },
         { "add_options_changed", reinterpret_cast<PyCFunction>(IStorageQueryResultBase_add_OptionsChanged), METH_O, nullptr },
         { "remove_options_changed", reinterpret_cast<PyCFunction>(IStorageQueryResultBase_remove_OptionsChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IStorageQueryResultBase, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageQueryResultBase[] = {
@@ -7354,6 +7343,16 @@ namespace py::cpp::Windows::Storage::Search
         }
     };
 
+    static PyObject* _assign_array_IStorageQueryResultBase(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Search::IStorageQueryResultBase>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageQueryResultBase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7405,6 +7404,7 @@ namespace py::cpp::Windows::Storage::Search
     }
 
     static PyMethodDef methods_ImplementsIStorageQueryResultBase[] = {
+        { "_assign_array_", _assign_array_IStorageQueryResultBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageQueryResultBase), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageQueryResultBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageQueryResultBase), METH_VARARGS | METH_STATIC, nullptr },

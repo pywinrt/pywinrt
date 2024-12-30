@@ -1637,18 +1637,7 @@ namespace py::cpp::Windows::UI::Popups
         }
     }
 
-    static PyObject* _assign_array_IUICommand(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Popups::IUICommand>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IUICommand[] = {
-        { "_assign_array_", _assign_array_IUICommand, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IUICommand[] = {
@@ -1808,6 +1797,16 @@ namespace py::cpp::Windows::UI::Popups
         }
     };
 
+    static PyObject* _assign_array_IUICommand(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Popups::IUICommand>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IUICommand(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1859,6 +1858,7 @@ namespace py::cpp::Windows::UI::Popups
     }
 
     static PyMethodDef methods_ImplementsIUICommand[] = {
+        { "_assign_array_", _assign_array_IUICommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IUICommand), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUICommand), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUICommand), METH_VARARGS | METH_STATIC, nullptr },

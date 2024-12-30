@@ -7658,18 +7658,7 @@ namespace py::cpp::Windows::System::RemoteSystems
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IRemoteSystemFilter(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IRemoteSystemFilter[] = {
-        { "_assign_array_", _assign_array_IRemoteSystemFilter, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IRemoteSystemFilter[] = {
@@ -7696,6 +7685,16 @@ namespace py::cpp::Windows::System::RemoteSystems
         {
         }
     };
+
+    static PyObject* _assign_array_IRemoteSystemFilter(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IRemoteSystemFilter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -7748,6 +7747,7 @@ namespace py::cpp::Windows::System::RemoteSystems
     }
 
     static PyMethodDef methods_ImplementsIRemoteSystemFilter[] = {
+        { "_assign_array_", _assign_array_IRemoteSystemFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRemoteSystemFilter), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRemoteSystemFilter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRemoteSystemFilter), METH_VARARGS | METH_STATIC, nullptr },

@@ -820,18 +820,7 @@ namespace py::cpp::Windows::Devices::Custom
         }
     }
 
-    static PyObject* _assign_array_IIOControlCode(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Custom::IIOControlCode>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IIOControlCode[] = {
-        { "_assign_array_", _assign_array_IIOControlCode, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IIOControlCode[] = {
@@ -964,6 +953,16 @@ namespace py::cpp::Windows::Devices::Custom
         }
     };
 
+    static PyObject* _assign_array_IIOControlCode(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Custom::IIOControlCode>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IIOControlCode(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1015,6 +1014,7 @@ namespace py::cpp::Windows::Devices::Custom
     }
 
     static PyMethodDef methods_ImplementsIIOControlCode[] = {
+        { "_assign_array_", _assign_array_IIOControlCode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IIOControlCode), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIIOControlCode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIIOControlCode), METH_VARARGS | METH_STATIC, nullptr },

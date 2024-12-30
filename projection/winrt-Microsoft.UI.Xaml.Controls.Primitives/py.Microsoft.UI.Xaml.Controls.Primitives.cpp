@@ -39882,16 +39882,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* _assign_array_IScrollController(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IScrollController[] = {
         { "get_scroll_animation", reinterpret_cast<PyCFunction>(IScrollController_GetScrollAnimation), METH_VARARGS, nullptr },
         { "notify_requested_scroll_completed", reinterpret_cast<PyCFunction>(IScrollController_NotifyRequestedScrollCompleted), METH_VARARGS, nullptr },
@@ -39907,7 +39897,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { "remove_scroll_by_requested", reinterpret_cast<PyCFunction>(IScrollController_remove_ScrollByRequested), METH_O, nullptr },
         { "add_scroll_to_requested", reinterpret_cast<PyCFunction>(IScrollController_add_ScrollToRequested), METH_O, nullptr },
         { "remove_scroll_to_requested", reinterpret_cast<PyCFunction>(IScrollController_remove_ScrollToRequested), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IScrollController, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IScrollController[] = {
@@ -40478,6 +40467,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     };
 
+    static PyObject* _assign_array_IScrollController(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IScrollController(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -40529,6 +40528,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef methods_ImplementsIScrollController[] = {
+        { "_assign_array_", _assign_array_IScrollController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IScrollController), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIScrollController), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIScrollController), METH_VARARGS | METH_STATIC, nullptr },
@@ -40829,23 +40829,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* _assign_array_IScrollControllerPanningInfo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IScrollControllerPanningInfo[] = {
         { "set_panning_element_expression_animation_sources", reinterpret_cast<PyCFunction>(IScrollControllerPanningInfo_SetPanningElementExpressionAnimationSources), METH_VARARGS, nullptr },
         { "add_changed", reinterpret_cast<PyCFunction>(IScrollControllerPanningInfo_add_Changed), METH_O, nullptr },
         { "remove_changed", reinterpret_cast<PyCFunction>(IScrollControllerPanningInfo_remove_Changed), METH_O, nullptr },
         { "add_pan_requested", reinterpret_cast<PyCFunction>(IScrollControllerPanningInfo_add_PanRequested), METH_O, nullptr },
         { "remove_pan_requested", reinterpret_cast<PyCFunction>(IScrollControllerPanningInfo_remove_PanRequested), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IScrollControllerPanningInfo, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IScrollControllerPanningInfo[] = {
@@ -41120,6 +41109,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     };
 
+    static PyObject* _assign_array_IScrollControllerPanningInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IScrollControllerPanningInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -41171,6 +41170,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef methods_ImplementsIScrollControllerPanningInfo[] = {
+        { "_assign_array_", _assign_array_IScrollControllerPanningInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IScrollControllerPanningInfo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIScrollControllerPanningInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIScrollControllerPanningInfo), METH_VARARGS | METH_STATIC, nullptr },
@@ -41494,16 +41494,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* _assign_array_IScrollSnapPointsInfo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IScrollSnapPointsInfo[] = {
         { "get_irregular_snap_points", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_GetIrregularSnapPoints), METH_VARARGS, nullptr },
         { "get_regular_snap_points", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_GetRegularSnapPoints), METH_VARARGS, nullptr },
@@ -41511,7 +41501,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { "remove_horizontal_snap_points_changed", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_remove_HorizontalSnapPointsChanged), METH_O, nullptr },
         { "add_vertical_snap_points_changed", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_add_VerticalSnapPointsChanged), METH_O, nullptr },
         { "remove_vertical_snap_points_changed", reinterpret_cast<PyCFunction>(IScrollSnapPointsInfo_remove_VerticalSnapPointsChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IScrollSnapPointsInfo, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IScrollSnapPointsInfo[] = {
@@ -41795,6 +41784,16 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     };
 
+    static PyObject* _assign_array_IScrollSnapPointsInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IScrollSnapPointsInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -41846,6 +41845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef methods_ImplementsIScrollSnapPointsInfo[] = {
+        { "_assign_array_", _assign_array_IScrollSnapPointsInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IScrollSnapPointsInfo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIScrollSnapPointsInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIScrollSnapPointsInfo), METH_VARARGS | METH_STATIC, nullptr },

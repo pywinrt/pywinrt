@@ -364,7 +364,7 @@ static class WriterExtensions
             writeRow(evt.RemoveMethod);
         }
 
-        if (!(type.IsGeneric || type.IsStatic))
+        if (type.Category != Category.Interface && !(type.IsGeneric || type.IsStatic))
         {
             w.WriteLine(
                 $"{{ \"_assign_array_\", _assign_array_{type.Name}, METH_O | METH_STATIC, nullptr }},"
@@ -498,8 +498,9 @@ static class WriterExtensions
             w.WriteEventFunction(type, evt.RemoveMethod, evt.Name, componentDlls);
         }
 
-        if (!(type.IsGeneric || type.IsStatic))
+        if (type.Category != Category.Interface && !(type.IsGeneric || type.IsStatic))
         {
+            w.WriteBlankLine();
             w.WriteAssignArrayMethod(type);
         }
 
@@ -827,7 +828,6 @@ static class WriterExtensions
 
     public static void WriteAssignArrayMethod(this IndentedTextWriter w, ProjectedType type)
     {
-        w.WriteBlankLine();
         w.WriteLine(
             $"static PyObject* _assign_array_{type.Name}(PyObject* /*unused*/, PyObject* arg) noexcept"
         );

@@ -14771,18 +14771,7 @@ namespace py::cpp::Windows::Media::Devices
         }
     }
 
-    static PyObject* _assign_array_IDefaultAudioDeviceChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDefaultAudioDeviceChangedEventArgs[] = {
-        { "_assign_array_", _assign_array_IDefaultAudioDeviceChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDefaultAudioDeviceChangedEventArgs[] = {
@@ -14852,6 +14841,16 @@ namespace py::cpp::Windows::Media::Devices
         }
     };
 
+    static PyObject* _assign_array_IDefaultAudioDeviceChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IDefaultAudioDeviceChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14903,6 +14902,7 @@ namespace py::cpp::Windows::Media::Devices
     }
 
     static PyMethodDef methods_ImplementsIDefaultAudioDeviceChangedEventArgs[] = {
+        { "_assign_array_", _assign_array_IDefaultAudioDeviceChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDefaultAudioDeviceChangedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDefaultAudioDeviceChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDefaultAudioDeviceChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
@@ -15063,21 +15063,10 @@ namespace py::cpp::Windows::Media::Devices
         }
     }
 
-    static PyObject* _assign_array_IMediaDeviceController(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Devices::IMediaDeviceController>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IMediaDeviceController[] = {
         { "get_available_media_stream_properties", reinterpret_cast<PyCFunction>(IMediaDeviceController_GetAvailableMediaStreamProperties), METH_VARARGS, nullptr },
         { "get_media_stream_properties", reinterpret_cast<PyCFunction>(IMediaDeviceController_GetMediaStreamProperties), METH_VARARGS, nullptr },
         { "set_media_stream_properties_async", reinterpret_cast<PyCFunction>(IMediaDeviceController_SetMediaStreamPropertiesAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IMediaDeviceController, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaDeviceController[] = {
@@ -15213,6 +15202,16 @@ namespace py::cpp::Windows::Media::Devices
         }
     };
 
+    static PyObject* _assign_array_IMediaDeviceController(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Devices::IMediaDeviceController>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IMediaDeviceController(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -15264,6 +15263,7 @@ namespace py::cpp::Windows::Media::Devices
     }
 
     static PyMethodDef methods_ImplementsIMediaDeviceController[] = {
+        { "_assign_array_", _assign_array_IMediaDeviceController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaDeviceController), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaDeviceController), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaDeviceController), METH_VARARGS | METH_STATIC, nullptr },

@@ -10403,20 +10403,9 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _assign_array_ISmsBinaryMessage(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsBinaryMessage>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISmsBinaryMessage[] = {
         { "get_data", reinterpret_cast<PyCFunction>(ISmsBinaryMessage_GetData), METH_VARARGS, nullptr },
         { "set_data", reinterpret_cast<PyCFunction>(ISmsBinaryMessage_SetData), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISmsBinaryMessage, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISmsBinaryMessage[] = {
@@ -10587,6 +10576,16 @@ namespace py::cpp::Windows::Devices::Sms
         }
     };
 
+    static PyObject* _assign_array_ISmsBinaryMessage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsBinaryMessage>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISmsBinaryMessage(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10638,6 +10637,7 @@ namespace py::cpp::Windows::Devices::Sms
     }
 
     static PyMethodDef methods_ImplementsISmsBinaryMessage[] = {
+        { "_assign_array_", _assign_array_ISmsBinaryMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsBinaryMessage), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsBinaryMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsBinaryMessage), METH_VARARGS | METH_STATIC, nullptr },
@@ -11005,16 +11005,6 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _assign_array_ISmsDevice(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsDevice>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISmsDevice[] = {
         { "calculate_length", reinterpret_cast<PyCFunction>(ISmsDevice_CalculateLength), METH_VARARGS, nullptr },
         { "send_message_async", reinterpret_cast<PyCFunction>(ISmsDevice_SendMessageAsync), METH_VARARGS, nullptr },
@@ -11022,7 +11012,6 @@ namespace py::cpp::Windows::Devices::Sms
         { "remove_sms_device_status_changed", reinterpret_cast<PyCFunction>(ISmsDevice_remove_SmsDeviceStatusChanged), METH_O, nullptr },
         { "add_sms_message_received", reinterpret_cast<PyCFunction>(ISmsDevice_add_SmsMessageReceived), METH_O, nullptr },
         { "remove_sms_message_received", reinterpret_cast<PyCFunction>(ISmsDevice_remove_SmsMessageReceived), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ISmsDevice, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISmsDevice[] = {
@@ -11322,6 +11311,16 @@ namespace py::cpp::Windows::Devices::Sms
         }
     };
 
+    static PyObject* _assign_array_ISmsDevice(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsDevice>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISmsDevice(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11373,6 +11372,7 @@ namespace py::cpp::Windows::Devices::Sms
     }
 
     static PyMethodDef methods_ImplementsISmsDevice[] = {
+        { "_assign_array_", _assign_array_ISmsDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsDevice), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsDevice), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsDevice), METH_VARARGS | METH_STATIC, nullptr },
@@ -11466,18 +11466,7 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _assign_array_ISmsMessage(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsMessage>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISmsMessage[] = {
-        { "_assign_array_", _assign_array_ISmsMessage, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISmsMessage[] = {
@@ -11547,6 +11536,16 @@ namespace py::cpp::Windows::Devices::Sms
         }
     };
 
+    static PyObject* _assign_array_ISmsMessage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsMessage>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISmsMessage(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11598,6 +11597,7 @@ namespace py::cpp::Windows::Devices::Sms
     }
 
     static PyMethodDef methods_ImplementsISmsMessage[] = {
+        { "_assign_array_", _assign_array_ISmsMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsMessage), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsMessage), METH_VARARGS | METH_STATIC, nullptr },
@@ -11781,18 +11781,7 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _assign_array_ISmsMessageBase(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsMessageBase>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISmsMessageBase[] = {
-        { "_assign_array_", _assign_array_ISmsMessageBase, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISmsMessageBase[] = {
@@ -11925,6 +11914,16 @@ namespace py::cpp::Windows::Devices::Sms
         }
     };
 
+    static PyObject* _assign_array_ISmsMessageBase(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsMessageBase>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISmsMessageBase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11976,6 +11975,7 @@ namespace py::cpp::Windows::Devices::Sms
     }
 
     static PyMethodDef methods_ImplementsISmsMessageBase[] = {
+        { "_assign_array_", _assign_array_ISmsMessageBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsMessageBase), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsMessageBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsMessageBase), METH_VARARGS | METH_STATIC, nullptr },
@@ -12507,19 +12507,8 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _assign_array_ISmsTextMessage(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsTextMessage>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISmsTextMessage[] = {
         { "to_binary_messages", reinterpret_cast<PyCFunction>(ISmsTextMessage_ToBinaryMessages), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISmsTextMessage, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISmsTextMessage[] = {
@@ -12881,6 +12870,16 @@ namespace py::cpp::Windows::Devices::Sms
         }
     };
 
+    static PyObject* _assign_array_ISmsTextMessage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::ISmsTextMessage>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISmsTextMessage(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12932,6 +12931,7 @@ namespace py::cpp::Windows::Devices::Sms
     }
 
     static PyMethodDef methods_ImplementsISmsTextMessage[] = {
+        { "_assign_array_", _assign_array_ISmsTextMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISmsTextMessage), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISmsTextMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISmsTextMessage), METH_VARARGS | METH_STATIC, nullptr },

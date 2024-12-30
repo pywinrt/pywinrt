@@ -16125,16 +16125,6 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageFile(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFile>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageFile[] = {
         { "copy_and_replace_async", reinterpret_cast<PyCFunction>(IStorageFile_CopyAndReplaceAsync), METH_VARARGS, nullptr },
         { "copy_overload", reinterpret_cast<PyCFunction>(IStorageFile_CopyOverload), METH_VARARGS, nullptr },
@@ -16154,7 +16144,6 @@ namespace py::cpp::Windows::Storage
         { "open_transacted_write_async", reinterpret_cast<PyCFunction>(IStorageFile_OpenTransactedWriteAsync), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(IStorageFile_RenameAsync), METH_VARARGS, nullptr },
         { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFile_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageFile, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageFile[] = {
@@ -16926,6 +16915,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStorageFile(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFile>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageFile(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -16977,6 +16976,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageFile[] = {
+        { "_assign_array_", _assign_array_IStorageFile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFile), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageFile), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageFile), METH_VARARGS | METH_STATIC, nullptr },
@@ -17095,20 +17095,9 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageFile2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFile2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageFile2[] = {
         { "open_transacted_write_with_options_async", reinterpret_cast<PyCFunction>(IStorageFile2_OpenTransactedWriteWithOptionsAsync), METH_VARARGS, nullptr },
         { "open_with_options_async", reinterpret_cast<PyCFunction>(IStorageFile2_OpenWithOptionsAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageFile2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageFile2[] = {
@@ -17212,6 +17201,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStorageFile2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFile2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageFile2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -17263,6 +17262,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageFile2[] = {
+        { "_assign_array_", _assign_array_IStorageFile2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFile2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageFile2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageFile2), METH_VARARGS | METH_STATIC, nullptr },
@@ -17326,18 +17326,7 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageFilePropertiesWithAvailability(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageFilePropertiesWithAvailability[] = {
-        { "_assign_array_", _assign_array_IStorageFilePropertiesWithAvailability, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageFilePropertiesWithAvailability[] = {
@@ -17385,6 +17374,16 @@ namespace py::cpp::Windows::Storage
             }
         }
     };
+
+    static PyObject* _assign_array_IStorageFilePropertiesWithAvailability(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IStorageFilePropertiesWithAvailability(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -17437,6 +17436,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageFilePropertiesWithAvailability[] = {
+        { "_assign_array_", _assign_array_IStorageFilePropertiesWithAvailability, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFilePropertiesWithAvailability), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageFilePropertiesWithAvailability), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageFilePropertiesWithAvailability), METH_VARARGS | METH_STATIC, nullptr },
@@ -18255,16 +18255,6 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageFolder(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFolder>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageFolder[] = {
         { "create_file_async", reinterpret_cast<PyCFunction>(IStorageFolder_CreateFileAsync), METH_VARARGS, nullptr },
         { "create_file_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFolder_CreateFileAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
@@ -18282,7 +18272,6 @@ namespace py::cpp::Windows::Storage
         { "is_of_type", reinterpret_cast<PyCFunction>(IStorageFolder_IsOfType), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(IStorageFolder_RenameAsync), METH_VARARGS, nullptr },
         { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFolder_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageFolder, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageFolder[] = {
@@ -18912,6 +18901,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStorageFolder(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFolder>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageFolder(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -18963,6 +18962,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageFolder[] = {
+        { "_assign_array_", _assign_array_IStorageFolder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFolder), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageFolder), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageFolder), METH_VARARGS | METH_STATIC, nullptr },
@@ -19038,19 +19038,8 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageFolder2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFolder2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageFolder2[] = {
         { "try_get_item_async", reinterpret_cast<PyCFunction>(IStorageFolder2_TryGetItemAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageFolder2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageFolder2[] = {
@@ -19110,6 +19099,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStorageFolder2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageFolder2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageFolder2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -19161,6 +19160,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageFolder2[] = {
+        { "_assign_array_", _assign_array_IStorageFolder2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFolder2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageFolder2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageFolder2), METH_VARARGS | METH_STATIC, nullptr },
@@ -19563,16 +19563,6 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageItem(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItem>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageItem[] = {
         { "delete_async", reinterpret_cast<PyCFunction>(IStorageItem_DeleteAsync), METH_VARARGS, nullptr },
         { "delete_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItem_DeleteAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
@@ -19580,7 +19570,6 @@ namespace py::cpp::Windows::Storage
         { "is_of_type", reinterpret_cast<PyCFunction>(IStorageItem_IsOfType), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(IStorageItem_RenameAsync), METH_VARARGS, nullptr },
         { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItem_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageItem, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageItem[] = {
@@ -19884,6 +19873,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStorageItem(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItem>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageItem(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -19935,6 +19934,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageItem[] = {
+        { "_assign_array_", _assign_array_IStorageItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItem), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItem), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItem), METH_VARARGS | METH_STATIC, nullptr },
@@ -20419,16 +20419,6 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageItem2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItem2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageItem2[] = {
         { "delete_async", reinterpret_cast<PyCFunction>(IStorageItem2_DeleteAsync), METH_VARARGS, nullptr },
         { "delete_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItem2_DeleteAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
@@ -20438,7 +20428,6 @@ namespace py::cpp::Windows::Storage
         { "is_of_type", reinterpret_cast<PyCFunction>(IStorageItem2_IsOfType), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(IStorageItem2_RenameAsync), METH_VARARGS, nullptr },
         { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItem2_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageItem2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageItem2[] = {
@@ -20800,6 +20789,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStorageItem2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItem2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageItem2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -20851,6 +20850,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageItem2[] = {
+        { "_assign_array_", _assign_array_IStorageItem2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItem2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItem2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItem2), METH_VARARGS | METH_STATIC, nullptr },
@@ -21133,21 +21133,10 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageItemProperties(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItemProperties>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageItemProperties[] = {
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IStorageItemProperties_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties_GetThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "get_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageItemProperties, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageItemProperties[] = {
@@ -21385,6 +21374,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStorageItemProperties(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItemProperties>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageItemProperties(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -21436,6 +21435,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageItemProperties[] = {
+        { "_assign_array_", _assign_array_IStorageItemProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemProperties), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItemProperties), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItemProperties), METH_VARARGS | METH_STATIC, nullptr },
@@ -21847,16 +21847,6 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageItemProperties2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItemProperties2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageItemProperties2[] = {
         { "get_scaled_image_as_thumbnail_async", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetScaledImageAsThumbnailAsync), METH_VARARGS, nullptr },
         { "get_scaled_image_as_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
@@ -21864,7 +21854,6 @@ namespace py::cpp::Windows::Storage
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "get_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageItemProperties2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageItemProperties2[] = {
@@ -22228,6 +22217,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStorageItemProperties2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItemProperties2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageItemProperties2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -22279,6 +22278,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageItemProperties2[] = {
+        { "_assign_array_", _assign_array_IStorageItemProperties2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemProperties2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItemProperties2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItemProperties2), METH_VARARGS | METH_STATIC, nullptr },
@@ -22591,21 +22591,10 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStorageItemPropertiesWithProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageItemPropertiesWithProvider[] = {
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IStorageItemPropertiesWithProvider_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItemPropertiesWithProvider_GetThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "get_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(IStorageItemPropertiesWithProvider_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageItemPropertiesWithProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageItemPropertiesWithProvider[] = {
@@ -22864,6 +22853,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStorageItemPropertiesWithProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageItemPropertiesWithProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -22915,6 +22914,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStorageItemPropertiesWithProvider[] = {
+        { "_assign_array_", _assign_array_IStorageItemPropertiesWithProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemPropertiesWithProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItemPropertiesWithProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItemPropertiesWithProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -22991,19 +22991,8 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _assign_array_IStreamedFileDataRequest(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStreamedFileDataRequest>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStreamedFileDataRequest[] = {
         { "fail_and_close", reinterpret_cast<PyCFunction>(IStreamedFileDataRequest_FailAndClose), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStreamedFileDataRequest, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStreamedFileDataRequest[] = {
@@ -23061,6 +23050,16 @@ namespace py::cpp::Windows::Storage
         }
     };
 
+    static PyObject* _assign_array_IStreamedFileDataRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::IStreamedFileDataRequest>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStreamedFileDataRequest(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -23112,6 +23111,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef methods_ImplementsIStreamedFileDataRequest[] = {
+        { "_assign_array_", _assign_array_IStreamedFileDataRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStreamedFileDataRequest), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStreamedFileDataRequest), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStreamedFileDataRequest), METH_VARARGS | METH_STATIC, nullptr },

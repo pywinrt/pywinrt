@@ -2031,20 +2031,9 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         }
     }
 
-    static PyObject* _assign_array_IGameListEntry(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGameListEntry[] = {
         { "launch_async", reinterpret_cast<PyCFunction>(IGameListEntry_LaunchAsync), METH_VARARGS, nullptr },
         { "set_category_async", reinterpret_cast<PyCFunction>(IGameListEntry_SetCategoryAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IGameListEntry, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGameListEntry[] = {
@@ -2193,6 +2182,16 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         }
     };
 
+    static PyObject* _assign_array_IGameListEntry(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGameListEntry(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2244,6 +2243,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     }
 
     static PyMethodDef methods_ImplementsIGameListEntry[] = {
+        { "_assign_array_", _assign_array_IGameListEntry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGameListEntry), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGameListEntry), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGameListEntry), METH_VARARGS | METH_STATIC, nullptr },

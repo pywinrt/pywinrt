@@ -5310,18 +5310,7 @@ namespace py::cpp::Windows::Devices::Midi
         }
     }
 
-    static PyObject* _assign_array_IMidiMessage(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Midi::IMidiMessage>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IMidiMessage[] = {
-        { "_assign_array_", _assign_array_IMidiMessage, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMidiMessage[] = {
@@ -5412,6 +5401,16 @@ namespace py::cpp::Windows::Devices::Midi
         }
     };
 
+    static PyObject* _assign_array_IMidiMessage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Midi::IMidiMessage>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IMidiMessage(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5463,6 +5462,7 @@ namespace py::cpp::Windows::Devices::Midi
     }
 
     static PyMethodDef methods_ImplementsIMidiMessage[] = {
+        { "_assign_array_", _assign_array_IMidiMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMidiMessage), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMidiMessage), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMidiMessage), METH_VARARGS | METH_STATIC, nullptr },
@@ -5653,16 +5653,6 @@ namespace py::cpp::Windows::Devices::Midi
         }
     }
 
-    static PyObject* _assign_array_IMidiOutPort(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Midi::IMidiOutPort>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IMidiOutPort(py::wrapper::Windows::Devices::Midi::IMidiOutPort* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -5690,7 +5680,6 @@ namespace py::cpp::Windows::Devices::Midi
         { "close", reinterpret_cast<PyCFunction>(IMidiOutPort_Close), METH_VARARGS, nullptr },
         { "send_buffer", reinterpret_cast<PyCFunction>(IMidiOutPort_SendBuffer), METH_VARARGS, nullptr },
         { "send_message", reinterpret_cast<PyCFunction>(IMidiOutPort_SendMessage), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IMidiOutPort, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMidiOutPort), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMidiOutPort), METH_VARARGS, nullptr },
         { }};
@@ -5825,6 +5814,16 @@ namespace py::cpp::Windows::Devices::Midi
         }
     };
 
+    static PyObject* _assign_array_IMidiOutPort(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Midi::IMidiOutPort>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IMidiOutPort(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5876,6 +5875,7 @@ namespace py::cpp::Windows::Devices::Midi
     }
 
     static PyMethodDef methods_ImplementsIMidiOutPort[] = {
+        { "_assign_array_", _assign_array_IMidiOutPort, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMidiOutPort), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMidiOutPort), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMidiOutPort), METH_VARARGS | METH_STATIC, nullptr },
