@@ -119,15 +119,8 @@ D3D11_SDK_VERSION = 7
 # );
 
 
-def errcheck(result, func, args):
-    if result:
-        raise ctypes.WinError(result)
-
-    return (args[7], D3D_FEATURE_LEVEL(args[8].value), args[9])
-
-
 D3D11CreateDevice = ctypes.WINFUNCTYPE(
-    int,
+    wintypes.INT,
     wintypes.LPVOID,
     wintypes.UINT,
     wintypes.LPVOID,
@@ -153,7 +146,31 @@ D3D11CreateDevice = ctypes.WINFUNCTYPE(
         (OUT, "ppImmediateContext"),
     ),
 )
-D3D11CreateDevice.errcheck = errcheck
+
+
+def errcheck(
+    result: int,
+    func,  # type: ignore
+    args: tuple[
+        wintypes.LPVOID,
+        wintypes.UINT,
+        wintypes.LPVOID,
+        wintypes.UINT,
+        wintypes.UINT,
+        wintypes.UINT,
+        wintypes.UINT,
+        IUnknown,
+        wintypes.UINT,
+        IUnknown,
+    ],
+):
+    if result:
+        raise ctypes.WinError(result)
+
+    return (args[7], D3D_FEATURE_LEVEL(args[8].value), args[9])
+
+
+D3D11CreateDevice.errcheck = errcheck  # type: ignore
 
 # https://learn.microsoft.com/en-us/windows/win32/api/dxgicommon/ns-dxgicommon-dxgi_sample_desc
 
@@ -197,22 +214,24 @@ class DXGI_MAP(enum.IntFlag):
 
 
 class IDXGISurface(IUnknown):
-    GetDesc = ctypes.WINFUNCTYPE(int, ctypes.POINTER(DXGI_SURFACE_DESC))(8, "GetDesc")
-    Map = ctypes.WINFUNCTYPE(int, ctypes.POINTER(DXGI_MAPPED_RECT), wintypes.UINT)(
-        9, "Map"
+    GetDesc = ctypes.WINFUNCTYPE(wintypes.INT, ctypes.POINTER(DXGI_SURFACE_DESC))(
+        8, "GetDesc"
     )
-    Unmap = ctypes.WINFUNCTYPE(int)(10, "Unmap")
+    Map = ctypes.WINFUNCTYPE(
+        wintypes.INT, ctypes.POINTER(DXGI_MAPPED_RECT), wintypes.UINT
+    )(9, "Map")
+    Unmap = ctypes.WINFUNCTYPE(wintypes.INT)(10, "Unmap")
 
     @contextlib.contextmanager
-    def map(self, flags=DXGI_MAP.READ):
+    def map(self, flags: DXGI_MAP = DXGI_MAP.READ):
         locked_rect = DXGI_MAPPED_RECT()
         ret = IDXGISurface.Map(self, ctypes.byref(locked_rect), flags)
-        if ret:
-            raise ctypes.WinError(ret)
+        if ret.value:
+            raise ctypes.WinError(ret.value)
 
         try:
             yield locked_rect.Pitch
         finally:
             ret = IDXGISurface.Unmap(self)
-            if ret:
-                raise ctypes.WinError(ret)
+            if ret.value:
+                raise ctypes.WinError(ret.value)
