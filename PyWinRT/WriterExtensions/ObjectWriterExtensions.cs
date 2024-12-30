@@ -262,18 +262,8 @@ static class ObjectWriterExtensions
         }
         else if (type.IsPySequence)
         {
-            var method = type.Methods.Single(m => m.Name == "First");
+            var method = type.Methods.Single(m => m.Name == "GetAt");
             var nullabilityInfo = nullabilityMap.GetValueOrDefault(
-                method.Signature,
-                new MethodNullabilityInfo(method.Method)
-            );
-            var iterType = method.Method.ToPyReturnTyping(
-                ns,
-                nullabilityInfo,
-                method.GenericArgMap
-            );
-            method = type.Methods.Single(m => m.Name == "GetAt");
-            nullabilityInfo = nullabilityMap.GetValueOrDefault(
                 method.Signature,
                 new MethodNullabilityInfo(method.Method)
             );
@@ -284,7 +274,7 @@ static class ObjectWriterExtensions
             );
 
             w.WriteLine("def __len__(self) -> int: ...");
-            w.WriteLine($"def __iter__(self) -> {iterType}: ...");
+            w.WriteLine($"def __iter__(self) -> typing.Iterator[{elementType}]: ...");
             w.WriteLine("@typing.overload");
             w.WriteLine(
                 $"def __getitem__(self, index: typing.SupportsIndex) -> {elementType}: ..."
@@ -348,7 +338,12 @@ static class ObjectWriterExtensions
                 nullabilityInfo,
                 method.GenericArgMap
             );
-            w.WriteLine($"def __iter__(self) -> {iterType}: ...");
+
+            // HACK: there isn't a nice way to get the resolved generic arg type,
+            // so scrape it from the iter type.
+            var elementType = iterType[(iterType.IndexOf('[', StringComparison.Ordinal) + 1)..^1];
+
+            w.WriteLine($"def __iter__(self) -> typing.Iterator[{elementType}]: ...");
             didWriteLine = true;
         }
 

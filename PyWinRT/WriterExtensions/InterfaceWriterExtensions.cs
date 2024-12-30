@@ -617,18 +617,8 @@ static class InterfaceWriterExtensions
             && (type.Name == "IVector" || type.Name == "IVectorView")
         )
         {
-            var method = type.Methods.Single(m => m.Name == "First");
+            var method = type.Methods.Single(m => m.Name == "GetAt");
             var nullabilityInfo = nullabilityMap.GetValueOrDefault(
-                method.Signature,
-                new MethodNullabilityInfo(method.Method)
-            );
-            var iterType = method.Method.ToPyReturnTyping(
-                ns,
-                nullabilityInfo,
-                method.GenericArgMap
-            );
-            method = type.Methods.Single(m => m.Name == "GetAt");
-            nullabilityInfo = nullabilityMap.GetValueOrDefault(
                 method.Signature,
                 new MethodNullabilityInfo(method.Method)
             );
@@ -639,7 +629,7 @@ static class InterfaceWriterExtensions
             );
 
             w.WriteLine("def __len__(self) -> int: ...");
-            w.WriteLine($"def __iter__(self) -> {iterType}: ...");
+            w.WriteLine($"def __iter__(self) -> typing.Iterator[{elementType}]: ...");
             w.WriteLine("@typing.overload");
             w.WriteLine(
                 $"def __getitem__(self, index: typing.SupportsIndex) -> {elementType}: ..."
