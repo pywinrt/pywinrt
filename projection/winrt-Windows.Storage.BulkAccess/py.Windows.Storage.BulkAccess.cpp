@@ -5034,7 +5034,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { }};
 
     static PyType_Spec type_spec_IStorageItemInformation = {
-        "winrt._winrt_windows_storage_bulkaccess.IStorageItemInformation",
+        "winrt._winrt_windows_storage_bulkaccess._IStorageItemInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::IStorageItemInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5364,7 +5364,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItemInformation = {
-        "winrt._winrt_windows_storage_bulkaccess.ImplementsIStorageItemInformation",
+        "winrt._winrt_windows_storage_bulkaccess.IStorageItemInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -8,6 +8,7 @@ from winrt._winrt_windows_applicationmodel_userdataaccounts_provider import (
     UserDataAccountProviderAddAccountOperation,
     UserDataAccountProviderResolveErrorsOperation,
     UserDataAccountProviderSettingsOperation,
+    _IUserDataAccountProviderOperation,
     IUserDataAccountProviderOperation,
 )
 

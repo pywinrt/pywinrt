@@ -129,16 +129,16 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.ISystemBackdropController";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops._ISystemBackdropController";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "ISystemBackdropController";
+        static constexpr const char* type_name = "_ISystemBackdropController";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.ISystemBackdropControllerWithTargets";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops._ISystemBackdropControllerWithTargets";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "ISystemBackdropControllerWithTargets";
+        static constexpr const char* type_name = "_ISystemBackdropControllerWithTargets";
     };
 }

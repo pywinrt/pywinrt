@@ -19533,7 +19533,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { }};
 
     static PyType_Spec type_spec_IHumanPresenceSensorExtension = {
-        "winrt._winrt_windows_devices_sensors.IHumanPresenceSensorExtension",
+        "winrt._winrt_windows_devices_sensors._IHumanPresenceSensorExtension",
         sizeof(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19807,7 +19807,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { }};
 
     static PyType_Spec type_spec_ImplementsIHumanPresenceSensorExtension = {
-        "winrt._winrt_windows_devices_sensors.ImplementsIHumanPresenceSensorExtension",
+        "winrt._winrt_windows_devices_sensors.IHumanPresenceSensorExtension",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -19844,7 +19844,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { }};
 
     static PyType_Spec type_spec_ISensorDataThreshold = {
-        "winrt._winrt_windows_devices_sensors.ISensorDataThreshold",
+        "winrt._winrt_windows_devices_sensors._ISensorDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::ISensorDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19930,7 +19930,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { }};
 
     static PyType_Spec type_spec_ImplementsISensorDataThreshold = {
-        "winrt._winrt_windows_devices_sensors.ImplementsISensorDataThreshold",
+        "winrt._winrt_windows_devices_sensors.ISensorDataThreshold",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

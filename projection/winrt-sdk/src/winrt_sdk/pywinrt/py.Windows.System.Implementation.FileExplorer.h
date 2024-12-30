@@ -48,24 +48,24 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer.ISysStorageProviderEventSource";
+        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer._ISysStorageProviderEventSource";
         static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
-        static constexpr const char* type_name = "ISysStorageProviderEventSource";
+        static constexpr const char* type_name = "_ISysStorageProviderEventSource";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer.ISysStorageProviderHandlerFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer._ISysStorageProviderHandlerFactory";
         static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
-        static constexpr const char* type_name = "ISysStorageProviderHandlerFactory";
+        static constexpr const char* type_name = "_ISysStorageProviderHandlerFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer.ISysStorageProviderHttpRequestProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer._ISysStorageProviderHttpRequestProvider";
         static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
-        static constexpr const char* type_name = "ISysStorageProviderHttpRequestProvider";
+        static constexpr const char* type_name = "_ISysStorageProviderHttpRequestProvider";
     };
 }

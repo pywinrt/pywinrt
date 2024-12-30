@@ -11,11 +11,17 @@ from winrt._winrt_windows_gaming_input_custom import (
     GipGameControllerProvider,
     HidGameControllerProvider,
     XusbGameControllerProvider,
+    _ICustomGameControllerFactory,
     ICustomGameControllerFactory,
+    _IGameControllerInputSink,
     IGameControllerInputSink,
+    _IGameControllerProvider,
     IGameControllerProvider,
+    _IGipGameControllerInputSink,
     IGipGameControllerInputSink,
+    _IHidGameControllerInputSink,
     IHidGameControllerInputSink,
+    _IXusbGameControllerInputSink,
     IXusbGameControllerInputSink,
 )
 

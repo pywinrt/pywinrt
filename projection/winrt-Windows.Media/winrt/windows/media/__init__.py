@@ -27,9 +27,13 @@ from winrt._winrt_windows_media import (
     VideoDisplayProperties,
     VideoEffects,
     VideoFrame,
+    _IMediaExtension,
     IMediaExtension,
+    _IMediaFrame,
     IMediaFrame,
+    _IMediaMarker,
     IMediaMarker,
+    _IMediaMarkers,
     IMediaMarkers,
 )
 

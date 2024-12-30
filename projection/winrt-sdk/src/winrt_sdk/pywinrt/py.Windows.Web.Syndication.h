@@ -198,25 +198,25 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::ISyndicationClient>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.ISyndicationClient";
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication._ISyndicationClient";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
-        static constexpr const char* type_name = "ISyndicationClient";
+        static constexpr const char* type_name = "_ISyndicationClient";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Syndication::ISyndicationNode>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.ISyndicationNode";
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication._ISyndicationNode";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
-        static constexpr const char* type_name = "ISyndicationNode";
+        static constexpr const char* type_name = "_ISyndicationNode";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::Syndication::ISyndicationText>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.ISyndicationText";
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication._ISyndicationText";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
-        static constexpr const char* type_name = "ISyndicationText";
+        static constexpr const char* type_name = "_ISyndicationText";
     };
 
     template<>

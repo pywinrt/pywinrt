@@ -519,8 +519,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::IChatItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.IChatItem";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat._IChatItem";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
-        static constexpr const char* type_name = "IChatItem";
+        static constexpr const char* type_name = "_IChatItem";
     };
 }

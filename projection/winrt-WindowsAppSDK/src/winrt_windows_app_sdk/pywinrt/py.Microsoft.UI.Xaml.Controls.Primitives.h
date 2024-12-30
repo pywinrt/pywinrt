@@ -1245,25 +1245,25 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.primitives.IScrollController";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.primitives._IScrollController";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "IScrollController";
+        static constexpr const char* type_name = "_IScrollController";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.primitives.IScrollControllerPanningInfo";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.primitives._IScrollControllerPanningInfo";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "IScrollControllerPanningInfo";
+        static constexpr const char* type_name = "_IScrollControllerPanningInfo";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.primitives.IScrollSnapPointsInfo";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.primitives._IScrollSnapPointsInfo";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "IScrollSnapPointsInfo";
+        static constexpr const char* type_name = "_IScrollSnapPointsInfo";
     };
 
     template<>

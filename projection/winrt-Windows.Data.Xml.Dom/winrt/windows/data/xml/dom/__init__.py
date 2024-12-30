@@ -20,10 +20,15 @@ from winrt._winrt_windows_data_xml_dom import (
     XmlNodeList,
     XmlProcessingInstruction,
     XmlText,
+    _IXmlCharacterData,
     IXmlCharacterData,
+    _IXmlNode,
     IXmlNode,
+    _IXmlNodeSelector,
     IXmlNodeSelector,
+    _IXmlNodeSerializer,
     IXmlNodeSerializer,
+    _IXmlText,
     IXmlText,
 )
 

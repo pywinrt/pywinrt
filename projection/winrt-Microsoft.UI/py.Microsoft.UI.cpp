@@ -4828,7 +4828,7 @@ namespace py::cpp::Microsoft::UI
         { }};
 
     static PyType_Spec type_spec_IClosableNotifier = {
-        "winrt._winrt_microsoft_ui.IClosableNotifier",
+        "winrt._winrt_microsoft_ui._IClosableNotifier",
         sizeof(py::wrapper::Microsoft::UI::IClosableNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5058,7 +5058,7 @@ namespace py::cpp::Microsoft::UI
         { }};
 
     static PyType_Spec type_spec_ImplementsIClosableNotifier = {
-        "winrt._winrt_microsoft_ui.ImplementsIClosableNotifier",
+        "winrt._winrt_microsoft_ui.IClosableNotifier",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

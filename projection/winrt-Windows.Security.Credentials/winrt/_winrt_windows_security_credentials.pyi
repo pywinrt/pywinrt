@@ -208,6 +208,9 @@ class WebAccountProvider(winrt.system.Object):
     @_property
     def is_system_provider(self) -> bool: ...
 
+@typing.final
+class _IWebAccount: ...
+
 class IWebAccount(winrt._winrt.IInspectable):
     # Windows.Security.Credentials.WebAccountState Windows.Security.Credentials.IWebAccount::get_State()
     @_property

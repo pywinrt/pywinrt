@@ -47,7 +47,9 @@ from winrt._winrt_windows_media_playback import (
     PlaybackMediaMarkerReachedEventArgs,
     PlaybackMediaMarkerSequence,
     TimedMetadataPresentationModeChangedEventArgs,
+    _IMediaEnginePlaybackSource,
     IMediaEnginePlaybackSource,
+    _IMediaPlaybackSource,
     IMediaPlaybackSource,
 )
 

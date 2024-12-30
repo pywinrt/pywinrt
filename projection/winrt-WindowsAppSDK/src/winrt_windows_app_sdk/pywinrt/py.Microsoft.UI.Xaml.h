@@ -1920,25 +1920,25 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::IDataTemplateExtension>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.IDataTemplateExtension";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml._IDataTemplateExtension";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml";
-        static constexpr const char* type_name = "IDataTemplateExtension";
+        static constexpr const char* type_name = "_IDataTemplateExtension";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::IElementFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.IElementFactory";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml._IElementFactory";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml";
-        static constexpr const char* type_name = "IElementFactory";
+        static constexpr const char* type_name = "_IElementFactory";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::IXamlServiceProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.IXamlServiceProvider";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml._IXamlServiceProvider";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml";
-        static constexpr const char* type_name = "IXamlServiceProvider";
+        static constexpr const char* type_name = "_IXamlServiceProvider";
     };
 
     template<>

@@ -52,7 +52,9 @@ from winrt._winrt_windows_media_devices import (
     WhiteBalanceControl,
     ZoomControl,
     ZoomSettings,
+    _IDefaultAudioDeviceChangedEventArgs,
     IDefaultAudioDeviceChangedEventArgs,
+    _IMediaDeviceController,
     IMediaDeviceController,
 )
 

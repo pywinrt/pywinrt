@@ -299,25 +299,25 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.IBitmapFrame";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging._IBitmapFrame";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
-        static constexpr const char* type_name = "IBitmapFrame";
+        static constexpr const char* type_name = "_IBitmapFrame";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.IBitmapFrameWithSoftwareBitmap";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging._IBitmapFrameWithSoftwareBitmap";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
-        static constexpr const char* type_name = "IBitmapFrameWithSoftwareBitmap";
+        static constexpr const char* type_name = "_IBitmapFrameWithSoftwareBitmap";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.IBitmapPropertiesView";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging._IBitmapPropertiesView";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
-        static constexpr const char* type_name = "IBitmapPropertiesView";
+        static constexpr const char* type_name = "_IBitmapPropertiesView";
     };
 
     template<>

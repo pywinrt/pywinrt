@@ -3145,7 +3145,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { }};
 
     static PyType_Spec type_spec_ILearningModelVariableDescriptorPreview = {
-        "winrt._winrt_windows_ai_machinelearning_preview.ILearningModelVariableDescriptorPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview._ILearningModelVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3311,7 +3311,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { }};
 
     static PyType_Spec type_spec_ImplementsILearningModelVariableDescriptorPreview = {
-        "winrt._winrt_windows_ai_machinelearning_preview.ImplementsILearningModelVariableDescriptorPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.ILearningModelVariableDescriptorPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

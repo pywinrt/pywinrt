@@ -9,6 +9,7 @@ from winrt._winrt_windows_gaming_input_forcefeedback import (
     ForceFeedbackMotor,
     PeriodicForceEffect,
     RampForceEffect,
+    _IForceFeedbackEffect,
     IForceFeedbackEffect,
 )
 

@@ -1285,6 +1285,9 @@ class XmlText(winrt.system.Object, IXmlText, IXmlCharacterData, IXmlNode, IXmlNo
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
+class _IXmlCharacterData: ...
+
 class IXmlCharacterData(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt._winrt.IInspectable):
     # System.Void Windows.Data.Xml.Dom.IXmlCharacterData::AppendData(System.String)
     @abstractmethod
@@ -1313,6 +1316,9 @@ class IXmlCharacterData(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt._w
     @_property
     @abstractmethod
     def length(self) -> winrt.system.UInt32: ...
+
+@typing.final
+class _IXmlNode: ...
 
 class IXmlNode(IXmlNodeSerializer, IXmlNodeSelector, winrt._winrt.IInspectable):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
@@ -1401,6 +1407,9 @@ class IXmlNode(IXmlNodeSerializer, IXmlNodeSelector, winrt._winrt.IInspectable):
     @abstractmethod
     def previous_sibling(self) -> IXmlNode: ...
 
+@typing.final
+class _IXmlNodeSelector: ...
+
 class IXmlNodeSelector(winrt._winrt.IInspectable):
     # Windows.Data.Xml.Dom.XmlNodeList Windows.Data.Xml.Dom.IXmlNodeSelector::SelectNodes(System.String)
     @abstractmethod
@@ -1415,6 +1424,9 @@ class IXmlNodeSelector(winrt._winrt.IInspectable):
     @abstractmethod
     def select_single_node_ns(self, xpath: str, namespaces: winrt.system.Object, /) -> IXmlNode: ...
 
+@typing.final
+class _IXmlNodeSerializer: ...
+
 class IXmlNodeSerializer(winrt._winrt.IInspectable):
     # System.String Windows.Data.Xml.Dom.IXmlNodeSerializer::GetXml()
     @abstractmethod
@@ -1427,6 +1439,9 @@ class IXmlNodeSerializer(winrt._winrt.IInspectable):
     @inner_text.setter
     @abstractmethod
     def inner_text(self, value: str) -> None: ...
+
+@typing.final
+class _IXmlText: ...
 
 class IXmlText(IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt._winrt.IInspectable):
     # Windows.Data.Xml.Dom.IXmlText Windows.Data.Xml.Dom.IXmlText::SplitText(System.UInt32)

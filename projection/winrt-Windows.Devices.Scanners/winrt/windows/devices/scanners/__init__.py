@@ -11,7 +11,9 @@ from winrt._winrt_windows_devices_scanners import (
     ImageScannerFlatbedConfiguration,
     ImageScannerPreviewResult,
     ImageScannerScanResult,
+    _IImageScannerFormatConfiguration,
     IImageScannerFormatConfiguration,
+    _IImageScannerSourceConfiguration,
     IImageScannerSourceConfiguration,
 )
 

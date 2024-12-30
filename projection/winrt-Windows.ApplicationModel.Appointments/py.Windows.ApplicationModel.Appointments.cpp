@@ -10507,7 +10507,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }};
 
     static PyType_Spec type_spec_IAppointmentParticipant = {
-        "winrt._winrt_windows_applicationmodel_appointments.IAppointmentParticipant",
+        "winrt._winrt_windows_applicationmodel_appointments._IAppointmentParticipant",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::IAppointmentParticipant),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10679,7 +10679,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }};
 
     static PyType_Spec type_spec_ImplementsIAppointmentParticipant = {
-        "winrt._winrt_windows_applicationmodel_appointments.ImplementsIAppointmentParticipant",
+        "winrt._winrt_windows_applicationmodel_appointments.IAppointmentParticipant",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

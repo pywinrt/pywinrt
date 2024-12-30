@@ -14,6 +14,7 @@ from winrt._winrt_windows_security_credentials import (
     PasswordVault,
     WebAccount,
     WebAccountProvider,
+    _IWebAccount,
     IWebAccount,
 )
 

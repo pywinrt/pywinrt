@@ -7,6 +7,7 @@ from winrt._winrt_windows_web_http_filters import (
     HttpBaseProtocolFilter,
     HttpCacheControl,
     HttpServerCustomValidationRequestedEventArgs,
+    _IHttpFilter,
     IHttpFilter,
 )
 

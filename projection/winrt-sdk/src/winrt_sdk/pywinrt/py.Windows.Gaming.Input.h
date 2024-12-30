@@ -244,17 +244,17 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::IGameController>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.IGameController";
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input._IGameController";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "IGameController";
+        static constexpr const char* type_name = "_IGameController";
     };
 
     template<>
     struct py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.IGameControllerBatteryInfo";
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input._IGameControllerBatteryInfo";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "IGameControllerBatteryInfo";
+        static constexpr const char* type_name = "_IGameControllerBatteryInfo";
     };
 
     template<>

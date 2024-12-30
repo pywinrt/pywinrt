@@ -18,7 +18,9 @@ from winrt._winrt_windows_web_ui import (
     WebViewControlUnsupportedUriSchemeIdentifiedEventArgs,
     WebViewControlUnviewableContentIdentifiedEventArgs,
     WebViewControlWebResourceRequestedEventArgs,
+    _IWebViewControl,
     IWebViewControl,
+    _IWebViewControl2,
     IWebViewControl2,
 )
 

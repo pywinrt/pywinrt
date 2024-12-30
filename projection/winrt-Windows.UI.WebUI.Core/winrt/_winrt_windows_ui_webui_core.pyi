@@ -174,8 +174,14 @@ class WebUICommandBarSymbolIcon(winrt.system.Object, IWebUICommandBarIcon):
     @symbol.setter
     def symbol(self, value: str) -> None: ...
 
+@typing.final
+class _IWebUICommandBarElement: ...
+
 class IWebUICommandBarElement(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
+
+@typing.final
+class _IWebUICommandBarIcon: ...
 
 class IWebUICommandBarIcon(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass

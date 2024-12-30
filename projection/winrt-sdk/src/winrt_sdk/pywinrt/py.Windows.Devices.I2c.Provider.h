@@ -85,25 +85,25 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.provider.II2cControllerProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.provider._II2cControllerProvider";
         static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
-        static constexpr const char* type_name = "II2cControllerProvider";
+        static constexpr const char* type_name = "_II2cControllerProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.provider.II2cDeviceProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.provider._II2cDeviceProvider";
         static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
-        static constexpr const char* type_name = "II2cDeviceProvider";
+        static constexpr const char* type_name = "_II2cDeviceProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::I2c::Provider::II2cProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.provider.II2cProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.provider._II2cProvider";
         static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
-        static constexpr const char* type_name = "II2cProvider";
+        static constexpr const char* type_name = "_II2cProvider";
     };
 
     template<>

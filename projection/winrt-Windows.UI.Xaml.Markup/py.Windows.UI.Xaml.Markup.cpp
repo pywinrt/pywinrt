@@ -1859,7 +1859,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_IComponentConnector = {
-        "winrt._winrt_windows_ui_xaml_markup.IComponentConnector",
+        "winrt._winrt_windows_ui_xaml_markup._IComponentConnector",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1987,7 +1987,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_ImplementsIComponentConnector = {
-        "winrt._winrt_windows_ui_xaml_markup.ImplementsIComponentConnector",
+        "winrt._winrt_windows_ui_xaml_markup.IComponentConnector",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2068,7 +2068,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_IComponentConnector2 = {
-        "winrt._winrt_windows_ui_xaml_markup.IComponentConnector2",
+        "winrt._winrt_windows_ui_xaml_markup._IComponentConnector2",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2198,7 +2198,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_ImplementsIComponentConnector2 = {
-        "winrt._winrt_windows_ui_xaml_markup.ImplementsIComponentConnector2",
+        "winrt._winrt_windows_ui_xaml_markup.IComponentConnector2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2330,7 +2330,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_IDataTemplateComponent = {
-        "winrt._winrt_windows_ui_xaml_markup.IDataTemplateComponent",
+        "winrt._winrt_windows_ui_xaml_markup._IDataTemplateComponent",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IDataTemplateComponent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2490,7 +2490,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_ImplementsIDataTemplateComponent = {
-        "winrt._winrt_windows_ui_xaml_markup.ImplementsIDataTemplateComponent",
+        "winrt._winrt_windows_ui_xaml_markup.IDataTemplateComponent",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2572,7 +2572,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_IXamlBindScopeDiagnostics = {
-        "winrt._winrt_windows_ui_xaml_markup.IXamlBindScopeDiagnostics",
+        "winrt._winrt_windows_ui_xaml_markup._IXamlBindScopeDiagnostics",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2700,7 +2700,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlBindScopeDiagnostics = {
-        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlBindScopeDiagnostics",
+        "winrt._winrt_windows_ui_xaml_markup.IXamlBindScopeDiagnostics",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3011,7 +3011,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_IXamlMember = {
-        "winrt._winrt_windows_ui_xaml_markup.IXamlMember",
+        "winrt._winrt_windows_ui_xaml_markup._IXamlMember",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlMember),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3291,7 +3291,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlMember = {
-        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlMember",
+        "winrt._winrt_windows_ui_xaml_markup.IXamlMember",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3455,7 +3455,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_IXamlMetadataProvider = {
-        "winrt._winrt_windows_ui_xaml_markup.IXamlMetadataProvider",
+        "winrt._winrt_windows_ui_xaml_markup._IXamlMetadataProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlMetadataProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3632,7 +3632,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlMetadataProvider = {
-        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlMetadataProvider",
+        "winrt._winrt_windows_ui_xaml_markup.IXamlMetadataProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4301,7 +4301,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_IXamlType = {
-        "winrt._winrt_windows_ui_xaml_markup.IXamlType",
+        "winrt._winrt_windows_ui_xaml_markup._IXamlType",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlType),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4831,7 +4831,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlType = {
-        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlType",
+        "winrt._winrt_windows_ui_xaml_markup.IXamlType",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5531,7 +5531,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_IXamlType2 = {
-        "winrt._winrt_windows_ui_xaml_markup.IXamlType2",
+        "winrt._winrt_windows_ui_xaml_markup._IXamlType2",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlType2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6081,7 +6081,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlType2 = {
-        "winrt._winrt_windows_ui_xaml_markup.ImplementsIXamlType2",
+        "winrt._winrt_windows_ui_xaml_markup.IXamlType2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

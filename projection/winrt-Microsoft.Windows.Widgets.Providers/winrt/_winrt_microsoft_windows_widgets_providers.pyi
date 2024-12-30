@@ -145,6 +145,9 @@ class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequ
     @_property
     def widget_id(self) -> str: ...
 
+@typing.final
+class _IWidgetManager: ...
+
 class IWidgetManager(winrt._winrt.IInspectable):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager::DeleteWidget(System.String)
     @abstractmethod
@@ -161,6 +164,9 @@ class IWidgetManager(winrt._winrt.IInspectable):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager::UpdateWidget(Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions)
     @abstractmethod
     def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
+
+@typing.final
+class _IWidgetProvider: ...
 
 class IWidgetProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::Activate(Microsoft.Windows.Widgets.Providers.WidgetContext)
@@ -182,15 +188,24 @@ class IWidgetProvider(winrt._winrt.IInspectable):
     @abstractmethod
     def on_widget_context_changed(self, context_changed_args: WidgetContextChangedArgs, /) -> None: ...
 
+@typing.final
+class _IWidgetProvider2: ...
+
 class IWidgetProvider2(winrt._winrt.IInspectable):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider2::OnCustomizationRequested(Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs)
     @abstractmethod
     def on_customization_requested(self, customization_requested_args: WidgetCustomizationRequestedArgs, /) -> None: ...
 
+@typing.final
+class _IWidgetProviderAnalytics: ...
+
 class IWidgetProviderAnalytics(winrt._winrt.IInspectable):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderAnalytics::OnAnalyticsInfoReported(Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs)
     @abstractmethod
     def on_analytics_info_reported(self, args: WidgetAnalyticsInfoReportedArgs, /) -> None: ...
+
+@typing.final
+class _IWidgetProviderErrors: ...
 
 class IWidgetProviderErrors(winrt._winrt.IInspectable):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors::OnErrorInfoReported(Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs)

@@ -16163,7 +16163,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageFile = {
-        "winrt._winrt_windows_storage.IStorageFile",
+        "winrt._winrt_windows_storage._IStorageFile",
         sizeof(py::wrapper::Windows::Storage::IStorageFile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16987,7 +16987,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageFile = {
-        "winrt._winrt_windows_storage.ImplementsIStorageFile",
+        "winrt._winrt_windows_storage.IStorageFile",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -17111,7 +17111,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageFile2 = {
-        "winrt._winrt_windows_storage.IStorageFile2",
+        "winrt._winrt_windows_storage._IStorageFile2",
         sizeof(py::wrapper::Windows::Storage::IStorageFile2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17273,7 +17273,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageFile2 = {
-        "winrt._winrt_windows_storage.ImplementsIStorageFile2",
+        "winrt._winrt_windows_storage.IStorageFile2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -17341,7 +17341,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageFilePropertiesWithAvailability = {
-        "winrt._winrt_windows_storage.IStorageFilePropertiesWithAvailability",
+        "winrt._winrt_windows_storage._IStorageFilePropertiesWithAvailability",
         sizeof(py::wrapper::Windows::Storage::IStorageFilePropertiesWithAvailability),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17447,7 +17447,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageFilePropertiesWithAvailability = {
-        "winrt._winrt_windows_storage.ImplementsIStorageFilePropertiesWithAvailability",
+        "winrt._winrt_windows_storage.IStorageFilePropertiesWithAvailability",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -18289,7 +18289,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageFolder = {
-        "winrt._winrt_windows_storage.IStorageFolder",
+        "winrt._winrt_windows_storage._IStorageFolder",
         sizeof(py::wrapper::Windows::Storage::IStorageFolder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18973,7 +18973,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageFolder = {
-        "winrt._winrt_windows_storage.ImplementsIStorageFolder",
+        "winrt._winrt_windows_storage.IStorageFolder",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -19053,7 +19053,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageFolder2 = {
-        "winrt._winrt_windows_storage.IStorageFolder2",
+        "winrt._winrt_windows_storage._IStorageFolder2",
         sizeof(py::wrapper::Windows::Storage::IStorageFolder2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19171,7 +19171,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageFolder2 = {
-        "winrt._winrt_windows_storage.ImplementsIStorageFolder2",
+        "winrt._winrt_windows_storage.IStorageFolder2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -19587,7 +19587,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageItem = {
-        "winrt._winrt_windows_storage.IStorageItem",
+        "winrt._winrt_windows_storage._IStorageItem",
         sizeof(py::wrapper::Windows::Storage::IStorageItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19945,7 +19945,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItem = {
-        "winrt._winrt_windows_storage.ImplementsIStorageItem",
+        "winrt._winrt_windows_storage.IStorageItem",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -20445,7 +20445,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageItem2 = {
-        "winrt._winrt_windows_storage.IStorageItem2",
+        "winrt._winrt_windows_storage._IStorageItem2",
         sizeof(py::wrapper::Windows::Storage::IStorageItem2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20861,7 +20861,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItem2 = {
-        "winrt._winrt_windows_storage.ImplementsIStorageItem2",
+        "winrt._winrt_windows_storage.IStorageItem2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -21154,7 +21154,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageItemProperties = {
-        "winrt._winrt_windows_storage.IStorageItemProperties",
+        "winrt._winrt_windows_storage._IStorageItemProperties",
         sizeof(py::wrapper::Windows::Storage::IStorageItemProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21446,7 +21446,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItemProperties = {
-        "winrt._winrt_windows_storage.ImplementsIStorageItemProperties",
+        "winrt._winrt_windows_storage.IStorageItemProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -21871,7 +21871,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageItemProperties2 = {
-        "winrt._winrt_windows_storage.IStorageItemProperties2",
+        "winrt._winrt_windows_storage._IStorageItemProperties2",
         sizeof(py::wrapper::Windows::Storage::IStorageItemProperties2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22289,7 +22289,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItemProperties2 = {
-        "winrt._winrt_windows_storage.ImplementsIStorageItemProperties2",
+        "winrt._winrt_windows_storage.IStorageItemProperties2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -22613,7 +22613,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStorageItemPropertiesWithProvider = {
-        "winrt._winrt_windows_storage.IStorageItemPropertiesWithProvider",
+        "winrt._winrt_windows_storage._IStorageItemPropertiesWithProvider",
         sizeof(py::wrapper::Windows::Storage::IStorageItemPropertiesWithProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22925,7 +22925,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItemPropertiesWithProvider = {
-        "winrt._winrt_windows_storage.ImplementsIStorageItemPropertiesWithProvider",
+        "winrt._winrt_windows_storage.IStorageItemPropertiesWithProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -23006,7 +23006,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_IStreamedFileDataRequest = {
-        "winrt._winrt_windows_storage.IStreamedFileDataRequest",
+        "winrt._winrt_windows_storage._IStreamedFileDataRequest",
         sizeof(py::wrapper::Windows::Storage::IStreamedFileDataRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23122,7 +23122,7 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Spec type_spec_ImplementsIStreamedFileDataRequest = {
-        "winrt._winrt_windows_storage.ImplementsIStreamedFileDataRequest",
+        "winrt._winrt_windows_storage.IStreamedFileDataRequest",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

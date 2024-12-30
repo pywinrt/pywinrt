@@ -10990,7 +10990,7 @@ namespace py::cpp::Windows::UI::Notifications
         { }};
 
     static PyType_Spec type_spec_IAdaptiveNotificationContent = {
-        "winrt._winrt_windows_ui_notifications.IAdaptiveNotificationContent",
+        "winrt._winrt_windows_ui_notifications._IAdaptiveNotificationContent",
         sizeof(py::wrapper::Windows::UI::Notifications::IAdaptiveNotificationContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11116,7 +11116,7 @@ namespace py::cpp::Windows::UI::Notifications
         { }};
 
     static PyType_Spec type_spec_ImplementsIAdaptiveNotificationContent = {
-        "winrt._winrt_windows_ui_notifications.ImplementsIAdaptiveNotificationContent",
+        "winrt._winrt_windows_ui_notifications.IAdaptiveNotificationContent",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

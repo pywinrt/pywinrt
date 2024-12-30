@@ -105,7 +105,7 @@ static class WriterExtensions
         w.WriteLine($"static PyType_Spec type_spec_{type.Name}_Static = {{");
         w.Indent++;
         w.WriteLine(
-            $"\"winrt.{type.Namespace.ToNsModuleName()}{moduleSuffix}.{type.Name}_Static\","
+            $"\"winrt.{type.PyExtModuleName}{moduleSuffix}.{type.PyWrapperTypeName}_Static\","
         );
         w.WriteLine("static_cast<int>(PyType_Type.tp_basicsize),");
         w.WriteLine("static_cast<int>(PyType_Type.tp_itemsize),");
@@ -182,7 +182,7 @@ static class WriterExtensions
         w.WriteBlankLine();
         w.WriteLine($"static PyType_Spec type_spec_{type.Name} = {{");
         w.Indent++;
-        w.WriteLine($"\"winrt.{type.Namespace.ToNsModuleName()}{moduleSuffix}.{type.Name}\",");
+        w.WriteLine($"\"winrt.{type.PyExtModuleName}{moduleSuffix}.{type.PyWrapperTypeName}\",");
 
         if (type.IsStatic)
         {
@@ -1508,10 +1508,12 @@ static class WriterExtensions
             () =>
             {
                 w.WriteLine(
-                    $"static constexpr std::string_view qualified_name = \"{type.PyModuleName}.{type.Name}\";"
+                    $"static constexpr std::string_view qualified_name = \"{type.PyModuleName}.{type.PyWrapperTypeName}\";"
                 );
                 w.WriteLine($"static constexpr const char* module_name = \"{type.PyModuleName}\";");
-                w.WriteLine($"static constexpr const char* type_name = \"{type.Name}\";");
+                w.WriteLine(
+                    $"static constexpr const char* type_name = \"{type.PyWrapperTypeName}\";"
+                );
             },
             ";"
         );

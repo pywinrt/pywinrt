@@ -39,11 +39,17 @@ from winrt._winrt_windows_applicationmodel import (
     SuspendingDeferral,
     SuspendingEventArgs,
     SuspendingOperation,
+    _IEnteredBackgroundEventArgs,
     IEnteredBackgroundEventArgs,
+    _ILeavingBackgroundEventArgs,
     ILeavingBackgroundEventArgs,
+    _IPackageCatalogStatics2,
     IPackageCatalogStatics2,
+    _ISuspendingDeferral,
     ISuspendingDeferral,
+    _ISuspendingEventArgs,
     ISuspendingEventArgs,
+    _ISuspendingOperation,
     ISuspendingOperation,
 )
 

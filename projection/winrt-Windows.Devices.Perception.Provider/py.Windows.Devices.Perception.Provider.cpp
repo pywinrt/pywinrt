@@ -2609,7 +2609,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }};
 
     static PyType_Spec type_spec_IPerceptionFrameProvider = {
-        "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProvider",
+        "winrt._winrt_windows_devices_perception_provider._IPerceptionFrameProvider",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2857,7 +2857,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIPerceptionFrameProvider = {
-        "winrt._winrt_windows_devices_perception_provider.ImplementsIPerceptionFrameProvider",
+        "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3004,7 +3004,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }};
 
     static PyType_Spec type_spec_IPerceptionFrameProviderManager = {
-        "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProviderManager",
+        "winrt._winrt_windows_devices_perception_provider._IPerceptionFrameProviderManager",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3146,7 +3146,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIPerceptionFrameProviderManager = {
-        "winrt._winrt_windows_devices_perception_provider.ImplementsIPerceptionFrameProviderManager",
+        "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProviderManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

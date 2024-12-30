@@ -4934,7 +4934,7 @@ namespace py::cpp::Windows::UI::Shell
         { }};
 
     static PyType_Spec type_spec_IAdaptiveCard = {
-        "winrt._winrt_windows_ui_shell.IAdaptiveCard",
+        "winrt._winrt_windows_ui_shell._IAdaptiveCard",
         sizeof(py::wrapper::Windows::UI::Shell::IAdaptiveCard),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5046,7 +5046,7 @@ namespace py::cpp::Windows::UI::Shell
         { }};
 
     static PyType_Spec type_spec_ImplementsIAdaptiveCard = {
-        "winrt._winrt_windows_ui_shell.ImplementsIAdaptiveCard",
+        "winrt._winrt_windows_ui_shell.IAdaptiveCard",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5126,7 +5126,7 @@ namespace py::cpp::Windows::UI::Shell
         { }};
 
     static PyType_Spec type_spec_IAdaptiveCardBuilderStatics = {
-        "winrt._winrt_windows_ui_shell.IAdaptiveCardBuilderStatics",
+        "winrt._winrt_windows_ui_shell._IAdaptiveCardBuilderStatics",
         sizeof(py::wrapper::Windows::UI::Shell::IAdaptiveCardBuilderStatics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5244,7 +5244,7 @@ namespace py::cpp::Windows::UI::Shell
         { }};
 
     static PyType_Spec type_spec_ImplementsIAdaptiveCardBuilderStatics = {
-        "winrt._winrt_windows_ui_shell.ImplementsIAdaptiveCardBuilderStatics",
+        "winrt._winrt_windows_ui_shell.IAdaptiveCardBuilderStatics",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

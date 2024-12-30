@@ -1226,9 +1226,9 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.web.webview2.core._ICoreWebView2DispatchAdapter";
         static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
-        static constexpr const char* type_name = "ICoreWebView2DispatchAdapter";
+        static constexpr const char* type_name = "_ICoreWebView2DispatchAdapter";
     };
 
     template<>

@@ -243,33 +243,33 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer.IBackgroundTransferBase";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer._IBackgroundTransferBase";
         static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
-        static constexpr const char* type_name = "IBackgroundTransferBase";
+        static constexpr const char* type_name = "_IBackgroundTransferBase";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer.IBackgroundTransferContentPartFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer._IBackgroundTransferContentPartFactory";
         static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
-        static constexpr const char* type_name = "IBackgroundTransferContentPartFactory";
+        static constexpr const char* type_name = "_IBackgroundTransferContentPartFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer.IBackgroundTransferOperation";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer._IBackgroundTransferOperation";
         static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
-        static constexpr const char* type_name = "IBackgroundTransferOperation";
+        static constexpr const char* type_name = "_IBackgroundTransferOperation";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer.IBackgroundTransferOperationPriority";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer._IBackgroundTransferOperationPriority";
         static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
-        static constexpr const char* type_name = "IBackgroundTransferOperationPriority";
+        static constexpr const char* type_name = "_IBackgroundTransferOperationPriority";
     };
 
     template<>

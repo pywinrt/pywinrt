@@ -403,7 +403,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { }};
 
     static PyType_Spec type_spec_IAdcControllerProvider = {
-        "winrt._winrt_windows_devices_adc_provider.IAdcControllerProvider",
+        "winrt._winrt_windows_devices_adc_provider._IAdcControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -736,7 +736,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIAdcControllerProvider = {
-        "winrt._winrt_windows_devices_adc_provider.ImplementsIAdcControllerProvider",
+        "winrt._winrt_windows_devices_adc_provider.IAdcControllerProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -814,7 +814,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { }};
 
     static PyType_Spec type_spec_IAdcProvider = {
-        "winrt._winrt_windows_devices_adc_provider.IAdcProvider",
+        "winrt._winrt_windows_devices_adc_provider._IAdcProvider",
         sizeof(py::wrapper::Windows::Devices::Adc::Provider::IAdcProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -926,7 +926,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIAdcProvider = {
-        "winrt._winrt_windows_devices_adc_provider.ImplementsIAdcProvider",
+        "winrt._winrt_windows_devices_adc_provider.IAdcProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

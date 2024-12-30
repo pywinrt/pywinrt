@@ -902,6 +902,9 @@ class UserWatcher(winrt.system.Object):
     @_property
     def status(self) -> UserWatcherStatus: ...
 
+@typing.final
+class _ILauncherViewOptions: ...
+
 class ILauncherViewOptions(winrt._winrt.IInspectable):
     # Windows.UI.ViewManagement.ViewSizePreference Windows.System.ILauncherViewOptions::get_DesiredRemainingView()
     @_property

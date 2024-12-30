@@ -1024,9 +1024,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.IScrollSnapPointsInfo";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives._IScrollSnapPointsInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
-        static constexpr const char* type_name = "IScrollSnapPointsInfo";
+        static constexpr const char* type_name = "_IScrollSnapPointsInfo";
     };
 
     template<>

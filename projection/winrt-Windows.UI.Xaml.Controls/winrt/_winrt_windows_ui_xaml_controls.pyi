@@ -13046,6 +13046,9 @@ class WebViewWebResourceRequestedEventArgs(winrt.system.Object):
     @_property
     def request(self) -> windows_web_http.HttpRequestMessage: ...
 
+@typing.final
+class _ICommandBarElement: ...
+
 class ICommandBarElement(winrt._winrt.IInspectable):
     # System.Boolean Windows.UI.Xaml.Controls.ICommandBarElement::get_IsCompact()
     @_property
@@ -13055,6 +13058,9 @@ class ICommandBarElement(winrt._winrt.IInspectable):
     @is_compact.setter
     @abstractmethod
     def is_compact(self, value: bool) -> None: ...
+
+@typing.final
+class _ICommandBarElement2: ...
 
 class ICommandBarElement2(winrt._winrt.IInspectable):
     # System.Int32 Windows.UI.Xaml.Controls.ICommandBarElement2::get_DynamicOverflowOrder()
@@ -13070,10 +13076,16 @@ class ICommandBarElement2(winrt._winrt.IInspectable):
     @abstractmethod
     def is_in_overflow(self) -> bool: ...
 
+@typing.final
+class _IInsertionPanel: ...
+
 class IInsertionPanel(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Controls.IInsertionPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
     @abstractmethod
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
+
+@typing.final
+class _IItemContainerMapping: ...
 
 class IItemContainerMapping(winrt._winrt.IInspectable):
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.IItemContainerMapping::ContainerFromIndex(System.Int32)
@@ -13089,10 +13101,16 @@ class IItemContainerMapping(winrt._winrt.IInspectable):
     @abstractmethod
     def item_from_container(self, container: windows_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
 
+@typing.final
+class _INavigate: ...
+
 class INavigate(winrt._winrt.IInspectable):
     # System.Boolean Windows.UI.Xaml.Controls.INavigate::Navigate(Windows.UI.Xaml.Interop.TypeName)
     @abstractmethod
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
+
+@typing.final
+class _IScrollAnchorProvider: ...
 
 class IScrollAnchorProvider(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Controls.IScrollAnchorProvider::RegisterAnchorCandidate(Windows.UI.Xaml.UIElement)
@@ -13105,6 +13123,9 @@ class IScrollAnchorProvider(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def current_anchor(self) -> windows_ui_xaml.UIElement: ...
+
+@typing.final
+class _ISemanticZoomInformation: ...
 
 class ISemanticZoomInformation(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChange()

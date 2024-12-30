@@ -84,8 +84,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess.IStorageItemInformation";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess._IStorageItemInformation";
         static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
-        static constexpr const char* type_name = "IStorageItemInformation";
+        static constexpr const char* type_name = "_IStorageItemInformation";
     };
 }

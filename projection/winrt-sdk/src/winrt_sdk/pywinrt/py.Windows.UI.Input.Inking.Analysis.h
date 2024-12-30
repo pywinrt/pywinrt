@@ -186,16 +186,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.IInkAnalysisNode";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis._IInkAnalysisNode";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "IInkAnalysisNode";
+        static constexpr const char* type_name = "_IInkAnalysisNode";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.IInkAnalyzerFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis._IInkAnalyzerFactory";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "IInkAnalyzerFactory";
+        static constexpr const char* type_name = "_IInkAnalyzerFactory";
     };
 }

@@ -27,10 +27,15 @@ from winrt._winrt_windows_ui_input_inking import (
     InkSynchronizer,
     InkUnprocessedInput,
     PenAndInkSettings,
+    _IInkPointFactory,
     IInkPointFactory,
+    _IInkPresenterRulerFactory,
     IInkPresenterRulerFactory,
+    _IInkPresenterStencil,
     IInkPresenterStencil,
+    _IInkRecognizerContainer,
     IInkRecognizerContainer,
+    _IInkStrokeContainer,
     IInkStrokeContainer,
 )
 

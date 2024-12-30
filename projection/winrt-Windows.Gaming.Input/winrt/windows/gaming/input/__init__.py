@@ -17,7 +17,9 @@ from winrt._winrt_windows_gaming_input import (
     RacingWheel,
     RawGameController,
     UINavigationController,
+    _IGameController,
     IGameController,
+    _IGameControllerBatteryInfo,
     IGameControllerBatteryInfo,
 )
 

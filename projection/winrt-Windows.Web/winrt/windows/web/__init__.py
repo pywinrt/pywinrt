@@ -5,6 +5,7 @@ import enum
 import winrt.system
 from winrt._winrt_windows_web import (
     WebError,
+    _IUriToStreamResolver,
     IUriToStreamResolver,
 )
 

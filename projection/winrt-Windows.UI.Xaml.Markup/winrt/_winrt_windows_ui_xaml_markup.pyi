@@ -122,15 +122,24 @@ class XamlReader_Static(type):
 class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
     pass
 
+@typing.final
+class _IComponentConnector: ...
+
 class IComponentConnector(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Markup.IComponentConnector::Connect(System.Int32,System.Object)
     @abstractmethod
     def connect(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> None: ...
 
+@typing.final
+class _IComponentConnector2: ...
+
 class IComponentConnector2(winrt._winrt.IInspectable):
     # Windows.UI.Xaml.Markup.IComponentConnector Windows.UI.Xaml.Markup.IComponentConnector2::GetBindingConnector(System.Int32,System.Object)
     @abstractmethod
     def get_binding_connector(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> IComponentConnector: ...
+
+@typing.final
+class _IDataTemplateComponent: ...
 
 class IDataTemplateComponent(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Markup.IDataTemplateComponent::ProcessBindings(System.Object,System.Int32,System.Int32,System.Int32&)
@@ -140,10 +149,16 @@ class IDataTemplateComponent(winrt._winrt.IInspectable):
     @abstractmethod
     def recycle(self) -> None: ...
 
+@typing.final
+class _IXamlBindScopeDiagnostics: ...
+
 class IXamlBindScopeDiagnostics(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics::Disable(System.Int32,System.Int32)
     @abstractmethod
     def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
+
+@typing.final
+class _IXamlMember: ...
 
 class IXamlMember(winrt._winrt.IInspectable):
     # System.Object Windows.UI.Xaml.Markup.IXamlMember::GetValue(System.Object)
@@ -177,6 +192,9 @@ class IXamlMember(winrt._winrt.IInspectable):
     @abstractmethod
     def type(self) -> IXamlType: ...
 
+@typing.final
+class _IXamlMetadataProvider: ...
+
 class IXamlMetadataProvider(winrt._winrt.IInspectable):
     # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlMetadataProvider::GetXamlType(Windows.UI.Xaml.Interop.TypeName)
     @abstractmethod
@@ -187,6 +205,9 @@ class IXamlMetadataProvider(winrt._winrt.IInspectable):
     # Windows.UI.Xaml.Markup.XmlnsDefinition[] Windows.UI.Xaml.Markup.IXamlMetadataProvider::GetXmlnsDefinitions()
     @abstractmethod
     def get_xmlns_definitions(self) -> winrt.system.Array[XmlnsDefinition]: ...
+
+@typing.final
+class _IXamlType: ...
 
 class IXamlType(winrt._winrt.IInspectable):
     # System.Object Windows.UI.Xaml.Markup.IXamlType::ActivateInstance()
@@ -255,6 +276,9 @@ class IXamlType(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def underlying_type(self) -> windows_ui_xaml_interop.TypeName: ...
+
+@typing.final
+class _IXamlType2: ...
 
 class IXamlType2(IXamlType, winrt._winrt.IInspectable):
     # Windows.UI.Xaml.Markup.IXamlType Windows.UI.Xaml.Markup.IXamlType2::get_BoxedType()

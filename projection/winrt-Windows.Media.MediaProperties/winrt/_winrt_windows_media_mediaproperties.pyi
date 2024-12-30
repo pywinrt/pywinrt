@@ -719,6 +719,9 @@ class Vp9ProfileIds_Static(type):
 class Vp9ProfileIds(winrt.system.Object, metaclass=Vp9ProfileIds_Static):
     pass
 
+@typing.final
+class _IMediaEncodingProperties: ...
+
 class IMediaEncodingProperties(winrt._winrt.IInspectable):
     # Windows.Media.MediaProperties.MediaPropertySet Windows.Media.MediaProperties.IMediaEncodingProperties::get_Properties()
     @_property

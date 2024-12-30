@@ -2412,11 +2412,17 @@ class UnifiedPosErrorData(winrt.system.Object):
     @_property
     def severity(self) -> UnifiedPosErrorSeverity: ...
 
+@typing.final
+class _ICashDrawerEventSourceEventArgs: ...
+
 class ICashDrawerEventSourceEventArgs(winrt._winrt.IInspectable):
     # Windows.Devices.PointOfService.CashDrawer Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs::get_CashDrawer()
     @_property
     @abstractmethod
     def cash_drawer(self) -> CashDrawer: ...
+
+@typing.final
+class _ICommonClaimedPosPrinterStation: ...
 
 class ICommonClaimedPosPrinterStation(winrt._winrt.IInspectable):
     # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::ValidateData(System.String)
@@ -2495,6 +2501,9 @@ class ICommonClaimedPosPrinterStation(winrt._winrt.IInspectable):
     @abstractmethod
     def line_width(self) -> winrt.system.UInt32: ...
 
+@typing.final
+class _ICommonPosPrintStationCapabilities: ...
+
 class ICommonPosPrintStationCapabilities(winrt._winrt.IInspectable):
     # Windows.Devices.PointOfService.PosPrinterCartridgeSensors Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_CartridgeSensors()
     @_property
@@ -2549,6 +2558,9 @@ class ICommonPosPrintStationCapabilities(winrt._winrt.IInspectable):
     @abstractmethod
     def supported_characters_per_line(self) -> typing.Sequence[winrt.system.UInt32]: ...
 
+@typing.final
+class _ICommonReceiptSlipCapabilities: ...
+
 class ICommonReceiptSlipCapabilities(ICommonPosPrintStationCapabilities, winrt._winrt.IInspectable):
     # System.Boolean Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_Is180RotationSupported()
     @_property
@@ -2587,6 +2599,9 @@ class ICommonReceiptSlipCapabilities(ICommonPosPrintStationCapabilities, winrt._
     @abstractmethod
     def supported_bitmap_rotations(self) -> typing.Sequence[PosPrinterRotation]: ...
 
+@typing.final
+class _IPosPrinterJob: ...
+
 class IPosPrinterJob(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.IPosPrinterJob::ExecuteAsync()
     @abstractmethod
@@ -2600,6 +2615,9 @@ class IPosPrinterJob(winrt._winrt.IInspectable):
     # System.Void Windows.Devices.PointOfService.IPosPrinterJob::PrintLine()
     @abstractmethod
     def print_newline(self) -> None: ...
+
+@typing.final
+class _IReceiptOrSlipJob: ...
 
 class IReceiptOrSlipJob(IPosPrinterJob, winrt._winrt.IInspectable):
     # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::DrawRuledLine(System.String,Windows.Devices.PointOfService.PosPrinterLineDirection,System.UInt32,Windows.Devices.PointOfService.PosPrinterLineStyle,System.UInt32)

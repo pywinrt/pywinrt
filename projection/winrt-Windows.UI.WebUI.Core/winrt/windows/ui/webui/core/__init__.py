@@ -13,7 +13,9 @@ from winrt._winrt_windows_ui_webui_core import (
     WebUICommandBarItemInvokedEventArgs,
     WebUICommandBarSizeChangedEventArgs,
     WebUICommandBarSymbolIcon,
+    _IWebUICommandBarElement,
     IWebUICommandBarElement,
+    _IWebUICommandBarIcon,
     IWebUICommandBarIcon,
 )
 

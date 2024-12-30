@@ -297,6 +297,9 @@ class FolderInformation(winrt.system.Object, windows_storage.IStorageItemPropert
     @_property
     def provider(self) -> windows_storage.StorageProvider: ...
 
+@typing.final
+class _IStorageItemInformation: ...
+
 class IStorageItemInformation(winrt._winrt.IInspectable):
     # Windows.Foundation.EventRegistrationToken Windows.Storage.BulkAccess.IStorageItemInformation::add_PropertiesUpdated(Windows.Foundation.TypedEventHandler`2<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object>)
     @abstractmethod

@@ -16995,7 +16995,7 @@ namespace py::cpp::Windows::Media::Playback
         { }};
 
     static PyType_Spec type_spec_IMediaEnginePlaybackSource = {
-        "winrt._winrt_windows_media_playback.IMediaEnginePlaybackSource",
+        "winrt._winrt_windows_media_playback._IMediaEnginePlaybackSource",
         sizeof(py::wrapper::Windows::Media::Playback::IMediaEnginePlaybackSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17131,7 +17131,7 @@ namespace py::cpp::Windows::Media::Playback
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaEnginePlaybackSource = {
-        "winrt._winrt_windows_media_playback.ImplementsIMediaEnginePlaybackSource",
+        "winrt._winrt_windows_media_playback.IMediaEnginePlaybackSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -17168,7 +17168,7 @@ namespace py::cpp::Windows::Media::Playback
         { }};
 
     static PyType_Spec type_spec_IMediaPlaybackSource = {
-        "winrt._winrt_windows_media_playback.IMediaPlaybackSource",
+        "winrt._winrt_windows_media_playback._IMediaPlaybackSource",
         sizeof(py::wrapper::Windows::Media::Playback::IMediaPlaybackSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17254,7 +17254,7 @@ namespace py::cpp::Windows::Media::Playback
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaPlaybackSource = {
-        "winrt._winrt_windows_media_playback.ImplementsIMediaPlaybackSource",
+        "winrt._winrt_windows_media_playback.IMediaPlaybackSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

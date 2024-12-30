@@ -9965,7 +9965,7 @@ namespace py::cpp::Windows::Web::Syndication
         { }};
 
     static PyType_Spec type_spec_ISyndicationClient = {
-        "winrt._winrt_windows_web_syndication.ISyndicationClient",
+        "winrt._winrt_windows_web_syndication._ISyndicationClient",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationClient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10340,7 +10340,7 @@ namespace py::cpp::Windows::Web::Syndication
         { }};
 
     static PyType_Spec type_spec_ImplementsISyndicationClient = {
-        "winrt._winrt_windows_web_syndication.ImplementsISyndicationClient",
+        "winrt._winrt_windows_web_syndication.ISyndicationClient",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -10832,7 +10832,7 @@ namespace py::cpp::Windows::Web::Syndication
         { }};
 
     static PyType_Spec type_spec_ISyndicationNode = {
-        "winrt._winrt_windows_web_syndication.ISyndicationNode",
+        "winrt._winrt_windows_web_syndication._ISyndicationNode",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11205,7 +11205,7 @@ namespace py::cpp::Windows::Web::Syndication
         { }};
 
     static PyType_Spec type_spec_ImplementsISyndicationNode = {
-        "winrt._winrt_windows_web_syndication.ImplementsISyndicationNode",
+        "winrt._winrt_windows_web_syndication.ISyndicationNode",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11907,7 +11907,7 @@ namespace py::cpp::Windows::Web::Syndication
         { }};
 
     static PyType_Spec type_spec_ISyndicationText = {
-        "winrt._winrt_windows_web_syndication.ISyndicationText",
+        "winrt._winrt_windows_web_syndication._ISyndicationText",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationText),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12409,7 +12409,7 @@ namespace py::cpp::Windows::Web::Syndication
         { }};
 
     static PyType_Spec type_spec_ImplementsISyndicationText = {
-        "winrt._winrt_windows_web_syndication.ImplementsISyndicationText",
+        "winrt._winrt_windows_web_syndication.ISyndicationText",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

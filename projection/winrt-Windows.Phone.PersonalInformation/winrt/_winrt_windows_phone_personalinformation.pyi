@@ -362,6 +362,9 @@ class StoredContact(winrt.system.Object, IContactInformation2, IContactInformati
     @_property
     def store(self) -> ContactStore: ...
 
+@typing.final
+class _IContactInformation: ...
+
 class IContactInformation(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Phone.PersonalInformation.IContactInformation::GetDisplayPictureAsync()
     @abstractmethod
@@ -422,6 +425,9 @@ class IContactInformation(winrt._winrt.IInspectable):
     @honorific_suffix.setter
     @abstractmethod
     def honorific_suffix(self, value: str) -> None: ...
+
+@typing.final
+class _IContactInformation2: ...
 
 class IContactInformation2(winrt._winrt.IInspectable):
     # Windows.Foundation.DateTime Windows.Phone.PersonalInformation.IContactInformation2::get_DisplayPictureDate()

@@ -2035,7 +2035,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_IRequiredFour = {
-        "winrt._winrt_testcomponent.IRequiredFour",
+        "winrt._winrt_testcomponent._IRequiredFour",
         sizeof(py::wrapper::TestComponent::IRequiredFour),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2225,7 +2225,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_ImplementsIRequiredFour = {
-        "winrt._winrt_testcomponent.ImplementsIRequiredFour",
+        "winrt._winrt_testcomponent.IRequiredFour",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2290,7 +2290,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_IRequiredOne = {
-        "winrt._winrt_testcomponent.IRequiredOne",
+        "winrt._winrt_testcomponent._IRequiredOne",
         sizeof(py::wrapper::TestComponent::IRequiredOne),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2402,7 +2402,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_ImplementsIRequiredOne = {
-        "winrt._winrt_testcomponent.ImplementsIRequiredOne",
+        "winrt._winrt_testcomponent.IRequiredOne",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2523,7 +2523,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_IRequiredThree = {
-        "winrt._winrt_testcomponent.IRequiredThree",
+        "winrt._winrt_testcomponent._IRequiredThree",
         sizeof(py::wrapper::TestComponent::IRequiredThree),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2687,7 +2687,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_ImplementsIRequiredThree = {
-        "winrt._winrt_testcomponent.ImplementsIRequiredThree",
+        "winrt._winrt_testcomponent.IRequiredThree",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2780,7 +2780,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_IRequiredTwo = {
-        "winrt._winrt_testcomponent.IRequiredTwo",
+        "winrt._winrt_testcomponent._IRequiredTwo",
         sizeof(py::wrapper::TestComponent::IRequiredTwo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2918,7 +2918,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_ImplementsIRequiredTwo = {
-        "winrt._winrt_testcomponent.ImplementsIRequiredTwo",
+        "winrt._winrt_testcomponent.IRequiredTwo",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7091,7 +7091,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_ITests = {
-        "winrt._winrt_testcomponent.ITests",
+        "winrt._winrt_testcomponent._ITests",
         sizeof(py::wrapper::TestComponent::ITests),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11629,7 +11629,7 @@ namespace py::cpp::TestComponent
         { }};
 
     static PyType_Spec type_spec_ImplementsITests = {
-        "winrt._winrt_testcomponent.ImplementsITests",
+        "winrt._winrt_testcomponent.ITests",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -7,6 +7,7 @@ from winrt._winrt_windows_graphics import (
     PointInt32,
     RectInt32,
     SizeInt32,
+    _IGeometrySource2D,
     IGeometrySource2D,
 )
 

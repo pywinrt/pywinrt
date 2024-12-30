@@ -20,9 +20,13 @@ from winrt._winrt_windows_networking_backgroundtransfer import (
     ResponseInformation,
     UnconstrainedTransferRequestResult,
     UploadOperation,
+    _IBackgroundTransferBase,
     IBackgroundTransferBase,
+    _IBackgroundTransferContentPartFactory,
     IBackgroundTransferContentPartFactory,
+    _IBackgroundTransferOperation,
     IBackgroundTransferOperation,
+    _IBackgroundTransferOperationPriority,
     IBackgroundTransferOperationPriority,
 )
 

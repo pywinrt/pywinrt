@@ -20349,7 +20349,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_IXmlCharacterData = {
-        "winrt._winrt_windows_data_xml_dom.IXmlCharacterData",
+        "winrt._winrt_windows_data_xml_dom._IXmlCharacterData",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21485,7 +21485,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_ImplementsIXmlCharacterData = {
-        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlCharacterData",
+        "winrt._winrt_windows_data_xml_dom.IXmlCharacterData",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -22619,7 +22619,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_IXmlNode = {
-        "winrt._winrt_windows_data_xml_dom.IXmlNode",
+        "winrt._winrt_windows_data_xml_dom._IXmlNode",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23486,7 +23486,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_ImplementsIXmlNode = {
-        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlNode",
+        "winrt._winrt_windows_data_xml_dom.IXmlNode",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -23697,7 +23697,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_IXmlNodeSelector = {
-        "winrt._winrt_windows_data_xml_dom.IXmlNodeSelector",
+        "winrt._winrt_windows_data_xml_dom._IXmlNodeSelector",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23935,7 +23935,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_ImplementsIXmlNodeSelector = {
-        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlNodeSelector",
+        "winrt._winrt_windows_data_xml_dom.IXmlNodeSelector",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -24083,7 +24083,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_IXmlNodeSerializer = {
-        "winrt._winrt_windows_data_xml_dom.IXmlNodeSerializer",
+        "winrt._winrt_windows_data_xml_dom._IXmlNodeSerializer",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24238,7 +24238,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_ImplementsIXmlNodeSerializer = {
-        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlNodeSerializer",
+        "winrt._winrt_windows_data_xml_dom.IXmlNodeSerializer",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -25740,7 +25740,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_IXmlText = {
-        "winrt._winrt_windows_data_xml_dom.IXmlText",
+        "winrt._winrt_windows_data_xml_dom._IXmlText",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlText),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -26908,7 +26908,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Spec type_spec_ImplementsIXmlText = {
-        "winrt._winrt_windows_data_xml_dom.ImplementsIXmlText",
+        "winrt._winrt_windows_data_xml_dom.IXmlText",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

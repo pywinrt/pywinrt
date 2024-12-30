@@ -2668,7 +2668,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }};
 
     static PyType_Spec type_spec_ICoreApplicationUnhandledError = {
-        "winrt._winrt_windows_applicationmodel_core.ICoreApplicationUnhandledError",
+        "winrt._winrt_windows_applicationmodel_core._ICoreApplicationUnhandledError",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2816,7 +2816,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICoreApplicationUnhandledError = {
-        "winrt._winrt_windows_applicationmodel_core.ImplementsICoreApplicationUnhandledError",
+        "winrt._winrt_windows_applicationmodel_core.ICoreApplicationUnhandledError",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3069,7 +3069,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }};
 
     static PyType_Spec type_spec_IFrameworkView = {
-        "winrt._winrt_windows_applicationmodel_core.IFrameworkView",
+        "winrt._winrt_windows_applicationmodel_core._IFrameworkView",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3293,7 +3293,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIFrameworkView = {
-        "winrt._winrt_windows_applicationmodel_core.ImplementsIFrameworkView",
+        "winrt._winrt_windows_applicationmodel_core.IFrameworkView",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3371,7 +3371,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }};
 
     static PyType_Spec type_spec_IFrameworkViewSource = {
-        "winrt._winrt_windows_applicationmodel_core.IFrameworkViewSource",
+        "winrt._winrt_windows_applicationmodel_core._IFrameworkViewSource",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::IFrameworkViewSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3483,7 +3483,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIFrameworkViewSource = {
-        "winrt._winrt_windows_applicationmodel_core.ImplementsIFrameworkViewSource",
+        "winrt._winrt_windows_applicationmodel_core.IFrameworkViewSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

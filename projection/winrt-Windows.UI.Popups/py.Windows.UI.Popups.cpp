@@ -1654,7 +1654,7 @@ namespace py::cpp::Windows::UI::Popups
         { }};
 
     static PyType_Spec type_spec_IUICommand = {
-        "winrt._winrt_windows_ui_popups.IUICommand",
+        "winrt._winrt_windows_ui_popups._IUICommand",
         sizeof(py::wrapper::Windows::UI::Popups::IUICommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1869,7 +1869,7 @@ namespace py::cpp::Windows::UI::Popups
         { }};
 
     static PyType_Spec type_spec_ImplementsIUICommand = {
-        "winrt._winrt_windows_ui_popups.ImplementsIUICommand",
+        "winrt._winrt_windows_ui_popups.IUICommand",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

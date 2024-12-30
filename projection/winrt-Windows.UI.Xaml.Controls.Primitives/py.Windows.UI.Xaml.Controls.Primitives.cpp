@@ -30934,7 +30934,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }};
 
     static PyType_Spec type_spec_IScrollSnapPointsInfo = {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.IScrollSnapPointsInfo",
+        "winrt._winrt_windows_ui_xaml_controls_primitives._IScrollSnapPointsInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -31274,7 +31274,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }};
 
     static PyType_Spec type_spec_ImplementsIScrollSnapPointsInfo = {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.ImplementsIScrollSnapPointsInfo",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.IScrollSnapPointsInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

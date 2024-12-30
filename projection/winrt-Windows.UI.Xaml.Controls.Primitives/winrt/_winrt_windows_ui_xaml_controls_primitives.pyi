@@ -2702,6 +2702,9 @@ class ToolTipTemplateSettings(windows_ui_xaml.DependencyObject):
     @_property
     def from_vertical_offset(self) -> winrt.system.Double: ...
 
+@typing.final
+class _IScrollSnapPointsInfo: ...
+
 class IScrollSnapPointsInfo(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     @abstractmethod

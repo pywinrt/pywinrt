@@ -3876,7 +3876,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }};
 
     static PyType_Spec type_spec_IInkAnalysisNode = {
-        "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalysisNode",
+        "winrt._winrt_windows_ui_input_inking_analysis._IInkAnalysisNode",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4108,7 +4108,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }};
 
     static PyType_Spec type_spec_ImplementsIInkAnalysisNode = {
-        "winrt._winrt_windows_ui_input_inking_analysis.ImplementsIInkAnalysisNode",
+        "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalysisNode",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4186,7 +4186,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }};
 
     static PyType_Spec type_spec_IInkAnalyzerFactory = {
-        "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalyzerFactory",
+        "winrt._winrt_windows_ui_input_inking_analysis._IInkAnalyzerFactory",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4298,7 +4298,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }};
 
     static PyType_Spec type_spec_ImplementsIInkAnalyzerFactory = {
-        "winrt._winrt_windows_ui_input_inking_analysis.ImplementsIInkAnalyzerFactory",
+        "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalyzerFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

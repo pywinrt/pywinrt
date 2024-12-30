@@ -68,8 +68,11 @@ from winrt._winrt_windows_ui_webui import (
     WebUIWalletActionActivatedEventArgs,
     WebUIWebAccountProviderActivatedEventArgs,
     WebUIWebAuthenticationBrokerContinuationEventArgs,
+    _IActivatedEventArgsDeferral,
     IActivatedEventArgsDeferral,
+    _IWebUIBackgroundTaskInstance,
     IWebUIBackgroundTaskInstance,
+    _IWebUINavigatedEventArgs,
     IWebUINavigatedEventArgs,
 )
 

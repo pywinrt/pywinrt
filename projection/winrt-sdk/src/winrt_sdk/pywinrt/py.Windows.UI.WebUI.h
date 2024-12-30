@@ -1043,25 +1043,25 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.IActivatedEventArgsDeferral";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui._IActivatedEventArgsDeferral";
         static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "IActivatedEventArgsDeferral";
+        static constexpr const char* type_name = "_IActivatedEventArgsDeferral";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.IWebUIBackgroundTaskInstance";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui._IWebUIBackgroundTaskInstance";
         static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "IWebUIBackgroundTaskInstance";
+        static constexpr const char* type_name = "_IWebUIBackgroundTaskInstance";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.IWebUINavigatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui._IWebUINavigatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "IWebUINavigatedEventArgs";
+        static constexpr const char* type_name = "_IWebUINavigatedEventArgs";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::WebUI::ActivatedEventHandler>

@@ -14787,7 +14787,7 @@ namespace py::cpp::Windows::Media::Devices
         { }};
 
     static PyType_Spec type_spec_IDefaultAudioDeviceChangedEventArgs = {
-        "winrt._winrt_windows_media_devices.IDefaultAudioDeviceChangedEventArgs",
+        "winrt._winrt_windows_media_devices._IDefaultAudioDeviceChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14913,7 +14913,7 @@ namespace py::cpp::Windows::Media::Devices
         { }};
 
     static PyType_Spec type_spec_ImplementsIDefaultAudioDeviceChangedEventArgs = {
-        "winrt._winrt_windows_media_devices.ImplementsIDefaultAudioDeviceChangedEventArgs",
+        "winrt._winrt_windows_media_devices.IDefaultAudioDeviceChangedEventArgs",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -15080,7 +15080,7 @@ namespace py::cpp::Windows::Media::Devices
         { }};
 
     static PyType_Spec type_spec_IMediaDeviceController = {
-        "winrt._winrt_windows_media_devices.IMediaDeviceController",
+        "winrt._winrt_windows_media_devices._IMediaDeviceController",
         sizeof(py::wrapper::Windows::Media::Devices::IMediaDeviceController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15274,7 +15274,7 @@ namespace py::cpp::Windows::Media::Devices
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaDeviceController = {
-        "winrt._winrt_windows_media_devices.ImplementsIMediaDeviceController",
+        "winrt._winrt_windows_media_devices.IMediaDeviceController",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

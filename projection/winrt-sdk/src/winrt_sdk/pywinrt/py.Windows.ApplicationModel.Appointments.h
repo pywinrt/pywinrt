@@ -410,8 +410,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.IAppointmentParticipant";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments._IAppointmentParticipant";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
-        static constexpr const char* type_name = "IAppointmentParticipant";
+        static constexpr const char* type_name = "_IAppointmentParticipant";
     };
 }

@@ -10,6 +10,7 @@ from winrt._winrt_windows_ui_popups import (
     PopupMenu,
     UICommand,
     UICommandSeparator,
+    _IUICommand,
     IUICommand,
 )
 

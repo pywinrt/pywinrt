@@ -393,16 +393,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.IDeviceEnumerationSettings";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration._IDeviceEnumerationSettings";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
-        static constexpr const char* type_name = "IDeviceEnumerationSettings";
+        static constexpr const char* type_name = "_IDeviceEnumerationSettings";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.IDevicePairingSettings";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration._IDevicePairingSettings";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
-        static constexpr const char* type_name = "IDevicePairingSettings";
+        static constexpr const char* type_name = "_IDevicePairingSettings";
     };
 }

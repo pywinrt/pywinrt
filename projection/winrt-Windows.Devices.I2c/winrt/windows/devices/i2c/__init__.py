@@ -8,6 +8,7 @@ from winrt._winrt_windows_devices_i2c import (
     I2cConnectionSettings,
     I2cController,
     I2cDevice,
+    _II2cDeviceStatics,
     II2cDeviceStatics,
 )
 

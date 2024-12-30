@@ -14,6 +14,7 @@ from winrt._winrt_windows_applicationmodel_useractivities import (
     UserActivitySession,
     UserActivitySessionHistoryItem,
     UserActivityVisualElements,
+    _IUserActivityContentInfo,
     IUserActivityContentInfo,
 )
 

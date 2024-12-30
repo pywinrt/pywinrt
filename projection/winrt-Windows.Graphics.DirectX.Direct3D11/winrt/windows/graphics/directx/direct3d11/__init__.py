@@ -6,7 +6,9 @@ import winrt.system
 from winrt._winrt_windows_graphics_directx_direct3d11 import (
     Direct3DMultisampleDescription,
     Direct3DSurfaceDescription,
+    _IDirect3DDevice,
     IDirect3DDevice,
+    _IDirect3DSurface,
     IDirect3DSurface,
 )
 

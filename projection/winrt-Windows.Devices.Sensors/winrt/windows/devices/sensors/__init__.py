@@ -73,7 +73,9 @@ from winrt._winrt_windows_devices_sensors import (
     SimpleOrientationSensor,
     SimpleOrientationSensorOrientationChangedEventArgs,
     WakeOnApproachOptions,
+    _IHumanPresenceSensorExtension,
     IHumanPresenceSensorExtension,
+    _ISensorDataThreshold,
     ISensorDataThreshold,
 )
 

@@ -197,8 +197,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::IWebAccount>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.IWebAccount";
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials._IWebAccount";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
-        static constexpr const char* type_name = "IWebAccount";
+        static constexpr const char* type_name = "_IWebAccount";
     };
 }

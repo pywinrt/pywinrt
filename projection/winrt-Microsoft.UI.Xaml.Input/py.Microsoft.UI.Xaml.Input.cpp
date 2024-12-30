@@ -11667,7 +11667,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { }};
 
     static PyType_Spec type_spec_ICommand = {
-        "winrt._winrt_microsoft_ui_xaml_input.ICommand",
+        "winrt._winrt_microsoft_ui_xaml_input._ICommand",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Input::ICommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11877,7 +11877,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { }};
 
     static PyType_Spec type_spec_ImplementsICommand = {
-        "winrt._winrt_microsoft_ui_xaml_input.ImplementsICommand",
+        "winrt._winrt_microsoft_ui_xaml_input.ICommand",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

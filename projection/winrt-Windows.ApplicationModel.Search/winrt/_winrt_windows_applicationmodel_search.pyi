@@ -250,6 +250,9 @@ class SearchSuggestionsRequestDeferral(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral::Complete()
     def complete(self) -> None: ...
 
+@typing.final
+class _ISearchPaneQueryChangedEventArgs: ...
+
 class ISearchPaneQueryChangedEventArgs(winrt._winrt.IInspectable):
     # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_Language()
     @_property

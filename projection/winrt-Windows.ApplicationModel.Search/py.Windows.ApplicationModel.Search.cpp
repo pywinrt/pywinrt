@@ -3304,7 +3304,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }};
 
     static PyType_Spec type_spec_ISearchPaneQueryChangedEventArgs = {
-        "winrt._winrt_windows_applicationmodel_search.ISearchPaneQueryChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_search._ISearchPaneQueryChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3450,7 +3450,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }};
 
     static PyType_Spec type_spec_ImplementsISearchPaneQueryChangedEventArgs = {
-        "winrt._winrt_windows_applicationmodel_search.ImplementsISearchPaneQueryChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_search.ISearchPaneQueryChangedEventArgs",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -31,10 +31,16 @@ class Direct3DSurfaceDescription:
     multisample_description: Direct3DMultisampleDescription
     def __init__(self, width: winrt.system.Int32 = 0, height: winrt.system.Int32 = 0, format: windows_graphics_directx.DirectXPixelFormat = windows_graphics_directx.DirectXPixelFormat(0), multisample_description: Direct3DMultisampleDescription = Direct3DMultisampleDescription()) -> None: ...
 
+@typing.final
+class _IDirect3DDevice: ...
+
 class IDirect3DDevice(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # System.Void Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice::Trim()
     @abstractmethod
     def trim(self) -> None: ...
+
+@typing.final
+class _IDirect3DSurface: ...
 
 class IDirect3DSurface(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface::get_Description()

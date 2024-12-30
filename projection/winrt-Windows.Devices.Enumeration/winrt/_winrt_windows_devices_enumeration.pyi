@@ -469,8 +469,14 @@ class EnclosureLocation(winrt.system.Object):
     @_property
     def rotation_angle_in_degrees_clockwise(self) -> winrt.system.UInt32: ...
 
+@typing.final
+class _IDeviceEnumerationSettings: ...
+
 class IDeviceEnumerationSettings(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
+
+@typing.final
+class _IDevicePairingSettings: ...
 
 class IDevicePairingSettings(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass

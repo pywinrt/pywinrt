@@ -352,13 +352,22 @@ class StandardPrintTaskOptions_Static(type):
 class StandardPrintTaskOptions(winrt.system.Object, metaclass=StandardPrintTaskOptions_Static):
     pass
 
+@typing.final
+class _IPrintDocumentSource: ...
+
 class IPrintDocumentSource(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
+
+@typing.final
+class _IPrintTaskOptionsCore: ...
 
 class IPrintTaskOptionsCore(winrt._winrt.IInspectable):
     # Windows.Graphics.Printing.PrintPageDescription Windows.Graphics.Printing.IPrintTaskOptionsCore::GetPageDescription(System.UInt32)
     @abstractmethod
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
+
+@typing.final
+class _IPrintTaskOptionsCoreProperties: ...
 
 class IPrintTaskOptionsCoreProperties(winrt._winrt.IInspectable):
     # Windows.Graphics.Printing.PrintBinding Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_Binding()
@@ -457,6 +466,9 @@ class IPrintTaskOptionsCoreProperties(winrt._winrt.IInspectable):
     @staple.setter
     @abstractmethod
     def staple(self, value: PrintStaple) -> None: ...
+
+@typing.final
+class _IPrintTaskOptionsCoreUIConfiguration: ...
 
 class IPrintTaskOptionsCoreUIConfiguration(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration::get_DisplayedOptions()

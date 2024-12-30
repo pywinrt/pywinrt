@@ -2027,7 +2027,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_IWidgetManager = {
-        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetManager",
+        "winrt._winrt_microsoft_windows_widgets_providers._IWidgetManager",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2259,7 +2259,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIWidgetManager = {
-        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetManager",
+        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2561,7 +2561,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_IWidgetProvider = {
-        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProvider",
+        "winrt._winrt_microsoft_windows_widgets_providers._IWidgetProvider",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2839,7 +2839,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIWidgetProvider = {
-        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetProvider",
+        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2920,7 +2920,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_IWidgetProvider2 = {
-        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProvider2",
+        "winrt._winrt_microsoft_windows_widgets_providers._IWidgetProvider2",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3036,7 +3036,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIWidgetProvider2 = {
-        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetProvider2",
+        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProvider2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3117,7 +3117,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_IWidgetProviderAnalytics = {
-        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProviderAnalytics",
+        "winrt._winrt_microsoft_windows_widgets_providers._IWidgetProviderAnalytics",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3233,7 +3233,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIWidgetProviderAnalytics = {
-        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetProviderAnalytics",
+        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProviderAnalytics",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3314,7 +3314,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_IWidgetProviderErrors = {
-        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProviderErrors",
+        "winrt._winrt_microsoft_windows_widgets_providers._IWidgetProviderErrors",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3430,7 +3430,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIWidgetProviderErrors = {
-        "winrt._winrt_microsoft_windows_widgets_providers.ImplementsIWidgetProviderErrors",
+        "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProviderErrors",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

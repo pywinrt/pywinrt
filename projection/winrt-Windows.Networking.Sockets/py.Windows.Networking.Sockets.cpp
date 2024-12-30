@@ -11614,7 +11614,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_IControlChannelTriggerEventDetails = {
-        "winrt._winrt_windows_networking_sockets.IControlChannelTriggerEventDetails",
+        "winrt._winrt_windows_networking_sockets._IControlChannelTriggerEventDetails",
         sizeof(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11720,7 +11720,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_ImplementsIControlChannelTriggerEventDetails = {
-        "winrt._winrt_windows_networking_sockets.ImplementsIControlChannelTriggerEventDetails",
+        "winrt._winrt_windows_networking_sockets.IControlChannelTriggerEventDetails",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11850,7 +11850,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_IControlChannelTriggerResetEventDetails = {
-        "winrt._winrt_windows_networking_sockets.IControlChannelTriggerResetEventDetails",
+        "winrt._winrt_windows_networking_sockets._IControlChannelTriggerResetEventDetails",
         sizeof(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11996,7 +11996,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_ImplementsIControlChannelTriggerResetEventDetails = {
-        "winrt._winrt_windows_networking_sockets.ImplementsIControlChannelTriggerResetEventDetails",
+        "winrt._winrt_windows_networking_sockets.IControlChannelTriggerResetEventDetails",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -12331,7 +12331,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_IWebSocket = {
-        "winrt._winrt_windows_networking_sockets.IWebSocket",
+        "winrt._winrt_windows_networking_sockets._IWebSocket",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocket),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12639,7 +12639,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebSocket = {
-        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocket",
+        "winrt._winrt_windows_networking_sockets.IWebSocket",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -12917,7 +12917,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_IWebSocketControl = {
-        "winrt._winrt_windows_networking_sockets.IWebSocketControl",
+        "winrt._winrt_windows_networking_sockets._IWebSocketControl",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13152,7 +13152,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebSocketControl = {
-        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocketControl",
+        "winrt._winrt_windows_networking_sockets.IWebSocketControl",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -13461,7 +13461,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_IWebSocketControl2 = {
-        "winrt._winrt_windows_networking_sockets.IWebSocketControl2",
+        "winrt._winrt_windows_networking_sockets._IWebSocketControl2",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketControl2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13716,7 +13716,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebSocketControl2 = {
-        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocketControl2",
+        "winrt._winrt_windows_networking_sockets.IWebSocketControl2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -13846,7 +13846,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_IWebSocketInformation = {
-        "winrt._winrt_windows_networking_sockets.IWebSocketInformation",
+        "winrt._winrt_windows_networking_sockets._IWebSocketInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13992,7 +13992,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebSocketInformation = {
-        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocketInformation",
+        "winrt._winrt_windows_networking_sockets.IWebSocketInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -14246,7 +14246,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_IWebSocketInformation2 = {
-        "winrt._winrt_windows_networking_sockets.IWebSocketInformation2",
+        "winrt._winrt_windows_networking_sockets._IWebSocketInformation2",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14472,7 +14472,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebSocketInformation2 = {
-        "winrt._winrt_windows_networking_sockets.ImplementsIWebSocketInformation2",
+        "winrt._winrt_windows_networking_sockets.IWebSocketInformation2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

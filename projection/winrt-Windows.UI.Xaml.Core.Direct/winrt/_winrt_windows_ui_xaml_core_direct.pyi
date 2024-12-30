@@ -132,6 +132,9 @@ class XamlDirect(winrt.system.Object, metaclass=XamlDirect_Static):
     # System.Void Windows.UI.Xaml.Core.Direct.XamlDirect::SetXamlDirectObjectProperty(Windows.UI.Xaml.Core.Direct.IXamlDirectObject,Windows.UI.Xaml.Core.Direct.XamlPropertyIndex,Windows.UI.Xaml.Core.Direct.IXamlDirectObject)
     def set_xaml_direct_object_property(self, xaml_direct_object: IXamlDirectObject, property_index: XamlPropertyIndex, value: IXamlDirectObject, /) -> None: ...
 
+@typing.final
+class _IXamlDirectObject: ...
+
 class IXamlDirectObject(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 

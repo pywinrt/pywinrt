@@ -41,6 +41,7 @@ from winrt._winrt_windows_ui_notifications import (
     ToastNotifier,
     UserNotification,
     UserNotificationChangedEventArgs,
+    _IAdaptiveNotificationContent,
     IAdaptiveNotificationContent,
 )
 

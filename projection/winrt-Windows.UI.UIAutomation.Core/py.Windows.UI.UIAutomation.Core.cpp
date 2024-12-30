@@ -1835,7 +1835,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }};
 
     static PyType_Spec type_spec_ICoreAutomationConnectionBoundObjectProvider = {
-        "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationConnectionBoundObjectProvider",
+        "winrt._winrt_windows_ui_uiautomation_core._ICoreAutomationConnectionBoundObjectProvider",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1941,7 +1941,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICoreAutomationConnectionBoundObjectProvider = {
-        "winrt._winrt_windows_ui_uiautomation_core.ImplementsICoreAutomationConnectionBoundObjectProvider",
+        "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationConnectionBoundObjectProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2067,7 +2067,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }};
 
     static PyType_Spec type_spec_ICoreAutomationRemoteOperationExtensionProvider = {
-        "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationRemoteOperationExtensionProvider",
+        "winrt._winrt_windows_ui_uiautomation_core._ICoreAutomationRemoteOperationExtensionProvider",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2233,7 +2233,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICoreAutomationRemoteOperationExtensionProvider = {
-        "winrt._winrt_windows_ui_uiautomation_core.ImplementsICoreAutomationRemoteOperationExtensionProvider",
+        "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationRemoteOperationExtensionProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

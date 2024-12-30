@@ -1071,49 +1071,49 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.ICashDrawerEventSourceEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice._ICashDrawerEventSourceEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
-        static constexpr const char* type_name = "ICashDrawerEventSourceEventArgs";
+        static constexpr const char* type_name = "_ICashDrawerEventSourceEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.ICommonClaimedPosPrinterStation";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice._ICommonClaimedPosPrinterStation";
         static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
-        static constexpr const char* type_name = "ICommonClaimedPosPrinterStation";
+        static constexpr const char* type_name = "_ICommonClaimedPosPrinterStation";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.ICommonPosPrintStationCapabilities";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice._ICommonPosPrintStationCapabilities";
         static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
-        static constexpr const char* type_name = "ICommonPosPrintStationCapabilities";
+        static constexpr const char* type_name = "_ICommonPosPrintStationCapabilities";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.ICommonReceiptSlipCapabilities";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice._ICommonReceiptSlipCapabilities";
         static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
-        static constexpr const char* type_name = "ICommonReceiptSlipCapabilities";
+        static constexpr const char* type_name = "_ICommonReceiptSlipCapabilities";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::PointOfService::IPosPrinterJob>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.IPosPrinterJob";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice._IPosPrinterJob";
         static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
-        static constexpr const char* type_name = "IPosPrinterJob";
+        static constexpr const char* type_name = "_IPosPrinterJob";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.IReceiptOrSlipJob";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice._IReceiptOrSlipJob";
         static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
-        static constexpr const char* type_name = "IReceiptOrSlipJob";
+        static constexpr const char* type_name = "_IReceiptOrSlipJob";
     };
 
     template<>

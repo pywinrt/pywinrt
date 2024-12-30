@@ -283,16 +283,16 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions._ICompositionInteractionSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
-        static constexpr const char* type_name = "ICompositionInteractionSource";
+        static constexpr const char* type_name = "_ICompositionInteractionSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerOwner>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.IInteractionTrackerOwner";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions._IInteractionTrackerOwner";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
-        static constexpr const char* type_name = "IInteractionTrackerOwner";
+        static constexpr const char* type_name = "_IInteractionTrackerOwner";
     };
 }

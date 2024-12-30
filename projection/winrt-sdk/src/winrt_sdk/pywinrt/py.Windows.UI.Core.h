@@ -500,65 +500,65 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::ICoreAcceleratorKeys>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICoreAcceleratorKeys";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core._ICoreAcceleratorKeys";
         static constexpr const char* module_name = "winrt.windows.ui.core";
-        static constexpr const char* type_name = "ICoreAcceleratorKeys";
+        static constexpr const char* type_name = "_ICoreAcceleratorKeys";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::ICoreInputSourceBase>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICoreInputSourceBase";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core._ICoreInputSourceBase";
         static constexpr const char* module_name = "winrt.windows.ui.core";
-        static constexpr const char* type_name = "ICoreInputSourceBase";
+        static constexpr const char* type_name = "_ICoreInputSourceBase";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::ICorePointerInputSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICorePointerInputSource";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core._ICorePointerInputSource";
         static constexpr const char* module_name = "winrt.windows.ui.core";
-        static constexpr const char* type_name = "ICorePointerInputSource";
+        static constexpr const char* type_name = "_ICorePointerInputSource";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::ICorePointerInputSource2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICorePointerInputSource2";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core._ICorePointerInputSource2";
         static constexpr const char* module_name = "winrt.windows.ui.core";
-        static constexpr const char* type_name = "ICorePointerInputSource2";
+        static constexpr const char* type_name = "_ICorePointerInputSource2";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::ICorePointerRedirector>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICorePointerRedirector";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core._ICorePointerRedirector";
         static constexpr const char* module_name = "winrt.windows.ui.core";
-        static constexpr const char* type_name = "ICorePointerRedirector";
+        static constexpr const char* type_name = "_ICorePointerRedirector";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::ICoreWindow>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICoreWindow";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core._ICoreWindow";
         static constexpr const char* module_name = "winrt.windows.ui.core";
-        static constexpr const char* type_name = "ICoreWindow";
+        static constexpr const char* type_name = "_ICoreWindow";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::ICoreWindowEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICoreWindowEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core._ICoreWindowEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
-        static constexpr const char* type_name = "ICoreWindowEventArgs";
+        static constexpr const char* type_name = "_ICoreWindowEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Core::IInitializeWithCoreWindow>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.IInitializeWithCoreWindow";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core._IInitializeWithCoreWindow";
         static constexpr const char* module_name = "winrt.windows.ui.core";
-        static constexpr const char* type_name = "IInitializeWithCoreWindow";
+        static constexpr const char* type_name = "_IInitializeWithCoreWindow";
     };
 
     template<>

@@ -24,6 +24,7 @@ from winrt._winrt_windows_phone_notification_management import (
     TextResponse,
     ToastNotificationTriggerDetails,
     VolumeInfo,
+    _IAccessoryNotificationTriggerDetails,
     IAccessoryNotificationTriggerDetails,
 )
 

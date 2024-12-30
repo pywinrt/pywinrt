@@ -2813,7 +2813,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }};
 
     static PyType_Spec type_spec_ISystemBackdropController = {
-        "winrt._winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropController",
+        "winrt._winrt_microsoft_ui_composition_systembackdrops._ISystemBackdropController",
         sizeof(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3011,7 +3011,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }};
 
     static PyType_Spec type_spec_ImplementsISystemBackdropController = {
-        "winrt._winrt_microsoft_ui_composition_systembackdrops.ImplementsISystemBackdropController",
+        "winrt._winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropController",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3473,7 +3473,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }};
 
     static PyType_Spec type_spec_ISystemBackdropControllerWithTargets = {
-        "winrt._winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropControllerWithTargets",
+        "winrt._winrt_microsoft_ui_composition_systembackdrops._ISystemBackdropControllerWithTargets",
         sizeof(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3871,7 +3871,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }};
 
     static PyType_Spec type_spec_ImplementsISystemBackdropControllerWithTargets = {
-        "winrt._winrt_microsoft_ui_composition_systembackdrops.ImplementsISystemBackdropControllerWithTargets",
+        "winrt._winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropControllerWithTargets",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

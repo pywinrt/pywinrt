@@ -137,8 +137,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.IForceFeedbackEffect";
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback._IForceFeedbackEffect";
         static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "IForceFeedbackEffect";
+        static constexpr const char* type_name = "_IForceFeedbackEffect";
     };
 }

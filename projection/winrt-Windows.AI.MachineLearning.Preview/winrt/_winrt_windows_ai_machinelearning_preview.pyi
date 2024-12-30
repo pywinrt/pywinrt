@@ -249,6 +249,9 @@ class TensorVariableDescriptorPreview(winrt.system.Object, ILearningModelVariabl
     @_property
     def shape(self) -> typing.Iterable[winrt.system.Int64]: ...
 
+@typing.final
+class _ILearningModelVariableDescriptorPreview: ...
+
 class ILearningModelVariableDescriptorPreview(winrt._winrt.IInspectable):
     # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Description()
     @_property

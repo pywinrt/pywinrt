@@ -13509,7 +13509,7 @@ namespace py::cpp::Microsoft::UI::Input
         { }};
 
     static PyType_Spec type_spec_IPointerPointTransform = {
-        "winrt._winrt_microsoft_ui_input.IPointerPointTransform",
+        "winrt._winrt_microsoft_ui_input._IPointerPointTransform",
         sizeof(py::wrapper::Microsoft::UI::Input::IPointerPointTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13683,7 +13683,7 @@ namespace py::cpp::Microsoft::UI::Input
         { }};
 
     static PyType_Spec type_spec_ImplementsIPointerPointTransform = {
-        "winrt._winrt_microsoft_ui_input.ImplementsIPointerPointTransform",
+        "winrt._winrt_microsoft_ui_input.IPointerPointTransform",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

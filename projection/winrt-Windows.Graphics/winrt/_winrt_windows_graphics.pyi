@@ -44,6 +44,9 @@ class SizeInt32:
     height: winrt.system.Int32
     def __init__(self, width: winrt.system.Int32 = 0, height: winrt.system.Int32 = 0) -> None: ...
 
+@typing.final
+class _IGeometrySource2D: ...
+
 class IGeometrySource2D(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 

@@ -14,10 +14,15 @@ from winrt._winrt_testcomponent import (
     OverloadClass,
     Override,
     TestRunner,
+    _IRequiredFour,
     IRequiredFour,
+    _IRequiredOne,
     IRequiredOne,
+    _IRequiredThree,
     IRequiredThree,
+    _IRequiredTwo,
     IRequiredTwo,
+    _ITests,
     ITests,
 )
 from typing import TYPE_CHECKING

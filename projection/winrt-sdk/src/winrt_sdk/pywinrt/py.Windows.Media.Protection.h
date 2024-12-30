@@ -317,9 +317,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.IMediaProtectionServiceRequest";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection._IMediaProtectionServiceRequest";
         static constexpr const char* module_name = "winrt.windows.media.protection";
-        static constexpr const char* type_name = "IMediaProtectionServiceRequest";
+        static constexpr const char* type_name = "_IMediaProtectionServiceRequest";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler>

@@ -422,6 +422,9 @@ class UINavigationController(winrt.system.Object, IGameControllerBatteryInfo, IG
     @_property
     def user(self) -> windows_system.User: ...
 
+@typing.final
+class _IGameController: ...
+
 class IGameController(winrt._winrt.IInspectable):
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.IGameController::add_HeadsetConnected(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset>)
     @abstractmethod
@@ -453,6 +456,9 @@ class IGameController(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def user(self) -> windows_system.User: ...
+
+@typing.final
+class _IGameControllerBatteryInfo: ...
 
 class IGameControllerBatteryInfo(winrt._winrt.IInspectable):
     # Windows.Devices.Power.BatteryReport Windows.Gaming.Input.IGameControllerBatteryInfo::TryGetBatteryReport()

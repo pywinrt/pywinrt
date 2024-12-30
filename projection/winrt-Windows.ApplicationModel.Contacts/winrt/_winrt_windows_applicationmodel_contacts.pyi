@@ -1408,6 +1408,9 @@ class PinnedContactManager(winrt.system.Object, metaclass=PinnedContactManager_S
     @_property
     def user(self) -> windows_system.User: ...
 
+@typing.final
+class _IContactField: ...
+
 class IContactField(winrt._winrt.IInspectable):
     # Windows.ApplicationModel.Contacts.ContactFieldCategory Windows.ApplicationModel.Contacts.IContactField::get_Category()
     @_property
@@ -1426,6 +1429,9 @@ class IContactField(winrt._winrt.IInspectable):
     @abstractmethod
     def value(self) -> str: ...
 
+@typing.final
+class _IContactFieldFactory: ...
+
 class IContactFieldFactory(winrt._winrt.IInspectable):
     # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
     @abstractmethod
@@ -1437,6 +1443,9 @@ class IContactFieldFactory(winrt._winrt.IInspectable):
     @abstractmethod
     def create_field_default(self, value: str, type: ContactFieldType, /) -> ContactField: ...
 
+@typing.final
+class _IContactInstantMessageFieldFactory: ...
+
 class IContactInstantMessageFieldFactory(winrt._winrt.IInspectable):
     # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,Windows.Foundation.Uri)
     @abstractmethod
@@ -1447,6 +1456,9 @@ class IContactInstantMessageFieldFactory(winrt._winrt.IInspectable):
     # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String)
     @abstractmethod
     def create_instant_message_default(self, user_name: str, /) -> ContactInstantMessageField: ...
+
+@typing.final
+class _IContactLocationFieldFactory: ...
 
 class IContactLocationFieldFactory(winrt._winrt.IInspectable):
     # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,System.String,System.String,System.String)

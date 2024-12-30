@@ -9705,7 +9705,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_IInkPointFactory = {
-        "winrt._winrt_windows_ui_input_inking.IInkPointFactory",
+        "winrt._winrt_windows_ui_input_inking._IInkPointFactory",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkPointFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9835,7 +9835,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_ImplementsIInkPointFactory = {
-        "winrt._winrt_windows_ui_input_inking.ImplementsIInkPointFactory",
+        "winrt._winrt_windows_ui_input_inking.IInkPointFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -9915,7 +9915,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_IInkPresenterRulerFactory = {
-        "winrt._winrt_windows_ui_input_inking.IInkPresenterRulerFactory",
+        "winrt._winrt_windows_ui_input_inking._IInkPresenterRulerFactory",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkPresenterRulerFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10033,7 +10033,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_ImplementsIInkPresenterRulerFactory = {
-        "winrt._winrt_windows_ui_input_inking.ImplementsIInkPresenterRulerFactory",
+        "winrt._winrt_windows_ui_input_inking.IInkPresenterRulerFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -10381,7 +10381,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_IInkPresenterStencil = {
-        "winrt._winrt_windows_ui_input_inking.IInkPresenterStencil",
+        "winrt._winrt_windows_ui_input_inking._IInkPresenterStencil",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10659,7 +10659,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_ImplementsIInkPresenterStencil = {
-        "winrt._winrt_windows_ui_input_inking.ImplementsIInkPresenterStencil",
+        "winrt._winrt_windows_ui_input_inking.IInkPresenterStencil",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -10825,7 +10825,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_IInkRecognizerContainer = {
-        "winrt._winrt_windows_ui_input_inking.IInkRecognizerContainer",
+        "winrt._winrt_windows_ui_input_inking._IInkRecognizerContainer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkRecognizerContainer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11011,7 +11011,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_ImplementsIInkRecognizerContainer = {
-        "winrt._winrt_windows_ui_input_inking.ImplementsIInkRecognizerContainer",
+        "winrt._winrt_windows_ui_input_inking.IInkRecognizerContainer",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11632,7 +11632,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_IInkStrokeContainer = {
-        "winrt._winrt_windows_ui_input_inking.IInkStrokeContainer",
+        "winrt._winrt_windows_ui_input_inking._IInkStrokeContainer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12130,7 +12130,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Spec type_spec_ImplementsIInkStrokeContainer = {
-        "winrt._winrt_windows_ui_input_inking.ImplementsIInkStrokeContainer",
+        "winrt._winrt_windows_ui_input_inking.IInkStrokeContainer",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

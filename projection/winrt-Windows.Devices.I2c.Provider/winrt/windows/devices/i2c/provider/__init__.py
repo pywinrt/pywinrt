@@ -6,8 +6,11 @@ import winrt.system
 from winrt._winrt_windows_devices_i2c_provider import (
     ProviderI2cTransferResult,
     ProviderI2cConnectionSettings,
+    _II2cControllerProvider,
     II2cControllerProvider,
+    _II2cDeviceProvider,
     II2cDeviceProvider,
+    _II2cProvider,
     II2cProvider,
 )
 

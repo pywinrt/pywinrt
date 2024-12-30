@@ -71,6 +71,7 @@ from winrt._winrt_microsoft_web_webview2_core import (
     CoreWebView2WebResourceResponseReceivedEventArgs,
     CoreWebView2WebResourceResponseView,
     CoreWebView2WindowFeatures,
+    _ICoreWebView2DispatchAdapter,
     ICoreWebView2DispatchAdapter,
 )
 from typing import TYPE_CHECKING

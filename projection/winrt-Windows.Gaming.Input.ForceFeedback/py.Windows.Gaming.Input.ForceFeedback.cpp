@@ -2276,7 +2276,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { }};
 
     static PyType_Spec type_spec_IForceFeedbackEffect = {
-        "winrt._winrt_windows_gaming_input_forcefeedback.IForceFeedbackEffect",
+        "winrt._winrt_windows_gaming_input_forcefeedback._IForceFeedbackEffect",
         sizeof(py::wrapper::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2473,7 +2473,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { }};
 
     static PyType_Spec type_spec_ImplementsIForceFeedbackEffect = {
-        "winrt._winrt_windows_gaming_input_forcefeedback.ImplementsIForceFeedbackEffect",
+        "winrt._winrt_windows_gaming_input_forcefeedback.IForceFeedbackEffect",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

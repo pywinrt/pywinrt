@@ -18,8 +18,11 @@ from winrt._winrt_windows_web_syndication import (
     SyndicationNode,
     SyndicationPerson,
     SyndicationText,
+    _ISyndicationClient,
     ISyndicationClient,
+    _ISyndicationNode,
     ISyndicationNode,
+    _ISyndicationText,
     ISyndicationText,
 )
 

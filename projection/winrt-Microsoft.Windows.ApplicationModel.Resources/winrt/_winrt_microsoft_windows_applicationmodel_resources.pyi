@@ -143,11 +143,17 @@ class ResourceNotFoundEventArgs(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
+class _IResourceContext: ...
+
 class IResourceContext(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.ApplicationModel.Resources.IResourceContext::get_QualifierValues()
     @_property
     @abstractmethod
     def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
+
+@typing.final
+class _IResourceManager: ...
 
 class IResourceManager(winrt._winrt.IInspectable):
     # Microsoft.Windows.ApplicationModel.Resources.ResourceContext Microsoft.Windows.ApplicationModel.Resources.IResourceManager::CreateResourceContext()

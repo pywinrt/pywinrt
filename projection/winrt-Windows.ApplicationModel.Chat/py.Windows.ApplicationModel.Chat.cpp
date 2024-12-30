@@ -11040,7 +11040,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { }};
 
     static PyType_Spec type_spec_IChatItem = {
-        "winrt._winrt_windows_applicationmodel_chat.IChatItem",
+        "winrt._winrt_windows_applicationmodel_chat._IChatItem",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::IChatItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11146,7 +11146,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { }};
 
     static PyType_Spec type_spec_ImplementsIChatItem = {
-        "winrt._winrt_windows_applicationmodel_chat.ImplementsIChatItem",
+        "winrt._winrt_windows_applicationmodel_chat.IChatItem",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

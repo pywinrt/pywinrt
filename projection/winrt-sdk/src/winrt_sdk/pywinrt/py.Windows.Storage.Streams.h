@@ -227,88 +227,88 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IBuffer>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IBuffer";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IBuffer";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IBuffer";
+        static constexpr const char* type_name = "_IBuffer";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IContentTypeProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IContentTypeProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IContentTypeProvider";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IContentTypeProvider";
+        static constexpr const char* type_name = "_IContentTypeProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IDataReader>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IDataReader";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IDataReader";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IDataReader";
+        static constexpr const char* type_name = "_IDataReader";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IDataWriter>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IDataWriter";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IDataWriter";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IDataWriter";
+        static constexpr const char* type_name = "_IDataWriter";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IInputStream>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IInputStream";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IInputStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IInputStream";
+        static constexpr const char* type_name = "_IInputStream";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IInputStreamReference>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IInputStreamReference";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IInputStreamReference";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IInputStreamReference";
+        static constexpr const char* type_name = "_IInputStreamReference";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IOutputStream>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IOutputStream";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IOutputStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IOutputStream";
+        static constexpr const char* type_name = "_IOutputStream";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IPropertySetSerializer>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IPropertySetSerializer";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IPropertySetSerializer";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IPropertySetSerializer";
+        static constexpr const char* type_name = "_IPropertySetSerializer";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IRandomAccessStream>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IRandomAccessStream";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IRandomAccessStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IRandomAccessStream";
+        static constexpr const char* type_name = "_IRandomAccessStream";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IRandomAccessStreamReference";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IRandomAccessStreamReference";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IRandomAccessStreamReference";
+        static constexpr const char* type_name = "_IRandomAccessStreamReference";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IRandomAccessStreamWithContentType";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams._IRandomAccessStreamWithContentType";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
-        static constexpr const char* type_name = "IRandomAccessStreamWithContentType";
+        static constexpr const char* type_name = "_IRandomAccessStreamWithContentType";
     };
 }

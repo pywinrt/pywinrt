@@ -3431,6 +3431,9 @@ class ZoomSnapPointBase_Static(SnapPointBase_Static):
 class ZoomSnapPointBase(SnapPointBase, metaclass=ZoomSnapPointBase_Static):
     pass
 
+@typing.final
+class _IScrollController: ...
+
 class IScrollController(winrt._winrt.IInspectable):
     # Microsoft.UI.Composition.CompositionAnimation Microsoft.UI.Xaml.Controls.Primitives.IScrollController::GetScrollAnimation(System.Int32,Windows.Foundation.Numerics.Vector2,Windows.Foundation.Numerics.Vector2,Microsoft.UI.Composition.CompositionAnimation)
     @abstractmethod
@@ -3487,6 +3490,9 @@ class IScrollController(winrt._winrt.IInspectable):
     @abstractmethod
     def panning_info(self) -> IScrollControllerPanningInfo: ...
 
+@typing.final
+class _IScrollControllerPanningInfo: ...
+
 class IScrollControllerPanningInfo(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::SetPanningElementExpressionAnimationSources(Microsoft.UI.Composition.CompositionPropertySet,System.String,System.String,System.String,System.String)
     @abstractmethod
@@ -3515,6 +3521,9 @@ class IScrollControllerPanningInfo(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def panning_element_ancestor(self) -> microsoft_ui_xaml.UIElement: ...
+
+@typing.final
+class _IScrollSnapPointsInfo: ...
 
 class IScrollSnapPointsInfo(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetIrregularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation,Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment)

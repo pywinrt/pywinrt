@@ -306,8 +306,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.ISpeechRecognitionConstraint";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition._ISpeechRecognitionConstraint";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
-        static constexpr const char* type_name = "ISpeechRecognitionConstraint";
+        static constexpr const char* type_name = "_ISpeechRecognitionConstraint";
     };
 }

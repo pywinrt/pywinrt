@@ -7,6 +7,7 @@ from winrt._winrt_windows_devices_custom import (
     CustomDevice,
     IOControlCode,
     KnownDeviceTypes,
+    _IIOControlCode,
     IIOControlCode,
 )
 

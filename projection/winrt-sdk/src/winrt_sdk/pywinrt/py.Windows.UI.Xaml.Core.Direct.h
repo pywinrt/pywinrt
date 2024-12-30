@@ -94,8 +94,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.IXamlDirectObject";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct._IXamlDirectObject";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
-        static constexpr const char* type_name = "IXamlDirectObject";
+        static constexpr const char* type_name = "_IXamlDirectObject";
     };
 }

@@ -45,6 +45,7 @@ from winrt._winrt_microsoft_ui_xaml_input import (
     StandardUICommand,
     TappedRoutedEventArgs,
     XamlUICommand,
+    _ICommand,
     ICommand,
 )
 from typing import TYPE_CHECKING

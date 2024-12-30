@@ -7,7 +7,9 @@ from winrt._winrt_microsoft_ui_composition_systembackdrops import (
     DesktopAcrylicController,
     MicaController,
     SystemBackdropConfiguration,
+    _ISystemBackdropController,
     ISystemBackdropController,
+    _ISystemBackdropControllerWithTargets,
     ISystemBackdropControllerWithTargets,
 )
 

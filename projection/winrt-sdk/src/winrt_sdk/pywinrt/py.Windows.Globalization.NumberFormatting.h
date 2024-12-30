@@ -129,64 +129,64 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberFormatter";
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting._INumberFormatter";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
-        static constexpr const char* type_name = "INumberFormatter";
+        static constexpr const char* type_name = "_INumberFormatter";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberFormatter2";
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting._INumberFormatter2";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
-        static constexpr const char* type_name = "INumberFormatter2";
+        static constexpr const char* type_name = "_INumberFormatter2";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberFormatterOptions";
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting._INumberFormatterOptions";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
-        static constexpr const char* type_name = "INumberFormatterOptions";
+        static constexpr const char* type_name = "_INumberFormatterOptions";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberParser";
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting._INumberParser";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
-        static constexpr const char* type_name = "INumberParser";
+        static constexpr const char* type_name = "_INumberParser";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberRounder";
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting._INumberRounder";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
-        static constexpr const char* type_name = "INumberRounder";
+        static constexpr const char* type_name = "_INumberRounder";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberRounderOption";
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting._INumberRounderOption";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
-        static constexpr const char* type_name = "INumberRounderOption";
+        static constexpr const char* type_name = "_INumberRounderOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.ISignedZeroOption";
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting._ISignedZeroOption";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
-        static constexpr const char* type_name = "ISignedZeroOption";
+        static constexpr const char* type_name = "_ISignedZeroOption";
     };
 
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.ISignificantDigitsOption";
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting._ISignificantDigitsOption";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
-        static constexpr const char* type_name = "ISignificantDigitsOption";
+        static constexpr const char* type_name = "_ISignificantDigitsOption";
     };
 }

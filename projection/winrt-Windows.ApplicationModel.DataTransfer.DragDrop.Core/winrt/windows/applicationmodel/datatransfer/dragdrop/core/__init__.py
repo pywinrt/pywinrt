@@ -9,6 +9,7 @@ from winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core import (
     CoreDragOperation,
     CoreDragUIOverride,
     CoreDropOperationTargetRequestedEventArgs,
+    _ICoreDropOperationTarget,
     ICoreDropOperationTarget,
 )
 

@@ -16,6 +16,7 @@ from winrt._winrt_windows_applicationmodel_search import (
     SearchSuggestionCollection,
     SearchSuggestionsRequest,
     SearchSuggestionsRequestDeferral,
+    _ISearchPaneQueryChangedEventArgs,
     ISearchPaneQueryChangedEventArgs,
 )
 

@@ -8648,7 +8648,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }};
 
     static PyType_Spec type_spec_IAccessoryNotificationTriggerDetails = {
-        "winrt._winrt_windows_phone_notification_management.IAccessoryNotificationTriggerDetails",
+        "winrt._winrt_windows_phone_notification_management._IAccessoryNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8857,7 +8857,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }};
 
     static PyType_Spec type_spec_ImplementsIAccessoryNotificationTriggerDetails = {
-        "winrt._winrt_windows_phone_notification_management.ImplementsIAccessoryNotificationTriggerDetails",
+        "winrt._winrt_windows_phone_notification_management.IAccessoryNotificationTriggerDetails",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

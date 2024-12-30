@@ -228,7 +228,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }};
 
     static PyType_Spec type_spec_IGpioControllerProvider = {
-        "winrt._winrt_windows_devices_gpio_provider.IGpioControllerProvider",
+        "winrt._winrt_windows_devices_gpio_provider._IGpioControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -378,7 +378,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIGpioControllerProvider = {
-        "winrt._winrt_windows_devices_gpio_provider.ImplementsIGpioControllerProvider",
+        "winrt._winrt_windows_devices_gpio_provider.IGpioControllerProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -827,7 +827,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }};
 
     static PyType_Spec type_spec_IGpioPinProvider = {
-        "winrt._winrt_windows_devices_gpio_provider.IGpioPinProvider",
+        "winrt._winrt_windows_devices_gpio_provider._IGpioPinProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1202,7 +1202,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIGpioPinProvider = {
-        "winrt._winrt_windows_devices_gpio_provider.ImplementsIGpioPinProvider",
+        "winrt._winrt_windows_devices_gpio_provider.IGpioPinProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -1280,7 +1280,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }};
 
     static PyType_Spec type_spec_IGpioProvider = {
-        "winrt._winrt_windows_devices_gpio_provider.IGpioProvider",
+        "winrt._winrt_windows_devices_gpio_provider._IGpioProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1392,7 +1392,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIGpioProvider = {
-        "winrt._winrt_windows_devices_gpio_provider.ImplementsIGpioProvider",
+        "winrt._winrt_windows_devices_gpio_provider.IGpioProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

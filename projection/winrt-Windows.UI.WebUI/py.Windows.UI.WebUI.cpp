@@ -18393,7 +18393,7 @@ namespace py::cpp::Windows::UI::WebUI
         { }};
 
     static PyType_Spec type_spec_IActivatedEventArgsDeferral = {
-        "winrt._winrt_windows_ui_webui.IActivatedEventArgsDeferral",
+        "winrt._winrt_windows_ui_webui._IActivatedEventArgsDeferral",
         sizeof(py::wrapper::Windows::UI::WebUI::IActivatedEventArgsDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18499,7 +18499,7 @@ namespace py::cpp::Windows::UI::WebUI
         { }};
 
     static PyType_Spec type_spec_ImplementsIActivatedEventArgsDeferral = {
-        "winrt._winrt_windows_ui_webui.ImplementsIActivatedEventArgsDeferral",
+        "winrt._winrt_windows_ui_webui.IActivatedEventArgsDeferral",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -18606,7 +18606,7 @@ namespace py::cpp::Windows::UI::WebUI
         { }};
 
     static PyType_Spec type_spec_IWebUIBackgroundTaskInstance = {
-        "winrt._winrt_windows_ui_webui.IWebUIBackgroundTaskInstance",
+        "winrt._winrt_windows_ui_webui._IWebUIBackgroundTaskInstance",
         sizeof(py::wrapper::Windows::UI::WebUI::IWebUIBackgroundTaskInstance),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18735,7 +18735,7 @@ namespace py::cpp::Windows::UI::WebUI
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebUIBackgroundTaskInstance = {
-        "winrt._winrt_windows_ui_webui.ImplementsIWebUIBackgroundTaskInstance",
+        "winrt._winrt_windows_ui_webui.IWebUIBackgroundTaskInstance",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -18803,7 +18803,7 @@ namespace py::cpp::Windows::UI::WebUI
         { }};
 
     static PyType_Spec type_spec_IWebUINavigatedEventArgs = {
-        "winrt._winrt_windows_ui_webui.IWebUINavigatedEventArgs",
+        "winrt._winrt_windows_ui_webui._IWebUINavigatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::IWebUINavigatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18909,7 +18909,7 @@ namespace py::cpp::Windows::UI::WebUI
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebUINavigatedEventArgs = {
-        "winrt._winrt_windows_ui_webui.ImplementsIWebUINavigatedEventArgs",
+        "winrt._winrt_windows_ui_webui.IWebUINavigatedEventArgs",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

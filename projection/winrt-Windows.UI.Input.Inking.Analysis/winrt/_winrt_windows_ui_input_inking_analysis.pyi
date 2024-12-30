@@ -295,6 +295,9 @@ class InkAnalyzer(winrt.system.Object):
     @_property
     def is_analyzing(self) -> bool: ...
 
+@typing.final
+class _IInkAnalysisNode: ...
+
 class IInkAnalysisNode(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.IInkAnalysisNode::GetStrokeIds()
     @abstractmethod
@@ -323,6 +326,9 @@ class IInkAnalysisNode(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def rotated_bounding_rect(self) -> typing.Sequence[windows_foundation.Point]: ...
+
+@typing.final
+class _IInkAnalyzerFactory: ...
 
 class IInkAnalyzerFactory(winrt._winrt.IInspectable):
     # Windows.UI.Input.Inking.Analysis.InkAnalyzer Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory::CreateAnalyzer()

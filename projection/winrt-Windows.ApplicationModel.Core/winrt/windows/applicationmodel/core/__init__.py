@@ -11,8 +11,11 @@ from winrt._winrt_windows_applicationmodel_core import (
     HostedViewClosingEventArgs,
     UnhandledError,
     UnhandledErrorDetectedEventArgs,
+    _ICoreApplicationUnhandledError,
     ICoreApplicationUnhandledError,
+    _IFrameworkView,
     IFrameworkView,
+    _IFrameworkViewSource,
     IFrameworkViewSource,
 )
 

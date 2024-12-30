@@ -1841,7 +1841,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         { }};
 
     static PyType_Spec type_spec_IHttpFilter = {
-        "winrt._winrt_windows_web_http_filters.IHttpFilter",
+        "winrt._winrt_windows_web_http_filters._IHttpFilter",
         sizeof(py::wrapper::Windows::Web::Http::Filters::IHttpFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1983,7 +1983,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         { }};
 
     static PyType_Spec type_spec_ImplementsIHttpFilter = {
-        "winrt._winrt_windows_web_http_filters.ImplementsIHttpFilter",
+        "winrt._winrt_windows_web_http_filters.IHttpFilter",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

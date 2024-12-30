@@ -20,6 +20,7 @@ class ProjectedType
         CircularDependencyDepth =
             Category == Category.Class ? type.GetCircularDependencyDepth() : 0;
 
+        PyWrapperTypeName = Category == Category.Interface ? $"_{Name}" : Name;
         PyModuleName = Namespace.ToPyModuleName();
         PyExtModuleName = Namespace.ToNsModuleName();
         PyModuleAlias = Namespace.ToPyModuleAlias();
@@ -195,6 +196,14 @@ class ProjectedType
     /// a type in this namespace.
     /// </remarks>
     public int CircularDependencyDepth { get; }
+
+    /// <summary>
+    /// Gets the Python type name for the wrapper class.
+    /// </summary>
+    /// <remarks>
+    /// In the case of interfaces, this is not the same as <see cref="Name"/>.
+    /// </remarks>
+    public string PyWrapperTypeName { get; }
 
     /// <summary>
     /// Gets the dotted Python module name of the type, e.g. "winrt.windows.foundation".

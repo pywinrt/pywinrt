@@ -8,6 +8,7 @@ from winrt._winrt_windows_data_json import (
     JsonError,
     JsonObject,
     JsonValue,
+    _IJsonValue,
     IJsonValue,
 )
 

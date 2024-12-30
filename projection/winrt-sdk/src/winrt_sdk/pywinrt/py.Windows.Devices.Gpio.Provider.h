@@ -92,24 +92,24 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.provider.IGpioControllerProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.provider._IGpioControllerProvider";
         static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
-        static constexpr const char* type_name = "IGpioControllerProvider";
+        static constexpr const char* type_name = "_IGpioControllerProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.provider.IGpioPinProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.provider._IGpioPinProvider";
         static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
-        static constexpr const char* type_name = "IGpioPinProvider";
+        static constexpr const char* type_name = "_IGpioPinProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.provider.IGpioProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.provider._IGpioProvider";
         static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
-        static constexpr const char* type_name = "IGpioProvider";
+        static constexpr const char* type_name = "_IGpioProvider";
     };
 }

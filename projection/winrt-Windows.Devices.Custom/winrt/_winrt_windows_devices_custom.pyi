@@ -66,6 +66,9 @@ class KnownDeviceTypes_Static(type):
 class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
     pass
 
+@typing.final
+class _IIOControlCode: ...
+
 class IIOControlCode(winrt._winrt.IInspectable):
     # Windows.Devices.Custom.IOControlAccessMode Windows.Devices.Custom.IIOControlCode::get_AccessMode()
     @_property

@@ -15,7 +15,9 @@ from winrt._winrt_windows_ui_uiautomation_core import (
     RemoteAutomationDisconnectedEventArgs,
     RemoteAutomationServer,
     RemoteAutomationWindow,
+    _ICoreAutomationConnectionBoundObjectProvider,
     ICoreAutomationConnectionBoundObjectProvider,
+    _ICoreAutomationRemoteOperationExtensionProvider,
     ICoreAutomationRemoteOperationExtensionProvider,
 )
 

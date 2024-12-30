@@ -21,9 +21,13 @@ from winrt._winrt_windows_graphics_printing import (
     PrintTaskSourceRequestedArgs,
     PrintTaskSourceRequestedDeferral,
     StandardPrintTaskOptions,
+    _IPrintDocumentSource,
     IPrintDocumentSource,
+    _IPrintTaskOptionsCore,
     IPrintTaskOptionsCore,
+    _IPrintTaskOptionsCoreProperties,
     IPrintTaskOptionsCoreProperties,
+    _IPrintTaskOptionsCoreUIConfiguration,
     IPrintTaskOptionsCoreUIConfiguration,
 )
 

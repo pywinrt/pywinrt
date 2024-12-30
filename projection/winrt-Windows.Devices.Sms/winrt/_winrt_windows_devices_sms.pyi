@@ -833,6 +833,9 @@ class SmsWapMessage(winrt.system.Object, ISmsMessageBase):
     @_property
     def to(self) -> str: ...
 
+@typing.final
+class _ISmsBinaryMessage: ...
+
 class ISmsBinaryMessage(ISmsMessage, winrt._winrt.IInspectable):
     # System.Byte[] Windows.Devices.Sms.ISmsBinaryMessage::GetData()
     # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
@@ -850,6 +853,9 @@ class ISmsBinaryMessage(ISmsMessage, winrt._winrt.IInspectable):
     @format.setter
     @abstractmethod
     def format(self, value: SmsDataFormat) -> None: ...
+
+@typing.final
+class _ISmsDevice: ...
 
 class ISmsDevice(winrt._winrt.IInspectable):
     # Windows.Devices.Sms.SmsEncodedLength Windows.Devices.Sms.ISmsDevice::CalculateLength(Windows.Devices.Sms.SmsTextMessage)
@@ -893,6 +899,9 @@ class ISmsDevice(winrt._winrt.IInspectable):
     @abstractmethod
     def message_store(self) -> SmsDeviceMessageStore: ...
 
+@typing.final
+class _ISmsMessage: ...
+
 class ISmsMessage(winrt._winrt.IInspectable):
     # System.UInt32 Windows.Devices.Sms.ISmsMessage::get_Id()
     @_property
@@ -902,6 +911,9 @@ class ISmsMessage(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def message_class(self) -> SmsMessageClass: ...
+
+@typing.final
+class _ISmsMessageBase: ...
 
 class ISmsMessageBase(winrt._winrt.IInspectable):
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.ISmsMessageBase::get_CellularClass()
@@ -924,6 +936,9 @@ class ISmsMessageBase(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def sim_icc_id(self) -> str: ...
+
+@typing.final
+class _ISmsTextMessage: ...
 
 class ISmsTextMessage(ISmsMessage, winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.ISmsBinaryMessage> Windows.Devices.Sms.ISmsTextMessage::ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)

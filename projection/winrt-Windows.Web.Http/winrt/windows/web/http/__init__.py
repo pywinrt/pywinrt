@@ -23,6 +23,7 @@ from winrt._winrt_windows_web_http import (
     HttpStreamContent,
     HttpStringContent,
     HttpTransportInformation,
+    _IHttpContent,
     IHttpContent,
 )
 

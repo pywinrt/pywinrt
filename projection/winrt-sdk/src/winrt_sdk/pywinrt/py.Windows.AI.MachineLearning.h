@@ -330,32 +330,32 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ILearningModelFeatureDescriptor";
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning._ILearningModelFeatureDescriptor";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
-        static constexpr const char* type_name = "ILearningModelFeatureDescriptor";
+        static constexpr const char* type_name = "_ILearningModelFeatureDescriptor";
     };
 
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ILearningModelFeatureValue";
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning._ILearningModelFeatureValue";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
-        static constexpr const char* type_name = "ILearningModelFeatureValue";
+        static constexpr const char* type_name = "_ILearningModelFeatureValue";
     };
 
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ILearningModelOperatorProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning._ILearningModelOperatorProvider";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
-        static constexpr const char* type_name = "ILearningModelOperatorProvider";
+        static constexpr const char* type_name = "_ILearningModelOperatorProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ITensor>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ITensor";
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning._ITensor";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
-        static constexpr const char* type_name = "ITensor";
+        static constexpr const char* type_name = "_ITensor";
     };
 }

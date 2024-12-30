@@ -4381,7 +4381,7 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }};
 
     static PyType_Spec type_spec_IGeoshape = {
-        "winrt._winrt_windows_devices_geolocation.IGeoshape",
+        "winrt._winrt_windows_devices_geolocation._IGeoshape",
         sizeof(py::wrapper::Windows::Devices::Geolocation::IGeoshape),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4527,7 +4527,7 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }};
 
     static PyType_Spec type_spec_ImplementsIGeoshape = {
-        "winrt._winrt_windows_devices_geolocation.ImplementsIGeoshape",
+        "winrt._winrt_windows_devices_geolocation.IGeoshape",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

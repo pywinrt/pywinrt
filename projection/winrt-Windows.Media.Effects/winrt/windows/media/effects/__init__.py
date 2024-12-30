@@ -18,11 +18,17 @@ from winrt._winrt_windows_media_effects import (
     VideoEffectDefinition,
     VideoTransformEffectDefinition,
     VideoTransformSphericalProjection,
+    _IAudioEffectDefinition,
     IAudioEffectDefinition,
+    _IBasicAudioEffect,
     IBasicAudioEffect,
+    _IBasicVideoEffect,
     IBasicVideoEffect,
+    _IVideoCompositor,
     IVideoCompositor,
+    _IVideoCompositorDefinition,
     IVideoCompositorDefinition,
+    _IVideoEffectDefinition,
     IVideoEffectDefinition,
 )
 

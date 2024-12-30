@@ -12,6 +12,7 @@ from winrt._winrt_windows_storage_fileproperties import (
     StorageItemContentProperties,
     StorageItemThumbnail,
     VideoProperties,
+    _IStorageItemExtraProperties,
     IStorageItemExtraProperties,
 )
 

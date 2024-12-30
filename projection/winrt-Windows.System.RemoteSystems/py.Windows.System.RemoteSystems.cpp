@@ -7672,7 +7672,7 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }};
 
     static PyType_Spec type_spec_IRemoteSystemFilter = {
-        "winrt._winrt_windows_system_remotesystems.IRemoteSystemFilter",
+        "winrt._winrt_windows_system_remotesystems._IRemoteSystemFilter",
         sizeof(py::wrapper::Windows::System::RemoteSystems::IRemoteSystemFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7758,7 +7758,7 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }};
 
     static PyType_Spec type_spec_ImplementsIRemoteSystemFilter = {
-        "winrt._winrt_windows_system_remotesystems.ImplementsIRemoteSystemFilter",
+        "winrt._winrt_windows_system_remotesystems.IRemoteSystemFilter",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

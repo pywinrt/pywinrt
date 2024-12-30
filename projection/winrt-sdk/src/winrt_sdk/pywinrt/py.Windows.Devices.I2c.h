@@ -106,9 +106,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.II2cDeviceStatics";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c._II2cDeviceStatics";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
-        static constexpr const char* type_name = "II2cDeviceStatics";
+        static constexpr const char* type_name = "_II2cDeviceStatics";
     };
 
     template<>

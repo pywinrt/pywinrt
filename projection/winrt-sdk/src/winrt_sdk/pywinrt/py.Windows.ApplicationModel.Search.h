@@ -173,8 +173,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.ISearchPaneQueryChangedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search._ISearchPaneQueryChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
-        static constexpr const char* type_name = "ISearchPaneQueryChangedEventArgs";
+        static constexpr const char* type_name = "_ISearchPaneQueryChangedEventArgs";
     };
 }

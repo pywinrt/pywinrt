@@ -3940,7 +3940,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }};
 
     static PyType_Spec type_spec_ILampArrayEffect = {
-        "winrt._winrt_windows_devices_lights_effects.ILampArrayEffect",
+        "winrt._winrt_windows_devices_lights_effects._ILampArrayEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::ILampArrayEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4069,7 +4069,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }};
 
     static PyType_Spec type_spec_ImplementsILampArrayEffect = {
-        "winrt._winrt_windows_devices_lights_effects.ImplementsILampArrayEffect",
+        "winrt._winrt_windows_devices_lights_effects.ILampArrayEffect",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

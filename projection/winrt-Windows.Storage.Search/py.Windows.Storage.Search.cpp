@@ -5046,7 +5046,7 @@ namespace py::cpp::Windows::Storage::Search
         { }};
 
     static PyType_Spec type_spec_IIndexableContent = {
-        "winrt._winrt_windows_storage_search.IIndexableContent",
+        "winrt._winrt_windows_storage_search._IIndexableContent",
         sizeof(py::wrapper::Windows::Storage::Search::IIndexableContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5281,7 +5281,7 @@ namespace py::cpp::Windows::Storage::Search
         { }};
 
     static PyType_Spec type_spec_ImplementsIIndexableContent = {
-        "winrt._winrt_windows_storage_search.ImplementsIIndexableContent",
+        "winrt._winrt_windows_storage_search.IIndexableContent",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6046,7 +6046,7 @@ namespace py::cpp::Windows::Storage::Search
         { }};
 
     static PyType_Spec type_spec_IStorageFolderQueryOperations = {
-        "winrt._winrt_windows_storage_search.IStorageFolderQueryOperations",
+        "winrt._winrt_windows_storage_search._IStorageFolderQueryOperations",
         sizeof(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6700,7 +6700,7 @@ namespace py::cpp::Windows::Storage::Search
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageFolderQueryOperations = {
-        "winrt._winrt_windows_storage_search.ImplementsIStorageFolderQueryOperations",
+        "winrt._winrt_windows_storage_search.IStorageFolderQueryOperations",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7071,7 +7071,7 @@ namespace py::cpp::Windows::Storage::Search
         { }};
 
     static PyType_Spec type_spec_IStorageQueryResultBase = {
-        "winrt._winrt_windows_storage_search.IStorageQueryResultBase",
+        "winrt._winrt_windows_storage_search._IStorageQueryResultBase",
         sizeof(py::wrapper::Windows::Storage::Search::IStorageQueryResultBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7415,7 +7415,7 @@ namespace py::cpp::Windows::Storage::Search
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageQueryResultBase = {
-        "winrt._winrt_windows_storage_search.ImplementsIStorageQueryResultBase",
+        "winrt._winrt_windows_storage_search.IStorageQueryResultBase",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

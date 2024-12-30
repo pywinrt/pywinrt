@@ -523,96 +523,96 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnChannelStatics>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnChannelStatics";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnChannelStatics";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnChannelStatics";
+        static constexpr const char* type_name = "_IVpnChannelStatics";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnCredential>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnCredential";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnCredential";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnCredential";
+        static constexpr const char* type_name = "_IVpnCredential";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnCustomPrompt";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnCustomPrompt";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnCustomPrompt";
+        static constexpr const char* type_name = "_IVpnCustomPrompt";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnCustomPromptElement";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnCustomPromptElement";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnCustomPromptElement";
+        static constexpr const char* type_name = "_IVpnCustomPromptElement";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnDomainNameInfoFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnDomainNameInfoFactory";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnDomainNameInfoFactory";
+        static constexpr const char* type_name = "_IVpnDomainNameInfoFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnInterfaceIdFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnInterfaceIdFactory";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnInterfaceIdFactory";
+        static constexpr const char* type_name = "_IVpnInterfaceIdFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnNamespaceInfoFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnNamespaceInfoFactory";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnNamespaceInfoFactory";
+        static constexpr const char* type_name = "_IVpnNamespaceInfoFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnPacketBufferFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnPacketBufferFactory";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnPacketBufferFactory";
+        static constexpr const char* type_name = "_IVpnPacketBufferFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnPlugIn>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnPlugIn";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnPlugIn";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnPlugIn";
+        static constexpr const char* type_name = "_IVpnPlugIn";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnPlugInReconnectTransport";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnPlugInReconnectTransport";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnPlugInReconnectTransport";
+        static constexpr const char* type_name = "_IVpnPlugInReconnectTransport";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnProfile>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnProfile";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnProfile";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnProfile";
+        static constexpr const char* type_name = "_IVpnProfile";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Vpn::IVpnRouteFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnRouteFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn._IVpnRouteFactory";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
-        static constexpr const char* type_name = "IVpnRouteFactory";
+        static constexpr const char* type_name = "_IVpnRouteFactory";
     };
 }

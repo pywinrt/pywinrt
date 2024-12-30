@@ -650,16 +650,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.IMediaEnginePlaybackSource";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback._IMediaEnginePlaybackSource";
         static constexpr const char* module_name = "winrt.windows.media.playback";
-        static constexpr const char* type_name = "IMediaEnginePlaybackSource";
+        static constexpr const char* type_name = "_IMediaEnginePlaybackSource";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.IMediaPlaybackSource";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback._IMediaPlaybackSource";
         static constexpr const char* module_name = "winrt.windows.media.playback";
-        static constexpr const char* type_name = "IMediaPlaybackSource";
+        static constexpr const char* type_name = "_IMediaPlaybackSource";
     };
 }

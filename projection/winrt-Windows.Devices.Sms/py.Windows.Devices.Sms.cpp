@@ -10422,7 +10422,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ISmsBinaryMessage = {
-        "winrt._winrt_windows_devices_sms.ISmsBinaryMessage",
+        "winrt._winrt_windows_devices_sms._ISmsBinaryMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10648,7 +10648,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ImplementsISmsBinaryMessage = {
-        "winrt._winrt_windows_devices_sms.ImplementsISmsBinaryMessage",
+        "winrt._winrt_windows_devices_sms.ISmsBinaryMessage",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11029,7 +11029,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ISmsDevice = {
-        "winrt._winrt_windows_devices_sms.ISmsDevice",
+        "winrt._winrt_windows_devices_sms._ISmsDevice",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11383,7 +11383,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ImplementsISmsDevice = {
-        "winrt._winrt_windows_devices_sms.ImplementsISmsDevice",
+        "winrt._winrt_windows_devices_sms.ISmsDevice",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11482,7 +11482,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ISmsMessage = {
-        "winrt._winrt_windows_devices_sms.ISmsMessage",
+        "winrt._winrt_windows_devices_sms._ISmsMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11608,7 +11608,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ImplementsISmsMessage = {
-        "winrt._winrt_windows_devices_sms.ImplementsISmsMessage",
+        "winrt._winrt_windows_devices_sms.ISmsMessage",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11800,7 +11800,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ISmsMessageBase = {
-        "winrt._winrt_windows_devices_sms.ISmsMessageBase",
+        "winrt._winrt_windows_devices_sms._ISmsMessageBase",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsMessageBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11986,7 +11986,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ImplementsISmsMessageBase = {
-        "winrt._winrt_windows_devices_sms.ImplementsISmsMessageBase",
+        "winrt._winrt_windows_devices_sms.ISmsMessageBase",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -12532,7 +12532,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ISmsTextMessage = {
-        "winrt._winrt_windows_devices_sms.ISmsTextMessage",
+        "winrt._winrt_windows_devices_sms._ISmsTextMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsTextMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12942,7 +12942,7 @@ namespace py::cpp::Windows::Devices::Sms
         { }};
 
     static PyType_Spec type_spec_ImplementsISmsTextMessage = {
-        "winrt._winrt_windows_devices_sms.ImplementsISmsTextMessage",
+        "winrt._winrt_windows_devices_sms.ISmsTextMessage",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

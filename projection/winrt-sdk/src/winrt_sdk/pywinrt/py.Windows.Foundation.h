@@ -4743,113 +4743,113 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::IAsyncAction>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IAsyncAction";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IAsyncAction";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IAsyncAction";
+        static constexpr const char* type_name = "_IAsyncAction";
     };
 
     template<>
     struct py_type<py::proj::Windows::Foundation::IAsyncActionWithProgress>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IAsyncActionWithProgress";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IAsyncActionWithProgress";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IAsyncActionWithProgress";
+        static constexpr const char* type_name = "_IAsyncActionWithProgress";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::IAsyncInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IAsyncInfo";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IAsyncInfo";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IAsyncInfo";
+        static constexpr const char* type_name = "_IAsyncInfo";
     };
 
     template<>
     struct py_type<py::proj::Windows::Foundation::IAsyncOperationWithProgress>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IAsyncOperationWithProgress";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IAsyncOperationWithProgress";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IAsyncOperationWithProgress";
+        static constexpr const char* type_name = "_IAsyncOperationWithProgress";
     };
 
     template<>
     struct py_type<py::proj::Windows::Foundation::IAsyncOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IAsyncOperation";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IAsyncOperation";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IAsyncOperation";
+        static constexpr const char* type_name = "_IAsyncOperation";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::IClosable>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IClosable";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IClosable";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IClosable";
+        static constexpr const char* type_name = "_IClosable";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::IGetActivationFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IGetActivationFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IGetActivationFactory";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IGetActivationFactory";
+        static constexpr const char* type_name = "_IGetActivationFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::IMemoryBuffer>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IMemoryBuffer";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IMemoryBuffer";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IMemoryBuffer";
+        static constexpr const char* type_name = "_IMemoryBuffer";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::IMemoryBufferReference>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IMemoryBufferReference";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IMemoryBufferReference";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IMemoryBufferReference";
+        static constexpr const char* type_name = "_IMemoryBufferReference";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::IPropertyValue>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IPropertyValue";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IPropertyValue";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IPropertyValue";
+        static constexpr const char* type_name = "_IPropertyValue";
     };
 
     template<>
     struct py_type<py::proj::Windows::Foundation::IReferenceArray>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IReferenceArray";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IReferenceArray";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IReferenceArray";
+        static constexpr const char* type_name = "_IReferenceArray";
     };
 
     template<>
     struct py_type<py::proj::Windows::Foundation::IReference>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IReference";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IReference";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IReference";
+        static constexpr const char* type_name = "_IReference";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::IStringable>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IStringable";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IStringable";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IStringable";
+        static constexpr const char* type_name = "_IStringable";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.IWwwFormUrlDecoderEntry";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation._IWwwFormUrlDecoderEntry";
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IWwwFormUrlDecoderEntry";
+        static constexpr const char* type_name = "_IWwwFormUrlDecoderEntry";
     };
 
     template<>

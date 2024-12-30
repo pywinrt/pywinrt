@@ -108,8 +108,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Custom::IIOControlCode>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.IIOControlCode";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom._IIOControlCode";
         static constexpr const char* module_name = "winrt.windows.devices.custom";
-        static constexpr const char* type_name = "IIOControlCode";
+        static constexpr const char* type_name = "_IIOControlCode";
     };
 }

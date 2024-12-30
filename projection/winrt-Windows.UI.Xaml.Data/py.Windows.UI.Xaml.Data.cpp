@@ -4405,7 +4405,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ICollectionView = {
-        "winrt._winrt_windows_ui_xaml_data.ICollectionView",
+        "winrt._winrt_windows_ui_xaml_data._ICollectionView",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::ICollectionView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5401,7 +5401,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsICollectionView = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsICollectionView",
+        "winrt._winrt_windows_ui_xaml_data.ICollectionView",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5479,7 +5479,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ICollectionViewFactory = {
-        "winrt._winrt_windows_ui_xaml_data.ICollectionViewFactory",
+        "winrt._winrt_windows_ui_xaml_data._ICollectionViewFactory",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::ICollectionViewFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5591,7 +5591,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsICollectionViewFactory = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsICollectionViewFactory",
+        "winrt._winrt_windows_ui_xaml_data.ICollectionViewFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5690,7 +5690,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ICollectionViewGroup = {
-        "winrt._winrt_windows_ui_xaml_data.ICollectionViewGroup",
+        "winrt._winrt_windows_ui_xaml_data._ICollectionViewGroup",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::ICollectionViewGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5816,7 +5816,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsICollectionViewGroup = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsICollectionViewGroup",
+        "winrt._winrt_windows_ui_xaml_data.ICollectionViewGroup",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6155,7 +6155,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ICustomProperty = {
-        "winrt._winrt_windows_ui_xaml_data.ICustomProperty",
+        "winrt._winrt_windows_ui_xaml_data._ICustomProperty",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::ICustomProperty),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6487,7 +6487,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsICustomProperty = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsICustomProperty",
+        "winrt._winrt_windows_ui_xaml_data.ICustomProperty",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6683,7 +6683,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ICustomPropertyProvider = {
-        "winrt._winrt_windows_ui_xaml_data.ICustomPropertyProvider",
+        "winrt._winrt_windows_ui_xaml_data._ICustomPropertyProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::ICustomPropertyProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6891,7 +6891,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsICustomPropertyProvider = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsICustomPropertyProvider",
+        "winrt._winrt_windows_ui_xaml_data.ICustomPropertyProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7040,7 +7040,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_IItemsRangeInfo = {
-        "winrt._winrt_windows_ui_xaml_data.IItemsRangeInfo",
+        "winrt._winrt_windows_ui_xaml_data._IItemsRangeInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::IItemsRangeInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7192,7 +7192,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsIItemsRangeInfo = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsIItemsRangeInfo",
+        "winrt._winrt_windows_ui_xaml_data.IItemsRangeInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7296,7 +7296,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_INotifyPropertyChanged = {
-        "winrt._winrt_windows_ui_xaml_data.INotifyPropertyChanged",
+        "winrt._winrt_windows_ui_xaml_data._INotifyPropertyChanged",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::INotifyPropertyChanged),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7444,7 +7444,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsINotifyPropertyChanged = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsINotifyPropertyChanged",
+        "winrt._winrt_windows_ui_xaml_data.INotifyPropertyChanged",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7653,7 +7653,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ISelectionInfo = {
-        "winrt._winrt_windows_ui_xaml_data.ISelectionInfo",
+        "winrt._winrt_windows_ui_xaml_data._ISelectionInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::ISelectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7857,7 +7857,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsISelectionInfo = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsISelectionInfo",
+        "winrt._winrt_windows_ui_xaml_data.ISelectionInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7968,7 +7968,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ISupportIncrementalLoading = {
-        "winrt._winrt_windows_ui_xaml_data.ISupportIncrementalLoading",
+        "winrt._winrt_windows_ui_xaml_data._ISupportIncrementalLoading",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::ISupportIncrementalLoading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8106,7 +8106,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsISupportIncrementalLoading = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsISupportIncrementalLoading",
+        "winrt._winrt_windows_ui_xaml_data.ISupportIncrementalLoading",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -8235,7 +8235,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_IValueConverter = {
-        "winrt._winrt_windows_ui_xaml_data.IValueConverter",
+        "winrt._winrt_windows_ui_xaml_data._IValueConverter",
         sizeof(py::wrapper::Windows::UI::Xaml::Data::IValueConverter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8433,7 +8433,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }};
 
     static PyType_Spec type_spec_ImplementsIValueConverter = {
-        "winrt._winrt_windows_ui_xaml_data.ImplementsIValueConverter",
+        "winrt._winrt_windows_ui_xaml_data.IValueConverter",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

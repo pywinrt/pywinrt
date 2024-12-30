@@ -1828,7 +1828,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { }};
 
     static PyType_Spec type_spec_IResourceContext = {
-        "winrt._winrt_microsoft_windows_applicationmodel_resources.IResourceContext",
+        "winrt._winrt_microsoft_windows_applicationmodel_resources._IResourceContext",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceContext),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1934,7 +1934,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { }};
 
     static PyType_Spec type_spec_ImplementsIResourceContext = {
-        "winrt._winrt_microsoft_windows_applicationmodel_resources.ImplementsIResourceContext",
+        "winrt._winrt_microsoft_windows_applicationmodel_resources.IResourceContext",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2110,7 +2110,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { }};
 
     static PyType_Spec type_spec_IResourceManager = {
-        "winrt._winrt_microsoft_windows_applicationmodel_resources.IResourceManager",
+        "winrt._winrt_microsoft_windows_applicationmodel_resources._IResourceManager",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2304,7 +2304,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { }};
 
     static PyType_Spec type_spec_ImplementsIResourceManager = {
-        "winrt._winrt_microsoft_windows_applicationmodel_resources.ImplementsIResourceManager",
+        "winrt._winrt_microsoft_windows_applicationmodel_resources.IResourceManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -1094,6 +1094,9 @@ class ZoomSettings(winrt.system.Object):
     @mode.setter
     def mode(self, value: ZoomTransitionMode) -> None: ...
 
+@typing.final
+class _IDefaultAudioDeviceChangedEventArgs: ...
+
 class IDefaultAudioDeviceChangedEventArgs(winrt._winrt.IInspectable):
     # System.String Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs::get_Id()
     @_property
@@ -1103,6 +1106,9 @@ class IDefaultAudioDeviceChangedEventArgs(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def role(self) -> AudioDeviceRole: ...
+
+@typing.final
+class _IMediaDeviceController: ...
 
 class IMediaDeviceController(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaProperties.IMediaEncodingProperties> Windows.Media.Devices.IMediaDeviceController::GetAvailableMediaStreamProperties(Windows.Media.Capture.MediaStreamType)

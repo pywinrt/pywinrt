@@ -606,6 +606,9 @@ class HttpTransportInformation(winrt.system.Object, windows_foundation.IStringab
     @_property
     def server_intermediate_certificates(self) -> typing.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
+@typing.final
+class _IHttpContent: ...
+
 class IHttpContent(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt64,System.UInt64> Windows.Web.Http.IHttpContent::BufferAllAsync()
     @abstractmethod

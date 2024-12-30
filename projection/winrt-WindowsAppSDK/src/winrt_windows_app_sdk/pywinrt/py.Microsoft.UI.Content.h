@@ -235,8 +235,8 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::IContentSiteBridge>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.IContentSiteBridge";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content._IContentSiteBridge";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
-        static constexpr const char* type_name = "IContentSiteBridge";
+        static constexpr const char* type_name = "_IContentSiteBridge";
     };
 }

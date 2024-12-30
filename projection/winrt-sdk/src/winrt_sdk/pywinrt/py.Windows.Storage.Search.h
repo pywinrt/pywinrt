@@ -228,25 +228,25 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::IIndexableContent>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.IIndexableContent";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search._IIndexableContent";
         static constexpr const char* module_name = "winrt.windows.storage.search";
-        static constexpr const char* type_name = "IIndexableContent";
+        static constexpr const char* type_name = "_IIndexableContent";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.IStorageFolderQueryOperations";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search._IStorageFolderQueryOperations";
         static constexpr const char* module_name = "winrt.windows.storage.search";
-        static constexpr const char* type_name = "IStorageFolderQueryOperations";
+        static constexpr const char* type_name = "_IStorageFolderQueryOperations";
     };
 
     template<>
     struct py_type<winrt::Windows::Storage::Search::IStorageQueryResultBase>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.IStorageQueryResultBase";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search._IStorageQueryResultBase";
         static constexpr const char* module_name = "winrt.windows.storage.search";
-        static constexpr const char* type_name = "IStorageQueryResultBase";
+        static constexpr const char* type_name = "_IStorageQueryResultBase";
     };
 
     template<>

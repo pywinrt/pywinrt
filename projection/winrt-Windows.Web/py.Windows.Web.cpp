@@ -170,7 +170,7 @@ namespace py::cpp::Windows::Web
         { }};
 
     static PyType_Spec type_spec_IUriToStreamResolver = {
-        "winrt._winrt_windows_web.IUriToStreamResolver",
+        "winrt._winrt_windows_web._IUriToStreamResolver",
         sizeof(py::wrapper::Windows::Web::IUriToStreamResolver),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -288,7 +288,7 @@ namespace py::cpp::Windows::Web
         { }};
 
     static PyType_Spec type_spec_ImplementsIUriToStreamResolver = {
-        "winrt._winrt_windows_web.ImplementsIUriToStreamResolver",
+        "winrt._winrt_windows_web.IUriToStreamResolver",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

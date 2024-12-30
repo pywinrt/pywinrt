@@ -533,6 +533,9 @@ class RemoteSystemWebAccountFilter(winrt.system.Object, IRemoteSystemFilter):
     @_property
     def account(self) -> windows_security_credentials.WebAccount: ...
 
+@typing.final
+class _IRemoteSystemFilter: ...
+
 class IRemoteSystemFilter(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
 

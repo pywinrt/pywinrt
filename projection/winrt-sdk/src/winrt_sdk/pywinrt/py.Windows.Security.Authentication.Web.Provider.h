@@ -230,56 +230,56 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider.IWebAccountProviderBaseReportOperation";
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider._IWebAccountProviderBaseReportOperation";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
-        static constexpr const char* type_name = "IWebAccountProviderBaseReportOperation";
+        static constexpr const char* type_name = "_IWebAccountProviderBaseReportOperation";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider.IWebAccountProviderOperation";
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider._IWebAccountProviderOperation";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
-        static constexpr const char* type_name = "IWebAccountProviderOperation";
+        static constexpr const char* type_name = "_IWebAccountProviderOperation";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider.IWebAccountProviderSilentReportOperation";
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider._IWebAccountProviderSilentReportOperation";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
-        static constexpr const char* type_name = "IWebAccountProviderSilentReportOperation";
+        static constexpr const char* type_name = "_IWebAccountProviderSilentReportOperation";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider.IWebAccountProviderTokenObjects";
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider._IWebAccountProviderTokenObjects";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
-        static constexpr const char* type_name = "IWebAccountProviderTokenObjects";
+        static constexpr const char* type_name = "_IWebAccountProviderTokenObjects";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider.IWebAccountProviderTokenObjects2";
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider._IWebAccountProviderTokenObjects2";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
-        static constexpr const char* type_name = "IWebAccountProviderTokenObjects2";
+        static constexpr const char* type_name = "_IWebAccountProviderTokenObjects2";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider.IWebAccountProviderTokenOperation";
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider._IWebAccountProviderTokenOperation";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
-        static constexpr const char* type_name = "IWebAccountProviderTokenOperation";
+        static constexpr const char* type_name = "_IWebAccountProviderTokenOperation";
     };
 
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider.IWebAccountProviderUIReportOperation";
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.provider._IWebAccountProviderUIReportOperation";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
-        static constexpr const char* type_name = "IWebAccountProviderUIReportOperation";
+        static constexpr const char* type_name = "_IWebAccountProviderUIReportOperation";
     };
 }

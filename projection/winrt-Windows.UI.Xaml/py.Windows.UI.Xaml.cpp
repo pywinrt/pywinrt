@@ -39981,7 +39981,7 @@ namespace py::cpp::Windows::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_IDataTemplateExtension = {
-        "winrt._winrt_windows_ui_xaml.IDataTemplateExtension",
+        "winrt._winrt_windows_ui_xaml._IDataTemplateExtension",
         sizeof(py::wrapper::Windows::UI::Xaml::IDataTemplateExtension),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -40155,7 +40155,7 @@ namespace py::cpp::Windows::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_ImplementsIDataTemplateExtension = {
-        "winrt._winrt_windows_ui_xaml.ImplementsIDataTemplateExtension",
+        "winrt._winrt_windows_ui_xaml.IDataTemplateExtension",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -40279,7 +40279,7 @@ namespace py::cpp::Windows::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_IElementFactory = {
-        "winrt._winrt_windows_ui_xaml.IElementFactory",
+        "winrt._winrt_windows_ui_xaml._IElementFactory",
         sizeof(py::wrapper::Windows::UI::Xaml::IElementFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -40427,7 +40427,7 @@ namespace py::cpp::Windows::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_ImplementsIElementFactory = {
-        "winrt._winrt_windows_ui_xaml.ImplementsIElementFactory",
+        "winrt._winrt_windows_ui_xaml.IElementFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -48,6 +48,7 @@ from winrt._winrt_windows_ui_input import (
     TappedEventArgs,
     TouchpadGesturesController,
     TouchpadGlobalActionEventArgs,
+    _IPointerPointTransform,
     IPointerPointTransform,
 )
 from typing import TYPE_CHECKING

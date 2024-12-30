@@ -785,16 +785,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.IHumanPresenceSensorExtension";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors._IHumanPresenceSensorExtension";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
-        static constexpr const char* type_name = "IHumanPresenceSensorExtension";
+        static constexpr const char* type_name = "_IHumanPresenceSensorExtension";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ISensorDataThreshold>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ISensorDataThreshold";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors._ISensorDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
-        static constexpr const char* type_name = "ISensorDataThreshold";
+        static constexpr const char* type_name = "_ISensorDataThreshold";
     };
 }

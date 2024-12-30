@@ -2494,7 +2494,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         { }};
 
     static PyType_Spec type_spec_IXamlDirectObject = {
-        "winrt._winrt_windows_ui_xaml_core_direct.IXamlDirectObject",
+        "winrt._winrt_windows_ui_xaml_core_direct._IXamlDirectObject",
         sizeof(py::wrapper::Windows::UI::Xaml::Core::Direct::IXamlDirectObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2580,7 +2580,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlDirectObject = {
-        "winrt._winrt_windows_ui_xaml_core_direct.ImplementsIXamlDirectObject",
+        "winrt._winrt_windows_ui_xaml_core_direct.IXamlDirectObject",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

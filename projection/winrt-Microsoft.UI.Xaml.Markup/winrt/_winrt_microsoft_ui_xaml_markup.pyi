@@ -137,6 +137,9 @@ class XamlReader_Static(type):
 class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
     pass
 
+@typing.final
+class _IComponentConnector: ...
+
 class IComponentConnector(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Markup.IComponentConnector::Connect(System.Int32,System.Object)
     @abstractmethod
@@ -145,6 +148,9 @@ class IComponentConnector(winrt._winrt.IInspectable):
     @abstractmethod
     def get_binding_connector(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> IComponentConnector: ...
 
+@typing.final
+class _IDataTemplateComponent: ...
+
 class IDataTemplateComponent(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Markup.IDataTemplateComponent::ProcessBindings(System.Object,System.Int32,System.Int32,System.Int32&)
     @abstractmethod
@@ -152,6 +158,9 @@ class IDataTemplateComponent(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Markup.IDataTemplateComponent::Recycle()
     @abstractmethod
     def recycle(self) -> None: ...
+
+@typing.final
+class _IProvideValueTarget: ...
 
 class IProvideValueTarget(winrt._winrt.IInspectable):
     # System.Object Microsoft.UI.Xaml.Markup.IProvideValueTarget::get_TargetObject()
@@ -163,11 +172,17 @@ class IProvideValueTarget(winrt._winrt.IInspectable):
     @abstractmethod
     def target_property(self) -> winrt.system.Object: ...
 
+@typing.final
+class _IRootObjectProvider: ...
+
 class IRootObjectProvider(winrt._winrt.IInspectable):
     # System.Object Microsoft.UI.Xaml.Markup.IRootObjectProvider::get_RootObject()
     @_property
     @abstractmethod
     def root_object(self) -> winrt.system.Object: ...
+
+@typing.final
+class _IUriContext: ...
 
 class IUriContext(winrt._winrt.IInspectable):
     # Windows.Foundation.Uri Microsoft.UI.Xaml.Markup.IUriContext::get_BaseUri()
@@ -175,10 +190,16 @@ class IUriContext(winrt._winrt.IInspectable):
     @abstractmethod
     def base_uri(self) -> windows_foundation.Uri: ...
 
+@typing.final
+class _IXamlBindScopeDiagnostics: ...
+
 class IXamlBindScopeDiagnostics(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Markup.IXamlBindScopeDiagnostics::Disable(System.Int32,System.Int32)
     @abstractmethod
     def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
+
+@typing.final
+class _IXamlMember: ...
 
 class IXamlMember(winrt._winrt.IInspectable):
     # System.Object Microsoft.UI.Xaml.Markup.IXamlMember::GetValue(System.Object)
@@ -212,6 +233,9 @@ class IXamlMember(winrt._winrt.IInspectable):
     @abstractmethod
     def type(self) -> IXamlType: ...
 
+@typing.final
+class _IXamlMetadataProvider: ...
+
 class IXamlMetadataProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlMetadataProvider::GetXamlType(Windows.UI.Xaml.Interop.TypeName)
     @abstractmethod
@@ -222,6 +246,9 @@ class IXamlMetadataProvider(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Markup.XmlnsDefinition[] Microsoft.UI.Xaml.Markup.IXamlMetadataProvider::GetXmlnsDefinitions()
     @abstractmethod
     def get_xmlns_definitions(self) -> winrt.system.Array[XmlnsDefinition]: ...
+
+@typing.final
+class _IXamlType: ...
 
 class IXamlType(winrt._winrt.IInspectable):
     # System.Object Microsoft.UI.Xaml.Markup.IXamlType::ActivateInstance()
@@ -294,6 +321,9 @@ class IXamlType(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def underlying_type(self) -> windows_ui_xaml_interop.TypeName: ...
+
+@typing.final
+class _IXamlTypeResolver: ...
 
 class IXamlTypeResolver(winrt._winrt.IInspectable):
     # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Markup.IXamlTypeResolver::Resolve(System.String)

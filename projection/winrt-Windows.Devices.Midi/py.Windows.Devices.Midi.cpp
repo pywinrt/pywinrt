@@ -5327,7 +5327,7 @@ namespace py::cpp::Windows::Devices::Midi
         { }};
 
     static PyType_Spec type_spec_IMidiMessage = {
-        "winrt._winrt_windows_devices_midi.IMidiMessage",
+        "winrt._winrt_windows_devices_midi._IMidiMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::IMidiMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5473,7 +5473,7 @@ namespace py::cpp::Windows::Devices::Midi
         { }};
 
     static PyType_Spec type_spec_ImplementsIMidiMessage = {
-        "winrt._winrt_windows_devices_midi.ImplementsIMidiMessage",
+        "winrt._winrt_windows_devices_midi.IMidiMessage",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5696,7 +5696,7 @@ namespace py::cpp::Windows::Devices::Midi
         { }};
 
     static PyType_Spec type_spec_IMidiOutPort = {
-        "winrt._winrt_windows_devices_midi.IMidiOutPort",
+        "winrt._winrt_windows_devices_midi._IMidiOutPort",
         sizeof(py::wrapper::Windows::Devices::Midi::IMidiOutPort),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5886,7 +5886,7 @@ namespace py::cpp::Windows::Devices::Midi
         { }};
 
     static PyType_Spec type_spec_ImplementsIMidiOutPort = {
-        "winrt._winrt_windows_devices_midi.ImplementsIMidiOutPort",
+        "winrt._winrt_windows_devices_midi.IMidiOutPort",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

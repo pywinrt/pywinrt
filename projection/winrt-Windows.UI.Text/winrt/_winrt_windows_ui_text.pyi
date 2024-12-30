@@ -345,6 +345,9 @@ class TextConstants_Static(type):
 class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
     pass
 
+@typing.final
+class _ITextCharacterFormat: ...
+
 class ITextCharacterFormat(winrt._winrt.IInspectable):
     # Windows.UI.Text.ITextCharacterFormat Windows.UI.Text.ITextCharacterFormat::GetClone()
     @abstractmethod
@@ -544,6 +547,9 @@ class ITextCharacterFormat(winrt._winrt.IInspectable):
     @abstractmethod
     def weight(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
+class _ITextDocument: ...
+
 class ITextDocument(winrt._winrt.IInspectable):
     # System.Int32 Windows.UI.Text.ITextDocument::ApplyDisplayUpdates()
     @abstractmethod
@@ -633,6 +639,9 @@ class ITextDocument(winrt._winrt.IInspectable):
     @undo_limit.setter
     @abstractmethod
     def undo_limit(self, value: winrt.system.UInt32) -> None: ...
+
+@typing.final
+class _ITextParagraphFormat: ...
 
 class ITextParagraphFormat(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Text.ITextParagraphFormat::AddTab(System.Single,Windows.UI.Text.TabAlignment,Windows.UI.Text.TabLeader)
@@ -819,6 +828,9 @@ class ITextParagraphFormat(winrt._winrt.IInspectable):
     @abstractmethod
     def widow_control(self, value: FormatEffect) -> None: ...
 
+@typing.final
+class _ITextRange: ...
+
 class ITextRange(winrt._winrt.IInspectable):
     # System.Boolean Windows.UI.Text.ITextRange::CanPaste(System.Int32)
     @abstractmethod
@@ -996,6 +1008,9 @@ class ITextRange(winrt._winrt.IInspectable):
     @text.setter
     @abstractmethod
     def text(self, value: str) -> None: ...
+
+@typing.final
+class _ITextSelection: ...
 
 class ITextSelection(ITextRange, winrt._winrt.IInspectable):
     # System.Int32 Windows.UI.Text.ITextSelection::EndKey(Windows.UI.Text.TextRangeUnit,System.Boolean)

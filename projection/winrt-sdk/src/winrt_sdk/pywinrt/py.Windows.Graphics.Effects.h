@@ -28,16 +28,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.effects.IGraphicsEffect";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.effects._IGraphicsEffect";
         static constexpr const char* module_name = "winrt.windows.graphics.effects";
-        static constexpr const char* type_name = "IGraphicsEffect";
+        static constexpr const char* type_name = "_IGraphicsEffect";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.effects.IGraphicsEffectSource";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.effects._IGraphicsEffectSource";
         static constexpr const char* module_name = "winrt.windows.graphics.effects";
-        static constexpr const char* type_name = "IGraphicsEffectSource";
+        static constexpr const char* type_name = "_IGraphicsEffectSource";
     };
 }

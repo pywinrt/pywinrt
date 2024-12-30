@@ -35,7 +35,7 @@ namespace py::cpp::Windows::Graphics
         { }};
 
     static PyType_Spec type_spec_IGeometrySource2D = {
-        "winrt._winrt_windows_graphics.IGeometrySource2D",
+        "winrt._winrt_windows_graphics._IGeometrySource2D",
         sizeof(py::wrapper::Windows::Graphics::IGeometrySource2D),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -121,7 +121,7 @@ namespace py::cpp::Windows::Graphics
         { }};
 
     static PyType_Spec type_spec_ImplementsIGeometrySource2D = {
-        "winrt._winrt_windows_graphics.ImplementsIGeometrySource2D",
+        "winrt._winrt_windows_graphics.IGeometrySource2D",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

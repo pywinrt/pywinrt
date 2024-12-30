@@ -839,7 +839,7 @@ namespace py::cpp::Windows::Devices::Custom
         { }};
 
     static PyType_Spec type_spec_IIOControlCode = {
-        "winrt._winrt_windows_devices_custom.IIOControlCode",
+        "winrt._winrt_windows_devices_custom._IIOControlCode",
         sizeof(py::wrapper::Windows::Devices::Custom::IIOControlCode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1025,7 +1025,7 @@ namespace py::cpp::Windows::Devices::Custom
         { }};
 
     static PyType_Spec type_spec_ImplementsIIOControlCode = {
-        "winrt._winrt_windows_devices_custom.ImplementsIIOControlCode",
+        "winrt._winrt_windows_devices_custom.IIOControlCode",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

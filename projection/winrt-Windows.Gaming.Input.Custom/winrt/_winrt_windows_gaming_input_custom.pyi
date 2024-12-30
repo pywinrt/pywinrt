@@ -133,6 +133,9 @@ class XusbGameControllerProvider(winrt.system.Object, IGameControllerProvider):
     @_property
     def is_connected(self) -> bool: ...
 
+@typing.final
+class _ICustomGameControllerFactory: ...
+
 class ICustomGameControllerFactory(winrt._winrt.IInspectable):
     # System.Object Windows.Gaming.Input.Custom.ICustomGameControllerFactory::CreateGameController(Windows.Gaming.Input.Custom.IGameControllerProvider)
     @abstractmethod
@@ -144,6 +147,9 @@ class ICustomGameControllerFactory(winrt._winrt.IInspectable):
     @abstractmethod
     def on_game_controller_removed(self, value: windows_gaming_input.IGameController, /) -> None: ...
 
+@typing.final
+class _IGameControllerInputSink: ...
+
 class IGameControllerInputSink(winrt._winrt.IInspectable):
     # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputResumed(System.UInt64)
     @abstractmethod
@@ -151,6 +157,9 @@ class IGameControllerInputSink(winrt._winrt.IInspectable):
     # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputSuspended(System.UInt64)
     @abstractmethod
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
+
+@typing.final
+class _IGameControllerProvider: ...
 
 class IGameControllerProvider(winrt._winrt.IInspectable):
     # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.IGameControllerProvider::get_FirmwareVersionInfo()
@@ -174,6 +183,9 @@ class IGameControllerProvider(winrt._winrt.IInspectable):
     @abstractmethod
     def is_connected(self) -> bool: ...
 
+@typing.final
+class _IGipGameControllerInputSink: ...
+
 class IGipGameControllerInputSink(IGameControllerInputSink, winrt._winrt.IInspectable):
     # System.Void Windows.Gaming.Input.Custom.IGipGameControllerInputSink::OnKeyReceived(System.UInt64,System.Byte,System.Boolean)
     @abstractmethod
@@ -182,10 +194,16 @@ class IGipGameControllerInputSink(IGameControllerInputSink, winrt._winrt.IInspec
     @abstractmethod
     def on_message_received(self, timestamp: winrt.system.UInt64, message_class: GipMessageClass, message_id: winrt.system.UInt8, sequence_id: winrt.system.UInt8, message_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
 
+@typing.final
+class _IHidGameControllerInputSink: ...
+
 class IHidGameControllerInputSink(IGameControllerInputSink, winrt._winrt.IInspectable):
     # System.Void Windows.Gaming.Input.Custom.IHidGameControllerInputSink::OnInputReportReceived(System.UInt64,System.Byte,System.Byte[])
     @abstractmethod
     def on_input_report_received(self, timestamp: winrt.system.UInt64, report_id: winrt.system.UInt8, report_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+
+@typing.final
+class _IXusbGameControllerInputSink: ...
 
 class IXusbGameControllerInputSink(IGameControllerInputSink, winrt._winrt.IInspectable):
     # System.Void Windows.Gaming.Input.Custom.IXusbGameControllerInputSink::OnInputReceived(System.UInt64,System.Byte,System.Byte[])

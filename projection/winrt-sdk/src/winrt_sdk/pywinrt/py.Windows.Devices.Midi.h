@@ -252,16 +252,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::IMidiMessage>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.IMidiMessage";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi._IMidiMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
-        static constexpr const char* type_name = "IMidiMessage";
+        static constexpr const char* type_name = "_IMidiMessage";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Midi::IMidiOutPort>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.IMidiOutPort";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi._IMidiOutPort";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
-        static constexpr const char* type_name = "IMidiOutPort";
+        static constexpr const char* type_name = "_IMidiOutPort";
     };
 }

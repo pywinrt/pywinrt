@@ -482,8 +482,14 @@ class VisualInteractionSource(windows_ui_composition.CompositionObject, IComposi
     @typing.final
     def pointer_wheel_config(self) -> InteractionSourceConfiguration: ...
 
+@typing.final
+class _ICompositionInteractionSource: ...
+
 class ICompositionInteractionSource(winrt._winrt.IInspectable):  # type: ignore[misc]
     pass
+
+@typing.final
+class _IInteractionTrackerOwner: ...
 
 class IInteractionTrackerOwner(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Composition.Interactions.IInteractionTrackerOwner::CustomAnimationStateEntered(Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs)

@@ -26,7 +26,9 @@ from winrt._winrt_windows_devices_midi import (
     MidiTimeCodeMessage,
     MidiTimingClockMessage,
     MidiTuneRequestMessage,
+    _IMidiMessage,
     IMidiMessage,
+    _IMidiOutPort,
     IMidiOutPort,
 )
 

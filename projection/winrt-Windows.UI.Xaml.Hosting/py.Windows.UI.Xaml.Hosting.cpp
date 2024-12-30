@@ -3262,7 +3262,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }};
 
     static PyType_Spec type_spec_IXamlUIPresenterHost = {
-        "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost",
+        "winrt._winrt_windows_ui_xaml_hosting._IXamlUIPresenterHost",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3380,7 +3380,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlUIPresenterHost = {
-        "winrt._winrt_windows_ui_xaml_hosting.ImplementsIXamlUIPresenterHost",
+        "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3458,7 +3458,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }};
 
     static PyType_Spec type_spec_IXamlUIPresenterHost2 = {
-        "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost2",
+        "winrt._winrt_windows_ui_xaml_hosting._IXamlUIPresenterHost2",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3570,7 +3570,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlUIPresenterHost2 = {
-        "winrt._winrt_windows_ui_xaml_hosting.ImplementsIXamlUIPresenterHost2",
+        "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3652,7 +3652,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }};
 
     static PyType_Spec type_spec_IXamlUIPresenterHost3 = {
-        "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost3",
+        "winrt._winrt_windows_ui_xaml_hosting._IXamlUIPresenterHost3",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3788,7 +3788,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlUIPresenterHost3 = {
-        "winrt._winrt_windows_ui_xaml_hosting.ImplementsIXamlUIPresenterHost3",
+        "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost3",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -15,7 +15,9 @@ from winrt._winrt_windows_devices_perception_provider import (
     PerceptionFrameProviderManagerService,
     PerceptionPropertyChangeRequest,
     PerceptionVideoFrameAllocator,
+    _IPerceptionFrameProvider,
     IPerceptionFrameProvider,
+    _IPerceptionFrameProviderManager,
     IPerceptionFrameProviderManager,
 )
 

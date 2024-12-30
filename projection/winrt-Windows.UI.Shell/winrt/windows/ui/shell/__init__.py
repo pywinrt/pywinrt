@@ -20,7 +20,9 @@ from winrt._winrt_windows_ui_shell import (
     WindowTabSwitchRequestedEventArgs,
     WindowTabTearOutRequestedEventArgs,
     WindowTabThumbnailRequestedEventArgs,
+    _IAdaptiveCard,
     IAdaptiveCard,
+    _IAdaptiveCardBuilderStatics,
     IAdaptiveCardBuilderStatics,
 )
 

@@ -5,6 +5,7 @@ import enum
 import winrt.system
 from winrt._winrt_windows_ui_xaml_core_direct import (
     XamlDirect,
+    _IXamlDirectObject,
     IXamlDirectObject,
 )
 

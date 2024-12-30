@@ -590,7 +590,7 @@ namespace py::cpp::Windows::Devices
         { }};
 
     static PyType_Spec type_spec_ILowLevelDevicesAggregateProvider = {
-        "winrt._winrt_windows_devices.ILowLevelDevicesAggregateProvider",
+        "winrt._winrt_windows_devices._ILowLevelDevicesAggregateProvider",
         sizeof(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -776,7 +776,7 @@ namespace py::cpp::Windows::Devices
         { }};
 
     static PyType_Spec type_spec_ImplementsILowLevelDevicesAggregateProvider = {
-        "winrt._winrt_windows_devices.ImplementsILowLevelDevicesAggregateProvider",
+        "winrt._winrt_windows_devices.ILowLevelDevicesAggregateProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

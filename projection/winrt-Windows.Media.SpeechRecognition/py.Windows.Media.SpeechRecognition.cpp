@@ -5174,7 +5174,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }};
 
     static PyType_Spec type_spec_ISpeechRecognitionConstraint = {
-        "winrt._winrt_windows_media_speechrecognition.ISpeechRecognitionConstraint",
+        "winrt._winrt_windows_media_speechrecognition._ISpeechRecognitionConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5409,7 +5409,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }};
 
     static PyType_Spec type_spec_ImplementsISpeechRecognitionConstraint = {
-        "winrt._winrt_windows_media_speechrecognition.ImplementsISpeechRecognitionConstraint",
+        "winrt._winrt_windows_media_speechrecognition.ISpeechRecognitionConstraint",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

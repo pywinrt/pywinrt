@@ -23,6 +23,7 @@ from winrt._winrt_windows_applicationmodel_appointments import (
     AppointmentStoreChangedEventArgs,
     AppointmentStoreNotificationTriggerDetails,
     FindAppointmentsOptions,
+    _IAppointmentParticipant,
     IAppointmentParticipant,
 )
 

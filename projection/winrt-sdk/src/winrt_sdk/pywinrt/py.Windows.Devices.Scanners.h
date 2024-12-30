@@ -155,17 +155,17 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.IImageScannerFormatConfiguration";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners._IImageScannerFormatConfiguration";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "IImageScannerFormatConfiguration";
+        static constexpr const char* type_name = "_IImageScannerFormatConfiguration";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.IImageScannerSourceConfiguration";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners._IImageScannerSourceConfiguration";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
-        static constexpr const char* type_name = "IImageScannerSourceConfiguration";
+        static constexpr const char* type_name = "_IImageScannerSourceConfiguration";
     };
 
     template<>

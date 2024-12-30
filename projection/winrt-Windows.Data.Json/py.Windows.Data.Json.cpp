@@ -4138,7 +4138,7 @@ namespace py::cpp::Windows::Data::Json
         { }};
 
     static PyType_Spec type_spec_IJsonValue = {
-        "winrt._winrt_windows_data_json.IJsonValue",
+        "winrt._winrt_windows_data_json._IJsonValue",
         sizeof(py::wrapper::Windows::Data::Json::IJsonValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4400,7 +4400,7 @@ namespace py::cpp::Windows::Data::Json
         { }};
 
     static PyType_Spec type_spec_ImplementsIJsonValue = {
-        "winrt._winrt_windows_data_json.ImplementsIJsonValue",
+        "winrt._winrt_windows_data_json.IJsonValue",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -6143,7 +6143,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { }};
 
     static PyType_Spec type_spec_ICompositionInteractionSource = {
-        "winrt._winrt_microsoft_ui_composition_interactions.ICompositionInteractionSource",
+        "winrt._winrt_microsoft_ui_composition_interactions._ICompositionInteractionSource",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6229,7 +6229,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { }};
 
     static PyType_Spec type_spec_ImplementsICompositionInteractionSource = {
-        "winrt._winrt_microsoft_ui_composition_interactions.ImplementsICompositionInteractionSource",
+        "winrt._winrt_microsoft_ui_composition_interactions.ICompositionInteractionSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6536,7 +6536,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { }};
 
     static PyType_Spec type_spec_IInteractionTrackerOwner = {
-        "winrt._winrt_microsoft_ui_composition_interactions.IInteractionTrackerOwner",
+        "winrt._winrt_microsoft_ui_composition_interactions._IInteractionTrackerOwner",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::IInteractionTrackerOwner),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6874,7 +6874,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { }};
 
     static PyType_Spec type_spec_ImplementsIInteractionTrackerOwner = {
-        "winrt._winrt_microsoft_ui_composition_interactions.ImplementsIInteractionTrackerOwner",
+        "winrt._winrt_microsoft_ui_composition_interactions.IInteractionTrackerOwner",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

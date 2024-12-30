@@ -361,32 +361,32 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ITextCharacterFormat>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ITextCharacterFormat";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text._ITextCharacterFormat";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
-        static constexpr const char* type_name = "ITextCharacterFormat";
+        static constexpr const char* type_name = "_ITextCharacterFormat";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ITextParagraphFormat>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ITextParagraphFormat";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text._ITextParagraphFormat";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
-        static constexpr const char* type_name = "ITextParagraphFormat";
+        static constexpr const char* type_name = "_ITextParagraphFormat";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ITextRange>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ITextRange";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text._ITextRange";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
-        static constexpr const char* type_name = "ITextRange";
+        static constexpr const char* type_name = "_ITextRange";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ITextSelection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ITextSelection";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text._ITextSelection";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
-        static constexpr const char* type_name = "ITextSelection";
+        static constexpr const char* type_name = "_ITextSelection";
     };
 }

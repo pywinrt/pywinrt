@@ -103,8 +103,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.ICoreDropOperationTarget";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core._ICoreDropOperationTarget";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
-        static constexpr const char* type_name = "ICoreDropOperationTarget";
+        static constexpr const char* type_name = "_ICoreDropOperationTarget";
     };
 }

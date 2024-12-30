@@ -190,8 +190,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.IStorageItemExtraProperties";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties._IStorageItemExtraProperties";
         static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "IStorageItemExtraProperties";
+        static constexpr const char* type_name = "_IStorageItemExtraProperties";
     };
 }

@@ -53,6 +53,7 @@ from winrt._winrt_microsoft_ui_input import (
     TappedEventArgs,
     WindowRectChangedEventArgs,
     WindowRectChangingEventArgs,
+    _IPointerPointTransform,
     IPointerPointTransform,
 )
 from typing import TYPE_CHECKING

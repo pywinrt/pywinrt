@@ -9,6 +9,7 @@ from winrt._winrt_microsoft_ui_input_dragdrop import (
     DragOperation,
     DragUIOverride,
     DropOperationTargetRequestedEventArgs,
+    _IDropOperationTarget,
     IDropOperationTarget,
 )
 
