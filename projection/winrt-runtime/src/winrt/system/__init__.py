@@ -1,3 +1,4 @@
+import os
 import sys
 from collections.abc import Mapping, MutableMapping, MutableSequence, Sequence
 from pathlib import Path
@@ -81,7 +82,7 @@ def _register_dll_search_path(module_path) -> _DllCookie:
     Returns:
         An cookie object that will remove the search path when closed.
     """
-    return _DllCookie(_add_dll_directory(str(Path(module_path).parent.resolve())))
+    return _DllCookie(_add_dll_directory(os.fspath(Path(module_path).parent.resolve())))
 
 
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12

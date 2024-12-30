@@ -31,7 +31,7 @@ wheel_dir = glob.glob(
     "winrt_Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap-*"
 )[0]
 
-bootstrap_dll = str(
+bootstrap_dll = os.fspath(
     pathlib.Path(os.environ["WINDOWS_APP_SDK_PATH"])
     / "runtimes"
     / f"win-{ARCH_MAP[wheel_arch]}"

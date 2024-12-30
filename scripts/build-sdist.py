@@ -9,8 +9,8 @@ PROJECTION_PATH = (PROJECT_DIR / "projection").resolve()
 WEBVIEW2_PATH = (PROJECT_DIR / "_tools/Microsoft.Web.WebView2").resolve()
 WINDOWS_APP_SDK_PATH = (PROJECT_DIR / "_tools/Microsoft.WindowsAppSDK").resolve()
 
-os.environ["WEBVIEW2_PATH"] = str(WEBVIEW2_PATH)
-os.environ["WINDOWS_APP_SDK_PATH"] = str(WINDOWS_APP_SDK_PATH)
+os.environ["WEBVIEW2_PATH"] = os.fspath(WEBVIEW2_PATH)
+os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
 
 
 try:
@@ -24,10 +24,10 @@ except ImportError:
 
 
 for package_path in chain(
-    [str(PROJECTION_PATH / "winrt-runtime")],
-    iglob(str(PROJECTION_PATH / "interop" / "winrt-*")),
-    iglob(str(PROJECTION_PATH / "winrt-Windows.*")),
-    iglob(str(PROJECTION_PATH / "winrt-Microsoft.*")),
+    [os.fspath(PROJECTION_PATH / "winrt-runtime")],
+    iglob(os.fspath(PROJECTION_PATH / "interop" / "winrt-*")),
+    iglob(os.fspath(PROJECTION_PATH / "winrt-Windows.*")),
+    iglob(os.fspath(PROJECTION_PATH / "winrt-Microsoft.*")),
 ):
     subprocess.check_call(
         [

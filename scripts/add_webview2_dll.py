@@ -28,7 +28,7 @@ subprocess.check_call(["wheel", "unpack", wheel])
 # get name of extracted directory
 wheel_dir = glob.glob("winrt_Microsoft.Web.WebView2.Core-*")[0]
 
-dll = str(
+dll = os.fspath(
     pathlib.Path(os.environ["WEBVIEW2_PATH"])
     / "runtimes"
     / f"win-{ARCH_MAP[wheel_arch]}"
