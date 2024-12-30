@@ -92,7 +92,7 @@ with contextlib.ExitStack() as stack:
     assert frame is not None, "This shouldn't happen since we waited for the event."
 
     stack.enter_context(frame)
-    bitmap = stack.enter_context(
+    bitmap = stack.push(
         wait_for(SoftwareBitmap.create_copy_from_surface_async(frame.surface))
     )
     folder = wait_for(StorageFolder.get_folder_from_path_async(abspath(".")))
@@ -102,7 +102,7 @@ with contextlib.ExitStack() as stack:
             CreationCollisionOption.REPLACE_EXISTING,
         )
     )
-    stream = stack.enter_context(wait_for(file.open_async(FileAccessMode.READ_WRITE)))
+    stream = stack.push(wait_for(file.open_async(FileAccessMode.READ_WRITE)))
     encoder = wait_for(BitmapEncoder.create_async(BitmapEncoder.png_encoder_id, stream))
     encoder.set_software_bitmap(bitmap)
     wait_for(encoder.flush_async())
