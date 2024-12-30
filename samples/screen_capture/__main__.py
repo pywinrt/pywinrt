@@ -12,8 +12,9 @@ capture will time out. The captured image will be saved as
 """
 
 import contextlib
-from pathlib import Path
+import os
 from threading import Event
+from typing import Callable
 
 from winrt.windows.graphics.capture import (
     GraphicsCaptureItem,
@@ -29,6 +30,18 @@ from winrt.windows.ui.windowmanagement import WindowServices
 
 from .d3d11 import D3D_DRIVER_TYPE, D3D11_CREATE_DEVICE_FLAG, D3D11CreateDevice
 from .sync import wait_for
+
+if os.environ.get("MSYSTEM", ""):
+    _getfullpathname: Callable[[str], str]
+    from nt import _getfullpathname  # type: ignore
+
+    # HACK: MSYS hacks ntpath module to use unix directory separators when the
+    # MSYSTEM environment variable is present, so we have to work around that.
+    def abspath(path: str) -> str:
+        return _getfullpathname(os.path.normpath(path))
+else:
+    abspath = os.path.abspath
+
 
 capture_items: list[GraphicsCaptureItem] = []
 
@@ -82,9 +95,7 @@ with contextlib.ExitStack() as stack:
     bitmap = stack.enter_context(
         wait_for(SoftwareBitmap.create_copy_from_surface_async(frame.surface))
     )
-    folder = wait_for(
-        StorageFolder.get_folder_from_path_async(str(Path(".").resolve()))
-    )
+    folder = wait_for(StorageFolder.get_folder_from_path_async(abspath(".")))
     file = wait_for(
         folder.create_file_async(
             "pywinrt example screen capture.png",
