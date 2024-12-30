@@ -931,17 +931,17 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.IDefaultAudioDeviceChangedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices._IDefaultAudioDeviceChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.devices";
-        static constexpr const char* type_name = "IDefaultAudioDeviceChangedEventArgs";
+        static constexpr const char* type_name = "_IDefaultAudioDeviceChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Devices::IMediaDeviceController>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.IMediaDeviceController";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices._IMediaDeviceController";
         static constexpr const char* module_name = "winrt.windows.media.devices";
-        static constexpr const char* type_name = "IMediaDeviceController";
+        static constexpr const char* type_name = "_IMediaDeviceController";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Media::Devices::CallControlEventHandler>

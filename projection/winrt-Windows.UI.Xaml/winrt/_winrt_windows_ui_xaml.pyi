@@ -3153,6 +3153,9 @@ class XamlRoot(winrt.system.Object):
 class XamlRootChangedEventArgs(winrt.system.Object):
     pass
 
+@typing.final
+class _IDataTemplateExtension: ...
+
 class IDataTemplateExtension(winrt._winrt.IInspectable):
     # System.Boolean Windows.UI.Xaml.IDataTemplateExtension::ProcessBinding(System.UInt32)
     @abstractmethod
@@ -3163,6 +3166,9 @@ class IDataTemplateExtension(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Xaml.IDataTemplateExtension::ResetTemplate()
     @abstractmethod
     def reset_template(self) -> None: ...
+
+@typing.final
+class _IElementFactory: ...
 
 class IElementFactory(winrt._winrt.IInspectable):
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.IElementFactory::GetElement(Windows.UI.Xaml.ElementFactoryGetArgs)

@@ -90,8 +90,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Json::IJsonValue>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.json.IJsonValue";
+        static constexpr std::string_view qualified_name = "winrt.windows.data.json._IJsonValue";
         static constexpr const char* module_name = "winrt.windows.data.json";
-        static constexpr const char* type_name = "IJsonValue";
+        static constexpr const char* type_name = "_IJsonValue";
     };
 }

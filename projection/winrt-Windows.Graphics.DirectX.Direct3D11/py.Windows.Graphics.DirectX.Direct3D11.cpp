@@ -144,7 +144,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }};
 
     static PyType_Spec type_spec_IDirect3DDevice = {
-        "winrt._winrt_windows_graphics_directx_direct3d11.IDirect3DDevice",
+        "winrt._winrt_windows_graphics_directx_direct3d11._IDirect3DDevice",
         sizeof(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -278,7 +278,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }};
 
     static PyType_Spec type_spec_ImplementsIDirect3DDevice = {
-        "winrt._winrt_windows_graphics_directx_direct3d11.ImplementsIDirect3DDevice",
+        "winrt._winrt_windows_graphics_directx_direct3d11.IDirect3DDevice",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -413,7 +413,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }};
 
     static PyType_Spec type_spec_IDirect3DSurface = {
-        "winrt._winrt_windows_graphics_directx_direct3d11.IDirect3DSurface",
+        "winrt._winrt_windows_graphics_directx_direct3d11._IDirect3DSurface",
         sizeof(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -543,7 +543,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }};
 
     static PyType_Spec type_spec_ImplementsIDirect3DSurface = {
-        "winrt._winrt_windows_graphics_directx_direct3d11.ImplementsIDirect3DSurface",
+        "winrt._winrt_windows_graphics_directx_direct3d11.IDirect3DSurface",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

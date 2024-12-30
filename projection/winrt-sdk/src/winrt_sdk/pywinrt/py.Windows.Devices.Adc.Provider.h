@@ -44,16 +44,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.provider.IAdcControllerProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.provider._IAdcControllerProvider";
         static constexpr const char* module_name = "winrt.windows.devices.adc.provider";
-        static constexpr const char* type_name = "IAdcControllerProvider";
+        static constexpr const char* type_name = "_IAdcControllerProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.provider.IAdcProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.provider._IAdcProvider";
         static constexpr const char* module_name = "winrt.windows.devices.adc.provider";
-        static constexpr const char* type_name = "IAdcProvider";
+        static constexpr const char* type_name = "_IAdcProvider";
     };
 }

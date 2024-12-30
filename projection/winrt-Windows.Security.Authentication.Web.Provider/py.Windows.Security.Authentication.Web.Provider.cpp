@@ -3931,7 +3931,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_IWebAccountProviderBaseReportOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderBaseReportOperation",
+        "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderBaseReportOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4071,7 +4071,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderBaseReportOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderBaseReportOperation",
+        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderBaseReportOperation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4139,7 +4139,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_IWebAccountProviderOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderOperation",
+        "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4245,7 +4245,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderOperation",
+        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderOperation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4454,7 +4454,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_IWebAccountProviderSilentReportOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderSilentReportOperation",
+        "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderSilentReportOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4648,7 +4648,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderSilentReportOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderSilentReportOperation",
+        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderSilentReportOperation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4716,7 +4716,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_IWebAccountProviderTokenObjects = {
-        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenObjects",
+        "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderTokenObjects",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4822,7 +4822,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderTokenObjects = {
-        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderTokenObjects",
+        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenObjects",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4921,7 +4921,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_IWebAccountProviderTokenObjects2 = {
-        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenObjects2",
+        "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderTokenObjects2",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5047,7 +5047,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderTokenObjects2 = {
-        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderTokenObjects2",
+        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenObjects2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5247,7 +5247,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_IWebAccountProviderTokenOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenOperation",
+        "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderTokenOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5436,7 +5436,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderTokenOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderTokenOperation",
+        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenOperation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5601,7 +5601,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_IWebAccountProviderUIReportOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderUIReportOperation",
+        "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderUIReportOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5765,7 +5765,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccountProviderUIReportOperation = {
-        "winrt._winrt_windows_security_authentication_web_provider.ImplementsIWebAccountProviderUIReportOperation",
+        "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderUIReportOperation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -8,6 +8,7 @@ from winrt._winrt_windows_devices_spi import (
     SpiConnectionSettings,
     SpiController,
     SpiDevice,
+    _ISpiDeviceStatics,
     ISpiDeviceStatics,
 )
 

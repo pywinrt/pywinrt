@@ -467,184 +467,184 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDClosedCaptionDataReceivedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDClosedCaptionDataReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDClosedCaptionDataReceivedEventArgs";
+        static constexpr const char* type_name = "_INDClosedCaptionDataReceivedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDCustomData";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDCustomData";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDCustomData";
+        static constexpr const char* type_name = "_INDCustomData";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDDownloadEngine";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDDownloadEngine";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDDownloadEngine";
+        static constexpr const char* type_name = "_INDDownloadEngine";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDDownloadEngineNotifier";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDDownloadEngineNotifier";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDDownloadEngineNotifier";
+        static constexpr const char* type_name = "_INDDownloadEngineNotifier";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDLicenseFetchCompletedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDLicenseFetchCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDLicenseFetchCompletedEventArgs";
+        static constexpr const char* type_name = "_INDLicenseFetchCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDLicenseFetchDescriptor";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDLicenseFetchDescriptor";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDLicenseFetchDescriptor";
+        static constexpr const char* type_name = "_INDLicenseFetchDescriptor";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDLicenseFetchResult";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDLicenseFetchResult";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDLicenseFetchResult";
+        static constexpr const char* type_name = "_INDLicenseFetchResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDMessenger";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDMessenger";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDMessenger";
+        static constexpr const char* type_name = "_INDMessenger";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDProximityDetectionCompletedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDProximityDetectionCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDProximityDetectionCompletedEventArgs";
+        static constexpr const char* type_name = "_INDProximityDetectionCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDRegistrationCompletedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDRegistrationCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDRegistrationCompletedEventArgs";
+        static constexpr const char* type_name = "_INDRegistrationCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDSendResult";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDSendResult";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDSendResult";
+        static constexpr const char* type_name = "_INDSendResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDStartResult";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDStartResult";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDStartResult";
+        static constexpr const char* type_name = "_INDStartResult";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDStorageFileHelper";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDStorageFileHelper";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDStorageFileHelper";
+        static constexpr const char* type_name = "_INDStorageFileHelper";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDStreamParser";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDStreamParser";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDStreamParser";
+        static constexpr const char* type_name = "_INDStreamParser";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDStreamParserNotifier";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDStreamParserNotifier";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDStreamParserNotifier";
+        static constexpr const char* type_name = "_INDStreamParserNotifier";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.INDTransmitterProperties";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._INDTransmitterProperties";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "INDTransmitterProperties";
+        static constexpr const char* type_name = "_INDTransmitterProperties";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.IPlayReadyDomain";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._IPlayReadyDomain";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "IPlayReadyDomain";
+        static constexpr const char* type_name = "_IPlayReadyDomain";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.IPlayReadyLicense";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._IPlayReadyLicense";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "IPlayReadyLicense";
+        static constexpr const char* type_name = "_IPlayReadyLicense";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.IPlayReadyLicenseAcquisitionServiceRequest";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._IPlayReadyLicenseAcquisitionServiceRequest";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "IPlayReadyLicenseAcquisitionServiceRequest";
+        static constexpr const char* type_name = "_IPlayReadyLicenseAcquisitionServiceRequest";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.IPlayReadyLicenseSession";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._IPlayReadyLicenseSession";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "IPlayReadyLicenseSession";
+        static constexpr const char* type_name = "_IPlayReadyLicenseSession";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.IPlayReadyLicenseSession2";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._IPlayReadyLicenseSession2";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "IPlayReadyLicenseSession2";
+        static constexpr const char* type_name = "_IPlayReadyLicenseSession2";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.IPlayReadySecureStopServiceRequest";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._IPlayReadySecureStopServiceRequest";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "IPlayReadySecureStopServiceRequest";
+        static constexpr const char* type_name = "_IPlayReadySecureStopServiceRequest";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready.IPlayReadyServiceRequest";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.playready._IPlayReadyServiceRequest";
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
-        static constexpr const char* type_name = "IPlayReadyServiceRequest";
+        static constexpr const char* type_name = "_IPlayReadyServiceRequest";
     };
 }

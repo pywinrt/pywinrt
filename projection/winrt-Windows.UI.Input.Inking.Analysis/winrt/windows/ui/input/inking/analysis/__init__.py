@@ -15,7 +15,9 @@ from winrt._winrt_windows_ui_input_inking_analysis import (
     InkAnalysisRoot,
     InkAnalysisWritingRegion,
     InkAnalyzer,
+    _IInkAnalysisNode,
     IInkAnalysisNode,
+    _IInkAnalyzerFactory,
     IInkAnalyzerFactory,
 )
 

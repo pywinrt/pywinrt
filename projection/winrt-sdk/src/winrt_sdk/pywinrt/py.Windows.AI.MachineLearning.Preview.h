@@ -175,8 +175,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.ILearningModelVariableDescriptorPreview";
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview._ILearningModelVariableDescriptorPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
-        static constexpr const char* type_name = "ILearningModelVariableDescriptorPreview";
+        static constexpr const char* type_name = "_ILearningModelVariableDescriptorPreview";
     };
 }

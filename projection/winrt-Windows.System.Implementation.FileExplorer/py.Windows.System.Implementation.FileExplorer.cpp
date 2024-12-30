@@ -220,7 +220,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }};
 
     static PyType_Spec type_spec_ISysStorageProviderEventSource = {
-        "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderEventSource",
+        "winrt._winrt_windows_system_implementation_fileexplorer._ISysStorageProviderEventSource",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -368,7 +368,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }};
 
     static PyType_Spec type_spec_ImplementsISysStorageProviderEventSource = {
-        "winrt._winrt_windows_system_implementation_fileexplorer.ImplementsISysStorageProviderEventSource",
+        "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderEventSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -492,7 +492,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }};
 
     static PyType_Spec type_spec_ISysStorageProviderHandlerFactory = {
-        "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHandlerFactory",
+        "winrt._winrt_windows_system_implementation_fileexplorer._ISysStorageProviderHandlerFactory",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -654,7 +654,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }};
 
     static PyType_Spec type_spec_ImplementsISysStorageProviderHandlerFactory = {
-        "winrt._winrt_windows_system_implementation_fileexplorer.ImplementsISysStorageProviderHandlerFactory",
+        "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHandlerFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -734,7 +734,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }};
 
     static PyType_Spec type_spec_ISysStorageProviderHttpRequestProvider = {
-        "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHttpRequestProvider",
+        "winrt._winrt_windows_system_implementation_fileexplorer._ISysStorageProviderHttpRequestProvider",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -852,7 +852,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }};
 
     static PyType_Spec type_spec_ImplementsISysStorageProviderHttpRequestProvider = {
-        "winrt._winrt_windows_system_implementation_fileexplorer.ImplementsISysStorageProviderHttpRequestProvider",
+        "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHttpRequestProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

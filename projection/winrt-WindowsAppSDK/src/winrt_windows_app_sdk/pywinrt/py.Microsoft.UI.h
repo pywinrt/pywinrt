@@ -92,9 +92,9 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::IClosableNotifier>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.IClosableNotifier";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui._IClosableNotifier";
         static constexpr const char* module_name = "winrt.microsoft.ui";
-        static constexpr const char* type_name = "IClosableNotifier";
+        static constexpr const char* type_name = "_IClosableNotifier";
     };
 
     template<>

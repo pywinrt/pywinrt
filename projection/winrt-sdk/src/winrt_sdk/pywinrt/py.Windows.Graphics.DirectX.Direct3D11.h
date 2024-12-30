@@ -63,17 +63,17 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.IDirect3DDevice";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11._IDirect3DDevice";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
-        static constexpr const char* type_name = "IDirect3DDevice";
+        static constexpr const char* type_name = "_IDirect3DDevice";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.IDirect3DSurface";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11._IDirect3DSurface";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
-        static constexpr const char* type_name = "IDirect3DSurface";
+        static constexpr const char* type_name = "_IDirect3DSurface";
     };
 
     template<>

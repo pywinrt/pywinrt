@@ -122,8 +122,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::IHttpFilter>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.IHttpFilter";
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters._IHttpFilter";
         static constexpr const char* module_name = "winrt.windows.web.http.filters";
-        static constexpr const char* type_name = "IHttpFilter";
+        static constexpr const char* type_name = "_IHttpFilter";
     };
 }

@@ -206,40 +206,40 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.IXmlCharacterData";
+        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlCharacterData";
         static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "IXmlCharacterData";
+        static constexpr const char* type_name = "_IXmlCharacterData";
     };
 
     template<>
     struct py_type<winrt::Windows::Data::Xml::Dom::IXmlNode>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.IXmlNode";
+        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlNode";
         static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "IXmlNode";
+        static constexpr const char* type_name = "_IXmlNode";
     };
 
     template<>
     struct py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.IXmlNodeSelector";
+        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlNodeSelector";
         static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "IXmlNodeSelector";
+        static constexpr const char* type_name = "_IXmlNodeSelector";
     };
 
     template<>
     struct py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.IXmlNodeSerializer";
+        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlNodeSerializer";
         static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "IXmlNodeSerializer";
+        static constexpr const char* type_name = "_IXmlNodeSerializer";
     };
 
     template<>
     struct py_type<winrt::Windows::Data::Xml::Dom::IXmlText>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom.IXmlText";
+        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.dom._IXmlText";
         static constexpr const char* module_name = "winrt.windows.data.xml.dom";
-        static constexpr const char* type_name = "IXmlText";
+        static constexpr const char* type_name = "_IXmlText";
     };
 }

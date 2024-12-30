@@ -1938,41 +1938,41 @@ namespace py
     template<>
     struct py_type<winrt::TestComponent::IRequiredFour>
     {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.IRequiredFour";
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredFour";
         static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "IRequiredFour";
+        static constexpr const char* type_name = "_IRequiredFour";
     };
 
     template<>
     struct py_type<winrt::TestComponent::IRequiredOne>
     {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.IRequiredOne";
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredOne";
         static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "IRequiredOne";
+        static constexpr const char* type_name = "_IRequiredOne";
     };
 
     template<>
     struct py_type<winrt::TestComponent::IRequiredThree>
     {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.IRequiredThree";
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredThree";
         static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "IRequiredThree";
+        static constexpr const char* type_name = "_IRequiredThree";
     };
 
     template<>
     struct py_type<winrt::TestComponent::IRequiredTwo>
     {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.IRequiredTwo";
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredTwo";
         static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "IRequiredTwo";
+        static constexpr const char* type_name = "_IRequiredTwo";
     };
 
     template<>
     struct py_type<winrt::TestComponent::ITests>
     {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.ITests";
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._ITests";
         static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "ITests";
+        static constexpr const char* type_name = "_ITests";
     };
 
     template<>

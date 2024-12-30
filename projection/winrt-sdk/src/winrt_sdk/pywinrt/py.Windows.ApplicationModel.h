@@ -482,49 +482,49 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.IEnteredBackgroundEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel._IEnteredBackgroundEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
-        static constexpr const char* type_name = "IEnteredBackgroundEventArgs";
+        static constexpr const char* type_name = "_IEnteredBackgroundEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.ILeavingBackgroundEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel._ILeavingBackgroundEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
-        static constexpr const char* type_name = "ILeavingBackgroundEventArgs";
+        static constexpr const char* type_name = "_ILeavingBackgroundEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.IPackageCatalogStatics2";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel._IPackageCatalogStatics2";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
-        static constexpr const char* type_name = "IPackageCatalogStatics2";
+        static constexpr const char* type_name = "_IPackageCatalogStatics2";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ISuspendingDeferral>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.ISuspendingDeferral";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel._ISuspendingDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
-        static constexpr const char* type_name = "ISuspendingDeferral";
+        static constexpr const char* type_name = "_ISuspendingDeferral";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ISuspendingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.ISuspendingEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel._ISuspendingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
-        static constexpr const char* type_name = "ISuspendingEventArgs";
+        static constexpr const char* type_name = "_ISuspendingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ISuspendingOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.ISuspendingOperation";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel._ISuspendingOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
-        static constexpr const char* type_name = "ISuspendingOperation";
+        static constexpr const char* type_name = "_ISuspendingOperation";
     };
 
     template<>

@@ -8,9 +8,13 @@ from winrt._winrt_microsoft_ui_text import (
     RichEditTextDocument,
     RichEditTextRange,
     TextConstants,
+    _ITextCharacterFormat,
     ITextCharacterFormat,
+    _ITextParagraphFormat,
     ITextParagraphFormat,
+    _ITextRange,
     ITextRange,
+    _ITextSelection,
     ITextSelection,
 )
 

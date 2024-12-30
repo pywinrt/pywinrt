@@ -118,9 +118,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.IStorageItemAccessList";
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache._IStorageItemAccessList";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
-        static constexpr const char* type_name = "IStorageItemAccessList";
+        static constexpr const char* type_name = "_IStorageItemAccessList";
     };
 
     template<>

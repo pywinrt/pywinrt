@@ -36584,7 +36584,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_IAnimationObject = {
-        "winrt._winrt_microsoft_ui_composition.IAnimationObject",
+        "winrt._winrt_microsoft_ui_composition._IAnimationObject",
         sizeof(py::wrapper::Microsoft::UI::Composition::IAnimationObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -36712,7 +36712,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ImplementsIAnimationObject = {
-        "winrt._winrt_microsoft_ui_composition.ImplementsIAnimationObject",
+        "winrt._winrt_microsoft_ui_composition.IAnimationObject",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -36749,7 +36749,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ICompositionAnimationBase = {
-        "winrt._winrt_microsoft_ui_composition.ICompositionAnimationBase",
+        "winrt._winrt_microsoft_ui_composition._ICompositionAnimationBase",
         sizeof(py::wrapper::Microsoft::UI::Composition::ICompositionAnimationBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -36835,7 +36835,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ImplementsICompositionAnimationBase = {
-        "winrt._winrt_microsoft_ui_composition.ImplementsICompositionAnimationBase",
+        "winrt._winrt_microsoft_ui_composition.ICompositionAnimationBase",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -36942,7 +36942,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ICompositionSupportsSystemBackdrop = {
-        "winrt._winrt_microsoft_ui_composition.ICompositionSupportsSystemBackdrop",
+        "winrt._winrt_microsoft_ui_composition._ICompositionSupportsSystemBackdrop",
         sizeof(py::wrapper::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -37071,7 +37071,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ImplementsICompositionSupportsSystemBackdrop = {
-        "winrt._winrt_microsoft_ui_composition.ImplementsICompositionSupportsSystemBackdrop",
+        "winrt._winrt_microsoft_ui_composition.ICompositionSupportsSystemBackdrop",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -37108,7 +37108,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ICompositionSurface = {
-        "winrt._winrt_microsoft_ui_composition.ICompositionSurface",
+        "winrt._winrt_microsoft_ui_composition._ICompositionSurface",
         sizeof(py::wrapper::Microsoft::UI::Composition::ICompositionSurface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -37194,7 +37194,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ImplementsICompositionSurface = {
-        "winrt._winrt_microsoft_ui_composition.ImplementsICompositionSurface",
+        "winrt._winrt_microsoft_ui_composition.ICompositionSurface",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -37272,7 +37272,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ICompositionSurfaceFacade = {
-        "winrt._winrt_microsoft_ui_composition.ICompositionSurfaceFacade",
+        "winrt._winrt_microsoft_ui_composition._ICompositionSurfaceFacade",
         sizeof(py::wrapper::Microsoft::UI::Composition::ICompositionSurfaceFacade),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -37384,7 +37384,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ImplementsICompositionSurfaceFacade = {
-        "winrt._winrt_microsoft_ui_composition.ImplementsICompositionSurfaceFacade",
+        "winrt._winrt_microsoft_ui_composition.ICompositionSurfaceFacade",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -37421,7 +37421,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_IVisualElement = {
-        "winrt._winrt_microsoft_ui_composition.IVisualElement",
+        "winrt._winrt_microsoft_ui_composition._IVisualElement",
         sizeof(py::wrapper::Microsoft::UI::Composition::IVisualElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -37507,7 +37507,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ImplementsIVisualElement = {
-        "winrt._winrt_microsoft_ui_composition.ImplementsIVisualElement",
+        "winrt._winrt_microsoft_ui_composition.IVisualElement",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -37585,7 +37585,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_IVisualElement2 = {
-        "winrt._winrt_microsoft_ui_composition.IVisualElement2",
+        "winrt._winrt_microsoft_ui_composition._IVisualElement2",
         sizeof(py::wrapper::Microsoft::UI::Composition::IVisualElement2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -37697,7 +37697,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { }};
 
     static PyType_Spec type_spec_ImplementsIVisualElement2 = {
-        "winrt._winrt_microsoft_ui_composition.ImplementsIVisualElement2",
+        "winrt._winrt_microsoft_ui_composition.IVisualElement2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

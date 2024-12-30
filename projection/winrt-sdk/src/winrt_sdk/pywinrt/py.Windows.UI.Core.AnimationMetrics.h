@@ -115,8 +115,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.IPropertyAnimation";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics._IPropertyAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
-        static constexpr const char* type_name = "IPropertyAnimation";
+        static constexpr const char* type_name = "_IPropertyAnimation";
     };
 }

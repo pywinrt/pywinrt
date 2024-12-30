@@ -92,6 +92,9 @@ class I2cDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=I2c
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
+class _II2cDeviceStatics: ...
+
 class II2cDeviceStatics(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.I2c.I2cDevice> Windows.Devices.I2c.II2cDeviceStatics::FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)
     @abstractmethod

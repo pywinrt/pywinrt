@@ -23,10 +23,15 @@ from winrt._winrt_windows_graphics_printing_optiondetails import (
     PrintStapleOptionDetails,
     PrintTaskOptionChangedEventArgs,
     PrintTaskOptionDetails,
+    _IPrintCustomOptionDetails,
     IPrintCustomOptionDetails,
+    _IPrintItemListOptionDetails,
     IPrintItemListOptionDetails,
+    _IPrintNumberOptionDetails,
     IPrintNumberOptionDetails,
+    _IPrintOptionDetails,
     IPrintOptionDetails,
+    _IPrintTextOptionDetails,
     IPrintTextOptionDetails,
 )
 

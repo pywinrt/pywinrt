@@ -351,7 +351,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }};
 
     static PyType_Spec type_spec_II2cControllerProvider = {
-        "winrt._winrt_windows_devices_i2c_provider.II2cControllerProvider",
+        "winrt._winrt_windows_devices_i2c_provider._II2cControllerProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -469,7 +469,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsII2cControllerProvider = {
-        "winrt._winrt_windows_devices_i2c_provider.ImplementsII2cControllerProvider",
+        "winrt._winrt_windows_devices_i2c_provider.II2cControllerProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -867,7 +867,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }};
 
     static PyType_Spec type_spec_II2cDeviceProvider = {
-        "winrt._winrt_windows_devices_i2c_provider.II2cDeviceProvider",
+        "winrt._winrt_windows_devices_i2c_provider._II2cDeviceProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cDeviceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1207,7 +1207,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsII2cDeviceProvider = {
-        "winrt._winrt_windows_devices_i2c_provider.ImplementsII2cDeviceProvider",
+        "winrt._winrt_windows_devices_i2c_provider.II2cDeviceProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -1285,7 +1285,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }};
 
     static PyType_Spec type_spec_II2cProvider = {
-        "winrt._winrt_windows_devices_i2c_provider.II2cProvider",
+        "winrt._winrt_windows_devices_i2c_provider._II2cProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1397,7 +1397,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsII2cProvider = {
-        "winrt._winrt_windows_devices_i2c_provider.ImplementsII2cProvider",
+        "winrt._winrt_windows_devices_i2c_provider.II2cProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

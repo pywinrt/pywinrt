@@ -11,10 +11,15 @@ from winrt._winrt_microsoft_windows_widgets_providers import (
     WidgetInfo,
     WidgetManager,
     WidgetUpdateRequestOptions,
+    _IWidgetManager,
     IWidgetManager,
+    _IWidgetProvider,
     IWidgetProvider,
+    _IWidgetProvider2,
     IWidgetProvider2,
+    _IWidgetProviderAnalytics,
     IWidgetProviderAnalytics,
+    _IWidgetProviderErrors,
     IWidgetProviderErrors,
 )
 

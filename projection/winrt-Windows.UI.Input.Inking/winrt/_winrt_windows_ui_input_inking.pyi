@@ -679,15 +679,24 @@ class PenAndInkSettings(winrt.system.Object, metaclass=PenAndInkSettings_Static)
     @_property
     def user_consents_to_handwriting_telemetry_collection(self) -> bool: ...
 
+@typing.final
+class _IInkPointFactory: ...
+
 class IInkPointFactory(winrt._winrt.IInspectable):
     # Windows.UI.Input.Inking.InkPoint Windows.UI.Input.Inking.IInkPointFactory::CreateInkPoint(Windows.Foundation.Point,System.Single)
     @abstractmethod
     def create_ink_point(self, position: windows_foundation.Point, pressure: winrt.system.Single, /) -> InkPoint: ...
 
+@typing.final
+class _IInkPresenterRulerFactory: ...
+
 class IInkPresenterRulerFactory(winrt._winrt.IInspectable):
     # Windows.UI.Input.Inking.InkPresenterRuler Windows.UI.Input.Inking.IInkPresenterRulerFactory::Create(Windows.UI.Input.Inking.InkPresenter)
     @abstractmethod
     def create(self, ink_presenter: InkPresenter, /) -> InkPresenterRuler: ...
+
+@typing.final
+class _IInkPresenterStencil: ...
 
 class IInkPresenterStencil(winrt._winrt.IInspectable):
     # Windows.UI.Color Windows.UI.Input.Inking.IInkPresenterStencil::get_BackgroundColor()
@@ -727,6 +736,9 @@ class IInkPresenterStencil(winrt._winrt.IInspectable):
     @abstractmethod
     def transform(self, value: windows_foundation_numerics.Matrix3x2) -> None: ...
 
+@typing.final
+class _IInkRecognizerContainer: ...
+
 class IInkRecognizerContainer(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognizer> Windows.UI.Input.Inking.IInkRecognizerContainer::GetRecognizers()
     @abstractmethod
@@ -737,6 +749,9 @@ class IInkRecognizerContainer(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Input.Inking.IInkRecognizerContainer::SetDefaultRecognizer(Windows.UI.Input.Inking.InkRecognizer)
     @abstractmethod
     def set_default_recognizer(self, recognizer: InkRecognizer, /) -> None: ...
+
+@typing.final
+class _IInkStrokeContainer: ...
 
 class IInkStrokeContainer(winrt._winrt.IInspectable):
     # System.Void Windows.UI.Input.Inking.IInkStrokeContainer::AddStroke(Windows.UI.Input.Inking.InkStroke)

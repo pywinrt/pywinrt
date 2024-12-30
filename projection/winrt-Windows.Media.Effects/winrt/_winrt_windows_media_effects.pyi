@@ -261,6 +261,9 @@ class VideoTransformSphericalProjection(winrt.system.Object):
     @frame_format.setter
     def frame_format(self, value: windows_media_mediaproperties.SphericalVideoFrameFormat) -> None: ...
 
+@typing.final
+class _IAudioEffectDefinition: ...
+
 class IAudioEffectDefinition(winrt._winrt.IInspectable):
     # System.String Windows.Media.Effects.IAudioEffectDefinition::get_ActivatableClassId()
     @_property
@@ -270,6 +273,9 @@ class IAudioEffectDefinition(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
+
+@typing.final
+class _IBasicAudioEffect: ...
 
 class IBasicAudioEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable):
     # System.Void Windows.Media.Effects.IBasicAudioEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
@@ -292,6 +298,9 @@ class IBasicAudioEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable
     @_property
     @abstractmethod
     def use_input_frame_for_output(self) -> bool: ...
+
+@typing.final
+class _IBasicVideoEffect: ...
 
 class IBasicVideoEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable):
     # System.Void Windows.Media.Effects.IBasicVideoEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
@@ -323,6 +332,9 @@ class IBasicVideoEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable
     @abstractmethod
     def time_independent(self) -> bool: ...
 
+@typing.final
+class _IVideoCompositor: ...
+
 class IVideoCompositor(windows_media.IMediaExtension, winrt._winrt.IInspectable):
     # System.Void Windows.Media.Effects.IVideoCompositor::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
@@ -341,6 +353,9 @@ class IVideoCompositor(windows_media.IMediaExtension, winrt._winrt.IInspectable)
     @abstractmethod
     def time_independent(self) -> bool: ...
 
+@typing.final
+class _IVideoCompositorDefinition: ...
+
 class IVideoCompositorDefinition(winrt._winrt.IInspectable):
     # System.String Windows.Media.Effects.IVideoCompositorDefinition::get_ActivatableClassId()
     @_property
@@ -350,6 +365,9 @@ class IVideoCompositorDefinition(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
+
+@typing.final
+class _IVideoEffectDefinition: ...
 
 class IVideoEffectDefinition(winrt._winrt.IInspectable):
     # System.String Windows.Media.Effects.IVideoEffectDefinition::get_ActivatableClassId()

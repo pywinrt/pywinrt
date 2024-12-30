@@ -200,17 +200,17 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.IWebUICommandBarElement";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core._IWebUICommandBarElement";
         static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "IWebUICommandBarElement";
+        static constexpr const char* type_name = "_IWebUICommandBarElement";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.IWebUICommandBarIcon";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core._IWebUICommandBarIcon";
         static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "IWebUICommandBarIcon";
+        static constexpr const char* type_name = "_IWebUICommandBarIcon";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::WebUI::Core::MenuClosedEventHandler>

@@ -44,9 +44,13 @@ from winrt._winrt_windows_media_audio import (
     SpatialAudioDeviceConfiguration,
     SpatialAudioFormatConfiguration,
     SpatialAudioFormatSubtype,
+    _IAudioInputNode,
     IAudioInputNode,
+    _IAudioInputNode2,
     IAudioInputNode2,
+    _IAudioNode,
     IAudioNode,
+    _IAudioNodeWithListener,
     IAudioNodeWithListener,
 )
 

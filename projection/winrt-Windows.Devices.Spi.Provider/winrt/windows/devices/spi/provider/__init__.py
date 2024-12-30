@@ -5,8 +5,11 @@ import enum
 import winrt.system
 from winrt._winrt_windows_devices_spi_provider import (
     ProviderSpiConnectionSettings,
+    _ISpiControllerProvider,
     ISpiControllerProvider,
+    _ISpiDeviceProvider,
     ISpiDeviceProvider,
+    _ISpiProvider,
     ISpiProvider,
 )
 

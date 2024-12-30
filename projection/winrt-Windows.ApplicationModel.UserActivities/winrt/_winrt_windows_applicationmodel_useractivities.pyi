@@ -230,6 +230,9 @@ class UserActivityVisualElements(winrt.system.Object):
     @attribution_display_text.setter
     def attribution_display_text(self, value: str) -> None: ...
 
+@typing.final
+class _IUserActivityContentInfo: ...
+
 class IUserActivityContentInfo(winrt._winrt.IInspectable):
     # System.String Windows.ApplicationModel.UserActivities.IUserActivityContentInfo::ToJson()
     @abstractmethod

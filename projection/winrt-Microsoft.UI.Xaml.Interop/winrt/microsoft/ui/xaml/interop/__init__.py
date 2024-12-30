@@ -7,11 +7,17 @@ import uuid as _uuid
 import winrt.system
 from winrt._winrt_microsoft_ui_xaml_interop import (
     NotifyCollectionChangedEventArgs,
+    _IBindableIterable,
     IBindableIterable,
+    _IBindableIterator,
     IBindableIterator,
+    _IBindableObservableVector,
     IBindableObservableVector,
+    _IBindableVector,
     IBindableVector,
+    _IBindableVectorView,
     IBindableVectorView,
+    _INotifyCollectionChanged,
     INotifyCollectionChanged,
 )
 from typing import TYPE_CHECKING

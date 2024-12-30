@@ -220,6 +220,9 @@ class JsonValue(winrt.system.Object, windows_foundation.IStringable, IJsonValue,
     @_property
     def value_type(self) -> JsonValueType: ...
 
+@typing.final
+class _IJsonValue: ...
+
 class IJsonValue(winrt._winrt.IInspectable):
     # Windows.Data.Json.JsonArray Windows.Data.Json.IJsonValue::GetArray()
     @abstractmethod

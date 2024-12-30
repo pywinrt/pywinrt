@@ -9194,7 +9194,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_IEnteredBackgroundEventArgs = {
-        "winrt._winrt_windows_applicationmodel.IEnteredBackgroundEventArgs",
+        "winrt._winrt_windows_applicationmodel._IEnteredBackgroundEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::IEnteredBackgroundEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9306,7 +9306,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ImplementsIEnteredBackgroundEventArgs = {
-        "winrt._winrt_windows_applicationmodel.ImplementsIEnteredBackgroundEventArgs",
+        "winrt._winrt_windows_applicationmodel.IEnteredBackgroundEventArgs",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -9384,7 +9384,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ILeavingBackgroundEventArgs = {
-        "winrt._winrt_windows_applicationmodel.ILeavingBackgroundEventArgs",
+        "winrt._winrt_windows_applicationmodel._ILeavingBackgroundEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ILeavingBackgroundEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9496,7 +9496,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ImplementsILeavingBackgroundEventArgs = {
-        "winrt._winrt_windows_applicationmodel.ImplementsILeavingBackgroundEventArgs",
+        "winrt._winrt_windows_applicationmodel.ILeavingBackgroundEventArgs",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -9576,7 +9576,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_IPackageCatalogStatics2 = {
-        "winrt._winrt_windows_applicationmodel.IPackageCatalogStatics2",
+        "winrt._winrt_windows_applicationmodel._IPackageCatalogStatics2",
         sizeof(py::wrapper::Windows::ApplicationModel::IPackageCatalogStatics2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9694,7 +9694,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ImplementsIPackageCatalogStatics2 = {
-        "winrt._winrt_windows_applicationmodel.ImplementsIPackageCatalogStatics2",
+        "winrt._winrt_windows_applicationmodel.IPackageCatalogStatics2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -9773,7 +9773,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ISuspendingDeferral = {
-        "winrt._winrt_windows_applicationmodel.ISuspendingDeferral",
+        "winrt._winrt_windows_applicationmodel._ISuspendingDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::ISuspendingDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9883,7 +9883,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ImplementsISuspendingDeferral = {
-        "winrt._winrt_windows_applicationmodel.ImplementsISuspendingDeferral",
+        "winrt._winrt_windows_applicationmodel.ISuspendingDeferral",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -9951,7 +9951,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ISuspendingEventArgs = {
-        "winrt._winrt_windows_applicationmodel.ISuspendingEventArgs",
+        "winrt._winrt_windows_applicationmodel._ISuspendingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ISuspendingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10057,7 +10057,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ImplementsISuspendingEventArgs = {
-        "winrt._winrt_windows_applicationmodel.ImplementsISuspendingEventArgs",
+        "winrt._winrt_windows_applicationmodel.ISuspendingEventArgs",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -10166,7 +10166,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ISuspendingOperation = {
-        "winrt._winrt_windows_applicationmodel.ISuspendingOperation",
+        "winrt._winrt_windows_applicationmodel._ISuspendingOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::ISuspendingOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10298,7 +10298,7 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Spec type_spec_ImplementsISuspendingOperation = {
-        "winrt._winrt_windows_applicationmodel.ImplementsISuspendingOperation",
+        "winrt._winrt_windows_applicationmodel.ISuspendingOperation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

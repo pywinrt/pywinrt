@@ -9135,7 +9135,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }};
 
     static PyType_Spec type_spec_IMediaEncodingProperties = {
-        "winrt._winrt_windows_media_mediaproperties.IMediaEncodingProperties",
+        "winrt._winrt_windows_media_mediaproperties._IMediaEncodingProperties",
         sizeof(py::wrapper::Windows::Media::MediaProperties::IMediaEncodingProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9304,7 +9304,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaEncodingProperties = {
-        "winrt._winrt_windows_media_mediaproperties.ImplementsIMediaEncodingProperties",
+        "winrt._winrt_windows_media_mediaproperties.IMediaEncodingProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -405,40 +405,40 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::IInkPointFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.IInkPointFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking._IInkPointFactory";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking";
-        static constexpr const char* type_name = "IInkPointFactory";
+        static constexpr const char* type_name = "_IInkPointFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.IInkPresenterRulerFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking._IInkPresenterRulerFactory";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking";
-        static constexpr const char* type_name = "IInkPresenterRulerFactory";
+        static constexpr const char* type_name = "_IInkPresenterRulerFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.IInkPresenterStencil";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking._IInkPresenterStencil";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking";
-        static constexpr const char* type_name = "IInkPresenterStencil";
+        static constexpr const char* type_name = "_IInkPresenterStencil";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.IInkRecognizerContainer";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking._IInkRecognizerContainer";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking";
-        static constexpr const char* type_name = "IInkRecognizerContainer";
+        static constexpr const char* type_name = "_IInkRecognizerContainer";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.IInkStrokeContainer";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking._IInkStrokeContainer";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking";
-        static constexpr const char* type_name = "IInkStrokeContainer";
+        static constexpr const char* type_name = "_IInkStrokeContainer";
     };
 }

@@ -270,81 +270,81 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::ICollectionView>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.ICollectionView";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._ICollectionView";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "ICollectionView";
+        static constexpr const char* type_name = "_ICollectionView";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::ICollectionViewFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.ICollectionViewFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._ICollectionViewFactory";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "ICollectionViewFactory";
+        static constexpr const char* type_name = "_ICollectionViewFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::ICollectionViewGroup>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.ICollectionViewGroup";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._ICollectionViewGroup";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "ICollectionViewGroup";
+        static constexpr const char* type_name = "_ICollectionViewGroup";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::ICustomProperty>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.ICustomProperty";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._ICustomProperty";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "ICustomProperty";
+        static constexpr const char* type_name = "_ICustomProperty";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::ICustomPropertyProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.ICustomPropertyProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._ICustomPropertyProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "ICustomPropertyProvider";
+        static constexpr const char* type_name = "_ICustomPropertyProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::IItemsRangeInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.IItemsRangeInfo";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._IItemsRangeInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "IItemsRangeInfo";
+        static constexpr const char* type_name = "_IItemsRangeInfo";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::INotifyPropertyChanged>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.INotifyPropertyChanged";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._INotifyPropertyChanged";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "INotifyPropertyChanged";
+        static constexpr const char* type_name = "_INotifyPropertyChanged";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::ISelectionInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.ISelectionInfo";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._ISelectionInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "ISelectionInfo";
+        static constexpr const char* type_name = "_ISelectionInfo";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::ISupportIncrementalLoading>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.ISupportIncrementalLoading";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._ISupportIncrementalLoading";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "ISupportIncrementalLoading";
+        static constexpr const char* type_name = "_ISupportIncrementalLoading";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::IValueConverter>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.IValueConverter";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data._IValueConverter";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
-        static constexpr const char* type_name = "IValueConverter";
+        static constexpr const char* type_name = "_IValueConverter";
     };
 
     template<>

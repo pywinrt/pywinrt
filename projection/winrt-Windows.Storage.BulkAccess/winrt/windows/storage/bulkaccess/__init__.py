@@ -5,6 +5,7 @@ from winrt._winrt_windows_storage_bulkaccess import (
     FileInformation,
     FileInformationFactory,
     FolderInformation,
+    _IStorageItemInformation,
     IStorageItemInformation,
 )
 

@@ -126,9 +126,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Popups::IUICommand>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.IUICommand";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups._IUICommand";
         static constexpr const char* module_name = "winrt.windows.ui.popups";
-        static constexpr const char* type_name = "IUICommand";
+        static constexpr const char* type_name = "_IUICommand";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Popups::UICommandInvokedHandler>

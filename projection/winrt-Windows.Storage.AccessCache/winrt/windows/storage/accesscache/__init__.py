@@ -10,6 +10,7 @@ from winrt._winrt_windows_storage_accesscache import (
     StorageApplicationPermissions,
     StorageItemAccessList,
     StorageItemMostRecentlyUsedList,
+    _IStorageItemAccessList,
     IStorageItemAccessList,
 )
 

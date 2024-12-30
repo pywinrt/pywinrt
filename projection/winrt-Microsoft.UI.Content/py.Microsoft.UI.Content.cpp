@@ -6699,7 +6699,7 @@ namespace py::cpp::Microsoft::UI::Content
         { }};
 
     static PyType_Spec type_spec_IContentSiteBridge = {
-        "winrt._winrt_microsoft_ui_content.IContentSiteBridge",
+        "winrt._winrt_microsoft_ui_content._IContentSiteBridge",
         sizeof(py::wrapper::Microsoft::UI::Content::IContentSiteBridge),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6915,7 +6915,7 @@ namespace py::cpp::Microsoft::UI::Content
         { }};
 
     static PyType_Spec type_spec_ImplementsIContentSiteBridge = {
-        "winrt._winrt_microsoft_ui_content.ImplementsIContentSiteBridge",
+        "winrt._winrt_microsoft_ui_content.IContentSiteBridge",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

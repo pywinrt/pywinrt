@@ -475,6 +475,9 @@ class UploadOperation(winrt.system.Object, IBackgroundTransferOperationPriority,
     @_property
     def transfer_group(self) -> BackgroundTransferGroup: ...
 
+@typing.final
+class _IBackgroundTransferBase: ...
+
 class IBackgroundTransferBase(winrt._winrt.IInspectable):
     # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::SetRequestHeader(System.String,System.String)
     @abstractmethod
@@ -520,6 +523,9 @@ class IBackgroundTransferBase(winrt._winrt.IInspectable):
     @abstractmethod
     def server_credential(self, value: windows_security_credentials.PasswordCredential) -> None: ...
 
+@typing.final
+class _IBackgroundTransferContentPartFactory: ...
+
 class IBackgroundTransferContentPartFactory(winrt._winrt.IInspectable):
     # Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory::CreateWithName(System.String)
     @abstractmethod
@@ -527,6 +533,9 @@ class IBackgroundTransferContentPartFactory(winrt._winrt.IInspectable):
     # Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory::CreateWithNameAndFileName(System.String,System.String)
     @abstractmethod
     def create_with_name_and_file_name(self, name: str, file_name: str, /) -> BackgroundTransferContentPart: ...
+
+@typing.final
+class _IBackgroundTransferOperation: ...
 
 class IBackgroundTransferOperation(winrt._winrt.IInspectable):
     # Windows.Networking.BackgroundTransfer.ResponseInformation Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::GetResponseInformation()
@@ -559,6 +568,9 @@ class IBackgroundTransferOperation(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def requested_uri(self) -> windows_foundation.Uri: ...
+
+@typing.final
+class _IBackgroundTransferOperationPriority: ...
 
 class IBackgroundTransferOperationPriority(winrt._winrt.IInspectable):
     # Windows.Networking.BackgroundTransfer.BackgroundTransferPriority Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority::get_Priority()

@@ -9,17 +9,29 @@ from winrt._winrt_windows_foundation_collections import (
     PropertySet,
     StringMap,
     ValueSet,
+    _IIterable,
     IIterable,
+    _IIterator,
     IIterator,
+    _IKeyValuePair,
     IKeyValuePair,
+    _IMapChangedEventArgs,
     IMapChangedEventArgs,
+    _IMapView,
     IMapView,
+    _IMap,
     IMap,
+    _IObservableMap,
     IObservableMap,
+    _IObservableVector,
     IObservableVector,
+    _IPropertySet,
     IPropertySet,
+    _IVectorChangedEventArgs,
     IVectorChangedEventArgs,
+    _IVectorView,
     IVectorView,
+    _IVector,
     IVector,
 )
 
@@ -56,12 +68,12 @@ class CollectionChange(enum.IntEnum):
 winrt.system._mixin_mutable_mapping(PropertySet)
 winrt.system._mixin_mutable_mapping(StringMap)
 winrt.system._mixin_mutable_mapping(ValueSet)
-winrt.system._mixin_mapping(IMapView)
-winrt.system._mixin_mutable_mapping(IMap)
-winrt.system._mixin_mutable_mapping(IObservableMap)
-winrt.system._mixin_mutable_sequence(IObservableVector)
-winrt.system._mixin_mutable_mapping(IPropertySet)
-winrt.system._mixin_sequence(IVectorView)
-winrt.system._mixin_mutable_sequence(IVector)
+winrt.system._mixin_mapping(_IMapView)
+winrt.system._mixin_mutable_mapping(_IMap)
+winrt.system._mixin_mutable_mapping(_IObservableMap)
+winrt.system._mixin_mutable_sequence(_IObservableVector)
+winrt.system._mixin_mutable_mapping(_IPropertySet)
+winrt.system._mixin_sequence(_IVectorView)
+winrt.system._mixin_mutable_sequence(_IVector)
 MapChangedEventHandler = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], None]
 VectorChangedEventHandler = typing.Callable[[IObservableVector[T], IVectorChangedEventArgs], None]

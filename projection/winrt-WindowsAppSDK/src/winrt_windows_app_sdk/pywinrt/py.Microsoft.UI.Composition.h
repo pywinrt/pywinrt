@@ -1236,56 +1236,56 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::IAnimationObject>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.IAnimationObject";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition._IAnimationObject";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition";
-        static constexpr const char* type_name = "IAnimationObject";
+        static constexpr const char* type_name = "_IAnimationObject";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.ICompositionAnimationBase";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition._ICompositionAnimationBase";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition";
-        static constexpr const char* type_name = "ICompositionAnimationBase";
+        static constexpr const char* type_name = "_ICompositionAnimationBase";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition._ICompositionSupportsSystemBackdrop";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition";
-        static constexpr const char* type_name = "ICompositionSupportsSystemBackdrop";
+        static constexpr const char* type_name = "_ICompositionSupportsSystemBackdrop";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::ICompositionSurface>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.ICompositionSurface";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition._ICompositionSurface";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition";
-        static constexpr const char* type_name = "ICompositionSurface";
+        static constexpr const char* type_name = "_ICompositionSurface";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::ICompositionSurfaceFacade>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.ICompositionSurfaceFacade";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition._ICompositionSurfaceFacade";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition";
-        static constexpr const char* type_name = "ICompositionSurfaceFacade";
+        static constexpr const char* type_name = "_ICompositionSurfaceFacade";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::IVisualElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.IVisualElement";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition._IVisualElement";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition";
-        static constexpr const char* type_name = "IVisualElement";
+        static constexpr const char* type_name = "_IVisualElement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::IVisualElement2>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.IVisualElement2";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition._IVisualElement2";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition";
-        static constexpr const char* type_name = "IVisualElement2";
+        static constexpr const char* type_name = "_IVisualElement2";
     };
 }

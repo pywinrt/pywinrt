@@ -23,6 +23,7 @@ from winrt._winrt_windows_media_speechrecognition import (
     SpeechRecognizerUIOptions,
     VoiceCommandManager,
     VoiceCommandSet,
+    _ISpeechRecognitionConstraint,
     ISpeechRecognitionConstraint,
 )
 

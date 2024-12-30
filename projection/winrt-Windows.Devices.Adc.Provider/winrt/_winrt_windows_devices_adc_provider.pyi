@@ -16,6 +16,9 @@ from winrt.windows.devices.adc.provider import ProviderAdcChannelMode
 
 Self = typing.TypeVar('Self')
 
+@typing.final
+class _IAdcControllerProvider: ...
+
 class IAdcControllerProvider(winrt._winrt.IInspectable):
     # System.Void Windows.Devices.Adc.Provider.IAdcControllerProvider::AcquireChannel(System.Int32)
     @abstractmethod
@@ -53,6 +56,9 @@ class IAdcControllerProvider(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def resolution_in_bits(self) -> winrt.system.Int32: ...
+
+@typing.final
+class _IAdcProvider: ...
 
 class IAdcProvider(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Adc.Provider.IAdcControllerProvider> Windows.Devices.Adc.Provider.IAdcProvider::GetControllers()

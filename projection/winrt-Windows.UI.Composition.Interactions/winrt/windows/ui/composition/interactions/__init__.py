@@ -21,7 +21,9 @@ from winrt._winrt_windows_ui_composition_interactions import (
     InteractionTrackerVector2InertiaModifier,
     InteractionTrackerVector2InertiaNaturalMotion,
     VisualInteractionSource,
+    _ICompositionInteractionSource,
     ICompositionInteractionSource,
+    _IInteractionTrackerOwner,
     IInteractionTrackerOwner,
 )
 from typing import TYPE_CHECKING

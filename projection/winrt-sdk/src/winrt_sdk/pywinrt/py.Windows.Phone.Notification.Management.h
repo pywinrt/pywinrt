@@ -386,8 +386,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.IAccessoryNotificationTriggerDetails";
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management._IAccessoryNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
-        static constexpr const char* type_name = "IAccessoryNotificationTriggerDetails";
+        static constexpr const char* type_name = "_IAccessoryNotificationTriggerDetails";
     };
 }

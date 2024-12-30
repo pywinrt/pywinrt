@@ -273,9 +273,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::IGeoshape>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.IGeoshape";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation._IGeoshape";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
-        static constexpr const char* type_name = "IGeoshape";
+        static constexpr const char* type_name = "_IGeoshape";
     };
 
     template<>

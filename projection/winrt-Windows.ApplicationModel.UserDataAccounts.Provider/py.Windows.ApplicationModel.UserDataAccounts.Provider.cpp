@@ -756,7 +756,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { }};
 
     static PyType_Spec type_spec_IUserDataAccountProviderOperation = {
-        "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation",
+        "winrt._winrt_windows_applicationmodel_userdataaccounts_provider._IUserDataAccountProviderOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -862,7 +862,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIUserDataAccountProviderOperation = {
-        "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.ImplementsIUserDataAccountProviderOperation",
+        "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

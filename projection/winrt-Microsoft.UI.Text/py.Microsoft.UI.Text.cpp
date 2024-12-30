@@ -6068,7 +6068,7 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Spec type_spec_ITextCharacterFormat = {
-        "winrt._winrt_microsoft_ui_text.ITextCharacterFormat",
+        "winrt._winrt_microsoft_ui_text._ITextCharacterFormat",
         sizeof(py::wrapper::Microsoft::UI::Text::ITextCharacterFormat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7251,7 +7251,7 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Spec type_spec_ImplementsITextCharacterFormat = {
-        "winrt._winrt_microsoft_ui_text.ImplementsITextCharacterFormat",
+        "winrt._winrt_microsoft_ui_text.ITextCharacterFormat",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -9047,7 +9047,7 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Spec type_spec_ITextParagraphFormat = {
-        "winrt._winrt_microsoft_ui_text.ITextParagraphFormat",
+        "winrt._winrt_microsoft_ui_text._ITextParagraphFormat",
         sizeof(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10280,7 +10280,7 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Spec type_spec_ImplementsITextParagraphFormat = {
-        "winrt._winrt_microsoft_ui_text.ImplementsITextParagraphFormat",
+        "winrt._winrt_microsoft_ui_text.ITextParagraphFormat",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -12452,7 +12452,7 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Spec type_spec_ITextRange = {
-        "winrt._winrt_microsoft_ui_text.ITextRange",
+        "winrt._winrt_microsoft_ui_text._ITextRange",
         sizeof(py::wrapper::Microsoft::UI::Text::ITextRange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14167,7 +14167,7 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Spec type_spec_ImplementsITextRange = {
-        "winrt._winrt_microsoft_ui_text.ImplementsITextRange",
+        "winrt._winrt_microsoft_ui_text.ITextRange",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -16752,7 +16752,7 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Spec type_spec_ITextSelection = {
-        "winrt._winrt_microsoft_ui_text.ITextSelection",
+        "winrt._winrt_microsoft_ui_text._ITextSelection",
         sizeof(py::wrapper::Microsoft::UI::Text::ITextSelection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18848,7 +18848,7 @@ namespace py::cpp::Microsoft::UI::Text
         { }};
 
     static PyType_Spec type_spec_ImplementsITextSelection = {
-        "winrt._winrt_microsoft_ui_text.ImplementsITextSelection",
+        "winrt._winrt_microsoft_ui_text.ITextSelection",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -2050,7 +2050,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { }};
 
     static PyType_Spec type_spec_IGameListEntry = {
-        "winrt._winrt_windows_gaming_preview_gamesenumeration.IGameListEntry",
+        "winrt._winrt_windows_gaming_preview_gamesenumeration._IGameListEntry",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2254,7 +2254,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { }};
 
     static PyType_Spec type_spec_ImplementsIGameListEntry = {
-        "winrt._winrt_windows_gaming_preview_gamesenumeration.ImplementsIGameListEntry",
+        "winrt._winrt_windows_gaming_preview_gamesenumeration.IGameListEntry",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

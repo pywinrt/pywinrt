@@ -665,488 +665,488 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IActivatedEventArgs";
+        static constexpr const char* type_name = "_IActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IActivatedEventArgsWithUser";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IActivatedEventArgsWithUser";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IActivatedEventArgsWithUser";
+        static constexpr const char* type_name = "_IActivatedEventArgsWithUser";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IApplicationViewActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IApplicationViewActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IApplicationViewActivatedEventArgs";
+        static constexpr const char* type_name = "_IApplicationViewActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IAppointmentsProviderActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IAppointmentsProviderActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IAppointmentsProviderActivatedEventArgs";
+        static constexpr const char* type_name = "_IAppointmentsProviderActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IAppointmentsProviderAddAppointmentActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IAppointmentsProviderAddAppointmentActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IAppointmentsProviderAddAppointmentActivatedEventArgs";
+        static constexpr const char* type_name = "_IAppointmentsProviderAddAppointmentActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IAppointmentsProviderRemoveAppointmentActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IAppointmentsProviderRemoveAppointmentActivatedEventArgs";
+        static constexpr const char* type_name = "_IAppointmentsProviderRemoveAppointmentActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IAppointmentsProviderReplaceAppointmentActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IAppointmentsProviderReplaceAppointmentActivatedEventArgs";
+        static constexpr const char* type_name = "_IAppointmentsProviderReplaceAppointmentActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
+        static constexpr const char* type_name = "_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IAppointmentsProviderShowTimeFrameActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IAppointmentsProviderShowTimeFrameActivatedEventArgs";
+        static constexpr const char* type_name = "_IAppointmentsProviderShowTimeFrameActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IBackgroundActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IBackgroundActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IBackgroundActivatedEventArgs";
+        static constexpr const char* type_name = "_IBackgroundActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IBarcodeScannerPreviewActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IBarcodeScannerPreviewActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IBarcodeScannerPreviewActivatedEventArgs";
+        static constexpr const char* type_name = "_IBarcodeScannerPreviewActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.ICachedFileUpdaterActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._ICachedFileUpdaterActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "ICachedFileUpdaterActivatedEventArgs";
+        static constexpr const char* type_name = "_ICachedFileUpdaterActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.ICameraSettingsActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._ICameraSettingsActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "ICameraSettingsActivatedEventArgs";
+        static constexpr const char* type_name = "_ICameraSettingsActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.ICommandLineActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._ICommandLineActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "ICommandLineActivatedEventArgs";
+        static constexpr const char* type_name = "_ICommandLineActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContactActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContactActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContactActivatedEventArgs";
+        static constexpr const char* type_name = "_IContactActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContactCallActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContactCallActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContactCallActivatedEventArgs";
+        static constexpr const char* type_name = "_IContactCallActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContactMapActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContactMapActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContactMapActivatedEventArgs";
+        static constexpr const char* type_name = "_IContactMapActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContactMessageActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContactMessageActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContactMessageActivatedEventArgs";
+        static constexpr const char* type_name = "_IContactMessageActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContactPanelActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContactPanelActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContactPanelActivatedEventArgs";
+        static constexpr const char* type_name = "_IContactPanelActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContactPickerActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContactPickerActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContactPickerActivatedEventArgs";
+        static constexpr const char* type_name = "_IContactPickerActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContactPostActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContactPostActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContactPostActivatedEventArgs";
+        static constexpr const char* type_name = "_IContactPostActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContactVideoCallActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContactVideoCallActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContactVideoCallActivatedEventArgs";
+        static constexpr const char* type_name = "_IContactVideoCallActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContactsProviderActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContactsProviderActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContactsProviderActivatedEventArgs";
+        static constexpr const char* type_name = "_IContactsProviderActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IContinuationActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IContinuationActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IContinuationActivatedEventArgs";
+        static constexpr const char* type_name = "_IContinuationActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IDeviceActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IDeviceActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IDeviceActivatedEventArgs";
+        static constexpr const char* type_name = "_IDeviceActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IDevicePairingActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IDevicePairingActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IDevicePairingActivatedEventArgs";
+        static constexpr const char* type_name = "_IDevicePairingActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IDialReceiverActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IDialReceiverActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IDialReceiverActivatedEventArgs";
+        static constexpr const char* type_name = "_IDialReceiverActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFileActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFileActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFileActivatedEventArgs";
+        static constexpr const char* type_name = "_IFileActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFileActivatedEventArgsWithCallerPackageFamilyName";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFileActivatedEventArgsWithCallerPackageFamilyName";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFileActivatedEventArgsWithCallerPackageFamilyName";
+        static constexpr const char* type_name = "_IFileActivatedEventArgsWithCallerPackageFamilyName";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFileActivatedEventArgsWithNeighboringFiles";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFileActivatedEventArgsWithNeighboringFiles";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFileActivatedEventArgsWithNeighboringFiles";
+        static constexpr const char* type_name = "_IFileActivatedEventArgsWithNeighboringFiles";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFileOpenPickerActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFileOpenPickerActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFileOpenPickerActivatedEventArgs";
+        static constexpr const char* type_name = "_IFileOpenPickerActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFileOpenPickerActivatedEventArgs2";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFileOpenPickerActivatedEventArgs2";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFileOpenPickerActivatedEventArgs2";
+        static constexpr const char* type_name = "_IFileOpenPickerActivatedEventArgs2";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFileOpenPickerContinuationEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFileOpenPickerContinuationEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFileOpenPickerContinuationEventArgs";
+        static constexpr const char* type_name = "_IFileOpenPickerContinuationEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFileSavePickerActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFileSavePickerActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFileSavePickerActivatedEventArgs";
+        static constexpr const char* type_name = "_IFileSavePickerActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFileSavePickerActivatedEventArgs2";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFileSavePickerActivatedEventArgs2";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFileSavePickerActivatedEventArgs2";
+        static constexpr const char* type_name = "_IFileSavePickerActivatedEventArgs2";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFileSavePickerContinuationEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFileSavePickerContinuationEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFileSavePickerContinuationEventArgs";
+        static constexpr const char* type_name = "_IFileSavePickerContinuationEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IFolderPickerContinuationEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IFolderPickerContinuationEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IFolderPickerContinuationEventArgs";
+        static constexpr const char* type_name = "_IFolderPickerContinuationEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.ILaunchActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._ILaunchActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "ILaunchActivatedEventArgs";
+        static constexpr const char* type_name = "_ILaunchActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.ILaunchActivatedEventArgs2";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._ILaunchActivatedEventArgs2";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "ILaunchActivatedEventArgs2";
+        static constexpr const char* type_name = "_ILaunchActivatedEventArgs2";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.ILockScreenActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._ILockScreenActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "ILockScreenActivatedEventArgs";
+        static constexpr const char* type_name = "_ILockScreenActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.ILockScreenCallActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._ILockScreenCallActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "ILockScreenCallActivatedEventArgs";
+        static constexpr const char* type_name = "_ILockScreenCallActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IPhoneCallActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IPhoneCallActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IPhoneCallActivatedEventArgs";
+        static constexpr const char* type_name = "_IPhoneCallActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IPickerReturnedActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IPickerReturnedActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IPickerReturnedActivatedEventArgs";
+        static constexpr const char* type_name = "_IPickerReturnedActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IPrelaunchActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IPrelaunchActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IPrelaunchActivatedEventArgs";
+        static constexpr const char* type_name = "_IPrelaunchActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IPrint3DWorkflowActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IPrint3DWorkflowActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IPrint3DWorkflowActivatedEventArgs";
+        static constexpr const char* type_name = "_IPrint3DWorkflowActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IPrintTaskSettingsActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IPrintTaskSettingsActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IPrintTaskSettingsActivatedEventArgs";
+        static constexpr const char* type_name = "_IPrintTaskSettingsActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IProtocolActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IProtocolActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IProtocolActivatedEventArgs";
+        static constexpr const char* type_name = "_IProtocolActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData";
+        static constexpr const char* type_name = "_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IProtocolForResultsActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IProtocolForResultsActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IProtocolForResultsActivatedEventArgs";
+        static constexpr const char* type_name = "_IProtocolForResultsActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IRestrictedLaunchActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IRestrictedLaunchActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IRestrictedLaunchActivatedEventArgs";
+        static constexpr const char* type_name = "_IRestrictedLaunchActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.ISearchActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._ISearchActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "ISearchActivatedEventArgs";
+        static constexpr const char* type_name = "_ISearchActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.ISearchActivatedEventArgsWithLinguisticDetails";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._ISearchActivatedEventArgsWithLinguisticDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "ISearchActivatedEventArgsWithLinguisticDetails";
+        static constexpr const char* type_name = "_ISearchActivatedEventArgsWithLinguisticDetails";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IShareTargetActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IShareTargetActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IShareTargetActivatedEventArgs";
+        static constexpr const char* type_name = "_IShareTargetActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IStartupTaskActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IStartupTaskActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IStartupTaskActivatedEventArgs";
+        static constexpr const char* type_name = "_IStartupTaskActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IToastNotificationActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IToastNotificationActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IToastNotificationActivatedEventArgs";
+        static constexpr const char* type_name = "_IToastNotificationActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IUserDataAccountProviderActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IUserDataAccountProviderActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IUserDataAccountProviderActivatedEventArgs";
+        static constexpr const char* type_name = "_IUserDataAccountProviderActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IViewSwitcherProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IViewSwitcherProvider";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IViewSwitcherProvider";
+        static constexpr const char* type_name = "_IViewSwitcherProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IVoiceCommandActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IVoiceCommandActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IVoiceCommandActivatedEventArgs";
+        static constexpr const char* type_name = "_IVoiceCommandActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IWalletActionActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IWalletActionActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IWalletActionActivatedEventArgs";
+        static constexpr const char* type_name = "_IWalletActionActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IWebAccountProviderActivatedEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IWebAccountProviderActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IWebAccountProviderActivatedEventArgs";
+        static constexpr const char* type_name = "_IWebAccountProviderActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation.IWebAuthenticationBrokerContinuationEventArgs";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.activation._IWebAuthenticationBrokerContinuationEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
-        static constexpr const char* type_name = "IWebAuthenticationBrokerContinuationEventArgs";
+        static constexpr const char* type_name = "_IWebAuthenticationBrokerContinuationEventArgs";
     };
 }

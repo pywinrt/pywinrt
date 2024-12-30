@@ -560,8 +560,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.IRemoteSystemFilter";
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems._IRemoteSystemFilter";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
-        static constexpr const char* type_name = "IRemoteSystemFilter";
+        static constexpr const char* type_name = "_IRemoteSystemFilter";
     };
 }

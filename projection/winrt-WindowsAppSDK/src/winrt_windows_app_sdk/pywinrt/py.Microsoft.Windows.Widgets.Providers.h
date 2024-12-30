@@ -122,40 +122,40 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers.IWidgetManager";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers._IWidgetManager";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.providers";
-        static constexpr const char* type_name = "IWidgetManager";
+        static constexpr const char* type_name = "_IWidgetManager";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers.IWidgetProvider";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers._IWidgetProvider";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.providers";
-        static constexpr const char* type_name = "IWidgetProvider";
+        static constexpr const char* type_name = "_IWidgetProvider";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers.IWidgetProvider2";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers._IWidgetProvider2";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.providers";
-        static constexpr const char* type_name = "IWidgetProvider2";
+        static constexpr const char* type_name = "_IWidgetProvider2";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers.IWidgetProviderAnalytics";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers._IWidgetProviderAnalytics";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.providers";
-        static constexpr const char* type_name = "IWidgetProviderAnalytics";
+        static constexpr const char* type_name = "_IWidgetProviderAnalytics";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers.IWidgetProviderErrors";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.providers._IWidgetProviderErrors";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.providers";
-        static constexpr const char* type_name = "IWidgetProviderErrors";
+        static constexpr const char* type_name = "_IWidgetProviderErrors";
     };
 }

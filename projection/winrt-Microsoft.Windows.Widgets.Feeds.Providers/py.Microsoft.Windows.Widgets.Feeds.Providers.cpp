@@ -2479,7 +2479,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_IFeedAnnouncementInvokedTarget = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedAnnouncementInvokedTarget",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers._IFeedAnnouncementInvokedTarget",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2595,7 +2595,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIFeedAnnouncementInvokedTarget = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedAnnouncementInvokedTarget",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedAnnouncementInvokedTarget",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2717,7 +2717,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_IFeedManager = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedManager",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers._IFeedManager",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2860,7 +2860,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIFeedManager = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedManager",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2989,7 +2989,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_IFeedManager2 = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedManager2",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers._IFeedManager2",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3171,7 +3171,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIFeedManager2 = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedManager2",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedManager2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3428,7 +3428,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_IFeedProvider = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProvider",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers._IFeedProvider",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3664,7 +3664,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIFeedProvider = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProvider",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3745,7 +3745,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_IFeedProviderAnalytics = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderAnalytics",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers._IFeedProviderAnalytics",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3861,7 +3861,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIFeedProviderAnalytics = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProviderAnalytics",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderAnalytics",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3942,7 +3942,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_IFeedProviderErrors = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderErrors",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers._IFeedProviderErrors",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4058,7 +4058,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIFeedProviderErrors = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProviderErrors",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderErrors",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4139,7 +4139,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_IFeedProviderMessage = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderMessage",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers._IFeedProviderMessage",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4255,7 +4255,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIFeedProviderMessage = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedProviderMessage",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderMessage",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4336,7 +4336,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_IFeedResourceProvider = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedResourceProvider",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers._IFeedResourceProvider",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4452,7 +4452,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }};
 
     static PyType_Spec type_spec_ImplementsIFeedResourceProvider = {
-        "winrt._winrt_microsoft_windows_widgets_feeds_providers.ImplementsIFeedResourceProvider",
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedResourceProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

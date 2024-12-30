@@ -2,7 +2,9 @@
 
 import winrt.system
 from winrt._winrt_windows_devices_pwm_provider import (
+    _IPwmControllerProvider,
     IPwmControllerProvider,
+    _IPwmProvider,
     IPwmProvider,
 )
 

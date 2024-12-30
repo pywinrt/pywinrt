@@ -117,6 +117,9 @@ class CoreDropOperationTargetRequestedEventArgs(winrt.system.Object):
     # System.Void Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs::SetTarget(Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget)
     def set_target(self, target: ICoreDropOperationTarget, /) -> None: ...
 
+@typing.final
+class _ICoreDropOperationTarget: ...
+
 class ICoreDropOperationTarget(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget::DropAsync(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo)
     @abstractmethod

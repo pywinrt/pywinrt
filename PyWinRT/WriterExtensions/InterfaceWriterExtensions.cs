@@ -315,9 +315,7 @@ static class InterfaceWriterExtensions
 
         w.WriteLine($"static PyType_Spec type_spec_Implements{type.Name} = {{");
         w.Indent++;
-        w.WriteLine(
-            $"\"winrt.{type.Namespace.ToNsModuleName()}{moduleSuffix}.Implements{type.Name}\","
-        );
+        w.WriteLine($"\"winrt.{type.PyExtModuleName}{moduleSuffix}.{type.Name}\",");
         w.WriteLine("0,");
         w.WriteLine("0,");
         w.WriteLine("Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,");

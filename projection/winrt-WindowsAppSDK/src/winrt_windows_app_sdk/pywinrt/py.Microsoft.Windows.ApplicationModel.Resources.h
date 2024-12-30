@@ -112,16 +112,16 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.resources.IResourceContext";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.resources._IResourceContext";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.resources";
-        static constexpr const char* type_name = "IResourceContext";
+        static constexpr const char* type_name = "_IResourceContext";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.resources.IResourceManager";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.resources._IResourceManager";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.resources";
-        static constexpr const char* type_name = "IResourceManager";
+        static constexpr const char* type_name = "_IResourceManager";
     };
 }

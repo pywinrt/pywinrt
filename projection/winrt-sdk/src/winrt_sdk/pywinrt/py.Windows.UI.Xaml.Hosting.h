@@ -180,24 +180,24 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.IXamlUIPresenterHost";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting._IXamlUIPresenterHost";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "IXamlUIPresenterHost";
+        static constexpr const char* type_name = "_IXamlUIPresenterHost";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.IXamlUIPresenterHost2";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting._IXamlUIPresenterHost2";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "IXamlUIPresenterHost2";
+        static constexpr const char* type_name = "_IXamlUIPresenterHost2";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.IXamlUIPresenterHost3";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting._IXamlUIPresenterHost3";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "IXamlUIPresenterHost3";
+        static constexpr const char* type_name = "_IXamlUIPresenterHost3";
     };
 }

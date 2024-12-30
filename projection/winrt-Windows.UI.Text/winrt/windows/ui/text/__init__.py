@@ -10,10 +10,15 @@ from winrt._winrt_windows_ui_text import (
     RichEditTextDocument,
     RichEditTextRange,
     TextConstants,
+    _ITextCharacterFormat,
     ITextCharacterFormat,
+    _ITextDocument,
     ITextDocument,
+    _ITextParagraphFormat,
     ITextParagraphFormat,
+    _ITextRange,
     ITextRange,
+    _ITextSelection,
     ITextSelection,
 )
 

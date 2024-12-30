@@ -7095,7 +7095,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }};
 
     static PyType_Spec type_spec_IDeviceEnumerationSettings = {
-        "winrt._winrt_windows_devices_enumeration.IDeviceEnumerationSettings",
+        "winrt._winrt_windows_devices_enumeration._IDeviceEnumerationSettings",
         sizeof(py::wrapper::Windows::Devices::Enumeration::IDeviceEnumerationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7181,7 +7181,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }};
 
     static PyType_Spec type_spec_ImplementsIDeviceEnumerationSettings = {
-        "winrt._winrt_windows_devices_enumeration.ImplementsIDeviceEnumerationSettings",
+        "winrt._winrt_windows_devices_enumeration.IDeviceEnumerationSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7218,7 +7218,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }};
 
     static PyType_Spec type_spec_IDevicePairingSettings = {
-        "winrt._winrt_windows_devices_enumeration.IDevicePairingSettings",
+        "winrt._winrt_windows_devices_enumeration._IDevicePairingSettings",
         sizeof(py::wrapper::Windows::Devices::Enumeration::IDevicePairingSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7304,7 +7304,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }};
 
     static PyType_Spec type_spec_ImplementsIDevicePairingSettings = {
-        "winrt._winrt_windows_devices_enumeration.ImplementsIDevicePairingSettings",
+        "winrt._winrt_windows_devices_enumeration.IDevicePairingSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

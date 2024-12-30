@@ -5417,7 +5417,7 @@ namespace py::cpp::Windows::Gaming::Input
         { }};
 
     static PyType_Spec type_spec_IGameController = {
-        "winrt._winrt_windows_gaming_input.IGameController",
+        "winrt._winrt_windows_gaming_input._IGameController",
         sizeof(py::wrapper::Windows::Gaming::Input::IGameController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5749,7 +5749,7 @@ namespace py::cpp::Windows::Gaming::Input
         { }};
 
     static PyType_Spec type_spec_ImplementsIGameController = {
-        "winrt._winrt_windows_gaming_input.ImplementsIGameController",
+        "winrt._winrt_windows_gaming_input.IGameController",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5827,7 +5827,7 @@ namespace py::cpp::Windows::Gaming::Input
         { }};
 
     static PyType_Spec type_spec_IGameControllerBatteryInfo = {
-        "winrt._winrt_windows_gaming_input.IGameControllerBatteryInfo",
+        "winrt._winrt_windows_gaming_input._IGameControllerBatteryInfo",
         sizeof(py::wrapper::Windows::Gaming::Input::IGameControllerBatteryInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5939,7 +5939,7 @@ namespace py::cpp::Windows::Gaming::Input
         { }};
 
     static PyType_Spec type_spec_ImplementsIGameControllerBatteryInfo = {
-        "winrt._winrt_windows_gaming_input.ImplementsIGameControllerBatteryInfo",
+        "winrt._winrt_windows_gaming_input.IGameControllerBatteryInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

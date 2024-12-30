@@ -139,6 +139,9 @@ class RampForceEffect(winrt.system.Object, IForceFeedbackEffect):
     @_property
     def state(self) -> ForceFeedbackEffectState: ...
 
+@typing.final
+class _IForceFeedbackEffect: ...
+
 class IForceFeedbackEffect(winrt._winrt.IInspectable):
     # System.Void Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect::Start()
     @abstractmethod

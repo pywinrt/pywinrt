@@ -10,6 +10,7 @@ from winrt._winrt_microsoft_ui import (
     WindowId,
     ColorHelper,
     Colors,
+    _IClosableNotifier,
     IClosableNotifier,
 )
 

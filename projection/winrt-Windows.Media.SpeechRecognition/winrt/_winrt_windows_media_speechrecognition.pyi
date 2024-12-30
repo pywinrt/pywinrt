@@ -382,6 +382,9 @@ class VoiceCommandSet(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
+class _ISpeechRecognitionConstraint: ...
+
 class ISpeechRecognitionConstraint(winrt._winrt.IInspectable):
     # System.Boolean Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_IsEnabled()
     @_property

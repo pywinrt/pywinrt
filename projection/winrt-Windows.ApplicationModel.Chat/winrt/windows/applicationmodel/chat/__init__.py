@@ -40,6 +40,7 @@ from winrt._winrt_windows_applicationmodel_chat import (
     RcsTransport,
     RcsTransportConfiguration,
     RemoteParticipantComposingChangedEventArgs,
+    _IChatItem,
     IChatItem,
 )
 

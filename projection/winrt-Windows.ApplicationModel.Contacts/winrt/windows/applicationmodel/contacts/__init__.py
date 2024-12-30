@@ -52,9 +52,13 @@ from winrt._winrt_windows_applicationmodel_contacts import (
     KnownContactField,
     PinnedContactIdsQueryResult,
     PinnedContactManager,
+    _IContactField,
     IContactField,
+    _IContactFieldFactory,
     IContactFieldFactory,
+    _IContactInstantMessageFieldFactory,
     IContactInstantMessageFieldFactory,
+    _IContactLocationFieldFactory,
     IContactLocationFieldFactory,
 )
 

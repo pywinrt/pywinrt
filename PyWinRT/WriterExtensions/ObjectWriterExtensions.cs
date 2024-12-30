@@ -94,6 +94,14 @@ static class ObjectWriterExtensions
 
         if (type.Category == Category.Interface)
         {
+            // This is to make mypy happy so that we have to import it in the
+            // __init__.py files. It is just used internally though, so not
+            // doing full typing.
+            w.WriteLine("@typing.final");
+            w.WriteLine($"class {type.PyWrapperTypeName}: ...");
+            w.WriteBlankLine();
+
+            // This is the type users will actually use.
             w.WritePythonImplementsInterfaceTyping(type, ns, nullabilityMap);
             return;
         }

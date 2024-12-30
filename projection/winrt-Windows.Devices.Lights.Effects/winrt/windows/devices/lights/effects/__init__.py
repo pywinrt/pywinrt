@@ -12,6 +12,7 @@ from winrt._winrt_windows_devices_lights_effects import (
     LampArrayEffectPlaylist,
     LampArraySolidEffect,
     LampArrayUpdateRequestedEventArgs,
+    _ILampArrayEffect,
     ILampArrayEffect,
 )
 

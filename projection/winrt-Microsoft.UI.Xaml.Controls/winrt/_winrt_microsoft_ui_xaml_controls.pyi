@@ -15442,6 +15442,9 @@ class XamlControlsResources(microsoft_ui_xaml.ResourceDictionary, metaclass=Xaml
     @use_compact_resources.setter
     def use_compact_resources(self, value: bool) -> None: ...
 
+@typing.final
+class _IAnimatedVisual: ...
+
 class IAnimatedVisual(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Duration()
     @_property
@@ -15456,6 +15459,9 @@ class IAnimatedVisual(windows_foundation.IClosable, winrt._winrt.IInspectable):
     @abstractmethod
     def size(self) -> windows_foundation_numerics.Vector2: ...
 
+@typing.final
+class _IAnimatedVisual2: ...
+
 class IAnimatedVisual2(IAnimatedVisual, windows_foundation.IClosable, winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisual2::CreateAnimations()
     @abstractmethod
@@ -15464,10 +15470,16 @@ class IAnimatedVisual2(IAnimatedVisual, windows_foundation.IClosable, winrt._win
     @abstractmethod
     def destroy_animations(self) -> None: ...
 
+@typing.final
+class _IAnimatedVisualSource: ...
+
 class IAnimatedVisualSource(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Controls.IAnimatedVisual Microsoft.UI.Xaml.Controls.IAnimatedVisualSource::TryCreateAnimatedVisual(Microsoft.UI.Composition.Compositor,System.Object&)
     @abstractmethod
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, /) -> typing.Tuple[typing.Optional[IAnimatedVisual], winrt.system.Object]: ...
+
+@typing.final
+class _IAnimatedVisualSource2: ...
 
 class IAnimatedVisualSource2(IAnimatedVisualSource, winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2::SetColorProperty(System.String,Windows.UI.Color)
@@ -15478,10 +15490,16 @@ class IAnimatedVisualSource2(IAnimatedVisualSource, winrt._winrt.IInspectable):
     @abstractmethod
     def markers(self) -> typing.Mapping[str, winrt.system.Double]: ...
 
+@typing.final
+class _IAnimatedVisualSource3: ...
+
 class IAnimatedVisualSource3(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Controls.IAnimatedVisual2 Microsoft.UI.Xaml.Controls.IAnimatedVisualSource3::TryCreateAnimatedVisual(Microsoft.UI.Composition.Compositor,System.Object&,System.Boolean)
     @abstractmethod
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, create_animations: bool, /) -> typing.Tuple[typing.Optional[IAnimatedVisual2], winrt.system.Object]: ...
+
+@typing.final
+class _ICommandBarElement: ...
 
 class ICommandBarElement(winrt._winrt.IInspectable):
     # System.Int32 Microsoft.UI.Xaml.Controls.ICommandBarElement::get_DynamicOverflowOrder()
@@ -15505,6 +15523,9 @@ class ICommandBarElement(winrt._winrt.IInspectable):
     @abstractmethod
     def is_in_overflow(self) -> bool: ...
 
+@typing.final
+class _IDynamicAnimatedVisualSource: ...
+
 class IDynamicAnimatedVisualSource(IAnimatedVisualSource, winrt._winrt.IInspectable):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource::add_AnimatedVisualInvalidated(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource,System.Object>)
     @abstractmethod
@@ -15513,10 +15534,16 @@ class IDynamicAnimatedVisualSource(IAnimatedVisualSource, winrt._winrt.IInspecta
     @abstractmethod
     def remove_animated_visual_invalidated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
+class _IInsertionPanel: ...
+
 class IInsertionPanel(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Controls.IInsertionPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
     @abstractmethod
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
+
+@typing.final
+class _IItemContainerMapping: ...
 
 class IItemContainerMapping(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.IItemContainerMapping::ContainerFromIndex(System.Int32)
@@ -15532,6 +15559,9 @@ class IItemContainerMapping(winrt._winrt.IInspectable):
     @abstractmethod
     def item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
 
+@typing.final
+class _IKeyIndexMapping: ...
+
 class IKeyIndexMapping(winrt._winrt.IInspectable):
     # System.Int32 Microsoft.UI.Xaml.Controls.IKeyIndexMapping::IndexFromKey(System.String)
     @abstractmethod
@@ -15540,10 +15570,16 @@ class IKeyIndexMapping(winrt._winrt.IInspectable):
     @abstractmethod
     def key_from_index(self, index: winrt.system.Int32, /) -> str: ...
 
+@typing.final
+class _INavigate: ...
+
 class INavigate(winrt._winrt.IInspectable):
     # System.Boolean Microsoft.UI.Xaml.Controls.INavigate::Navigate(Windows.UI.Xaml.Interop.TypeName)
     @abstractmethod
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
+
+@typing.final
+class _IScrollAnchorProvider: ...
 
 class IScrollAnchorProvider(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Controls.IScrollAnchorProvider::RegisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
@@ -15556,6 +15592,9 @@ class IScrollAnchorProvider(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def current_anchor(self) -> microsoft_ui_xaml.UIElement: ...
+
+@typing.final
+class _ISemanticZoomInformation: ...
 
 class ISemanticZoomInformation(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChange()

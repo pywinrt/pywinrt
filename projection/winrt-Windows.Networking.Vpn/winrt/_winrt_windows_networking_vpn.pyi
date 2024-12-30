@@ -891,10 +891,16 @@ class VpnTrafficFilterAssignment(winrt.system.Object):
     @_property
     def traffic_filter_list(self) -> typing.MutableSequence[VpnTrafficFilter]: ...
 
+@typing.final
+class _IVpnChannelStatics: ...
+
 class IVpnChannelStatics(winrt._winrt.IInspectable):
     # System.Void Windows.Networking.Vpn.IVpnChannelStatics::ProcessEventAsync(System.Object,System.Object)
     @abstractmethod
     def process_event_async(self, third_party_plug_in: winrt.system.Object, event: winrt.system.Object, /) -> None: ...
+
+@typing.final
+class _IVpnCredential: ...
 
 class IVpnCredential(winrt._winrt.IInspectable):
     # System.String Windows.Networking.Vpn.IVpnCredential::get_AdditionalPin()
@@ -913,6 +919,9 @@ class IVpnCredential(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def passkey_credential(self) -> windows_security_credentials.PasswordCredential: ...
+
+@typing.final
+class _IVpnCustomPrompt: ...
 
 class IVpnCustomPrompt(winrt._winrt.IInspectable):
     # System.Boolean Windows.Networking.Vpn.IVpnCustomPrompt::get_Bordered()
@@ -940,6 +949,9 @@ class IVpnCustomPrompt(winrt._winrt.IInspectable):
     @abstractmethod
     def label(self, value: str) -> None: ...
 
+@typing.final
+class _IVpnCustomPromptElement: ...
+
 class IVpnCustomPromptElement(winrt._winrt.IInspectable):
     # System.Boolean Windows.Networking.Vpn.IVpnCustomPromptElement::get_Compulsory()
     @_property
@@ -966,25 +978,40 @@ class IVpnCustomPromptElement(winrt._winrt.IInspectable):
     @abstractmethod
     def emphasized(self, value: bool) -> None: ...
 
+@typing.final
+class _IVpnDomainNameInfoFactory: ...
+
 class IVpnDomainNameInfoFactory(winrt._winrt.IInspectable):
     # Windows.Networking.Vpn.VpnDomainNameInfo Windows.Networking.Vpn.IVpnDomainNameInfoFactory::CreateVpnDomainNameInfo(System.String,Windows.Networking.Vpn.VpnDomainNameType,Windows.Foundation.Collections.IIterable`1<Windows.Networking.HostName>,Windows.Foundation.Collections.IIterable`1<Windows.Networking.HostName>)
     @abstractmethod
     def create_vpn_domain_name_info(self, name: str, name_type: VpnDomainNameType, dns_server_list: typing.Iterable[windows_networking.HostName], proxy_server_list: typing.Iterable[windows_networking.HostName], /) -> VpnDomainNameInfo: ...
+
+@typing.final
+class _IVpnInterfaceIdFactory: ...
 
 class IVpnInterfaceIdFactory(winrt._winrt.IInspectable):
     # Windows.Networking.Vpn.VpnInterfaceId Windows.Networking.Vpn.IVpnInterfaceIdFactory::CreateVpnInterfaceId(System.Byte[])
     @abstractmethod
     def create_vpn_interface_id(self, address: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> VpnInterfaceId: ...
 
+@typing.final
+class _IVpnNamespaceInfoFactory: ...
+
 class IVpnNamespaceInfoFactory(winrt._winrt.IInspectable):
     # Windows.Networking.Vpn.VpnNamespaceInfo Windows.Networking.Vpn.IVpnNamespaceInfoFactory::CreateVpnNamespaceInfo(System.String,Windows.Foundation.Collections.IVector`1<Windows.Networking.HostName>,Windows.Foundation.Collections.IVector`1<Windows.Networking.HostName>)
     @abstractmethod
     def create_vpn_namespace_info(self, name: str, dns_server_list: typing.MutableSequence[windows_networking.HostName], proxy_server_list: typing.MutableSequence[windows_networking.HostName], /) -> VpnNamespaceInfo: ...
 
+@typing.final
+class _IVpnPacketBufferFactory: ...
+
 class IVpnPacketBufferFactory(winrt._winrt.IInspectable):
     # Windows.Networking.Vpn.VpnPacketBuffer Windows.Networking.Vpn.IVpnPacketBufferFactory::CreateVpnPacketBuffer(Windows.Networking.Vpn.VpnPacketBuffer,System.UInt32,System.UInt32)
     @abstractmethod
     def create_vpn_packet_buffer(self, parent_buffer: VpnPacketBuffer, offset: winrt.system.UInt32, length: winrt.system.UInt32, /) -> VpnPacketBuffer: ...
+
+@typing.final
+class _IVpnPlugIn: ...
 
 class IVpnPlugIn(winrt._winrt.IInspectable):
     # System.Void Windows.Networking.Vpn.IVpnPlugIn::Connect(Windows.Networking.Vpn.VpnChannel)
@@ -1003,10 +1030,16 @@ class IVpnPlugIn(winrt._winrt.IInspectable):
     @abstractmethod
     def get_keep_alive_payload(self, channel: VpnChannel, /) -> VpnPacketBuffer: ...
 
+@typing.final
+class _IVpnPlugInReconnectTransport: ...
+
 class IVpnPlugInReconnectTransport(winrt._winrt.IInspectable):
     # System.Void Windows.Networking.Vpn.IVpnPlugInReconnectTransport::ReconnectTransport(Windows.Networking.Vpn.VpnChannel,System.Object)
     @abstractmethod
     def reconnect_transport(self, channel: VpnChannel, context: winrt.system.Object, /) -> None: ...
+
+@typing.final
+class _IVpnProfile: ...
 
 class IVpnProfile(winrt._winrt.IInspectable):
     # System.Boolean Windows.Networking.Vpn.IVpnProfile::get_AlwaysOn()
@@ -1049,6 +1082,9 @@ class IVpnProfile(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def traffic_filters(self) -> typing.MutableSequence[VpnTrafficFilter]: ...
+
+@typing.final
+class _IVpnRouteFactory: ...
 
 class IVpnRouteFactory(winrt._winrt.IInspectable):
     # Windows.Networking.Vpn.VpnRoute Windows.Networking.Vpn.IVpnRouteFactory::CreateVpnRoute(Windows.Networking.HostName,System.Byte)

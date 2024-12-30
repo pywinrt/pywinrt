@@ -196,10 +196,17 @@ static class FileWriters
             var suffix = depth == 0 ? "" : $"_{depth + 1}";
             w.WriteLine($"from .{ns.ToNsModuleName()}{suffix} import (");
             w.Indent++;
+
             foreach (var type in dependencyTypes)
             {
-                w.WriteLine($"{type.Name},");
+                w.WriteLine($"{type.PyWrapperTypeName},");
+
+                if (type.Category == Category.Interface)
+                {
+                    w.WriteLine($"{type.Name},");
+                }
             }
+
             w.Indent--;
             w.WriteLine(")");
             w.WriteBlankLine();
@@ -319,7 +326,12 @@ static class FileWriters
 
                 foreach (var type in dependencyModuleTypes)
                 {
-                    w.WriteLine($"{type.Name},");
+                    w.WriteLine($"{type.PyWrapperTypeName},");
+
+                    if (type.Category == Category.Interface)
+                    {
+                        w.WriteLine($"{type.Name},");
+                    }
                 }
 
                 w.Indent--;
@@ -449,19 +461,19 @@ static class FileWriters
         {
             if (type.IsPyMutableMapping)
             {
-                w.WriteLine($"winrt.system._mixin_mutable_mapping({type.Name})");
+                w.WriteLine($"winrt.system._mixin_mutable_mapping({type.PyWrapperTypeName})");
             }
             else if (type.IsPyMapping)
             {
-                w.WriteLine($"winrt.system._mixin_mapping({type.Name})");
+                w.WriteLine($"winrt.system._mixin_mapping({type.PyWrapperTypeName})");
             }
             else if (type.IsPyMutableSequence)
             {
-                w.WriteLine($"winrt.system._mixin_mutable_sequence({type.Name})");
+                w.WriteLine($"winrt.system._mixin_mutable_sequence({type.PyWrapperTypeName})");
             }
             else if (type.IsPySequence)
             {
-                w.WriteLine($"winrt.system._mixin_sequence({type.Name})");
+                w.WriteLine($"winrt.system._mixin_sequence({type.PyWrapperTypeName})");
             }
         }
 

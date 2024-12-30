@@ -1091,6 +1091,9 @@ class TouchpadGlobalActionEventArgs(winrt.system.Object):
     @_property
     def action(self) -> TouchpadGlobalAction: ...
 
+@typing.final
+class _IPointerPointTransform: ...
+
 class IPointerPointTransform(winrt._winrt.IInspectable):
     # Windows.Foundation.Rect Windows.UI.Input.IPointerPointTransform::TransformBounds(Windows.Foundation.Rect)
     @abstractmethod

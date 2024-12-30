@@ -150,6 +150,9 @@ class StorageItemMostRecentlyUsedList(winrt.system.Object, IStorageItemAccessLis
     @_property
     def maximum_items_allowed(self) -> winrt.system.UInt32: ...
 
+@typing.final
+class _IStorageItemAccessList: ...
+
 class IStorageItemAccessList(winrt._winrt.IInspectable):
     # System.String Windows.Storage.AccessCache.IStorageItemAccessList::Add(Windows.Storage.IStorageItem,System.String)
     @abstractmethod

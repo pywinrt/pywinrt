@@ -454,10 +454,16 @@ class StorageProviderSyncRootManager_Static(type):
 class StorageProviderSyncRootManager(winrt.system.Object, metaclass=StorageProviderSyncRootManager_Static):
     pass
 
+@typing.final
+class _IStorageProviderItemPropertySource: ...
+
 class IStorageProviderItemPropertySource(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IIterable`1<Windows.Storage.Provider.StorageProviderItemProperty> Windows.Storage.Provider.IStorageProviderItemPropertySource::GetItemProperties(System.String)
     @abstractmethod
     def get_item_properties(self, item_path: str, /) -> typing.Iterable[StorageProviderItemProperty]: ...
+
+@typing.final
+class _IStorageProviderKnownFolderSyncInfoSource: ...
 
 class IStorageProviderKnownFolderSyncInfoSource(winrt._winrt.IInspectable):
     # Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource::GetKnownFolderSyncInfo()
@@ -470,15 +476,24 @@ class IStorageProviderKnownFolderSyncInfoSource(winrt._winrt.IInspectable):
     @abstractmethod
     def remove_known_folder_sync_info_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
+class _IStorageProviderKnownFolderSyncInfoSourceFactory: ...
+
 class IStorageProviderKnownFolderSyncInfoSourceFactory(winrt._winrt.IInspectable):
     # Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSourceFactory::GetKnownFolderSyncInfoSource()
     @abstractmethod
     def get_known_folder_sync_info_source(self) -> IStorageProviderKnownFolderSyncInfoSource: ...
 
+@typing.final
+class _IStorageProviderPropertyCapabilities: ...
+
 class IStorageProviderPropertyCapabilities(winrt._winrt.IInspectable):
     # System.Boolean Windows.Storage.Provider.IStorageProviderPropertyCapabilities::IsPropertySupported(System.String)
     @abstractmethod
     def is_property_supported(self, property_canonical_name: str, /) -> bool: ...
+
+@typing.final
+class _IStorageProviderShareLinkSource: ...
 
 class IStorageProviderShareLinkSource(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Uri> Windows.Storage.Provider.IStorageProviderShareLinkSource::CreateLinkAsync(Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>)
@@ -491,6 +506,9 @@ class IStorageProviderShareLinkSource(winrt._winrt.IInspectable):
     @abstractmethod
     def get_state(self, storage_item_list: typing.Sequence[windows_storage.IStorageItem], /) -> windows_foundation.IAsyncOperation[StorageProviderShareLinkState]: ...
 
+@typing.final
+class _IStorageProviderStatusUISource: ...
+
 class IStorageProviderStatusUISource(winrt._winrt.IInspectable):
     # Windows.Storage.Provider.StorageProviderStatusUI Windows.Storage.Provider.IStorageProviderStatusUISource::GetStatusUI()
     @abstractmethod
@@ -502,10 +520,16 @@ class IStorageProviderStatusUISource(winrt._winrt.IInspectable):
     @abstractmethod
     def remove_status_ui_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
+class _IStorageProviderStatusUISourceFactory: ...
+
 class IStorageProviderStatusUISourceFactory(winrt._winrt.IInspectable):
     # Windows.Storage.Provider.IStorageProviderStatusUISource Windows.Storage.Provider.IStorageProviderStatusUISourceFactory::GetStatusUISource(System.String)
     @abstractmethod
     def get_status_ui_source(self, sync_root_id: str, /) -> IStorageProviderStatusUISource: ...
+
+@typing.final
+class _IStorageProviderUICommand: ...
 
 class IStorageProviderUICommand(winrt._winrt.IInspectable):
     # System.Void Windows.Storage.Provider.IStorageProviderUICommand::Invoke()
@@ -527,6 +551,9 @@ class IStorageProviderUICommand(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def state(self) -> StorageProviderUICommandState: ...
+
+@typing.final
+class _IStorageProviderUriSource: ...
 
 class IStorageProviderUriSource(winrt._winrt.IInspectable):
     # System.Void Windows.Storage.Provider.IStorageProviderUriSource::GetContentInfoForPath(System.String,Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult)

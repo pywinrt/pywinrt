@@ -8931,7 +8931,7 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Spec type_spec_IMediaExtension = {
-        "winrt._winrt_windows_media.IMediaExtension",
+        "winrt._winrt_windows_media._IMediaExtension",
         sizeof(py::wrapper::Windows::Media::IMediaExtension),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9047,7 +9047,7 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaExtension = {
-        "winrt._winrt_windows_media.ImplementsIMediaExtension",
+        "winrt._winrt_windows_media.IMediaExtension",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -9524,7 +9524,7 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Spec type_spec_IMediaFrame = {
-        "winrt._winrt_windows_media.IMediaFrame",
+        "winrt._winrt_windows_media._IMediaFrame",
         sizeof(py::wrapper::Windows::Media::IMediaFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9866,7 +9866,7 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaFrame = {
-        "winrt._winrt_windows_media.ImplementsIMediaFrame",
+        "winrt._winrt_windows_media.IMediaFrame",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -9996,7 +9996,7 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Spec type_spec_IMediaMarker = {
-        "winrt._winrt_windows_media.IMediaMarker",
+        "winrt._winrt_windows_media._IMediaMarker",
         sizeof(py::wrapper::Windows::Media::IMediaMarker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10142,7 +10142,7 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaMarker = {
-        "winrt._winrt_windows_media.ImplementsIMediaMarker",
+        "winrt._winrt_windows_media.IMediaMarker",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -10210,7 +10210,7 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Spec type_spec_IMediaMarkers = {
-        "winrt._winrt_windows_media.IMediaMarkers",
+        "winrt._winrt_windows_media._IMediaMarkers",
         sizeof(py::wrapper::Windows::Media::IMediaMarkers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10316,7 +10316,7 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaMarkers = {
-        "winrt._winrt_windows_media.ImplementsIMediaMarkers",
+        "winrt._winrt_windows_media.IMediaMarkers",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

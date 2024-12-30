@@ -283,9 +283,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::IHttpContent>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.IHttpContent";
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http._IHttpContent";
         static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "IHttpContent";
+        static constexpr const char* type_name = "_IHttpContent";
     };
 
     template<>

@@ -6974,7 +6974,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }};
 
     static PyType_Spec type_spec_IBitmapFrame = {
-        "winrt._winrt_windows_graphics_imaging.IBitmapFrame",
+        "winrt._winrt_windows_graphics_imaging._IBitmapFrame",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7354,7 +7354,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }};
 
     static PyType_Spec type_spec_ImplementsIBitmapFrame = {
-        "winrt._winrt_windows_graphics_imaging.ImplementsIBitmapFrame",
+        "winrt._winrt_windows_graphics_imaging.IBitmapFrame",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7931,7 +7931,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }};
 
     static PyType_Spec type_spec_IBitmapFrameWithSoftwareBitmap = {
-        "winrt._winrt_windows_graphics_imaging.IBitmapFrameWithSoftwareBitmap",
+        "winrt._winrt_windows_graphics_imaging._IBitmapFrameWithSoftwareBitmap",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8443,7 +8443,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }};
 
     static PyType_Spec type_spec_ImplementsIBitmapFrameWithSoftwareBitmap = {
-        "winrt._winrt_windows_graphics_imaging.ImplementsIBitmapFrameWithSoftwareBitmap",
+        "winrt._winrt_windows_graphics_imaging.IBitmapFrameWithSoftwareBitmap",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -8523,7 +8523,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }};
 
     static PyType_Spec type_spec_IBitmapPropertiesView = {
-        "winrt._winrt_windows_graphics_imaging.IBitmapPropertiesView",
+        "winrt._winrt_windows_graphics_imaging._IBitmapPropertiesView",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapPropertiesView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8641,7 +8641,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }};
 
     static PyType_Spec type_spec_ImplementsIBitmapPropertiesView = {
-        "winrt._winrt_windows_graphics_imaging.ImplementsIBitmapPropertiesView",
+        "winrt._winrt_windows_graphics_imaging.IBitmapPropertiesView",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

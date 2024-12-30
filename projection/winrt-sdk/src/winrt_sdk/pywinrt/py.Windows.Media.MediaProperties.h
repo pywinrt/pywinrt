@@ -266,8 +266,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.IMediaEncodingProperties";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties._IMediaEncodingProperties";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
-        static constexpr const char* type_name = "IMediaEncodingProperties";
+        static constexpr const char* type_name = "_IMediaEncodingProperties";
     };
 }

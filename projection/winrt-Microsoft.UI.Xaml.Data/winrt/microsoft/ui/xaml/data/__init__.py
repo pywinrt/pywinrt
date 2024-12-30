@@ -18,16 +18,27 @@ from winrt._winrt_microsoft_ui_xaml_data import (
     ItemIndexRange,
     PropertyChangedEventArgs,
     RelativeSource,
+    _ICollectionView,
     ICollectionView,
+    _ICollectionViewFactory,
     ICollectionViewFactory,
+    _ICollectionViewGroup,
     ICollectionViewGroup,
+    _ICustomProperty,
     ICustomProperty,
+    _ICustomPropertyProvider,
     ICustomPropertyProvider,
+    _IItemsRangeInfo,
     IItemsRangeInfo,
+    _INotifyDataErrorInfo,
     INotifyDataErrorInfo,
+    _INotifyPropertyChanged,
     INotifyPropertyChanged,
+    _ISelectionInfo,
     ISelectionInfo,
+    _ISupportIncrementalLoading,
     ISupportIncrementalLoading,
+    _IValueConverter,
     IValueConverter,
 )
 from typing import TYPE_CHECKING
@@ -90,6 +101,6 @@ class UpdateSourceTrigger(enum.IntEnum):
     EXPLICIT = 2
     LOST_FOCUS = 3
 
-winrt.system._mixin_mutable_sequence(ICollectionView)
+winrt.system._mixin_mutable_sequence(_ICollectionView)
 CurrentChangingEventHandler = typing.Callable[[winrt.system.Object, CurrentChangingEventArgs], None]
 PropertyChangedEventHandler = typing.Callable[[winrt.system.Object, PropertyChangedEventArgs], None]

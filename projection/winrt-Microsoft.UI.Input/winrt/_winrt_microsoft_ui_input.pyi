@@ -999,6 +999,9 @@ class WindowRectChangingEventArgs(winrt.system.Object):
     @_property
     def pointer_screen_point(self) -> windows_graphics.PointInt32: ...
 
+@typing.final
+class _IPointerPointTransform: ...
+
 class IPointerPointTransform(winrt._winrt.IInspectable):
     # System.Boolean Microsoft.UI.Input.IPointerPointTransform::TryTransform(Windows.Foundation.Point,Windows.Foundation.Point&)
     @abstractmethod

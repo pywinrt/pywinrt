@@ -21,6 +21,7 @@ from winrt._winrt_windows_devices_geolocation import (
     PositionChangedEventArgs,
     StatusChangedEventArgs,
     VenueData,
+    _IGeoshape,
     IGeoshape,
 )
 

@@ -371,33 +371,33 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::IMediaExtension>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.IMediaExtension";
+        static constexpr std::string_view qualified_name = "winrt.windows.media._IMediaExtension";
         static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "IMediaExtension";
+        static constexpr const char* type_name = "_IMediaExtension";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::IMediaFrame>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.IMediaFrame";
+        static constexpr std::string_view qualified_name = "winrt.windows.media._IMediaFrame";
         static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "IMediaFrame";
+        static constexpr const char* type_name = "_IMediaFrame";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::IMediaMarker>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.IMediaMarker";
+        static constexpr std::string_view qualified_name = "winrt.windows.media._IMediaMarker";
         static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "IMediaMarker";
+        static constexpr const char* type_name = "_IMediaMarker";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::IMediaMarkers>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.IMediaMarkers";
+        static constexpr std::string_view qualified_name = "winrt.windows.media._IMediaMarkers";
         static constexpr const char* module_name = "winrt.windows.media";
-        static constexpr const char* type_name = "IMediaMarkers";
+        static constexpr const char* type_name = "_IMediaMarkers";
     };
 
     template<>

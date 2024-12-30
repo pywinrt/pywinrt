@@ -157,8 +157,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.ILampArrayEffect";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects._ILampArrayEffect";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "ILampArrayEffect";
+        static constexpr const char* type_name = "_ILampArrayEffect";
     };
 }

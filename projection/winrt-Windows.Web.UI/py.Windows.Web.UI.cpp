@@ -4616,7 +4616,7 @@ namespace py::cpp::Windows::Web::UI
         { }};
 
     static PyType_Spec type_spec_IWebViewControl = {
-        "winrt._winrt_windows_web_ui.IWebViewControl",
+        "winrt._winrt_windows_web_ui._IWebViewControl",
         sizeof(py::wrapper::Windows::Web::UI::IWebViewControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6368,7 +6368,7 @@ namespace py::cpp::Windows::Web::UI
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebViewControl = {
-        "winrt._winrt_windows_web_ui.ImplementsIWebViewControl",
+        "winrt._winrt_windows_web_ui.IWebViewControl",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6449,7 +6449,7 @@ namespace py::cpp::Windows::Web::UI
         { }};
 
     static PyType_Spec type_spec_IWebViewControl2 = {
-        "winrt._winrt_windows_web_ui.IWebViewControl2",
+        "winrt._winrt_windows_web_ui._IWebViewControl2",
         sizeof(py::wrapper::Windows::Web::UI::IWebViewControl2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6565,7 +6565,7 @@ namespace py::cpp::Windows::Web::UI
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebViewControl2 = {
-        "winrt._winrt_windows_web_ui.ImplementsIWebViewControl2",
+        "winrt._winrt_windows_web_ui.IWebViewControl2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -18,6 +18,7 @@ from winrt._winrt_windows_media_mediaproperties import (
     TimedMetadataEncodingProperties,
     VideoEncodingProperties,
     Vp9ProfileIds,
+    _IMediaEncodingProperties,
     IMediaEncodingProperties,
 )
 

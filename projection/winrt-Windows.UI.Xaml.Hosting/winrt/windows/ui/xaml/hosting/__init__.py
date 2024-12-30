@@ -15,8 +15,11 @@ from winrt._winrt_windows_ui_xaml_hosting import (
     XamlSourceFocusNavigationRequest,
     XamlSourceFocusNavigationResult,
     XamlUIPresenter,
+    _IXamlUIPresenterHost,
     IXamlUIPresenterHost,
+    _IXamlUIPresenterHost2,
     IXamlUIPresenterHost2,
+    _IXamlUIPresenterHost3,
     IXamlUIPresenterHost3,
 )
 from typing import TYPE_CHECKING

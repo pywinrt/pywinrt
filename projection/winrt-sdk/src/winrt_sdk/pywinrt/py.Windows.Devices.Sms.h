@@ -462,41 +462,41 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sms::ISmsBinaryMessage>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms.ISmsBinaryMessage";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms._ISmsBinaryMessage";
         static constexpr const char* module_name = "winrt.windows.devices.sms";
-        static constexpr const char* type_name = "ISmsBinaryMessage";
+        static constexpr const char* type_name = "_ISmsBinaryMessage";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::ISmsDevice>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms.ISmsDevice";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms._ISmsDevice";
         static constexpr const char* module_name = "winrt.windows.devices.sms";
-        static constexpr const char* type_name = "ISmsDevice";
+        static constexpr const char* type_name = "_ISmsDevice";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::ISmsMessage>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms.ISmsMessage";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms._ISmsMessage";
         static constexpr const char* module_name = "winrt.windows.devices.sms";
-        static constexpr const char* type_name = "ISmsMessage";
+        static constexpr const char* type_name = "_ISmsMessage";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::ISmsMessageBase>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms.ISmsMessageBase";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms._ISmsMessageBase";
         static constexpr const char* module_name = "winrt.windows.devices.sms";
-        static constexpr const char* type_name = "ISmsMessageBase";
+        static constexpr const char* type_name = "_ISmsMessageBase";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Sms::ISmsTextMessage>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms.ISmsTextMessage";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sms._ISmsTextMessage";
         static constexpr const char* module_name = "winrt.windows.devices.sms";
-        static constexpr const char* type_name = "ISmsTextMessage";
+        static constexpr const char* type_name = "_ISmsTextMessage";
     };
 
     template<>

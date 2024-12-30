@@ -3030,7 +3030,7 @@ namespace py::cpp::Windows::Storage::AccessCache
         { }};
 
     static PyType_Spec type_spec_IStorageItemAccessList = {
-        "winrt._winrt_windows_storage_accesscache.IStorageItemAccessList",
+        "winrt._winrt_windows_storage_accesscache._IStorageItemAccessList",
         sizeof(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3668,7 +3668,7 @@ namespace py::cpp::Windows::Storage::AccessCache
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItemAccessList = {
-        "winrt._winrt_windows_storage_accesscache.ImplementsIStorageItemAccessList",
+        "winrt._winrt_windows_storage_accesscache.IStorageItemAccessList",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

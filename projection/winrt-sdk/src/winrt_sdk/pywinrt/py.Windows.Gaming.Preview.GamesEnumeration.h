@@ -168,9 +168,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.IGameListEntry";
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration._IGameListEntry";
         static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
-        static constexpr const char* type_name = "IGameListEntry";
+        static constexpr const char* type_name = "_IGameListEntry";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler>

@@ -51,10 +51,16 @@ class ProviderSpiConnectionSettings(winrt.system.Object):
     @chip_select_line.setter
     def chip_select_line(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
+class _ISpiControllerProvider: ...
+
 class ISpiControllerProvider(winrt._winrt.IInspectable):
     # Windows.Devices.Spi.Provider.ISpiDeviceProvider Windows.Devices.Spi.Provider.ISpiControllerProvider::GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)
     @abstractmethod
     def get_device_provider(self, settings: ProviderSpiConnectionSettings, /) -> ISpiDeviceProvider: ...
+
+@typing.final
+class _ISpiDeviceProvider: ...
 
 class ISpiDeviceProvider(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # System.Void Windows.Devices.Spi.Provider.ISpiDeviceProvider::Read(System.Byte[])
@@ -77,6 +83,9 @@ class ISpiDeviceProvider(windows_foundation.IClosable, winrt._winrt.IInspectable
     @_property
     @abstractmethod
     def device_id(self) -> str: ...
+
+@typing.final
+class _ISpiProvider: ...
 
 class ISpiProvider(winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Spi.Provider.ISpiControllerProvider>> Windows.Devices.Spi.Provider.ISpiProvider::GetControllersAsync()

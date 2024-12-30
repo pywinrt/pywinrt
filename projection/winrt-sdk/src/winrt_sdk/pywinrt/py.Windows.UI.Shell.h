@@ -251,16 +251,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::IAdaptiveCard>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.IAdaptiveCard";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell._IAdaptiveCard";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
-        static constexpr const char* type_name = "IAdaptiveCard";
+        static constexpr const char* type_name = "_IAdaptiveCard";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.IAdaptiveCardBuilderStatics";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell._IAdaptiveCardBuilderStatics";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
-        static constexpr const char* type_name = "IAdaptiveCardBuilderStatics";
+        static constexpr const char* type_name = "_IAdaptiveCardBuilderStatics";
     };
 }

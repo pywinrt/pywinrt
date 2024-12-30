@@ -162,25 +162,40 @@ class TestRunner_Static(type):
 class TestRunner(winrt.system.Object, metaclass=TestRunner_Static):
     pass
 
+@typing.final
+class _IRequiredFour: ...
+
 class IRequiredFour(IRequiredThree, IRequiredTwo, IRequiredOne, winrt._winrt.IInspectable):
     # System.Int32 TestComponent.IRequiredFour::Four()
     @abstractmethod
     def four(self) -> winrt.system.Int32: ...
+
+@typing.final
+class _IRequiredOne: ...
 
 class IRequiredOne(winrt._winrt.IInspectable):
     # System.Int32 TestComponent.IRequiredOne::One()
     @abstractmethod
     def one(self) -> winrt.system.Int32: ...
 
+@typing.final
+class _IRequiredThree: ...
+
 class IRequiredThree(IRequiredTwo, IRequiredOne, winrt._winrt.IInspectable):
     # System.Int32 TestComponent.IRequiredThree::Three()
     @abstractmethod
     def three(self) -> winrt.system.Int32: ...
 
+@typing.final
+class _IRequiredTwo: ...
+
 class IRequiredTwo(IRequiredOne, winrt._winrt.IInspectable):
     # System.Int32 TestComponent.IRequiredTwo::Two()
     @abstractmethod
     def two(self) -> winrt.system.Int32: ...
+
+@typing.final
+class _ITests: ...
 
 class ITests(winrt._winrt.IInspectable):
     # System.Boolean[] TestComponent.ITests::Array1(System.Boolean[],System.Boolean[],System.Boolean[]&)

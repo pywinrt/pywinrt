@@ -16,10 +16,15 @@ from winrt._winrt_windows_foundation_diagnostics import (
     LoggingSession,
     RuntimeBrokerErrorSettings,
     TracingStatusChangedEventArgs,
+    _IErrorReportingSettings,
     IErrorReportingSettings,
+    _IFileLoggingSession,
     IFileLoggingSession,
+    _ILoggingChannel,
     ILoggingChannel,
+    _ILoggingSession,
     ILoggingSession,
+    _ILoggingTarget,
     ILoggingTarget,
 )
 

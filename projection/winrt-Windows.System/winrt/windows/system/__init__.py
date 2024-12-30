@@ -52,6 +52,7 @@ from winrt._winrt_windows_system import (
     UserDeviceAssociationChangedEventArgs,
     UserPicker,
     UserWatcher,
+    _ILauncherViewOptions,
     ILauncherViewOptions,
 )
 

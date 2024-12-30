@@ -1022,9 +1022,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Input::ICommand>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.input.ICommand";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.input._ICommand";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
-        static constexpr const char* type_name = "ICommand";
+        static constexpr const char* type_name = "_ICommand";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Input::DoubleTappedEventHandler>

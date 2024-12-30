@@ -19,6 +19,7 @@ from winrt._winrt_microsoft_ui_content import (
     ContentSiteView,
     DesktopChildSiteBridge,
     DesktopSiteBridge,
+    _IContentSiteBridge,
     IContentSiteBridge,
 )
 from typing import TYPE_CHECKING

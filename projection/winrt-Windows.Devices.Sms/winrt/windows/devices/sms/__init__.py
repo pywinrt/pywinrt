@@ -31,10 +31,15 @@ from winrt._winrt_windows_devices_sms import (
     SmsTextMessage2,
     SmsVoicemailMessage,
     SmsWapMessage,
+    _ISmsBinaryMessage,
     ISmsBinaryMessage,
+    _ISmsDevice,
     ISmsDevice,
+    _ISmsMessage,
     ISmsMessage,
+    _ISmsMessageBase,
     ISmsMessageBase,
+    _ISmsTextMessage,
     ISmsTextMessage,
 )
 

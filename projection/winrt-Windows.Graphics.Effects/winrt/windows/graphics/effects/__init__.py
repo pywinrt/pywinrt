@@ -2,7 +2,9 @@
 
 import winrt.system
 from winrt._winrt_windows_graphics_effects import (
+    _IGraphicsEffect,
     IGraphicsEffect,
+    _IGraphicsEffectSource,
     IGraphicsEffectSource,
 )
 

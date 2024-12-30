@@ -875,6 +875,9 @@ class XamlUICommand(microsoft_ui_xaml.DependencyObject, ICommand, metaclass=Xaml
     @typing.final
     def keyboard_accelerators(self) -> typing.MutableSequence[KeyboardAccelerator]: ...
 
+@typing.final
+class _ICommand: ...
+
 class ICommand(winrt._winrt.IInspectable):
     # System.Boolean Microsoft.UI.Xaml.Input.ICommand::CanExecute(System.Object)
     @abstractmethod

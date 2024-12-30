@@ -11004,7 +11004,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_IBackgroundCondition = {
-        "winrt._winrt_windows_applicationmodel_background.IBackgroundCondition",
+        "winrt._winrt_windows_applicationmodel_background._IBackgroundCondition",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundCondition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11090,7 +11090,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundCondition = {
-        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundCondition",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundCondition",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11171,7 +11171,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_IBackgroundTask = {
-        "winrt._winrt_windows_applicationmodel_background.IBackgroundTask",
+        "winrt._winrt_windows_applicationmodel_background._IBackgroundTask",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTask),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11287,7 +11287,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTask = {
-        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTask",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTask",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11626,7 +11626,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_IBackgroundTaskInstance = {
-        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance",
+        "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskInstance",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11923,7 +11923,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTaskInstance = {
-        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskInstance",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -12305,7 +12305,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_IBackgroundTaskInstance2 = {
-        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance2",
+        "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskInstance2",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12634,7 +12634,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTaskInstance2 = {
-        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskInstance2",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -13004,7 +13004,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_IBackgroundTaskInstance4 = {
-        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance4",
+        "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskInstance4",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance4),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13321,7 +13321,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTaskInstance4 = {
-        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskInstance4",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance4",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -13598,7 +13598,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_IBackgroundTaskRegistration = {
-        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration",
+        "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskRegistration",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13878,7 +13878,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTaskRegistration = {
-        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskRegistration",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -14186,7 +14186,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_IBackgroundTaskRegistration2 = {
-        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration2",
+        "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskRegistration2",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14486,7 +14486,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTaskRegistration2 = {
-        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskRegistration2",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -14794,7 +14794,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_IBackgroundTaskRegistration3 = {
-        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration3",
+        "winrt._winrt_windows_applicationmodel_background._IBackgroundTaskRegistration3",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15094,7 +15094,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTaskRegistration3 = {
-        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTaskRegistration3",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration3",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -15131,7 +15131,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_IBackgroundTrigger = {
-        "winrt._winrt_windows_applicationmodel_background.IBackgroundTrigger",
+        "winrt._winrt_windows_applicationmodel_background._IBackgroundTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15217,7 +15217,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }};
 
     static PyType_Spec type_spec_ImplementsIBackgroundTrigger = {
-        "winrt._winrt_windows_applicationmodel_background.ImplementsIBackgroundTrigger",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTrigger",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

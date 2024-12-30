@@ -10,6 +10,7 @@ from winrt._winrt_windows_gaming_preview_gamesenumeration import (
     GameListEntry,
     GameModeConfiguration,
     GameModeUserConfiguration,
+    _IGameListEntry,
     IGameListEntry,
 )
 

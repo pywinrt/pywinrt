@@ -138,17 +138,17 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.ICoreAutomationConnectionBoundObjectProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core._ICoreAutomationConnectionBoundObjectProvider";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
-        static constexpr const char* type_name = "ICoreAutomationConnectionBoundObjectProvider";
+        static constexpr const char* type_name = "_ICoreAutomationConnectionBoundObjectProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.ICoreAutomationRemoteOperationExtensionProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core._ICoreAutomationRemoteOperationExtensionProvider";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
-        static constexpr const char* type_name = "ICoreAutomationRemoteOperationExtensionProvider";
+        static constexpr const char* type_name = "_ICoreAutomationRemoteOperationExtensionProvider";
     };
 
     template<>

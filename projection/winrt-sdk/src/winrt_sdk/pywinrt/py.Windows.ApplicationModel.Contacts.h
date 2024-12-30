@@ -766,32 +766,32 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactField>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.IContactField";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts._IContactField";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
-        static constexpr const char* type_name = "IContactField";
+        static constexpr const char* type_name = "_IContactField";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.IContactFieldFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts._IContactFieldFactory";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
-        static constexpr const char* type_name = "IContactFieldFactory";
+        static constexpr const char* type_name = "_IContactFieldFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.IContactInstantMessageFieldFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts._IContactInstantMessageFieldFactory";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
-        static constexpr const char* type_name = "IContactInstantMessageFieldFactory";
+        static constexpr const char* type_name = "_IContactInstantMessageFieldFactory";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.IContactLocationFieldFactory";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts._IContactLocationFieldFactory";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
-        static constexpr const char* type_name = "IContactLocationFieldFactory";
+        static constexpr const char* type_name = "_IContactLocationFieldFactory";
     };
 }

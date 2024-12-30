@@ -3,6 +3,7 @@
 import winrt.system
 from winrt._winrt_windows_phone_startscreen import (
     DualSimTile,
+    _IToastNotificationManagerStatics3,
     IToastNotificationManagerStatics3,
 )
 

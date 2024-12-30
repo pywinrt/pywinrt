@@ -100,8 +100,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::ISpiDeviceStatics>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.ISpiDeviceStatics";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi._ISpiDeviceStatics";
         static constexpr const char* module_name = "winrt.windows.devices.spi";
-        static constexpr const char* type_name = "ISpiDeviceStatics";
+        static constexpr const char* type_name = "_ISpiDeviceStatics";
     };
 }

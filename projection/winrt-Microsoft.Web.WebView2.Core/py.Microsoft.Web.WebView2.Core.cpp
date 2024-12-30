@@ -21354,7 +21354,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { }};
 
     static PyType_Spec type_spec_ICoreWebView2DispatchAdapter = {
-        "winrt._winrt_microsoft_web_webview2_core.ICoreWebView2DispatchAdapter",
+        "winrt._winrt_microsoft_web_webview2_core._ICoreWebView2DispatchAdapter",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21584,7 +21584,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICoreWebView2DispatchAdapter = {
-        "winrt._winrt_microsoft_web_webview2_core.ImplementsICoreWebView2DispatchAdapter",
+        "winrt._winrt_microsoft_web_webview2_core.ICoreWebView2DispatchAdapter",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

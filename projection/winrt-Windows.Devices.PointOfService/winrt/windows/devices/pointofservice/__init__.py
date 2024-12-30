@@ -72,11 +72,17 @@ from winrt._winrt_windows_devices_pointofservice import (
     SlipPrintJob,
     SlipPrinterCapabilities,
     UnifiedPosErrorData,
+    _ICashDrawerEventSourceEventArgs,
     ICashDrawerEventSourceEventArgs,
+    _ICommonClaimedPosPrinterStation,
     ICommonClaimedPosPrinterStation,
+    _ICommonPosPrintStationCapabilities,
     ICommonPosPrintStationCapabilities,
+    _ICommonReceiptSlipCapabilities,
     ICommonReceiptSlipCapabilities,
+    _IPosPrinterJob,
     IPosPrinterJob,
+    _IReceiptOrSlipJob,
     IReceiptOrSlipJob,
 )
 

@@ -16,8 +16,11 @@ from winrt._winrt_windows_storage_search import (
     StorageLibraryChangeTrackerTriggerDetails,
     StorageLibraryContentChangedTriggerDetails,
     ValueAndLanguage,
+    _IIndexableContent,
     IIndexableContent,
+    _IStorageFolderQueryOperations,
     IStorageFolderQueryOperations,
+    _IStorageQueryResultBase,
     IStorageQueryResultBase,
 )
 

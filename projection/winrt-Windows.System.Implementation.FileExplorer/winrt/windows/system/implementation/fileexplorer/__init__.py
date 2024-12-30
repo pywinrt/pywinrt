@@ -3,8 +3,11 @@
 import winrt.system
 from winrt._winrt_windows_system_implementation_fileexplorer import (
     SysStorageProviderEventReceivedEventArgs,
+    _ISysStorageProviderEventSource,
     ISysStorageProviderEventSource,
+    _ISysStorageProviderHandlerFactory,
     ISysStorageProviderHandlerFactory,
+    _ISysStorageProviderHttpRequestProvider,
     ISysStorageProviderHttpRequestProvider,
 )
 

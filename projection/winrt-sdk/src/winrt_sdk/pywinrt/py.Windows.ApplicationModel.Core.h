@@ -133,24 +133,24 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.ICoreApplicationUnhandledError";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core._ICoreApplicationUnhandledError";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "ICoreApplicationUnhandledError";
+        static constexpr const char* type_name = "_ICoreApplicationUnhandledError";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.IFrameworkView";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core._IFrameworkView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "IFrameworkView";
+        static constexpr const char* type_name = "_IFrameworkView";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.IFrameworkViewSource";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core._IFrameworkViewSource";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "IFrameworkViewSource";
+        static constexpr const char* type_name = "_IFrameworkViewSource";
     };
 }

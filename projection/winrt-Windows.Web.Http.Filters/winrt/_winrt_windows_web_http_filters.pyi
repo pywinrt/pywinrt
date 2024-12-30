@@ -152,6 +152,9 @@ class HttpServerCustomValidationRequestedEventArgs(winrt.system.Object):
     @_property
     def server_intermediate_certificates(self) -> typing.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
+@typing.final
+class _IHttpFilter: ...
+
 class IHttpFilter(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> Windows.Web.Http.Filters.IHttpFilter::SendRequestAsync(Windows.Web.Http.HttpRequestMessage)
     @abstractmethod

@@ -4324,7 +4324,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Spec type_spec_IPrintDocumentSource = {
-        "winrt._winrt_windows_graphics_printing.IPrintDocumentSource",
+        "winrt._winrt_windows_graphics_printing._IPrintDocumentSource",
         sizeof(py::wrapper::Windows::Graphics::Printing::IPrintDocumentSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4410,7 +4410,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Spec type_spec_ImplementsIPrintDocumentSource = {
-        "winrt._winrt_windows_graphics_printing.ImplementsIPrintDocumentSource",
+        "winrt._winrt_windows_graphics_printing.IPrintDocumentSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4490,7 +4490,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Spec type_spec_IPrintTaskOptionsCore = {
-        "winrt._winrt_windows_graphics_printing.IPrintTaskOptionsCore",
+        "winrt._winrt_windows_graphics_printing._IPrintTaskOptionsCore",
         sizeof(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4608,7 +4608,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Spec type_spec_ImplementsIPrintTaskOptionsCore = {
-        "winrt._winrt_windows_graphics_printing.ImplementsIPrintTaskOptionsCore",
+        "winrt._winrt_windows_graphics_printing.IPrintTaskOptionsCore",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5477,7 +5477,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Spec type_spec_IPrintTaskOptionsCoreProperties = {
-        "winrt._winrt_windows_graphics_printing.IPrintTaskOptionsCoreProperties",
+        "winrt._winrt_windows_graphics_printing._IPrintTaskOptionsCoreProperties",
         sizeof(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6076,7 +6076,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Spec type_spec_ImplementsIPrintTaskOptionsCoreProperties = {
-        "winrt._winrt_windows_graphics_printing.ImplementsIPrintTaskOptionsCoreProperties",
+        "winrt._winrt_windows_graphics_printing.IPrintTaskOptionsCoreProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6144,7 +6144,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Spec type_spec_IPrintTaskOptionsCoreUIConfiguration = {
-        "winrt._winrt_windows_graphics_printing.IPrintTaskOptionsCoreUIConfiguration",
+        "winrt._winrt_windows_graphics_printing._IPrintTaskOptionsCoreUIConfiguration",
         sizeof(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6250,7 +6250,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { }};
 
     static PyType_Spec type_spec_ImplementsIPrintTaskOptionsCoreUIConfiguration = {
-        "winrt._winrt_windows_graphics_printing.ImplementsIPrintTaskOptionsCoreUIConfiguration",
+        "winrt._winrt_windows_graphics_printing.IPrintTaskOptionsCoreUIConfiguration",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

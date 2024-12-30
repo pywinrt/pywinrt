@@ -43,10 +43,16 @@ class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyColl
     @typing.final
     def old_starting_index(self) -> winrt.system.Int32: ...
 
+@typing.final
+class _IBindableIterable: ...
+
 class IBindableIterable(winrt._winrt.IInspectable):
     # Microsoft.UI.Xaml.Interop.IBindableIterator Microsoft.UI.Xaml.Interop.IBindableIterable::First()
     @abstractmethod
     def first(self) -> IBindableIterator: ...
+
+@typing.final
+class _IBindableIterator: ...
 
 class IBindableIterator(winrt._winrt.IInspectable):
     # System.Boolean Microsoft.UI.Xaml.Interop.IBindableIterator::MoveNext()
@@ -61,6 +67,9 @@ class IBindableIterator(winrt._winrt.IInspectable):
     @abstractmethod
     def has_current(self) -> bool: ...
 
+@typing.final
+class _IBindableObservableVector: ...
+
 class IBindableObservableVector(IBindableVector, IBindableIterable, winrt._winrt.IInspectable):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Interop.IBindableObservableVector::add_VectorChanged(Microsoft.UI.Xaml.Interop.BindableVectorChangedEventHandler)
     @abstractmethod
@@ -68,6 +77,9 @@ class IBindableObservableVector(IBindableVector, IBindableIterable, winrt._winrt
     # System.Void Microsoft.UI.Xaml.Interop.IBindableObservableVector::remove_VectorChanged(Windows.Foundation.EventRegistrationToken)
     @abstractmethod
     def remove_vector_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+
+@typing.final
+class _IBindableVector: ...
 
 class IBindableVector(IBindableIterable, winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Interop.IBindableVector::Append(System.Object)
@@ -102,6 +114,9 @@ class IBindableVector(IBindableIterable, winrt._winrt.IInspectable):
     @abstractmethod
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
+class _IBindableVectorView: ...
+
 class IBindableVectorView(IBindableIterable, winrt._winrt.IInspectable):
     # System.Object Microsoft.UI.Xaml.Interop.IBindableVectorView::GetAt(System.UInt32)
     @abstractmethod
@@ -113,6 +128,9 @@ class IBindableVectorView(IBindableIterable, winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def size(self) -> winrt.system.UInt32: ...
+
+@typing.final
+class _INotifyCollectionChanged: ...
 
 class INotifyCollectionChanged(winrt._winrt.IInspectable):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Interop.INotifyCollectionChanged::add_CollectionChanged(Microsoft.UI.Xaml.Interop.NotifyCollectionChangedEventHandler)

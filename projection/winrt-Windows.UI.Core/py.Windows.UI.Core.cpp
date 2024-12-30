@@ -11143,7 +11143,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ICoreAcceleratorKeys = {
-        "winrt._winrt_windows_ui_core.ICoreAcceleratorKeys",
+        "winrt._winrt_windows_ui_core._ICoreAcceleratorKeys",
         sizeof(py::wrapper::Windows::UI::Core::ICoreAcceleratorKeys),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11291,7 +11291,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICoreAcceleratorKeys = {
-        "winrt._winrt_windows_ui_core.ImplementsICoreAcceleratorKeys",
+        "winrt._winrt_windows_ui_core.ICoreAcceleratorKeys",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11496,7 +11496,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ICoreInputSourceBase = {
-        "winrt._winrt_windows_ui_core.ICoreInputSourceBase",
+        "winrt._winrt_windows_ui_core._ICoreInputSourceBase",
         sizeof(py::wrapper::Windows::UI::Core::ICoreInputSourceBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11707,7 +11707,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICoreInputSourceBase = {
-        "winrt._winrt_windows_ui_core.ImplementsICoreInputSourceBase",
+        "winrt._winrt_windows_ui_core.ICoreInputSourceBase",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -12429,7 +12429,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ICorePointerInputSource = {
-        "winrt._winrt_windows_ui_core.ICorePointerInputSource",
+        "winrt._winrt_windows_ui_core._ICorePointerInputSource",
         sizeof(py::wrapper::Windows::UI::Core::ICorePointerInputSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13080,7 +13080,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICorePointerInputSource = {
-        "winrt._winrt_windows_ui_core.ImplementsICorePointerInputSource",
+        "winrt._winrt_windows_ui_core.ICorePointerInputSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -13833,7 +13833,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ICorePointerInputSource2 = {
-        "winrt._winrt_windows_ui_core.ICorePointerInputSource2",
+        "winrt._winrt_windows_ui_core._ICorePointerInputSource2",
         sizeof(py::wrapper::Windows::UI::Core::ICorePointerInputSource2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14504,7 +14504,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICorePointerInputSource2 = {
-        "winrt._winrt_windows_ui_core.ImplementsICorePointerInputSource2",
+        "winrt._winrt_windows_ui_core.ICorePointerInputSource2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -14742,7 +14742,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ICorePointerRedirector = {
-        "winrt._winrt_windows_ui_core.ICorePointerRedirector",
+        "winrt._winrt_windows_ui_core._ICorePointerRedirector",
         sizeof(py::wrapper::Windows::UI::Core::ICorePointerRedirector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15014,7 +15014,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICorePointerRedirector = {
-        "winrt._winrt_windows_ui_core.ImplementsICorePointerRedirector",
+        "winrt._winrt_windows_ui_core.ICorePointerRedirector",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -16840,7 +16840,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ICoreWindow = {
-        "winrt._winrt_windows_ui_core.ICoreWindow",
+        "winrt._winrt_windows_ui_core._ICoreWindow",
         sizeof(py::wrapper::Windows::UI::Core::ICoreWindow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18389,7 +18389,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICoreWindow = {
-        "winrt._winrt_windows_ui_core.ImplementsICoreWindow",
+        "winrt._winrt_windows_ui_core.ICoreWindow",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -18496,7 +18496,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ICoreWindowEventArgs = {
-        "winrt._winrt_windows_ui_core.ICoreWindowEventArgs",
+        "winrt._winrt_windows_ui_core._ICoreWindowEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::ICoreWindowEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18625,7 +18625,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsICoreWindowEventArgs = {
-        "winrt._winrt_windows_ui_core.ImplementsICoreWindowEventArgs",
+        "winrt._winrt_windows_ui_core.ICoreWindowEventArgs",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -18706,7 +18706,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_IInitializeWithCoreWindow = {
-        "winrt._winrt_windows_ui_core.IInitializeWithCoreWindow",
+        "winrt._winrt_windows_ui_core._IInitializeWithCoreWindow",
         sizeof(py::wrapper::Windows::UI::Core::IInitializeWithCoreWindow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18822,7 +18822,7 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIInitializeWithCoreWindow = {
-        "winrt._winrt_windows_ui_core.ImplementsIInitializeWithCoreWindow",
+        "winrt._winrt_windows_ui_core.IInitializeWithCoreWindow",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

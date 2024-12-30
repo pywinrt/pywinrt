@@ -170,16 +170,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.IContactInformation";
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation._IContactInformation";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
-        static constexpr const char* type_name = "IContactInformation";
+        static constexpr const char* type_name = "_IContactInformation";
     };
 
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.IContactInformation2";
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation._IContactInformation2";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
-        static constexpr const char* type_name = "IContactInformation2";
+        static constexpr const char* type_name = "_IContactInformation2";
     };
 }

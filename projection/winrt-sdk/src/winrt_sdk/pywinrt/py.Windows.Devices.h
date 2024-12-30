@@ -70,8 +70,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.ILowLevelDevicesAggregateProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices._ILowLevelDevicesAggregateProvider";
         static constexpr const char* module_name = "winrt.windows.devices";
-        static constexpr const char* type_name = "ILowLevelDevicesAggregateProvider";
+        static constexpr const char* type_name = "_ILowLevelDevicesAggregateProvider";
     };
 }

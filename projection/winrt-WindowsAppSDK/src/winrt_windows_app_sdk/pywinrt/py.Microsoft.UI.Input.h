@@ -642,9 +642,9 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::IPointerPointTransform>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.IPointerPointTransform";
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input._IPointerPointTransform";
         static constexpr const char* module_name = "winrt.microsoft.ui.input";
-        static constexpr const char* type_name = "IPointerPointTransform";
+        static constexpr const char* type_name = "_IPointerPointTransform";
     };
 
     template<>

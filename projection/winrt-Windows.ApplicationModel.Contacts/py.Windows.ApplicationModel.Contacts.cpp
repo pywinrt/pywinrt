@@ -19377,7 +19377,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Spec type_spec_IContactField = {
-        "winrt._winrt_windows_applicationmodel_contacts.IContactField",
+        "winrt._winrt_windows_applicationmodel_contacts._IContactField",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactField),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19543,7 +19543,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Spec type_spec_ImplementsIContactField = {
-        "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactField",
+        "winrt._winrt_windows_applicationmodel_contacts.IContactField",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -19715,7 +19715,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Spec type_spec_IContactFieldFactory = {
-        "winrt._winrt_windows_applicationmodel_contacts.IContactFieldFactory",
+        "winrt._winrt_windows_applicationmodel_contacts._IContactFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19951,7 +19951,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Spec type_spec_ImplementsIContactFieldFactory = {
-        "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactFieldFactory",
+        "winrt._winrt_windows_applicationmodel_contacts.IContactFieldFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -20122,7 +20122,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Spec type_spec_IContactInstantMessageFieldFactory = {
-        "winrt._winrt_windows_applicationmodel_contacts.IContactInstantMessageFieldFactory",
+        "winrt._winrt_windows_applicationmodel_contacts._IContactInstantMessageFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20346,7 +20346,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Spec type_spec_ImplementsIContactInstantMessageFieldFactory = {
-        "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactInstantMessageFieldFactory",
+        "winrt._winrt_windows_applicationmodel_contacts.IContactInstantMessageFieldFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -20519,7 +20519,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Spec type_spec_IContactLocationFieldFactory = {
-        "winrt._winrt_windows_applicationmodel_contacts.IContactLocationFieldFactory",
+        "winrt._winrt_windows_applicationmodel_contacts._IContactLocationFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20755,7 +20755,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }};
 
     static PyType_Spec type_spec_ImplementsIContactLocationFieldFactory = {
-        "winrt._winrt_windows_applicationmodel_contacts.ImplementsIContactLocationFieldFactory",
+        "winrt._winrt_windows_applicationmodel_contacts.IContactLocationFieldFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

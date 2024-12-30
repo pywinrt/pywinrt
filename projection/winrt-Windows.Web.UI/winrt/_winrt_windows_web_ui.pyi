@@ -204,6 +204,9 @@ class WebViewControlWebResourceRequestedEventArgs(winrt.system.Object):
     @_property
     def request(self) -> windows_web_http.HttpRequestMessage: ...
 
+@typing.final
+class _IWebViewControl: ...
+
 class IWebViewControl(winrt._winrt.IInspectable):
     # Windows.Foundation.Uri Windows.Web.UI.IWebViewControl::BuildLocalStreamUri(System.String,System.String)
     @abstractmethod
@@ -386,6 +389,9 @@ class IWebViewControl(winrt._winrt.IInspectable):
     @source.setter
     @abstractmethod
     def source(self, value: windows_foundation.Uri) -> None: ...
+
+@typing.final
+class _IWebViewControl2: ...
 
 class IWebViewControl2(winrt._winrt.IInspectable):
     # System.Void Windows.Web.UI.IWebViewControl2::AddInitializeScript(System.String)

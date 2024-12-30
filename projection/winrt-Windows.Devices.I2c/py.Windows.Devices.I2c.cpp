@@ -1275,7 +1275,7 @@ namespace py::cpp::Windows::Devices::I2c
         { }};
 
     static PyType_Spec type_spec_II2cDeviceStatics = {
-        "winrt._winrt_windows_devices_i2c.II2cDeviceStatics",
+        "winrt._winrt_windows_devices_i2c._II2cDeviceStatics",
         sizeof(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1463,7 +1463,7 @@ namespace py::cpp::Windows::Devices::I2c
         { }};
 
     static PyType_Spec type_spec_ImplementsII2cDeviceStatics = {
-        "winrt._winrt_windows_devices_i2c.ImplementsII2cDeviceStatics",
+        "winrt._winrt_windows_devices_i2c.II2cDeviceStatics",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

@@ -158,8 +158,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.IUserActivityContentInfo";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities._IUserActivityContentInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "IUserActivityContentInfo";
+        static constexpr const char* type_name = "_IUserActivityContentInfo";
     };
 }

@@ -11,7 +11,9 @@ from winrt._winrt_microsoft_windows_applicationmodel_resources import (
     ResourceManager,
     ResourceMap,
     ResourceNotFoundEventArgs,
+    _IResourceContext,
     IResourceContext,
+    _IResourceManager,
     IResourceManager,
 )
 

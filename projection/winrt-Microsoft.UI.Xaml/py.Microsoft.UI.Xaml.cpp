@@ -41393,7 +41393,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_IDataTemplateExtension = {
-        "winrt._winrt_microsoft_ui_xaml.IDataTemplateExtension",
+        "winrt._winrt_microsoft_ui_xaml._IDataTemplateExtension",
         sizeof(py::wrapper::Microsoft::UI::Xaml::IDataTemplateExtension),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -41567,7 +41567,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_ImplementsIDataTemplateExtension = {
-        "winrt._winrt_microsoft_ui_xaml.ImplementsIDataTemplateExtension",
+        "winrt._winrt_microsoft_ui_xaml.IDataTemplateExtension",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -41691,7 +41691,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_IElementFactory = {
-        "winrt._winrt_microsoft_ui_xaml.IElementFactory",
+        "winrt._winrt_microsoft_ui_xaml._IElementFactory",
         sizeof(py::wrapper::Microsoft::UI::Xaml::IElementFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -41839,7 +41839,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_ImplementsIElementFactory = {
-        "winrt._winrt_microsoft_ui_xaml.ImplementsIElementFactory",
+        "winrt._winrt_microsoft_ui_xaml.IElementFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -41919,7 +41919,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_IXamlServiceProvider = {
-        "winrt._winrt_microsoft_ui_xaml.IXamlServiceProvider",
+        "winrt._winrt_microsoft_ui_xaml._IXamlServiceProvider",
         sizeof(py::wrapper::Microsoft::UI::Xaml::IXamlServiceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -42037,7 +42037,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }};
 
     static PyType_Spec type_spec_ImplementsIXamlServiceProvider = {
-        "winrt._winrt_microsoft_ui_xaml.ImplementsIXamlServiceProvider",
+        "winrt._winrt_microsoft_ui_xaml.IXamlServiceProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

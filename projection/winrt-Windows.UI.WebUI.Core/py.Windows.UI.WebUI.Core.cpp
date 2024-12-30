@@ -2126,7 +2126,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }};
 
     static PyType_Spec type_spec_IWebUICommandBarElement = {
-        "winrt._winrt_windows_ui_webui_core.IWebUICommandBarElement",
+        "winrt._winrt_windows_ui_webui_core._IWebUICommandBarElement",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2212,7 +2212,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebUICommandBarElement = {
-        "winrt._winrt_windows_ui_webui_core.ImplementsIWebUICommandBarElement",
+        "winrt._winrt_windows_ui_webui_core.IWebUICommandBarElement",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -2249,7 +2249,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }};
 
     static PyType_Spec type_spec_IWebUICommandBarIcon = {
-        "winrt._winrt_windows_ui_webui_core.IWebUICommandBarIcon",
+        "winrt._winrt_windows_ui_webui_core._IWebUICommandBarIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarIcon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2335,7 +2335,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebUICommandBarIcon = {
-        "winrt._winrt_windows_ui_webui_core.ImplementsIWebUICommandBarIcon",
+        "winrt._winrt_windows_ui_webui_core.IWebUICommandBarIcon",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

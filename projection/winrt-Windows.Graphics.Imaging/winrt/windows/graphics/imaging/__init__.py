@@ -20,8 +20,11 @@ from winrt._winrt_windows_graphics_imaging import (
     ImageStream,
     PixelDataProvider,
     SoftwareBitmap,
+    _IBitmapFrame,
     IBitmapFrame,
+    _IBitmapFrameWithSoftwareBitmap,
     IBitmapFrameWithSoftwareBitmap,
+    _IBitmapPropertiesView,
     IBitmapPropertiesView,
 )
 

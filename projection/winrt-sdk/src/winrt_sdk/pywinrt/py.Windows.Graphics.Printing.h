@@ -343,33 +343,33 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::IPrintDocumentSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.IPrintDocumentSource";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing._IPrintDocumentSource";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
-        static constexpr const char* type_name = "IPrintDocumentSource";
+        static constexpr const char* type_name = "_IPrintDocumentSource";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.IPrintTaskOptionsCore";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing._IPrintTaskOptionsCore";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
-        static constexpr const char* type_name = "IPrintTaskOptionsCore";
+        static constexpr const char* type_name = "_IPrintTaskOptionsCore";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.IPrintTaskOptionsCoreProperties";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing._IPrintTaskOptionsCoreProperties";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
-        static constexpr const char* type_name = "IPrintTaskOptionsCoreProperties";
+        static constexpr const char* type_name = "_IPrintTaskOptionsCoreProperties";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.IPrintTaskOptionsCoreUIConfiguration";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing._IPrintTaskOptionsCoreUIConfiguration";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
-        static constexpr const char* type_name = "IPrintTaskOptionsCoreUIConfiguration";
+        static constexpr const char* type_name = "_IPrintTaskOptionsCoreUIConfiguration";
     };
 
     template<>

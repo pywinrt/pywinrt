@@ -264,6 +264,9 @@ class WebProviderTokenResponse(winrt.system.Object):
     @_property
     def client_response(self) -> windows_security_authentication_web_core.WebTokenResponse: ...
 
+@typing.final
+class _IWebAccountProviderBaseReportOperation: ...
+
 class IWebAccountProviderBaseReportOperation(winrt._winrt.IInspectable):
     # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation::ReportCompleted()
     @abstractmethod
@@ -272,11 +275,17 @@ class IWebAccountProviderBaseReportOperation(winrt._winrt.IInspectable):
     @abstractmethod
     def report_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
 
+@typing.final
+class _IWebAccountProviderOperation: ...
+
 class IWebAccountProviderOperation(winrt._winrt.IInspectable):
     # Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation::get_Kind()
     @_property
     @abstractmethod
     def kind(self) -> WebAccountProviderOperationKind: ...
+
+@typing.final
+class _IWebAccountProviderSilentReportOperation: ...
 
 class IWebAccountProviderSilentReportOperation(IWebAccountProviderBaseReportOperation, winrt._winrt.IInspectable):
     # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderSilentReportOperation::ReportUserInteractionRequired()
@@ -286,17 +295,26 @@ class IWebAccountProviderSilentReportOperation(IWebAccountProviderBaseReportOper
     @abstractmethod
     def report_user_interaction_required_with_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
 
+@typing.final
+class _IWebAccountProviderTokenObjects: ...
+
 class IWebAccountProviderTokenObjects(winrt._winrt.IInspectable):
     # Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects::get_Operation()
     @_property
     @abstractmethod
     def operation(self) -> IWebAccountProviderOperation: ...
 
+@typing.final
+class _IWebAccountProviderTokenObjects2: ...
+
 class IWebAccountProviderTokenObjects2(IWebAccountProviderTokenObjects, winrt._winrt.IInspectable):
     # Windows.System.User Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenObjects2::get_User()
     @_property
     @abstractmethod
     def user(self) -> windows_system.User: ...
+
+@typing.final
+class _IWebAccountProviderTokenOperation: ...
 
 class IWebAccountProviderTokenOperation(IWebAccountProviderOperation, winrt._winrt.IInspectable):
     # Windows.Foundation.DateTime Windows.Security.Authentication.Web.Provider.IWebAccountProviderTokenOperation::get_CacheExpirationTime()
@@ -315,6 +333,9 @@ class IWebAccountProviderTokenOperation(IWebAccountProviderOperation, winrt._win
     @_property
     @abstractmethod
     def provider_responses(self) -> typing.MutableSequence[WebProviderTokenResponse]: ...
+
+@typing.final
+class _IWebAccountProviderUIReportOperation: ...
 
 class IWebAccountProviderUIReportOperation(IWebAccountProviderBaseReportOperation, winrt._winrt.IInspectable):
     # System.Void Windows.Security.Authentication.Web.Provider.IWebAccountProviderUIReportOperation::ReportUserCanceled()

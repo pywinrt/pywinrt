@@ -424,7 +424,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         { }};
 
     static PyType_Spec type_spec_IPwmControllerProvider = {
-        "winrt._winrt_windows_devices_pwm_provider.IPwmControllerProvider",
+        "winrt._winrt_windows_devices_pwm_provider._IPwmControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -790,7 +790,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIPwmControllerProvider = {
-        "winrt._winrt_windows_devices_pwm_provider.ImplementsIPwmControllerProvider",
+        "winrt._winrt_windows_devices_pwm_provider.IPwmControllerProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -868,7 +868,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         { }};
 
     static PyType_Spec type_spec_IPwmProvider = {
-        "winrt._winrt_windows_devices_pwm_provider.IPwmProvider",
+        "winrt._winrt_windows_devices_pwm_provider._IPwmProvider",
         sizeof(py::wrapper::Windows::Devices::Pwm::Provider::IPwmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -980,7 +980,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIPwmProvider = {
-        "winrt._winrt_windows_devices_pwm_provider.ImplementsIPwmProvider",
+        "winrt._winrt_windows_devices_pwm_provider.IPwmProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

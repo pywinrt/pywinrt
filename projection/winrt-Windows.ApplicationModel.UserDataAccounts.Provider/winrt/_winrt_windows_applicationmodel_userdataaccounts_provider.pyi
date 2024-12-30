@@ -65,6 +65,9 @@ class UserDataAccountProviderSettingsOperation(winrt.system.Object, IUserDataAcc
     @_property
     def user_data_account_id(self) -> str: ...
 
+@typing.final
+class _IUserDataAccountProviderOperation: ...
+
 class IUserDataAccountProviderOperation(winrt._winrt.IInspectable):
     # Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation::get_Kind()
     @_property

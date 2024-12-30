@@ -1603,7 +1603,7 @@ namespace py::cpp::Windows::Devices::Spi
         { }};
 
     static PyType_Spec type_spec_ISpiDeviceStatics = {
-        "winrt._winrt_windows_devices_spi.ISpiDeviceStatics",
+        "winrt._winrt_windows_devices_spi._ISpiDeviceStatics",
         sizeof(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1823,7 +1823,7 @@ namespace py::cpp::Windows::Devices::Spi
         { }};
 
     static PyType_Spec type_spec_ImplementsISpiDeviceStatics = {
-        "winrt._winrt_windows_devices_spi.ImplementsISpiDeviceStatics",
+        "winrt._winrt_windows_devices_spi.ISpiDeviceStatics",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

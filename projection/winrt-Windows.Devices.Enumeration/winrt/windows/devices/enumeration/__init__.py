@@ -26,7 +26,9 @@ from winrt._winrt_windows_devices_enumeration import (
     DeviceWatcherEvent,
     DeviceWatcherTriggerDetails,
     EnclosureLocation,
+    _IDeviceEnumerationSettings,
     IDeviceEnumerationSettings,
+    _IDevicePairingSettings,
     IDevicePairingSettings,
 )
 

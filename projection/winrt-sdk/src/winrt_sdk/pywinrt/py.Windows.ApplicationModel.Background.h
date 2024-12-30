@@ -1022,73 +1022,73 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundCondition";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background._IBackgroundCondition";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
-        static constexpr const char* type_name = "IBackgroundCondition";
+        static constexpr const char* type_name = "_IBackgroundCondition";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTask>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTask";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background._IBackgroundTask";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
-        static constexpr const char* type_name = "IBackgroundTask";
+        static constexpr const char* type_name = "_IBackgroundTask";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskInstance";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background._IBackgroundTaskInstance";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
-        static constexpr const char* type_name = "IBackgroundTaskInstance";
+        static constexpr const char* type_name = "_IBackgroundTaskInstance";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskInstance2";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background._IBackgroundTaskInstance2";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
-        static constexpr const char* type_name = "IBackgroundTaskInstance2";
+        static constexpr const char* type_name = "_IBackgroundTaskInstance2";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskInstance4";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background._IBackgroundTaskInstance4";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
-        static constexpr const char* type_name = "IBackgroundTaskInstance4";
+        static constexpr const char* type_name = "_IBackgroundTaskInstance4";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskRegistration";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background._IBackgroundTaskRegistration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
-        static constexpr const char* type_name = "IBackgroundTaskRegistration";
+        static constexpr const char* type_name = "_IBackgroundTaskRegistration";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskRegistration2";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background._IBackgroundTaskRegistration2";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
-        static constexpr const char* type_name = "IBackgroundTaskRegistration2";
+        static constexpr const char* type_name = "_IBackgroundTaskRegistration2";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskRegistration3";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background._IBackgroundTaskRegistration3";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
-        static constexpr const char* type_name = "IBackgroundTaskRegistration3";
+        static constexpr const char* type_name = "_IBackgroundTaskRegistration3";
     };
 
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTrigger";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background._IBackgroundTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
-        static constexpr const char* type_name = "IBackgroundTrigger";
+        static constexpr const char* type_name = "_IBackgroundTrigger";
     };
     template <>
     struct delegate_python_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>

@@ -211,16 +211,16 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::IWebViewControl>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.IWebViewControl";
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui._IWebViewControl";
         static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "IWebViewControl";
+        static constexpr const char* type_name = "_IWebViewControl";
     };
 
     template<>
     struct py_type<winrt::Windows::Web::UI::IWebViewControl2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.IWebViewControl2";
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui._IWebViewControl2";
         static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "IWebViewControl2";
+        static constexpr const char* type_name = "_IWebViewControl2";
     };
 }

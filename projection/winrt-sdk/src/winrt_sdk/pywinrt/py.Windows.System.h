@@ -791,9 +791,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ILauncherViewOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.ILauncherViewOptions";
+        static constexpr std::string_view qualified_name = "winrt.windows.system._ILauncherViewOptions";
         static constexpr const char* module_name = "winrt.windows.system";
-        static constexpr const char* type_name = "ILauncherViewOptions";
+        static constexpr const char* type_name = "_ILauncherViewOptions";
     };
     template <>
     struct delegate_python_type<winrt::Windows::System::DispatcherQueueHandler>

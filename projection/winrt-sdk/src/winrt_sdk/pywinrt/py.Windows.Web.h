@@ -57,8 +57,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::IUriToStreamResolver>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.IUriToStreamResolver";
+        static constexpr std::string_view qualified_name = "winrt.windows.web._IUriToStreamResolver";
         static constexpr const char* module_name = "winrt.windows.web";
-        static constexpr const char* type_name = "IUriToStreamResolver";
+        static constexpr const char* type_name = "_IUriToStreamResolver";
     };
 }

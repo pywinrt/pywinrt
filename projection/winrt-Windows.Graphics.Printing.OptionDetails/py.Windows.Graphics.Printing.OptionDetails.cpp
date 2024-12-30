@@ -9595,7 +9595,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_IPrintCustomOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintCustomOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails._IPrintCustomOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9902,7 +9902,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_ImplementsIPrintCustomOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintCustomOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintCustomOptionDetails",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -10246,7 +10246,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_IPrintItemListOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintItemListOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails._IPrintItemListOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10530,7 +10530,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_ImplementsIPrintItemListOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintItemListOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintItemListOptionDetails",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -10905,7 +10905,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_IPrintNumberOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintNumberOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails._IPrintNumberOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11209,7 +11209,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_ImplementsIPrintNumberOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintNumberOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintNumberOptionDetails",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -11522,7 +11522,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_IPrintOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails._IPrintOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11786,7 +11786,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_ImplementsIPrintOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintOptionDetails",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -12130,7 +12130,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_IPrintTextOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintTextOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails._IPrintTextOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12414,7 +12414,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { }};
 
     static PyType_Spec type_spec_ImplementsIPrintTextOptionDetails = {
-        "winrt._winrt_windows_graphics_printing_optiondetails.ImplementsIPrintTextOptionDetails",
+        "winrt._winrt_windows_graphics_printing_optiondetails.IPrintTextOptionDetails",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

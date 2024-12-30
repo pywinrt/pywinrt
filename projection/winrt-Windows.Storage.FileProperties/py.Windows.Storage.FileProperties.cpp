@@ -4794,7 +4794,7 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }};
 
     static PyType_Spec type_spec_IStorageItemExtraProperties = {
-        "winrt._winrt_windows_storage_fileproperties.IStorageItemExtraProperties",
+        "winrt._winrt_windows_storage_fileproperties._IStorageItemExtraProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::IStorageItemExtraProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4970,7 +4970,7 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageItemExtraProperties = {
-        "winrt._winrt_windows_storage_fileproperties.ImplementsIStorageItemExtraProperties",
+        "winrt._winrt_windows_storage_fileproperties.IStorageItemExtraProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

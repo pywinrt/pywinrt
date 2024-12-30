@@ -3081,7 +3081,7 @@ namespace py::cpp::Windows::Security::Credentials
         { }};
 
     static PyType_Spec type_spec_IWebAccount = {
-        "winrt._winrt_windows_security_credentials.IWebAccount",
+        "winrt._winrt_windows_security_credentials._IWebAccount",
         sizeof(py::wrapper::Windows::Security::Credentials::IWebAccount),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3227,7 +3227,7 @@ namespace py::cpp::Windows::Security::Credentials
         { }};
 
     static PyType_Spec type_spec_ImplementsIWebAccount = {
-        "winrt._winrt_windows_security_credentials.ImplementsIWebAccount",
+        "winrt._winrt_windows_security_credentials.IWebAccount",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

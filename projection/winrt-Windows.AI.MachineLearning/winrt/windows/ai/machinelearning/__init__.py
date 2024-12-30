@@ -28,9 +28,13 @@ from winrt._winrt_windows_ai_machinelearning import (
     TensorUInt32Bit,
     TensorUInt64Bit,
     TensorUInt8Bit,
+    _ILearningModelFeatureDescriptor,
     ILearningModelFeatureDescriptor,
+    _ILearningModelFeatureValue,
     ILearningModelFeatureValue,
+    _ILearningModelOperatorProvider,
     ILearningModelOperatorProvider,
+    _ITensor,
     ITensor,
 )
 

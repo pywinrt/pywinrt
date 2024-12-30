@@ -82,7 +82,9 @@ from winrt._winrt_windows_ui_xaml import (
     WindowCreatedEventArgs,
     XamlRoot,
     XamlRootChangedEventArgs,
+    _IDataTemplateExtension,
     IDataTemplateExtension,
+    _IElementFactory,
     IElementFactory,
 )
 from typing import TYPE_CHECKING

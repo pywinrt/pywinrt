@@ -620,32 +620,32 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Audio::IAudioInputNode>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.audio.IAudioInputNode";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.audio._IAudioInputNode";
         static constexpr const char* module_name = "winrt.windows.media.audio";
-        static constexpr const char* type_name = "IAudioInputNode";
+        static constexpr const char* type_name = "_IAudioInputNode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Audio::IAudioInputNode2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.audio.IAudioInputNode2";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.audio._IAudioInputNode2";
         static constexpr const char* module_name = "winrt.windows.media.audio";
-        static constexpr const char* type_name = "IAudioInputNode2";
+        static constexpr const char* type_name = "_IAudioInputNode2";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Audio::IAudioNode>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.audio.IAudioNode";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.audio._IAudioNode";
         static constexpr const char* module_name = "winrt.windows.media.audio";
-        static constexpr const char* type_name = "IAudioNode";
+        static constexpr const char* type_name = "_IAudioNode";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Audio::IAudioNodeWithListener>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.audio.IAudioNodeWithListener";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.audio._IAudioNodeWithListener";
         static constexpr const char* module_name = "winrt.windows.media.audio";
-        static constexpr const char* type_name = "IAudioNodeWithListener";
+        static constexpr const char* type_name = "_IAudioNodeWithListener";
     };
 }

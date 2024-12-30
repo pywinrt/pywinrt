@@ -244,40 +244,40 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails.IPrintCustomOptionDetails";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails._IPrintCustomOptionDetails";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
-        static constexpr const char* type_name = "IPrintCustomOptionDetails";
+        static constexpr const char* type_name = "_IPrintCustomOptionDetails";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails.IPrintItemListOptionDetails";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails._IPrintItemListOptionDetails";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
-        static constexpr const char* type_name = "IPrintItemListOptionDetails";
+        static constexpr const char* type_name = "_IPrintItemListOptionDetails";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails.IPrintNumberOptionDetails";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails._IPrintNumberOptionDetails";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
-        static constexpr const char* type_name = "IPrintNumberOptionDetails";
+        static constexpr const char* type_name = "_IPrintNumberOptionDetails";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails.IPrintOptionDetails";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails._IPrintOptionDetails";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
-        static constexpr const char* type_name = "IPrintOptionDetails";
+        static constexpr const char* type_name = "_IPrintOptionDetails";
     };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails.IPrintTextOptionDetails";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.optiondetails._IPrintTextOptionDetails";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
-        static constexpr const char* type_name = "IPrintTextOptionDetails";
+        static constexpr const char* type_name = "_IPrintTextOptionDetails";
     };
 }

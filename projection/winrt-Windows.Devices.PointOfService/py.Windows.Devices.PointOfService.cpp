@@ -31901,7 +31901,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ICashDrawerEventSourceEventArgs = {
-        "winrt._winrt_windows_devices_pointofservice.ICashDrawerEventSourceEventArgs",
+        "winrt._winrt_windows_devices_pointofservice._ICashDrawerEventSourceEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -32007,7 +32007,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ImplementsICashDrawerEventSourceEventArgs = {
-        "winrt._winrt_windows_devices_pointofservice.ImplementsICashDrawerEventSourceEventArgs",
+        "winrt._winrt_windows_devices_pointofservice.ICashDrawerEventSourceEventArgs",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -32685,7 +32685,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ICommonClaimedPosPrinterStation = {
-        "winrt._winrt_windows_devices_pointofservice.ICommonClaimedPosPrinterStation",
+        "winrt._winrt_windows_devices_pointofservice._ICommonClaimedPosPrinterStation",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -33178,7 +33178,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ImplementsICommonClaimedPosPrinterStation = {
-        "winrt._winrt_windows_devices_pointofservice.ImplementsICommonClaimedPosPrinterStation",
+        "winrt._winrt_windows_devices_pointofservice.ICommonClaimedPosPrinterStation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -33618,7 +33618,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ICommonPosPrintStationCapabilities = {
-        "winrt._winrt_windows_devices_pointofservice.ICommonPosPrintStationCapabilities",
+        "winrt._winrt_windows_devices_pointofservice._ICommonPosPrintStationCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -33964,7 +33964,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ImplementsICommonPosPrintStationCapabilities = {
-        "winrt._winrt_windows_devices_pointofservice.ImplementsICommonPosPrintStationCapabilities",
+        "winrt._winrt_windows_devices_pointofservice.ICommonPosPrintStationCapabilities",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -34683,7 +34683,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ICommonReceiptSlipCapabilities = {
-        "winrt._winrt_windows_devices_pointofservice.ICommonReceiptSlipCapabilities",
+        "winrt._winrt_windows_devices_pointofservice._ICommonReceiptSlipCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -35209,7 +35209,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ImplementsICommonReceiptSlipCapabilities = {
-        "winrt._winrt_windows_devices_pointofservice.ImplementsICommonReceiptSlipCapabilities",
+        "winrt._winrt_windows_devices_pointofservice.ICommonReceiptSlipCapabilities",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -35417,7 +35417,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_IPosPrinterJob = {
-        "winrt._winrt_windows_devices_pointofservice.IPosPrinterJob",
+        "winrt._winrt_windows_devices_pointofservice._IPosPrinterJob",
         sizeof(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -35613,7 +35613,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ImplementsIPosPrinterJob = {
-        "winrt._winrt_windows_devices_pointofservice.ImplementsIPosPrinterJob",
+        "winrt._winrt_windows_devices_pointofservice.IPosPrinterJob",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -36512,7 +36512,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_IReceiptOrSlipJob = {
-        "winrt._winrt_windows_devices_pointofservice.IReceiptOrSlipJob",
+        "winrt._winrt_windows_devices_pointofservice._IReceiptOrSlipJob",
         sizeof(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -37416,7 +37416,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Spec type_spec_ImplementsIReceiptOrSlipJob = {
-        "winrt._winrt_windows_devices_pointofservice.ImplementsIReceiptOrSlipJob",
+        "winrt._winrt_windows_devices_pointofservice.IReceiptOrSlipJob",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

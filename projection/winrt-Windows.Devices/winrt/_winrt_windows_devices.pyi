@@ -50,6 +50,9 @@ class LowLevelDevicesController_Static(type):
 class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesController_Static):
     pass
 
+@typing.final
+class _ILowLevelDevicesAggregateProvider: ...
+
 class ILowLevelDevicesAggregateProvider(winrt._winrt.IInspectable):
     # Windows.Devices.Adc.Provider.IAdcControllerProvider Windows.Devices.ILowLevelDevicesAggregateProvider::get_AdcControllerProvider()
     @_property

@@ -1139,57 +1139,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaCue>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaCue";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core._IMediaCue";
         static constexpr const char* module_name = "winrt.windows.media.core";
-        static constexpr const char* type_name = "IMediaCue";
+        static constexpr const char* type_name = "_IMediaCue";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaSource";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core._IMediaSource";
         static constexpr const char* module_name = "winrt.windows.media.core";
-        static constexpr const char* type_name = "IMediaSource";
+        static constexpr const char* type_name = "_IMediaSource";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaStreamDescriptor";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core._IMediaStreamDescriptor";
         static constexpr const char* module_name = "winrt.windows.media.core";
-        static constexpr const char* type_name = "IMediaStreamDescriptor";
+        static constexpr const char* type_name = "_IMediaStreamDescriptor";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaStreamDescriptor2";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core._IMediaStreamDescriptor2";
         static constexpr const char* module_name = "winrt.windows.media.core";
-        static constexpr const char* type_name = "IMediaStreamDescriptor2";
+        static constexpr const char* type_name = "_IMediaStreamDescriptor2";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaTrack>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaTrack";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core._IMediaTrack";
         static constexpr const char* module_name = "winrt.windows.media.core";
-        static constexpr const char* type_name = "IMediaTrack";
+        static constexpr const char* type_name = "_IMediaTrack";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.core.ISingleSelectMediaTrackList";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core._ISingleSelectMediaTrackList";
         static constexpr const char* module_name = "winrt.windows.media.core";
-        static constexpr const char* type_name = "ISingleSelectMediaTrackList";
+        static constexpr const char* type_name = "_ISingleSelectMediaTrackList";
     };
 
     template<>
     struct py_type<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.core.ITimedMetadataTrackProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core._ITimedMetadataTrackProvider";
         static constexpr const char* module_name = "winrt.windows.media.core";
-        static constexpr const char* type_name = "ITimedMetadataTrackProvider";
+        static constexpr const char* type_name = "_ITimedMetadataTrackProvider";
     };
 
     template<>

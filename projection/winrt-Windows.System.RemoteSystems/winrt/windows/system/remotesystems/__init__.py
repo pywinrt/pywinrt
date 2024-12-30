@@ -44,6 +44,7 @@ from winrt._winrt_windows_system_remotesystems import (
     RemoteSystemWatcher,
     RemoteSystemWatcherErrorOccurredEventArgs,
     RemoteSystemWebAccountFilter,
+    _IRemoteSystemFilter,
     IRemoteSystemFilter,
 )
 

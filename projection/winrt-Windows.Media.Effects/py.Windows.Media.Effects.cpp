@@ -3280,7 +3280,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_IAudioEffectDefinition = {
-        "winrt._winrt_windows_media_effects.IAudioEffectDefinition",
+        "winrt._winrt_windows_media_effects._IAudioEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::IAudioEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3406,7 +3406,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_ImplementsIAudioEffectDefinition = {
-        "winrt._winrt_windows_media_effects.ImplementsIAudioEffectDefinition",
+        "winrt._winrt_windows_media_effects.IAudioEffectDefinition",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -3723,7 +3723,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_IBasicAudioEffect = {
-        "winrt._winrt_windows_media_effects.IBasicAudioEffect",
+        "winrt._winrt_windows_media_effects._IBasicAudioEffect",
         sizeof(py::wrapper::Windows::Media::Effects::IBasicAudioEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3993,7 +3993,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_ImplementsIBasicAudioEffect = {
-        "winrt._winrt_windows_media_effects.ImplementsIBasicAudioEffect",
+        "winrt._winrt_windows_media_effects.IBasicAudioEffect",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4373,7 +4373,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_IBasicVideoEffect = {
-        "winrt._winrt_windows_media_effects.IBasicVideoEffect",
+        "winrt._winrt_windows_media_effects._IBasicVideoEffect",
         sizeof(py::wrapper::Windows::Media::Effects::IBasicVideoEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4695,7 +4695,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_ImplementsIBasicVideoEffect = {
-        "winrt._winrt_windows_media_effects.ImplementsIBasicVideoEffect",
+        "winrt._winrt_windows_media_effects.IBasicVideoEffect",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -4982,7 +4982,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_IVideoCompositor = {
-        "winrt._winrt_windows_media_effects.IVideoCompositor",
+        "winrt._winrt_windows_media_effects._IVideoCompositor",
         sizeof(py::wrapper::Windows::Media::Effects::IVideoCompositor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5244,7 +5244,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_ImplementsIVideoCompositor = {
-        "winrt._winrt_windows_media_effects.ImplementsIVideoCompositor",
+        "winrt._winrt_windows_media_effects.IVideoCompositor",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5343,7 +5343,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_IVideoCompositorDefinition = {
-        "winrt._winrt_windows_media_effects.IVideoCompositorDefinition",
+        "winrt._winrt_windows_media_effects._IVideoCompositorDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::IVideoCompositorDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5469,7 +5469,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_ImplementsIVideoCompositorDefinition = {
-        "winrt._winrt_windows_media_effects.ImplementsIVideoCompositorDefinition",
+        "winrt._winrt_windows_media_effects.IVideoCompositorDefinition",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -5568,7 +5568,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_IVideoEffectDefinition = {
-        "winrt._winrt_windows_media_effects.IVideoEffectDefinition",
+        "winrt._winrt_windows_media_effects._IVideoEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::IVideoEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5694,7 +5694,7 @@ namespace py::cpp::Windows::Media::Effects
         { }};
 
     static PyType_Spec type_spec_ImplementsIVideoEffectDefinition = {
-        "winrt._winrt_windows_media_effects.ImplementsIVideoEffectDefinition",
+        "winrt._winrt_windows_media_effects.IVideoEffectDefinition",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

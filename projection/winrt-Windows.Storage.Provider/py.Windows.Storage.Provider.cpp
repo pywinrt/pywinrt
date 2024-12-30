@@ -5821,7 +5821,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_IStorageProviderItemPropertySource = {
-        "winrt._winrt_windows_storage_provider.IStorageProviderItemPropertySource",
+        "winrt._winrt_windows_storage_provider._IStorageProviderItemPropertySource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderItemPropertySource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5939,7 +5939,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderItemPropertySource = {
-        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderItemPropertySource",
+        "winrt._winrt_windows_storage_provider.IStorageProviderItemPropertySource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6084,7 +6084,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_IStorageProviderKnownFolderSyncInfoSource = {
-        "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSource",
+        "winrt._winrt_windows_storage_provider._IStorageProviderKnownFolderSyncInfoSource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6258,7 +6258,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderKnownFolderSyncInfoSource = {
-        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderKnownFolderSyncInfoSource",
+        "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6336,7 +6336,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_IStorageProviderKnownFolderSyncInfoSourceFactory = {
-        "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSourceFactory",
+        "winrt._winrt_windows_storage_provider._IStorageProviderKnownFolderSyncInfoSourceFactory",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6448,7 +6448,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory = {
-        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory",
+        "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSourceFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6528,7 +6528,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_IStorageProviderPropertyCapabilities = {
-        "winrt._winrt_windows_storage_provider.IStorageProviderPropertyCapabilities",
+        "winrt._winrt_windows_storage_provider._IStorageProviderPropertyCapabilities",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderPropertyCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6646,7 +6646,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderPropertyCapabilities = {
-        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderPropertyCapabilities",
+        "winrt._winrt_windows_storage_provider.IStorageProviderPropertyCapabilities",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -6812,7 +6812,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_IStorageProviderShareLinkSource = {
-        "winrt._winrt_windows_storage_provider.IStorageProviderShareLinkSource",
+        "winrt._winrt_windows_storage_provider._IStorageProviderShareLinkSource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderShareLinkSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6994,7 +6994,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderShareLinkSource = {
-        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderShareLinkSource",
+        "winrt._winrt_windows_storage_provider.IStorageProviderShareLinkSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7139,7 +7139,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_IStorageProviderStatusUISource = {
-        "winrt._winrt_windows_storage_provider.IStorageProviderStatusUISource",
+        "winrt._winrt_windows_storage_provider._IStorageProviderStatusUISource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7313,7 +7313,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderStatusUISource = {
-        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderStatusUISource",
+        "winrt._winrt_windows_storage_provider.IStorageProviderStatusUISource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7393,7 +7393,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_IStorageProviderStatusUISourceFactory = {
-        "winrt._winrt_windows_storage_provider.IStorageProviderStatusUISourceFactory",
+        "winrt._winrt_windows_storage_provider._IStorageProviderStatusUISourceFactory",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7511,7 +7511,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderStatusUISourceFactory = {
-        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderStatusUISourceFactory",
+        "winrt._winrt_windows_storage_provider.IStorageProviderStatusUISourceFactory",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -7714,7 +7714,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_IStorageProviderUICommand = {
-        "winrt._winrt_windows_storage_provider.IStorageProviderUICommand",
+        "winrt._winrt_windows_storage_provider._IStorageProviderUICommand",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderUICommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7904,7 +7904,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderUICommand = {
-        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderUICommand",
+        "winrt._winrt_windows_storage_provider.IStorageProviderUICommand",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -8031,7 +8031,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_IStorageProviderUriSource = {
-        "winrt._winrt_windows_storage_provider.IStorageProviderUriSource",
+        "winrt._winrt_windows_storage_provider._IStorageProviderUriSource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderUriSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8201,7 +8201,7 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Spec type_spec_ImplementsIStorageProviderUriSource = {
-        "winrt._winrt_windows_storage_provider.ImplementsIStorageProviderUriSource",
+        "winrt._winrt_windows_storage_provider.IStorageProviderUriSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

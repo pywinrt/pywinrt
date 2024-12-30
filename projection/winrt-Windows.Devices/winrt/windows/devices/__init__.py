@@ -4,6 +4,7 @@ import winrt.system
 from winrt._winrt_windows_devices import (
     LowLevelDevicesAggregateProvider,
     LowLevelDevicesController,
+    _ILowLevelDevicesAggregateProvider,
     ILowLevelDevicesAggregateProvider,
 )
 

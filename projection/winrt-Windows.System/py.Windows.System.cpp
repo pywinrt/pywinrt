@@ -13116,7 +13116,7 @@ namespace py::cpp::Windows::System
         { }};
 
     static PyType_Spec type_spec_ILauncherViewOptions = {
-        "winrt._winrt_windows_system.ILauncherViewOptions",
+        "winrt._winrt_windows_system._ILauncherViewOptions",
         sizeof(py::wrapper::Windows::System::ILauncherViewOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13245,7 +13245,7 @@ namespace py::cpp::Windows::System
         { }};
 
     static PyType_Spec type_spec_ImplementsILauncherViewOptions = {
-        "winrt._winrt_windows_system.ImplementsILauncherViewOptions",
+        "winrt._winrt_windows_system.ILauncherViewOptions",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

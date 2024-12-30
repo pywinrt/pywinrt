@@ -14,6 +14,7 @@ from winrt._winrt_windows_ai_machinelearning_preview import (
     MapVariableDescriptorPreview,
     SequenceVariableDescriptorPreview,
     TensorVariableDescriptorPreview,
+    _ILearningModelVariableDescriptorPreview,
     ILearningModelVariableDescriptorPreview,
 )
 

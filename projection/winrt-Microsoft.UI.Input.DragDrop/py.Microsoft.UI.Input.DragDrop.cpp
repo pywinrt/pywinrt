@@ -1764,7 +1764,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { }};
 
     static PyType_Spec type_spec_IDropOperationTarget = {
-        "winrt._winrt_microsoft_ui_input_dragdrop.IDropOperationTarget",
+        "winrt._winrt_microsoft_ui_input_dragdrop._IDropOperationTarget",
         sizeof(py::wrapper::Microsoft::UI::Input::DragDrop::IDropOperationTarget),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2002,7 +2002,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { }};
 
     static PyType_Spec type_spec_ImplementsIDropOperationTarget = {
-        "winrt._winrt_microsoft_ui_input_dragdrop.ImplementsIDropOperationTarget",
+        "winrt._winrt_microsoft_ui_input_dragdrop.IDropOperationTarget",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

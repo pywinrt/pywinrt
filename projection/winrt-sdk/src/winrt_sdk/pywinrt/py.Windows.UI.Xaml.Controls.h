@@ -4271,57 +4271,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.ICommandBarElement";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls._ICommandBarElement";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
-        static constexpr const char* type_name = "ICommandBarElement";
+        static constexpr const char* type_name = "_ICommandBarElement";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.ICommandBarElement2";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls._ICommandBarElement2";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
-        static constexpr const char* type_name = "ICommandBarElement2";
+        static constexpr const char* type_name = "_ICommandBarElement2";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::IInsertionPanel>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.IInsertionPanel";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls._IInsertionPanel";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
-        static constexpr const char* type_name = "IInsertionPanel";
+        static constexpr const char* type_name = "_IInsertionPanel";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::IItemContainerMapping>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.IItemContainerMapping";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls._IItemContainerMapping";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
-        static constexpr const char* type_name = "IItemContainerMapping";
+        static constexpr const char* type_name = "_IItemContainerMapping";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::INavigate>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.INavigate";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls._INavigate";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
-        static constexpr const char* type_name = "INavigate";
+        static constexpr const char* type_name = "_INavigate";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::IScrollAnchorProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.IScrollAnchorProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls._IScrollAnchorProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
-        static constexpr const char* type_name = "IScrollAnchorProvider";
+        static constexpr const char* type_name = "_IScrollAnchorProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::ISemanticZoomInformation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.ISemanticZoomInformation";
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls._ISemanticZoomInformation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
-        static constexpr const char* type_name = "ISemanticZoomInformation";
+        static constexpr const char* type_name = "_ISemanticZoomInformation";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Controls::BackClickEventHandler>

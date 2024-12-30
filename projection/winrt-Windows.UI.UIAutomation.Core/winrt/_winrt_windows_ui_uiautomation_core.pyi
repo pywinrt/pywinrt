@@ -135,11 +135,17 @@ class RemoteAutomationWindow(winrt.system.Object):
     @_property
     def automation_provider(self) -> winrt.system.Object: ...
 
+@typing.final
+class _ICoreAutomationConnectionBoundObjectProvider: ...
+
 class ICoreAutomationConnectionBoundObjectProvider(winrt._winrt.IInspectable):
     # System.Boolean Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider::get_IsComThreadingRequired()
     @_property
     @abstractmethod
     def is_com_threading_required(self) -> bool: ...
+
+@typing.final
+class _ICoreAutomationRemoteOperationExtensionProvider: ...
 
 class ICoreAutomationRemoteOperationExtensionProvider(winrt._winrt.IInspectable):
     # System.Void Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider::CallExtension(System.Guid,Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext,Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId[])

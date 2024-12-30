@@ -88,8 +88,11 @@ from winrt._winrt_microsoft_ui_xaml import (
     XamlResourceReferenceFailedEventArgs,
     XamlRoot,
     XamlRootChangedEventArgs,
+    _IDataTemplateExtension,
     IDataTemplateExtension,
+    _IElementFactory,
     IElementFactory,
+    _IXamlServiceProvider,
     IXamlServiceProvider,
 )
 from typing import TYPE_CHECKING

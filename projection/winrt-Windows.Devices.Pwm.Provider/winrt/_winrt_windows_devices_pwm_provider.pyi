@@ -14,6 +14,9 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
+class _IPwmControllerProvider: ...
+
 class IPwmControllerProvider(winrt._winrt.IInspectable):
     # System.Void Windows.Devices.Pwm.Provider.IPwmControllerProvider::AcquirePin(System.Int32)
     @abstractmethod
@@ -49,6 +52,9 @@ class IPwmControllerProvider(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def pin_count(self) -> winrt.system.Int32: ...
+
+@typing.final
+class _IPwmProvider: ...
 
 class IPwmProvider(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Pwm.Provider.IPwmControllerProvider> Windows.Devices.Pwm.Provider.IPwmProvider::GetControllers()

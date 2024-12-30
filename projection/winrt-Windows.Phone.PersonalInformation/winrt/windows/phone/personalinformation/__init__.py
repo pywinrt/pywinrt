@@ -12,7 +12,9 @@ from winrt._winrt_windows_phone_personalinformation import (
     ContactStore,
     KnownContactProperties,
     StoredContact,
+    _IContactInformation,
     IContactInformation,
+    _IContactInformation2,
     IContactInformation2,
 )
 

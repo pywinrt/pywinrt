@@ -9,6 +9,7 @@ from winrt._winrt_windows_ui_core_animationmetrics import (
     PropertyAnimation,
     ScaleAnimation,
     TranslationAnimation,
+    _IPropertyAnimation,
     IPropertyAnimation,
 )
 

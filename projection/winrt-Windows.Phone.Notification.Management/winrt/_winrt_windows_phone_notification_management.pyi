@@ -658,6 +658,9 @@ class VolumeInfo(winrt.system.Object):
     @_property
     def system_volume(self) -> winrt.system.UInt32: ...
 
+@typing.final
+class _IAccessoryNotificationTriggerDetails: ...
+
 class IAccessoryNotificationTriggerDetails(winrt._winrt.IInspectable):
     # Windows.Phone.Notification.Management.AccessoryNotificationType Windows.Phone.Notification.Management.IAccessoryNotificationTriggerDetails::get_AccessoryNotificationType()
     @_property

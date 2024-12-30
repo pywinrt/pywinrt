@@ -213,17 +213,17 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.IPerceptionFrameProvider";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider._IPerceptionFrameProvider";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
-        static constexpr const char* type_name = "IPerceptionFrameProvider";
+        static constexpr const char* type_name = "_IPerceptionFrameProvider";
     };
 
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.IPerceptionFrameProviderManager";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider._IPerceptionFrameProviderManager";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
-        static constexpr const char* type_name = "IPerceptionFrameProviderManager";
+        static constexpr const char* type_name = "_IPerceptionFrameProviderManager";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler>

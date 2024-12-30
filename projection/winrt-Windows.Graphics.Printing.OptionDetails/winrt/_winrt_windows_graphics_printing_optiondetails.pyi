@@ -747,6 +747,9 @@ class PrintTaskOptionDetails(winrt.system.Object, windows_graphics_printing.IPri
     @_property
     def options(self) -> typing.Mapping[str, IPrintOptionDetails]: ...
 
+@typing.final
+class _IPrintCustomOptionDetails: ...
+
 class IPrintCustomOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     # System.String Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails::get_DisplayName()
     @_property
@@ -757,11 +760,17 @@ class IPrintCustomOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     @abstractmethod
     def display_name(self, value: str) -> None: ...
 
+@typing.final
+class _IPrintItemListOptionDetails: ...
+
 class IPrintItemListOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails::get_Items()
     @_property
     @abstractmethod
     def items(self) -> typing.Sequence[winrt.system.Object]: ...
+
+@typing.final
+class _IPrintNumberOptionDetails: ...
 
 class IPrintNumberOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     # System.UInt32 Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails::get_MaxValue()
@@ -772,6 +781,9 @@ class IPrintNumberOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def min_value(self) -> winrt.system.UInt32: ...
+
+@typing.final
+class _IPrintOptionDetails: ...
 
 class IPrintOptionDetails(winrt._winrt.IInspectable):
     # System.Boolean Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails::TrySetValue(System.Object)
@@ -805,6 +817,9 @@ class IPrintOptionDetails(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def value(self) -> winrt.system.Object: ...
+
+@typing.final
+class _IPrintTextOptionDetails: ...
 
 class IPrintTextOptionDetails(IPrintOptionDetails, winrt._winrt.IInspectable):
     # System.UInt32 Windows.Graphics.Printing.OptionDetails.IPrintTextOptionDetails::get_MaxCharacters()

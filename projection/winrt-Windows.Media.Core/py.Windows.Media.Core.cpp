@@ -24478,7 +24478,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_IMediaCue = {
-        "winrt._winrt_windows_media_core.IMediaCue",
+        "winrt._winrt_windows_media_core._IMediaCue",
         sizeof(py::wrapper::Windows::Media::Core::IMediaCue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24693,7 +24693,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaCue = {
-        "winrt._winrt_windows_media_core.ImplementsIMediaCue",
+        "winrt._winrt_windows_media_core.IMediaCue",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -24730,7 +24730,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_IMediaSource = {
-        "winrt._winrt_windows_media_core.IMediaSource",
+        "winrt._winrt_windows_media_core._IMediaSource",
         sizeof(py::wrapper::Windows::Media::Core::IMediaSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24816,7 +24816,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaSource = {
-        "winrt._winrt_windows_media_core.ImplementsIMediaSource",
+        "winrt._winrt_windows_media_core.IMediaSource",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -25024,7 +25024,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_IMediaStreamDescriptor = {
-        "winrt._winrt_windows_media_core.IMediaStreamDescriptor",
+        "winrt._winrt_windows_media_core._IMediaStreamDescriptor",
         sizeof(py::wrapper::Windows::Media::Core::IMediaStreamDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25216,7 +25216,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaStreamDescriptor = {
-        "winrt._winrt_windows_media_core.ImplementsIMediaStreamDescriptor",
+        "winrt._winrt_windows_media_core.IMediaStreamDescriptor",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -25494,7 +25494,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_IMediaStreamDescriptor2 = {
-        "winrt._winrt_windows_media_core.IMediaStreamDescriptor2",
+        "winrt._winrt_windows_media_core._IMediaStreamDescriptor2",
         sizeof(py::wrapper::Windows::Media::Core::IMediaStreamDescriptor2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25729,7 +25729,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaStreamDescriptor2 = {
-        "winrt._winrt_windows_media_core.ImplementsIMediaStreamDescriptor2",
+        "winrt._winrt_windows_media_core.IMediaStreamDescriptor2",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -25929,7 +25929,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_IMediaTrack = {
-        "winrt._winrt_windows_media_core.IMediaTrack",
+        "winrt._winrt_windows_media_core._IMediaTrack",
         sizeof(py::wrapper::Windows::Media::Core::IMediaTrack),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -26118,7 +26118,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaTrack = {
-        "winrt._winrt_windows_media_core.ImplementsIMediaTrack",
+        "winrt._winrt_windows_media_core.IMediaTrack",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -26292,7 +26292,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_ISingleSelectMediaTrackList = {
-        "winrt._winrt_windows_media_core.ISingleSelectMediaTrackList",
+        "winrt._winrt_windows_media_core._ISingleSelectMediaTrackList",
         sizeof(py::wrapper::Windows::Media::Core::ISingleSelectMediaTrackList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -26483,7 +26483,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsISingleSelectMediaTrackList = {
-        "winrt._winrt_windows_media_core.ImplementsISingleSelectMediaTrackList",
+        "winrt._winrt_windows_media_core.ISingleSelectMediaTrackList",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -26551,7 +26551,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_ITimedMetadataTrackProvider = {
-        "winrt._winrt_windows_media_core.ITimedMetadataTrackProvider",
+        "winrt._winrt_windows_media_core._ITimedMetadataTrackProvider",
         sizeof(py::wrapper::Windows::Media::Core::ITimedMetadataTrackProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -26657,7 +26657,7 @@ namespace py::cpp::Windows::Media::Core
         { }};
 
     static PyType_Spec type_spec_ImplementsITimedMetadataTrackProvider = {
-        "winrt._winrt_windows_media_core.ImplementsITimedMetadataTrackProvider",
+        "winrt._winrt_windows_media_core.ITimedMetadataTrackProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

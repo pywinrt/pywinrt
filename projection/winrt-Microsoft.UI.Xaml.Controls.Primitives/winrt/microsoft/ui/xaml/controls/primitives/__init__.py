@@ -80,8 +80,11 @@ from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
     ToolTipTemplateSettings,
     ZoomSnapPoint,
     ZoomSnapPointBase,
+    _IScrollController,
     IScrollController,
+    _IScrollControllerPanningInfo,
     IScrollControllerPanningInfo,
+    _IScrollSnapPointsInfo,
     IScrollSnapPointsInfo,
 )
 from typing import TYPE_CHECKING

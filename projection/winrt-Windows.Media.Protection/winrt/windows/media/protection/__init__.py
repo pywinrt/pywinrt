@@ -16,6 +16,7 @@ from winrt._winrt_windows_media_protection import (
     RevocationAndRenewalInformation,
     RevocationAndRenewalItem,
     ServiceRequestedEventArgs,
+    _IMediaProtectionServiceRequest,
     IMediaProtectionServiceRequest,
 )
 

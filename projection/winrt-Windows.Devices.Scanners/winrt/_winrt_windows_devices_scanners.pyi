@@ -336,6 +336,9 @@ class ImageScannerScanResult(winrt.system.Object):
     @_property
     def scanned_files(self) -> typing.Sequence[windows_storage.StorageFile]: ...
 
+@typing.final
+class _IImageScannerFormatConfiguration: ...
+
 class IImageScannerFormatConfiguration(winrt._winrt.IInspectable):
     # System.Boolean Windows.Devices.Scanners.IImageScannerFormatConfiguration::IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)
     @abstractmethod
@@ -352,6 +355,9 @@ class IImageScannerFormatConfiguration(winrt._winrt.IInspectable):
     @format.setter
     @abstractmethod
     def format(self, value: ImageScannerFormat) -> None: ...
+
+@typing.final
+class _IImageScannerSourceConfiguration: ...
 
 class IImageScannerSourceConfiguration(IImageScannerFormatConfiguration, winrt._winrt.IInspectable):
     # System.Boolean Windows.Devices.Scanners.IImageScannerSourceConfiguration::IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)

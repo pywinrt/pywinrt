@@ -47,9 +47,9 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::IGeometrySource2D>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.IGeometrySource2D";
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics._IGeometrySource2D";
         static constexpr const char* module_name = "winrt.windows.graphics";
-        static constexpr const char* type_name = "IGeometrySource2D";
+        static constexpr const char* type_name = "_IGeometrySource2D";
     };
 
     template<>

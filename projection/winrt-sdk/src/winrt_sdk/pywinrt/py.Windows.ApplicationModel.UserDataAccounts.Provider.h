@@ -95,8 +95,8 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.provider.IUserDataAccountProviderOperation";
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.provider._IUserDataAccountProviderOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
-        static constexpr const char* type_name = "IUserDataAccountProviderOperation";
+        static constexpr const char* type_name = "_IUserDataAccountProviderOperation";
     };
 }

@@ -237,40 +237,40 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.IErrorReportingSettings";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics._IErrorReportingSettings";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
-        static constexpr const char* type_name = "IErrorReportingSettings";
+        static constexpr const char* type_name = "_IErrorReportingSettings";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.IFileLoggingSession";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics._IFileLoggingSession";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
-        static constexpr const char* type_name = "IFileLoggingSession";
+        static constexpr const char* type_name = "_IFileLoggingSession";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.ILoggingChannel";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics._ILoggingChannel";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
-        static constexpr const char* type_name = "ILoggingChannel";
+        static constexpr const char* type_name = "_ILoggingChannel";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::ILoggingSession>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.ILoggingSession";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics._ILoggingSession";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
-        static constexpr const char* type_name = "ILoggingSession";
+        static constexpr const char* type_name = "_ILoggingSession";
     };
 
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.ILoggingTarget";
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics._ILoggingTarget";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
-        static constexpr const char* type_name = "ILoggingTarget";
+        static constexpr const char* type_name = "_ILoggingTarget";
     };
 }

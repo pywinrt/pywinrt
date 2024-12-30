@@ -774,6 +774,9 @@ class UserNotificationChangedEventArgs(winrt.system.Object):
     @_property
     def user_notification_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
+class _IAdaptiveNotificationContent: ...
+
 class IAdaptiveNotificationContent(winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.UI.Notifications.IAdaptiveNotificationContent::get_Hints()
     @_property

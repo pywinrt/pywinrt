@@ -1522,7 +1522,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { }};
 
     static PyType_Spec type_spec_IPropertyAnimation = {
-        "winrt._winrt_windows_ui_core_animationmetrics.IPropertyAnimation",
+        "winrt._winrt_windows_ui_core_animationmetrics._IPropertyAnimation",
         sizeof(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1708,7 +1708,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { }};
 
     static PyType_Spec type_spec_ImplementsIPropertyAnimation = {
-        "winrt._winrt_windows_ui_core_animationmetrics.ImplementsIPropertyAnimation",
+        "winrt._winrt_windows_ui_core_animationmetrics.IPropertyAnimation",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

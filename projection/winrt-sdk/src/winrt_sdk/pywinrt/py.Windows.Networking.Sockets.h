@@ -506,57 +506,57 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IControlChannelTriggerEventDetails";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets._IControlChannelTriggerEventDetails";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
-        static constexpr const char* type_name = "IControlChannelTriggerEventDetails";
+        static constexpr const char* type_name = "_IControlChannelTriggerEventDetails";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IControlChannelTriggerResetEventDetails";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets._IControlChannelTriggerResetEventDetails";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
-        static constexpr const char* type_name = "IControlChannelTriggerResetEventDetails";
+        static constexpr const char* type_name = "_IControlChannelTriggerResetEventDetails";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocket>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocket";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets._IWebSocket";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
-        static constexpr const char* type_name = "IWebSocket";
+        static constexpr const char* type_name = "_IWebSocket";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocketControl>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocketControl";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets._IWebSocketControl";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
-        static constexpr const char* type_name = "IWebSocketControl";
+        static constexpr const char* type_name = "_IWebSocketControl";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocketControl2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocketControl2";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets._IWebSocketControl2";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
-        static constexpr const char* type_name = "IWebSocketControl2";
+        static constexpr const char* type_name = "_IWebSocketControl2";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocketInformation";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets._IWebSocketInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
-        static constexpr const char* type_name = "IWebSocketInformation";
+        static constexpr const char* type_name = "_IWebSocketInformation";
     };
 
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation2>
     {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocketInformation2";
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets._IWebSocketInformation2";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
-        static constexpr const char* type_name = "IWebSocketInformation2";
+        static constexpr const char* type_name = "_IWebSocketInformation2";
     };
 
     template<>

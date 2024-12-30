@@ -1799,7 +1799,7 @@ namespace py::cpp::Windows::Media::Protection
         { }};
 
     static PyType_Spec type_spec_IMediaProtectionServiceRequest = {
-        "winrt._winrt_windows_media_protection.IMediaProtectionServiceRequest",
+        "winrt._winrt_windows_media_protection._IMediaProtectionServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::IMediaProtectionServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1925,7 +1925,7 @@ namespace py::cpp::Windows::Media::Protection
         { }};
 
     static PyType_Spec type_spec_ImplementsIMediaProtectionServiceRequest = {
-        "winrt._winrt_windows_media_protection.ImplementsIMediaProtectionServiceRequest",
+        "winrt._winrt_windows_media_protection.IMediaProtectionServiceRequest",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

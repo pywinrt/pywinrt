@@ -9535,7 +9535,7 @@ namespace py::cpp::Windows::Web::Http
         { }};
 
     static PyType_Spec type_spec_IHttpContent = {
-        "winrt._winrt_windows_web_http.IHttpContent",
+        "winrt._winrt_windows_web_http._IHttpContent",
         sizeof(py::wrapper::Windows::Web::Http::IHttpContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9829,7 +9829,7 @@ namespace py::cpp::Windows::Web::Http
         { }};
 
     static PyType_Spec type_spec_ImplementsIHttpContent = {
-        "winrt._winrt_windows_web_http.ImplementsIHttpContent",
+        "winrt._winrt_windows_web_http.IHttpContent",
         0,
         0,
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

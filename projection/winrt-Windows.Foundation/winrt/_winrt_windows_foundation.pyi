@@ -273,6 +273,9 @@ class WwwFormUrlDecoderEntry(winrt.system.Object, IWwwFormUrlDecoderEntry):
     @_property
     def value(self) -> str: ...
 
+@typing.final
+class _IAsyncAction: ...
+
 class IAsyncAction(IAsyncInfo, winrt._winrt.IInspectable):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     # System.Void Windows.Foundation.IAsyncAction::GetResults()
@@ -286,6 +289,9 @@ class IAsyncAction(IAsyncInfo, winrt._winrt.IInspectable):
     @completed.setter
     @abstractmethod
     def completed(self, value: AsyncActionCompletedHandler) -> None: ...
+
+@typing.final
+class _IAsyncActionWithProgress: ...
 
 class IAsyncActionWithProgress(IAsyncInfo, typing.Generic[TProgress], winrt._winrt.IInspectable):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
@@ -309,6 +315,9 @@ class IAsyncActionWithProgress(IAsyncInfo, typing.Generic[TProgress], winrt._win
     @abstractmethod
     def completed(self, value: AsyncActionWithProgressCompletedHandler[TProgress]) -> None: ...
 
+@typing.final
+class _IAsyncInfo: ...
+
 class IAsyncInfo(winrt._winrt.IInspectable):
     # System.Void Windows.Foundation.IAsyncInfo::Cancel()
     @abstractmethod
@@ -328,6 +337,9 @@ class IAsyncInfo(winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def status(self) -> AsyncStatus: ...
+
+@typing.final
+class _IAsyncOperationWithProgress: ...
 
 class IAsyncOperationWithProgress(IAsyncInfo, typing.Generic[TResult, TProgress], winrt._winrt.IInspectable):
     def __await__(self) -> typing.Generator[typing.Any, None, TResult]: ...
@@ -351,6 +363,9 @@ class IAsyncOperationWithProgress(IAsyncInfo, typing.Generic[TResult, TProgress]
     @abstractmethod
     def completed(self, value: AsyncOperationWithProgressCompletedHandler[TResult, TProgress]) -> None: ...
 
+@typing.final
+class _IAsyncOperation: ...
+
 class IAsyncOperation(IAsyncInfo, typing.Generic[TResult], winrt._winrt.IInspectable):
     def __await__(self) -> typing.Generator[typing.Any, None, TResult]: ...
     # TResult Windows.Foundation.IAsyncOperation`1::GetResults()
@@ -365,6 +380,9 @@ class IAsyncOperation(IAsyncInfo, typing.Generic[TResult], winrt._winrt.IInspect
     @abstractmethod
     def completed(self, value: AsyncOperationCompletedHandler[TResult]) -> None: ...
 
+@typing.final
+class _IClosable: ...
+
 class IClosable(winrt._winrt.IInspectable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
@@ -372,15 +390,24 @@ class IClosable(winrt._winrt.IInspectable):
     @abstractmethod
     def close(self) -> None: ...
 
+@typing.final
+class _IGetActivationFactory: ...
+
 class IGetActivationFactory(winrt._winrt.IInspectable):
     # System.Object Windows.Foundation.IGetActivationFactory::GetActivationFactory(System.String)
     @abstractmethod
     def get_activation_factory(self, activatable_class_id: str, /) -> winrt.system.Object: ...
 
+@typing.final
+class _IMemoryBuffer: ...
+
 class IMemoryBuffer(IClosable, winrt._winrt.IInspectable):
     # Windows.Foundation.IMemoryBufferReference Windows.Foundation.IMemoryBuffer::CreateReference()
     @abstractmethod
     def create_reference(self) -> IMemoryBufferReference: ...
+
+@typing.final
+class _IMemoryBufferReference: ...
 
 class IMemoryBufferReference(IClosable, winrt._winrt.IInspectable):
     def __buffer__(self, flags: int, /) -> memoryview: ...
@@ -395,6 +422,9 @@ class IMemoryBufferReference(IClosable, winrt._winrt.IInspectable):
     @_property
     @abstractmethod
     def capacity(self) -> winrt.system.UInt32: ...
+
+@typing.final
+class _IPropertyValue: ...
 
 class IPropertyValue(winrt._winrt.IInspectable):
     # System.Boolean Windows.Foundation.IPropertyValue::GetBoolean()
@@ -517,11 +547,17 @@ class IPropertyValue(winrt._winrt.IInspectable):
     @abstractmethod
     def type(self) -> PropertyType: ...
 
+@typing.final
+class _IReferenceArray: ...
+
 class IReferenceArray(IPropertyValue, typing.Generic[T], winrt._winrt.IInspectable):
     # T[] Windows.Foundation.IReferenceArray`1::get_Value()
     @_property
     @abstractmethod
     def value(self) -> T: ...
+
+@typing.final
+class _IReference: ...
 
 class IReference(IPropertyValue, typing.Generic[T], winrt._winrt.IInspectable):
     # T Windows.Foundation.IReference`1::get_Value()
@@ -529,11 +565,17 @@ class IReference(IPropertyValue, typing.Generic[T], winrt._winrt.IInspectable):
     @abstractmethod
     def value(self) -> T: ...
 
+@typing.final
+class _IStringable: ...
+
 class IStringable(winrt._winrt.IInspectable):
     def __str__(self) -> str: ...
     # System.String Windows.Foundation.IStringable::ToString()
     @abstractmethod
     def to_string(self) -> str: ...
+
+@typing.final
+class _IWwwFormUrlDecoderEntry: ...
 
 class IWwwFormUrlDecoderEntry(winrt._winrt.IInspectable):
     # System.String Windows.Foundation.IWwwFormUrlDecoderEntry::get_Name()

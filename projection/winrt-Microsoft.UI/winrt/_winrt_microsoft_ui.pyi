@@ -473,6 +473,9 @@ class Colors_Static(type):
 class Colors(winrt.system.Object, metaclass=Colors_Static):
     pass
 
+@typing.final
+class _IClosableNotifier: ...
+
 class IClosableNotifier(winrt._winrt.IInspectable):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.IClosableNotifier::add_Closed(Microsoft.UI.ClosableNotifierHandler)
     @abstractmethod

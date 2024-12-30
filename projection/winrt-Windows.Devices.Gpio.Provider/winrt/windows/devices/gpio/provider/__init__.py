@@ -5,8 +5,11 @@ import enum
 import winrt.system
 from winrt._winrt_windows_devices_gpio_provider import (
     GpioPinProviderValueChangedEventArgs,
+    _IGpioControllerProvider,
     IGpioControllerProvider,
+    _IGpioPinProvider,
     IGpioPinProvider,
+    _IGpioProvider,
     IGpioProvider,
 )
 
