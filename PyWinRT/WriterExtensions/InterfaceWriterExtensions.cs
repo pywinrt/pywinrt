@@ -285,7 +285,13 @@ static class InterfaceWriterExtensions
         w.WriteLine($"static PyMethodDef methods_Implements{type.Name}[] = {{");
         w.Indent++;
 
-        if (!type.IsGeneric)
+        if (type.IsGeneric)
+        {
+            w.WriteLine(
+                $"{{ \"__class_getitem__\", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR(\"See PEP 585\") }},"
+            );
+        }
+        else
         {
             w.WriteLine(
                 $"{{ \"_assign_array_\", _assign_array_{type.Name}, METH_O | METH_STATIC, nullptr }},"
@@ -294,6 +300,7 @@ static class InterfaceWriterExtensions
                 $"{{ \"_from\", reinterpret_cast<PyCFunction>(_from_{type.Name}), METH_O | METH_STATIC, nullptr }},"
             );
         }
+
         w.WriteLine(
             $"{{ \"_guid_\", reinterpret_cast<PyCFunction>(_guid_Implements{type.Name}), METH_NOARGS | METH_STATIC, nullptr }},"
         );
