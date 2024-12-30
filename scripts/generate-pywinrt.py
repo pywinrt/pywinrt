@@ -1,4 +1,5 @@
 import itertools
+import os
 import pathlib
 import shutil
 import subprocess
@@ -177,8 +178,10 @@ for path in itertools.chain(
 ):
     try:
         shutil.copy(
-            str(PROJECTION_PATH / "winrt-Windows.Foundation" / "pywinrt-version.txt"),
-            str(path / "pywinrt-version.txt"),
+            os.fspath(
+                PROJECTION_PATH / "winrt-Windows.Foundation" / "pywinrt-version.txt"
+            ),
+            os.fspath(path / "pywinrt-version.txt"),
         )
     except shutil.SameFileError:
         pass

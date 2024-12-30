@@ -129,7 +129,7 @@ except KeyError:
 
 APP_SDK_EXTRA_BUILD = """
         target = self.plat_name.replace("32", "-x86").replace("amd", "x").replace("win", "win10")
-        ext.library_dirs = [str(WINDOWS_APP_SDK_PATH / "lib" / target)]
+        ext.library_dirs = [os.fspath(WINDOWS_APP_SDK_PATH / "lib" / target)]
 """
 
 README_TEMPLATE = """\
@@ -344,7 +344,7 @@ def write_project_files(
                         else ""
                     )
                     + (
-                        '+ [str(WINDOWS_APP_SDK_PATH / "include")]'
+                        '+ [os.fspath(WINDOWS_APP_SDK_PATH / "include")]'
                         if is_app_sdk_interop_package(package_name)
                         else ""
                     )

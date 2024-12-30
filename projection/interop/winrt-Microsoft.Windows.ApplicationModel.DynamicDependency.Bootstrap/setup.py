@@ -25,7 +25,7 @@ class build_ext_ex(build_ext):
             raise ValueError(f"Unsupported compiler: {self.compiler.compiler_type}")
 
         target = self.plat_name.replace("32", "-x86").replace("amd", "x").replace("win", "win10")
-        ext.library_dirs = [str(WINDOWS_APP_SDK_PATH / "lib" / target)]
+        ext.library_dirs = [os.fspath(WINDOWS_APP_SDK_PATH / "lib" / target)]
 
         build_ext.build_extension(self, ext)
 
@@ -36,7 +36,7 @@ setup(
         Extension(
             "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap",
             sources=["py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp"],
-            include_dirs=get_include_dirs()+ get_app_sdk_include_dirs()+ [str(WINDOWS_APP_SDK_PATH / "include")],
+            include_dirs=get_include_dirs()+ get_app_sdk_include_dirs()+ [os.fspath(WINDOWS_APP_SDK_PATH / "include")],
             libraries=["windowsapp", "Microsoft.WindowsAppRuntime.Bootstrap"],
         )
     ],

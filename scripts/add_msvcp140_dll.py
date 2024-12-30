@@ -34,7 +34,7 @@ subprocess.check_call(["wheel", "unpack", wheel])
 wheel_dir = glob.glob("winrt_runtime-*")[0]
 
 # find MSVC redist DLLs
-vswhere = str(
+vswhere = os.fspath(
     pathlib.Path(os.environ["ProgramFiles(x86)"])
     / "Microsoft Visual Studio"
     / "Installer"

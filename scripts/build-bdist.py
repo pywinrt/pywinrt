@@ -10,8 +10,8 @@ PROJECTION_PATH = (PROJECT_DIR / "projection").resolve()
 WEBVIEW2_PATH = (PROJECT_DIR / "_tools/Microsoft.Web.WebView2").resolve()
 WINDOWS_APP_SDK_PATH = (PROJECT_DIR / "_tools/Microsoft.WindowsAppSDK").resolve()
 
-os.environ["WEBVIEW2_PATH"] = str(WEBVIEW2_PATH)
-os.environ["WINDOWS_APP_SDK_PATH"] = str(WINDOWS_APP_SDK_PATH)
+os.environ["WEBVIEW2_PATH"] = os.fspath(WEBVIEW2_PATH)
+os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
 
 for package_path in chain(
     [PROJECTION_PATH / "winrt-runtime"],
@@ -22,7 +22,7 @@ for package_path in chain(
     subprocess.check_call(
         [
             "cibuildwheel",
-            str(package_path),
+            os.fspath(package_path),
         ]
         + (sys.argv[1:] or ["--platform", "windows"])
     )
