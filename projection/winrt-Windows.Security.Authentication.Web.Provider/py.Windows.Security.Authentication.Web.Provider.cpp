@@ -3915,20 +3915,9 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     }
 
-    static PyObject* _assign_array_IWebAccountProviderBaseReportOperation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebAccountProviderBaseReportOperation[] = {
         { "report_completed", reinterpret_cast<PyCFunction>(IWebAccountProviderBaseReportOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "report_error", reinterpret_cast<PyCFunction>(IWebAccountProviderBaseReportOperation_ReportError), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IWebAccountProviderBaseReportOperation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAccountProviderBaseReportOperation[] = {
@@ -4010,6 +3999,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     };
 
+    static PyObject* _assign_array_IWebAccountProviderBaseReportOperation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebAccountProviderBaseReportOperation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4061,6 +4060,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     }
 
     static PyMethodDef methods_ImplementsIWebAccountProviderBaseReportOperation[] = {
+        { "_assign_array_", _assign_array_IWebAccountProviderBaseReportOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderBaseReportOperation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderBaseReportOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderBaseReportOperation), METH_VARARGS | METH_STATIC, nullptr },
@@ -4124,18 +4124,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     }
 
-    static PyObject* _assign_array_IWebAccountProviderOperation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebAccountProviderOperation[] = {
-        { "_assign_array_", _assign_array_IWebAccountProviderOperation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAccountProviderOperation[] = {
@@ -4183,6 +4172,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
         }
     };
+
+    static PyObject* _assign_array_IWebAccountProviderOperation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IWebAccountProviderOperation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -4235,6 +4234,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     }
 
     static PyMethodDef methods_ImplementsIWebAccountProviderOperation[] = {
+        { "_assign_array_", _assign_array_IWebAccountProviderOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderOperation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderOperation), METH_VARARGS | METH_STATIC, nullptr },
@@ -4436,22 +4436,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     }
 
-    static PyObject* _assign_array_IWebAccountProviderSilentReportOperation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebAccountProviderSilentReportOperation[] = {
         { "report_completed", reinterpret_cast<PyCFunction>(IWebAccountProviderSilentReportOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "report_error", reinterpret_cast<PyCFunction>(IWebAccountProviderSilentReportOperation_ReportError), METH_VARARGS, nullptr },
         { "report_user_interaction_required", reinterpret_cast<PyCFunction>(IWebAccountProviderSilentReportOperation_ReportUserInteractionRequired), METH_VARARGS, nullptr },
         { "report_user_interaction_required_with_error", reinterpret_cast<PyCFunction>(IWebAccountProviderSilentReportOperation_ReportUserInteractionRequiredWithError), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IWebAccountProviderSilentReportOperation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAccountProviderSilentReportOperation[] = {
@@ -4587,6 +4576,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     };
 
+    static PyObject* _assign_array_IWebAccountProviderSilentReportOperation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebAccountProviderSilentReportOperation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4638,6 +4637,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     }
 
     static PyMethodDef methods_ImplementsIWebAccountProviderSilentReportOperation[] = {
+        { "_assign_array_", _assign_array_IWebAccountProviderSilentReportOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderSilentReportOperation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderSilentReportOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderSilentReportOperation), METH_VARARGS | METH_STATIC, nullptr },
@@ -4701,18 +4701,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     }
 
-    static PyObject* _assign_array_IWebAccountProviderTokenObjects(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebAccountProviderTokenObjects[] = {
-        { "_assign_array_", _assign_array_IWebAccountProviderTokenObjects, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAccountProviderTokenObjects[] = {
@@ -4760,6 +4749,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
         }
     };
+
+    static PyObject* _assign_array_IWebAccountProviderTokenObjects(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IWebAccountProviderTokenObjects(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -4812,6 +4811,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     }
 
     static PyMethodDef methods_ImplementsIWebAccountProviderTokenObjects[] = {
+        { "_assign_array_", _assign_array_IWebAccountProviderTokenObjects, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderTokenObjects), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderTokenObjects), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderTokenObjects), METH_VARARGS | METH_STATIC, nullptr },
@@ -4905,18 +4905,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     }
 
-    static PyObject* _assign_array_IWebAccountProviderTokenObjects2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebAccountProviderTokenObjects2[] = {
-        { "_assign_array_", _assign_array_IWebAccountProviderTokenObjects2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAccountProviderTokenObjects2[] = {
@@ -4986,6 +4975,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     };
 
+    static PyObject* _assign_array_IWebAccountProviderTokenObjects2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebAccountProviderTokenObjects2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5037,6 +5036,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     }
 
     static PyMethodDef methods_ImplementsIWebAccountProviderTokenObjects2[] = {
+        { "_assign_array_", _assign_array_IWebAccountProviderTokenObjects2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderTokenObjects2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderTokenObjects2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderTokenObjects2), METH_VARARGS | METH_STATIC, nullptr },
@@ -5229,18 +5229,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     }
 
-    static PyObject* _assign_array_IWebAccountProviderTokenOperation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebAccountProviderTokenOperation[] = {
-        { "_assign_array_", _assign_array_IWebAccountProviderTokenOperation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAccountProviderTokenOperation[] = {
@@ -5375,6 +5364,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     };
 
+    static PyObject* _assign_array_IWebAccountProviderTokenOperation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebAccountProviderTokenOperation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5426,6 +5425,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     }
 
     static PyMethodDef methods_ImplementsIWebAccountProviderTokenOperation[] = {
+        { "_assign_array_", _assign_array_IWebAccountProviderTokenOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderTokenOperation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderTokenOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderTokenOperation), METH_VARARGS | METH_STATIC, nullptr },
@@ -5584,21 +5584,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     }
 
-    static PyObject* _assign_array_IWebAccountProviderUIReportOperation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebAccountProviderUIReportOperation[] = {
         { "report_completed", reinterpret_cast<PyCFunction>(IWebAccountProviderUIReportOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "report_error", reinterpret_cast<PyCFunction>(IWebAccountProviderUIReportOperation_ReportError), METH_VARARGS, nullptr },
         { "report_user_canceled", reinterpret_cast<PyCFunction>(IWebAccountProviderUIReportOperation_ReportUserCanceled), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IWebAccountProviderUIReportOperation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAccountProviderUIReportOperation[] = {
@@ -5704,6 +5693,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         }
     };
 
+    static PyObject* _assign_array_IWebAccountProviderUIReportOperation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebAccountProviderUIReportOperation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5755,6 +5754,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     }
 
     static PyMethodDef methods_ImplementsIWebAccountProviderUIReportOperation[] = {
+        { "_assign_array_", _assign_array_IWebAccountProviderUIReportOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderUIReportOperation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccountProviderUIReportOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccountProviderUIReportOperation), METH_VARARGS | METH_STATIC, nullptr },

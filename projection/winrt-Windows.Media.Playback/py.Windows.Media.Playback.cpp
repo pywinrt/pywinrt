@@ -16979,19 +16979,8 @@ namespace py::cpp::Windows::Media::Playback
         }
     }
 
-    static PyObject* _assign_array_IMediaEnginePlaybackSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IMediaEnginePlaybackSource[] = {
         { "set_playback_source", reinterpret_cast<PyCFunction>(IMediaEnginePlaybackSource_SetPlaybackSource), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IMediaEnginePlaybackSource, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaEnginePlaybackSource[] = {
@@ -17070,6 +17059,16 @@ namespace py::cpp::Windows::Media::Playback
         }
     };
 
+    static PyObject* _assign_array_IMediaEnginePlaybackSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IMediaEnginePlaybackSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -17121,6 +17120,7 @@ namespace py::cpp::Windows::Media::Playback
     }
 
     static PyMethodDef methods_ImplementsIMediaEnginePlaybackSource[] = {
+        { "_assign_array_", _assign_array_IMediaEnginePlaybackSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaEnginePlaybackSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaEnginePlaybackSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaEnginePlaybackSource), METH_VARARGS | METH_STATIC, nullptr },
@@ -17154,18 +17154,7 @@ namespace py::cpp::Windows::Media::Playback
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IMediaPlaybackSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Playback::IMediaPlaybackSource>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IMediaPlaybackSource[] = {
-        { "_assign_array_", _assign_array_IMediaPlaybackSource, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaPlaybackSource[] = {
@@ -17192,6 +17181,16 @@ namespace py::cpp::Windows::Media::Playback
         {
         }
     };
+
+    static PyObject* _assign_array_IMediaPlaybackSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Playback::IMediaPlaybackSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IMediaPlaybackSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -17244,6 +17243,7 @@ namespace py::cpp::Windows::Media::Playback
     }
 
     static PyMethodDef methods_ImplementsIMediaPlaybackSource[] = {
+        { "_assign_array_", _assign_array_IMediaPlaybackSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaPlaybackSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaPlaybackSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaPlaybackSource), METH_VARARGS | METH_STATIC, nullptr },

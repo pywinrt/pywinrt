@@ -2112,18 +2112,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IWebUICommandBarElement(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebUICommandBarElement[] = {
-        { "_assign_array_", _assign_array_IWebUICommandBarElement, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebUICommandBarElement[] = {
@@ -2150,6 +2139,16 @@ namespace py::cpp::Windows::UI::WebUI::Core
         {
         }
     };
+
+    static PyObject* _assign_array_IWebUICommandBarElement(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IWebUICommandBarElement(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -2202,6 +2201,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
     }
 
     static PyMethodDef methods_ImplementsIWebUICommandBarElement[] = {
+        { "_assign_array_", _assign_array_IWebUICommandBarElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebUICommandBarElement), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUICommandBarElement), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUICommandBarElement), METH_VARARGS | METH_STATIC, nullptr },
@@ -2235,18 +2235,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IWebUICommandBarIcon(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebUICommandBarIcon[] = {
-        { "_assign_array_", _assign_array_IWebUICommandBarIcon, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebUICommandBarIcon[] = {
@@ -2273,6 +2262,16 @@ namespace py::cpp::Windows::UI::WebUI::Core
         {
         }
     };
+
+    static PyObject* _assign_array_IWebUICommandBarIcon(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IWebUICommandBarIcon(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -2325,6 +2324,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
     }
 
     static PyMethodDef methods_ImplementsIWebUICommandBarIcon[] = {
+        { "_assign_array_", _assign_array_IWebUICommandBarIcon, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebUICommandBarIcon), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebUICommandBarIcon), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebUICommandBarIcon), METH_VARARGS | METH_STATIC, nullptr },

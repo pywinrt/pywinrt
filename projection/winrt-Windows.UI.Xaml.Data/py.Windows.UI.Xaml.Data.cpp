@@ -4210,16 +4210,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_ICollectionView(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICollectionView>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _iterator_ICollectionView(py::wrapper::Windows::UI::Xaml::Data::ICollectionView* self) noexcept
     {
         try
@@ -4390,7 +4380,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { "remove_current_changing", reinterpret_cast<PyCFunction>(ICollectionView_remove_CurrentChanging), METH_O, nullptr },
         { "add_vector_changed", reinterpret_cast<PyCFunction>(ICollectionView_add_VectorChanged), METH_O, nullptr },
         { "remove_vector_changed", reinterpret_cast<PyCFunction>(ICollectionView_remove_VectorChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ICollectionView, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICollectionView[] = {
@@ -5340,6 +5329,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_ICollectionView(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICollectionView>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICollectionView(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5391,6 +5390,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsICollectionView[] = {
+        { "_assign_array_", _assign_array_ICollectionView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICollectionView), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICollectionView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICollectionView), METH_VARARGS | METH_STATIC, nullptr },
@@ -5464,19 +5464,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_ICollectionViewFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICollectionViewFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICollectionViewFactory[] = {
         { "create_view", reinterpret_cast<PyCFunction>(ICollectionViewFactory_CreateView), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ICollectionViewFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICollectionViewFactory[] = {
@@ -5530,6 +5519,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_ICollectionViewFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICollectionViewFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICollectionViewFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5581,6 +5580,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsICollectionViewFactory[] = {
+        { "_assign_array_", _assign_array_ICollectionViewFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICollectionViewFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICollectionViewFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICollectionViewFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -5674,18 +5674,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_ICollectionViewGroup(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICollectionViewGroup>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICollectionViewGroup[] = {
-        { "_assign_array_", _assign_array_ICollectionViewGroup, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICollectionViewGroup[] = {
@@ -5755,6 +5744,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_ICollectionViewGroup(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICollectionViewGroup>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICollectionViewGroup(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5806,6 +5805,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsICollectionViewGroup[] = {
+        { "_assign_array_", _assign_array_ICollectionViewGroup, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICollectionViewGroup), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICollectionViewGroup), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICollectionViewGroup), METH_VARARGS | METH_STATIC, nullptr },
@@ -6133,22 +6133,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_ICustomProperty(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICustomProperty>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICustomProperty[] = {
         { "get_indexed_value", reinterpret_cast<PyCFunction>(ICustomProperty_GetIndexedValue), METH_VARARGS, nullptr },
         { "get_value", reinterpret_cast<PyCFunction>(ICustomProperty_GetValue), METH_VARARGS, nullptr },
         { "set_indexed_value", reinterpret_cast<PyCFunction>(ICustomProperty_SetIndexedValue), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(ICustomProperty_SetValue), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ICustomProperty, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICustomProperty[] = {
@@ -6426,6 +6415,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_ICustomProperty(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICustomProperty>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICustomProperty(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6477,6 +6476,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsICustomProperty[] = {
+        { "_assign_array_", _assign_array_ICustomProperty, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICustomProperty), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICustomProperty), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICustomProperty), METH_VARARGS | METH_STATIC, nullptr },
@@ -6665,21 +6665,10 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_ICustomPropertyProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICustomPropertyProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICustomPropertyProvider[] = {
         { "get_custom_property", reinterpret_cast<PyCFunction>(ICustomPropertyProvider_GetCustomProperty), METH_VARARGS, nullptr },
         { "get_indexed_property", reinterpret_cast<PyCFunction>(ICustomPropertyProvider_GetIndexedProperty), METH_VARARGS, nullptr },
         { "get_string_representation", reinterpret_cast<PyCFunction>(ICustomPropertyProvider_GetStringRepresentation), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ICustomPropertyProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICustomPropertyProvider[] = {
@@ -6830,6 +6819,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_ICustomPropertyProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ICustomPropertyProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICustomPropertyProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6881,6 +6880,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsICustomPropertyProvider[] = {
+        { "_assign_array_", _assign_array_ICustomPropertyProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICustomPropertyProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICustomPropertyProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICustomPropertyProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -6999,16 +6999,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_IItemsRangeInfo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::IItemsRangeInfo>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IItemsRangeInfo(py::wrapper::Windows::UI::Xaml::Data::IItemsRangeInfo* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -7035,7 +7025,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static PyMethodDef _methods_IItemsRangeInfo[] = {
         { "close", reinterpret_cast<PyCFunction>(IItemsRangeInfo_Close), METH_VARARGS, nullptr },
         { "ranges_changed", reinterpret_cast<PyCFunction>(IItemsRangeInfo_RangesChanged), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IItemsRangeInfo, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IItemsRangeInfo), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IItemsRangeInfo), METH_VARARGS, nullptr },
         { }};
@@ -7131,6 +7120,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_IItemsRangeInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::IItemsRangeInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IItemsRangeInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7182,6 +7181,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsIItemsRangeInfo[] = {
+        { "_assign_array_", _assign_array_IItemsRangeInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IItemsRangeInfo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIItemsRangeInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIItemsRangeInfo), METH_VARARGS | METH_STATIC, nullptr },
@@ -7280,20 +7280,9 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_INotifyPropertyChanged(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::INotifyPropertyChanged>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INotifyPropertyChanged[] = {
         { "add_property_changed", reinterpret_cast<PyCFunction>(INotifyPropertyChanged_add_PropertyChanged), METH_O, nullptr },
         { "remove_property_changed", reinterpret_cast<PyCFunction>(INotifyPropertyChanged_remove_PropertyChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_INotifyPropertyChanged, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INotifyPropertyChanged[] = {
@@ -7383,6 +7372,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_INotifyPropertyChanged(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::INotifyPropertyChanged>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INotifyPropertyChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7434,6 +7433,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsINotifyPropertyChanged[] = {
+        { "_assign_array_", _assign_array_INotifyPropertyChanged, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INotifyPropertyChanged), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINotifyPropertyChanged), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINotifyPropertyChanged), METH_VARARGS | METH_STATIC, nullptr },
@@ -7635,22 +7635,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_ISelectionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ISelectionInfo>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISelectionInfo[] = {
         { "deselect_range", reinterpret_cast<PyCFunction>(ISelectionInfo_DeselectRange), METH_VARARGS, nullptr },
         { "get_selected_ranges", reinterpret_cast<PyCFunction>(ISelectionInfo_GetSelectedRanges), METH_VARARGS, nullptr },
         { "is_selected", reinterpret_cast<PyCFunction>(ISelectionInfo_IsSelected), METH_VARARGS, nullptr },
         { "select_range", reinterpret_cast<PyCFunction>(ISelectionInfo_SelectRange), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISelectionInfo, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISelectionInfo[] = {
@@ -7796,6 +7785,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_ISelectionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ISelectionInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISelectionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7847,6 +7846,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsISelectionInfo[] = {
+        { "_assign_array_", _assign_array_ISelectionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISelectionInfo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISelectionInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISelectionInfo), METH_VARARGS | METH_STATIC, nullptr },
@@ -7952,19 +7952,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_ISupportIncrementalLoading(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ISupportIncrementalLoading>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISupportIncrementalLoading[] = {
         { "load_more_items_async", reinterpret_cast<PyCFunction>(ISupportIncrementalLoading_LoadMoreItemsAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISupportIncrementalLoading, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISupportIncrementalLoading[] = {
@@ -8045,6 +8034,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_ISupportIncrementalLoading(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::ISupportIncrementalLoading>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISupportIncrementalLoading(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -8096,6 +8095,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsISupportIncrementalLoading[] = {
+        { "_assign_array_", _assign_array_ISupportIncrementalLoading, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISupportIncrementalLoading), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISupportIncrementalLoading), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISupportIncrementalLoading), METH_VARARGS | METH_STATIC, nullptr },
@@ -8219,20 +8219,9 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _assign_array_IValueConverter(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::IValueConverter>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IValueConverter[] = {
         { "convert", reinterpret_cast<PyCFunction>(IValueConverter_Convert), METH_VARARGS, nullptr },
         { "convert_back", reinterpret_cast<PyCFunction>(IValueConverter_ConvertBack), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IValueConverter, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IValueConverter[] = {
@@ -8372,6 +8361,16 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     };
 
+    static PyObject* _assign_array_IValueConverter(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::IValueConverter>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IValueConverter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -8423,6 +8422,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef methods_ImplementsIValueConverter[] = {
+        { "_assign_array_", _assign_array_IValueConverter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IValueConverter), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIValueConverter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIValueConverter), METH_VARARGS | METH_STATIC, nullptr },

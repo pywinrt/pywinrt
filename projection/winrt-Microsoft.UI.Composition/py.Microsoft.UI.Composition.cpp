@@ -36569,19 +36569,8 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     }
 
-    static PyObject* _assign_array_IAnimationObject(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::IAnimationObject>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IAnimationObject[] = {
         { "populate_property_info", reinterpret_cast<PyCFunction>(IAnimationObject_PopulatePropertyInfo), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IAnimationObject, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAnimationObject[] = {
@@ -36651,6 +36640,16 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     };
 
+    static PyObject* _assign_array_IAnimationObject(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::IAnimationObject>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAnimationObject(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -36702,6 +36701,7 @@ namespace py::cpp::Microsoft::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsIAnimationObject[] = {
+        { "_assign_array_", _assign_array_IAnimationObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAnimationObject), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAnimationObject), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAnimationObject), METH_VARARGS | METH_STATIC, nullptr },
@@ -36735,18 +36735,7 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_ICompositionAnimationBase(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICompositionAnimationBase[] = {
-        { "_assign_array_", _assign_array_ICompositionAnimationBase, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICompositionAnimationBase[] = {
@@ -36773,6 +36762,16 @@ namespace py::cpp::Microsoft::UI::Composition
         {
         }
     };
+
+    static PyObject* _assign_array_ICompositionAnimationBase(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ICompositionAnimationBase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -36825,6 +36824,7 @@ namespace py::cpp::Microsoft::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsICompositionAnimationBase[] = {
+        { "_assign_array_", _assign_array_ICompositionAnimationBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionAnimationBase), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionAnimationBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionAnimationBase), METH_VARARGS | METH_STATIC, nullptr },
@@ -36927,18 +36927,7 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     }
 
-    static PyObject* _assign_array_ICompositionSupportsSystemBackdrop(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICompositionSupportsSystemBackdrop[] = {
-        { "_assign_array_", _assign_array_ICompositionSupportsSystemBackdrop, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICompositionSupportsSystemBackdrop[] = {
@@ -37010,6 +36999,16 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     };
 
+    static PyObject* _assign_array_ICompositionSupportsSystemBackdrop(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICompositionSupportsSystemBackdrop(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -37061,6 +37060,7 @@ namespace py::cpp::Microsoft::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsICompositionSupportsSystemBackdrop[] = {
+        { "_assign_array_", _assign_array_ICompositionSupportsSystemBackdrop, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSupportsSystemBackdrop), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSupportsSystemBackdrop), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSupportsSystemBackdrop), METH_VARARGS | METH_STATIC, nullptr },
@@ -37094,18 +37094,7 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_ICompositionSurface(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::ICompositionSurface>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICompositionSurface[] = {
-        { "_assign_array_", _assign_array_ICompositionSurface, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICompositionSurface[] = {
@@ -37132,6 +37121,16 @@ namespace py::cpp::Microsoft::UI::Composition
         {
         }
     };
+
+    static PyObject* _assign_array_ICompositionSurface(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::ICompositionSurface>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ICompositionSurface(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -37184,6 +37183,7 @@ namespace py::cpp::Microsoft::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsICompositionSurface[] = {
+        { "_assign_array_", _assign_array_ICompositionSurface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSurface), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSurface), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSurface), METH_VARARGS | METH_STATIC, nullptr },
@@ -37257,19 +37257,8 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     }
 
-    static PyObject* _assign_array_ICompositionSurfaceFacade(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::ICompositionSurfaceFacade>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICompositionSurfaceFacade[] = {
         { "get_real_surface", reinterpret_cast<PyCFunction>(ICompositionSurfaceFacade_GetRealSurface), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ICompositionSurfaceFacade, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICompositionSurfaceFacade[] = {
@@ -37323,6 +37312,16 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     };
 
+    static PyObject* _assign_array_ICompositionSurfaceFacade(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::ICompositionSurfaceFacade>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICompositionSurfaceFacade(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -37374,6 +37373,7 @@ namespace py::cpp::Microsoft::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsICompositionSurfaceFacade[] = {
+        { "_assign_array_", _assign_array_ICompositionSurfaceFacade, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionSurfaceFacade), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionSurfaceFacade), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionSurfaceFacade), METH_VARARGS | METH_STATIC, nullptr },
@@ -37407,18 +37407,7 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IVisualElement(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::IVisualElement>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVisualElement[] = {
-        { "_assign_array_", _assign_array_IVisualElement, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVisualElement[] = {
@@ -37445,6 +37434,16 @@ namespace py::cpp::Microsoft::UI::Composition
         {
         }
     };
+
+    static PyObject* _assign_array_IVisualElement(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::IVisualElement>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IVisualElement(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -37497,6 +37496,7 @@ namespace py::cpp::Microsoft::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsIVisualElement[] = {
+        { "_assign_array_", _assign_array_IVisualElement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVisualElement), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVisualElement), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVisualElement), METH_VARARGS | METH_STATIC, nullptr },
@@ -37570,19 +37570,8 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     }
 
-    static PyObject* _assign_array_IVisualElement2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::IVisualElement2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVisualElement2[] = {
         { "get_visual_internal", reinterpret_cast<PyCFunction>(IVisualElement2_GetVisualInternal), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVisualElement2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVisualElement2[] = {
@@ -37636,6 +37625,16 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     };
 
+    static PyObject* _assign_array_IVisualElement2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::IVisualElement2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVisualElement2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -37687,6 +37686,7 @@ namespace py::cpp::Microsoft::UI::Composition
     }
 
     static PyMethodDef methods_ImplementsIVisualElement2[] = {
+        { "_assign_array_", _assign_array_IVisualElement2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVisualElement2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVisualElement2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVisualElement2), METH_VARARGS | METH_STATIC, nullptr },

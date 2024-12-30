@@ -3000,16 +3000,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         }
     }
 
-    static PyObject* _assign_array_IStorageItemAccessList(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageItemAccessList[] = {
         { "add", reinterpret_cast<PyCFunction>(IStorageItemAccessList_Add), METH_VARARGS, nullptr },
         { "add_or_replace", reinterpret_cast<PyCFunction>(IStorageItemAccessList_AddOrReplace), METH_VARARGS, nullptr },
@@ -3025,7 +3015,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         { "get_item_async", reinterpret_cast<PyCFunction>(IStorageItemAccessList_GetItemAsync), METH_VARARGS, nullptr },
         { "get_item_with_options_async", reinterpret_cast<PyCFunction>(IStorageItemAccessList_GetItemWithOptionsAsync), METH_VARARGS, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(IStorageItemAccessList_Remove), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStorageItemAccessList, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageItemAccessList[] = {
@@ -3607,6 +3596,16 @@ namespace py::cpp::Windows::Storage::AccessCache
         }
     };
 
+    static PyObject* _assign_array_IStorageItemAccessList(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageItemAccessList(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3658,6 +3657,7 @@ namespace py::cpp::Windows::Storage::AccessCache
     }
 
     static PyMethodDef methods_ImplementsIStorageItemAccessList[] = {
+        { "_assign_array_", _assign_array_IStorageItemAccessList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemAccessList), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItemAccessList), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItemAccessList), METH_VARARGS | METH_STATIC, nullptr },

@@ -155,19 +155,8 @@ namespace py::cpp::Windows::Web
         }
     }
 
-    static PyObject* _assign_array_IUriToStreamResolver(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Web::IUriToStreamResolver>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IUriToStreamResolver[] = {
         { "uri_to_stream_async", reinterpret_cast<PyCFunction>(IUriToStreamResolver_UriToStreamAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IUriToStreamResolver, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IUriToStreamResolver[] = {
@@ -227,6 +216,16 @@ namespace py::cpp::Windows::Web
         }
     };
 
+    static PyObject* _assign_array_IUriToStreamResolver(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Web::IUriToStreamResolver>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IUriToStreamResolver(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -278,6 +277,7 @@ namespace py::cpp::Windows::Web
     }
 
     static PyMethodDef methods_ImplementsIUriToStreamResolver[] = {
+        { "_assign_array_", _assign_array_IUriToStreamResolver, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IUriToStreamResolver), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUriToStreamResolver), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUriToStreamResolver), METH_VARARGS | METH_STATIC, nullptr },

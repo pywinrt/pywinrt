@@ -3127,18 +3127,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         }
     }
 
-    static PyObject* _assign_array_ILearningModelVariableDescriptorPreview(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ILearningModelVariableDescriptorPreview[] = {
-        { "_assign_array_", _assign_array_ILearningModelVariableDescriptorPreview, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILearningModelVariableDescriptorPreview[] = {
@@ -3250,6 +3239,16 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         }
     };
 
+    static PyObject* _assign_array_ILearningModelVariableDescriptorPreview(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ILearningModelVariableDescriptorPreview(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3301,6 +3300,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     }
 
     static PyMethodDef methods_ImplementsILearningModelVariableDescriptorPreview[] = {
+        { "_assign_array_", _assign_array_ILearningModelVariableDescriptorPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelVariableDescriptorPreview), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelVariableDescriptorPreview), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelVariableDescriptorPreview), METH_VARARGS | METH_STATIC, nullptr },

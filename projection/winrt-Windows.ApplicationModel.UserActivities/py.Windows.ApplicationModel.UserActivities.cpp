@@ -3113,19 +3113,8 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         }
     }
 
-    static PyObject* _assign_array_IUserActivityContentInfo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IUserActivityContentInfo[] = {
         { "to_json", reinterpret_cast<PyCFunction>(IUserActivityContentInfo_ToJson), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IUserActivityContentInfo, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IUserActivityContentInfo[] = {
@@ -3179,6 +3168,16 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         }
     };
 
+    static PyObject* _assign_array_IUserActivityContentInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IUserActivityContentInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3230,6 +3229,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     }
 
     static PyMethodDef methods_ImplementsIUserActivityContentInfo[] = {
+        { "_assign_array_", _assign_array_IUserActivityContentInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IUserActivityContentInfo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUserActivityContentInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUserActivityContentInfo), METH_VARARGS | METH_STATIC, nullptr },

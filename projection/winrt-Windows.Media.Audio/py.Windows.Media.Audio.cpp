@@ -18472,16 +18472,6 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _assign_array_IAudioInputNode(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Audio::IAudioInputNode>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -18515,7 +18505,6 @@ namespace py::cpp::Windows::Media::Audio
         { "reset", reinterpret_cast<PyCFunction>(IAudioInputNode_Reset), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(IAudioInputNode_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IAudioInputNode_Stop), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IAudioInputNode, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioInputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioInputNode), METH_VARARGS, nullptr },
         { }};
@@ -18954,6 +18943,16 @@ namespace py::cpp::Windows::Media::Audio
         }
     };
 
+    static PyObject* _assign_array_IAudioInputNode(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Audio::IAudioInputNode>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAudioInputNode(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -19005,6 +19004,7 @@ namespace py::cpp::Windows::Media::Audio
     }
 
     static PyMethodDef methods_ImplementsIAudioInputNode[] = {
+        { "_assign_array_", _assign_array_IAudioInputNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioInputNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioInputNode), METH_VARARGS | METH_STATIC, nullptr },
@@ -19676,16 +19676,6 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _assign_array_IAudioInputNode2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Audio::IAudioInputNode2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -19719,7 +19709,6 @@ namespace py::cpp::Windows::Media::Audio
         { "reset", reinterpret_cast<PyCFunction>(IAudioInputNode2_Reset), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(IAudioInputNode2_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IAudioInputNode2_Stop), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IAudioInputNode2, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioInputNode2), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioInputNode2), METH_VARARGS, nullptr },
         { }};
@@ -20179,6 +20168,16 @@ namespace py::cpp::Windows::Media::Audio
         }
     };
 
+    static PyObject* _assign_array_IAudioInputNode2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Audio::IAudioInputNode2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAudioInputNode2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -20230,6 +20229,7 @@ namespace py::cpp::Windows::Media::Audio
     }
 
     static PyMethodDef methods_ImplementsIAudioInputNode2[] = {
+        { "_assign_array_", _assign_array_IAudioInputNode2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioInputNode2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioInputNode2), METH_VARARGS | METH_STATIC, nullptr },
@@ -20711,16 +20711,6 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _assign_array_IAudioNode(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Audio::IAudioNode>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -20751,7 +20741,6 @@ namespace py::cpp::Windows::Media::Audio
         { "reset", reinterpret_cast<PyCFunction>(IAudioNode_Reset), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(IAudioNode_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IAudioNode_Stop), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IAudioNode, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioNode), METH_VARARGS, nullptr },
         { }};
@@ -21067,6 +21056,16 @@ namespace py::cpp::Windows::Media::Audio
         }
     };
 
+    static PyObject* _assign_array_IAudioNode(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Audio::IAudioNode>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAudioNode(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -21118,6 +21117,7 @@ namespace py::cpp::Windows::Media::Audio
     }
 
     static PyMethodDef methods_ImplementsIAudioNode[] = {
+        { "_assign_array_", _assign_array_IAudioNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNode), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioNode), METH_VARARGS | METH_STATIC, nullptr },
@@ -21668,16 +21668,6 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _assign_array_IAudioNodeWithListener(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Audio::IAudioNodeWithListener>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -21708,7 +21698,6 @@ namespace py::cpp::Windows::Media::Audio
         { "reset", reinterpret_cast<PyCFunction>(IAudioNodeWithListener_Reset), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(IAudioNodeWithListener_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IAudioNodeWithListener_Stop), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IAudioNodeWithListener, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioNodeWithListener), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioNodeWithListener), METH_VARARGS, nullptr },
         { }};
@@ -22068,6 +22057,16 @@ namespace py::cpp::Windows::Media::Audio
         }
     };
 
+    static PyObject* _assign_array_IAudioNodeWithListener(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Audio::IAudioNodeWithListener>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAudioNodeWithListener(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -22119,6 +22118,7 @@ namespace py::cpp::Windows::Media::Audio
     }
 
     static PyMethodDef methods_ImplementsIAudioNodeWithListener[] = {
+        { "_assign_array_", _assign_array_IAudioNodeWithListener, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNodeWithListener), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioNodeWithListener), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioNodeWithListener), METH_VARARGS | METH_STATIC, nullptr },

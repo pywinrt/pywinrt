@@ -3264,18 +3264,7 @@ namespace py::cpp::Windows::Media::Effects
         }
     }
 
-    static PyObject* _assign_array_IAudioEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IAudioEffectDefinition>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IAudioEffectDefinition[] = {
-        { "_assign_array_", _assign_array_IAudioEffectDefinition, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAudioEffectDefinition[] = {
@@ -3345,6 +3334,16 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _assign_array_IAudioEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IAudioEffectDefinition>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAudioEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3396,6 +3395,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIAudioEffectDefinition[] = {
+        { "_assign_array_", _assign_array_IAudioEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioEffectDefinition), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioEffectDefinition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioEffectDefinition), METH_VARARGS | METH_STATIC, nullptr },
@@ -3702,23 +3702,12 @@ namespace py::cpp::Windows::Media::Effects
         }
     }
 
-    static PyObject* _assign_array_IBasicAudioEffect(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IBasicAudioEffect>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBasicAudioEffect[] = {
         { "close", reinterpret_cast<PyCFunction>(IBasicAudioEffect_Close), METH_VARARGS, nullptr },
         { "discard_queued_frames", reinterpret_cast<PyCFunction>(IBasicAudioEffect_DiscardQueuedFrames), METH_VARARGS, nullptr },
         { "process_frame", reinterpret_cast<PyCFunction>(IBasicAudioEffect_ProcessFrame), METH_VARARGS, nullptr },
         { "set_encoding_properties", reinterpret_cast<PyCFunction>(IBasicAudioEffect_SetEncodingProperties), METH_VARARGS, nullptr },
         { "set_properties", reinterpret_cast<PyCFunction>(IBasicAudioEffect_SetProperties), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IBasicAudioEffect, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBasicAudioEffect[] = {
@@ -3932,6 +3921,16 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _assign_array_IBasicAudioEffect(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IBasicAudioEffect>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBasicAudioEffect(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3983,6 +3982,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIBasicAudioEffect[] = {
+        { "_assign_array_", _assign_array_IBasicAudioEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBasicAudioEffect), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBasicAudioEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBasicAudioEffect), METH_VARARGS | METH_STATIC, nullptr },
@@ -4350,23 +4350,12 @@ namespace py::cpp::Windows::Media::Effects
         }
     }
 
-    static PyObject* _assign_array_IBasicVideoEffect(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IBasicVideoEffect>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBasicVideoEffect[] = {
         { "close", reinterpret_cast<PyCFunction>(IBasicVideoEffect_Close), METH_VARARGS, nullptr },
         { "discard_queued_frames", reinterpret_cast<PyCFunction>(IBasicVideoEffect_DiscardQueuedFrames), METH_VARARGS, nullptr },
         { "process_frame", reinterpret_cast<PyCFunction>(IBasicVideoEffect_ProcessFrame), METH_VARARGS, nullptr },
         { "set_encoding_properties", reinterpret_cast<PyCFunction>(IBasicVideoEffect_SetEncodingProperties), METH_VARARGS, nullptr },
         { "set_properties", reinterpret_cast<PyCFunction>(IBasicVideoEffect_SetProperties), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IBasicVideoEffect, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBasicVideoEffect[] = {
@@ -4634,6 +4623,16 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _assign_array_IBasicVideoEffect(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IBasicVideoEffect>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBasicVideoEffect(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4685,6 +4684,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIBasicVideoEffect[] = {
+        { "_assign_array_", _assign_array_IBasicVideoEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBasicVideoEffect), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBasicVideoEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBasicVideoEffect), METH_VARARGS | METH_STATIC, nullptr },
@@ -4962,23 +4962,12 @@ namespace py::cpp::Windows::Media::Effects
         }
     }
 
-    static PyObject* _assign_array_IVideoCompositor(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IVideoCompositor>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVideoCompositor[] = {
         { "close", reinterpret_cast<PyCFunction>(IVideoCompositor_Close), METH_VARARGS, nullptr },
         { "composite_frame", reinterpret_cast<PyCFunction>(IVideoCompositor_CompositeFrame), METH_VARARGS, nullptr },
         { "discard_queued_frames", reinterpret_cast<PyCFunction>(IVideoCompositor_DiscardQueuedFrames), METH_VARARGS, nullptr },
         { "set_encoding_properties", reinterpret_cast<PyCFunction>(IVideoCompositor_SetEncodingProperties), METH_VARARGS, nullptr },
         { "set_properties", reinterpret_cast<PyCFunction>(IVideoCompositor_SetProperties), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVideoCompositor, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVideoCompositor[] = {
@@ -5183,6 +5172,16 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _assign_array_IVideoCompositor(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IVideoCompositor>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVideoCompositor(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5234,6 +5233,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIVideoCompositor[] = {
+        { "_assign_array_", _assign_array_IVideoCompositor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVideoCompositor), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVideoCompositor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVideoCompositor), METH_VARARGS | METH_STATIC, nullptr },
@@ -5327,18 +5327,7 @@ namespace py::cpp::Windows::Media::Effects
         }
     }
 
-    static PyObject* _assign_array_IVideoCompositorDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IVideoCompositorDefinition>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVideoCompositorDefinition[] = {
-        { "_assign_array_", _assign_array_IVideoCompositorDefinition, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVideoCompositorDefinition[] = {
@@ -5408,6 +5397,16 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _assign_array_IVideoCompositorDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IVideoCompositorDefinition>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVideoCompositorDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5459,6 +5458,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIVideoCompositorDefinition[] = {
+        { "_assign_array_", _assign_array_IVideoCompositorDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVideoCompositorDefinition), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVideoCompositorDefinition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVideoCompositorDefinition), METH_VARARGS | METH_STATIC, nullptr },
@@ -5552,18 +5552,7 @@ namespace py::cpp::Windows::Media::Effects
         }
     }
 
-    static PyObject* _assign_array_IVideoEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IVideoEffectDefinition>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVideoEffectDefinition[] = {
-        { "_assign_array_", _assign_array_IVideoEffectDefinition, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVideoEffectDefinition[] = {
@@ -5633,6 +5622,16 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _assign_array_IVideoEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::IVideoEffectDefinition>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVideoEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5684,6 +5683,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIVideoEffectDefinition[] = {
+        { "_assign_array_", _assign_array_IVideoEffectDefinition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVideoEffectDefinition), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVideoEffectDefinition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVideoEffectDefinition), METH_VARARGS | METH_STATIC, nullptr },

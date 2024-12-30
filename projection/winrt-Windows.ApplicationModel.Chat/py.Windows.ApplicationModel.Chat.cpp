@@ -11025,18 +11025,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         }
     }
 
-    static PyObject* _assign_array_IChatItem(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Chat::IChatItem>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IChatItem[] = {
-        { "_assign_array_", _assign_array_IChatItem, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IChatItem[] = {
@@ -11084,6 +11073,16 @@ namespace py::cpp::Windows::ApplicationModel::Chat
             }
         }
     };
+
+    static PyObject* _assign_array_IChatItem(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Chat::IChatItem>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IChatItem(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -11136,6 +11135,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     }
 
     static PyMethodDef methods_ImplementsIChatItem[] = {
+        { "_assign_array_", _assign_array_IChatItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IChatItem), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIChatItem), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIChatItem), METH_VARARGS | METH_STATIC, nullptr },

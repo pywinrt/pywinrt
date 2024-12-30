@@ -21336,22 +21336,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static PyObject* _assign_array_ICoreWebView2DispatchAdapter(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICoreWebView2DispatchAdapter[] = {
         { "clean", reinterpret_cast<PyCFunction>(ICoreWebView2DispatchAdapter_Clean), METH_VARARGS, nullptr },
         { "unwrap_object", reinterpret_cast<PyCFunction>(ICoreWebView2DispatchAdapter_UnwrapObject), METH_VARARGS, nullptr },
         { "wrap_named_object", reinterpret_cast<PyCFunction>(ICoreWebView2DispatchAdapter_WrapNamedObject), METH_VARARGS, nullptr },
         { "wrap_object", reinterpret_cast<PyCFunction>(ICoreWebView2DispatchAdapter_WrapObject), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ICoreWebView2DispatchAdapter, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICoreWebView2DispatchAdapter[] = {
@@ -21523,6 +21512,16 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     };
 
+    static PyObject* _assign_array_ICoreWebView2DispatchAdapter(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICoreWebView2DispatchAdapter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -21574,6 +21573,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     }
 
     static PyMethodDef methods_ImplementsICoreWebView2DispatchAdapter[] = {
+        { "_assign_array_", _assign_array_ICoreWebView2DispatchAdapter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreWebView2DispatchAdapter), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreWebView2DispatchAdapter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreWebView2DispatchAdapter), METH_VARARGS | METH_STATIC, nullptr },

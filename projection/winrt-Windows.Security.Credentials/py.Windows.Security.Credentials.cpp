@@ -3064,18 +3064,7 @@ namespace py::cpp::Windows::Security::Credentials
         }
     }
 
-    static PyObject* _assign_array_IWebAccount(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Credentials::IWebAccount>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWebAccount[] = {
-        { "_assign_array_", _assign_array_IWebAccount, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWebAccount[] = {
@@ -3166,6 +3155,16 @@ namespace py::cpp::Windows::Security::Credentials
         }
     };
 
+    static PyObject* _assign_array_IWebAccount(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Credentials::IWebAccount>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWebAccount(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3217,6 +3216,7 @@ namespace py::cpp::Windows::Security::Credentials
     }
 
     static PyMethodDef methods_ImplementsIWebAccount[] = {
+        { "_assign_array_", _assign_array_IWebAccount, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccount), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWebAccount), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWebAccount), METH_VARARGS | METH_STATIC, nullptr },

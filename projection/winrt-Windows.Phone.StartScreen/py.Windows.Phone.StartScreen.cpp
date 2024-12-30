@@ -723,19 +723,8 @@ namespace py::cpp::Windows::Phone::StartScreen
         }
     }
 
-    static PyObject* _assign_array_IToastNotificationManagerStatics3(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IToastNotificationManagerStatics3[] = {
         { "create_toast_notifier_for_secondary_tile", reinterpret_cast<PyCFunction>(IToastNotificationManagerStatics3_CreateToastNotifierForSecondaryTile), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IToastNotificationManagerStatics3, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IToastNotificationManagerStatics3[] = {
@@ -795,6 +784,16 @@ namespace py::cpp::Windows::Phone::StartScreen
         }
     };
 
+    static PyObject* _assign_array_IToastNotificationManagerStatics3(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IToastNotificationManagerStatics3(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -846,6 +845,7 @@ namespace py::cpp::Windows::Phone::StartScreen
     }
 
     static PyMethodDef methods_ImplementsIToastNotificationManagerStatics3[] = {
+        { "_assign_array_", _assign_array_IToastNotificationManagerStatics3, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IToastNotificationManagerStatics3), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIToastNotificationManagerStatics3), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIToastNotificationManagerStatics3), METH_VARARGS | METH_STATIC, nullptr },

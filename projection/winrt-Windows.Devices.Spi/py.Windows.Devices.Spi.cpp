@@ -1585,22 +1585,11 @@ namespace py::cpp::Windows::Devices::Spi
         }
     }
 
-    static PyObject* _assign_array_ISpiDeviceStatics(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Spi::ISpiDeviceStatics>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISpiDeviceStatics[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_FromIdAsync), METH_VARARGS, nullptr },
         { "get_bus_info", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_GetBusInfo), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISpiDeviceStatics, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISpiDeviceStatics[] = {
@@ -1762,6 +1751,16 @@ namespace py::cpp::Windows::Devices::Spi
         }
     };
 
+    static PyObject* _assign_array_ISpiDeviceStatics(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Spi::ISpiDeviceStatics>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISpiDeviceStatics(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1813,6 +1812,7 @@ namespace py::cpp::Windows::Devices::Spi
     }
 
     static PyMethodDef methods_ImplementsISpiDeviceStatics[] = {
+        { "_assign_array_", _assign_array_ISpiDeviceStatics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpiDeviceStatics), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpiDeviceStatics), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpiDeviceStatics), METH_VARARGS | METH_STATIC, nullptr },

@@ -4057,16 +4057,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _assign_array_IAsyncAction(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IAsyncAction>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _await_IAsyncAction(py::wrapper::Windows::Foundation::IAsyncAction* self) noexcept
     {
         return py::dunder_await(self->obj);
@@ -4076,7 +4066,6 @@ namespace py::cpp::Windows::Foundation
         { "cancel", reinterpret_cast<PyCFunction>(IAsyncAction_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(IAsyncAction_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(IAsyncAction_GetResults), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IAsyncAction, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAsyncAction[] = {
@@ -4284,6 +4273,16 @@ namespace py::cpp::Windows::Foundation
         }
     };
 
+    static PyObject* _assign_array_IAsyncAction(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IAsyncAction>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAsyncAction(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4335,6 +4334,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIAsyncAction[] = {
+        { "_assign_array_", _assign_array_IAsyncAction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAsyncAction), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncAction), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncAction), METH_VARARGS | METH_STATIC, nullptr },
@@ -4854,20 +4854,9 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _assign_array_IAsyncInfo(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IAsyncInfo>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IAsyncInfo[] = {
         { "cancel", reinterpret_cast<PyCFunction>(IAsyncInfo_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(IAsyncInfo_Close), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IAsyncInfo, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAsyncInfo[] = {
@@ -5006,6 +4995,16 @@ namespace py::cpp::Windows::Foundation
         }
     };
 
+    static PyObject* _assign_array_IAsyncInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IAsyncInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAsyncInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5057,6 +5056,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIAsyncInfo[] = {
+        { "_assign_array_", _assign_array_IAsyncInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAsyncInfo), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncInfo), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncInfo), METH_VARARGS | METH_STATIC, nullptr },
@@ -5700,16 +5700,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _assign_array_IClosable(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IClosable>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IClosable(py::wrapper::Windows::Foundation::IClosable* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -5735,7 +5725,6 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_IClosable[] = {
         { "close", reinterpret_cast<PyCFunction>(IClosable_Close), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IClosable, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IClosable), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IClosable), METH_VARARGS, nullptr },
         { }};
@@ -5789,6 +5778,16 @@ namespace py::cpp::Windows::Foundation
         }
     };
 
+    static PyObject* _assign_array_IClosable(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IClosable>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IClosable(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5840,6 +5839,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIClosable[] = {
+        { "_assign_array_", _assign_array_IClosable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IClosable), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIClosable), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIClosable), METH_VARARGS | METH_STATIC, nullptr },
@@ -5915,19 +5915,8 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _assign_array_IGetActivationFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IGetActivationFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGetActivationFactory[] = {
         { "get_activation_factory", reinterpret_cast<PyCFunction>(IGetActivationFactory_GetActivationFactory), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IGetActivationFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGetActivationFactory[] = {
@@ -5987,6 +5976,16 @@ namespace py::cpp::Windows::Foundation
         }
     };
 
+    static PyObject* _assign_array_IGetActivationFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IGetActivationFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGetActivationFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6038,6 +6037,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIGetActivationFactory[] = {
+        { "_assign_array_", _assign_array_IGetActivationFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGetActivationFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGetActivationFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGetActivationFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -6152,16 +6152,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _assign_array_IMemoryBuffer(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IMemoryBuffer>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IMemoryBuffer(py::wrapper::Windows::Foundation::IMemoryBuffer* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -6188,7 +6178,6 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef _methods_IMemoryBuffer[] = {
         { "close", reinterpret_cast<PyCFunction>(IMemoryBuffer_Close), METH_VARARGS, nullptr },
         { "create_reference", reinterpret_cast<PyCFunction>(IMemoryBuffer_CreateReference), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IMemoryBuffer, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMemoryBuffer), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMemoryBuffer), METH_VARARGS, nullptr },
         { }};
@@ -6268,6 +6257,16 @@ namespace py::cpp::Windows::Foundation
         }
     };
 
+    static PyObject* _assign_array_IMemoryBuffer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IMemoryBuffer>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IMemoryBuffer(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6319,6 +6318,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIMemoryBuffer[] = {
+        { "_assign_array_", _assign_array_IMemoryBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMemoryBuffer), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMemoryBuffer), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMemoryBuffer), METH_VARARGS | METH_STATIC, nullptr },
@@ -6488,16 +6488,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _assign_array_IMemoryBufferReference(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IMemoryBufferReference>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IMemoryBufferReference(py::wrapper::Windows::Foundation::IMemoryBufferReference* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -6539,7 +6529,6 @@ namespace py::cpp::Windows::Foundation
         { "close", reinterpret_cast<PyCFunction>(IMemoryBufferReference_Close), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(IMemoryBufferReference_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(IMemoryBufferReference_remove_Closed), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IMemoryBufferReference, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMemoryBufferReference), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMemoryBufferReference), METH_VARARGS, nullptr },
         { }};
@@ -6677,6 +6666,16 @@ namespace py::cpp::Windows::Foundation
         }
     };
 
+    static PyObject* _assign_array_IMemoryBufferReference(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IMemoryBufferReference>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IMemoryBufferReference(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6728,6 +6727,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIMemoryBufferReference[] = {
+        { "_assign_array_", _assign_array_IMemoryBufferReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMemoryBufferReference), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMemoryBufferReference), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMemoryBufferReference), METH_VARARGS | METH_STATIC, nullptr },
@@ -8472,16 +8472,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _assign_array_IPropertyValue(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IPropertyValue>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPropertyValue[] = {
         { "get_boolean", reinterpret_cast<PyCFunction>(IPropertyValue_GetBoolean), METH_VARARGS, nullptr },
         { "get_boolean_array", reinterpret_cast<PyCFunction>(IPropertyValue_GetBooleanArray), METH_VARARGS, nullptr },
@@ -8520,7 +8510,6 @@ namespace py::cpp::Windows::Foundation
         { "get_uint64_array", reinterpret_cast<PyCFunction>(IPropertyValue_GetUInt64Array), METH_VARARGS, nullptr },
         { "get_uint8", reinterpret_cast<PyCFunction>(IPropertyValue_GetUInt8), METH_VARARGS, nullptr },
         { "get_uint8_array", reinterpret_cast<PyCFunction>(IPropertyValue_GetUInt8Array), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPropertyValue, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPropertyValue[] = {
@@ -9571,6 +9560,16 @@ namespace py::cpp::Windows::Foundation
         }
     };
 
+    static PyObject* _assign_array_IPropertyValue(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IPropertyValue>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPropertyValue(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9622,6 +9621,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIPropertyValue[] = {
+        { "_assign_array_", _assign_array_IPropertyValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPropertyValue), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertyValue), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertyValue), METH_VARARGS | METH_STATIC, nullptr },
@@ -10483,16 +10483,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _assign_array_IStringable(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IStringable>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _str_IStringable(py::wrapper::Windows::Foundation::IStringable* self) noexcept
     {
         try
@@ -10512,7 +10502,6 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_IStringable[] = {
         { "to_string", reinterpret_cast<PyCFunction>(IStringable_ToString), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IStringable, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStringable[] = {
@@ -10567,6 +10556,16 @@ namespace py::cpp::Windows::Foundation
         }
     };
 
+    static PyObject* _assign_array_IStringable(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IStringable>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStringable(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10618,6 +10617,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIStringable[] = {
+        { "_assign_array_", _assign_array_IStringable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStringable), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStringable), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStringable), METH_VARARGS | METH_STATIC, nullptr },
@@ -10711,18 +10711,7 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _assign_array_IWwwFormUrlDecoderEntry(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWwwFormUrlDecoderEntry[] = {
-        { "_assign_array_", _assign_array_IWwwFormUrlDecoderEntry, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWwwFormUrlDecoderEntry[] = {
@@ -10792,6 +10781,16 @@ namespace py::cpp::Windows::Foundation
         }
     };
 
+    static PyObject* _assign_array_IWwwFormUrlDecoderEntry(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWwwFormUrlDecoderEntry(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10843,6 +10842,7 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIWwwFormUrlDecoderEntry[] = {
+        { "_assign_array_", _assign_array_IWwwFormUrlDecoderEntry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWwwFormUrlDecoderEntry), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWwwFormUrlDecoderEntry), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWwwFormUrlDecoderEntry), METH_VARARGS | METH_STATIC, nullptr },

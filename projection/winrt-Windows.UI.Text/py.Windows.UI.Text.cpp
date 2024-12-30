@@ -6670,21 +6670,10 @@ namespace py::cpp::Windows::UI::Text
         }
     }
 
-    static PyObject* _assign_array_ITextCharacterFormat(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextCharacterFormat>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextCharacterFormat[] = {
         { "get_clone", reinterpret_cast<PyCFunction>(ITextCharacterFormat_GetClone), METH_VARARGS, nullptr },
         { "is_equal", reinterpret_cast<PyCFunction>(ITextCharacterFormat_IsEqual), METH_VARARGS, nullptr },
         { "set_clone", reinterpret_cast<PyCFunction>(ITextCharacterFormat_SetClone), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextCharacterFormat, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextCharacterFormat[] = {
@@ -7833,6 +7822,16 @@ namespace py::cpp::Windows::UI::Text
         }
     };
 
+    static PyObject* _assign_array_ITextCharacterFormat(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextCharacterFormat>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextCharacterFormat(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7884,6 +7883,7 @@ namespace py::cpp::Windows::UI::Text
     }
 
     static PyMethodDef methods_ImplementsITextCharacterFormat[] = {
+        { "_assign_array_", _assign_array_ITextCharacterFormat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextCharacterFormat), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextCharacterFormat), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextCharacterFormat), METH_VARARGS | METH_STATIC, nullptr },
@@ -8992,16 +8992,6 @@ namespace py::cpp::Windows::UI::Text
         }
     }
 
-    static PyObject* _assign_array_ITextDocument(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextDocument>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextDocument[] = {
         { "apply_display_updates", reinterpret_cast<PyCFunction>(ITextDocument_ApplyDisplayUpdates), METH_VARARGS, nullptr },
         { "batch_display_updates", reinterpret_cast<PyCFunction>(ITextDocument_BatchDisplayUpdates), METH_VARARGS, nullptr },
@@ -9023,7 +9013,6 @@ namespace py::cpp::Windows::UI::Text
         { "set_default_paragraph_format", reinterpret_cast<PyCFunction>(ITextDocument_SetDefaultParagraphFormat), METH_VARARGS, nullptr },
         { "set_text", reinterpret_cast<PyCFunction>(ITextDocument_SetText), METH_VARARGS, nullptr },
         { "undo", reinterpret_cast<PyCFunction>(ITextDocument_Undo), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextDocument, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextDocument[] = {
@@ -9814,6 +9803,16 @@ namespace py::cpp::Windows::UI::Text
         }
     };
 
+    static PyObject* _assign_array_ITextDocument(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextDocument>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextDocument(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9865,6 +9864,7 @@ namespace py::cpp::Windows::UI::Text
     }
 
     static PyMethodDef methods_ImplementsITextDocument[] = {
+        { "_assign_array_", _assign_array_ITextDocument, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextDocument), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextDocument), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextDocument), METH_VARARGS | METH_STATIC, nullptr },
@@ -11626,16 +11626,6 @@ namespace py::cpp::Windows::UI::Text
         }
     }
 
-    static PyObject* _assign_array_ITextParagraphFormat(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextParagraphFormat>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextParagraphFormat[] = {
         { "add_tab", reinterpret_cast<PyCFunction>(ITextParagraphFormat_AddTab), METH_VARARGS, nullptr },
         { "clear_all_tabs", reinterpret_cast<PyCFunction>(ITextParagraphFormat_ClearAllTabs), METH_VARARGS, nullptr },
@@ -11646,7 +11636,6 @@ namespace py::cpp::Windows::UI::Text
         { "set_clone", reinterpret_cast<PyCFunction>(ITextParagraphFormat_SetClone), METH_VARARGS, nullptr },
         { "set_indents", reinterpret_cast<PyCFunction>(ITextParagraphFormat_SetIndents), METH_VARARGS, nullptr },
         { "set_line_spacing", reinterpret_cast<PyCFunction>(ITextParagraphFormat_SetLineSpacing), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextParagraphFormat, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextParagraphFormat[] = {
@@ -12843,6 +12832,16 @@ namespace py::cpp::Windows::UI::Text
         }
     };
 
+    static PyObject* _assign_array_ITextParagraphFormat(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextParagraphFormat>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextParagraphFormat(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12894,6 +12893,7 @@ namespace py::cpp::Windows::UI::Text
     }
 
     static PyMethodDef methods_ImplementsITextParagraphFormat[] = {
+        { "_assign_array_", _assign_array_ITextParagraphFormat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextParagraphFormat), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextParagraphFormat), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextParagraphFormat), METH_VARARGS | METH_STATIC, nullptr },
@@ -15019,16 +15019,6 @@ namespace py::cpp::Windows::UI::Text
         }
     }
 
-    static PyObject* _assign_array_ITextRange(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextRange>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextRange[] = {
         { "can_paste", reinterpret_cast<PyCFunction>(ITextRange_CanPaste), METH_VARARGS, nullptr },
         { "change_case", reinterpret_cast<PyCFunction>(ITextRange_ChangeCase), METH_VARARGS, nullptr },
@@ -15062,7 +15052,6 @@ namespace py::cpp::Windows::UI::Text
         { "set_text", reinterpret_cast<PyCFunction>(ITextRange_SetText), METH_VARARGS, nullptr },
         { "set_text_via_stream", reinterpret_cast<PyCFunction>(ITextRange_SetTextViaStream), METH_VARARGS, nullptr },
         { "start_of", reinterpret_cast<PyCFunction>(ITextRange_StartOf), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextRange, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextRange[] = {
@@ -16730,6 +16719,16 @@ namespace py::cpp::Windows::UI::Text
         }
     };
 
+    static PyObject* _assign_array_ITextRange(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextRange>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextRange(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -16781,6 +16780,7 @@ namespace py::cpp::Windows::UI::Text
     }
 
     static PyMethodDef methods_ImplementsITextRange[] = {
+        { "_assign_array_", _assign_array_ITextRange, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextRange), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextRange), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextRange), METH_VARARGS | METH_STATIC, nullptr },
@@ -19310,16 +19310,6 @@ namespace py::cpp::Windows::UI::Text
         }
     }
 
-    static PyObject* _assign_array_ITextSelection(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextSelection>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextSelection[] = {
         { "can_paste", reinterpret_cast<PyCFunction>(ITextSelection_CanPaste), METH_VARARGS, nullptr },
         { "change_case", reinterpret_cast<PyCFunction>(ITextSelection_ChangeCase), METH_VARARGS, nullptr },
@@ -19360,7 +19350,6 @@ namespace py::cpp::Windows::UI::Text
         { "set_text_via_stream", reinterpret_cast<PyCFunction>(ITextSelection_SetTextViaStream), METH_VARARGS, nullptr },
         { "start_of", reinterpret_cast<PyCFunction>(ITextSelection_StartOf), METH_VARARGS, nullptr },
         { "type_text", reinterpret_cast<PyCFunction>(ITextSelection_TypeText), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextSelection, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextSelection[] = {
@@ -21411,6 +21400,16 @@ namespace py::cpp::Windows::UI::Text
         }
     };
 
+    static PyObject* _assign_array_ITextSelection(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::ITextSelection>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextSelection(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -21462,6 +21461,7 @@ namespace py::cpp::Windows::UI::Text
     }
 
     static PyMethodDef methods_ImplementsITextSelection[] = {
+        { "_assign_array_", _assign_array_ITextSelection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextSelection), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextSelection), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextSelection), METH_VARARGS | METH_STATIC, nullptr },

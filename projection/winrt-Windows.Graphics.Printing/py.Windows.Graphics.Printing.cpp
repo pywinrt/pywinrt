@@ -4310,18 +4310,7 @@ namespace py::cpp::Windows::Graphics::Printing
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IPrintDocumentSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::IPrintDocumentSource>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPrintDocumentSource[] = {
-        { "_assign_array_", _assign_array_IPrintDocumentSource, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintDocumentSource[] = {
@@ -4348,6 +4337,16 @@ namespace py::cpp::Windows::Graphics::Printing
         {
         }
     };
+
+    static PyObject* _assign_array_IPrintDocumentSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::IPrintDocumentSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IPrintDocumentSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -4400,6 +4399,7 @@ namespace py::cpp::Windows::Graphics::Printing
     }
 
     static PyMethodDef methods_ImplementsIPrintDocumentSource[] = {
+        { "_assign_array_", _assign_array_IPrintDocumentSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintDocumentSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintDocumentSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintDocumentSource), METH_VARARGS | METH_STATIC, nullptr },
@@ -4475,19 +4475,8 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     }
 
-    static PyObject* _assign_array_IPrintTaskOptionsCore(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPrintTaskOptionsCore[] = {
         { "get_page_description", reinterpret_cast<PyCFunction>(IPrintTaskOptionsCore_GetPageDescription), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IPrintTaskOptionsCore, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintTaskOptionsCore[] = {
@@ -4547,6 +4536,16 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     };
 
+    static PyObject* _assign_array_IPrintTaskOptionsCore(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPrintTaskOptionsCore(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4598,6 +4597,7 @@ namespace py::cpp::Windows::Graphics::Printing
     }
 
     static PyMethodDef methods_ImplementsIPrintTaskOptionsCore[] = {
+        { "_assign_array_", _assign_array_IPrintTaskOptionsCore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintTaskOptionsCore), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintTaskOptionsCore), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintTaskOptionsCore), METH_VARARGS | METH_STATIC, nullptr },
@@ -5450,18 +5450,7 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     }
 
-    static PyObject* _assign_array_IPrintTaskOptionsCoreProperties(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPrintTaskOptionsCoreProperties[] = {
-        { "_assign_array_", _assign_array_IPrintTaskOptionsCoreProperties, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintTaskOptionsCoreProperties[] = {
@@ -6015,6 +6004,16 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     };
 
+    static PyObject* _assign_array_IPrintTaskOptionsCoreProperties(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPrintTaskOptionsCoreProperties(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6066,6 +6065,7 @@ namespace py::cpp::Windows::Graphics::Printing
     }
 
     static PyMethodDef methods_ImplementsIPrintTaskOptionsCoreProperties[] = {
+        { "_assign_array_", _assign_array_IPrintTaskOptionsCoreProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintTaskOptionsCoreProperties), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintTaskOptionsCoreProperties), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintTaskOptionsCoreProperties), METH_VARARGS | METH_STATIC, nullptr },
@@ -6129,18 +6129,7 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     }
 
-    static PyObject* _assign_array_IPrintTaskOptionsCoreUIConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IPrintTaskOptionsCoreUIConfiguration[] = {
-        { "_assign_array_", _assign_array_IPrintTaskOptionsCoreUIConfiguration, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintTaskOptionsCoreUIConfiguration[] = {
@@ -6188,6 +6177,16 @@ namespace py::cpp::Windows::Graphics::Printing
             }
         }
     };
+
+    static PyObject* _assign_array_IPrintTaskOptionsCoreUIConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IPrintTaskOptionsCoreUIConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -6240,6 +6239,7 @@ namespace py::cpp::Windows::Graphics::Printing
     }
 
     static PyMethodDef methods_ImplementsIPrintTaskOptionsCoreUIConfiguration[] = {
+        { "_assign_array_", _assign_array_IPrintTaskOptionsCoreUIConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPrintTaskOptionsCoreUIConfiguration), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintTaskOptionsCoreUIConfiguration), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintTaskOptionsCoreUIConfiguration), METH_VARARGS | METH_STATIC, nullptr },

@@ -380,22 +380,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         }
     }
 
-    static PyObject* _assign_array_IAdcControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IAdcControllerProvider[] = {
         { "acquire_channel", reinterpret_cast<PyCFunction>(IAdcControllerProvider_AcquireChannel), METH_VARARGS, nullptr },
         { "is_channel_mode_supported", reinterpret_cast<PyCFunction>(IAdcControllerProvider_IsChannelModeSupported), METH_VARARGS, nullptr },
         { "read_value", reinterpret_cast<PyCFunction>(IAdcControllerProvider_ReadValue), METH_VARARGS, nullptr },
         { "release_channel", reinterpret_cast<PyCFunction>(IAdcControllerProvider_ReleaseChannel), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IAdcControllerProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAdcControllerProvider[] = {
@@ -675,6 +664,16 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         }
     };
 
+    static PyObject* _assign_array_IAdcControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAdcControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -726,6 +725,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
     }
 
     static PyMethodDef methods_ImplementsIAdcControllerProvider[] = {
+        { "_assign_array_", _assign_array_IAdcControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAdcControllerProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAdcControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAdcControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -799,19 +799,8 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         }
     }
 
-    static PyObject* _assign_array_IAdcProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Adc::Provider::IAdcProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IAdcProvider[] = {
         { "get_controllers", reinterpret_cast<PyCFunction>(IAdcProvider_GetControllers), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IAdcProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAdcProvider[] = {
@@ -865,6 +854,16 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         }
     };
 
+    static PyObject* _assign_array_IAdcProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Adc::Provider::IAdcProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAdcProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -916,6 +915,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
     }
 
     static PyMethodDef methods_ImplementsIAdcProvider[] = {
+        { "_assign_array_", _assign_array_IAdcProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAdcProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAdcProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAdcProvider), METH_VARARGS | METH_STATIC, nullptr },

@@ -10990,18 +10990,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IBackgroundCondition(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBackgroundCondition[] = {
-        { "_assign_array_", _assign_array_IBackgroundCondition, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundCondition[] = {
@@ -11028,6 +11017,16 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
         }
     };
+
+    static PyObject* _assign_array_IBackgroundCondition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IBackgroundCondition(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -11080,6 +11079,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef methods_ImplementsIBackgroundCondition[] = {
+        { "_assign_array_", _assign_array_IBackgroundCondition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundCondition), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundCondition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundCondition), METH_VARARGS | METH_STATIC, nullptr },
@@ -11156,19 +11156,8 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
-    static PyObject* _assign_array_IBackgroundTask(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTask>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBackgroundTask[] = {
         { "run", reinterpret_cast<PyCFunction>(IBackgroundTask_Run), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IBackgroundTask, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTask[] = {
@@ -11226,6 +11215,16 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     };
 
+    static PyObject* _assign_array_IBackgroundTask(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTask>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBackgroundTask(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11277,6 +11276,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTask[] = {
+        { "_assign_array_", _assign_array_IBackgroundTask, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTask), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTask), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTask), METH_VARARGS | METH_STATIC, nullptr },
@@ -11604,21 +11604,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
-    static PyObject* _assign_array_IBackgroundTaskInstance(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBackgroundTaskInstance[] = {
         { "get_deferral", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance_GetDeferral), METH_VARARGS, nullptr },
         { "add_canceled", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance_add_Canceled), METH_O, nullptr },
         { "remove_canceled", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance_remove_Canceled), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IBackgroundTaskInstance, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTaskInstance[] = {
@@ -11862,6 +11851,16 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     };
 
+    static PyObject* _assign_array_IBackgroundTaskInstance(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBackgroundTaskInstance(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11913,6 +11912,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTaskInstance[] = {
+        { "_assign_array_", _assign_array_IBackgroundTaskInstance, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTaskInstance), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTaskInstance), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTaskInstance), METH_VARARGS | METH_STATIC, nullptr },
@@ -12282,22 +12282,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
-    static PyObject* _assign_array_IBackgroundTaskInstance2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBackgroundTaskInstance2[] = {
         { "get_deferral", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance2_GetDeferral), METH_VARARGS, nullptr },
         { "get_throttle_count", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance2_GetThrottleCount), METH_VARARGS, nullptr },
         { "add_canceled", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance2_add_Canceled), METH_O, nullptr },
         { "remove_canceled", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance2_remove_Canceled), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IBackgroundTaskInstance2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTaskInstance2[] = {
@@ -12573,6 +12562,16 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     };
 
+    static PyObject* _assign_array_IBackgroundTaskInstance2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBackgroundTaskInstance2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12624,6 +12623,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTaskInstance2[] = {
+        { "_assign_array_", _assign_array_IBackgroundTaskInstance2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTaskInstance2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTaskInstance2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTaskInstance2), METH_VARARGS | METH_STATIC, nullptr },
@@ -12981,21 +12981,10 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
-    static PyObject* _assign_array_IBackgroundTaskInstance4(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBackgroundTaskInstance4[] = {
         { "get_deferral", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance4_GetDeferral), METH_VARARGS, nullptr },
         { "add_canceled", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance4_add_Canceled), METH_O, nullptr },
         { "remove_canceled", reinterpret_cast<PyCFunction>(IBackgroundTaskInstance4_remove_Canceled), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IBackgroundTaskInstance4, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTaskInstance4[] = {
@@ -13260,6 +13249,16 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     };
 
+    static PyObject* _assign_array_IBackgroundTaskInstance4(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBackgroundTaskInstance4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13311,6 +13310,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTaskInstance4[] = {
+        { "_assign_array_", _assign_array_IBackgroundTaskInstance4, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTaskInstance4), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTaskInstance4), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTaskInstance4), METH_VARARGS | METH_STATIC, nullptr },
@@ -13577,23 +13577,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
-    static PyObject* _assign_array_IBackgroundTaskRegistration(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBackgroundTaskRegistration[] = {
         { "unregister", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration_Unregister), METH_VARARGS, nullptr },
         { "add_completed", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration_add_Completed), METH_O, nullptr },
         { "remove_completed", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration_remove_Completed), METH_O, nullptr },
         { "add_progress", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration_add_Progress), METH_O, nullptr },
         { "remove_progress", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration_remove_Progress), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IBackgroundTaskRegistration, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTaskRegistration[] = {
@@ -13817,6 +13806,16 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     };
 
+    static PyObject* _assign_array_IBackgroundTaskRegistration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBackgroundTaskRegistration(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13868,6 +13867,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTaskRegistration[] = {
+        { "_assign_array_", _assign_array_IBackgroundTaskRegistration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTaskRegistration), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTaskRegistration), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTaskRegistration), METH_VARARGS | METH_STATIC, nullptr },
@@ -14164,23 +14164,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
-    static PyObject* _assign_array_IBackgroundTaskRegistration2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBackgroundTaskRegistration2[] = {
         { "unregister", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration2_Unregister), METH_VARARGS, nullptr },
         { "add_completed", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration2_add_Completed), METH_O, nullptr },
         { "remove_completed", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration2_remove_Completed), METH_O, nullptr },
         { "add_progress", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration2_add_Progress), METH_O, nullptr },
         { "remove_progress", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration2_remove_Progress), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IBackgroundTaskRegistration2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTaskRegistration2[] = {
@@ -14425,6 +14414,16 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     };
 
+    static PyObject* _assign_array_IBackgroundTaskRegistration2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBackgroundTaskRegistration2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14476,6 +14475,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTaskRegistration2[] = {
+        { "_assign_array_", _assign_array_IBackgroundTaskRegistration2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTaskRegistration2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTaskRegistration2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTaskRegistration2), METH_VARARGS | METH_STATIC, nullptr },
@@ -14772,23 +14772,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
-    static PyObject* _assign_array_IBackgroundTaskRegistration3(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBackgroundTaskRegistration3[] = {
         { "unregister", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration3_Unregister), METH_VARARGS, nullptr },
         { "add_completed", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration3_add_Completed), METH_O, nullptr },
         { "remove_completed", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration3_remove_Completed), METH_O, nullptr },
         { "add_progress", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration3_add_Progress), METH_O, nullptr },
         { "remove_progress", reinterpret_cast<PyCFunction>(IBackgroundTaskRegistration3_remove_Progress), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IBackgroundTaskRegistration3, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTaskRegistration3[] = {
@@ -15033,6 +15022,16 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     };
 
+    static PyObject* _assign_array_IBackgroundTaskRegistration3(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBackgroundTaskRegistration3(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -15084,6 +15083,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTaskRegistration3[] = {
+        { "_assign_array_", _assign_array_IBackgroundTaskRegistration3, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTaskRegistration3), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTaskRegistration3), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTaskRegistration3), METH_VARARGS | METH_STATIC, nullptr },
@@ -15117,18 +15117,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IBackgroundTrigger(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBackgroundTrigger[] = {
-        { "_assign_array_", _assign_array_IBackgroundTrigger, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTrigger[] = {
@@ -15155,6 +15144,16 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
         }
     };
+
+    static PyObject* _assign_array_IBackgroundTrigger(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IBackgroundTrigger(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -15207,6 +15206,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTrigger[] = {
+        { "_assign_array_", _assign_array_IBackgroundTrigger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTrigger), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTrigger), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTrigger), METH_VARARGS | METH_STATIC, nullptr },

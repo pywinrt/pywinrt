@@ -388,19 +388,8 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
-    static PyObject* _assign_array_IBindableIterable(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableIterable>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBindableIterable[] = {
         { "first", reinterpret_cast<PyCFunction>(IBindableIterable_First), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IBindableIterable, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBindableIterable[] = {
@@ -454,6 +443,16 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     };
 
+    static PyObject* _assign_array_IBindableIterable(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableIterable>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBindableIterable(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -505,6 +504,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     }
 
     static PyMethodDef methods_ImplementsIBindableIterable[] = {
+        { "_assign_array_", _assign_array_IBindableIterable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableIterable), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableIterable), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableIterable), METH_VARARGS | METH_STATIC, nullptr },
@@ -638,19 +638,8 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
-    static PyObject* _assign_array_IBindableIterator(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableIterator>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBindableIterator[] = {
         { "move_next", reinterpret_cast<PyCFunction>(IBindableIterator_MoveNext), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IBindableIterator, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBindableIterator[] = {
@@ -746,6 +735,16 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     };
 
+    static PyObject* _assign_array_IBindableIterator(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableIterator>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBindableIterator(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -797,6 +796,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     }
 
     static PyMethodDef methods_ImplementsIBindableIterator[] = {
+        { "_assign_array_", _assign_array_IBindableIterator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableIterator), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableIterator), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableIterator), METH_VARARGS | METH_STATIC, nullptr },
@@ -1359,16 +1359,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
-    static PyObject* _assign_array_IBindableObservableVector(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBindableObservableVector[] = {
         { "append", reinterpret_cast<PyCFunction>(IBindableObservableVector_Append), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(IBindableObservableVector_Clear), METH_VARARGS, nullptr },
@@ -1382,7 +1372,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { "set_at", reinterpret_cast<PyCFunction>(IBindableObservableVector_SetAt), METH_VARARGS, nullptr },
         { "add_vector_changed", reinterpret_cast<PyCFunction>(IBindableObservableVector_add_VectorChanged), METH_O, nullptr },
         { "remove_vector_changed", reinterpret_cast<PyCFunction>(IBindableObservableVector_remove_VectorChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IBindableObservableVector, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBindableObservableVector[] = {
@@ -1803,6 +1792,16 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     };
 
+    static PyObject* _assign_array_IBindableObservableVector(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBindableObservableVector(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1854,6 +1853,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     }
 
     static PyMethodDef methods_ImplementsIBindableObservableVector[] = {
+        { "_assign_array_", _assign_array_IBindableObservableVector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableObservableVector), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableObservableVector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableObservableVector), METH_VARARGS | METH_STATIC, nullptr },
@@ -2351,16 +2351,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
-    static PyObject* _assign_array_IBindableVector(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableVector>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBindableVector[] = {
         { "append", reinterpret_cast<PyCFunction>(IBindableVector_Append), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(IBindableVector_Clear), METH_VARARGS, nullptr },
@@ -2372,7 +2362,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { "remove_at", reinterpret_cast<PyCFunction>(IBindableVector_RemoveAt), METH_VARARGS, nullptr },
         { "remove_at_end", reinterpret_cast<PyCFunction>(IBindableVector_RemoveAtEnd), METH_VARARGS, nullptr },
         { "set_at", reinterpret_cast<PyCFunction>(IBindableVector_SetAt), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IBindableVector, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBindableVector[] = {
@@ -2731,6 +2720,16 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     };
 
+    static PyObject* _assign_array_IBindableVector(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableVector>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBindableVector(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2782,6 +2781,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     }
 
     static PyMethodDef methods_ImplementsIBindableVector[] = {
+        { "_assign_array_", _assign_array_IBindableVector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableVector), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableVector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableVector), METH_VARARGS | METH_STATIC, nullptr },
@@ -2983,21 +2983,10 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
-    static PyObject* _assign_array_IBindableVectorView(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IBindableVectorView[] = {
         { "first", reinterpret_cast<PyCFunction>(IBindableVectorView_First), METH_VARARGS, nullptr },
         { "get_at", reinterpret_cast<PyCFunction>(IBindableVectorView_GetAt), METH_VARARGS, nullptr },
         { "index_of", reinterpret_cast<PyCFunction>(IBindableVectorView_IndexOf), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IBindableVectorView, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBindableVectorView[] = {
@@ -3138,6 +3127,16 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     };
 
+    static PyObject* _assign_array_IBindableVectorView(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IBindableVectorView(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3189,6 +3188,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     }
 
     static PyMethodDef methods_ImplementsIBindableVectorView[] = {
+        { "_assign_array_", _assign_array_IBindableVectorView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBindableVectorView), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBindableVectorView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBindableVectorView), METH_VARARGS | METH_STATIC, nullptr },
@@ -3287,20 +3287,9 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
-    static PyObject* _assign_array_INotifyCollectionChanged(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INotifyCollectionChanged[] = {
         { "add_collection_changed", reinterpret_cast<PyCFunction>(INotifyCollectionChanged_add_CollectionChanged), METH_O, nullptr },
         { "remove_collection_changed", reinterpret_cast<PyCFunction>(INotifyCollectionChanged_remove_CollectionChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_INotifyCollectionChanged, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INotifyCollectionChanged[] = {
@@ -3390,6 +3379,16 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     };
 
+    static PyObject* _assign_array_INotifyCollectionChanged(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INotifyCollectionChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3441,6 +3440,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     }
 
     static PyMethodDef methods_ImplementsINotifyCollectionChanged[] = {
+        { "_assign_array_", _assign_array_INotifyCollectionChanged, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INotifyCollectionChanged), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINotifyCollectionChanged), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINotifyCollectionChanged), METH_VARARGS | METH_STATIC, nullptr },

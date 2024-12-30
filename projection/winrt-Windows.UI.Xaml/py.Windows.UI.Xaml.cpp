@@ -39964,21 +39964,10 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _assign_array_IDataTemplateExtension(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::IDataTemplateExtension>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDataTemplateExtension[] = {
         { "process_binding", reinterpret_cast<PyCFunction>(IDataTemplateExtension_ProcessBinding), METH_VARARGS, nullptr },
         { "process_bindings", reinterpret_cast<PyCFunction>(IDataTemplateExtension_ProcessBindings), METH_VARARGS, nullptr },
         { "reset_template", reinterpret_cast<PyCFunction>(IDataTemplateExtension_ResetTemplate), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IDataTemplateExtension, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDataTemplateExtension[] = {
@@ -40094,6 +40083,16 @@ namespace py::cpp::Windows::UI::Xaml
         }
     };
 
+    static PyObject* _assign_array_IDataTemplateExtension(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::IDataTemplateExtension>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IDataTemplateExtension(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -40145,6 +40144,7 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef methods_ImplementsIDataTemplateExtension[] = {
+        { "_assign_array_", _assign_array_IDataTemplateExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDataTemplateExtension), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDataTemplateExtension), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDataTemplateExtension), METH_VARARGS | METH_STATIC, nullptr },
@@ -40263,20 +40263,9 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* _assign_array_IElementFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::IElementFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IElementFactory[] = {
         { "get_element", reinterpret_cast<PyCFunction>(IElementFactory_GetElement), METH_VARARGS, nullptr },
         { "recycle_element", reinterpret_cast<PyCFunction>(IElementFactory_RecycleElement), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IElementFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IElementFactory[] = {
@@ -40366,6 +40355,16 @@ namespace py::cpp::Windows::UI::Xaml
         }
     };
 
+    static PyObject* _assign_array_IElementFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::IElementFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IElementFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -40417,6 +40416,7 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef methods_ImplementsIElementFactory[] = {
+        { "_assign_array_", _assign_array_IElementFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IElementFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIElementFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIElementFactory), METH_VARARGS | METH_STATIC, nullptr },

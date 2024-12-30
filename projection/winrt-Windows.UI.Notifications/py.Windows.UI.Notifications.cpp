@@ -10974,18 +10974,7 @@ namespace py::cpp::Windows::UI::Notifications
         }
     }
 
-    static PyObject* _assign_array_IAdaptiveNotificationContent(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IAdaptiveNotificationContent[] = {
-        { "_assign_array_", _assign_array_IAdaptiveNotificationContent, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAdaptiveNotificationContent[] = {
@@ -11055,6 +11044,16 @@ namespace py::cpp::Windows::UI::Notifications
         }
     };
 
+    static PyObject* _assign_array_IAdaptiveNotificationContent(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAdaptiveNotificationContent(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11106,6 +11105,7 @@ namespace py::cpp::Windows::UI::Notifications
     }
 
     static PyMethodDef methods_ImplementsIAdaptiveNotificationContent[] = {
+        { "_assign_array_", _assign_array_IAdaptiveNotificationContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAdaptiveNotificationContent), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAdaptiveNotificationContent), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAdaptiveNotificationContent), METH_VARARGS | METH_STATIC, nullptr },

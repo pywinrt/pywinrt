@@ -11368,18 +11368,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _assign_array_ILearningModelFeatureDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ILearningModelFeatureDescriptor[] = {
-        { "_assign_array_", _assign_array_ILearningModelFeatureDescriptor, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILearningModelFeatureDescriptor[] = {
@@ -11491,6 +11480,16 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     };
 
+    static PyObject* _assign_array_ILearningModelFeatureDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ILearningModelFeatureDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -11542,6 +11541,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     }
 
     static PyMethodDef methods_ImplementsILearningModelFeatureDescriptor[] = {
+        { "_assign_array_", _assign_array_ILearningModelFeatureDescriptor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelFeatureDescriptor), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelFeatureDescriptor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelFeatureDescriptor), METH_VARARGS | METH_STATIC, nullptr },
@@ -11605,18 +11605,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _assign_array_ILearningModelFeatureValue(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ILearningModelFeatureValue[] = {
-        { "_assign_array_", _assign_array_ILearningModelFeatureValue, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILearningModelFeatureValue[] = {
@@ -11664,6 +11653,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
         }
     };
+
+    static PyObject* _assign_array_ILearningModelFeatureValue(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ILearningModelFeatureValue(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -11716,6 +11715,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     }
 
     static PyMethodDef methods_ImplementsILearningModelFeatureValue[] = {
+        { "_assign_array_", _assign_array_ILearningModelFeatureValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelFeatureValue), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelFeatureValue), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelFeatureValue), METH_VARARGS | METH_STATIC, nullptr },
@@ -11749,18 +11749,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_ILearningModelOperatorProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ILearningModelOperatorProvider[] = {
-        { "_assign_array_", _assign_array_ILearningModelOperatorProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILearningModelOperatorProvider[] = {
@@ -11787,6 +11776,16 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
         }
     };
+
+    static PyObject* _assign_array_ILearningModelOperatorProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ILearningModelOperatorProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -11839,6 +11838,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     }
 
     static PyMethodDef methods_ImplementsILearningModelOperatorProvider[] = {
+        { "_assign_array_", _assign_array_ILearningModelOperatorProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelOperatorProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelOperatorProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelOperatorProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -11962,18 +11962,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _assign_array_ITensor(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::ITensor>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITensor[] = {
-        { "_assign_array_", _assign_array_ITensor, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITensor[] = {
@@ -12064,6 +12053,16 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     };
 
+    static PyObject* _assign_array_ITensor(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::MachineLearning::ITensor>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITensor(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12115,6 +12114,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     }
 
     static PyMethodDef methods_ImplementsITensor[] = {
+        { "_assign_array_", _assign_array_ITensor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITensor), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITensor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITensor), METH_VARARGS | METH_STATIC, nullptr },

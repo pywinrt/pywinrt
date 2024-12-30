@@ -19512,16 +19512,6 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
-    static PyObject* _assign_array_IHumanPresenceSensorExtension(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IHumanPresenceSensorExtension[] = {
         { "initialize", reinterpret_cast<PyCFunction>(IHumanPresenceSensorExtension_Initialize), METH_VARARGS, nullptr },
         { "process_reading", reinterpret_cast<PyCFunction>(IHumanPresenceSensorExtension_ProcessReading), METH_VARARGS, nullptr },
@@ -19530,7 +19520,6 @@ namespace py::cpp::Windows::Devices::Sensors
         { "start", reinterpret_cast<PyCFunction>(IHumanPresenceSensorExtension_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IHumanPresenceSensorExtension_Stop), METH_VARARGS, nullptr },
         { "uninitialize", reinterpret_cast<PyCFunction>(IHumanPresenceSensorExtension_Uninitialize), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IHumanPresenceSensorExtension, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IHumanPresenceSensorExtension[] = {
@@ -19746,6 +19735,16 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     };
 
+    static PyObject* _assign_array_IHumanPresenceSensorExtension(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IHumanPresenceSensorExtension(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -19797,6 +19796,7 @@ namespace py::cpp::Windows::Devices::Sensors
     }
 
     static PyMethodDef methods_ImplementsIHumanPresenceSensorExtension[] = {
+        { "_assign_array_", _assign_array_IHumanPresenceSensorExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IHumanPresenceSensorExtension), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIHumanPresenceSensorExtension), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIHumanPresenceSensorExtension), METH_VARARGS | METH_STATIC, nullptr },
@@ -19830,18 +19830,7 @@ namespace py::cpp::Windows::Devices::Sensors
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_ISensorDataThreshold(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::ISensorDataThreshold>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISensorDataThreshold[] = {
-        { "_assign_array_", _assign_array_ISensorDataThreshold, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISensorDataThreshold[] = {
@@ -19868,6 +19857,16 @@ namespace py::cpp::Windows::Devices::Sensors
         {
         }
     };
+
+    static PyObject* _assign_array_ISensorDataThreshold(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::ISensorDataThreshold>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ISensorDataThreshold(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -19920,6 +19919,7 @@ namespace py::cpp::Windows::Devices::Sensors
     }
 
     static PyMethodDef methods_ImplementsISensorDataThreshold[] = {
+        { "_assign_array_", _assign_array_ISensorDataThreshold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISensorDataThreshold), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISensorDataThreshold), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISensorDataThreshold), METH_VARARGS | METH_STATIC, nullptr },

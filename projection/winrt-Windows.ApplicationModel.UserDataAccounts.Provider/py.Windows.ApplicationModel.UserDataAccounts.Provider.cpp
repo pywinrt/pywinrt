@@ -741,18 +741,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         }
     }
 
-    static PyObject* _assign_array_IUserDataAccountProviderOperation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IUserDataAccountProviderOperation[] = {
-        { "_assign_array_", _assign_array_IUserDataAccountProviderOperation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IUserDataAccountProviderOperation[] = {
@@ -800,6 +789,16 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
             }
         }
     };
+
+    static PyObject* _assign_array_IUserDataAccountProviderOperation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IUserDataAccountProviderOperation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -852,6 +851,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     }
 
     static PyMethodDef methods_ImplementsIUserDataAccountProviderOperation[] = {
+        { "_assign_array_", _assign_array_IUserDataAccountProviderOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IUserDataAccountProviderOperation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIUserDataAccountProviderOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIUserDataAccountProviderOperation), METH_VARARGS | METH_STATIC, nullptr },

@@ -1800,16 +1800,6 @@ namespace py::cpp::Windows::Web::Http::Filters
         }
     }
 
-    static PyObject* _assign_array_IHttpFilter(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Web::Http::Filters::IHttpFilter>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_IHttpFilter(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -1836,7 +1826,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     static PyMethodDef _methods_IHttpFilter[] = {
         { "close", reinterpret_cast<PyCFunction>(IHttpFilter_Close), METH_VARARGS, nullptr },
         { "send_request_async", reinterpret_cast<PyCFunction>(IHttpFilter_SendRequestAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IHttpFilter, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IHttpFilter), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IHttpFilter), METH_VARARGS, nullptr },
         { }};
@@ -1922,6 +1911,16 @@ namespace py::cpp::Windows::Web::Http::Filters
         }
     };
 
+    static PyObject* _assign_array_IHttpFilter(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Web::Http::Filters::IHttpFilter>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IHttpFilter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1973,6 +1972,7 @@ namespace py::cpp::Windows::Web::Http::Filters
     }
 
     static PyMethodDef methods_ImplementsIHttpFilter[] = {
+        { "_assign_array_", _assign_array_IHttpFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IHttpFilter), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIHttpFilter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIHttpFilter), METH_VARARGS | METH_STATIC, nullptr },

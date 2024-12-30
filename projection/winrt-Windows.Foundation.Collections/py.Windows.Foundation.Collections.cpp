@@ -3697,16 +3697,6 @@ namespace py::cpp::Windows::Foundation::Collections
         }
     }
 
-    static PyObject* _assign_array_IPropertySet(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Collections::IPropertySet>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _iterator_IPropertySet(py::wrapper::Windows::Foundation::Collections::IPropertySet* self) noexcept
     {
         try
@@ -3849,7 +3839,6 @@ namespace py::cpp::Windows::Foundation::Collections
         { "remove", reinterpret_cast<PyCFunction>(IPropertySet_Remove), METH_VARARGS, nullptr },
         { "add_map_changed", reinterpret_cast<PyCFunction>(IPropertySet_add_MapChanged), METH_O, nullptr },
         { "remove_map_changed", reinterpret_cast<PyCFunction>(IPropertySet_remove_MapChanged), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IPropertySet, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPropertySet[] = {
@@ -4179,6 +4168,16 @@ namespace py::cpp::Windows::Foundation::Collections
         }
     };
 
+    static PyObject* _assign_array_IPropertySet(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Collections::IPropertySet>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IPropertySet(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4230,6 +4229,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIPropertySet[] = {
+        { "_assign_array_", _assign_array_IPropertySet, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPropertySet), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertySet), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertySet), METH_VARARGS | METH_STATIC, nullptr },
@@ -4323,18 +4323,7 @@ namespace py::cpp::Windows::Foundation::Collections
         }
     }
 
-    static PyObject* _assign_array_IVectorChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVectorChangedEventArgs[] = {
-        { "_assign_array_", _assign_array_IVectorChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVectorChangedEventArgs[] = {
@@ -4404,6 +4393,16 @@ namespace py::cpp::Windows::Foundation::Collections
         }
     };
 
+    static PyObject* _assign_array_IVectorChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IVectorChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4455,6 +4454,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIVectorChangedEventArgs[] = {
+        { "_assign_array_", _assign_array_IVectorChangedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVectorChangedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVectorChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVectorChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },

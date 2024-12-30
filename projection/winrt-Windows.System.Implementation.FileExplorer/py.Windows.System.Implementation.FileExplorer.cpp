@@ -204,20 +204,9 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         }
     }
 
-    static PyObject* _assign_array_ISysStorageProviderEventSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISysStorageProviderEventSource[] = {
         { "add_event_received", reinterpret_cast<PyCFunction>(ISysStorageProviderEventSource_add_EventReceived), METH_O, nullptr },
         { "remove_event_received", reinterpret_cast<PyCFunction>(ISysStorageProviderEventSource_remove_EventReceived), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ISysStorageProviderEventSource, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISysStorageProviderEventSource[] = {
@@ -307,6 +296,16 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         }
     };
 
+    static PyObject* _assign_array_ISysStorageProviderEventSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISysStorageProviderEventSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -358,6 +357,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     }
 
     static PyMethodDef methods_ImplementsISysStorageProviderEventSource[] = {
+        { "_assign_array_", _assign_array_ISysStorageProviderEventSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISysStorageProviderEventSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISysStorageProviderEventSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISysStorageProviderEventSource), METH_VARARGS | METH_STATIC, nullptr },
@@ -476,20 +476,9 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         }
     }
 
-    static PyObject* _assign_array_ISysStorageProviderHandlerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISysStorageProviderHandlerFactory[] = {
         { "get_event_source", reinterpret_cast<PyCFunction>(ISysStorageProviderHandlerFactory_GetEventSource), METH_VARARGS, nullptr },
         { "get_http_request_provider", reinterpret_cast<PyCFunction>(ISysStorageProviderHandlerFactory_GetHttpRequestProvider), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISysStorageProviderHandlerFactory, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISysStorageProviderHandlerFactory[] = {
@@ -593,6 +582,16 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         }
     };
 
+    static PyObject* _assign_array_ISysStorageProviderHandlerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISysStorageProviderHandlerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -644,6 +643,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     }
 
     static PyMethodDef methods_ImplementsISysStorageProviderHandlerFactory[] = {
+        { "_assign_array_", _assign_array_ISysStorageProviderHandlerFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISysStorageProviderHandlerFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISysStorageProviderHandlerFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISysStorageProviderHandlerFactory), METH_VARARGS | METH_STATIC, nullptr },
@@ -719,19 +719,8 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         }
     }
 
-    static PyObject* _assign_array_ISysStorageProviderHttpRequestProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISysStorageProviderHttpRequestProvider[] = {
         { "send_request_async", reinterpret_cast<PyCFunction>(ISysStorageProviderHttpRequestProvider_SendRequestAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISysStorageProviderHttpRequestProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISysStorageProviderHttpRequestProvider[] = {
@@ -791,6 +780,16 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         }
     };
 
+    static PyObject* _assign_array_ISysStorageProviderHttpRequestProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISysStorageProviderHttpRequestProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -842,6 +841,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     }
 
     static PyMethodDef methods_ImplementsISysStorageProviderHttpRequestProvider[] = {
+        { "_assign_array_", _assign_array_ISysStorageProviderHttpRequestProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISysStorageProviderHttpRequestProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISysStorageProviderHttpRequestProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISysStorageProviderHttpRequestProvider), METH_VARARGS | METH_STATIC, nullptr },

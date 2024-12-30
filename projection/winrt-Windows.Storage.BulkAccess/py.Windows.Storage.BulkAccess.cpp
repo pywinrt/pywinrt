@@ -5010,22 +5010,11 @@ namespace py::cpp::Windows::Storage::BulkAccess
         }
     }
 
-    static PyObject* _assign_array_IStorageItemInformation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStorageItemInformation[] = {
         { "add_properties_updated", reinterpret_cast<PyCFunction>(IStorageItemInformation_add_PropertiesUpdated), METH_O, nullptr },
         { "remove_properties_updated", reinterpret_cast<PyCFunction>(IStorageItemInformation_remove_PropertiesUpdated), METH_O, nullptr },
         { "add_thumbnail_updated", reinterpret_cast<PyCFunction>(IStorageItemInformation_add_ThumbnailUpdated), METH_O, nullptr },
         { "remove_thumbnail_updated", reinterpret_cast<PyCFunction>(IStorageItemInformation_remove_ThumbnailUpdated), METH_O, nullptr },
-        { "_assign_array_", _assign_array_IStorageItemInformation, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageItemInformation[] = {
@@ -5303,6 +5292,16 @@ namespace py::cpp::Windows::Storage::BulkAccess
         }
     };
 
+    static PyObject* _assign_array_IStorageItemInformation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStorageItemInformation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5354,6 +5353,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
     }
 
     static PyMethodDef methods_ImplementsIStorageItemInformation[] = {
+        { "_assign_array_", _assign_array_IStorageItemInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemInformation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItemInformation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItemInformation), METH_VARARGS | METH_STATIC, nullptr },

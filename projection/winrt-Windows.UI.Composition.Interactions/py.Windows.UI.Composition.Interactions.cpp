@@ -6129,18 +6129,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_ICompositionInteractionSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICompositionInteractionSource[] = {
-        { "_assign_array_", _assign_array_ICompositionInteractionSource, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICompositionInteractionSource[] = {
@@ -6167,6 +6156,16 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         {
         }
     };
+
+    static PyObject* _assign_array_ICompositionInteractionSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_ICompositionInteractionSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -6219,6 +6218,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     }
 
     static PyMethodDef methods_ImplementsICompositionInteractionSource[] = {
+        { "_assign_array_", _assign_array_ICompositionInteractionSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICompositionInteractionSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICompositionInteractionSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICompositionInteractionSource), METH_VARARGS | METH_STATIC, nullptr },
@@ -6516,16 +6516,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
-    static PyObject* _assign_array_IInteractionTrackerOwner(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IInteractionTrackerOwner[] = {
         { "custom_animation_state_entered", reinterpret_cast<PyCFunction>(IInteractionTrackerOwner_CustomAnimationStateEntered), METH_VARARGS, nullptr },
         { "idle_state_entered", reinterpret_cast<PyCFunction>(IInteractionTrackerOwner_IdleStateEntered), METH_VARARGS, nullptr },
@@ -6533,7 +6523,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { "interacting_state_entered", reinterpret_cast<PyCFunction>(IInteractionTrackerOwner_InteractingStateEntered), METH_VARARGS, nullptr },
         { "request_ignored", reinterpret_cast<PyCFunction>(IInteractionTrackerOwner_RequestIgnored), METH_VARARGS, nullptr },
         { "values_changed", reinterpret_cast<PyCFunction>(IInteractionTrackerOwner_ValuesChanged), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IInteractionTrackerOwner, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInteractionTrackerOwner[] = {
@@ -6813,6 +6802,16 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     };
 
+    static PyObject* _assign_array_IInteractionTrackerOwner(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IInteractionTrackerOwner(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6864,6 +6863,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     }
 
     static PyMethodDef methods_ImplementsIInteractionTrackerOwner[] = {
+        { "_assign_array_", _assign_array_IInteractionTrackerOwner, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInteractionTrackerOwner), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInteractionTrackerOwner), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInteractionTrackerOwner), METH_VARARGS | METH_STATIC, nullptr },

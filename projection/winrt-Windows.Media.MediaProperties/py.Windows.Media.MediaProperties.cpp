@@ -9118,18 +9118,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         }
     }
 
-    static PyObject* _assign_array_IMediaEncodingProperties(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IMediaEncodingProperties[] = {
-        { "_assign_array_", _assign_array_IMediaEncodingProperties, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaEncodingProperties[] = {
@@ -9243,6 +9232,16 @@ namespace py::cpp::Windows::Media::MediaProperties
         }
     };
 
+    static PyObject* _assign_array_IMediaEncodingProperties(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IMediaEncodingProperties(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9294,6 +9293,7 @@ namespace py::cpp::Windows::Media::MediaProperties
     }
 
     static PyMethodDef methods_ImplementsIMediaEncodingProperties[] = {
+        { "_assign_array_", _assign_array_IMediaEncodingProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaEncodingProperties), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaEncodingProperties), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaEncodingProperties), METH_VARARGS | METH_STATIC, nullptr },

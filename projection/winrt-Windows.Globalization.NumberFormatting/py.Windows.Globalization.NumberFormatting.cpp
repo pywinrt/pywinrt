@@ -5747,21 +5747,10 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* _assign_array_INumberFormatter(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INumberFormatter[] = {
         { "format_double", reinterpret_cast<PyCFunction>(INumberFormatter_FormatDouble), METH_VARARGS, nullptr },
         { "format_int", reinterpret_cast<PyCFunction>(INumberFormatter_FormatInt), METH_VARARGS, nullptr },
         { "format_uint", reinterpret_cast<PyCFunction>(INumberFormatter_FormatUInt), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INumberFormatter, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INumberFormatter[] = {
@@ -5885,6 +5874,16 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     };
 
+    static PyObject* _assign_array_INumberFormatter(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INumberFormatter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5936,6 +5935,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef methods_ImplementsINumberFormatter[] = {
+        { "_assign_array_", _assign_array_INumberFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberFormatter), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberFormatter), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberFormatter), METH_VARARGS | METH_STATIC, nullptr },
@@ -6095,21 +6095,10 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* _assign_array_INumberFormatter2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INumberFormatter2[] = {
         { "format_double", reinterpret_cast<PyCFunction>(INumberFormatter2_FormatDouble), METH_VARARGS, nullptr },
         { "format_int", reinterpret_cast<PyCFunction>(INumberFormatter2_FormatInt), METH_VARARGS, nullptr },
         { "format_uint", reinterpret_cast<PyCFunction>(INumberFormatter2_FormatUInt), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INumberFormatter2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INumberFormatter2[] = {
@@ -6233,6 +6222,16 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     };
 
+    static PyObject* _assign_array_INumberFormatter2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INumberFormatter2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6284,6 +6283,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef methods_ImplementsINumberFormatter2[] = {
+        { "_assign_array_", _assign_array_INumberFormatter2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberFormatter2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberFormatter2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberFormatter2), METH_VARARGS | METH_STATIC, nullptr },
@@ -6782,18 +6782,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* _assign_array_INumberFormatterOptions(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INumberFormatterOptions[] = {
-        { "_assign_array_", _assign_array_INumberFormatterOptions, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INumberFormatterOptions[] = {
@@ -7125,6 +7114,16 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     };
 
+    static PyObject* _assign_array_INumberFormatterOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INumberFormatterOptions(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7176,6 +7175,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef methods_ImplementsINumberFormatterOptions[] = {
+        { "_assign_array_", _assign_array_INumberFormatterOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberFormatterOptions), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberFormatterOptions), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberFormatterOptions), METH_VARARGS | METH_STATIC, nullptr },
@@ -7335,21 +7335,10 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* _assign_array_INumberParser(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberParser>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INumberParser[] = {
         { "parse_double", reinterpret_cast<PyCFunction>(INumberParser_ParseDouble), METH_VARARGS, nullptr },
         { "parse_int", reinterpret_cast<PyCFunction>(INumberParser_ParseInt), METH_VARARGS, nullptr },
         { "parse_uint", reinterpret_cast<PyCFunction>(INumberParser_ParseUInt), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INumberParser, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INumberParser[] = {
@@ -7473,6 +7462,16 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     };
 
+    static PyObject* _assign_array_INumberParser(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberParser>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INumberParser(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7524,6 +7523,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef methods_ImplementsINumberParser[] = {
+        { "_assign_array_", _assign_array_INumberParser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberParser), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberParser), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberParser), METH_VARARGS | METH_STATIC, nullptr },
@@ -7809,16 +7809,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* _assign_array_INumberRounder(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberRounder>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INumberRounder[] = {
         { "round_double", reinterpret_cast<PyCFunction>(INumberRounder_RoundDouble), METH_VARARGS, nullptr },
         { "round_int32", reinterpret_cast<PyCFunction>(INumberRounder_RoundInt32), METH_VARARGS, nullptr },
@@ -7826,7 +7816,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { "round_single", reinterpret_cast<PyCFunction>(INumberRounder_RoundSingle), METH_VARARGS, nullptr },
         { "round_uint32", reinterpret_cast<PyCFunction>(INumberRounder_RoundUInt32), METH_VARARGS, nullptr },
         { "round_uint64", reinterpret_cast<PyCFunction>(INumberRounder_RoundUInt64), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_INumberRounder, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INumberRounder[] = {
@@ -8046,6 +8035,16 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     };
 
+    static PyObject* _assign_array_INumberRounder(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberRounder>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INumberRounder(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -8097,6 +8096,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef methods_ImplementsINumberRounder[] = {
+        { "_assign_array_", _assign_array_INumberRounder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberRounder), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberRounder), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberRounder), METH_VARARGS | METH_STATIC, nullptr },
@@ -8199,18 +8199,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* _assign_array_INumberRounderOption(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_INumberRounderOption[] = {
-        { "_assign_array_", _assign_array_INumberRounderOption, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_INumberRounderOption[] = {
@@ -8282,6 +8271,16 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     };
 
+    static PyObject* _assign_array_INumberRounderOption(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_INumberRounderOption(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -8333,6 +8332,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef methods_ImplementsINumberRounderOption[] = {
+        { "_assign_array_", _assign_array_INumberRounderOption, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberRounderOption), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsINumberRounderOption), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsINumberRounderOption), METH_VARARGS | METH_STATIC, nullptr },
@@ -8435,18 +8435,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* _assign_array_ISignedZeroOption(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISignedZeroOption[] = {
-        { "_assign_array_", _assign_array_ISignedZeroOption, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISignedZeroOption[] = {
@@ -8518,6 +8507,16 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     };
 
+    static PyObject* _assign_array_ISignedZeroOption(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISignedZeroOption(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -8569,6 +8568,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef methods_ImplementsISignedZeroOption[] = {
+        { "_assign_array_", _assign_array_ISignedZeroOption, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISignedZeroOption), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISignedZeroOption), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISignedZeroOption), METH_VARARGS | METH_STATIC, nullptr },
@@ -8671,18 +8671,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* _assign_array_ISignificantDigitsOption(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISignificantDigitsOption[] = {
-        { "_assign_array_", _assign_array_ISignificantDigitsOption, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISignificantDigitsOption[] = {
@@ -8754,6 +8743,16 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     };
 
+    static PyObject* _assign_array_ISignificantDigitsOption(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISignificantDigitsOption(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -8805,6 +8804,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef methods_ImplementsISignificantDigitsOption[] = {
+        { "_assign_array_", _assign_array_ISignificantDigitsOption, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISignificantDigitsOption), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISignificantDigitsOption), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISignificantDigitsOption), METH_VARARGS | METH_STATIC, nullptr },

@@ -7081,18 +7081,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IDeviceEnumerationSettings(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDeviceEnumerationSettings[] = {
-        { "_assign_array_", _assign_array_IDeviceEnumerationSettings, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDeviceEnumerationSettings[] = {
@@ -7119,6 +7108,16 @@ namespace py::cpp::Windows::Devices::Enumeration
         {
         }
     };
+
+    static PyObject* _assign_array_IDeviceEnumerationSettings(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IDeviceEnumerationSettings(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -7171,6 +7170,7 @@ namespace py::cpp::Windows::Devices::Enumeration
     }
 
     static PyMethodDef methods_ImplementsIDeviceEnumerationSettings[] = {
+        { "_assign_array_", _assign_array_IDeviceEnumerationSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDeviceEnumerationSettings), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDeviceEnumerationSettings), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDeviceEnumerationSettings), METH_VARARGS | METH_STATIC, nullptr },
@@ -7204,18 +7204,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IDevicePairingSettings(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDevicePairingSettings[] = {
-        { "_assign_array_", _assign_array_IDevicePairingSettings, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDevicePairingSettings[] = {
@@ -7242,6 +7231,16 @@ namespace py::cpp::Windows::Devices::Enumeration
         {
         }
     };
+
+    static PyObject* _assign_array_IDevicePairingSettings(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IDevicePairingSettings(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -7294,6 +7293,7 @@ namespace py::cpp::Windows::Devices::Enumeration
     }
 
     static PyMethodDef methods_ImplementsIDevicePairingSettings[] = {
+        { "_assign_array_", _assign_array_IDevicePairingSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDevicePairingSettings), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDevicePairingSettings), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDevicePairingSettings), METH_VARARGS | METH_STATIC, nullptr },

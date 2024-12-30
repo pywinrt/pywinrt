@@ -90,18 +90,7 @@ namespace py::cpp::Windows::Graphics::Effects
         }
     }
 
-    static PyObject* _assign_array_IGraphicsEffect(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Effects::IGraphicsEffect>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGraphicsEffect[] = {
-        { "_assign_array_", _assign_array_IGraphicsEffect, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGraphicsEffect[] = {
@@ -173,6 +162,16 @@ namespace py::cpp::Windows::Graphics::Effects
         }
     };
 
+    static PyObject* _assign_array_IGraphicsEffect(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Effects::IGraphicsEffect>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGraphicsEffect(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -224,6 +223,7 @@ namespace py::cpp::Windows::Graphics::Effects
     }
 
     static PyMethodDef methods_ImplementsIGraphicsEffect[] = {
+        { "_assign_array_", _assign_array_IGraphicsEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGraphicsEffect), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGraphicsEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGraphicsEffect), METH_VARARGS | METH_STATIC, nullptr },
@@ -257,18 +257,7 @@ namespace py::cpp::Windows::Graphics::Effects
         Py_DECREF(tp);
     }
 
-    static PyObject* _assign_array_IGraphicsEffectSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGraphicsEffectSource[] = {
-        { "_assign_array_", _assign_array_IGraphicsEffectSource, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGraphicsEffectSource[] = {
@@ -295,6 +284,16 @@ namespace py::cpp::Windows::Graphics::Effects
         {
         }
     };
+
+    static PyObject* _assign_array_IGraphicsEffectSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IGraphicsEffectSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -347,6 +346,7 @@ namespace py::cpp::Windows::Graphics::Effects
     }
 
     static PyMethodDef methods_ImplementsIGraphicsEffectSource[] = {
+        { "_assign_array_", _assign_array_IGraphicsEffectSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGraphicsEffectSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGraphicsEffectSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGraphicsEffectSource), METH_VARARGS | METH_STATIC, nullptr },

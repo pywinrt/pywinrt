@@ -1258,21 +1258,10 @@ namespace py::cpp::Windows::Devices::I2c
         }
     }
 
-    static PyObject* _assign_array_II2cDeviceStatics(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::I2c::II2cDeviceStatics>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_II2cDeviceStatics[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(II2cDeviceStatics_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(II2cDeviceStatics_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(II2cDeviceStatics_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_II2cDeviceStatics, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_II2cDeviceStatics[] = {
@@ -1402,6 +1391,16 @@ namespace py::cpp::Windows::Devices::I2c
         }
     };
 
+    static PyObject* _assign_array_II2cDeviceStatics(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::I2c::II2cDeviceStatics>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_II2cDeviceStatics(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1453,6 +1452,7 @@ namespace py::cpp::Windows::Devices::I2c
     }
 
     static PyMethodDef methods_ImplementsII2cDeviceStatics[] = {
+        { "_assign_array_", _assign_array_II2cDeviceStatics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_II2cDeviceStatics), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsII2cDeviceStatics), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsII2cDeviceStatics), METH_VARARGS | METH_STATIC, nullptr },

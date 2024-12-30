@@ -500,19 +500,8 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         }
     }
 
-    static PyObject* _assign_array_ISpiControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISpiControllerProvider[] = {
         { "get_device_provider", reinterpret_cast<PyCFunction>(ISpiControllerProvider_GetDeviceProvider), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISpiControllerProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISpiControllerProvider[] = {
@@ -572,6 +561,16 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         }
     };
 
+    static PyObject* _assign_array_ISpiControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISpiControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -623,6 +622,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     }
 
     static PyMethodDef methods_ImplementsISpiControllerProvider[] = {
+        { "_assign_array_", _assign_array_ISpiControllerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpiControllerProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpiControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpiControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -931,16 +931,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         }
     }
 
-    static PyObject* _assign_array_ISpiDeviceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyObject* _enter_ISpiDeviceProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -970,7 +960,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         { "transfer_full_duplex", reinterpret_cast<PyCFunction>(ISpiDeviceProvider_TransferFullDuplex), METH_VARARGS, nullptr },
         { "transfer_sequential", reinterpret_cast<PyCFunction>(ISpiDeviceProvider_TransferSequential), METH_VARARGS, nullptr },
         { "write", reinterpret_cast<PyCFunction>(ISpiDeviceProvider_Write), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISpiDeviceProvider, METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ISpiDeviceProvider), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_ISpiDeviceProvider), METH_VARARGS, nullptr },
         { }};
@@ -1210,6 +1199,16 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         }
     };
 
+    static PyObject* _assign_array_ISpiDeviceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISpiDeviceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1261,6 +1260,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     }
 
     static PyMethodDef methods_ImplementsISpiDeviceProvider[] = {
+        { "_assign_array_", _assign_array_ISpiDeviceProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpiDeviceProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpiDeviceProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpiDeviceProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -1334,19 +1334,8 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         }
     }
 
-    static PyObject* _assign_array_ISpiProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Spi::Provider::ISpiProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISpiProvider[] = {
         { "get_controllers_async", reinterpret_cast<PyCFunction>(ISpiProvider_GetControllersAsync), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISpiProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISpiProvider[] = {
@@ -1400,6 +1389,16 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         }
     };
 
+    static PyObject* _assign_array_ISpiProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Spi::Provider::ISpiProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISpiProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1451,6 +1450,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     }
 
     static PyMethodDef methods_ImplementsISpiProvider[] = {
+        { "_assign_array_", _assign_array_ISpiProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpiProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpiProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpiProvider), METH_VARARGS | METH_STATIC, nullptr },

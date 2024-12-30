@@ -234,18 +234,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IAnnotationProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IAnnotationProvider[] = {
-        { "_assign_array_", _assign_array_IAnnotationProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAnnotationProvider[] = {
@@ -378,6 +367,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IAnnotationProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IAnnotationProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -429,6 +428,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIAnnotationProvider[] = {
+        { "_assign_array_", _assign_array_IAnnotationProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAnnotationProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAnnotationProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAnnotationProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -504,19 +504,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ICustomNavigationProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICustomNavigationProvider[] = {
         { "navigate_custom", reinterpret_cast<PyCFunction>(ICustomNavigationProvider_NavigateCustom), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ICustomNavigationProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICustomNavigationProvider[] = {
@@ -576,6 +565,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ICustomNavigationProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICustomNavigationProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -627,6 +626,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsICustomNavigationProvider[] = {
+        { "_assign_array_", _assign_array_ICustomNavigationProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICustomNavigationProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICustomNavigationProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICustomNavigationProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -733,19 +733,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IDockProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDockProvider[] = {
         { "set_dock_position", reinterpret_cast<PyCFunction>(IDockProvider_SetDockPosition), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IDockProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDockProvider[] = {
@@ -824,6 +813,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IDockProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IDockProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -875,6 +874,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIDockProvider[] = {
+        { "_assign_array_", _assign_array_IDockProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDockProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDockProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDockProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -1038,19 +1038,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IDragProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDragProvider[] = {
         { "get_grabbed_items", reinterpret_cast<PyCFunction>(IDragProvider_GetGrabbedItems), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IDragProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDragProvider[] = {
@@ -1169,6 +1158,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IDragProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IDragProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1220,6 +1219,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIDragProvider[] = {
+        { "_assign_array_", _assign_array_IDragProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDragProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDragProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDragProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -1313,18 +1313,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IDropTargetProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IDropTargetProvider[] = {
-        { "_assign_array_", _assign_array_IDropTargetProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IDropTargetProvider[] = {
@@ -1395,6 +1384,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IDropTargetProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IDropTargetProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1446,6 +1445,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIDropTargetProvider[] = {
+        { "_assign_array_", _assign_array_IDropTargetProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDropTargetProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDropTargetProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDropTargetProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -1591,20 +1591,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IExpandCollapseProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IExpandCollapseProvider[] = {
         { "collapse", reinterpret_cast<PyCFunction>(IExpandCollapseProvider_Collapse), METH_VARARGS, nullptr },
         { "expand", reinterpret_cast<PyCFunction>(IExpandCollapseProvider_Expand), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IExpandCollapseProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IExpandCollapseProvider[] = {
@@ -1701,6 +1690,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IExpandCollapseProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IExpandCollapseProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -1752,6 +1751,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIExpandCollapseProvider[] = {
+        { "_assign_array_", _assign_array_IExpandCollapseProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IExpandCollapseProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIExpandCollapseProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIExpandCollapseProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -1935,18 +1935,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IGridItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGridItemProvider[] = {
-        { "_assign_array_", _assign_array_IGridItemProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGridItemProvider[] = {
@@ -2079,6 +2068,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IGridItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGridItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2130,6 +2129,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIGridItemProvider[] = {
+        { "_assign_array_", _assign_array_IGridItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGridItemProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGridItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGridItemProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -2266,19 +2266,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IGridProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IGridProvider[] = {
         { "get_item", reinterpret_cast<PyCFunction>(IGridProvider_GetItem), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IGridProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGridProvider[] = {
@@ -2392,6 +2381,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IGridProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IGridProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2443,6 +2442,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIGridProvider[] = {
+        { "_assign_array_", _assign_array_IGridProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IGridProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGridProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGridProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -2517,19 +2517,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IInvokeProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IInvokeProvider[] = {
         { "invoke", reinterpret_cast<PyCFunction>(IInvokeProvider_Invoke), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IInvokeProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInvokeProvider[] = {
@@ -2580,6 +2569,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
             }
         }
     };
+
+    static PyObject* _assign_array_IInvokeProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IInvokeProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -2632,6 +2631,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIInvokeProvider[] = {
+        { "_assign_array_", _assign_array_IInvokeProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInvokeProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInvokeProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInvokeProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -2709,19 +2709,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IItemContainerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IItemContainerProvider[] = {
         { "find_item_by_property", reinterpret_cast<PyCFunction>(IItemContainerProvider_FindItemByProperty), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IItemContainerProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IItemContainerProvider[] = {
@@ -2799,6 +2788,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IItemContainerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IItemContainerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2850,6 +2849,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIItemContainerProvider[] = {
+        { "_assign_array_", _assign_array_IItemContainerProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IItemContainerProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIItemContainerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIItemContainerProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -3038,21 +3038,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IMultipleViewProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IMultipleViewProvider[] = {
         { "get_supported_views", reinterpret_cast<PyCFunction>(IMultipleViewProvider_GetSupportedViews), METH_VARARGS, nullptr },
         { "get_view_name", reinterpret_cast<PyCFunction>(IMultipleViewProvider_GetViewName), METH_VARARGS, nullptr },
         { "set_current_view", reinterpret_cast<PyCFunction>(IMultipleViewProvider_SetCurrentView), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IMultipleViewProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMultipleViewProvider[] = {
@@ -3190,6 +3179,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IMultipleViewProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IMultipleViewProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3241,6 +3240,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIMultipleViewProvider[] = {
+        { "_assign_array_", _assign_array_IMultipleViewProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMultipleViewProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMultipleViewProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMultipleViewProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -3314,19 +3314,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IObjectModelProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IObjectModelProvider[] = {
         { "get_underlying_object_model", reinterpret_cast<PyCFunction>(IObjectModelProvider_GetUnderlyingObjectModel), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IObjectModelProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IObjectModelProvider[] = {
@@ -3380,6 +3369,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IObjectModelProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IObjectModelProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3431,6 +3430,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIObjectModelProvider[] = {
+        { "_assign_array_", _assign_array_IObjectModelProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IObjectModelProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIObjectModelProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIObjectModelProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -3687,19 +3687,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IRangeValueProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IRangeValueProvider[] = {
         { "set_value", reinterpret_cast<PyCFunction>(IRangeValueProvider_SetValue), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IRangeValueProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IRangeValueProvider[] = {
@@ -3883,6 +3872,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IRangeValueProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IRangeValueProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3934,6 +3933,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIRangeValueProvider[] = {
+        { "_assign_array_", _assign_array_IRangeValueProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRangeValueProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIRangeValueProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIRangeValueProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -4008,19 +4008,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IScrollItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IScrollItemProvider[] = {
         { "scroll_into_view", reinterpret_cast<PyCFunction>(IScrollItemProvider_ScrollIntoView), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IScrollItemProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IScrollItemProvider[] = {
@@ -4071,6 +4060,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
             }
         }
     };
+
+    static PyObject* _assign_array_IScrollItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IScrollItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -4123,6 +4122,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIScrollItemProvider[] = {
+        { "_assign_array_", _assign_array_IScrollItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IScrollItemProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIScrollItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIScrollItemProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -4424,20 +4424,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IScrollProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IScrollProvider[] = {
         { "scroll", reinterpret_cast<PyCFunction>(IScrollProvider_Scroll), METH_VARARGS, nullptr },
         { "set_scroll_percent", reinterpret_cast<PyCFunction>(IScrollProvider_SetScrollPercent), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IScrollProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IScrollProvider[] = {
@@ -4675,6 +4664,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IScrollProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IScrollProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -4726,6 +4725,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIScrollProvider[] = {
+        { "_assign_array_", _assign_array_IScrollProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IScrollProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIScrollProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIScrollProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -4942,21 +4942,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ISelectionItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISelectionItemProvider[] = {
         { "add_to_selection", reinterpret_cast<PyCFunction>(ISelectionItemProvider_AddToSelection), METH_VARARGS, nullptr },
         { "remove_from_selection", reinterpret_cast<PyCFunction>(ISelectionItemProvider_RemoveFromSelection), METH_VARARGS, nullptr },
         { "select", reinterpret_cast<PyCFunction>(ISelectionItemProvider_Select), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISelectionItemProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISelectionItemProvider[] = {
@@ -5098,6 +5087,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ISelectionItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISelectionItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5149,6 +5148,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsISelectionItemProvider[] = {
+        { "_assign_array_", _assign_array_ISelectionItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISelectionItemProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISelectionItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISelectionItemProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -5282,19 +5282,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ISelectionProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISelectionProvider[] = {
         { "get_selection", reinterpret_cast<PyCFunction>(ISelectionProvider_GetSelection), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISelectionProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISelectionProvider[] = {
@@ -5391,6 +5380,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ISelectionProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISelectionProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5442,6 +5441,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsISelectionProvider[] = {
+        { "_assign_array_", _assign_array_ISelectionProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISelectionProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISelectionProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISelectionProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -5585,20 +5585,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ISpreadsheetItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISpreadsheetItemProvider[] = {
         { "get_annotation_objects", reinterpret_cast<PyCFunction>(ISpreadsheetItemProvider_GetAnnotationObjects), METH_VARARGS, nullptr },
         { "get_annotation_types", reinterpret_cast<PyCFunction>(ISpreadsheetItemProvider_GetAnnotationTypes), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISpreadsheetItemProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISpreadsheetItemProvider[] = {
@@ -5701,6 +5690,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ISpreadsheetItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISpreadsheetItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5752,6 +5751,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsISpreadsheetItemProvider[] = {
+        { "_assign_array_", _assign_array_ISpreadsheetItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpreadsheetItemProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpreadsheetItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpreadsheetItemProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -5827,19 +5827,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ISpreadsheetProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISpreadsheetProvider[] = {
         { "get_item_by_name", reinterpret_cast<PyCFunction>(ISpreadsheetProvider_GetItemByName), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISpreadsheetProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISpreadsheetProvider[] = {
@@ -5899,6 +5888,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ISpreadsheetProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISpreadsheetProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -5950,6 +5949,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsISpreadsheetProvider[] = {
+        { "_assign_array_", _assign_array_ISpreadsheetProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpreadsheetProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISpreadsheetProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISpreadsheetProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -6193,18 +6193,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IStylesProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IStylesProvider[] = {
-        { "_assign_array_", _assign_array_IStylesProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStylesProvider[] = {
@@ -6379,6 +6368,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IStylesProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IStylesProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6430,6 +6429,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIStylesProvider[] = {
+        { "_assign_array_", _assign_array_IStylesProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStylesProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStylesProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStylesProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -6547,20 +6547,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ISynchronizedInputProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ISynchronizedInputProvider[] = {
         { "cancel", reinterpret_cast<PyCFunction>(ISynchronizedInputProvider_Cancel), METH_VARARGS, nullptr },
         { "start_listening", reinterpret_cast<PyCFunction>(ISynchronizedInputProvider_StartListening), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ISynchronizedInputProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISynchronizedInputProvider[] = {
@@ -6642,6 +6631,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ISynchronizedInputProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ISynchronizedInputProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6693,6 +6692,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsISynchronizedInputProvider[] = {
+        { "_assign_array_", _assign_array_ISynchronizedInputProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISynchronizedInputProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISynchronizedInputProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISynchronizedInputProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -6806,20 +6806,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITableItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITableItemProvider[] = {
         { "get_column_header_items", reinterpret_cast<PyCFunction>(ITableItemProvider_GetColumnHeaderItems), METH_VARARGS, nullptr },
         { "get_row_header_items", reinterpret_cast<PyCFunction>(ITableItemProvider_GetRowHeaderItems), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITableItemProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITableItemProvider[] = {
@@ -6901,6 +6890,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITableItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITableItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -6952,6 +6951,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITableItemProvider[] = {
+        { "_assign_array_", _assign_array_ITableItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITableItemProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITableItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITableItemProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -7095,20 +7095,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITableProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITableProvider[] = {
         { "get_column_headers", reinterpret_cast<PyCFunction>(ITableProvider_GetColumnHeaders), METH_VARARGS, nullptr },
         { "get_row_headers", reinterpret_cast<PyCFunction>(ITableProvider_GetRowHeaders), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITableProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITableProvider[] = {
@@ -7211,6 +7200,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITableProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITableProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7262,6 +7261,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITableProvider[] = {
+        { "_assign_array_", _assign_array_ITableProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITableProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITableProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITableProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -7355,18 +7355,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITextChildProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextChildProvider[] = {
-        { "_assign_array_", _assign_array_ITextChildProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextChildProvider[] = {
@@ -7436,6 +7425,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITextChildProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextChildProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -7487,6 +7486,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITextChildProvider[] = {
+        { "_assign_array_", _assign_array_ITextChildProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextChildProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextChildProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextChildProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -7824,16 +7824,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITextEditProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextEditProvider[] = {
         { "get_active_composition", reinterpret_cast<PyCFunction>(ITextEditProvider_GetActiveComposition), METH_VARARGS, nullptr },
         { "get_conversion_target", reinterpret_cast<PyCFunction>(ITextEditProvider_GetConversionTarget), METH_VARARGS, nullptr },
@@ -7841,7 +7831,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { "get_visible_ranges", reinterpret_cast<PyCFunction>(ITextEditProvider_GetVisibleRanges), METH_VARARGS, nullptr },
         { "range_from_child", reinterpret_cast<PyCFunction>(ITextEditProvider_RangeFromChild), METH_VARARGS, nullptr },
         { "range_from_point", reinterpret_cast<PyCFunction>(ITextEditProvider_RangeFromPoint), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextEditProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextEditProvider[] = {
@@ -8081,6 +8070,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITextEditProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextEditProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -8132,6 +8131,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITextEditProvider[] = {
+        { "_assign_array_", _assign_array_ITextEditProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextEditProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextEditProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextEditProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -8389,22 +8389,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITextProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextProvider[] = {
         { "get_selection", reinterpret_cast<PyCFunction>(ITextProvider_GetSelection), METH_VARARGS, nullptr },
         { "get_visible_ranges", reinterpret_cast<PyCFunction>(ITextProvider_GetVisibleRanges), METH_VARARGS, nullptr },
         { "range_from_child", reinterpret_cast<PyCFunction>(ITextProvider_RangeFromChild), METH_VARARGS, nullptr },
         { "range_from_point", reinterpret_cast<PyCFunction>(ITextProvider_RangeFromPoint), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextProvider[] = {
@@ -8592,6 +8581,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITextProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -8643,6 +8642,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITextProvider[] = {
+        { "_assign_array_", _assign_array_ITextProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -8997,16 +8997,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITextProvider2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextProvider2[] = {
         { "get_caret_range", reinterpret_cast<PyCFunction>(ITextProvider2_GetCaretRange), METH_VARARGS, nullptr },
         { "get_selection", reinterpret_cast<PyCFunction>(ITextProvider2_GetSelection), METH_VARARGS, nullptr },
@@ -9014,7 +9004,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { "range_from_annotation", reinterpret_cast<PyCFunction>(ITextProvider2_RangeFromAnnotation), METH_VARARGS, nullptr },
         { "range_from_child", reinterpret_cast<PyCFunction>(ITextProvider2_RangeFromChild), METH_VARARGS, nullptr },
         { "range_from_point", reinterpret_cast<PyCFunction>(ITextProvider2_RangeFromPoint), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextProvider2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextProvider2[] = {
@@ -9262,6 +9251,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITextProvider2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextProvider2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -9313,6 +9312,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITextProvider2[] = {
+        { "_assign_array_", _assign_array_ITextProvider2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextProvider2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextProvider2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextProvider2), METH_VARARGS | METH_STATIC, nullptr },
@@ -10114,16 +10114,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITextRangeProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextRangeProvider[] = {
         { "add_to_selection", reinterpret_cast<PyCFunction>(ITextRangeProvider_AddToSelection), METH_VARARGS, nullptr },
         { "clone", reinterpret_cast<PyCFunction>(ITextRangeProvider_Clone), METH_VARARGS, nullptr },
@@ -10143,7 +10133,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { "remove_from_selection", reinterpret_cast<PyCFunction>(ITextRangeProvider_RemoveFromSelection), METH_VARARGS, nullptr },
         { "scroll_into_view", reinterpret_cast<PyCFunction>(ITextRangeProvider_ScrollIntoView), METH_VARARGS, nullptr },
         { "select", reinterpret_cast<PyCFunction>(ITextRangeProvider_Select), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextRangeProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextRangeProvider[] = {
@@ -10797,6 +10786,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITextRangeProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextRangeProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10848,6 +10847,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITextRangeProvider[] = {
+        { "_assign_array_", _assign_array_ITextRangeProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextRangeProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextRangeProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextRangeProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -11690,16 +11690,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITextRangeProvider2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITextRangeProvider2[] = {
         { "add_to_selection", reinterpret_cast<PyCFunction>(ITextRangeProvider2_AddToSelection), METH_VARARGS, nullptr },
         { "clone", reinterpret_cast<PyCFunction>(ITextRangeProvider2_Clone), METH_VARARGS, nullptr },
@@ -11720,7 +11710,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { "scroll_into_view", reinterpret_cast<PyCFunction>(ITextRangeProvider2_ScrollIntoView), METH_VARARGS, nullptr },
         { "select", reinterpret_cast<PyCFunction>(ITextRangeProvider2_Select), METH_VARARGS, nullptr },
         { "show_context_menu", reinterpret_cast<PyCFunction>(ITextRangeProvider2_ShowContextMenu), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITextRangeProvider2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITextRangeProvider2[] = {
@@ -12398,6 +12387,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITextRangeProvider2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITextRangeProvider2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12449,6 +12448,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITextRangeProvider2[] = {
+        { "_assign_array_", _assign_array_ITextRangeProvider2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITextRangeProvider2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITextRangeProvider2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITextRangeProvider2), METH_VARARGS | METH_STATIC, nullptr },
@@ -12553,19 +12553,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IToggleProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IToggleProvider[] = {
         { "toggle", reinterpret_cast<PyCFunction>(IToggleProvider_Toggle), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IToggleProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IToggleProvider[] = {
@@ -12638,6 +12627,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IToggleProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IToggleProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -12689,6 +12688,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIToggleProvider[] = {
+        { "_assign_array_", _assign_array_IToggleProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IToggleProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIToggleProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIToggleProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -12943,21 +12943,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITransformProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITransformProvider[] = {
         { "move", reinterpret_cast<PyCFunction>(ITransformProvider_Move), METH_VARARGS, nullptr },
         { "resize", reinterpret_cast<PyCFunction>(ITransformProvider_Resize), METH_VARARGS, nullptr },
         { "rotate", reinterpret_cast<PyCFunction>(ITransformProvider_Rotate), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITransformProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITransformProvider[] = {
@@ -13162,6 +13151,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITransformProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITransformProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -13213,6 +13212,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITransformProvider[] = {
+        { "_assign_array_", _assign_array_ITransformProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITransformProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITransformProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITransformProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -13673,23 +13673,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_ITransformProvider2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ITransformProvider2[] = {
         { "move", reinterpret_cast<PyCFunction>(ITransformProvider2_Move), METH_VARARGS, nullptr },
         { "resize", reinterpret_cast<PyCFunction>(ITransformProvider2_Resize), METH_VARARGS, nullptr },
         { "rotate", reinterpret_cast<PyCFunction>(ITransformProvider2_Rotate), METH_VARARGS, nullptr },
         { "zoom", reinterpret_cast<PyCFunction>(ITransformProvider2_Zoom), METH_VARARGS, nullptr },
         { "zoom_by_unit", reinterpret_cast<PyCFunction>(ITransformProvider2_ZoomByUnit), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_ITransformProvider2, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITransformProvider2[] = {
@@ -14038,6 +14027,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_ITransformProvider2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ITransformProvider2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14089,6 +14088,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsITransformProvider2[] = {
+        { "_assign_array_", _assign_array_ITransformProvider2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ITransformProvider2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITransformProvider2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITransformProvider2), METH_VARARGS | METH_STATIC, nullptr },
@@ -14225,19 +14225,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IValueProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IValueProvider[] = {
         { "set_value", reinterpret_cast<PyCFunction>(IValueProvider_SetValue), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IValueProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IValueProvider[] = {
@@ -14337,6 +14326,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IValueProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IValueProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -14388,6 +14387,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIValueProvider[] = {
+        { "_assign_array_", _assign_array_IValueProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IValueProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIValueProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIValueProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -14462,19 +14462,8 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IVirtualizedItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IVirtualizedItemProvider[] = {
         { "realize", reinterpret_cast<PyCFunction>(IVirtualizedItemProvider_Realize), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IVirtualizedItemProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVirtualizedItemProvider[] = {
@@ -14525,6 +14514,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
             }
         }
     };
+
+    static PyObject* _assign_array_IVirtualizedItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
 
     static PyObject* _from_IVirtualizedItemProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
@@ -14577,6 +14576,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIVirtualizedItemProvider[] = {
+        { "_assign_array_", _assign_array_IVirtualizedItemProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IVirtualizedItemProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVirtualizedItemProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVirtualizedItemProvider), METH_VARARGS | METH_STATIC, nullptr },
@@ -14916,21 +14916,10 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
-    static PyObject* _assign_array_IWindowProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IWindowProvider[] = {
         { "close", reinterpret_cast<PyCFunction>(IWindowProvider_Close), METH_VARARGS, nullptr },
         { "set_visual_state", reinterpret_cast<PyCFunction>(IWindowProvider_SetVisualState), METH_VARARGS, nullptr },
         { "wait_for_input_idle", reinterpret_cast<PyCFunction>(IWindowProvider_WaitForInputIdle), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IWindowProvider, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IWindowProvider[] = {
@@ -15170,6 +15159,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     };
 
+    static PyObject* _assign_array_IWindowProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IWindowProvider(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -15221,6 +15220,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     }
 
     static PyMethodDef methods_ImplementsIWindowProvider[] = {
+        { "_assign_array_", _assign_array_IWindowProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWindowProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWindowProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWindowProvider), METH_VARARGS | METH_STATIC, nullptr },

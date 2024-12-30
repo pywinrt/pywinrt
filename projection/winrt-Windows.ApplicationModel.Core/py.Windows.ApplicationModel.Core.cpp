@@ -2652,20 +2652,9 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
     }
 
-    static PyObject* _assign_array_ICoreApplicationUnhandledError(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_ICoreApplicationUnhandledError[] = {
         { "add_unhandled_error_detected", reinterpret_cast<PyCFunction>(ICoreApplicationUnhandledError_add_UnhandledErrorDetected), METH_O, nullptr },
         { "remove_unhandled_error_detected", reinterpret_cast<PyCFunction>(ICoreApplicationUnhandledError_remove_UnhandledErrorDetected), METH_O, nullptr },
-        { "_assign_array_", _assign_array_ICoreApplicationUnhandledError, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICoreApplicationUnhandledError[] = {
@@ -2755,6 +2744,16 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
     };
 
+    static PyObject* _assign_array_ICoreApplicationUnhandledError(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_ICoreApplicationUnhandledError(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -2806,6 +2805,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
     }
 
     static PyMethodDef methods_ImplementsICoreApplicationUnhandledError[] = {
+        { "_assign_array_", _assign_array_ICoreApplicationUnhandledError, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ICoreApplicationUnhandledError), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreApplicationUnhandledError), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreApplicationUnhandledError), METH_VARARGS | METH_STATIC, nullptr },
@@ -3050,23 +3050,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
     }
 
-    static PyObject* _assign_array_IFrameworkView(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Core::IFrameworkView>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFrameworkView[] = {
         { "initialize", reinterpret_cast<PyCFunction>(IFrameworkView_Initialize), METH_VARARGS, nullptr },
         { "load", reinterpret_cast<PyCFunction>(IFrameworkView_Load), METH_VARARGS, nullptr },
         { "run", reinterpret_cast<PyCFunction>(IFrameworkView_Run), METH_VARARGS, nullptr },
         { "set_window", reinterpret_cast<PyCFunction>(IFrameworkView_SetWindow), METH_VARARGS, nullptr },
         { "uninitialize", reinterpret_cast<PyCFunction>(IFrameworkView_Uninitialize), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFrameworkView, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFrameworkView[] = {
@@ -3232,6 +3221,16 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
     };
 
+    static PyObject* _assign_array_IFrameworkView(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Core::IFrameworkView>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFrameworkView(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3283,6 +3282,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
     }
 
     static PyMethodDef methods_ImplementsIFrameworkView[] = {
+        { "_assign_array_", _assign_array_IFrameworkView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFrameworkView), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFrameworkView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFrameworkView), METH_VARARGS | METH_STATIC, nullptr },
@@ -3356,19 +3356,8 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
     }
 
-    static PyObject* _assign_array_IFrameworkViewSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
     static PyMethodDef _methods_IFrameworkViewSource[] = {
         { "create_view", reinterpret_cast<PyCFunction>(IFrameworkViewSource_CreateView), METH_VARARGS, nullptr },
-        { "_assign_array_", _assign_array_IFrameworkViewSource, METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFrameworkViewSource[] = {
@@ -3422,6 +3411,16 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
     };
 
+    static PyObject* _assign_array_IFrameworkViewSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
     static PyObject* _from_IFrameworkViewSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -3473,6 +3472,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
     }
 
     static PyMethodDef methods_ImplementsIFrameworkViewSource[] = {
+        { "_assign_array_", _assign_array_IFrameworkViewSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFrameworkViewSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFrameworkViewSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFrameworkViewSource), METH_VARARGS | METH_STATIC, nullptr },
