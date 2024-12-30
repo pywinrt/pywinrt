@@ -4787,26 +4787,11 @@ namespace py::cpp::Windows::Storage::FileProperties
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IStorageItemExtraProperties(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IStorageItemExtraProperties[] = {
         { "retrieve_properties_async", reinterpret_cast<PyCFunction>(IStorageItemExtraProperties_RetrievePropertiesAsync), METH_VARARGS, nullptr },
         { "save_properties_async", reinterpret_cast<PyCFunction>(IStorageItemExtraProperties_SavePropertiesAsync), METH_VARARGS, nullptr },
         { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(IStorageItemExtraProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageItemExtraProperties, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemExtraProperties), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageItemExtraProperties[] = {
@@ -4924,6 +4909,20 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
     };
 
+    static PyObject* _from_IStorageItemExtraProperties(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIStorageItemExtraProperties(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -4961,6 +4960,7 @@ namespace py::cpp::Windows::Storage::FileProperties
     }
 
     static PyMethodDef methods_ImplementsIStorageItemExtraProperties[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemExtraProperties), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageItemExtraProperties), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageItemExtraProperties), METH_VARARGS | METH_STATIC, nullptr },
         { }};

@@ -9128,23 +9128,8 @@ namespace py::cpp::Windows::Media::MediaProperties
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaEncodingProperties(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IMediaEncodingProperties[] = {
         { "_assign_array_", _assign_array_IMediaEncodingProperties, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaEncodingProperties), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaEncodingProperties[] = {
@@ -9258,6 +9243,20 @@ namespace py::cpp::Windows::Media::MediaProperties
         }
     };
 
+    static PyObject* _from_IMediaEncodingProperties(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIMediaEncodingProperties(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -9295,6 +9294,7 @@ namespace py::cpp::Windows::Media::MediaProperties
     }
 
     static PyMethodDef methods_ImplementsIMediaEncodingProperties[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaEncodingProperties), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaEncodingProperties), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaEncodingProperties), METH_VARARGS | METH_STATIC, nullptr },
         { }};

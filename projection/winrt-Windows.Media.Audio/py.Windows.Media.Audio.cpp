@@ -18482,20 +18482,6 @@ namespace py::cpp::Windows::Media::Audio
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAudioInputNode(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Audio::IAudioInputNode>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -18530,7 +18516,6 @@ namespace py::cpp::Windows::Media::Audio
         { "start", reinterpret_cast<PyCFunction>(IAudioInputNode_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IAudioInputNode_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAudioInputNode, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioInputNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioInputNode), METH_VARARGS, nullptr },
         { }};
@@ -18969,6 +18954,20 @@ namespace py::cpp::Windows::Media::Audio
         }
     };
 
+    static PyObject* _from_IAudioInputNode(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Audio::IAudioInputNode>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAudioInputNode(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -19006,6 +19005,7 @@ namespace py::cpp::Windows::Media::Audio
     }
 
     static PyMethodDef methods_ImplementsIAudioInputNode[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioInputNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioInputNode), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -19686,20 +19686,6 @@ namespace py::cpp::Windows::Media::Audio
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAudioInputNode2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Audio::IAudioInputNode2>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -19734,7 +19720,6 @@ namespace py::cpp::Windows::Media::Audio
         { "start", reinterpret_cast<PyCFunction>(IAudioInputNode2_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IAudioInputNode2_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAudioInputNode2, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode2), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioInputNode2), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioInputNode2), METH_VARARGS, nullptr },
         { }};
@@ -20194,6 +20179,20 @@ namespace py::cpp::Windows::Media::Audio
         }
     };
 
+    static PyObject* _from_IAudioInputNode2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Audio::IAudioInputNode2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAudioInputNode2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -20231,6 +20230,7 @@ namespace py::cpp::Windows::Media::Audio
     }
 
     static PyMethodDef methods_ImplementsIAudioInputNode2[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioInputNode2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioInputNode2), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -20721,20 +20721,6 @@ namespace py::cpp::Windows::Media::Audio
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAudioNode(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Audio::IAudioNode>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -20766,7 +20752,6 @@ namespace py::cpp::Windows::Media::Audio
         { "start", reinterpret_cast<PyCFunction>(IAudioNode_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IAudioNode_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAudioNode, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioNode), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioNode), METH_VARARGS, nullptr },
         { }};
@@ -21082,6 +21067,20 @@ namespace py::cpp::Windows::Media::Audio
         }
     };
 
+    static PyObject* _from_IAudioNode(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Audio::IAudioNode>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAudioNode(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -21119,6 +21118,7 @@ namespace py::cpp::Windows::Media::Audio
     }
 
     static PyMethodDef methods_ImplementsIAudioNode[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNode), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioNode), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -21678,20 +21678,6 @@ namespace py::cpp::Windows::Media::Audio
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAudioNodeWithListener(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Audio::IAudioNodeWithListener>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -21723,7 +21709,6 @@ namespace py::cpp::Windows::Media::Audio
         { "start", reinterpret_cast<PyCFunction>(IAudioNodeWithListener_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IAudioNodeWithListener_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAudioNodeWithListener, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNodeWithListener), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioNodeWithListener), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioNodeWithListener), METH_VARARGS, nullptr },
         { }};
@@ -22083,6 +22068,20 @@ namespace py::cpp::Windows::Media::Audio
         }
     };
 
+    static PyObject* _from_IAudioNodeWithListener(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Audio::IAudioNodeWithListener>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAudioNodeWithListener(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -22120,6 +22119,7 @@ namespace py::cpp::Windows::Media::Audio
     }
 
     static PyMethodDef methods_ImplementsIAudioNodeWithListener[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNodeWithListener), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioNodeWithListener), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioNodeWithListener), METH_VARARGS | METH_STATIC, nullptr },
         { }};

@@ -24471,23 +24471,8 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaCue(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaCue>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IMediaCue[] = {
         { "_assign_array_", _assign_array_IMediaCue, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaCue), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaCue[] = {
@@ -24647,6 +24632,20 @@ namespace py::cpp::Windows::Media::Core
         }
     };
 
+    static PyObject* _from_IMediaCue(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaCue>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIMediaCue(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -24684,6 +24683,7 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef methods_ImplementsIMediaCue[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaCue), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaCue), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaCue), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -24726,23 +24726,8 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaSource>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IMediaSource[] = {
         { "_assign_array_", _assign_array_IMediaSource, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaSource), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaSource[] = {
@@ -24769,6 +24754,20 @@ namespace py::cpp::Windows::Media::Core
         {
         }
     };
+
+    static PyObject* _from_IMediaSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsIMediaSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -24807,6 +24806,7 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef methods_ImplementsIMediaSource[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaSource), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -25017,23 +25017,8 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaStreamDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaStreamDescriptor>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IMediaStreamDescriptor[] = {
         { "_assign_array_", _assign_array_IMediaStreamDescriptor, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaStreamDescriptor), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaStreamDescriptor[] = {
@@ -25170,6 +25155,20 @@ namespace py::cpp::Windows::Media::Core
         }
     };
 
+    static PyObject* _from_IMediaStreamDescriptor(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaStreamDescriptor>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIMediaStreamDescriptor(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -25207,6 +25206,7 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef methods_ImplementsIMediaStreamDescriptor[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaStreamDescriptor), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaStreamDescriptor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaStreamDescriptor), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -25486,23 +25486,8 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaStreamDescriptor2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaStreamDescriptor2>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IMediaStreamDescriptor2[] = {
         { "_assign_array_", _assign_array_IMediaStreamDescriptor2, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaStreamDescriptor2), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaStreamDescriptor2[] = {
@@ -25683,6 +25668,20 @@ namespace py::cpp::Windows::Media::Core
         }
     };
 
+    static PyObject* _from_IMediaStreamDescriptor2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaStreamDescriptor2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIMediaStreamDescriptor2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -25720,6 +25719,7 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef methods_ImplementsIMediaStreamDescriptor2[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaStreamDescriptor2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaStreamDescriptor2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaStreamDescriptor2), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -25921,23 +25921,8 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaTrack(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaTrack>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IMediaTrack[] = {
         { "_assign_array_", _assign_array_IMediaTrack, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaTrack), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaTrack[] = {
@@ -26072,6 +26057,20 @@ namespace py::cpp::Windows::Media::Core
         }
     };
 
+    static PyObject* _from_IMediaTrack(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Core::IMediaTrack>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIMediaTrack(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -26109,6 +26108,7 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef methods_ImplementsIMediaTrack[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaTrack), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaTrack), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaTrack), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -26285,25 +26285,10 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ISingleSelectMediaTrackList(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ISingleSelectMediaTrackList[] = {
         { "add_selected_index_changed", reinterpret_cast<PyCFunction>(ISingleSelectMediaTrackList_add_SelectedIndexChanged), METH_O, nullptr },
         { "remove_selected_index_changed", reinterpret_cast<PyCFunction>(ISingleSelectMediaTrackList_remove_SelectedIndexChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ISingleSelectMediaTrackList, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ISingleSelectMediaTrackList), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISingleSelectMediaTrackList[] = {
@@ -26437,6 +26422,20 @@ namespace py::cpp::Windows::Media::Core
         }
     };
 
+    static PyObject* _from_ISingleSelectMediaTrackList(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsISingleSelectMediaTrackList(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -26474,6 +26473,7 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef methods_ImplementsISingleSelectMediaTrackList[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ISingleSelectMediaTrackList), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISingleSelectMediaTrackList), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISingleSelectMediaTrackList), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -26546,23 +26546,8 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ITimedMetadataTrackProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ITimedMetadataTrackProvider[] = {
         { "_assign_array_", _assign_array_ITimedMetadataTrackProvider, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ITimedMetadataTrackProvider), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ITimedMetadataTrackProvider[] = {
@@ -26611,6 +26596,20 @@ namespace py::cpp::Windows::Media::Core
         }
     };
 
+    static PyObject* _from_ITimedMetadataTrackProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsITimedMetadataTrackProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -26648,6 +26647,7 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef methods_ImplementsITimedMetadataTrackProvider[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ITimedMetadataTrackProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsITimedMetadataTrackProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsITimedMetadataTrackProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }};

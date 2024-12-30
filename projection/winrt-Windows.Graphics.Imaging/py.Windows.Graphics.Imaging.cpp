@@ -6958,26 +6958,11 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBitmapFrame(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Imaging::IBitmapFrame>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBitmapFrame[] = {
         { "get_pixel_data_async", reinterpret_cast<PyCFunction>(IBitmapFrame_GetPixelDataAsync), METH_VARARGS, nullptr },
         { "get_pixel_data_transformed_async", reinterpret_cast<PyCFunction>(IBitmapFrame_GetPixelDataTransformedAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IBitmapFrame_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBitmapFrame, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBitmapFrame), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBitmapFrame[] = {
@@ -7308,6 +7293,20 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     };
 
+    static PyObject* _from_IBitmapFrame(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Imaging::IBitmapFrame>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBitmapFrame(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -7345,6 +7344,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     }
 
     static PyMethodDef methods_ImplementsIBitmapFrame[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBitmapFrame), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBitmapFrame), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBitmapFrame), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -7912,20 +7912,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBitmapFrameWithSoftwareBitmap(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBitmapFrameWithSoftwareBitmap[] = {
         { "get_pixel_data_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetPixelDataAsync), METH_VARARGS, nullptr },
         { "get_pixel_data_transformed_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetPixelDataTransformedAsync), METH_VARARGS, nullptr },
@@ -7934,7 +7920,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "get_software_bitmap_transformed_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetSoftwareBitmapTransformedAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBitmapFrameWithSoftwareBitmap, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBitmapFrameWithSoftwareBitmap), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBitmapFrameWithSoftwareBitmap[] = {
@@ -8397,6 +8382,20 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     };
 
+    static PyObject* _from_IBitmapFrameWithSoftwareBitmap(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBitmapFrameWithSoftwareBitmap(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -8434,6 +8433,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     }
 
     static PyMethodDef methods_ImplementsIBitmapFrameWithSoftwareBitmap[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBitmapFrameWithSoftwareBitmap), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBitmapFrameWithSoftwareBitmap), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBitmapFrameWithSoftwareBitmap), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -8518,24 +8518,9 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBitmapPropertiesView(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBitmapPropertiesView[] = {
         { "get_properties_async", reinterpret_cast<PyCFunction>(IBitmapPropertiesView_GetPropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBitmapPropertiesView, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBitmapPropertiesView), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBitmapPropertiesView[] = {
@@ -8595,6 +8580,20 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     };
 
+    static PyObject* _from_IBitmapPropertiesView(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBitmapPropertiesView(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -8632,6 +8631,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     }
 
     static PyMethodDef methods_ImplementsIBitmapPropertiesView[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBitmapPropertiesView), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBitmapPropertiesView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBitmapPropertiesView), METH_VARARGS | METH_STATIC, nullptr },
         { }};

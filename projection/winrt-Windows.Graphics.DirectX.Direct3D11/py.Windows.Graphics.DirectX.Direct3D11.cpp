@@ -113,20 +113,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IDirect3DDevice(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IDirect3DDevice(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -154,7 +140,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { "close", reinterpret_cast<PyCFunction>(IDirect3DDevice_Close), METH_VARARGS, nullptr },
         { "trim", reinterpret_cast<PyCFunction>(IDirect3DDevice_Trim), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IDirect3DDevice, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IDirect3DDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IDirect3DDevice), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IDirect3DDevice), METH_VARARGS, nullptr },
         { }};
@@ -232,6 +217,20 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     };
 
+    static PyObject* _from_IDirect3DDevice(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIDirect3DDevice(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -269,6 +268,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     }
 
     static PyMethodDef methods_ImplementsIDirect3DDevice[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IDirect3DDevice), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDirect3DDevice), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDirect3DDevice), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -382,20 +382,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IDirect3DSurface(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IDirect3DSurface(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -422,7 +408,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     static PyMethodDef _methods_IDirect3DSurface[] = {
         { "close", reinterpret_cast<PyCFunction>(IDirect3DSurface_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IDirect3DSurface, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IDirect3DSurface), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IDirect3DSurface), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IDirect3DSurface), METH_VARARGS, nullptr },
         { }};
@@ -497,6 +482,20 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     };
 
+    static PyObject* _from_IDirect3DSurface(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIDirect3DSurface(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -534,6 +533,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     }
 
     static PyMethodDef methods_ImplementsIDirect3DSurface[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IDirect3DSurface), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIDirect3DSurface), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIDirect3DSurface), METH_VARARGS | METH_STATIC, nullptr },
         { }};

@@ -3257,24 +3257,9 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IXamlUIPresenterHost(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IXamlUIPresenterHost[] = {
         { "resolve_file_resource", reinterpret_cast<PyCFunction>(IXamlUIPresenterHost_ResolveFileResource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXamlUIPresenterHost, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IXamlUIPresenterHost), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlUIPresenterHost[] = {
@@ -3334,6 +3319,20 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
     };
 
+    static PyObject* _from_IXamlUIPresenterHost(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIXamlUIPresenterHost(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3371,6 +3370,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     }
 
     static PyMethodDef methods_ImplementsIXamlUIPresenterHost[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IXamlUIPresenterHost), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlUIPresenterHost), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlUIPresenterHost), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -3453,24 +3453,9 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IXamlUIPresenterHost2(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IXamlUIPresenterHost2[] = {
         { "get_generic_xaml_file_path", reinterpret_cast<PyCFunction>(IXamlUIPresenterHost2_GetGenericXamlFilePath), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXamlUIPresenterHost2, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IXamlUIPresenterHost2), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlUIPresenterHost2[] = {
@@ -3524,6 +3509,20 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
     };
 
+    static PyObject* _from_IXamlUIPresenterHost2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIXamlUIPresenterHost2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3561,6 +3560,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     }
 
     static PyMethodDef methods_ImplementsIXamlUIPresenterHost2[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IXamlUIPresenterHost2), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlUIPresenterHost2), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlUIPresenterHost2), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -3647,24 +3647,9 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IXamlUIPresenterHost3(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IXamlUIPresenterHost3[] = {
         { "resolve_dictionary_resource", reinterpret_cast<PyCFunction>(IXamlUIPresenterHost3_ResolveDictionaryResource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXamlUIPresenterHost3, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IXamlUIPresenterHost3), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXamlUIPresenterHost3[] = {
@@ -3742,6 +3727,20 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
     };
 
+    static PyObject* _from_IXamlUIPresenterHost3(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIXamlUIPresenterHost3(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3779,6 +3778,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     }
 
     static PyMethodDef methods_ImplementsIXamlUIPresenterHost3[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IXamlUIPresenterHost3), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXamlUIPresenterHost3), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXamlUIPresenterHost3), METH_VARARGS | METH_STATIC, nullptr },
         { }};

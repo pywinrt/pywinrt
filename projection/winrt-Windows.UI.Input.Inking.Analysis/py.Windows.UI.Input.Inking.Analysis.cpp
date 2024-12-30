@@ -3865,24 +3865,9 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IInkAnalysisNode(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IInkAnalysisNode[] = {
         { "get_stroke_ids", reinterpret_cast<PyCFunction>(IInkAnalysisNode_GetStrokeIds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IInkAnalysisNode, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IInkAnalysisNode), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInkAnalysisNode[] = {
@@ -4062,6 +4047,20 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         }
     };
 
+    static PyObject* _from_IInkAnalysisNode(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIInkAnalysisNode(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -4099,6 +4098,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     }
 
     static PyMethodDef methods_ImplementsIInkAnalysisNode[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IInkAnalysisNode), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInkAnalysisNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInkAnalysisNode), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -4181,24 +4181,9 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IInkAnalyzerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IInkAnalyzerFactory[] = {
         { "create_analyzer", reinterpret_cast<PyCFunction>(IInkAnalyzerFactory_CreateAnalyzer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IInkAnalyzerFactory, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IInkAnalyzerFactory), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IInkAnalyzerFactory[] = {
@@ -4252,6 +4237,20 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         }
     };
 
+    static PyObject* _from_IInkAnalyzerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIInkAnalyzerFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -4289,6 +4288,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     }
 
     static PyMethodDef methods_ImplementsIInkAnalyzerFactory[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IInkAnalyzerFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIInkAnalyzerFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIInkAnalyzerFactory), METH_VARARGS | METH_STATIC, nullptr },
         { }};

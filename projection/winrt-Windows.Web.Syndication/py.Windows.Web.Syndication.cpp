@@ -9954,25 +9954,10 @@ namespace py::cpp::Windows::Web::Syndication
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ISyndicationClient(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Web::Syndication::ISyndicationClient>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ISyndicationClient[] = {
         { "retrieve_feed_async", reinterpret_cast<PyCFunction>(ISyndicationClient_RetrieveFeedAsync), METH_VARARGS, nullptr },
         { "set_request_header", reinterpret_cast<PyCFunction>(ISyndicationClient_SetRequestHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISyndicationClient, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ISyndicationClient), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISyndicationClient[] = {
@@ -10294,6 +10279,20 @@ namespace py::cpp::Windows::Web::Syndication
         }
     };
 
+    static PyObject* _from_ISyndicationClient(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Web::Syndication::ISyndicationClient>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsISyndicationClient(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -10331,6 +10330,7 @@ namespace py::cpp::Windows::Web::Syndication
     }
 
     static PyMethodDef methods_ImplementsISyndicationClient[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ISyndicationClient), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISyndicationClient), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISyndicationClient), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -10820,24 +10820,9 @@ namespace py::cpp::Windows::Web::Syndication
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ISyndicationNode(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Web::Syndication::ISyndicationNode>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ISyndicationNode[] = {
         { "get_xml_document", reinterpret_cast<PyCFunction>(ISyndicationNode_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISyndicationNode, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ISyndicationNode), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISyndicationNode[] = {
@@ -11159,6 +11144,20 @@ namespace py::cpp::Windows::Web::Syndication
         }
     };
 
+    static PyObject* _from_ISyndicationNode(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Web::Syndication::ISyndicationNode>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsISyndicationNode(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -11196,6 +11195,7 @@ namespace py::cpp::Windows::Web::Syndication
     }
 
     static PyMethodDef methods_ImplementsISyndicationNode[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ISyndicationNode), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISyndicationNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISyndicationNode), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -11892,24 +11892,9 @@ namespace py::cpp::Windows::Web::Syndication
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ISyndicationText(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Web::Syndication::ISyndicationText>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ISyndicationText[] = {
         { "get_xml_document", reinterpret_cast<PyCFunction>(ISyndicationText_GetXmlDocument), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISyndicationText, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ISyndicationText), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ISyndicationText[] = {
@@ -12363,6 +12348,20 @@ namespace py::cpp::Windows::Web::Syndication
         }
     };
 
+    static PyObject* _from_ISyndicationText(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Web::Syndication::ISyndicationText>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsISyndicationText(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -12400,6 +12399,7 @@ namespace py::cpp::Windows::Web::Syndication
     }
 
     static PyMethodDef methods_ImplementsISyndicationText[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ISyndicationText), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsISyndicationText), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsISyndicationText), METH_VARARGS | METH_STATIC, nullptr },
         { }};

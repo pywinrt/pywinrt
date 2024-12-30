@@ -6260,24 +6260,9 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBackgroundTransferBase(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBackgroundTransferBase[] = {
         { "set_request_header", reinterpret_cast<PyCFunction>(IBackgroundTransferBase_SetRequestHeader), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBackgroundTransferBase, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferBase), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTransferBase[] = {
@@ -6567,6 +6552,20 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     };
 
+    static PyObject* _from_IBackgroundTransferBase(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBackgroundTransferBase(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -6604,6 +6603,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTransferBase[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferBase), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTransferBase), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTransferBase), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -6731,25 +6731,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBackgroundTransferContentPartFactory(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBackgroundTransferContentPartFactory[] = {
         { "create_with_name", reinterpret_cast<PyCFunction>(IBackgroundTransferContentPartFactory_CreateWithName), METH_VARARGS, nullptr },
         { "create_with_name_and_file_name", reinterpret_cast<PyCFunction>(IBackgroundTransferContentPartFactory_CreateWithNameAndFileName), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBackgroundTransferContentPartFactory, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferContentPartFactory), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTransferContentPartFactory[] = {
@@ -6853,6 +6838,20 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     };
 
+    static PyObject* _from_IBackgroundTransferContentPartFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBackgroundTransferContentPartFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -6890,6 +6889,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTransferContentPartFactory[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferContentPartFactory), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTransferContentPartFactory), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTransferContentPartFactory), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -7203,25 +7203,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBackgroundTransferOperation(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBackgroundTransferOperation[] = {
         { "get_response_information", reinterpret_cast<PyCFunction>(IBackgroundTransferOperation_GetResponseInformation), METH_VARARGS, nullptr },
         { "get_result_stream_at", reinterpret_cast<PyCFunction>(IBackgroundTransferOperation_GetResultStreamAt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBackgroundTransferOperation, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferOperation), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTransferOperation[] = {
@@ -7435,6 +7420,20 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     };
 
+    static PyObject* _from_IBackgroundTransferOperation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBackgroundTransferOperation(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -7472,6 +7471,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTransferOperation[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferOperation), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTransferOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTransferOperation), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -7583,23 +7583,8 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBackgroundTransferOperationPriority(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBackgroundTransferOperationPriority[] = {
         { "_assign_array_", _assign_array_IBackgroundTransferOperationPriority, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferOperationPriority), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBackgroundTransferOperationPriority[] = {
@@ -7671,6 +7656,20 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     };
 
+    static PyObject* _from_IBackgroundTransferOperationPriority(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBackgroundTransferOperationPriority(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -7708,6 +7707,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     }
 
     static PyMethodDef methods_ImplementsIBackgroundTransferOperationPriority[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBackgroundTransferOperationPriority), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBackgroundTransferOperationPriority), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBackgroundTransferOperationPriority), METH_VARARGS | METH_STATIC, nullptr },
         { }};

@@ -3274,23 +3274,8 @@ namespace py::cpp::Windows::Media::Effects
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAudioEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Effects::IAudioEffectDefinition>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAudioEffectDefinition[] = {
         { "_assign_array_", _assign_array_IAudioEffectDefinition, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioEffectDefinition), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAudioEffectDefinition[] = {
@@ -3360,6 +3345,20 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _from_IAudioEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Effects::IAudioEffectDefinition>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAudioEffectDefinition(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3397,6 +3396,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIAudioEffectDefinition[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAudioEffectDefinition), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAudioEffectDefinition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAudioEffectDefinition), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -3712,20 +3712,6 @@ namespace py::cpp::Windows::Media::Effects
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBasicAudioEffect(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Effects::IBasicAudioEffect>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBasicAudioEffect[] = {
         { "close", reinterpret_cast<PyCFunction>(IBasicAudioEffect_Close), METH_VARARGS, nullptr },
         { "discard_queued_frames", reinterpret_cast<PyCFunction>(IBasicAudioEffect_DiscardQueuedFrames), METH_VARARGS, nullptr },
@@ -3733,7 +3719,6 @@ namespace py::cpp::Windows::Media::Effects
         { "set_encoding_properties", reinterpret_cast<PyCFunction>(IBasicAudioEffect_SetEncodingProperties), METH_VARARGS, nullptr },
         { "set_properties", reinterpret_cast<PyCFunction>(IBasicAudioEffect_SetProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBasicAudioEffect, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBasicAudioEffect), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBasicAudioEffect[] = {
@@ -3947,6 +3932,20 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _from_IBasicAudioEffect(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Effects::IBasicAudioEffect>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBasicAudioEffect(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3984,6 +3983,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIBasicAudioEffect[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBasicAudioEffect), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBasicAudioEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBasicAudioEffect), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -4360,20 +4360,6 @@ namespace py::cpp::Windows::Media::Effects
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IBasicVideoEffect(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Effects::IBasicVideoEffect>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IBasicVideoEffect[] = {
         { "close", reinterpret_cast<PyCFunction>(IBasicVideoEffect_Close), METH_VARARGS, nullptr },
         { "discard_queued_frames", reinterpret_cast<PyCFunction>(IBasicVideoEffect_DiscardQueuedFrames), METH_VARARGS, nullptr },
@@ -4381,7 +4367,6 @@ namespace py::cpp::Windows::Media::Effects
         { "set_encoding_properties", reinterpret_cast<PyCFunction>(IBasicVideoEffect_SetEncodingProperties), METH_VARARGS, nullptr },
         { "set_properties", reinterpret_cast<PyCFunction>(IBasicVideoEffect_SetProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IBasicVideoEffect, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IBasicVideoEffect), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IBasicVideoEffect[] = {
@@ -4649,6 +4634,20 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _from_IBasicVideoEffect(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Effects::IBasicVideoEffect>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIBasicVideoEffect(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -4686,6 +4685,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIBasicVideoEffect[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IBasicVideoEffect), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIBasicVideoEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIBasicVideoEffect), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -4972,20 +4972,6 @@ namespace py::cpp::Windows::Media::Effects
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IVideoCompositor(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Effects::IVideoCompositor>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IVideoCompositor[] = {
         { "close", reinterpret_cast<PyCFunction>(IVideoCompositor_Close), METH_VARARGS, nullptr },
         { "composite_frame", reinterpret_cast<PyCFunction>(IVideoCompositor_CompositeFrame), METH_VARARGS, nullptr },
@@ -4993,7 +4979,6 @@ namespace py::cpp::Windows::Media::Effects
         { "set_encoding_properties", reinterpret_cast<PyCFunction>(IVideoCompositor_SetEncodingProperties), METH_VARARGS, nullptr },
         { "set_properties", reinterpret_cast<PyCFunction>(IVideoCompositor_SetProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IVideoCompositor, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IVideoCompositor), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVideoCompositor[] = {
@@ -5198,6 +5183,20 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _from_IVideoCompositor(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Effects::IVideoCompositor>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIVideoCompositor(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -5235,6 +5234,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIVideoCompositor[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IVideoCompositor), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVideoCompositor), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVideoCompositor), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -5337,23 +5337,8 @@ namespace py::cpp::Windows::Media::Effects
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IVideoCompositorDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Effects::IVideoCompositorDefinition>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IVideoCompositorDefinition[] = {
         { "_assign_array_", _assign_array_IVideoCompositorDefinition, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IVideoCompositorDefinition), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVideoCompositorDefinition[] = {
@@ -5423,6 +5408,20 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _from_IVideoCompositorDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Effects::IVideoCompositorDefinition>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIVideoCompositorDefinition(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -5460,6 +5459,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIVideoCompositorDefinition[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IVideoCompositorDefinition), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVideoCompositorDefinition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVideoCompositorDefinition), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -5562,23 +5562,8 @@ namespace py::cpp::Windows::Media::Effects
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IVideoEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::Effects::IVideoEffectDefinition>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IVideoEffectDefinition[] = {
         { "_assign_array_", _assign_array_IVideoEffectDefinition, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IVideoEffectDefinition), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVideoEffectDefinition[] = {
@@ -5648,6 +5633,20 @@ namespace py::cpp::Windows::Media::Effects
         }
     };
 
+    static PyObject* _from_IVideoEffectDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Effects::IVideoEffectDefinition>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIVideoEffectDefinition(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -5685,6 +5684,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef methods_ImplementsIVideoEffectDefinition[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IVideoEffectDefinition), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVideoEffectDefinition), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVideoEffectDefinition), METH_VARARGS | METH_STATIC, nullptr },
         { }};

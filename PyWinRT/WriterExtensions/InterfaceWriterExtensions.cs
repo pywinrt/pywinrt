@@ -207,6 +207,21 @@ static class InterfaceWriterExtensions
         if (!type.IsGeneric)
         {
             w.WriteImplementsInterfaceCppType(type);
+
+            w.WriteLine(
+                $"static PyObject* _from_{type.Name}(PyObject* /*unused*/, PyObject* arg) noexcept"
+            );
+            w.WriteBlock(
+                () =>
+                    w.WriteTryCatch(() =>
+                    {
+                        w.WriteLine(
+                            $"auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);"
+                        );
+                        w.WriteLine($"return py::convert(return_value.as<{type.CppWinrtType}>());");
+                    })
+            );
+            w.WriteBlankLine();
         }
 
         w.WriteLine(
@@ -267,6 +282,13 @@ static class InterfaceWriterExtensions
 
         w.WriteLine($"static PyMethodDef methods_Implements{type.Name}[] = {{");
         w.Indent++;
+
+        if (!type.IsGeneric)
+        {
+            w.WriteLine(
+                $"{{ \"_from\", reinterpret_cast<PyCFunction>(_from_{type.Name}), METH_O | METH_STATIC, nullptr }},"
+            );
+        }
         w.WriteLine(
             $"{{ \"_guid_\", reinterpret_cast<PyCFunction>(_guid_Implements{type.Name}), METH_NOARGS | METH_STATIC, nullptr }},"
         );

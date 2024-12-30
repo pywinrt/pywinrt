@@ -2662,25 +2662,10 @@ namespace py::cpp::Windows::ApplicationModel::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ICoreApplicationUnhandledError(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ICoreApplicationUnhandledError[] = {
         { "add_unhandled_error_detected", reinterpret_cast<PyCFunction>(ICoreApplicationUnhandledError_add_UnhandledErrorDetected), METH_O, nullptr },
         { "remove_unhandled_error_detected", reinterpret_cast<PyCFunction>(ICoreApplicationUnhandledError_remove_UnhandledErrorDetected), METH_O, nullptr },
         { "_assign_array_", _assign_array_ICoreApplicationUnhandledError, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ICoreApplicationUnhandledError), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ICoreApplicationUnhandledError[] = {
@@ -2770,6 +2755,20 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
     };
 
+    static PyObject* _from_ICoreApplicationUnhandledError(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsICoreApplicationUnhandledError(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -2807,6 +2806,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
     }
 
     static PyMethodDef methods_ImplementsICoreApplicationUnhandledError[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ICoreApplicationUnhandledError), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsICoreApplicationUnhandledError), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsICoreApplicationUnhandledError), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -3060,20 +3060,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFrameworkView(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Core::IFrameworkView>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFrameworkView[] = {
         { "initialize", reinterpret_cast<PyCFunction>(IFrameworkView_Initialize), METH_VARARGS, nullptr },
         { "load", reinterpret_cast<PyCFunction>(IFrameworkView_Load), METH_VARARGS, nullptr },
@@ -3081,7 +3067,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "set_window", reinterpret_cast<PyCFunction>(IFrameworkView_SetWindow), METH_VARARGS, nullptr },
         { "uninitialize", reinterpret_cast<PyCFunction>(IFrameworkView_Uninitialize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFrameworkView, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFrameworkView), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFrameworkView[] = {
@@ -3247,6 +3232,20 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
     };
 
+    static PyObject* _from_IFrameworkView(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Core::IFrameworkView>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFrameworkView(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3284,6 +3283,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
     }
 
     static PyMethodDef methods_ImplementsIFrameworkView[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFrameworkView), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFrameworkView), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFrameworkView), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -3366,24 +3366,9 @@ namespace py::cpp::Windows::ApplicationModel::Core
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IFrameworkViewSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IFrameworkViewSource[] = {
         { "create_view", reinterpret_cast<PyCFunction>(IFrameworkViewSource_CreateView), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IFrameworkViewSource, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IFrameworkViewSource), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IFrameworkViewSource[] = {
@@ -3437,6 +3422,20 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
     };
 
+    static PyObject* _from_IFrameworkViewSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIFrameworkViewSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3474,6 +3473,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
     }
 
     static PyMethodDef methods_ImplementsIFrameworkViewSource[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFrameworkViewSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFrameworkViewSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFrameworkViewSource), METH_VARARGS | METH_STATIC, nullptr },
         { }};

@@ -2268,25 +2268,10 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IForceFeedbackEffect(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IForceFeedbackEffect[] = {
         { "start", reinterpret_cast<PyCFunction>(IForceFeedbackEffect_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IForceFeedbackEffect_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IForceFeedbackEffect, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IForceFeedbackEffect), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IForceFeedbackEffect[] = {
@@ -2427,6 +2412,20 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         }
     };
 
+    static PyObject* _from_IForceFeedbackEffect(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIForceFeedbackEffect(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -2464,6 +2463,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     }
 
     static PyMethodDef methods_ImplementsIForceFeedbackEffect[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IForceFeedbackEffect), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIForceFeedbackEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIForceFeedbackEffect), METH_VARARGS | METH_STATIC, nullptr },
         { }};

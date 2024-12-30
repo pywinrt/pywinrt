@@ -9584,24 +9584,9 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPrintCustomOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPrintCustomOptionDetails[] = {
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintCustomOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintCustomOptionDetails, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintCustomOptionDetails), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintCustomOptionDetails[] = {
@@ -9856,6 +9841,20 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         }
     };
 
+    static PyObject* _from_IPrintCustomOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPrintCustomOptionDetails(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -9893,6 +9892,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     }
 
     static PyMethodDef methods_ImplementsIPrintCustomOptionDetails[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintCustomOptionDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintCustomOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintCustomOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -10235,24 +10235,9 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPrintItemListOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPrintItemListOptionDetails[] = {
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintItemListOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintItemListOptionDetails, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintItemListOptionDetails), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintItemListOptionDetails[] = {
@@ -10484,6 +10469,20 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         }
     };
 
+    static PyObject* _from_IPrintItemListOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPrintItemListOptionDetails(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -10521,6 +10520,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     }
 
     static PyMethodDef methods_ImplementsIPrintItemListOptionDetails[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintItemListOptionDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintItemListOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintItemListOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -10893,24 +10893,9 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPrintNumberOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPrintNumberOptionDetails[] = {
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintNumberOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintNumberOptionDetails, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintNumberOptionDetails), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintNumberOptionDetails[] = {
@@ -11163,6 +11148,20 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         }
     };
 
+    static PyObject* _from_IPrintNumberOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPrintNumberOptionDetails(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -11200,6 +11199,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     }
 
     static PyMethodDef methods_ImplementsIPrintNumberOptionDetails[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintNumberOptionDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintNumberOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintNumberOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -11512,24 +11512,9 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPrintOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPrintOptionDetails[] = {
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintOptionDetails, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintOptionDetails), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintOptionDetails[] = {
@@ -11740,6 +11725,20 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         }
     };
 
+    static PyObject* _from_IPrintOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPrintOptionDetails(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -11777,6 +11776,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     }
 
     static PyMethodDef methods_ImplementsIPrintOptionDetails[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintOptionDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -12119,24 +12119,9 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPrintTextOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPrintTextOptionDetails[] = {
         { "try_set_value", reinterpret_cast<PyCFunction>(IPrintTextOptionDetails_TrySetValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPrintTextOptionDetails, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintTextOptionDetails), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPrintTextOptionDetails[] = {
@@ -12368,6 +12353,20 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         }
     };
 
+    static PyObject* _from_IPrintTextOptionDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPrintTextOptionDetails(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -12405,6 +12404,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     }
 
     static PyMethodDef methods_ImplementsIPrintTextOptionDetails[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPrintTextOptionDetails), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPrintTextOptionDetails), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPrintTextOptionDetails), METH_VARARGS | METH_STATIC, nullptr },
         { }};

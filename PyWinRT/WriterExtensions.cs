@@ -373,10 +373,7 @@ static class WriterExtensions
 
         // TODO: support _from for generic types
 
-        if (
-            (type.Category == Category.Class || type.Category == Category.Interface)
-            && !(type.IsGeneric || type.IsStatic)
-        )
+        if (type.Category == Category.Class && !(type.IsGeneric || type.IsStatic))
         {
             w.WriteLine(
                 $"{{ \"_from\", reinterpret_cast<PyCFunction>(_from_{type.Name}), METH_O | METH_STATIC, nullptr }},"
@@ -506,10 +503,7 @@ static class WriterExtensions
             w.WriteAssignArrayMethod(type);
         }
 
-        if (
-            (type.Category == Category.Class || type.Category == Category.Interface)
-            && !(type.IsGeneric || type.IsStatic)
-        )
+        if (type.Category == Category.Class && !(type.IsGeneric || type.IsStatic))
         {
             w.WriteBlankLine();
             w.WriteLine(

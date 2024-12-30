@@ -100,23 +100,8 @@ namespace py::cpp::Windows::Graphics::Effects
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IGraphicsEffect(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Effects::IGraphicsEffect>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IGraphicsEffect[] = {
         { "_assign_array_", _assign_array_IGraphicsEffect, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IGraphicsEffect), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGraphicsEffect[] = {
@@ -188,6 +173,20 @@ namespace py::cpp::Windows::Graphics::Effects
         }
     };
 
+    static PyObject* _from_IGraphicsEffect(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Effects::IGraphicsEffect>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIGraphicsEffect(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -225,6 +224,7 @@ namespace py::cpp::Windows::Graphics::Effects
     }
 
     static PyMethodDef methods_ImplementsIGraphicsEffect[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IGraphicsEffect), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGraphicsEffect), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGraphicsEffect), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -267,23 +267,8 @@ namespace py::cpp::Windows::Graphics::Effects
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IGraphicsEffectSource(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IGraphicsEffectSource[] = {
         { "_assign_array_", _assign_array_IGraphicsEffectSource, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IGraphicsEffectSource), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IGraphicsEffectSource[] = {
@@ -310,6 +295,20 @@ namespace py::cpp::Windows::Graphics::Effects
         {
         }
     };
+
+    static PyObject* _from_IGraphicsEffectSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
 
     static PyObject* _guid_ImplementsIGraphicsEffectSource(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -348,6 +347,7 @@ namespace py::cpp::Windows::Graphics::Effects
     }
 
     static PyMethodDef methods_ImplementsIGraphicsEffectSource[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IGraphicsEffectSource), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIGraphicsEffectSource), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIGraphicsEffectSource), METH_VARARGS | METH_STATIC, nullptr },
         { }};

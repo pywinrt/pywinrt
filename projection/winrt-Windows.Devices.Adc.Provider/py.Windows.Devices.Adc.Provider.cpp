@@ -390,27 +390,12 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAdcControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAdcControllerProvider[] = {
         { "acquire_channel", reinterpret_cast<PyCFunction>(IAdcControllerProvider_AcquireChannel), METH_VARARGS, nullptr },
         { "is_channel_mode_supported", reinterpret_cast<PyCFunction>(IAdcControllerProvider_IsChannelModeSupported), METH_VARARGS, nullptr },
         { "read_value", reinterpret_cast<PyCFunction>(IAdcControllerProvider_ReadValue), METH_VARARGS, nullptr },
         { "release_channel", reinterpret_cast<PyCFunction>(IAdcControllerProvider_ReleaseChannel), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAdcControllerProvider, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAdcControllerProvider), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAdcControllerProvider[] = {
@@ -690,6 +675,20 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         }
     };
 
+    static PyObject* _from_IAdcControllerProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAdcControllerProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -727,6 +726,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
     }
 
     static PyMethodDef methods_ImplementsIAdcControllerProvider[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAdcControllerProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAdcControllerProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAdcControllerProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -809,24 +809,9 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IAdcProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::Adc::Provider::IAdcProvider>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IAdcProvider[] = {
         { "get_controllers", reinterpret_cast<PyCFunction>(IAdcProvider_GetControllers), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IAdcProvider, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IAdcProvider), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAdcProvider[] = {
@@ -880,6 +865,20 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         }
     };
 
+    static PyObject* _from_IAdcProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Adc::Provider::IAdcProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIAdcProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -917,6 +916,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
     }
 
     static PyMethodDef methods_ImplementsIAdcProvider[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IAdcProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAdcProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAdcProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }};

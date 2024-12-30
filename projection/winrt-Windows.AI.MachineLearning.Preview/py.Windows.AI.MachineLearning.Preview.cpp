@@ -3137,23 +3137,8 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILearningModelVariableDescriptorPreview(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILearningModelVariableDescriptorPreview[] = {
         { "_assign_array_", _assign_array_ILearningModelVariableDescriptorPreview, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelVariableDescriptorPreview), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILearningModelVariableDescriptorPreview[] = {
@@ -3265,6 +3250,20 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         }
     };
 
+    static PyObject* _from_ILearningModelVariableDescriptorPreview(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILearningModelVariableDescriptorPreview(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3302,6 +3301,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     }
 
     static PyMethodDef methods_ImplementsILearningModelVariableDescriptorPreview[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILearningModelVariableDescriptorPreview), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILearningModelVariableDescriptorPreview), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILearningModelVariableDescriptorPreview), METH_VARARGS | METH_STATIC, nullptr },
         { }};

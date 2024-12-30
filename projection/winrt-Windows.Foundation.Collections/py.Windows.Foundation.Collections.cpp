@@ -3707,20 +3707,6 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPropertySet(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Foundation::Collections::IPropertySet>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _iterator_IPropertySet(py::wrapper::Windows::Foundation::Collections::IPropertySet* self) noexcept
     {
         try
@@ -3864,7 +3850,6 @@ namespace py::cpp::Windows::Foundation::Collections
         { "add_map_changed", reinterpret_cast<PyCFunction>(IPropertySet_add_MapChanged), METH_O, nullptr },
         { "remove_map_changed", reinterpret_cast<PyCFunction>(IPropertySet_remove_MapChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_IPropertySet, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPropertySet), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPropertySet[] = {
@@ -4194,6 +4179,20 @@ namespace py::cpp::Windows::Foundation::Collections
         }
     };
 
+    static PyObject* _from_IPropertySet(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Foundation::Collections::IPropertySet>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPropertySet(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -4231,6 +4230,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIPropertySet[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPropertySet), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPropertySet), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPropertySet), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -4333,23 +4333,8 @@ namespace py::cpp::Windows::Foundation::Collections
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IVectorChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IVectorChangedEventArgs[] = {
         { "_assign_array_", _assign_array_IVectorChangedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IVectorChangedEventArgs), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IVectorChangedEventArgs[] = {
@@ -4419,6 +4404,20 @@ namespace py::cpp::Windows::Foundation::Collections
         }
     };
 
+    static PyObject* _from_IVectorChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIVectorChangedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -4456,6 +4455,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef methods_ImplementsIVectorChangedEventArgs[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IVectorChangedEventArgs), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIVectorChangedEventArgs), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIVectorChangedEventArgs), METH_VARARGS | METH_STATIC, nullptr },
         { }};

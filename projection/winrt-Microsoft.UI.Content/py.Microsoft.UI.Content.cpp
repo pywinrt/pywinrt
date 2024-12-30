@@ -6666,20 +6666,6 @@ namespace py::cpp::Microsoft::UI::Content
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IContentSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Microsoft::UI::Content::IContentSiteBridge>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IContentSiteBridge(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -6706,7 +6692,6 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_IContentSiteBridge[] = {
         { "close", reinterpret_cast<PyCFunction>(IContentSiteBridge_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContentSiteBridge, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IContentSiteBridge), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IContentSiteBridge), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IContentSiteBridge), METH_VARARGS, nullptr },
         { }};
@@ -6869,6 +6854,20 @@ namespace py::cpp::Microsoft::UI::Content
         }
     };
 
+    static PyObject* _from_IContentSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::IContentSiteBridge>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIContentSiteBridge(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -6906,6 +6905,7 @@ namespace py::cpp::Microsoft::UI::Content
     }
 
     static PyMethodDef methods_ImplementsIContentSiteBridge[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContentSiteBridge), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContentSiteBridge), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContentSiteBridge), METH_VARARGS | METH_STATIC, nullptr },
         { }};

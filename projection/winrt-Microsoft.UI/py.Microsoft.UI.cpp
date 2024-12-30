@@ -4819,27 +4819,12 @@ namespace py::cpp::Microsoft::UI
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IClosableNotifier(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Microsoft::UI::IClosableNotifier>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IClosableNotifier[] = {
         { "add_closed", reinterpret_cast<PyCFunction>(IClosableNotifier_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(IClosableNotifier_remove_Closed), METH_O, nullptr },
         { "add_framework_closed", reinterpret_cast<PyCFunction>(IClosableNotifier_add_FrameworkClosed), METH_O, nullptr },
         { "remove_framework_closed", reinterpret_cast<PyCFunction>(IClosableNotifier_remove_FrameworkClosed), METH_O, nullptr },
         { "_assign_array_", _assign_array_IClosableNotifier, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IClosableNotifier), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IClosableNotifier[] = {
@@ -5012,6 +4997,20 @@ namespace py::cpp::Microsoft::UI
         }
     };
 
+    static PyObject* _from_IClosableNotifier(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::IClosableNotifier>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIClosableNotifier(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -5049,6 +5048,7 @@ namespace py::cpp::Microsoft::UI
     }
 
     static PyMethodDef methods_ImplementsIClosableNotifier[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IClosableNotifier), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIClosableNotifier), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIClosableNotifier), METH_VARARGS | METH_STATIC, nullptr },
         { }};

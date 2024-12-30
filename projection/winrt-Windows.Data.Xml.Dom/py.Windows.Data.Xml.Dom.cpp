@@ -20311,20 +20311,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IXmlCharacterData(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IXmlCharacterData[] = {
         { "append_child", reinterpret_cast<PyCFunction>(IXmlCharacterData_AppendChild), METH_VARARGS, nullptr },
         { "append_data", reinterpret_cast<PyCFunction>(IXmlCharacterData_AppendData), METH_VARARGS, nullptr },
@@ -20344,7 +20330,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(IXmlCharacterData_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "substring_data", reinterpret_cast<PyCFunction>(IXmlCharacterData_SubstringData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlCharacterData, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlCharacterData), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXmlCharacterData[] = {
@@ -21439,6 +21424,20 @@ namespace py::cpp::Windows::Data::Xml::Dom
         }
     };
 
+    static PyObject* _from_IXmlCharacterData(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIXmlCharacterData(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -21476,6 +21475,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
     }
 
     static PyMethodDef methods_ImplementsIXmlCharacterData[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlCharacterData), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlCharacterData), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlCharacterData), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -22588,20 +22588,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IXmlNode(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlNode>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IXmlNode[] = {
         { "append_child", reinterpret_cast<PyCFunction>(IXmlNode_AppendChild), METH_VARARGS, nullptr },
         { "clone_node", reinterpret_cast<PyCFunction>(IXmlNode_CloneNode), METH_VARARGS, nullptr },
@@ -22616,7 +22602,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "select_single_node", reinterpret_cast<PyCFunction>(IXmlNode_SelectSingleNode), METH_VARARGS, nullptr },
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(IXmlNode_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlNode, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlNode), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXmlNode[] = {
@@ -23440,6 +23425,20 @@ namespace py::cpp::Windows::Data::Xml::Dom
         }
     };
 
+    static PyObject* _from_IXmlNode(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlNode>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIXmlNode(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -23477,6 +23476,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
     }
 
     static PyMethodDef methods_ImplementsIXmlNode[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlNode), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlNode), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlNode), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -23689,27 +23689,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IXmlNodeSelector(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IXmlNodeSelector[] = {
         { "select_nodes", reinterpret_cast<PyCFunction>(IXmlNodeSelector_SelectNodes), METH_VARARGS, nullptr },
         { "select_nodes_ns", reinterpret_cast<PyCFunction>(IXmlNodeSelector_SelectNodesNS), METH_VARARGS, nullptr },
         { "select_single_node", reinterpret_cast<PyCFunction>(IXmlNodeSelector_SelectSingleNode), METH_VARARGS, nullptr },
         { "select_single_node_ns", reinterpret_cast<PyCFunction>(IXmlNodeSelector_SelectSingleNodeNS), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlNodeSelector, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlNodeSelector), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXmlNodeSelector[] = {
@@ -23889,6 +23874,20 @@ namespace py::cpp::Windows::Data::Xml::Dom
         }
     };
 
+    static PyObject* _from_IXmlNodeSelector(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIXmlNodeSelector(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -23926,6 +23925,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
     }
 
     static PyMethodDef methods_ImplementsIXmlNodeSelector[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlNodeSelector), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlNodeSelector), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlNodeSelector), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -24077,24 +24077,9 @@ namespace py::cpp::Windows::Data::Xml::Dom
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IXmlNodeSerializer(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IXmlNodeSerializer[] = {
         { "get_xml", reinterpret_cast<PyCFunction>(IXmlNodeSerializer_GetXml), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlNodeSerializer, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlNodeSerializer), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXmlNodeSerializer[] = {
@@ -24192,6 +24177,20 @@ namespace py::cpp::Windows::Data::Xml::Dom
         }
     };
 
+    static PyObject* _from_IXmlNodeSerializer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIXmlNodeSerializer(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -24229,6 +24228,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
     }
 
     static PyMethodDef methods_ImplementsIXmlNodeSerializer[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlNodeSerializer), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlNodeSerializer), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlNodeSerializer), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -25701,20 +25701,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IXmlText(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlText>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IXmlText[] = {
         { "append_child", reinterpret_cast<PyCFunction>(IXmlText_AppendChild), METH_VARARGS, nullptr },
         { "append_data", reinterpret_cast<PyCFunction>(IXmlText_AppendData), METH_VARARGS, nullptr },
@@ -25735,7 +25721,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "split_text", reinterpret_cast<PyCFunction>(IXmlText_SplitText), METH_VARARGS, nullptr },
         { "substring_data", reinterpret_cast<PyCFunction>(IXmlText_SubstringData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXmlText, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlText), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IXmlText[] = {
@@ -26862,6 +26847,20 @@ namespace py::cpp::Windows::Data::Xml::Dom
         }
     };
 
+    static PyObject* _from_IXmlText(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Data::Xml::Dom::IXmlText>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIXmlText(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -26899,6 +26898,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
     }
 
     static PyMethodDef methods_ImplementsIXmlText[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IXmlText), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIXmlText), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIXmlText), METH_VARARGS | METH_STATIC, nullptr },
         { }};

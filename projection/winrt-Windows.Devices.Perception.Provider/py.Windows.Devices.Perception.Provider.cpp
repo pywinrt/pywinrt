@@ -2573,20 +2573,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPerceptionFrameProvider(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IPerceptionFrameProvider(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -2616,7 +2602,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "start", reinterpret_cast<PyCFunction>(IPerceptionFrameProvider_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(IPerceptionFrameProvider_Stop), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPerceptionFrameProvider, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPerceptionFrameProvider), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IPerceptionFrameProvider), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IPerceptionFrameProvider), METH_VARARGS, nullptr },
         { }};
@@ -2811,6 +2796,20 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         }
     };
 
+    static PyObject* _from_IPerceptionFrameProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPerceptionFrameProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -2848,6 +2847,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     }
 
     static PyMethodDef methods_ImplementsIPerceptionFrameProvider[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPerceptionFrameProvider), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPerceptionFrameProvider), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPerceptionFrameProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -2973,20 +2973,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPerceptionFrameProviderManager(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IPerceptionFrameProviderManager(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -3014,7 +3000,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "close", reinterpret_cast<PyCFunction>(IPerceptionFrameProviderManager_Close), METH_VARARGS, nullptr },
         { "get_frame_provider", reinterpret_cast<PyCFunction>(IPerceptionFrameProviderManager_GetFrameProvider), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPerceptionFrameProviderManager, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPerceptionFrameProviderManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IPerceptionFrameProviderManager), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IPerceptionFrameProviderManager), METH_VARARGS, nullptr },
         { }};
@@ -3100,6 +3085,20 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         }
     };
 
+    static PyObject* _from_IPerceptionFrameProviderManager(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPerceptionFrameProviderManager(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -3137,6 +3136,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     }
 
     static PyMethodDef methods_ImplementsIPerceptionFrameProviderManager[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPerceptionFrameProviderManager), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPerceptionFrameProviderManager), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPerceptionFrameProviderManager), METH_VARARGS | METH_STATIC, nullptr },
         { }};

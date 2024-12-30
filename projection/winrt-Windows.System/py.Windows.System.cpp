@@ -13111,23 +13111,8 @@ namespace py::cpp::Windows::System
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_ILauncherViewOptions(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::System::ILauncherViewOptions>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ILauncherViewOptions[] = {
         { "_assign_array_", _assign_array_ILauncherViewOptions, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_ILauncherViewOptions), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_ILauncherViewOptions[] = {
@@ -13199,6 +13184,20 @@ namespace py::cpp::Windows::System
         }
     };
 
+    static PyObject* _from_ILauncherViewOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::System::ILauncherViewOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsILauncherViewOptions(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -13236,6 +13235,7 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef methods_ImplementsILauncherViewOptions[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_ILauncherViewOptions), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsILauncherViewOptions), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsILauncherViewOptions), METH_VARARGS | METH_STATIC, nullptr },
         { }};

@@ -14458,25 +14458,10 @@ namespace py::cpp::Windows::UI::Input
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IPointerPointTransform(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::UI::Input::IPointerPointTransform>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IPointerPointTransform[] = {
         { "transform_bounds", reinterpret_cast<PyCFunction>(IPointerPointTransform_TransformBounds), METH_VARARGS, nullptr },
         { "try_transform", reinterpret_cast<PyCFunction>(IPointerPointTransform_TryTransform), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPointerPointTransform, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IPointerPointTransform), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IPointerPointTransform[] = {
@@ -14591,6 +14576,20 @@ namespace py::cpp::Windows::UI::Input
         }
     };
 
+    static PyObject* _from_IPointerPointTransform(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Input::IPointerPointTransform>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIPointerPointTransform(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -14628,6 +14627,7 @@ namespace py::cpp::Windows::UI::Input
     }
 
     static PyMethodDef methods_ImplementsIPointerPointTransform[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IPointerPointTransform), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIPointerPointTransform), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIPointerPointTransform), METH_VARARGS | METH_STATIC, nullptr },
         { }};

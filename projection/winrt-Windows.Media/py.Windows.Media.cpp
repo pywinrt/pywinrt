@@ -8926,24 +8926,9 @@ namespace py::cpp::Windows::Media
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaExtension(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::IMediaExtension>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IMediaExtension[] = {
         { "set_properties", reinterpret_cast<PyCFunction>(IMediaExtension_SetProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IMediaExtension, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaExtension), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaExtension[] = {
@@ -9001,6 +8986,20 @@ namespace py::cpp::Windows::Media
         }
     };
 
+    static PyObject* _from_IMediaExtension(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::IMediaExtension>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIMediaExtension(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -9038,6 +9037,7 @@ namespace py::cpp::Windows::Media
     }
 
     static PyMethodDef methods_ImplementsIMediaExtension[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaExtension), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaExtension), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaExtension), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -9487,20 +9487,6 @@ namespace py::cpp::Windows::Media
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaFrame(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::IMediaFrame>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _enter_IMediaFrame(py::wrapper::Windows::Media::IMediaFrame* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
@@ -9527,7 +9513,6 @@ namespace py::cpp::Windows::Media
     static PyMethodDef _methods_IMediaFrame[] = {
         { "close", reinterpret_cast<PyCFunction>(IMediaFrame_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IMediaFrame, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMediaFrame), METH_NOARGS, nullptr },
         { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMediaFrame), METH_VARARGS, nullptr },
         { }};
@@ -9820,6 +9805,20 @@ namespace py::cpp::Windows::Media
         }
     };
 
+    static PyObject* _from_IMediaFrame(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::IMediaFrame>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIMediaFrame(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -9857,6 +9856,7 @@ namespace py::cpp::Windows::Media
     }
 
     static PyMethodDef methods_ImplementsIMediaFrame[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaFrame), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaFrame), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaFrame), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -9989,23 +9989,8 @@ namespace py::cpp::Windows::Media
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaMarker(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::IMediaMarker>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IMediaMarker[] = {
         { "_assign_array_", _assign_array_IMediaMarker, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaMarker), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaMarker[] = {
@@ -10096,6 +10081,20 @@ namespace py::cpp::Windows::Media
         }
     };
 
+    static PyObject* _from_IMediaMarker(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::IMediaMarker>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIMediaMarker(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -10133,6 +10132,7 @@ namespace py::cpp::Windows::Media
     }
 
     static PyMethodDef methods_ImplementsIMediaMarker[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaMarker), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaMarker), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaMarker), METH_VARARGS | METH_STATIC, nullptr },
         { }};
@@ -10205,23 +10205,8 @@ namespace py::cpp::Windows::Media
         Py_RETURN_NONE;
     }
 
-    static PyObject* _from_IMediaMarkers(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Windows::Media::IMediaMarkers>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IMediaMarkers[] = {
         { "_assign_array_", _assign_array_IMediaMarkers, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaMarkers), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_IMediaMarkers[] = {
@@ -10270,6 +10255,20 @@ namespace py::cpp::Windows::Media
         }
     };
 
+    static PyObject* _from_IMediaMarkers(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::IMediaMarkers>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _guid_ImplementsIMediaMarkers(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         try
@@ -10307,6 +10306,7 @@ namespace py::cpp::Windows::Media
     }
 
     static PyMethodDef methods_ImplementsIMediaMarkers[] = {
+        { "_from", reinterpret_cast<PyCFunction>(_from_IMediaMarkers), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIMediaMarkers), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIMediaMarkers), METH_VARARGS | METH_STATIC, nullptr },
         { }};
