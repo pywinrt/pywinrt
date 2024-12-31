@@ -2,6 +2,7 @@ import gc
 import threading
 import unittest
 import weakref
+from typing import override
 from uuid import UUID
 
 import winrt.testcomponent as tc
@@ -37,6 +38,7 @@ class TestTestComponent(unittest.TestCase):
 
     def test_composable_subclass_with_interface(self):
         class C(tc.Override, tc.IRequiredOne):
+            @override
             def one(self) -> int:
                 return 1
 
@@ -49,6 +51,7 @@ class TestTestComponent(unittest.TestCase):
 
     def test_overriding_new(self):
         class C(tc.Composable):
+            @override
             def __new__(cls):
                 return super().__new__(cls, 2)
 
@@ -63,6 +66,7 @@ class TestTestComponent(unittest.TestCase):
         base_event = threading.Event()
 
         class C(tc.Override):
+            @override
             def _on_overridable(self) -> None:
                 event.set()
 
@@ -78,6 +82,7 @@ class TestTestComponent(unittest.TestCase):
         base_event = threading.Event()
 
         class C(tc.Override):
+            @override
             def _on_overridable(self) -> None:
                 super()._on_overridable()
                 event.set()
@@ -91,6 +96,7 @@ class TestTestComponent(unittest.TestCase):
 
     def test_unhandled_exception_in_override(self) -> None:
         class C(tc.Override):
+            @override
             def _on_overridable(self) -> None:
                 raise RuntimeError("test")
 
