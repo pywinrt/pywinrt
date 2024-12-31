@@ -22,7 +22,7 @@ from winrt.windows.applicationmodel.useractivities import UserActivityState
 Self = typing.TypeVar('Self')
 
 @typing.final
-class UserActivity_Static(type):
+class UserActivity_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.ApplicationModel.UserActivities.UserActivity::ToJsonArray(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.UserActivities.UserActivity>)
     def to_json_array(cls, activities: typing.Iterable[UserActivity], /) -> str: ...
     # Windows.ApplicationModel.UserActivities.UserActivity Windows.ApplicationModel.UserActivities.UserActivity::TryParseFromJson(System.String)
@@ -111,7 +111,7 @@ class UserActivityAttribution(winrt.system.Object):
     def add_image_query(self, value: bool) -> None: ...
 
 @typing.final
-class UserActivityChannel_Static(type):
+class UserActivityChannel_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.ApplicationModel.UserActivities.UserActivityChannel::DisableAutoSessionCreation()
     def disable_auto_session_creation(cls) -> None: ...
     # Windows.ApplicationModel.UserActivities.UserActivityChannel Windows.ApplicationModel.UserActivities.UserActivityChannel::GetDefault()
@@ -135,7 +135,7 @@ class UserActivityChannel(winrt.system.Object, metaclass=UserActivityChannel_Sta
     def get_session_history_items_for_user_activity_async(self, activity_id: str, start_time: datetime.datetime, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[UserActivitySessionHistoryItem]]: ...
 
 @typing.final
-class UserActivityContentInfo_Static(type):
+class UserActivityContentInfo_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.UserActivities.UserActivityContentInfo Windows.ApplicationModel.UserActivities.UserActivityContentInfo::FromJson(System.String)
     def from_json(cls, value: str, /) -> UserActivityContentInfo: ...
 
@@ -150,7 +150,7 @@ class UserActivityRequest(winrt.system.Object):
     def set_user_activity(self, activity: UserActivity, /) -> None: ...
 
 @typing.final
-class UserActivityRequestManager_Static(type):
+class UserActivityRequestManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.UserActivities.UserActivityRequestManager Windows.ApplicationModel.UserActivities.UserActivityRequestManager::GetForCurrentView()
     def get_for_current_view(cls) -> UserActivityRequestManager: ...
 

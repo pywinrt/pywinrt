@@ -58,7 +58,7 @@ class ContentLinkInfo(winrt.system.Object):
     def display_text(self, value: str) -> None: ...
 
 @typing.final
-class FontWeights_Static(type):
+class FontWeights_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Text.FontWeight Windows.UI.Text.FontWeights::get_Black()
     @_property
     def black(cls) -> FontWeight: ...
@@ -315,7 +315,7 @@ class RichEditTextRange(winrt.system.Object, ITextRange):
     def story_length(self) -> winrt.system.Int32: ...
 
 @typing.final
-class TextConstants_Static(type):
+class TextConstants_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Color Windows.UI.Text.TextConstants::get_AutoColor()
     @_property
     def auto_color(cls) -> windows_ui.Color: ...

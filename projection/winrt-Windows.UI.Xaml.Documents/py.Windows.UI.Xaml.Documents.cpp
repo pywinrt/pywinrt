@@ -18088,6 +18088,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -18173,7 +18179,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BlockCollection_type{py::register_python_type(module.get(), &type_spec_BlockCollection, object_bases.get(), nullptr)};
+    py::pytype_handle BlockCollection_type{py::register_python_type(module.get(), &type_spec_BlockCollection, object_bases.get(), inspectable_meta_type)};
     if (!BlockCollection_type)
     {
         return nullptr;
@@ -18233,7 +18239,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Bold_type{py::register_python_type(module.get(), &type_spec_Bold, Bold_bases.get(), nullptr)};
+    py::pytype_handle Bold_type{py::register_python_type(module.get(), &type_spec_Bold, Bold_bases.get(), inspectable_meta_type)};
     if (!Bold_type)
     {
         return nullptr;
@@ -18269,7 +18275,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContactContentLinkProvider_type{py::register_python_type(module.get(), &type_spec_ContactContentLinkProvider, ContactContentLinkProvider_bases.get(), nullptr)};
+    py::pytype_handle ContactContentLinkProvider_type{py::register_python_type(module.get(), &type_spec_ContactContentLinkProvider, ContactContentLinkProvider_bases.get(), inspectable_meta_type)};
     if (!ContactContentLinkProvider_type)
     {
         return nullptr;
@@ -18299,13 +18305,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContentLinkInvokedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentLinkInvokedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ContentLinkInvokedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentLinkInvokedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ContentLinkInvokedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContentLinkProviderCollection_type{py::register_python_type(module.get(), &type_spec_ContentLinkProviderCollection, object_bases.get(), nullptr)};
+    py::pytype_handle ContentLinkProviderCollection_type{py::register_python_type(module.get(), &type_spec_ContentLinkProviderCollection, object_bases.get(), inspectable_meta_type)};
     if (!ContentLinkProviderCollection_type)
     {
         return nullptr;
@@ -18365,13 +18371,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HyperlinkClickEventArgs_type{py::register_python_type(module.get(), &type_spec_HyperlinkClickEventArgs, HyperlinkClickEventArgs_bases.get(), nullptr)};
+    py::pytype_handle HyperlinkClickEventArgs_type{py::register_python_type(module.get(), &type_spec_HyperlinkClickEventArgs, HyperlinkClickEventArgs_bases.get(), inspectable_meta_type)};
     if (!HyperlinkClickEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InlineCollection_type{py::register_python_type(module.get(), &type_spec_InlineCollection, object_bases.get(), nullptr)};
+    py::pytype_handle InlineCollection_type{py::register_python_type(module.get(), &type_spec_InlineCollection, object_bases.get(), inspectable_meta_type)};
     if (!InlineCollection_type)
     {
         return nullptr;
@@ -18383,7 +18389,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InlineUIContainer_type{py::register_python_type(module.get(), &type_spec_InlineUIContainer, InlineUIContainer_bases.get(), nullptr)};
+    py::pytype_handle InlineUIContainer_type{py::register_python_type(module.get(), &type_spec_InlineUIContainer, InlineUIContainer_bases.get(), inspectable_meta_type)};
     if (!InlineUIContainer_type)
     {
         return nullptr;
@@ -18395,7 +18401,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Italic_type{py::register_python_type(module.get(), &type_spec_Italic, Italic_bases.get(), nullptr)};
+    py::pytype_handle Italic_type{py::register_python_type(module.get(), &type_spec_Italic, Italic_bases.get(), inspectable_meta_type)};
     if (!Italic_type)
     {
         return nullptr;
@@ -18407,7 +18413,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LineBreak_type{py::register_python_type(module.get(), &type_spec_LineBreak, LineBreak_bases.get(), nullptr)};
+    py::pytype_handle LineBreak_type{py::register_python_type(module.get(), &type_spec_LineBreak, LineBreak_bases.get(), inspectable_meta_type)};
     if (!LineBreak_type)
     {
         return nullptr;
@@ -18443,7 +18449,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PlaceContentLinkProvider_type{py::register_python_type(module.get(), &type_spec_PlaceContentLinkProvider, PlaceContentLinkProvider_bases.get(), nullptr)};
+    py::pytype_handle PlaceContentLinkProvider_type{py::register_python_type(module.get(), &type_spec_PlaceContentLinkProvider, PlaceContentLinkProvider_bases.get(), inspectable_meta_type)};
     if (!PlaceContentLinkProvider_type)
     {
         return nullptr;
@@ -18473,7 +18479,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TextHighlighter_Static{PyType_FromSpec(&type_spec_TextHighlighter_Static)};
+    py::pyobj_handle TextHighlighter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TextHighlighter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TextHighlighter_Static{PyType_FromSpecWithBases(&type_spec_TextHighlighter_Static, TextHighlighter_Static_bases.get())};
     if (!type_TextHighlighter_Static)
     {
         return nullptr;
@@ -18509,13 +18521,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TextPointer_type{py::register_python_type(module.get(), &type_spec_TextPointer, object_bases.get(), nullptr)};
+    py::pytype_handle TextPointer_type{py::register_python_type(module.get(), &type_spec_TextPointer, object_bases.get(), inspectable_meta_type)};
     if (!TextPointer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Typography_Static{PyType_FromSpec(&type_spec_Typography_Static)};
+    py::pyobj_handle Typography_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Typography_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Typography_Static{PyType_FromSpecWithBases(&type_spec_Typography_Static, Typography_Static_bases.get())};
     if (!type_Typography_Static)
     {
         return nullptr;
@@ -18533,7 +18551,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Underline_type{py::register_python_type(module.get(), &type_spec_Underline, Underline_bases.get(), nullptr)};
+    py::pytype_handle Underline_type{py::register_python_type(module.get(), &type_spec_Underline, Underline_bases.get(), inspectable_meta_type)};
     if (!Underline_type)
     {
         return nullptr;

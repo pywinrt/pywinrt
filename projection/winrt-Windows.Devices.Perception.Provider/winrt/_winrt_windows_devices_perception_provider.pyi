@@ -22,7 +22,7 @@ from winrt.windows.devices.perception.provider import PerceptionStartFaceAuthent
 Self = typing.TypeVar('Self')
 
 @typing.final
-class KnownPerceptionFrameKind_Static(type):
+class KnownPerceptionFrameKind_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Devices.Perception.Provider.KnownPerceptionFrameKind::get_Color()
     @_property
     def color(cls) -> str: ...
@@ -121,7 +121,7 @@ class PerceptionFrameProviderInfo(winrt.system.Object):
     def device_kind(self, value: str) -> None: ...
 
 @typing.final
-class PerceptionFrameProviderManagerService_Static(type):
+class PerceptionFrameProviderManagerService_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::PublishFrameForProvider(Windows.Devices.Perception.Provider.IPerceptionFrameProvider,Windows.Devices.Perception.Provider.PerceptionFrame)
     # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def publish_frame_for_provider(cls, provider: IPerceptionFrameProvider, frame: PerceptionFrame, /) -> None: ...

@@ -2373,6 +2373,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2386,7 +2392,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_WebUICommandBar_Static{PyType_FromSpec(&type_spec_WebUICommandBar_Static)};
+    py::pyobj_handle WebUICommandBar_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WebUICommandBar_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WebUICommandBar_Static{PyType_FromSpecWithBases(&type_spec_WebUICommandBar_Static, WebUICommandBar_Static_bases.get())};
     if (!type_WebUICommandBar_Static)
     {
         return nullptr;
@@ -2398,37 +2410,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WebUICommandBarBitmapIcon_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarBitmapIcon, object_bases.get(), nullptr)};
+    py::pytype_handle WebUICommandBarBitmapIcon_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarBitmapIcon, object_bases.get(), inspectable_meta_type)};
     if (!WebUICommandBarBitmapIcon_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebUICommandBarConfirmationButton_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarConfirmationButton, object_bases.get(), nullptr)};
+    py::pytype_handle WebUICommandBarConfirmationButton_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarConfirmationButton, object_bases.get(), inspectable_meta_type)};
     if (!WebUICommandBarConfirmationButton_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebUICommandBarIconButton_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarIconButton, object_bases.get(), nullptr)};
+    py::pytype_handle WebUICommandBarIconButton_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarIconButton, object_bases.get(), inspectable_meta_type)};
     if (!WebUICommandBarIconButton_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebUICommandBarItemInvokedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarItemInvokedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WebUICommandBarItemInvokedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarItemInvokedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WebUICommandBarItemInvokedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebUICommandBarSizeChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarSizeChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WebUICommandBarSizeChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarSizeChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WebUICommandBarSizeChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebUICommandBarSymbolIcon_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarSymbolIcon, object_bases.get(), nullptr)};
+    py::pytype_handle WebUICommandBarSymbolIcon_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarSymbolIcon, object_bases.get(), inspectable_meta_type)};
     if (!WebUICommandBarSymbolIcon_type)
     {
         return nullptr;
@@ -2440,7 +2452,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebUICommandBarElement_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebUICommandBarElement, nullptr))};
+    py::pytype_handle ImplementsIWebUICommandBarElement_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebUICommandBarElement, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebUICommandBarElement_type)
     {
         return nullptr;
@@ -2457,7 +2469,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebUICommandBarIcon_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebUICommandBarIcon, nullptr))};
+    py::pytype_handle ImplementsIWebUICommandBarIcon_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebUICommandBarIcon, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebUICommandBarIcon_type)
     {
         return nullptr;

@@ -573,6 +573,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_windowsappruntim
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -586,13 +592,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_windowsappruntim
         return nullptr;
     }
 
-    py::pytype_handle DeploymentInitializeOptions_type{py::register_python_type(module.get(), &type_spec_DeploymentInitializeOptions, object_bases.get(), nullptr)};
+    py::pytype_handle DeploymentInitializeOptions_type{py::register_python_type(module.get(), &type_spec_DeploymentInitializeOptions, object_bases.get(), inspectable_meta_type)};
     if (!DeploymentInitializeOptions_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DeploymentManager_Static{PyType_FromSpec(&type_spec_DeploymentManager_Static)};
+    py::pyobj_handle DeploymentManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DeploymentManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DeploymentManager_Static{PyType_FromSpecWithBases(&type_spec_DeploymentManager_Static, DeploymentManager_Static_bases.get())};
     if (!type_DeploymentManager_Static)
     {
         return nullptr;
@@ -604,7 +616,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_windowsappruntim
         return nullptr;
     }
 
-    py::pytype_handle DeploymentResult_type{py::register_python_type(module.get(), &type_spec_DeploymentResult, object_bases.get(), nullptr)};
+    py::pytype_handle DeploymentResult_type{py::register_python_type(module.get(), &type_spec_DeploymentResult, object_bases.get(), inspectable_meta_type)};
     if (!DeploymentResult_type)
     {
         return nullptr;

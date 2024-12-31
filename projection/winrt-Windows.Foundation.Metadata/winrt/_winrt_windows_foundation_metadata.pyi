@@ -15,7 +15,7 @@ from winrt.windows.foundation.metadata import AttributeTargets, CompositionType,
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ApiInformation_Static(type):
+class ApiInformation_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsApiContractPresent(System.String,System.UInt16)
     def is_api_contract_present_by_major(cls, contract_name: str, major_version: winrt.system.UInt16, /) -> bool: ...
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsApiContractPresent(System.String,System.UInt16,System.UInt16)

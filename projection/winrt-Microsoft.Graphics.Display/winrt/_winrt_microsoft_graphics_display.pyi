@@ -53,7 +53,7 @@ class DisplayAdvancedColorInfo(winrt.system.Object):
     def white_point(self) -> windows_foundation.Point: ...
 
 @typing.final
-class DisplayInformation_Static(type):
+class DisplayInformation_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Graphics.Display.DisplayInformation Microsoft.Graphics.Display.DisplayInformation::CreateForDisplayId(Microsoft.UI.DisplayId)
     def create_for_display_id(cls, display_id: microsoft_ui.DisplayId, /) -> DisplayInformation: ...
     # Microsoft.Graphics.Display.DisplayInformation Microsoft.Graphics.Display.DisplayInformation::CreateForWindowId(Microsoft.UI.WindowId)

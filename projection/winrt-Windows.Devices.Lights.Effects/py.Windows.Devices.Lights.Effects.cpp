@@ -4107,6 +4107,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4120,37 +4126,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LampArrayBitmapEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayBitmapEffect, object_bases.get(), nullptr)};
+    py::pytype_handle LampArrayBitmapEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayBitmapEffect, object_bases.get(), inspectable_meta_type)};
     if (!LampArrayBitmapEffect_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LampArrayBitmapRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_LampArrayBitmapRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle LampArrayBitmapRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_LampArrayBitmapRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!LampArrayBitmapRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LampArrayBlinkEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayBlinkEffect, object_bases.get(), nullptr)};
+    py::pytype_handle LampArrayBlinkEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayBlinkEffect, object_bases.get(), inspectable_meta_type)};
     if (!LampArrayBlinkEffect_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LampArrayColorRampEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayColorRampEffect, object_bases.get(), nullptr)};
+    py::pytype_handle LampArrayColorRampEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayColorRampEffect, object_bases.get(), inspectable_meta_type)};
     if (!LampArrayColorRampEffect_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LampArrayCustomEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayCustomEffect, object_bases.get(), nullptr)};
+    py::pytype_handle LampArrayCustomEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayCustomEffect, object_bases.get(), inspectable_meta_type)};
     if (!LampArrayCustomEffect_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LampArrayEffectPlaylist_Static{PyType_FromSpec(&type_spec_LampArrayEffectPlaylist_Static)};
+    py::pyobj_handle LampArrayEffectPlaylist_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LampArrayEffectPlaylist_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LampArrayEffectPlaylist_Static{PyType_FromSpecWithBases(&type_spec_LampArrayEffectPlaylist_Static, LampArrayEffectPlaylist_Static_bases.get())};
     if (!type_LampArrayEffectPlaylist_Static)
     {
         return nullptr;
@@ -4162,13 +4174,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LampArraySolidEffect_type{py::register_python_type(module.get(), &type_spec_LampArraySolidEffect, object_bases.get(), nullptr)};
+    py::pytype_handle LampArraySolidEffect_type{py::register_python_type(module.get(), &type_spec_LampArraySolidEffect, object_bases.get(), inspectable_meta_type)};
     if (!LampArraySolidEffect_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LampArrayUpdateRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_LampArrayUpdateRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle LampArrayUpdateRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_LampArrayUpdateRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!LampArrayUpdateRequestedEventArgs_type)
     {
         return nullptr;
@@ -4180,7 +4192,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsILampArrayEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILampArrayEffect, nullptr))};
+    py::pytype_handle ImplementsILampArrayEffect_type{py::register_python_type(module.get(), &type_spec_ImplementsILampArrayEffect, nullptr, inspectable_meta_type)};
     if (!ImplementsILampArrayEffect_type)
     {
         return nullptr;

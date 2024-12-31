@@ -752,7 +752,7 @@ class TextElement(microsoft_ui_xaml.DependencyObject, metaclass=TextElement_Stat
     @typing.final
     def name(self) -> str: ...
 
-class TextHighlighter_Static(type):
+class TextHighlighter_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Documents.TextHighlighter::get_BackgroundProperty()
     @_property
     @typing.final
@@ -809,7 +809,7 @@ class TextPointer(winrt.system.Object):
     def visual_parent(self) -> microsoft_ui_xaml.FrameworkElement: ...
 
 @typing.final
-class Typography_Static(type):
+class Typography_Static(winrt._winrt.IInspectable_Static):
     # System.Int32 Microsoft.UI.Xaml.Documents.Typography::GetAnnotationAlternates(Microsoft.UI.Xaml.DependencyObject)
     def get_annotation_alternates(cls, element: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
     # System.Boolean Microsoft.UI.Xaml.Documents.Typography::GetCapitalSpacing(Microsoft.UI.Xaml.DependencyObject)

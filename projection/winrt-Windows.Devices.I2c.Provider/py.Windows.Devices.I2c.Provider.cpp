@@ -1646,6 +1646,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c_provider(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1659,7 +1665,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ProviderI2cConnectionSettings_type{py::register_python_type(module.get(), &type_spec_ProviderI2cConnectionSettings, object_bases.get(), nullptr)};
+    py::pytype_handle ProviderI2cConnectionSettings_type{py::register_python_type(module.get(), &type_spec_ProviderI2cConnectionSettings, object_bases.get(), inspectable_meta_type)};
     if (!ProviderI2cConnectionSettings_type)
     {
         return nullptr;
@@ -1671,7 +1677,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsII2cControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsII2cControllerProvider, nullptr))};
+    py::pytype_handle ImplementsII2cControllerProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsII2cControllerProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsII2cControllerProvider_type)
     {
         return nullptr;
@@ -1688,7 +1694,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsII2cDeviceProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsII2cDeviceProvider, nullptr))};
+    py::pytype_handle ImplementsII2cDeviceProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsII2cDeviceProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsII2cDeviceProvider_type)
     {
         return nullptr;
@@ -1705,7 +1711,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsII2cProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsII2cProvider, nullptr))};
+    py::pytype_handle ImplementsII2cProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsII2cProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsII2cProvider_type)
     {
         return nullptr;

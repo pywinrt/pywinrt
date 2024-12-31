@@ -7094,6 +7094,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -7107,7 +7113,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AsymmetricAlgorithmNames_Static{PyType_FromSpec(&type_spec_AsymmetricAlgorithmNames_Static)};
+    py::pyobj_handle AsymmetricAlgorithmNames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AsymmetricAlgorithmNames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AsymmetricAlgorithmNames_Static{PyType_FromSpecWithBases(&type_spec_AsymmetricAlgorithmNames_Static, AsymmetricAlgorithmNames_Static_bases.get())};
     if (!type_AsymmetricAlgorithmNames_Static)
     {
         return nullptr;
@@ -7119,7 +7131,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AsymmetricKeyAlgorithmProvider_Static{PyType_FromSpec(&type_spec_AsymmetricKeyAlgorithmProvider_Static)};
+    py::pyobj_handle AsymmetricKeyAlgorithmProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AsymmetricKeyAlgorithmProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AsymmetricKeyAlgorithmProvider_Static{PyType_FromSpecWithBases(&type_spec_AsymmetricKeyAlgorithmProvider_Static, AsymmetricKeyAlgorithmProvider_Static_bases.get())};
     if (!type_AsymmetricKeyAlgorithmProvider_Static)
     {
         return nullptr;
@@ -7131,7 +7149,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CryptographicEngine_Static{PyType_FromSpec(&type_spec_CryptographicEngine_Static)};
+    py::pyobj_handle CryptographicEngine_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CryptographicEngine_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CryptographicEngine_Static{PyType_FromSpecWithBases(&type_spec_CryptographicEngine_Static, CryptographicEngine_Static_bases.get())};
     if (!type_CryptographicEngine_Static)
     {
         return nullptr;
@@ -7143,19 +7167,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CryptographicHash_type{py::register_python_type(module.get(), &type_spec_CryptographicHash, object_bases.get(), nullptr)};
+    py::pytype_handle CryptographicHash_type{py::register_python_type(module.get(), &type_spec_CryptographicHash, object_bases.get(), inspectable_meta_type)};
     if (!CryptographicHash_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CryptographicKey_type{py::register_python_type(module.get(), &type_spec_CryptographicKey, object_bases.get(), nullptr)};
+    py::pytype_handle CryptographicKey_type{py::register_python_type(module.get(), &type_spec_CryptographicKey, object_bases.get(), inspectable_meta_type)};
     if (!CryptographicKey_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EccCurveNames_Static{PyType_FromSpec(&type_spec_EccCurveNames_Static)};
+    py::pyobj_handle EccCurveNames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!EccCurveNames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EccCurveNames_Static{PyType_FromSpecWithBases(&type_spec_EccCurveNames_Static, EccCurveNames_Static_bases.get())};
     if (!type_EccCurveNames_Static)
     {
         return nullptr;
@@ -7167,13 +7197,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle EncryptedAndAuthenticatedData_type{py::register_python_type(module.get(), &type_spec_EncryptedAndAuthenticatedData, object_bases.get(), nullptr)};
+    py::pytype_handle EncryptedAndAuthenticatedData_type{py::register_python_type(module.get(), &type_spec_EncryptedAndAuthenticatedData, object_bases.get(), inspectable_meta_type)};
     if (!EncryptedAndAuthenticatedData_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HashAlgorithmNames_Static{PyType_FromSpec(&type_spec_HashAlgorithmNames_Static)};
+    py::pyobj_handle HashAlgorithmNames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HashAlgorithmNames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HashAlgorithmNames_Static{PyType_FromSpecWithBases(&type_spec_HashAlgorithmNames_Static, HashAlgorithmNames_Static_bases.get())};
     if (!type_HashAlgorithmNames_Static)
     {
         return nullptr;
@@ -7185,7 +7221,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_HashAlgorithmProvider_Static{PyType_FromSpec(&type_spec_HashAlgorithmProvider_Static)};
+    py::pyobj_handle HashAlgorithmProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HashAlgorithmProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HashAlgorithmProvider_Static{PyType_FromSpecWithBases(&type_spec_HashAlgorithmProvider_Static, HashAlgorithmProvider_Static_bases.get())};
     if (!type_HashAlgorithmProvider_Static)
     {
         return nullptr;
@@ -7197,7 +7239,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyDerivationAlgorithmNames_Static{PyType_FromSpec(&type_spec_KeyDerivationAlgorithmNames_Static)};
+    py::pyobj_handle KeyDerivationAlgorithmNames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KeyDerivationAlgorithmNames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KeyDerivationAlgorithmNames_Static{PyType_FromSpecWithBases(&type_spec_KeyDerivationAlgorithmNames_Static, KeyDerivationAlgorithmNames_Static_bases.get())};
     if (!type_KeyDerivationAlgorithmNames_Static)
     {
         return nullptr;
@@ -7209,7 +7257,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyDerivationAlgorithmProvider_Static{PyType_FromSpec(&type_spec_KeyDerivationAlgorithmProvider_Static)};
+    py::pyobj_handle KeyDerivationAlgorithmProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KeyDerivationAlgorithmProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KeyDerivationAlgorithmProvider_Static{PyType_FromSpecWithBases(&type_spec_KeyDerivationAlgorithmProvider_Static, KeyDerivationAlgorithmProvider_Static_bases.get())};
     if (!type_KeyDerivationAlgorithmProvider_Static)
     {
         return nullptr;
@@ -7221,7 +7275,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyDerivationParameters_Static{PyType_FromSpec(&type_spec_KeyDerivationParameters_Static)};
+    py::pyobj_handle KeyDerivationParameters_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KeyDerivationParameters_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KeyDerivationParameters_Static{PyType_FromSpecWithBases(&type_spec_KeyDerivationParameters_Static, KeyDerivationParameters_Static_bases.get())};
     if (!type_KeyDerivationParameters_Static)
     {
         return nullptr;
@@ -7233,7 +7293,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MacAlgorithmNames_Static{PyType_FromSpec(&type_spec_MacAlgorithmNames_Static)};
+    py::pyobj_handle MacAlgorithmNames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MacAlgorithmNames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MacAlgorithmNames_Static{PyType_FromSpecWithBases(&type_spec_MacAlgorithmNames_Static, MacAlgorithmNames_Static_bases.get())};
     if (!type_MacAlgorithmNames_Static)
     {
         return nullptr;
@@ -7245,7 +7311,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MacAlgorithmProvider_Static{PyType_FromSpec(&type_spec_MacAlgorithmProvider_Static)};
+    py::pyobj_handle MacAlgorithmProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MacAlgorithmProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MacAlgorithmProvider_Static{PyType_FromSpecWithBases(&type_spec_MacAlgorithmProvider_Static, MacAlgorithmProvider_Static_bases.get())};
     if (!type_MacAlgorithmProvider_Static)
     {
         return nullptr;
@@ -7257,7 +7329,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PersistedKeyProvider_Static{PyType_FromSpec(&type_spec_PersistedKeyProvider_Static)};
+    py::pyobj_handle PersistedKeyProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PersistedKeyProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PersistedKeyProvider_Static{PyType_FromSpecWithBases(&type_spec_PersistedKeyProvider_Static, PersistedKeyProvider_Static_bases.get())};
     if (!type_PersistedKeyProvider_Static)
     {
         return nullptr;
@@ -7269,7 +7347,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SymmetricAlgorithmNames_Static{PyType_FromSpec(&type_spec_SymmetricAlgorithmNames_Static)};
+    py::pyobj_handle SymmetricAlgorithmNames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SymmetricAlgorithmNames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SymmetricAlgorithmNames_Static{PyType_FromSpecWithBases(&type_spec_SymmetricAlgorithmNames_Static, SymmetricAlgorithmNames_Static_bases.get())};
     if (!type_SymmetricAlgorithmNames_Static)
     {
         return nullptr;
@@ -7281,7 +7365,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SymmetricKeyAlgorithmProvider_Static{PyType_FromSpec(&type_spec_SymmetricKeyAlgorithmProvider_Static)};
+    py::pyobj_handle SymmetricKeyAlgorithmProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SymmetricKeyAlgorithmProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SymmetricKeyAlgorithmProvider_Static{PyType_FromSpecWithBases(&type_spec_SymmetricKeyAlgorithmProvider_Static, SymmetricKeyAlgorithmProvider_Static_bases.get())};
     if (!type_SymmetricKeyAlgorithmProvider_Static)
     {
         return nullptr;

@@ -15,7 +15,7 @@ import winrt.windows.ui as windows_ui
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ResourceLoader_Static(type):
+class ResourceLoader_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.ApplicationModel.Resources.ResourceLoader::GetDefaultPriPath(System.String)
     def get_default_pri_path(cls, package_full_name: str, /) -> str: ...
     # Windows.ApplicationModel.Resources.ResourceLoader Windows.ApplicationModel.Resources.ResourceLoader::GetForCurrentView()

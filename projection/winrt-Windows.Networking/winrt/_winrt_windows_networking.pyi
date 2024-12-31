@@ -45,7 +45,7 @@ class EndpointPair(winrt.system.Object):
     def local_host_name(self, value: HostName) -> None: ...
 
 @typing.final
-class HostName_Static(type):
+class HostName_Static(winrt._winrt.IInspectable_Static):
     # System.Int32 Windows.Networking.HostName::Compare(System.String,System.String)
     def compare(cls, value1: str, value2: str, /) -> winrt.system.Int32: ...
 

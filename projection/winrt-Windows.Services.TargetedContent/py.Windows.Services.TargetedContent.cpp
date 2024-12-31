@@ -3210,6 +3210,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3223,31 +3229,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentAction_type{py::register_python_type(module.get(), &type_spec_TargetedContentAction, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentAction_type{py::register_python_type(module.get(), &type_spec_TargetedContentAction, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentAction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentAvailabilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TargetedContentAvailabilityChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentAvailabilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TargetedContentAvailabilityChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentAvailabilityChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TargetedContentChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TargetedContentChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentCollection_type{py::register_python_type(module.get(), &type_spec_TargetedContentCollection, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentCollection_type{py::register_python_type(module.get(), &type_spec_TargetedContentCollection, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentCollection_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TargetedContentContainer_Static{PyType_FromSpec(&type_spec_TargetedContentContainer_Static)};
+    py::pyobj_handle TargetedContentContainer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TargetedContentContainer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TargetedContentContainer_Static{PyType_FromSpecWithBases(&type_spec_TargetedContentContainer_Static, TargetedContentContainer_Static_bases.get())};
     if (!type_TargetedContentContainer_Static)
     {
         return nullptr;
@@ -3259,43 +3271,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentFile_type{py::register_python_type(module.get(), &type_spec_TargetedContentFile, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentFile_type{py::register_python_type(module.get(), &type_spec_TargetedContentFile, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentFile_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentImage_type{py::register_python_type(module.get(), &type_spec_TargetedContentImage, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentImage_type{py::register_python_type(module.get(), &type_spec_TargetedContentImage, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentImage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentItem_type{py::register_python_type(module.get(), &type_spec_TargetedContentItem, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentItem_type{py::register_python_type(module.get(), &type_spec_TargetedContentItem, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentItemState_type{py::register_python_type(module.get(), &type_spec_TargetedContentItemState, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentItemState_type{py::register_python_type(module.get(), &type_spec_TargetedContentItemState, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentItemState_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentObject_type{py::register_python_type(module.get(), &type_spec_TargetedContentObject, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentObject_type{py::register_python_type(module.get(), &type_spec_TargetedContentObject, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentObject_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TargetedContentStateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TargetedContentStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TargetedContentSubscription_Static{PyType_FromSpec(&type_spec_TargetedContentSubscription_Static)};
+    py::pyobj_handle TargetedContentSubscription_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TargetedContentSubscription_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TargetedContentSubscription_Static{PyType_FromSpecWithBases(&type_spec_TargetedContentSubscription_Static, TargetedContentSubscription_Static_bases.get())};
     if (!type_TargetedContentSubscription_Static)
     {
         return nullptr;
@@ -3307,13 +3325,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentSubscriptionOptions_type{py::register_python_type(module.get(), &type_spec_TargetedContentSubscriptionOptions, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentSubscriptionOptions_type{py::register_python_type(module.get(), &type_spec_TargetedContentSubscriptionOptions, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentSubscriptionOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TargetedContentValue_type{py::register_python_type(module.get(), &type_spec_TargetedContentValue, object_bases.get(), nullptr)};
+    py::pytype_handle TargetedContentValue_type{py::register_python_type(module.get(), &type_spec_TargetedContentValue, object_bases.get(), inspectable_meta_type)};
     if (!TargetedContentValue_type)
     {
         return nullptr;

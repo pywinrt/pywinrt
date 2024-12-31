@@ -3695,6 +3695,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3708,7 +3714,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XboxLiveDeviceAddress_Static{PyType_FromSpec(&type_spec_XboxLiveDeviceAddress_Static)};
+    py::pyobj_handle XboxLiveDeviceAddress_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!XboxLiveDeviceAddress_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XboxLiveDeviceAddress_Static{PyType_FromSpecWithBases(&type_spec_XboxLiveDeviceAddress_Static, XboxLiveDeviceAddress_Static_bases.get())};
     if (!type_XboxLiveDeviceAddress_Static)
     {
         return nullptr;
@@ -3720,7 +3732,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XboxLiveEndpointPair_Static{PyType_FromSpec(&type_spec_XboxLiveEndpointPair_Static)};
+    py::pyobj_handle XboxLiveEndpointPair_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!XboxLiveEndpointPair_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XboxLiveEndpointPair_Static{PyType_FromSpecWithBases(&type_spec_XboxLiveEndpointPair_Static, XboxLiveEndpointPair_Static_bases.get())};
     if (!type_XboxLiveEndpointPair_Static)
     {
         return nullptr;
@@ -3732,19 +3750,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle XboxLiveEndpointPairCreationResult_type{py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairCreationResult, object_bases.get(), nullptr)};
+    py::pytype_handle XboxLiveEndpointPairCreationResult_type{py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairCreationResult, object_bases.get(), inspectable_meta_type)};
     if (!XboxLiveEndpointPairCreationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XboxLiveEndpointPairStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairStateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle XboxLiveEndpointPairStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!XboxLiveEndpointPairStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_XboxLiveEndpointPairTemplate_Static{PyType_FromSpec(&type_spec_XboxLiveEndpointPairTemplate_Static)};
+    py::pyobj_handle XboxLiveEndpointPairTemplate_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!XboxLiveEndpointPairTemplate_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XboxLiveEndpointPairTemplate_Static{PyType_FromSpecWithBases(&type_spec_XboxLiveEndpointPairTemplate_Static, XboxLiveEndpointPairTemplate_Static_bases.get())};
     if (!type_XboxLiveEndpointPairTemplate_Static)
     {
         return nullptr;
@@ -3756,13 +3780,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle XboxLiveInboundEndpointPairCreatedEventArgs_type{py::register_python_type(module.get(), &type_spec_XboxLiveInboundEndpointPairCreatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle XboxLiveInboundEndpointPairCreatedEventArgs_type{py::register_python_type(module.get(), &type_spec_XboxLiveInboundEndpointPairCreatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!XboxLiveInboundEndpointPairCreatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_XboxLiveQualityOfServiceMeasurement_Static{PyType_FromSpec(&type_spec_XboxLiveQualityOfServiceMeasurement_Static)};
+    py::pyobj_handle XboxLiveQualityOfServiceMeasurement_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!XboxLiveQualityOfServiceMeasurement_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XboxLiveQualityOfServiceMeasurement_Static{PyType_FromSpecWithBases(&type_spec_XboxLiveQualityOfServiceMeasurement_Static, XboxLiveQualityOfServiceMeasurement_Static_bases.get())};
     if (!type_XboxLiveQualityOfServiceMeasurement_Static)
     {
         return nullptr;
@@ -3774,13 +3804,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle XboxLiveQualityOfServiceMetricResult_type{py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMetricResult, object_bases.get(), nullptr)};
+    py::pytype_handle XboxLiveQualityOfServiceMetricResult_type{py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMetricResult, object_bases.get(), inspectable_meta_type)};
     if (!XboxLiveQualityOfServiceMetricResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XboxLiveQualityOfServicePrivatePayloadResult_type{py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServicePrivatePayloadResult, object_bases.get(), nullptr)};
+    py::pytype_handle XboxLiveQualityOfServicePrivatePayloadResult_type{py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServicePrivatePayloadResult, object_bases.get(), inspectable_meta_type)};
     if (!XboxLiveQualityOfServicePrivatePayloadResult_type)
     {
         return nullptr;

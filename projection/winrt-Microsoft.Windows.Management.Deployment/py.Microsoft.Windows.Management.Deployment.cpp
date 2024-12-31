@@ -8111,6 +8111,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_management_deployment(void) noexc
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -8124,19 +8130,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_management_deployment(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle AddPackageOptions_type{py::register_python_type(module.get(), &type_spec_AddPackageOptions, object_bases.get(), nullptr)};
+    py::pytype_handle AddPackageOptions_type{py::register_python_type(module.get(), &type_spec_AddPackageOptions, object_bases.get(), inspectable_meta_type)};
     if (!AddPackageOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EnsureReadyOptions_type{py::register_python_type(module.get(), &type_spec_EnsureReadyOptions, object_bases.get(), nullptr)};
+    py::pytype_handle EnsureReadyOptions_type{py::register_python_type(module.get(), &type_spec_EnsureReadyOptions, object_bases.get(), inspectable_meta_type)};
     if (!EnsureReadyOptions_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PackageDeploymentManager_Static{PyType_FromSpec(&type_spec_PackageDeploymentManager_Static)};
+    py::pyobj_handle PackageDeploymentManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PackageDeploymentManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PackageDeploymentManager_Static{PyType_FromSpecWithBases(&type_spec_PackageDeploymentManager_Static, PackageDeploymentManager_Static_bases.get())};
     if (!type_PackageDeploymentManager_Static)
     {
         return nullptr;
@@ -8148,13 +8160,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_management_deployment(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle PackageDeploymentResult_type{py::register_python_type(module.get(), &type_spec_PackageDeploymentResult, object_bases.get(), nullptr)};
+    py::pytype_handle PackageDeploymentResult_type{py::register_python_type(module.get(), &type_spec_PackageDeploymentResult, object_bases.get(), inspectable_meta_type)};
     if (!PackageDeploymentResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PackageRuntimeManager_Static{PyType_FromSpec(&type_spec_PackageRuntimeManager_Static)};
+    py::pyobj_handle PackageRuntimeManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PackageRuntimeManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PackageRuntimeManager_Static{PyType_FromSpecWithBases(&type_spec_PackageRuntimeManager_Static, PackageRuntimeManager_Static_bases.get())};
     if (!type_PackageRuntimeManager_Static)
     {
         return nullptr;
@@ -8166,31 +8184,37 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_management_deployment(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle PackageSet_type{py::register_python_type(module.get(), &type_spec_PackageSet, object_bases.get(), nullptr)};
+    py::pytype_handle PackageSet_type{py::register_python_type(module.get(), &type_spec_PackageSet, object_bases.get(), inspectable_meta_type)};
     if (!PackageSet_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageSetItem_type{py::register_python_type(module.get(), &type_spec_PackageSetItem, object_bases.get(), nullptr)};
+    py::pytype_handle PackageSetItem_type{py::register_python_type(module.get(), &type_spec_PackageSetItem, object_bases.get(), inspectable_meta_type)};
     if (!PackageSetItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageSetItemRuntimeDisposition_type{py::register_python_type(module.get(), &type_spec_PackageSetItemRuntimeDisposition, object_bases.get(), nullptr)};
+    py::pytype_handle PackageSetItemRuntimeDisposition_type{py::register_python_type(module.get(), &type_spec_PackageSetItemRuntimeDisposition, object_bases.get(), inspectable_meta_type)};
     if (!PackageSetItemRuntimeDisposition_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageSetRuntimeDisposition_type{py::register_python_type(module.get(), &type_spec_PackageSetRuntimeDisposition, object_bases.get(), nullptr)};
+    py::pytype_handle PackageSetRuntimeDisposition_type{py::register_python_type(module.get(), &type_spec_PackageSetRuntimeDisposition, object_bases.get(), inspectable_meta_type)};
     if (!PackageSetRuntimeDisposition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PackageVolume_Static{PyType_FromSpec(&type_spec_PackageVolume_Static)};
+    py::pyobj_handle PackageVolume_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PackageVolume_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PackageVolume_Static{PyType_FromSpecWithBases(&type_spec_PackageVolume_Static, PackageVolume_Static_bases.get())};
     if (!type_PackageVolume_Static)
     {
         return nullptr;
@@ -8202,25 +8226,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_management_deployment(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle ProvisionPackageOptions_type{py::register_python_type(module.get(), &type_spec_ProvisionPackageOptions, object_bases.get(), nullptr)};
+    py::pytype_handle ProvisionPackageOptions_type{py::register_python_type(module.get(), &type_spec_ProvisionPackageOptions, object_bases.get(), inspectable_meta_type)};
     if (!ProvisionPackageOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RegisterPackageOptions_type{py::register_python_type(module.get(), &type_spec_RegisterPackageOptions, object_bases.get(), nullptr)};
+    py::pytype_handle RegisterPackageOptions_type{py::register_python_type(module.get(), &type_spec_RegisterPackageOptions, object_bases.get(), inspectable_meta_type)};
     if (!RegisterPackageOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RemovePackageOptions_type{py::register_python_type(module.get(), &type_spec_RemovePackageOptions, object_bases.get(), nullptr)};
+    py::pytype_handle RemovePackageOptions_type{py::register_python_type(module.get(), &type_spec_RemovePackageOptions, object_bases.get(), inspectable_meta_type)};
     if (!RemovePackageOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StagePackageOptions_type{py::register_python_type(module.get(), &type_spec_StagePackageOptions, object_bases.get(), nullptr)};
+    py::pytype_handle StagePackageOptions_type{py::register_python_type(module.get(), &type_spec_StagePackageOptions, object_bases.get(), inspectable_meta_type)};
     if (!StagePackageOptions_type)
     {
         return nullptr;

@@ -18,7 +18,7 @@ from winrt.windows.media.apprecording import AppRecordingSaveScreenshotOption
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AppRecordingManager_Static(type):
+class AppRecordingManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Media.AppRecording.AppRecordingManager Windows.Media.AppRecording.AppRecordingManager::GetDefault()
     def get_default(cls) -> AppRecordingManager: ...
 

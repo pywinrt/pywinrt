@@ -815,6 +815,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -828,13 +834,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle EndpointPair_type{py::register_python_type(module.get(), &type_spec_EndpointPair, object_bases.get(), nullptr)};
+    py::pytype_handle EndpointPair_type{py::register_python_type(module.get(), &type_spec_EndpointPair, object_bases.get(), inspectable_meta_type)};
     if (!EndpointPair_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HostName_Static{PyType_FromSpec(&type_spec_HostName_Static)};
+    py::pyobj_handle HostName_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HostName_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HostName_Static{PyType_FromSpecWithBases(&type_spec_HostName_Static, HostName_Static_bases.get())};
     if (!type_HostName_Static)
     {
         return nullptr;

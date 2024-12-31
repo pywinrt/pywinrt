@@ -17,7 +17,7 @@ from winrt.windows.devices.radios import RadioAccessStatus, RadioKind, RadioStat
 Self = typing.TypeVar('Self')
 
 @typing.final
-class Radio_Static(type):
+class Radio_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Radios.Radio> Windows.Devices.Radios.Radio::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Radio]: ...
     # System.String Windows.Devices.Radios.Radio::GetDeviceSelector()

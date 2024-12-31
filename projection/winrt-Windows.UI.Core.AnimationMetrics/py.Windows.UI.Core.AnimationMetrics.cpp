@@ -1746,6 +1746,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_animationmetrics(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1759,31 +1765,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_animationmetrics(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AnimationDescription_type{py::register_python_type(module.get(), &type_spec_AnimationDescription, object_bases.get(), nullptr)};
+    py::pytype_handle AnimationDescription_type{py::register_python_type(module.get(), &type_spec_AnimationDescription, object_bases.get(), inspectable_meta_type)};
     if (!AnimationDescription_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle OpacityAnimation_type{py::register_python_type(module.get(), &type_spec_OpacityAnimation, object_bases.get(), nullptr)};
+    py::pytype_handle OpacityAnimation_type{py::register_python_type(module.get(), &type_spec_OpacityAnimation, object_bases.get(), inspectable_meta_type)};
     if (!OpacityAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PropertyAnimation_type{py::register_python_type(module.get(), &type_spec_PropertyAnimation, object_bases.get(), nullptr)};
+    py::pytype_handle PropertyAnimation_type{py::register_python_type(module.get(), &type_spec_PropertyAnimation, object_bases.get(), inspectable_meta_type)};
     if (!PropertyAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScaleAnimation_type{py::register_python_type(module.get(), &type_spec_ScaleAnimation, object_bases.get(), nullptr)};
+    py::pytype_handle ScaleAnimation_type{py::register_python_type(module.get(), &type_spec_ScaleAnimation, object_bases.get(), inspectable_meta_type)};
     if (!ScaleAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TranslationAnimation_type{py::register_python_type(module.get(), &type_spec_TranslationAnimation, object_bases.get(), nullptr)};
+    py::pytype_handle TranslationAnimation_type{py::register_python_type(module.get(), &type_spec_TranslationAnimation, object_bases.get(), inspectable_meta_type)};
     if (!TranslationAnimation_type)
     {
         return nullptr;
@@ -1795,7 +1801,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_animationmetrics(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPropertyAnimation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPropertyAnimation, nullptr))};
+    py::pytype_handle ImplementsIPropertyAnimation_type{py::register_python_type(module.get(), &type_spec_ImplementsIPropertyAnimation, nullptr, inspectable_meta_type)};
     if (!ImplementsIPropertyAnimation_type)
     {
         return nullptr;

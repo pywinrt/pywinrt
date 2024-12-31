@@ -8724,6 +8724,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -8737,7 +8743,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundDownloader_Static{PyType_FromSpec(&type_spec_BackgroundDownloader_Static)};
+    py::pyobj_handle BackgroundDownloader_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BackgroundDownloader_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BackgroundDownloader_Static{PyType_FromSpecWithBases(&type_spec_BackgroundDownloader_Static, BackgroundDownloader_Static_bases.get())};
     if (!type_BackgroundDownloader_Static)
     {
         return nullptr;
@@ -8749,25 +8761,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle BackgroundTransferCompletionGroup_type{py::register_python_type(module.get(), &type_spec_BackgroundTransferCompletionGroup, object_bases.get(), nullptr)};
+    py::pytype_handle BackgroundTransferCompletionGroup_type{py::register_python_type(module.get(), &type_spec_BackgroundTransferCompletionGroup, object_bases.get(), inspectable_meta_type)};
     if (!BackgroundTransferCompletionGroup_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BackgroundTransferCompletionGroupTriggerDetails_type{py::register_python_type(module.get(), &type_spec_BackgroundTransferCompletionGroupTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle BackgroundTransferCompletionGroupTriggerDetails_type{py::register_python_type(module.get(), &type_spec_BackgroundTransferCompletionGroupTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!BackgroundTransferCompletionGroupTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BackgroundTransferContentPart_type{py::register_python_type(module.get(), &type_spec_BackgroundTransferContentPart, object_bases.get(), nullptr)};
+    py::pytype_handle BackgroundTransferContentPart_type{py::register_python_type(module.get(), &type_spec_BackgroundTransferContentPart, object_bases.get(), inspectable_meta_type)};
     if (!BackgroundTransferContentPart_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundTransferError_Static{PyType_FromSpec(&type_spec_BackgroundTransferError_Static)};
+    py::pyobj_handle BackgroundTransferError_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BackgroundTransferError_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BackgroundTransferError_Static{PyType_FromSpecWithBases(&type_spec_BackgroundTransferError_Static, BackgroundTransferError_Static_bases.get())};
     if (!type_BackgroundTransferError_Static)
     {
         return nullptr;
@@ -8779,7 +8797,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundTransferGroup_Static{PyType_FromSpec(&type_spec_BackgroundTransferGroup_Static)};
+    py::pyobj_handle BackgroundTransferGroup_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BackgroundTransferGroup_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BackgroundTransferGroup_Static{PyType_FromSpecWithBases(&type_spec_BackgroundTransferGroup_Static, BackgroundTransferGroup_Static_bases.get())};
     if (!type_BackgroundTransferGroup_Static)
     {
         return nullptr;
@@ -8791,13 +8815,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle BackgroundTransferRangesDownloadedEventArgs_type{py::register_python_type(module.get(), &type_spec_BackgroundTransferRangesDownloadedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BackgroundTransferRangesDownloadedEventArgs_type{py::register_python_type(module.get(), &type_spec_BackgroundTransferRangesDownloadedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BackgroundTransferRangesDownloadedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundUploader_Static{PyType_FromSpec(&type_spec_BackgroundUploader_Static)};
+    py::pyobj_handle BackgroundUploader_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BackgroundUploader_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BackgroundUploader_Static{PyType_FromSpecWithBases(&type_spec_BackgroundUploader_Static, BackgroundUploader_Static_bases.get())};
     if (!type_BackgroundUploader_Static)
     {
         return nullptr;
@@ -8809,7 +8839,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_ContentPrefetcher_Static{PyType_FromSpec(&type_spec_ContentPrefetcher_Static)};
+    py::pyobj_handle ContentPrefetcher_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ContentPrefetcher_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContentPrefetcher_Static{PyType_FromSpecWithBases(&type_spec_ContentPrefetcher_Static, ContentPrefetcher_Static_bases.get())};
     if (!type_ContentPrefetcher_Static)
     {
         return nullptr;
@@ -8821,25 +8857,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle DownloadOperation_type{py::register_python_type(module.get(), &type_spec_DownloadOperation, object_bases.get(), nullptr)};
+    py::pytype_handle DownloadOperation_type{py::register_python_type(module.get(), &type_spec_DownloadOperation, object_bases.get(), inspectable_meta_type)};
     if (!DownloadOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ResponseInformation_type{py::register_python_type(module.get(), &type_spec_ResponseInformation, object_bases.get(), nullptr)};
+    py::pytype_handle ResponseInformation_type{py::register_python_type(module.get(), &type_spec_ResponseInformation, object_bases.get(), inspectable_meta_type)};
     if (!ResponseInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UnconstrainedTransferRequestResult_type{py::register_python_type(module.get(), &type_spec_UnconstrainedTransferRequestResult, object_bases.get(), nullptr)};
+    py::pytype_handle UnconstrainedTransferRequestResult_type{py::register_python_type(module.get(), &type_spec_UnconstrainedTransferRequestResult, object_bases.get(), inspectable_meta_type)};
     if (!UnconstrainedTransferRequestResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UploadOperation_type{py::register_python_type(module.get(), &type_spec_UploadOperation, object_bases.get(), nullptr)};
+    py::pytype_handle UploadOperation_type{py::register_python_type(module.get(), &type_spec_UploadOperation, object_bases.get(), inspectable_meta_type)};
     if (!UploadOperation_type)
     {
         return nullptr;
@@ -8851,7 +8887,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTransferBase_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTransferBase, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTransferBase_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTransferBase, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTransferBase_type)
     {
         return nullptr;
@@ -8868,7 +8904,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTransferContentPartFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTransferContentPartFactory, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTransferContentPartFactory_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTransferContentPartFactory, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTransferContentPartFactory_type)
     {
         return nullptr;
@@ -8885,7 +8921,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTransferOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTransferOperation, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTransferOperation_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTransferOperation, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTransferOperation_type)
     {
         return nullptr;
@@ -8902,7 +8938,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTransferOperationPriority_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTransferOperationPriority, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTransferOperationPriority_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTransferOperationPriority, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTransferOperationPriority_type)
     {
         return nullptr;

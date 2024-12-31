@@ -4182,6 +4182,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_advertisement(void) noexc
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4195,25 +4201,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_advertisement(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisement_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisement, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisement_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisement, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisement_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementBytePattern_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementBytePattern, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementBytePattern_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementBytePattern, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementBytePattern_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementDataSection_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementDataSection, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementDataSection_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementDataSection, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementDataSection_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothLEAdvertisementDataTypes_Static{PyType_FromSpec(&type_spec_BluetoothLEAdvertisementDataTypes_Static)};
+    py::pyobj_handle BluetoothLEAdvertisementDataTypes_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothLEAdvertisementDataTypes_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothLEAdvertisementDataTypes_Static{PyType_FromSpecWithBases(&type_spec_BluetoothLEAdvertisementDataTypes_Static, BluetoothLEAdvertisementDataTypes_Static_bases.get())};
     if (!type_BluetoothLEAdvertisementDataTypes_Static)
     {
         return nullptr;
@@ -4225,43 +4237,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_advertisement(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementFilter_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementFilter, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementFilter_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementFilter, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementFilter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementPublisher_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisher, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementPublisher_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisher, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementPublisher_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementPublisherStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherStatusChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementPublisherStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherStatusChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementPublisherStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementWatcher_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcher, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementWatcher_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcher, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementWatcher_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementWatcherStoppedEventArgs_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherStoppedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementWatcherStoppedEventArgs_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherStoppedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementWatcherStoppedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEManufacturerData_type{py::register_python_type(module.get(), &type_spec_BluetoothLEManufacturerData, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEManufacturerData_type{py::register_python_type(module.get(), &type_spec_BluetoothLEManufacturerData, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEManufacturerData_type)
     {
         return nullptr;

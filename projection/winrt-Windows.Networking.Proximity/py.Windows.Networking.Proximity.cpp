@@ -2955,6 +2955,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2968,13 +2974,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ConnectionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConnectionRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ConnectionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConnectionRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ConnectionRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PeerFinder_Static{PyType_FromSpec(&type_spec_PeerFinder_Static)};
+    py::pyobj_handle PeerFinder_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PeerFinder_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PeerFinder_Static{PyType_FromSpecWithBases(&type_spec_PeerFinder_Static, PeerFinder_Static_bases.get())};
     if (!type_PeerFinder_Static)
     {
         return nullptr;
@@ -2986,19 +2998,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PeerInformation_type{py::register_python_type(module.get(), &type_spec_PeerInformation, object_bases.get(), nullptr)};
+    py::pytype_handle PeerInformation_type{py::register_python_type(module.get(), &type_spec_PeerInformation, object_bases.get(), inspectable_meta_type)};
     if (!PeerInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PeerWatcher_type{py::register_python_type(module.get(), &type_spec_PeerWatcher, object_bases.get(), nullptr)};
+    py::pytype_handle PeerWatcher_type{py::register_python_type(module.get(), &type_spec_PeerWatcher, object_bases.get(), inspectable_meta_type)};
     if (!PeerWatcher_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ProximityDevice_Static{PyType_FromSpec(&type_spec_ProximityDevice_Static)};
+    py::pyobj_handle ProximityDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ProximityDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ProximityDevice_Static{PyType_FromSpecWithBases(&type_spec_ProximityDevice_Static, ProximityDevice_Static_bases.get())};
     if (!type_ProximityDevice_Static)
     {
         return nullptr;
@@ -3010,13 +3028,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ProximityMessage_type{py::register_python_type(module.get(), &type_spec_ProximityMessage, object_bases.get(), nullptr)};
+    py::pytype_handle ProximityMessage_type{py::register_python_type(module.get(), &type_spec_ProximityMessage, object_bases.get(), inspectable_meta_type)};
     if (!ProximityMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TriggeredConnectionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TriggeredConnectionStateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle TriggeredConnectionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TriggeredConnectionStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!TriggeredConnectionStateChangedEventArgs_type)
     {
         return nullptr;

@@ -1415,6 +1415,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1428,7 +1434,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CredentialPicker_Static{PyType_FromSpec(&type_spec_CredentialPicker_Static)};
+    py::pyobj_handle CredentialPicker_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CredentialPicker_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CredentialPicker_Static{PyType_FromSpecWithBases(&type_spec_CredentialPicker_Static, CredentialPicker_Static_bases.get())};
     if (!type_CredentialPicker_Static)
     {
         return nullptr;
@@ -1440,19 +1452,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CredentialPickerOptions_type{py::register_python_type(module.get(), &type_spec_CredentialPickerOptions, object_bases.get(), nullptr)};
+    py::pytype_handle CredentialPickerOptions_type{py::register_python_type(module.get(), &type_spec_CredentialPickerOptions, object_bases.get(), inspectable_meta_type)};
     if (!CredentialPickerOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CredentialPickerResults_type{py::register_python_type(module.get(), &type_spec_CredentialPickerResults, object_bases.get(), nullptr)};
+    py::pytype_handle CredentialPickerResults_type{py::register_python_type(module.get(), &type_spec_CredentialPickerResults, object_bases.get(), inspectable_meta_type)};
     if (!CredentialPickerResults_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UserConsentVerifier_Static{PyType_FromSpec(&type_spec_UserConsentVerifier_Static)};
+    py::pyobj_handle UserConsentVerifier_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserConsentVerifier_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserConsentVerifier_Static{PyType_FromSpecWithBases(&type_spec_UserConsentVerifier_Static, UserConsentVerifier_Static_bases.get())};
     if (!type_UserConsentVerifier_Static)
     {
         return nullptr;

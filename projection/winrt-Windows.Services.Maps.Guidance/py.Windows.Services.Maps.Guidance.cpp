@@ -4261,6 +4261,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4274,31 +4280,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GuidanceAudioNotificationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_GuidanceAudioNotificationRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GuidanceAudioNotificationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_GuidanceAudioNotificationRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GuidanceAudioNotificationRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GuidanceLaneInfo_type{py::register_python_type(module.get(), &type_spec_GuidanceLaneInfo, object_bases.get(), nullptr)};
+    py::pytype_handle GuidanceLaneInfo_type{py::register_python_type(module.get(), &type_spec_GuidanceLaneInfo, object_bases.get(), inspectable_meta_type)};
     if (!GuidanceLaneInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GuidanceManeuver_type{py::register_python_type(module.get(), &type_spec_GuidanceManeuver, object_bases.get(), nullptr)};
+    py::pytype_handle GuidanceManeuver_type{py::register_python_type(module.get(), &type_spec_GuidanceManeuver, object_bases.get(), inspectable_meta_type)};
     if (!GuidanceManeuver_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GuidanceMapMatchedCoordinate_type{py::register_python_type(module.get(), &type_spec_GuidanceMapMatchedCoordinate, object_bases.get(), nullptr)};
+    py::pytype_handle GuidanceMapMatchedCoordinate_type{py::register_python_type(module.get(), &type_spec_GuidanceMapMatchedCoordinate, object_bases.get(), inspectable_meta_type)};
     if (!GuidanceMapMatchedCoordinate_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GuidanceNavigator_Static{PyType_FromSpec(&type_spec_GuidanceNavigator_Static)};
+    py::pyobj_handle GuidanceNavigator_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GuidanceNavigator_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GuidanceNavigator_Static{PyType_FromSpecWithBases(&type_spec_GuidanceNavigator_Static, GuidanceNavigator_Static_bases.get())};
     if (!type_GuidanceNavigator_Static)
     {
         return nullptr;
@@ -4310,25 +4322,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GuidanceReroutedEventArgs_type{py::register_python_type(module.get(), &type_spec_GuidanceReroutedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GuidanceReroutedEventArgs_type{py::register_python_type(module.get(), &type_spec_GuidanceReroutedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GuidanceReroutedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GuidanceRoadSegment_type{py::register_python_type(module.get(), &type_spec_GuidanceRoadSegment, object_bases.get(), nullptr)};
+    py::pytype_handle GuidanceRoadSegment_type{py::register_python_type(module.get(), &type_spec_GuidanceRoadSegment, object_bases.get(), inspectable_meta_type)};
     if (!GuidanceRoadSegment_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GuidanceRoadSignpost_type{py::register_python_type(module.get(), &type_spec_GuidanceRoadSignpost, object_bases.get(), nullptr)};
+    py::pytype_handle GuidanceRoadSignpost_type{py::register_python_type(module.get(), &type_spec_GuidanceRoadSignpost, object_bases.get(), inspectable_meta_type)};
     if (!GuidanceRoadSignpost_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GuidanceRoute_Static{PyType_FromSpec(&type_spec_GuidanceRoute_Static)};
+    py::pyobj_handle GuidanceRoute_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GuidanceRoute_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GuidanceRoute_Static{PyType_FromSpecWithBases(&type_spec_GuidanceRoute_Static, GuidanceRoute_Static_bases.get())};
     if (!type_GuidanceRoute_Static)
     {
         return nullptr;
@@ -4340,7 +4358,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GuidanceTelemetryCollector_Static{PyType_FromSpec(&type_spec_GuidanceTelemetryCollector_Static)};
+    py::pyobj_handle GuidanceTelemetryCollector_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GuidanceTelemetryCollector_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GuidanceTelemetryCollector_Static{PyType_FromSpecWithBases(&type_spec_GuidanceTelemetryCollector_Static, GuidanceTelemetryCollector_Static_bases.get())};
     if (!type_GuidanceTelemetryCollector_Static)
     {
         return nullptr;
@@ -4352,7 +4376,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GuidanceUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_GuidanceUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GuidanceUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_GuidanceUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GuidanceUpdatedEventArgs_type)
     {
         return nullptr;

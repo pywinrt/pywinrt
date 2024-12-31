@@ -1002,6 +1002,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_power(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1015,7 +1021,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_power(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Battery_Static{PyType_FromSpec(&type_spec_Battery_Static)};
+    py::pyobj_handle Battery_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Battery_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Battery_Static{PyType_FromSpecWithBases(&type_spec_Battery_Static, Battery_Static_bases.get())};
     if (!type_Battery_Static)
     {
         return nullptr;
@@ -1027,19 +1039,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_power(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BatteryReport_type{py::register_python_type(module.get(), &type_spec_BatteryReport, object_bases.get(), nullptr)};
+    py::pytype_handle BatteryReport_type{py::register_python_type(module.get(), &type_spec_BatteryReport, object_bases.get(), inspectable_meta_type)};
     if (!BatteryReport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PowerGridData_type{py::register_python_type(module.get(), &type_spec_PowerGridData, object_bases.get(), nullptr)};
+    py::pytype_handle PowerGridData_type{py::register_python_type(module.get(), &type_spec_PowerGridData, object_bases.get(), inspectable_meta_type)};
     if (!PowerGridData_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PowerGridForecast_Static{PyType_FromSpec(&type_spec_PowerGridForecast_Static)};
+    py::pyobj_handle PowerGridForecast_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PowerGridForecast_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PowerGridForecast_Static{PyType_FromSpecWithBases(&type_spec_PowerGridForecast_Static, PowerGridForecast_Static_bases.get())};
     if (!type_PowerGridForecast_Static)
     {
         return nullptr;

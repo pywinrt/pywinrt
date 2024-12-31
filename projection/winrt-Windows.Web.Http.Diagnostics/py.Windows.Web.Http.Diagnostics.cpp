@@ -1662,6 +1662,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_diagnostics(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1675,7 +1681,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_diagnostics(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_HttpDiagnosticProvider_Static{PyType_FromSpec(&type_spec_HttpDiagnosticProvider_Static)};
+    py::pyobj_handle HttpDiagnosticProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HttpDiagnosticProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HttpDiagnosticProvider_Static{PyType_FromSpecWithBases(&type_spec_HttpDiagnosticProvider_Static, HttpDiagnosticProvider_Static_bases.get())};
     if (!type_HttpDiagnosticProvider_Static)
     {
         return nullptr;
@@ -1687,31 +1699,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_diagnostics(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HttpDiagnosticProviderRequestResponseCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle HttpDiagnosticProviderRequestResponseCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!HttpDiagnosticProviderRequestResponseCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpDiagnosticProviderRequestResponseTimestamps_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestResponseTimestamps, object_bases.get(), nullptr)};
+    py::pytype_handle HttpDiagnosticProviderRequestResponseTimestamps_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestResponseTimestamps, object_bases.get(), inspectable_meta_type)};
     if (!HttpDiagnosticProviderRequestResponseTimestamps_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpDiagnosticProviderRequestSentEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestSentEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle HttpDiagnosticProviderRequestSentEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestSentEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!HttpDiagnosticProviderRequestSentEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpDiagnosticProviderResponseReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderResponseReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle HttpDiagnosticProviderResponseReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderResponseReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!HttpDiagnosticProviderResponseReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpDiagnosticSourceLocation_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticSourceLocation, object_bases.get(), nullptr)};
+    py::pytype_handle HttpDiagnosticSourceLocation_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticSourceLocation, object_bases.get(), inspectable_meta_type)};
     if (!HttpDiagnosticSourceLocation_type)
     {
         return nullptr;

@@ -1063,6 +1063,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1076,7 +1082,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CustomDevice_Static{PyType_FromSpec(&type_spec_CustomDevice_Static)};
+    py::pyobj_handle CustomDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CustomDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CustomDevice_Static{PyType_FromSpecWithBases(&type_spec_CustomDevice_Static, CustomDevice_Static_bases.get())};
     if (!type_CustomDevice_Static)
     {
         return nullptr;
@@ -1088,13 +1100,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle IOControlCode_type{py::register_python_type(module.get(), &type_spec_IOControlCode, object_bases.get(), nullptr)};
+    py::pytype_handle IOControlCode_type{py::register_python_type(module.get(), &type_spec_IOControlCode, object_bases.get(), inspectable_meta_type)};
     if (!IOControlCode_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownDeviceTypes_Static{PyType_FromSpec(&type_spec_KnownDeviceTypes_Static)};
+    py::pyobj_handle KnownDeviceTypes_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownDeviceTypes_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownDeviceTypes_Static{PyType_FromSpecWithBases(&type_spec_KnownDeviceTypes_Static, KnownDeviceTypes_Static_bases.get())};
     if (!type_KnownDeviceTypes_Static)
     {
         return nullptr;
@@ -1112,7 +1130,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIIOControlCode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIIOControlCode, nullptr))};
+    py::pytype_handle ImplementsIIOControlCode_type{py::register_python_type(module.get(), &type_spec_ImplementsIIOControlCode, nullptr, inspectable_meta_type)};
     if (!ImplementsIIOControlCode_type)
     {
         return nullptr;

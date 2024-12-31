@@ -47,7 +47,7 @@ class I2cConnectionSettings(winrt.system.Object):
     def bus_speed(self, value: I2cBusSpeed) -> None: ...
 
 @typing.final
-class I2cController_Static(type):
+class I2cController_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.I2c.I2cController>> Windows.Devices.I2c.I2cController::GetControllersAsync(Windows.Devices.I2c.Provider.II2cProvider)
     def get_controllers_async(cls, provider: windows_devices_i2c_provider.II2cProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[I2cController]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.I2c.I2cController> Windows.Devices.I2c.I2cController::GetDefaultAsync()
@@ -59,7 +59,7 @@ class I2cController(winrt.system.Object, metaclass=I2cController_Static):
     def get_device(self, settings: I2cConnectionSettings, /) -> I2cDevice: ...
 
 @typing.final
-class I2cDevice_Static(type):
+class I2cDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.I2c.I2cDevice> Windows.Devices.I2c.I2cDevice::FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)
     def from_id_async(cls, device_id: str, settings: I2cConnectionSettings, /) -> windows_foundation.IAsyncOperation[I2cDevice]: ...
     # System.String Windows.Devices.I2c.I2cDevice::GetDeviceSelector()

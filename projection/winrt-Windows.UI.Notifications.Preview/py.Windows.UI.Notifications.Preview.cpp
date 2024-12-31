@@ -130,6 +130,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications_preview(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -143,7 +149,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications_preview(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ToastOcclusionManagerPreview_Static{PyType_FromSpec(&type_spec_ToastOcclusionManagerPreview_Static)};
+    py::pyobj_handle ToastOcclusionManagerPreview_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ToastOcclusionManagerPreview_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ToastOcclusionManagerPreview_Static{PyType_FromSpecWithBases(&type_spec_ToastOcclusionManagerPreview_Static, ToastOcclusionManagerPreview_Static_bases.get())};
     if (!type_ToastOcclusionManagerPreview_Static)
     {
         return nullptr;

@@ -2292,6 +2292,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexc
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2305,7 +2311,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexc
         return nullptr;
     }
 
-    py::pyobj_handle type_GameList_Static{PyType_FromSpec(&type_spec_GameList_Static)};
+    py::pyobj_handle GameList_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GameList_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GameList_Static{PyType_FromSpecWithBases(&type_spec_GameList_Static, GameList_Static_bases.get())};
     if (!type_GameList_Static)
     {
         return nullptr;
@@ -2317,19 +2329,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle GameListEntry_type{py::register_python_type(module.get(), &type_spec_GameListEntry, object_bases.get(), nullptr)};
+    py::pytype_handle GameListEntry_type{py::register_python_type(module.get(), &type_spec_GameListEntry, object_bases.get(), inspectable_meta_type)};
     if (!GameListEntry_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameModeConfiguration_type{py::register_python_type(module.get(), &type_spec_GameModeConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle GameModeConfiguration_type{py::register_python_type(module.get(), &type_spec_GameModeConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!GameModeConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GameModeUserConfiguration_Static{PyType_FromSpec(&type_spec_GameModeUserConfiguration_Static)};
+    py::pyobj_handle GameModeUserConfiguration_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GameModeUserConfiguration_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GameModeUserConfiguration_Static{PyType_FromSpecWithBases(&type_spec_GameModeUserConfiguration_Static, GameModeUserConfiguration_Static_bases.get())};
     if (!type_GameModeUserConfiguration_Static)
     {
         return nullptr;
@@ -2347,7 +2365,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGameListEntry_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameListEntry, nullptr))};
+    py::pytype_handle ImplementsIGameListEntry_type{py::register_python_type(module.get(), &type_spec_ImplementsIGameListEntry, nullptr, inspectable_meta_type)};
     if (!ImplementsIGameListEntry_type)
     {
         return nullptr;

@@ -17,7 +17,7 @@ from winrt.windows.management.update import WindowsUpdateAdministratorOptions, W
 Self = typing.TypeVar('Self')
 
 @typing.final
-class PreviewBuildsManager_Static(type):
+class PreviewBuildsManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Management.Update.PreviewBuildsManager Windows.Management.Update.PreviewBuildsManager::GetDefault()
     def get_default(cls) -> PreviewBuildsManager: ...
     # System.Boolean Windows.Management.Update.PreviewBuildsManager::IsSupported()
@@ -155,7 +155,7 @@ class WindowsUpdateActionResult(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class WindowsUpdateAdministrator_Static(type):
+class WindowsUpdateAdministrator_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.Management.Update.WindowsUpdateAdministrator::CancelRestartRequest(System.String)
     def cancel_restart_request(cls, request_restart_token: str, /) -> None: ...
     # Windows.Management.Update.WindowsUpdateGetAdministratorResult Windows.Management.Update.WindowsUpdateAdministrator::GetRegisteredAdministrator(System.String)

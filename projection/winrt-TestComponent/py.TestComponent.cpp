@@ -12720,6 +12720,12 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -12733,13 +12739,19 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Class_type{py::register_python_type(module.get(), &type_spec_Class, object_bases.get(), nullptr)};
+    py::pytype_handle Class_type{py::register_python_type(module.get(), &type_spec_Class, object_bases.get(), inspectable_meta_type)};
     if (!Class_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Composable_Static{PyType_FromSpec(&type_spec_Composable_Static)};
+    py::pyobj_handle Composable_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Composable_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Composable_Static{PyType_FromSpecWithBases(&type_spec_Composable_Static, Composable_Static_bases.get())};
     if (!type_Composable_Static)
     {
         return nullptr;
@@ -12775,7 +12787,13 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_OverloadClass_Static{PyType_FromSpec(&type_spec_OverloadClass_Static)};
+    py::pyobj_handle OverloadClass_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!OverloadClass_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_OverloadClass_Static{PyType_FromSpecWithBases(&type_spec_OverloadClass_Static, OverloadClass_Static_bases.get())};
     if (!type_OverloadClass_Static)
     {
         return nullptr;
@@ -12787,7 +12805,13 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Override_Static{PyType_FromSpec(&type_spec_Override_Static)};
+    py::pyobj_handle Override_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Override_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Override_Static{PyType_FromSpecWithBases(&type_spec_Override_Static, Override_Static_bases.get())};
     if (!type_Override_Static)
     {
         return nullptr;
@@ -12799,7 +12823,13 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TestRunner_Static{PyType_FromSpec(&type_spec_TestRunner_Static)};
+    py::pyobj_handle TestRunner_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TestRunner_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TestRunner_Static{PyType_FromSpecWithBases(&type_spec_TestRunner_Static, TestRunner_Static_bases.get())};
     if (!type_TestRunner_Static)
     {
         return nullptr;
@@ -12817,7 +12847,7 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIRequiredFour_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRequiredFour, nullptr))};
+    py::pytype_handle ImplementsIRequiredFour_type{py::register_python_type(module.get(), &type_spec_ImplementsIRequiredFour, nullptr, inspectable_meta_type)};
     if (!ImplementsIRequiredFour_type)
     {
         return nullptr;
@@ -12834,7 +12864,7 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIRequiredOne_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRequiredOne, nullptr))};
+    py::pytype_handle ImplementsIRequiredOne_type{py::register_python_type(module.get(), &type_spec_ImplementsIRequiredOne, nullptr, inspectable_meta_type)};
     if (!ImplementsIRequiredOne_type)
     {
         return nullptr;
@@ -12851,7 +12881,7 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIRequiredThree_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRequiredThree, nullptr))};
+    py::pytype_handle ImplementsIRequiredThree_type{py::register_python_type(module.get(), &type_spec_ImplementsIRequiredThree, nullptr, inspectable_meta_type)};
     if (!ImplementsIRequiredThree_type)
     {
         return nullptr;
@@ -12868,7 +12898,7 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIRequiredTwo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRequiredTwo, nullptr))};
+    py::pytype_handle ImplementsIRequiredTwo_type{py::register_python_type(module.get(), &type_spec_ImplementsIRequiredTwo, nullptr, inspectable_meta_type)};
     if (!ImplementsIRequiredTwo_type)
     {
         return nullptr;
@@ -12885,7 +12915,7 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITests_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITests, nullptr))};
+    py::pytype_handle ImplementsITests_type{py::register_python_type(module.get(), &type_spec_ImplementsITests, nullptr, inspectable_meta_type)};
     if (!ImplementsITests_type)
     {
         return nullptr;

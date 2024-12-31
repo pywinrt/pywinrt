@@ -65,7 +65,7 @@ class CreatePackageDependencyOptions(winrt.system.Object):
     def architectures(self, value: PackageDependencyProcessorArchitectures) -> None: ...
 
 @typing.final
-class PackageDependency_Static(type):
+class PackageDependency_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::Create(System.String,Windows.ApplicationModel.PackageVersion)
     def create(cls, package_family_name: str, min_version: windows_applicationmodel.PackageVersion, /) -> PackageDependency: ...
     # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::Create(System.String,Windows.ApplicationModel.PackageVersion,Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions)
@@ -111,7 +111,7 @@ class PackageDependencyContext(winrt.system.Object):
     def package_full_name(self) -> str: ...
 
 @typing.final
-class PackageDependencyRank_Static(type):
+class PackageDependencyRank_Static(winrt._winrt.IInspectable_Static):
     # System.Int32 Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyRank::get_Default()
     @_property
     def default(cls) -> winrt.system.Int32: ...

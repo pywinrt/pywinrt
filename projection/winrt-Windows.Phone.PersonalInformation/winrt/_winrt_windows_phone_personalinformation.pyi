@@ -68,7 +68,7 @@ class ContactChangeRecord(winrt.system.Object):
     def revision_number(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class ContactInformation_Static(type):
+class ContactInformation_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Phone.PersonalInformation.ContactInformation> Windows.Phone.PersonalInformation.ContactInformation::ParseVcardAsync(Windows.Storage.Streams.IInputStream)
     def parse_vcard_async(cls, vcard: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncOperation[ContactInformation]: ...
 
@@ -144,7 +144,7 @@ class ContactQueryResult(winrt.system.Object):
     def get_current_query_options(self) -> ContactQueryOptions: ...
 
 @typing.final
-class ContactStore_Static(type):
+class ContactStore_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Phone.PersonalInformation.ContactStore> Windows.Phone.PersonalInformation.ContactStore::CreateOrOpenAsync()
     def create_or_open_async(cls) -> windows_foundation.IAsyncOperation[ContactStore]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Phone.PersonalInformation.ContactStore> Windows.Phone.PersonalInformation.ContactStore::CreateOrOpenAsync(Windows.Phone.PersonalInformation.ContactStoreSystemAccessMode,Windows.Phone.PersonalInformation.ContactStoreApplicationAccessMode)
@@ -177,7 +177,7 @@ class ContactStore(winrt.system.Object, metaclass=ContactStore_Static):
     def revision_number(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class KnownContactProperties_Static(type):
+class KnownContactProperties_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Phone.PersonalInformation.KnownContactProperties::get_AdditionalName()
     @_property
     def additional_name(cls) -> str: ...

@@ -29,7 +29,7 @@ class ComponentLoadFailedEventArgs(winrt.system.Object):
     def information(self) -> RevocationAndRenewalInformation: ...
 
 @typing.final
-class ComponentRenewal_Static(type):
+class ComponentRenewal_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Media.Protection.RenewalStatus,System.UInt32> Windows.Media.Protection.ComponentRenewal::RenewSystemComponentsAsync(Windows.Media.Protection.RevocationAndRenewalInformation)
     def renew_system_components_async(cls, information: RevocationAndRenewalInformation, /) -> windows_foundation.IAsyncOperationWithProgress[RenewalStatus, winrt.system.UInt32]: ...
 

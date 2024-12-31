@@ -11184,6 +11184,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -11197,13 +11203,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ChatCapabilities_type{py::register_python_type(module.get(), &type_spec_ChatCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle ChatCapabilities_type{py::register_python_type(module.get(), &type_spec_ChatCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!ChatCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ChatCapabilitiesManager_Static{PyType_FromSpec(&type_spec_ChatCapabilitiesManager_Static)};
+    py::pyobj_handle ChatCapabilitiesManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ChatCapabilitiesManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ChatCapabilitiesManager_Static{PyType_FromSpecWithBases(&type_spec_ChatCapabilitiesManager_Static, ChatCapabilitiesManager_Static_bases.get())};
     if (!type_ChatCapabilitiesManager_Static)
     {
         return nullptr;
@@ -11215,37 +11227,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ChatConversation_type{py::register_python_type(module.get(), &type_spec_ChatConversation, object_bases.get(), nullptr)};
+    py::pytype_handle ChatConversation_type{py::register_python_type(module.get(), &type_spec_ChatConversation, object_bases.get(), inspectable_meta_type)};
     if (!ChatConversation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatConversationReader_type{py::register_python_type(module.get(), &type_spec_ChatConversationReader, object_bases.get(), nullptr)};
+    py::pytype_handle ChatConversationReader_type{py::register_python_type(module.get(), &type_spec_ChatConversationReader, object_bases.get(), inspectable_meta_type)};
     if (!ChatConversationReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatConversationThreadingInfo_type{py::register_python_type(module.get(), &type_spec_ChatConversationThreadingInfo, object_bases.get(), nullptr)};
+    py::pytype_handle ChatConversationThreadingInfo_type{py::register_python_type(module.get(), &type_spec_ChatConversationThreadingInfo, object_bases.get(), inspectable_meta_type)};
     if (!ChatConversationThreadingInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessage_type{py::register_python_type(module.get(), &type_spec_ChatMessage, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessage_type{py::register_python_type(module.get(), &type_spec_ChatMessage, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageAttachment_type{py::register_python_type(module.get(), &type_spec_ChatMessageAttachment, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageAttachment_type{py::register_python_type(module.get(), &type_spec_ChatMessageAttachment, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageAttachment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ChatMessageBlocking_Static{PyType_FromSpec(&type_spec_ChatMessageBlocking_Static)};
+    py::pyobj_handle ChatMessageBlocking_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ChatMessageBlocking_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ChatMessageBlocking_Static{PyType_FromSpecWithBases(&type_spec_ChatMessageBlocking_Static, ChatMessageBlocking_Static_bases.get())};
     if (!type_ChatMessageBlocking_Static)
     {
         return nullptr;
@@ -11257,37 +11275,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageChange_type{py::register_python_type(module.get(), &type_spec_ChatMessageChange, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageChange_type{py::register_python_type(module.get(), &type_spec_ChatMessageChange, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageChange_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageChangeReader_type{py::register_python_type(module.get(), &type_spec_ChatMessageChangeReader, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageChangeReader_type{py::register_python_type(module.get(), &type_spec_ChatMessageChangeReader, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageChangeReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageChangeTracker_type{py::register_python_type(module.get(), &type_spec_ChatMessageChangeTracker, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageChangeTracker_type{py::register_python_type(module.get(), &type_spec_ChatMessageChangeTracker, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageChangeTracker_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageChangedDeferral_type{py::register_python_type(module.get(), &type_spec_ChatMessageChangedDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageChangedDeferral_type{py::register_python_type(module.get(), &type_spec_ChatMessageChangedDeferral, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageChangedDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ChatMessageChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ChatMessageChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ChatMessageManager_Static{PyType_FromSpec(&type_spec_ChatMessageManager_Static)};
+    py::pyobj_handle ChatMessageManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ChatMessageManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ChatMessageManager_Static{PyType_FromSpecWithBases(&type_spec_ChatMessageManager_Static, ChatMessageManager_Static_bases.get())};
     if (!type_ChatMessageManager_Static)
     {
         return nullptr;
@@ -11299,109 +11323,115 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ChatMessageNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ChatMessageNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageReader_type{py::register_python_type(module.get(), &type_spec_ChatMessageReader, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageReader_type{py::register_python_type(module.get(), &type_spec_ChatMessageReader, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageStore_type{py::register_python_type(module.get(), &type_spec_ChatMessageStore, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageStore_type{py::register_python_type(module.get(), &type_spec_ChatMessageStore, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageStore_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageStoreChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ChatMessageStoreChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageStoreChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ChatMessageStoreChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageStoreChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageTransport_type{py::register_python_type(module.get(), &type_spec_ChatMessageTransport, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageTransport_type{py::register_python_type(module.get(), &type_spec_ChatMessageTransport, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageTransport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageTransportConfiguration_type{py::register_python_type(module.get(), &type_spec_ChatMessageTransportConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageTransportConfiguration_type{py::register_python_type(module.get(), &type_spec_ChatMessageTransportConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageTransportConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageValidationResult_type{py::register_python_type(module.get(), &type_spec_ChatMessageValidationResult, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageValidationResult_type{py::register_python_type(module.get(), &type_spec_ChatMessageValidationResult, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageValidationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatQueryOptions_type{py::register_python_type(module.get(), &type_spec_ChatQueryOptions, object_bases.get(), nullptr)};
+    py::pytype_handle ChatQueryOptions_type{py::register_python_type(module.get(), &type_spec_ChatQueryOptions, object_bases.get(), inspectable_meta_type)};
     if (!ChatQueryOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatRecipientDeliveryInfo_type{py::register_python_type(module.get(), &type_spec_ChatRecipientDeliveryInfo, object_bases.get(), nullptr)};
+    py::pytype_handle ChatRecipientDeliveryInfo_type{py::register_python_type(module.get(), &type_spec_ChatRecipientDeliveryInfo, object_bases.get(), inspectable_meta_type)};
     if (!ChatRecipientDeliveryInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatSearchReader_type{py::register_python_type(module.get(), &type_spec_ChatSearchReader, object_bases.get(), nullptr)};
+    py::pytype_handle ChatSearchReader_type{py::register_python_type(module.get(), &type_spec_ChatSearchReader, object_bases.get(), inspectable_meta_type)};
     if (!ChatSearchReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatSyncConfiguration_type{py::register_python_type(module.get(), &type_spec_ChatSyncConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle ChatSyncConfiguration_type{py::register_python_type(module.get(), &type_spec_ChatSyncConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!ChatSyncConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatSyncManager_type{py::register_python_type(module.get(), &type_spec_ChatSyncManager, object_bases.get(), nullptr)};
+    py::pytype_handle ChatSyncManager_type{py::register_python_type(module.get(), &type_spec_ChatSyncManager, object_bases.get(), inspectable_meta_type)};
     if (!ChatSyncManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RcsEndUserMessage_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessage, object_bases.get(), nullptr)};
+    py::pytype_handle RcsEndUserMessage_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessage, object_bases.get(), inspectable_meta_type)};
     if (!RcsEndUserMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RcsEndUserMessageAction_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAction, object_bases.get(), nullptr)};
+    py::pytype_handle RcsEndUserMessageAction_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAction, object_bases.get(), inspectable_meta_type)};
     if (!RcsEndUserMessageAction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RcsEndUserMessageAvailableEventArgs_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle RcsEndUserMessageAvailableEventArgs_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!RcsEndUserMessageAvailableEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RcsEndUserMessageAvailableTriggerDetails_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle RcsEndUserMessageAvailableTriggerDetails_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!RcsEndUserMessageAvailableTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RcsEndUserMessageManager_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageManager, object_bases.get(), nullptr)};
+    py::pytype_handle RcsEndUserMessageManager_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageManager, object_bases.get(), inspectable_meta_type)};
     if (!RcsEndUserMessageManager_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RcsManager_Static{PyType_FromSpec(&type_spec_RcsManager_Static)};
+    py::pyobj_handle RcsManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RcsManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RcsManager_Static{PyType_FromSpecWithBases(&type_spec_RcsManager_Static, RcsManager_Static_bases.get())};
     if (!type_RcsManager_Static)
     {
         return nullptr;
@@ -11413,25 +11443,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RcsServiceKindSupportedChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_RcsServiceKindSupportedChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle RcsServiceKindSupportedChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_RcsServiceKindSupportedChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!RcsServiceKindSupportedChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RcsTransport_type{py::register_python_type(module.get(), &type_spec_RcsTransport, object_bases.get(), nullptr)};
+    py::pytype_handle RcsTransport_type{py::register_python_type(module.get(), &type_spec_RcsTransport, object_bases.get(), inspectable_meta_type)};
     if (!RcsTransport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RcsTransportConfiguration_type{py::register_python_type(module.get(), &type_spec_RcsTransportConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle RcsTransportConfiguration_type{py::register_python_type(module.get(), &type_spec_RcsTransportConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!RcsTransportConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RemoteParticipantComposingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteParticipantComposingChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle RemoteParticipantComposingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteParticipantComposingChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!RemoteParticipantComposingChangedEventArgs_type)
     {
         return nullptr;
@@ -11443,7 +11473,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIChatItem_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIChatItem, nullptr))};
+    py::pytype_handle ImplementsIChatItem_type{py::register_python_type(module.get(), &type_spec_ImplementsIChatItem, nullptr, inspectable_meta_type)};
     if (!ImplementsIChatItem_type)
     {
         return nullptr;

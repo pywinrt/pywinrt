@@ -5325,6 +5325,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview_installcontr
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5338,43 +5344,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview_installcontr
         return nullptr;
     }
 
-    py::pytype_handle AppInstallItem_type{py::register_python_type(module.get(), &type_spec_AppInstallItem, object_bases.get(), nullptr)};
+    py::pytype_handle AppInstallItem_type{py::register_python_type(module.get(), &type_spec_AppInstallItem, object_bases.get(), inspectable_meta_type)};
     if (!AppInstallItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppInstallManager_type{py::register_python_type(module.get(), &type_spec_AppInstallManager, object_bases.get(), nullptr)};
+    py::pytype_handle AppInstallManager_type{py::register_python_type(module.get(), &type_spec_AppInstallManager, object_bases.get(), inspectable_meta_type)};
     if (!AppInstallManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppInstallManagerItemEventArgs_type{py::register_python_type(module.get(), &type_spec_AppInstallManagerItemEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppInstallManagerItemEventArgs_type{py::register_python_type(module.get(), &type_spec_AppInstallManagerItemEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppInstallManagerItemEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppInstallOptions_type{py::register_python_type(module.get(), &type_spec_AppInstallOptions, object_bases.get(), nullptr)};
+    py::pytype_handle AppInstallOptions_type{py::register_python_type(module.get(), &type_spec_AppInstallOptions, object_bases.get(), inspectable_meta_type)};
     if (!AppInstallOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppInstallStatus_type{py::register_python_type(module.get(), &type_spec_AppInstallStatus, object_bases.get(), nullptr)};
+    py::pytype_handle AppInstallStatus_type{py::register_python_type(module.get(), &type_spec_AppInstallStatus, object_bases.get(), inspectable_meta_type)};
     if (!AppInstallStatus_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppUpdateOptions_type{py::register_python_type(module.get(), &type_spec_AppUpdateOptions, object_bases.get(), nullptr)};
+    py::pytype_handle AppUpdateOptions_type{py::register_python_type(module.get(), &type_spec_AppUpdateOptions, object_bases.get(), inspectable_meta_type)};
     if (!AppUpdateOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GetEntitlementResult_type{py::register_python_type(module.get(), &type_spec_GetEntitlementResult, object_bases.get(), nullptr)};
+    py::pytype_handle GetEntitlementResult_type{py::register_python_type(module.get(), &type_spec_GetEntitlementResult, object_bases.get(), inspectable_meta_type)};
     if (!GetEntitlementResult_type)
     {
         return nullptr;

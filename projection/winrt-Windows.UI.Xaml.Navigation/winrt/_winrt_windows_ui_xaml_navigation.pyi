@@ -19,7 +19,7 @@ from winrt.windows.ui.xaml.navigation import LoadCompletedEventHandler, Navigate
 
 Self = typing.TypeVar('Self')
 
-class FrameNavigationOptions_Static(type):
+class FrameNavigationOptions_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class FrameNavigationOptions(winrt.system.Object, metaclass=FrameNavigationOptions_Static):

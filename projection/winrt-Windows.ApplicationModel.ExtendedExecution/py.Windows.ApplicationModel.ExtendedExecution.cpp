@@ -600,6 +600,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_extendedexecution(void) no
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -613,13 +619,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_extendedexecution(void) no
         return nullptr;
     }
 
-    py::pytype_handle ExtendedExecutionRevokedEventArgs_type{py::register_python_type(module.get(), &type_spec_ExtendedExecutionRevokedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ExtendedExecutionRevokedEventArgs_type{py::register_python_type(module.get(), &type_spec_ExtendedExecutionRevokedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ExtendedExecutionRevokedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExtendedExecutionSession_type{py::register_python_type(module.get(), &type_spec_ExtendedExecutionSession, object_bases.get(), nullptr)};
+    py::pytype_handle ExtendedExecutionSession_type{py::register_python_type(module.get(), &type_spec_ExtendedExecutionSession, object_bases.get(), inspectable_meta_type)};
     if (!ExtendedExecutionSession_type)
     {
         return nullptr;

@@ -3468,6 +3468,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3481,49 +3487,55 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WidgetActionInvokedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetActionInvokedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WidgetActionInvokedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetActionInvokedArgs, object_bases.get(), inspectable_meta_type)};
     if (!WidgetActionInvokedArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WidgetAnalyticsInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetAnalyticsInfoReportedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WidgetAnalyticsInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetAnalyticsInfoReportedArgs, object_bases.get(), inspectable_meta_type)};
     if (!WidgetAnalyticsInfoReportedArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WidgetContext_type{py::register_python_type(module.get(), &type_spec_WidgetContext, object_bases.get(), nullptr)};
+    py::pytype_handle WidgetContext_type{py::register_python_type(module.get(), &type_spec_WidgetContext, object_bases.get(), inspectable_meta_type)};
     if (!WidgetContext_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WidgetContextChangedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetContextChangedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WidgetContextChangedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetContextChangedArgs, object_bases.get(), inspectable_meta_type)};
     if (!WidgetContextChangedArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WidgetCustomizationRequestedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetCustomizationRequestedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WidgetCustomizationRequestedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetCustomizationRequestedArgs, object_bases.get(), inspectable_meta_type)};
     if (!WidgetCustomizationRequestedArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WidgetErrorInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetErrorInfoReportedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WidgetErrorInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetErrorInfoReportedArgs, object_bases.get(), inspectable_meta_type)};
     if (!WidgetErrorInfoReportedArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WidgetInfo_type{py::register_python_type(module.get(), &type_spec_WidgetInfo, object_bases.get(), nullptr)};
+    py::pytype_handle WidgetInfo_type{py::register_python_type(module.get(), &type_spec_WidgetInfo, object_bases.get(), inspectable_meta_type)};
     if (!WidgetInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_WidgetManager_Static{PyType_FromSpec(&type_spec_WidgetManager_Static)};
+    py::pyobj_handle WidgetManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WidgetManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WidgetManager_Static{PyType_FromSpecWithBases(&type_spec_WidgetManager_Static, WidgetManager_Static_bases.get())};
     if (!type_WidgetManager_Static)
     {
         return nullptr;
@@ -3535,7 +3547,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_WidgetUpdateRequestOptions_Static{PyType_FromSpec(&type_spec_WidgetUpdateRequestOptions_Static)};
+    py::pyobj_handle WidgetUpdateRequestOptions_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WidgetUpdateRequestOptions_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WidgetUpdateRequestOptions_Static{PyType_FromSpecWithBases(&type_spec_WidgetUpdateRequestOptions_Static, WidgetUpdateRequestOptions_Static_bases.get())};
     if (!type_WidgetUpdateRequestOptions_Static)
     {
         return nullptr;
@@ -3553,7 +3571,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWidgetManager_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetManager, nullptr))};
+    py::pytype_handle ImplementsIWidgetManager_type{py::register_python_type(module.get(), &type_spec_ImplementsIWidgetManager, nullptr, inspectable_meta_type)};
     if (!ImplementsIWidgetManager_type)
     {
         return nullptr;
@@ -3570,7 +3588,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWidgetProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetProvider, nullptr))};
+    py::pytype_handle ImplementsIWidgetProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIWidgetProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIWidgetProvider_type)
     {
         return nullptr;
@@ -3587,7 +3605,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWidgetProvider2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetProvider2, nullptr))};
+    py::pytype_handle ImplementsIWidgetProvider2_type{py::register_python_type(module.get(), &type_spec_ImplementsIWidgetProvider2, nullptr, inspectable_meta_type)};
     if (!ImplementsIWidgetProvider2_type)
     {
         return nullptr;
@@ -3604,7 +3622,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWidgetProviderAnalytics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetProviderAnalytics, nullptr))};
+    py::pytype_handle ImplementsIWidgetProviderAnalytics_type{py::register_python_type(module.get(), &type_spec_ImplementsIWidgetProviderAnalytics, nullptr, inspectable_meta_type)};
     if (!ImplementsIWidgetProviderAnalytics_type)
     {
         return nullptr;
@@ -3621,7 +3639,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWidgetProviderErrors_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWidgetProviderErrors, nullptr))};
+    py::pytype_handle ImplementsIWidgetProviderErrors_type{py::register_python_type(module.get(), &type_spec_ImplementsIWidgetProviderErrors, nullptr, inspectable_meta_type)};
     if (!ImplementsIWidgetProviderErrors_type)
     {
         return nullptr;

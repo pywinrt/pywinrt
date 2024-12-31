@@ -21679,6 +21679,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -21692,13 +21698,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContentLinkInfo_type{py::register_python_type(module.get(), &type_spec_ContentLinkInfo, object_bases.get(), nullptr)};
+    py::pytype_handle ContentLinkInfo_type{py::register_python_type(module.get(), &type_spec_ContentLinkInfo, object_bases.get(), inspectable_meta_type)};
     if (!ContentLinkInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FontWeights_Static{PyType_FromSpec(&type_spec_FontWeights_Static)};
+    py::pyobj_handle FontWeights_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FontWeights_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FontWeights_Static{PyType_FromSpecWithBases(&type_spec_FontWeights_Static, FontWeights_Static_bases.get())};
     if (!type_FontWeights_Static)
     {
         return nullptr;
@@ -21710,19 +21722,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RichEditTextDocument_type{py::register_python_type(module.get(), &type_spec_RichEditTextDocument, object_bases.get(), nullptr)};
+    py::pytype_handle RichEditTextDocument_type{py::register_python_type(module.get(), &type_spec_RichEditTextDocument, object_bases.get(), inspectable_meta_type)};
     if (!RichEditTextDocument_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RichEditTextRange_type{py::register_python_type(module.get(), &type_spec_RichEditTextRange, object_bases.get(), nullptr)};
+    py::pytype_handle RichEditTextRange_type{py::register_python_type(module.get(), &type_spec_RichEditTextRange, object_bases.get(), inspectable_meta_type)};
     if (!RichEditTextRange_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TextConstants_Static{PyType_FromSpec(&type_spec_TextConstants_Static)};
+    py::pyobj_handle TextConstants_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TextConstants_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TextConstants_Static{PyType_FromSpecWithBases(&type_spec_TextConstants_Static, TextConstants_Static_bases.get())};
     if (!type_TextConstants_Static)
     {
         return nullptr;
@@ -21740,7 +21758,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextCharacterFormat_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextCharacterFormat, nullptr))};
+    py::pytype_handle ImplementsITextCharacterFormat_type{py::register_python_type(module.get(), &type_spec_ImplementsITextCharacterFormat, nullptr, inspectable_meta_type)};
     if (!ImplementsITextCharacterFormat_type)
     {
         return nullptr;
@@ -21757,7 +21775,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextDocument_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextDocument, nullptr))};
+    py::pytype_handle ImplementsITextDocument_type{py::register_python_type(module.get(), &type_spec_ImplementsITextDocument, nullptr, inspectable_meta_type)};
     if (!ImplementsITextDocument_type)
     {
         return nullptr;
@@ -21774,7 +21792,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextParagraphFormat_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextParagraphFormat, nullptr))};
+    py::pytype_handle ImplementsITextParagraphFormat_type{py::register_python_type(module.get(), &type_spec_ImplementsITextParagraphFormat, nullptr, inspectable_meta_type)};
     if (!ImplementsITextParagraphFormat_type)
     {
         return nullptr;
@@ -21791,7 +21809,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextRange_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextRange, nullptr))};
+    py::pytype_handle ImplementsITextRange_type{py::register_python_type(module.get(), &type_spec_ImplementsITextRange, nullptr, inspectable_meta_type)};
     if (!ImplementsITextRange_type)
     {
         return nullptr;
@@ -21808,7 +21826,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextSelection_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextSelection, nullptr))};
+    py::pytype_handle ImplementsITextSelection_type{py::register_python_type(module.get(), &type_spec_ImplementsITextSelection, nullptr, inspectable_meta_type)};
     if (!ImplementsITextSelection_type)
     {
         return nullptr;

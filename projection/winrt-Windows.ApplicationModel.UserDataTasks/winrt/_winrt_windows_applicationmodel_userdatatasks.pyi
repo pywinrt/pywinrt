@@ -199,7 +199,7 @@ class UserDataTaskListSyncManager(winrt.system.Object):
     def last_attempted_sync_time(self, value: datetime.datetime) -> None: ...
 
 @typing.final
-class UserDataTaskManager_Static(type):
+class UserDataTaskManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.UserDataTasks.UserDataTaskManager Windows.ApplicationModel.UserDataTasks.UserDataTaskManager::GetDefault()
     def get_default(cls) -> UserDataTaskManager: ...
     # Windows.ApplicationModel.UserDataTasks.UserDataTaskManager Windows.ApplicationModel.UserDataTasks.UserDataTaskManager::GetForUser(Windows.System.User)

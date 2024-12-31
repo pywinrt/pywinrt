@@ -3265,6 +3265,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3278,19 +3284,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle KeyCredential_type{py::register_python_type(module.get(), &type_spec_KeyCredential, object_bases.get(), nullptr)};
+    py::pytype_handle KeyCredential_type{py::register_python_type(module.get(), &type_spec_KeyCredential, object_bases.get(), inspectable_meta_type)};
     if (!KeyCredential_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle KeyCredentialAttestationResult_type{py::register_python_type(module.get(), &type_spec_KeyCredentialAttestationResult, object_bases.get(), nullptr)};
+    py::pytype_handle KeyCredentialAttestationResult_type{py::register_python_type(module.get(), &type_spec_KeyCredentialAttestationResult, object_bases.get(), inspectable_meta_type)};
     if (!KeyCredentialAttestationResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyCredentialManager_Static{PyType_FromSpec(&type_spec_KeyCredentialManager_Static)};
+    py::pyobj_handle KeyCredentialManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KeyCredentialManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KeyCredentialManager_Static{PyType_FromSpecWithBases(&type_spec_KeyCredentialManager_Static, KeyCredentialManager_Static_bases.get())};
     if (!type_KeyCredentialManager_Static)
     {
         return nullptr;
@@ -3302,43 +3314,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle KeyCredentialOperationResult_type{py::register_python_type(module.get(), &type_spec_KeyCredentialOperationResult, object_bases.get(), nullptr)};
+    py::pytype_handle KeyCredentialOperationResult_type{py::register_python_type(module.get(), &type_spec_KeyCredentialOperationResult, object_bases.get(), inspectable_meta_type)};
     if (!KeyCredentialOperationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle KeyCredentialRetrievalResult_type{py::register_python_type(module.get(), &type_spec_KeyCredentialRetrievalResult, object_bases.get(), nullptr)};
+    py::pytype_handle KeyCredentialRetrievalResult_type{py::register_python_type(module.get(), &type_spec_KeyCredentialRetrievalResult, object_bases.get(), inspectable_meta_type)};
     if (!KeyCredentialRetrievalResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PasswordCredential_type{py::register_python_type(module.get(), &type_spec_PasswordCredential, object_bases.get(), nullptr)};
+    py::pytype_handle PasswordCredential_type{py::register_python_type(module.get(), &type_spec_PasswordCredential, object_bases.get(), inspectable_meta_type)};
     if (!PasswordCredential_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PasswordCredentialPropertyStore_type{py::register_python_type(module.get(), &type_spec_PasswordCredentialPropertyStore, object_bases.get(), nullptr)};
+    py::pytype_handle PasswordCredentialPropertyStore_type{py::register_python_type(module.get(), &type_spec_PasswordCredentialPropertyStore, object_bases.get(), inspectable_meta_type)};
     if (!PasswordCredentialPropertyStore_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PasswordVault_type{py::register_python_type(module.get(), &type_spec_PasswordVault, object_bases.get(), nullptr)};
+    py::pytype_handle PasswordVault_type{py::register_python_type(module.get(), &type_spec_PasswordVault, object_bases.get(), inspectable_meta_type)};
     if (!PasswordVault_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebAccount_type{py::register_python_type(module.get(), &type_spec_WebAccount, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccount_type{py::register_python_type(module.get(), &type_spec_WebAccount, object_bases.get(), inspectable_meta_type)};
     if (!WebAccount_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebAccountProvider_type{py::register_python_type(module.get(), &type_spec_WebAccountProvider, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountProvider_type{py::register_python_type(module.get(), &type_spec_WebAccountProvider, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountProvider_type)
     {
         return nullptr;
@@ -3350,7 +3362,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebAccount_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccount, nullptr))};
+    py::pytype_handle ImplementsIWebAccount_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebAccount, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebAccount_type)
     {
         return nullptr;

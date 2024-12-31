@@ -1862,6 +1862,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_dialprotocol(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1875,19 +1881,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_dialprotocol(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DialApp_type{py::register_python_type(module.get(), &type_spec_DialApp, object_bases.get(), nullptr)};
+    py::pytype_handle DialApp_type{py::register_python_type(module.get(), &type_spec_DialApp, object_bases.get(), inspectable_meta_type)};
     if (!DialApp_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DialAppStateDetails_type{py::register_python_type(module.get(), &type_spec_DialAppStateDetails, object_bases.get(), nullptr)};
+    py::pytype_handle DialAppStateDetails_type{py::register_python_type(module.get(), &type_spec_DialAppStateDetails, object_bases.get(), inspectable_meta_type)};
     if (!DialAppStateDetails_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DialDevice_Static{PyType_FromSpec(&type_spec_DialDevice_Static)};
+    py::pyobj_handle DialDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DialDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DialDevice_Static{PyType_FromSpecWithBases(&type_spec_DialDevice_Static, DialDevice_Static_bases.get())};
     if (!type_DialDevice_Static)
     {
         return nullptr;
@@ -1899,31 +1911,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_dialprotocol(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DialDevicePicker_type{py::register_python_type(module.get(), &type_spec_DialDevicePicker, object_bases.get(), nullptr)};
+    py::pytype_handle DialDevicePicker_type{py::register_python_type(module.get(), &type_spec_DialDevicePicker, object_bases.get(), inspectable_meta_type)};
     if (!DialDevicePicker_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DialDevicePickerFilter_type{py::register_python_type(module.get(), &type_spec_DialDevicePickerFilter, object_bases.get(), nullptr)};
+    py::pytype_handle DialDevicePickerFilter_type{py::register_python_type(module.get(), &type_spec_DialDevicePickerFilter, object_bases.get(), inspectable_meta_type)};
     if (!DialDevicePickerFilter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DialDeviceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_DialDeviceSelectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DialDeviceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_DialDeviceSelectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DialDeviceSelectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DialDisconnectButtonClickedEventArgs_type{py::register_python_type(module.get(), &type_spec_DialDisconnectButtonClickedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DialDisconnectButtonClickedEventArgs_type{py::register_python_type(module.get(), &type_spec_DialDisconnectButtonClickedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DialDisconnectButtonClickedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DialReceiverApp_Static{PyType_FromSpec(&type_spec_DialReceiverApp_Static)};
+    py::pyobj_handle DialReceiverApp_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DialReceiverApp_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DialReceiverApp_Static{PyType_FromSpecWithBases(&type_spec_DialReceiverApp_Static, DialReceiverApp_Static_bases.get())};
     if (!type_DialReceiverApp_Static)
     {
         return nullptr;

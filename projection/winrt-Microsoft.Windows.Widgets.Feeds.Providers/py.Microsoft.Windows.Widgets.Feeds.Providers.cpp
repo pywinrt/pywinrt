@@ -4490,6 +4490,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4503,43 +4509,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle CustomQueryParametersRequestedArgs_type{py::register_python_type(module.get(), &type_spec_CustomQueryParametersRequestedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CustomQueryParametersRequestedArgs_type{py::register_python_type(module.get(), &type_spec_CustomQueryParametersRequestedArgs, object_bases.get(), inspectable_meta_type)};
     if (!CustomQueryParametersRequestedArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CustomQueryParametersUpdateOptions_type{py::register_python_type(module.get(), &type_spec_CustomQueryParametersUpdateOptions, object_bases.get(), nullptr)};
+    py::pytype_handle CustomQueryParametersUpdateOptions_type{py::register_python_type(module.get(), &type_spec_CustomQueryParametersUpdateOptions, object_bases.get(), inspectable_meta_type)};
     if (!CustomQueryParametersUpdateOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedAnalyticsInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_FeedAnalyticsInfoReportedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FeedAnalyticsInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_FeedAnalyticsInfoReportedArgs, object_bases.get(), inspectable_meta_type)};
     if (!FeedAnalyticsInfoReportedArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedDisabledArgs_type{py::register_python_type(module.get(), &type_spec_FeedDisabledArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FeedDisabledArgs_type{py::register_python_type(module.get(), &type_spec_FeedDisabledArgs, object_bases.get(), inspectable_meta_type)};
     if (!FeedDisabledArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedEnabledArgs_type{py::register_python_type(module.get(), &type_spec_FeedEnabledArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FeedEnabledArgs_type{py::register_python_type(module.get(), &type_spec_FeedEnabledArgs, object_bases.get(), inspectable_meta_type)};
     if (!FeedEnabledArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedErrorInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_FeedErrorInfoReportedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FeedErrorInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_FeedErrorInfoReportedArgs, object_bases.get(), inspectable_meta_type)};
     if (!FeedErrorInfoReportedArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FeedManager_Static{PyType_FromSpec(&type_spec_FeedManager_Static)};
+    py::pyobj_handle FeedManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FeedManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FeedManager_Static{PyType_FromSpecWithBases(&type_spec_FeedManager_Static, FeedManager_Static_bases.get())};
     if (!type_FeedManager_Static)
     {
         return nullptr;
@@ -4551,43 +4563,43 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle FeedMessageReceivedArgs_type{py::register_python_type(module.get(), &type_spec_FeedMessageReceivedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FeedMessageReceivedArgs_type{py::register_python_type(module.get(), &type_spec_FeedMessageReceivedArgs, object_bases.get(), inspectable_meta_type)};
     if (!FeedMessageReceivedArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedProviderDisabledArgs_type{py::register_python_type(module.get(), &type_spec_FeedProviderDisabledArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FeedProviderDisabledArgs_type{py::register_python_type(module.get(), &type_spec_FeedProviderDisabledArgs, object_bases.get(), inspectable_meta_type)};
     if (!FeedProviderDisabledArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedProviderEnabledArgs_type{py::register_python_type(module.get(), &type_spec_FeedProviderEnabledArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FeedProviderEnabledArgs_type{py::register_python_type(module.get(), &type_spec_FeedProviderEnabledArgs, object_bases.get(), inspectable_meta_type)};
     if (!FeedProviderEnabledArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedProviderInfo_type{py::register_python_type(module.get(), &type_spec_FeedProviderInfo, object_bases.get(), nullptr)};
+    py::pytype_handle FeedProviderInfo_type{py::register_python_type(module.get(), &type_spec_FeedProviderInfo, object_bases.get(), inspectable_meta_type)};
     if (!FeedProviderInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedResourceRequest_type{py::register_python_type(module.get(), &type_spec_FeedResourceRequest, object_bases.get(), nullptr)};
+    py::pytype_handle FeedResourceRequest_type{py::register_python_type(module.get(), &type_spec_FeedResourceRequest, object_bases.get(), inspectable_meta_type)};
     if (!FeedResourceRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedResourceRequestedArgs_type{py::register_python_type(module.get(), &type_spec_FeedResourceRequestedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FeedResourceRequestedArgs_type{py::register_python_type(module.get(), &type_spec_FeedResourceRequestedArgs, object_bases.get(), inspectable_meta_type)};
     if (!FeedResourceRequestedArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FeedResourceResponse_type{py::register_python_type(module.get(), &type_spec_FeedResourceResponse, object_bases.get(), nullptr)};
+    py::pytype_handle FeedResourceResponse_type{py::register_python_type(module.get(), &type_spec_FeedResourceResponse, object_bases.get(), inspectable_meta_type)};
     if (!FeedResourceResponse_type)
     {
         return nullptr;
@@ -4599,7 +4611,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFeedAnnouncementInvokedTarget_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedAnnouncementInvokedTarget, nullptr))};
+    py::pytype_handle ImplementsIFeedAnnouncementInvokedTarget_type{py::register_python_type(module.get(), &type_spec_ImplementsIFeedAnnouncementInvokedTarget, nullptr, inspectable_meta_type)};
     if (!ImplementsIFeedAnnouncementInvokedTarget_type)
     {
         return nullptr;
@@ -4616,7 +4628,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFeedManager_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedManager, nullptr))};
+    py::pytype_handle ImplementsIFeedManager_type{py::register_python_type(module.get(), &type_spec_ImplementsIFeedManager, nullptr, inspectable_meta_type)};
     if (!ImplementsIFeedManager_type)
     {
         return nullptr;
@@ -4633,7 +4645,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFeedManager2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedManager2, nullptr))};
+    py::pytype_handle ImplementsIFeedManager2_type{py::register_python_type(module.get(), &type_spec_ImplementsIFeedManager2, nullptr, inspectable_meta_type)};
     if (!ImplementsIFeedManager2_type)
     {
         return nullptr;
@@ -4650,7 +4662,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFeedProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedProvider, nullptr))};
+    py::pytype_handle ImplementsIFeedProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIFeedProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIFeedProvider_type)
     {
         return nullptr;
@@ -4667,7 +4679,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFeedProviderAnalytics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedProviderAnalytics, nullptr))};
+    py::pytype_handle ImplementsIFeedProviderAnalytics_type{py::register_python_type(module.get(), &type_spec_ImplementsIFeedProviderAnalytics, nullptr, inspectable_meta_type)};
     if (!ImplementsIFeedProviderAnalytics_type)
     {
         return nullptr;
@@ -4684,7 +4696,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFeedProviderErrors_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedProviderErrors, nullptr))};
+    py::pytype_handle ImplementsIFeedProviderErrors_type{py::register_python_type(module.get(), &type_spec_ImplementsIFeedProviderErrors, nullptr, inspectable_meta_type)};
     if (!ImplementsIFeedProviderErrors_type)
     {
         return nullptr;
@@ -4701,7 +4713,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFeedProviderMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedProviderMessage, nullptr))};
+    py::pytype_handle ImplementsIFeedProviderMessage_type{py::register_python_type(module.get(), &type_spec_ImplementsIFeedProviderMessage, nullptr, inspectable_meta_type)};
     if (!ImplementsIFeedProviderMessage_type)
     {
         return nullptr;
@@ -4718,7 +4730,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFeedResourceProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFeedResourceProvider, nullptr))};
+    py::pytype_handle ImplementsIFeedResourceProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIFeedResourceProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIFeedResourceProvider_type)
     {
         return nullptr;

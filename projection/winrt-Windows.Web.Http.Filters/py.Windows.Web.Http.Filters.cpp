@@ -2021,6 +2021,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_filters(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2034,7 +2040,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_filters(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_HttpBaseProtocolFilter_Static{PyType_FromSpec(&type_spec_HttpBaseProtocolFilter_Static)};
+    py::pyobj_handle HttpBaseProtocolFilter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HttpBaseProtocolFilter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HttpBaseProtocolFilter_Static{PyType_FromSpecWithBases(&type_spec_HttpBaseProtocolFilter_Static, HttpBaseProtocolFilter_Static_bases.get())};
     if (!type_HttpBaseProtocolFilter_Static)
     {
         return nullptr;
@@ -2046,13 +2058,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_filters(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HttpCacheControl_type{py::register_python_type(module.get(), &type_spec_HttpCacheControl, object_bases.get(), nullptr)};
+    py::pytype_handle HttpCacheControl_type{py::register_python_type(module.get(), &type_spec_HttpCacheControl, object_bases.get(), inspectable_meta_type)};
     if (!HttpCacheControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpServerCustomValidationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpServerCustomValidationRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle HttpServerCustomValidationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpServerCustomValidationRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!HttpServerCustomValidationRequestedEventArgs_type)
     {
         return nullptr;
@@ -2064,7 +2076,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_filters(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIHttpFilter_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIHttpFilter, nullptr))};
+    py::pytype_handle ImplementsIHttpFilter_type{py::register_python_type(module.get(), &type_spec_ImplementsIHttpFilter, nullptr, inspectable_meta_type)};
     if (!ImplementsIHttpFilter_type)
     {
         return nullptr;

@@ -27,7 +27,7 @@ class CameraEventArgs(winrt.system.Object):
     pass
 
 @typing.final
-class HardwareButtons_Static(type):
+class HardwareButtons_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.EventRegistrationToken Windows.Phone.UI.Input.HardwareButtons::add_BackPressed(Windows.Foundation.EventHandler`1<Windows.Phone.UI.Input.BackPressedEventArgs>)
     def add_back_pressed(cls, handler: windows_foundation.EventHandler[BackPressedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Phone.UI.Input.HardwareButtons::remove_BackPressed(Windows.Foundation.EventRegistrationToken)

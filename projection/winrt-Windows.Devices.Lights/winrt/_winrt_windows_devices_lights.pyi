@@ -20,7 +20,7 @@ from winrt.windows.devices.lights import LampArrayKind, LampPurposes
 Self = typing.TypeVar('Self')
 
 @typing.final
-class Lamp_Static(type):
+class Lamp_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Lights.Lamp> Windows.Devices.Lights.Lamp::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Lamp]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Lights.Lamp> Windows.Devices.Lights.Lamp::GetDefaultAsync()
@@ -64,7 +64,7 @@ class Lamp(winrt.system.Object, windows_foundation.IClosable, metaclass=Lamp_Sta
     def is_color_settable(self) -> bool: ...
 
 @typing.final
-class LampArray_Static(type):
+class LampArray_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Lights.LampArray> Windows.Devices.Lights.LampArray::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[LampArray]: ...
     # System.String Windows.Devices.Lights.LampArray::GetDeviceSelector()

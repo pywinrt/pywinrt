@@ -236,7 +236,7 @@ class SyndicationContent(winrt.system.Object, ISyndicationText, ISyndicationNode
     def xml(self, value: windows_data_xml_dom.XmlDocument) -> None: ...
 
 @typing.final
-class SyndicationError_Static(type):
+class SyndicationError_Static(winrt._winrt.IInspectable_Static):
     # Windows.Web.Syndication.SyndicationErrorStatus Windows.Web.Syndication.SyndicationError::GetStatus(System.Int32)
     def get_status(cls, hresult: winrt.system.Int32, /) -> SyndicationErrorStatus: ...
 

@@ -337,7 +337,7 @@ class CoreIndependentInputSource(winrt.system.Object, ICorePointerRedirector, IC
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
 @typing.final
-class CoreIndependentInputSourceController_Static(type):
+class CoreIndependentInputSourceController_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Core.CoreIndependentInputSourceController Windows.UI.Core.CoreIndependentInputSourceController::CreateForIVisualElement(Windows.UI.Composition.IVisualElement)
     def create_for_ivisual_element(cls, visual_element: windows_ui_composition.IVisualElement, /) -> CoreIndependentInputSourceController: ...
     # Windows.UI.Core.CoreIndependentInputSourceController Windows.UI.Core.CoreIndependentInputSourceController::CreateForVisual(Windows.UI.Composition.Visual)
@@ -370,7 +370,7 @@ class CoreIndependentInputSourceController(winrt.system.Object, windows_foundati
     def source(self) -> CoreIndependentInputSource: ...
 
 @typing.final
-class CoreWindow_Static(type):
+class CoreWindow_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Core.CoreWindow Windows.UI.Core.CoreWindow::GetForCurrentThread()
     def get_for_current_thread(cls) -> CoreWindow: ...
 
@@ -644,7 +644,7 @@ class CoreWindowPopupShowingEventArgs(winrt.system.Object):
     def set_desired_size(self, value: windows_foundation.Size, /) -> None: ...
 
 @typing.final
-class CoreWindowResizeManager_Static(type):
+class CoreWindowResizeManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Core.CoreWindowResizeManager Windows.UI.Core.CoreWindowResizeManager::GetForCurrentView()
     def get_for_current_view(cls) -> CoreWindowResizeManager: ...
 
@@ -713,7 +713,7 @@ class PointerEventArgs(winrt.system.Object, ICoreWindowEventArgs):
     def key_modifiers(self) -> windows_system.VirtualKeyModifiers: ...
 
 @typing.final
-class SystemNavigationManager_Static(type):
+class SystemNavigationManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Core.SystemNavigationManager Windows.UI.Core.SystemNavigationManager::GetForCurrentView()
     def get_for_current_view(cls) -> SystemNavigationManager: ...
 

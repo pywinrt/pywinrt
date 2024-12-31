@@ -17,7 +17,7 @@ import winrt.windows.ui.input as windows_ui_input
 Self = typing.TypeVar('Self')
 
 @typing.final
-class RadialControllerIndependentInputSource_Static(type):
+class RadialControllerIndependentInputSource_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Input.Core.RadialControllerIndependentInputSource Windows.UI.Input.Core.RadialControllerIndependentInputSource::CreateForView(Windows.ApplicationModel.Core.CoreApplicationView)
     def create_for_view(cls, view: windows_applicationmodel_core.CoreApplicationView, /) -> RadialControllerIndependentInputSource: ...
 

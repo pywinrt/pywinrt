@@ -40,7 +40,7 @@ class Enterprise(winrt.system.Object):
     def workplace_id(self) -> winrt.system.Int32: ...
 
 @typing.final
-class EnterpriseEnrollmentManager_Static(type):
+class EnterpriseEnrollmentManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Phone.Management.Deployment.EnterpriseEnrollmentResult> Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager::RequestEnrollmentAsync(System.String)
     def request_enrollment_async(cls, enrollment_token: str, /) -> windows_foundation.IAsyncOperation[EnterpriseEnrollmentResult]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager::RequestUnenrollmentAsync(Windows.Phone.Management.Deployment.Enterprise)
@@ -68,7 +68,7 @@ class EnterpriseEnrollmentResult(winrt.system.Object):
     def status(self) -> EnterpriseEnrollmentStatus: ...
 
 @typing.final
-class InstallationManager_Static(type):
+class InstallationManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Phone.Management.Deployment.PackageInstallResult,System.UInt32> Windows.Phone.Management.Deployment.InstallationManager::AddPackageAsync(System.String,Windows.Foundation.Uri)
     def add_package_async(cls, title: str, source_location: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Phone.Management.Deployment.PackageInstallResult,System.UInt32> Windows.Phone.Management.Deployment.InstallationManager::AddPackageAsync(System.String,Windows.Foundation.Uri,System.String,System.String,Windows.Foundation.Uri)

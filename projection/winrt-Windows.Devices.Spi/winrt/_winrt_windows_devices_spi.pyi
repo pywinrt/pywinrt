@@ -68,7 +68,7 @@ class SpiConnectionSettings(winrt.system.Object):
     def chip_select_line(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class SpiController_Static(type):
+class SpiController_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Spi.SpiController>> Windows.Devices.Spi.SpiController::GetControllersAsync(Windows.Devices.Spi.Provider.ISpiProvider)
     def get_controllers_async(cls, provider: windows_devices_spi_provider.ISpiProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[SpiController]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Spi.SpiController> Windows.Devices.Spi.SpiController::GetDefaultAsync()
@@ -80,7 +80,7 @@ class SpiController(winrt.system.Object, metaclass=SpiController_Static):
     def get_device(self, settings: SpiConnectionSettings, /) -> SpiDevice: ...
 
 @typing.final
-class SpiDevice_Static(type):
+class SpiDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Spi.SpiDevice> Windows.Devices.Spi.SpiDevice::FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)
     def from_id_async(cls, bus_id: str, settings: SpiConnectionSettings, /) -> windows_foundation.IAsyncOperation[SpiDevice]: ...
     # Windows.Devices.Spi.SpiBusInfo Windows.Devices.Spi.SpiDevice::GetBusInfo(System.String)

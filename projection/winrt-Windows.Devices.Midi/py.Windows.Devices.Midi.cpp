@@ -5924,6 +5924,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_midi(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5937,31 +5943,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_midi(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MidiActiveSensingMessage_type{py::register_python_type(module.get(), &type_spec_MidiActiveSensingMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiActiveSensingMessage_type{py::register_python_type(module.get(), &type_spec_MidiActiveSensingMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiActiveSensingMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiChannelPressureMessage_type{py::register_python_type(module.get(), &type_spec_MidiChannelPressureMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiChannelPressureMessage_type{py::register_python_type(module.get(), &type_spec_MidiChannelPressureMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiChannelPressureMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiContinueMessage_type{py::register_python_type(module.get(), &type_spec_MidiContinueMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiContinueMessage_type{py::register_python_type(module.get(), &type_spec_MidiContinueMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiContinueMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiControlChangeMessage_type{py::register_python_type(module.get(), &type_spec_MidiControlChangeMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiControlChangeMessage_type{py::register_python_type(module.get(), &type_spec_MidiControlChangeMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiControlChangeMessage_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MidiInPort_Static{PyType_FromSpec(&type_spec_MidiInPort_Static)};
+    py::pyobj_handle MidiInPort_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MidiInPort_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MidiInPort_Static{PyType_FromSpecWithBases(&type_spec_MidiInPort_Static, MidiInPort_Static_bases.get())};
     if (!type_MidiInPort_Static)
     {
         return nullptr;
@@ -5973,25 +5985,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_midi(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MidiMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MidiMessageReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MidiMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MidiMessageReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MidiMessageReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiNoteOffMessage_type{py::register_python_type(module.get(), &type_spec_MidiNoteOffMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiNoteOffMessage_type{py::register_python_type(module.get(), &type_spec_MidiNoteOffMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiNoteOffMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiNoteOnMessage_type{py::register_python_type(module.get(), &type_spec_MidiNoteOnMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiNoteOnMessage_type{py::register_python_type(module.get(), &type_spec_MidiNoteOnMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiNoteOnMessage_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MidiOutPort_Static{PyType_FromSpec(&type_spec_MidiOutPort_Static)};
+    py::pyobj_handle MidiOutPort_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MidiOutPort_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MidiOutPort_Static{PyType_FromSpecWithBases(&type_spec_MidiOutPort_Static, MidiOutPort_Static_bases.get())};
     if (!type_MidiOutPort_Static)
     {
         return nullptr;
@@ -6003,49 +6021,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_midi(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MidiPitchBendChangeMessage_type{py::register_python_type(module.get(), &type_spec_MidiPitchBendChangeMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiPitchBendChangeMessage_type{py::register_python_type(module.get(), &type_spec_MidiPitchBendChangeMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiPitchBendChangeMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiPolyphonicKeyPressureMessage_type{py::register_python_type(module.get(), &type_spec_MidiPolyphonicKeyPressureMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiPolyphonicKeyPressureMessage_type{py::register_python_type(module.get(), &type_spec_MidiPolyphonicKeyPressureMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiPolyphonicKeyPressureMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiProgramChangeMessage_type{py::register_python_type(module.get(), &type_spec_MidiProgramChangeMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiProgramChangeMessage_type{py::register_python_type(module.get(), &type_spec_MidiProgramChangeMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiProgramChangeMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiSongPositionPointerMessage_type{py::register_python_type(module.get(), &type_spec_MidiSongPositionPointerMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiSongPositionPointerMessage_type{py::register_python_type(module.get(), &type_spec_MidiSongPositionPointerMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiSongPositionPointerMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiSongSelectMessage_type{py::register_python_type(module.get(), &type_spec_MidiSongSelectMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiSongSelectMessage_type{py::register_python_type(module.get(), &type_spec_MidiSongSelectMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiSongSelectMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiStartMessage_type{py::register_python_type(module.get(), &type_spec_MidiStartMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiStartMessage_type{py::register_python_type(module.get(), &type_spec_MidiStartMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiStartMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiStopMessage_type{py::register_python_type(module.get(), &type_spec_MidiStopMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiStopMessage_type{py::register_python_type(module.get(), &type_spec_MidiStopMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiStopMessage_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MidiSynthesizer_Static{PyType_FromSpec(&type_spec_MidiSynthesizer_Static)};
+    py::pyobj_handle MidiSynthesizer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MidiSynthesizer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MidiSynthesizer_Static{PyType_FromSpecWithBases(&type_spec_MidiSynthesizer_Static, MidiSynthesizer_Static_bases.get())};
     if (!type_MidiSynthesizer_Static)
     {
         return nullptr;
@@ -6057,31 +6081,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_midi(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MidiSystemExclusiveMessage_type{py::register_python_type(module.get(), &type_spec_MidiSystemExclusiveMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiSystemExclusiveMessage_type{py::register_python_type(module.get(), &type_spec_MidiSystemExclusiveMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiSystemExclusiveMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiSystemResetMessage_type{py::register_python_type(module.get(), &type_spec_MidiSystemResetMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiSystemResetMessage_type{py::register_python_type(module.get(), &type_spec_MidiSystemResetMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiSystemResetMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiTimeCodeMessage_type{py::register_python_type(module.get(), &type_spec_MidiTimeCodeMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiTimeCodeMessage_type{py::register_python_type(module.get(), &type_spec_MidiTimeCodeMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiTimeCodeMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiTimingClockMessage_type{py::register_python_type(module.get(), &type_spec_MidiTimingClockMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiTimingClockMessage_type{py::register_python_type(module.get(), &type_spec_MidiTimingClockMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiTimingClockMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MidiTuneRequestMessage_type{py::register_python_type(module.get(), &type_spec_MidiTuneRequestMessage, object_bases.get(), nullptr)};
+    py::pytype_handle MidiTuneRequestMessage_type{py::register_python_type(module.get(), &type_spec_MidiTuneRequestMessage, object_bases.get(), inspectable_meta_type)};
     if (!MidiTuneRequestMessage_type)
     {
         return nullptr;
@@ -6093,7 +6117,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_midi(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMidiMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMidiMessage, nullptr))};
+    py::pytype_handle ImplementsIMidiMessage_type{py::register_python_type(module.get(), &type_spec_ImplementsIMidiMessage, nullptr, inspectable_meta_type)};
     if (!ImplementsIMidiMessage_type)
     {
         return nullptr;
@@ -6110,7 +6134,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_midi(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMidiOutPort_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMidiOutPort, nullptr))};
+    py::pytype_handle ImplementsIMidiOutPort_type{py::register_python_type(module.get(), &type_spec_ImplementsIMidiOutPort, nullptr, inspectable_meta_type)};
     if (!ImplementsIMidiOutPort_type)
     {
         return nullptr;

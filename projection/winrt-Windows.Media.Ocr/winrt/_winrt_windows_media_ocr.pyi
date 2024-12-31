@@ -17,7 +17,7 @@ import winrt.windows.graphics.imaging as windows_graphics_imaging
 Self = typing.TypeVar('Self')
 
 @typing.final
-class OcrEngine_Static(type):
+class OcrEngine_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Media.Ocr.OcrEngine::IsLanguageSupported(Windows.Globalization.Language)
     def is_language_supported(cls, language: windows_globalization.Language, /) -> bool: ...
     # Windows.Media.Ocr.OcrEngine Windows.Media.Ocr.OcrEngine::TryCreateFromLanguage(Windows.Globalization.Language)

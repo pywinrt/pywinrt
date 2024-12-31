@@ -16,7 +16,7 @@ from winrt.windows.system.power import BatteryStatus, EnergySaverStatus, PowerSu
 Self = typing.TypeVar('Self')
 
 @typing.final
-class BackgroundEnergyManager_Static(type):
+class BackgroundEnergyManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.BackgroundEnergyManager::add_RecentEnergyUsageIncreased(Windows.Foundation.EventHandler`1<System.Object>)
     # @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def add_recent_energy_usage_increased(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -59,7 +59,7 @@ class BackgroundEnergyManager(winrt.system.Object, metaclass=BackgroundEnergyMan
     pass
 
 @typing.final
-class ForegroundEnergyManager_Static(type):
+class ForegroundEnergyManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.ForegroundEnergyManager::add_RecentEnergyUsageIncreased(Windows.Foundation.EventHandler`1<System.Object>)
     # @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def add_recent_energy_usage_increased(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -96,7 +96,7 @@ class ForegroundEnergyManager(winrt.system.Object, metaclass=ForegroundEnergyMan
     pass
 
 @typing.final
-class PowerManager_Static(type):
+class PowerManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.PowerManager::add_BatteryStatusChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_battery_status_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Power.PowerManager::remove_BatteryStatusChanged(Windows.Foundation.EventRegistrationToken)

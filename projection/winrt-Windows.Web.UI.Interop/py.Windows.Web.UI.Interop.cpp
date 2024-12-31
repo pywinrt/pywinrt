@@ -3734,6 +3734,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_ui_interop(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3747,31 +3753,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_ui_interop(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WebViewControl_type{py::register_python_type(module.get(), &type_spec_WebViewControl, object_bases.get(), nullptr)};
+    py::pytype_handle WebViewControl_type{py::register_python_type(module.get(), &type_spec_WebViewControl, object_bases.get(), inspectable_meta_type)};
     if (!WebViewControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebViewControlAcceleratorKeyPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlAcceleratorKeyPressedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WebViewControlAcceleratorKeyPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlAcceleratorKeyPressedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WebViewControlAcceleratorKeyPressedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebViewControlMoveFocusRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlMoveFocusRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WebViewControlMoveFocusRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlMoveFocusRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WebViewControlMoveFocusRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebViewControlProcess_type{py::register_python_type(module.get(), &type_spec_WebViewControlProcess, object_bases.get(), nullptr)};
+    py::pytype_handle WebViewControlProcess_type{py::register_python_type(module.get(), &type_spec_WebViewControlProcess, object_bases.get(), inspectable_meta_type)};
     if (!WebViewControlProcess_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebViewControlProcessOptions_type{py::register_python_type(module.get(), &type_spec_WebViewControlProcessOptions, object_bases.get(), nullptr)};
+    py::pytype_handle WebViewControlProcessOptions_type{py::register_python_type(module.get(), &type_spec_WebViewControlProcessOptions, object_bases.get(), inspectable_meta_type)};
     if (!WebViewControlProcessOptions_type)
     {
         return nullptr;

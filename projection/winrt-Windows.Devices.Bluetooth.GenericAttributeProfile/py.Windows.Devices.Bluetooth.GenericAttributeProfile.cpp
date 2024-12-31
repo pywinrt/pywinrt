@@ -14745,6 +14745,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -14758,7 +14764,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pyobj_handle type_GattCharacteristic_Static{PyType_FromSpec(&type_spec_GattCharacteristic_Static)};
+    py::pyobj_handle GattCharacteristic_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattCharacteristic_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattCharacteristic_Static{PyType_FromSpecWithBases(&type_spec_GattCharacteristic_Static, GattCharacteristic_Static_bases.get())};
     if (!type_GattCharacteristic_Static)
     {
         return nullptr;
@@ -14770,7 +14782,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pyobj_handle type_GattCharacteristicUuids_Static{PyType_FromSpec(&type_spec_GattCharacteristicUuids_Static)};
+    py::pyobj_handle GattCharacteristicUuids_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattCharacteristicUuids_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattCharacteristicUuids_Static{PyType_FromSpecWithBases(&type_spec_GattCharacteristicUuids_Static, GattCharacteristicUuids_Static_bases.get())};
     if (!type_GattCharacteristicUuids_Static)
     {
         return nullptr;
@@ -14782,19 +14800,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pytype_handle GattCharacteristicsResult_type{py::register_python_type(module.get(), &type_spec_GattCharacteristicsResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattCharacteristicsResult_type{py::register_python_type(module.get(), &type_spec_GattCharacteristicsResult, object_bases.get(), inspectable_meta_type)};
     if (!GattCharacteristicsResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattClientNotificationResult_type{py::register_python_type(module.get(), &type_spec_GattClientNotificationResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattClientNotificationResult_type{py::register_python_type(module.get(), &type_spec_GattClientNotificationResult, object_bases.get(), inspectable_meta_type)};
     if (!GattClientNotificationResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattDescriptor_Static{PyType_FromSpec(&type_spec_GattDescriptor_Static)};
+    py::pyobj_handle GattDescriptor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattDescriptor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattDescriptor_Static{PyType_FromSpecWithBases(&type_spec_GattDescriptor_Static, GattDescriptor_Static_bases.get())};
     if (!type_GattDescriptor_Static)
     {
         return nullptr;
@@ -14806,7 +14830,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pyobj_handle type_GattDescriptorUuids_Static{PyType_FromSpec(&type_spec_GattDescriptorUuids_Static)};
+    py::pyobj_handle GattDescriptorUuids_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattDescriptorUuids_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattDescriptorUuids_Static{PyType_FromSpecWithBases(&type_spec_GattDescriptorUuids_Static, GattDescriptorUuids_Static_bases.get())};
     if (!type_GattDescriptorUuids_Static)
     {
         return nullptr;
@@ -14818,13 +14848,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pytype_handle GattDescriptorsResult_type{py::register_python_type(module.get(), &type_spec_GattDescriptorsResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattDescriptorsResult_type{py::register_python_type(module.get(), &type_spec_GattDescriptorsResult, object_bases.get(), inspectable_meta_type)};
     if (!GattDescriptorsResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattDeviceService_Static{PyType_FromSpec(&type_spec_GattDeviceService_Static)};
+    py::pyobj_handle GattDeviceService_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattDeviceService_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattDeviceService_Static{PyType_FromSpecWithBases(&type_spec_GattDeviceService_Static, GattDeviceService_Static_bases.get())};
     if (!type_GattDeviceService_Static)
     {
         return nullptr;
@@ -14836,55 +14872,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pytype_handle GattDeviceServicesResult_type{py::register_python_type(module.get(), &type_spec_GattDeviceServicesResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattDeviceServicesResult_type{py::register_python_type(module.get(), &type_spec_GattDeviceServicesResult, object_bases.get(), inspectable_meta_type)};
     if (!GattDeviceServicesResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattLocalCharacteristic_type{py::register_python_type(module.get(), &type_spec_GattLocalCharacteristic, object_bases.get(), nullptr)};
+    py::pytype_handle GattLocalCharacteristic_type{py::register_python_type(module.get(), &type_spec_GattLocalCharacteristic, object_bases.get(), inspectable_meta_type)};
     if (!GattLocalCharacteristic_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattLocalCharacteristicParameters_type{py::register_python_type(module.get(), &type_spec_GattLocalCharacteristicParameters, object_bases.get(), nullptr)};
+    py::pytype_handle GattLocalCharacteristicParameters_type{py::register_python_type(module.get(), &type_spec_GattLocalCharacteristicParameters, object_bases.get(), inspectable_meta_type)};
     if (!GattLocalCharacteristicParameters_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattLocalCharacteristicResult_type{py::register_python_type(module.get(), &type_spec_GattLocalCharacteristicResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattLocalCharacteristicResult_type{py::register_python_type(module.get(), &type_spec_GattLocalCharacteristicResult, object_bases.get(), inspectable_meta_type)};
     if (!GattLocalCharacteristicResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattLocalDescriptor_type{py::register_python_type(module.get(), &type_spec_GattLocalDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle GattLocalDescriptor_type{py::register_python_type(module.get(), &type_spec_GattLocalDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!GattLocalDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattLocalDescriptorParameters_type{py::register_python_type(module.get(), &type_spec_GattLocalDescriptorParameters, object_bases.get(), nullptr)};
+    py::pytype_handle GattLocalDescriptorParameters_type{py::register_python_type(module.get(), &type_spec_GattLocalDescriptorParameters, object_bases.get(), inspectable_meta_type)};
     if (!GattLocalDescriptorParameters_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattLocalDescriptorResult_type{py::register_python_type(module.get(), &type_spec_GattLocalDescriptorResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattLocalDescriptorResult_type{py::register_python_type(module.get(), &type_spec_GattLocalDescriptorResult, object_bases.get(), inspectable_meta_type)};
     if (!GattLocalDescriptorResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattLocalService_type{py::register_python_type(module.get(), &type_spec_GattLocalService, object_bases.get(), nullptr)};
+    py::pytype_handle GattLocalService_type{py::register_python_type(module.get(), &type_spec_GattLocalService, object_bases.get(), inspectable_meta_type)};
     if (!GattLocalService_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattPresentationFormat_Static{PyType_FromSpec(&type_spec_GattPresentationFormat_Static)};
+    py::pyobj_handle GattPresentationFormat_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattPresentationFormat_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattPresentationFormat_Static{PyType_FromSpecWithBases(&type_spec_GattPresentationFormat_Static, GattPresentationFormat_Static_bases.get())};
     if (!type_GattPresentationFormat_Static)
     {
         return nullptr;
@@ -14896,7 +14938,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pyobj_handle type_GattPresentationFormatTypes_Static{PyType_FromSpec(&type_spec_GattPresentationFormatTypes_Static)};
+    py::pyobj_handle GattPresentationFormatTypes_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattPresentationFormatTypes_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattPresentationFormatTypes_Static{PyType_FromSpecWithBases(&type_spec_GattPresentationFormatTypes_Static, GattPresentationFormatTypes_Static_bases.get())};
     if (!type_GattPresentationFormatTypes_Static)
     {
         return nullptr;
@@ -14908,7 +14956,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pyobj_handle type_GattProtocolError_Static{PyType_FromSpec(&type_spec_GattProtocolError_Static)};
+    py::pyobj_handle GattProtocolError_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattProtocolError_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattProtocolError_Static{PyType_FromSpecWithBases(&type_spec_GattProtocolError_Static, GattProtocolError_Static_bases.get())};
     if (!type_GattProtocolError_Static)
     {
         return nullptr;
@@ -14920,43 +14974,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pytype_handle GattReadClientCharacteristicConfigurationDescriptorResult_type{py::register_python_type(module.get(), &type_spec_GattReadClientCharacteristicConfigurationDescriptorResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattReadClientCharacteristicConfigurationDescriptorResult_type{py::register_python_type(module.get(), &type_spec_GattReadClientCharacteristicConfigurationDescriptorResult, object_bases.get(), inspectable_meta_type)};
     if (!GattReadClientCharacteristicConfigurationDescriptorResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattReadRequest_type{py::register_python_type(module.get(), &type_spec_GattReadRequest, object_bases.get(), nullptr)};
+    py::pytype_handle GattReadRequest_type{py::register_python_type(module.get(), &type_spec_GattReadRequest, object_bases.get(), inspectable_meta_type)};
     if (!GattReadRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattReadRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattReadRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GattReadRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattReadRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GattReadRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattReadResult_type{py::register_python_type(module.get(), &type_spec_GattReadResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattReadResult_type{py::register_python_type(module.get(), &type_spec_GattReadResult, object_bases.get(), inspectable_meta_type)};
     if (!GattReadResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattReliableWriteTransaction_type{py::register_python_type(module.get(), &type_spec_GattReliableWriteTransaction, object_bases.get(), nullptr)};
+    py::pytype_handle GattReliableWriteTransaction_type{py::register_python_type(module.get(), &type_spec_GattReliableWriteTransaction, object_bases.get(), inspectable_meta_type)};
     if (!GattReliableWriteTransaction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattRequestStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattRequestStateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GattRequestStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattRequestStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GattRequestStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattServiceProvider_Static{PyType_FromSpec(&type_spec_GattServiceProvider_Static)};
+    py::pyobj_handle GattServiceProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattServiceProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattServiceProvider_Static{PyType_FromSpecWithBases(&type_spec_GattServiceProvider_Static, GattServiceProvider_Static_bases.get())};
     if (!type_GattServiceProvider_Static)
     {
         return nullptr;
@@ -14968,25 +15028,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pytype_handle GattServiceProviderAdvertisementStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderAdvertisementStatusChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GattServiceProviderAdvertisementStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderAdvertisementStatusChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GattServiceProviderAdvertisementStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattServiceProviderAdvertisingParameters_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderAdvertisingParameters, object_bases.get(), nullptr)};
+    py::pytype_handle GattServiceProviderAdvertisingParameters_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderAdvertisingParameters, object_bases.get(), inspectable_meta_type)};
     if (!GattServiceProviderAdvertisingParameters_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattServiceProviderResult_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattServiceProviderResult_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderResult, object_bases.get(), inspectable_meta_type)};
     if (!GattServiceProviderResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattServiceUuids_Static{PyType_FromSpec(&type_spec_GattServiceUuids_Static)};
+    py::pyobj_handle GattServiceUuids_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattServiceUuids_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattServiceUuids_Static{PyType_FromSpecWithBases(&type_spec_GattServiceUuids_Static, GattServiceUuids_Static_bases.get())};
     if (!type_GattServiceUuids_Static)
     {
         return nullptr;
@@ -14998,7 +15064,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pyobj_handle type_GattSession_Static{PyType_FromSpec(&type_spec_GattSession_Static)};
+    py::pyobj_handle GattSession_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattSession_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattSession_Static{PyType_FromSpecWithBases(&type_spec_GattSession_Static, GattSession_Static_bases.get())};
     if (!type_GattSession_Static)
     {
         return nullptr;
@@ -15010,37 +15082,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pytype_handle GattSessionStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattSessionStatusChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GattSessionStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattSessionStatusChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GattSessionStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattSubscribedClient_type{py::register_python_type(module.get(), &type_spec_GattSubscribedClient, object_bases.get(), nullptr)};
+    py::pytype_handle GattSubscribedClient_type{py::register_python_type(module.get(), &type_spec_GattSubscribedClient, object_bases.get(), inspectable_meta_type)};
     if (!GattSubscribedClient_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattValueChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattValueChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GattValueChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattValueChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GattValueChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattWriteRequest_type{py::register_python_type(module.get(), &type_spec_GattWriteRequest, object_bases.get(), nullptr)};
+    py::pytype_handle GattWriteRequest_type{py::register_python_type(module.get(), &type_spec_GattWriteRequest, object_bases.get(), inspectable_meta_type)};
     if (!GattWriteRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattWriteRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattWriteRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GattWriteRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_GattWriteRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GattWriteRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattWriteResult_type{py::register_python_type(module.get(), &type_spec_GattWriteResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattWriteResult_type{py::register_python_type(module.get(), &type_spec_GattWriteResult, object_bases.get(), inspectable_meta_type)};
     if (!GattWriteResult_type)
     {
         return nullptr;

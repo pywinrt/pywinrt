@@ -172,7 +172,7 @@ class HolographicCameraViewportParameters(winrt.system.Object):
     def visible_area_mesh(self) -> windows_foundation_numerics.Vector2: ...
 
 @typing.final
-class HolographicDisplay_Static(type):
+class HolographicDisplay_Static(winrt._winrt.IInspectable_Static):
     # Windows.Graphics.Holographic.HolographicDisplay Windows.Graphics.Holographic.HolographicDisplay::GetDefault()
     def get_default(cls) -> HolographicDisplay: ...
 
@@ -352,7 +352,7 @@ class HolographicQuadLayerUpdateParameters(winrt.system.Object):
     def can_acquire_with_hardware_protection(self) -> bool: ...
 
 @typing.final
-class HolographicSpace_Static(type):
+class HolographicSpace_Static(winrt._winrt.IInspectable_Static):
     # Windows.Graphics.Holographic.HolographicSpace Windows.Graphics.Holographic.HolographicSpace::CreateForCoreWindow(Windows.UI.Core.CoreWindow)
     def create_for_core_window(cls, window: windows_ui_core.CoreWindow, /) -> HolographicSpace: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Holographic.HolographicSpace::add_IsAvailableChanged(Windows.Foundation.EventHandler`1<System.Object>)

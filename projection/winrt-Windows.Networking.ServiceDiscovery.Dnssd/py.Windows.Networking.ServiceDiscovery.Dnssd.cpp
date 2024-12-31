@@ -1755,6 +1755,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_servicediscovery_dnssd(void) noe
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1768,25 +1774,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_servicediscovery_dnssd(void) noe
         return nullptr;
     }
 
-    py::pytype_handle DnssdRegistrationResult_type{py::register_python_type(module.get(), &type_spec_DnssdRegistrationResult, object_bases.get(), nullptr)};
+    py::pytype_handle DnssdRegistrationResult_type{py::register_python_type(module.get(), &type_spec_DnssdRegistrationResult, object_bases.get(), inspectable_meta_type)};
     if (!DnssdRegistrationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DnssdServiceInstance_type{py::register_python_type(module.get(), &type_spec_DnssdServiceInstance, object_bases.get(), nullptr)};
+    py::pytype_handle DnssdServiceInstance_type{py::register_python_type(module.get(), &type_spec_DnssdServiceInstance, object_bases.get(), inspectable_meta_type)};
     if (!DnssdServiceInstance_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DnssdServiceInstanceCollection_type{py::register_python_type(module.get(), &type_spec_DnssdServiceInstanceCollection, object_bases.get(), nullptr)};
+    py::pytype_handle DnssdServiceInstanceCollection_type{py::register_python_type(module.get(), &type_spec_DnssdServiceInstanceCollection, object_bases.get(), inspectable_meta_type)};
     if (!DnssdServiceInstanceCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DnssdServiceWatcher_type{py::register_python_type(module.get(), &type_spec_DnssdServiceWatcher, object_bases.get(), nullptr)};
+    py::pytype_handle DnssdServiceWatcher_type{py::register_python_type(module.get(), &type_spec_DnssdServiceWatcher, object_bases.get(), inspectable_meta_type)};
     if (!DnssdServiceWatcher_type)
     {
         return nullptr;

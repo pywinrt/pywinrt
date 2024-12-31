@@ -1945,6 +1945,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_dragdrop_core
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1958,7 +1964,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_dragdrop_core
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreDragDropManager_Static{PyType_FromSpec(&type_spec_CoreDragDropManager_Static)};
+    py::pyobj_handle CoreDragDropManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreDragDropManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreDragDropManager_Static{PyType_FromSpecWithBases(&type_spec_CoreDragDropManager_Static, CoreDragDropManager_Static_bases.get())};
     if (!type_CoreDragDropManager_Static)
     {
         return nullptr;
@@ -1970,25 +1982,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_dragdrop_core
         return nullptr;
     }
 
-    py::pytype_handle CoreDragInfo_type{py::register_python_type(module.get(), &type_spec_CoreDragInfo, object_bases.get(), nullptr)};
+    py::pytype_handle CoreDragInfo_type{py::register_python_type(module.get(), &type_spec_CoreDragInfo, object_bases.get(), inspectable_meta_type)};
     if (!CoreDragInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreDragOperation_type{py::register_python_type(module.get(), &type_spec_CoreDragOperation, object_bases.get(), nullptr)};
+    py::pytype_handle CoreDragOperation_type{py::register_python_type(module.get(), &type_spec_CoreDragOperation, object_bases.get(), inspectable_meta_type)};
     if (!CoreDragOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreDragUIOverride_type{py::register_python_type(module.get(), &type_spec_CoreDragUIOverride, object_bases.get(), nullptr)};
+    py::pytype_handle CoreDragUIOverride_type{py::register_python_type(module.get(), &type_spec_CoreDragUIOverride, object_bases.get(), inspectable_meta_type)};
     if (!CoreDragUIOverride_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreDropOperationTargetRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreDropOperationTargetRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreDropOperationTargetRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreDropOperationTargetRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreDropOperationTargetRequestedEventArgs_type)
     {
         return nullptr;
@@ -2000,7 +2012,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_dragdrop_core
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICoreDropOperationTarget_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreDropOperationTarget, nullptr))};
+    py::pytype_handle ImplementsICoreDropOperationTarget_type{py::register_python_type(module.get(), &type_spec_ImplementsICoreDropOperationTarget, nullptr, inspectable_meta_type)};
     if (!ImplementsICoreDropOperationTarget_type)
     {
         return nullptr;

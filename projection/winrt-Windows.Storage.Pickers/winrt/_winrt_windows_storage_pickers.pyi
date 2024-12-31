@@ -63,7 +63,7 @@ class FileExtensionVector(winrt.system.Object, winrt._winrt.MutableSequence[str]
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class FileOpenPicker_Static(type):
+class FileOpenPicker_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.Pickers.FileOpenPicker Windows.Storage.Pickers.FileOpenPicker::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> FileOpenPicker: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.Pickers.FileOpenPicker::ResumePickSingleFileAsync()
@@ -168,7 +168,7 @@ class FilePickerSelectedFilesArray(winrt.system.Object, winrt._winrt.Sequence[wi
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class FileSavePicker_Static(type):
+class FileSavePicker_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.Pickers.FileSavePicker Windows.Storage.Pickers.FileSavePicker::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> FileSavePicker: ...
 
@@ -233,7 +233,7 @@ class FileSavePicker(winrt.system.Object, metaclass=FileSavePicker_Static):
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class FolderPicker_Static(type):
+class FolderPicker_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.Pickers.FolderPicker Windows.Storage.Pickers.FolderPicker::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> FolderPicker: ...
 

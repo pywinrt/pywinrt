@@ -19,7 +19,7 @@ from winrt.windows.security.cryptography.core import Capi1KdfTargetAlgorithm, Cr
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AsymmetricAlgorithmNames_Static(type):
+class AsymmetricAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames::get_EcdsaP521Sha512()
     @_property
     def ecdsa_p521_sha512(cls) -> str: ...
@@ -89,7 +89,7 @@ class AsymmetricAlgorithmNames(winrt.system.Object, metaclass=AsymmetricAlgorith
     pass
 
 @typing.final
-class AsymmetricKeyAlgorithmProvider_Static(type):
+class AsymmetricKeyAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::OpenAlgorithm(System.String)
     def open_algorithm(cls, algorithm: str, /) -> AsymmetricKeyAlgorithmProvider: ...
 
@@ -114,7 +114,7 @@ class AsymmetricKeyAlgorithmProvider(winrt.system.Object, metaclass=AsymmetricKe
     def algorithm_name(self) -> str: ...
 
 @typing.final
-class CryptographicEngine_Static(type):
+class CryptographicEngine_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicEngine::Decrypt(Windows.Security.Cryptography.Core.CryptographicKey,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     def decrypt(cls, key: CryptographicKey, data: windows_storage_streams.IBuffer, iv: windows_storage_streams.IBuffer, /) -> windows_storage_streams.IBuffer: ...
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicEngine::DecryptAndAuthenticate(Windows.Security.Cryptography.Core.CryptographicKey,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
@@ -166,7 +166,7 @@ class CryptographicKey(winrt.system.Object):
     def key_size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class EccCurveNames_Static(type):
+class EccCurveNames_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Security.Cryptography.Core.EccCurveNames::get_AllEccCurveNames()
     @_property
     def all_ecc_curve_names(cls) -> typing.Sequence[str]: ...
@@ -320,7 +320,7 @@ class EncryptedAndAuthenticatedData(winrt.system.Object):
     def encrypted_data(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
-class HashAlgorithmNames_Static(type):
+class HashAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Security.Cryptography.Core.HashAlgorithmNames::get_Md5()
     @_property
     def md5(cls) -> str: ...
@@ -342,7 +342,7 @@ class HashAlgorithmNames(winrt.system.Object, metaclass=HashAlgorithmNames_Stati
     pass
 
 @typing.final
-class HashAlgorithmProvider_Static(type):
+class HashAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.Cryptography.Core.HashAlgorithmProvider Windows.Security.Cryptography.Core.HashAlgorithmProvider::OpenAlgorithm(System.String)
     def open_algorithm(cls, algorithm: str, /) -> HashAlgorithmProvider: ...
 
@@ -360,7 +360,7 @@ class HashAlgorithmProvider(winrt.system.Object, metaclass=HashAlgorithmProvider
     def hash_length(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class KeyDerivationAlgorithmNames_Static(type):
+class KeyDerivationAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames::get_Pbkdf2Sha256()
     @_property
     def pbkdf2_sha256(cls) -> str: ...
@@ -427,7 +427,7 @@ class KeyDerivationAlgorithmNames(winrt.system.Object, metaclass=KeyDerivationAl
     pass
 
 @typing.final
-class KeyDerivationAlgorithmProvider_Static(type):
+class KeyDerivationAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider::OpenAlgorithm(System.String)
     def open_algorithm(cls, algorithm: str, /) -> KeyDerivationAlgorithmProvider: ...
 
@@ -440,7 +440,7 @@ class KeyDerivationAlgorithmProvider(winrt.system.Object, metaclass=KeyDerivatio
     def algorithm_name(self) -> str: ...
 
 @typing.final
-class KeyDerivationParameters_Static(type):
+class KeyDerivationParameters_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.Cryptography.Core.KeyDerivationParameters Windows.Security.Cryptography.Core.KeyDerivationParameters::BuildForCapi1Kdf(Windows.Security.Cryptography.Core.Capi1KdfTargetAlgorithm)
     def build_for_capi1_kdf(cls, capi1_kdf_target_algorithm: Capi1KdfTargetAlgorithm, /) -> KeyDerivationParameters: ...
     # Windows.Security.Cryptography.Core.KeyDerivationParameters Windows.Security.Cryptography.Core.KeyDerivationParameters::BuildForPbkdf2(Windows.Storage.Streams.IBuffer,System.UInt32)
@@ -469,7 +469,7 @@ class KeyDerivationParameters(winrt.system.Object, metaclass=KeyDerivationParame
     def capi1_kdf_target_algorithm(self, value: Capi1KdfTargetAlgorithm) -> None: ...
 
 @typing.final
-class MacAlgorithmNames_Static(type):
+class MacAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Security.Cryptography.Core.MacAlgorithmNames::get_AesCmac()
     @_property
     def aes_cmac(cls) -> str: ...
@@ -494,7 +494,7 @@ class MacAlgorithmNames(winrt.system.Object, metaclass=MacAlgorithmNames_Static)
     pass
 
 @typing.final
-class MacAlgorithmProvider_Static(type):
+class MacAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.Cryptography.Core.MacAlgorithmProvider Windows.Security.Cryptography.Core.MacAlgorithmProvider::OpenAlgorithm(System.String)
     def open_algorithm(cls, algorithm: str, /) -> MacAlgorithmProvider: ...
 
@@ -512,7 +512,7 @@ class MacAlgorithmProvider(winrt.system.Object, metaclass=MacAlgorithmProvider_S
     def mac_length(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class PersistedKeyProvider_Static(type):
+class PersistedKeyProvider_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Cryptography.Core.CryptographicKey> Windows.Security.Cryptography.Core.PersistedKeyProvider::OpenKeyPairFromCertificateAsync(Windows.Security.Cryptography.Certificates.Certificate,System.String,Windows.Security.Cryptography.Core.CryptographicPadding)
     def open_key_pair_from_certificate_async(cls, certificate: windows_security_cryptography_certificates.Certificate, hash_algorithm_name: str, padding: CryptographicPadding, /) -> windows_foundation.IAsyncOperation[CryptographicKey]: ...
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.PersistedKeyProvider::OpenPublicKeyFromCertificate(Windows.Security.Cryptography.Certificates.Certificate,System.String,Windows.Security.Cryptography.Core.CryptographicPadding)
@@ -523,7 +523,7 @@ class PersistedKeyProvider(winrt.system.Object, metaclass=PersistedKeyProvider_S
     pass
 
 @typing.final
-class SymmetricAlgorithmNames_Static(type):
+class SymmetricAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Security.Cryptography.Core.SymmetricAlgorithmNames::get_AesCbc()
     @_property
     def aes_cbc(cls) -> str: ...
@@ -587,7 +587,7 @@ class SymmetricAlgorithmNames(winrt.system.Object, metaclass=SymmetricAlgorithmN
     pass
 
 @typing.final
-class SymmetricKeyAlgorithmProvider_Static(type):
+class SymmetricKeyAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider::OpenAlgorithm(System.String)
     def open_algorithm(cls, algorithm: str, /) -> SymmetricKeyAlgorithmProvider: ...
 

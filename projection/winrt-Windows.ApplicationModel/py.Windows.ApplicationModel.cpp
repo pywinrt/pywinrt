@@ -10800,6 +10800,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -10813,13 +10819,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AppDisplayInfo_type{py::register_python_type(module.get(), &type_spec_AppDisplayInfo, object_bases.get(), nullptr)};
+    py::pytype_handle AppDisplayInfo_type{py::register_python_type(module.get(), &type_spec_AppDisplayInfo, object_bases.get(), inspectable_meta_type)};
     if (!AppDisplayInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppInfo_Static{PyType_FromSpec(&type_spec_AppInfo_Static)};
+    py::pyobj_handle AppInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppInfo_Static{PyType_FromSpecWithBases(&type_spec_AppInfo_Static, AppInfo_Static_bases.get())};
     if (!type_AppInfo_Static)
     {
         return nullptr;
@@ -10831,13 +10843,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AppInstallerInfo_type{py::register_python_type(module.get(), &type_spec_AppInstallerInfo, object_bases.get(), nullptr)};
+    py::pytype_handle AppInstallerInfo_type{py::register_python_type(module.get(), &type_spec_AppInstallerInfo, object_bases.get(), inspectable_meta_type)};
     if (!AppInstallerInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppInstance_Static{PyType_FromSpec(&type_spec_AppInstance_Static)};
+    py::pyobj_handle AppInstance_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppInstance_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppInstance_Static{PyType_FromSpecWithBases(&type_spec_AppInstance_Static, AppInstance_Static_bases.get())};
     if (!type_AppInstance_Static)
     {
         return nullptr;
@@ -10849,7 +10867,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CameraApplicationManager_Static{PyType_FromSpec(&type_spec_CameraApplicationManager_Static)};
+    py::pyobj_handle CameraApplicationManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CameraApplicationManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CameraApplicationManager_Static{PyType_FromSpecWithBases(&type_spec_CameraApplicationManager_Static, CameraApplicationManager_Static_bases.get())};
     if (!type_CameraApplicationManager_Static)
     {
         return nullptr;
@@ -10861,7 +10885,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DesignMode_Static{PyType_FromSpec(&type_spec_DesignMode_Static)};
+    py::pyobj_handle DesignMode_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DesignMode_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DesignMode_Static{PyType_FromSpecWithBases(&type_spec_DesignMode_Static, DesignMode_Static_bases.get())};
     if (!type_DesignMode_Static)
     {
         return nullptr;
@@ -10873,25 +10903,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle EnteredBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteredBackgroundEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle EnteredBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteredBackgroundEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!EnteredBackgroundEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FindRelatedPackagesOptions_type{py::register_python_type(module.get(), &type_spec_FindRelatedPackagesOptions, object_bases.get(), nullptr)};
+    py::pytype_handle FindRelatedPackagesOptions_type{py::register_python_type(module.get(), &type_spec_FindRelatedPackagesOptions, object_bases.get(), inspectable_meta_type)};
     if (!FindRelatedPackagesOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FullTrustProcessLaunchResult_type{py::register_python_type(module.get(), &type_spec_FullTrustProcessLaunchResult, object_bases.get(), nullptr)};
+    py::pytype_handle FullTrustProcessLaunchResult_type{py::register_python_type(module.get(), &type_spec_FullTrustProcessLaunchResult, object_bases.get(), inspectable_meta_type)};
     if (!FullTrustProcessLaunchResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FullTrustProcessLauncher_Static{PyType_FromSpec(&type_spec_FullTrustProcessLauncher_Static)};
+    py::pyobj_handle FullTrustProcessLauncher_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FullTrustProcessLauncher_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FullTrustProcessLauncher_Static{PyType_FromSpecWithBases(&type_spec_FullTrustProcessLauncher_Static, FullTrustProcessLauncher_Static_bases.get())};
     if (!type_FullTrustProcessLauncher_Static)
     {
         return nullptr;
@@ -10903,19 +10939,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LeavingBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_LeavingBackgroundEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle LeavingBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_LeavingBackgroundEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!LeavingBackgroundEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LimitedAccessFeatureRequestResult_type{py::register_python_type(module.get(), &type_spec_LimitedAccessFeatureRequestResult, object_bases.get(), nullptr)};
+    py::pytype_handle LimitedAccessFeatureRequestResult_type{py::register_python_type(module.get(), &type_spec_LimitedAccessFeatureRequestResult, object_bases.get(), inspectable_meta_type)};
     if (!LimitedAccessFeatureRequestResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LimitedAccessFeatures_Static{PyType_FromSpec(&type_spec_LimitedAccessFeatures_Static)};
+    py::pyobj_handle LimitedAccessFeatures_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LimitedAccessFeatures_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LimitedAccessFeatures_Static{PyType_FromSpecWithBases(&type_spec_LimitedAccessFeatures_Static, LimitedAccessFeatures_Static_bases.get())};
     if (!type_LimitedAccessFeatures_Static)
     {
         return nullptr;
@@ -10927,7 +10969,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Package_Static{PyType_FromSpec(&type_spec_Package_Static)};
+    py::pyobj_handle Package_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Package_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Package_Static{PyType_FromSpecWithBases(&type_spec_Package_Static, Package_Static_bases.get())};
     if (!type_Package_Static)
     {
         return nullptr;
@@ -10939,7 +10987,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PackageCatalog_Static{PyType_FromSpec(&type_spec_PackageCatalog_Static)};
+    py::pyobj_handle PackageCatalog_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PackageCatalog_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PackageCatalog_Static{PyType_FromSpecWithBases(&type_spec_PackageCatalog_Static, PackageCatalog_Static_bases.get())};
     if (!type_PackageCatalog_Static)
     {
         return nullptr;
@@ -10951,31 +11005,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PackageCatalogAddOptionalPackageResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogAddOptionalPackageResult, object_bases.get(), nullptr)};
+    py::pytype_handle PackageCatalogAddOptionalPackageResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogAddOptionalPackageResult, object_bases.get(), inspectable_meta_type)};
     if (!PackageCatalogAddOptionalPackageResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageCatalogAddResourcePackageResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogAddResourcePackageResult, object_bases.get(), nullptr)};
+    py::pytype_handle PackageCatalogAddResourcePackageResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogAddResourcePackageResult, object_bases.get(), inspectable_meta_type)};
     if (!PackageCatalogAddResourcePackageResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageCatalogRemoveOptionalPackagesResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogRemoveOptionalPackagesResult, object_bases.get(), nullptr)};
+    py::pytype_handle PackageCatalogRemoveOptionalPackagesResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogRemoveOptionalPackagesResult, object_bases.get(), inspectable_meta_type)};
     if (!PackageCatalogRemoveOptionalPackagesResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageCatalogRemoveResourcePackagesResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogRemoveResourcePackagesResult, object_bases.get(), nullptr)};
+    py::pytype_handle PackageCatalogRemoveResourcePackagesResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogRemoveResourcePackagesResult, object_bases.get(), inspectable_meta_type)};
     if (!PackageCatalogRemoveResourcePackagesResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PackageContentGroup_Static{PyType_FromSpec(&type_spec_PackageContentGroup_Static)};
+    py::pyobj_handle PackageContentGroup_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PackageContentGroup_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PackageContentGroup_Static{PyType_FromSpecWithBases(&type_spec_PackageContentGroup_Static, PackageContentGroup_Static_bases.get())};
     if (!type_PackageContentGroup_Static)
     {
         return nullptr;
@@ -10987,61 +11047,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PackageContentGroupStagingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageContentGroupStagingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageContentGroupStagingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageContentGroupStagingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageContentGroupStagingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageId_type{py::register_python_type(module.get(), &type_spec_PackageId, object_bases.get(), nullptr)};
+    py::pytype_handle PackageId_type{py::register_python_type(module.get(), &type_spec_PackageId, object_bases.get(), inspectable_meta_type)};
     if (!PackageId_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageInstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageInstallingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageInstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageInstallingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageInstallingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageStagingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageStagingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageStagingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageStagingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageStagingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageStatus_type{py::register_python_type(module.get(), &type_spec_PackageStatus, object_bases.get(), nullptr)};
+    py::pytype_handle PackageStatus_type{py::register_python_type(module.get(), &type_spec_PackageStatus, object_bases.get(), inspectable_meta_type)};
     if (!PackageStatus_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageStatusChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageStatusChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageUninstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageUninstallingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageUninstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageUninstallingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageUninstallingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageUpdateAvailabilityResult_type{py::register_python_type(module.get(), &type_spec_PackageUpdateAvailabilityResult, object_bases.get(), nullptr)};
+    py::pytype_handle PackageUpdateAvailabilityResult_type{py::register_python_type(module.get(), &type_spec_PackageUpdateAvailabilityResult, object_bases.get(), inspectable_meta_type)};
     if (!PackageUpdateAvailabilityResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageUpdatingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageUpdatingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageUpdatingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StartupTask_Static{PyType_FromSpec(&type_spec_StartupTask_Static)};
+    py::pyobj_handle StartupTask_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StartupTask_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StartupTask_Static{PyType_FromSpecWithBases(&type_spec_StartupTask_Static, StartupTask_Static_bases.get())};
     if (!type_StartupTask_Static)
     {
         return nullptr;
@@ -11053,19 +11119,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SuspendingDeferral_type{py::register_python_type(module.get(), &type_spec_SuspendingDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle SuspendingDeferral_type{py::register_python_type(module.get(), &type_spec_SuspendingDeferral, object_bases.get(), inspectable_meta_type)};
     if (!SuspendingDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SuspendingEventArgs_type{py::register_python_type(module.get(), &type_spec_SuspendingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SuspendingEventArgs_type{py::register_python_type(module.get(), &type_spec_SuspendingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SuspendingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SuspendingOperation_type{py::register_python_type(module.get(), &type_spec_SuspendingOperation, object_bases.get(), nullptr)};
+    py::pytype_handle SuspendingOperation_type{py::register_python_type(module.get(), &type_spec_SuspendingOperation, object_bases.get(), inspectable_meta_type)};
     if (!SuspendingOperation_type)
     {
         return nullptr;
@@ -11077,7 +11143,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIEnteredBackgroundEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIEnteredBackgroundEventArgs, nullptr))};
+    py::pytype_handle ImplementsIEnteredBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_ImplementsIEnteredBackgroundEventArgs, nullptr, inspectable_meta_type)};
     if (!ImplementsIEnteredBackgroundEventArgs_type)
     {
         return nullptr;
@@ -11094,7 +11160,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsILeavingBackgroundEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILeavingBackgroundEventArgs, nullptr))};
+    py::pytype_handle ImplementsILeavingBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_ImplementsILeavingBackgroundEventArgs, nullptr, inspectable_meta_type)};
     if (!ImplementsILeavingBackgroundEventArgs_type)
     {
         return nullptr;
@@ -11111,7 +11177,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPackageCatalogStatics2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPackageCatalogStatics2, nullptr))};
+    py::pytype_handle ImplementsIPackageCatalogStatics2_type{py::register_python_type(module.get(), &type_spec_ImplementsIPackageCatalogStatics2, nullptr, inspectable_meta_type)};
     if (!ImplementsIPackageCatalogStatics2_type)
     {
         return nullptr;
@@ -11128,7 +11194,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISuspendingDeferral_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISuspendingDeferral, nullptr))};
+    py::pytype_handle ImplementsISuspendingDeferral_type{py::register_python_type(module.get(), &type_spec_ImplementsISuspendingDeferral, nullptr, inspectable_meta_type)};
     if (!ImplementsISuspendingDeferral_type)
     {
         return nullptr;
@@ -11145,7 +11211,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISuspendingEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISuspendingEventArgs, nullptr))};
+    py::pytype_handle ImplementsISuspendingEventArgs_type{py::register_python_type(module.get(), &type_spec_ImplementsISuspendingEventArgs, nullptr, inspectable_meta_type)};
     if (!ImplementsISuspendingEventArgs_type)
     {
         return nullptr;
@@ -11162,7 +11228,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISuspendingOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISuspendingOperation, nullptr))};
+    py::pytype_handle ImplementsISuspendingOperation_type{py::register_python_type(module.get(), &type_spec_ImplementsISuspendingOperation, nullptr, inspectable_meta_type)};
     if (!ImplementsISuspendingOperation_type)
     {
         return nullptr;

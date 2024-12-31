@@ -8853,6 +8853,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -8866,43 +8872,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle CurrencyFormatter_type{py::register_python_type(module.get(), &type_spec_CurrencyFormatter, object_bases.get(), nullptr)};
+    py::pytype_handle CurrencyFormatter_type{py::register_python_type(module.get(), &type_spec_CurrencyFormatter, object_bases.get(), inspectable_meta_type)};
     if (!CurrencyFormatter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DecimalFormatter_type{py::register_python_type(module.get(), &type_spec_DecimalFormatter, object_bases.get(), nullptr)};
+    py::pytype_handle DecimalFormatter_type{py::register_python_type(module.get(), &type_spec_DecimalFormatter, object_bases.get(), inspectable_meta_type)};
     if (!DecimalFormatter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IncrementNumberRounder_type{py::register_python_type(module.get(), &type_spec_IncrementNumberRounder, object_bases.get(), nullptr)};
+    py::pytype_handle IncrementNumberRounder_type{py::register_python_type(module.get(), &type_spec_IncrementNumberRounder, object_bases.get(), inspectable_meta_type)};
     if (!IncrementNumberRounder_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NumeralSystemTranslator_type{py::register_python_type(module.get(), &type_spec_NumeralSystemTranslator, object_bases.get(), nullptr)};
+    py::pytype_handle NumeralSystemTranslator_type{py::register_python_type(module.get(), &type_spec_NumeralSystemTranslator, object_bases.get(), inspectable_meta_type)};
     if (!NumeralSystemTranslator_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PercentFormatter_type{py::register_python_type(module.get(), &type_spec_PercentFormatter, object_bases.get(), nullptr)};
+    py::pytype_handle PercentFormatter_type{py::register_python_type(module.get(), &type_spec_PercentFormatter, object_bases.get(), inspectable_meta_type)};
     if (!PercentFormatter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PermilleFormatter_type{py::register_python_type(module.get(), &type_spec_PermilleFormatter, object_bases.get(), nullptr)};
+    py::pytype_handle PermilleFormatter_type{py::register_python_type(module.get(), &type_spec_PermilleFormatter, object_bases.get(), inspectable_meta_type)};
     if (!PermilleFormatter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SignificantDigitsNumberRounder_type{py::register_python_type(module.get(), &type_spec_SignificantDigitsNumberRounder, object_bases.get(), nullptr)};
+    py::pytype_handle SignificantDigitsNumberRounder_type{py::register_python_type(module.get(), &type_spec_SignificantDigitsNumberRounder, object_bases.get(), inspectable_meta_type)};
     if (!SignificantDigitsNumberRounder_type)
     {
         return nullptr;
@@ -8914,7 +8920,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle ImplementsINumberFormatter_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberFormatter, nullptr))};
+    py::pytype_handle ImplementsINumberFormatter_type{py::register_python_type(module.get(), &type_spec_ImplementsINumberFormatter, nullptr, inspectable_meta_type)};
     if (!ImplementsINumberFormatter_type)
     {
         return nullptr;
@@ -8931,7 +8937,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle ImplementsINumberFormatter2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberFormatter2, nullptr))};
+    py::pytype_handle ImplementsINumberFormatter2_type{py::register_python_type(module.get(), &type_spec_ImplementsINumberFormatter2, nullptr, inspectable_meta_type)};
     if (!ImplementsINumberFormatter2_type)
     {
         return nullptr;
@@ -8948,7 +8954,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle ImplementsINumberFormatterOptions_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberFormatterOptions, nullptr))};
+    py::pytype_handle ImplementsINumberFormatterOptions_type{py::register_python_type(module.get(), &type_spec_ImplementsINumberFormatterOptions, nullptr, inspectable_meta_type)};
     if (!ImplementsINumberFormatterOptions_type)
     {
         return nullptr;
@@ -8965,7 +8971,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle ImplementsINumberParser_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberParser, nullptr))};
+    py::pytype_handle ImplementsINumberParser_type{py::register_python_type(module.get(), &type_spec_ImplementsINumberParser, nullptr, inspectable_meta_type)};
     if (!ImplementsINumberParser_type)
     {
         return nullptr;
@@ -8982,7 +8988,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle ImplementsINumberRounder_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberRounder, nullptr))};
+    py::pytype_handle ImplementsINumberRounder_type{py::register_python_type(module.get(), &type_spec_ImplementsINumberRounder, nullptr, inspectable_meta_type)};
     if (!ImplementsINumberRounder_type)
     {
         return nullptr;
@@ -8999,7 +9005,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle ImplementsINumberRounderOption_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINumberRounderOption, nullptr))};
+    py::pytype_handle ImplementsINumberRounderOption_type{py::register_python_type(module.get(), &type_spec_ImplementsINumberRounderOption, nullptr, inspectable_meta_type)};
     if (!ImplementsINumberRounderOption_type)
     {
         return nullptr;
@@ -9016,7 +9022,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISignedZeroOption_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISignedZeroOption, nullptr))};
+    py::pytype_handle ImplementsISignedZeroOption_type{py::register_python_type(module.get(), &type_spec_ImplementsISignedZeroOption, nullptr, inspectable_meta_type)};
     if (!ImplementsISignedZeroOption_type)
     {
         return nullptr;
@@ -9033,7 +9039,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISignificantDigitsOption_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISignificantDigitsOption, nullptr))};
+    py::pytype_handle ImplementsISignificantDigitsOption_type{py::register_python_type(module.get(), &type_spec_ImplementsISignificantDigitsOption, nullptr, inspectable_meta_type)};
     if (!ImplementsISignificantDigitsOption_type)
     {
         return nullptr;

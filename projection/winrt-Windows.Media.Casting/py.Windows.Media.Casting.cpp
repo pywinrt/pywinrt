@@ -2015,6 +2015,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_casting(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2028,19 +2034,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_casting(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CastingConnection_type{py::register_python_type(module.get(), &type_spec_CastingConnection, object_bases.get(), nullptr)};
+    py::pytype_handle CastingConnection_type{py::register_python_type(module.get(), &type_spec_CastingConnection, object_bases.get(), inspectable_meta_type)};
     if (!CastingConnection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CastingConnectionErrorOccurredEventArgs_type{py::register_python_type(module.get(), &type_spec_CastingConnectionErrorOccurredEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CastingConnectionErrorOccurredEventArgs_type{py::register_python_type(module.get(), &type_spec_CastingConnectionErrorOccurredEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CastingConnectionErrorOccurredEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CastingDevice_Static{PyType_FromSpec(&type_spec_CastingDevice_Static)};
+    py::pyobj_handle CastingDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CastingDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CastingDevice_Static{PyType_FromSpecWithBases(&type_spec_CastingDevice_Static, CastingDevice_Static_bases.get())};
     if (!type_CastingDevice_Static)
     {
         return nullptr;
@@ -2052,25 +2064,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_casting(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CastingDevicePicker_type{py::register_python_type(module.get(), &type_spec_CastingDevicePicker, object_bases.get(), nullptr)};
+    py::pytype_handle CastingDevicePicker_type{py::register_python_type(module.get(), &type_spec_CastingDevicePicker, object_bases.get(), inspectable_meta_type)};
     if (!CastingDevicePicker_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CastingDevicePickerFilter_type{py::register_python_type(module.get(), &type_spec_CastingDevicePickerFilter, object_bases.get(), nullptr)};
+    py::pytype_handle CastingDevicePickerFilter_type{py::register_python_type(module.get(), &type_spec_CastingDevicePickerFilter, object_bases.get(), inspectable_meta_type)};
     if (!CastingDevicePickerFilter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CastingDeviceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_CastingDeviceSelectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CastingDeviceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_CastingDeviceSelectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CastingDeviceSelectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CastingSource_type{py::register_python_type(module.get(), &type_spec_CastingSource, object_bases.get(), nullptr)};
+    py::pytype_handle CastingSource_type{py::register_python_type(module.get(), &type_spec_CastingSource, object_bases.get(), inspectable_meta_type)};
     if (!CastingSource_type)
     {
         return nullptr;

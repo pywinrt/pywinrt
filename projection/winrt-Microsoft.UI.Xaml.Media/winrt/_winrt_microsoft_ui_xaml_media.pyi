@@ -364,7 +364,7 @@ class CompositeTransform(Transform, metaclass=CompositeTransform_Static):
     def center_x(self, value: winrt.system.Double) -> None: ...
 
 @typing.final
-class CompositionTarget_Static(type):
+class CompositionTarget_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Composition.Compositor Microsoft.UI.Xaml.Media.CompositionTarget::GetCompositorForCurrentThread()
     def get_compositor_for_current_thread(cls) -> microsoft_ui_composition.Compositor: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Media.CompositionTarget::add_Rendered(Windows.Foundation.EventHandler`1<Microsoft.UI.Xaml.Media.RenderedEventArgs>)
@@ -469,7 +469,7 @@ class EllipseGeometry(Geometry, metaclass=EllipseGeometry_Static):
     @center.setter
     def center(self, value: windows_foundation.Point) -> None: ...
 
-class FontFamily_Static(type):
+class FontFamily_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Media.FontFamily::get_XamlAutoFontFamily()
     @_property
     @typing.final
@@ -825,7 +825,7 @@ class LoadedImageSourceLoadCompletedEventArgs(winrt.system.Object):
     def status(self) -> LoadedImageSourceLoadStatus: ...
 
 @typing.final
-class LoadedImageSurface_Static(type):
+class LoadedImageSurface_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.Media.LoadedImageSurface Microsoft.UI.Xaml.Media.LoadedImageSurface::StartLoadFromStream(Windows.Storage.Streams.IRandomAccessStream)
     def start_load_from_stream(cls, stream: windows_storage_streams.IRandomAccessStream, /) -> LoadedImageSurface: ...
     # Microsoft.UI.Xaml.Media.LoadedImageSurface Microsoft.UI.Xaml.Media.LoadedImageSurface::StartLoadFromStream(Windows.Storage.Streams.IRandomAccessStream,Windows.Foundation.Size)
@@ -872,7 +872,7 @@ class Matrix3DProjection(Projection, metaclass=Matrix3DProjection_Static):
     def projection_matrix(self, value: microsoft_ui_xaml_media_media3d.Matrix3D) -> None: ...
 
 @typing.final
-class MatrixHelper_Static(type):
+class MatrixHelper_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.Media.Matrix Microsoft.UI.Xaml.Media.MatrixHelper::FromElements(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
     def from_elements(cls, m11: winrt.system.Double, m12: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double, /) -> Matrix: ...
     # System.Boolean Microsoft.UI.Xaml.Media.MatrixHelper::GetIsIdentity(Microsoft.UI.Xaml.Media.Matrix)
@@ -1751,7 +1751,7 @@ class TranslateTransform(Transform, metaclass=TranslateTransform_Static):
     def x(self, value: winrt.system.Double) -> None: ...
 
 @typing.final
-class VisualTreeHelper_Static(type):
+class VisualTreeHelper_Static(winrt._winrt.IInspectable_Static):
     # System.Void Microsoft.UI.Xaml.Media.VisualTreeHelper::DisconnectChildrenRecursive(Microsoft.UI.Xaml.UIElement)
     def disconnect_children_recursive(cls, element: microsoft_ui_xaml.UIElement, /) -> None: ...
     # Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Media.VisualTreeHelper::FindElementsInHostCoordinates(Windows.Foundation.Point,Microsoft.UI.Xaml.UIElement,System.Boolean)

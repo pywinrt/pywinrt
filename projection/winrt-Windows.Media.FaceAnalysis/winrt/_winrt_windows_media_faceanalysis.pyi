@@ -23,7 +23,7 @@ class DetectedFace(winrt.system.Object):
     def face_box(self) -> windows_graphics_imaging.BitmapBounds: ...
 
 @typing.final
-class FaceDetector_Static(type):
+class FaceDetector_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.FaceAnalysis.FaceDetector> Windows.Media.FaceAnalysis.FaceDetector::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[FaceDetector]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Imaging.BitmapPixelFormat> Windows.Media.FaceAnalysis.FaceDetector::GetSupportedBitmapPixelFormats()
@@ -54,7 +54,7 @@ class FaceDetector(winrt.system.Object, metaclass=FaceDetector_Static):
     def max_detectable_face_size(self, value: windows_graphics_imaging.BitmapSize) -> None: ...
 
 @typing.final
-class FaceTracker_Static(type):
+class FaceTracker_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.FaceAnalysis.FaceTracker> Windows.Media.FaceAnalysis.FaceTracker::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[FaceTracker]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Imaging.BitmapPixelFormat> Windows.Media.FaceAnalysis.FaceTracker::GetSupportedBitmapPixelFormats()

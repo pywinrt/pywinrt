@@ -1339,6 +1339,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_core(void)
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1352,7 +1358,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_core(void)
         return nullptr;
     }
 
-    py::pyobj_handle type_MicrosoftAccountMultiFactorAuthenticationManager_Static{PyType_FromSpec(&type_spec_MicrosoftAccountMultiFactorAuthenticationManager_Static)};
+    py::pyobj_handle MicrosoftAccountMultiFactorAuthenticationManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MicrosoftAccountMultiFactorAuthenticationManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MicrosoftAccountMultiFactorAuthenticationManager_Static{PyType_FromSpecWithBases(&type_spec_MicrosoftAccountMultiFactorAuthenticationManager_Static, MicrosoftAccountMultiFactorAuthenticationManager_Static_bases.get())};
     if (!type_MicrosoftAccountMultiFactorAuthenticationManager_Static)
     {
         return nullptr;
@@ -1364,25 +1376,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_core(void)
         return nullptr;
     }
 
-    py::pytype_handle MicrosoftAccountMultiFactorGetSessionsResult_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorGetSessionsResult, object_bases.get(), nullptr)};
+    py::pytype_handle MicrosoftAccountMultiFactorGetSessionsResult_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorGetSessionsResult, object_bases.get(), inspectable_meta_type)};
     if (!MicrosoftAccountMultiFactorGetSessionsResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MicrosoftAccountMultiFactorOneTimeCodedInfo_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo, object_bases.get(), nullptr)};
+    py::pytype_handle MicrosoftAccountMultiFactorOneTimeCodedInfo_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo, object_bases.get(), inspectable_meta_type)};
     if (!MicrosoftAccountMultiFactorOneTimeCodedInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MicrosoftAccountMultiFactorSessionInfo_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorSessionInfo, object_bases.get(), nullptr)};
+    py::pytype_handle MicrosoftAccountMultiFactorSessionInfo_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorSessionInfo, object_bases.get(), inspectable_meta_type)};
     if (!MicrosoftAccountMultiFactorSessionInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo, object_bases.get(), nullptr)};
+    py::pytype_handle MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo, object_bases.get(), inspectable_meta_type)};
     if (!MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_type)
     {
         return nullptr;

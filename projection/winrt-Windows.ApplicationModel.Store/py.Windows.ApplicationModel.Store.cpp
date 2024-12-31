@@ -3421,6 +3421,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3434,7 +3440,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CurrentApp_Static{PyType_FromSpec(&type_spec_CurrentApp_Static)};
+    py::pyobj_handle CurrentApp_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CurrentApp_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CurrentApp_Static{PyType_FromSpecWithBases(&type_spec_CurrentApp_Static, CurrentApp_Static_bases.get())};
     if (!type_CurrentApp_Static)
     {
         return nullptr;
@@ -3446,7 +3458,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CurrentAppSimulator_Static{PyType_FromSpec(&type_spec_CurrentAppSimulator_Static)};
+    py::pyobj_handle CurrentAppSimulator_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CurrentAppSimulator_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CurrentAppSimulator_Static{PyType_FromSpecWithBases(&type_spec_CurrentAppSimulator_Static, CurrentAppSimulator_Static_bases.get())};
     if (!type_CurrentAppSimulator_Static)
     {
         return nullptr;
@@ -3458,43 +3476,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LicenseInformation_type{py::register_python_type(module.get(), &type_spec_LicenseInformation, object_bases.get(), nullptr)};
+    py::pytype_handle LicenseInformation_type{py::register_python_type(module.get(), &type_spec_LicenseInformation, object_bases.get(), inspectable_meta_type)};
     if (!LicenseInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListingInformation_type{py::register_python_type(module.get(), &type_spec_ListingInformation, object_bases.get(), nullptr)};
+    py::pytype_handle ListingInformation_type{py::register_python_type(module.get(), &type_spec_ListingInformation, object_bases.get(), inspectable_meta_type)};
     if (!ListingInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProductLicense_type{py::register_python_type(module.get(), &type_spec_ProductLicense, object_bases.get(), nullptr)};
+    py::pytype_handle ProductLicense_type{py::register_python_type(module.get(), &type_spec_ProductLicense, object_bases.get(), inspectable_meta_type)};
     if (!ProductLicense_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProductListing_type{py::register_python_type(module.get(), &type_spec_ProductListing, object_bases.get(), nullptr)};
+    py::pytype_handle ProductListing_type{py::register_python_type(module.get(), &type_spec_ProductListing, object_bases.get(), inspectable_meta_type)};
     if (!ProductListing_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProductPurchaseDisplayProperties_type{py::register_python_type(module.get(), &type_spec_ProductPurchaseDisplayProperties, object_bases.get(), nullptr)};
+    py::pytype_handle ProductPurchaseDisplayProperties_type{py::register_python_type(module.get(), &type_spec_ProductPurchaseDisplayProperties, object_bases.get(), inspectable_meta_type)};
     if (!ProductPurchaseDisplayProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PurchaseResults_type{py::register_python_type(module.get(), &type_spec_PurchaseResults, object_bases.get(), nullptr)};
+    py::pytype_handle PurchaseResults_type{py::register_python_type(module.get(), &type_spec_PurchaseResults, object_bases.get(), inspectable_meta_type)};
     if (!PurchaseResults_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UnfulfilledConsumable_type{py::register_python_type(module.get(), &type_spec_UnfulfilledConsumable, object_bases.get(), nullptr)};
+    py::pytype_handle UnfulfilledConsumable_type{py::register_python_type(module.get(), &type_spec_UnfulfilledConsumable, object_bases.get(), inspectable_meta_type)};
     if (!UnfulfilledConsumable_type)
     {
         return nullptr;

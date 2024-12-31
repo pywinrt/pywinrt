@@ -10246,6 +10246,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -10259,61 +10265,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HttpBufferContent_type{py::register_python_type(module.get(), &type_spec_HttpBufferContent, object_bases.get(), nullptr)};
+    py::pytype_handle HttpBufferContent_type{py::register_python_type(module.get(), &type_spec_HttpBufferContent, object_bases.get(), inspectable_meta_type)};
     if (!HttpBufferContent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpClient_type{py::register_python_type(module.get(), &type_spec_HttpClient, object_bases.get(), nullptr)};
+    py::pytype_handle HttpClient_type{py::register_python_type(module.get(), &type_spec_HttpClient, object_bases.get(), inspectable_meta_type)};
     if (!HttpClient_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpCookie_type{py::register_python_type(module.get(), &type_spec_HttpCookie, object_bases.get(), nullptr)};
+    py::pytype_handle HttpCookie_type{py::register_python_type(module.get(), &type_spec_HttpCookie, object_bases.get(), inspectable_meta_type)};
     if (!HttpCookie_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpCookieCollection_type{py::register_python_type(module.get(), &type_spec_HttpCookieCollection, object_bases.get(), nullptr)};
+    py::pytype_handle HttpCookieCollection_type{py::register_python_type(module.get(), &type_spec_HttpCookieCollection, object_bases.get(), inspectable_meta_type)};
     if (!HttpCookieCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpCookieManager_type{py::register_python_type(module.get(), &type_spec_HttpCookieManager, object_bases.get(), nullptr)};
+    py::pytype_handle HttpCookieManager_type{py::register_python_type(module.get(), &type_spec_HttpCookieManager, object_bases.get(), inspectable_meta_type)};
     if (!HttpCookieManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpFormUrlEncodedContent_type{py::register_python_type(module.get(), &type_spec_HttpFormUrlEncodedContent, object_bases.get(), nullptr)};
+    py::pytype_handle HttpFormUrlEncodedContent_type{py::register_python_type(module.get(), &type_spec_HttpFormUrlEncodedContent, object_bases.get(), inspectable_meta_type)};
     if (!HttpFormUrlEncodedContent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpGetBufferResult_type{py::register_python_type(module.get(), &type_spec_HttpGetBufferResult, object_bases.get(), nullptr)};
+    py::pytype_handle HttpGetBufferResult_type{py::register_python_type(module.get(), &type_spec_HttpGetBufferResult, object_bases.get(), inspectable_meta_type)};
     if (!HttpGetBufferResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpGetInputStreamResult_type{py::register_python_type(module.get(), &type_spec_HttpGetInputStreamResult, object_bases.get(), nullptr)};
+    py::pytype_handle HttpGetInputStreamResult_type{py::register_python_type(module.get(), &type_spec_HttpGetInputStreamResult, object_bases.get(), inspectable_meta_type)};
     if (!HttpGetInputStreamResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpGetStringResult_type{py::register_python_type(module.get(), &type_spec_HttpGetStringResult, object_bases.get(), nullptr)};
+    py::pytype_handle HttpGetStringResult_type{py::register_python_type(module.get(), &type_spec_HttpGetStringResult, object_bases.get(), inspectable_meta_type)};
     if (!HttpGetStringResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HttpMethod_Static{PyType_FromSpec(&type_spec_HttpMethod_Static)};
+    py::pyobj_handle HttpMethod_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HttpMethod_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HttpMethod_Static{PyType_FromSpecWithBases(&type_spec_HttpMethod_Static, HttpMethod_Static_bases.get())};
     if (!type_HttpMethod_Static)
     {
         return nullptr;
@@ -10325,49 +10337,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HttpMultipartContent_type{py::register_python_type(module.get(), &type_spec_HttpMultipartContent, object_bases.get(), nullptr)};
+    py::pytype_handle HttpMultipartContent_type{py::register_python_type(module.get(), &type_spec_HttpMultipartContent, object_bases.get(), inspectable_meta_type)};
     if (!HttpMultipartContent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpMultipartFormDataContent_type{py::register_python_type(module.get(), &type_spec_HttpMultipartFormDataContent, object_bases.get(), nullptr)};
+    py::pytype_handle HttpMultipartFormDataContent_type{py::register_python_type(module.get(), &type_spec_HttpMultipartFormDataContent, object_bases.get(), inspectable_meta_type)};
     if (!HttpMultipartFormDataContent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpRequestMessage_type{py::register_python_type(module.get(), &type_spec_HttpRequestMessage, object_bases.get(), nullptr)};
+    py::pytype_handle HttpRequestMessage_type{py::register_python_type(module.get(), &type_spec_HttpRequestMessage, object_bases.get(), inspectable_meta_type)};
     if (!HttpRequestMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpRequestResult_type{py::register_python_type(module.get(), &type_spec_HttpRequestResult, object_bases.get(), nullptr)};
+    py::pytype_handle HttpRequestResult_type{py::register_python_type(module.get(), &type_spec_HttpRequestResult, object_bases.get(), inspectable_meta_type)};
     if (!HttpRequestResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpResponseMessage_type{py::register_python_type(module.get(), &type_spec_HttpResponseMessage, object_bases.get(), nullptr)};
+    py::pytype_handle HttpResponseMessage_type{py::register_python_type(module.get(), &type_spec_HttpResponseMessage, object_bases.get(), inspectable_meta_type)};
     if (!HttpResponseMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpStreamContent_type{py::register_python_type(module.get(), &type_spec_HttpStreamContent, object_bases.get(), nullptr)};
+    py::pytype_handle HttpStreamContent_type{py::register_python_type(module.get(), &type_spec_HttpStreamContent, object_bases.get(), inspectable_meta_type)};
     if (!HttpStreamContent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpStringContent_type{py::register_python_type(module.get(), &type_spec_HttpStringContent, object_bases.get(), nullptr)};
+    py::pytype_handle HttpStringContent_type{py::register_python_type(module.get(), &type_spec_HttpStringContent, object_bases.get(), inspectable_meta_type)};
     if (!HttpStringContent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpTransportInformation_type{py::register_python_type(module.get(), &type_spec_HttpTransportInformation, object_bases.get(), nullptr)};
+    py::pytype_handle HttpTransportInformation_type{py::register_python_type(module.get(), &type_spec_HttpTransportInformation, object_bases.get(), inspectable_meta_type)};
     if (!HttpTransportInformation_type)
     {
         return nullptr;
@@ -10379,7 +10391,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIHttpContent_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIHttpContent, nullptr))};
+    py::pytype_handle ImplementsIHttpContent_type{py::register_python_type(module.get(), &type_spec_ImplementsIHttpContent, nullptr, inspectable_meta_type)};
     if (!ImplementsIHttpContent_type)
     {
         return nullptr;

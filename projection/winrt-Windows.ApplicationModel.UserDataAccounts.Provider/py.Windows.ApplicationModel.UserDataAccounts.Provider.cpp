@@ -900,6 +900,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_provider(
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -913,25 +919,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_provider(
         return nullptr;
     }
 
-    py::pytype_handle UserDataAccountPartnerAccountInfo_type{py::register_python_type(module.get(), &type_spec_UserDataAccountPartnerAccountInfo, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataAccountPartnerAccountInfo_type{py::register_python_type(module.get(), &type_spec_UserDataAccountPartnerAccountInfo, object_bases.get(), inspectable_meta_type)};
     if (!UserDataAccountPartnerAccountInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataAccountProviderAddAccountOperation_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderAddAccountOperation, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataAccountProviderAddAccountOperation_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderAddAccountOperation, object_bases.get(), inspectable_meta_type)};
     if (!UserDataAccountProviderAddAccountOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataAccountProviderResolveErrorsOperation_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderResolveErrorsOperation, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataAccountProviderResolveErrorsOperation_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderResolveErrorsOperation, object_bases.get(), inspectable_meta_type)};
     if (!UserDataAccountProviderResolveErrorsOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataAccountProviderSettingsOperation_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderSettingsOperation, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataAccountProviderSettingsOperation_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderSettingsOperation, object_bases.get(), inspectable_meta_type)};
     if (!UserDataAccountProviderSettingsOperation_type)
     {
         return nullptr;
@@ -943,7 +949,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_provider(
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIUserDataAccountProviderOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIUserDataAccountProviderOperation, nullptr))};
+    py::pytype_handle ImplementsIUserDataAccountProviderOperation_type{py::register_python_type(module.get(), &type_spec_ImplementsIUserDataAccountProviderOperation, nullptr, inspectable_meta_type)};
     if (!ImplementsIUserDataAccountProviderOperation_type)
     {
         return nullptr;

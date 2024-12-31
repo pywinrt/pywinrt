@@ -20,7 +20,7 @@ from winrt.windows.devices.bluetooth.genericattributeprofile import GattCharacte
 Self = typing.TypeVar('Self')
 
 @typing.final
-class GattCharacteristic_Static(type):
+class GattCharacteristic_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::ConvertShortIdToUuid(System.UInt16)
     # @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
@@ -89,7 +89,7 @@ class GattCharacteristic(winrt.system.Object, metaclass=GattCharacteristic_Stati
     def service(self) -> GattDeviceService: ...
 
 @typing.final
-class GattCharacteristicUuids_Static(type):
+class GattCharacteristicUuids_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicUuids::get_HeartRateMeasurement()
     @_property
     def heart_rate_measurement(cls) -> _uuid.UUID: ...
@@ -366,7 +366,7 @@ class GattClientNotificationResult(winrt.system.Object):
     def bytes_sent(self) -> winrt.system.UInt16: ...
 
 @typing.final
-class GattDescriptor_Static(type):
+class GattDescriptor_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor::ConvertShortIdToUuid(System.UInt16)
     # @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
@@ -395,7 +395,7 @@ class GattDescriptor(winrt.system.Object, metaclass=GattDescriptor_Static):
     def uuid(self) -> _uuid.UUID: ...
 
 @typing.final
-class GattDescriptorUuids_Static(type):
+class GattDescriptorUuids_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorUuids::get_CharacteristicAggregateFormat()
     @_property
     def characteristic_aggregate_format(cls) -> _uuid.UUID: ...
@@ -432,7 +432,7 @@ class GattDescriptorsResult(winrt.system.Object):
     def status(self) -> GattCommunicationStatus: ...
 
 @typing.final
-class GattDeviceService_Static(type):
+class GattDeviceService_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::ConvertShortIdToUuid(System.UInt16)
     # @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
@@ -689,7 +689,7 @@ class GattLocalService(winrt.system.Object):
     def uuid(self) -> _uuid.UUID: ...
 
 @typing.final
-class GattPresentationFormat_Static(type):
+class GattPresentationFormat_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat::FromParts(System.Byte,System.Int32,System.UInt16,System.Byte,System.UInt16)
     def from_parts(cls, format_type: winrt.system.UInt8, exponent: winrt.system.Int32, unit: winrt.system.UInt16, namespace_id: winrt.system.UInt8, description: winrt.system.UInt16, /) -> GattPresentationFormat: ...
     # System.Byte Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat::get_BluetoothSigAssignedNumbers()
@@ -715,7 +715,7 @@ class GattPresentationFormat(winrt.system.Object, metaclass=GattPresentationForm
     def unit(self) -> winrt.system.UInt16: ...
 
 @typing.final
-class GattPresentationFormatTypes_Static(type):
+class GattPresentationFormatTypes_Static(winrt._winrt.IInspectable_Static):
     # System.Byte Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormatTypes::get_Bit2()
     @_property
     def bit2(cls) -> winrt.system.UInt8: ...
@@ -803,7 +803,7 @@ class GattPresentationFormatTypes(winrt.system.Object, metaclass=GattPresentatio
     pass
 
 @typing.final
-class GattProtocolError_Static(type):
+class GattProtocolError_Static(winrt._winrt.IInspectable_Static):
     # System.Byte Windows.Devices.Bluetooth.GenericAttributeProfile.GattProtocolError::get_AttributeNotFound()
     @_property
     def attribute_not_found(cls) -> winrt.system.UInt8: ...
@@ -934,7 +934,7 @@ class GattRequestStateChangedEventArgs(winrt.system.Object):
     def state(self) -> GattRequestState: ...
 
 @typing.final
-class GattServiceProvider_Static(type):
+class GattServiceProvider_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider::CreateAsync(System.Guid)
     def create_async(cls, service_uuid: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[GattServiceProviderResult]: ...
 
@@ -998,7 +998,7 @@ class GattServiceProviderResult(winrt.system.Object):
     def service_provider(self) -> GattServiceProvider: ...
 
 @typing.final
-class GattServiceUuids_Static(type):
+class GattServiceUuids_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids::get_Battery()
     @_property
     def battery(cls) -> _uuid.UUID: ...
@@ -1071,7 +1071,7 @@ class GattServiceUuids(winrt.system.Object, metaclass=GattServiceUuids_Static):
     pass
 
 @typing.final
-class GattSession_Static(type):
+class GattSession_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession::FromDeviceIdAsync(Windows.Devices.Bluetooth.BluetoothDeviceId)
     def from_device_id_async(cls, device_id: windows_devices_bluetooth.BluetoothDeviceId, /) -> windows_foundation.IAsyncOperation[GattSession]: ...
 

@@ -3132,6 +3132,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_control(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3145,19 +3151,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_control(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CurrentSessionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentSessionChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CurrentSessionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentSessionChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CurrentSessionChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GlobalSystemMediaTransportControlsSession_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSession, object_bases.get(), nullptr)};
+    py::pytype_handle GlobalSystemMediaTransportControlsSession_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSession, object_bases.get(), inspectable_meta_type)};
     if (!GlobalSystemMediaTransportControlsSession_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GlobalSystemMediaTransportControlsSessionManager_Static{PyType_FromSpec(&type_spec_GlobalSystemMediaTransportControlsSessionManager_Static)};
+    py::pyobj_handle GlobalSystemMediaTransportControlsSessionManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GlobalSystemMediaTransportControlsSessionManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GlobalSystemMediaTransportControlsSessionManager_Static{PyType_FromSpecWithBases(&type_spec_GlobalSystemMediaTransportControlsSessionManager_Static, GlobalSystemMediaTransportControlsSessionManager_Static_bases.get())};
     if (!type_GlobalSystemMediaTransportControlsSessionManager_Static)
     {
         return nullptr;
@@ -3169,49 +3181,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_control(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GlobalSystemMediaTransportControlsSessionMediaProperties_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionMediaProperties, object_bases.get(), nullptr)};
+    py::pytype_handle GlobalSystemMediaTransportControlsSessionMediaProperties_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionMediaProperties, object_bases.get(), inspectable_meta_type)};
     if (!GlobalSystemMediaTransportControlsSessionMediaProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GlobalSystemMediaTransportControlsSessionPlaybackControls_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackControls, object_bases.get(), nullptr)};
+    py::pytype_handle GlobalSystemMediaTransportControlsSessionPlaybackControls_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackControls, object_bases.get(), inspectable_meta_type)};
     if (!GlobalSystemMediaTransportControlsSessionPlaybackControls_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GlobalSystemMediaTransportControlsSessionPlaybackInfo_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackInfo, object_bases.get(), nullptr)};
+    py::pytype_handle GlobalSystemMediaTransportControlsSessionPlaybackInfo_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackInfo, object_bases.get(), inspectable_meta_type)};
     if (!GlobalSystemMediaTransportControlsSessionPlaybackInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GlobalSystemMediaTransportControlsSessionTimelineProperties_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionTimelineProperties, object_bases.get(), nullptr)};
+    py::pytype_handle GlobalSystemMediaTransportControlsSessionTimelineProperties_type{py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionTimelineProperties, object_bases.get(), inspectable_meta_type)};
     if (!GlobalSystemMediaTransportControlsSessionTimelineProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaPropertiesChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MediaPropertiesChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MediaPropertiesChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MediaPropertiesChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MediaPropertiesChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlaybackInfoChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlaybackInfoChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PlaybackInfoChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlaybackInfoChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PlaybackInfoChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SessionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SessionsChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SessionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SessionsChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SessionsChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TimelinePropertiesChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TimelinePropertiesChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle TimelinePropertiesChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TimelinePropertiesChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!TimelinePropertiesChangedEventArgs_type)
     {
         return nullptr;

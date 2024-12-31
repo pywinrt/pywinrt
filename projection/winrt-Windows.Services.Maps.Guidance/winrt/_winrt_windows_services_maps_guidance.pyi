@@ -98,7 +98,7 @@ class GuidanceMapMatchedCoordinate(winrt.system.Object):
     def road(self) -> GuidanceRoadSegment: ...
 
 @typing.final
-class GuidanceNavigator_Static(type):
+class GuidanceNavigator_Static(winrt._winrt.IInspectable_Static):
     # Windows.Services.Maps.Guidance.GuidanceNavigator Windows.Services.Maps.Guidance.GuidanceNavigator::GetCurrent()
     def get_current(cls) -> GuidanceNavigator: ...
     # System.Boolean Windows.Services.Maps.Guidance.GuidanceNavigator::get_UseAppProvidedVoice()
@@ -236,7 +236,7 @@ class GuidanceRoadSignpost(winrt.system.Object):
     def foreground_color(self) -> windows_ui.Color: ...
 
 @typing.final
-class GuidanceRoute_Static(type):
+class GuidanceRoute_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Services.Maps.Guidance.GuidanceRoute::CanCreateFromMapRoute(Windows.Services.Maps.MapRoute)
     def can_create_from_map_route(cls, map_route: windows_services_maps.MapRoute, /) -> bool: ...
     # Windows.Services.Maps.Guidance.GuidanceRoute Windows.Services.Maps.Guidance.GuidanceRoute::TryCreateFromMapRoute(Windows.Services.Maps.MapRoute)
@@ -266,7 +266,7 @@ class GuidanceRoute(winrt.system.Object, metaclass=GuidanceRoute_Static):
     def road_segments(self) -> typing.Sequence[GuidanceRoadSegment]: ...
 
 @typing.final
-class GuidanceTelemetryCollector_Static(type):
+class GuidanceTelemetryCollector_Static(winrt._winrt.IInspectable_Static):
     # Windows.Services.Maps.Guidance.GuidanceTelemetryCollector Windows.Services.Maps.Guidance.GuidanceTelemetryCollector::GetCurrent()
     def get_current(cls) -> GuidanceTelemetryCollector: ...
 

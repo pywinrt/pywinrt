@@ -25,7 +25,7 @@ from winrt.windows.media.editing import MediaTrimmingPreference, VideoFramePreci
 Self = typing.TypeVar('Self')
 
 @typing.final
-class BackgroundAudioTrack_Static(type):
+class BackgroundAudioTrack_Static(winrt._winrt.IInspectable_Static):
     # Windows.Media.Editing.BackgroundAudioTrack Windows.Media.Editing.BackgroundAudioTrack::CreateFromEmbeddedAudioTrack(Windows.Media.Editing.EmbeddedAudioTrack)
     def create_from_embedded_audio_track(cls, embedded_audio_track: EmbeddedAudioTrack, /) -> BackgroundAudioTrack: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Editing.BackgroundAudioTrack> Windows.Media.Editing.BackgroundAudioTrack::CreateFromFileAsync(Windows.Storage.IStorageFile)
@@ -80,7 +80,7 @@ class EmbeddedAudioTrack(winrt.system.Object):
     def get_audio_encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
 
 @typing.final
-class MediaClip_Static(type):
+class MediaClip_Static(winrt._winrt.IInspectable_Static):
     # Windows.Media.Editing.MediaClip Windows.Media.Editing.MediaClip::CreateFromColor(Windows.UI.Color,Windows.Foundation.TimeSpan)
     def create_from_color(cls, color: windows_ui.Color, original_duration: datetime.timedelta, /) -> MediaClip: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Editing.MediaClip> Windows.Media.Editing.MediaClip::CreateFromFileAsync(Windows.Storage.IStorageFile)
@@ -146,7 +146,7 @@ class MediaClip(winrt.system.Object, metaclass=MediaClip_Static):
     def audio_effect_definitions(self) -> typing.MutableSequence[windows_media_effects.IAudioEffectDefinition]: ...
 
 @typing.final
-class MediaComposition_Static(type):
+class MediaComposition_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Editing.MediaComposition> Windows.Media.Editing.MediaComposition::LoadAsync(Windows.Storage.StorageFile)
     def load_async(cls, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncOperation[MediaComposition]: ...
 

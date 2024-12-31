@@ -20,7 +20,7 @@ from winrt.windows.ui.webui.core import MenuClosedEventHandler, MenuOpenedEventH
 Self = typing.TypeVar('Self')
 
 @typing.final
-class WebUICommandBar_Static(type):
+class WebUICommandBar_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.WebUI.Core.WebUICommandBar Windows.UI.WebUI.Core.WebUICommandBar::GetForCurrentView()
     def get_for_current_view(cls) -> WebUICommandBar: ...
 

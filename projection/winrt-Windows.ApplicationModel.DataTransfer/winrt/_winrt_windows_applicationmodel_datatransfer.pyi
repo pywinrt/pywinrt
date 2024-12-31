@@ -22,7 +22,7 @@ from winrt.windows.applicationmodel.datatransfer import DataProviderHandler, Sha
 Self = typing.TypeVar('Self')
 
 @typing.final
-class Clipboard_Static(type):
+class Clipboard_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.ApplicationModel.DataTransfer.Clipboard::Clear()
     def clear(cls) -> None: ...
     # System.Boolean Windows.ApplicationModel.DataTransfer.Clipboard::ClearHistory()
@@ -424,7 +424,7 @@ class DataRequestedEventArgs(winrt.system.Object):
     def request(self) -> DataRequest: ...
 
 @typing.final
-class DataTransferManager_Static(type):
+class DataTransferManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.DataTransfer.DataTransferManager Windows.ApplicationModel.DataTransfer.DataTransferManager::GetForCurrentView()
     def get_for_current_view(cls) -> DataTransferManager: ...
     # System.Boolean Windows.ApplicationModel.DataTransfer.DataTransferManager::IsSupported()
@@ -450,7 +450,7 @@ class DataTransferManager(winrt.system.Object, metaclass=DataTransferManager_Sta
     def remove_share_providers_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class HtmlFormatHelper_Static(type):
+class HtmlFormatHelper_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.ApplicationModel.DataTransfer.HtmlFormatHelper::CreateHtmlFormat(System.String)
     def create_html_format(cls, html_fragment: str, /) -> str: ...
     # System.String Windows.ApplicationModel.DataTransfer.HtmlFormatHelper::GetStaticFragment(System.String)
@@ -542,7 +542,7 @@ class ShareUIOptions(winrt.system.Object):
     def selection_rect(self, value: typing.Optional[windows_foundation.Rect]) -> None: ...
 
 @typing.final
-class SharedStorageAccessManager_Static(type):
+class SharedStorageAccessManager_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager::AddFile(Windows.Storage.IStorageFile)
     def add_file(cls, file: windows_storage.IStorageFile, /) -> str: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager::RedeemTokenForFileAsync(System.String)
@@ -555,7 +555,7 @@ class SharedStorageAccessManager(winrt.system.Object, metaclass=SharedStorageAcc
     pass
 
 @typing.final
-class StandardDataFormats_Static(type):
+class StandardDataFormats_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.ApplicationModel.DataTransfer.StandardDataFormats::get_Bitmap()
     @_property
     def bitmap(cls) -> str: ...

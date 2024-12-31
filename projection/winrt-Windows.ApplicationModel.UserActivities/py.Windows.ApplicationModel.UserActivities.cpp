@@ -3278,6 +3278,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3291,7 +3297,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    py::pyobj_handle type_UserActivity_Static{PyType_FromSpec(&type_spec_UserActivity_Static)};
+    py::pyobj_handle UserActivity_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserActivity_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserActivity_Static{PyType_FromSpecWithBases(&type_spec_UserActivity_Static, UserActivity_Static_bases.get())};
     if (!type_UserActivity_Static)
     {
         return nullptr;
@@ -3303,13 +3315,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle UserActivityAttribution_type{py::register_python_type(module.get(), &type_spec_UserActivityAttribution, object_bases.get(), nullptr)};
+    py::pytype_handle UserActivityAttribution_type{py::register_python_type(module.get(), &type_spec_UserActivityAttribution, object_bases.get(), inspectable_meta_type)};
     if (!UserActivityAttribution_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UserActivityChannel_Static{PyType_FromSpec(&type_spec_UserActivityChannel_Static)};
+    py::pyobj_handle UserActivityChannel_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserActivityChannel_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserActivityChannel_Static{PyType_FromSpecWithBases(&type_spec_UserActivityChannel_Static, UserActivityChannel_Static_bases.get())};
     if (!type_UserActivityChannel_Static)
     {
         return nullptr;
@@ -3321,7 +3339,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    py::pyobj_handle type_UserActivityContentInfo_Static{PyType_FromSpec(&type_spec_UserActivityContentInfo_Static)};
+    py::pyobj_handle UserActivityContentInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserActivityContentInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserActivityContentInfo_Static{PyType_FromSpecWithBases(&type_spec_UserActivityContentInfo_Static, UserActivityContentInfo_Static_bases.get())};
     if (!type_UserActivityContentInfo_Static)
     {
         return nullptr;
@@ -3333,13 +3357,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle UserActivityRequest_type{py::register_python_type(module.get(), &type_spec_UserActivityRequest, object_bases.get(), nullptr)};
+    py::pytype_handle UserActivityRequest_type{py::register_python_type(module.get(), &type_spec_UserActivityRequest, object_bases.get(), inspectable_meta_type)};
     if (!UserActivityRequest_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UserActivityRequestManager_Static{PyType_FromSpec(&type_spec_UserActivityRequestManager_Static)};
+    py::pyobj_handle UserActivityRequestManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserActivityRequestManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserActivityRequestManager_Static{PyType_FromSpecWithBases(&type_spec_UserActivityRequestManager_Static, UserActivityRequestManager_Static_bases.get())};
     if (!type_UserActivityRequestManager_Static)
     {
         return nullptr;
@@ -3351,25 +3381,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle UserActivityRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_UserActivityRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UserActivityRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_UserActivityRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UserActivityRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserActivitySession_type{py::register_python_type(module.get(), &type_spec_UserActivitySession, object_bases.get(), nullptr)};
+    py::pytype_handle UserActivitySession_type{py::register_python_type(module.get(), &type_spec_UserActivitySession, object_bases.get(), inspectable_meta_type)};
     if (!UserActivitySession_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserActivitySessionHistoryItem_type{py::register_python_type(module.get(), &type_spec_UserActivitySessionHistoryItem, object_bases.get(), nullptr)};
+    py::pytype_handle UserActivitySessionHistoryItem_type{py::register_python_type(module.get(), &type_spec_UserActivitySessionHistoryItem, object_bases.get(), inspectable_meta_type)};
     if (!UserActivitySessionHistoryItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserActivityVisualElements_type{py::register_python_type(module.get(), &type_spec_UserActivityVisualElements, object_bases.get(), nullptr)};
+    py::pytype_handle UserActivityVisualElements_type{py::register_python_type(module.get(), &type_spec_UserActivityVisualElements, object_bases.get(), inspectable_meta_type)};
     if (!UserActivityVisualElements_type)
     {
         return nullptr;
@@ -3381,7 +3411,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIUserActivityContentInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIUserActivityContentInfo, nullptr))};
+    py::pytype_handle ImplementsIUserActivityContentInfo_type{py::register_python_type(module.get(), &type_spec_ImplementsIUserActivityContentInfo, nullptr, inspectable_meta_type)};
     if (!ImplementsIUserActivityContentInfo_type)
     {
         return nullptr;

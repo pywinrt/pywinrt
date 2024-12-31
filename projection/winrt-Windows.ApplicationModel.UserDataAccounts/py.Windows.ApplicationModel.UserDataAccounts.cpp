@@ -1925,6 +1925,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts(void) noe
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1938,13 +1944,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts(void) noe
         return nullptr;
     }
 
-    py::pytype_handle UserDataAccount_type{py::register_python_type(module.get(), &type_spec_UserDataAccount, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataAccount_type{py::register_python_type(module.get(), &type_spec_UserDataAccount, object_bases.get(), inspectable_meta_type)};
     if (!UserDataAccount_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UserDataAccountManager_Static{PyType_FromSpec(&type_spec_UserDataAccountManager_Static)};
+    py::pyobj_handle UserDataAccountManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserDataAccountManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserDataAccountManager_Static{PyType_FromSpecWithBases(&type_spec_UserDataAccountManager_Static, UserDataAccountManager_Static_bases.get())};
     if (!type_UserDataAccountManager_Static)
     {
         return nullptr;
@@ -1956,19 +1968,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts(void) noe
         return nullptr;
     }
 
-    py::pytype_handle UserDataAccountManagerForUser_type{py::register_python_type(module.get(), &type_spec_UserDataAccountManagerForUser, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataAccountManagerForUser_type{py::register_python_type(module.get(), &type_spec_UserDataAccountManagerForUser, object_bases.get(), inspectable_meta_type)};
     if (!UserDataAccountManagerForUser_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataAccountStore_type{py::register_python_type(module.get(), &type_spec_UserDataAccountStore, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataAccountStore_type{py::register_python_type(module.get(), &type_spec_UserDataAccountStore, object_bases.get(), inspectable_meta_type)};
     if (!UserDataAccountStore_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataAccountStoreChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataAccountStoreChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataAccountStoreChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataAccountStoreChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UserDataAccountStoreChangedEventArgs_type)
     {
         return nullptr;

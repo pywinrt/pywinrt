@@ -303,6 +303,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives_2(void) noexcep
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {

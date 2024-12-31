@@ -1445,6 +1445,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_pushnotifications(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1458,13 +1464,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_pushnotifications(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PushNotificationChannel_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannel, object_bases.get(), nullptr)};
+    py::pytype_handle PushNotificationChannel_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannel, object_bases.get(), inspectable_meta_type)};
     if (!PushNotificationChannel_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PushNotificationChannelManager_Static{PyType_FromSpec(&type_spec_PushNotificationChannelManager_Static)};
+    py::pyobj_handle PushNotificationChannelManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PushNotificationChannelManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PushNotificationChannelManager_Static{PyType_FromSpecWithBases(&type_spec_PushNotificationChannelManager_Static, PushNotificationChannelManager_Static_bases.get())};
     if (!type_PushNotificationChannelManager_Static)
     {
         return nullptr;
@@ -1476,25 +1488,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_pushnotifications(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PushNotificationChannelManagerForUser_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannelManagerForUser, object_bases.get(), nullptr)};
+    py::pytype_handle PushNotificationChannelManagerForUser_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannelManagerForUser, object_bases.get(), inspectable_meta_type)};
     if (!PushNotificationChannelManagerForUser_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PushNotificationChannelsRevokedEventArgs_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannelsRevokedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PushNotificationChannelsRevokedEventArgs_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannelsRevokedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PushNotificationChannelsRevokedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PushNotificationReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PushNotificationReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PushNotificationReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RawNotification_type{py::register_python_type(module.get(), &type_spec_RawNotification, object_bases.get(), nullptr)};
+    py::pytype_handle RawNotification_type{py::register_python_type(module.get(), &type_spec_RawNotification, object_bases.get(), inspectable_meta_type)};
     if (!RawNotification_type)
     {
         return nullptr;

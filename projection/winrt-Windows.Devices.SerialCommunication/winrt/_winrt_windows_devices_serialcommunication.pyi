@@ -29,7 +29,7 @@ class PinChangedEventArgs(winrt.system.Object):
     def pin_change(self) -> SerialPinChange: ...
 
 @typing.final
-class SerialDevice_Static(type):
+class SerialDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SerialCommunication.SerialDevice> Windows.Devices.SerialCommunication.SerialDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[SerialDevice]: ...
     # System.String Windows.Devices.SerialCommunication.SerialDevice::GetDeviceSelector()

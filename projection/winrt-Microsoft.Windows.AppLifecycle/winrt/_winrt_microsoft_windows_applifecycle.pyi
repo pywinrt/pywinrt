@@ -18,7 +18,7 @@ from winrt.microsoft.windows.applifecycle import ExtendedActivationKind
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ActivationRegistrationManager_Static(type):
+class ActivationRegistrationManager_Static(winrt._winrt.IInspectable_Static):
     # System.Void Microsoft.Windows.AppLifecycle.ActivationRegistrationManager::RegisterForFileTypeActivation(System.String[],System.String,System.String,System.String[],System.String)
     def register_for_file_type_activation(cls, supported_file_types: typing.Union[winrt.system.Array[str], winrt.system.ReadableBuffer], logo: str, display_name: str, supported_verbs: typing.Union[winrt.system.Array[str], winrt.system.ReadableBuffer], exe_path: str, /) -> None: ...
     # System.Void Microsoft.Windows.AppLifecycle.ActivationRegistrationManager::RegisterForProtocolActivation(System.String,System.String,System.String,System.String)
@@ -46,7 +46,7 @@ class AppActivationArguments(winrt.system.Object):
     def kind(self) -> ExtendedActivationKind: ...
 
 @typing.final
-class AppInstance_Static(type):
+class AppInstance_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.AppLifecycle.AppInstance Microsoft.Windows.AppLifecycle.AppInstance::FindOrRegisterForKey(System.String)
     def find_or_register_for_key(cls, key: str, /) -> AppInstance: ...
     # Microsoft.Windows.AppLifecycle.AppInstance Microsoft.Windows.AppLifecycle.AppInstance::GetCurrent()

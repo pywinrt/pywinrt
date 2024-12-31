@@ -147,7 +147,7 @@ class EnsureReadyOptions(winrt.system.Object):
     def register_newer_if_available(self, value: bool) -> None: ...
 
 @typing.final
-class PackageDeploymentManager_Static(type):
+class PackageDeploymentManager_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.Management.Deployment.PackageDeploymentManager Microsoft.Windows.Management.Deployment.PackageDeploymentManager::GetDefault()
     def get_default(cls) -> PackageDeploymentManager: ...
     # System.Boolean Microsoft.Windows.Management.Deployment.PackageDeploymentManager::IsPackageDeploymentFeatureSupported(Microsoft.Windows.Management.Deployment.PackageDeploymentFeature)
@@ -255,7 +255,7 @@ class PackageDeploymentResult(winrt.system.Object):
     def status(self) -> PackageDeploymentStatus: ...
 
 @typing.final
-class PackageRuntimeManager_Static(type):
+class PackageRuntimeManager_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.Management.Deployment.PackageRuntimeManager Microsoft.Windows.Management.Deployment.PackageRuntimeManager::GetDefault()
     def get_default(cls) -> PackageRuntimeManager: ...
 
@@ -351,7 +351,7 @@ class PackageSetRuntimeDisposition(winrt.system.Object):
     def package_set_item_runtime_dispositions(self) -> typing.MutableSequence[PackageSetItemRuntimeDisposition]: ...
 
 @typing.final
-class PackageVolume_Static(type):
+class PackageVolume_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.PackageVolume::FindPackageVolumeByName(System.String)
     def find_package_volume_by_name(cls, name: str, /) -> PackageVolume: ...
     # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.PackageVolume::FindPackageVolumeByPath(System.String)

@@ -2893,6 +2893,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2906,7 +2912,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreFrameworkInputView_Static{PyType_FromSpec(&type_spec_CoreFrameworkInputView_Static)};
+    py::pyobj_handle CoreFrameworkInputView_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreFrameworkInputView_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreFrameworkInputView_Static{PyType_FromSpecWithBases(&type_spec_CoreFrameworkInputView_Static, CoreFrameworkInputView_Static_bases.get())};
     if (!type_CoreFrameworkInputView_Static)
     {
         return nullptr;
@@ -2918,19 +2930,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreFrameworkInputViewAnimationStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreFrameworkInputViewAnimationStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreFrameworkInputViewAnimationStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreFrameworkInputViewOcclusionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreFrameworkInputViewOcclusionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreFrameworkInputViewOcclusionsChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreInputView_Static{PyType_FromSpec(&type_spec_CoreInputView_Static)};
+    py::pyobj_handle CoreInputView_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreInputView_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreInputView_Static{PyType_FromSpecWithBases(&type_spec_CoreInputView_Static, CoreInputView_Static_bases.get())};
     if (!type_CoreInputView_Static)
     {
         return nullptr;
@@ -2942,43 +2960,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreInputViewAnimationStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewAnimationStartingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreInputViewAnimationStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewAnimationStartingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreInputViewAnimationStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreInputViewHidingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewHidingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreInputViewHidingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewHidingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreInputViewHidingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreInputViewOcclusion_type{py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusion, object_bases.get(), nullptr)};
+    py::pytype_handle CoreInputViewOcclusion_type{py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusion, object_bases.get(), inspectable_meta_type)};
     if (!CoreInputViewOcclusion_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreInputViewOcclusionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreInputViewOcclusionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusionsChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreInputViewOcclusionsChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreInputViewShowingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewShowingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreInputViewShowingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewShowingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreInputViewShowingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreInputViewTransferringXYFocusEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewTransferringXYFocusEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreInputViewTransferringXYFocusEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewTransferringXYFocusEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreInputViewTransferringXYFocusEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UISettingsController_Static{PyType_FromSpec(&type_spec_UISettingsController_Static)};
+    py::pyobj_handle UISettingsController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UISettingsController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UISettingsController_Static{PyType_FromSpecWithBases(&type_spec_UISettingsController_Static, UISettingsController_Static_bases.get())};
     if (!type_UISettingsController_Static)
     {
         return nullptr;

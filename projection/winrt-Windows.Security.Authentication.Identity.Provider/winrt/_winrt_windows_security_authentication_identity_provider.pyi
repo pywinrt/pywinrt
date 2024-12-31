@@ -18,7 +18,7 @@ from winrt.windows.security.authentication.identity.provider import SecondaryAut
 Self = typing.TypeVar('Self')
 
 @typing.final
-class SecondaryAuthenticationFactorAuthentication_Static(type):
+class SecondaryAuthenticationFactorAuthentication_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::GetAuthenticationStageInfoAsync()
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_authentication_stage_info_async(cls) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorAuthenticationStageInfo]: ...
@@ -108,7 +108,7 @@ class SecondaryAuthenticationFactorInfo(winrt.system.Object):
     def presence_monitoring_mode(self) -> SecondaryAuthenticationFactorDevicePresenceMonitoringMode: ...
 
 @typing.final
-class SecondaryAuthenticationFactorRegistration_Static(type):
+class SecondaryAuthenticationFactorRegistration_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::FindAllRegisteredDeviceInfoAsync(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceFindScope)
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def find_all_registered_device_info_async(cls, query_type: SecondaryAuthenticationFactorDeviceFindScope, /) -> windows_foundation.IAsyncOperation[typing.Sequence[SecondaryAuthenticationFactorInfo]]: ...

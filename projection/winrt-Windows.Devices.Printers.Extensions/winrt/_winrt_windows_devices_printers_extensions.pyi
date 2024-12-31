@@ -56,7 +56,7 @@ class Print3DWorkflowPrinterChangedEventArgs(winrt.system.Object):
     def new_device_id(self) -> str: ...
 
 @typing.final
-class PrintExtensionContext_Static(type):
+class PrintExtensionContext_Static(winrt._winrt.IInspectable_Static):
     # System.Object Windows.Devices.Printers.Extensions.PrintExtensionContext::FromDeviceId(System.String)
     def from_device_id(cls, device_id: str, /) -> winrt.system.Object: ...
 

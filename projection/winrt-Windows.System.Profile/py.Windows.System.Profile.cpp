@@ -2906,6 +2906,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2919,7 +2925,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AnalyticsInfo_Static{PyType_FromSpec(&type_spec_AnalyticsInfo_Static)};
+    py::pyobj_handle AnalyticsInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AnalyticsInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AnalyticsInfo_Static{PyType_FromSpecWithBases(&type_spec_AnalyticsInfo_Static, AnalyticsInfo_Static_bases.get())};
     if (!type_AnalyticsInfo_Static)
     {
         return nullptr;
@@ -2931,13 +2943,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AnalyticsVersionInfo_type{py::register_python_type(module.get(), &type_spec_AnalyticsVersionInfo, object_bases.get(), nullptr)};
+    py::pytype_handle AnalyticsVersionInfo_type{py::register_python_type(module.get(), &type_spec_AnalyticsVersionInfo, object_bases.get(), inspectable_meta_type)};
     if (!AnalyticsVersionInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppApplicability_Static{PyType_FromSpec(&type_spec_AppApplicability_Static)};
+    py::pyobj_handle AppApplicability_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppApplicability_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppApplicability_Static{PyType_FromSpecWithBases(&type_spec_AppApplicability_Static, AppApplicability_Static_bases.get())};
     if (!type_AppApplicability_Static)
     {
         return nullptr;
@@ -2949,7 +2967,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_EducationSettings_Static{PyType_FromSpec(&type_spec_EducationSettings_Static)};
+    py::pyobj_handle EducationSettings_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!EducationSettings_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EducationSettings_Static{PyType_FromSpecWithBases(&type_spec_EducationSettings_Static, EducationSettings_Static_bases.get())};
     if (!type_EducationSettings_Static)
     {
         return nullptr;
@@ -2961,7 +2985,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_HardwareIdentification_Static{PyType_FromSpec(&type_spec_HardwareIdentification_Static)};
+    py::pyobj_handle HardwareIdentification_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HardwareIdentification_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HardwareIdentification_Static{PyType_FromSpecWithBases(&type_spec_HardwareIdentification_Static, HardwareIdentification_Static_bases.get())};
     if (!type_HardwareIdentification_Static)
     {
         return nullptr;
@@ -2973,13 +3003,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HardwareToken_type{py::register_python_type(module.get(), &type_spec_HardwareToken, object_bases.get(), nullptr)};
+    py::pytype_handle HardwareToken_type{py::register_python_type(module.get(), &type_spec_HardwareToken, object_bases.get(), inspectable_meta_type)};
     if (!HardwareToken_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownRetailInfoProperties_Static{PyType_FromSpec(&type_spec_KnownRetailInfoProperties_Static)};
+    py::pyobj_handle KnownRetailInfoProperties_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownRetailInfoProperties_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownRetailInfoProperties_Static{PyType_FromSpecWithBases(&type_spec_KnownRetailInfoProperties_Static, KnownRetailInfoProperties_Static_bases.get())};
     if (!type_KnownRetailInfoProperties_Static)
     {
         return nullptr;
@@ -2991,7 +3027,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PlatformAutomaticAppSignInManager_Static{PyType_FromSpec(&type_spec_PlatformAutomaticAppSignInManager_Static)};
+    py::pyobj_handle PlatformAutomaticAppSignInManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PlatformAutomaticAppSignInManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PlatformAutomaticAppSignInManager_Static{PyType_FromSpecWithBases(&type_spec_PlatformAutomaticAppSignInManager_Static, PlatformAutomaticAppSignInManager_Static_bases.get())};
     if (!type_PlatformAutomaticAppSignInManager_Static)
     {
         return nullptr;
@@ -3003,7 +3045,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PlatformDiagnosticsAndUsageDataSettings_Static{PyType_FromSpec(&type_spec_PlatformDiagnosticsAndUsageDataSettings_Static)};
+    py::pyobj_handle PlatformDiagnosticsAndUsageDataSettings_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PlatformDiagnosticsAndUsageDataSettings_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PlatformDiagnosticsAndUsageDataSettings_Static{PyType_FromSpecWithBases(&type_spec_PlatformDiagnosticsAndUsageDataSettings_Static, PlatformDiagnosticsAndUsageDataSettings_Static_bases.get())};
     if (!type_PlatformDiagnosticsAndUsageDataSettings_Static)
     {
         return nullptr;
@@ -3015,7 +3063,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RetailInfo_Static{PyType_FromSpec(&type_spec_RetailInfo_Static)};
+    py::pyobj_handle RetailInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RetailInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RetailInfo_Static{PyType_FromSpecWithBases(&type_spec_RetailInfo_Static, RetailInfo_Static_bases.get())};
     if (!type_RetailInfo_Static)
     {
         return nullptr;
@@ -3027,7 +3081,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SharedModeSettings_Static{PyType_FromSpec(&type_spec_SharedModeSettings_Static)};
+    py::pyobj_handle SharedModeSettings_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SharedModeSettings_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SharedModeSettings_Static{PyType_FromSpecWithBases(&type_spec_SharedModeSettings_Static, SharedModeSettings_Static_bases.get())};
     if (!type_SharedModeSettings_Static)
     {
         return nullptr;
@@ -3039,7 +3099,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SmartAppControlPolicy_Static{PyType_FromSpec(&type_spec_SmartAppControlPolicy_Static)};
+    py::pyobj_handle SmartAppControlPolicy_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmartAppControlPolicy_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmartAppControlPolicy_Static{PyType_FromSpecWithBases(&type_spec_SmartAppControlPolicy_Static, SmartAppControlPolicy_Static_bases.get())};
     if (!type_SmartAppControlPolicy_Static)
     {
         return nullptr;
@@ -3051,7 +3117,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemIdentification_Static{PyType_FromSpec(&type_spec_SystemIdentification_Static)};
+    py::pyobj_handle SystemIdentification_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SystemIdentification_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemIdentification_Static{PyType_FromSpecWithBases(&type_spec_SystemIdentification_Static, SystemIdentification_Static_bases.get())};
     if (!type_SystemIdentification_Static)
     {
         return nullptr;
@@ -3063,13 +3135,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SystemIdentificationInfo_type{py::register_python_type(module.get(), &type_spec_SystemIdentificationInfo, object_bases.get(), nullptr)};
+    py::pytype_handle SystemIdentificationInfo_type{py::register_python_type(module.get(), &type_spec_SystemIdentificationInfo, object_bases.get(), inspectable_meta_type)};
     if (!SystemIdentificationInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemSetupInfo_Static{PyType_FromSpec(&type_spec_SystemSetupInfo_Static)};
+    py::pyobj_handle SystemSetupInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SystemSetupInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemSetupInfo_Static{PyType_FromSpecWithBases(&type_spec_SystemSetupInfo_Static, SystemSetupInfo_Static_bases.get())};
     if (!type_SystemSetupInfo_Static)
     {
         return nullptr;
@@ -3081,13 +3159,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle UnsupportedAppRequirement_type{py::register_python_type(module.get(), &type_spec_UnsupportedAppRequirement, object_bases.get(), nullptr)};
+    py::pytype_handle UnsupportedAppRequirement_type{py::register_python_type(module.get(), &type_spec_UnsupportedAppRequirement, object_bases.get(), inspectable_meta_type)};
     if (!UnsupportedAppRequirement_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_WindowsIntegrityPolicy_Static{PyType_FromSpec(&type_spec_WindowsIntegrityPolicy_Static)};
+    py::pyobj_handle WindowsIntegrityPolicy_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WindowsIntegrityPolicy_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WindowsIntegrityPolicy_Static{PyType_FromSpecWithBases(&type_spec_WindowsIntegrityPolicy_Static, WindowsIntegrityPolicy_Static_bases.get())};
     if (!type_WindowsIntegrityPolicy_Static)
     {
         return nullptr;

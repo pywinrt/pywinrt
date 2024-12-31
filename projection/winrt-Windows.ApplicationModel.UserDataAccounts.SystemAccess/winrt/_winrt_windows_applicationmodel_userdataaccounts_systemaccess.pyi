@@ -286,7 +286,7 @@ class DeviceAccountConfiguration(winrt.system.Object):
     def is_sso_authentication_supported(self) -> bool: ...
 
 @typing.final
-class UserDataAccountSystemAccessManager_Static(type):
+class UserDataAccountSystemAccessManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.ApplicationModel.UserDataAccounts.SystemAccess.UserDataAccountSystemAccessManager::AddAndShowDeviceAccountsAsync(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration>)
     def add_and_show_device_accounts_async(cls, accounts: typing.Iterable[DeviceAccountConfiguration], /) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.UserDataAccounts.SystemAccess.UserDataAccountSystemAccessManager::CreateDeviceAccountAsync(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration)

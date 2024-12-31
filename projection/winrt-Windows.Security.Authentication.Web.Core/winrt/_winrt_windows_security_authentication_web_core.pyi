@@ -78,7 +78,7 @@ class WebAuthenticationAddAccountResult(winrt.system.Object):
     def response_status(self) -> WebAuthenticationAddAccountStatus: ...
 
 @typing.final
-class WebAuthenticationCoreManager_Static(type):
+class WebAuthenticationCoreManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::AddAccountWithTransferTokenAsync(Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest)
     def add_account_with_transfer_token_async(cls, request: WebAuthenticationTransferTokenRequest, /) -> windows_foundation.IAsyncOperation[WebAuthenticationAddAccountResult]: ...
     # Windows.Security.Authentication.Web.Core.WebAccountMonitor Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::CreateWebAccountMonitor(Windows.Foundation.Collections.IIterable`1<Windows.Security.Credentials.WebAccount>)

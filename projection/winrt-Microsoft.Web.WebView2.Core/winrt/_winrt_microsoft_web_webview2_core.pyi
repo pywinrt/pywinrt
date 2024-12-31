@@ -659,7 +659,7 @@ class CoreWebView2ContextMenuTarget(winrt.system.Object):
     @_property
     def source_uri(self) -> str: ...
 
-class CoreWebView2Controller_Static(type):
+class CoreWebView2Controller_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class CoreWebView2Controller(winrt.system.Object, metaclass=CoreWebView2Controller_Static):
@@ -805,7 +805,7 @@ class CoreWebView2ControllerOptions(winrt.system.Object):
     def script_locale(self, value: str) -> None: ...
 
 @typing.final
-class CoreWebView2ControllerWindowReference_Static(type):
+class CoreWebView2ControllerWindowReference_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference::CreateFromCoreWindow(Windows.UI.Core.CoreWindow)
     def create_from_core_window(cls, core_window: windows_ui_core.CoreWindow, /) -> CoreWebView2ControllerWindowReference: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference::CreateFromWindowHandle(System.UInt64)
@@ -1006,7 +1006,7 @@ class CoreWebView2DownloadStartingEventArgs(winrt.system.Object):
     def download_operation(self) -> CoreWebView2DownloadOperation: ...
 
 @typing.final
-class CoreWebView2Environment_Static(type):
+class CoreWebView2Environment_Static(winrt._winrt.IInspectable_Static):
     # System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2Environment::CompareBrowserVersionString(System.String,System.String)
     def compare_browser_version_string(cls, browser_version_string1: str, browser_version_string2: str, /) -> winrt.system.Int32: ...
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Web.WebView2.Core.CoreWebView2Environment> Microsoft.Web.WebView2.Core.CoreWebView2Environment::CreateAsync()

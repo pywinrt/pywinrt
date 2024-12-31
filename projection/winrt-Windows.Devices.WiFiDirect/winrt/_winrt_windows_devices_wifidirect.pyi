@@ -83,7 +83,7 @@ class WiFiDirectConnectionListener(winrt.system.Object):
     def remove_connection_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class WiFiDirectConnectionParameters_Static(type):
+class WiFiDirectConnectionParameters_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Enumeration.DevicePairingKinds Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters::GetDevicePairingKinds(Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod)
     def get_device_pairing_kinds(cls, configuration_method: WiFiDirectConfigurationMethod, /) -> windows_devices_enumeration.DevicePairingKinds: ...
 
@@ -122,7 +122,7 @@ class WiFiDirectConnectionRequestedEventArgs(winrt.system.Object):
     def get_connection_request(self) -> WiFiDirectConnectionRequest: ...
 
 @typing.final
-class WiFiDirectDevice_Static(type):
+class WiFiDirectDevice_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.WiFiDirectDevice> Windows.Devices.WiFiDirect.WiFiDirectDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectDevice]: ...
@@ -156,7 +156,7 @@ class WiFiDirectDevice(winrt.system.Object, windows_foundation.IClosable, metacl
     def device_id(self) -> str: ...
 
 @typing.final
-class WiFiDirectInformationElement_Static(type):
+class WiFiDirectInformationElement_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IVector`1<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> Windows.Devices.WiFiDirect.WiFiDirectInformationElement::CreateFromBuffer(Windows.Storage.Streams.IBuffer)
     def create_from_buffer(cls, buffer: windows_storage_streams.IBuffer, /) -> typing.MutableSequence[WiFiDirectInformationElement]: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> Windows.Devices.WiFiDirect.WiFiDirectInformationElement::CreateFromDeviceInformation(Windows.Devices.Enumeration.DeviceInformation)

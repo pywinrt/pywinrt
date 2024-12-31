@@ -18,7 +18,7 @@ from winrt.microsoft.windows.appnotifications.builder import AppNotificationAudi
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AppNotificationBuilder_Static(type):
+class AppNotificationBuilder_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::IsUrgentScenarioSupported()
     def is_urgent_scenario_supported(cls) -> bool: ...
 
@@ -85,7 +85,7 @@ class AppNotificationBuilder(winrt.system.Object, metaclass=AppNotificationBuild
     def set_time_stamp(self, value: datetime.datetime, /) -> AppNotificationBuilder: ...
 
 @typing.final
-class AppNotificationButton_Static(type):
+class AppNotificationButton_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::IsButtonStyleSupported()
     def is_button_style_supported(cls) -> bool: ...
     # System.Boolean Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::IsToolTipSupported()

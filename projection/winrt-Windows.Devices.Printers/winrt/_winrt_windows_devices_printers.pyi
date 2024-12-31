@@ -31,7 +31,7 @@ class IppAttributeError(winrt.system.Object):
     def reason(self) -> IppAttributeErrorReason: ...
 
 @typing.final
-class IppAttributeValue_Static(type):
+class IppAttributeValue_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Printers.IppAttributeValue Windows.Devices.Printers.IppAttributeValue::CreateBoolean(System.Boolean)
     def create_boolean(cls, value: bool, /) -> IppAttributeValue: ...
     # Windows.Devices.Printers.IppAttributeValue Windows.Devices.Printers.IppAttributeValue::CreateBooleanArray(Windows.Foundation.Collections.IIterable`1<System.Boolean>)
@@ -164,7 +164,7 @@ class IppIntegerRange(winrt.system.Object):
     def start(self) -> winrt.system.Int32: ...
 
 @typing.final
-class IppPrintDevice_Static(type):
+class IppPrintDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Printers.IppPrintDevice Windows.Devices.Printers.IppPrintDevice::FromId(System.String)
     def from_id(cls, device_id: str, /) -> IppPrintDevice: ...
     # Windows.Devices.Printers.IppPrintDevice Windows.Devices.Printers.IppPrintDevice::FromPrinterName(System.String)
@@ -291,7 +291,7 @@ class PdlPassthroughTarget(winrt.system.Object, windows_foundation.IClosable):
     def print_job_id(self) -> winrt.system.Int32: ...
 
 @typing.final
-class Print3DDevice_Static(type):
+class Print3DDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.Print3DDevice> Windows.Devices.Printers.Print3DDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Print3DDevice]: ...
     # System.String Windows.Devices.Printers.Print3DDevice::GetDeviceSelector()

@@ -5960,6 +5960,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5973,7 +5979,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AppWindow_Static{PyType_FromSpec(&type_spec_AppWindow_Static)};
+    py::pyobj_handle AppWindow_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppWindow_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppWindow_Static{PyType_FromSpecWithBases(&type_spec_AppWindow_Static, AppWindow_Static_bases.get())};
     if (!type_AppWindow_Static)
     {
         return nullptr;
@@ -5985,19 +5997,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AppWindowChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppWindowChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppWindowChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppWindowChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppWindowChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppWindowClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppWindowClosingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppWindowClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppWindowClosingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppWindowClosingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppWindowPresenter_Static{PyType_FromSpec(&type_spec_AppWindowPresenter_Static)};
+    py::pyobj_handle AppWindowPresenter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppWindowPresenter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppWindowPresenter_Static{PyType_FromSpecWithBases(&type_spec_AppWindowPresenter_Static, AppWindowPresenter_Static_bases.get())};
     if (!type_AppWindowPresenter_Static)
     {
         return nullptr;
@@ -6009,7 +6027,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AppWindowTitleBar_Static{PyType_FromSpec(&type_spec_AppWindowTitleBar_Static)};
+    py::pyobj_handle AppWindowTitleBar_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppWindowTitleBar_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppWindowTitleBar_Static{PyType_FromSpecWithBases(&type_spec_AppWindowTitleBar_Static, AppWindowTitleBar_Static_bases.get())};
     if (!type_AppWindowTitleBar_Static)
     {
         return nullptr;
@@ -6045,7 +6069,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DisplayArea_Static{PyType_FromSpec(&type_spec_DisplayArea_Static)};
+    py::pyobj_handle DisplayArea_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DisplayArea_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DisplayArea_Static{PyType_FromSpecWithBases(&type_spec_DisplayArea_Static, DisplayArea_Static_bases.get())};
     if (!type_DisplayArea_Static)
     {
         return nullptr;
@@ -6057,7 +6087,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DisplayAreaWatcher_type{py::register_python_type(module.get(), &type_spec_DisplayAreaWatcher, object_bases.get(), nullptr)};
+    py::pytype_handle DisplayAreaWatcher_type{py::register_python_type(module.get(), &type_spec_DisplayAreaWatcher, object_bases.get(), inspectable_meta_type)};
     if (!DisplayAreaWatcher_type)
     {
         return nullptr;

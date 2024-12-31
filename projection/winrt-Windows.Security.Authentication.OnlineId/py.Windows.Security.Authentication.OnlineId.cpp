@@ -2339,6 +2339,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_onlineid(void) noex
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2352,25 +2358,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_onlineid(void) noex
         return nullptr;
     }
 
-    py::pytype_handle OnlineIdAuthenticator_type{py::register_python_type(module.get(), &type_spec_OnlineIdAuthenticator, object_bases.get(), nullptr)};
+    py::pytype_handle OnlineIdAuthenticator_type{py::register_python_type(module.get(), &type_spec_OnlineIdAuthenticator, object_bases.get(), inspectable_meta_type)};
     if (!OnlineIdAuthenticator_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle OnlineIdServiceTicket_type{py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicket, object_bases.get(), nullptr)};
+    py::pytype_handle OnlineIdServiceTicket_type{py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicket, object_bases.get(), inspectable_meta_type)};
     if (!OnlineIdServiceTicket_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle OnlineIdServiceTicketRequest_type{py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicketRequest, object_bases.get(), nullptr)};
+    py::pytype_handle OnlineIdServiceTicketRequest_type{py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicketRequest, object_bases.get(), inspectable_meta_type)};
     if (!OnlineIdServiceTicketRequest_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_OnlineIdSystemAuthenticator_Static{PyType_FromSpec(&type_spec_OnlineIdSystemAuthenticator_Static)};
+    py::pyobj_handle OnlineIdSystemAuthenticator_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!OnlineIdSystemAuthenticator_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_OnlineIdSystemAuthenticator_Static{PyType_FromSpecWithBases(&type_spec_OnlineIdSystemAuthenticator_Static, OnlineIdSystemAuthenticator_Static_bases.get())};
     if (!type_OnlineIdSystemAuthenticator_Static)
     {
         return nullptr;
@@ -2382,37 +2394,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_onlineid(void) noex
         return nullptr;
     }
 
-    py::pytype_handle OnlineIdSystemAuthenticatorForUser_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticatorForUser, object_bases.get(), nullptr)};
+    py::pytype_handle OnlineIdSystemAuthenticatorForUser_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticatorForUser, object_bases.get(), inspectable_meta_type)};
     if (!OnlineIdSystemAuthenticatorForUser_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle OnlineIdSystemIdentity_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemIdentity, object_bases.get(), nullptr)};
+    py::pytype_handle OnlineIdSystemIdentity_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemIdentity, object_bases.get(), inspectable_meta_type)};
     if (!OnlineIdSystemIdentity_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle OnlineIdSystemTicketResult_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemTicketResult, object_bases.get(), nullptr)};
+    py::pytype_handle OnlineIdSystemTicketResult_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemTicketResult, object_bases.get(), inspectable_meta_type)};
     if (!OnlineIdSystemTicketResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SignOutUserOperation_type{py::register_python_type(module.get(), &type_spec_SignOutUserOperation, object_bases.get(), nullptr)};
+    py::pytype_handle SignOutUserOperation_type{py::register_python_type(module.get(), &type_spec_SignOutUserOperation, object_bases.get(), inspectable_meta_type)};
     if (!SignOutUserOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserAuthenticationOperation_type{py::register_python_type(module.get(), &type_spec_UserAuthenticationOperation, object_bases.get(), nullptr)};
+    py::pytype_handle UserAuthenticationOperation_type{py::register_python_type(module.get(), &type_spec_UserAuthenticationOperation, object_bases.get(), inspectable_meta_type)};
     if (!UserAuthenticationOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserIdentity_type{py::register_python_type(module.get(), &type_spec_UserIdentity, object_bases.get(), nullptr)};
+    py::pytype_handle UserIdentity_type{py::register_python_type(module.get(), &type_spec_UserIdentity, object_bases.get(), inspectable_meta_type)};
     if (!UserIdentity_type)
     {
         return nullptr;

@@ -347,6 +347,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_embedded_devicelockdown(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -360,7 +366,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_embedded_devicelockdown(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DeviceLockdownProfile_Static{PyType_FromSpec(&type_spec_DeviceLockdownProfile_Static)};
+    py::pyobj_handle DeviceLockdownProfile_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DeviceLockdownProfile_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DeviceLockdownProfile_Static{PyType_FromSpecWithBases(&type_spec_DeviceLockdownProfile_Static, DeviceLockdownProfile_Static_bases.get())};
     if (!type_DeviceLockdownProfile_Static)
     {
         return nullptr;
@@ -372,7 +384,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_embedded_devicelockdown(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DeviceLockdownProfileInformation_type{py::register_python_type(module.get(), &type_spec_DeviceLockdownProfileInformation, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceLockdownProfileInformation_type{py::register_python_type(module.get(), &type_spec_DeviceLockdownProfileInformation, object_bases.get(), inspectable_meta_type)};
     if (!DeviceLockdownProfileInformation_type)
     {
         return nullptr;

@@ -583,7 +583,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that breaks
      * binary compatibility.
      */
-    const uint16_t runtime_abi_version_major = 2;
+    const uint16_t runtime_abi_version_major = 3;
 
     /**
      * ABI version for runtime verification.
@@ -606,6 +606,7 @@ namespace py
     winrt::Windows::Foundation::DateTime convert_to_datetime(PyObject* obj);
     PyObject* convert_guid(winrt::guid value) noexcept;
     winrt::guid convert_to_guid(PyObject* obj);
+    PyTypeObject* get_inspectable_meta_type() noexcept;
     PyTypeObject* get_object_type() noexcept;
 
     struct runtime_api
@@ -621,6 +622,7 @@ namespace py
         decltype(convert_to_datetime)* convert_to_datetime;
         decltype(convert_guid)* convert_guid;
         decltype(convert_to_guid)* convert_to_guid;
+        decltype(get_inspectable_meta_type)* get_inspectable_meta_type;
         decltype(get_object_type)* get_object_type;
         decltype(cpp::_winrt::Array_New)* array_new;
         decltype(cpp::_winrt::Array_Assign)* array_assign;
@@ -728,6 +730,12 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_to_guid);
         return (*PyWinRT_API->convert_to_guid)(obj);
+    }
+
+    inline PyTypeObject* get_inspectable_meta_type() noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_inspectable_meta_type);
+        return (*PyWinRT_API->get_inspectable_meta_type)();
     }
 
     inline PyTypeObject* get_object_type() noexcept

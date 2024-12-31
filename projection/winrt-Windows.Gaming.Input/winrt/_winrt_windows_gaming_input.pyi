@@ -78,7 +78,7 @@ class UINavigationReading:
     def __init__(self, timestamp: winrt.system.UInt64 = 0, required_buttons: RequiredUINavigationButtons = RequiredUINavigationButtons(0), optional_buttons: OptionalUINavigationButtons = OptionalUINavigationButtons(0)) -> None: ...
 
 @typing.final
-class ArcadeStick_Static(type):
+class ArcadeStick_Static(winrt._winrt.IInspectable_Static):
     # Windows.Gaming.Input.ArcadeStick Windows.Gaming.Input.ArcadeStick::FromGameController(Windows.Gaming.Input.IGameController)
     def from_game_controller(cls, game_controller: IGameController, /) -> ArcadeStick: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.ArcadeStick::add_ArcadeStickAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.ArcadeStick>)
@@ -124,7 +124,7 @@ class ArcadeStick(winrt.system.Object, IGameControllerBatteryInfo, IGameControll
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class FlightStick_Static(type):
+class FlightStick_Static(winrt._winrt.IInspectable_Static):
     # Windows.Gaming.Input.FlightStick Windows.Gaming.Input.FlightStick::FromGameController(Windows.Gaming.Input.IGameController)
     def from_game_controller(cls, game_controller: IGameController, /) -> FlightStick: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.FlightStick::add_FlightStickAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.FlightStick>)
@@ -173,7 +173,7 @@ class FlightStick(winrt.system.Object, IGameControllerBatteryInfo, IGameControll
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class Gamepad_Static(type):
+class Gamepad_Static(winrt._winrt.IInspectable_Static):
     # Windows.Gaming.Input.Gamepad Windows.Gaming.Input.Gamepad::FromGameController(Windows.Gaming.Input.IGameController)
     def from_game_controller(cls, game_controller: IGameController, /) -> Gamepad: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.Gamepad::add_GamepadAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.Gamepad>)
@@ -236,7 +236,7 @@ class Headset(winrt.system.Object, IGameControllerBatteryInfo):
     def render_device_id(self) -> str: ...
 
 @typing.final
-class RacingWheel_Static(type):
+class RacingWheel_Static(winrt._winrt.IInspectable_Static):
     # Windows.Gaming.Input.RacingWheel Windows.Gaming.Input.RacingWheel::FromGameController(Windows.Gaming.Input.IGameController)
     def from_game_controller(cls, game_controller: IGameController, /) -> RacingWheel: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.RacingWheel::add_RacingWheelAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.RacingWheel>)
@@ -300,7 +300,7 @@ class RacingWheel(winrt.system.Object, IGameControllerBatteryInfo, IGameControll
     def wheel_motor(self) -> windows_gaming_input_forcefeedback.ForceFeedbackMotor: ...
 
 @typing.final
-class RawGameController_Static(type):
+class RawGameController_Static(winrt._winrt.IInspectable_Static):
     # Windows.Gaming.Input.RawGameController Windows.Gaming.Input.RawGameController::FromGameController(Windows.Gaming.Input.IGameController)
     def from_game_controller(cls, game_controller: IGameController, /) -> RawGameController: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.RawGameController::add_RawGameControllerAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.RawGameController>)
@@ -375,7 +375,7 @@ class RawGameController(winrt.system.Object, IGameControllerBatteryInfo, IGameCo
     def simple_haptics_controllers(self) -> typing.Sequence[windows_devices_haptics.SimpleHapticsController]: ...
 
 @typing.final
-class UINavigationController_Static(type):
+class UINavigationController_Static(winrt._winrt.IInspectable_Static):
     # Windows.Gaming.Input.UINavigationController Windows.Gaming.Input.UINavigationController::FromGameController(Windows.Gaming.Input.IGameController)
     def from_game_controller(cls, game_controller: IGameController, /) -> UINavigationController: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.Input.UINavigationController::add_UINavigationControllerAdded(Windows.Foundation.EventHandler`1<Windows.Gaming.Input.UINavigationController>)

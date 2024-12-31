@@ -3700,6 +3700,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3713,7 +3719,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_NotifyCollectionChangedEventArgs_Static{PyType_FromSpec(&type_spec_NotifyCollectionChangedEventArgs_Static)};
+    py::pyobj_handle NotifyCollectionChangedEventArgs_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!NotifyCollectionChangedEventArgs_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NotifyCollectionChangedEventArgs_Static{PyType_FromSpecWithBases(&type_spec_NotifyCollectionChangedEventArgs_Static, NotifyCollectionChangedEventArgs_Static_bases.get())};
     if (!type_NotifyCollectionChangedEventArgs_Static)
     {
         return nullptr;
@@ -3731,7 +3743,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBindableIterable_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableIterable, nullptr))};
+    py::pytype_handle ImplementsIBindableIterable_type{py::register_python_type(module.get(), &type_spec_ImplementsIBindableIterable, nullptr, inspectable_meta_type)};
     if (!ImplementsIBindableIterable_type)
     {
         return nullptr;
@@ -3748,7 +3760,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBindableIterator_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableIterator, nullptr))};
+    py::pytype_handle ImplementsIBindableIterator_type{py::register_python_type(module.get(), &type_spec_ImplementsIBindableIterator, nullptr, inspectable_meta_type)};
     if (!ImplementsIBindableIterator_type)
     {
         return nullptr;
@@ -3765,7 +3777,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBindableObservableVector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableObservableVector, nullptr))};
+    py::pytype_handle ImplementsIBindableObservableVector_type{py::register_python_type(module.get(), &type_spec_ImplementsIBindableObservableVector, nullptr, inspectable_meta_type)};
     if (!ImplementsIBindableObservableVector_type)
     {
         return nullptr;
@@ -3782,7 +3794,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBindableVector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableVector, nullptr))};
+    py::pytype_handle ImplementsIBindableVector_type{py::register_python_type(module.get(), &type_spec_ImplementsIBindableVector, nullptr, inspectable_meta_type)};
     if (!ImplementsIBindableVector_type)
     {
         return nullptr;
@@ -3799,7 +3811,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBindableVectorView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBindableVectorView, nullptr))};
+    py::pytype_handle ImplementsIBindableVectorView_type{py::register_python_type(module.get(), &type_spec_ImplementsIBindableVectorView, nullptr, inspectable_meta_type)};
     if (!ImplementsIBindableVectorView_type)
     {
         return nullptr;
@@ -3816,7 +3828,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsINotifyCollectionChanged_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINotifyCollectionChanged, nullptr))};
+    py::pytype_handle ImplementsINotifyCollectionChanged_type{py::register_python_type(module.get(), &type_spec_ImplementsINotifyCollectionChanged, nullptr, inspectable_meta_type)};
     if (!ImplementsINotifyCollectionChanged_type)
     {
         return nullptr;

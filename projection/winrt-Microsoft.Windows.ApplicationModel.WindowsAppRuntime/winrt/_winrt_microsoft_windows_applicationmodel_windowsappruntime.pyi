@@ -32,7 +32,7 @@ class DeploymentInitializeOptions(winrt.system.Object):
     def on_error_show_ui(self, value: bool) -> None: ...
 
 @typing.final
-class DeploymentManager_Static(type):
+class DeploymentManager_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager::GetStatus()
     def get_status(cls) -> DeploymentResult: ...
     @typing.overload

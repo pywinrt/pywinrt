@@ -21,7 +21,7 @@ from winrt.microsoft.ui.input.dragdrop import DragDropModifiers, DragUIContentMo
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DragDropManager_Static(type):
+class DragDropManager_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Input.DragDrop.DragDropManager Microsoft.UI.Input.DragDrop.DragDropManager::GetForIsland(Microsoft.UI.Content.ContentIsland)
     def get_for_island(cls, content: microsoft_ui_content.ContentIsland, /) -> DragDropManager: ...
 

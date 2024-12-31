@@ -3163,6 +3163,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_text(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3176,55 +3182,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_text(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AlternateWordForm_type{py::register_python_type(module.get(), &type_spec_AlternateWordForm, object_bases.get(), nullptr)};
+    py::pytype_handle AlternateWordForm_type{py::register_python_type(module.get(), &type_spec_AlternateWordForm, object_bases.get(), inspectable_meta_type)};
     if (!AlternateWordForm_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SelectableWordSegment_type{py::register_python_type(module.get(), &type_spec_SelectableWordSegment, object_bases.get(), nullptr)};
+    py::pytype_handle SelectableWordSegment_type{py::register_python_type(module.get(), &type_spec_SelectableWordSegment, object_bases.get(), inspectable_meta_type)};
     if (!SelectableWordSegment_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SelectableWordsSegmenter_type{py::register_python_type(module.get(), &type_spec_SelectableWordsSegmenter, object_bases.get(), nullptr)};
+    py::pytype_handle SelectableWordsSegmenter_type{py::register_python_type(module.get(), &type_spec_SelectableWordsSegmenter, object_bases.get(), inspectable_meta_type)};
     if (!SelectableWordsSegmenter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SemanticTextQuery_type{py::register_python_type(module.get(), &type_spec_SemanticTextQuery, object_bases.get(), nullptr)};
+    py::pytype_handle SemanticTextQuery_type{py::register_python_type(module.get(), &type_spec_SemanticTextQuery, object_bases.get(), inspectable_meta_type)};
     if (!SemanticTextQuery_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextConversionGenerator_type{py::register_python_type(module.get(), &type_spec_TextConversionGenerator, object_bases.get(), nullptr)};
+    py::pytype_handle TextConversionGenerator_type{py::register_python_type(module.get(), &type_spec_TextConversionGenerator, object_bases.get(), inspectable_meta_type)};
     if (!TextConversionGenerator_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextPhoneme_type{py::register_python_type(module.get(), &type_spec_TextPhoneme, object_bases.get(), nullptr)};
+    py::pytype_handle TextPhoneme_type{py::register_python_type(module.get(), &type_spec_TextPhoneme, object_bases.get(), inspectable_meta_type)};
     if (!TextPhoneme_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextPredictionGenerator_type{py::register_python_type(module.get(), &type_spec_TextPredictionGenerator, object_bases.get(), nullptr)};
+    py::pytype_handle TextPredictionGenerator_type{py::register_python_type(module.get(), &type_spec_TextPredictionGenerator, object_bases.get(), inspectable_meta_type)};
     if (!TextPredictionGenerator_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextReverseConversionGenerator_type{py::register_python_type(module.get(), &type_spec_TextReverseConversionGenerator, object_bases.get(), nullptr)};
+    py::pytype_handle TextReverseConversionGenerator_type{py::register_python_type(module.get(), &type_spec_TextReverseConversionGenerator, object_bases.get(), inspectable_meta_type)};
     if (!TextReverseConversionGenerator_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UnicodeCharacters_Static{PyType_FromSpec(&type_spec_UnicodeCharacters_Static)};
+    py::pyobj_handle UnicodeCharacters_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UnicodeCharacters_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UnicodeCharacters_Static{PyType_FromSpecWithBases(&type_spec_UnicodeCharacters_Static, UnicodeCharacters_Static_bases.get())};
     if (!type_UnicodeCharacters_Static)
     {
         return nullptr;
@@ -3236,13 +3248,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_text(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WordSegment_type{py::register_python_type(module.get(), &type_spec_WordSegment, object_bases.get(), nullptr)};
+    py::pytype_handle WordSegment_type{py::register_python_type(module.get(), &type_spec_WordSegment, object_bases.get(), inspectable_meta_type)};
     if (!WordSegment_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WordsSegmenter_type{py::register_python_type(module.get(), &type_spec_WordsSegmenter, object_bases.get(), nullptr)};
+    py::pytype_handle WordsSegmenter_type{py::register_python_type(module.get(), &type_spec_WordsSegmenter, object_bases.get(), inspectable_meta_type)};
     if (!WordsSegmenter_type)
     {
         return nullptr;

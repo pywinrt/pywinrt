@@ -14,7 +14,7 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ApplicationLanguages_Static(type):
+class ApplicationLanguages_Static(winrt._winrt.IInspectable_Static):
     # System.String Microsoft.Windows.Globalization.ApplicationLanguages::get_PrimaryLanguageOverride()
     @_property
     def primary_language_override(cls) -> str: ...

@@ -247,6 +247,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_devices_notification(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -260,7 +266,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_devices_notification(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_VibrationDevice_Static{PyType_FromSpec(&type_spec_VibrationDevice_Static)};
+    py::pyobj_handle VibrationDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!VibrationDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VibrationDevice_Static{PyType_FromSpecWithBases(&type_spec_VibrationDevice_Static, VibrationDevice_Static_bases.get())};
     if (!type_VibrationDevice_Static)
     {
         return nullptr;

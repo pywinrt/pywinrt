@@ -93,7 +93,7 @@ class ResourceCandidateVectorView(winrt.system.Object, winrt._winrt.Sequence[Res
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ResourceContext_Static(type):
+class ResourceContext_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.Resources.Core.ResourceContext Windows.ApplicationModel.Resources.Core.ResourceContext::CreateMatchingContext(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Resources.Core.ResourceQualifier>)
     def create_matching_context(cls, result: typing.Iterable[ResourceQualifier], /) -> ResourceContext: ...
     # Windows.ApplicationModel.Resources.Core.ResourceContext Windows.ApplicationModel.Resources.Core.ResourceContext::GetForCurrentView()
@@ -153,7 +153,7 @@ class ResourceContextLanguagesVectorView(winrt.system.Object, winrt._winrt.Seque
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ResourceManager_Static(type):
+class ResourceManager_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.ApplicationModel.Resources.Core.ResourceManager::IsResourceReference(System.String)
     def is_resource_reference(cls, resource_reference: str, /) -> bool: ...
     # Windows.ApplicationModel.Resources.Core.ResourceManager Windows.ApplicationModel.Resources.Core.ResourceManager::get_Current()

@@ -28,7 +28,7 @@ class HeadsetGeqGains:
     def __init__(self, band1_gain: winrt.system.Int32 = 0, band2_gain: winrt.system.Int32 = 0, band3_gain: winrt.system.Int32 = 0, band4_gain: winrt.system.Int32 = 0, band5_gain: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
-class GameControllerProviderInfo_Static(type):
+class GameControllerProviderInfo_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Gaming.Input.Preview.GameControllerProviderInfo::GetParentProviderId(Windows.Gaming.Input.Custom.IGameControllerProvider)
     def get_parent_provider_id(cls, provider: windows_gaming_input_custom.IGameControllerProvider, /) -> str: ...
     # System.String Windows.Gaming.Input.Preview.GameControllerProviderInfo::GetProviderId(Windows.Gaming.Input.Custom.IGameControllerProvider)
@@ -39,7 +39,7 @@ class GameControllerProviderInfo(winrt.system.Object, metaclass=GameControllerPr
     pass
 
 @typing.final
-class LegacyGipGameControllerProvider_Static(type):
+class LegacyGipGameControllerProvider_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider::ClearPairing(Windows.System.User,System.String)
     def clear_pairing(cls, user: windows_system.User, controller_provider_id: str, /) -> None: ...
     # Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider::FromGameController(Windows.Gaming.Input.IGameController)

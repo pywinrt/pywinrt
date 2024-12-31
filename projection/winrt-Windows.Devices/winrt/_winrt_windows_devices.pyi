@@ -38,7 +38,7 @@ class LowLevelDevicesAggregateProvider(winrt.system.Object, ILowLevelDevicesAggr
     def spi_controller_provider(self) -> windows_devices_spi_provider.ISpiControllerProvider: ...
 
 @typing.final
-class LowLevelDevicesController_Static(type):
+class LowLevelDevicesController_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.ILowLevelDevicesAggregateProvider Windows.Devices.LowLevelDevicesController::get_DefaultProvider()
     @_property
     def default_provider(cls) -> ILowLevelDevicesAggregateProvider: ...

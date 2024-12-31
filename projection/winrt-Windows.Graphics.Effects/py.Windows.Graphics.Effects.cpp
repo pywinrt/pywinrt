@@ -395,6 +395,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_effects(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -414,7 +420,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGraphicsEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGraphicsEffect, nullptr))};
+    py::pytype_handle ImplementsIGraphicsEffect_type{py::register_python_type(module.get(), &type_spec_ImplementsIGraphicsEffect, nullptr, inspectable_meta_type)};
     if (!ImplementsIGraphicsEffect_type)
     {
         return nullptr;
@@ -431,7 +437,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGraphicsEffectSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGraphicsEffectSource, nullptr))};
+    py::pytype_handle ImplementsIGraphicsEffectSource_type{py::register_python_type(module.get(), &type_spec_ImplementsIGraphicsEffectSource, nullptr, inspectable_meta_type)};
     if (!ImplementsIGraphicsEffectSource_type)
     {
         return nullptr;

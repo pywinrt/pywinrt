@@ -4336,6 +4336,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playto(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4349,43 +4355,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playto(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CurrentTimeChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentTimeChangeRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CurrentTimeChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentTimeChangeRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CurrentTimeChangeRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MuteChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MuteChangeRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MuteChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MuteChangeRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MuteChangeRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlayToConnection_type{py::register_python_type(module.get(), &type_spec_PlayToConnection, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToConnection_type{py::register_python_type(module.get(), &type_spec_PlayToConnection, object_bases.get(), inspectable_meta_type)};
     if (!PlayToConnection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlayToConnectionErrorEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToConnectionErrorEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToConnectionErrorEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToConnectionErrorEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PlayToConnectionErrorEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlayToConnectionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToConnectionStateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToConnectionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToConnectionStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PlayToConnectionStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlayToConnectionTransferredEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToConnectionTransferredEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToConnectionTransferredEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToConnectionTransferredEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PlayToConnectionTransferredEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PlayToManager_Static{PyType_FromSpec(&type_spec_PlayToManager_Static)};
+    py::pyobj_handle PlayToManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PlayToManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PlayToManager_Static{PyType_FromSpecWithBases(&type_spec_PlayToManager_Static, PlayToManager_Static_bases.get())};
     if (!type_PlayToManager_Static)
     {
         return nullptr;
@@ -4397,55 +4409,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playto(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PlayToReceiver_type{py::register_python_type(module.get(), &type_spec_PlayToReceiver, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToReceiver_type{py::register_python_type(module.get(), &type_spec_PlayToReceiver, object_bases.get(), inspectable_meta_type)};
     if (!PlayToReceiver_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlayToSource_type{py::register_python_type(module.get(), &type_spec_PlayToSource, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToSource_type{py::register_python_type(module.get(), &type_spec_PlayToSource, object_bases.get(), inspectable_meta_type)};
     if (!PlayToSource_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlayToSourceDeferral_type{py::register_python_type(module.get(), &type_spec_PlayToSourceDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToSourceDeferral_type{py::register_python_type(module.get(), &type_spec_PlayToSourceDeferral, object_bases.get(), inspectable_meta_type)};
     if (!PlayToSourceDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlayToSourceRequest_type{py::register_python_type(module.get(), &type_spec_PlayToSourceRequest, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToSourceRequest_type{py::register_python_type(module.get(), &type_spec_PlayToSourceRequest, object_bases.get(), inspectable_meta_type)};
     if (!PlayToSourceRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlayToSourceRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToSourceRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToSourceRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToSourceRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PlayToSourceRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlayToSourceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToSourceSelectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PlayToSourceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlayToSourceSelectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PlayToSourceSelectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlaybackRateChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlaybackRateChangeRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PlaybackRateChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlaybackRateChangeRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PlaybackRateChangeRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SourceChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_SourceChangeRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SourceChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_SourceChangeRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SourceChangeRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VolumeChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_VolumeChangeRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle VolumeChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_VolumeChangeRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!VolumeChangeRequestedEventArgs_type)
     {
         return nullptr;

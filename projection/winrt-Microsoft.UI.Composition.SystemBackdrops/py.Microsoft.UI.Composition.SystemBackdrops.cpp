@@ -3909,6 +3909,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noex
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3922,7 +3928,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noex
         return nullptr;
     }
 
-    py::pyobj_handle type_DesktopAcrylicController_Static{PyType_FromSpec(&type_spec_DesktopAcrylicController_Static)};
+    py::pyobj_handle DesktopAcrylicController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DesktopAcrylicController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DesktopAcrylicController_Static{PyType_FromSpecWithBases(&type_spec_DesktopAcrylicController_Static, DesktopAcrylicController_Static_bases.get())};
     if (!type_DesktopAcrylicController_Static)
     {
         return nullptr;
@@ -3934,7 +3946,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noex
         return nullptr;
     }
 
-    py::pyobj_handle type_MicaController_Static{PyType_FromSpec(&type_spec_MicaController_Static)};
+    py::pyobj_handle MicaController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MicaController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MicaController_Static{PyType_FromSpecWithBases(&type_spec_MicaController_Static, MicaController_Static_bases.get())};
     if (!type_MicaController_Static)
     {
         return nullptr;
@@ -3946,7 +3964,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noex
         return nullptr;
     }
 
-    py::pytype_handle SystemBackdropConfiguration_type{py::register_python_type(module.get(), &type_spec_SystemBackdropConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle SystemBackdropConfiguration_type{py::register_python_type(module.get(), &type_spec_SystemBackdropConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!SystemBackdropConfiguration_type)
     {
         return nullptr;
@@ -3958,7 +3976,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noex
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISystemBackdropController_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISystemBackdropController, nullptr))};
+    py::pytype_handle ImplementsISystemBackdropController_type{py::register_python_type(module.get(), &type_spec_ImplementsISystemBackdropController, nullptr, inspectable_meta_type)};
     if (!ImplementsISystemBackdropController_type)
     {
         return nullptr;
@@ -3975,7 +3993,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noex
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISystemBackdropControllerWithTargets_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISystemBackdropControllerWithTargets, nullptr))};
+    py::pytype_handle ImplementsISystemBackdropControllerWithTargets_type{py::register_python_type(module.get(), &type_spec_ImplementsISystemBackdropControllerWithTargets, nullptr, inspectable_meta_type)};
     if (!ImplementsISystemBackdropControllerWithTargets_type)
     {
         return nullptr;

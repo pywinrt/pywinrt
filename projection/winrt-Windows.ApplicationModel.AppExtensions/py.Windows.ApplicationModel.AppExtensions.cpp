@@ -1764,6 +1764,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appextensions(void) noexce
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1777,13 +1783,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appextensions(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle AppExtension_type{py::register_python_type(module.get(), &type_spec_AppExtension, object_bases.get(), nullptr)};
+    py::pytype_handle AppExtension_type{py::register_python_type(module.get(), &type_spec_AppExtension, object_bases.get(), inspectable_meta_type)};
     if (!AppExtension_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppExtensionCatalog_Static{PyType_FromSpec(&type_spec_AppExtensionCatalog_Static)};
+    py::pyobj_handle AppExtensionCatalog_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppExtensionCatalog_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppExtensionCatalog_Static{PyType_FromSpecWithBases(&type_spec_AppExtensionCatalog_Static, AppExtensionCatalog_Static_bases.get())};
     if (!type_AppExtensionCatalog_Static)
     {
         return nullptr;
@@ -1795,31 +1807,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appextensions(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle AppExtensionPackageInstalledEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageInstalledEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppExtensionPackageInstalledEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageInstalledEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppExtensionPackageInstalledEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppExtensionPackageStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageStatusChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppExtensionPackageStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageStatusChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppExtensionPackageStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppExtensionPackageUninstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageUninstallingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppExtensionPackageUninstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageUninstallingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppExtensionPackageUninstallingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppExtensionPackageUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppExtensionPackageUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppExtensionPackageUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppExtensionPackageUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppExtensionPackageUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppExtensionPackageUpdatingEventArgs_type)
     {
         return nullptr;

@@ -22,7 +22,7 @@ from winrt.windows.ui.startscreen import ForegroundText, JumpListItemKind, JumpL
 Self = typing.TypeVar('Self')
 
 @typing.final
-class JumpList_Static(type):
+class JumpList_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.UI.StartScreen.JumpList::IsSupported()
     def is_supported(cls) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.StartScreen.JumpList> Windows.UI.StartScreen.JumpList::LoadCurrentAsync()
@@ -43,7 +43,7 @@ class JumpList(winrt.system.Object, metaclass=JumpList_Static):
     def items(self) -> typing.MutableSequence[JumpListItem]: ...
 
 @typing.final
-class JumpListItem_Static(type):
+class JumpListItem_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.StartScreen.JumpListItem Windows.UI.StartScreen.JumpListItem::CreateSeparator()
     def create_separator(cls) -> JumpListItem: ...
     # Windows.UI.StartScreen.JumpListItem Windows.UI.StartScreen.JumpListItem::CreateWithArguments(System.String,System.String)
@@ -86,7 +86,7 @@ class JumpListItem(winrt.system.Object, metaclass=JumpListItem_Static):
     def removed_by_user(self) -> bool: ...
 
 @typing.final
-class SecondaryTile_Static(type):
+class SecondaryTile_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.UI.StartScreen.SecondaryTile::Exists(System.String)
     def exists(cls, tile_id: str, /) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.StartScreen.SecondaryTile>> Windows.UI.StartScreen.SecondaryTile::FindAllAsync()
@@ -297,7 +297,7 @@ class SecondaryTileVisualElements(winrt.system.Object):
     def mixed_reality_model(self) -> TileMixedRealityModel: ...
 
 @typing.final
-class StartScreenManager_Static(type):
+class StartScreenManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.StartScreen.StartScreenManager Windows.UI.StartScreen.StartScreenManager::GetDefault()
     def get_default(cls) -> StartScreenManager: ...
     # Windows.UI.StartScreen.StartScreenManager Windows.UI.StartScreen.StartScreenManager::GetForUser(Windows.System.User)

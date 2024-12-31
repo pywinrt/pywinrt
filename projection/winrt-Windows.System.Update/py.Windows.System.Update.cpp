@@ -1425,6 +1425,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_update(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1438,19 +1444,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_update(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SystemUpdateItem_type{py::register_python_type(module.get(), &type_spec_SystemUpdateItem, object_bases.get(), nullptr)};
+    py::pytype_handle SystemUpdateItem_type{py::register_python_type(module.get(), &type_spec_SystemUpdateItem, object_bases.get(), inspectable_meta_type)};
     if (!SystemUpdateItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SystemUpdateLastErrorInfo_type{py::register_python_type(module.get(), &type_spec_SystemUpdateLastErrorInfo, object_bases.get(), nullptr)};
+    py::pytype_handle SystemUpdateLastErrorInfo_type{py::register_python_type(module.get(), &type_spec_SystemUpdateLastErrorInfo, object_bases.get(), inspectable_meta_type)};
     if (!SystemUpdateLastErrorInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemUpdateManager_Static{PyType_FromSpec(&type_spec_SystemUpdateManager_Static)};
+    py::pyobj_handle SystemUpdateManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SystemUpdateManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemUpdateManager_Static{PyType_FromSpecWithBases(&type_spec_SystemUpdateManager_Static, SystemUpdateManager_Static_bases.get())};
     if (!type_SystemUpdateManager_Static)
     {
         return nullptr;

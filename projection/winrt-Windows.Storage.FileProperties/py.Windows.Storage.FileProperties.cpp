@@ -5008,6 +5008,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_fileproperties(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5021,19 +5027,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_fileproperties(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BasicProperties_type{py::register_python_type(module.get(), &type_spec_BasicProperties, object_bases.get(), nullptr)};
+    py::pytype_handle BasicProperties_type{py::register_python_type(module.get(), &type_spec_BasicProperties, object_bases.get(), inspectable_meta_type)};
     if (!BasicProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DocumentProperties_type{py::register_python_type(module.get(), &type_spec_DocumentProperties, object_bases.get(), nullptr)};
+    py::pytype_handle DocumentProperties_type{py::register_python_type(module.get(), &type_spec_DocumentProperties, object_bases.get(), inspectable_meta_type)};
     if (!DocumentProperties_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GeotagHelper_Static{PyType_FromSpec(&type_spec_GeotagHelper_Static)};
+    py::pyobj_handle GeotagHelper_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GeotagHelper_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GeotagHelper_Static{PyType_FromSpecWithBases(&type_spec_GeotagHelper_Static, GeotagHelper_Static_bases.get())};
     if (!type_GeotagHelper_Static)
     {
         return nullptr;
@@ -5045,31 +5057,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_fileproperties(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImageProperties_type{py::register_python_type(module.get(), &type_spec_ImageProperties, object_bases.get(), nullptr)};
+    py::pytype_handle ImageProperties_type{py::register_python_type(module.get(), &type_spec_ImageProperties, object_bases.get(), inspectable_meta_type)};
     if (!ImageProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MusicProperties_type{py::register_python_type(module.get(), &type_spec_MusicProperties, object_bases.get(), nullptr)};
+    py::pytype_handle MusicProperties_type{py::register_python_type(module.get(), &type_spec_MusicProperties, object_bases.get(), inspectable_meta_type)};
     if (!MusicProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageItemContentProperties_type{py::register_python_type(module.get(), &type_spec_StorageItemContentProperties, object_bases.get(), nullptr)};
+    py::pytype_handle StorageItemContentProperties_type{py::register_python_type(module.get(), &type_spec_StorageItemContentProperties, object_bases.get(), inspectable_meta_type)};
     if (!StorageItemContentProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageItemThumbnail_type{py::register_python_type(module.get(), &type_spec_StorageItemThumbnail, object_bases.get(), nullptr)};
+    py::pytype_handle StorageItemThumbnail_type{py::register_python_type(module.get(), &type_spec_StorageItemThumbnail, object_bases.get(), inspectable_meta_type)};
     if (!StorageItemThumbnail_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VideoProperties_type{py::register_python_type(module.get(), &type_spec_VideoProperties, object_bases.get(), nullptr)};
+    py::pytype_handle VideoProperties_type{py::register_python_type(module.get(), &type_spec_VideoProperties, object_bases.get(), inspectable_meta_type)};
     if (!VideoProperties_type)
     {
         return nullptr;
@@ -5081,7 +5093,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_fileproperties(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageItemExtraProperties_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemExtraProperties, nullptr))};
+    py::pytype_handle ImplementsIStorageItemExtraProperties_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageItemExtraProperties, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageItemExtraProperties_type)
     {
         return nullptr;

@@ -1501,6 +1501,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_haptics(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1514,7 +1520,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_haptics(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownSimpleHapticsControllerWaveforms_Static{PyType_FromSpec(&type_spec_KnownSimpleHapticsControllerWaveforms_Static)};
+    py::pyobj_handle KnownSimpleHapticsControllerWaveforms_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownSimpleHapticsControllerWaveforms_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownSimpleHapticsControllerWaveforms_Static{PyType_FromSpecWithBases(&type_spec_KnownSimpleHapticsControllerWaveforms_Static, KnownSimpleHapticsControllerWaveforms_Static_bases.get())};
     if (!type_KnownSimpleHapticsControllerWaveforms_Static)
     {
         return nullptr;
@@ -1526,19 +1538,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_haptics(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SimpleHapticsController_type{py::register_python_type(module.get(), &type_spec_SimpleHapticsController, object_bases.get(), nullptr)};
+    py::pytype_handle SimpleHapticsController_type{py::register_python_type(module.get(), &type_spec_SimpleHapticsController, object_bases.get(), inspectable_meta_type)};
     if (!SimpleHapticsController_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SimpleHapticsControllerFeedback_type{py::register_python_type(module.get(), &type_spec_SimpleHapticsControllerFeedback, object_bases.get(), nullptr)};
+    py::pytype_handle SimpleHapticsControllerFeedback_type{py::register_python_type(module.get(), &type_spec_SimpleHapticsControllerFeedback, object_bases.get(), inspectable_meta_type)};
     if (!SimpleHapticsControllerFeedback_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_VibrationDevice_Static{PyType_FromSpec(&type_spec_VibrationDevice_Static)};
+    py::pyobj_handle VibrationDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!VibrationDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VibrationDevice_Static{PyType_FromSpecWithBases(&type_spec_VibrationDevice_Static, VibrationDevice_Static_bases.get())};
     if (!type_VibrationDevice_Static)
     {
         return nullptr;

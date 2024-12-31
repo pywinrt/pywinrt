@@ -17,7 +17,7 @@ from winrt.windows.devices.haptics import VibrationAccessStatus
 Self = typing.TypeVar('Self')
 
 @typing.final
-class KnownSimpleHapticsControllerWaveforms_Static(type):
+class KnownSimpleHapticsControllerWaveforms_Static(winrt._winrt.IInspectable_Static):
     # System.UInt16 Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms::get_BuzzContinuous()
     @_property
     def buzz_continuous(cls) -> winrt.system.UInt16: ...
@@ -109,7 +109,7 @@ class SimpleHapticsControllerFeedback(winrt.system.Object):
     def waveform(self) -> winrt.system.UInt16: ...
 
 @typing.final
-class VibrationDevice_Static(type):
+class VibrationDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.VibrationDevice>> Windows.Devices.Haptics.VibrationDevice::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[VibrationDevice]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Haptics.VibrationDevice> Windows.Devices.Haptics.VibrationDevice::FromIdAsync(System.String)

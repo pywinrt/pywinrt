@@ -15,7 +15,7 @@ import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 Self = typing.TypeVar('Self')
 
 @typing.final
-class XamlControlsXamlMetaDataProvider_Static(type):
+class XamlControlsXamlMetaDataProvider_Static(winrt._winrt.IInspectable_Static):
     # System.Void Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider::Initialize()
     def initialize(cls) -> None: ...
 

@@ -1963,6 +1963,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1976,13 +1982,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ComponentLoadFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_ComponentLoadFailedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ComponentLoadFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_ComponentLoadFailedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ComponentLoadFailedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ComponentRenewal_Static{PyType_FromSpec(&type_spec_ComponentRenewal_Static)};
+    py::pyobj_handle ComponentRenewal_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ComponentRenewal_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ComponentRenewal_Static{PyType_FromSpecWithBases(&type_spec_ComponentRenewal_Static, ComponentRenewal_Static_bases.get())};
     if (!type_ComponentRenewal_Static)
     {
         return nullptr;
@@ -1994,49 +2006,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HdcpSession_type{py::register_python_type(module.get(), &type_spec_HdcpSession, object_bases.get(), nullptr)};
+    py::pytype_handle HdcpSession_type{py::register_python_type(module.get(), &type_spec_HdcpSession, object_bases.get(), inspectable_meta_type)};
     if (!HdcpSession_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaProtectionManager_type{py::register_python_type(module.get(), &type_spec_MediaProtectionManager, object_bases.get(), nullptr)};
+    py::pytype_handle MediaProtectionManager_type{py::register_python_type(module.get(), &type_spec_MediaProtectionManager, object_bases.get(), inspectable_meta_type)};
     if (!MediaProtectionManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaProtectionPMPServer_type{py::register_python_type(module.get(), &type_spec_MediaProtectionPMPServer, object_bases.get(), nullptr)};
+    py::pytype_handle MediaProtectionPMPServer_type{py::register_python_type(module.get(), &type_spec_MediaProtectionPMPServer, object_bases.get(), inspectable_meta_type)};
     if (!MediaProtectionPMPServer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaProtectionServiceCompletion_type{py::register_python_type(module.get(), &type_spec_MediaProtectionServiceCompletion, object_bases.get(), nullptr)};
+    py::pytype_handle MediaProtectionServiceCompletion_type{py::register_python_type(module.get(), &type_spec_MediaProtectionServiceCompletion, object_bases.get(), inspectable_meta_type)};
     if (!MediaProtectionServiceCompletion_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProtectionCapabilities_type{py::register_python_type(module.get(), &type_spec_ProtectionCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle ProtectionCapabilities_type{py::register_python_type(module.get(), &type_spec_ProtectionCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!ProtectionCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RevocationAndRenewalInformation_type{py::register_python_type(module.get(), &type_spec_RevocationAndRenewalInformation, object_bases.get(), nullptr)};
+    py::pytype_handle RevocationAndRenewalInformation_type{py::register_python_type(module.get(), &type_spec_RevocationAndRenewalInformation, object_bases.get(), inspectable_meta_type)};
     if (!RevocationAndRenewalInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RevocationAndRenewalItem_type{py::register_python_type(module.get(), &type_spec_RevocationAndRenewalItem, object_bases.get(), nullptr)};
+    py::pytype_handle RevocationAndRenewalItem_type{py::register_python_type(module.get(), &type_spec_RevocationAndRenewalItem, object_bases.get(), inspectable_meta_type)};
     if (!RevocationAndRenewalItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ServiceRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ServiceRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ServiceRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ServiceRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ServiceRequestedEventArgs_type)
     {
         return nullptr;
@@ -2048,7 +2060,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMediaProtectionServiceRequest_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaProtectionServiceRequest, nullptr))};
+    py::pytype_handle ImplementsIMediaProtectionServiceRequest_type{py::register_python_type(module.get(), &type_spec_ImplementsIMediaProtectionServiceRequest, nullptr, inspectable_meta_type)};
     if (!ImplementsIMediaProtectionServiceRequest_type)
     {
         return nullptr;

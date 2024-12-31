@@ -1469,6 +1469,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_exchangeactivesyncprovisioning(voi
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1482,19 +1488,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_exchangeactivesyncprovisioning(voi
         return nullptr;
     }
 
-    py::pytype_handle EasClientDeviceInformation_type{py::register_python_type(module.get(), &type_spec_EasClientDeviceInformation, object_bases.get(), nullptr)};
+    py::pytype_handle EasClientDeviceInformation_type{py::register_python_type(module.get(), &type_spec_EasClientDeviceInformation, object_bases.get(), inspectable_meta_type)};
     if (!EasClientDeviceInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EasClientSecurityPolicy_type{py::register_python_type(module.get(), &type_spec_EasClientSecurityPolicy, object_bases.get(), nullptr)};
+    py::pytype_handle EasClientSecurityPolicy_type{py::register_python_type(module.get(), &type_spec_EasClientSecurityPolicy, object_bases.get(), inspectable_meta_type)};
     if (!EasClientSecurityPolicy_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EasComplianceResults_type{py::register_python_type(module.get(), &type_spec_EasComplianceResults, object_bases.get(), nullptr)};
+    py::pytype_handle EasComplianceResults_type{py::register_python_type(module.get(), &type_spec_EasComplianceResults, object_bases.get(), inspectable_meta_type)};
     if (!EasComplianceResults_type)
     {
         return nullptr;

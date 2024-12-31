@@ -45,7 +45,7 @@ class ActivationViewSwitcher(winrt.system.Object):
     def show_as_standalone_with_size_preference_async(self, view_id: winrt.system.Int32, size_preference: ViewSizePreference, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
-class ApplicationView_Static(type):
+class ApplicationView_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.UI.ViewManagement.ApplicationView::ClearAllPersistedState()
     def clear_all_persisted_state(cls) -> None: ...
     # System.Void Windows.UI.ViewManagement.ApplicationView::ClearPersistedState(System.String)
@@ -194,7 +194,7 @@ class ApplicationViewConsolidatedEventArgs(winrt.system.Object):
     def is_app_initiated(self) -> bool: ...
 
 @typing.final
-class ApplicationViewScaling_Static(type):
+class ApplicationViewScaling_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.UI.ViewManagement.ApplicationViewScaling::TrySetDisableLayoutScaling(System.Boolean)
     def try_set_disable_layout_scaling(cls, disable_layout_scaling: bool, /) -> bool: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationViewScaling::get_DisableLayoutScaling()
@@ -206,7 +206,7 @@ class ApplicationViewScaling(winrt.system.Object, metaclass=ApplicationViewScali
     pass
 
 @typing.final
-class ApplicationViewSwitcher_Static(type):
+class ApplicationViewSwitcher_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.UI.ViewManagement.ApplicationViewSwitcher::DisableShowingMainViewOnActivation()
     def disable_showing_main_view_on_activation(cls) -> None: ...
     # System.Void Windows.UI.ViewManagement.ApplicationViewSwitcher::DisableSystemViewActivationPolicy()
@@ -310,7 +310,7 @@ class ApplicationViewTitleBar(winrt.system.Object):
     def background_color(self, value: typing.Optional[windows_ui.Color]) -> None: ...
 
 @typing.final
-class ApplicationViewTransferContext_Static(type):
+class ApplicationViewTransferContext_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.UI.ViewManagement.ApplicationViewTransferContext::get_DataPackageFormatId()
     @_property
     def data_package_format_id(cls) -> str: ...
@@ -326,7 +326,7 @@ class ApplicationViewTransferContext(winrt.system.Object, metaclass=ApplicationV
     def view_id(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class InputPane_Static(type):
+class InputPane_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.ViewManagement.InputPane Windows.UI.ViewManagement.InputPane::GetForCurrentView()
     def get_for_current_view(cls) -> InputPane: ...
     # Windows.UI.ViewManagement.InputPane Windows.UI.ViewManagement.InputPane::GetForUIContext(Windows.UI.UIContext)
@@ -369,7 +369,7 @@ class InputPaneVisibilityEventArgs(winrt.system.Object):
     def occluded_rect(self) -> windows_foundation.Rect: ...
 
 @typing.final
-class ProjectionManager_Static(type):
+class ProjectionManager_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.UI.ViewManagement.ProjectionManager::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ProjectionManager::RequestStartProjectingAsync(System.Int32,System.Int32,Windows.Foundation.Rect)
@@ -397,7 +397,7 @@ class ProjectionManager(winrt.system.Object, metaclass=ProjectionManager_Static)
     pass
 
 @typing.final
-class StatusBar_Static(type):
+class StatusBar_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.ViewManagement.StatusBar Windows.UI.ViewManagement.StatusBar::GetForCurrentView()
     def get_for_current_view(cls) -> StatusBar: ...
 
@@ -549,7 +549,7 @@ class UISettingsMessageDurationChangedEventArgs(winrt.system.Object):
     pass
 
 @typing.final
-class UIViewSettings_Static(type):
+class UIViewSettings_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.ViewManagement.UIViewSettings Windows.UI.ViewManagement.UIViewSettings::GetForCurrentView()
     def get_for_current_view(cls) -> UIViewSettings: ...
 
@@ -560,7 +560,7 @@ class UIViewSettings(winrt.system.Object, metaclass=UIViewSettings_Static):
     def user_interaction_mode(self) -> UserInteractionMode: ...
 
 @typing.final
-class ViewModePreferences_Static(type):
+class ViewModePreferences_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.ViewManagement.ViewModePreferences Windows.UI.ViewManagement.ViewModePreferences::CreateDefault(Windows.UI.ViewManagement.ApplicationViewMode)
     def create_default(cls, mode: ApplicationViewMode, /) -> ViewModePreferences: ...
 

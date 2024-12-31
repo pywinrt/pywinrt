@@ -310,6 +310,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_dataprotection(void) 
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -323,7 +329,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_dataprotection(void) 
         return nullptr;
     }
 
-    py::pytype_handle DataProtectionProvider_type{py::register_python_type(module.get(), &type_spec_DataProtectionProvider, object_bases.get(), nullptr)};
+    py::pytype_handle DataProtectionProvider_type{py::register_python_type(module.get(), &type_spec_DataProtectionProvider, object_bases.get(), inspectable_meta_type)};
     if (!DataProtectionProvider_type)
     {
         return nullptr;

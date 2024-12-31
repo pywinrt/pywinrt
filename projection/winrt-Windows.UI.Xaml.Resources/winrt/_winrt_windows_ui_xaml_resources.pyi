@@ -12,7 +12,7 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
-class CustomXamlResourceLoader_Static(type):
+class CustomXamlResourceLoader_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Xaml.Resources.CustomXamlResourceLoader Windows.UI.Xaml.Resources.CustomXamlResourceLoader::get_Current()
     @_property
     def current(cls) -> CustomXamlResourceLoader: ...

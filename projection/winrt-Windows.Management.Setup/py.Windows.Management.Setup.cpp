@@ -2456,6 +2456,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_setup(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2469,49 +2475,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_setup(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AgentProvisioningProgressReport_type{py::register_python_type(module.get(), &type_spec_AgentProvisioningProgressReport, object_bases.get(), nullptr)};
+    py::pytype_handle AgentProvisioningProgressReport_type{py::register_python_type(module.get(), &type_spec_AgentProvisioningProgressReport, object_bases.get(), inspectable_meta_type)};
     if (!AgentProvisioningProgressReport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeploymentSessionConnectionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeploymentSessionConnectionChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DeploymentSessionConnectionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeploymentSessionConnectionChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DeploymentSessionConnectionChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeploymentSessionHeartbeatRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeploymentSessionHeartbeatRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DeploymentSessionHeartbeatRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeploymentSessionHeartbeatRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DeploymentSessionHeartbeatRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeploymentSessionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeploymentSessionStateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DeploymentSessionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeploymentSessionStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DeploymentSessionStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeploymentWorkload_type{py::register_python_type(module.get(), &type_spec_DeploymentWorkload, object_bases.get(), nullptr)};
+    py::pytype_handle DeploymentWorkload_type{py::register_python_type(module.get(), &type_spec_DeploymentWorkload, object_bases.get(), inspectable_meta_type)};
     if (!DeploymentWorkload_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeploymentWorkloadBatch_type{py::register_python_type(module.get(), &type_spec_DeploymentWorkloadBatch, object_bases.get(), nullptr)};
+    py::pytype_handle DeploymentWorkloadBatch_type{py::register_python_type(module.get(), &type_spec_DeploymentWorkloadBatch, object_bases.get(), inspectable_meta_type)};
     if (!DeploymentWorkloadBatch_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DevicePreparationExecutionContext_type{py::register_python_type(module.get(), &type_spec_DevicePreparationExecutionContext, object_bases.get(), nullptr)};
+    py::pytype_handle DevicePreparationExecutionContext_type{py::register_python_type(module.get(), &type_spec_DevicePreparationExecutionContext, object_bases.get(), inspectable_meta_type)};
     if (!DevicePreparationExecutionContext_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MachineProvisioningProgressReporter_Static{PyType_FromSpec(&type_spec_MachineProvisioningProgressReporter_Static)};
+    py::pyobj_handle MachineProvisioningProgressReporter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MachineProvisioningProgressReporter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MachineProvisioningProgressReporter_Static{PyType_FromSpecWithBases(&type_spec_MachineProvisioningProgressReporter_Static, MachineProvisioningProgressReporter_Static_bases.get())};
     if (!type_MachineProvisioningProgressReporter_Static)
     {
         return nullptr;

@@ -70,7 +70,7 @@ class SpatialSurfaceMeshBuffer(winrt.system.Object):
     def stride(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class SpatialSurfaceMeshOptions_Static(type):
+class SpatialSurfaceMeshOptions_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.DirectX.DirectXPixelFormat> Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions::get_SupportedTriangleIndexFormats()
     @_property
     def supported_triangle_index_formats(cls) -> typing.Sequence[windows_graphics_directx.DirectXPixelFormat]: ...
@@ -110,7 +110,7 @@ class SpatialSurfaceMeshOptions(winrt.system.Object, metaclass=SpatialSurfaceMes
     def include_vertex_normals(self, value: bool) -> None: ...
 
 @typing.final
-class SpatialSurfaceObserver_Static(type):
+class SpatialSurfaceObserver_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver::IsSupported()
     def is_supported(cls) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver::RequestAccessAsync()

@@ -23,7 +23,7 @@ from winrt.microsoft.ui.content import ContentCoordinateRoundingMode, ContentLay
 
 Self = typing.TypeVar('Self')
 
-class ContentCoordinateConverter_Static(type):
+class ContentCoordinateConverter_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Content.ContentCoordinateConverter Microsoft.UI.Content.ContentCoordinateConverter::CreateForWindowId(Microsoft.UI.WindowId)
     def create_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> ContentCoordinateConverter: ...
 
@@ -70,7 +70,7 @@ class ContentEnvironmentStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_display_id_change(self) -> bool: ...
 
-class ContentIsland_Static(type):
+class ContentIsland_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::Create(Microsoft.UI.Composition.Visual)
     def create(cls, root: microsoft_ui_composition.Visual, /) -> ContentIsland: ...
     # Microsoft.UI.Content.ContentIsland[] Microsoft.UI.Content.ContentIsland::FindAllForCompositor(Microsoft.UI.Composition.Compositor)
@@ -219,7 +219,7 @@ class ContentIslandAutomationProviderRequestedEventArgs(winrt.system.Object):
     @automation_provider.setter
     def automation_provider(self, value: winrt.system.Object) -> None: ...
 
-class ContentIslandEnvironment_Static(type):
+class ContentIslandEnvironment_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ContentIslandEnvironment(winrt.system.Object, metaclass=ContentIslandEnvironment_Static):
@@ -262,7 +262,7 @@ class ContentIslandStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_site_visible_change(self) -> bool: ...
 
-class ContentSite_Static(type):
+class ContentSite_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ContentSite(winrt.system.Object, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=ContentSite_Static):
@@ -380,7 +380,7 @@ class ContentSite(winrt.system.Object, microsoft_ui.IClosableNotifier, windows_f
     @typing.final
     def is_closed(self) -> bool: ...
 
-class ContentSiteEnvironment_Static(type):
+class ContentSiteEnvironment_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ContentSiteEnvironment(winrt.system.Object, metaclass=ContentSiteEnvironment_Static):
@@ -406,7 +406,7 @@ class ContentSiteEnvironment(winrt.system.Object, metaclass=ContentSiteEnvironme
     @typing.final
     def view(self) -> ContentSiteEnvironmentView: ...
 
-class ContentSiteEnvironmentView_Static(type):
+class ContentSiteEnvironmentView_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ContentSiteEnvironmentView(winrt.system.Object, metaclass=ContentSiteEnvironmentView_Static):
@@ -425,7 +425,7 @@ class ContentSiteRequestedStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_requested_size_change(self) -> bool: ...
 
-class ContentSiteView_Static(type):
+class ContentSiteView_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ContentSiteView(winrt.system.Object, metaclass=ContentSiteView_Static):
@@ -503,7 +503,7 @@ class DesktopChildSiteBridge(DesktopSiteBridge, metaclass=DesktopChildSiteBridge
     @_property
     def site_view(self) -> ContentSiteView: ...
 
-class DesktopSiteBridge_Static(type):
+class DesktopSiteBridge_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Microsoft.UI.Content.DesktopSiteBridge::IsSupported()
     def is_supported(cls) -> bool: ...
 

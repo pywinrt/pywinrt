@@ -1405,7 +1405,7 @@ class MapStyleSheet(windows_ui_xaml.DependencyObject, metaclass=MapStyleSheet_St
     pass
 
 @typing.final
-class MapStyleSheetEntries_Static(type):
+class MapStyleSheetEntries_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries::get_AdminDistrict()
     @_property
     def admin_district(cls) -> str: ...
@@ -1604,7 +1604,7 @@ class MapStyleSheetEntries(winrt.system.Object, metaclass=MapStyleSheetEntries_S
     pass
 
 @typing.final
-class MapStyleSheetEntryStates_Static(type):
+class MapStyleSheetEntryStates_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntryStates::get_Disabled()
     @_property
     def disabled(cls) -> str: ...

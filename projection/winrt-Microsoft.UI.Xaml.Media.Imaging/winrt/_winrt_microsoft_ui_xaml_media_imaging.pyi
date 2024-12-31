@@ -274,7 +274,7 @@ class WriteableBitmap(BitmapSource):
     @_property
     def pixel_buffer(self) -> windows_storage_streams.IBuffer: ...
 
-class XamlRenderingBackgroundTask_Static(type):
+class XamlRenderingBackgroundTask_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class XamlRenderingBackgroundTask(winrt.system.Object, metaclass=XamlRenderingBackgroundTask_Static):

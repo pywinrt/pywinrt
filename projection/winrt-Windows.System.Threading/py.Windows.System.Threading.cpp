@@ -583,6 +583,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -596,7 +602,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ThreadPool_Static{PyType_FromSpec(&type_spec_ThreadPool_Static)};
+    py::pyobj_handle ThreadPool_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ThreadPool_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ThreadPool_Static{PyType_FromSpecWithBases(&type_spec_ThreadPool_Static, ThreadPool_Static_bases.get())};
     if (!type_ThreadPool_Static)
     {
         return nullptr;
@@ -608,7 +620,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ThreadPoolTimer_Static{PyType_FromSpec(&type_spec_ThreadPoolTimer_Static)};
+    py::pyobj_handle ThreadPoolTimer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ThreadPoolTimer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ThreadPoolTimer_Static{PyType_FromSpecWithBases(&type_spec_ThreadPoolTimer_Static, ThreadPoolTimer_Static_bases.get())};
     if (!type_ThreadPoolTimer_Static)
     {
         return nullptr;

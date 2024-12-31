@@ -3690,6 +3690,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3763,7 +3769,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DownloadProgressEventArgs_type{py::register_python_type(module.get(), &type_spec_DownloadProgressEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DownloadProgressEventArgs_type{py::register_python_type(module.get(), &type_spec_DownloadProgressEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DownloadProgressEventArgs_type)
     {
         return nullptr;
@@ -3799,7 +3805,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SoftwareBitmapSource_type{py::register_python_type(module.get(), &type_spec_SoftwareBitmapSource, SoftwareBitmapSource_bases.get(), nullptr)};
+    py::pytype_handle SoftwareBitmapSource_type{py::register_python_type(module.get(), &type_spec_SoftwareBitmapSource, SoftwareBitmapSource_bases.get(), inspectable_meta_type)};
     if (!SoftwareBitmapSource_type)
     {
         return nullptr;
@@ -3853,13 +3859,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SvgImageSourceFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_SvgImageSourceFailedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SvgImageSourceFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_SvgImageSourceFailedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SvgImageSourceFailedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SvgImageSourceOpenedEventArgs_type{py::register_python_type(module.get(), &type_spec_SvgImageSourceOpenedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SvgImageSourceOpenedEventArgs_type{py::register_python_type(module.get(), &type_spec_SvgImageSourceOpenedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SvgImageSourceOpenedEventArgs_type)
     {
         return nullptr;
@@ -3871,7 +3877,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle VirtualSurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_VirtualSurfaceImageSource, VirtualSurfaceImageSource_bases.get(), nullptr)};
+    py::pytype_handle VirtualSurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_VirtualSurfaceImageSource, VirtualSurfaceImageSource_bases.get(), inspectable_meta_type)};
     if (!VirtualSurfaceImageSource_type)
     {
         return nullptr;
@@ -3883,13 +3889,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WriteableBitmap_type{py::register_python_type(module.get(), &type_spec_WriteableBitmap, WriteableBitmap_bases.get(), nullptr)};
+    py::pytype_handle WriteableBitmap_type{py::register_python_type(module.get(), &type_spec_WriteableBitmap, WriteableBitmap_bases.get(), inspectable_meta_type)};
     if (!WriteableBitmap_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlRenderingBackgroundTask_Static{PyType_FromSpec(&type_spec_XamlRenderingBackgroundTask_Static)};
+    py::pyobj_handle XamlRenderingBackgroundTask_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!XamlRenderingBackgroundTask_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XamlRenderingBackgroundTask_Static{PyType_FromSpecWithBases(&type_spec_XamlRenderingBackgroundTask_Static, XamlRenderingBackgroundTask_Static_bases.get())};
     if (!type_XamlRenderingBackgroundTask_Static)
     {
         return nullptr;

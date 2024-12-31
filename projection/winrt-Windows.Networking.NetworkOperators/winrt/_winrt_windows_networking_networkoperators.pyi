@@ -117,7 +117,7 @@ class ESimDownloadProfileMetadataResult(winrt.system.Object):
     def result(self) -> ESimOperationResult: ...
 
 @typing.final
-class ESimManager_Static(type):
+class ESimManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Networking.NetworkOperators.ESimWatcher Windows.Networking.NetworkOperators.ESimManager::TryCreateESimWatcher()
     def try_create_e_sim_watcher(cls) -> typing.Optional[ESimWatcher]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Networking.NetworkOperators.ESimManager::add_ServiceInfoChanged(Windows.Foundation.EventHandler`1<System.Object>)
@@ -277,7 +277,7 @@ class ESimWatcher(winrt.system.Object):
     def status(self) -> ESimWatcherStatus: ...
 
 @typing.final
-class FdnAccessManager_Static(type):
+class FdnAccessManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Networking.NetworkOperators.FdnAccessManager::RequestUnlockAsync(System.String)
     def request_unlock_async(cls, contact_list_id: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
 
@@ -286,7 +286,7 @@ class FdnAccessManager(winrt.system.Object, metaclass=FdnAccessManager_Static):
     pass
 
 @typing.final
-class HotspotAuthenticationContext_Static(type):
+class HotspotAuthenticationContext_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Networking.NetworkOperators.HotspotAuthenticationContext::TryGetAuthenticationContext(System.String,Windows.Networking.NetworkOperators.HotspotAuthenticationContext&)
     def try_get_authentication_context(cls, even_token: str, /) -> typing.Tuple[bool, HotspotAuthenticationContext]: ...
 
@@ -340,7 +340,7 @@ class HotspotCredentialsAuthenticationResult(winrt.system.Object):
     def response_code(self) -> HotspotAuthenticationResponseCode: ...
 
 @typing.final
-class KnownCSimFilePaths_Static(type):
+class KnownCSimFilePaths_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownCSimFilePaths::get_EFSpn()
     @_property
     def e_f_spn(cls) -> typing.Sequence[winrt.system.UInt32]: ...
@@ -356,7 +356,7 @@ class KnownCSimFilePaths(winrt.system.Object, metaclass=KnownCSimFilePaths_Stati
     pass
 
 @typing.final
-class KnownRuimFilePaths_Static(type):
+class KnownRuimFilePaths_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownRuimFilePaths::get_EFSpn()
     @_property
     def e_f_spn(cls) -> typing.Sequence[winrt.system.UInt32]: ...
@@ -372,7 +372,7 @@ class KnownRuimFilePaths(winrt.system.Object, metaclass=KnownRuimFilePaths_Stati
     pass
 
 @typing.final
-class KnownSimFilePaths_Static(type):
+class KnownSimFilePaths_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownSimFilePaths::get_EFOns()
     @_property
     def e_f_ons(cls) -> typing.Sequence[winrt.system.UInt32]: ...
@@ -391,7 +391,7 @@ class KnownSimFilePaths(winrt.system.Object, metaclass=KnownSimFilePaths_Static)
     pass
 
 @typing.final
-class KnownUSimFilePaths_Static(type):
+class KnownUSimFilePaths_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownUSimFilePaths::get_EFOpl()
     @_property
     def e_f_opl(cls) -> typing.Sequence[winrt.system.UInt32]: ...
@@ -413,7 +413,7 @@ class KnownUSimFilePaths(winrt.system.Object, metaclass=KnownUSimFilePaths_Stati
     pass
 
 @typing.final
-class MobileBroadbandAccount_Static(type):
+class MobileBroadbandAccount_Static(winrt._winrt.IInspectable_Static):
     # Windows.Networking.NetworkOperators.MobileBroadbandAccount Windows.Networking.NetworkOperators.MobileBroadbandAccount::CreateFromNetworkAccountId(System.String)
     def create_from_network_account_id(cls, network_account_id: str, /) -> MobileBroadbandAccount: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Networking.NetworkOperators.MobileBroadbandAccount::get_AvailableNetworkAccountIds()
@@ -870,7 +870,7 @@ class MobileBroadbandDeviceServiceTriggerDetails(winrt.system.Object):
     def event_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class MobileBroadbandModem_Static(type):
+class MobileBroadbandModem_Static(winrt._winrt.IInspectable_Static):
     # Windows.Networking.NetworkOperators.MobileBroadbandModem Windows.Networking.NetworkOperators.MobileBroadbandModem::FromId(System.String)
     def from_id(cls, device_id: str, /) -> MobileBroadbandModem: ...
     # Windows.Networking.NetworkOperators.MobileBroadbandModem Windows.Networking.NetworkOperators.MobileBroadbandModem::GetDefault()
@@ -1330,7 +1330,7 @@ class NetworkOperatorTetheringClient(winrt.system.Object):
     def mac_address(self) -> str: ...
 
 @typing.final
-class NetworkOperatorTetheringManager_Static(type):
+class NetworkOperatorTetheringManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager::CreateFromConnectionProfile(Windows.Networking.Connectivity.ConnectionProfile)
     def create_from_connection_profile(cls, profile: windows_networking_connectivity.ConnectionProfile, /) -> NetworkOperatorTetheringManager: ...
     # Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager::CreateFromConnectionProfile(Windows.Networking.Connectivity.ConnectionProfile,Windows.Networking.Connectivity.NetworkAdapter)
@@ -1446,7 +1446,7 @@ class ProvisionedProfile(winrt.system.Object):
     def update_usage(self, value: ProfileUsage, /) -> None: ...
 
 @typing.final
-class ProvisioningAgent_Static(type):
+class ProvisioningAgent_Static(winrt._winrt.IInspectable_Static):
     # Windows.Networking.NetworkOperators.ProvisioningAgent Windows.Networking.NetworkOperators.ProvisioningAgent::CreateFromNetworkAccountId(System.String)
     def create_from_network_account_id(cls, network_account_id: str, /) -> ProvisioningAgent: ...
 
@@ -1498,7 +1498,7 @@ class UssdReply(winrt.system.Object):
     def result_code(self) -> UssdResultCode: ...
 
 @typing.final
-class UssdSession_Static(type):
+class UssdSession_Static(winrt._winrt.IInspectable_Static):
     # Windows.Networking.NetworkOperators.UssdSession Windows.Networking.NetworkOperators.UssdSession::CreateFromNetworkAccountId(System.String)
     def create_from_network_account_id(cls, network_account_id: str, /) -> UssdSession: ...
     # Windows.Networking.NetworkOperators.UssdSession Windows.Networking.NetworkOperators.UssdSession::CreateFromNetworkInterfaceId(System.String)

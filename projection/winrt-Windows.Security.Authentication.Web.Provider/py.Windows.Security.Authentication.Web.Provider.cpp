@@ -5803,6 +5803,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5816,13 +5822,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle WebAccountClientView_type{py::register_python_type(module.get(), &type_spec_WebAccountClientView, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountClientView_type{py::register_python_type(module.get(), &type_spec_WebAccountClientView, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountClientView_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_WebAccountManager_Static{PyType_FromSpec(&type_spec_WebAccountManager_Static)};
+    py::pyobj_handle WebAccountManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WebAccountManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WebAccountManager_Static{PyType_FromSpecWithBases(&type_spec_WebAccountManager_Static, WebAccountManager_Static_bases.get())};
     if (!type_WebAccountManager_Static)
     {
         return nullptr;
@@ -5834,61 +5846,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle WebAccountProviderAddAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderAddAccountOperation, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountProviderAddAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderAddAccountOperation, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountProviderAddAccountOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebAccountProviderDeleteAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderDeleteAccountOperation, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountProviderDeleteAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderDeleteAccountOperation, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountProviderDeleteAccountOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebAccountProviderGetTokenSilentOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderGetTokenSilentOperation, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountProviderGetTokenSilentOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderGetTokenSilentOperation, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountProviderGetTokenSilentOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebAccountProviderManageAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderManageAccountOperation, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountProviderManageAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderManageAccountOperation, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountProviderManageAccountOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebAccountProviderRequestTokenOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderRequestTokenOperation, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountProviderRequestTokenOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderRequestTokenOperation, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountProviderRequestTokenOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebAccountProviderRetrieveCookiesOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderRetrieveCookiesOperation, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountProviderRetrieveCookiesOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderRetrieveCookiesOperation, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountProviderRetrieveCookiesOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebAccountProviderSignOutAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderSignOutAccountOperation, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountProviderSignOutAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderSignOutAccountOperation, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountProviderSignOutAccountOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebAccountProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle WebAccountProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!WebAccountProviderTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebProviderTokenRequest_type{py::register_python_type(module.get(), &type_spec_WebProviderTokenRequest, object_bases.get(), nullptr)};
+    py::pytype_handle WebProviderTokenRequest_type{py::register_python_type(module.get(), &type_spec_WebProviderTokenRequest, object_bases.get(), inspectable_meta_type)};
     if (!WebProviderTokenRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebProviderTokenResponse_type{py::register_python_type(module.get(), &type_spec_WebProviderTokenResponse, object_bases.get(), nullptr)};
+    py::pytype_handle WebProviderTokenResponse_type{py::register_python_type(module.get(), &type_spec_WebProviderTokenResponse, object_bases.get(), inspectable_meta_type)};
     if (!WebProviderTokenResponse_type)
     {
         return nullptr;
@@ -5900,7 +5912,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebAccountProviderBaseReportOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderBaseReportOperation, nullptr))};
+    py::pytype_handle ImplementsIWebAccountProviderBaseReportOperation_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebAccountProviderBaseReportOperation, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebAccountProviderBaseReportOperation_type)
     {
         return nullptr;
@@ -5917,7 +5929,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebAccountProviderOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderOperation, nullptr))};
+    py::pytype_handle ImplementsIWebAccountProviderOperation_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebAccountProviderOperation, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebAccountProviderOperation_type)
     {
         return nullptr;
@@ -5934,7 +5946,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebAccountProviderSilentReportOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderSilentReportOperation, nullptr))};
+    py::pytype_handle ImplementsIWebAccountProviderSilentReportOperation_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebAccountProviderSilentReportOperation, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebAccountProviderSilentReportOperation_type)
     {
         return nullptr;
@@ -5951,7 +5963,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebAccountProviderTokenObjects_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderTokenObjects, nullptr))};
+    py::pytype_handle ImplementsIWebAccountProviderTokenObjects_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebAccountProviderTokenObjects, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebAccountProviderTokenObjects_type)
     {
         return nullptr;
@@ -5968,7 +5980,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebAccountProviderTokenObjects2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderTokenObjects2, nullptr))};
+    py::pytype_handle ImplementsIWebAccountProviderTokenObjects2_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebAccountProviderTokenObjects2, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebAccountProviderTokenObjects2_type)
     {
         return nullptr;
@@ -5985,7 +5997,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebAccountProviderTokenOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderTokenOperation, nullptr))};
+    py::pytype_handle ImplementsIWebAccountProviderTokenOperation_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebAccountProviderTokenOperation, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebAccountProviderTokenOperation_type)
     {
         return nullptr;
@@ -6002,7 +6014,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebAccountProviderUIReportOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebAccountProviderUIReportOperation, nullptr))};
+    py::pytype_handle ImplementsIWebAccountProviderUIReportOperation_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebAccountProviderUIReportOperation, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebAccountProviderUIReportOperation_type)
     {
         return nullptr;

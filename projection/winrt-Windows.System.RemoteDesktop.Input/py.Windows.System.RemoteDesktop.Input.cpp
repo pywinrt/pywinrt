@@ -455,6 +455,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_input(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -468,7 +474,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RemoteTextConnection_type{py::register_python_type(module.get(), &type_spec_RemoteTextConnection, object_bases.get(), nullptr)};
+    py::pytype_handle RemoteTextConnection_type{py::register_python_type(module.get(), &type_spec_RemoteTextConnection, object_bases.get(), inspectable_meta_type)};
     if (!RemoteTextConnection_type)
     {
         return nullptr;

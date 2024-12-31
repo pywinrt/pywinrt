@@ -18,7 +18,7 @@ from winrt.windows.web import WebErrorStatus
 Self = typing.TypeVar('Self')
 
 @typing.final
-class WebError_Static(type):
+class WebError_Static(winrt._winrt.IInspectable_Static):
     # Windows.Web.WebErrorStatus Windows.Web.WebError::GetStatus(System.Int32)
     def get_status(cls, hresult: winrt.system.Int32, /) -> WebErrorStatus: ...
 

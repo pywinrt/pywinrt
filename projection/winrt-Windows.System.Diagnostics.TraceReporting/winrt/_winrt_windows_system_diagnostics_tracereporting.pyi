@@ -16,7 +16,7 @@ from winrt.windows.system.diagnostics.tracereporting import PlatformDiagnosticAc
 Self = typing.TypeVar('Self')
 
 @typing.final
-class PlatformDiagnosticActions_Static(type):
+class PlatformDiagnosticActions_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::DownloadLatestSettingsForNamespace(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)
     def download_latest_settings_for_namespace(cls, partner: str, feature: str, is_scenario_namespace: bool, download_over_costed_network: bool, download_over_battery: bool, /) -> PlatformDiagnosticActionState: ...
     # Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::ForceUpload(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies,System.Boolean,System.Boolean)

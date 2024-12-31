@@ -1070,6 +1070,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_provider(void) noexcep
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1083,13 +1089,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_provider(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle PerformLocalActionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerformLocalActionRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PerformLocalActionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerformLocalActionRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PerformLocalActionRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RemoteDesktopConnectionInfo_Static{PyType_FromSpec(&type_spec_RemoteDesktopConnectionInfo_Static)};
+    py::pyobj_handle RemoteDesktopConnectionInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RemoteDesktopConnectionInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RemoteDesktopConnectionInfo_Static{PyType_FromSpecWithBases(&type_spec_RemoteDesktopConnectionInfo_Static, RemoteDesktopConnectionInfo_Static_bases.get())};
     if (!type_RemoteDesktopConnectionInfo_Static)
     {
         return nullptr;
@@ -1101,7 +1113,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_provider(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_RemoteDesktopConnectionRemoteInfo_Static{PyType_FromSpec(&type_spec_RemoteDesktopConnectionRemoteInfo_Static)};
+    py::pyobj_handle RemoteDesktopConnectionRemoteInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RemoteDesktopConnectionRemoteInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RemoteDesktopConnectionRemoteInfo_Static{PyType_FromSpecWithBases(&type_spec_RemoteDesktopConnectionRemoteInfo_Static, RemoteDesktopConnectionRemoteInfo_Static_bases.get())};
     if (!type_RemoteDesktopConnectionRemoteInfo_Static)
     {
         return nullptr;
@@ -1113,13 +1131,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_provider(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle RemoteDesktopInfo_type{py::register_python_type(module.get(), &type_spec_RemoteDesktopInfo, object_bases.get(), nullptr)};
+    py::pytype_handle RemoteDesktopInfo_type{py::register_python_type(module.get(), &type_spec_RemoteDesktopInfo, object_bases.get(), inspectable_meta_type)};
     if (!RemoteDesktopInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RemoteDesktopRegistrar_Static{PyType_FromSpec(&type_spec_RemoteDesktopRegistrar_Static)};
+    py::pyobj_handle RemoteDesktopRegistrar_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RemoteDesktopRegistrar_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RemoteDesktopRegistrar_Static{PyType_FromSpecWithBases(&type_spec_RemoteDesktopRegistrar_Static, RemoteDesktopRegistrar_Static_bases.get())};
     if (!type_RemoteDesktopRegistrar_Static)
     {
         return nullptr;

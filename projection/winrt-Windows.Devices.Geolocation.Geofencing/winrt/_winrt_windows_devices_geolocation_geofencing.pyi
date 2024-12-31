@@ -50,7 +50,7 @@ class Geofence(winrt.system.Object):
     def start_time(self) -> datetime.datetime: ...
 
 @typing.final
-class GeofenceMonitor_Static(type):
+class GeofenceMonitor_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Geolocation.Geofencing.GeofenceMonitor Windows.Devices.Geolocation.Geofencing.GeofenceMonitor::get_Current()
     @_property
     def current(cls) -> GeofenceMonitor: ...

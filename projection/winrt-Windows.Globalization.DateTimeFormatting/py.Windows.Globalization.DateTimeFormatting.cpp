@@ -1007,6 +1007,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_datetimeformatting(void) noex
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1020,7 +1026,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_datetimeformatting(void) noex
         return nullptr;
     }
 
-    py::pyobj_handle type_DateTimeFormatter_Static{PyType_FromSpec(&type_spec_DateTimeFormatter_Static)};
+    py::pyobj_handle DateTimeFormatter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DateTimeFormatter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DateTimeFormatter_Static{PyType_FromSpecWithBases(&type_spec_DateTimeFormatter_Static, DateTimeFormatter_Static_bases.get())};
     if (!type_DateTimeFormatter_Static)
     {
         return nullptr;

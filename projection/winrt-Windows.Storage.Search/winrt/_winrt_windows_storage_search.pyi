@@ -28,7 +28,7 @@ class SortEntry:
     def __init__(self, property_name: str = "", ascending_order: bool = False) -> None: ...
 
 @typing.final
-class ContentIndexer_Static(type):
+class ContentIndexer_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.Search.ContentIndexer Windows.Storage.Search.ContentIndexer::GetIndexer()
     def get_indexer(cls) -> ContentIndexer: ...
     # Windows.Storage.Search.ContentIndexer Windows.Storage.Search.ContentIndexer::GetIndexer(System.String)

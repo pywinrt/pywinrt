@@ -15,7 +15,7 @@ import winrt.windows.graphics.imaging as windows_graphics_imaging
 Self = typing.TypeVar('Self')
 
 @typing.final
-class InkWorkspaceHostedAppManager_Static(type):
+class InkWorkspaceHostedAppManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager::GetForCurrentApp()
     def get_for_current_app(cls) -> InkWorkspaceHostedAppManager: ...
 

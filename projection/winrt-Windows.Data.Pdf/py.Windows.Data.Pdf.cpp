@@ -1535,6 +1535,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_pdf(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1548,7 +1554,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_pdf(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PdfDocument_Static{PyType_FromSpec(&type_spec_PdfDocument_Static)};
+    py::pyobj_handle PdfDocument_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PdfDocument_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PdfDocument_Static{PyType_FromSpecWithBases(&type_spec_PdfDocument_Static, PdfDocument_Static_bases.get())};
     if (!type_PdfDocument_Static)
     {
         return nullptr;
@@ -1560,19 +1572,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_pdf(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PdfPage_type{py::register_python_type(module.get(), &type_spec_PdfPage, object_bases.get(), nullptr)};
+    py::pytype_handle PdfPage_type{py::register_python_type(module.get(), &type_spec_PdfPage, object_bases.get(), inspectable_meta_type)};
     if (!PdfPage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PdfPageDimensions_type{py::register_python_type(module.get(), &type_spec_PdfPageDimensions, object_bases.get(), nullptr)};
+    py::pytype_handle PdfPageDimensions_type{py::register_python_type(module.get(), &type_spec_PdfPageDimensions, object_bases.get(), inspectable_meta_type)};
     if (!PdfPageDimensions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PdfPageRenderOptions_type{py::register_python_type(module.get(), &type_spec_PdfPageRenderOptions, object_bases.get(), nullptr)};
+    py::pytype_handle PdfPageRenderOptions_type{py::register_python_type(module.get(), &type_spec_PdfPageRenderOptions, object_bases.get(), inspectable_meta_type)};
     if (!PdfPageRenderOptions_type)
     {
         return nullptr;

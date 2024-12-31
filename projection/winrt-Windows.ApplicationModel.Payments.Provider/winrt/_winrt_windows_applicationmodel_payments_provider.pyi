@@ -24,7 +24,7 @@ class PaymentAppCanMakePaymentTriggerDetails(winrt.system.Object):
     def request(self) -> windows_applicationmodel_payments.PaymentRequest: ...
 
 @typing.final
-class PaymentAppManager_Static(type):
+class PaymentAppManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.Payments.Provider.PaymentAppManager Windows.ApplicationModel.Payments.Provider.PaymentAppManager::get_Current()
     @_property
     def current(cls) -> PaymentAppManager: ...
@@ -37,7 +37,7 @@ class PaymentAppManager(winrt.system.Object, metaclass=PaymentAppManager_Static)
     def unregister_async(self) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
-class PaymentTransaction_Static(type):
+class PaymentTransaction_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Payments.Provider.PaymentTransaction> Windows.ApplicationModel.Payments.Provider.PaymentTransaction::FromIdAsync(System.String)
     def from_id_async(cls, id: str, /) -> windows_foundation.IAsyncOperation[PaymentTransaction]: ...
 

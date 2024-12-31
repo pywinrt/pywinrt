@@ -23,7 +23,7 @@ from winrt.windows.web.http.filters import HttpCacheReadBehavior, HttpCacheWrite
 Self = typing.TypeVar('Self')
 
 @typing.final
-class HttpBaseProtocolFilter_Static(type):
+class HttpBaseProtocolFilter_Static(winrt._winrt.IInspectable_Static):
     # Windows.Web.Http.Filters.HttpBaseProtocolFilter Windows.Web.Http.Filters.HttpBaseProtocolFilter::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> HttpBaseProtocolFilter: ...
 

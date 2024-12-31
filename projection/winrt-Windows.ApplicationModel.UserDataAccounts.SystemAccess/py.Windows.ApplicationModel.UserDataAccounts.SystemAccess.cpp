@@ -3457,6 +3457,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_systemacc
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3470,13 +3476,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_systemacc
         return nullptr;
     }
 
-    py::pytype_handle DeviceAccountConfiguration_type{py::register_python_type(module.get(), &type_spec_DeviceAccountConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceAccountConfiguration_type{py::register_python_type(module.get(), &type_spec_DeviceAccountConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!DeviceAccountConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UserDataAccountSystemAccessManager_Static{PyType_FromSpec(&type_spec_UserDataAccountSystemAccessManager_Static)};
+    py::pyobj_handle UserDataAccountSystemAccessManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserDataAccountSystemAccessManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserDataAccountSystemAccessManager_Static{PyType_FromSpecWithBases(&type_spec_UserDataAccountSystemAccessManager_Static, UserDataAccountSystemAccessManager_Static_bases.get())};
     if (!type_UserDataAccountSystemAccessManager_Static)
     {
         return nullptr;

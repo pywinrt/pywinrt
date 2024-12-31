@@ -56,7 +56,7 @@ class SystemUpdateLastErrorInfo(winrt.system.Object):
     def state(self) -> SystemUpdateManagerState: ...
 
 @typing.final
-class SystemUpdateManager_Static(type):
+class SystemUpdateManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.Update.SystemUpdateManager::BlockAutomaticRebootAsync(System.String)
     def block_automatic_reboot_async(cls, lock_id: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.Update.SystemUpdateManager::GetAutomaticRebootBlockIds()

@@ -1499,6 +1499,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi_provider(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1512,7 +1518,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ProviderSpiConnectionSettings_type{py::register_python_type(module.get(), &type_spec_ProviderSpiConnectionSettings, object_bases.get(), nullptr)};
+    py::pytype_handle ProviderSpiConnectionSettings_type{py::register_python_type(module.get(), &type_spec_ProviderSpiConnectionSettings, object_bases.get(), inspectable_meta_type)};
     if (!ProviderSpiConnectionSettings_type)
     {
         return nullptr;
@@ -1524,7 +1530,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISpiControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpiControllerProvider, nullptr))};
+    py::pytype_handle ImplementsISpiControllerProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsISpiControllerProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsISpiControllerProvider_type)
     {
         return nullptr;
@@ -1541,7 +1547,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISpiDeviceProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpiDeviceProvider, nullptr))};
+    py::pytype_handle ImplementsISpiDeviceProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsISpiDeviceProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsISpiDeviceProvider_type)
     {
         return nullptr;
@@ -1558,7 +1564,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISpiProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpiProvider, nullptr))};
+    py::pytype_handle ImplementsISpiProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsISpiProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsISpiProvider_type)
     {
         return nullptr;

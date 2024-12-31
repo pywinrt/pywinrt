@@ -3488,6 +3488,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3501,13 +3507,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LocalContentSuggestionSettings_type{py::register_python_type(module.get(), &type_spec_LocalContentSuggestionSettings, object_bases.get(), nullptr)};
+    py::pytype_handle LocalContentSuggestionSettings_type{py::register_python_type(module.get(), &type_spec_LocalContentSuggestionSettings, object_bases.get(), inspectable_meta_type)};
     if (!LocalContentSuggestionSettings_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SearchPane_Static{PyType_FromSpec(&type_spec_SearchPane_Static)};
+    py::pyobj_handle SearchPane_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SearchPane_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SearchPane_Static{PyType_FromSpecWithBases(&type_spec_SearchPane_Static, SearchPane_Static_bases.get())};
     if (!type_SearchPane_Static)
     {
         return nullptr;
@@ -3519,73 +3531,73 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SearchPaneQueryChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneQueryChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SearchPaneQueryChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneQueryChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SearchPaneQueryChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchPaneQueryLinguisticDetails_type{py::register_python_type(module.get(), &type_spec_SearchPaneQueryLinguisticDetails, object_bases.get(), nullptr)};
+    py::pytype_handle SearchPaneQueryLinguisticDetails_type{py::register_python_type(module.get(), &type_spec_SearchPaneQueryLinguisticDetails, object_bases.get(), inspectable_meta_type)};
     if (!SearchPaneQueryLinguisticDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchPaneQuerySubmittedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneQuerySubmittedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SearchPaneQuerySubmittedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneQuerySubmittedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SearchPaneQuerySubmittedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchPaneResultSuggestionChosenEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneResultSuggestionChosenEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SearchPaneResultSuggestionChosenEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneResultSuggestionChosenEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SearchPaneResultSuggestionChosenEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchPaneSuggestionsRequest_type{py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequest, object_bases.get(), nullptr)};
+    py::pytype_handle SearchPaneSuggestionsRequest_type{py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequest, object_bases.get(), inspectable_meta_type)};
     if (!SearchPaneSuggestionsRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchPaneSuggestionsRequestDeferral_type{py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle SearchPaneSuggestionsRequestDeferral_type{py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestDeferral, object_bases.get(), inspectable_meta_type)};
     if (!SearchPaneSuggestionsRequestDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchPaneSuggestionsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SearchPaneSuggestionsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SearchPaneSuggestionsRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchPaneVisibilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneVisibilityChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SearchPaneVisibilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneVisibilityChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SearchPaneVisibilityChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchQueryLinguisticDetails_type{py::register_python_type(module.get(), &type_spec_SearchQueryLinguisticDetails, object_bases.get(), nullptr)};
+    py::pytype_handle SearchQueryLinguisticDetails_type{py::register_python_type(module.get(), &type_spec_SearchQueryLinguisticDetails, object_bases.get(), inspectable_meta_type)};
     if (!SearchQueryLinguisticDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchSuggestionCollection_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionCollection, object_bases.get(), nullptr)};
+    py::pytype_handle SearchSuggestionCollection_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionCollection, object_bases.get(), inspectable_meta_type)};
     if (!SearchSuggestionCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchSuggestionsRequest_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequest, object_bases.get(), nullptr)};
+    py::pytype_handle SearchSuggestionsRequest_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequest, object_bases.get(), inspectable_meta_type)};
     if (!SearchSuggestionsRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchSuggestionsRequestDeferral_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle SearchSuggestionsRequestDeferral_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestDeferral, object_bases.get(), inspectable_meta_type)};
     if (!SearchSuggestionsRequestDeferral_type)
     {
         return nullptr;
@@ -3597,7 +3609,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISearchPaneQueryChangedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISearchPaneQueryChangedEventArgs, nullptr))};
+    py::pytype_handle ImplementsISearchPaneQueryChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ImplementsISearchPaneQueryChangedEventArgs, nullptr, inspectable_meta_type)};
     if (!ImplementsISearchPaneQueryChangedEventArgs_type)
     {
         return nullptr;

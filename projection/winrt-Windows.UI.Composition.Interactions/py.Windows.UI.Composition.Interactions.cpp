@@ -6912,6 +6912,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -6967,7 +6973,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionInteractionSourceCollection_type{py::register_python_type(module.get(), &type_spec_CompositionInteractionSourceCollection, CompositionInteractionSourceCollection_bases.get(), nullptr)};
+    py::pytype_handle CompositionInteractionSourceCollection_type{py::register_python_type(module.get(), &type_spec_CompositionInteractionSourceCollection, CompositionInteractionSourceCollection_bases.get(), inspectable_meta_type)};
     if (!CompositionInteractionSourceCollection_type)
     {
         return nullptr;
@@ -6979,7 +6985,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InteractionSourceConfiguration_type{py::register_python_type(module.get(), &type_spec_InteractionSourceConfiguration, InteractionSourceConfiguration_bases.get(), nullptr)};
+    py::pytype_handle InteractionSourceConfiguration_type{py::register_python_type(module.get(), &type_spec_InteractionSourceConfiguration, InteractionSourceConfiguration_bases.get(), inspectable_meta_type)};
     if (!InteractionSourceConfiguration_type)
     {
         return nullptr;
@@ -7009,13 +7015,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerCustomAnimationStateEnteredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerCustomAnimationStateEnteredArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InteractionTrackerCustomAnimationStateEnteredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerCustomAnimationStateEnteredArgs, object_bases.get(), inspectable_meta_type)};
     if (!InteractionTrackerCustomAnimationStateEnteredArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerIdleStateEnteredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerIdleStateEnteredArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InteractionTrackerIdleStateEnteredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerIdleStateEnteredArgs, object_bases.get(), inspectable_meta_type)};
     if (!InteractionTrackerIdleStateEnteredArgs_type)
     {
         return nullptr;
@@ -7117,25 +7123,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerInertiaStateEnteredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaStateEnteredArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InteractionTrackerInertiaStateEnteredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaStateEnteredArgs, object_bases.get(), inspectable_meta_type)};
     if (!InteractionTrackerInertiaStateEnteredArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerInteractingStateEnteredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInteractingStateEnteredArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InteractionTrackerInteractingStateEnteredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInteractingStateEnteredArgs, object_bases.get(), inspectable_meta_type)};
     if (!InteractionTrackerInteractingStateEnteredArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerRequestIgnoredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerRequestIgnoredArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InteractionTrackerRequestIgnoredArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerRequestIgnoredArgs, object_bases.get(), inspectable_meta_type)};
     if (!InteractionTrackerRequestIgnoredArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerValuesChangedArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerValuesChangedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InteractionTrackerValuesChangedArgs_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerValuesChangedArgs, object_bases.get(), inspectable_meta_type)};
     if (!InteractionTrackerValuesChangedArgs_type)
     {
         return nullptr;
@@ -7219,7 +7225,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICompositionInteractionSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICompositionInteractionSource, nullptr))};
+    py::pytype_handle ImplementsICompositionInteractionSource_type{py::register_python_type(module.get(), &type_spec_ImplementsICompositionInteractionSource, nullptr, inspectable_meta_type)};
     if (!ImplementsICompositionInteractionSource_type)
     {
         return nullptr;
@@ -7236,7 +7242,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIInteractionTrackerOwner_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInteractionTrackerOwner, nullptr))};
+    py::pytype_handle ImplementsIInteractionTrackerOwner_type{py::register_python_type(module.get(), &type_spec_ImplementsIInteractionTrackerOwner, nullptr, inspectable_meta_type)};
     if (!ImplementsIInteractionTrackerOwner_type)
     {
         return nullptr;

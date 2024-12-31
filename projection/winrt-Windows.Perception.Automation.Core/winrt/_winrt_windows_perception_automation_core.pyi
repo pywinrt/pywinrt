@@ -14,7 +14,7 @@ import winrt.windows.foundation as windows_foundation
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CorePerceptionAutomation_Static(type):
+class CorePerceptionAutomation_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.Perception.Automation.Core.CorePerceptionAutomation::SetActivationFactoryProvider(Windows.Foundation.IGetActivationFactory)
     def set_activation_factory_provider(cls, provider: windows_foundation.IGetActivationFactory, /) -> None: ...
 

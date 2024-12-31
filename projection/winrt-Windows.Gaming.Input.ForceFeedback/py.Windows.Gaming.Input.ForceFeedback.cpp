@@ -2511,6 +2511,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_forcefeedback(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2524,31 +2530,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_forcefeedback(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ConditionForceEffect_type{py::register_python_type(module.get(), &type_spec_ConditionForceEffect, object_bases.get(), nullptr)};
+    py::pytype_handle ConditionForceEffect_type{py::register_python_type(module.get(), &type_spec_ConditionForceEffect, object_bases.get(), inspectable_meta_type)};
     if (!ConditionForceEffect_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConstantForceEffect_type{py::register_python_type(module.get(), &type_spec_ConstantForceEffect, object_bases.get(), nullptr)};
+    py::pytype_handle ConstantForceEffect_type{py::register_python_type(module.get(), &type_spec_ConstantForceEffect, object_bases.get(), inspectable_meta_type)};
     if (!ConstantForceEffect_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ForceFeedbackMotor_type{py::register_python_type(module.get(), &type_spec_ForceFeedbackMotor, object_bases.get(), nullptr)};
+    py::pytype_handle ForceFeedbackMotor_type{py::register_python_type(module.get(), &type_spec_ForceFeedbackMotor, object_bases.get(), inspectable_meta_type)};
     if (!ForceFeedbackMotor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PeriodicForceEffect_type{py::register_python_type(module.get(), &type_spec_PeriodicForceEffect, object_bases.get(), nullptr)};
+    py::pytype_handle PeriodicForceEffect_type{py::register_python_type(module.get(), &type_spec_PeriodicForceEffect, object_bases.get(), inspectable_meta_type)};
     if (!PeriodicForceEffect_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RampForceEffect_type{py::register_python_type(module.get(), &type_spec_RampForceEffect, object_bases.get(), nullptr)};
+    py::pytype_handle RampForceEffect_type{py::register_python_type(module.get(), &type_spec_RampForceEffect, object_bases.get(), inspectable_meta_type)};
     if (!RampForceEffect_type)
     {
         return nullptr;
@@ -2560,7 +2566,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_forcefeedback(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIForceFeedbackEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIForceFeedbackEffect, nullptr))};
+    py::pytype_handle ImplementsIForceFeedbackEffect_type{py::register_python_type(module.get(), &type_spec_ImplementsIForceFeedbackEffect, nullptr, inspectable_meta_type)};
     if (!ImplementsIForceFeedbackEffect_type)
     {
         return nullptr;

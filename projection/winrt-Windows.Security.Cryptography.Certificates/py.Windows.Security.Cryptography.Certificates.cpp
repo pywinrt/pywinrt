@@ -8919,6 +8919,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -8932,19 +8938,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pytype_handle Certificate_type{py::register_python_type(module.get(), &type_spec_Certificate, object_bases.get(), nullptr)};
+    py::pytype_handle Certificate_type{py::register_python_type(module.get(), &type_spec_Certificate, object_bases.get(), inspectable_meta_type)};
     if (!Certificate_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CertificateChain_type{py::register_python_type(module.get(), &type_spec_CertificateChain, object_bases.get(), nullptr)};
+    py::pytype_handle CertificateChain_type{py::register_python_type(module.get(), &type_spec_CertificateChain, object_bases.get(), inspectable_meta_type)};
     if (!CertificateChain_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CertificateEnrollmentManager_Static{PyType_FromSpec(&type_spec_CertificateEnrollmentManager_Static)};
+    py::pyobj_handle CertificateEnrollmentManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CertificateEnrollmentManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CertificateEnrollmentManager_Static{PyType_FromSpecWithBases(&type_spec_CertificateEnrollmentManager_Static, CertificateEnrollmentManager_Static_bases.get())};
     if (!type_CertificateEnrollmentManager_Static)
     {
         return nullptr;
@@ -8956,37 +8968,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pytype_handle CertificateExtension_type{py::register_python_type(module.get(), &type_spec_CertificateExtension, object_bases.get(), nullptr)};
+    py::pytype_handle CertificateExtension_type{py::register_python_type(module.get(), &type_spec_CertificateExtension, object_bases.get(), inspectable_meta_type)};
     if (!CertificateExtension_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CertificateKeyUsages_type{py::register_python_type(module.get(), &type_spec_CertificateKeyUsages, object_bases.get(), nullptr)};
+    py::pytype_handle CertificateKeyUsages_type{py::register_python_type(module.get(), &type_spec_CertificateKeyUsages, object_bases.get(), inspectable_meta_type)};
     if (!CertificateKeyUsages_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CertificateQuery_type{py::register_python_type(module.get(), &type_spec_CertificateQuery, object_bases.get(), nullptr)};
+    py::pytype_handle CertificateQuery_type{py::register_python_type(module.get(), &type_spec_CertificateQuery, object_bases.get(), inspectable_meta_type)};
     if (!CertificateQuery_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CertificateRequestProperties_type{py::register_python_type(module.get(), &type_spec_CertificateRequestProperties, object_bases.get(), nullptr)};
+    py::pytype_handle CertificateRequestProperties_type{py::register_python_type(module.get(), &type_spec_CertificateRequestProperties, object_bases.get(), inspectable_meta_type)};
     if (!CertificateRequestProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CertificateStore_type{py::register_python_type(module.get(), &type_spec_CertificateStore, object_bases.get(), nullptr)};
+    py::pytype_handle CertificateStore_type{py::register_python_type(module.get(), &type_spec_CertificateStore, object_bases.get(), inspectable_meta_type)};
     if (!CertificateStore_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CertificateStores_Static{PyType_FromSpec(&type_spec_CertificateStores_Static)};
+    py::pyobj_handle CertificateStores_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CertificateStores_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CertificateStores_Static{PyType_FromSpecWithBases(&type_spec_CertificateStores_Static, CertificateStores_Static_bases.get())};
     if (!type_CertificateStores_Static)
     {
         return nullptr;
@@ -8998,19 +9016,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pytype_handle ChainBuildingParameters_type{py::register_python_type(module.get(), &type_spec_ChainBuildingParameters, object_bases.get(), nullptr)};
+    py::pytype_handle ChainBuildingParameters_type{py::register_python_type(module.get(), &type_spec_ChainBuildingParameters, object_bases.get(), inspectable_meta_type)};
     if (!ChainBuildingParameters_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChainValidationParameters_type{py::register_python_type(module.get(), &type_spec_ChainValidationParameters, object_bases.get(), nullptr)};
+    py::pytype_handle ChainValidationParameters_type{py::register_python_type(module.get(), &type_spec_ChainValidationParameters, object_bases.get(), inspectable_meta_type)};
     if (!ChainValidationParameters_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CmsAttachedSignature_Static{PyType_FromSpec(&type_spec_CmsAttachedSignature_Static)};
+    py::pyobj_handle CmsAttachedSignature_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CmsAttachedSignature_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CmsAttachedSignature_Static{PyType_FromSpecWithBases(&type_spec_CmsAttachedSignature_Static, CmsAttachedSignature_Static_bases.get())};
     if (!type_CmsAttachedSignature_Static)
     {
         return nullptr;
@@ -9022,7 +9046,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_CmsDetachedSignature_Static{PyType_FromSpec(&type_spec_CmsDetachedSignature_Static)};
+    py::pyobj_handle CmsDetachedSignature_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CmsDetachedSignature_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CmsDetachedSignature_Static{PyType_FromSpecWithBases(&type_spec_CmsDetachedSignature_Static, CmsDetachedSignature_Static_bases.get())};
     if (!type_CmsDetachedSignature_Static)
     {
         return nullptr;
@@ -9034,19 +9064,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pytype_handle CmsSignerInfo_type{py::register_python_type(module.get(), &type_spec_CmsSignerInfo, object_bases.get(), nullptr)};
+    py::pytype_handle CmsSignerInfo_type{py::register_python_type(module.get(), &type_spec_CmsSignerInfo, object_bases.get(), inspectable_meta_type)};
     if (!CmsSignerInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CmsTimestampInfo_type{py::register_python_type(module.get(), &type_spec_CmsTimestampInfo, object_bases.get(), nullptr)};
+    py::pytype_handle CmsTimestampInfo_type{py::register_python_type(module.get(), &type_spec_CmsTimestampInfo, object_bases.get(), inspectable_meta_type)};
     if (!CmsTimestampInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyAlgorithmNames_Static{PyType_FromSpec(&type_spec_KeyAlgorithmNames_Static)};
+    py::pyobj_handle KeyAlgorithmNames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KeyAlgorithmNames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KeyAlgorithmNames_Static{PyType_FromSpecWithBases(&type_spec_KeyAlgorithmNames_Static, KeyAlgorithmNames_Static_bases.get())};
     if (!type_KeyAlgorithmNames_Static)
     {
         return nullptr;
@@ -9058,7 +9094,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyAttestationHelper_Static{PyType_FromSpec(&type_spec_KeyAttestationHelper_Static)};
+    py::pyobj_handle KeyAttestationHelper_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KeyAttestationHelper_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KeyAttestationHelper_Static{PyType_FromSpecWithBases(&type_spec_KeyAttestationHelper_Static, KeyAttestationHelper_Static_bases.get())};
     if (!type_KeyAttestationHelper_Static)
     {
         return nullptr;
@@ -9070,7 +9112,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyStorageProviderNames_Static{PyType_FromSpec(&type_spec_KeyStorageProviderNames_Static)};
+    py::pyobj_handle KeyStorageProviderNames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KeyStorageProviderNames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KeyStorageProviderNames_Static{PyType_FromSpecWithBases(&type_spec_KeyStorageProviderNames_Static, KeyStorageProviderNames_Static_bases.get())};
     if (!type_KeyStorageProviderNames_Static)
     {
         return nullptr;
@@ -9082,13 +9130,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pytype_handle PfxImportParameters_type{py::register_python_type(module.get(), &type_spec_PfxImportParameters, object_bases.get(), nullptr)};
+    py::pytype_handle PfxImportParameters_type{py::register_python_type(module.get(), &type_spec_PfxImportParameters, object_bases.get(), inspectable_meta_type)};
     if (!PfxImportParameters_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StandardCertificateStoreNames_Static{PyType_FromSpec(&type_spec_StandardCertificateStoreNames_Static)};
+    py::pyobj_handle StandardCertificateStoreNames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StandardCertificateStoreNames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StandardCertificateStoreNames_Static{PyType_FromSpecWithBases(&type_spec_StandardCertificateStoreNames_Static, StandardCertificateStoreNames_Static_bases.get())};
     if (!type_StandardCertificateStoreNames_Static)
     {
         return nullptr;
@@ -9100,19 +9154,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pytype_handle SubjectAlternativeNameInfo_type{py::register_python_type(module.get(), &type_spec_SubjectAlternativeNameInfo, object_bases.get(), nullptr)};
+    py::pytype_handle SubjectAlternativeNameInfo_type{py::register_python_type(module.get(), &type_spec_SubjectAlternativeNameInfo, object_bases.get(), inspectable_meta_type)};
     if (!SubjectAlternativeNameInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserCertificateEnrollmentManager_type{py::register_python_type(module.get(), &type_spec_UserCertificateEnrollmentManager, object_bases.get(), nullptr)};
+    py::pytype_handle UserCertificateEnrollmentManager_type{py::register_python_type(module.get(), &type_spec_UserCertificateEnrollmentManager, object_bases.get(), inspectable_meta_type)};
     if (!UserCertificateEnrollmentManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserCertificateStore_type{py::register_python_type(module.get(), &type_spec_UserCertificateStore, object_bases.get(), nullptr)};
+    py::pytype_handle UserCertificateStore_type{py::register_python_type(module.get(), &type_spec_UserCertificateStore, object_bases.get(), inspectable_meta_type)};
     if (!UserCertificateStore_type)
     {
         return nullptr;

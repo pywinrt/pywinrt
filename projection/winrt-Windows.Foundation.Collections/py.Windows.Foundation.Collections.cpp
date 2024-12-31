@@ -4899,6 +4899,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4912,19 +4918,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PropertySet_type{py::register_python_type(module.get(), &type_spec_PropertySet, object_bases.get(), nullptr)};
+    py::pytype_handle PropertySet_type{py::register_python_type(module.get(), &type_spec_PropertySet, object_bases.get(), inspectable_meta_type)};
     if (!PropertySet_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StringMap_type{py::register_python_type(module.get(), &type_spec_StringMap, object_bases.get(), nullptr)};
+    py::pytype_handle StringMap_type{py::register_python_type(module.get(), &type_spec_StringMap, object_bases.get(), inspectable_meta_type)};
     if (!StringMap_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ValueSet_type{py::register_python_type(module.get(), &type_spec_ValueSet, object_bases.get(), nullptr)};
+    py::pytype_handle ValueSet_type{py::register_python_type(module.get(), &type_spec_ValueSet, object_bases.get(), inspectable_meta_type)};
     if (!ValueSet_type)
     {
         return nullptr;
@@ -4936,7 +4942,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIIterable_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIIterable, nullptr))};
+    py::pytype_handle ImplementsIIterable_type{py::register_python_type(module.get(), &type_spec_ImplementsIIterable, nullptr, inspectable_meta_type)};
     if (!ImplementsIIterable_type)
     {
         return nullptr;
@@ -4953,7 +4959,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIIterator_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIIterator, nullptr))};
+    py::pytype_handle ImplementsIIterator_type{py::register_python_type(module.get(), &type_spec_ImplementsIIterator, nullptr, inspectable_meta_type)};
     if (!ImplementsIIterator_type)
     {
         return nullptr;
@@ -4970,7 +4976,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIKeyValuePair_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIKeyValuePair, nullptr))};
+    py::pytype_handle ImplementsIKeyValuePair_type{py::register_python_type(module.get(), &type_spec_ImplementsIKeyValuePair, nullptr, inspectable_meta_type)};
     if (!ImplementsIKeyValuePair_type)
     {
         return nullptr;
@@ -4987,7 +4993,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMapChangedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMapChangedEventArgs, nullptr))};
+    py::pytype_handle ImplementsIMapChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ImplementsIMapChangedEventArgs, nullptr, inspectable_meta_type)};
     if (!ImplementsIMapChangedEventArgs_type)
     {
         return nullptr;
@@ -5004,7 +5010,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMapView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMapView, nullptr))};
+    py::pytype_handle ImplementsIMapView_type{py::register_python_type(module.get(), &type_spec_ImplementsIMapView, nullptr, inspectable_meta_type)};
     if (!ImplementsIMapView_type)
     {
         return nullptr;
@@ -5021,7 +5027,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMap_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMap, nullptr))};
+    py::pytype_handle ImplementsIMap_type{py::register_python_type(module.get(), &type_spec_ImplementsIMap, nullptr, inspectable_meta_type)};
     if (!ImplementsIMap_type)
     {
         return nullptr;
@@ -5038,7 +5044,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIObservableMap_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIObservableMap, nullptr))};
+    py::pytype_handle ImplementsIObservableMap_type{py::register_python_type(module.get(), &type_spec_ImplementsIObservableMap, nullptr, inspectable_meta_type)};
     if (!ImplementsIObservableMap_type)
     {
         return nullptr;
@@ -5055,7 +5061,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIObservableVector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIObservableVector, nullptr))};
+    py::pytype_handle ImplementsIObservableVector_type{py::register_python_type(module.get(), &type_spec_ImplementsIObservableVector, nullptr, inspectable_meta_type)};
     if (!ImplementsIObservableVector_type)
     {
         return nullptr;
@@ -5072,7 +5078,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPropertySet_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPropertySet, nullptr))};
+    py::pytype_handle ImplementsIPropertySet_type{py::register_python_type(module.get(), &type_spec_ImplementsIPropertySet, nullptr, inspectable_meta_type)};
     if (!ImplementsIPropertySet_type)
     {
         return nullptr;
@@ -5089,7 +5095,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIVectorChangedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVectorChangedEventArgs, nullptr))};
+    py::pytype_handle ImplementsIVectorChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ImplementsIVectorChangedEventArgs, nullptr, inspectable_meta_type)};
     if (!ImplementsIVectorChangedEventArgs_type)
     {
         return nullptr;
@@ -5106,7 +5112,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIVectorView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVectorView, nullptr))};
+    py::pytype_handle ImplementsIVectorView_type{py::register_python_type(module.get(), &type_spec_ImplementsIVectorView, nullptr, inspectable_meta_type)};
     if (!ImplementsIVectorView_type)
     {
         return nullptr;
@@ -5123,7 +5129,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIVector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVector, nullptr))};
+    py::pytype_handle ImplementsIVector_type{py::register_python_type(module.get(), &type_spec_ImplementsIVector, nullptr, inspectable_meta_type)};
     if (!ImplementsIVector_type)
     {
         return nullptr;

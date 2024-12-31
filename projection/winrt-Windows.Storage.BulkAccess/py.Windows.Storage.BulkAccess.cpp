@@ -5402,6 +5402,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_bulkaccess(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5415,19 +5421,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_bulkaccess(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FileInformation_type{py::register_python_type(module.get(), &type_spec_FileInformation, object_bases.get(), nullptr)};
+    py::pytype_handle FileInformation_type{py::register_python_type(module.get(), &type_spec_FileInformation, object_bases.get(), inspectable_meta_type)};
     if (!FileInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FileInformationFactory_type{py::register_python_type(module.get(), &type_spec_FileInformationFactory, object_bases.get(), nullptr)};
+    py::pytype_handle FileInformationFactory_type{py::register_python_type(module.get(), &type_spec_FileInformationFactory, object_bases.get(), inspectable_meta_type)};
     if (!FileInformationFactory_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FolderInformation_type{py::register_python_type(module.get(), &type_spec_FolderInformation, object_bases.get(), nullptr)};
+    py::pytype_handle FolderInformation_type{py::register_python_type(module.get(), &type_spec_FolderInformation, object_bases.get(), inspectable_meta_type)};
     if (!FolderInformation_type)
     {
         return nullptr;
@@ -5439,7 +5445,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_bulkaccess(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageItemInformation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemInformation, nullptr))};
+    py::pytype_handle ImplementsIStorageItemInformation_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageItemInformation, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageItemInformation_type)
     {
         return nullptr;

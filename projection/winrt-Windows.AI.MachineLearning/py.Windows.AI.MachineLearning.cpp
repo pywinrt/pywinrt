@@ -12163,6 +12163,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -12176,13 +12182,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImageFeatureDescriptor_type{py::register_python_type(module.get(), &type_spec_ImageFeatureDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle ImageFeatureDescriptor_type{py::register_python_type(module.get(), &type_spec_ImageFeatureDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!ImageFeatureDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ImageFeatureValue_Static{PyType_FromSpec(&type_spec_ImageFeatureValue_Static)};
+    py::pyobj_handle ImageFeatureValue_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ImageFeatureValue_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ImageFeatureValue_Static{PyType_FromSpecWithBases(&type_spec_ImageFeatureValue_Static, ImageFeatureValue_Static_bases.get())};
     if (!type_ImageFeatureValue_Static)
     {
         return nullptr;
@@ -12194,7 +12206,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LearningModel_Static{PyType_FromSpec(&type_spec_LearningModel_Static)};
+    py::pyobj_handle LearningModel_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LearningModel_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LearningModel_Static{PyType_FromSpecWithBases(&type_spec_LearningModel_Static, LearningModel_Static_bases.get())};
     if (!type_LearningModel_Static)
     {
         return nullptr;
@@ -12206,13 +12224,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LearningModelBinding_type{py::register_python_type(module.get(), &type_spec_LearningModelBinding, object_bases.get(), nullptr)};
+    py::pytype_handle LearningModelBinding_type{py::register_python_type(module.get(), &type_spec_LearningModelBinding, object_bases.get(), inspectable_meta_type)};
     if (!LearningModelBinding_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LearningModelDevice_Static{PyType_FromSpec(&type_spec_LearningModelDevice_Static)};
+    py::pyobj_handle LearningModelDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LearningModelDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LearningModelDevice_Static{PyType_FromSpecWithBases(&type_spec_LearningModelDevice_Static, LearningModelDevice_Static_bases.get())};
     if (!type_LearningModelDevice_Static)
     {
         return nullptr;
@@ -12224,37 +12248,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LearningModelEvaluationResult_type{py::register_python_type(module.get(), &type_spec_LearningModelEvaluationResult, object_bases.get(), nullptr)};
+    py::pytype_handle LearningModelEvaluationResult_type{py::register_python_type(module.get(), &type_spec_LearningModelEvaluationResult, object_bases.get(), inspectable_meta_type)};
     if (!LearningModelEvaluationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LearningModelSession_type{py::register_python_type(module.get(), &type_spec_LearningModelSession, object_bases.get(), nullptr)};
+    py::pytype_handle LearningModelSession_type{py::register_python_type(module.get(), &type_spec_LearningModelSession, object_bases.get(), inspectable_meta_type)};
     if (!LearningModelSession_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LearningModelSessionOptions_type{py::register_python_type(module.get(), &type_spec_LearningModelSessionOptions, object_bases.get(), nullptr)};
+    py::pytype_handle LearningModelSessionOptions_type{py::register_python_type(module.get(), &type_spec_LearningModelSessionOptions, object_bases.get(), inspectable_meta_type)};
     if (!LearningModelSessionOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapFeatureDescriptor_type{py::register_python_type(module.get(), &type_spec_MapFeatureDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle MapFeatureDescriptor_type{py::register_python_type(module.get(), &type_spec_MapFeatureDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!MapFeatureDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SequenceFeatureDescriptor_type{py::register_python_type(module.get(), &type_spec_SequenceFeatureDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle SequenceFeatureDescriptor_type{py::register_python_type(module.get(), &type_spec_SequenceFeatureDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!SequenceFeatureDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorBoolean_Static{PyType_FromSpec(&type_spec_TensorBoolean_Static)};
+    py::pyobj_handle TensorBoolean_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorBoolean_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorBoolean_Static{PyType_FromSpecWithBases(&type_spec_TensorBoolean_Static, TensorBoolean_Static_bases.get())};
     if (!type_TensorBoolean_Static)
     {
         return nullptr;
@@ -12266,7 +12296,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorDouble_Static{PyType_FromSpec(&type_spec_TensorDouble_Static)};
+    py::pyobj_handle TensorDouble_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorDouble_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorDouble_Static{PyType_FromSpecWithBases(&type_spec_TensorDouble_Static, TensorDouble_Static_bases.get())};
     if (!type_TensorDouble_Static)
     {
         return nullptr;
@@ -12278,13 +12314,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TensorFeatureDescriptor_type{py::register_python_type(module.get(), &type_spec_TensorFeatureDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle TensorFeatureDescriptor_type{py::register_python_type(module.get(), &type_spec_TensorFeatureDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!TensorFeatureDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorFloat_Static{PyType_FromSpec(&type_spec_TensorFloat_Static)};
+    py::pyobj_handle TensorFloat_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorFloat_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorFloat_Static{PyType_FromSpecWithBases(&type_spec_TensorFloat_Static, TensorFloat_Static_bases.get())};
     if (!type_TensorFloat_Static)
     {
         return nullptr;
@@ -12296,7 +12338,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorFloat16Bit_Static{PyType_FromSpec(&type_spec_TensorFloat16Bit_Static)};
+    py::pyobj_handle TensorFloat16Bit_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorFloat16Bit_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorFloat16Bit_Static{PyType_FromSpecWithBases(&type_spec_TensorFloat16Bit_Static, TensorFloat16Bit_Static_bases.get())};
     if (!type_TensorFloat16Bit_Static)
     {
         return nullptr;
@@ -12308,7 +12356,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorInt16Bit_Static{PyType_FromSpec(&type_spec_TensorInt16Bit_Static)};
+    py::pyobj_handle TensorInt16Bit_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorInt16Bit_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorInt16Bit_Static{PyType_FromSpecWithBases(&type_spec_TensorInt16Bit_Static, TensorInt16Bit_Static_bases.get())};
     if (!type_TensorInt16Bit_Static)
     {
         return nullptr;
@@ -12320,7 +12374,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorInt32Bit_Static{PyType_FromSpec(&type_spec_TensorInt32Bit_Static)};
+    py::pyobj_handle TensorInt32Bit_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorInt32Bit_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorInt32Bit_Static{PyType_FromSpecWithBases(&type_spec_TensorInt32Bit_Static, TensorInt32Bit_Static_bases.get())};
     if (!type_TensorInt32Bit_Static)
     {
         return nullptr;
@@ -12332,7 +12392,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorInt64Bit_Static{PyType_FromSpec(&type_spec_TensorInt64Bit_Static)};
+    py::pyobj_handle TensorInt64Bit_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorInt64Bit_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorInt64Bit_Static{PyType_FromSpecWithBases(&type_spec_TensorInt64Bit_Static, TensorInt64Bit_Static_bases.get())};
     if (!type_TensorInt64Bit_Static)
     {
         return nullptr;
@@ -12344,7 +12410,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorInt8Bit_Static{PyType_FromSpec(&type_spec_TensorInt8Bit_Static)};
+    py::pyobj_handle TensorInt8Bit_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorInt8Bit_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorInt8Bit_Static{PyType_FromSpecWithBases(&type_spec_TensorInt8Bit_Static, TensorInt8Bit_Static_bases.get())};
     if (!type_TensorInt8Bit_Static)
     {
         return nullptr;
@@ -12356,7 +12428,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorString_Static{PyType_FromSpec(&type_spec_TensorString_Static)};
+    py::pyobj_handle TensorString_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorString_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorString_Static{PyType_FromSpecWithBases(&type_spec_TensorString_Static, TensorString_Static_bases.get())};
     if (!type_TensorString_Static)
     {
         return nullptr;
@@ -12368,7 +12446,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorUInt16Bit_Static{PyType_FromSpec(&type_spec_TensorUInt16Bit_Static)};
+    py::pyobj_handle TensorUInt16Bit_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorUInt16Bit_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorUInt16Bit_Static{PyType_FromSpecWithBases(&type_spec_TensorUInt16Bit_Static, TensorUInt16Bit_Static_bases.get())};
     if (!type_TensorUInt16Bit_Static)
     {
         return nullptr;
@@ -12380,7 +12464,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorUInt32Bit_Static{PyType_FromSpec(&type_spec_TensorUInt32Bit_Static)};
+    py::pyobj_handle TensorUInt32Bit_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorUInt32Bit_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorUInt32Bit_Static{PyType_FromSpecWithBases(&type_spec_TensorUInt32Bit_Static, TensorUInt32Bit_Static_bases.get())};
     if (!type_TensorUInt32Bit_Static)
     {
         return nullptr;
@@ -12392,7 +12482,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorUInt64Bit_Static{PyType_FromSpec(&type_spec_TensorUInt64Bit_Static)};
+    py::pyobj_handle TensorUInt64Bit_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorUInt64Bit_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorUInt64Bit_Static{PyType_FromSpecWithBases(&type_spec_TensorUInt64Bit_Static, TensorUInt64Bit_Static_bases.get())};
     if (!type_TensorUInt64Bit_Static)
     {
         return nullptr;
@@ -12404,7 +12500,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TensorUInt8Bit_Static{PyType_FromSpec(&type_spec_TensorUInt8Bit_Static)};
+    py::pyobj_handle TensorUInt8Bit_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TensorUInt8Bit_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TensorUInt8Bit_Static{PyType_FromSpecWithBases(&type_spec_TensorUInt8Bit_Static, TensorUInt8Bit_Static_bases.get())};
     if (!type_TensorUInt8Bit_Static)
     {
         return nullptr;
@@ -12422,7 +12524,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsILearningModelFeatureDescriptor_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILearningModelFeatureDescriptor, nullptr))};
+    py::pytype_handle ImplementsILearningModelFeatureDescriptor_type{py::register_python_type(module.get(), &type_spec_ImplementsILearningModelFeatureDescriptor, nullptr, inspectable_meta_type)};
     if (!ImplementsILearningModelFeatureDescriptor_type)
     {
         return nullptr;
@@ -12439,7 +12541,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsILearningModelFeatureValue_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILearningModelFeatureValue, nullptr))};
+    py::pytype_handle ImplementsILearningModelFeatureValue_type{py::register_python_type(module.get(), &type_spec_ImplementsILearningModelFeatureValue, nullptr, inspectable_meta_type)};
     if (!ImplementsILearningModelFeatureValue_type)
     {
         return nullptr;
@@ -12456,7 +12558,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsILearningModelOperatorProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILearningModelOperatorProvider, nullptr))};
+    py::pytype_handle ImplementsILearningModelOperatorProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsILearningModelOperatorProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsILearningModelOperatorProvider_type)
     {
         return nullptr;
@@ -12473,7 +12575,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITensor_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITensor, nullptr))};
+    py::pytype_handle ImplementsITensor_type{py::register_python_type(module.get(), &type_spec_ImplementsITensor, nullptr, inspectable_meta_type)};
     if (!ImplementsITensor_type)
     {
         return nullptr;

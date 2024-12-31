@@ -4713,6 +4713,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4726,7 +4732,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_JumpList_Static{PyType_FromSpec(&type_spec_JumpList_Static)};
+    py::pyobj_handle JumpList_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!JumpList_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_JumpList_Static{PyType_FromSpecWithBases(&type_spec_JumpList_Static, JumpList_Static_bases.get())};
     if (!type_JumpList_Static)
     {
         return nullptr;
@@ -4738,7 +4750,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_JumpListItem_Static{PyType_FromSpec(&type_spec_JumpListItem_Static)};
+    py::pyobj_handle JumpListItem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!JumpListItem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_JumpListItem_Static{PyType_FromSpecWithBases(&type_spec_JumpListItem_Static, JumpListItem_Static_bases.get())};
     if (!type_JumpListItem_Static)
     {
         return nullptr;
@@ -4750,7 +4768,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SecondaryTile_Static{PyType_FromSpec(&type_spec_SecondaryTile_Static)};
+    py::pyobj_handle SecondaryTile_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SecondaryTile_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SecondaryTile_Static{PyType_FromSpecWithBases(&type_spec_SecondaryTile_Static, SecondaryTile_Static_bases.get())};
     if (!type_SecondaryTile_Static)
     {
         return nullptr;
@@ -4762,13 +4786,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SecondaryTileVisualElements_type{py::register_python_type(module.get(), &type_spec_SecondaryTileVisualElements, object_bases.get(), nullptr)};
+    py::pytype_handle SecondaryTileVisualElements_type{py::register_python_type(module.get(), &type_spec_SecondaryTileVisualElements, object_bases.get(), inspectable_meta_type)};
     if (!SecondaryTileVisualElements_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StartScreenManager_Static{PyType_FromSpec(&type_spec_StartScreenManager_Static)};
+    py::pyobj_handle StartScreenManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StartScreenManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StartScreenManager_Static{PyType_FromSpecWithBases(&type_spec_StartScreenManager_Static, StartScreenManager_Static_bases.get())};
     if (!type_StartScreenManager_Static)
     {
         return nullptr;
@@ -4780,25 +4810,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TileMixedRealityModel_type{py::register_python_type(module.get(), &type_spec_TileMixedRealityModel, object_bases.get(), nullptr)};
+    py::pytype_handle TileMixedRealityModel_type{py::register_python_type(module.get(), &type_spec_TileMixedRealityModel, object_bases.get(), inspectable_meta_type)};
     if (!TileMixedRealityModel_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VisualElementsRequest_type{py::register_python_type(module.get(), &type_spec_VisualElementsRequest, object_bases.get(), nullptr)};
+    py::pytype_handle VisualElementsRequest_type{py::register_python_type(module.get(), &type_spec_VisualElementsRequest, object_bases.get(), inspectable_meta_type)};
     if (!VisualElementsRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VisualElementsRequestDeferral_type{py::register_python_type(module.get(), &type_spec_VisualElementsRequestDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle VisualElementsRequestDeferral_type{py::register_python_type(module.get(), &type_spec_VisualElementsRequestDeferral, object_bases.get(), inspectable_meta_type)};
     if (!VisualElementsRequestDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VisualElementsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_VisualElementsRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle VisualElementsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_VisualElementsRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!VisualElementsRequestedEventArgs_type)
     {
         return nullptr;

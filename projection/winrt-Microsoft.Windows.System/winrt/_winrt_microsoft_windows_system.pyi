@@ -14,7 +14,7 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 Self = typing.TypeVar('Self')
 
 @typing.final
-class EnvironmentManager_Static(type):
+class EnvironmentManager_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.System.EnvironmentManager Microsoft.Windows.System.EnvironmentManager::GetForMachine()
     def get_for_machine(cls) -> EnvironmentManager: ...
     # Microsoft.Windows.System.EnvironmentManager Microsoft.Windows.System.EnvironmentManager::GetForProcess()

@@ -243,7 +243,7 @@ class SpeechRecognitionVoiceCommandDefinitionConstraint(winrt.system.Object, ISp
     def type(self) -> SpeechRecognitionConstraintType: ...
 
 @typing.final
-class SpeechRecognizer_Static(type):
+class SpeechRecognizer_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Media.SpeechRecognition.SpeechRecognizer::TrySetSystemSpeechLanguageAsync(Windows.Globalization.Language)
     def try_set_system_speech_language_async(cls, speech_language: windows_globalization.Language, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Globalization.Language> Windows.Media.SpeechRecognition.SpeechRecognizer::get_SupportedGrammarLanguages()
@@ -360,7 +360,7 @@ class SpeechRecognizerUIOptions(winrt.system.Object):
     def audible_prompt(self, value: str) -> None: ...
 
 @typing.final
-class VoiceCommandManager_Static(type):
+class VoiceCommandManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction Windows.Media.SpeechRecognition.VoiceCommandManager::InstallCommandSetsFromStorageFileAsync(Windows.Storage.StorageFile)
     def install_command_sets_from_storage_file_async(cls, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Media.SpeechRecognition.VoiceCommandSet> Windows.Media.SpeechRecognition.VoiceCommandManager::get_InstalledCommandSets()

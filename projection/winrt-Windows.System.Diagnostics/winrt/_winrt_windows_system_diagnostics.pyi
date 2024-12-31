@@ -28,7 +28,7 @@ class DiagnosticActionResult(winrt.system.Object):
     def results(self) -> windows_foundation_collections.ValueSet: ...
 
 @typing.final
-class DiagnosticInvoker_Static(type):
+class DiagnosticInvoker_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.Diagnostics.DiagnosticInvoker Windows.System.Diagnostics.DiagnosticInvoker::GetDefault()
     def get_default(cls) -> DiagnosticInvoker: ...
     # Windows.System.Diagnostics.DiagnosticInvoker Windows.System.Diagnostics.DiagnosticInvoker::GetForUser(Windows.System.User)
@@ -59,7 +59,7 @@ class ProcessCpuUsageReport(winrt.system.Object):
     def user_time(self) -> datetime.timedelta: ...
 
 @typing.final
-class ProcessDiagnosticInfo_Static(type):
+class ProcessDiagnosticInfo_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.Diagnostics.ProcessDiagnosticInfo Windows.System.Diagnostics.ProcessDiagnosticInfo::GetForCurrentProcess()
     def get_for_current_process(cls) -> ProcessDiagnosticInfo: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.System.Diagnostics.ProcessDiagnosticInfo> Windows.System.Diagnostics.ProcessDiagnosticInfo::GetForProcesses()
@@ -184,7 +184,7 @@ class SystemCpuUsageReport(winrt.system.Object):
     def user_time(self) -> datetime.timedelta: ...
 
 @typing.final
-class SystemDiagnosticInfo_Static(type):
+class SystemDiagnosticInfo_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.Diagnostics.SystemDiagnosticInfo Windows.System.Diagnostics.SystemDiagnosticInfo::GetForCurrentSystem()
     def get_for_current_system(cls) -> SystemDiagnosticInfo: ...
     # System.Boolean Windows.System.Diagnostics.SystemDiagnosticInfo::IsArchitectureSupported(Windows.System.ProcessorArchitecture)

@@ -21,7 +21,7 @@ from winrt.microsoft.ui.windowing import AppWindowPresenterKind, CompactOverlayS
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AppWindow_Static(type):
+class AppWindow_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::Create()
     def create(cls) -> AppWindow: ...
     # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::Create(Microsoft.UI.Windowing.AppWindowPresenter,Microsoft.UI.WindowId,Microsoft.UI.Dispatching.DispatcherQueue)
@@ -159,7 +159,7 @@ class AppWindowClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class AppWindowPresenter_Static(type):
+class AppWindowPresenter_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Static):
@@ -169,7 +169,7 @@ class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Stati
     def kind(self) -> AppWindowPresenterKind: ...
 
 @typing.final
-class AppWindowTitleBar_Static(type):
+class AppWindowTitleBar_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Microsoft.UI.Windowing.AppWindowTitleBar::IsCustomizationSupported()
     def is_customization_supported(cls) -> bool: ...
 
@@ -295,7 +295,7 @@ class CompactOverlayPresenter(AppWindowPresenter, metaclass=CompactOverlayPresen
     def initial_size(self, value: CompactOverlaySize) -> None: ...
 
 @typing.final
-class DisplayArea_Static(type):
+class DisplayArea_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Windowing.DisplayAreaWatcher Microsoft.UI.Windowing.DisplayArea::CreateWatcher()
     def create_watcher(cls) -> DisplayAreaWatcher: ...
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Windowing.DisplayArea> Microsoft.UI.Windowing.DisplayArea::FindAll()

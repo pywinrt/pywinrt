@@ -20,7 +20,7 @@ from winrt.windows.system.diagnostics.deviceportal import DevicePortalConnection
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DevicePortalConnection_Static(type):
+class DevicePortalConnection_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.Diagnostics.DevicePortal.DevicePortalConnection Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetForAppServiceConnection(Windows.ApplicationModel.AppService.AppServiceConnection)
     def get_for_app_service_connection(cls, app_service_connection: windows_applicationmodel_appservice.AppServiceConnection, /) -> DevicePortalConnection: ...
 

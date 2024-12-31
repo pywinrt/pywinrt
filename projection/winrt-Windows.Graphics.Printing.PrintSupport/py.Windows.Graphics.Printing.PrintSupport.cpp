@@ -3787,6 +3787,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printsupport(void) noexce
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3800,49 +3806,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printsupport(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportCommunicationErrorDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportCommunicationErrorDetectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportCommunicationErrorDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportCommunicationErrorDetectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportCommunicationErrorDetectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportExtensionSession_type{py::register_python_type(module.get(), &type_spec_PrintSupportExtensionSession, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportExtensionSession_type{py::register_python_type(module.get(), &type_spec_PrintSupportExtensionSession, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportExtensionSession_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportExtensionTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PrintSupportExtensionTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportExtensionTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PrintSupportExtensionTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportExtensionTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportIppCommunicationConfiguration_type{py::register_python_type(module.get(), &type_spec_PrintSupportIppCommunicationConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportIppCommunicationConfiguration_type{py::register_python_type(module.get(), &type_spec_PrintSupportIppCommunicationConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportIppCommunicationConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportIppCommunicationTimeouts_type{py::register_python_type(module.get(), &type_spec_PrintSupportIppCommunicationTimeouts, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportIppCommunicationTimeouts_type{py::register_python_type(module.get(), &type_spec_PrintSupportIppCommunicationTimeouts, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportIppCommunicationTimeouts_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportMxdcImageQualityConfiguration_type{py::register_python_type(module.get(), &type_spec_PrintSupportMxdcImageQualityConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportMxdcImageQualityConfiguration_type{py::register_python_type(module.get(), &type_spec_PrintSupportMxdcImageQualityConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportMxdcImageQualityConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportPrintDeviceCapabilitiesChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportPrintDeviceCapabilitiesChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportPrintDeviceCapabilitiesChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportPrintDeviceCapabilitiesChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportPrintDeviceCapabilitiesChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static{PyType_FromSpec(&type_spec_PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static)};
+    py::pyobj_handle PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static{PyType_FromSpecWithBases(&type_spec_PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static, PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static_bases.get())};
     if (!type_PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static)
     {
         return nullptr;
@@ -3854,37 +3866,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printsupport(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportPrintTicketElement_type{py::register_python_type(module.get(), &type_spec_PrintSupportPrintTicketElement, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportPrintTicketElement_type{py::register_python_type(module.get(), &type_spec_PrintSupportPrintTicketElement, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportPrintTicketElement_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportPrintTicketValidationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportPrintTicketValidationRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportPrintTicketValidationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportPrintTicketValidationRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportPrintTicketValidationRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportPrinterSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportPrinterSelectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportPrinterSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportPrinterSelectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportPrinterSelectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportSessionInfo_type{py::register_python_type(module.get(), &type_spec_PrintSupportSessionInfo, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportSessionInfo_type{py::register_python_type(module.get(), &type_spec_PrintSupportSessionInfo, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportSessionInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportSettingsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportSettingsActivatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportSettingsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportSettingsActivatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportSettingsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintSupportSettingsUISession_type{py::register_python_type(module.get(), &type_spec_PrintSupportSettingsUISession, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSupportSettingsUISession_type{py::register_python_type(module.get(), &type_spec_PrintSupportSettingsUISession, object_bases.get(), inspectable_meta_type)};
     if (!PrintSupportSettingsUISession_type)
     {
         return nullptr;

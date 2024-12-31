@@ -8083,6 +8083,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -8096,7 +8102,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ArcadeStick_Static{PyType_FromSpec(&type_spec_ArcadeStick_Static)};
+    py::pyobj_handle ArcadeStick_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ArcadeStick_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ArcadeStick_Static{PyType_FromSpecWithBases(&type_spec_ArcadeStick_Static, ArcadeStick_Static_bases.get())};
     if (!type_ArcadeStick_Static)
     {
         return nullptr;
@@ -8108,7 +8120,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FlightStick_Static{PyType_FromSpec(&type_spec_FlightStick_Static)};
+    py::pyobj_handle FlightStick_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FlightStick_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FlightStick_Static{PyType_FromSpecWithBases(&type_spec_FlightStick_Static, FlightStick_Static_bases.get())};
     if (!type_FlightStick_Static)
     {
         return nullptr;
@@ -8120,7 +8138,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Gamepad_Static{PyType_FromSpec(&type_spec_Gamepad_Static)};
+    py::pyobj_handle Gamepad_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Gamepad_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Gamepad_Static{PyType_FromSpecWithBases(&type_spec_Gamepad_Static, Gamepad_Static_bases.get())};
     if (!type_Gamepad_Static)
     {
         return nullptr;
@@ -8132,13 +8156,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Headset_type{py::register_python_type(module.get(), &type_spec_Headset, object_bases.get(), nullptr)};
+    py::pytype_handle Headset_type{py::register_python_type(module.get(), &type_spec_Headset, object_bases.get(), inspectable_meta_type)};
     if (!Headset_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RacingWheel_Static{PyType_FromSpec(&type_spec_RacingWheel_Static)};
+    py::pyobj_handle RacingWheel_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RacingWheel_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RacingWheel_Static{PyType_FromSpecWithBases(&type_spec_RacingWheel_Static, RacingWheel_Static_bases.get())};
     if (!type_RacingWheel_Static)
     {
         return nullptr;
@@ -8150,7 +8180,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RawGameController_Static{PyType_FromSpec(&type_spec_RawGameController_Static)};
+    py::pyobj_handle RawGameController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RawGameController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RawGameController_Static{PyType_FromSpecWithBases(&type_spec_RawGameController_Static, RawGameController_Static_bases.get())};
     if (!type_RawGameController_Static)
     {
         return nullptr;
@@ -8162,7 +8198,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_UINavigationController_Static{PyType_FromSpec(&type_spec_UINavigationController_Static)};
+    py::pyobj_handle UINavigationController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UINavigationController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UINavigationController_Static{PyType_FromSpecWithBases(&type_spec_UINavigationController_Static, UINavigationController_Static_bases.get())};
     if (!type_UINavigationController_Static)
     {
         return nullptr;
@@ -8180,7 +8222,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGameController_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameController, nullptr))};
+    py::pytype_handle ImplementsIGameController_type{py::register_python_type(module.get(), &type_spec_ImplementsIGameController, nullptr, inspectable_meta_type)};
     if (!ImplementsIGameController_type)
     {
         return nullptr;
@@ -8197,7 +8239,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGameControllerBatteryInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameControllerBatteryInfo, nullptr))};
+    py::pytype_handle ImplementsIGameControllerBatteryInfo_type{py::register_python_type(module.get(), &type_spec_ImplementsIGameControllerBatteryInfo, nullptr, inspectable_meta_type)};
     if (!ImplementsIGameControllerBatteryInfo_type)
     {
         return nullptr;

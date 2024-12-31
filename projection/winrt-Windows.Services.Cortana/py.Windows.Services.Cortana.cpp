@@ -1324,6 +1324,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1337,7 +1343,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CortanaActionableInsights_Static{PyType_FromSpec(&type_spec_CortanaActionableInsights_Static)};
+    py::pyobj_handle CortanaActionableInsights_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CortanaActionableInsights_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CortanaActionableInsights_Static{PyType_FromSpecWithBases(&type_spec_CortanaActionableInsights_Static, CortanaActionableInsights_Static_bases.get())};
     if (!type_CortanaActionableInsights_Static)
     {
         return nullptr;
@@ -1349,13 +1361,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CortanaActionableInsightsOptions_type{py::register_python_type(module.get(), &type_spec_CortanaActionableInsightsOptions, object_bases.get(), nullptr)};
+    py::pytype_handle CortanaActionableInsightsOptions_type{py::register_python_type(module.get(), &type_spec_CortanaActionableInsightsOptions, object_bases.get(), inspectable_meta_type)};
     if (!CortanaActionableInsightsOptions_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CortanaPermissionsManager_Static{PyType_FromSpec(&type_spec_CortanaPermissionsManager_Static)};
+    py::pyobj_handle CortanaPermissionsManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CortanaPermissionsManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CortanaPermissionsManager_Static{PyType_FromSpecWithBases(&type_spec_CortanaPermissionsManager_Static, CortanaPermissionsManager_Static_bases.get())};
     if (!type_CortanaPermissionsManager_Static)
     {
         return nullptr;
@@ -1367,7 +1385,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CortanaSettings_Static{PyType_FromSpec(&type_spec_CortanaSettings_Static)};
+    py::pyobj_handle CortanaSettings_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CortanaSettings_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CortanaSettings_Static{PyType_FromSpecWithBases(&type_spec_CortanaSettings_Static, CortanaSettings_Static_bases.get())};
     if (!type_CortanaSettings_Static)
     {
         return nullptr;

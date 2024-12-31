@@ -30,7 +30,7 @@ from winrt.windows.media.playback import AutoLoadedDisplayPropertyKind, FailedMe
 Self = typing.TypeVar('Self')
 
 @typing.final
-class BackgroundMediaPlayer_Static(type):
+class BackgroundMediaPlayer_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Media.Playback.BackgroundMediaPlayer::IsMediaPlaying()
     # @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def is_media_playing(cls) -> bool: ...
@@ -465,7 +465,7 @@ class MediaPlaybackCommandManagerShuffleReceivedEventArgs(winrt.system.Object):
     def is_shuffle_requested(self) -> bool: ...
 
 @typing.final
-class MediaPlaybackItem_Static(type):
+class MediaPlaybackItem_Static(winrt._winrt.IInspectable_Static):
     # Windows.Media.Playback.MediaPlaybackItem Windows.Media.Playback.MediaPlaybackItem::FindFromMediaSource(Windows.Media.Core.MediaSource)
     def find_from_media_source(cls, source: windows_media_core.MediaSource, /) -> MediaPlaybackItem: ...
 

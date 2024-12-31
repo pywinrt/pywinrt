@@ -1200,6 +1200,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1213,13 +1219,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Enterprise_type{py::register_python_type(module.get(), &type_spec_Enterprise, object_bases.get(), nullptr)};
+    py::pytype_handle Enterprise_type{py::register_python_type(module.get(), &type_spec_Enterprise, object_bases.get(), inspectable_meta_type)};
     if (!Enterprise_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EnterpriseEnrollmentManager_Static{PyType_FromSpec(&type_spec_EnterpriseEnrollmentManager_Static)};
+    py::pyobj_handle EnterpriseEnrollmentManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!EnterpriseEnrollmentManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EnterpriseEnrollmentManager_Static{PyType_FromSpecWithBases(&type_spec_EnterpriseEnrollmentManager_Static, EnterpriseEnrollmentManager_Static_bases.get())};
     if (!type_EnterpriseEnrollmentManager_Static)
     {
         return nullptr;
@@ -1231,13 +1243,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle EnterpriseEnrollmentResult_type{py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentResult, object_bases.get(), nullptr)};
+    py::pytype_handle EnterpriseEnrollmentResult_type{py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentResult, object_bases.get(), inspectable_meta_type)};
     if (!EnterpriseEnrollmentResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InstallationManager_Static{PyType_FromSpec(&type_spec_InstallationManager_Static)};
+    py::pyobj_handle InstallationManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!InstallationManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InstallationManager_Static{PyType_FromSpecWithBases(&type_spec_InstallationManager_Static, InstallationManager_Static_bases.get())};
     if (!type_InstallationManager_Static)
     {
         return nullptr;
@@ -1249,7 +1267,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PackageInstallResult_type{py::register_python_type(module.get(), &type_spec_PackageInstallResult, object_bases.get(), nullptr)};
+    py::pytype_handle PackageInstallResult_type{py::register_python_type(module.get(), &type_spec_PackageInstallResult, object_bases.get(), inspectable_meta_type)};
     if (!PackageInstallResult_type)
     {
         return nullptr;

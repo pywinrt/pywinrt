@@ -13,7 +13,7 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ClassicAppManager_Static(type):
+class ClassicAppManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Management.Deployment.Preview.InstalledClassicAppInfo Windows.Management.Deployment.Preview.ClassicAppManager::FindInstalledApp(System.String)
     def find_installed_app(cls, app_uninstall_key: str, /) -> InstalledClassicAppInfo: ...
 

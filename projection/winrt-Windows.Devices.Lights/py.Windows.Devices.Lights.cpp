@@ -2376,6 +2376,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2389,7 +2395,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Lamp_Static{PyType_FromSpec(&type_spec_Lamp_Static)};
+    py::pyobj_handle Lamp_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Lamp_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Lamp_Static{PyType_FromSpecWithBases(&type_spec_Lamp_Static, Lamp_Static_bases.get())};
     if (!type_Lamp_Static)
     {
         return nullptr;
@@ -2401,7 +2413,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LampArray_Static{PyType_FromSpec(&type_spec_LampArray_Static)};
+    py::pyobj_handle LampArray_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LampArray_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LampArray_Static{PyType_FromSpecWithBases(&type_spec_LampArray_Static, LampArray_Static_bases.get())};
     if (!type_LampArray_Static)
     {
         return nullptr;
@@ -2413,13 +2431,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LampAvailabilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_LampAvailabilityChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle LampAvailabilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_LampAvailabilityChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!LampAvailabilityChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LampInfo_type{py::register_python_type(module.get(), &type_spec_LampInfo, object_bases.get(), nullptr)};
+    py::pytype_handle LampInfo_type{py::register_python_type(module.get(), &type_spec_LampInfo, object_bases.get(), inspectable_meta_type)};
     if (!LampInfo_type)
     {
         return nullptr;

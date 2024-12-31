@@ -4356,6 +4356,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4369,73 +4375,79 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreTextCompositionCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextCompositionCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextCompositionCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextCompositionCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextCompositionCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextCompositionSegment_type{py::register_python_type(module.get(), &type_spec_CoreTextCompositionSegment, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextCompositionSegment_type{py::register_python_type(module.get(), &type_spec_CoreTextCompositionSegment, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextCompositionSegment_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextCompositionStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextCompositionStartedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextCompositionStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextCompositionStartedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextCompositionStartedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextEditContext_type{py::register_python_type(module.get(), &type_spec_CoreTextEditContext, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextEditContext_type{py::register_python_type(module.get(), &type_spec_CoreTextEditContext, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextEditContext_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextFormatUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextFormatUpdatingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextFormatUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextFormatUpdatingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextFormatUpdatingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextLayoutBounds_type{py::register_python_type(module.get(), &type_spec_CoreTextLayoutBounds, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextLayoutBounds_type{py::register_python_type(module.get(), &type_spec_CoreTextLayoutBounds, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextLayoutBounds_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextLayoutRequest_type{py::register_python_type(module.get(), &type_spec_CoreTextLayoutRequest, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextLayoutRequest_type{py::register_python_type(module.get(), &type_spec_CoreTextLayoutRequest, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextLayoutRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextLayoutRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextLayoutRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextLayoutRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextLayoutRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextLayoutRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextSelectionRequest_type{py::register_python_type(module.get(), &type_spec_CoreTextSelectionRequest, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextSelectionRequest_type{py::register_python_type(module.get(), &type_spec_CoreTextSelectionRequest, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextSelectionRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextSelectionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextSelectionRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextSelectionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextSelectionRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextSelectionRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextSelectionUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextSelectionUpdatingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextSelectionUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextSelectionUpdatingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextSelectionUpdatingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreTextServicesConstants_Static{PyType_FromSpec(&type_spec_CoreTextServicesConstants_Static)};
+    py::pyobj_handle CoreTextServicesConstants_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreTextServicesConstants_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreTextServicesConstants_Static{PyType_FromSpecWithBases(&type_spec_CoreTextServicesConstants_Static, CoreTextServicesConstants_Static_bases.get())};
     if (!type_CoreTextServicesConstants_Static)
     {
         return nullptr;
@@ -4447,7 +4459,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreTextServicesManager_Static{PyType_FromSpec(&type_spec_CoreTextServicesManager_Static)};
+    py::pyobj_handle CoreTextServicesManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreTextServicesManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreTextServicesManager_Static{PyType_FromSpecWithBases(&type_spec_CoreTextServicesManager_Static, CoreTextServicesManager_Static_bases.get())};
     if (!type_CoreTextServicesManager_Static)
     {
         return nullptr;
@@ -4459,19 +4477,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreTextTextRequest_type{py::register_python_type(module.get(), &type_spec_CoreTextTextRequest, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextTextRequest_type{py::register_python_type(module.get(), &type_spec_CoreTextTextRequest, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextTextRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextTextRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextTextRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextTextRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextTextRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextTextRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreTextTextUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextTextUpdatingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreTextTextUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreTextTextUpdatingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreTextTextUpdatingEventArgs_type)
     {
         return nullptr;

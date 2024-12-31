@@ -21,7 +21,7 @@ from winrt.windows.ui.xaml.core.direct import XamlEventIndex, XamlPropertyIndex,
 Self = typing.TypeVar('Self')
 
 @typing.final
-class XamlDirect_Static(type):
+class XamlDirect_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Xaml.Core.Direct.XamlDirect Windows.UI.Xaml.Core.Direct.XamlDirect::GetDefault()
     def get_default(cls) -> XamlDirect: ...
 

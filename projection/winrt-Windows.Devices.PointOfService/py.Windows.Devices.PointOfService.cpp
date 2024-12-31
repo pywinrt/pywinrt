@@ -37665,6 +37665,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -37678,7 +37684,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BarcodeScanner_Static{PyType_FromSpec(&type_spec_BarcodeScanner_Static)};
+    py::pyobj_handle BarcodeScanner_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BarcodeScanner_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BarcodeScanner_Static{PyType_FromSpecWithBases(&type_spec_BarcodeScanner_Static, BarcodeScanner_Static_bases.get())};
     if (!type_BarcodeScanner_Static)
     {
         return nullptr;
@@ -37690,43 +37702,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerCapabilities_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerCapabilities_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerDataReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerDataReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerDataReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerErrorOccurredEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerErrorOccurredEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerErrorOccurredEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerErrorOccurredEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerErrorOccurredEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerImagePreviewReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerImagePreviewReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerImagePreviewReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerImagePreviewReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerImagePreviewReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerReport_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerReport, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerReport_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerReport, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerReport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStatusUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStatusUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerStatusUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BarcodeSymbologies_Static{PyType_FromSpec(&type_spec_BarcodeSymbologies_Static)};
+    py::pyobj_handle BarcodeSymbologies_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BarcodeSymbologies_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BarcodeSymbologies_Static{PyType_FromSpecWithBases(&type_spec_BarcodeSymbologies_Static, BarcodeSymbologies_Static_bases.get())};
     if (!type_BarcodeSymbologies_Static)
     {
         return nullptr;
@@ -37738,13 +37756,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BarcodeSymbologyAttributes_type{py::register_python_type(module.get(), &type_spec_BarcodeSymbologyAttributes, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeSymbologyAttributes_type{py::register_python_type(module.get(), &type_spec_BarcodeSymbologyAttributes, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeSymbologyAttributes_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CashDrawer_Static{PyType_FromSpec(&type_spec_CashDrawer_Static)};
+    py::pyobj_handle CashDrawer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CashDrawer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CashDrawer_Static{PyType_FromSpecWithBases(&type_spec_CashDrawer_Static, CashDrawer_Static_bases.get())};
     if (!type_CashDrawer_Static)
     {
         return nullptr;
@@ -37756,79 +37780,85 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CashDrawerCapabilities_type{py::register_python_type(module.get(), &type_spec_CashDrawerCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle CashDrawerCapabilities_type{py::register_python_type(module.get(), &type_spec_CashDrawerCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!CashDrawerCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CashDrawerCloseAlarm_type{py::register_python_type(module.get(), &type_spec_CashDrawerCloseAlarm, object_bases.get(), nullptr)};
+    py::pytype_handle CashDrawerCloseAlarm_type{py::register_python_type(module.get(), &type_spec_CashDrawerCloseAlarm, object_bases.get(), inspectable_meta_type)};
     if (!CashDrawerCloseAlarm_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CashDrawerClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_CashDrawerClosedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CashDrawerClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_CashDrawerClosedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CashDrawerClosedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CashDrawerEventSource_type{py::register_python_type(module.get(), &type_spec_CashDrawerEventSource, object_bases.get(), nullptr)};
+    py::pytype_handle CashDrawerEventSource_type{py::register_python_type(module.get(), &type_spec_CashDrawerEventSource, object_bases.get(), inspectable_meta_type)};
     if (!CashDrawerEventSource_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CashDrawerOpenedEventArgs_type{py::register_python_type(module.get(), &type_spec_CashDrawerOpenedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CashDrawerOpenedEventArgs_type{py::register_python_type(module.get(), &type_spec_CashDrawerOpenedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CashDrawerOpenedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CashDrawerStatus_type{py::register_python_type(module.get(), &type_spec_CashDrawerStatus, object_bases.get(), nullptr)};
+    py::pytype_handle CashDrawerStatus_type{py::register_python_type(module.get(), &type_spec_CashDrawerStatus, object_bases.get(), inspectable_meta_type)};
     if (!CashDrawerStatus_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CashDrawerStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_CashDrawerStatusUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CashDrawerStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_CashDrawerStatusUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CashDrawerStatusUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedBarcodeScanner_type{py::register_python_type(module.get(), &type_spec_ClaimedBarcodeScanner, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedBarcodeScanner_type{py::register_python_type(module.get(), &type_spec_ClaimedBarcodeScanner, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedBarcodeScanner_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedBarcodeScannerClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedBarcodeScannerClosedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedBarcodeScannerClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedBarcodeScannerClosedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedBarcodeScannerClosedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedCashDrawer_type{py::register_python_type(module.get(), &type_spec_ClaimedCashDrawer, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedCashDrawer_type{py::register_python_type(module.get(), &type_spec_ClaimedCashDrawer, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedCashDrawer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedCashDrawerClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedCashDrawerClosedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedCashDrawerClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedCashDrawerClosedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedCashDrawerClosedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedJournalPrinter_type{py::register_python_type(module.get(), &type_spec_ClaimedJournalPrinter, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedJournalPrinter_type{py::register_python_type(module.get(), &type_spec_ClaimedJournalPrinter, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedJournalPrinter_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ClaimedLineDisplay_Static{PyType_FromSpec(&type_spec_ClaimedLineDisplay_Static)};
+    py::pyobj_handle ClaimedLineDisplay_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ClaimedLineDisplay_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ClaimedLineDisplay_Static{PyType_FromSpecWithBases(&type_spec_ClaimedLineDisplay_Static, ClaimedLineDisplay_Static_bases.get())};
     if (!type_ClaimedLineDisplay_Static)
     {
         return nullptr;
@@ -37840,61 +37870,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ClaimedLineDisplayClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedLineDisplayClosedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedLineDisplayClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedLineDisplayClosedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedLineDisplayClosedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedMagneticStripeReader_type{py::register_python_type(module.get(), &type_spec_ClaimedMagneticStripeReader, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedMagneticStripeReader_type{py::register_python_type(module.get(), &type_spec_ClaimedMagneticStripeReader, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedMagneticStripeReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedMagneticStripeReaderClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedMagneticStripeReaderClosedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedMagneticStripeReaderClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedMagneticStripeReaderClosedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedMagneticStripeReaderClosedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedPosPrinter_type{py::register_python_type(module.get(), &type_spec_ClaimedPosPrinter, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedPosPrinter_type{py::register_python_type(module.get(), &type_spec_ClaimedPosPrinter, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedPosPrinter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedPosPrinterClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedPosPrinterClosedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedPosPrinterClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClaimedPosPrinterClosedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedPosPrinterClosedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedReceiptPrinter_type{py::register_python_type(module.get(), &type_spec_ClaimedReceiptPrinter, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedReceiptPrinter_type{py::register_python_type(module.get(), &type_spec_ClaimedReceiptPrinter, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedReceiptPrinter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClaimedSlipPrinter_type{py::register_python_type(module.get(), &type_spec_ClaimedSlipPrinter, object_bases.get(), nullptr)};
+    py::pytype_handle ClaimedSlipPrinter_type{py::register_python_type(module.get(), &type_spec_ClaimedSlipPrinter, object_bases.get(), inspectable_meta_type)};
     if (!ClaimedSlipPrinter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle JournalPrintJob_type{py::register_python_type(module.get(), &type_spec_JournalPrintJob, object_bases.get(), nullptr)};
+    py::pytype_handle JournalPrintJob_type{py::register_python_type(module.get(), &type_spec_JournalPrintJob, object_bases.get(), inspectable_meta_type)};
     if (!JournalPrintJob_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle JournalPrinterCapabilities_type{py::register_python_type(module.get(), &type_spec_JournalPrinterCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle JournalPrinterCapabilities_type{py::register_python_type(module.get(), &type_spec_JournalPrinterCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!JournalPrinterCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LineDisplay_Static{PyType_FromSpec(&type_spec_LineDisplay_Static)};
+    py::pyobj_handle LineDisplay_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LineDisplay_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LineDisplay_Static{PyType_FromSpecWithBases(&type_spec_LineDisplay_Static, LineDisplay_Static_bases.get())};
     if (!type_LineDisplay_Static)
     {
         return nullptr;
@@ -37906,67 +37942,73 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayAttributes_type{py::register_python_type(module.get(), &type_spec_LineDisplayAttributes, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayAttributes_type{py::register_python_type(module.get(), &type_spec_LineDisplayAttributes, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayAttributes_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayCapabilities_type{py::register_python_type(module.get(), &type_spec_LineDisplayCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayCapabilities_type{py::register_python_type(module.get(), &type_spec_LineDisplayCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayCursor_type{py::register_python_type(module.get(), &type_spec_LineDisplayCursor, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayCursor_type{py::register_python_type(module.get(), &type_spec_LineDisplayCursor, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayCursor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayCursorAttributes_type{py::register_python_type(module.get(), &type_spec_LineDisplayCursorAttributes, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayCursorAttributes_type{py::register_python_type(module.get(), &type_spec_LineDisplayCursorAttributes, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayCursorAttributes_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayCustomGlyphs_type{py::register_python_type(module.get(), &type_spec_LineDisplayCustomGlyphs, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayCustomGlyphs_type{py::register_python_type(module.get(), &type_spec_LineDisplayCustomGlyphs, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayCustomGlyphs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayMarquee_type{py::register_python_type(module.get(), &type_spec_LineDisplayMarquee, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayMarquee_type{py::register_python_type(module.get(), &type_spec_LineDisplayMarquee, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayMarquee_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayStatisticsCategorySelector_type{py::register_python_type(module.get(), &type_spec_LineDisplayStatisticsCategorySelector, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayStatisticsCategorySelector_type{py::register_python_type(module.get(), &type_spec_LineDisplayStatisticsCategorySelector, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayStatisticsCategorySelector_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_LineDisplayStatusUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_LineDisplayStatusUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayStatusUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayStoredBitmap_type{py::register_python_type(module.get(), &type_spec_LineDisplayStoredBitmap, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayStoredBitmap_type{py::register_python_type(module.get(), &type_spec_LineDisplayStoredBitmap, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayStoredBitmap_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineDisplayWindow_type{py::register_python_type(module.get(), &type_spec_LineDisplayWindow, object_bases.get(), nullptr)};
+    py::pytype_handle LineDisplayWindow_type{py::register_python_type(module.get(), &type_spec_LineDisplayWindow, object_bases.get(), inspectable_meta_type)};
     if (!LineDisplayWindow_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MagneticStripeReader_Static{PyType_FromSpec(&type_spec_MagneticStripeReader_Static)};
+    py::pyobj_handle MagneticStripeReader_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MagneticStripeReader_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MagneticStripeReader_Static{PyType_FromSpecWithBases(&type_spec_MagneticStripeReader_Static, MagneticStripeReader_Static_bases.get())};
     if (!type_MagneticStripeReader_Static)
     {
         return nullptr;
@@ -37978,25 +38020,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MagneticStripeReaderAamvaCardDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MagneticStripeReaderAamvaCardDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MagneticStripeReaderAamvaCardDataReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MagneticStripeReaderBankCardDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MagneticStripeReaderBankCardDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MagneticStripeReaderBankCardDataReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MagneticStripeReaderCapabilities_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle MagneticStripeReaderCapabilities_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!MagneticStripeReaderCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MagneticStripeReaderCardTypes_Static{PyType_FromSpec(&type_spec_MagneticStripeReaderCardTypes_Static)};
+    py::pyobj_handle MagneticStripeReaderCardTypes_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MagneticStripeReaderCardTypes_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MagneticStripeReaderCardTypes_Static{PyType_FromSpecWithBases(&type_spec_MagneticStripeReaderCardTypes_Static, MagneticStripeReaderCardTypes_Static_bases.get())};
     if (!type_MagneticStripeReaderCardTypes_Static)
     {
         return nullptr;
@@ -38008,7 +38056,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MagneticStripeReaderEncryptionAlgorithms_Static{PyType_FromSpec(&type_spec_MagneticStripeReaderEncryptionAlgorithms_Static)};
+    py::pyobj_handle MagneticStripeReaderEncryptionAlgorithms_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MagneticStripeReaderEncryptionAlgorithms_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MagneticStripeReaderEncryptionAlgorithms_Static{PyType_FromSpecWithBases(&type_spec_MagneticStripeReaderEncryptionAlgorithms_Static, MagneticStripeReaderEncryptionAlgorithms_Static_bases.get())};
     if (!type_MagneticStripeReaderEncryptionAlgorithms_Static)
     {
         return nullptr;
@@ -38020,37 +38074,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MagneticStripeReaderErrorOccurredEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderErrorOccurredEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MagneticStripeReaderErrorOccurredEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderErrorOccurredEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MagneticStripeReaderErrorOccurredEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MagneticStripeReaderReport_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderReport, object_bases.get(), nullptr)};
+    py::pytype_handle MagneticStripeReaderReport_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderReport, object_bases.get(), inspectable_meta_type)};
     if (!MagneticStripeReaderReport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MagneticStripeReaderStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderStatusUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MagneticStripeReaderStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderStatusUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MagneticStripeReaderStatusUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MagneticStripeReaderTrackData_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderTrackData, object_bases.get(), nullptr)};
+    py::pytype_handle MagneticStripeReaderTrackData_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderTrackData, object_bases.get(), inspectable_meta_type)};
     if (!MagneticStripeReaderTrackData_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PosPrinter_Static{PyType_FromSpec(&type_spec_PosPrinter_Static)};
+    py::pyobj_handle PosPrinter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PosPrinter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PosPrinter_Static{PyType_FromSpecWithBases(&type_spec_PosPrinter_Static, PosPrinter_Static_bases.get())};
     if (!type_PosPrinter_Static)
     {
         return nullptr;
@@ -38062,13 +38122,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PosPrinterCapabilities_type{py::register_python_type(module.get(), &type_spec_PosPrinterCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle PosPrinterCapabilities_type{py::register_python_type(module.get(), &type_spec_PosPrinterCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!PosPrinterCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PosPrinterCharacterSetIds_Static{PyType_FromSpec(&type_spec_PosPrinterCharacterSetIds_Static)};
+    py::pyobj_handle PosPrinterCharacterSetIds_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PosPrinterCharacterSetIds_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PosPrinterCharacterSetIds_Static{PyType_FromSpecWithBases(&type_spec_PosPrinterCharacterSetIds_Static, PosPrinterCharacterSetIds_Static_bases.get())};
     if (!type_PosPrinterCharacterSetIds_Static)
     {
         return nullptr;
@@ -38080,61 +38146,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PosPrinterFontProperty_type{py::register_python_type(module.get(), &type_spec_PosPrinterFontProperty, object_bases.get(), nullptr)};
+    py::pytype_handle PosPrinterFontProperty_type{py::register_python_type(module.get(), &type_spec_PosPrinterFontProperty, object_bases.get(), inspectable_meta_type)};
     if (!PosPrinterFontProperty_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PosPrinterPrintOptions_type{py::register_python_type(module.get(), &type_spec_PosPrinterPrintOptions, object_bases.get(), nullptr)};
+    py::pytype_handle PosPrinterPrintOptions_type{py::register_python_type(module.get(), &type_spec_PosPrinterPrintOptions, object_bases.get(), inspectable_meta_type)};
     if (!PosPrinterPrintOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PosPrinterReleaseDeviceRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PosPrinterReleaseDeviceRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PosPrinterReleaseDeviceRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PosPrinterReleaseDeviceRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PosPrinterReleaseDeviceRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PosPrinterStatus_type{py::register_python_type(module.get(), &type_spec_PosPrinterStatus, object_bases.get(), nullptr)};
+    py::pytype_handle PosPrinterStatus_type{py::register_python_type(module.get(), &type_spec_PosPrinterStatus, object_bases.get(), inspectable_meta_type)};
     if (!PosPrinterStatus_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PosPrinterStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PosPrinterStatusUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PosPrinterStatusUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PosPrinterStatusUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PosPrinterStatusUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ReceiptPrintJob_type{py::register_python_type(module.get(), &type_spec_ReceiptPrintJob, object_bases.get(), nullptr)};
+    py::pytype_handle ReceiptPrintJob_type{py::register_python_type(module.get(), &type_spec_ReceiptPrintJob, object_bases.get(), inspectable_meta_type)};
     if (!ReceiptPrintJob_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ReceiptPrinterCapabilities_type{py::register_python_type(module.get(), &type_spec_ReceiptPrinterCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle ReceiptPrinterCapabilities_type{py::register_python_type(module.get(), &type_spec_ReceiptPrinterCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!ReceiptPrinterCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SlipPrintJob_type{py::register_python_type(module.get(), &type_spec_SlipPrintJob, object_bases.get(), nullptr)};
+    py::pytype_handle SlipPrintJob_type{py::register_python_type(module.get(), &type_spec_SlipPrintJob, object_bases.get(), inspectable_meta_type)};
     if (!SlipPrintJob_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SlipPrinterCapabilities_type{py::register_python_type(module.get(), &type_spec_SlipPrinterCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle SlipPrinterCapabilities_type{py::register_python_type(module.get(), &type_spec_SlipPrinterCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!SlipPrinterCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UnifiedPosErrorData_type{py::register_python_type(module.get(), &type_spec_UnifiedPosErrorData, object_bases.get(), nullptr)};
+    py::pytype_handle UnifiedPosErrorData_type{py::register_python_type(module.get(), &type_spec_UnifiedPosErrorData, object_bases.get(), inspectable_meta_type)};
     if (!UnifiedPosErrorData_type)
     {
         return nullptr;
@@ -38146,7 +38212,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICashDrawerEventSourceEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICashDrawerEventSourceEventArgs, nullptr))};
+    py::pytype_handle ImplementsICashDrawerEventSourceEventArgs_type{py::register_python_type(module.get(), &type_spec_ImplementsICashDrawerEventSourceEventArgs, nullptr, inspectable_meta_type)};
     if (!ImplementsICashDrawerEventSourceEventArgs_type)
     {
         return nullptr;
@@ -38163,7 +38229,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICommonClaimedPosPrinterStation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICommonClaimedPosPrinterStation, nullptr))};
+    py::pytype_handle ImplementsICommonClaimedPosPrinterStation_type{py::register_python_type(module.get(), &type_spec_ImplementsICommonClaimedPosPrinterStation, nullptr, inspectable_meta_type)};
     if (!ImplementsICommonClaimedPosPrinterStation_type)
     {
         return nullptr;
@@ -38180,7 +38246,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICommonPosPrintStationCapabilities_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICommonPosPrintStationCapabilities, nullptr))};
+    py::pytype_handle ImplementsICommonPosPrintStationCapabilities_type{py::register_python_type(module.get(), &type_spec_ImplementsICommonPosPrintStationCapabilities, nullptr, inspectable_meta_type)};
     if (!ImplementsICommonPosPrintStationCapabilities_type)
     {
         return nullptr;
@@ -38197,7 +38263,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICommonReceiptSlipCapabilities_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICommonReceiptSlipCapabilities, nullptr))};
+    py::pytype_handle ImplementsICommonReceiptSlipCapabilities_type{py::register_python_type(module.get(), &type_spec_ImplementsICommonReceiptSlipCapabilities, nullptr, inspectable_meta_type)};
     if (!ImplementsICommonReceiptSlipCapabilities_type)
     {
         return nullptr;
@@ -38214,7 +38280,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPosPrinterJob_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPosPrinterJob, nullptr))};
+    py::pytype_handle ImplementsIPosPrinterJob_type{py::register_python_type(module.get(), &type_spec_ImplementsIPosPrinterJob, nullptr, inspectable_meta_type)};
     if (!ImplementsIPosPrinterJob_type)
     {
         return nullptr;
@@ -38231,7 +38297,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIReceiptOrSlipJob_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIReceiptOrSlipJob, nullptr))};
+    py::pytype_handle ImplementsIReceiptOrSlipJob_type{py::register_python_type(module.get(), &type_spec_ImplementsIReceiptOrSlipJob, nullptr, inspectable_meta_type)};
     if (!ImplementsIReceiptOrSlipJob_type)
     {
         return nullptr;

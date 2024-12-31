@@ -4925,6 +4925,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4938,31 +4944,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle EnhancedWaypoint_type{py::register_python_type(module.get(), &type_spec_EnhancedWaypoint, object_bases.get(), nullptr)};
+    py::pytype_handle EnhancedWaypoint_type{py::register_python_type(module.get(), &type_spec_EnhancedWaypoint, object_bases.get(), inspectable_meta_type)};
     if (!EnhancedWaypoint_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManeuverWarning_type{py::register_python_type(module.get(), &type_spec_ManeuverWarning, object_bases.get(), nullptr)};
+    py::pytype_handle ManeuverWarning_type{py::register_python_type(module.get(), &type_spec_ManeuverWarning, object_bases.get(), inspectable_meta_type)};
     if (!ManeuverWarning_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapAddress_type{py::register_python_type(module.get(), &type_spec_MapAddress, object_bases.get(), nullptr)};
+    py::pytype_handle MapAddress_type{py::register_python_type(module.get(), &type_spec_MapAddress, object_bases.get(), inspectable_meta_type)};
     if (!MapAddress_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapLocation_type{py::register_python_type(module.get(), &type_spec_MapLocation, object_bases.get(), nullptr)};
+    py::pytype_handle MapLocation_type{py::register_python_type(module.get(), &type_spec_MapLocation, object_bases.get(), inspectable_meta_type)};
     if (!MapLocation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapLocationFinder_Static{PyType_FromSpec(&type_spec_MapLocationFinder_Static)};
+    py::pyobj_handle MapLocationFinder_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MapLocationFinder_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapLocationFinder_Static{PyType_FromSpecWithBases(&type_spec_MapLocationFinder_Static, MapLocationFinder_Static_bases.get())};
     if (!type_MapLocationFinder_Static)
     {
         return nullptr;
@@ -4974,13 +4986,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapLocationFinderResult_type{py::register_python_type(module.get(), &type_spec_MapLocationFinderResult, object_bases.get(), nullptr)};
+    py::pytype_handle MapLocationFinderResult_type{py::register_python_type(module.get(), &type_spec_MapLocationFinderResult, object_bases.get(), inspectable_meta_type)};
     if (!MapLocationFinderResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapManager_Static{PyType_FromSpec(&type_spec_MapManager_Static)};
+    py::pyobj_handle MapManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MapManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapManager_Static{PyType_FromSpecWithBases(&type_spec_MapManager_Static, MapManager_Static_bases.get())};
     if (!type_MapManager_Static)
     {
         return nullptr;
@@ -4992,19 +5010,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapRoute_type{py::register_python_type(module.get(), &type_spec_MapRoute, object_bases.get(), nullptr)};
+    py::pytype_handle MapRoute_type{py::register_python_type(module.get(), &type_spec_MapRoute, object_bases.get(), inspectable_meta_type)};
     if (!MapRoute_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapRouteDrivingOptions_type{py::register_python_type(module.get(), &type_spec_MapRouteDrivingOptions, object_bases.get(), nullptr)};
+    py::pytype_handle MapRouteDrivingOptions_type{py::register_python_type(module.get(), &type_spec_MapRouteDrivingOptions, object_bases.get(), inspectable_meta_type)};
     if (!MapRouteDrivingOptions_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapRouteFinder_Static{PyType_FromSpec(&type_spec_MapRouteFinder_Static)};
+    py::pyobj_handle MapRouteFinder_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MapRouteFinder_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapRouteFinder_Static{PyType_FromSpecWithBases(&type_spec_MapRouteFinder_Static, MapRouteFinder_Static_bases.get())};
     if (!type_MapRouteFinder_Static)
     {
         return nullptr;
@@ -5016,25 +5040,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapRouteFinderResult_type{py::register_python_type(module.get(), &type_spec_MapRouteFinderResult, object_bases.get(), nullptr)};
+    py::pytype_handle MapRouteFinderResult_type{py::register_python_type(module.get(), &type_spec_MapRouteFinderResult, object_bases.get(), inspectable_meta_type)};
     if (!MapRouteFinderResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapRouteLeg_type{py::register_python_type(module.get(), &type_spec_MapRouteLeg, object_bases.get(), nullptr)};
+    py::pytype_handle MapRouteLeg_type{py::register_python_type(module.get(), &type_spec_MapRouteLeg, object_bases.get(), inspectable_meta_type)};
     if (!MapRouteLeg_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapRouteManeuver_type{py::register_python_type(module.get(), &type_spec_MapRouteManeuver, object_bases.get(), nullptr)};
+    py::pytype_handle MapRouteManeuver_type{py::register_python_type(module.get(), &type_spec_MapRouteManeuver, object_bases.get(), inspectable_meta_type)};
     if (!MapRouteManeuver_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapService_Static{PyType_FromSpec(&type_spec_MapService_Static)};
+    py::pyobj_handle MapService_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MapService_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapService_Static{PyType_FromSpecWithBases(&type_spec_MapService_Static, MapService_Static_bases.get())};
     if (!type_MapService_Static)
     {
         return nullptr;
@@ -5046,7 +5076,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PlaceInfo_Static{PyType_FromSpec(&type_spec_PlaceInfo_Static)};
+    py::pyobj_handle PlaceInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PlaceInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PlaceInfo_Static{PyType_FromSpecWithBases(&type_spec_PlaceInfo_Static, PlaceInfo_Static_bases.get())};
     if (!type_PlaceInfo_Static)
     {
         return nullptr;
@@ -5058,7 +5094,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PlaceInfoCreateOptions_type{py::register_python_type(module.get(), &type_spec_PlaceInfoCreateOptions, object_bases.get(), nullptr)};
+    py::pytype_handle PlaceInfoCreateOptions_type{py::register_python_type(module.get(), &type_spec_PlaceInfoCreateOptions, object_bases.get(), inspectable_meta_type)};
     if (!PlaceInfoCreateOptions_type)
     {
         return nullptr;

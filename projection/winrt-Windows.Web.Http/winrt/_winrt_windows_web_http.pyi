@@ -297,7 +297,7 @@ class HttpGetStringResult(winrt.system.Object, windows_foundation.IStringable, w
     def value(self) -> str: ...
 
 @typing.final
-class HttpMethod_Static(type):
+class HttpMethod_Static(winrt._winrt.IInspectable_Static):
     # Windows.Web.Http.HttpMethod Windows.Web.Http.HttpMethod::get_Delete()
     @_property
     def delete(cls) -> HttpMethod: ...

@@ -789,6 +789,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_ocr(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -802,7 +808,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_ocr(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_OcrEngine_Static{PyType_FromSpec(&type_spec_OcrEngine_Static)};
+    py::pyobj_handle OcrEngine_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!OcrEngine_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_OcrEngine_Static{PyType_FromSpecWithBases(&type_spec_OcrEngine_Static, OcrEngine_Static_bases.get())};
     if (!type_OcrEngine_Static)
     {
         return nullptr;
@@ -814,19 +826,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_ocr(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle OcrLine_type{py::register_python_type(module.get(), &type_spec_OcrLine, object_bases.get(), nullptr)};
+    py::pytype_handle OcrLine_type{py::register_python_type(module.get(), &type_spec_OcrLine, object_bases.get(), inspectable_meta_type)};
     if (!OcrLine_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle OcrResult_type{py::register_python_type(module.get(), &type_spec_OcrResult, object_bases.get(), nullptr)};
+    py::pytype_handle OcrResult_type{py::register_python_type(module.get(), &type_spec_OcrResult, object_bases.get(), inspectable_meta_type)};
     if (!OcrResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle OcrWord_type{py::register_python_type(module.get(), &type_spec_OcrWord, object_bases.get(), nullptr)};
+    py::pytype_handle OcrWord_type{py::register_python_type(module.get(), &type_spec_OcrWord, object_bases.get(), inspectable_meta_type)};
     if (!OcrWord_type)
     {
         return nullptr;

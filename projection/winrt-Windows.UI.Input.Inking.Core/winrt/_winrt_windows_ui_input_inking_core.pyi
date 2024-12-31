@@ -38,7 +38,7 @@ class CoreIncrementalInkStroke(winrt.system.Object):
     def point_transform(self) -> windows_foundation_numerics.Matrix3x2: ...
 
 @typing.final
-class CoreInkIndependentInputSource_Static(type):
+class CoreInkIndependentInputSource_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource::Create(Windows.UI.Input.Inking.InkPresenter)
     def create(cls, ink_presenter: windows_ui_input_inking.InkPresenter, /) -> CoreInkIndependentInputSource: ...
 
@@ -111,7 +111,7 @@ class CoreWetStrokeUpdateEventArgs(winrt.system.Object):
     def pointer_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class CoreWetStrokeUpdateSource_Static(type):
+class CoreWetStrokeUpdateSource_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource::Create(Windows.UI.Input.Inking.InkPresenter)
     def create(cls, ink_presenter: windows_ui_input_inking.InkPresenter, /) -> CoreWetStrokeUpdateSource: ...
 

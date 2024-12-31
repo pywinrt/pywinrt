@@ -131,7 +131,7 @@ class TextReverseConversionGenerator(winrt.system.Object):
     def resolved_language(self) -> str: ...
 
 @typing.final
-class UnicodeCharacters_Static(type):
+class UnicodeCharacters_Static(winrt._winrt.IInspectable_Static):
     # System.UInt32 Windows.Data.Text.UnicodeCharacters::GetCodepointFromSurrogatePair(System.UInt32,System.UInt32)
     def get_codepoint_from_surrogate_pair(cls, high_surrogate: winrt.system.UInt32, low_surrogate: winrt.system.UInt32, /) -> winrt.system.UInt32: ...
     # Windows.Data.Text.UnicodeGeneralCategory Windows.Data.Text.UnicodeCharacters::GetGeneralCategory(System.UInt32)

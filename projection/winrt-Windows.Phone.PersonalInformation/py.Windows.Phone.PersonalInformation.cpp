@@ -5917,6 +5917,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5930,19 +5936,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContactAddress_type{py::register_python_type(module.get(), &type_spec_ContactAddress, object_bases.get(), nullptr)};
+    py::pytype_handle ContactAddress_type{py::register_python_type(module.get(), &type_spec_ContactAddress, object_bases.get(), inspectable_meta_type)};
     if (!ContactAddress_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactChangeRecord_type{py::register_python_type(module.get(), &type_spec_ContactChangeRecord, object_bases.get(), nullptr)};
+    py::pytype_handle ContactChangeRecord_type{py::register_python_type(module.get(), &type_spec_ContactChangeRecord, object_bases.get(), inspectable_meta_type)};
     if (!ContactChangeRecord_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ContactInformation_Static{PyType_FromSpec(&type_spec_ContactInformation_Static)};
+    py::pyobj_handle ContactInformation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ContactInformation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContactInformation_Static{PyType_FromSpecWithBases(&type_spec_ContactInformation_Static, ContactInformation_Static_bases.get())};
     if (!type_ContactInformation_Static)
     {
         return nullptr;
@@ -5954,19 +5966,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContactQueryOptions_type{py::register_python_type(module.get(), &type_spec_ContactQueryOptions, object_bases.get(), nullptr)};
+    py::pytype_handle ContactQueryOptions_type{py::register_python_type(module.get(), &type_spec_ContactQueryOptions, object_bases.get(), inspectable_meta_type)};
     if (!ContactQueryOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactQueryResult_type{py::register_python_type(module.get(), &type_spec_ContactQueryResult, object_bases.get(), nullptr)};
+    py::pytype_handle ContactQueryResult_type{py::register_python_type(module.get(), &type_spec_ContactQueryResult, object_bases.get(), inspectable_meta_type)};
     if (!ContactQueryResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ContactStore_Static{PyType_FromSpec(&type_spec_ContactStore_Static)};
+    py::pyobj_handle ContactStore_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ContactStore_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContactStore_Static{PyType_FromSpecWithBases(&type_spec_ContactStore_Static, ContactStore_Static_bases.get())};
     if (!type_ContactStore_Static)
     {
         return nullptr;
@@ -5978,7 +5996,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownContactProperties_Static{PyType_FromSpec(&type_spec_KnownContactProperties_Static)};
+    py::pyobj_handle KnownContactProperties_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownContactProperties_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownContactProperties_Static{PyType_FromSpecWithBases(&type_spec_KnownContactProperties_Static, KnownContactProperties_Static_bases.get())};
     if (!type_KnownContactProperties_Static)
     {
         return nullptr;
@@ -5990,7 +6014,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StoredContact_type{py::register_python_type(module.get(), &type_spec_StoredContact, object_bases.get(), nullptr)};
+    py::pytype_handle StoredContact_type{py::register_python_type(module.get(), &type_spec_StoredContact, object_bases.get(), inspectable_meta_type)};
     if (!StoredContact_type)
     {
         return nullptr;
@@ -6002,7 +6026,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIContactInformation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactInformation, nullptr))};
+    py::pytype_handle ImplementsIContactInformation_type{py::register_python_type(module.get(), &type_spec_ImplementsIContactInformation, nullptr, inspectable_meta_type)};
     if (!ImplementsIContactInformation_type)
     {
         return nullptr;
@@ -6019,7 +6043,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIContactInformation2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIContactInformation2, nullptr))};
+    py::pytype_handle ImplementsIContactInformation2_type{py::register_python_type(module.get(), &type_spec_ImplementsIContactInformation2, nullptr, inspectable_meta_type)};
     if (!ImplementsIContactInformation2_type)
     {
         return nullptr;

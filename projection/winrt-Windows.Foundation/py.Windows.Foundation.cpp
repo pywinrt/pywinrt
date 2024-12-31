@@ -11951,6 +11951,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -11964,13 +11970,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Deferral_type{py::register_python_type(module.get(), &type_spec_Deferral, object_bases.get(), nullptr)};
+    py::pytype_handle Deferral_type{py::register_python_type(module.get(), &type_spec_Deferral, object_bases.get(), inspectable_meta_type)};
     if (!Deferral_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GuidHelper_Static{PyType_FromSpec(&type_spec_GuidHelper_Static)};
+    py::pyobj_handle GuidHelper_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GuidHelper_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GuidHelper_Static{PyType_FromSpecWithBases(&type_spec_GuidHelper_Static, GuidHelper_Static_bases.get())};
     if (!type_GuidHelper_Static)
     {
         return nullptr;
@@ -11982,13 +11994,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MemoryBuffer_type{py::register_python_type(module.get(), &type_spec_MemoryBuffer, object_bases.get(), nullptr)};
+    py::pytype_handle MemoryBuffer_type{py::register_python_type(module.get(), &type_spec_MemoryBuffer, object_bases.get(), inspectable_meta_type)};
     if (!MemoryBuffer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PropertyValue_Static{PyType_FromSpec(&type_spec_PropertyValue_Static)};
+    py::pyobj_handle PropertyValue_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PropertyValue_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PropertyValue_Static{PyType_FromSpecWithBases(&type_spec_PropertyValue_Static, PropertyValue_Static_bases.get())};
     if (!type_PropertyValue_Static)
     {
         return nullptr;
@@ -12000,7 +12018,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Uri_Static{PyType_FromSpec(&type_spec_Uri_Static)};
+    py::pyobj_handle Uri_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Uri_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Uri_Static{PyType_FromSpecWithBases(&type_spec_Uri_Static, Uri_Static_bases.get())};
     if (!type_Uri_Static)
     {
         return nullptr;
@@ -12012,13 +12036,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WwwFormUrlDecoder_type{py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoder, object_bases.get(), nullptr)};
+    py::pytype_handle WwwFormUrlDecoder_type{py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoder, object_bases.get(), inspectable_meta_type)};
     if (!WwwFormUrlDecoder_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WwwFormUrlDecoderEntry_type{py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoderEntry, object_bases.get(), nullptr)};
+    py::pytype_handle WwwFormUrlDecoderEntry_type{py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoderEntry, object_bases.get(), inspectable_meta_type)};
     if (!WwwFormUrlDecoderEntry_type)
     {
         return nullptr;
@@ -12030,7 +12054,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAsyncAction_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncAction, nullptr))};
+    py::pytype_handle ImplementsIAsyncAction_type{py::register_python_type(module.get(), &type_spec_ImplementsIAsyncAction, nullptr, inspectable_meta_type)};
     if (!ImplementsIAsyncAction_type)
     {
         return nullptr;
@@ -12047,7 +12071,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAsyncActionWithProgress_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncActionWithProgress, nullptr))};
+    py::pytype_handle ImplementsIAsyncActionWithProgress_type{py::register_python_type(module.get(), &type_spec_ImplementsIAsyncActionWithProgress, nullptr, inspectable_meta_type)};
     if (!ImplementsIAsyncActionWithProgress_type)
     {
         return nullptr;
@@ -12064,7 +12088,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAsyncInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncInfo, nullptr))};
+    py::pytype_handle ImplementsIAsyncInfo_type{py::register_python_type(module.get(), &type_spec_ImplementsIAsyncInfo, nullptr, inspectable_meta_type)};
     if (!ImplementsIAsyncInfo_type)
     {
         return nullptr;
@@ -12081,7 +12105,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAsyncOperationWithProgress_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncOperationWithProgress, nullptr))};
+    py::pytype_handle ImplementsIAsyncOperationWithProgress_type{py::register_python_type(module.get(), &type_spec_ImplementsIAsyncOperationWithProgress, nullptr, inspectable_meta_type)};
     if (!ImplementsIAsyncOperationWithProgress_type)
     {
         return nullptr;
@@ -12098,7 +12122,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAsyncOperation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAsyncOperation, nullptr))};
+    py::pytype_handle ImplementsIAsyncOperation_type{py::register_python_type(module.get(), &type_spec_ImplementsIAsyncOperation, nullptr, inspectable_meta_type)};
     if (!ImplementsIAsyncOperation_type)
     {
         return nullptr;
@@ -12115,7 +12139,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIClosable_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIClosable, nullptr))};
+    py::pytype_handle ImplementsIClosable_type{py::register_python_type(module.get(), &type_spec_ImplementsIClosable, nullptr, inspectable_meta_type)};
     if (!ImplementsIClosable_type)
     {
         return nullptr;
@@ -12132,7 +12156,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGetActivationFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGetActivationFactory, nullptr))};
+    py::pytype_handle ImplementsIGetActivationFactory_type{py::register_python_type(module.get(), &type_spec_ImplementsIGetActivationFactory, nullptr, inspectable_meta_type)};
     if (!ImplementsIGetActivationFactory_type)
     {
         return nullptr;
@@ -12149,7 +12173,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMemoryBuffer_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMemoryBuffer, nullptr))};
+    py::pytype_handle ImplementsIMemoryBuffer_type{py::register_python_type(module.get(), &type_spec_ImplementsIMemoryBuffer, nullptr, inspectable_meta_type)};
     if (!ImplementsIMemoryBuffer_type)
     {
         return nullptr;
@@ -12166,7 +12190,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMemoryBufferReference_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMemoryBufferReference, nullptr))};
+    py::pytype_handle ImplementsIMemoryBufferReference_type{py::register_python_type(module.get(), &type_spec_ImplementsIMemoryBufferReference, nullptr, inspectable_meta_type)};
     if (!ImplementsIMemoryBufferReference_type)
     {
         return nullptr;
@@ -12183,7 +12207,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPropertyValue_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPropertyValue, nullptr))};
+    py::pytype_handle ImplementsIPropertyValue_type{py::register_python_type(module.get(), &type_spec_ImplementsIPropertyValue, nullptr, inspectable_meta_type)};
     if (!ImplementsIPropertyValue_type)
     {
         return nullptr;
@@ -12200,7 +12224,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIReferenceArray_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIReferenceArray, nullptr))};
+    py::pytype_handle ImplementsIReferenceArray_type{py::register_python_type(module.get(), &type_spec_ImplementsIReferenceArray, nullptr, inspectable_meta_type)};
     if (!ImplementsIReferenceArray_type)
     {
         return nullptr;
@@ -12217,7 +12241,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIReference_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIReference, nullptr))};
+    py::pytype_handle ImplementsIReference_type{py::register_python_type(module.get(), &type_spec_ImplementsIReference, nullptr, inspectable_meta_type)};
     if (!ImplementsIReference_type)
     {
         return nullptr;
@@ -12234,7 +12258,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStringable_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStringable, nullptr))};
+    py::pytype_handle ImplementsIStringable_type{py::register_python_type(module.get(), &type_spec_ImplementsIStringable, nullptr, inspectable_meta_type)};
     if (!ImplementsIStringable_type)
     {
         return nullptr;
@@ -12251,7 +12275,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWwwFormUrlDecoderEntry_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWwwFormUrlDecoderEntry, nullptr))};
+    py::pytype_handle ImplementsIWwwFormUrlDecoderEntry_type{py::register_python_type(module.get(), &type_spec_ImplementsIWwwFormUrlDecoderEntry, nullptr, inspectable_meta_type)};
     if (!ImplementsIWwwFormUrlDecoderEntry_type)
     {
         return nullptr;

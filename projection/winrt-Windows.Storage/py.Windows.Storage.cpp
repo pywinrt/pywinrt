@@ -23160,6 +23160,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -23173,7 +23179,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AppDataPaths_Static{PyType_FromSpec(&type_spec_AppDataPaths_Static)};
+    py::pyobj_handle AppDataPaths_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppDataPaths_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppDataPaths_Static{PyType_FromSpecWithBases(&type_spec_AppDataPaths_Static, AppDataPaths_Static_bases.get())};
     if (!type_AppDataPaths_Static)
     {
         return nullptr;
@@ -23185,7 +23197,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ApplicationData_Static{PyType_FromSpec(&type_spec_ApplicationData_Static)};
+    py::pyobj_handle ApplicationData_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ApplicationData_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ApplicationData_Static{PyType_FromSpecWithBases(&type_spec_ApplicationData_Static, ApplicationData_Static_bases.get())};
     if (!type_ApplicationData_Static)
     {
         return nullptr;
@@ -23197,25 +23215,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ApplicationDataCompositeValue_type{py::register_python_type(module.get(), &type_spec_ApplicationDataCompositeValue, object_bases.get(), nullptr)};
+    py::pytype_handle ApplicationDataCompositeValue_type{py::register_python_type(module.get(), &type_spec_ApplicationDataCompositeValue, object_bases.get(), inspectable_meta_type)};
     if (!ApplicationDataCompositeValue_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ApplicationDataContainer_type{py::register_python_type(module.get(), &type_spec_ApplicationDataContainer, object_bases.get(), nullptr)};
+    py::pytype_handle ApplicationDataContainer_type{py::register_python_type(module.get(), &type_spec_ApplicationDataContainer, object_bases.get(), inspectable_meta_type)};
     if (!ApplicationDataContainer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ApplicationDataContainerSettings_type{py::register_python_type(module.get(), &type_spec_ApplicationDataContainerSettings, object_bases.get(), nullptr)};
+    py::pytype_handle ApplicationDataContainerSettings_type{py::register_python_type(module.get(), &type_spec_ApplicationDataContainerSettings, object_bases.get(), inspectable_meta_type)};
     if (!ApplicationDataContainerSettings_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CachedFileManager_Static{PyType_FromSpec(&type_spec_CachedFileManager_Static)};
+    py::pyobj_handle CachedFileManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CachedFileManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CachedFileManager_Static{PyType_FromSpecWithBases(&type_spec_CachedFileManager_Static, CachedFileManager_Static_bases.get())};
     if (!type_CachedFileManager_Static)
     {
         return nullptr;
@@ -23227,7 +23251,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DownloadsFolder_Static{PyType_FromSpec(&type_spec_DownloadsFolder_Static)};
+    py::pyobj_handle DownloadsFolder_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DownloadsFolder_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DownloadsFolder_Static{PyType_FromSpecWithBases(&type_spec_DownloadsFolder_Static, DownloadsFolder_Static_bases.get())};
     if (!type_DownloadsFolder_Static)
     {
         return nullptr;
@@ -23239,7 +23269,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FileIO_Static{PyType_FromSpec(&type_spec_FileIO_Static)};
+    py::pyobj_handle FileIO_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FileIO_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FileIO_Static{PyType_FromSpecWithBases(&type_spec_FileIO_Static, FileIO_Static_bases.get())};
     if (!type_FileIO_Static)
     {
         return nullptr;
@@ -23251,7 +23287,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownFolders_Static{PyType_FromSpec(&type_spec_KnownFolders_Static)};
+    py::pyobj_handle KnownFolders_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownFolders_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownFolders_Static{PyType_FromSpecWithBases(&type_spec_KnownFolders_Static, KnownFolders_Static_bases.get())};
     if (!type_KnownFolders_Static)
     {
         return nullptr;
@@ -23263,7 +23305,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PathIO_Static{PyType_FromSpec(&type_spec_PathIO_Static)};
+    py::pyobj_handle PathIO_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PathIO_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PathIO_Static{PyType_FromSpecWithBases(&type_spec_PathIO_Static, PathIO_Static_bases.get())};
     if (!type_PathIO_Static)
     {
         return nullptr;
@@ -23275,19 +23323,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SetVersionDeferral_type{py::register_python_type(module.get(), &type_spec_SetVersionDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle SetVersionDeferral_type{py::register_python_type(module.get(), &type_spec_SetVersionDeferral, object_bases.get(), inspectable_meta_type)};
     if (!SetVersionDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SetVersionRequest_type{py::register_python_type(module.get(), &type_spec_SetVersionRequest, object_bases.get(), nullptr)};
+    py::pytype_handle SetVersionRequest_type{py::register_python_type(module.get(), &type_spec_SetVersionRequest, object_bases.get(), inspectable_meta_type)};
     if (!SetVersionRequest_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StorageFile_Static{PyType_FromSpec(&type_spec_StorageFile_Static)};
+    py::pyobj_handle StorageFile_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StorageFile_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StorageFile_Static{PyType_FromSpecWithBases(&type_spec_StorageFile_Static, StorageFile_Static_bases.get())};
     if (!type_StorageFile_Static)
     {
         return nullptr;
@@ -23299,7 +23353,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StorageFolder_Static{PyType_FromSpec(&type_spec_StorageFolder_Static)};
+    py::pyobj_handle StorageFolder_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StorageFolder_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StorageFolder_Static{PyType_FromSpecWithBases(&type_spec_StorageFolder_Static, StorageFolder_Static_bases.get())};
     if (!type_StorageFolder_Static)
     {
         return nullptr;
@@ -23311,7 +23371,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StorageLibrary_Static{PyType_FromSpec(&type_spec_StorageLibrary_Static)};
+    py::pyobj_handle StorageLibrary_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StorageLibrary_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StorageLibrary_Static{PyType_FromSpecWithBases(&type_spec_StorageLibrary_Static, StorageLibrary_Static_bases.get())};
     if (!type_StorageLibrary_Static)
     {
         return nullptr;
@@ -23323,31 +23389,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StorageLibraryChange_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChange, object_bases.get(), nullptr)};
+    py::pytype_handle StorageLibraryChange_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChange, object_bases.get(), inspectable_meta_type)};
     if (!StorageLibraryChange_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageLibraryChangeReader_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeReader, object_bases.get(), nullptr)};
+    py::pytype_handle StorageLibraryChangeReader_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeReader, object_bases.get(), inspectable_meta_type)};
     if (!StorageLibraryChangeReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageLibraryChangeTracker_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeTracker, object_bases.get(), nullptr)};
+    py::pytype_handle StorageLibraryChangeTracker_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeTracker, object_bases.get(), inspectable_meta_type)};
     if (!StorageLibraryChangeTracker_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageLibraryChangeTrackerOptions_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeTrackerOptions, object_bases.get(), nullptr)};
+    py::pytype_handle StorageLibraryChangeTrackerOptions_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeTrackerOptions, object_bases.get(), inspectable_meta_type)};
     if (!StorageLibraryChangeTrackerOptions_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StorageLibraryLastChangeId_Static{PyType_FromSpec(&type_spec_StorageLibraryLastChangeId_Static)};
+    py::pyobj_handle StorageLibraryLastChangeId_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StorageLibraryLastChangeId_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StorageLibraryLastChangeId_Static{PyType_FromSpecWithBases(&type_spec_StorageLibraryLastChangeId_Static, StorageLibraryLastChangeId_Static_bases.get())};
     if (!type_StorageLibraryLastChangeId_Static)
     {
         return nullptr;
@@ -23359,31 +23431,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StorageProvider_type{py::register_python_type(module.get(), &type_spec_StorageProvider, object_bases.get(), nullptr)};
+    py::pytype_handle StorageProvider_type{py::register_python_type(module.get(), &type_spec_StorageProvider, object_bases.get(), inspectable_meta_type)};
     if (!StorageProvider_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageStreamTransaction_type{py::register_python_type(module.get(), &type_spec_StorageStreamTransaction, object_bases.get(), nullptr)};
+    py::pytype_handle StorageStreamTransaction_type{py::register_python_type(module.get(), &type_spec_StorageStreamTransaction, object_bases.get(), inspectable_meta_type)};
     if (!StorageStreamTransaction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreamedFileDataRequest_type{py::register_python_type(module.get(), &type_spec_StreamedFileDataRequest, object_bases.get(), nullptr)};
+    py::pytype_handle StreamedFileDataRequest_type{py::register_python_type(module.get(), &type_spec_StreamedFileDataRequest, object_bases.get(), inspectable_meta_type)};
     if (!StreamedFileDataRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SystemAudioProperties_type{py::register_python_type(module.get(), &type_spec_SystemAudioProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SystemAudioProperties_type{py::register_python_type(module.get(), &type_spec_SystemAudioProperties, object_bases.get(), inspectable_meta_type)};
     if (!SystemAudioProperties_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemDataPaths_Static{PyType_FromSpec(&type_spec_SystemDataPaths_Static)};
+    py::pyobj_handle SystemDataPaths_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SystemDataPaths_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemDataPaths_Static{PyType_FromSpecWithBases(&type_spec_SystemDataPaths_Static, SystemDataPaths_Static_bases.get())};
     if (!type_SystemDataPaths_Static)
     {
         return nullptr;
@@ -23395,37 +23473,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SystemGPSProperties_type{py::register_python_type(module.get(), &type_spec_SystemGPSProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SystemGPSProperties_type{py::register_python_type(module.get(), &type_spec_SystemGPSProperties, object_bases.get(), inspectable_meta_type)};
     if (!SystemGPSProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SystemImageProperties_type{py::register_python_type(module.get(), &type_spec_SystemImageProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SystemImageProperties_type{py::register_python_type(module.get(), &type_spec_SystemImageProperties, object_bases.get(), inspectable_meta_type)};
     if (!SystemImageProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SystemMediaProperties_type{py::register_python_type(module.get(), &type_spec_SystemMediaProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SystemMediaProperties_type{py::register_python_type(module.get(), &type_spec_SystemMediaProperties, object_bases.get(), inspectable_meta_type)};
     if (!SystemMediaProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SystemMusicProperties_type{py::register_python_type(module.get(), &type_spec_SystemMusicProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SystemMusicProperties_type{py::register_python_type(module.get(), &type_spec_SystemMusicProperties, object_bases.get(), inspectable_meta_type)};
     if (!SystemMusicProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SystemPhotoProperties_type{py::register_python_type(module.get(), &type_spec_SystemPhotoProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SystemPhotoProperties_type{py::register_python_type(module.get(), &type_spec_SystemPhotoProperties, object_bases.get(), inspectable_meta_type)};
     if (!SystemPhotoProperties_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemProperties_Static{PyType_FromSpec(&type_spec_SystemProperties_Static)};
+    py::pyobj_handle SystemProperties_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SystemProperties_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemProperties_Static{PyType_FromSpecWithBases(&type_spec_SystemProperties_Static, SystemProperties_Static_bases.get())};
     if (!type_SystemProperties_Static)
     {
         return nullptr;
@@ -23437,13 +23521,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SystemVideoProperties_type{py::register_python_type(module.get(), &type_spec_SystemVideoProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SystemVideoProperties_type{py::register_python_type(module.get(), &type_spec_SystemVideoProperties, object_bases.get(), inspectable_meta_type)};
     if (!SystemVideoProperties_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UserDataPaths_Static{PyType_FromSpec(&type_spec_UserDataPaths_Static)};
+    py::pyobj_handle UserDataPaths_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserDataPaths_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserDataPaths_Static{PyType_FromSpecWithBases(&type_spec_UserDataPaths_Static, UserDataPaths_Static_bases.get())};
     if (!type_UserDataPaths_Static)
     {
         return nullptr;
@@ -23461,7 +23551,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageFile_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFile, nullptr))};
+    py::pytype_handle ImplementsIStorageFile_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageFile, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageFile_type)
     {
         return nullptr;
@@ -23478,7 +23568,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageFile2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFile2, nullptr))};
+    py::pytype_handle ImplementsIStorageFile2_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageFile2, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageFile2_type)
     {
         return nullptr;
@@ -23495,7 +23585,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageFilePropertiesWithAvailability_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFilePropertiesWithAvailability, nullptr))};
+    py::pytype_handle ImplementsIStorageFilePropertiesWithAvailability_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageFilePropertiesWithAvailability, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageFilePropertiesWithAvailability_type)
     {
         return nullptr;
@@ -23512,7 +23602,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageFolder_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFolder, nullptr))};
+    py::pytype_handle ImplementsIStorageFolder_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageFolder, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageFolder_type)
     {
         return nullptr;
@@ -23529,7 +23619,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageFolder2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFolder2, nullptr))};
+    py::pytype_handle ImplementsIStorageFolder2_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageFolder2, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageFolder2_type)
     {
         return nullptr;
@@ -23546,7 +23636,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageItem_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItem, nullptr))};
+    py::pytype_handle ImplementsIStorageItem_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageItem, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageItem_type)
     {
         return nullptr;
@@ -23563,7 +23653,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageItem2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItem2, nullptr))};
+    py::pytype_handle ImplementsIStorageItem2_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageItem2, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageItem2_type)
     {
         return nullptr;
@@ -23580,7 +23670,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageItemProperties_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemProperties, nullptr))};
+    py::pytype_handle ImplementsIStorageItemProperties_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageItemProperties, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageItemProperties_type)
     {
         return nullptr;
@@ -23597,7 +23687,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageItemProperties2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemProperties2, nullptr))};
+    py::pytype_handle ImplementsIStorageItemProperties2_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageItemProperties2, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageItemProperties2_type)
     {
         return nullptr;
@@ -23614,7 +23704,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageItemPropertiesWithProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemPropertiesWithProvider, nullptr))};
+    py::pytype_handle ImplementsIStorageItemPropertiesWithProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageItemPropertiesWithProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageItemPropertiesWithProvider_type)
     {
         return nullptr;
@@ -23631,7 +23721,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStreamedFileDataRequest_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStreamedFileDataRequest, nullptr))};
+    py::pytype_handle ImplementsIStreamedFileDataRequest_type{py::register_python_type(module.get(), &type_spec_ImplementsIStreamedFileDataRequest, nullptr, inspectable_meta_type)};
     if (!ImplementsIStreamedFileDataRequest_type)
     {
         return nullptr;

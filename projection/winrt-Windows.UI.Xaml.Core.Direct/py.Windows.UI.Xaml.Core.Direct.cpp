@@ -2618,6 +2618,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_core_direct(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2631,7 +2637,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_core_direct(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlDirect_Static{PyType_FromSpec(&type_spec_XamlDirect_Static)};
+    py::pyobj_handle XamlDirect_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!XamlDirect_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XamlDirect_Static{PyType_FromSpecWithBases(&type_spec_XamlDirect_Static, XamlDirect_Static_bases.get())};
     if (!type_XamlDirect_Static)
     {
         return nullptr;
@@ -2649,7 +2661,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_core_direct(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIXamlDirectObject_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXamlDirectObject, nullptr))};
+    py::pytype_handle ImplementsIXamlDirectObject_type{py::register_python_type(module.get(), &type_spec_ImplementsIXamlDirectObject, nullptr, inspectable_meta_type)};
     if (!ImplementsIXamlDirectObject_type)
     {
         return nullptr;

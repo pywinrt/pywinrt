@@ -263,7 +263,7 @@ class WalletItemStore(winrt.system.Object):
     def update_async(self, item: WalletItem, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
-class WalletManager_Static(type):
+class WalletManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.WalletItemStore> Windows.ApplicationModel.Wallet.WalletManager::RequestStoreAsync()
     # @deprecated("IWalletManagerStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def request_store_async(cls) -> windows_foundation.IAsyncOperation[WalletItemStore]: ...

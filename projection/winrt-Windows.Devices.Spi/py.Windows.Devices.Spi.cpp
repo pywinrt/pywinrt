@@ -1861,6 +1861,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1874,19 +1880,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SpiBusInfo_type{py::register_python_type(module.get(), &type_spec_SpiBusInfo, object_bases.get(), nullptr)};
+    py::pytype_handle SpiBusInfo_type{py::register_python_type(module.get(), &type_spec_SpiBusInfo, object_bases.get(), inspectable_meta_type)};
     if (!SpiBusInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpiConnectionSettings_type{py::register_python_type(module.get(), &type_spec_SpiConnectionSettings, object_bases.get(), nullptr)};
+    py::pytype_handle SpiConnectionSettings_type{py::register_python_type(module.get(), &type_spec_SpiConnectionSettings, object_bases.get(), inspectable_meta_type)};
     if (!SpiConnectionSettings_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SpiController_Static{PyType_FromSpec(&type_spec_SpiController_Static)};
+    py::pyobj_handle SpiController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SpiController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpiController_Static{PyType_FromSpecWithBases(&type_spec_SpiController_Static, SpiController_Static_bases.get())};
     if (!type_SpiController_Static)
     {
         return nullptr;
@@ -1898,7 +1910,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SpiDevice_Static{PyType_FromSpec(&type_spec_SpiDevice_Static)};
+    py::pyobj_handle SpiDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SpiDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpiDevice_Static{PyType_FromSpecWithBases(&type_spec_SpiDevice_Static, SpiDevice_Static_bases.get())};
     if (!type_SpiDevice_Static)
     {
         return nullptr;
@@ -1916,7 +1934,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISpiDeviceStatics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpiDeviceStatics, nullptr))};
+    py::pytype_handle ImplementsISpiDeviceStatics_type{py::register_python_type(module.get(), &type_spec_ImplementsISpiDeviceStatics, nullptr, inspectable_meta_type)};
     if (!ImplementsISpiDeviceStatics_type)
     {
         return nullptr;

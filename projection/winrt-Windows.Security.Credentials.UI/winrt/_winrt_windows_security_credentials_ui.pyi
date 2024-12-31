@@ -17,7 +17,7 @@ from winrt.windows.security.credentials.ui import AuthenticationProtocol, Creden
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CredentialPicker_Static(type):
+class CredentialPicker_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(System.String,System.String,System.String)
     def pick_with_caption_async(cls, target_name: str, message: str, caption: str, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(System.String,System.String)
@@ -118,7 +118,7 @@ class CredentialPickerResults(winrt.system.Object):
     def error_code(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class UserConsentVerifier_Static(type):
+class UserConsentVerifier_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.UserConsentVerifierAvailability> Windows.Security.Credentials.UI.UserConsentVerifier::CheckAvailabilityAsync()
     def check_availability_async(cls) -> windows_foundation.IAsyncOperation[UserConsentVerifierAvailability]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.UserConsentVerificationResult> Windows.Security.Credentials.UI.UserConsentVerifier::RequestVerificationAsync(System.String)

@@ -21,7 +21,7 @@ from winrt.windows.phone.notification.management import AccessoryNotificationTyp
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AccessoryManager_Static(type):
+class AccessoryManager_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.Phone.Notification.Management.AccessoryManager::AcceptPhoneCall(System.UInt32)
     def accept_phone_call(cls, phone_call_id: winrt.system.UInt32, /) -> None: ...
     # System.Void Windows.Phone.Notification.Management.AccessoryManager::AcceptPhoneCall(System.UInt32,Windows.Phone.Notification.Management.PhoneCallAudioEndpoint)

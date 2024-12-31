@@ -47,7 +47,7 @@ class KeyCredentialAttestationResult(winrt.system.Object):
     def status(self) -> KeyCredentialAttestationStatus: ...
 
 @typing.final
-class KeyCredentialManager_Static(type):
+class KeyCredentialManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction Windows.Security.Credentials.KeyCredentialManager::DeleteAsync(System.String)
     def delete_async(cls, name: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Security.Credentials.KeyCredentialManager::IsSupportedAsync()

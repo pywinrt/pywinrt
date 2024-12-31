@@ -4438,6 +4438,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4451,7 +4457,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_JsonArray_Static{PyType_FromSpec(&type_spec_JsonArray_Static)};
+    py::pyobj_handle JsonArray_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!JsonArray_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_JsonArray_Static{PyType_FromSpecWithBases(&type_spec_JsonArray_Static, JsonArray_Static_bases.get())};
     if (!type_JsonArray_Static)
     {
         return nullptr;
@@ -4463,7 +4475,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_JsonError_Static{PyType_FromSpec(&type_spec_JsonError_Static)};
+    py::pyobj_handle JsonError_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!JsonError_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_JsonError_Static{PyType_FromSpecWithBases(&type_spec_JsonError_Static, JsonError_Static_bases.get())};
     if (!type_JsonError_Static)
     {
         return nullptr;
@@ -4475,7 +4493,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_JsonObject_Static{PyType_FromSpec(&type_spec_JsonObject_Static)};
+    py::pyobj_handle JsonObject_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!JsonObject_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_JsonObject_Static{PyType_FromSpecWithBases(&type_spec_JsonObject_Static, JsonObject_Static_bases.get())};
     if (!type_JsonObject_Static)
     {
         return nullptr;
@@ -4487,7 +4511,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_JsonValue_Static{PyType_FromSpec(&type_spec_JsonValue_Static)};
+    py::pyobj_handle JsonValue_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!JsonValue_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_JsonValue_Static{PyType_FromSpecWithBases(&type_spec_JsonValue_Static, JsonValue_Static_bases.get())};
     if (!type_JsonValue_Static)
     {
         return nullptr;
@@ -4505,7 +4535,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIJsonValue_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIJsonValue, nullptr))};
+    py::pytype_handle ImplementsIJsonValue_type{py::register_python_type(module.get(), &type_spec_ImplementsIJsonValue, nullptr, inspectable_meta_type)};
     if (!ImplementsIJsonValue_type)
     {
         return nullptr;

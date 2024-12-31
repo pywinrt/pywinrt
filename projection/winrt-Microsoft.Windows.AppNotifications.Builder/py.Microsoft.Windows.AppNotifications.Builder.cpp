@@ -4167,6 +4167,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_appnotifications_builder(void) no
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4180,7 +4186,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_appnotifications_builder(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_AppNotificationBuilder_Static{PyType_FromSpec(&type_spec_AppNotificationBuilder_Static)};
+    py::pyobj_handle AppNotificationBuilder_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppNotificationBuilder_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppNotificationBuilder_Static{PyType_FromSpecWithBases(&type_spec_AppNotificationBuilder_Static, AppNotificationBuilder_Static_bases.get())};
     if (!type_AppNotificationBuilder_Static)
     {
         return nullptr;
@@ -4192,7 +4204,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_appnotifications_builder(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_AppNotificationButton_Static{PyType_FromSpec(&type_spec_AppNotificationButton_Static)};
+    py::pyobj_handle AppNotificationButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppNotificationButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppNotificationButton_Static{PyType_FromSpecWithBases(&type_spec_AppNotificationButton_Static, AppNotificationButton_Static_bases.get())};
     if (!type_AppNotificationButton_Static)
     {
         return nullptr;
@@ -4204,19 +4222,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_appnotifications_builder(void) no
         return nullptr;
     }
 
-    py::pytype_handle AppNotificationComboBox_type{py::register_python_type(module.get(), &type_spec_AppNotificationComboBox, object_bases.get(), nullptr)};
+    py::pytype_handle AppNotificationComboBox_type{py::register_python_type(module.get(), &type_spec_AppNotificationComboBox, object_bases.get(), inspectable_meta_type)};
     if (!AppNotificationComboBox_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppNotificationProgressBar_type{py::register_python_type(module.get(), &type_spec_AppNotificationProgressBar, object_bases.get(), nullptr)};
+    py::pytype_handle AppNotificationProgressBar_type{py::register_python_type(module.get(), &type_spec_AppNotificationProgressBar, object_bases.get(), inspectable_meta_type)};
     if (!AppNotificationProgressBar_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppNotificationTextProperties_type{py::register_python_type(module.get(), &type_spec_AppNotificationTextProperties, object_bases.get(), nullptr)};
+    py::pytype_handle AppNotificationTextProperties_type{py::register_python_type(module.get(), &type_spec_AppNotificationTextProperties, object_bases.get(), inspectable_meta_type)};
     if (!AppNotificationTextProperties_type)
     {
         return nullptr;

@@ -15312,6 +15312,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -15325,43 +15331,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AdvancedPhotoCaptureSettings_type{py::register_python_type(module.get(), &type_spec_AdvancedPhotoCaptureSettings, object_bases.get(), nullptr)};
+    py::pytype_handle AdvancedPhotoCaptureSettings_type{py::register_python_type(module.get(), &type_spec_AdvancedPhotoCaptureSettings, object_bases.get(), inspectable_meta_type)};
     if (!AdvancedPhotoCaptureSettings_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdvancedPhotoControl_type{py::register_python_type(module.get(), &type_spec_AdvancedPhotoControl, object_bases.get(), nullptr)};
+    py::pytype_handle AdvancedPhotoControl_type{py::register_python_type(module.get(), &type_spec_AdvancedPhotoControl, object_bases.get(), inspectable_meta_type)};
     if (!AdvancedPhotoControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AudioDeviceController_type{py::register_python_type(module.get(), &type_spec_AudioDeviceController, object_bases.get(), nullptr)};
+    py::pytype_handle AudioDeviceController_type{py::register_python_type(module.get(), &type_spec_AudioDeviceController, object_bases.get(), inspectable_meta_type)};
     if (!AudioDeviceController_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AudioDeviceModule_type{py::register_python_type(module.get(), &type_spec_AudioDeviceModule, object_bases.get(), nullptr)};
+    py::pytype_handle AudioDeviceModule_type{py::register_python_type(module.get(), &type_spec_AudioDeviceModule, object_bases.get(), inspectable_meta_type)};
     if (!AudioDeviceModule_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AudioDeviceModuleNotificationEventArgs_type{py::register_python_type(module.get(), &type_spec_AudioDeviceModuleNotificationEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AudioDeviceModuleNotificationEventArgs_type{py::register_python_type(module.get(), &type_spec_AudioDeviceModuleNotificationEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AudioDeviceModuleNotificationEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AudioDeviceModulesManager_type{py::register_python_type(module.get(), &type_spec_AudioDeviceModulesManager, object_bases.get(), nullptr)};
+    py::pytype_handle AudioDeviceModulesManager_type{py::register_python_type(module.get(), &type_spec_AudioDeviceModulesManager, object_bases.get(), inspectable_meta_type)};
     if (!AudioDeviceModulesManager_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CallControl_Static{PyType_FromSpec(&type_spec_CallControl_Static)};
+    py::pyobj_handle CallControl_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CallControl_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CallControl_Static{PyType_FromSpecWithBases(&type_spec_CallControl_Static, CallControl_Static_bases.get())};
     if (!type_CallControl_Static)
     {
         return nullptr;
@@ -15373,133 +15385,139 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CameraOcclusionInfo_type{py::register_python_type(module.get(), &type_spec_CameraOcclusionInfo, object_bases.get(), nullptr)};
+    py::pytype_handle CameraOcclusionInfo_type{py::register_python_type(module.get(), &type_spec_CameraOcclusionInfo, object_bases.get(), inspectable_meta_type)};
     if (!CameraOcclusionInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CameraOcclusionState_type{py::register_python_type(module.get(), &type_spec_CameraOcclusionState, object_bases.get(), nullptr)};
+    py::pytype_handle CameraOcclusionState_type{py::register_python_type(module.get(), &type_spec_CameraOcclusionState, object_bases.get(), inspectable_meta_type)};
     if (!CameraOcclusionState_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CameraOcclusionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CameraOcclusionStateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CameraOcclusionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CameraOcclusionStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CameraOcclusionStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DefaultAudioCaptureDeviceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DefaultAudioCaptureDeviceChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DefaultAudioCaptureDeviceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DefaultAudioCaptureDeviceChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DefaultAudioCaptureDeviceChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DefaultAudioRenderDeviceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DefaultAudioRenderDeviceChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DefaultAudioRenderDeviceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DefaultAudioRenderDeviceChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DefaultAudioRenderDeviceChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DialRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DialRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DialRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DialRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DialRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DigitalWindowBounds_type{py::register_python_type(module.get(), &type_spec_DigitalWindowBounds, object_bases.get(), nullptr)};
+    py::pytype_handle DigitalWindowBounds_type{py::register_python_type(module.get(), &type_spec_DigitalWindowBounds, object_bases.get(), inspectable_meta_type)};
     if (!DigitalWindowBounds_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DigitalWindowCapability_type{py::register_python_type(module.get(), &type_spec_DigitalWindowCapability, object_bases.get(), nullptr)};
+    py::pytype_handle DigitalWindowCapability_type{py::register_python_type(module.get(), &type_spec_DigitalWindowCapability, object_bases.get(), inspectable_meta_type)};
     if (!DigitalWindowCapability_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DigitalWindowControl_type{py::register_python_type(module.get(), &type_spec_DigitalWindowControl, object_bases.get(), nullptr)};
+    py::pytype_handle DigitalWindowControl_type{py::register_python_type(module.get(), &type_spec_DigitalWindowControl, object_bases.get(), inspectable_meta_type)};
     if (!DigitalWindowControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExposureCompensationControl_type{py::register_python_type(module.get(), &type_spec_ExposureCompensationControl, object_bases.get(), nullptr)};
+    py::pytype_handle ExposureCompensationControl_type{py::register_python_type(module.get(), &type_spec_ExposureCompensationControl, object_bases.get(), inspectable_meta_type)};
     if (!ExposureCompensationControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExposureControl_type{py::register_python_type(module.get(), &type_spec_ExposureControl, object_bases.get(), nullptr)};
+    py::pytype_handle ExposureControl_type{py::register_python_type(module.get(), &type_spec_ExposureControl, object_bases.get(), inspectable_meta_type)};
     if (!ExposureControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExposurePriorityVideoControl_type{py::register_python_type(module.get(), &type_spec_ExposurePriorityVideoControl, object_bases.get(), nullptr)};
+    py::pytype_handle ExposurePriorityVideoControl_type{py::register_python_type(module.get(), &type_spec_ExposurePriorityVideoControl, object_bases.get(), inspectable_meta_type)};
     if (!ExposurePriorityVideoControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlashControl_type{py::register_python_type(module.get(), &type_spec_FlashControl, object_bases.get(), nullptr)};
+    py::pytype_handle FlashControl_type{py::register_python_type(module.get(), &type_spec_FlashControl, object_bases.get(), inspectable_meta_type)};
     if (!FlashControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FocusControl_type{py::register_python_type(module.get(), &type_spec_FocusControl, object_bases.get(), nullptr)};
+    py::pytype_handle FocusControl_type{py::register_python_type(module.get(), &type_spec_FocusControl, object_bases.get(), inspectable_meta_type)};
     if (!FocusControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FocusSettings_type{py::register_python_type(module.get(), &type_spec_FocusSettings, object_bases.get(), nullptr)};
+    py::pytype_handle FocusSettings_type{py::register_python_type(module.get(), &type_spec_FocusSettings, object_bases.get(), inspectable_meta_type)};
     if (!FocusSettings_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HdrVideoControl_type{py::register_python_type(module.get(), &type_spec_HdrVideoControl, object_bases.get(), nullptr)};
+    py::pytype_handle HdrVideoControl_type{py::register_python_type(module.get(), &type_spec_HdrVideoControl, object_bases.get(), inspectable_meta_type)};
     if (!HdrVideoControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InfraredTorchControl_type{py::register_python_type(module.get(), &type_spec_InfraredTorchControl, object_bases.get(), nullptr)};
+    py::pytype_handle InfraredTorchControl_type{py::register_python_type(module.get(), &type_spec_InfraredTorchControl, object_bases.get(), inspectable_meta_type)};
     if (!InfraredTorchControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsoSpeedControl_type{py::register_python_type(module.get(), &type_spec_IsoSpeedControl, object_bases.get(), nullptr)};
+    py::pytype_handle IsoSpeedControl_type{py::register_python_type(module.get(), &type_spec_IsoSpeedControl, object_bases.get(), inspectable_meta_type)};
     if (!IsoSpeedControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle KeypadPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_KeypadPressedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle KeypadPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_KeypadPressedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!KeypadPressedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LowLagPhotoControl_type{py::register_python_type(module.get(), &type_spec_LowLagPhotoControl, object_bases.get(), nullptr)};
+    py::pytype_handle LowLagPhotoControl_type{py::register_python_type(module.get(), &type_spec_LowLagPhotoControl, object_bases.get(), inspectable_meta_type)};
     if (!LowLagPhotoControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LowLagPhotoSequenceControl_type{py::register_python_type(module.get(), &type_spec_LowLagPhotoSequenceControl, object_bases.get(), nullptr)};
+    py::pytype_handle LowLagPhotoSequenceControl_type{py::register_python_type(module.get(), &type_spec_LowLagPhotoSequenceControl, object_bases.get(), inspectable_meta_type)};
     if (!LowLagPhotoSequenceControl_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MediaDevice_Static{PyType_FromSpec(&type_spec_MediaDevice_Static)};
+    py::pyobj_handle MediaDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MediaDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MediaDevice_Static{PyType_FromSpecWithBases(&type_spec_MediaDevice_Static, MediaDevice_Static_bases.get())};
     if (!type_MediaDevice_Static)
     {
         return nullptr;
@@ -15511,103 +15529,103 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MediaDeviceControl_type{py::register_python_type(module.get(), &type_spec_MediaDeviceControl, object_bases.get(), nullptr)};
+    py::pytype_handle MediaDeviceControl_type{py::register_python_type(module.get(), &type_spec_MediaDeviceControl, object_bases.get(), inspectable_meta_type)};
     if (!MediaDeviceControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaDeviceControlCapabilities_type{py::register_python_type(module.get(), &type_spec_MediaDeviceControlCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle MediaDeviceControlCapabilities_type{py::register_python_type(module.get(), &type_spec_MediaDeviceControlCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!MediaDeviceControlCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ModuleCommandResult_type{py::register_python_type(module.get(), &type_spec_ModuleCommandResult, object_bases.get(), nullptr)};
+    py::pytype_handle ModuleCommandResult_type{py::register_python_type(module.get(), &type_spec_ModuleCommandResult, object_bases.get(), inspectable_meta_type)};
     if (!ModuleCommandResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle OpticalImageStabilizationControl_type{py::register_python_type(module.get(), &type_spec_OpticalImageStabilizationControl, object_bases.get(), nullptr)};
+    py::pytype_handle OpticalImageStabilizationControl_type{py::register_python_type(module.get(), &type_spec_OpticalImageStabilizationControl, object_bases.get(), inspectable_meta_type)};
     if (!OpticalImageStabilizationControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PanelBasedOptimizationControl_type{py::register_python_type(module.get(), &type_spec_PanelBasedOptimizationControl, object_bases.get(), nullptr)};
+    py::pytype_handle PanelBasedOptimizationControl_type{py::register_python_type(module.get(), &type_spec_PanelBasedOptimizationControl, object_bases.get(), inspectable_meta_type)};
     if (!PanelBasedOptimizationControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhotoConfirmationControl_type{py::register_python_type(module.get(), &type_spec_PhotoConfirmationControl, object_bases.get(), nullptr)};
+    py::pytype_handle PhotoConfirmationControl_type{py::register_python_type(module.get(), &type_spec_PhotoConfirmationControl, object_bases.get(), inspectable_meta_type)};
     if (!PhotoConfirmationControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RedialRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_RedialRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle RedialRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_RedialRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!RedialRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RegionOfInterest_type{py::register_python_type(module.get(), &type_spec_RegionOfInterest, object_bases.get(), nullptr)};
+    py::pytype_handle RegionOfInterest_type{py::register_python_type(module.get(), &type_spec_RegionOfInterest, object_bases.get(), inspectable_meta_type)};
     if (!RegionOfInterest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RegionsOfInterestControl_type{py::register_python_type(module.get(), &type_spec_RegionsOfInterestControl, object_bases.get(), nullptr)};
+    py::pytype_handle RegionsOfInterestControl_type{py::register_python_type(module.get(), &type_spec_RegionsOfInterestControl, object_bases.get(), inspectable_meta_type)};
     if (!RegionsOfInterestControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneModeControl_type{py::register_python_type(module.get(), &type_spec_SceneModeControl, object_bases.get(), nullptr)};
+    py::pytype_handle SceneModeControl_type{py::register_python_type(module.get(), &type_spec_SceneModeControl, object_bases.get(), inspectable_meta_type)};
     if (!SceneModeControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TorchControl_type{py::register_python_type(module.get(), &type_spec_TorchControl, object_bases.get(), nullptr)};
+    py::pytype_handle TorchControl_type{py::register_python_type(module.get(), &type_spec_TorchControl, object_bases.get(), inspectable_meta_type)};
     if (!TorchControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VideoDeviceController_type{py::register_python_type(module.get(), &type_spec_VideoDeviceController, object_bases.get(), nullptr)};
+    py::pytype_handle VideoDeviceController_type{py::register_python_type(module.get(), &type_spec_VideoDeviceController, object_bases.get(), inspectable_meta_type)};
     if (!VideoDeviceController_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VideoDeviceControllerGetDevicePropertyResult_type{py::register_python_type(module.get(), &type_spec_VideoDeviceControllerGetDevicePropertyResult, object_bases.get(), nullptr)};
+    py::pytype_handle VideoDeviceControllerGetDevicePropertyResult_type{py::register_python_type(module.get(), &type_spec_VideoDeviceControllerGetDevicePropertyResult, object_bases.get(), inspectable_meta_type)};
     if (!VideoDeviceControllerGetDevicePropertyResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VideoTemporalDenoisingControl_type{py::register_python_type(module.get(), &type_spec_VideoTemporalDenoisingControl, object_bases.get(), nullptr)};
+    py::pytype_handle VideoTemporalDenoisingControl_type{py::register_python_type(module.get(), &type_spec_VideoTemporalDenoisingControl, object_bases.get(), inspectable_meta_type)};
     if (!VideoTemporalDenoisingControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WhiteBalanceControl_type{py::register_python_type(module.get(), &type_spec_WhiteBalanceControl, object_bases.get(), nullptr)};
+    py::pytype_handle WhiteBalanceControl_type{py::register_python_type(module.get(), &type_spec_WhiteBalanceControl, object_bases.get(), inspectable_meta_type)};
     if (!WhiteBalanceControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ZoomControl_type{py::register_python_type(module.get(), &type_spec_ZoomControl, object_bases.get(), nullptr)};
+    py::pytype_handle ZoomControl_type{py::register_python_type(module.get(), &type_spec_ZoomControl, object_bases.get(), inspectable_meta_type)};
     if (!ZoomControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ZoomSettings_type{py::register_python_type(module.get(), &type_spec_ZoomSettings, object_bases.get(), nullptr)};
+    py::pytype_handle ZoomSettings_type{py::register_python_type(module.get(), &type_spec_ZoomSettings, object_bases.get(), inspectable_meta_type)};
     if (!ZoomSettings_type)
     {
         return nullptr;
@@ -15619,7 +15637,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIDefaultAudioDeviceChangedEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDefaultAudioDeviceChangedEventArgs, nullptr))};
+    py::pytype_handle ImplementsIDefaultAudioDeviceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ImplementsIDefaultAudioDeviceChangedEventArgs, nullptr, inspectable_meta_type)};
     if (!ImplementsIDefaultAudioDeviceChangedEventArgs_type)
     {
         return nullptr;
@@ -15636,7 +15654,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMediaDeviceController_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaDeviceController, nullptr))};
+    py::pytype_handle ImplementsIMediaDeviceController_type{py::register_python_type(module.get(), &type_spec_ImplementsIMediaDeviceController, nullptr, inspectable_meta_type)};
     if (!ImplementsIMediaDeviceController_type)
     {
         return nullptr;

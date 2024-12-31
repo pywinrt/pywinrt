@@ -33,7 +33,7 @@ class HdmiDisplayHdr2086Metadata:
     def __init__(self, red_primary_x: winrt.system.UInt16 = 0, red_primary_y: winrt.system.UInt16 = 0, green_primary_x: winrt.system.UInt16 = 0, green_primary_y: winrt.system.UInt16 = 0, blue_primary_x: winrt.system.UInt16 = 0, blue_primary_y: winrt.system.UInt16 = 0, white_point_x: winrt.system.UInt16 = 0, white_point_y: winrt.system.UInt16 = 0, max_mastering_luminance: winrt.system.UInt16 = 0, min_mastering_luminance: winrt.system.UInt16 = 0, max_content_light_level: winrt.system.UInt16 = 0, max_frame_average_light_level: winrt.system.UInt16 = 0) -> None: ...
 
 @typing.final
-class HdmiDisplayInformation_Static(type):
+class HdmiDisplayInformation_Static(winrt._winrt.IInspectable_Static):
     # Windows.Graphics.Display.Core.HdmiDisplayInformation Windows.Graphics.Display.Core.HdmiDisplayInformation::GetForCurrentView()
     def get_for_current_view(cls) -> HdmiDisplayInformation: ...
 

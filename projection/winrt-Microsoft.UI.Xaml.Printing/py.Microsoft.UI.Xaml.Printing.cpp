@@ -1062,6 +1062,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_printing(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1087,19 +1093,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_printing(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AddPagesEventArgs_type{py::register_python_type(module.get(), &type_spec_AddPagesEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AddPagesEventArgs_type{py::register_python_type(module.get(), &type_spec_AddPagesEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AddPagesEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GetPreviewPageEventArgs_type{py::register_python_type(module.get(), &type_spec_GetPreviewPageEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GetPreviewPageEventArgs_type{py::register_python_type(module.get(), &type_spec_GetPreviewPageEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GetPreviewPageEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PaginateEventArgs_type{py::register_python_type(module.get(), &type_spec_PaginateEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PaginateEventArgs_type{py::register_python_type(module.get(), &type_spec_PaginateEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PaginateEventArgs_type)
     {
         return nullptr;

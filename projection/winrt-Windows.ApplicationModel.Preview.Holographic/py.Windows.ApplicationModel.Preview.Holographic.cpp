@@ -429,6 +429,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_holographic(void) 
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -442,7 +448,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_holographic(void) 
         return nullptr;
     }
 
-    py::pyobj_handle type_HolographicApplicationPreview_Static{PyType_FromSpec(&type_spec_HolographicApplicationPreview_Static)};
+    py::pyobj_handle HolographicApplicationPreview_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HolographicApplicationPreview_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HolographicApplicationPreview_Static{PyType_FromSpecWithBases(&type_spec_HolographicApplicationPreview_Static, HolographicApplicationPreview_Static_bases.get())};
     if (!type_HolographicApplicationPreview_Static)
     {
         return nullptr;
@@ -454,7 +466,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_holographic(void) 
         return nullptr;
     }
 
-    py::pyobj_handle type_HolographicKeyboardPlacementOverridePreview_Static{PyType_FromSpec(&type_spec_HolographicKeyboardPlacementOverridePreview_Static)};
+    py::pyobj_handle HolographicKeyboardPlacementOverridePreview_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HolographicKeyboardPlacementOverridePreview_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HolographicKeyboardPlacementOverridePreview_Static{PyType_FromSpecWithBases(&type_spec_HolographicKeyboardPlacementOverridePreview_Static, HolographicKeyboardPlacementOverridePreview_Static_bases.get())};
     if (!type_HolographicKeyboardPlacementOverridePreview_Static)
     {
         return nullptr;

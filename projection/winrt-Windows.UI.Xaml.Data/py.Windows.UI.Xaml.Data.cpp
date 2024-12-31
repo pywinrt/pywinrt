@@ -8640,6 +8640,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -8713,7 +8719,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BindingExpressionBase_Static{PyType_FromSpec(&type_spec_BindingExpressionBase_Static)};
+    py::pyobj_handle BindingExpressionBase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BindingExpressionBase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BindingExpressionBase_Static{PyType_FromSpecWithBases(&type_spec_BindingExpressionBase_Static, BindingExpressionBase_Static_bases.get())};
     if (!type_BindingExpressionBase_Static)
     {
         return nullptr;
@@ -8749,7 +8761,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BindingOperations_Static{PyType_FromSpec(&type_spec_BindingOperations_Static)};
+    py::pyobj_handle BindingOperations_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BindingOperations_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BindingOperations_Static{PyType_FromSpecWithBases(&type_spec_BindingOperations_Static, BindingOperations_Static_bases.get())};
     if (!type_BindingOperations_Static)
     {
         return nullptr;
@@ -8785,7 +8803,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CurrentChangingEventArgs_Static{PyType_FromSpec(&type_spec_CurrentChangingEventArgs_Static)};
+    py::pyobj_handle CurrentChangingEventArgs_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CurrentChangingEventArgs_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CurrentChangingEventArgs_Static{PyType_FromSpecWithBases(&type_spec_CurrentChangingEventArgs_Static, CurrentChangingEventArgs_Static_bases.get())};
     if (!type_CurrentChangingEventArgs_Static)
     {
         return nullptr;
@@ -8797,7 +8821,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ItemIndexRange_Static{PyType_FromSpec(&type_spec_ItemIndexRange_Static)};
+    py::pyobj_handle ItemIndexRange_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ItemIndexRange_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ItemIndexRange_Static{PyType_FromSpecWithBases(&type_spec_ItemIndexRange_Static, ItemIndexRange_Static_bases.get())};
     if (!type_ItemIndexRange_Static)
     {
         return nullptr;
@@ -8809,7 +8839,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PropertyChangedEventArgs_Static{PyType_FromSpec(&type_spec_PropertyChangedEventArgs_Static)};
+    py::pyobj_handle PropertyChangedEventArgs_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PropertyChangedEventArgs_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PropertyChangedEventArgs_Static{PyType_FromSpecWithBases(&type_spec_PropertyChangedEventArgs_Static, PropertyChangedEventArgs_Static_bases.get())};
     if (!type_PropertyChangedEventArgs_Static)
     {
         return nullptr;
@@ -8851,7 +8887,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICollectionView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICollectionView, nullptr))};
+    py::pytype_handle ImplementsICollectionView_type{py::register_python_type(module.get(), &type_spec_ImplementsICollectionView, nullptr, inspectable_meta_type)};
     if (!ImplementsICollectionView_type)
     {
         return nullptr;
@@ -8868,7 +8904,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICollectionViewFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICollectionViewFactory, nullptr))};
+    py::pytype_handle ImplementsICollectionViewFactory_type{py::register_python_type(module.get(), &type_spec_ImplementsICollectionViewFactory, nullptr, inspectable_meta_type)};
     if (!ImplementsICollectionViewFactory_type)
     {
         return nullptr;
@@ -8885,7 +8921,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICollectionViewGroup_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICollectionViewGroup, nullptr))};
+    py::pytype_handle ImplementsICollectionViewGroup_type{py::register_python_type(module.get(), &type_spec_ImplementsICollectionViewGroup, nullptr, inspectable_meta_type)};
     if (!ImplementsICollectionViewGroup_type)
     {
         return nullptr;
@@ -8902,7 +8938,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICustomProperty_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICustomProperty, nullptr))};
+    py::pytype_handle ImplementsICustomProperty_type{py::register_python_type(module.get(), &type_spec_ImplementsICustomProperty, nullptr, inspectable_meta_type)};
     if (!ImplementsICustomProperty_type)
     {
         return nullptr;
@@ -8919,7 +8955,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICustomPropertyProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICustomPropertyProvider, nullptr))};
+    py::pytype_handle ImplementsICustomPropertyProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsICustomPropertyProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsICustomPropertyProvider_type)
     {
         return nullptr;
@@ -8936,7 +8972,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIItemsRangeInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIItemsRangeInfo, nullptr))};
+    py::pytype_handle ImplementsIItemsRangeInfo_type{py::register_python_type(module.get(), &type_spec_ImplementsIItemsRangeInfo, nullptr, inspectable_meta_type)};
     if (!ImplementsIItemsRangeInfo_type)
     {
         return nullptr;
@@ -8953,7 +8989,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsINotifyPropertyChanged_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsINotifyPropertyChanged, nullptr))};
+    py::pytype_handle ImplementsINotifyPropertyChanged_type{py::register_python_type(module.get(), &type_spec_ImplementsINotifyPropertyChanged, nullptr, inspectable_meta_type)};
     if (!ImplementsINotifyPropertyChanged_type)
     {
         return nullptr;
@@ -8970,7 +9006,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISelectionInfo_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISelectionInfo, nullptr))};
+    py::pytype_handle ImplementsISelectionInfo_type{py::register_python_type(module.get(), &type_spec_ImplementsISelectionInfo, nullptr, inspectable_meta_type)};
     if (!ImplementsISelectionInfo_type)
     {
         return nullptr;
@@ -8987,7 +9023,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISupportIncrementalLoading_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISupportIncrementalLoading, nullptr))};
+    py::pytype_handle ImplementsISupportIncrementalLoading_type{py::register_python_type(module.get(), &type_spec_ImplementsISupportIncrementalLoading, nullptr, inspectable_meta_type)};
     if (!ImplementsISupportIncrementalLoading_type)
     {
         return nullptr;
@@ -9004,7 +9040,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIValueConverter_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIValueConverter, nullptr))};
+    py::pytype_handle ImplementsIValueConverter_type{py::register_python_type(module.get(), &type_spec_ImplementsIValueConverter, nullptr, inspectable_meta_type)};
     if (!ImplementsIValueConverter_type)
     {
         return nullptr;

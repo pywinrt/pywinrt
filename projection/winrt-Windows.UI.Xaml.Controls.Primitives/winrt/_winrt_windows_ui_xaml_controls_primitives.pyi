@@ -808,7 +808,7 @@ class FlyoutBaseClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class FlyoutShowOptions_Static(type):
+class FlyoutShowOptions_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class FlyoutShowOptions(winrt.system.Object, metaclass=FlyoutShowOptions_Static):
@@ -843,7 +843,7 @@ class FlyoutShowOptions(winrt.system.Object, metaclass=FlyoutShowOptions_Static)
     def exclusion_rect(self, value: typing.Optional[windows_foundation.Rect]) -> None: ...
 
 @typing.final
-class GeneratorPositionHelper_Static(type):
+class GeneratorPositionHelper_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Xaml.Controls.Primitives.GeneratorPosition Windows.UI.Xaml.Controls.Primitives.GeneratorPositionHelper::FromIndexAndOffset(System.Int32,System.Int32)
     def from_index_and_offset(cls, index: winrt.system.Int32, offset: winrt.system.Int32, /) -> GeneratorPosition: ...
 
@@ -1181,7 +1181,7 @@ class JumpListItemForegroundConverter(windows_ui_xaml.DependencyObject, windows_
     def disabled(self, value: windows_ui_xaml_media.Brush) -> None: ...
 
 @typing.final
-class LayoutInformation_Static(type):
+class LayoutInformation_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Size Windows.UI.Xaml.Controls.Primitives.LayoutInformation::GetAvailableSize(Windows.UI.Xaml.UIElement)
     def get_available_size(cls, element: windows_ui_xaml.UIElement, /) -> windows_foundation.Size: ...
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.Primitives.LayoutInformation::GetLayoutExceptionElement(System.Object)

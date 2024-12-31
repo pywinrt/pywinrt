@@ -45,7 +45,7 @@ class AccessKeyInvokedEventArgs(winrt.system.Object):
     def handled(self, value: bool) -> None: ...
 
 @typing.final
-class AccessKeyManager_Static(type):
+class AccessKeyManager_Static(winrt._winrt.IInspectable_Static):
     # System.Void Microsoft.UI.Xaml.Input.AccessKeyManager::EnterDisplayMode(Microsoft.UI.Xaml.XamlRoot)
     def enter_display_mode_for_xaml_root(cls, xaml_root: microsoft_ui_xaml.XamlRoot, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Input.AccessKeyManager::ExitDisplayMode()
@@ -157,7 +157,7 @@ class FindNextElementOptions(winrt.system.Object):
     def exclusion_rect(self, value: windows_foundation.Rect) -> None: ...
 
 @typing.final
-class FocusManager_Static(type):
+class FocusManager_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Input.FocusManager::FindFirstFocusableElement(Microsoft.UI.Xaml.DependencyObject)
     def find_first_focusable_element(cls, search_scope: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.DependencyObject: ...
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Input.FocusManager::FindLastFocusableElement(Microsoft.UI.Xaml.DependencyObject)

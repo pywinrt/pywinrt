@@ -5604,6 +5604,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_conversationalagent(void) 
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5617,25 +5623,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_conversationalagent(void) 
         return nullptr;
     }
 
-    py::pytype_handle ActivationSignalDetectionConfiguration_type{py::register_python_type(module.get(), &type_spec_ActivationSignalDetectionConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle ActivationSignalDetectionConfiguration_type{py::register_python_type(module.get(), &type_spec_ActivationSignalDetectionConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!ActivationSignalDetectionConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ActivationSignalDetectionConfigurationCreationResult_type{py::register_python_type(module.get(), &type_spec_ActivationSignalDetectionConfigurationCreationResult, object_bases.get(), nullptr)};
+    py::pytype_handle ActivationSignalDetectionConfigurationCreationResult_type{py::register_python_type(module.get(), &type_spec_ActivationSignalDetectionConfigurationCreationResult, object_bases.get(), inspectable_meta_type)};
     if (!ActivationSignalDetectionConfigurationCreationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ActivationSignalDetector_type{py::register_python_type(module.get(), &type_spec_ActivationSignalDetector, object_bases.get(), nullptr)};
+    py::pytype_handle ActivationSignalDetector_type{py::register_python_type(module.get(), &type_spec_ActivationSignalDetector, object_bases.get(), inspectable_meta_type)};
     if (!ActivationSignalDetector_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ConversationalAgentDetectorManager_Static{PyType_FromSpec(&type_spec_ConversationalAgentDetectorManager_Static)};
+    py::pyobj_handle ConversationalAgentDetectorManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ConversationalAgentDetectorManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ConversationalAgentDetectorManager_Static{PyType_FromSpecWithBases(&type_spec_ConversationalAgentDetectorManager_Static, ConversationalAgentDetectorManager_Static_bases.get())};
     if (!type_ConversationalAgentDetectorManager_Static)
     {
         return nullptr;
@@ -5647,7 +5659,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_conversationalagent(void) 
         return nullptr;
     }
 
-    py::pyobj_handle type_ConversationalAgentSession_Static{PyType_FromSpec(&type_spec_ConversationalAgentSession_Static)};
+    py::pyobj_handle ConversationalAgentSession_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ConversationalAgentSession_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ConversationalAgentSession_Static{PyType_FromSpecWithBases(&type_spec_ConversationalAgentSession_Static, ConversationalAgentSession_Static_bases.get())};
     if (!type_ConversationalAgentSession_Static)
     {
         return nullptr;
@@ -5659,37 +5677,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_conversationalagent(void) 
         return nullptr;
     }
 
-    py::pytype_handle ConversationalAgentSessionInterruptedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSessionInterruptedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ConversationalAgentSessionInterruptedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSessionInterruptedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ConversationalAgentSessionInterruptedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConversationalAgentSignal_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSignal, object_bases.get(), nullptr)};
+    py::pytype_handle ConversationalAgentSignal_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSignal, object_bases.get(), inspectable_meta_type)};
     if (!ConversationalAgentSignal_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConversationalAgentSignalDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSignalDetectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ConversationalAgentSignalDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSignalDetectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ConversationalAgentSignalDetectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConversationalAgentSystemStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSystemStateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ConversationalAgentSystemStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSystemStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ConversationalAgentSystemStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DetectionConfigurationAvailabilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DetectionConfigurationAvailabilityChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DetectionConfigurationAvailabilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DetectionConfigurationAvailabilityChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DetectionConfigurationAvailabilityChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DetectionConfigurationAvailabilityInfo_type{py::register_python_type(module.get(), &type_spec_DetectionConfigurationAvailabilityInfo, object_bases.get(), nullptr)};
+    py::pytype_handle DetectionConfigurationAvailabilityInfo_type{py::register_python_type(module.get(), &type_spec_DetectionConfigurationAvailabilityInfo, object_bases.get(), inspectable_meta_type)};
     if (!DetectionConfigurationAvailabilityInfo_type)
     {
         return nullptr;
